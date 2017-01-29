@@ -1,2 +1,2 @@
-# qt5xhb
-Qt Framework 5 for Harbour and xHarbour
+# Qt5xHb
+Bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
