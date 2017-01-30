@@ -1,0 +1,106 @@
+#
+# Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+#
+# Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+#
+# Arquivo de configuração para Qt5xHb e HBMK2
+#
+
+description=Qt5xHb
+
+# pasta include do Qt5xHb
+{allwin|android}incpaths=${QT5XHB_INC_DIR}
+
+# pasta lib do Qt5xHb
+{allwin|android}libpaths=${QT5XHB_LIB_DIR}
+
+# bibliotecas do Qt5xHb
+{android}libs=hbqtandroidextras5
+{allwin}libs=hbqaxcontainer5
+#{allwin}libs=hbqaxserver5 (MANTER DESATIVADA)
+{allwin|android}libs=hbqtbluetooth5
+{allwin|android}libs=hbqtcore5
+{allwin|android}libs=hbqtdeclarative5
+{allwin}libs=hbqtdesigner5
+{allwin|android}libs=hbqtgui5
+{allwin|android}libs=hbqthelp5
+{allwin|android}libs=hbqtmultimedia5
+{allwin|android}libs=hbqtmultimediawidgets5
+{allwin|android}libs=hbqtnetwork5
+{allwin|android}libs=hbqtopengl5
+{allwin|android}libs=hbqtpositioning5
+{allwin|android}libs=hbqtprintsupport5
+{allwin|android}libs=hbqtqml5
+{allwin|android}libs=hbqtquick5
+{allwin|android}libs=hbqtquickwidgets5
+{allwin|android}libs=hbqtscript5
+{allwin|android}libs=hbqtscripttools5
+{allwin|android}libs=hbqtsensors5
+{allwin}libs=hbqtserialport5
+{allwin|android}libs=hbqtsql5
+{allwin|android}libs=hbqtsvg5
+{allwin|android}libs=hbqtuitools5
+{allwin|android}libs=hbqtwebsockets5
+{allwin}libs=hbqtwebkit5
+{allwin}libs=hbqtwebkitwidgets5
+{allwin|android}libs=hbqtwidgets5
+{allwin}libs=hbqtwinextras5
+{allwin|android}libs=hbqtxml5
+{allwin|android}libs=hbqtxmlpatterns5
+
+# pasta include do Qt Framework
+{allwin|android}incpaths=${QTDIR}/include
+
+# pasta lib do Qt Framework
+{allwin|android}libpaths=${QTDIR}/lib
+
+# bibliotecas do Qt Framework
+{android}libs=Qt5AndroidExtras
+{allwin}libs=Qt5AxBase
+{allwin}libs=Qt5AxContainer
+{allwin|android}libs=Qt5Bluetooth
+{allwin|android}libs=Qt5CLucene
+{allwin|android}libs=Qt5Concurrent
+{allwin|android}libs=Qt5Core
+{allwin|android}libs=Qt5Declarative
+{allwin}libs=Qt5Designer
+{allwin}libs=Qt5DesignerComponents
+{allwin|android}libs=Qt5Gui
+{allwin|android}libs=Qt5Help
+{allwin|android}libs=Qt5Multimedia
+{allwin|android}libs=Qt5MultimediaQuick_p
+{allwin|android}libs=Qt5MultimediaWidgets
+{allwin|android}libs=Qt5Network
+{allwin|android}libs=Qt5Nfc
+{allwin|android}libs=Qt5OpenGL
+{allwin|android}libs=Qt5OpenGLExtensions
+{allwin|android}libs=Qt5PlatformSupport
+{allwin|android}libs=Qt5Positioning
+{allwin|android}libs=Qt5PrintSupport
+{allwin|android}libs=Qt5Qml
+{allwin|android}libs=Qt5QmlDevTools
+{allwin|android}libs=Qt5Quick
+{allwin|android}libs=Qt5QuickParticles
+{allwin|android}libs=Qt5QuickTest
+{allwin|android}libs=Qt5QuickWidgets
+{allwin|android}libs=Qt5Script
+{allwin|android}libs=Qt5ScriptTools
+{allwin|android}libs=Qt5Sensors
+{allwin}libs=Qt5SerialPort
+{allwin|android}libs=Qt5Sql
+{allwin|android}libs=Qt5Svg
+{allwin|android}libs=Qt5Test
+{allwin|android}libs=Qt5UiTools
+{allwin|android}libs=Qt5WebSockets
+{allwin}libs=Qt5WebKit
+{allwin}libs=Qt5WebKitWidgets
+{allwin|android}libs=Qt5Widgets
+{allwin}libs=Qt5WinExtras
+{allwin|android}libs=Qt5Xml
+{allwin|android}libs=Qt5XmlPatterns
+
+# outros parâmetros
+cpp=yes
+gui=yes
+
+{msvc}ldflags=/NODEFAULTLIB:msvcrt.lib
