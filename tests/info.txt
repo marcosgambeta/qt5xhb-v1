@@ -1,0 +1,38 @@
+Esta pasta contém programas de teste, usados para verificar se
+as bibliotecas do projeto Qt5xHb estão funcionando corretamente.
+
+A compilação depende do arquivo qt5xhb.hbc, presente na pasta
+principal.
+
+Diversos testes usam a janela de console para a exibição de informações,
+sendo recomendado usar a biblioteca gtwin para a visualização destas
+informações. Caso queira eliminar a exibição da janela de console,
+compile com a biblioteca gtgui.
+
+Estando no prompt de comando, utilize os scripts abaixo:
+
+compilartodos.bat : compila todos os testes.
+
+compilar.bat : compila um teste específico (exemplo: compilar mainwindow).
+
+Use da forma abaixo caso esteja usando o xHarbour:
+
+compilartodos -xhb
+
+compilar mainwindow -xhb
+
+copiardlls.bat : copia as dlls da pasta bin do Qt para a pasta de testes,
+permitindo executar os testes através do Windows Explorer, com um duplo
+clique.
+
+apagartestes.bat : apaga todos os executáveis da pasta de testes (*.exe).
+
+apagardlls.bat : apaga todas as dlls da pasta de testes (*.dll).
+
+A compilação dos testes é efetuada através da ferramenta hbmk2, independente
+de se estar usando o Harbour ou o xHarbour.
+
+Embora estes programas tenham por finalidade básica servirem para
+testar recursos diversos das bibliotecas do Qt5xHb, podem servir de
+fonte de estudo para se aprender a usar os recursos do Qt Framework 5
+em conjunto com Harbour/xHarbour.
