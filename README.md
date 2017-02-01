@@ -5,9 +5,9 @@ Passos básicos para utilização:
 
 1. Instalar o Qt Framework de sua preferência, lembrando que:
 
-. a versão para MinGW já traz o compilador C++
+1.1. a versão para MinGW já traz o compilador C++
 
-. a versão para MSVC requer a instalação em separado, do site da Microsoft, do compilador C++
+1.2. a versão para MSVC requer a instalação em separado, do site da Microsoft, do compilador C++
 
 2. Baixar e compilar o [x]Harbour de sua preferência:
 
