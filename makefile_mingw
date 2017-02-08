@@ -654,6 +654,11 @@ $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtBluetooth/%.cpp
 #	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
 #$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtDBus/%.cpp
 #	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
+# QtDeclarative
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDeclarative/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtDeclarative/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtGui
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtGui/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
