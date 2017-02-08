@@ -656,6 +656,11 @@ $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDeclarative/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtDeclarative/%.cpp
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtDesigner
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDesigner/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtDesigner/%.cpp
+	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtGui
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtGui/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
