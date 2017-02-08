@@ -27,4 +27,3 @@ OBJECTS_QTHELP += $(QT5XHB_OBJ_DIR)/QHelpSearchQueryWidgetSlotsMoc$(OBJEXT)
 OBJECTS_QTHELP += $(QT5XHB_OBJ_DIR)/QHelpSearchResultWidget$(OBJEXT)
 OBJECTS_QTHELP += $(QT5XHB_OBJ_DIR)/QHelpSearchResultWidgetSlots$(OBJEXT)
 OBJECTS_QTHELP += $(QT5XHB_OBJ_DIR)/QHelpSearchResultWidgetSlotsMoc$(OBJEXT)
-
