@@ -637,13 +637,15 @@ $(QT5XHB_LIB_DIR)/libhbqtxmlpatterns5$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
 
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtBluetooth/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtBluetooth/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.c
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
-
-$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/%.cpp
-	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
-
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 
