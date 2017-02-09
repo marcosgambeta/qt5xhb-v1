@@ -25,7 +25,7 @@ OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAnimationDriverSlotsMoc$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAnimationGroup$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAtomicInt$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAtomicPointer$(OBJEXT)
-ifneq ("$(wildcard ../source/QBBSystemLocaleData.prg)","")
+ifneq ("$(wildcard ../source/QtCore/QBBSystemLocaleData.prg)","")
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QBBSystemLocaleData$(OBJEXT)
 endif
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QBasicTimer$(OBJEXT)
@@ -191,4 +191,3 @@ OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QXmlStreamNamespaceDeclaration$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QXmlStreamNotationDeclaration$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QXmlStreamReader$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QXmlStreamWriter$(OBJEXT)
-
