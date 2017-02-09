@@ -689,6 +689,11 @@ $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtOpenGL/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtOpenGL/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
+# QtPositioning
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtPositioning/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtPositioning/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtQml
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtQml/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
