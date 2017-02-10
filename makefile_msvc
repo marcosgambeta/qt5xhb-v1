@@ -741,6 +741,11 @@ $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSql/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtSql/%.cpp
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtSvg
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSvg/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtSvg/%.cpp
+	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtWebChannel
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebChannel/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
