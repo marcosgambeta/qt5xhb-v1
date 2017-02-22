@@ -346,10 +346,24 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     HB_FUNC_EXEC( QBRUSH_NEW9 );
   }
+  // Classe QGradient e derivadas
   else if( ISNUMPAR(1) && ISQGRADIENT(1) )
   {
     HB_FUNC_EXEC( QBRUSH_NEW10 );
   }
+  else if( ISNUMPAR(1) && ISQCONICALGRADIENT(1) )
+  {
+    HB_FUNC_EXEC( QBRUSH_NEW10 );
+  }
+  else if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
+  {
+    HB_FUNC_EXEC( QBRUSH_NEW10 );
+  }
+  else if( ISNUMPAR(1) && ISQRADIALGRADIENT(1) )
+  {
+    HB_FUNC_EXEC( QBRUSH_NEW10 );
+  }
+  //
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
