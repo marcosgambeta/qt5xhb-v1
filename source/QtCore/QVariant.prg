@@ -10,6 +10,7 @@
 #include "qt4xhb_clsid.ch"
 
 
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QBYTEARRAY
 REQUEST QBITARRAY
 REQUEST QCHAR
@@ -19,11 +20,11 @@ REQUEST QDATETIME
 REQUEST QPOINT
 REQUEST QPOINTF
 REQUEST QRECT
+REQUEST QRECTF
 REQUEST QSIZE
 REQUEST QSIZEF
 REQUEST QLINE
 REQUEST QLINEF
-REQUEST QRECTF
 REQUEST QLOCALE
 REQUEST QREGEXP
 REQUEST QREGULAREXPRESSION
@@ -35,6 +36,7 @@ REQUEST QJSONVALUE
 REQUEST QJSONOBJECT
 REQUEST QJSONARRAY
 REQUEST QJSONDOCUMENT
+#endif
 
 CLASS QVariant
 
@@ -121,11 +123,11 @@ CLASS QVariant
    METHOD toPoint
    METHOD toPointF
    METHOD toRect
+   METHOD toRectF
    METHOD toSize
    METHOD toSizeF
    METHOD toLine
    METHOD toLineF
-   METHOD toRectF
    METHOD toLocale
    METHOD toRegExp
    METHOD toRegularExpression
@@ -329,6 +331,7 @@ QVariant(QDataStream &s)
 HB_FUNC_STATIC( QVARIANT_NEW6 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_DATASTREAM
   QDataStream * par1 = (QDataStream *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -339,6 +342,7 @@ HB_FUNC_STATIC( QVARIANT_NEW6 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
+#endif
 #endif
 }
 
@@ -386,7 +390,7 @@ QVariant(qlonglong ll)
 HB_FUNC_STATIC( QVARIANT_NEW9 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  qlonglong par1 = hb_parnl(1);
+  qlonglong par1 = hb_parnll(1);
   QVariant * o = new QVariant ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVariant *) o );
@@ -405,7 +409,7 @@ QVariant(qulonglong ull)
 HB_FUNC_STATIC( QVARIANT_NEW10 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  qulonglong par1 = hb_parnl(1);
+  qulonglong par1 = hb_parnll(1);
   QVariant * o = new QVariant ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVariant *) o );
@@ -481,6 +485,7 @@ QVariant(const char *str)
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_CAST_FROM_ASCII
   const char * par1 = hb_parc(1);
   QVariant * o = new QVariant (  (const char *) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -491,6 +496,7 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
+#endif
 #endif
 }
 
@@ -741,6 +747,7 @@ QVariant(const QSize &size)
 HB_FUNC_STATIC( QVARIANT_NEW27 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -752,6 +759,7 @@ HB_FUNC_STATIC( QVARIANT_NEW27 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -760,6 +768,7 @@ QVariant(const QSizeF &size)
 HB_FUNC_STATIC( QVARIANT_NEW28 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QSizeF * par1 = (QSizeF *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -771,6 +780,7 @@ HB_FUNC_STATIC( QVARIANT_NEW28 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -779,6 +789,7 @@ QVariant(const QPoint &pt)
 HB_FUNC_STATIC( QVARIANT_NEW29 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -790,6 +801,7 @@ HB_FUNC_STATIC( QVARIANT_NEW29 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -798,6 +810,7 @@ QVariant(const QPointF &pt)
 HB_FUNC_STATIC( QVARIANT_NEW30 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -809,6 +822,7 @@ HB_FUNC_STATIC( QVARIANT_NEW30 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -817,6 +831,7 @@ QVariant(const QLine &line)
 HB_FUNC_STATIC( QVARIANT_NEW31 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QLine * par1 = (QLine *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -828,6 +843,7 @@ HB_FUNC_STATIC( QVARIANT_NEW31 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -836,6 +852,7 @@ QVariant(const QLineF &line)
 HB_FUNC_STATIC( QVARIANT_NEW32 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QLineF * par1 = (QLineF *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -847,6 +864,7 @@ HB_FUNC_STATIC( QVARIANT_NEW32 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -855,6 +873,7 @@ QVariant(const QRect &rect)
 HB_FUNC_STATIC( QVARIANT_NEW33 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -866,6 +885,7 @@ HB_FUNC_STATIC( QVARIANT_NEW33 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -874,6 +894,7 @@ QVariant(const QRectF &rect)
 HB_FUNC_STATIC( QVARIANT_NEW34 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_GEOM_VARIANT
   QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -884,6 +905,7 @@ HB_FUNC_STATIC( QVARIANT_NEW34 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
+#endif
 #endif
 }
 
@@ -912,6 +934,7 @@ QVariant(const QRegExp &regExp)
 HB_FUNC_STATIC( QVARIANT_NEW36 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_REGEXP
   QRegExp * par1 = (QRegExp *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -923,6 +946,7 @@ HB_FUNC_STATIC( QVARIANT_NEW36 )
   hb_itemRelease( des );
   hb_itemReturn( self );
 #endif
+#endif
 }
 
 /*
@@ -931,6 +955,7 @@ QVariant(const QRegularExpression &re)
 HB_FUNC_STATIC( QVARIANT_NEW37 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#ifndef QT_NO_REGULAREXPRESSION
   QRegularExpression * par1 = (QRegularExpression *) _qtxhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -941,6 +966,7 @@ HB_FUNC_STATIC( QVARIANT_NEW37 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
+#endif
 #endif
 }
 
@@ -1143,13 +1169,158 @@ HB_FUNC_STATIC( QVARIANT_NEW45 )
 //[44]QVariant(const QJsonArray &jsonArray)
 //[45]QVariant(const QJsonDocument &jsonDocument)
 
-// TODO: implementar reconhecimento de parâmetros
+/*
+TODO: implementar reconhecimento de parâmetros, se possível, para os casos abaixo
+
+[2]QVariant(Type type)
+[8]QVariant(uint ui)
+[10]QVariant(qulonglong ull)
+[13]QVariant(float f)
+[14]QVariant(const char *str)
+[24]QVariant(const QList<QVariant> &list)
+[25]QVariant(const QMap<QString,QVariant> &map)
+[26]QVariant(const QHash<QString,QVariant> &hash)
+*/
 
 HB_FUNC_STATIC( QVARIANT_NEW )
 {
   if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QVARIANT_NEW1 );
+  }
+  else if( ISNUMPAR(1) && ISOBJECT(1) )
+  {
+    if( ISQVARIANT(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW5  );
+    }
+    else if( ISQDATASTREAM(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW6  );
+    }
+    else if( ISQBYTEARRAY(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW15 );
+    }
+    else if( ISQBITARRAY(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW16 );
+    }
+    else if( ISQLATIN1STRING(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW18 );
+    }
+    else if( ISQCHAR(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW20 );
+    }
+    else if( ISQDATE(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW21 );
+    }
+    else if( ISQTIME(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW22 );
+    }
+    else if( ISQDATETIME(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW23 );
+    }
+    else if( ISQSIZE(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW27 );
+    }
+    else if( ISQSIZEF(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW28 );
+    }
+    else if( ISQPOINT(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW29 );
+    }
+    else if( ISQPOINTF(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW30 );
+    }
+    else if( ISQLINE(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW31 );
+    }
+    else if( ISQLINEF(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW32 );
+    }
+    else if( ISQRECT(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW33 );
+    }
+    else if( ISQRECTF(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW34 );
+    }
+    else if( ISQLOCALE(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW35 );
+    }
+    else if( ISQREGEXP(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW36 );
+    }
+    else if( ISQREGULAREXPRESSION(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW37 );
+    }
+    else if( ISQURL(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW38 );
+    }
+    else if( ISQEASINGCURVE(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW39 );
+    }
+    else if( ISQUUID(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW40 );
+    }
+    else if( ISQMODELINDEX(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW41 );
+    }
+    else if( ISQJSONVALUE(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW42 );
+    }
+    else if( ISQJSONOBJECT(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW43 );
+    }
+    else if( ISQJSONARRAY(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW44 );
+    }
+    else if( ISQJSONDOCUMENT(1) )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW45 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    if( hb_param( 1, HB_IT_DOUBLE ) != NULL )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW12 );
+    }
+    else if( hb_param( 1, HB_IT_LONG ) != NULL )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW9 );
+    }
+    else
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW7 );
+    }
   }
   else if( ISNUMPAR(1) && ISLOG(1) )
   {
@@ -1162,6 +1333,14 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
     HB_FUNC_EXEC( QVARIANT_NEW19 );
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
+  {
+    HB_FUNC_EXEC( QVARIANT_NEW3 );
+  }
+  else if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
+  {
+    HB_FUNC_EXEC( QVARIANT_NEW4 );
   }
   else
   {
@@ -1253,6 +1432,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
     hb_retl( obj->canConvert ( (int) hb_parni(1) ) );
   }
 }
+
 
 
 /*
@@ -1374,7 +1554,7 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
   if( obj )
   {
     bool par1;
-    hb_retnl( obj->toLongLong ( &par1 ) );
+    hb_retnll( obj->toLongLong ( &par1 ) );
     hb_storl( par1, 1 );
   }
 }
@@ -1389,7 +1569,7 @@ HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
   if( obj )
   {
     bool par1;
-    hb_retnl( obj->toULongLong ( &par1 ) );
+    hb_retnll( obj->toULongLong ( &par1 ) );
     hb_storl( par1, 1 );
   }
 }
@@ -1619,12 +1799,14 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVARIANT_TOPOINT )
 {
+#ifndef QT_NO_GEOM_VARIANT
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->toPoint (  ) );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
+#endif
 }
 
 
@@ -1633,12 +1815,14 @@ QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVARIANT_TOPOINTF )
 {
+#ifndef QT_NO_GEOM_VARIANT
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->toPointF (  ) );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
+#endif
 }
 
 
@@ -1647,68 +1831,14 @@ QRect toRect() const
 */
 HB_FUNC_STATIC( QVARIANT_TORECT )
 {
+#ifndef QT_NO_GEOM_VARIANT
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->toRect (  ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
-}
-
-
-/*
-QSize toSize() const
-*/
-HB_FUNC_STATIC( QVARIANT_TOSIZE )
-{
-  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->toSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
-
-/*
-QSizeF toSizeF() const
-*/
-HB_FUNC_STATIC( QVARIANT_TOSIZEF )
-{
-  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->toSizeF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
-
-
-/*
-QLine toLine() const
-*/
-HB_FUNC_STATIC( QVARIANT_TOLINE )
-{
-  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->toLine (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
-
-
-/*
-QLineF toLineF() const
-*/
-HB_FUNC_STATIC( QVARIANT_TOLINEF )
-{
-  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->toLineF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
+#endif
 }
 
 
@@ -1717,12 +1847,78 @@ QRectF toRectF() const
 */
 HB_FUNC_STATIC( QVARIANT_TORECTF )
 {
+#ifndef QT_NO_GEOM_VARIANT
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->toRectF (  ) );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
+#endif
+}
+
+
+/*
+QSize toSize() const
+*/
+HB_FUNC_STATIC( QVARIANT_TOSIZE )
+{
+#ifndef QT_NO_GEOM_VARIANT
+  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    QSize * ptr = new QSize( obj->toSize (  ) );
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
+#endif
+}
+
+
+/*
+QSizeF toSizeF() const
+*/
+HB_FUNC_STATIC( QVARIANT_TOSIZEF )
+{
+#ifndef QT_NO_GEOM_VARIANT
+  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    QSizeF * ptr = new QSizeF( obj->toSizeF (  ) );
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
+#endif
+}
+
+
+/*
+QLine toLine() const
+*/
+HB_FUNC_STATIC( QVARIANT_TOLINE )
+{
+#ifndef QT_NO_GEOM_VARIANT
+  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    QLine * ptr = new QLine( obj->toLine (  ) );
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+  }
+#endif
+}
+
+
+/*
+QLineF toLineF() const
+*/
+HB_FUNC_STATIC( QVARIANT_TOLINEF )
+{
+#ifndef QT_NO_GEOM_VARIANT
+  QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    QLineF * ptr = new QLineF( obj->toLineF (  ) );
+    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
+#endif
 }
 
 
@@ -1745,12 +1941,14 @@ QRegExp toRegExp() const
 */
 HB_FUNC_STATIC( QVARIANT_TOREGEXP )
 {
+#ifndef QT_NO_REGEXP
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegExp * ptr = new QRegExp( obj->toRegExp (  ) );
     _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
+#endif
 }
 
 
@@ -1759,12 +1957,14 @@ QRegularExpression toRegularExpression() const
 */
 HB_FUNC_STATIC( QVARIANT_TOREGULAREXPRESSION )
 {
+#ifndef QT_NO_REGULAREXPRESSION
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegularExpression * ptr = new QRegularExpression( obj->toRegularExpression (  ) );
     _qt4xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
   }
+#endif
 }
 
 
@@ -1885,6 +2085,7 @@ void load(QDataStream &ds)
 */
 HB_FUNC_STATIC( QVARIANT_LOAD )
 {
+#ifndef QT_NO_DATASTREAM
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
@@ -1892,6 +2093,7 @@ HB_FUNC_STATIC( QVARIANT_LOAD )
     obj->load ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 
@@ -1900,6 +2102,7 @@ void save(QDataStream &ds) const
 */
 HB_FUNC_STATIC( QVARIANT_SAVE )
 {
+#ifndef QT_NO_DATASTREAM
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
@@ -1907,6 +2110,7 @@ HB_FUNC_STATIC( QVARIANT_SAVE )
     obj->save ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 
@@ -1944,6 +2148,8 @@ HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
   int i = QVariant::nameToType (  (const char *) par1 );
   hb_retni( i );
 }
+
+
 
 
 
