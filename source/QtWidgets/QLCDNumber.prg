@@ -190,13 +190,11 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
 //[1]bool checkOverflow ( double num ) const
 //[2]bool checkOverflow ( int num ) const
 
-HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW ) /* TODO: verificar se é double ou integer */
-
+HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    //HB_FUNC_EXEC( QLCDNUMBER_CHECKOVERFLOW1 );
-    PHB_ITEM pNum = hb_param(1,HB_IT_NUMERIC);
+    PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
     if( pNum )
     {
       if( HB_IS_DOUBLE(pNum) )
@@ -407,7 +405,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
 //[2]void display ( double num )
 //[3]void display ( int num )
 
-HB_FUNC_STATIC( QLCDNUMBER_DISPLAY ) /* TODO: verificar se é double ou integer */
+HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
   if( ISNUMPAR(1) )
   {
@@ -417,8 +415,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY ) /* TODO: verificar se é double ou integer *
     }
     else if( ISNUM(1) )
     {
-      //HB_FUNC_EXEC( QLCDNUMBER_DISPLAY2 );
-      PHB_ITEM pNum = hb_param(1,HB_IT_NUMERIC);
+      PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
       if( pNum )
       {
         if( HB_IS_DOUBLE(pNum) )
@@ -427,7 +424,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY ) /* TODO: verificar se é double ou integer *
         }
         else if( HB_IS_INTEGER(pNum) )
         {
-          HB_FUNC_EXEC( QLCDNUMBER_CHECKOVERFLOW2 );
+          HB_FUNC_EXEC( QLCDNUMBER_DISPLAY3 );
         }
         else
         {
