@@ -258,33 +258,11 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROM )
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROMOBJECT )
 {
-  //PHB_ITEM self = hb_stackSelfItem();
-  //if( hb_pcount() == 1 && ISOBJECT(1) )
-  //{
-  //  PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-  //  hb_objSendMsg( self, "_pointer", 1, ptr );
-  //  hb_itemRelease( ptr );
-  //  PHB_ITEM des = hb_itemPutL( NULL, false );
-  //  hb_objSendMsg( self, "_self_destruction", 1, des );
-  //  hb_itemRelease( des );
-  //}
-  //hb_itemReturn( self );
   HB_FUNC_EXEC( QDNSTEXTRECORD_NEWFROM );
 }
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROMPOINTER )
 {
-  //PHB_ITEM self = hb_stackSelfItem();
-  //if( hb_pcount() == 1 && ISPOINTER(1) )
-  //{
-  //  PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-  //  hb_objSendMsg( self, "_pointer", 1, ptr );
-  //  hb_itemRelease( ptr );
-  //  PHB_ITEM des = hb_itemPutL( NULL, false );
-  //  hb_objSendMsg( self, "_self_destruction", 1, des );
-  //  hb_itemRelease( des );
-  //}
-  //hb_itemReturn( self );
   HB_FUNC_EXEC( QDNSTEXTRECORD_NEWFROM );
 }
 
