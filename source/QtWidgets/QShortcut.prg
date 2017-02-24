@@ -177,8 +177,7 @@ HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
   QShortcut * obj = (QShortcut *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->context (  );
-    hb_retni( i );
+    hb_retni( obj->context (  ) );
   }
 }
 

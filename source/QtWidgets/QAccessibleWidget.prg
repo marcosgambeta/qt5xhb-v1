@@ -237,8 +237,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->role (  );
-    hb_retni( i );
+    hb_retni( obj->role (  ) );
   }
 }
 

@@ -375,8 +375,7 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
   QToolBar * obj = (QToolBar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->allowedAreas (  );
-    hb_retni( i );
+    hb_retni( obj->allowedAreas (  ) );
   }
 }
 
@@ -501,8 +500,7 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
   QToolBar * obj = (QToolBar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -587,8 +585,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
   QToolBar * obj = (QToolBar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->toolButtonStyle (  );
-    hb_retni( i );
+    hb_retni( obj->toolButtonStyle (  ) );
   }
 }
 

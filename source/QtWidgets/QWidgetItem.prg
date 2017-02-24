@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QWIDGETITEM_CONTROLTYPES )
   QWidgetItem * obj = (QWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->controlTypes (  );
-    hb_retni( i );
+    hb_retni( obj->controlTypes (  ) );
   }
 }
 
@@ -135,8 +134,7 @@ HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
   QWidgetItem * obj = (QWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( obj->expandingDirections (  ) );
   }
 }
 

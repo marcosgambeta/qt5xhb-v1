@@ -123,8 +123,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SURFACETYPE )
   QOffscreenSurface * obj = (QOffscreenSurface *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->surfaceType (  );
-    hb_retni( i );
+    hb_retni( obj->surfaceType (  ) );
   }
 }
 

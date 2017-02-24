@@ -865,8 +865,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
   QGraphicsScene * obj = (QGraphicsScene *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->itemIndexMethod (  );
-    hb_retni( i );
+    hb_retni( obj->itemIndexMethod (  ) );
   }
 }
 

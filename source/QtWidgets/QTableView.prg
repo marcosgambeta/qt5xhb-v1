@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
   QTableView * obj = (QTableView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->gridStyle (  );
-    hb_retni( i );
+    hb_retni( obj->gridStyle (  ) );
   }
 }
 

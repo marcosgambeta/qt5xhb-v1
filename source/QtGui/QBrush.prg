@@ -574,8 +574,7 @@ HB_FUNC_STATIC( QBRUSH_STYLE )
   QBrush * obj = (QBrush *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( obj->style (  ) );
   }
 }
 

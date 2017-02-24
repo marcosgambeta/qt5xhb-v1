@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
   QTapReading * obj = (QTapReading *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->tapDirection (  );
-    hb_retni( i );
+    hb_retni( obj->tapDirection (  ) );
   }
 #endif
 }

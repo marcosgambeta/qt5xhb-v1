@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
   QFontDialog * obj = (QFontDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( obj->options (  ) );
   }
 }
 

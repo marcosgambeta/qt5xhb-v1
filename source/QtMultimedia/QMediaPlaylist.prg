@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERROR )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -466,8 +465,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PLAYBACKMODE )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->playbackMode (  );
-    hb_retni( i );
+    hb_retni( obj->playbackMode (  ) );
   }
 }
 

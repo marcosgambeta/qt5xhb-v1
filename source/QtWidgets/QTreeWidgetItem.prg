@@ -457,8 +457,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHECKSTATE )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->checkState ( (int) hb_parni(1) );
-    hb_retni( i );
+    hb_retni( obj->checkState ( (int) hb_parni(1) ) );
   }
 }
 
@@ -498,8 +497,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDINDICATORPOLICY )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->childIndicatorPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->childIndicatorPolicy (  ) );
   }
 }
 
@@ -553,8 +551,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FLAGS )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

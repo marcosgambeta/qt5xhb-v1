@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
   QInputEvent * obj = (QInputEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( obj->modifiers (  ) );
   }
 }
 

@@ -188,8 +188,7 @@ HB_FUNC_STATIC( QSGNODE_FLAGS )
   QSGNode * obj = (QSGNode *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 
@@ -406,8 +405,7 @@ HB_FUNC_STATIC( QSGNODE_TYPE )
   QSGNode * obj = (QSGNode *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

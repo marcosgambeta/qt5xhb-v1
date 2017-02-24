@@ -222,8 +222,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
   QPluginLoader * obj = (QPluginLoader *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->loadHints (  );
-    hb_retni( i );
+    hb_retni( obj->loadHints (  ) );
   }
 }
 

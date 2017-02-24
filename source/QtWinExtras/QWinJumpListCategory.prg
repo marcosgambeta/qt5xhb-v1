@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 #endif
 }

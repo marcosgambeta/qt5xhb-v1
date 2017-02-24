@@ -174,8 +174,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
   QLocalSocket * obj = (QLocalSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -269,8 +268,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_STATE )
   QLocalSocket * obj = (QLocalSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

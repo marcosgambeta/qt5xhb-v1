@@ -339,8 +339,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
   QGraphicsItem * obj = (QGraphicsItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->acceptedMouseButtons (  );
-    hb_retni( i );
+    hb_retni( obj->acceptedMouseButtons (  ) );
   }
 }
 
@@ -409,8 +408,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
   QGraphicsItem * obj = (QGraphicsItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->cacheMode (  );
-    hb_retni( i );
+    hb_retni( obj->cacheMode (  ) );
   }
 }
 
@@ -646,8 +644,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
   QGraphicsItem * obj = (QGraphicsItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 
@@ -784,8 +781,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
   QGraphicsItem * obj = (QGraphicsItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->inputMethodHints (  );
-    hb_retni( i );
+    hb_retni( obj->inputMethodHints (  ) );
   }
 }
 
@@ -2232,8 +2228,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
   QGraphicsItem * obj = (QGraphicsItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->panelModality (  );
-    hb_retni( i );
+    hb_retni( obj->panelModality (  ) );
   }
 }
 

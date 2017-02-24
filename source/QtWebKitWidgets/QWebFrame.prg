@@ -585,8 +585,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->scrollBarPolicy (  (Qt::Orientation) par1 );
-    hb_retni( i );
+    hb_retni( obj->scrollBarPolicy (  (Qt::Orientation) par1 ) );
   }
 }
 

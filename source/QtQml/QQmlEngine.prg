@@ -533,8 +533,7 @@ static ObjectOwnership objectOwnership(QObject * object)
 HB_FUNC_STATIC( QQMLENGINE_OBJECTOWNERSHIP )
 {
   QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-  int i = QQmlEngine::objectOwnership ( par1 );
-  hb_retni( i );
+  hb_retni( QQmlEngine::objectOwnership ( par1 ) );
 }
 
 

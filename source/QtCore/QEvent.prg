@@ -187,8 +187,7 @@ HB_FUNC_STATIC( QEVENT_TYPE )
   QEvent * obj = (QEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

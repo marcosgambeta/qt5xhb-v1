@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
   QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->priority (  );
-    hb_retni( i );
+    hb_retni( obj->priority (  ) );
   }
 }
 

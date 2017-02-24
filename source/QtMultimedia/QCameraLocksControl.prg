@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->lockStatus (  (QCamera::LockType) par1 );
-    hb_retni( i );
+    hb_retni( obj->lockStatus (  (QCamera::LockType) par1 ) );
   }
 }
 
@@ -123,8 +122,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
   QCameraLocksControl * obj = (QCameraLocksControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedLocks (  );
-    hb_retni( i );
+    hb_retni( obj->supportedLocks (  ) );
   }
 }
 

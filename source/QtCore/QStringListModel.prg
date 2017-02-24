@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->flags ( *par1 ) );
   }
 }
 
@@ -303,8 +302,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
   QStringListModel * obj = (QStringListModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( obj->supportedDropActions (  ) );
   }
 }
 

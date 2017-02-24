@@ -224,8 +224,7 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
   QSslError * obj = (QSslError *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

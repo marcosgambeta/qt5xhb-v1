@@ -207,8 +207,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ALIGNMENT )
   if( obj )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
-    int i = obj->alignment ( par1 );
-    hb_retni( i );
+    hb_retni( obj->alignment ( par1 ) );
   }
 }
 
@@ -221,8 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->columnAlignment ( (int) hb_parni(1) );
-    hb_retni( i );
+    hb_retni( obj->columnAlignment ( (int) hb_parni(1) ) );
   }
 }
 
@@ -387,8 +385,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->rowAlignment ( (int) hb_parni(1) );
-    hb_retni( i );
+    hb_retni( obj->rowAlignment ( (int) hb_parni(1) ) );
   }
 }
 

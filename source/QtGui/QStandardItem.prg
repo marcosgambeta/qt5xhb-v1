@@ -513,8 +513,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
   QStandardItem * obj = (QStandardItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textAlignment (  );
-    hb_retni( i );
+    hb_retni( obj->textAlignment (  ) );
   }
 }
 
@@ -600,8 +599,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
   QStandardItem * obj = (QStandardItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->checkState (  );
-    hb_retni( i );
+    hb_retni( obj->checkState (  ) );
   }
 }
 
@@ -685,8 +683,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
   QStandardItem * obj = (QStandardItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

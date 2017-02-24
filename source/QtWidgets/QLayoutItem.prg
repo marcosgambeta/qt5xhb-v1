@@ -119,8 +119,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
   QLayoutItem * obj = (QLayoutItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -133,8 +132,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
   QLayoutItem * obj = (QLayoutItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->controlTypes (  );
-    hb_retni( i );
+    hb_retni( obj->controlTypes (  ) );
   }
 }
 
@@ -147,8 +145,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
   QLayoutItem * obj = (QLayoutItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( obj->expandingDirections (  ) );
   }
 }
 

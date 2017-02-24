@@ -194,8 +194,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ENCODINGMODE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->encodingMode (  );
-    hb_retni( i );
+    hb_retni( obj->encodingMode (  ) );
   }
 }
 
@@ -250,8 +249,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_QUALITY )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->quality (  );
-    hb_retni( i );
+    hb_retni( obj->quality (  ) );
   }
 }
 

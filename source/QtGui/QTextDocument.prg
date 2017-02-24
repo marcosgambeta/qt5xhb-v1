@@ -1242,8 +1242,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
   QTextDocument * obj = (QTextDocument *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->defaultCursorMoveStyle (  );
-    hb_retni( i );
+    hb_retni( obj->defaultCursorMoveStyle (  ) );
   }
 }
 

@@ -239,8 +239,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

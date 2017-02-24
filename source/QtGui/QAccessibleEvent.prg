@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
   QAccessibleEvent * obj = (QAccessibleEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

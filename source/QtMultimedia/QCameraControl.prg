@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
   QCameraControl * obj = (QCameraControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->captureMode (  );
-    hb_retni( i );
+    hb_retni( obj->captureMode (  ) );
   }
 }
 
@@ -172,8 +171,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATE )
   QCameraControl * obj = (QCameraControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -186,8 +184,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
   QCameraControl * obj = (QCameraControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

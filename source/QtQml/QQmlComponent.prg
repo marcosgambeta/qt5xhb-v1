@@ -402,8 +402,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_STATUS )
   QQmlComponent * obj = (QQmlComponent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

@@ -251,8 +251,7 @@ HB_FUNC_STATIC( QSTATE_CHILDMODE )
   QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->childMode (  );
-    hb_retni( i );
+    hb_retni( obj->childMode (  ) );
   }
 }
 

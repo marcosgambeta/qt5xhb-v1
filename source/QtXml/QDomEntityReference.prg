@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
   QDomEntityReference * obj = (QDomEntityReference *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->nodeType (  );
-    hb_retni( i );
+    hb_retni( obj->nodeType (  ) );
   }
 }
 

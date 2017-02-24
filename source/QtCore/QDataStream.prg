@@ -281,8 +281,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
   QDataStream * obj = (QDataStream *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 
@@ -324,8 +323,7 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
   QDataStream * obj = (QDataStream *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->floatingPointPrecision (  );
-    hb_retni( i );
+    hb_retni( obj->floatingPointPrecision (  ) );
   }
 }
 
@@ -353,8 +351,7 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
   QDataStream * obj = (QDataStream *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->byteOrder (  );
-    hb_retni( i );
+    hb_retni( obj->byteOrder (  ) );
   }
 }
 

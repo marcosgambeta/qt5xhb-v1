@@ -146,8 +146,7 @@ HB_FUNC_STATIC( QRADIOTUNER_AVAILABILITY )
   QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->availability (  );
-    hb_retni( i );
+    hb_retni( obj->availability (  ) );
   }
 }
 
@@ -160,8 +159,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STATE )
   QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -174,8 +172,7 @@ HB_FUNC_STATIC( QRADIOTUNER_BAND )
   QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->band (  );
-    hb_retni( i );
+    hb_retni( obj->band (  ) );
   }
 }
 
@@ -258,8 +255,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STEREOMODE )
   QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->stereoMode (  );
-    hb_retni( i );
+    hb_retni( obj->stereoMode (  ) );
   }
 }
 
@@ -337,8 +333,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERROR )
   QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

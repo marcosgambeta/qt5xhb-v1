@@ -1367,8 +1367,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
   QGLFunctions * obj = (QGLFunctions *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->openGLFeatures (  );
-    hb_retni( i );
+    hb_retni( obj->openGLFeatures (  ) );
   }
 }
 

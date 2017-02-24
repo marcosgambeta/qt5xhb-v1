@@ -341,8 +341,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_TYPE )
   QDBusMessage * obj = (QDBusMessage *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

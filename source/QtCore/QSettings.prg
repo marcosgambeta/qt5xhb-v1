@@ -438,8 +438,7 @@ HB_FUNC_STATIC( QSETTINGS_FORMAT )
   QSettings * obj = (QSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->format (  );
-    hb_retni( i );
+    hb_retni( obj->format (  ) );
   }
 }
 
@@ -520,8 +519,7 @@ HB_FUNC_STATIC( QSETTINGS_SCOPE )
   QSettings * obj = (QSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->scope (  );
-    hb_retni( i );
+    hb_retni( obj->scope (  ) );
   }
 }
 
@@ -623,8 +621,7 @@ HB_FUNC_STATIC( QSETTINGS_STATUS )
   QSettings * obj = (QSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 
@@ -664,8 +661,7 @@ static Format defaultFormat ()
 */
 HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 {
-  int i = QSettings::defaultFormat (  );
-  hb_retni( i );
+  hb_retni( QSettings::defaultFormat (  ) );
 }
 
 

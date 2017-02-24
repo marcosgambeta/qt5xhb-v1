@@ -125,8 +125,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_UPDATEMODE )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->updateMode (  );
-    hb_retni( i );
+    hb_retni( obj->updateMode (  ) );
   }
 #endif
 }
@@ -206,8 +205,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedPositioningMethods (  );
-    hb_retni( i );
+    hb_retni( obj->supportedPositioningMethods (  ) );
   }
 #endif
 }
@@ -237,8 +235,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_ERROR )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

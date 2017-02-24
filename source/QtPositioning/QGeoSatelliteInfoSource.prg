@@ -169,8 +169,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ERROR )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

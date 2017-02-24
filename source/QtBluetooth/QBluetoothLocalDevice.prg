@@ -197,8 +197,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS )
   if( obj )
   {
     QBluetoothAddress * par1 = (QBluetoothAddress *) _qtxhb_itemGetPtr(1);
-    int i = obj->pairingStatus ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->pairingStatus ( *par1 ) );
   }
 #endif
 }
@@ -230,8 +229,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_HOSTMODE )
   QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->hostMode (  );
-    hb_retni( i );
+    hb_retni( obj->hostMode (  ) );
   }
 #endif
 }

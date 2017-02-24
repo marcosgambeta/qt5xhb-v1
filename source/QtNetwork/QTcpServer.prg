@@ -251,8 +251,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
   QTcpServer * obj = (QTcpServer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->serverError (  );
-    hb_retni( i );
+    hb_retni( obj->serverError (  ) );
   }
 }
 

@@ -200,8 +200,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
   QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->capabilities (  );
-    hb_retni( i );
+    hb_retni( obj->capabilities (  ) );
   }
 }
 
@@ -368,8 +367,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
   QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->blurHints (  );
-    hb_retni( i );
+    hb_retni( obj->blurHints (  ) );
   }
 }
 

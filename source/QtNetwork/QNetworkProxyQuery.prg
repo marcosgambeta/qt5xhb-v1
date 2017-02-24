@@ -387,8 +387,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->queryType (  );
-    hb_retni( i );
+    hb_retni( obj->queryType (  ) );
   }
 }
 

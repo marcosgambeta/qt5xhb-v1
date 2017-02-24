@@ -381,8 +381,7 @@ HB_FUNC_STATIC( QSERIALPORT_DATABITS )
   QSerialPort * obj = (QSerialPort *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->dataBits (  );
-    hb_retni( i );
+    hb_retni( obj->dataBits (  ) );
   }
 #endif
 }
@@ -413,8 +412,7 @@ HB_FUNC_STATIC( QSERIALPORT_PARITY )
   QSerialPort * obj = (QSerialPort *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->parity (  );
-    hb_retni( i );
+    hb_retni( obj->parity (  ) );
   }
 #endif
 }
@@ -445,8 +443,7 @@ HB_FUNC_STATIC( QSERIALPORT_STOPBITS )
   QSerialPort * obj = (QSerialPort *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->stopBits (  );
-    hb_retni( i );
+    hb_retni( obj->stopBits (  ) );
   }
 #endif
 }
@@ -477,8 +474,7 @@ HB_FUNC_STATIC( QSERIALPORT_FLOWCONTROL )
   QSerialPort * obj = (QSerialPort *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flowControl (  );
-    hb_retni( i );
+    hb_retni( obj->flowControl (  ) );
   }
 #endif
 }
@@ -553,8 +549,7 @@ HB_FUNC_STATIC( QSERIALPORT_PINOUTSIGNALS )
   QSerialPort * obj = (QSerialPort *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->pinoutSignals (  );
-    hb_retni( i );
+    hb_retni( obj->pinoutSignals (  ) );
   }
 #endif
 }
@@ -631,8 +626,7 @@ HB_FUNC_STATIC( QSERIALPORT_DATAERRORPOLICY )
   QSerialPort * obj = (QSerialPort *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->dataErrorPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->dataErrorPolicy (  ) );
   }
 #endif
 }
@@ -647,8 +641,7 @@ HB_FUNC_STATIC( QSERIALPORT_ERROR )
   QSerialPort * obj = (QSerialPort *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

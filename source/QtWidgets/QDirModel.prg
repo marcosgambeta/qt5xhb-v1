@@ -348,8 +348,7 @@ HB_FUNC_STATIC( QDIRMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->flags ( *par1 ) );
   }
 }
 
@@ -393,8 +392,7 @@ HB_FUNC_STATIC( QDIRMODEL_SUPPORTEDDROPACTIONS )
   QDirModel * obj = (QDirModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( obj->supportedDropActions (  ) );
   }
 }
 
@@ -488,8 +486,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILTER )
   QDirModel * obj = (QDirModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->filter (  );
-    hb_retni( i );
+    hb_retni( obj->filter (  ) );
   }
 }
 
@@ -517,8 +514,7 @@ HB_FUNC_STATIC( QDIRMODEL_SORTING )
   QDirModel * obj = (QDirModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sorting (  );
-    hb_retni( i );
+    hb_retni( obj->sorting (  ) );
   }
 }
 

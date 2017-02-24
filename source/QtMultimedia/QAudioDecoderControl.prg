@@ -268,8 +268,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_STATE )
   QAudioDecoderControl * obj = (QAudioDecoderControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

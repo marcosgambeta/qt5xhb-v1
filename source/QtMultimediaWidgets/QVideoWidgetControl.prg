@@ -123,8 +123,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ASPECTRATIOMODE )
   QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->aspectRatioMode (  );
-    hb_retni( i );
+    hb_retni( obj->aspectRatioMode (  ) );
   }
 }
 

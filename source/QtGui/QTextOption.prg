@@ -201,8 +201,7 @@ HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
   QTextOption * obj = (QTextOption *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -230,8 +229,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
   QTextOption * obj = (QTextOption *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( obj->textDirection (  ) );
   }
 }
 
@@ -259,8 +257,7 @@ HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
   QTextOption * obj = (QTextOption *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->wrapMode (  );
-    hb_retni( i );
+    hb_retni( obj->wrapMode (  ) );
   }
 }
 
@@ -288,8 +285,7 @@ HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
   QTextOption * obj = (QTextOption *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

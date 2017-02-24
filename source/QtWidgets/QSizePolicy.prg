@@ -172,8 +172,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
   QSizePolicy * obj = (QSizePolicy *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->controlType (  );
-    hb_retni( i );
+    hb_retni( obj->controlType (  ) );
   }
 }
 
@@ -186,8 +185,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
   QSizePolicy * obj = (QSizePolicy *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( obj->expandingDirections (  ) );
   }
 }
 
@@ -226,8 +224,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
   QSizePolicy * obj = (QSizePolicy *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->horizontalPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->horizontalPolicy (  ) );
   }
 }
 
@@ -368,8 +365,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
   QSizePolicy * obj = (QSizePolicy *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->verticalPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->verticalPolicy (  ) );
   }
 }
 

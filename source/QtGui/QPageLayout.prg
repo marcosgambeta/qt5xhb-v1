@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MODE )
   QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mode (  );
-    hb_retni( i );
+    hb_retni( obj->mode (  ) );
   }
 }
 
@@ -284,8 +283,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
   QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -312,8 +310,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
   QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->units (  );
-    hb_retni( i );
+    hb_retni( obj->units (  ) );
   }
 }
 

@@ -120,8 +120,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
   QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 

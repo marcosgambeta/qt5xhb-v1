@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->attachment (  );
-    hb_retni( i );
+    hb_retni( obj->attachment (  ) );
   }
 }
 

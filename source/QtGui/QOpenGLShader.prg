@@ -120,8 +120,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_SHADERTYPE )
   QOpenGLShader * obj = (QOpenGLShader *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->shaderType (  );
-    hb_retni( i );
+    hb_retni( obj->shaderType (  ) );
   }
 }
 

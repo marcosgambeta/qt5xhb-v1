@@ -252,8 +252,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->defaultDropAction (  );
-    hb_retni( i );
+    hb_retni( obj->defaultDropAction (  ) );
   }
 }
 
@@ -280,8 +279,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPMODE )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->dragDropMode (  );
-    hb_retni( i );
+    hb_retni( obj->dragDropMode (  ) );
   }
 }
 
@@ -360,8 +358,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDITTRIGGERS )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->editTriggers (  );
-    hb_retni( i );
+    hb_retni( obj->editTriggers (  ) );
   }
 }
 
@@ -414,8 +411,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->horizontalScrollMode (  );
-    hb_retni( i );
+    hb_retni( obj->horizontalScrollMode (  ) );
   }
 }
 
@@ -750,8 +746,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->selectionBehavior (  );
-    hb_retni( i );
+    hb_retni( obj->selectionBehavior (  ) );
   }
 }
 
@@ -778,8 +773,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->selectionMode (  );
-    hb_retni( i );
+    hb_retni( obj->selectionMode (  ) );
   }
 }
 
@@ -886,8 +880,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textElideMode (  );
-    hb_retni( i );
+    hb_retni( obj->textElideMode (  ) );
   }
 }
 
@@ -914,8 +907,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VERTICALSCROLLMODE )
   QAbstractItemView * obj = (QAbstractItemView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->verticalScrollMode (  );
-    hb_retni( i );
+    hb_retni( obj->verticalScrollMode (  ) );
   }
 }
 

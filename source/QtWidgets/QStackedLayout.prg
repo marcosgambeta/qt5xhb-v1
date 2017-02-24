@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
   QStackedLayout * obj = (QStackedLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->stackingMode (  );
-    hb_retni( i );
+    hb_retni( obj->stackingMode (  ) );
   }
 }
 

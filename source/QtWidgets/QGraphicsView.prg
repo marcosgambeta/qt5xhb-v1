@@ -240,8 +240,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -268,8 +267,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->cacheMode (  );
-    hb_retni( i );
+    hb_retni( obj->cacheMode (  ) );
   }
 }
 
@@ -350,8 +348,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->dragMode (  );
-    hb_retni( i );
+    hb_retni( obj->dragMode (  ) );
   }
 }
 
@@ -865,8 +862,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->optimizationFlags (  );
-    hb_retni( i );
+    hb_retni( obj->optimizationFlags (  ) );
   }
 }
 
@@ -897,8 +893,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->renderHints (  );
-    hb_retni( i );
+    hb_retni( obj->renderHints (  ) );
   }
 }
 
@@ -953,8 +948,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->resizeAnchor (  );
-    hb_retni( i );
+    hb_retni( obj->resizeAnchor (  ) );
   }
 }
 
@@ -982,8 +976,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->rubberBandSelectionMode (  );
-    hb_retni( i );
+    hb_retni( obj->rubberBandSelectionMode (  ) );
   }
 }
 
@@ -1375,8 +1368,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->transformationAnchor (  );
-    hb_retni( i );
+    hb_retni( obj->transformationAnchor (  ) );
   }
 }
 
@@ -1419,8 +1411,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
   QGraphicsView * obj = (QGraphicsView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->viewportUpdateMode (  );
-    hb_retni( i );
+    hb_retni( obj->viewportUpdateMode (  ) );
   }
 }
 

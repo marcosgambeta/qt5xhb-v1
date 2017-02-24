@@ -210,8 +210,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AVAILABILITY )
   QMediaRecorder * obj = (QMediaRecorder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->availability (  );
-    hb_retni( i );
+    hb_retni( obj->availability (  ) );
   }
 }
 
@@ -278,8 +277,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ERROR )
   QMediaRecorder * obj = (QMediaRecorder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -478,8 +476,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STATE )
   QMediaRecorder * obj = (QMediaRecorder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -492,8 +489,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STATUS )
   QMediaRecorder * obj = (QMediaRecorder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
   QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fontFilters (  );
-    hb_retni( i );
+    hb_retni( obj->fontFilters (  ) );
   }
 }
 
@@ -175,8 +174,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
   QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->writingSystem (  );
-    hb_retni( i );
+    hb_retni( obj->writingSystem (  ) );
   }
 }
 

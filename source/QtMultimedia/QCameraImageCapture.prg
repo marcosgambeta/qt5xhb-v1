@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_AVAILABILITY )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->availability (  );
-    hb_retni( i );
+    hb_retni( obj->availability (  ) );
   }
 }
 
@@ -153,8 +152,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_BUFFERFORMAT )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->bufferFormat (  );
-    hb_retni( i );
+    hb_retni( obj->bufferFormat (  ) );
   }
 }
 
@@ -167,8 +165,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTUREDESTINATION )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->captureDestination (  );
-    hb_retni( i );
+    hb_retni( obj->captureDestination (  ) );
   }
 }
 
@@ -195,8 +192,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERROR )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

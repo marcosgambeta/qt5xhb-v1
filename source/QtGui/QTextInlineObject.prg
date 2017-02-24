@@ -246,8 +246,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
   QTextInlineObject * obj = (QTextInlineObject *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( obj->textDirection (  ) );
   }
 }
 

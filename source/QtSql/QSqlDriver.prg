@@ -293,8 +293,7 @@ HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
   QSqlDriver * obj = (QSqlDriver *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->numericalPrecisionPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->numericalPrecisionPolicy (  ) );
   }
 }
 

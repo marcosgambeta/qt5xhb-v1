@@ -172,8 +172,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
   QPrintDialog * obj = (QPrintDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( obj->options (  ) );
   }
 }
 

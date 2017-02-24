@@ -322,8 +322,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SECURITYFLAGS )
   QBluetoothServer * obj = (QBluetoothServer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->securityFlags (  );
-    hb_retni( i );
+    hb_retni( obj->securityFlags (  ) );
   }
 #endif
 }
@@ -338,8 +337,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERTYPE )
   QBluetoothServer * obj = (QBluetoothServer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->serverType (  );
-    hb_retni( i );
+    hb_retni( obj->serverType (  ) );
   }
 #endif
 }
@@ -354,8 +352,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
   QBluetoothServer * obj = (QBluetoothServer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

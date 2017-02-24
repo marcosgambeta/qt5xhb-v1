@@ -198,8 +198,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ALIGNMENT )
   if( obj )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
-    int i = obj->alignment ( par1 );
-    hb_retni( i );
+    hb_retni( obj->alignment ( par1 ) );
   }
 }
 
@@ -254,8 +253,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
   QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 

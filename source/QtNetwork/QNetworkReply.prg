@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
   QNetworkReply * obj = (QNetworkReply *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -290,8 +289,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
   QNetworkReply * obj = (QNetworkReply *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->operation (  );
-    hb_retni( i );
+    hb_retni( obj->operation (  ) );
   }
 }
 

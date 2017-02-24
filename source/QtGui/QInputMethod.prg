@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
   QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->inputDirection (  );
-    hb_retni( i );
+    hb_retni( obj->inputDirection (  ) );
   }
 }
 

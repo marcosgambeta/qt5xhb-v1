@@ -132,8 +132,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modelChangeType (  );
-    hb_retni( i );
+    hb_retni( obj->modelChangeType (  ) );
   }
 }
 

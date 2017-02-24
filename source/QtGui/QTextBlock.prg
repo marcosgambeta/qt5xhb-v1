@@ -343,8 +343,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
   QTextBlock * obj = (QTextBlock *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( obj->textDirection (  ) );
   }
 }
 

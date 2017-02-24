@@ -216,8 +216,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
   QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

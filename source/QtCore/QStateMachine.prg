@@ -197,8 +197,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
   QStateMachine * obj = (QStateMachine *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -352,8 +351,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
   QStateMachine * obj = (QStateMachine *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->globalRestorePolicy (  );
-    hb_retni( i );
+    hb_retni( obj->globalRestorePolicy (  ) );
   }
 }
 

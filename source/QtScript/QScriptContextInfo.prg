@@ -259,8 +259,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
   QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->functionType (  );
-    hb_retni( i );
+    hb_retni( obj->functionType (  ) );
   }
 }
 

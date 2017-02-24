@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -435,8 +434,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->pageBreakPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->pageBreakPolicy (  ) );
   }
 }
 

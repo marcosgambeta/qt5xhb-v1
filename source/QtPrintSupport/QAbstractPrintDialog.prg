@@ -158,8 +158,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->printRange (  );
-    hb_retni( i );
+    hb_retni( obj->printRange (  ) );
   }
 }
 
@@ -294,8 +293,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ENABLEDOPTIONS )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->enabledOptions (  );
-    hb_retni( i );
+    hb_retni( obj->enabledOptions (  ) );
   }
 }
 

@@ -324,8 +324,7 @@ HB_FUNC_STATIC( QCURSOR_SHAPE )
   QCursor * obj = (QCursor *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->shape (  );
-    hb_retni( i );
+    hb_retni( obj->shape (  ) );
   }
 }
 

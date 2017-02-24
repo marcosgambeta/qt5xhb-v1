@@ -184,8 +184,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTERSERVICE )
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    int i = obj->registerService ( par1 );
-    hb_retni( i );
+    hb_retni( obj->registerService ( par1 ) );
   }
 }
 

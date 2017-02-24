@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_REASON )
   QFocusEvent * obj = (QFocusEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->reason (  );
-    hb_retni( i );
+    hb_retni( obj->reason (  ) );
   }
 }
 

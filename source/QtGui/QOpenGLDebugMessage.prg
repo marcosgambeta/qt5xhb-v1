@@ -158,8 +158,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->source (  );
-    hb_retni( i );
+    hb_retni( obj->source (  ) );
   }
 }
 
@@ -172,8 +171,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 
@@ -186,8 +184,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->severity (  );
-    hb_retni( i );
+    hb_retni( obj->severity (  ) );
   }
 }
 

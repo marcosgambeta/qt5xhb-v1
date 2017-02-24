@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
   QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( obj->modifiers (  ) );
   }
 }
 

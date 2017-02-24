@@ -138,8 +138,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
   QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->frameShadow (  );
-    hb_retni( i );
+    hb_retni( obj->frameShadow (  ) );
   }
 }
 
@@ -152,8 +151,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
   QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->frameShape (  );
-    hb_retni( i );
+    hb_retni( obj->frameShape (  ) );
   }
 }
 

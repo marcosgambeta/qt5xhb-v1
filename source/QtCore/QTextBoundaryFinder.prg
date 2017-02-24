@@ -233,8 +233,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 
@@ -354,8 +353,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->boundaryReasons (  );
-    hb_retni( i );
+    hb_retni( obj->boundaryReasons (  ) );
   }
 }
 

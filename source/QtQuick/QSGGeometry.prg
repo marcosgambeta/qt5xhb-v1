@@ -174,8 +174,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_INDEXDATAPATTERN )
   QSGGeometry * obj = (QSGGeometry *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->indexDataPattern (  );
-    hb_retni( i );
+    hb_retni( obj->indexDataPattern (  ) );
   }
 }
 
@@ -348,8 +347,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_VERTEXDATAPATTERN )
   QSGGeometry * obj = (QSGGeometry *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->vertexDataPattern (  );
-    hb_retni( i );
+    hb_retni( obj->vertexDataPattern (  ) );
   }
 }
 

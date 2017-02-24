@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QQUICKITEM_ACCEPTEDMOUSEBUTTONS )
   QQuickItem * obj = (QQuickItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->acceptedMouseButtons (  );
-    hb_retni( i );
+    hb_retni( obj->acceptedMouseButtons (  ) );
   }
 }
 
@@ -340,8 +339,7 @@ HB_FUNC_STATIC( QQUICKITEM_FLAGS )
   QQuickItem * obj = (QQuickItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 
@@ -1255,8 +1253,7 @@ HB_FUNC_STATIC( QQUICKITEM_TRANSFORMORIGIN )
   QQuickItem * obj = (QQuickItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->transformOrigin (  );
-    hb_retni( i );
+    hb_retni( obj->transformOrigin (  ) );
   }
 }
 

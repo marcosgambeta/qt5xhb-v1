@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERROR )
   QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

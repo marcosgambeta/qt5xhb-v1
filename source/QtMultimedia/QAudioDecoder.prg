@@ -175,8 +175,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ERROR )
   QAudioDecoder * obj = (QAudioDecoder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -301,8 +300,7 @@ HB_FUNC_STATIC( QAUDIODECODER_STATE )
   QAudioDecoder * obj = (QAudioDecoder *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -350,8 +348,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
 par2 << temp;
 }
-  int i = QAudioDecoder::hasSupport ( par1, par2 );
-  hb_retni( i );
+  hb_retni( QAudioDecoder::hasSupport ( par1, par2 ) );
 }
 
 

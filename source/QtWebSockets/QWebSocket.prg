@@ -181,8 +181,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ERROR )
   QWebSocket * obj = (QWebSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }
@@ -273,8 +272,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PAUSEMODE )
   QWebSocket * obj = (QWebSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->pauseMode (  );
-    hb_retni( i );
+    hb_retni( obj->pauseMode (  ) );
   }
 #endif
 }
@@ -462,8 +460,7 @@ HB_FUNC_STATIC( QWEBSOCKET_STATE )
   QWebSocket * obj = (QWebSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 #endif
 }
@@ -478,8 +475,7 @@ HB_FUNC_STATIC( QWEBSOCKET_VERSION )
   QWebSocket * obj = (QWebSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->version (  );
-    hb_retni( i );
+    hb_retni( obj->version (  ) );
   }
 #endif
 }
@@ -540,8 +536,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSECODE )
   QWebSocket * obj = (QWebSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->closeCode (  );
-    hb_retni( i );
+    hb_retni( obj->closeCode (  ) );
   }
 #endif
 }

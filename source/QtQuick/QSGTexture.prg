@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QSGTEXTURE_FILTERING )
   QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->filtering (  );
-    hb_retni( i );
+    hb_retni( obj->filtering (  ) );
   }
 }
 
@@ -179,8 +178,7 @@ HB_FUNC_STATIC( QSGTEXTURE_HORIZONTALWRAPMODE )
   QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->horizontalWrapMode (  );
-    hb_retni( i );
+    hb_retni( obj->horizontalWrapMode (  ) );
   }
 }
 
@@ -206,8 +204,7 @@ HB_FUNC_STATIC( QSGTEXTURE_MIPMAPFILTERING )
   QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mipmapFiltering (  );
-    hb_retni( i );
+    hb_retni( obj->mipmapFiltering (  ) );
   }
 }
 
@@ -349,8 +346,7 @@ HB_FUNC_STATIC( QSGTEXTURE_VERTICALWRAPMODE )
   QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->verticalWrapMode (  );
-    hb_retni( i );
+    hb_retni( obj->verticalWrapMode (  ) );
   }
 }
 

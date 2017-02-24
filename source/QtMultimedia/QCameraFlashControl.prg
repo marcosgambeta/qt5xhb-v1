@@ -93,8 +93,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
   QCameraFlashControl * obj = (QCameraFlashControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flashMode (  );
-    hb_retni( i );
+    hb_retni( obj->flashMode (  ) );
   }
 }
 

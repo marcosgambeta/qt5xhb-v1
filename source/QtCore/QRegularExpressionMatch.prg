@@ -440,8 +440,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_MATCHOPTIONS )
   QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->matchOptions (  );
-    hb_retni( i );
+    hb_retni( obj->matchOptions (  ) );
   }
 }
 
@@ -454,8 +453,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_MATCHTYPE )
   QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->matchType (  );
-    hb_retni( i );
+    hb_retni( obj->matchType (  ) );
   }
 }
 

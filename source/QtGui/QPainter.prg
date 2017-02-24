@@ -382,8 +382,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
   QPainter * obj = (QPainter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->backgroundMode (  );
-    hb_retni( i );
+    hb_retni( obj->backgroundMode (  ) );
   }
 }
 
@@ -584,8 +583,7 @@ HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
   QPainter * obj = (QPainter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->compositionMode (  );
-    hb_retni( i );
+    hb_retni( obj->compositionMode (  ) );
   }
 }
 
@@ -2825,8 +2823,7 @@ HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
   QPainter * obj = (QPainter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->layoutDirection (  );
-    hb_retni( i );
+    hb_retni( obj->layoutDirection (  ) );
   }
 }
 
@@ -2880,8 +2877,7 @@ HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
   QPainter * obj = (QPainter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->renderHints (  );
-    hb_retni( i );
+    hb_retni( obj->renderHints (  ) );
   }
 }
 

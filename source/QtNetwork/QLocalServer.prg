@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
   QLocalServer * obj = (QLocalServer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->serverError (  );
-    hb_retni( i );
+    hb_retni( obj->serverError (  ) );
   }
 }
 

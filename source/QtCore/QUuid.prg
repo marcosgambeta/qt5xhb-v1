@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QUUID_VARIANT )
   QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->variant (  );
-    hb_retni( i );
+    hb_retni( obj->variant (  ) );
   }
 }
 
@@ -257,8 +256,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
   QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->version (  );
-    hb_retni( i );
+    hb_retni( obj->version (  ) );
   }
 }
 

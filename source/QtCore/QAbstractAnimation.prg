@@ -164,8 +164,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
   QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( obj->direction (  ) );
   }
 }
 
@@ -245,8 +244,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
   QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

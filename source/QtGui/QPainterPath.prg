@@ -867,8 +867,7 @@ HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
   QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fillRule (  );
-    hb_retni( i );
+    hb_retni( obj->fillRule (  ) );
   }
 }
 

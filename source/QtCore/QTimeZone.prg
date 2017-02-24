@@ -313,8 +313,7 @@ HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
   QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->country (  );
-    hb_retni( i );
+    hb_retni( obj->country (  ) );
   }
 #endif
 }

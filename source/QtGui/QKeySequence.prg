@@ -292,8 +292,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
   if( obj )
   {
     QKeySequence * par1 = (QKeySequence *) _qtxhb_itemGetPtr(1);
-    int i = obj->matches ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->matches ( *par1 ) );
   }
 }
 

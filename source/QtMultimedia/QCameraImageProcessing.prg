@@ -267,8 +267,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_WHITEBALANCEMODE )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->whiteBalanceMode (  );
-    hb_retni( i );
+    hb_retni( obj->whiteBalanceMode (  ) );
   }
 }
 

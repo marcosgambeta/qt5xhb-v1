@@ -303,8 +303,7 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
   QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->streamType ( (int) hb_parni(1) );
-    hb_retni( i );
+    hb_retni( obj->streamType ( (int) hb_parni(1) ) );
   }
 }
 

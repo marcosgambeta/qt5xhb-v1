@@ -221,8 +221,7 @@ HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
   QSslKey * obj = (QSslKey *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->algorithm (  );
-    hb_retni( i );
+    hb_retni( obj->algorithm (  ) );
   }
 }
 
@@ -306,8 +305,7 @@ HB_FUNC_STATIC( QSSLKEY_TYPE )
   QSslKey * obj = (QSslKey *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

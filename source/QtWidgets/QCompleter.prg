@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
   QCompleter * obj = (QCompleter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->caseSensitivity (  );
-    hb_retni( i );
+    hb_retni( obj->caseSensitivity (  ) );
   }
 }
 
@@ -257,8 +256,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
   QCompleter * obj = (QCompleter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->completionMode (  );
-    hb_retni( i );
+    hb_retni( obj->completionMode (  ) );
   }
 }
 
@@ -378,8 +376,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
   QCompleter * obj = (QCompleter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modelSorting (  );
-    hb_retni( i );
+    hb_retni( obj->modelSorting (  ) );
   }
 }
 

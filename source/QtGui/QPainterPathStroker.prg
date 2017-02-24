@@ -133,8 +133,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
   QPainterPathStroker * obj = (QPainterPathStroker *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->capStyle (  );
-    hb_retni( i );
+    hb_retni( obj->capStyle (  ) );
   }
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
   QPainterPathStroker * obj = (QPainterPathStroker *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->joinStyle (  );
-    hb_retni( i );
+    hb_retni( obj->joinStyle (  ) );
   }
 }
 

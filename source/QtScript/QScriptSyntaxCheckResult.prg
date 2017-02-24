@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

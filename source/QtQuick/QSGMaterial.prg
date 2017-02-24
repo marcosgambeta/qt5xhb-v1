@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
   QSGMaterial * obj = (QSGMaterial *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

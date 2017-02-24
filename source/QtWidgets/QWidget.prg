@@ -641,8 +641,7 @@ HB_FUNC_STATIC( QWIDGET_BACKGROUNDROLE )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->backgroundRole (  );
-    hb_retni( i );
+    hb_retni( obj->backgroundRole (  ) );
   }
 }
 
@@ -860,8 +859,7 @@ HB_FUNC_STATIC( QWIDGET_CONTEXTMENUPOLICY )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->contextMenuPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->contextMenuPolicy (  ) );
   }
 }
 
@@ -963,8 +961,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPOLICY )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->focusPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->focusPolicy (  ) );
   }
 }
 
@@ -1075,8 +1072,7 @@ HB_FUNC_STATIC( QWIDGET_FOREGROUNDROLE )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->foregroundRole (  );
-    hb_retni( i );
+    hb_retni( obj->foregroundRole (  ) );
   }
 }
 
@@ -1378,8 +1374,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTMETHODHINTS )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->inputMethodHints (  );
-    hb_retni( i );
+    hb_retni( obj->inputMethodHints (  ) );
   }
 }
 
@@ -1663,8 +1658,7 @@ HB_FUNC_STATIC( QWIDGET_LAYOUTDIRECTION )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->layoutDirection (  );
-    hb_retni( i );
+    hb_retni( obj->layoutDirection (  ) );
   }
 }
 
@@ -3170,8 +3164,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWMODALITY )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->windowModality (  );
-    hb_retni( i );
+    hb_retni( obj->windowModality (  ) );
   }
 }
 
@@ -3689,8 +3682,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFLAGS )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->windowFlags (  );
-    hb_retni( i );
+    hb_retni( obj->windowFlags (  ) );
   }
 }
 
@@ -3812,8 +3804,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWSTATE )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->windowState (  );
-    hb_retni( i );
+    hb_retni( obj->windowState (  ) );
   }
 }
 
@@ -3854,8 +3845,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTYPE )
   QWidget * obj = (QWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->windowType (  );
-    hb_retni( i );
+    hb_retni( obj->windowType (  ) );
   }
 }
 

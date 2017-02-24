@@ -727,8 +727,7 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
   QDomNode * obj = (QDomNode *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->nodeType (  );
-    hb_retni( i );
+    hb_retni( obj->nodeType (  ) );
   }
 }
 

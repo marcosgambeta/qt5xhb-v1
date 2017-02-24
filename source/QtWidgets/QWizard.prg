@@ -302,8 +302,7 @@ HB_FUNC_STATIC( QWIZARD_OPTIONS )
   QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( obj->options (  ) );
   }
 }
 
@@ -545,8 +544,7 @@ HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
   QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->subTitleFormat (  );
-    hb_retni( i );
+    hb_retni( obj->subTitleFormat (  ) );
   }
 }
 
@@ -587,8 +585,7 @@ HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
   QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->titleFormat (  );
-    hb_retni( i );
+    hb_retni( obj->titleFormat (  ) );
   }
 }
 
@@ -642,8 +639,7 @@ HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
   QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->wizardStyle (  );
-    hb_retni( i );
+    hb_retni( obj->wizardStyle (  ) );
   }
 }
 

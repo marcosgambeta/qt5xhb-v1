@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
   QToolButton * obj = (QToolButton *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->arrowType (  );
-    hb_retni( i );
+    hb_retni( obj->arrowType (  ) );
   }
 }
 
@@ -181,8 +180,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
   QToolButton * obj = (QToolButton *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->popupMode (  );
-    hb_retni( i );
+    hb_retni( obj->popupMode (  ) );
   }
 }
 
@@ -254,8 +252,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
   QToolButton * obj = (QToolButton *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->toolButtonStyle (  );
-    hb_retni( i );
+    hb_retni( obj->toolButtonStyle (  ) );
   }
 }
 

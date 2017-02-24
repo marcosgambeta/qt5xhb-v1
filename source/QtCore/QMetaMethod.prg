@@ -253,8 +253,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
   QMetaMethod * obj = (QMetaMethod *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->access (  );
-    hb_retni( i );
+    hb_retni( obj->access (  ) );
   }
 }
 
@@ -267,8 +266,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
   QMetaMethod * obj = (QMetaMethod *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->methodType (  );
-    hb_retni( i );
+    hb_retni( obj->methodType (  ) );
   }
 }
 

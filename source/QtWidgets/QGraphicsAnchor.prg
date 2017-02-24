@@ -123,8 +123,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sizePolicy (  );
-    hb_retni( i );
+    hb_retni( obj->sizePolicy (  ) );
   }
 }
 

@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_FILTERING )
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->filtering (  );
-    hb_retni( i );
+    hb_retni( obj->filtering (  ) );
   }
 }
 

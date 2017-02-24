@@ -455,8 +455,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SOCKETPROTOCOL )
   QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->socketProtocol (  );
-    hb_retni( i );
+    hb_retni( obj->socketProtocol (  ) );
   }
 #endif
 }

@@ -319,8 +319,7 @@ HB_FUNC_STATIC( QIODEVICE_OPENMODE )
   QIODevice * obj = (QIODevice *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->openMode (  );
-    hb_retni( i );
+    hb_retni( obj->openMode (  ) );
   }
 }
 

@@ -404,8 +404,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
   QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->originCorner (  );
-    hb_retni( i );
+    hb_retni( obj->originCorner (  ) );
   }
 }
 
@@ -609,8 +608,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
   QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( obj->expandingDirections (  ) );
   }
 }
 

@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
   QCameraFocus * obj = (QCameraFocus *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->focusMode (  );
-    hb_retni( i );
+    hb_retni( obj->focusMode (  ) );
   }
 }
 
@@ -135,8 +134,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
   QCameraFocus * obj = (QCameraFocus *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->focusPointMode (  );
-    hb_retni( i );
+    hb_retni( obj->focusPointMode (  ) );
   }
 }
 

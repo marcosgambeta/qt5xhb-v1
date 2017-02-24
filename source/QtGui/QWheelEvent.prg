@@ -223,8 +223,7 @@ HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
   QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -345,8 +344,7 @@ HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
   QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->buttons (  );
-    hb_retni( i );
+    hb_retni( obj->buttons (  ) );
   }
 }
 

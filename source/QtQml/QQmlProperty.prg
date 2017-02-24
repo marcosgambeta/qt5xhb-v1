@@ -555,8 +555,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPECATEGORY )
   QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->propertyTypeCategory (  );
-    hb_retni( i );
+    hb_retni( obj->propertyTypeCategory (  ) );
   }
 }
 
@@ -674,8 +673,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
   QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

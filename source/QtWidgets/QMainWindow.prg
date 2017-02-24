@@ -314,8 +314,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CORNER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->corner (  (Qt::Corner) par1 );
-    hb_retni( i );
+    hb_retni( obj->corner (  (Qt::Corner) par1 ) );
   }
 }
 
@@ -342,8 +341,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
   QMainWindow * obj = (QMainWindow *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->dockOptions (  );
-    hb_retni( i );
+    hb_retni( obj->dockOptions (  ) );
   }
 }
 
@@ -357,8 +355,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
   if( obj )
   {
     QDockWidget * par1 = (QDockWidget *) _qtxhb_itemGetPtr(1);
-    int i = obj->dockWidgetArea ( par1 );
-    hb_retni( i );
+    hb_retni( obj->dockWidgetArea ( par1 ) );
   }
 }
 
@@ -769,8 +766,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->tabPosition (  (Qt::DockWidgetArea) par1 );
-    hb_retni( i );
+    hb_retni( obj->tabPosition (  (Qt::DockWidgetArea) par1 ) );
   }
 }
 
@@ -783,8 +779,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
   QMainWindow * obj = (QMainWindow *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->tabShape (  );
-    hb_retni( i );
+    hb_retni( obj->tabShape (  ) );
   }
 }
 
@@ -815,8 +810,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
   if( obj )
   {
     QToolBar * par1 = (QToolBar *) _qtxhb_itemGetPtr(1);
-    int i = obj->toolBarArea ( par1 );
-    hb_retni( i );
+    hb_retni( obj->toolBarArea ( par1 ) );
   }
 }
 
@@ -843,8 +837,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
   QMainWindow * obj = (QMainWindow *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->toolButtonStyle (  );
-    hb_retni( i );
+    hb_retni( obj->toolButtonStyle (  ) );
   }
 }
 

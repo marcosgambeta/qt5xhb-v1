@@ -358,8 +358,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
   QDateTimeEdit * obj = (QDateTimeEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->currentSection (  );
-    hb_retni( i );
+    hb_retni( obj->currentSection (  ) );
   }
 }
 
@@ -426,8 +425,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
   QDateTimeEdit * obj = (QDateTimeEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->displayedSections (  );
-    hb_retni( i );
+    hb_retni( obj->displayedSections (  ) );
   }
 }
 
@@ -524,8 +522,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
   QDateTimeEdit * obj = (QDateTimeEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sectionAt ( (int) hb_parni(1) );
-    hb_retni( i );
+    hb_retni( obj->sectionAt ( (int) hb_parni(1) ) );
   }
 }
 
@@ -820,8 +817,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
   QDateTimeEdit * obj = (QDateTimeEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->timeSpec (  );
-    hb_retni( i );
+    hb_retni( obj->timeSpec (  ) );
   }
 }
 

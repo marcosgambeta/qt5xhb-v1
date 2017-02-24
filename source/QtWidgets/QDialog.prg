@@ -309,8 +309,7 @@ HB_FUNC_STATIC( QDIALOG_ORIENTATION )
   QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 

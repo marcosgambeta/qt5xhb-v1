@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
   QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->driveMode (  );
-    hb_retni( i );
+    hb_retni( obj->driveMode (  ) );
   }
 }
 

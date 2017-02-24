@@ -376,8 +376,7 @@ HB_FUNC_STATIC( QLINEF_INTERSECT )
   {
     QLineF * par1 = (QLineF *) _qtxhb_itemGetPtr(1);
     QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
-    int i = obj->intersect ( *par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->intersect ( *par1, par2 ) );
   }
 }
 

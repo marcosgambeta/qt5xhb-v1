@@ -803,8 +803,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->flags ( *par1 ) );
   }
 }
 
@@ -817,8 +816,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SUPPORTEDDROPACTIONS )
   QStandardItemModel * obj = (QStandardItemModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( obj->supportedDropActions (  ) );
   }
 }
 

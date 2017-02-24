@@ -158,8 +158,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
   QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -247,8 +246,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
   QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

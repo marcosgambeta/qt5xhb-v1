@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_CHANGEFLAGS )
   QPinchGesture * obj = (QPinchGesture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->changeFlags (  );
-    hb_retni( i );
+    hb_retni( obj->changeFlags (  ) );
   }
 }
 
@@ -385,8 +384,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALCHANGEFLAGS )
   QPinchGesture * obj = (QPinchGesture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->totalChangeFlags (  );
-    hb_retni( i );
+    hb_retni( obj->totalChangeFlags (  ) );
   }
 }
 

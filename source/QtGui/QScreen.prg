@@ -406,8 +406,7 @@ HB_FUNC_STATIC( QSCREEN_PRIMARYORIENTATION )
   QScreen * obj = (QScreen *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->primaryOrientation (  );
-    hb_retni( i );
+    hb_retni( obj->primaryOrientation (  ) );
   }
 }
 
@@ -420,8 +419,7 @@ HB_FUNC_STATIC( QSCREEN_ORIENTATION )
   QScreen * obj = (QScreen *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -434,8 +432,7 @@ HB_FUNC_STATIC( QSCREEN_ORIENTATIONUPDATEMASK )
   QScreen * obj = (QScreen *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientationUpdateMask (  );
-    hb_retni( i );
+    hb_retni( obj->orientationUpdateMask (  ) );
   }
 }
 

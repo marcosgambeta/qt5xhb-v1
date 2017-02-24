@@ -491,8 +491,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
   QTextStream * obj = (QTextStream *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 
@@ -669,8 +668,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
   QTextStream * obj = (QTextStream *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fieldAlignment (  );
-    hb_retni( i );
+    hb_retni( obj->fieldAlignment (  ) );
   }
 }
 
@@ -754,8 +752,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
   QTextStream * obj = (QTextStream *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->numberFlags (  );
-    hb_retni( i );
+    hb_retni( obj->numberFlags (  ) );
   }
 }
 
@@ -810,8 +807,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
   QTextStream * obj = (QTextStream *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->realNumberNotation (  );
-    hb_retni( i );
+    hb_retni( obj->realNumberNotation (  ) );
   }
 }
 

@@ -312,8 +312,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
   QTextTableFormat * obj = (QTextTableFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 

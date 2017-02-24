@@ -386,8 +386,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
     const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qtxhb_itemGetPtr(2);
     QPoint * par3 = (QPoint *) _qtxhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qtxhb_itemGetPtr(4);
-    int i = obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *par3, par4 );
-    hb_retni( i );
+    hb_retni( obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *par3, par4 ) );
   }
 }
 

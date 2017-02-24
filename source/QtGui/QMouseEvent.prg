@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
   QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->button (  );
-    hb_retni( i );
+    hb_retni( obj->button (  ) );
   }
 }
 
@@ -205,8 +204,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
   QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->buttons (  );
-    hb_retni( i );
+    hb_retni( obj->buttons (  ) );
   }
 }
 

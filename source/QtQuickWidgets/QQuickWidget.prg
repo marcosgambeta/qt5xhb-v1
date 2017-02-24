@@ -276,8 +276,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
   QQuickWidget * obj = (QQuickWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->resizeMode (  );
-    hb_retni( i );
+    hb_retni( obj->resizeMode (  ) );
   }
 #endif
 }
@@ -308,8 +307,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
   QQuickWidget * obj = (QQuickWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 #endif
 }

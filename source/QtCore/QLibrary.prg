@@ -371,8 +371,7 @@ HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
   QLibrary * obj = (QLibrary *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->loadHints (  );
-    hb_retni( i );
+    hb_retni( obj->loadHints (  ) );
   }
 }
 

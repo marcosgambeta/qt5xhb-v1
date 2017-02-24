@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QMOVIE_CACHEMODE )
   QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->cacheMode (  );
-    hb_retni( i );
+    hb_retni( obj->cacheMode (  ) );
   }
 }
 
@@ -521,8 +520,7 @@ HB_FUNC_STATIC( QMOVIE_STATE )
   QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

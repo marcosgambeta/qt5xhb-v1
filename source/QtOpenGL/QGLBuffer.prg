@@ -401,8 +401,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
   QGLBuffer * obj = (QGLBuffer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 
@@ -428,8 +427,7 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
   QGLBuffer * obj = (QGLBuffer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->usagePattern (  );
-    hb_retni( i );
+    hb_retni( obj->usagePattern (  ) );
   }
 }
 

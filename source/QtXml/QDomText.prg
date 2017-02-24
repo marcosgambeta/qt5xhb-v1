@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
   QDomText * obj = (QDomText *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->nodeType (  );
-    hb_retni( i );
+    hb_retni( obj->nodeType (  ) );
   }
 }
 

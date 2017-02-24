@@ -481,8 +481,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->attachment (  );
-    hb_retni( i );
+    hb_retni( obj->attachment (  ) );
   }
 }
 

@@ -132,8 +132,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
   QProgressBar * obj = (QProgressBar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -212,8 +211,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
   QProgressBar * obj = (QProgressBar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -312,8 +310,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
   QProgressBar * obj = (QProgressBar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( obj->textDirection (  ) );
   }
 }
 

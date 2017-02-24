@@ -252,8 +252,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_CHECKSTATE )
   QTableWidgetItem * obj = (QTableWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->checkState (  );
-    hb_retni( i );
+    hb_retni( obj->checkState (  ) );
   }
 }
 
@@ -307,8 +306,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FLAGS )
   QTableWidgetItem * obj = (QTableWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

@@ -227,8 +227,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
   QHeaderView * obj = (QHeaderView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->defaultAlignment (  );
-    hb_retni( i );
+    hb_retni( obj->defaultAlignment (  ) );
   }
 }
 
@@ -516,8 +515,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
   QHeaderView * obj = (QHeaderView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -739,8 +737,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
   QHeaderView * obj = (QHeaderView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sortIndicatorOrder (  );
-    hb_retni( i );
+    hb_retni( obj->sortIndicatorOrder (  ) );
   }
 }
 
@@ -988,8 +985,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
   QHeaderView * obj = (QHeaderView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sectionResizeMode ( (int) hb_parni(1) );
-    hb_retni( i );
+    hb_retni( obj->sectionResizeMode ( (int) hb_parni(1) ) );
   }
 }
 

@@ -97,8 +97,7 @@ HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
-    int i = obj->supportedFeatures ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->supportedFeatures ( *par1 ) );
   }
 }
 

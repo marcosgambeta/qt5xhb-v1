@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
   QSplitterHandle * obj = (QSplitterHandle *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 

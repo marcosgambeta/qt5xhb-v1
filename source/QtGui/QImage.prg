@@ -713,8 +713,7 @@ HB_FUNC_STATIC( QIMAGE_FORMAT )
   QImage * obj = (QImage *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->format (  );
-    hb_retni( i );
+    hb_retni( obj->format (  ) );
   }
 }
 

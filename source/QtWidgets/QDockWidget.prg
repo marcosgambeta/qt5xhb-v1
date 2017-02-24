@@ -166,8 +166,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
   QDockWidget * obj = (QDockWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->allowedAreas (  );
-    hb_retni( i );
+    hb_retni( obj->allowedAreas (  ) );
   }
 }
 
@@ -180,8 +179,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
   QDockWidget * obj = (QDockWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->features (  );
-    hb_retni( i );
+    hb_retni( obj->features (  ) );
   }
 }
 

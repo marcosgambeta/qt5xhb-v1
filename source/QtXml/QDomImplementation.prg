@@ -222,8 +222,7 @@ static InvalidDataPolicy invalidDataPolicy ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
-  int i = QDomImplementation::invalidDataPolicy (  );
-  hb_retni( i );
+  hb_retni( QDomImplementation::invalidDataPolicy (  ) );
 }
 
 

@@ -281,8 +281,7 @@ HB_FUNC_STATIC( QFONT_CAPITALIZATION )
   QFont * obj = (QFont *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->capitalization (  );
-    hb_retni( i );
+    hb_retni( obj->capitalization (  ) );
   }
 }
 
@@ -455,8 +454,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
   QFont * obj = (QFont *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->letterSpacingType (  );
-    hb_retni( i );
+    hb_retni( obj->letterSpacingType (  ) );
   }
 }
 
@@ -894,8 +892,7 @@ HB_FUNC_STATIC( QFONT_STYLE )
   QFont * obj = (QFont *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( obj->style (  ) );
   }
 }
 
@@ -908,8 +905,7 @@ HB_FUNC_STATIC( QFONT_STYLEHINT )
   QFont * obj = (QFont *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->styleHint (  );
-    hb_retni( i );
+    hb_retni( obj->styleHint (  ) );
   }
 }
 
@@ -922,8 +918,7 @@ HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
   QFont * obj = (QFont *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->styleStrategy (  );
-    hb_retni( i );
+    hb_retni( obj->styleStrategy (  ) );
   }
 }
 

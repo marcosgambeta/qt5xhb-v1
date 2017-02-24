@@ -403,8 +403,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SWAPBEHAVIOR )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->swapBehavior (  );
-    hb_retni( i );
+    hb_retni( obj->swapBehavior (  ) );
   }
 }
 
@@ -445,8 +444,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->profile (  );
-    hb_retni( i );
+    hb_retni( obj->profile (  ) );
   }
 }
 
@@ -474,8 +472,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->renderableType (  );
-    hb_retni( i );
+    hb_retni( obj->renderableType (  ) );
   }
 }
 

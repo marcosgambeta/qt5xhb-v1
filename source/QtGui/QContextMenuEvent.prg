@@ -234,8 +234,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->reason (  );
-    hb_retni( i );
+    hb_retni( obj->reason (  ) );
   }
 }
 

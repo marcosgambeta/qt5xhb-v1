@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_PERFORMANCEHINTS )
   QQuickPaintedItem * obj = (QQuickPaintedItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->performanceHints (  );
-    hb_retni( i );
+    hb_retni( obj->performanceHints (  ) );
   }
 }
 
@@ -243,8 +242,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_RENDERTARGET )
   QQuickPaintedItem * obj = (QQuickPaintedItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->renderTarget (  );
-    hb_retni( i );
+    hb_retni( obj->renderTarget (  ) );
   }
 }
 

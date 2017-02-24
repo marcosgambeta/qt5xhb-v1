@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATE )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -193,8 +192,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATUS )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

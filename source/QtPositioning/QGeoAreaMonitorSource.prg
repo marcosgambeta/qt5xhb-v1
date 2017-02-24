@@ -159,8 +159,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ERROR )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }
@@ -175,8 +174,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedAreaMonitorFeatures (  );
-    hb_retni( i );
+    hb_retni( obj->supportedAreaMonitorFeatures (  ) );
   }
 #endif
 }

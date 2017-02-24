@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERROR )
   QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

@@ -537,8 +537,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->propertyTypeCategory (  );
-    hb_retni( i );
+    hb_retni( obj->propertyTypeCategory (  ) );
   }
 }
 
@@ -592,8 +591,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

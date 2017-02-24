@@ -188,8 +188,7 @@ HB_FUNC_STATIC( QCAMERA_CAPTUREMODE )
   QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->captureMode (  );
-    hb_retni( i );
+    hb_retni( obj->captureMode (  ) );
   }
 }
 
@@ -202,8 +201,7 @@ HB_FUNC_STATIC( QCAMERA_ERROR )
   QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -285,8 +283,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS1 )
   QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->lockStatus (  );
-    hb_retni( i );
+    hb_retni( obj->lockStatus (  ) );
   }
 }
 
@@ -300,8 +297,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->lockStatus (  (QCamera::LockType) par1 );
-    hb_retni( i );
+    hb_retni( obj->lockStatus (  (QCamera::LockType) par1 ) );
   }
 }
 
@@ -333,8 +329,7 @@ HB_FUNC_STATIC( QCAMERA_REQUESTEDLOCKS )
   QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->requestedLocks (  );
-    hb_retni( i );
+    hb_retni( obj->requestedLocks (  ) );
   }
 }
 
@@ -416,8 +411,7 @@ HB_FUNC_STATIC( QCAMERA_STATE )
   QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -430,8 +424,7 @@ HB_FUNC_STATIC( QCAMERA_STATUS )
   QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 
@@ -444,8 +437,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDLOCKS )
   QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedLocks (  );
-    hb_retni( i );
+    hb_retni( obj->supportedLocks (  ) );
   }
 }
 

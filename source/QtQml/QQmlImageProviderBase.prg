@@ -96,8 +96,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_FLAGS )
   QQmlImageProviderBase * obj = (QQmlImageProviderBase *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 
@@ -110,8 +109,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_IMAGETYPE )
   QQmlImageProviderBase * obj = (QQmlImageProviderBase *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->imageType (  );
-    hb_retni( i );
+    hb_retni( obj->imageType (  ) );
   }
 }
 

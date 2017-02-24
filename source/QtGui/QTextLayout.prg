@@ -440,8 +440,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
   QTextLayout * obj = (QTextLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->cursorMoveStyle (  );
-    hb_retni( i );
+    hb_retni( obj->cursorMoveStyle (  ) );
   }
 }
 

@@ -332,8 +332,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRY )
   QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->country (  );
-    hb_retni( i );
+    hb_retni( obj->country (  ) );
   }
 }
 
@@ -452,8 +451,7 @@ HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
   QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->firstDayOfWeek (  );
-    hb_retni( i );
+    hb_retni( obj->firstDayOfWeek (  ) );
   }
 }
 
@@ -480,8 +478,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGE )
   QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->language (  );
-    hb_retni( i );
+    hb_retni( obj->language (  ) );
   }
 }
 
@@ -494,8 +491,7 @@ HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
   QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->measurementSystem (  );
-    hb_retni( i );
+    hb_retni( obj->measurementSystem (  ) );
   }
 }
 
@@ -575,8 +571,7 @@ HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
   QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->numberOptions (  );
-    hb_retni( i );
+    hb_retni( obj->numberOptions (  ) );
   }
 }
 
@@ -670,8 +665,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPT )
   QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->script (  );
-    hb_retni( i );
+    hb_retni( obj->script (  ) );
   }
 }
 
@@ -727,8 +721,7 @@ HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
   QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( obj->textDirection (  ) );
   }
 }
 

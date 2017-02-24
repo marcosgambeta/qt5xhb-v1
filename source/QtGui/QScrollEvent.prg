@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
   QScrollEvent * obj = (QScrollEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->scrollState (  );
-    hb_retni( i );
+    hb_retni( obj->scrollState (  ) );
   }
 }
 

@@ -269,8 +269,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SERVICECLASSES )
   QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->serviceClasses (  );
-    hb_retni( i );
+    hb_retni( obj->serviceClasses (  ) );
   }
 #endif
 }
@@ -285,8 +284,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MAJORDEVICECLASS )
   QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->majorDeviceClass (  );
-    hb_retni( i );
+    hb_retni( obj->majorDeviceClass (  ) );
   }
 #endif
 }
@@ -419,8 +417,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SERVICEUUIDSCOMPLETENESS )
   QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->serviceUuidsCompleteness (  );
-    hb_retni( i );
+    hb_retni( obj->serviceUuidsCompleteness (  ) );
   }
 #endif
 }

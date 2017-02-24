@@ -322,8 +322,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
   QSharedMemory * obj = (QSharedMemory *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

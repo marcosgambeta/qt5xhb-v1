@@ -483,8 +483,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETTYPE )
   QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->socketType (  );
-    hb_retni( i );
+    hb_retni( obj->socketType (  ) );
   }
 #endif
 }
@@ -499,8 +498,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
   QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 #endif
 }
@@ -515,8 +513,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERROR )
   QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

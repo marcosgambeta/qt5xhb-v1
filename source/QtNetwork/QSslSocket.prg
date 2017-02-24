@@ -543,8 +543,7 @@ HB_FUNC_STATIC( QSSLSOCKET_MODE )
   QSslSocket * obj = (QSslSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mode (  );
-    hb_retni( i );
+    hb_retni( obj->mode (  ) );
   }
 }
 
@@ -632,8 +631,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYMODE )
   QSslSocket * obj = (QSslSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->peerVerifyMode (  );
-    hb_retni( i );
+    hb_retni( obj->peerVerifyMode (  ) );
   }
 }
 
@@ -660,8 +658,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PROTOCOL )
   QSslSocket * obj = (QSslSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->protocol (  );
-    hb_retni( i );
+    hb_retni( obj->protocol (  ) );
   }
 }
 

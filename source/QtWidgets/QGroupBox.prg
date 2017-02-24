@@ -159,8 +159,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
   QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 

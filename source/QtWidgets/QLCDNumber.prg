@@ -255,8 +255,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
   QLCDNumber * obj = (QLCDNumber *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mode (  );
-    hb_retni( i );
+    hb_retni( obj->mode (  ) );
   }
 }
 
@@ -269,8 +268,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
   QLCDNumber * obj = (QLCDNumber *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->segmentStyle (  );
-    hb_retni( i );
+    hb_retni( obj->segmentStyle (  ) );
   }
 }
 

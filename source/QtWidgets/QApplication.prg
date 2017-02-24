@@ -628,8 +628,7 @@ static Qt::KeyboardModifiers keyboardModifiers ()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDMODIFIERS )
 {
-  int i = QApplication::keyboardModifiers (  );
-  hb_retni( i );
+  hb_retni( QApplication::keyboardModifiers (  ) );
 }
 
 
@@ -639,8 +638,7 @@ static Qt::LayoutDirection layoutDirection ()
 */
 HB_FUNC_STATIC( QAPPLICATION_LAYOUTDIRECTION )
 {
-  int i = QApplication::layoutDirection (  );
-  hb_retni( i );
+  hb_retni( QApplication::layoutDirection (  ) );
 }
 
 
@@ -649,8 +647,7 @@ static Qt::MouseButtons mouseButtons ()
 */
 HB_FUNC_STATIC( QAPPLICATION_MOUSEBUTTONS )
 {
-  int i = QApplication::mouseButtons (  );
-  hb_retni( i );
+  hb_retni( QApplication::mouseButtons (  ) );
 }
 
 
@@ -724,8 +721,7 @@ static Qt::KeyboardModifiers queryKeyboardModifiers ()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 {
-  int i = QApplication::queryKeyboardModifiers (  );
-  hb_retni( i );
+  hb_retni( QApplication::queryKeyboardModifiers (  ) );
 }
 
 

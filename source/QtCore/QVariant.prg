@@ -1388,8 +1388,7 @@ HB_FUNC_STATIC( QVARIANT_TYPE )
   QVariant * obj = (QVariant *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 
@@ -2145,8 +2144,7 @@ static Type nameToType(const char *name)
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
   const char * par1 = hb_parc(1);
-  int i = QVariant::nameToType (  (const char *) par1 );
-  hb_retni( i );
+  hb_retni( QVariant::nameToType (  (const char *) par1 ) );
 }
 
 

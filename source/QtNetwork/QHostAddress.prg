@@ -311,8 +311,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
   QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->protocol (  );
-    hb_retni( i );
+    hb_retni( obj->protocol (  ) );
   }
 }
 

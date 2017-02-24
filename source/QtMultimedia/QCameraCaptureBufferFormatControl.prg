@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
   QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->bufferFormat (  );
-    hb_retni( i );
+    hb_retni( obj->bufferFormat (  ) );
   }
 }
 

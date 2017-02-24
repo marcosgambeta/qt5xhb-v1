@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
   QRegExp * obj = (QRegExp *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->caseSensitivity (  );
-    hb_retni( i );
+    hb_retni( obj->caseSensitivity (  ) );
   }
 }
 
@@ -379,8 +378,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
   QRegExp * obj = (QRegExp *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->patternSyntax (  );
-    hb_retni( i );
+    hb_retni( obj->patternSyntax (  ) );
   }
 }
 

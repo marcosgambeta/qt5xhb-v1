@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGGINGMODE )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->loggingMode (  );
-    hb_retni( i );
+    hb_retni( obj->loggingMode (  ) );
   }
 }
 

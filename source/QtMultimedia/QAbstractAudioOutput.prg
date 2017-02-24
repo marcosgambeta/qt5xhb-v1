@@ -328,8 +328,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ERROR )
   QAbstractAudioOutput * obj = (QAbstractAudioOutput *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -342,8 +341,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_STATE )
   QAbstractAudioOutput * obj = (QAbstractAudioOutput *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QLISTVIEW_FLOW )
   QListView * obj = (QListView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flow (  );
-    hb_retni( i );
+    hb_retni( obj->flow (  ) );
   }
 }
 
@@ -237,8 +236,7 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
   QListView * obj = (QListView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->layoutMode (  );
-    hb_retni( i );
+    hb_retni( obj->layoutMode (  ) );
   }
 }
 
@@ -264,8 +262,7 @@ HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
   QListView * obj = (QListView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->movement (  );
-    hb_retni( i );
+    hb_retni( obj->movement (  ) );
   }
 }
 
@@ -278,8 +275,7 @@ HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
   QListView * obj = (QListView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->resizeMode (  );
-    hb_retni( i );
+    hb_retni( obj->resizeMode (  ) );
   }
 }
 
@@ -520,8 +516,7 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
   QListView * obj = (QListView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->viewMode (  );
-    hb_retni( i );
+    hb_retni( obj->viewMode (  ) );
   }
 }
 

@@ -294,8 +294,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERNOPTIONS )
   QRegularExpression * obj = (QRegularExpression *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->patternOptions (  );
-    hb_retni( i );
+    hb_retni( obj->patternOptions (  ) );
   }
 }
 

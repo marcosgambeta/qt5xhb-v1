@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
-    int i = obj->buttonRole ( par1 );
-    hb_retni( i );
+    hb_retni( obj->buttonRole ( par1 ) );
   }
 }
 
@@ -316,8 +315,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
   QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -390,8 +388,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
-    int i = obj->standardButton ( par1 );
-    hb_retni( i );
+    hb_retni( obj->standardButton ( par1 ) );
   }
 }
 
@@ -404,8 +401,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
   QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->standardButtons (  );
-    hb_retni( i );
+    hb_retni( obj->standardButtons (  ) );
   }
 }
 

@@ -210,8 +210,7 @@ HB_FUNC_STATIC( QMODELINDEX_FLAGS )
   QModelIndex * obj = (QModelIndex *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

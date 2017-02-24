@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
   QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->captureDestination (  );
-    hb_retni( i );
+    hb_retni( obj->captureDestination (  ) );
   }
 }
 

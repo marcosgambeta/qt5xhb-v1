@@ -107,8 +107,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
 par2 << temp;
 }
-    int i = obj->hasSupport ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->hasSupport ( par1, par2 ) );
   }
 }
 

@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
   QHistoryState * obj = (QHistoryState *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->historyType (  );
-    hb_retni( i );
+    hb_retni( obj->historyType (  ) );
   }
 }
 

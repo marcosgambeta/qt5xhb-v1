@@ -102,8 +102,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ERROR )
   QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -156,8 +155,7 @@ HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
   QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->permissions (  );
-    hb_retni( i );
+    hb_retni( obj->permissions (  ) );
   }
 }
 

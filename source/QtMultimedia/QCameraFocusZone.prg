@@ -144,8 +144,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
   QCameraFocusZone * obj = (QCameraFocusZone *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

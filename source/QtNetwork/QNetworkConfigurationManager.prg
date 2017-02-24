@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->capabilities (  );
-    hb_retni( i );
+    hb_retni( obj->capabilities (  ) );
   }
 }
 

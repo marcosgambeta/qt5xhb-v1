@@ -254,8 +254,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SECUREMODE )
   QWebSocketServer * obj = (QWebSocketServer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->secureMode (  );
-    hb_retni( i );
+    hb_retni( obj->secureMode (  ) );
   }
 #endif
 }
@@ -330,8 +329,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERROR )
   QWebSocketServer * obj = (QWebSocketServer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

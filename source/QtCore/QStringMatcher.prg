@@ -304,8 +304,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
   QStringMatcher * obj = (QStringMatcher *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->caseSensitivity (  );
-    hb_retni( i );
+    hb_retni( obj->caseSensitivity (  ) );
   }
 }
 

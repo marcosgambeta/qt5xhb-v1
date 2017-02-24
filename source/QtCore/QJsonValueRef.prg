@@ -177,8 +177,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
   QJsonValueRef * obj = (QJsonValueRef *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

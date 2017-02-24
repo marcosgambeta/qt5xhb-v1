@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_PREFERREDPOSITIONINGMETHODS )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->preferredPositioningMethods (  );
-    hb_retni( i );
+    hb_retni( obj->preferredPositioningMethods (  ) );
   }
 #endif
 }
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedPositioningMethods (  );
-    hb_retni( i );
+    hb_retni( obj->supportedPositioningMethods (  ) );
   }
 #endif
 }
@@ -238,8 +236,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ERROR )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 #endif
 }

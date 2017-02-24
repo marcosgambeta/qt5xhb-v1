@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
   QSurface * obj = (QSurface *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->surfaceClass (  );
-    hb_retni( i );
+    hb_retni( obj->surfaceClass (  ) );
   }
 }
 
@@ -146,8 +145,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
   QSurface * obj = (QSurface *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->surfaceType (  );
-    hb_retni( i );
+    hb_retni( obj->surfaceType (  ) );
   }
 }
 

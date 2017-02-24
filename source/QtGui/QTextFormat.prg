@@ -786,8 +786,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LAYOUTDIRECTION )
   QTextFormat * obj = (QTextFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->layoutDirection (  );
-    hb_retni( i );
+    hb_retni( obj->layoutDirection (  ) );
   }
 }
 

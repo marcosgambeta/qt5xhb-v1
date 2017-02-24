@@ -285,8 +285,7 @@ HB_FUNC_STATIC( QFILE_ERROR )
   QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -504,8 +503,7 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS1 )
   QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->permissions (  );
-    hb_retni( i );
+    hb_retni( obj->permissions (  ) );
   }
 }
 
@@ -515,8 +513,7 @@ static Permissions permissions ( const QString & fileName )
 HB_FUNC_STATIC( QFILE_PERMISSIONS2 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
-  int i = QFile::permissions ( par1 );
-  hb_retni( i );
+  hb_retni( QFile::permissions ( par1 ) );
 }
 
 

@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
   QAxScriptEngine * obj = (QAxScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->horizontalScrollBarPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->horizontalScrollBarPolicy (  ) );
   }
 }
 
@@ -315,8 +314,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->verticalScrollBarPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->verticalScrollBarPolicy (  ) );
   }
 }
 
@@ -400,8 +398,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEADJUSTPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sizeAdjustPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->sizeAdjustPolicy (  ) );
   }
 }
 

@@ -266,8 +266,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_HANDLETYPE )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->handleType (  );
-    hb_retni( i );
+    hb_retni( obj->handleType (  ) );
   }
 }
 
@@ -307,8 +306,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELFORMAT )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->pixelFormat (  );
-    hb_retni( i );
+    hb_retni( obj->pixelFormat (  ) );
   }
 }
 
@@ -380,8 +378,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SCANLINEDIRECTION )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->scanLineDirection (  );
-    hb_retni( i );
+    hb_retni( obj->scanLineDirection (  ) );
   }
 }
 
@@ -594,8 +591,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_YCBCRCOLORSPACE )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->yCbCrColorSpace (  );
-    hb_retni( i );
+    hb_retni( obj->yCbCrColorSpace (  ) );
   }
 }
 

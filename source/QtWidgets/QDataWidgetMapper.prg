@@ -289,8 +289,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -407,8 +406,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->submitPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->submitPolicy (  ) );
   }
 }
 

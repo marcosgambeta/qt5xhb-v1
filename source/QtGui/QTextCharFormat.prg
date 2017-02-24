@@ -335,8 +335,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
   QTextCharFormat * obj = (QTextCharFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fontCapitalization (  );
-    hb_retni( i );
+    hb_retni( obj->fontCapitalization (  ) );
   }
 }
 
@@ -364,8 +363,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACINGTYPE )
   QTextCharFormat * obj = (QTextCharFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fontLetterSpacingType (  );
-    hb_retni( i );
+    hb_retni( obj->fontLetterSpacingType (  ) );
   }
 }
 
@@ -629,8 +627,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
   QTextCharFormat * obj = (QTextCharFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fontStyleHint (  );
-    hb_retni( i );
+    hb_retni( obj->fontStyleHint (  ) );
   }
 }
 
@@ -643,8 +640,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
   QTextCharFormat * obj = (QTextCharFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fontStyleStrategy (  );
-    hb_retni( i );
+    hb_retni( obj->fontStyleStrategy (  ) );
   }
 }
 
@@ -672,8 +668,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
   QTextCharFormat * obj = (QTextCharFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fontHintingPreference (  );
-    hb_retni( i );
+    hb_retni( obj->fontHintingPreference (  ) );
   }
 }
 
@@ -728,8 +723,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
   QTextCharFormat * obj = (QTextCharFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->underlineStyle (  );
-    hb_retni( i );
+    hb_retni( obj->underlineStyle (  ) );
   }
 }
 
@@ -757,8 +751,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
   QTextCharFormat * obj = (QTextCharFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->verticalAlignment (  );
-    hb_retni( i );
+    hb_retni( obj->verticalAlignment (  ) );
   }
 }
 

@@ -284,8 +284,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
   QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

@@ -135,8 +135,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
   QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->backgroundMode (  );
-    hb_retni( i );
+    hb_retni( obj->backgroundMode (  ) );
   }
 }
 
@@ -190,8 +189,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
   QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->clipOperation (  );
-    hb_retni( i );
+    hb_retni( obj->clipOperation (  ) );
   }
 }
 
@@ -232,8 +230,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
   QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->compositionMode (  );
-    hb_retni( i );
+    hb_retni( obj->compositionMode (  ) );
   }
 }
 
@@ -327,8 +324,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
   QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->renderHints (  );
-    hb_retni( i );
+    hb_retni( obj->renderHints (  ) );
   }
 }
 
@@ -341,8 +337,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
   QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

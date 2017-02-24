@@ -717,8 +717,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
   QSqlQuery * obj = (QSqlQuery *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->numericalPrecisionPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->numericalPrecisionPolicy (  ) );
   }
 }
 

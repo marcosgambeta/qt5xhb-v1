@@ -216,8 +216,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ERROR )
   QMediaPlayer * obj = (QMediaPlayer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -309,8 +308,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTATUS )
   QMediaPlayer * obj = (QMediaPlayer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mediaStatus (  );
-    hb_retni( i );
+    hb_retni( obj->mediaStatus (  ) );
   }
 }
 
@@ -446,8 +444,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_STATE )
   QMediaPlayer * obj = (QMediaPlayer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -473,8 +470,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_AVAILABILITY )
   QMediaPlayer * obj = (QMediaPlayer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->availability (  );
-    hb_retni( i );
+    hb_retni( obj->availability (  ) );
   }
 }
 
@@ -647,8 +643,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
 par2 << temp;
 }
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  int i = QMediaPlayer::hasSupport ( par1, par2,  (QMediaPlayer::Flags) par3 );
-  hb_retni( i );
+  hb_retni( QMediaPlayer::hasSupport ( par1, par2,  (QMediaPlayer::Flags) par3 ) );
 }
 
 

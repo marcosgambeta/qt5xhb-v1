@@ -119,8 +119,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->handleType (  );
-    hb_retni( i );
+    hb_retni( obj->handleType (  ) );
   }
 }
 
@@ -152,8 +151,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mapMode (  );
-    hb_retni( i );
+    hb_retni( obj->mapMode (  ) );
   }
 }
 

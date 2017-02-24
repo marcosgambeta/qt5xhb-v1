@@ -285,8 +285,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLE )
   QFontInfo * obj = (QFontInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( obj->style (  ) );
   }
 }
 
@@ -299,8 +298,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
   QFontInfo * obj = (QFontInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->styleHint (  );
-    hb_retni( i );
+    hb_retni( obj->styleHint (  ) );
   }
 }
 

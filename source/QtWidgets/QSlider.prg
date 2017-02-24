@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
   QSlider * obj = (QSlider *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->tickPosition (  );
-    hb_retni( i );
+    hb_retni( obj->tickPosition (  ) );
   }
 }
 

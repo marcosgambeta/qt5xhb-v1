@@ -337,8 +337,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->filterCaseSensitivity (  );
-    hb_retni( i );
+    hb_retni( obj->filterCaseSensitivity (  ) );
   }
 }
 
@@ -366,8 +365,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sortCaseSensitivity (  );
-    hb_retni( i );
+    hb_retni( obj->sortCaseSensitivity (  ) );
   }
 }
 
@@ -435,8 +433,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sortOrder (  );
-    hb_retni( i );
+    hb_retni( obj->sortOrder (  ) );
   }
 }
 
@@ -892,8 +889,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->flags ( *par1 ) );
   }
 }
 
@@ -1012,8 +1008,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( obj->supportedDropActions (  ) );
   }
 }
 

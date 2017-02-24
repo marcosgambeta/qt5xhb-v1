@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
   QCheckBox * obj = (QCheckBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->checkState (  );
-    hb_retni( i );
+    hb_retni( obj->checkState (  ) );
   }
 }
 

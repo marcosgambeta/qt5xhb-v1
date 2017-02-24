@@ -1305,8 +1305,7 @@ HB_FUNC_STATIC( QCOLOR_SPEC )
   QColor * obj = (QColor *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->spec (  );
-    hb_retni( i );
+    hb_retni( obj->spec (  ) );
   }
 }
 

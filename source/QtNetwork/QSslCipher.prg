@@ -254,8 +254,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
   QSslCipher * obj = (QSslCipher *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->protocol (  );
-    hb_retni( i );
+    hb_retni( obj->protocol (  ) );
   }
 }
 

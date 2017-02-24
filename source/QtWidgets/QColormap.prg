@@ -194,8 +194,7 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
   QColormap * obj = (QColormap *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mode (  );
-    hb_retni( i );
+    hb_retni( obj->mode (  ) );
   }
 }
 

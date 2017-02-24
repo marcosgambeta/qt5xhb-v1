@@ -506,8 +506,7 @@ HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
   QLayout * obj = (QLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sizeConstraint (  );
-    hb_retni( i );
+    hb_retni( obj->sizeConstraint (  ) );
   }
 }
 
@@ -561,8 +560,7 @@ HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
   QLayout * obj = (QLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( obj->expandingDirections (  ) );
   }
 }
 

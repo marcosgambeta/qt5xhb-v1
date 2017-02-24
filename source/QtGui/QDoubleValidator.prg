@@ -182,8 +182,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
   QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->notation (  );
-    hb_retni( i );
+    hb_retni( obj->notation (  ) );
   }
 }
 
@@ -286,8 +285,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     int par2;
-    int i = obj->validate ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->validate ( par1, par2 ) );
   }
 }
 

@@ -428,8 +428,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textInteractionFlags (  );
-    hb_retni( i );
+    hb_retni( obj->textInteractionFlags (  ) );
   }
 }
 

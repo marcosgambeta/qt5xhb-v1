@@ -117,8 +117,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->pageSize (  );
-    hb_retni( i );
+    hb_retni( obj->pageSize (  ) );
   }
 }
 

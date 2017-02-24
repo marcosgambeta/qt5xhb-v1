@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
   QTouchEvent * obj = (QTouchEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->touchPointStates (  );
-    hb_retni( i );
+    hb_retni( obj->touchPointStates (  ) );
   }
 }
 

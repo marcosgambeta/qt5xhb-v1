@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
   QTextListFormat * obj = (QTextListFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( obj->style (  ) );
   }
 }
 

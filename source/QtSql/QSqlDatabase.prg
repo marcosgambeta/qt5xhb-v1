@@ -425,8 +425,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
   QSqlDatabase * obj = (QSqlDatabase *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->numericalPrecisionPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->numericalPrecisionPolicy (  ) );
   }
 }
 

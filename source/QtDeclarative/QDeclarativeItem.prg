@@ -385,8 +385,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
   QDeclarativeItem * obj = (QDeclarativeItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->transformOrigin (  );
-    hb_retni( i );
+    hb_retni( obj->transformOrigin (  ) );
   }
 }
 

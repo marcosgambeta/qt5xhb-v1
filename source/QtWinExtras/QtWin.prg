@@ -338,8 +338,7 @@ HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
-  int i = QtWin::windowFlip3DPolicy ( par1 );
-  hb_retni( i );
+  hb_retni( QtWin::windowFlip3DPolicy ( par1 ) );
 #endif
 }
 

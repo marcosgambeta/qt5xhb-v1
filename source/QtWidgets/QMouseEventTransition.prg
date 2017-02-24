@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
   QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->button (  );
-    hb_retni( i );
+    hb_retni( obj->button (  ) );
   }
 }
 
@@ -184,8 +183,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
   QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modifierMask (  );
-    hb_retni( i );
+    hb_retni( obj->modifierMask (  ) );
   }
 }
 

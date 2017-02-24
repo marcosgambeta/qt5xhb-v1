@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
   QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->gestureType (  );
-    hb_retni( i );
+    hb_retni( obj->gestureType (  ) );
   }
 }
 

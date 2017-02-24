@@ -140,8 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_MODIFIERS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( obj->modifiers (  ) );
   }
 }
 

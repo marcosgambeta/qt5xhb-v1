@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
   QAudioFormat * obj = (QAudioFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->byteOrder (  );
-    hb_retni( i );
+    hb_retni( obj->byteOrder (  ) );
   }
 }
 
@@ -240,8 +239,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
   QAudioFormat * obj = (QAudioFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sampleType (  );
-    hb_retni( i );
+    hb_retni( obj->sampleType (  ) );
   }
 }
 

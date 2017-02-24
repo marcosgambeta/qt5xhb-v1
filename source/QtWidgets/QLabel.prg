@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QLABEL_ALIGNMENT )
   QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -495,8 +494,7 @@ HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
   QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textFormat (  );
-    hb_retni( i );
+    hb_retni( obj->textFormat (  ) );
   }
 }
 
@@ -509,8 +507,7 @@ HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
   QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textInteractionFlags (  );
-    hb_retni( i );
+    hb_retni( obj->textInteractionFlags (  ) );
   }
 }
 

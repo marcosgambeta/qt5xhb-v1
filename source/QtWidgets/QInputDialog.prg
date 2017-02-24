@@ -333,8 +333,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
   QInputDialog * obj = (QInputDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->inputMode (  );
-    hb_retni( i );
+    hb_retni( obj->inputMode (  ) );
   }
 }
 
@@ -561,8 +560,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
   QInputDialog * obj = (QInputDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( obj->options (  ) );
   }
 }
 
@@ -648,8 +646,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
   QInputDialog * obj = (QInputDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textEchoMode (  );
-    hb_retni( i );
+    hb_retni( obj->textEchoMode (  ) );
   }
 }
 

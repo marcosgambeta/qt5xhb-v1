@@ -109,8 +109,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->oldState (  );
-    hb_retni( i );
+    hb_retni( obj->oldState (  ) );
   }
 }
 

@@ -593,8 +593,7 @@ HB_FUNC_STATIC( QSENSOR_AXESORIENTATIONMODE )
   QSensor * obj = (QSensor *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->axesOrientationMode (  );
-    hb_retni( i );
+    hb_retni( obj->axesOrientationMode (  ) );
   }
 #endif
 }

@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
   QCalendarWidget * obj = (QCalendarWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->firstDayOfWeek (  );
-    hb_retni( i );
+    hb_retni( obj->firstDayOfWeek (  ) );
   }
 }
 
@@ -232,8 +231,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->horizontalHeaderFormat (  );
-    hb_retni( i );
+    hb_retni( obj->horizontalHeaderFormat (  ) );
   }
 }
 
@@ -340,8 +338,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTIONMODE )
   QCalendarWidget * obj = (QCalendarWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->selectionMode (  );
-    hb_retni( i );
+    hb_retni( obj->selectionMode (  ) );
   }
 }
 
@@ -519,8 +516,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->verticalHeaderFormat (  );
-    hb_retni( i );
+    hb_retni( obj->verticalHeaderFormat (  ) );
   }
 }
 

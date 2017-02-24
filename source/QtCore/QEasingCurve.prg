@@ -361,8 +361,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
   QEasingCurve * obj = (QEasingCurve *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

@@ -757,8 +757,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSIONS )
   QFileInfo * obj = (QFileInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->permissions (  );
-    hb_retni( i );
+    hb_retni( obj->permissions (  ) );
   }
 }
 

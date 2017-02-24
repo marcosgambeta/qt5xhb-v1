@@ -244,8 +244,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_TYPE )
   QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 
@@ -299,8 +298,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_FEATURES )
   QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->features (  );
-    hb_retni( i );
+    hb_retni( obj->features (  ) );
   }
 }
 

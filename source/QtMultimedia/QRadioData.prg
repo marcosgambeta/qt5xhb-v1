@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
   QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->availability (  );
-    hb_retni( i );
+    hb_retni( obj->availability (  ) );
   }
 }
 
@@ -168,8 +167,7 @@ HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
   QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->programType (  );
-    hb_retni( i );
+    hb_retni( obj->programType (  ) );
   }
 }
 
@@ -234,8 +232,7 @@ HB_FUNC_STATIC( QRADIODATA_ERROR )
   QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

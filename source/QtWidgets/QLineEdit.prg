@@ -230,8 +230,7 @@ HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
   QLineEdit * obj = (QLineEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -477,8 +476,7 @@ HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
   QLineEdit * obj = (QLineEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->echoMode (  );
-    hb_retni( i );
+    hb_retni( obj->echoMode (  ) );
   }
 }
 
@@ -1093,8 +1091,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORMOVESTYLE )
   QLineEdit * obj = (QLineEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->cursorMoveStyle (  );
-    hb_retni( i );
+    hb_retni( obj->cursorMoveStyle (  ) );
   }
 }
 

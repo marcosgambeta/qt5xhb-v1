@@ -513,8 +513,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
   QAction * obj = (QAction *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->menuRole (  );
-    hb_retni( i );
+    hb_retni( obj->menuRole (  ) );
   }
 }
 
@@ -541,8 +540,7 @@ HB_FUNC_STATIC( QACTION_PRIORITY )
   QAction * obj = (QAction *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->priority (  );
-    hb_retni( i );
+    hb_retni( obj->priority (  ) );
   }
 }
 
@@ -891,8 +889,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
   QAction * obj = (QAction *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->shortcutContext (  );
-    hb_retni( i );
+    hb_retni( obj->shortcutContext (  ) );
   }
 }
 

@@ -286,8 +286,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
   QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fieldGrowthPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->fieldGrowthPolicy (  ) );
   }
 }
 
@@ -300,8 +299,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
   QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->formAlignment (  );
-    hb_retni( i );
+    hb_retni( obj->formAlignment (  ) );
   }
 }
 
@@ -505,8 +503,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
   QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->labelAlignment (  );
-    hb_retni( i );
+    hb_retni( obj->labelAlignment (  ) );
   }
 }
 
@@ -580,8 +577,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
   QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->rowWrapPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->rowWrapPolicy (  ) );
   }
 }
 
@@ -798,8 +794,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
   QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( obj->expandingDirections (  ) );
   }
 }
 

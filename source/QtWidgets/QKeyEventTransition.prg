@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
   QKeyEventTransition * obj = (QKeyEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modifierMask (  );
-    hb_retni( i );
+    hb_retni( obj->modifierMask (  ) );
   }
 }
 

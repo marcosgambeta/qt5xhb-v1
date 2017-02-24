@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
   QMdiArea * obj = (QMdiArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->activationOrder (  );
-    hb_retni( i );
+    hb_retni( obj->activationOrder (  ) );
   }
 }
 
@@ -388,8 +387,7 @@ HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
   QMdiArea * obj = (QMdiArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->tabPosition (  );
-    hb_retni( i );
+    hb_retni( obj->tabPosition (  ) );
   }
 }
 
@@ -402,8 +400,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
   QMdiArea * obj = (QMdiArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->tabShape (  );
-    hb_retni( i );
+    hb_retni( obj->tabShape (  ) );
   }
 }
 
@@ -430,8 +427,7 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
   QMdiArea * obj = (QMdiArea *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->viewMode (  );
-    hb_retni( i );
+    hb_retni( obj->viewMode (  ) );
   }
 }
 

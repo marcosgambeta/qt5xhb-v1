@@ -137,8 +137,7 @@ HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
   QDropEvent * obj = (QDropEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->dropAction (  );
-    hb_retni( i );
+    hb_retni( obj->dropAction (  ) );
   }
 }
 
@@ -151,8 +150,7 @@ HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
   QDropEvent * obj = (QDropEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->keyboardModifiers (  );
-    hb_retni( i );
+    hb_retni( obj->keyboardModifiers (  ) );
   }
 }
 
@@ -179,8 +177,7 @@ HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
   QDropEvent * obj = (QDropEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mouseButtons (  );
-    hb_retni( i );
+    hb_retni( obj->mouseButtons (  ) );
   }
 }
 
@@ -194,8 +191,7 @@ HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
   QDropEvent * obj = (QDropEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->possibleActions (  );
-    hb_retni( i );
+    hb_retni( obj->possibleActions (  ) );
   }
 }
 
@@ -208,8 +204,7 @@ HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
   QDropEvent * obj = (QDropEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->proposedAction (  );
-    hb_retni( i );
+    hb_retni( obj->proposedAction (  ) );
   }
 }
 

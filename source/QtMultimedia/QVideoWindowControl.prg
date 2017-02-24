@@ -200,8 +200,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ASPECTRATIOMODE )
   QVideoWindowControl * obj = (QVideoWindowControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->aspectRatioMode (  );
-    hb_retni( i );
+    hb_retni( obj->aspectRatioMode (  ) );
   }
 }
 

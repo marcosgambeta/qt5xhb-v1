@@ -258,8 +258,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
   QTextEdit * obj = (QTextEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( obj->alignment (  ) );
   }
 }
 
@@ -286,8 +285,7 @@ HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
   QTextEdit * obj = (QTextEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->autoFormatting (  );
-    hb_retni( i );
+    hb_retni( obj->autoFormatting (  ) );
   }
 }
 
@@ -624,8 +622,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
   QTextEdit * obj = (QTextEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->lineWrapMode (  );
-    hb_retni( i );
+    hb_retni( obj->lineWrapMode (  ) );
   }
 }
 
@@ -1013,8 +1010,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
   QTextEdit * obj = (QTextEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textInteractionFlags (  );
-    hb_retni( i );
+    hb_retni( obj->textInteractionFlags (  ) );
   }
 }
 
@@ -1053,8 +1049,7 @@ HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
   QTextEdit * obj = (QTextEdit *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->wordWrapMode (  );
-    hb_retni( i );
+    hb_retni( obj->wordWrapMode (  ) );
   }
 }
 

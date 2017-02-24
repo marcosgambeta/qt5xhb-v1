@@ -118,8 +118,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPE )
   QRadioDataControl * obj = (QRadioDataControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->programType (  );
-    hb_retni( i );
+    hb_retni( obj->programType (  ) );
   }
 }
 
@@ -198,8 +197,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERROR )
   QRadioDataControl * obj = (QRadioDataControl *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

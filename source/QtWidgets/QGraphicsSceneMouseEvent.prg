@@ -103,8 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->button (  );
-    hb_retni( i );
+    hb_retni( obj->button (  ) );
   }
 }
 
@@ -162,8 +161,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->buttons (  );
-    hb_retni( i );
+    hb_retni( obj->buttons (  ) );
   }
 }
 
@@ -218,8 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( obj->modifiers (  ) );
   }
 }
 

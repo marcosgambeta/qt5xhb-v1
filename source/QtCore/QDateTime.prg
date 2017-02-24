@@ -482,8 +482,7 @@ HB_FUNC_STATIC( QDATETIME_TIMESPEC )
   QDateTime * obj = (QDateTime *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->timeSpec (  );
-    hb_retni( i );
+    hb_retni( obj->timeSpec (  ) );
   }
 }
 

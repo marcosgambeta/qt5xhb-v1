@@ -302,8 +302,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
   QRawFont * obj = (QRawFont *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( obj->style (  ) );
   }
 }
 
@@ -511,8 +510,7 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
   QRawFont * obj = (QRawFont *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->hintingPreference (  );
-    hb_retni( i );
+    hb_retni( obj->hintingPreference (  ) );
   }
 }
 

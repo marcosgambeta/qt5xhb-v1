@@ -473,8 +473,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
   QComboBox * obj = (QComboBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->insertPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->insertPolicy (  ) );
   }
 }
 
@@ -984,8 +983,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
   QComboBox * obj = (QComboBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->sizeAdjustPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->sizeAdjustPolicy (  ) );
   }
 }
 

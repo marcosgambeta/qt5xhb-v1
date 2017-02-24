@@ -182,8 +182,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->satelliteSystem (  );
-    hb_retni( i );
+    hb_retni( obj->satelliteSystem (  ) );
   }
 #endif
 }

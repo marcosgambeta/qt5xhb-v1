@@ -343,8 +343,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
   QDBusArgument * obj = (QDBusArgument *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->currentType (  );
-    hb_retni( i );
+    hb_retni( obj->currentType (  ) );
   }
 }
 

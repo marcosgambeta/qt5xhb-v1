@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QCOLLATOR_CASESENSITIVITY )
   QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->caseSensitivity (  );
-    hb_retni( i );
+    hb_retni( obj->caseSensitivity (  ) );
   }
 #endif
 }

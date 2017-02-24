@@ -288,8 +288,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->shapeMode (  );
-    hb_retni( i );
+    hb_retni( obj->shapeMode (  ) );
   }
 }
 
@@ -302,8 +301,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->transformationMode (  );
-    hb_retni( i );
+    hb_retni( obj->transformationMode (  ) );
   }
 }
 

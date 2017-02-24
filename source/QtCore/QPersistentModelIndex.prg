@@ -311,8 +311,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_FLAGS )
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

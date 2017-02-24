@@ -167,8 +167,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
   QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->editStrategy (  );
-    hb_retni( i );
+    hb_retni( obj->editStrategy (  ) );
   }
 }
 
@@ -451,8 +450,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->flags ( *par1 ) );
   }
 }
 

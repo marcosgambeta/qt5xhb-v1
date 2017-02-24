@@ -314,8 +314,7 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
   QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->category (  );
-    hb_retni( i );
+    hb_retni( obj->category (  ) );
   }
 }
 
@@ -355,8 +354,7 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
   QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->decompositionTag (  );
-    hb_retni( i );
+    hb_retni( obj->decompositionTag (  ) );
   }
 }
 
@@ -382,8 +380,7 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
   QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( obj->direction (  ) );
   }
 }
 
@@ -604,8 +601,7 @@ HB_FUNC_STATIC( QCHAR_JOINING )
   QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->joining (  );
-    hb_retni( i );
+    hb_retni( obj->joining (  ) );
   }
 }
 
@@ -729,8 +725,7 @@ HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
   QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->unicodeVersion (  );
-    hb_retni( i );
+    hb_retni( obj->unicodeVersion (  ) );
   }
 }
 

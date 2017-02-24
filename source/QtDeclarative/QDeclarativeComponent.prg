@@ -389,8 +389,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

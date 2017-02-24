@@ -171,8 +171,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
   QAbstractSlider * obj = (QAbstractSlider *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 

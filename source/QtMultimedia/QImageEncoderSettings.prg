@@ -265,8 +265,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_QUALITY )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->quality (  );
-    hb_retni( i );
+    hb_retni( obj->quality (  ) );
   }
 }
 

@@ -379,8 +379,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
   QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->peerVerifyMode (  );
-    hb_retni( i );
+    hb_retni( obj->peerVerifyMode (  ) );
   }
 }
 
@@ -407,8 +406,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
   QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->protocol (  );
-    hb_retni( i );
+    hb_retni( obj->protocol (  ) );
   }
 }
 

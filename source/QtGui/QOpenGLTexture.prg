@@ -471,8 +471,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_FORMAT )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->format (  );
-    hb_retni( i );
+    hb_retni( obj->format (  ) );
   }
 #endif
 }
@@ -1129,8 +1128,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SWIZZLEMASK )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->swizzleMask (  (QOpenGLTexture::SwizzleComponent) par1 );
-    hb_retni( i );
+    hb_retni( obj->swizzleMask (  (QOpenGLTexture::SwizzleComponent) par1 ) );
   }
 #endif
 }
@@ -1162,8 +1160,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTHSTENCILMODE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->depthStencilMode (  );
-    hb_retni( i );
+    hb_retni( obj->depthStencilMode (  ) );
   }
 #endif
 }
@@ -1195,8 +1192,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MINIFICATIONFILTER )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->minificationFilter (  );
-    hb_retni( i );
+    hb_retni( obj->minificationFilter (  ) );
   }
 #endif
 }
@@ -1228,8 +1224,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAGNIFICATIONFILTER )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->magnificationFilter (  );
-    hb_retni( i );
+    hb_retni( obj->magnificationFilter (  ) );
   }
 #endif
 }
@@ -1349,8 +1344,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_WRAPMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->wrapMode (  (QOpenGLTexture::CoordinateDirection) par1 );
-    hb_retni( i );
+    hb_retni( obj->wrapMode (  (QOpenGLTexture::CoordinateDirection) par1 ) );
   }
 #endif
 }

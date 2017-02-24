@@ -351,8 +351,7 @@ HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
   QTabWidget * obj = (QTabWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->elideMode (  );
-    hb_retni( i );
+    hb_retni( obj->elideMode (  ) );
   }
 }
 
@@ -564,8 +563,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
   QTabWidget * obj = (QTabWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->tabPosition (  );
-    hb_retni( i );
+    hb_retni( obj->tabPosition (  ) );
   }
 }
 
@@ -592,8 +590,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
   QTabWidget * obj = (QTabWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->tabShape (  );
-    hb_retni( i );
+    hb_retni( obj->tabShape (  ) );
   }
 }
 

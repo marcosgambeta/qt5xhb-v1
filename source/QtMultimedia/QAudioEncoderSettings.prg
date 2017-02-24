@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGMODE )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->encodingMode (  );
-    hb_retni( i );
+    hb_retni( obj->encodingMode (  ) );
   }
 }
 
@@ -247,8 +246,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_QUALITY )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->quality (  );
-    hb_retni( i );
+    hb_retni( obj->quality (  ) );
   }
 }
 

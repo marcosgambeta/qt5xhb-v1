@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
   QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( obj->options (  ) );
   }
 }
 

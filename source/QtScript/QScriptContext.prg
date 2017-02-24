@@ -271,8 +271,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
   QScriptContext * obj = (QScriptContext *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

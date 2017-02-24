@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
   QSwipeGesture * obj = (QSwipeGesture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->horizontalDirection (  );
-    hb_retni( i );
+    hb_retni( obj->horizontalDirection (  ) );
   }
 }
 
@@ -134,8 +133,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
   QSwipeGesture * obj = (QSwipeGesture *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->verticalDirection (  );
-    hb_retni( i );
+    hb_retni( obj->verticalDirection (  ) );
   }
 }
 

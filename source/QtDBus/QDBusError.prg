@@ -194,8 +194,7 @@ HB_FUNC_STATIC( QDBUSERROR_TYPE )
   QDBusError * obj = (QDBusError *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

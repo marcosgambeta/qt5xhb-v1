@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     int par2;
-    int i = obj->validate ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->validate ( par1, par2 ) );
   }
 }
 

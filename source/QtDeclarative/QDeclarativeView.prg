@@ -237,8 +237,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
   QDeclarativeView * obj = (QDeclarativeView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->resizeMode (  );
-    hb_retni( i );
+    hb_retni( obj->resizeMode (  ) );
   }
 }
 
@@ -323,8 +322,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
   QDeclarativeView * obj = (QDeclarativeView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

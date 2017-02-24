@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
   QImageWriter * obj = (QImageWriter *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 

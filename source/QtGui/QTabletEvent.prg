@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
   QTabletEvent * obj = (QTabletEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->device (  );
-    hb_retni( i );
+    hb_retni( obj->device (  ) );
   }
 }
 
@@ -231,8 +230,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
   QTabletEvent * obj = (QTabletEvent *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->pointerType (  );
-    hb_retni( i );
+    hb_retni( obj->pointerType (  ) );
   }
 }
 

@@ -341,8 +341,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERROR )
   QImageReader * obj = (QImageReader *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -408,8 +407,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT1 )
   QImageReader * obj = (QImageReader *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->imageFormat (  );
-    hb_retni( i );
+    hb_retni( obj->imageFormat (  ) );
   }
 }
 

@@ -367,8 +367,7 @@ HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
   QWebPage * obj = (QWebPage *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->linkDelegationPolicy (  );
-    hb_retni( i );
+    hb_retni( obj->linkDelegationPolicy (  ) );
   }
 }
 

@@ -231,8 +231,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
   QBoxLayout * obj = (QBoxLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( obj->direction (  ) );
   }
 }
 
@@ -462,8 +461,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
   QBoxLayout * obj = (QBoxLayout *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( obj->expandingDirections (  ) );
   }
 }
 

@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
   QPrintEngine * obj = (QPrintEngine *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->printerState (  );
-    hb_retni( i );
+    hb_retni( obj->printerState (  ) );
   }
 }
 

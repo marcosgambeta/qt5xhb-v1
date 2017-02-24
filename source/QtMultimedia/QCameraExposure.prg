@@ -138,8 +138,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
   QCameraExposure * obj = (QCameraExposure *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->exposureMode (  );
-    hb_retni( i );
+    hb_retni( obj->exposureMode (  ) );
   }
 }
 
@@ -152,8 +151,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
   QCameraExposure * obj = (QCameraExposure *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flashMode (  );
-    hb_retni( i );
+    hb_retni( obj->flashMode (  ) );
   }
 }
 
@@ -247,8 +245,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
   QCameraExposure * obj = (QCameraExposure *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->meteringMode (  );
-    hb_retni( i );
+    hb_retni( obj->meteringMode (  ) );
   }
 }
 

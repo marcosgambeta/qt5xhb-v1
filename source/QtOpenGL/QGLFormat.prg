@@ -408,8 +408,7 @@ HB_FUNC_STATIC( QGLFORMAT_PROFILE )
   QGLFormat * obj = (QGLFormat *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->profile (  );
-    hb_retni( i );
+    hb_retni( obj->profile (  ) );
   }
 }
 
@@ -899,8 +898,7 @@ static OpenGLVersionFlags openGLVersionFlags ()
 */
 HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
-  int i = QGLFormat::openGLVersionFlags (  );
-  hb_retni( i );
+  hb_retni( QGLFormat::openGLVersionFlags (  ) );
 }
 
 

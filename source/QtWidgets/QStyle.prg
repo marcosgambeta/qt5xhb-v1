@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
     const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qtxhb_itemGetPtr(2);
     QPoint * par3 = (QPoint *) _qtxhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qtxhb_itemGetPtr(4);
-    int i = obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *par3, par4 );
-    hb_retni( i );
+    hb_retni( obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *par3, par4 ) );
   }
 }
 
@@ -584,8 +583,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  int i = QStyle::visualAlignment (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2 );
-  hb_retni( i );
+  hb_retni( QStyle::visualAlignment (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2 ) );
 }
 
 

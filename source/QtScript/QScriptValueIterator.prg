@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_FLAGS )
   QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

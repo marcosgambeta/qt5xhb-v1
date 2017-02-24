@@ -289,8 +289,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
-    int i = obj->buttonRole ( par1 );
-    hb_retni( i );
+    hb_retni( obj->buttonRole ( par1 ) );
   }
 }
 
@@ -420,8 +419,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICON )
   QMessageBox * obj = (QMessageBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->icon (  );
-    hb_retni( i );
+    hb_retni( obj->icon (  ) );
   }
 }
 
@@ -661,8 +659,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
-    int i = obj->standardButton ( par1 );
-    hb_retni( i );
+    hb_retni( obj->standardButton ( par1 ) );
   }
 }
 
@@ -675,8 +672,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
   QMessageBox * obj = (QMessageBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->standardButtons (  );
-    hb_retni( i );
+    hb_retni( obj->standardButtons (  ) );
   }
 }
 
@@ -730,8 +726,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
   QMessageBox * obj = (QMessageBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textFormat (  );
-    hb_retni( i );
+    hb_retni( obj->textFormat (  ) );
   }
 }
 
@@ -814,8 +809,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
   QString par3 = QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  int i = QMessageBox::critical ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 );
-  hb_retni( i );
+  hb_retni( QMessageBox::critical ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -829,8 +823,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
   QString par3 = QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  int i = QMessageBox::information ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 );
-  hb_retni( i );
+  hb_retni( QMessageBox::information ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -844,8 +837,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
   QString par3 = QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  int i = QMessageBox::question ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 );
-  hb_retni( i );
+  hb_retni( QMessageBox::question ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -859,8 +851,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
   QString par3 = QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  int i = QMessageBox::warning ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 );
-  hb_retni( i );
+  hb_retni( QMessageBox::warning ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -872,8 +863,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTINTERACTIONFLAGS )
   QMessageBox * obj = (QMessageBox *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->textInteractionFlags (  );
-    hb_retni( i );
+    hb_retni( obj->textInteractionFlags (  ) );
   }
 }
 

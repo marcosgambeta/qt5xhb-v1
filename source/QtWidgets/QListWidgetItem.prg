@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
   QListWidgetItem * obj = (QListWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->checkState (  );
-    hb_retni( i );
+    hb_retni( obj->checkState (  ) );
   }
 }
 
@@ -344,8 +343,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
   QListWidgetItem * obj = (QListWidgetItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( obj->flags (  ) );
   }
 }
 

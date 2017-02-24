@@ -178,8 +178,7 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
   QTimeLine * obj = (QTimeLine *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->curveShape (  );
-    hb_retni( i );
+    hb_retni( obj->curveShape (  ) );
   }
 }
 
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
   QTimeLine * obj = (QTimeLine *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( obj->direction (  ) );
   }
 }
 
@@ -401,8 +399,7 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
   QTimeLine * obj = (QTimeLine *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 

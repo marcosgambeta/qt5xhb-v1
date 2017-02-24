@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QWINDOW_CONTENTORIENTATION )
   QWindow * obj = (QWindow *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->contentOrientation (  );
-    hb_retni( i );
+    hb_retni( obj->contentOrientation (  ) );
   }
 }
 
@@ -935,8 +934,7 @@ HB_FUNC_STATIC( QWINDOW_WINDOWSTATE )
   QWindow * obj = (QWindow *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->windowState (  );
-    hb_retni( i );
+    hb_retni( obj->windowState (  ) );
   }
 }
 
@@ -1005,8 +1003,7 @@ HB_FUNC_STATIC( QWINDOW_SURFACETYPE )
   QWindow * obj = (QWindow *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->surfaceType (  );
-    hb_retni( i );
+    hb_retni( obj->surfaceType (  ) );
   }
 }
 

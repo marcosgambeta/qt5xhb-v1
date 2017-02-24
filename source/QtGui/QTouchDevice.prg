@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
   QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 
@@ -145,8 +144,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
   QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->capabilities (  );
-    hb_retni( i );
+    hb_retni( obj->capabilities (  ) );
   }
 }
 

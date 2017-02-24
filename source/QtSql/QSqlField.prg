@@ -409,8 +409,7 @@ HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
   QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->requiredStatus (  );
-    hb_retni( i );
+    hb_retni( obj->requiredStatus (  ) );
   }
 }
 
@@ -451,8 +450,7 @@ HB_FUNC_STATIC( QSQLFIELD_TYPE )
   QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

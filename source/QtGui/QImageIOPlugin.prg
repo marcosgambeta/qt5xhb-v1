@@ -95,8 +95,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
   {
     QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
     QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
-    int i = obj->capabilities ( par1, *par2 );
-    hb_retni( i );
+    hb_retni( obj->capabilities ( par1, *par2 ) );
   }
 }
 

@@ -290,8 +290,7 @@ HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
   QWebView * obj = (QWebView *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->renderHints (  );
-    hb_retni( i );
+    hb_retni( obj->renderHints (  ) );
   }
 }
 

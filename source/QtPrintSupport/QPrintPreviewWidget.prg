@@ -184,8 +184,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( obj->orientation (  ) );
   }
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->viewMode (  );
-    hb_retni( i );
+    hb_retni( obj->viewMode (  ) );
   }
 }
 
@@ -238,8 +236,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->zoomMode (  );
-    hb_retni( i );
+    hb_retni( obj->zoomMode (  ) );
   }
 }
 

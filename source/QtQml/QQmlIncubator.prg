@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
   QQmlIncubator * obj = (QQmlIncubator *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->incubationMode (  );
-    hb_retni( i );
+    hb_retni( obj->incubationMode (  ) );
   }
 }
 
@@ -232,8 +231,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
   QQmlIncubator * obj = (QQmlIncubator *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( obj->status (  ) );
   }
 }
 

@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QPROCESS_ERROR )
   QProcess * obj = (QProcess *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -244,8 +243,7 @@ HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
   QProcess * obj = (QProcess *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->exitStatus (  );
-    hb_retni( i );
+    hb_retni( obj->exitStatus (  ) );
   }
 }
 
@@ -274,8 +272,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
   QProcess * obj = (QProcess *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->processChannelMode (  );
-    hb_retni( i );
+    hb_retni( obj->processChannelMode (  ) );
   }
 }
 
@@ -330,8 +327,7 @@ HB_FUNC_STATIC( QPROCESS_READCHANNEL )
   QProcess * obj = (QProcess *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->readChannel (  );
-    hb_retni( i );
+    hb_retni( obj->readChannel (  ) );
   }
 }
 
@@ -584,8 +580,7 @@ HB_FUNC_STATIC( QPROCESS_STATE )
   QProcess * obj = (QProcess *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
@@ -976,8 +971,7 @@ HB_FUNC_STATIC( QPROCESS_READCHANNELMODE )
   QProcess * obj = (QProcess *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->readChannelMode (  );
-    hb_retni( i );
+    hb_retni( obj->readChannelMode (  ) );
   }
 }
 
@@ -1004,8 +998,7 @@ HB_FUNC_STATIC( QPROCESS_INPUTCHANNELMODE )
   QProcess * obj = (QProcess *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->inputChannelMode (  );
-    hb_retni( i );
+    hb_retni( obj->inputChannelMode (  ) );
   }
 }
 

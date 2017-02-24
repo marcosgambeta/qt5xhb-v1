@@ -159,8 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->fillRule (  );
-    hb_retni( i );
+    hb_retni( obj->fillRule (  ) );
   }
 }
 

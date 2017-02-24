@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
   QAbstractSocket * obj = (QAbstractSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( obj->error (  ) );
   }
 }
 
@@ -434,8 +433,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
   QAbstractSocket * obj = (QAbstractSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->socketType (  );
-    hb_retni( i );
+    hb_retni( obj->socketType (  ) );
   }
 }
 
@@ -448,8 +446,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
   QAbstractSocket * obj = (QAbstractSocket *) _qtxhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( obj->state (  ) );
   }
 }
 
