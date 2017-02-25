@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
 CLASS QHttpPart
 
    DATA pointer

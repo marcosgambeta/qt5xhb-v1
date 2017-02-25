@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QPLATFORMBACKINGSTORE
 REQUEST QPAINTDEVICE
 REQUEST QSIZE
 REQUEST QREGION
 REQUEST QWINDOW
+#endif
 
 CLASS QBackingStore
 

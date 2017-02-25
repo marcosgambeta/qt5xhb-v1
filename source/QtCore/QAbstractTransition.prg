@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QABSTRACTANIMATION
 REQUEST QSTATEMACHINE
 REQUEST QSTATE
 REQUEST QABSTRACTSTATE
+#endif
 
 CLASS QAbstractTransition INHERIT QObject
 

@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QDBUSCONNECTION
 REQUEST QDBUSERROR
 REQUEST QDBUSMESSAGE
 REQUEST QDBUSPENDINGCALL
+#endif
 
 CLASS QDBusAbstractInterface INHERIT QDBusAbstractInterfaceBase
 

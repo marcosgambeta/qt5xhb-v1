@@ -9,9 +9,10 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QEXTENSIONMANAGER
 REQUEST QOBJECT
+#endif
 
 CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
 

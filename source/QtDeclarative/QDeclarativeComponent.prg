@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QOBJECT
 REQUEST QDECLARATIVECONTEXT
 REQUEST QDECLARATIVEERROR
 REQUEST QURL
+#endif
 
 CLASS QDeclarativeComponent INHERIT QObject
 

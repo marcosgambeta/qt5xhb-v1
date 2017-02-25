@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QICON
 REQUEST QDATETIME
 REQUEST QURL
 REQUEST QVARIANT
+#endif
 
 CLASS QWebHistoryItem
 

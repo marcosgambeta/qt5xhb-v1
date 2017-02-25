@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QPOINT
 REQUEST QRECT
 REQUEST QSIZE
 REQUEST QTRANSFORM
+#endif
 
 CLASS QImage INHERIT QPaintDevice
 

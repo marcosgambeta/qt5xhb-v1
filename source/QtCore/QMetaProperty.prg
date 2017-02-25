@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QMETAENUM
 REQUEST QMETAMETHOD
 REQUEST QVARIANT
 REQUEST QMETAOBJECT
+#endif
 
 CLASS QMetaProperty
 

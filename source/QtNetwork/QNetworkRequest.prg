@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QVARIANT
 REQUEST QOBJECT
 REQUEST QBYTEARRAY
 REQUEST QSSLCONFIGURATION
 REQUEST QURL
+#endif
 
 CLASS QNetworkRequest
 

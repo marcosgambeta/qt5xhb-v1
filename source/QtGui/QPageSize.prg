@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSIZEF
 REQUEST QSIZE
 REQUEST QRECTF
 REQUEST QRECT
+#endif
 
 CLASS QPageSize
 

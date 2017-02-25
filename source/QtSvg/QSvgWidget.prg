@@ -9,9 +9,10 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSVGRENDERER
 REQUEST QSIZE
+#endif
 
 CLASS QSvgWidget INHERIT QWidget
 

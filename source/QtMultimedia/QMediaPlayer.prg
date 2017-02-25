@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QMEDIACONTENT
 REQUEST QNETWORKCONFIGURATION
 REQUEST QIODEVICE
 REQUEST QMEDIAPLAYLIST
+#endif
 
 CLASS QMediaPlayer INHERIT QMediaObject
 

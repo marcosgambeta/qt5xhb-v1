@@ -10,10 +10,12 @@
 #include "qt4xhb_clsid.ch"
 
 
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QMEDIAOBJECT
 REQUEST QPOINTF
 REQUEST QSIZEF
 REQUEST QRECTF
+#endif
 
 CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 

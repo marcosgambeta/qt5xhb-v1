@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSQLRELATION
 REQUEST QSQLTABLEMODEL
 REQUEST QVARIANT
+#endif
 
 CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
 

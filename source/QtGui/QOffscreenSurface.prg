@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSURFACEFORMAT
 REQUEST QSIZE
 REQUEST QSCREEN
 REQUEST QPLATFORMOFFSCREENSURFACE
+#endif
 
 CLASS QOffscreenSurface INHERIT QObject,QSurface
 

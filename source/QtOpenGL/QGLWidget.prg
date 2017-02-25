@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QGLCOLORMAP
 REQUEST QGLCONTEXT
 REQUEST QGLFORMAT
 REQUEST QIMAGE
 REQUEST QPIXMAP
+#endif
 
 CLASS QGLWidget INHERIT QWidget
 

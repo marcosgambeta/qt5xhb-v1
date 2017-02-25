@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSQLDRIVER
 REQUEST QSQLQUERY
 REQUEST QSQLERROR
 REQUEST QSQLINDEX
 REQUEST QSQLRECORD
+#endif
 
 CLASS QSqlDatabase
 

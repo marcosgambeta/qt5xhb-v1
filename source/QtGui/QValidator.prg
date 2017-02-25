@@ -9,8 +9,9 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QLOCALE
+#endif
 
 CLASS QValidator INHERIT QObject
 

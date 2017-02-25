@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QPIXMAP
 REQUEST QPOINT
 REQUEST QMIMEDATA
 REQUEST QOBJECT
+#endif
 
 CLASS QDrag INHERIT QObject
 

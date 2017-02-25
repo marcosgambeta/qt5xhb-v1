@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QGLFRAMEBUFFEROBJECTFORMAT
 REQUEST QSIZE
 REQUEST QIMAGE
 REQUEST QPAINTENGINE
+#endif
 
 CLASS QGLFramebufferObject INHERIT QPaintDevice
 

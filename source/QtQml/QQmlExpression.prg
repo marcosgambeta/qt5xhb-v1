@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QQMLCONTEXT
 REQUEST QQMLENGINE
 REQUEST QQMLERROR
 REQUEST QVARIANT
 REQUEST QOBJECT
+#endif
 
 CLASS QQmlExpression INHERIT QObject
 

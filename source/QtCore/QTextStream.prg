@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QTEXTCODEC
 REQUEST QLOCALE
 REQUEST QIODEVICE
 REQUEST QSTRING
 REQUEST QCHAR
+#endif
 
 CLASS QTextStream
 

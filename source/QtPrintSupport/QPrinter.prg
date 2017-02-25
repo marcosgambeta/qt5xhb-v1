@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QRECT
 REQUEST QRECTF
 REQUEST QSIZEF
 REQUEST QPRINTENGINE
 REQUEST QPAINTENGINE
+#endif
 
 CLASS QPrinter INHERIT QPagedPaintDevice
 

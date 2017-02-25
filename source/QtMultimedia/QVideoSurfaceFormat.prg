@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSIZE
 REQUEST QVARIANT
 REQUEST QBYTEARRAY
 REQUEST QRECT
+#endif
 
 CLASS QVideoSurfaceFormat
 

@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QPAINTENGINE
 REQUEST QOPENGLCONTEXT
 REQUEST QSIZE
+#endif
 
 CLASS QOpenGLPaintDevice INHERIT QPaintDevice
 

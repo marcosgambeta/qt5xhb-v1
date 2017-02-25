@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QBRUSH
 REQUEST QPOINTF
 REQUEST QPAINTERPATH
@@ -18,6 +18,7 @@ REQUEST QFONT
 REQUEST QPAINTER
 REQUEST QPEN
 REQUEST QTRANSFORM
+#endif
 
 CLASS QPaintEngineState
 

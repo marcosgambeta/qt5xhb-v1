@@ -9,8 +9,9 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST Q_IPV6ADDR
+#endif
 
 CLASS QHostAddress
 

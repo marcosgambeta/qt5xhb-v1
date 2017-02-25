@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QBLUETOOTHSERVICEINFO
 REQUEST QBLUETOOTHUUID
 REQUEST QBLUETOOTHADDRESS
+#endif
 
 CLASS QBluetoothServiceDiscoveryAgent INHERIT QObject
 

@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSQLDATABASE
 REQUEST QSQLINDEX
 REQUEST QVARIANT
 REQUEST QSQLRECORD
+#endif
 
 CLASS QSqlTableModel INHERIT QSqlQueryModel
 

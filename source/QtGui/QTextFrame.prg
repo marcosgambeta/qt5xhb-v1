@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QTEXTFRAMEFORMAT
 REQUEST QTEXTCURSOR
 REQUEST QTEXTFRAMELAYOUTDATA
+#endif
 
 CLASS QTextFrame INHERIT QTextObject
 

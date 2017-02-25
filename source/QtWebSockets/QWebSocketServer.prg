@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QHOSTADDRESS
 REQUEST QWEBSOCKET
 REQUEST QNETWORKPROXY
 REQUEST QSSLCONFIGURATION
+#endif
 
 CLASS QWebSocketServer INHERIT QObject
 

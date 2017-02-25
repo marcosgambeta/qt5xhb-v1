@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QCHAR
 REQUEST QDATE
 REQUEST QDATETIME
 REQUEST QTIME
+#endif
 
 CLASS QLocale
 

@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QPOINT
 REQUEST QPOINTF
 REQUEST QLINE
@@ -21,6 +21,7 @@ REQUEST QPAINTERPATH
 REQUEST QRECT
 REQUEST QRECTF
 REQUEST QMATRIX
+#endif
 
 CLASS QTransform
 

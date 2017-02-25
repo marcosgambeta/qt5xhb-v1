@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QXMLNAMEPOOL
 REQUEST QURL
 REQUEST QXMLNODEMODELINDEX
 REQUEST QXMLNAME
+#endif
 
 CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
 

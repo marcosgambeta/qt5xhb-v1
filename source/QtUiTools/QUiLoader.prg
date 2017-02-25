@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QACTION
 REQUEST QACTIONGROUP
 REQUEST QLAYOUT
 REQUEST QWIDGET
 REQUEST QDIR
+#endif
 
 CLASS QUiLoader INHERIT QObject
 

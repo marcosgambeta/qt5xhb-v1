@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QRECTF
 REQUEST QTEXTDOCUMENT
 REQUEST QSIZEF
 REQUEST QTEXTOBJECTINTERFACE
 REQUEST QPAINTDEVICE
+#endif
 
 CLASS QAbstractTextDocumentLayout INHERIT QObject
 

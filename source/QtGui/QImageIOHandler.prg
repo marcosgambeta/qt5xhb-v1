@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QRECT
 REQUEST QIODEVICE
 REQUEST QBYTEARRAY
 REQUEST QVARIANT
+#endif
 
 CLASS QImageIOHandler
 

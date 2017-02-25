@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QWEBENGINEPAGE
 REQUEST QWEBENGINEHISTORY
 REQUEST QURL
 REQUEST QACTION
 REQUEST QSIZE
+#endif
 
 CLASS QWebEngineView INHERIT QWidget
 

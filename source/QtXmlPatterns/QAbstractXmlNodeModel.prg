@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QURL
 REQUEST QXMLNODEMODELINDEX
 REQUEST QXMLNAME
 REQUEST QSOURCELOCATION
 REQUEST QVARIANT
+#endif
 
 CLASS QAbstractXmlNodeModel INHERIT QSharedData
 

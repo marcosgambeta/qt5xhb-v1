@@ -9,8 +9,9 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QREGEXP
+#endif
 
 CLASS QRegExpValidator INHERIT QValidator
 

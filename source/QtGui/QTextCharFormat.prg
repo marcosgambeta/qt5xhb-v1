@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QFONT
 REQUEST QCOLOR
 REQUEST QPEN
+#endif
 
 CLASS QTextCharFormat INHERIT QTextFormat
 

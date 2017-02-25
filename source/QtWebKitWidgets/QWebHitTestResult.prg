@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QRECT
 REQUEST QWEBELEMENT
 REQUEST QWEBFRAME
 REQUEST QURL
 REQUEST QPIXMAP
 REQUEST QPOINT
+#endif
 
 CLASS QWebHitTestResult
 
