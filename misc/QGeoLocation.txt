@@ -1,0 +1,5 @@
+To resolve the ausence of the files QGeoLocation and qgeolocation.h in the Qt Framework 5.5.1,
+copy the files below to the folder C:\Qt\Qt5.5.1\5.5\mingw492_32\include\QtPositioning:
+
+copy QGeoLocation C:\Qt\Qt5.5.1\5.5\mingw492_32\include\QtPositioning
+copy qgeolocation.h C:\Qt\Qt5.5.1\5.5\mingw492_32\include\QtPositioning
