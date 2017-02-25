@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QWIDGET
 REQUEST QCLIPBOARD
 REQUEST QDESKTOPWIDGET
@@ -20,6 +20,7 @@ REQUEST QCURSOR
 REQUEST QPALETTE
 REQUEST QSTYLE
 REQUEST QICON
+#endif
 
 CLASS QApplication INHERIT QGuiApplication
 

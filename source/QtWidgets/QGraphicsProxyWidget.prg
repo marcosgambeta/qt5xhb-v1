@@ -9,9 +9,10 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QRECTF
 REQUEST QWIDGET
+#endif
 
 CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
 

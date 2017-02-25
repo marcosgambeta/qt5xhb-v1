@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QCALENDARWIDGET
 REQUEST QDATE
 REQUEST QDATETIME
 REQUEST QTIME
 REQUEST QSIZE
+#endif
 
 CLASS QDateTimeEdit INHERIT QAbstractSpinBox
 

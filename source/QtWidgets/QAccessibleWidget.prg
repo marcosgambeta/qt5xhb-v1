@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QWINDOW
 REQUEST QACCESSIBLEINTERFACE
 REQUEST QRECT
 REQUEST QCOLOR
+#endif
 
 CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
 

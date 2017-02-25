@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QFONT
 REQUEST QGRAPHICSLAYOUT
 REQUEST QPALETTE
@@ -17,6 +17,7 @@ REQUEST QRECTF
 REQUEST QSIZEF
 REQUEST QSTYLE
 REQUEST QPAINTERPATH
+#endif
 
 CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
 

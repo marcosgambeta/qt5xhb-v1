@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QICON
 REQUEST QSIZE
 REQUEST QKEYSEQUENCE
 REQUEST QBUTTONGROUP
+#endif
 
 CLASS QAbstractButton INHERIT QWidget
 

@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QBRUSH
 REQUEST QVARIANT
 REQUEST QFONT
@@ -17,6 +17,7 @@ REQUEST QICON
 REQUEST QLISTWIDGET
 REQUEST QSIZE
 REQUEST QCOLOR
+#endif
 
 CLASS QListWidgetItem
 

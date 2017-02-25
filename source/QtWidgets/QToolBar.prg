@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QACTION
 REQUEST QSIZE
 REQUEST QWIDGET
+#endif
 
 CLASS QToolBar INHERIT QWidget
 

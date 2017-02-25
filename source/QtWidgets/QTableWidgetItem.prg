@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QBRUSH
 REQUEST QVARIANT
 REQUEST QFONT
 REQUEST QICON
 REQUEST QSIZE
 REQUEST QTABLEWIDGET
+#endif
 
 CLASS QTableWidgetItem
 

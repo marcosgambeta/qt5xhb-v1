@@ -9,9 +9,10 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QRECT
 REQUEST QWIDGET
+#endif
 
 CLASS QDesktopWidget INHERIT QWidget
 

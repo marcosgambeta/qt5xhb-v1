@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QWIDGET
 REQUEST QMOVIE
 REQUEST QPICTURE
 REQUEST QPIXMAP
 REQUEST QSIZE
+#endif
 
 CLASS QLabel INHERIT QFrame
 

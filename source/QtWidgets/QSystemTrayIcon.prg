@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QMENU
 REQUEST QRECT
 REQUEST QICON
+#endif
 
 CLASS QSystemTrayIcon INHERIT QObject
 

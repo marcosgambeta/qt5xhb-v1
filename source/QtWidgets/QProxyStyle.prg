@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSTYLE
 REQUEST QSIZE
 REQUEST QRECT
 REQUEST QICON
 REQUEST QPIXMAP
 REQUEST QPALETTE
+#endif
 
 CLASS QProxyStyle INHERIT QCommonStyle
 

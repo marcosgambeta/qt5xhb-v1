@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QMODELINDEX
 REQUEST QVARIANT
 REQUEST QFILEICONPROVIDER
 REQUEST QICON
 REQUEST QFILEINFO
+#endif
 
 CLASS QDirModel INHERIT QAbstractItemModel
 

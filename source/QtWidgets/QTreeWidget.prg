@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QTREEWIDGETITEM
 REQUEST QWIDGET
 REQUEST QRECT
+#endif
 
 CLASS QTreeWidget INHERIT QTreeView
 

@@ -9,9 +9,10 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QGRAPHICSANCHOR
 REQUEST QGRAPHICSLAYOUTITEM
+#endif
 
 CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
 

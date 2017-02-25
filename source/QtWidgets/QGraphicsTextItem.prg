@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QCOLOR
 REQUEST QTEXTDOCUMENT
 REQUEST QFONT
 REQUEST QTEXTCURSOR
 REQUEST QRECTF
 REQUEST QPAINTERPATH
+#endif
 
 CLASS QGraphicsTextItem INHERIT QGraphicsObject
 

@@ -9,9 +9,10 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QFONT
 REQUEST QSIZE
+#endif
 
 CLASS QFontComboBox INHERIT QComboBox
 

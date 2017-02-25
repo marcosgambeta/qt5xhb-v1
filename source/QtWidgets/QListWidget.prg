@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QLISTWIDGETITEM
 REQUEST QWIDGET
 REQUEST QRECT
+#endif
 
 CLASS QListWidget INHERIT QListView
 

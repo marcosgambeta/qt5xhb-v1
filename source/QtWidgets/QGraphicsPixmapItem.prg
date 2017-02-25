@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QPOINTF
 REQUEST QPIXMAP
 REQUEST QRECTF
 REQUEST QPAINTERPATH
+#endif
 
 CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
 

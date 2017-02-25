@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QGRAPHICSITEM
 REQUEST QMATRIX
 REQUEST QPOINTF
 REQUEST QTIMELINE
+#endif
 
 CLASS QGraphicsItemAnimation INHERIT QObject
 

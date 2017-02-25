@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSIZE
 REQUEST QWIDGET
 REQUEST QVARIANT
 REQUEST QICON
 REQUEST QRECT
 REQUEST QCOLOR
+#endif
 
 CLASS QTabBar INHERIT QWidget
 

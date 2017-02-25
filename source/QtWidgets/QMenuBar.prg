@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QACTION
 REQUEST QMENU
 REQUEST QSIZE
 REQUEST QRECT
 REQUEST QWIDGET
+#endif
 
 CLASS QMenuBar INHERIT QWidget
 

@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QTXHB_NO_REQUESTS
 REQUEST QSPLITTERHANDLE
 REQUEST QBYTEARRAY
 REQUEST QWIDGET
 REQUEST QSIZE
+#endif
 
 CLASS QSplitter INHERIT QFrame
 
