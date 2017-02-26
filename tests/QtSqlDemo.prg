@@ -1,16 +1,19 @@
 /*
 
-  Qt5xHb: Exemplo de uso do módulo QtSql
-
-  Data: 30/01/2017 03:56:21
+  Qt5xHb Project - Test Program
 
   Copyright (C) 2012-2017 Marcos Antonio Gambeta
 
-  E-mail: marcosgambeta@uol.com.br
+  E-mail:
+  marcosgambeta AT outlook DOT com
+  marcosgambeta AT gmail DOT com
 
-  Website: https://github.com/marcosgambeta/Qt5xHb
+  Website:
+  https://github.com/marcosgambeta/Qt5xHb
 
-  Grupo de usuários: http://br.groups.yahoo.com/neo/groups/qt4xhb/info
+  Users Groups:
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb-br [PORTUGUESE]
 
 */
 
