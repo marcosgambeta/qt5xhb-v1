@@ -32,7 +32,7 @@
 #endif
 
 #include "qt4xhb_clsid.h"
-#include "qt4xhb_utils.h"
+#include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))

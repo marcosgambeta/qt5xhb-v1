@@ -60,7 +60,7 @@ RETURN
 #define ISARRAY HB_ISARRAY
 #endif
 #include "qt4xhb_clsid.h"
-#include "qt4xhb_utils.h"
+#include "qt5xhb_utils.h"
 
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW1 )
 {
