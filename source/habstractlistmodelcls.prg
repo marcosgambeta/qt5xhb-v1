@@ -7,7 +7,7 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
+#include "qt5xhb_clsid.ch"
 
 CLASS HAbstractListModel INHERIT QAbstractListModel
 
@@ -90,7 +90,7 @@ END CLASS
 #define ISOBJECT HB_ISOBJECT
 #define ISARRAY HB_ISARRAY
 #endif
-#include "qt4xhb_clsid.h"
+#include "qt5xhb_clsid.h"
 #include "qt5xhb_utils.h"
 
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_NEW )

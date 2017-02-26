@@ -33,7 +33,7 @@
 #define ISARRAY HB_ISARRAY
 #endif
 
-#include "qt4xhb_clsid.h"
+#include "qt5xhb_clsid.h"
 #include "qt5xhb_utils.h"
 
 class HAbstractListModel : public QAbstractListModel

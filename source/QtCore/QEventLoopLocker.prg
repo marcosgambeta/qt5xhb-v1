@@ -7,7 +7,7 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
+#include "qt5xhb_clsid.ch"
 
 
 CLASS QEventLoopLocker
@@ -64,7 +64,7 @@ RETURN
 #define ISARRAY HB_ISARRAY
 #endif
 
-#include "qt4xhb_clsid.h"
+#include "qt5xhb_clsid.h"
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__

@@ -7,7 +7,7 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
+#include "qt5xhb_clsid.ch"
 
 REQUEST QMODELINDEX
 
@@ -93,7 +93,7 @@ END CLASS
 #define ISOBJECT HB_ISOBJECT
 #define ISARRAY HB_ISARRAY
 #endif
-#include "qt4xhb_clsid.h"
+#include "qt5xhb_clsid.h"
 #include "qt5xhb_utils.h"
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_NEW )
