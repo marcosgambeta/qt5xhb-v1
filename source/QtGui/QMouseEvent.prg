@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
-  QPointF * par3 = (QPointF *) _qtxhb_itemGetPtr(3);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
+  QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
-  QPointF * par3 = (QPointF *) _qtxhb_itemGetPtr(3);
-  QPointF * par4 = (QPointF *) _qtxhb_itemGetPtr(4);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
+  QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
+  QPointF * par4 = (QPointF *) _qt5xhb_itemGetPtr(4);
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
   int par7 = hb_parni(7);
@@ -189,7 +189,7 @@ Qt::MouseButton button () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->button (  ) );
@@ -202,7 +202,7 @@ Qt::MouseButtons buttons () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->buttons (  ) );
@@ -216,7 +216,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalX (  ) );
@@ -229,7 +229,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalY (  ) );
@@ -242,7 +242,7 @@ const QPointF & localPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->localPos (  );
@@ -257,7 +257,7 @@ const QPointF & screenPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->screenPos (  );
@@ -271,7 +271,7 @@ const QPointF & windowPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->windowPos (  );
@@ -286,7 +286,7 @@ int x () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->x (  ) );
@@ -299,7 +299,7 @@ int y () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->y (  ) );

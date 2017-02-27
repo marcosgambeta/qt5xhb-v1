@@ -91,11 +91,11 @@ virtual QObject * create ( const QString & mimeType, const QUrl & url, const QSt
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QUrl * par2 = (QUrl *) _qtxhb_itemGetPtr(2);
+    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
 QStringList par3;
 PHB_ITEM aStrings3 = hb_param(3, HB_IT_ARRAY);
 int i3;
@@ -126,7 +126,7 @@ virtual void refreshPlugins ()
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->refreshPlugins (  );

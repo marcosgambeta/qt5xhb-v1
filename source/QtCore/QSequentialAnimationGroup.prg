@@ -79,7 +79,7 @@ QSequentialAnimationGroup ( QObject * parent = 0 )
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSequentialAnimationGroup * o = new QSequentialAnimationGroup ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSequentialAnimationGroup *) o );
@@ -112,7 +112,7 @@ QPauseAnimation * addPause ( int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPauseAnimation * ptr = obj->addPause ( (int) hb_parni(1) );
@@ -126,7 +126,7 @@ QAbstractAnimation * currentAnimation () const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAbstractAnimation * ptr = obj->currentAnimation (  );
@@ -140,7 +140,7 @@ QPauseAnimation * insertPause ( int index, int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPauseAnimation * ptr = obj->insertPause ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -154,7 +154,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->duration (  ) );

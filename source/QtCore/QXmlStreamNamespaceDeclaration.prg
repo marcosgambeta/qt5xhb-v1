@@ -102,7 +102,7 @@ QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QXmlStreamNamespaceDeclaration * par1 = (QXmlStreamNamespaceDeclaration *) _qtxhb_itemGetPtr(1);
+  QXmlStreamNamespaceDeclaration * par1 = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtr(1);
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamNamespaceDeclaration *) o );
@@ -182,7 +182,7 @@ QStringRef namespaceUri() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
 {
-  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->namespaceUri (  ) );
@@ -196,7 +196,7 @@ QStringRef prefix() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
 {
-  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->prefix (  ) );

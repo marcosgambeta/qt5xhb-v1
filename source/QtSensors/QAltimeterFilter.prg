@@ -88,10 +88,10 @@ virtual bool filter(QAltimeterReading *reading) = 0
 HB_FUNC_STATIC( QALTIMETERFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeterFilter * obj = (QAltimeterFilter *) _qtxhb_itemGetPtrStackSelfItem();
+  QAltimeterFilter * obj = (QAltimeterFilter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAltimeterReading * par1 = (QAltimeterReading *) _qtxhb_itemGetPtr(1);
+    QAltimeterReading * par1 = (QAltimeterReading *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->filter ( par1 ) );
   }
 #endif

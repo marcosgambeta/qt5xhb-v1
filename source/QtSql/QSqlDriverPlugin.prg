@@ -90,7 +90,7 @@ virtual QSqlDriver * create ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
 {
-  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

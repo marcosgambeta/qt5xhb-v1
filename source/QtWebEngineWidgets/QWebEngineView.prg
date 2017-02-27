@@ -106,7 +106,7 @@ explicit QWebEngineView(QWidget* parent = 0)
 HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QWebEngineView * o = new QWebEngineView ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebEngineView *) o );
@@ -140,7 +140,7 @@ QWebEnginePage* page() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebEnginePage * ptr = obj->page (  );
@@ -155,10 +155,10 @@ void setPage(QWebEnginePage* page)
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebEnginePage * par1 = (QWebEnginePage *) _qtxhb_itemGetPtr(1);
+    QWebEnginePage * par1 = (QWebEnginePage *) _qt5xhb_itemGetPtr(1);
     obj->setPage ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -172,10 +172,10 @@ void load(const QUrl& url)
 HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->load ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -189,11 +189,11 @@ void setHtml(const QString& html, const QUrl& baseUrl = QUrl())
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qtxhb_itemGetPtr(2);
+    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
     obj->setHtml ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -207,12 +207,12 @@ void setContent(const QByteArray& data, const QString& mimeType = QString(), con
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qtxhb_itemGetPtr(3);
+    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
     obj->setContent ( *par1, par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -226,7 +226,7 @@ QWebEngineHistory* history() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebEngineHistory * ptr = obj->history (  );
@@ -242,7 +242,7 @@ QString title() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -257,7 +257,7 @@ QUrl url() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
@@ -272,10 +272,10 @@ void setUrl(const QUrl &url)
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setUrl ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -289,7 +289,7 @@ QUrl iconUrl() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_ICONURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->iconUrl (  ) );
@@ -305,7 +305,7 @@ bool hasSelection() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_HASSELECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasSelection (  ) );
@@ -320,7 +320,7 @@ QString selectedText() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_SELECTEDTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->selectedText (  ).toLatin1().data() );
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_ACTION
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -354,7 +354,7 @@ void triggerPageAction(QWebEnginePage::WebAction action, bool checked = false)
 HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -371,7 +371,7 @@ qreal zoomFactor() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->zoomFactor (  ) );
@@ -385,7 +385,7 @@ void setZoomFactor(qreal factor)
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -402,7 +402,7 @@ void findText(const QString &subString, QWebEnginePage::FindFlags options = 0, c
 HB_FUNC_STATIC( QWEBENGINEVIEW_FINDTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -420,7 +420,7 @@ virtual QSize sizeHint() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_SIZEHINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -436,7 +436,7 @@ void stop()
 HB_FUNC_STATIC( QWEBENGINEVIEW_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );
@@ -452,7 +452,7 @@ void back()
 HB_FUNC_STATIC( QWEBENGINEVIEW_BACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->back (  );
@@ -468,7 +468,7 @@ void forward()
 HB_FUNC_STATIC( QWEBENGINEVIEW_FORWARD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->forward (  );
@@ -484,7 +484,7 @@ void reload()
 HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reload (  );

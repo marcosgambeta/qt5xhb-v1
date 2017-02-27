@@ -89,7 +89,7 @@ bool close() const
 HB_FUNC_STATIC( QPROXIMITYREADING_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityReading * obj = (QProximityReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QProximityReading * obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->close (  ) );
@@ -104,7 +104,7 @@ void setClose(bool close)
 HB_FUNC_STATIC( QPROXIMITYREADING_SETCLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityReading * obj = (QProximityReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QProximityReading * obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setClose ( (bool) hb_parl(1) );

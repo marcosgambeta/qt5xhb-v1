@@ -77,7 +77,7 @@ QCommandLinkButton ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QCommandLinkButton * o = new QCommandLinkButton ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCommandLinkButton *) o );
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QCommandLinkButton * o = new QCommandLinkButton ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCommandLinkButton *) o );
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qtxhb_itemGetPtr(3);
+  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
   QCommandLinkButton * o = new QCommandLinkButton ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCommandLinkButton *) o );
@@ -169,7 +169,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->description (  ).toLatin1().data() );
@@ -182,7 +182,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -197,7 +197,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isFlat (  ) );
@@ -210,7 +210,7 @@ void setFlat ( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setFlat ( (bool) hb_parl(1) );

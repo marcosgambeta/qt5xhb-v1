@@ -109,7 +109,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ISVALID )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -122,7 +122,7 @@ QDBusConnection connection() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CONNECTION )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
@@ -136,7 +136,7 @@ QString service() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SERVICE )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->service (  ).toLatin1().data() );
@@ -149,7 +149,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_PATH )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->path (  ).toLatin1().data() );
@@ -162,7 +162,7 @@ QString interface() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_INTERFACE )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->interface (  ).toLatin1().data() );
@@ -175,7 +175,7 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->lastError (  ) );
@@ -189,7 +189,7 @@ void setTimeout(int timeout)
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SETTIMEOUT )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setTimeout ( (int) hb_parni(1) );
@@ -203,7 +203,7 @@ int timeout() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_TIMEOUT )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->timeout (  ) );
@@ -216,18 +216,18 @@ QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const 
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL1 )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(3);
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(4);
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(5);
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(6);
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(7);
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
+    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
+    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
+    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
+    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6);
+    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
+    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
+    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
     QDBusMessage * ptr = new QDBusMessage( obj->call ( par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
@@ -238,19 +238,19 @@ QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL2 )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
     QString par2 = QLatin1String( hb_parc(2) );
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(3);
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(4);
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(5);
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(6);
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(7);
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
-    QVariant par10 = ISNIL(10)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(10);
+    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
+    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
+    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
+    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6);
+    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
+    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
+    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
+    QVariant par10 = ISNIL(10)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(10);
     QDBusMessage * ptr = new QDBusMessage( obj->call (  (QDBus::CallMode) par1, par2, par3, par4, par5, par6, par7, par8, par9, par10 ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
@@ -270,7 +270,7 @@ QDBusMessage callWithArgumentList(QDBus::CallMode mode,const QString &method,con
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -294,7 +294,7 @@ bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject 
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK1 )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK1 )
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QObject * par3 = (QObject *) _qtxhb_itemGetPtr(3);
+    QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
     const char * par4 = hb_parc(4);
     const char * par5 = hb_parc(5);
     hb_retl( obj->callWithCallback ( par1, par2, par3,  (const char *) par4,  (const char *) par5 ) );
@@ -318,7 +318,7 @@ bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject 
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK2 )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK2 )
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QObject * par3 = (QObject *) _qtxhb_itemGetPtr(3);
+    QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
     const char * par4 = hb_parc(4);
     hb_retl( obj->callWithCallback ( par1, par2, par3,  (const char *) par4 ) );
   }
@@ -350,18 +350,18 @@ QDBusPendingCall asyncCall(const QString &method,const QVariant &arg1 = QVariant
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(3);
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(4);
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(5);
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(6);
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(7);
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
+    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
+    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
+    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
+    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6);
+    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
+    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
+    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
     QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
   }
@@ -373,7 +373,7 @@ QDBusPendingCall asyncCallWithArgumentList(const QString &method,const QList<QVa
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

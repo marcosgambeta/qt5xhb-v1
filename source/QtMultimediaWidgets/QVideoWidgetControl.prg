@@ -107,7 +107,7 @@ virtual QWidget *videoWidget() = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_VIDEOWIDGET )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->videoWidget (  );
@@ -121,7 +121,7 @@ virtual Qt::AspectRatioMode aspectRatioMode() const = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ASPECTRATIOMODE )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->aspectRatioMode (  ) );
@@ -134,7 +134,7 @@ virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETASPECTRATIOMODE )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -149,7 +149,7 @@ virtual bool isFullScreen() const = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ISFULLSCREEN )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isFullScreen (  ) );
@@ -162,7 +162,7 @@ virtual void setFullScreen(bool fullScreen) = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETFULLSCREEN )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setFullScreen ( (bool) hb_parl(1) );
@@ -176,7 +176,7 @@ virtual int brightness() const = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_BRIGHTNESS )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->brightness (  ) );
@@ -189,7 +189,7 @@ virtual void setBrightness(int brightness) = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETBRIGHTNESS )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setBrightness ( (int) hb_parni(1) );
@@ -203,7 +203,7 @@ virtual int contrast() const = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_CONTRAST )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->contrast (  ) );
@@ -216,7 +216,7 @@ virtual void setContrast(int contrast) = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETCONTRAST )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setContrast ( (int) hb_parni(1) );
@@ -230,7 +230,7 @@ virtual int hue() const = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_HUE )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->hue (  ) );
@@ -243,7 +243,7 @@ virtual void setHue(int hue) = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETHUE )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setHue ( (int) hb_parni(1) );
@@ -257,7 +257,7 @@ virtual int saturation() const = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SATURATION )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->saturation (  ) );
@@ -270,7 +270,7 @@ virtual void setSaturation(int saturation) = 0
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETSATURATION )
 {
-  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSaturation ( (int) hb_parni(1) );

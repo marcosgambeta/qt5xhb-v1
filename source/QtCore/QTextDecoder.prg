@@ -82,7 +82,7 @@ QTextDecoder(const QTextCodec * codec)
 HB_FUNC_STATIC( QTEXTDECODER_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  const QTextCodec * par1 = (const QTextCodec *) _qtxhb_itemGetPtr(1);
+  const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   QTextDecoder * o = new QTextDecoder ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextDecoder *) o );
@@ -98,7 +98,7 @@ QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 HB_FUNC_STATIC( QTEXTDECODER_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  const QTextCodec * par1 = (const QTextCodec *) _qtxhb_itemGetPtr(1);
+  const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QTextDecoder * o = new QTextDecoder ( par1,  (QTextCodec::ConversionFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -151,7 +151,7 @@ QString toUnicode(const char * chars, int len)
 */
 HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
 {
-  QTextDecoder * obj = (QTextDecoder *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -166,10 +166,10 @@ QString toUnicode(const QByteArray & ba)
 */
 HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE3 )
 {
-  QTextDecoder * obj = (QTextDecoder *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->toUnicode ( *par1 ).toLatin1().data() );
   }
 }
@@ -200,7 +200,7 @@ bool hasFailure() const
 */
 HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
 {
-  QTextDecoder * obj = (QTextDecoder *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasFailure (  ) );

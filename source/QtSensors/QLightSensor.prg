@@ -77,7 +77,7 @@ QLightSensor(QObject *parent = 0)
 HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QLightSensor * o = new QLightSensor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLightSensor *) o );
@@ -111,7 +111,7 @@ QLightReading *reading() const
 HB_FUNC_STATIC( QLIGHTSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLightReading * ptr = obj->reading (  );
@@ -127,7 +127,7 @@ qreal fieldOfView() const
 HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->fieldOfView (  ) );
@@ -142,7 +142,7 @@ void setFieldOfView(qreal fieldOfView)
 HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

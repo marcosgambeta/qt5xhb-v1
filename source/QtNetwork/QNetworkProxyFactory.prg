@@ -100,10 +100,10 @@ virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNe
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 {
-  QNetworkProxyFactory * obj = (QNetworkProxyFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxyFactory * obj = (QNetworkProxyFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qtxhb_itemGetPtr(1);
+    QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
     QList<QNetworkProxy> list = obj->queryProxy ( par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
@@ -149,7 +149,7 @@ static QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
-  QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) _qtxhb_itemGetPtr(1);
+  QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
   QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *par1 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
@@ -194,7 +194,7 @@ static void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 {
-  QNetworkProxyFactory * par1 = (QNetworkProxyFactory *) _qtxhb_itemGetPtr(1);
+  QNetworkProxyFactory * par1 = (QNetworkProxyFactory *) _qt5xhb_itemGetPtr(1);
   QNetworkProxyFactory::setApplicationProxyFactory ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -215,7 +215,7 @@ static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & que
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 {
-  QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qtxhb_itemGetPtr(1);
+  QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
   QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery ( par1 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__

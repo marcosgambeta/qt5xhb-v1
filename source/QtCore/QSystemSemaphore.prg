@@ -120,7 +120,7 @@ void setKey(const QString &key, int initialValue = 0, AccessMode mode = Open)
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -136,7 +136,7 @@ QString key() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->key (  ).toLatin1().data() );
@@ -149,7 +149,7 @@ bool acquire()
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->acquire (  ) );
@@ -162,7 +162,7 @@ bool release(int n = 1)
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->release ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
@@ -175,7 +175,7 @@ SystemSemaphoreError error() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -188,7 +188,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );

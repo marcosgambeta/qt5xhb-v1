@@ -99,7 +99,7 @@ virtual QList <QSensorGestureRecognizer *> createRecognizers() = 0
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QSensorGestureRecognizer *> list = obj->createRecognizers (  );
@@ -145,11 +145,11 @@ virtual QStringList supportedIds() const = 0
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->supportedIds (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
 }
@@ -161,7 +161,7 @@ virtual QString name() const = 0
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );

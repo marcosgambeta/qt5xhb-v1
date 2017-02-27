@@ -106,7 +106,7 @@ QDomImplementation ( const QDomImplementation & x )
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomImplementation * par1 = (QDomImplementation *) _qtxhb_itemGetPtr(1);
+  QDomImplementation * par1 = (QDomImplementation *) _qt5xhb_itemGetPtr(1);
   QDomImplementation * o = new QDomImplementation ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomImplementation *) o );
@@ -161,12 +161,12 @@ QDomDocument createDocument ( const QString & nsURI, const QString & qName, cons
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
-    QDomDocumentType * par3 = (QDomDocumentType *) _qtxhb_itemGetPtr(3);
+    QDomDocumentType * par3 = (QDomDocumentType *) _qt5xhb_itemGetPtr(3);
     QDomDocument * ptr = new QDomDocument( obj->createDocument ( par1, par2, *par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
   }
@@ -178,7 +178,7 @@ QDomDocumentType createDocumentType ( const QString & qName, const QString & pub
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -195,7 +195,7 @@ bool hasFeature ( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -210,7 +210,7 @@ bool isNull ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );

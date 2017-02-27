@@ -117,7 +117,7 @@ int count () const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -130,7 +130,7 @@ bool isAutoRepeat () const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAutoRepeat (  ) );
@@ -143,7 +143,7 @@ int key () const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->key (  ) );
@@ -156,7 +156,7 @@ bool matches ( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -170,7 +170,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->modifiers (  ) );
@@ -183,7 +183,7 @@ quint32 nativeModifiers () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nativeModifiers (  ) );
@@ -196,7 +196,7 @@ quint32 nativeScanCode () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nativeScanCode (  ) );
@@ -209,7 +209,7 @@ quint32 nativeVirtualKey () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nativeVirtualKey (  ) );
@@ -222,7 +222,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );

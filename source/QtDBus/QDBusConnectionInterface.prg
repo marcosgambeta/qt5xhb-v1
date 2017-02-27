@@ -89,7 +89,7 @@ QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent)
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QDBusConnectionInterface * o = new QDBusConnectionInterface ( par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusConnectionInterface *) o );
@@ -122,7 +122,7 @@ QDBusReply<QStringList> registeredServiceNames() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTEREDSERVICENAMES )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusReply<QStringList> * ptr = new QDBusReply<QStringList>( obj->registeredServiceNames (  ) );
@@ -136,7 +136,7 @@ QDBusReply<bool> isServiceRegistered(const QString &serviceName) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ISSERVICEREGISTERED )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -151,7 +151,7 @@ QDBusReply<QString> serviceOwner(const QString &name) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEOWNER )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -166,7 +166,7 @@ QDBusReply<bool> unregisterService(const QString &serviceName)
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_UNREGISTERSERVICE )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -181,7 +181,7 @@ QDBusReply<QDBusConnectionInterface::RegisterServiceReply> registerService(const
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTERSERVICE )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -195,7 +195,7 @@ QDBusReply<uint> servicePid(const QString &serviceName) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEPID )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -210,7 +210,7 @@ QDBusReply<uint> serviceUid(const QString &serviceName) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEUID )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -225,7 +225,7 @@ QDBusReply<void> startService(const QString &name)
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_STARTSERVICE )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

@@ -108,7 +108,7 @@ virtual int count () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -121,7 +121,7 @@ virtual QString declaredInClass ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->declaredInClass ( (int) hb_parni(1) ).toLatin1().data() );
@@ -134,7 +134,7 @@ virtual int indexOf ( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -148,7 +148,7 @@ virtual bool inheritedFromWidget ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->inheritedFromWidget ( (int) hb_parni(1) ) );
@@ -161,7 +161,7 @@ virtual bool isSignal ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSignal ( (int) hb_parni(1) ) );
@@ -174,7 +174,7 @@ virtual bool isSlot ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSlot ( (int) hb_parni(1) ) );
@@ -187,7 +187,7 @@ virtual bool isVisible ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isVisible ( (int) hb_parni(1) ) );
@@ -200,7 +200,7 @@ virtual QString memberGroup ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->memberGroup ( (int) hb_parni(1) ).toLatin1().data() );
@@ -213,7 +213,7 @@ virtual QString memberName ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->memberName ( (int) hb_parni(1) ).toLatin1().data() );
@@ -226,7 +226,7 @@ virtual QList<QByteArray> parameterNames ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QByteArray> list = obj->parameterNames ( (int) hb_parni(1) );
@@ -270,7 +270,7 @@ virtual QList<QByteArray> parameterTypes ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QByteArray> list = obj->parameterTypes ( (int) hb_parni(1) );
@@ -314,7 +314,7 @@ virtual void setMemberGroup ( int index, const QString & group ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
@@ -329,7 +329,7 @@ virtual void setVisible ( int index, bool visible ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (int) hb_parni(1), (bool) hb_parl(2) );
@@ -343,7 +343,7 @@ virtual QString signature ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->signature ( (int) hb_parni(1) ).toLatin1().data() );

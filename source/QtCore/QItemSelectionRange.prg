@@ -118,7 +118,7 @@ QItemSelectionRange(const QItemSelectionRange &other)
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QItemSelectionRange * par1 = (QItemSelectionRange *) _qtxhb_itemGetPtr(1);
+  QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
@@ -134,8 +134,8 @@ QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-  QModelIndex * par2 = (QModelIndex *) _qtxhb_itemGetPtr(2);
+  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+  QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1, *par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
@@ -151,7 +151,7 @@ QItemSelectionRange(const QModelIndex &index)
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
@@ -213,7 +213,7 @@ int top() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->top (  ) );
@@ -226,7 +226,7 @@ int left() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->left (  ) );
@@ -239,7 +239,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bottom (  ) );
@@ -252,7 +252,7 @@ int right() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->right (  ) );
@@ -265,7 +265,7 @@ int width() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->width (  ) );
@@ -278,7 +278,7 @@ int height() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->height (  ) );
@@ -291,7 +291,7 @@ const QPersistentModelIndex &topLeft() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPersistentModelIndex * ptr = &obj->topLeft (  );
@@ -305,7 +305,7 @@ const QPersistentModelIndex &bottomRight() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPersistentModelIndex * ptr = &obj->bottomRight (  );
@@ -319,7 +319,7 @@ QModelIndex parent() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->parent (  ) );
@@ -333,7 +333,7 @@ const QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QAbstractItemModel * ptr = obj->model (  );
@@ -347,10 +347,10 @@ bool contains(const QModelIndex &index) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS1 )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->contains ( *par1 ) );
   }
 }
@@ -361,10 +361,10 @@ bool contains(int row, int column, const QModelIndex &parentIndex) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS2 )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par3 = (QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->contains ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
   }
 }
@@ -394,10 +394,10 @@ bool intersects(const QItemSelectionRange &other) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemSelectionRange * par1 = (QItemSelectionRange *) _qtxhb_itemGetPtr(1);
+    QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->intersects ( *par1 ) );
   }
 }
@@ -408,10 +408,10 @@ QItemSelectionRange intersected(const QItemSelectionRange &other) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemSelectionRange * par1 = (QItemSelectionRange *) _qtxhb_itemGetPtr(1);
+    QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
     QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE" );
   }
@@ -423,7 +423,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -436,7 +436,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -449,7 +449,7 @@ QModelIndexList indexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QModelIndexList list = obj->indexes (  );

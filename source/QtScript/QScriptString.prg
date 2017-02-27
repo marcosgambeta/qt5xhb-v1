@@ -95,7 +95,7 @@ QScriptString(const QScriptString & other)
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScriptString * par1 = (QScriptString *) _qtxhb_itemGetPtr(1);
+  QScriptString * par1 = (QScriptString *) _qt5xhb_itemGetPtr(1);
   QScriptString * o = new QScriptString ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptString *) o );
@@ -147,7 +147,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 {
-  QScriptString * obj = (QScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -161,7 +161,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
 {
-  QScriptString * obj = (QScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString (  ).toLatin1().data() );

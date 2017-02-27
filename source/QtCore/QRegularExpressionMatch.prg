@@ -104,7 +104,7 @@ QRegularExpressionMatch(const QRegularExpressionMatch & match)
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QRegularExpressionMatch * par1 = (QRegularExpressionMatch *) _qtxhb_itemGetPtr(1);
+  QRegularExpressionMatch * par1 = (QRegularExpressionMatch *) _qt5xhb_itemGetPtr(1);
   QRegularExpressionMatch * o = new QRegularExpressionMatch ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegularExpressionMatch *) o );
@@ -140,7 +140,7 @@ QString captured(int nth = 0) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED1 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->captured ( (int) ISNIL(1)? 0 : hb_parni(1) ).toLatin1().data() );
@@ -153,7 +153,7 @@ QString captured(const QString & name) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED2 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -186,7 +186,7 @@ int capturedEnd(int nth = 0) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND1 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->capturedEnd ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -199,7 +199,7 @@ int capturedEnd(const QString & name) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND2 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -232,7 +232,7 @@ int capturedLength(int nth = 0) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH1 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->capturedLength ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -245,7 +245,7 @@ int capturedLength(const QString & name) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH2 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -278,7 +278,7 @@ QStringRef capturedRef(int nth = 0) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF1 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->capturedRef ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -292,7 +292,7 @@ QStringRef capturedRef(const QString & name) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF2 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -326,7 +326,7 @@ int capturedStart(int nth = 0) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDSTART1 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->capturedStart ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -339,7 +339,7 @@ int capturedStart(const QString & name) const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDSTART2 )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -372,11 +372,11 @@ QStringList capturedTexts() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDTEXTS )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->capturedTexts (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -386,7 +386,7 @@ bool hasMatch() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_HASMATCH )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasMatch (  ) );
@@ -399,7 +399,7 @@ bool hasPartialMatch() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_HASPARTIALMATCH )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasPartialMatch (  ) );
@@ -412,7 +412,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_ISVALID )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -425,7 +425,7 @@ int lastCapturedIndex() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_LASTCAPTUREDINDEX )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lastCapturedIndex (  ) );
@@ -438,7 +438,7 @@ QRegularExpression::MatchOptions matchOptions() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_MATCHOPTIONS )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->matchOptions (  ) );
@@ -451,7 +451,7 @@ QRegularExpression::MatchType matchType() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_MATCHTYPE )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->matchType (  ) );
@@ -464,7 +464,7 @@ QRegularExpression regularExpression() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_REGULAREXPRESSION )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
@@ -478,10 +478,10 @@ void swap(QRegularExpressionMatch & other)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_SWAP )
 {
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegularExpressionMatch * par1 = (QRegularExpressionMatch *) _qtxhb_itemGetPtr(1);
+    QRegularExpressionMatch * par1 = (QRegularExpressionMatch *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

@@ -94,7 +94,7 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomProcessingInstruction * par1 = (QDomProcessingInstruction *) _qtxhb_itemGetPtr(1);
+  QDomProcessingInstruction * par1 = (QDomProcessingInstruction *) _qt5xhb_itemGetPtr(1);
   QDomProcessingInstruction * o = new QDomProcessingInstruction ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomProcessingInstruction *) o );
@@ -150,7 +150,7 @@ QString data () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->data (  ).toLatin1().data() );
@@ -163,7 +163,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );
@@ -176,7 +176,7 @@ void setData ( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -191,7 +191,7 @@ QString target () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->target (  ).toLatin1().data() );

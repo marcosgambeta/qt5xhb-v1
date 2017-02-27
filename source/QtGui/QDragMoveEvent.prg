@@ -80,9 +80,9 @@ QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  const QMimeData * par3 = (const QMimeData *) _qtxhb_itemGetPtr(3);
+  const QMimeData * par3 = (const QMimeData *) _qt5xhb_itemGetPtr(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = ISNIL(6)? (int) QEvent::DragMove : hb_parni(6);
@@ -118,10 +118,10 @@ void accept ( const QRect & rectangle )
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT1 )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->accept ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -132,7 +132,7 @@ void accept ()
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT2 )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->accept (  );
@@ -165,7 +165,7 @@ QRect answerRect () const
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->answerRect (  ) );
@@ -179,10 +179,10 @@ void ignore ( const QRect & rectangle )
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE1 )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->ignore ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -193,7 +193,7 @@ void ignore ()
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE2 )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->ignore (  );

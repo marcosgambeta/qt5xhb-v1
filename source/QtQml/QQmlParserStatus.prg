@@ -93,7 +93,7 @@ virtual void classBegin() = 0
 */
 HB_FUNC_STATIC( QQMLPARSERSTATUS_CLASSBEGIN )
 {
-  QQmlParserStatus * obj = (QQmlParserStatus *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlParserStatus * obj = (QQmlParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->classBegin (  );
@@ -107,7 +107,7 @@ virtual void componentComplete() = 0
 */
 HB_FUNC_STATIC( QQMLPARSERSTATUS_COMPONENTCOMPLETE )
 {
-  QQmlParserStatus * obj = (QQmlParserStatus *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlParserStatus * obj = (QQmlParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->componentComplete (  );

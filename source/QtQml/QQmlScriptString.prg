@@ -99,7 +99,7 @@ QQmlScriptString(const QQmlScriptString & other)
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QQmlScriptString * par1 = (QQmlScriptString *) _qtxhb_itemGetPtr(1);
+  QQmlScriptString * par1 = (QQmlScriptString *) _qt5xhb_itemGetPtr(1);
   QQmlScriptString * o = new QQmlScriptString ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlScriptString *) o );
@@ -151,7 +151,7 @@ bool booleanLiteral(bool * ok) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
 {
-  QQmlScriptString * obj = (QQmlScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     bool par1;
@@ -166,7 +166,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISEMPTY )
 {
-  QQmlScriptString * obj = (QQmlScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -179,7 +179,7 @@ bool isNullLiteral() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISNULLLITERAL )
 {
-  QQmlScriptString * obj = (QQmlScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNullLiteral (  ) );
@@ -192,7 +192,7 @@ bool isUndefinedLiteral() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
 {
-  QQmlScriptString * obj = (QQmlScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isUndefinedLiteral (  ) );
@@ -205,7 +205,7 @@ qreal numberLiteral(bool * ok) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
 {
-  QQmlScriptString * obj = (QQmlScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     bool par1;
@@ -220,7 +220,7 @@ QString stringLiteral() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_STRINGLITERAL )
 {
-  QQmlScriptString * obj = (QQmlScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->stringLiteral (  ).toLatin1().data() );

@@ -87,7 +87,7 @@ Qt::ApplicationState applicationState() const
 */
 HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE )
 {
-  QApplicationStateChangeEvent * obj = (QApplicationStateChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplicationStateChangeEvent * obj = (QApplicationStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->applicationState (  ) );

@@ -97,7 +97,7 @@ virtual qreal crossfadeTime() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->crossfadeTime (  ) );
@@ -110,7 +110,7 @@ virtual bool isCrossfadeSupported() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCrossfadeSupported (  ) );
@@ -123,7 +123,7 @@ virtual QMediaContent nextMedia() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaContent * ptr = new QMediaContent( obj->nextMedia (  ) );
@@ -137,7 +137,7 @@ virtual void setCrossfadeTime(qreal crossfadeTime) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -152,10 +152,10 @@ virtual void setNextMedia(const QMediaContent & media) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaContent * par1 = (QMediaContent *) _qtxhb_itemGetPtr(1);
+    QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
     obj->setNextMedia ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

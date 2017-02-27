@@ -94,7 +94,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->modifiers (  ) );
@@ -107,7 +107,7 @@ QPointF pos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->pos (  ) );
@@ -121,7 +121,7 @@ Reason reason () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->reason (  ) );
@@ -134,7 +134,7 @@ QPointF scenePos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->scenePos (  ) );
@@ -148,7 +148,7 @@ QPoint screenPos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->screenPos (  ) );

@@ -97,7 +97,7 @@ QWindow *window() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
 {
-  QTouchEvent * obj = (QTouchEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWindow * ptr = obj->window (  );
@@ -111,7 +111,7 @@ QObject *target() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
 {
-  QTouchEvent * obj = (QTouchEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->target (  );
@@ -126,7 +126,7 @@ Qt::TouchPointStates touchPointStates() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
 {
-  QTouchEvent * obj = (QTouchEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->touchPointStates (  ) );
@@ -140,7 +140,7 @@ QTouchDevice *device() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
 {
-  QTouchEvent * obj = (QTouchEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTouchDevice * ptr = obj->device (  );

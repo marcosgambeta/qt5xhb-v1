@@ -122,7 +122,7 @@ QPrinterInfo ( const QPrinterInfo & src )
 HB_FUNC_STATIC( QPRINTERINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPrinterInfo * par1 = (QPrinterInfo *) _qtxhb_itemGetPtr(1);
+  QPrinterInfo * par1 = (QPrinterInfo *) _qt5xhb_itemGetPtr(1);
   QPrinterInfo * o = new QPrinterInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPrinterInfo *) o );
@@ -141,7 +141,7 @@ explicit QPrinterInfo ( const QPrinter & printer )
 HB_FUNC_STATIC( QPRINTERINFO_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPrinter * par1 = (QPrinter *) _qtxhb_itemGetPtr(1);
+  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QPrinterInfo * o = new QPrinterInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPrinterInfo *) o );
@@ -201,7 +201,7 @@ bool isDefault () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isDefault (  ) );
@@ -214,7 +214,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -227,7 +227,7 @@ QString printerName () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->printerName (  ).toLatin1().data() );
@@ -240,7 +240,7 @@ QList<QPrinter::PaperSize> supportedPaperSizes () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QPrinter::PaperSize> list = obj->supportedPaperSizes (  );
@@ -319,7 +319,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->description (  ).toLatin1().data() );
@@ -332,7 +332,7 @@ QString location() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->location (  ).toLatin1().data() );
@@ -345,7 +345,7 @@ QString makeAndModel() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->makeAndModel (  ).toLatin1().data() );
@@ -358,7 +358,7 @@ bool isRemote() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRemote (  ) );
@@ -371,7 +371,7 @@ QPrinter::PrinterState state() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_STATE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -384,7 +384,7 @@ QList<QPageSize> supportedPageSizes() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QPageSize> list = obj->supportedPageSizes (  );
@@ -432,7 +432,7 @@ QPageSize defaultPageSize() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->defaultPageSize (  ) );
@@ -446,7 +446,7 @@ bool supportsCustomPageSizes() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->supportsCustomPageSizes (  ) );
@@ -459,7 +459,7 @@ QPageSize minimumPhysicalPageSize() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize (  ) );
@@ -473,7 +473,7 @@ QPageSize maximumPhysicalPageSize() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize (  ) );
@@ -487,11 +487,11 @@ QList<int> supportedResolutions() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<int> list = obj->supportedResolutions (  );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -502,7 +502,7 @@ static QStringList availablePrinterNames()
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
 {
   QStringList strl = QPrinterInfo::availablePrinterNames (  );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
 

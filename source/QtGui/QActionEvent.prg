@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QAction * par2 = (QAction *) _qtxhb_itemGetPtr(2);
-  QAction * par3 = ISNIL(3)? 0 : (QAction *) _qtxhb_itemGetPtr(3);
+  QAction * par2 = (QAction *) _qt5xhb_itemGetPtr(2);
+  QAction * par3 = ISNIL(3)? 0 : (QAction *) _qt5xhb_itemGetPtr(3);
   QActionEvent * o = new QActionEvent ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QActionEvent *) o );
@@ -110,7 +110,7 @@ QAction * action () const
 */
 HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
-  QActionEvent * obj = (QActionEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->action (  );
@@ -124,7 +124,7 @@ QAction * before () const
 */
 HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {
-  QActionEvent * obj = (QActionEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->before (  );

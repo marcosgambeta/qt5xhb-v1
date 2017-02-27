@@ -110,7 +110,7 @@ QMediaContent(const QUrl & url)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
@@ -126,7 +126,7 @@ QMediaContent(const QNetworkRequest & request)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QNetworkRequest * par1 = (QNetworkRequest *) _qtxhb_itemGetPtr(1);
+  QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
@@ -142,7 +142,7 @@ QMediaContent(const QMediaResource & resource)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QMediaResource * par1 = (QMediaResource *) _qtxhb_itemGetPtr(1);
+  QMediaResource * par1 = (QMediaResource *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
@@ -181,7 +181,7 @@ QMediaContent(const QMediaContent & other)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW6 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QMediaContent * par1 = (QMediaContent *) _qtxhb_itemGetPtr(1);
+  QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
@@ -197,8 +197,8 @@ QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool 
 HB_FUNC_STATIC( QMEDIACONTENT_NEW7 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QMediaPlaylist * par1 = (QMediaPlaylist *) _qtxhb_itemGetPtr(1);
-  QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qtxhb_itemGetPtr(2);
+  QMediaPlaylist * par1 = (QMediaPlaylist *) _qt5xhb_itemGetPtr(1);
+  QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
   bool par3 = ISNIL(3)? false : hb_parl(3);
   QMediaContent * o = new QMediaContent ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -276,7 +276,7 @@ QNetworkRequest canonicalRequest() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
 {
-  QMediaContent * obj = (QMediaContent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QNetworkRequest * ptr = new QNetworkRequest( obj->canonicalRequest (  ) );
@@ -290,7 +290,7 @@ QMediaResource canonicalResource() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
 {
-  QMediaContent * obj = (QMediaContent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaResource * ptr = new QMediaResource( obj->canonicalResource (  ) );
@@ -304,7 +304,7 @@ QUrl canonicalUrl() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
 {
-  QMediaContent * obj = (QMediaContent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->canonicalUrl (  ) );
@@ -318,7 +318,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
 {
-  QMediaContent * obj = (QMediaContent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -331,7 +331,7 @@ QMediaPlaylist * playlist() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
 {
-  QMediaContent * obj = (QMediaContent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaPlaylist * ptr = obj->playlist (  );
@@ -345,7 +345,7 @@ QMediaResourceList resources() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
 {
-  QMediaContent * obj = (QMediaContent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaResourceList list = obj->resources (  );

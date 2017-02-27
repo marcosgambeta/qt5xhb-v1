@@ -111,7 +111,7 @@ QNetworkInterface ( const QNetworkInterface & other )
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QNetworkInterface * par1 = (QNetworkInterface *) _qtxhb_itemGetPtr(1);
+  QNetworkInterface * par1 = (QNetworkInterface *) _qt5xhb_itemGetPtr(1);
   QNetworkInterface * o = new QNetworkInterface ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkInterface *) o );
@@ -166,7 +166,7 @@ QList<QNetworkAddressEntry> addressEntries () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QNetworkAddressEntry> list = obj->addressEntries (  );
@@ -214,7 +214,7 @@ InterfaceFlags flags () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->flags (  ) );
@@ -227,7 +227,7 @@ QString hardwareAddress () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->hardwareAddress (  ).toLatin1().data() );
@@ -240,7 +240,7 @@ QString humanReadableName () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->humanReadableName (  ).toLatin1().data() );
@@ -253,7 +253,7 @@ int index () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->index (  ) );
@@ -266,7 +266,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -279,7 +279,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );

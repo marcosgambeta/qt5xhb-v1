@@ -86,7 +86,7 @@ QUndoView ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QUNDOVIEW_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QUndoView * o = new QUndoView ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoView *) o );
@@ -102,8 +102,8 @@ QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 HB_FUNC_STATIC( QUNDOVIEW_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUndoStack * par1 = (QUndoStack *) _qtxhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QUndoView * o = new QUndoView ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoView *) o );
@@ -119,8 +119,8 @@ QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 HB_FUNC_STATIC( QUNDOVIEW_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUndoGroup * par1 = (QUndoGroup *) _qtxhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QUndoView * o = new QUndoView ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoView *) o );
@@ -177,7 +177,7 @@ QIcon cleanIcon () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->cleanIcon (  ) );
@@ -191,7 +191,7 @@ QString emptyLabel () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->emptyLabel (  ).toLatin1().data() );
@@ -204,7 +204,7 @@ QUndoGroup * group () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUndoGroup * ptr = obj->group (  );
@@ -218,10 +218,10 @@ void setCleanIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
+    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     obj->setCleanIcon ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -233,7 +233,7 @@ void setEmptyLabel ( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -248,7 +248,7 @@ QUndoStack * stack () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUndoStack * ptr = obj->stack (  );
@@ -262,10 +262,10 @@ void setGroup ( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoGroup * par1 = (QUndoGroup *) _qtxhb_itemGetPtr(1);
+    QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
     obj->setGroup ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -277,10 +277,10 @@ void setStack ( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {
-  QUndoView * obj = (QUndoView *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoStack * par1 = (QUndoStack *) _qtxhb_itemGetPtr(1);
+    QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
     obj->setStack ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

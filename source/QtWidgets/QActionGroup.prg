@@ -88,7 +88,7 @@ QActionGroup ( QObject * parent )
 HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QActionGroup * o = new QActionGroup ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QActionGroup *) o );
@@ -122,10 +122,10 @@ QAction * addAction ( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
+    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     QAction * ptr = obj->addAction ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
@@ -136,7 +136,7 @@ QAction * addAction ( const QString & text )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ADDACTION2 )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -150,10 +150,10 @@ QAction * addAction ( const QIcon & icon, const QString & text )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ADDACTION3 )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
+    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     QString par2 = QLatin1String( hb_parc(2) );
     QAction * ptr = obj->addAction ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
@@ -190,7 +190,7 @@ QAction * checkedAction () const
 */
 HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->checkedAction (  );
@@ -204,7 +204,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEnabled (  ) );
@@ -217,7 +217,7 @@ bool isExclusive () const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isExclusive (  ) );
@@ -230,7 +230,7 @@ bool isVisible () const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isVisible (  ) );
@@ -243,10 +243,10 @@ void removeAction ( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
+    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     obj->removeAction ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -258,7 +258,7 @@ void setDisabled ( bool b )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDisabled ( (bool) hb_parl(1) );
@@ -272,7 +272,7 @@ void setEnabled ( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setEnabled ( (bool) hb_parl(1) );
@@ -286,7 +286,7 @@ void setExclusive ( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setExclusive ( (bool) hb_parl(1) );
@@ -300,7 +300,7 @@ void setVisible ( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {
-  QActionGroup * obj = (QActionGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );

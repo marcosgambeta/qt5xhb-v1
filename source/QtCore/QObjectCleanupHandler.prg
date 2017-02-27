@@ -109,10 +109,10 @@ QObject* add(QObject* object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QObject * ptr = obj->add ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
@@ -124,10 +124,10 @@ void remove(QObject *object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->remove ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,7 +139,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -152,7 +152,7 @@ void clear()
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );

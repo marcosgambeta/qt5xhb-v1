@@ -100,7 +100,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->brush (  ) );
@@ -113,10 +113,10 @@ void setBrush ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * par1 = (QBrush *) _qtxhb_itemGetPtr(1);
+    QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
     obj->setBrush ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -128,7 +128,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPen * ptr = new QPen( obj->pen (  ) );
@@ -141,10 +141,10 @@ void setPen ( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPen * par1 = (QPen *) _qtxhb_itemGetPtr(1);
+    QPen * par1 = (QPen *) _qt5xhb_itemGetPtr(1);
     obj->setPen ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -156,10 +156,10 @@ bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) _qtxhb_itemGetPtr(1);
+    const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isObscuredBy ( par1 ) );
   }
 }
@@ -170,7 +170,7 @@ QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );

@@ -111,7 +111,7 @@ QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomNamedNodeMap * par1 = (QDomNamedNodeMap *) _qtxhb_itemGetPtr(1);
+  QDomNamedNodeMap * par1 = (QDomNamedNodeMap *) _qt5xhb_itemGetPtr(1);
   QDomNamedNodeMap * o = new QDomNamedNodeMap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomNamedNodeMap *) o );
@@ -166,7 +166,7 @@ bool contains ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -180,7 +180,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -193,7 +193,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -206,7 +206,7 @@ QDomNode item ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomNode * ptr = new QDomNode( obj->item ( (int) hb_parni(1) ) );
@@ -220,7 +220,7 @@ uint length () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->length (  ) );
@@ -233,7 +233,7 @@ QDomNode namedItem ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -248,7 +248,7 @@ QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -264,7 +264,7 @@ QDomNode removeNamedItem ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -279,7 +279,7 @@ QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -295,10 +295,10 @@ QDomNode setNamedItem ( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) _qtxhb_itemGetPtr(1);
+    QDomNode * par1 = (QDomNode *) _qt5xhb_itemGetPtr(1);
     QDomNode * ptr = new QDomNode( obj->setNamedItem ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
@@ -310,10 +310,10 @@ QDomNode setNamedItemNS ( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) _qtxhb_itemGetPtr(1);
+    QDomNode * par1 = (QDomNode *) _qt5xhb_itemGetPtr(1);
     QDomNode * ptr = new QDomNode( obj->setNamedItemNS ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
@@ -325,7 +325,7 @@ int size () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );

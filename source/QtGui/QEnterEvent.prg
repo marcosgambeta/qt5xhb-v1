@@ -83,9 +83,9 @@ QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &sc
 HB_FUNC_STATIC( QENTEREVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
-  QPointF * par3 = (QPointF *) _qtxhb_itemGetPtr(3);
+  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
+  QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
   QEnterEvent * o = new QEnterEvent ( *par1, *par2, *par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEnterEvent *) o );
@@ -118,7 +118,7 @@ QPoint pos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_POS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->pos (  ) );
@@ -132,7 +132,7 @@ QPoint globalPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->globalPos (  ) );
@@ -146,7 +146,7 @@ int x() const
 */
 HB_FUNC_STATIC( QENTEREVENT_X )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->x (  ) );
@@ -159,7 +159,7 @@ int y() const
 */
 HB_FUNC_STATIC( QENTEREVENT_Y )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->y (  ) );
@@ -172,7 +172,7 @@ int globalX() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALX )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalX (  ) );
@@ -185,7 +185,7 @@ int globalY() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALY )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalY (  ) );
@@ -198,7 +198,7 @@ const QPointF &localPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_LOCALPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->localPos (  );
@@ -212,7 +212,7 @@ const QPointF &windowPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_WINDOWPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->windowPos (  );
@@ -226,7 +226,7 @@ const QPointF &screenPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_SCREENPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->screenPos (  );

@@ -160,11 +160,11 @@ virtual bool notify(QObject * object, QEvent * event)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
 {
-  QGuiApplication * obj = (QGuiApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-    QEvent * par2 = (QEvent *) _qtxhb_itemGetPtr(2);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->notify ( par1, par2 ) );
   }
 }
@@ -224,7 +224,7 @@ static void changeOverrideCursor(const QCursor & cursor)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qtxhb_itemGetPtr(1);
+  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
   QGuiApplication::changeOverrideCursor ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -464,7 +464,7 @@ static void setFont(const QFont & font)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
 {
-  QFont * par1 = (QFont *) _qtxhb_itemGetPtr(1);
+  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QGuiApplication::setFont ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -486,7 +486,7 @@ static void setOverrideCursor(const QCursor & cursor)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qtxhb_itemGetPtr(1);
+  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
   QGuiApplication::setOverrideCursor ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -497,7 +497,7 @@ static void setPalette(const QPalette & pal)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
 {
-  QPalette * par1 = (QPalette *) _qtxhb_itemGetPtr(1);
+  QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
   QGuiApplication::setPalette ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -528,7 +528,7 @@ static QWindow * topLevelAt(const QPoint & pos)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
 {
-  QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QWindow * ptr = QGuiApplication::topLevelAt ( *par1 );
   _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }

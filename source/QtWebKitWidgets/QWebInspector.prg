@@ -78,7 +78,7 @@ QWebInspector ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QWebInspector * o = new QWebInspector ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebInspector *) o );
@@ -111,7 +111,7 @@ QWebPage * page () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
-  QWebInspector * obj = (QWebInspector *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebPage * ptr = obj->page (  );
@@ -125,10 +125,10 @@ void setPage ( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
-  QWebInspector * obj = (QWebInspector *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebPage * par1 = (QWebPage *) _qtxhb_itemGetPtr(1);
+    QWebPage * par1 = (QWebPage *) _qt5xhb_itemGetPtr(1);
     obj->setPage ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -140,10 +140,10 @@ virtual bool event ( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
-  QWebInspector * obj = (QWebInspector *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qtxhb_itemGetPtr(1);
+    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->event ( par1 ) );
   }
 }
@@ -154,7 +154,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
-  QWebInspector * obj = (QWebInspector *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );

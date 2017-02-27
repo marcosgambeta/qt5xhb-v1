@@ -89,7 +89,7 @@ virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->captureDestination (  ) );
@@ -102,7 +102,7 @@ virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinati
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -116,7 +116,7 @@ virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations dest
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

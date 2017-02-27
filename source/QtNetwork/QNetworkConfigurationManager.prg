@@ -84,7 +84,7 @@ QNetworkConfigurationManager ( QObject * parent = 0 )
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QNetworkConfigurationManager * o = new QNetworkConfigurationManager ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkConfigurationManager *) o );
@@ -117,7 +117,7 @@ QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFla
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
@@ -166,7 +166,7 @@ QNetworkConfigurationManager::Capabilities capabilities () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->capabilities (  ) );
@@ -179,7 +179,7 @@ QNetworkConfiguration configurationFromIdentifier ( const QString & identifier )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -194,7 +194,7 @@ QNetworkConfiguration defaultConfiguration () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration (  ) );
@@ -208,7 +208,7 @@ bool isOnline () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isOnline (  ) );
@@ -221,7 +221,7 @@ void updateConfigurations ()
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->updateConfigurations (  );

@@ -95,7 +95,7 @@ void clear()
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -111,7 +111,7 @@ QList<QWebEngineHistoryItem> items() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->items (  ) );
@@ -127,7 +127,7 @@ QList<QWebEngineHistoryItem> backItems(int maxItems) const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->backItems ( (int) hb_parni(1) ) );
@@ -143,7 +143,7 @@ QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->forwardItems ( (int) hb_parni(1) ) );
@@ -159,7 +159,7 @@ bool canGoBack() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canGoBack (  ) );
@@ -174,7 +174,7 @@ bool canGoForward() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canGoForward (  ) );
@@ -189,7 +189,7 @@ void back()
 HB_FUNC_STATIC( QWEBENGINEHISTORY_BACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->back (  );
@@ -205,7 +205,7 @@ void forward()
 HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->forward (  );
@@ -221,7 +221,7 @@ void goToItem(const QWebEngineHistoryItem &item)
 HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->goToItem (  );
@@ -237,7 +237,7 @@ QWebEngineHistoryItem backItem() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->backItem (  ) );
@@ -253,7 +253,7 @@ QWebEngineHistoryItem currentItem() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->currentItem (  ) );
@@ -269,7 +269,7 @@ QWebEngineHistoryItem forwardItem() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->forwardItem (  ) );
@@ -285,7 +285,7 @@ QWebEngineHistoryItem itemAt(int i) const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->itemAt ( (int) hb_parni(1) ) );
@@ -301,7 +301,7 @@ int currentItemIndex() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentItemIndex (  ) );
@@ -316,7 +316,7 @@ int count() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );

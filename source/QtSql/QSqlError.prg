@@ -134,7 +134,7 @@ QSqlError ( const QSqlError & other )
 HB_FUNC_STATIC( QSQLERROR_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QSqlError * par1 = (QSqlError *) _qtxhb_itemGetPtr(1);
+  QSqlError * par1 = (QSqlError *) _qt5xhb_itemGetPtr(1);
   QSqlError * o = new QSqlError ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlError *) o );
@@ -194,7 +194,7 @@ QString databaseText () const
 */
 HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->databaseText (  ).toLatin1().data() );
@@ -206,7 +206,7 @@ QT_DEPRECATED void setDatabaseText ( const QString & databaseText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -221,7 +221,7 @@ QString driverText () const
 */
 HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->driverText (  ).toLatin1().data() );
@@ -233,7 +233,7 @@ QT_DEPRECATED void setDriverText ( const QString & driverText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -248,7 +248,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -261,7 +261,7 @@ QT_DEPRECATED  int number () const
 */
 HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->number (  ) );
@@ -273,7 +273,7 @@ QT_DEPRECATED void setNumber ( int number )
 */
 HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setNumber ( (int) hb_parni(1) );
@@ -287,7 +287,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QSQLERROR_TEXT )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
@@ -300,7 +300,7 @@ ErrorType type () const
 */
 HB_FUNC_STATIC( QSQLERROR_TYPE )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -312,7 +312,7 @@ QT_DEPRECATED void setType ( ErrorType type )
 */
 HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -327,7 +327,7 @@ QString nativeErrorCode() const
 */
 HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
 {
-  QSqlError * obj = (QSqlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->nativeErrorCode (  ).toLatin1().data() );

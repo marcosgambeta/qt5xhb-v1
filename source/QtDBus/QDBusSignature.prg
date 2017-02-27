@@ -113,7 +113,7 @@ explicit QDBusSignature(QLatin1String signature)
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QLatin1String * par1 = (QLatin1String *) _qtxhb_itemGetPtr(1);
+  QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
   QDBusSignature * o = new QDBusSignature ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusSignature *) o );
@@ -193,7 +193,7 @@ QString signature() const
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
 {
-  QDBusSignature * obj = (QDBusSignature *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->signature (  ).toLatin1().data() );
@@ -205,7 +205,7 @@ void setSignature(const QString &signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
 {
-  QDBusSignature * obj = (QDBusSignature *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

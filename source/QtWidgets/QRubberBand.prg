@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QRubberBand * o = new QRubberBand (  (QRubberBand::Shape) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRubberBand *) o );
@@ -114,7 +114,7 @@ void move ( int x, int y )
 */
 HB_FUNC_STATIC( QRUBBERBAND_MOVE1 )
 {
-  QRubberBand * obj = (QRubberBand *) _qtxhb_itemGetPtrStackSelfItem();
+  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->move ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -127,10 +127,10 @@ void move ( const QPoint & p )
 */
 HB_FUNC_STATIC( QRUBBERBAND_MOVE2 )
 {
-  QRubberBand * obj = (QRubberBand *) _qtxhb_itemGetPtrStackSelfItem();
+  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
     obj->move ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -161,7 +161,7 @@ void resize ( int width, int height )
 */
 HB_FUNC_STATIC( QRUBBERBAND_RESIZE1 )
 {
-  QRubberBand * obj = (QRubberBand *) _qtxhb_itemGetPtrStackSelfItem();
+  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->resize ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -174,10 +174,10 @@ void resize ( const QSize & size )
 */
 HB_FUNC_STATIC( QRUBBERBAND_RESIZE2 )
 {
-  QRubberBand * obj = (QRubberBand *) _qtxhb_itemGetPtrStackSelfItem();
+  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     obj->resize ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -208,10 +208,10 @@ void setGeometry ( const QRect & rect )
 */
 HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY1 )
 {
-  QRubberBand * obj = (QRubberBand *) _qtxhb_itemGetPtrStackSelfItem();
+  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->setGeometry ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -222,7 +222,7 @@ void setGeometry ( int x, int y, int width, int height )
 */
 HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY2 )
 {
-  QRubberBand * obj = (QRubberBand *) _qtxhb_itemGetPtrStackSelfItem();
+  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setGeometry ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
@@ -255,7 +255,7 @@ Shape shape () const
 */
 HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
-  QRubberBand * obj = (QRubberBand *) _qtxhb_itemGetPtrStackSelfItem();
+  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->shape (  ) );

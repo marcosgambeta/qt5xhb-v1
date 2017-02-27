@@ -90,7 +90,7 @@ QAxScriptManager ( QObject * parent = 0 )
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAxScriptManager * o = new QAxScriptManager ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxScriptManager *) o );
@@ -123,10 +123,10 @@ void addObject ( QAxBase * object )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT1 )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAxBase * par1 = (QAxBase *) _qtxhb_itemGetPtr(1);
+    QAxBase * par1 = (QAxBase *) _qt5xhb_itemGetPtr(1);
     obj->addObject ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -137,10 +137,10 @@ void addObject ( QObject * object )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT2 )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->addObject ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -171,18 +171,18 @@ QVariant call ( const QString & function, const QVariant & var1 = QVariant(), co
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL1 )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(3);
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(4);
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(5);
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(6);
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(7);
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
+    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
+    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
+    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
+    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6);
+    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
+    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
+    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
     QVariant * ptr = new QVariant( obj->call ( par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -193,7 +193,7 @@ QVariant call ( const QString & function, QList<QVariant> & arguments )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL2 )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -235,12 +235,12 @@ QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionName
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1);
     QStringList strl = obj->functions (  (QAxScript::FunctionFlags) par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -250,7 +250,7 @@ QAxScript * load ( const QString & code, const QString & name, const QString & l
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD1 )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -266,7 +266,7 @@ QAxScript * load ( const QString & file, const QString & name )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD2 )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -301,7 +301,7 @@ QAxScript * script ( const QString & name ) const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -316,11 +316,11 @@ QStringList scriptNames () const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->scriptNames (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

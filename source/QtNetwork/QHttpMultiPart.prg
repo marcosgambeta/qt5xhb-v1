@@ -79,7 +79,7 @@ QHttpMultiPart ( QObject * parent = 0 )
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QHttpMultiPart * o = new QHttpMultiPart ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHttpMultiPart *) o );
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QHttpMultiPart * o = new QHttpMultiPart (  (QHttpMultiPart::ContentType) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHttpMultiPart *) o );
@@ -148,10 +148,10 @@ void append ( const QHttpPart & httpPart )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHttpPart * par1 = (QHttpPart *) _qtxhb_itemGetPtr(1);
+    QHttpPart * par1 = (QHttpPart *) _qt5xhb_itemGetPtr(1);
     obj->append ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -163,7 +163,7 @@ QByteArray boundary () const
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->boundary (  ) );
@@ -177,10 +177,10 @@ void setBoundary ( const QByteArray & boundary )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setBoundary ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -192,7 +192,7 @@ void setContentType ( ContentType contentType )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

@@ -120,7 +120,7 @@ virtual QAction * actionAdjustSize () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionAdjustSize (  );
@@ -134,7 +134,7 @@ virtual QAction * actionBreakLayout () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionBreakLayout (  );
@@ -148,7 +148,7 @@ virtual QAction * actionCopy () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionCopy (  );
@@ -162,7 +162,7 @@ virtual QAction * actionCut () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionCut (  );
@@ -176,7 +176,7 @@ virtual QAction * actionDelete () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionDelete (  );
@@ -190,7 +190,7 @@ QAction * actionFormLayout () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionFormLayout (  );
@@ -204,7 +204,7 @@ virtual QAction * actionGridLayout () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionGridLayout (  );
@@ -218,7 +218,7 @@ virtual QAction * actionHorizontalLayout () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionHorizontalLayout (  );
@@ -232,7 +232,7 @@ virtual QAction * actionLower () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionLower (  );
@@ -246,7 +246,7 @@ virtual QAction * actionPaste () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionPaste (  );
@@ -260,7 +260,7 @@ virtual QAction * actionRaise () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionRaise (  );
@@ -274,7 +274,7 @@ virtual QAction * actionRedo () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionRedo (  );
@@ -288,7 +288,7 @@ virtual QAction * actionSelectAll () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionSelectAll (  );
@@ -302,7 +302,7 @@ QAction * actionSimplifyLayout () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionSimplifyLayout (  );
@@ -316,7 +316,7 @@ virtual QAction * actionSplitHorizontal () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionSplitHorizontal (  );
@@ -330,7 +330,7 @@ virtual QAction * actionSplitVertical () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionSplitVertical (  );
@@ -344,7 +344,7 @@ virtual QAction * actionUndo () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionUndo (  );
@@ -358,7 +358,7 @@ virtual QAction * actionVerticalLayout () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->actionVerticalLayout (  );
@@ -372,7 +372,7 @@ virtual QDesignerFormWindowInterface * activeFormWindow () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDesignerFormWindowInterface * ptr = obj->activeFormWindow (  );
@@ -386,7 +386,7 @@ virtual QDesignerFormEditorInterface * core () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDesignerFormEditorInterface * ptr = obj->core (  );
@@ -400,10 +400,10 @@ virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = 0, 
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
     QDesignerFormWindowInterface * ptr = obj->createFormWindow ( par1,  (Qt::WindowFlags) par2 );
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
@@ -416,7 +416,7 @@ virtual QDesignerFormWindowInterface * formWindow ( int index ) const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDesignerFormWindowInterface * ptr = obj->formWindow ( (int) hb_parni(1) );
@@ -430,7 +430,7 @@ virtual int formWindowCount () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->formWindowCount (  ) );
@@ -443,10 +443,10 @@ virtual void addFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qtxhb_itemGetPtr(1);
+    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
     obj->addFormWindow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -458,10 +458,10 @@ virtual void removeFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qtxhb_itemGetPtr(1);
+    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
     obj->removeFormWindow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -473,10 +473,10 @@ virtual void setActiveFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qtxhb_itemGetPtr(1);
+    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
     obj->setActiveFormWindow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

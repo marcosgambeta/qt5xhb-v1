@@ -74,7 +74,7 @@ QCompass(QObject *parent = 0)
 HB_FUNC_STATIC( QCOMPASS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QCompass * o = new QCompass ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCompass *) o );
@@ -108,7 +108,7 @@ QCompassReading *reading() const
 HB_FUNC_STATIC( QCOMPASS_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompass * obj = (QCompass *) _qtxhb_itemGetPtrStackSelfItem();
+  QCompass * obj = (QCompass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QCompassReading * ptr = obj->reading (  );

@@ -94,7 +94,7 @@ QScriptValueIterator(const QScriptValue & object)
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
+  QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
   QScriptValueIterator * o = new QScriptValueIterator ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValueIterator *) o );
@@ -127,7 +127,7 @@ QScriptValue::PropertyFlags flags() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_FLAGS )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->flags (  ) );
@@ -140,7 +140,7 @@ bool hasNext() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASNEXT )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasNext (  ) );
@@ -153,7 +153,7 @@ bool hasPrevious() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASPREVIOUS )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasPrevious (  ) );
@@ -166,7 +166,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NAME )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -179,7 +179,7 @@ void next()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEXT )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->next (  );
@@ -193,7 +193,7 @@ void previous()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_PREVIOUS )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->previous (  );
@@ -207,7 +207,7 @@ void remove()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_REMOVE )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->remove (  );
@@ -221,7 +221,7 @@ QScriptString scriptName() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SCRIPTNAME )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptString * ptr = new QScriptString( obj->scriptName (  ) );
@@ -235,10 +235,10 @@ void setValue(const QScriptValue & value)
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SETVALUE )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
     obj->setValue ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -250,7 +250,7 @@ void toBack()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOBACK )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->toBack (  );
@@ -264,7 +264,7 @@ void toFront()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOFRONT )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->toFront (  );
@@ -278,7 +278,7 @@ QScriptValue value() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_VALUE )
 {
-  QScriptValueIterator * obj = (QScriptValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->value (  ) );

@@ -115,7 +115,7 @@ virtual QAxAggregated * createAggregate ()
 */
 HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {
-  QAxBindable * obj = (QAxBindable *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAxAggregated * ptr = obj->createAggregate (  );
@@ -129,10 +129,10 @@ virtual bool readData ( QIODevice * source, const QString & format )
 */
 HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 {
-  QAxBindable * obj = (QAxBindable *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     hb_retl( obj->readData ( par1, par2 ) );
   }
@@ -144,7 +144,7 @@ void reportError ( int code, const QString & src, const QString & desc, const QS
 */
 HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 {
-  QAxBindable * obj = (QAxBindable *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
@@ -161,10 +161,10 @@ virtual bool writeData ( QIODevice * sink )
 */
 HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 {
-  QAxBindable * obj = (QAxBindable *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->writeData ( par1 ) );
   }
 }

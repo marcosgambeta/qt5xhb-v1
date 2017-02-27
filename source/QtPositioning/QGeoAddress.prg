@@ -119,7 +119,7 @@ QGeoAddress(const QGeoAddress &other)
 HB_FUNC_STATIC( QGEOADDRESS_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * par1 = (QGeoAddress *) _qtxhb_itemGetPtr(1);
+  QGeoAddress * par1 = (QGeoAddress *) _qt5xhb_itemGetPtr(1);
   QGeoAddress * o = new QGeoAddress ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGeoAddress *) o );
@@ -175,7 +175,7 @@ QString text() const
 HB_FUNC_STATIC( QGEOADDRESS_TEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
@@ -190,7 +190,7 @@ void setText(const QString &text)
 HB_FUNC_STATIC( QGEOADDRESS_SETTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -207,7 +207,7 @@ QString country() const
 HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->country (  ).toLatin1().data() );
@@ -222,7 +222,7 @@ void setCountry(const QString &country)
 HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -239,7 +239,7 @@ QString countryCode() const
 HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->countryCode (  ).toLatin1().data() );
@@ -254,7 +254,7 @@ void setCountryCode(const QString &countryCode)
 HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRYCODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -271,7 +271,7 @@ QString state() const
 HB_FUNC_STATIC( QGEOADDRESS_STATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->state (  ).toLatin1().data() );
@@ -286,7 +286,7 @@ void setState(const QString &state)
 HB_FUNC_STATIC( QGEOADDRESS_SETSTATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -303,7 +303,7 @@ QString county() const
 HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->county (  ).toLatin1().data() );
@@ -318,7 +318,7 @@ void setCounty(const QString &county)
 HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -335,7 +335,7 @@ QString city() const
 HB_FUNC_STATIC( QGEOADDRESS_CITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->city (  ).toLatin1().data() );
@@ -350,7 +350,7 @@ void setCity(const QString &city)
 HB_FUNC_STATIC( QGEOADDRESS_SETCITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -367,7 +367,7 @@ QString district() const
 HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->district (  ).toLatin1().data() );
@@ -382,7 +382,7 @@ void setDistrict(const QString &district)
 HB_FUNC_STATIC( QGEOADDRESS_SETDISTRICT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -399,7 +399,7 @@ QString postalCode() const
 HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->postalCode (  ).toLatin1().data() );
@@ -414,7 +414,7 @@ void setPostalCode(const QString &postalCode)
 HB_FUNC_STATIC( QGEOADDRESS_SETPOSTALCODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -431,7 +431,7 @@ QString street() const
 HB_FUNC_STATIC( QGEOADDRESS_STREET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->street (  ).toLatin1().data() );
@@ -446,7 +446,7 @@ void setStreet(const QString &street)
 HB_FUNC_STATIC( QGEOADDRESS_SETSTREET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -463,7 +463,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QGEOADDRESS_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -478,7 +478,7 @@ void clear()
 HB_FUNC_STATIC( QGEOADDRESS_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -494,7 +494,7 @@ bool isTextGenerated() const
 HB_FUNC_STATIC( QGEOADDRESS_ISTEXTGENERATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isTextGenerated (  ) );

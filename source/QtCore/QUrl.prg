@@ -170,7 +170,7 @@ QUrl ( const QUrl & other )
 HB_FUNC_STATIC( QURL_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QUrl * o = new QUrl ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrl *) o );
@@ -259,7 +259,7 @@ QString authority () const
 */
 HB_FUNC_STATIC( QURL_AUTHORITY )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->authority (  ).toLatin1().data() );
@@ -272,7 +272,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QURL_CLEAR )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -294,7 +294,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QURL_ERRORSTRING )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -307,7 +307,7 @@ QString fragment () const
 */
 HB_FUNC_STATIC( QURL_FRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fragment (  ).toLatin1().data() );
@@ -321,7 +321,7 @@ bool hasFragment () const
 */
 HB_FUNC_STATIC( QURL_HASFRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasFragment (  ) );
@@ -334,7 +334,7 @@ bool hasQuery () const
 */
 HB_FUNC_STATIC( QURL_HASQUERY )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasQuery (  ) );
@@ -348,7 +348,7 @@ QString host () const
 */
 HB_FUNC_STATIC( QURL_HOST )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->host (  ).toLatin1().data() );
@@ -361,7 +361,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QURL_ISEMPTY )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -374,7 +374,7 @@ bool isLocalFile () const
 */
 HB_FUNC_STATIC( QURL_ISLOCALFILE )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLocalFile (  ) );
@@ -387,10 +387,10 @@ bool isParentOf ( const QUrl & childUrl ) const
 */
 HB_FUNC_STATIC( QURL_ISPARENTOF )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isParentOf ( *par1 ) );
   }
 }
@@ -401,7 +401,7 @@ bool isRelative () const
 */
 HB_FUNC_STATIC( QURL_ISRELATIVE )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRelative (  ) );
@@ -414,7 +414,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QURL_ISVALID )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -427,7 +427,7 @@ QString password () const
 */
 HB_FUNC_STATIC( QURL_PASSWORD )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->password (  ).toLatin1().data() );
@@ -440,7 +440,7 @@ QString path () const
 */
 HB_FUNC_STATIC( QURL_PATH )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->path (  ).toLatin1().data() );
@@ -453,7 +453,7 @@ int port () const
 */
 HB_FUNC_STATIC( QURL_PORT1 )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->port (  ) );
@@ -465,7 +465,7 @@ int port ( int defaultPort ) const
 */
 HB_FUNC_STATIC( QURL_PORT2 )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->port ( (int) hb_parni(1) ) );
@@ -505,10 +505,10 @@ QUrl resolved ( const QUrl & relative ) const
 */
 HB_FUNC_STATIC( QURL_RESOLVED )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->resolved ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -520,7 +520,7 @@ QString scheme () const
 */
 HB_FUNC_STATIC( QURL_SCHEME )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->scheme (  ).toLatin1().data() );
@@ -533,7 +533,7 @@ void setAuthority ( const QString & authority )
 */
 HB_FUNC_STATIC( QURL_SETAUTHORITY )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -558,7 +558,7 @@ void setFragment ( const QString & fragment )
 */
 HB_FUNC_STATIC( QURL_SETFRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -573,7 +573,7 @@ void setHost ( const QString & host )
 */
 HB_FUNC_STATIC( QURL_SETHOST )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -588,7 +588,7 @@ void setPassword ( const QString & password )
 */
 HB_FUNC_STATIC( QURL_SETPASSWORD )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -603,10 +603,10 @@ void setPath ( const QString & path )
 */
 HB_FUNC_STATIC( QURL_SETPATH )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString  * par1 = (QString  *) _qtxhb_itemGetPtr(1);
+    QString  * par1 = (QString  *) _qt5xhb_itemGetPtr(1);
     obj->setPath ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -618,7 +618,7 @@ void setPort ( int port )
 */
 HB_FUNC_STATIC( QURL_SETPORT )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setPort ( (int) hb_parni(1) );
@@ -634,7 +634,7 @@ void setScheme ( const QString & scheme )
 */
 HB_FUNC_STATIC( QURL_SETSCHEME )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -649,7 +649,7 @@ void setUrl ( const QString & url )
 */
 HB_FUNC_STATIC( QURL_SETURL1 )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -663,7 +663,7 @@ void setUrl ( const QString & url, ParsingMode parsingMode )
 */
 HB_FUNC_STATIC( QURL_SETURL2 )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -698,7 +698,7 @@ void setUserInfo ( const QString & userInfo )
 */
 HB_FUNC_STATIC( QURL_SETUSERINFO )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -713,7 +713,7 @@ void setUserName ( const QString & userName )
 */
 HB_FUNC_STATIC( QURL_SETUSERNAME )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -728,10 +728,10 @@ void swap ( QUrl & other )
 */
 HB_FUNC_STATIC( QURL_SWAP )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -743,7 +743,7 @@ QByteArray toEncoded ( FormattingOptions options = None ) const
 */
 HB_FUNC_STATIC( QURL_TOENCODED )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
@@ -758,7 +758,7 @@ QString toLocalFile () const
 */
 HB_FUNC_STATIC( QURL_TOLOCALFILE )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toLocalFile (  ).toLatin1().data() );
@@ -771,7 +771,7 @@ QString toString ( FormattingOptions options = None ) const
 */
 HB_FUNC_STATIC( QURL_TOSTRING )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
@@ -785,7 +785,7 @@ QString topLevelDomain () const
 */
 HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->topLevelDomain (  ).toLatin1().data() );
@@ -798,7 +798,7 @@ QString userInfo () const
 */
 HB_FUNC_STATIC( QURL_USERINFO )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->userInfo (  ).toLatin1().data() );
@@ -811,7 +811,7 @@ QString userName () const
 */
 HB_FUNC_STATIC( QURL_USERNAME )
 {
-  QUrl * obj = (QUrl *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->userName (  ).toLatin1().data() );
@@ -824,7 +824,7 @@ static QString fromAce ( const QByteArray & domain )
 */
 HB_FUNC_STATIC( QURL_FROMACE )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   hb_retc( (const char *) QUrl::fromAce ( *par1 ).toLatin1().data() );
 }
 
@@ -834,7 +834,7 @@ static QUrl fromEncoded ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMENCODED1 )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QUrl * ptr = new QUrl( QUrl::fromEncoded ( *par1 ) );
   _qt5xhb_createReturnClass ( ptr, "QURL", true );
 }
@@ -844,7 +844,7 @@ static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
 HB_FUNC_STATIC( QURL_FROMENCODED2 )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QUrl * ptr = new QUrl( QUrl::fromEncoded ( *par1,  (QUrl::ParsingMode) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QURL", true );
@@ -886,7 +886,7 @@ static QString fromPercentEncoding ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   hb_retc( (const char *) QUrl::fromPercentEncoding ( *par1 ).toLatin1().data() );
 }
 
@@ -939,8 +939,8 @@ static QByteArray toPercentEncoding ( const QString & input, const QByteArray & 
 HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {
   QString par1 = QLatin1String( hb_parc(1) );
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(2);
-  QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(3);
+  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
+  QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
   QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding ( par1, par2, par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }

@@ -77,7 +77,7 @@ QItemDelegate ( QObject * parent = 0 )
 HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QItemDelegate * o = new QItemDelegate ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemDelegate *) o );
@@ -110,7 +110,7 @@ bool hasClipping () const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasClipping (  ) );
@@ -123,7 +123,7 @@ QItemEditorFactory * itemEditorFactory () const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QItemEditorFactory * ptr = obj->itemEditorFactory (  );
@@ -137,7 +137,7 @@ void setClipping ( bool clip )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setClipping ( (bool) hb_parl(1) );
@@ -151,10 +151,10 @@ void setItemEditorFactory ( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemEditorFactory * par1 = (QItemEditorFactory *) _qtxhb_itemGetPtr(1);
+    QItemEditorFactory * par1 = (QItemEditorFactory *) _qt5xhb_itemGetPtr(1);
     obj->setItemEditorFactory ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

@@ -72,7 +72,7 @@ QTimeEdit ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QTIMEEDIT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QTimeEdit * o = new QTimeEdit ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeEdit *) o );
@@ -88,8 +88,8 @@ QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 HB_FUNC_STATIC( QTIMEEDIT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QTime * par1 = (QTime *) _qtxhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QTimeEdit * o = new QTimeEdit ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeEdit *) o );

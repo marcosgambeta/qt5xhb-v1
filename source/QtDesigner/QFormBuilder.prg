@@ -110,7 +110,7 @@ void addPluginPath ( const QString & pluginPath )
 */
 HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 {
-  QFormBuilder * obj = (QFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -125,7 +125,7 @@ void clearPluginPaths ()
 */
 HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 {
-  QFormBuilder * obj = (QFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clearPluginPaths (  );
@@ -139,7 +139,7 @@ QList<QDesignerCustomWidgetInterface *> customWidgets () const
 */
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {
-  QFormBuilder * obj = (QFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets (  );
@@ -183,11 +183,11 @@ QStringList pluginPaths () const
 */
 HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 {
-  QFormBuilder * obj = (QFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->pluginPaths (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -197,7 +197,7 @@ void setPluginPath ( const QStringList & pluginPaths )
 */
 HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
 {
-  QFormBuilder * obj = (QFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;

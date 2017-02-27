@@ -92,7 +92,7 @@ virtual QString containerDescription(const QString & format) const = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION )
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -106,7 +106,7 @@ virtual QString containerFormat() const = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERFORMAT )
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->containerFormat (  ).toLatin1().data() );
@@ -119,7 +119,7 @@ virtual void setContainerFormat(const QString & format) = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT )
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -134,11 +134,11 @@ virtual QStringList supportedContainers() const = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SUPPORTEDCONTAINERS )
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->supportedContainers (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

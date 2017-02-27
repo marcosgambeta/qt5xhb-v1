@@ -98,7 +98,7 @@ explicit QSqlQueryModel ( QObject * parent = 0 )
 HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSqlQueryModel * o = new QSqlQueryModel ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlQueryModel *) o );
@@ -131,7 +131,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -145,7 +145,7 @@ QSqlError lastError () const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlError * ptr = new QSqlError( obj->lastError (  ) );
@@ -159,7 +159,7 @@ QSqlQuery query () const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlQuery * ptr = new QSqlQuery( obj->query (  ) );
@@ -172,10 +172,10 @@ void setQuery ( const QSqlQuery & query )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY1 )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSqlQuery * par1 = (QSqlQuery *) _qtxhb_itemGetPtr(1);
+    QSqlQuery * par1 = (QSqlQuery *) _qt5xhb_itemGetPtr(1);
     obj->setQuery ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -186,11 +186,11 @@ void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY2 )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qtxhb_itemGetPtr(2);
+    QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
     obj->setQuery ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -221,7 +221,7 @@ QSqlRecord record ( int row ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD1 )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlRecord * ptr = new QSqlRecord( obj->record ( (int) hb_parni(1) ) );
@@ -234,7 +234,7 @@ QSqlRecord record () const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD2 )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
@@ -267,10 +267,10 @@ bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->canFetchMore ( par1 ) );
   }
 }
@@ -281,10 +281,10 @@ int columnCount ( const QModelIndex & index = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->columnCount ( par1 ) );
   }
 }
@@ -295,10 +295,10 @@ QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -310,10 +310,10 @@ void fetchMore ( const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     obj->fetchMore ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -325,7 +325,7 @@ QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::D
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -339,11 +339,11 @@ bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
-    QVariant * par3 = (QVariant *) _qtxhb_itemGetPtr(3);
+    QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->setHeaderData ( (int) hb_parni(1),  (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
   }
 }
@@ -354,10 +354,10 @@ bool insertColumns ( int column, int count, const QModelIndex & parent = QModelI
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->insertColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -368,10 +368,10 @@ bool removeColumns ( int column, int count, const QModelIndex & parent = QModelI
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -382,10 +382,10 @@ int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->rowCount ( par1 ) );
   }
 }

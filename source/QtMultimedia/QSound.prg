@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QSound * o = new QSound ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSound *) o );
@@ -113,7 +113,7 @@ int loops() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPS )
 {
-  QSound * obj = (QSound *) _qtxhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->loops (  ) );
@@ -126,7 +126,7 @@ int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {
-  QSound * obj = (QSound *) _qtxhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->loopsRemaining (  ) );
@@ -139,7 +139,7 @@ void setLoops(int)
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
-  QSound * obj = (QSound *) _qtxhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLoops ( (int) hb_parni(1) );
@@ -153,7 +153,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSOUND_FILENAME )
 {
-  QSound * obj = (QSound *) _qtxhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -166,7 +166,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
-  QSound * obj = (QSound *) _qtxhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isFinished (  ) );
@@ -179,7 +179,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSOUND_STOP )
 {
-  QSound * obj = (QSound *) _qtxhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );
@@ -193,7 +193,7 @@ void play()
 */
 HB_FUNC_STATIC( QSOUND_PLAY1 )
 {
-  QSound * obj = (QSound *) _qtxhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->play (  );

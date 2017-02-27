@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QSplitter * par2 = (QSplitter *) _qtxhb_itemGetPtr(2);
+  QSplitter * par2 = (QSplitter *) _qt5xhb_itemGetPtr(2);
   QSplitterHandle * o = new QSplitterHandle (  (Qt::Orientation) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSplitterHandle *) o );
@@ -113,7 +113,7 @@ bool opaqueResize () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) _qtxhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->opaqueResize (  ) );
@@ -126,7 +126,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) _qtxhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );
@@ -139,7 +139,7 @@ void setOrientation ( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) _qtxhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -154,7 +154,7 @@ QSplitter * splitter () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) _qtxhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSplitter * ptr = obj->splitter (  );
@@ -168,7 +168,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) _qtxhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );

@@ -77,7 +77,7 @@ QTapSensor(QObject *parent = 0)
 HB_FUNC_STATIC( QTAPSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QTapSensor * o = new QTapSensor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTapSensor *) o );
@@ -111,7 +111,7 @@ QTapReading *reading() const
 HB_FUNC_STATIC( QTAPSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTapReading * ptr = obj->reading (  );
@@ -127,7 +127,7 @@ bool returnDoubleTapEvents() const
 HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->returnDoubleTapEvents (  ) );
@@ -142,7 +142,7 @@ void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setReturnDoubleTapEvents ( (bool) hb_parl(1) );

@@ -91,7 +91,7 @@ virtual void addHistoryEntry ( const QString & url ) = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -106,7 +106,7 @@ virtual bool historyContains ( const QString & url ) const = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -130,7 +130,7 @@ static void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
 {
-  QWebHistoryInterface * par1 = (QWebHistoryInterface *) _qtxhb_itemGetPtr(1);
+  QWebHistoryInterface * par1 = (QWebHistoryInterface *) _qt5xhb_itemGetPtr(1);
   QWebHistoryInterface::setDefaultInterface ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }

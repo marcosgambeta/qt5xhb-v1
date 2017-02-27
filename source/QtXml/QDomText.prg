@@ -93,7 +93,7 @@ QDomText ( const QDomText & x )
 HB_FUNC_STATIC( QDOMTEXT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomText * par1 = (QDomText *) _qtxhb_itemGetPtr(1);
+  QDomText * par1 = (QDomText *) _qt5xhb_itemGetPtr(1);
   QDomText * o = new QDomText ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomText *) o );
@@ -149,7 +149,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
-  QDomText * obj = (QDomText *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );
@@ -162,7 +162,7 @@ QDomText splitText ( int offset )
 */
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
-  QDomText * obj = (QDomText *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomText * ptr = new QDomText( obj->splitText ( (int) hb_parni(1) ) );

@@ -77,7 +77,7 @@ QWidgetItemV2(QWidget *widget)
 HB_FUNC_STATIC( QWIDGETITEMV2_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QWidgetItemV2 * o = new QWidgetItemV2 ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWidgetItemV2 *) o );
@@ -110,7 +110,7 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_SIZEHINT )
 {
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -124,7 +124,7 @@ QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_MINIMUMSIZE )
 {
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
@@ -138,7 +138,7 @@ QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_MAXIMUMSIZE )
 {
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
@@ -152,7 +152,7 @@ int heightForWidth(int width) const
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_HEIGHTFORWIDTH )
 {
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );

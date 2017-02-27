@@ -98,7 +98,7 @@ QBitmap ( const QPixmap & pixmap )
 HB_FUNC_STATIC( QBITMAP_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPixmap * par1 = (QPixmap *) _qtxhb_itemGetPtr(1);
+  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   QBitmap * o = new QBitmap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitmap *) o );
@@ -137,7 +137,7 @@ QBitmap ( const QSize & size )
 HB_FUNC_STATIC( QBITMAP_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QBitmap * o = new QBitmap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitmap *) o );
@@ -227,7 +227,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
-  QBitmap * obj = (QBitmap *) _qtxhb_itemGetPtrStackSelfItem();
+  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -241,10 +241,10 @@ QBitmap transformed ( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
-  QBitmap * obj = (QBitmap *) _qtxhb_itemGetPtrStackSelfItem();
+  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTransform * par1 = (QTransform *) _qtxhb_itemGetPtr(1);
+    QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
     QBitmap * ptr = new QBitmap( obj->transformed ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
   }
@@ -256,8 +256,8 @@ static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format
 */
 HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
-  QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
-  const uchar * par2 = (const uchar *) _qtxhb_itemGetPtr(2);
+  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
+  const uchar * par2 = (const uchar *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
   QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2,  (QImage::Format) par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
@@ -269,7 +269,7 @@ static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags 
 */
 HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
-  QImage * par1 = (QImage *) _qtxhb_itemGetPtr(1);
+  QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
   QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1,  (Qt::ImageConversionFlags) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );

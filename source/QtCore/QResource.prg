@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-  QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) _qtxhb_itemGetPtr(2);
+  QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(2);
   QResource * o = new QResource ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QResource *) o );
@@ -128,7 +128,7 @@ QString absoluteFilePath () const
 */
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->absoluteFilePath (  ).toLatin1().data() );
@@ -141,7 +141,7 @@ const uchar * data () const
 */
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const uchar * ptr = obj->data (  );
@@ -155,7 +155,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -168,7 +168,7 @@ bool isCompressed () const
 */
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCompressed (  ) );
@@ -181,7 +181,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -194,7 +194,7 @@ QLocale locale () const
 */
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
@@ -208,7 +208,7 @@ void setFileName ( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -223,10 +223,10 @@ void setLocale ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qtxhb_itemGetPtr(1);
+    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
     obj->setLocale ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -238,7 +238,7 @@ qint64 size () const
 */
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
-  QResource * obj = (QResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );

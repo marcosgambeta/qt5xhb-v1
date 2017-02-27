@@ -80,7 +80,7 @@ QKeySequenceEdit(QWidget *parent = 0)
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QKeySequenceEdit * o = new QKeySequenceEdit ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequenceEdit *) o );
@@ -96,8 +96,8 @@ QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequence * par1 = (QKeySequence *) _qtxhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QKeySequenceEdit * o = new QKeySequenceEdit ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequenceEdit *) o );
@@ -150,7 +150,7 @@ QKeySequence keySequence() const
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QKeySequence * ptr = new QKeySequence( obj->keySequence (  ) );
@@ -166,10 +166,10 @@ void setKeySequence(const QKeySequence &keySequence)
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) _qtxhb_itemGetPtr(1);
+    QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
     obj->setKeySequence ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -183,7 +183,7 @@ void clear()
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );

@@ -115,7 +115,7 @@ QTemporaryFile(QObject * parent)
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QTemporaryFile * o = new QTemporaryFile ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTemporaryFile *) o );
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QTemporaryFile * o = new QTemporaryFile ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTemporaryFile *) o );
@@ -194,7 +194,7 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->autoRemove (  ) );
@@ -207,7 +207,7 @@ QString fileTemplate() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileTemplate (  ).toLatin1().data() );
@@ -220,7 +220,7 @@ bool open()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->open (  ) );
@@ -233,7 +233,7 @@ void setAutoRemove(bool b)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAutoRemove ( (bool) hb_parl(1) );
@@ -247,7 +247,7 @@ void setFileTemplate(const QString & name)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -262,7 +262,7 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -275,7 +275,7 @@ static QTemporaryFile * createNativeFile(QFile & file)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE1 )
 {
-  QFile * par1 = (QFile *) _qtxhb_itemGetPtr(1);
+  QFile * par1 = (QFile *) _qt5xhb_itemGetPtr(1);
   QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( *par1 );
   _qt5xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
 }

@@ -129,7 +129,7 @@ void append ( const QString & qName, const QString & uri, const QString & localP
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -147,7 +147,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -161,7 +161,7 @@ int count () const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -174,7 +174,7 @@ int index ( const QString & qName ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX1 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -187,7 +187,7 @@ int index ( const QString & uri, const QString & localPart ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX3 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -226,7 +226,7 @@ int length () const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->length (  ) );
@@ -239,7 +239,7 @@ QString localName ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->localName ( (int) hb_parni(1) ).toLatin1().data() );
@@ -252,7 +252,7 @@ QString qName ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->qName ( (int) hb_parni(1) ).toLatin1().data() );
@@ -265,7 +265,7 @@ QString type ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE1 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->type ( (int) hb_parni(1) ).toLatin1().data() );
@@ -277,7 +277,7 @@ QString type ( const QString & qName ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE2 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -290,7 +290,7 @@ QString type ( const QString & uri, const QString & localName ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE3 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -329,7 +329,7 @@ QString uri ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->uri ( (int) hb_parni(1) ).toLatin1().data() );
@@ -342,7 +342,7 @@ QString value ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE1 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->value ( (int) hb_parni(1) ).toLatin1().data() );
@@ -354,7 +354,7 @@ QString value ( const QString & qName ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE2 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -367,7 +367,7 @@ QString value ( const QString & uri, const QString & localName ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE4 )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

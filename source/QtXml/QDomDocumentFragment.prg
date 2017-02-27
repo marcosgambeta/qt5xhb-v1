@@ -91,7 +91,7 @@ QDomDocumentFragment ( const QDomDocumentFragment & x )
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomDocumentFragment * par1 = (QDomDocumentFragment *) _qtxhb_itemGetPtr(1);
+  QDomDocumentFragment * par1 = (QDomDocumentFragment *) _qt5xhb_itemGetPtr(1);
   QDomDocumentFragment * o = new QDomDocumentFragment ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomDocumentFragment *) o );
@@ -147,7 +147,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
 {
-  QDomDocumentFragment * obj = (QDomDocumentFragment *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentFragment * obj = (QDomDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );

@@ -71,10 +71,10 @@ virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
-  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qtxhb_itemGetPtr(1);
+    QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
     obj->initializeEngine ( par1,  (const char *) par2 );
   }
@@ -87,7 +87,7 @@ virtual void registerTypes ( const char * uri ) = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
 {
-  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);

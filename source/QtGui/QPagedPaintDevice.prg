@@ -102,7 +102,7 @@ virtual bool newPage() = 0
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_NEWPAGE )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->newPage (  ) );
@@ -115,7 +115,7 @@ PageSize pageSize() const
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->pageSize (  ) );
@@ -127,7 +127,7 @@ virtual void setPageSize(PageSize size)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -142,7 +142,7 @@ QSizeF pageSizeMM() const
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->pageSizeMM (  ) );
@@ -155,10 +155,10 @@ virtual void setPageSizeMM(const QSizeF & size)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZEMM )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qtxhb_itemGetPtr(1);
+    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     obj->setPageSizeMM ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -171,7 +171,7 @@ QPageLayout pageLayout() const
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPageLayout * ptr = new QPageLayout( obj->pageLayout (  ) );
@@ -184,10 +184,10 @@ bool setPageLayout(const QPageLayout &pageLayout)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageLayout * par1 = (QPageLayout *) _qtxhb_itemGetPtr(1);
+    QPageLayout * par1 = (QPageLayout *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->setPageLayout ( *par1 ) );
   }
 }
@@ -198,7 +198,7 @@ bool setPageOrientation(QPageLayout::Orientation orientation)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -212,10 +212,10 @@ bool setPageMargins(const QMarginsF &margins)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS1 )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * par1 = (QMarginsF *) _qtxhb_itemGetPtr(1);
+    QMarginsF * par1 = (QMarginsF *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->setPageMargins ( *par1 ) );
   }
 }
@@ -225,10 +225,10 @@ bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS2 )
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * par1 = (QMarginsF *) _qtxhb_itemGetPtr(1);
+    QMarginsF * par1 = (QMarginsF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     hb_retl( obj->setPageMargins ( *par1,  (QPageLayout::Unit) par2 ) );
   }

@@ -82,7 +82,7 @@ QWriteLocker(QReadWriteLock * lock)
 HB_FUNC_STATIC( QWRITELOCKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QReadWriteLock * par1 = (QReadWriteLock *) _qtxhb_itemGetPtr(1);
+  QReadWriteLock * par1 = (QReadWriteLock *) _qt5xhb_itemGetPtr(1);
   QWriteLocker * o = new QWriteLocker ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWriteLocker *) o );
@@ -115,7 +115,7 @@ QReadWriteLock * readWriteLock() const
 */
 HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qtxhb_itemGetPtrStackSelfItem();
+  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QReadWriteLock * ptr = obj->readWriteLock (  );
@@ -129,7 +129,7 @@ void relock()
 */
 HB_FUNC_STATIC( QWRITELOCKER_RELOCK )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qtxhb_itemGetPtrStackSelfItem();
+  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->relock (  );
@@ -143,7 +143,7 @@ void unlock()
 */
 HB_FUNC_STATIC( QWRITELOCKER_UNLOCK )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qtxhb_itemGetPtrStackSelfItem();
+  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unlock (  );

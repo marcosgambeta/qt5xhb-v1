@@ -101,7 +101,7 @@ QVariant currentValue () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->currentValue (  ) );
@@ -115,7 +115,7 @@ QEasingCurve easingCurve () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QEasingCurve * ptr = new QEasingCurve( obj->easingCurve (  ) );
@@ -129,7 +129,7 @@ QVariant endValue () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->endValue (  ) );
@@ -143,7 +143,7 @@ QVariant keyValueAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -159,7 +159,7 @@ void setDuration ( int msecs )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDuration ( (int) hb_parni(1) );
@@ -173,10 +173,10 @@ void setEasingCurve ( const QEasingCurve & easing )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEasingCurve * par1 = (QEasingCurve *) _qtxhb_itemGetPtr(1);
+    QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
     obj->setEasingCurve ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -188,10 +188,10 @@ void setEndValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setEndValue ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -203,11 +203,11 @@ void setKeyValueAt ( qreal step, const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setKeyValueAt ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -220,10 +220,10 @@ void setStartValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setStartValue ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -235,7 +235,7 @@ QVariant startValue () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->startValue (  ) );

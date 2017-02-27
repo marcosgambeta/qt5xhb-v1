@@ -97,7 +97,7 @@ void clear ( Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
@@ -112,7 +112,7 @@ QImage image ( Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
@@ -127,7 +127,7 @@ const QMimeData * mimeData ( Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
@@ -142,7 +142,7 @@ bool ownsClipboard () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->ownsClipboard (  ) );
@@ -155,7 +155,7 @@ bool ownsFindBuffer () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->ownsFindBuffer (  ) );
@@ -168,7 +168,7 @@ bool ownsSelection () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->ownsSelection (  ) );
@@ -181,7 +181,7 @@ QPixmap pixmap ( Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
@@ -196,10 +196,10 @@ void setImage ( const QImage & image, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qtxhb_itemGetPtr(1);
+    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
     obj->setImage ( *par1,  (QClipboard::Mode) par2 );
   }
@@ -212,10 +212,10 @@ void setMimeData ( QMimeData * src, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMimeData * par1 = (QMimeData *) _qtxhb_itemGetPtr(1);
+    QMimeData * par1 = (QMimeData *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
     obj->setMimeData ( par1,  (QClipboard::Mode) par2 );
   }
@@ -228,10 +228,10 @@ void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qtxhb_itemGetPtr(1);
+    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
     obj->setPixmap ( *par1,  (QClipboard::Mode) par2 );
   }
@@ -244,7 +244,7 @@ void setText ( const QString & text, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -260,7 +260,7 @@ bool supportsFindBuffer () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->supportsFindBuffer (  ) );
@@ -273,7 +273,7 @@ bool supportsSelection () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->supportsSelection (  ) );
@@ -286,7 +286,7 @@ QString text ( Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_TEXT1 )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
@@ -299,7 +299,7 @@ QString text ( QString & subtype, Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
 {
-  QClipboard * obj = (QClipboard *) _qtxhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

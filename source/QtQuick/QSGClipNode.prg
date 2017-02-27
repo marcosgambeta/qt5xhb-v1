@@ -109,7 +109,7 @@ QRectF clipRect() const
 */
 HB_FUNC_STATIC( QSGCLIPNODE_CLIPRECT )
 {
-  QSGClipNode * obj = (QSGClipNode *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->clipRect (  ) );
@@ -123,7 +123,7 @@ bool isRectangular() const
 */
 HB_FUNC_STATIC( QSGCLIPNODE_ISRECTANGULAR )
 {
-  QSGClipNode * obj = (QSGClipNode *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRectangular (  ) );
@@ -136,10 +136,10 @@ void setClipRect(const QRectF & rect)
 */
 HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
 {
-  QSGClipNode * obj = (QSGClipNode *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     obj->setClipRect ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -151,7 +151,7 @@ void setIsRectangular(bool rectHint)
 */
 HB_FUNC_STATIC( QSGCLIPNODE_SETISRECTANGULAR )
 {
-  QSGClipNode * obj = (QSGClipNode *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setIsRectangular ( (bool) hb_parl(1) );

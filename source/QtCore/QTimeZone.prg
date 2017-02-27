@@ -130,7 +130,7 @@ QTimeZone(const QByteArray &ianaId)
 HB_FUNC_STATIC( QTIMEZONE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QTimeZone * o = new QTimeZone ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeZone *) o );
@@ -168,7 +168,7 @@ QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name,const
 HB_FUNC_STATIC( QTIMEZONE_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QString par3 = QLatin1String( hb_parc(3) );
   QString par4 = QLatin1String( hb_parc(4) );
@@ -192,7 +192,7 @@ QTimeZone(const QTimeZone &other)
 HB_FUNC_STATIC( QTIMEZONE_NEW5 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * par1 = (QTimeZone *) _qtxhb_itemGetPtr(1);
+  QTimeZone * par1 = (QTimeZone *) _qt5xhb_itemGetPtr(1);
   QTimeZone * o = new QTimeZone ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeZone *) o );
@@ -263,10 +263,10 @@ void swap(QTimeZone &other)
 HB_FUNC_STATIC( QTIMEZONE_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTimeZone * par1 = (QTimeZone *) _qtxhb_itemGetPtr(1);
+    QTimeZone * par1 = (QTimeZone *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -280,7 +280,7 @@ bool isValid() const
 HB_FUNC_STATIC( QTIMEZONE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -295,7 +295,7 @@ QByteArray id() const
 HB_FUNC_STATIC( QTIMEZONE_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->id (  ) );
@@ -311,7 +311,7 @@ QLocale::Country country() const
 HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->country (  ) );
@@ -326,7 +326,7 @@ QString comment() const
 HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->comment (  ).toLatin1().data() );
@@ -341,12 +341,12 @@ QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = Q
 HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
-    QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qtxhb_itemGetPtr(3);
+    QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
     hb_retc( (const char *) obj->displayName ( *par1,  (QTimeZone::NameType) par2, par3 ).toLatin1().data() );
   }
 #endif
@@ -358,12 +358,12 @@ QString displayName(QTimeZone::TimeType timeType,QTimeZone::NameType nameType = 
 HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
-    QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qtxhb_itemGetPtr(3);
+    QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
     hb_retc( (const char *) obj->displayName (  (QTimeZone::TimeType) par1,  (QTimeZone::NameType) par2, par3 ).toLatin1().data() );
   }
 #endif
@@ -395,10 +395,10 @@ QString abbreviation(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_ABBREVIATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->abbreviation ( *par1 ).toLatin1().data() );
   }
 #endif
@@ -411,10 +411,10 @@ int offsetFromUtc(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_OFFSETFROMUTC )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->offsetFromUtc ( *par1 ) );
   }
 #endif
@@ -427,10 +427,10 @@ int standardTimeOffset(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_STANDARDTIMEOFFSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->standardTimeOffset ( *par1 ) );
   }
 #endif
@@ -443,10 +443,10 @@ int daylightTimeOffset(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_DAYLIGHTTIMEOFFSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->daylightTimeOffset ( *par1 ) );
   }
 #endif
@@ -459,7 +459,7 @@ bool hasDaylightTime() const
 HB_FUNC_STATIC( QTIMEZONE_HASDAYLIGHTTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasDaylightTime (  ) );
@@ -474,10 +474,10 @@ bool isDaylightTime(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_ISDAYLIGHTTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isDaylightTime ( *par1 ) );
   }
 #endif
@@ -491,7 +491,7 @@ bool hasTransitions() const
 HB_FUNC_STATIC( QTIMEZONE_HASTRANSITIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasTransitions (  ) );
@@ -521,7 +521,7 @@ static bool isTimeZoneIdAvailable(const QByteArray &ianaId)
 HB_FUNC_STATIC( QTIMEZONE_ISTIMEZONEIDAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   hb_retl( QTimeZone::isTimeZoneIdAvailable ( *par1 ) );
 #endif
 }
@@ -682,7 +682,7 @@ static QByteArray ianaIdToWindowsId(const QByteArray &ianaId)
 HB_FUNC_STATIC( QTIMEZONE_IANAIDTOWINDOWSID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QByteArray * ptr = new QByteArray( QTimeZone::ianaIdToWindowsId ( *par1 ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
@@ -695,7 +695,7 @@ static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *par1 ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
@@ -707,7 +707,7 @@ static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *par1,  (QLocale::Country) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -740,7 +740,7 @@ static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *par1 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
@@ -782,7 +782,7 @@ static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId,QLocale:
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *par1,  (QLocale::Country) par2 );
   PHB_DYNS pDynSym;

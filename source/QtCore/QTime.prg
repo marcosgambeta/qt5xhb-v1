@@ -178,7 +178,7 @@ QTime addMSecs(int ms) const
 */
 HB_FUNC_STATIC( QTIME_ADDMSECS )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTime * ptr = new QTime( obj->addMSecs ( (int) hb_parni(1) ) );
@@ -192,7 +192,7 @@ QTime addSecs(int s) const
 */
 HB_FUNC_STATIC( QTIME_ADDSECS )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTime * ptr = new QTime( obj->addSecs ( (int) hb_parni(1) ) );
@@ -206,7 +206,7 @@ int elapsed() const
 */
 HB_FUNC_STATIC( QTIME_ELAPSED )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->elapsed (  ) );
@@ -219,7 +219,7 @@ int hour() const
 */
 HB_FUNC_STATIC( QTIME_HOUR )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->hour (  ) );
@@ -232,7 +232,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QTIME_ISNULL )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -245,7 +245,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTIME_ISVALID1 )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -285,7 +285,7 @@ int minute() const
 */
 HB_FUNC_STATIC( QTIME_MINUTE )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->minute (  ) );
@@ -298,7 +298,7 @@ int msec() const
 */
 HB_FUNC_STATIC( QTIME_MSEC )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->msec (  ) );
@@ -311,10 +311,10 @@ int msecsTo(const QTime & t) const
 */
 HB_FUNC_STATIC( QTIME_MSECSTO )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTime * par1 = (QTime *) _qtxhb_itemGetPtr(1);
+    QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->msecsTo ( *par1 ) );
   }
 }
@@ -325,7 +325,7 @@ int restart()
 */
 HB_FUNC_STATIC( QTIME_RESTART )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->restart (  ) );
@@ -338,7 +338,7 @@ int second() const
 */
 HB_FUNC_STATIC( QTIME_SECOND )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->second (  ) );
@@ -351,10 +351,10 @@ int secsTo(const QTime & t) const
 */
 HB_FUNC_STATIC( QTIME_SECSTO )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTime * par1 = (QTime *) _qtxhb_itemGetPtr(1);
+    QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->secsTo ( *par1 ) );
   }
 }
@@ -365,7 +365,7 @@ bool setHMS(int h, int m, int s, int ms = 0)
 */
 HB_FUNC_STATIC( QTIME_SETHMS )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->setHMS ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 0 : hb_parni(4) ) );
@@ -378,7 +378,7 @@ void start()
 */
 HB_FUNC_STATIC( QTIME_START )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->start (  );
@@ -392,7 +392,7 @@ QString toString(const QString & format) const
 */
 HB_FUNC_STATIC( QTIME_TOSTRING1 )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -405,7 +405,7 @@ QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
 HB_FUNC_STATIC( QTIME_TOSTRING2 )
 {
-  QTime * obj = (QTime *) _qtxhb_itemGetPtrStackSelfItem();
+  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);

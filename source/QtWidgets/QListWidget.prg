@@ -121,7 +121,7 @@ QListWidget ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QLISTWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QListWidget * o = new QListWidget ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QListWidget *) o );
@@ -154,7 +154,7 @@ void addItem ( const QString & label )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEM1 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -168,10 +168,10 @@ void addItem ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEM2 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     obj->addItem ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -202,7 +202,7 @@ void addItems ( const QStringList & labels )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -225,10 +225,10 @@ void closePersistentEditor ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     obj->closePersistentEditor ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -240,7 +240,7 @@ int count () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_COUNT )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -253,7 +253,7 @@ QListWidgetItem * currentItem () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QListWidgetItem * ptr = obj->currentItem (  );
@@ -267,7 +267,7 @@ int currentRow () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentRow (  ) );
@@ -280,10 +280,10 @@ void editItem ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_EDITITEM )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     obj->editItem ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -296,10 +296,10 @@ void insertItem ( int row, QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM1 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par2 = (QListWidgetItem *) _qtxhb_itemGetPtr(2);
+    QListWidgetItem * par2 = (QListWidgetItem *) _qt5xhb_itemGetPtr(2);
     obj->insertItem ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -310,7 +310,7 @@ void insertItem ( int row, const QString & label )
 */
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM2 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
@@ -344,7 +344,7 @@ void insertItems ( int row, const QStringList & labels )
 */
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par2;
@@ -367,7 +367,7 @@ bool isSortingEnabled () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSortingEnabled (  ) );
@@ -380,7 +380,7 @@ QListWidgetItem * item ( int row ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ITEM )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QListWidgetItem * ptr = obj->item ( (int) hb_parni(1) );
@@ -394,10 +394,10 @@ QListWidgetItem * itemAt ( const QPoint & p ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ITEMAT1 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
     QListWidgetItem * ptr = obj->itemAt ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
@@ -408,7 +408,7 @@ QListWidgetItem * itemAt ( int x, int y ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ITEMAT2 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QListWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -441,10 +441,10 @@ QWidget * itemWidget ( QListWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->itemWidget ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -456,10 +456,10 @@ void openPersistentEditor ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_OPENPERSISTENTEDITOR )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     obj->openPersistentEditor ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -471,10 +471,10 @@ void removeItemWidget ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_REMOVEITEMWIDGET )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     obj->removeItemWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -486,10 +486,10 @@ int row ( const QListWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ROW )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->row ( par1 ) );
   }
 }
@@ -501,10 +501,10 @@ void setCurrentItem ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM1 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     obj->setCurrentItem ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -515,10 +515,10 @@ void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlag
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM2 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->setCurrentItem ( par1,  (QItemSelectionModel::SelectionFlags) par2 );
   }
@@ -550,7 +550,7 @@ void setCurrentRow ( int row )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW1 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCurrentRow ( (int) hb_parni(1) );
@@ -563,7 +563,7 @@ void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW2 )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -597,11 +597,11 @@ void setItemWidget ( QListWidgetItem * item, QWidget * widget )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETITEMWIDGET )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     obj->setItemWidget ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -613,7 +613,7 @@ void setSortingEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSortingEnabled ( (bool) hb_parl(1) );
@@ -627,7 +627,7 @@ void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::AscendingOrder : hb_parni(1);
@@ -642,7 +642,7 @@ QListWidgetItem * takeItem ( int row )
 */
 HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QListWidgetItem * ptr = obj->takeItem ( (int) hb_parni(1) );
@@ -656,10 +656,10 @@ QRect visualItemRect ( const QListWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QListWidgetItem * par1 = (const QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    const QListWidgetItem * par1 = (const QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
@@ -671,10 +671,10 @@ virtual void dropEvent ( QDropEvent * event )
 */
 HB_FUNC_STATIC( QLISTWIDGET_DROPEVENT )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDropEvent * par1 = (QDropEvent *) _qtxhb_itemGetPtr(1);
+    QDropEvent * par1 = (QDropEvent *) _qt5xhb_itemGetPtr(1);
     obj->dropEvent ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -686,7 +686,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -700,10 +700,10 @@ void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint 
 */
 HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
 {
-  QListWidget * obj = (QListWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QListWidgetItem * par1 = (const QListWidgetItem *) _qtxhb_itemGetPtr(1);
+    const QListWidgetItem * par1 = (const QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);
     obj->scrollToItem ( par1,  (QAbstractItemView::ScrollHint) par2 );
   }

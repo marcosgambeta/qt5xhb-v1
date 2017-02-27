@@ -91,7 +91,7 @@ QDomCDATASection ( const QDomCDATASection & x )
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomCDATASection * par1 = (QDomCDATASection *) _qtxhb_itemGetPtr(1);
+  QDomCDATASection * par1 = (QDomCDATASection *) _qt5xhb_itemGetPtr(1);
   QDomCDATASection * o = new QDomCDATASection ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomCDATASection *) o );
@@ -147,7 +147,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
-  QDomCDATASection * obj = (QDomCDATASection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomCDATASection * obj = (QDomCDATASection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );

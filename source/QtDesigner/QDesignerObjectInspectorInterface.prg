@@ -91,7 +91,7 @@ virtual QDesignerFormEditorInterface * core () const
 */
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDesignerFormEditorInterface * ptr = obj->core (  );
@@ -105,10 +105,10 @@ virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 */
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qtxhb_itemGetPtr(1);
+    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
     obj->setFormWindow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

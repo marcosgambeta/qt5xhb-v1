@@ -95,10 +95,10 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
 {
-  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     QObject * ptr = obj->extension ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QOBJECT" );

@@ -93,7 +93,7 @@ QString file () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->file (  ).toLatin1().data() );
@@ -106,10 +106,10 @@ bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFile  * par1 = (QFile  *) _qtxhb_itemGetPtr(1);
+    QFile  * par1 = (QFile  *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     hb_retl( obj->openFile ( *par1,  (QIODevice::OpenMode) par2 ) );
   }
@@ -121,7 +121,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );

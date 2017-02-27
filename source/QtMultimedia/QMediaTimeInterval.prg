@@ -118,7 +118,7 @@ QMediaTimeInterval(const QMediaTimeInterval & other)
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qtxhb_itemGetPtr(1);
+  QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
   QMediaTimeInterval * o = new QMediaTimeInterval ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaTimeInterval *) o );
@@ -175,7 +175,7 @@ bool contains(qint64 time) const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_CONTAINS )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->contains ( (qint64) hb_parni(1) ) );
@@ -188,7 +188,7 @@ qint64 end() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_END )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->end (  ) );
@@ -201,7 +201,7 @@ bool isNormal() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_ISNORMAL )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNormal (  ) );
@@ -214,7 +214,7 @@ QMediaTimeInterval normalized() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NORMALIZED )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->normalized (  ) );
@@ -228,7 +228,7 @@ qint64 start() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_START )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->start (  ) );
@@ -241,7 +241,7 @@ QMediaTimeInterval translated(qint64 offset) const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_TRANSLATED )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->translated ( (qint64) hb_parni(1) ) );

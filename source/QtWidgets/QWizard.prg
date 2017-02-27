@@ -125,7 +125,7 @@ explicit QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QWIZARD_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QWizard * o = new QWizard ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -159,10 +159,10 @@ int addPage ( QWizardPage * page )
 */
 HB_FUNC_STATIC( QWIZARD_ADDPAGE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWizardPage * par1 = (QWizardPage *) _qtxhb_itemGetPtr(1);
+    QWizardPage * par1 = (QWizardPage *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->addPage ( par1 ) );
   }
 }
@@ -173,7 +173,7 @@ QAbstractButton * button ( WizardButton which ) const
 */
 HB_FUNC_STATIC( QWIZARD_BUTTON )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -187,11 +187,11 @@ void setButton ( WizardButton which, QAbstractButton * button )
 */
 HB_FUNC_STATIC( QWIZARD_SETBUTTON )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAbstractButton * par2 = (QAbstractButton *) _qtxhb_itemGetPtr(2);
+    QAbstractButton * par2 = (QAbstractButton *) _qt5xhb_itemGetPtr(2);
     obj->setButton (  (QWizard::WizardButton) par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -203,7 +203,7 @@ QString buttonText ( WizardButton which ) const
 */
 HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -216,7 +216,7 @@ void setButtonText ( WizardButton which, const QString & text )
 */
 HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -232,7 +232,7 @@ int currentId () const
 */
 HB_FUNC_STATIC( QWIZARD_CURRENTID )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentId (  ) );
@@ -245,7 +245,7 @@ QWizardPage * currentPage () const
 */
 HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWizardPage * ptr = obj->currentPage (  );
@@ -259,7 +259,7 @@ QVariant field ( const QString & name ) const
 */
 HB_FUNC_STATIC( QWIZARD_FIELD )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -274,7 +274,7 @@ bool hasVisitedPage ( int id ) const
 */
 HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasVisitedPage ( (int) hb_parni(1) ) );
@@ -287,7 +287,7 @@ virtual int nextId () const
 */
 HB_FUNC_STATIC( QWIZARD_NEXTID )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nextId (  ) );
@@ -300,7 +300,7 @@ WizardOptions options () const
 */
 HB_FUNC_STATIC( QWIZARD_OPTIONS )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->options (  ) );
@@ -312,7 +312,7 @@ void setOptions ( WizardOptions options )
 */
 HB_FUNC_STATIC( QWIZARD_SETOPTIONS )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -327,7 +327,7 @@ QWizardPage * page ( int id ) const
 */
 HB_FUNC_STATIC( QWIZARD_PAGE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWizardPage * ptr = obj->page ( (int) hb_parni(1) );
@@ -341,11 +341,11 @@ QList<int> pageIds () const
 */
 HB_FUNC_STATIC( QWIZARD_PAGEIDS )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<int> list = obj->pageIds (  );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -355,7 +355,7 @@ QPixmap pixmap ( WizardPixmap which ) const
 */
 HB_FUNC_STATIC( QWIZARD_PIXMAP )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -370,7 +370,7 @@ void removePage ( int id )
 */
 HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->removePage ( (int) hb_parni(1) );
@@ -384,7 +384,7 @@ void setButtonLayout ( const QList<WizardButton> & layout )
 */
 HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWizard::WizardButton> par1;
@@ -408,7 +408,7 @@ void setDefaultProperty ( const char * className, const char * property, const c
 */
 HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -425,11 +425,11 @@ void setField ( const QString & name, const QVariant & value )
 */
 HB_FUNC_STATIC( QWIZARD_SETFIELD )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setField ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -441,7 +441,7 @@ void setOption ( WizardOption option, bool on = true )
 */
 HB_FUNC_STATIC( QWIZARD_SETOPTION )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -456,10 +456,10 @@ void setPage ( int id, QWizardPage * page )
 */
 HB_FUNC_STATIC( QWIZARD_SETPAGE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWizardPage * par2 = (QWizardPage *) _qtxhb_itemGetPtr(2);
+    QWizardPage * par2 = (QWizardPage *) _qt5xhb_itemGetPtr(2);
     obj->setPage ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -471,11 +471,11 @@ void setPixmap ( WizardPixmap which, const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * par2 = (QPixmap *) _qtxhb_itemGetPtr(2);
+    QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
     obj->setPixmap (  (QWizard::WizardPixmap) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -487,10 +487,10 @@ void setSideWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIZARD_SETSIDEWIDGET )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setSideWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -502,7 +502,7 @@ QWidget * sideWidget () const
 */
 HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->sideWidget (  );
@@ -516,7 +516,7 @@ int startId () const
 */
 HB_FUNC_STATIC( QWIZARD_STARTID )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->startId (  ) );
@@ -528,7 +528,7 @@ void setStartId ( int id )
 */
 HB_FUNC_STATIC( QWIZARD_SETSTARTID )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setStartId ( (int) hb_parni(1) );
@@ -542,7 +542,7 @@ Qt::TextFormat subTitleFormat () const
 */
 HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->subTitleFormat (  ) );
@@ -554,7 +554,7 @@ void setSubTitleFormat(Qt::TextFormat format);
 */
 HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -569,7 +569,7 @@ bool testOption ( WizardOption option ) const
 */
 HB_FUNC_STATIC( QWIZARD_TESTOPTION )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -583,7 +583,7 @@ Qt::TextFormat titleFormat () const
 */
 HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->titleFormat (  ) );
@@ -595,7 +595,7 @@ void setTitleFormat ( Qt::TextFormat format )
 */
 HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -610,7 +610,7 @@ virtual bool validateCurrentPage ()
 */
 HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->validateCurrentPage (  ) );
@@ -623,11 +623,11 @@ QList<int> visitedPages () const
 */
 HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<int> list = obj->visitedPages (  );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -637,7 +637,7 @@ WizardStyle wizardStyle () const
 */
 HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->wizardStyle (  ) );
@@ -649,7 +649,7 @@ void setWizardStyle ( WizardStyle style )
 */
 HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -664,7 +664,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QWIZARD_SETVISIBLE )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
@@ -678,7 +678,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QWIZARD_SIZEHINT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -692,7 +692,7 @@ void back ()
 */
 HB_FUNC_STATIC( QWIZARD_BACK )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->back (  );
@@ -706,7 +706,7 @@ void next ()
 */
 HB_FUNC_STATIC( QWIZARD_NEXT )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->next (  );
@@ -720,7 +720,7 @@ void restart ()
 */
 HB_FUNC_STATIC( QWIZARD_RESTART )
 {
-  QWizard * obj = (QWizard *) _qtxhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->restart (  );

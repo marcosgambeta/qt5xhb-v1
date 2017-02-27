@@ -105,7 +105,7 @@ QDeclarativeEngine ( QObject * parent = 0 )
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDeclarativeEngine * o = new QDeclarativeEngine ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeEngine *) o );
@@ -138,11 +138,11 @@ void addImageProvider ( const QString & providerId, QDeclarativeImageProvider * 
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QDeclarativeImageProvider * par2 = (QDeclarativeImageProvider *) _qtxhb_itemGetPtr(2);
+    QDeclarativeImageProvider * par2 = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtr(2);
     obj->addImageProvider ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -154,7 +154,7 @@ void addImportPath ( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -169,7 +169,7 @@ void addPluginPath ( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -184,7 +184,7 @@ QUrl baseUrl () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->baseUrl (  ) );
@@ -198,7 +198,7 @@ void clearComponentCache ()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clearComponentCache (  );
@@ -212,7 +212,7 @@ QDeclarativeImageProvider * imageProvider ( const QString & providerId ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -227,11 +227,11 @@ QStringList importPathList () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->importPathList (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -242,7 +242,7 @@ QNetworkAccessManager * networkAccessManager () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QNetworkAccessManager * ptr = obj->networkAccessManager (  );
@@ -256,7 +256,7 @@ QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory (  );
@@ -270,7 +270,7 @@ QString offlineStoragePath () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->offlineStoragePath (  ).toLatin1().data() );
@@ -283,7 +283,7 @@ bool outputWarningsToStandardError () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->outputWarningsToStandardError (  ) );
@@ -296,11 +296,11 @@ QStringList pluginPathList () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->pluginPathList (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -310,7 +310,7 @@ void removeImageProvider ( const QString & providerId )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -325,7 +325,7 @@ QDeclarativeContext * rootContext () const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDeclarativeContext * ptr = obj->rootContext (  );
@@ -339,10 +339,10 @@ void setBaseUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setBaseUrl ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -354,7 +354,7 @@ void setImportPathList ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -377,10 +377,10 @@ void setNetworkAccessManagerFactory ( QDeclarativeNetworkAccessManagerFactory * 
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDeclarativeNetworkAccessManagerFactory * par1 = (QDeclarativeNetworkAccessManagerFactory *) _qtxhb_itemGetPtr(1);
+    QDeclarativeNetworkAccessManagerFactory * par1 = (QDeclarativeNetworkAccessManagerFactory *) _qt5xhb_itemGetPtr(1);
     obj->setNetworkAccessManagerFactory ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -392,7 +392,7 @@ void setOfflineStoragePath ( const QString & dir )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -407,7 +407,7 @@ void setOutputWarningsToStandardError ( bool enabled )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setOutputWarningsToStandardError ( (bool) hb_parl(1) );
@@ -421,7 +421,7 @@ void setPluginPathList ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -444,7 +444,7 @@ static QDeclarativeContext * contextForObject ( const QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 {
-  const QObject * par1 = (const QObject *) _qtxhb_itemGetPtr(1);
+  const QObject * par1 = (const QObject *) _qt5xhb_itemGetPtr(1);
   QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject ( par1 );
   _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
 }
@@ -455,7 +455,7 @@ static ObjectOwnership objectOwnership ( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   hb_retni( QDeclarativeEngine::objectOwnership ( par1 ) );
 }
 
@@ -465,8 +465,8 @@ static void setContextForObject ( QObject * object, QDeclarativeContext * contex
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-  QDeclarativeContext * par2 = (QDeclarativeContext *) _qtxhb_itemGetPtr(2);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+  QDeclarativeContext * par2 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(2);
   QDeclarativeEngine::setContextForObject ( par1, par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -477,7 +477,7 @@ static void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QDeclarativeEngine::setObjectOwnership ( par1,  (QDeclarativeEngine::ObjectOwnership) par2 );
   hb_itemReturn( hb_stackSelfItem() );

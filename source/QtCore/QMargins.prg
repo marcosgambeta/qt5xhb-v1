@@ -163,7 +163,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMARGINS_ISNULL )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -176,7 +176,7 @@ int left() const
 */
 HB_FUNC_STATIC( QMARGINS_LEFT )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->left (  ) );
@@ -189,7 +189,7 @@ int top() const
 */
 HB_FUNC_STATIC( QMARGINS_TOP )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->top (  ) );
@@ -202,7 +202,7 @@ int right() const
 */
 HB_FUNC_STATIC( QMARGINS_RIGHT )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->right (  ) );
@@ -215,7 +215,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QMARGINS_BOTTOM )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bottom (  ) );
@@ -228,7 +228,7 @@ void setLeft(int left)
 */
 HB_FUNC_STATIC( QMARGINS_SETLEFT )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLeft ( (int) hb_parni(1) );
@@ -242,7 +242,7 @@ void setTop(int top)
 */
 HB_FUNC_STATIC( QMARGINS_SETTOP )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setTop ( (int) hb_parni(1) );
@@ -256,7 +256,7 @@ void setRight(int right)
 */
 HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setRight ( (int) hb_parni(1) );
@@ -270,7 +270,7 @@ void setBottom(int bottom)
 */
 HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
 {
-  QMargins * obj = (QMargins *) _qtxhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setBottom ( (int) hb_parni(1) );

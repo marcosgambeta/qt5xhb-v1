@@ -96,7 +96,7 @@ virtual QVariant actualValue(ExposureParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -111,7 +111,7 @@ virtual bool isParameterSupported(ExposureParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -125,7 +125,7 @@ virtual QVariant requestedValue(ExposureParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -140,11 +140,11 @@ virtual bool setValue(ExposureParameter parameter, const QVariant & value) = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->setValue (  (QCameraExposureControl::ExposureParameter) par1, *par2 ) );
   }
 }
@@ -155,7 +155,7 @@ virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool *
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

@@ -113,7 +113,7 @@ QUuid(const QByteArray & text)
 HB_FUNC_STATIC( QUUID_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QUuid * o = new QUuid ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUuid *) o );
@@ -187,7 +187,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QUUID_ISNULL )
 {
-  QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -200,7 +200,7 @@ QByteArray toByteArray() const
 */
 HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
 {
-  QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toByteArray (  ) );
@@ -214,7 +214,7 @@ QByteArray toRfc4122() const
 */
 HB_FUNC_STATIC( QUUID_TORFC4122 )
 {
-  QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toRfc4122 (  ) );
@@ -228,7 +228,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QUUID_TOSTRING )
 {
-  QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
@@ -241,7 +241,7 @@ QUuid::Variant variant() const
 */
 HB_FUNC_STATIC( QUUID_VARIANT )
 {
-  QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->variant (  ) );
@@ -254,7 +254,7 @@ QUuid::Version version() const
 */
 HB_FUNC_STATIC( QUUID_VERSION )
 {
-  QUuid * obj = (QUuid *) _qtxhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->version (  ) );
@@ -267,8 +267,8 @@ static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 */
 HB_FUNC_STATIC( QUUID_CREATEUUIDV31 )
 {
-  QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
+  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
   QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, *par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
@@ -278,7 +278,7 @@ static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 */
 HB_FUNC_STATIC( QUUID_CREATEUUIDV32 )
 {
-  QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
+  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
@@ -309,8 +309,8 @@ static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 */
 HB_FUNC_STATIC( QUUID_CREATEUUIDV51 )
 {
-  QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
+  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
   QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, *par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
@@ -320,7 +320,7 @@ static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 */
 HB_FUNC_STATIC( QUUID_CREATEUUIDV52 )
 {
-  QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
+  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
@@ -351,7 +351,7 @@ static QUuid fromRfc4122(const QByteArray & bytes)
 */
 HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *par1 ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }

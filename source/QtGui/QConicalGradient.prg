@@ -97,7 +97,7 @@ QConicalGradient ( const QPointF & center, qreal angle )
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   QConicalGradient * o = new QConicalGradient ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -173,7 +173,7 @@ qreal angle () const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {
-  QConicalGradient * obj = (QConicalGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->angle (  ) );
@@ -186,7 +186,7 @@ QPointF center () const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {
-  QConicalGradient * obj = (QConicalGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->center (  ) );
@@ -200,7 +200,7 @@ void setAngle ( qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {
-  QConicalGradient * obj = (QConicalGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -215,10 +215,10 @@ void setCenter ( const QPointF & center )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER1 )
 {
-  QConicalGradient * obj = (QConicalGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setCenter ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -229,7 +229,7 @@ void setCenter ( qreal x, qreal y )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER2 )
 {
-  QConicalGradient * obj = (QConicalGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

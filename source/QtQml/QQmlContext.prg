@@ -91,8 +91,8 @@ QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 HB_FUNC_STATIC( QQMLCONTEXT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QQmlEngine * par1 = (QQmlEngine *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QQmlContext * o = new QQmlContext ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlContext *) o );
@@ -108,8 +108,8 @@ QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
 HB_FUNC_STATIC( QQMLCONTEXT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QQmlContext * par1 = (QQmlContext *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QQmlContext * par1 = (QQmlContext *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QQmlContext * o = new QQmlContext ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlContext *) o );
@@ -161,7 +161,7 @@ QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_BASEURL )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->baseUrl (  ) );
@@ -175,7 +175,7 @@ QObject * contextObject() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->contextObject (  );
@@ -189,7 +189,7 @@ QVariant contextProperty(const QString & name) const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -204,7 +204,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_ENGINE )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
@@ -218,7 +218,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_ISVALID )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -231,10 +231,10 @@ QString nameForObject(QObject * object) const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_NAMEFOROBJECT )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->nameForObject ( par1 ).toLatin1().data() );
   }
 }
@@ -245,7 +245,7 @@ QQmlContext * parentContext() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQmlContext * ptr = obj->parentContext (  );
@@ -259,10 +259,10 @@ QUrl resolvedUrl(const QUrl & src)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->resolvedUrl ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -274,10 +274,10 @@ void setBaseUrl(const QUrl & baseUrl)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setBaseUrl ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -289,10 +289,10 @@ void setContextObject(QObject * object)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->setContextObject ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -304,11 +304,11 @@ void setContextProperty(const QString & name, QObject * value)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY1 )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     obj->setContextProperty ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -319,11 +319,11 @@ void setContextProperty(const QString & name, const QVariant & value)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY2 )
 {
-  QQmlContext * obj = (QQmlContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setContextProperty ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );

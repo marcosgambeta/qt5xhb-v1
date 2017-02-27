@@ -102,7 +102,7 @@ QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qtxhb_itemGetPtr(1);
+  QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtr(1);
   QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLDebugMessage *) o );
@@ -140,10 +140,10 @@ void swap(QOpenGLDebugMessage &debugMessage)
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qtxhb_itemGetPtr(1);
+    QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -155,7 +155,7 @@ Source source() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->source (  ) );
@@ -168,7 +168,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -181,7 +181,7 @@ Severity severity() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->severity (  ) );
@@ -194,7 +194,7 @@ GLuint id() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_ID )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->id (  ) );
@@ -207,7 +207,7 @@ QString message() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->message (  ).toLatin1().data() );

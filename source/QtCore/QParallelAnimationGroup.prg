@@ -71,7 +71,7 @@ QParallelAnimationGroup ( QObject * parent = 0 )
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QParallelAnimationGroup * o = new QParallelAnimationGroup ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QParallelAnimationGroup *) o );
@@ -104,7 +104,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->duration (  ) );

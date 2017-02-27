@@ -80,7 +80,7 @@ QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult & other)
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScriptSyntaxCheckResult * par1 = (QScriptSyntaxCheckResult *) _qtxhb_itemGetPtr(1);
+  QScriptSyntaxCheckResult * par1 = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtr(1);
   QScriptSyntaxCheckResult * o = new QScriptSyntaxCheckResult ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptSyntaxCheckResult *) o );
@@ -113,7 +113,7 @@ int errorColumnNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->errorColumnNumber (  ) );
@@ -126,7 +126,7 @@ int errorLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->errorLineNumber (  ) );
@@ -139,7 +139,7 @@ QString errorMessage() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorMessage (  ).toLatin1().data() );
@@ -152,7 +152,7 @@ State state() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );

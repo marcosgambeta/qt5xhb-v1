@@ -97,7 +97,7 @@ QStyleOption(const QStyleOption &other)
 HB_FUNC_STATIC( QSTYLEOPTION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QStyleOption * par1 = (QStyleOption *) _qtxhb_itemGetPtr(1);
+  QStyleOption * par1 = (QStyleOption *) _qt5xhb_itemGetPtr(1);
   QStyleOption * o = new QStyleOption ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStyleOption *) o );
@@ -149,10 +149,10 @@ void init(const QWidget *w)
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 {
-  QStyleOption * obj = (QStyleOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QWidget * par1 = (const QWidget *) _qtxhb_itemGetPtr(1);
+    const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
     obj->init ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -164,10 +164,10 @@ void initFrom(const QWidget *w)
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 {
-  QStyleOption * obj = (QStyleOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QWidget * par1 = (const QWidget *) _qtxhb_itemGetPtr(1);
+    const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
     obj->initFrom ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

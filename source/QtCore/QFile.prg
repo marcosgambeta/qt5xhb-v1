@@ -161,7 +161,7 @@ explicit QFile(QObject *parent)
 HB_FUNC_STATIC( QFILE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QFile * o = new QFile ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFile *) o );
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QFILE_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QFile * o = new QFile ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFile *) o );
@@ -240,7 +240,7 @@ bool copy ( const QString & newName )
 */
 HB_FUNC_STATIC( QFILE_COPY1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -283,7 +283,7 @@ FileError error () const
 */
 HB_FUNC_STATIC( QFILE_ERROR )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -296,7 +296,7 @@ bool exists () const
 */
 HB_FUNC_STATIC( QFILE_EXISTS1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->exists (  ) );
@@ -337,7 +337,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QFILE_FILENAME )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -350,7 +350,7 @@ bool flush ()
 */
 HB_FUNC_STATIC( QFILE_FLUSH )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->flush (  ) );
@@ -363,7 +363,7 @@ int handle () const
 */
 HB_FUNC_STATIC( QFILE_HANDLE )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->handle (  ) );
@@ -376,7 +376,7 @@ bool link ( const QString & linkName )
 */
 HB_FUNC_STATIC( QFILE_LINK1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -419,7 +419,7 @@ uchar * map ( qint64 offset, qint64 size, MemoryMapFlags flags = NoOptions )
 */
 HB_FUNC_STATIC( QFILE_MAP )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QFile::NoOptions : hb_parni(3);
@@ -434,7 +434,7 @@ bool open(OpenMode flags)
 */
 HB_FUNC_STATIC( QFILE_OPEN1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -447,10 +447,10 @@ bool open(FILE *f, OpenMode ioFlags, FileHandleFlags handleFlags=DontCloseHandle
 */
 HB_FUNC_STATIC( QFILE_OPEN2 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    FILE * par1 = (FILE *) _qtxhb_itemGetPtr(1);
+    FILE * par1 = (FILE *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
     hb_retl( obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
@@ -462,7 +462,7 @@ bool open(int fd, OpenMode ioFlags, FileHandleFlags handleFlags=DontCloseHandle)
 */
 HB_FUNC_STATIC( QFILE_OPEN3 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -501,7 +501,7 @@ Permissions permissions () const
 */
 HB_FUNC_STATIC( QFILE_PERMISSIONS1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->permissions (  ) );
@@ -542,7 +542,7 @@ bool remove ()
 */
 HB_FUNC_STATIC( QFILE_REMOVE1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->remove (  ) );
@@ -583,7 +583,7 @@ bool rename ( const QString & newName )
 */
 HB_FUNC_STATIC( QFILE_RENAME1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -626,7 +626,7 @@ bool resize ( qint64 sz )
 */
 HB_FUNC_STATIC( QFILE_RESIZE1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->resize ( (qint64) hb_parni(1) ) );
@@ -667,7 +667,7 @@ void setFileName ( const QString & name )
 */
 HB_FUNC_STATIC( QFILE_SETFILENAME )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -682,7 +682,7 @@ bool setPermissions ( Permissions permissions )
 */
 HB_FUNC_STATIC( QFILE_SETPERMISSIONS1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -725,7 +725,7 @@ QString symLinkTarget () const
 */
 HB_FUNC_STATIC( QFILE_SYMLINKTARGET1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->symLinkTarget (  ).toLatin1().data() );
@@ -766,10 +766,10 @@ bool unmap ( uchar * address )
 */
 HB_FUNC_STATIC( QFILE_UNMAP )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    uchar * par1 = (uchar *) _qtxhb_itemGetPtr(1);
+    uchar * par1 = (uchar *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->unmap ( par1 ) );
   }
 }
@@ -780,7 +780,7 @@ void unsetError ()
 */
 HB_FUNC_STATIC( QFILE_UNSETERROR )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unsetError (  );
@@ -794,7 +794,7 @@ virtual bool atEnd () const
 */
 HB_FUNC_STATIC( QFILE_ATEND )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->atEnd (  ) );
@@ -807,7 +807,7 @@ virtual void close ()
 */
 HB_FUNC_STATIC( QFILE_CLOSE )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->close (  );
@@ -821,7 +821,7 @@ virtual bool isSequential () const
 */
 HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSequential (  ) );
@@ -834,7 +834,7 @@ virtual qint64 pos () const
 */
 HB_FUNC_STATIC( QFILE_POS )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->pos (  ) );
@@ -847,7 +847,7 @@ virtual bool seek ( qint64 pos )
 */
 HB_FUNC_STATIC( QFILE_SEEK )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
@@ -860,7 +860,7 @@ qint64 size () const
 */
 HB_FUNC_STATIC( QFILE_SIZE )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );
@@ -874,7 +874,7 @@ static QString decodeName ( const QByteArray & localFileName )
 */
 HB_FUNC_STATIC( QFILE_DECODENAME1 )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   hb_retc( (const char *) QFile::decodeName ( *par1 ).toLatin1().data() );
 }
 
@@ -925,7 +925,7 @@ QString readLink() const
 */
 HB_FUNC_STATIC( QFILE_READLINK1 )
 {
-  QFile * obj = (QFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->readLink (  ).toLatin1().data() );

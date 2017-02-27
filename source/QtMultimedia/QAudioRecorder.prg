@@ -77,7 +77,7 @@ QAudioRecorder(QObject * parent = 0)
 HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAudioRecorder * o = new QAudioRecorder ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioRecorder *) o );
@@ -110,7 +110,7 @@ QString audioInput() const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
 {
-  QAudioRecorder * obj = (QAudioRecorder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->audioInput (  ).toLatin1().data() );
@@ -123,7 +123,7 @@ QString audioInputDescription(const QString & name) const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
 {
-  QAudioRecorder * obj = (QAudioRecorder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -137,11 +137,11 @@ QStringList audioInputs() const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTS )
 {
-  QAudioRecorder * obj = (QAudioRecorder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->audioInputs (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -151,7 +151,7 @@ QString defaultAudioInput() const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
 {
-  QAudioRecorder * obj = (QAudioRecorder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->defaultAudioInput (  ).toLatin1().data() );
@@ -164,7 +164,7 @@ void setAudioInput(const QString & name)
 */
 HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
 {
-  QAudioRecorder * obj = (QAudioRecorder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

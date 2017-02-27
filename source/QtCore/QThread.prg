@@ -94,7 +94,7 @@ QThread(QObject * parent = 0)
 HB_FUNC_STATIC( QTHREAD_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QThread * o = new QThread ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QThread *) o );
@@ -127,7 +127,7 @@ QAbstractEventDispatcher * eventDispatcher() const
 */
 HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAbstractEventDispatcher * ptr = obj->eventDispatcher (  );
@@ -141,7 +141,7 @@ void exit(int returnCode = 0)
 */
 HB_FUNC_STATIC( QTHREAD_EXIT )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->exit ( (int) ISNIL(1)? 0 : hb_parni(1) );
@@ -155,7 +155,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QTHREAD_ISFINISHED )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isFinished (  ) );
@@ -168,7 +168,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRunning (  ) );
@@ -181,7 +181,7 @@ Priority priority() const
 */
 HB_FUNC_STATIC( QTHREAD_PRIORITY )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->priority (  ) );
@@ -194,10 +194,10 @@ void setEventDispatcher(QAbstractEventDispatcher * eventDispatcher)
 */
 HB_FUNC_STATIC( QTHREAD_SETEVENTDISPATCHER )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractEventDispatcher * par1 = (QAbstractEventDispatcher *) _qtxhb_itemGetPtr(1);
+    QAbstractEventDispatcher * par1 = (QAbstractEventDispatcher *) _qt5xhb_itemGetPtr(1);
     obj->setEventDispatcher ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,7 +209,7 @@ void setPriority(Priority priority)
 */
 HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -224,7 +224,7 @@ void setStackSize(uint stackSize)
 */
 HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setStackSize ( (uint) hb_parni(1) );
@@ -238,7 +238,7 @@ uint stackSize() const
 */
 HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->stackSize (  ) );
@@ -252,10 +252,10 @@ virtual bool event(QEvent * event)
 */
 HB_FUNC_STATIC( QTHREAD_EVENT )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qtxhb_itemGetPtr(1);
+    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->event ( par1 ) );
   }
 }
@@ -266,7 +266,7 @@ void quit()
 */
 HB_FUNC_STATIC( QTHREAD_QUIT )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->quit (  );
@@ -280,7 +280,7 @@ void start(Priority priority = InheritPriority)
 */
 HB_FUNC_STATIC( QTHREAD_START )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QThread::InheritPriority : hb_parni(1);
@@ -295,7 +295,7 @@ void terminate()
 */
 HB_FUNC_STATIC( QTHREAD_TERMINATE )
 {
-  QThread * obj = (QThread *) _qtxhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->terminate (  );

@@ -88,7 +88,7 @@ QUndoCommand(QUndoCommand * parent = 0)
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) _qtxhb_itemGetPtr(1);
+  QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(1);
   QUndoCommand * o = new QUndoCommand ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoCommand *) o );
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) _qtxhb_itemGetPtr(2);
+  QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(2);
   QUndoCommand * o = new QUndoCommand ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoCommand *) o );
@@ -157,7 +157,7 @@ QString actionText() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->actionText (  ).toLatin1().data() );
@@ -170,7 +170,7 @@ const QUndoCommand * child(int index) const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QUndoCommand * ptr = obj->child ( (int) hb_parni(1) );
@@ -184,7 +184,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->childCount (  ) );
@@ -197,7 +197,7 @@ virtual int id() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->id (  ) );
@@ -210,10 +210,10 @@ virtual bool mergeWith(const QUndoCommand * command)
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QUndoCommand * par1 = (const QUndoCommand *) _qtxhb_itemGetPtr(1);
+    const QUndoCommand * par1 = (const QUndoCommand *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->mergeWith ( par1 ) );
   }
 }
@@ -224,7 +224,7 @@ virtual void redo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->redo (  );
@@ -238,7 +238,7 @@ void setText(const QString & text)
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -253,7 +253,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
@@ -266,7 +266,7 @@ virtual void undo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->undo (  );

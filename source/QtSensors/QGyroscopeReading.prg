@@ -93,7 +93,7 @@ qreal x() const
 HB_FUNC_STATIC( QGYROSCOPEREADING_X )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->x (  ) );
@@ -108,7 +108,7 @@ void setX(qreal x)
 HB_FUNC_STATIC( QGYROSCOPEREADING_SETX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -125,7 +125,7 @@ qreal y() const
 HB_FUNC_STATIC( QGYROSCOPEREADING_Y )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->y (  ) );
@@ -140,7 +140,7 @@ void setY(qreal y)
 HB_FUNC_STATIC( QGYROSCOPEREADING_SETY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -157,7 +157,7 @@ qreal z() const
 HB_FUNC_STATIC( QGYROSCOPEREADING_Z )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->z (  ) );
@@ -172,7 +172,7 @@ void setZ(qreal z)
 HB_FUNC_STATIC( QGYROSCOPEREADING_SETZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

@@ -78,7 +78,7 @@ QRegExpValidator ( QObject * parent = 0 )
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QRegExpValidator * o = new QRegExpValidator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExpValidator *) o );
@@ -94,7 +94,7 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent )
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QRegExp * par1 = (QRegExp *) _qtxhb_itemGetPtr(1);
+  QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
   QRegExpValidator * o = new QRegExpValidator ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExpValidator *) o );
@@ -146,7 +146,7 @@ const QRegExp & regExp () const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegExp * ptr = new QRegExp( obj->regExp (  ) );
@@ -160,10 +160,10 @@ void setRegExp ( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegExp * par1 = (QRegExp *) _qtxhb_itemGetPtr(1);
+    QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
     obj->setRegExp ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -175,7 +175,7 @@ virtual QValidator::State validate ( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

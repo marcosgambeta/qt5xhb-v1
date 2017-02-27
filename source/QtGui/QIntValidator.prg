@@ -85,7 +85,7 @@ QIntValidator(QObject * parent = 0)
 HB_FUNC_STATIC( QINTVALIDATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QIntValidator * o = new QIntValidator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QIntValidator *) o );
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QIntValidator * o = new QIntValidator ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QIntValidator *) o );
@@ -155,7 +155,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bottom (  ) );
@@ -168,7 +168,7 @@ virtual void fixup(QString & input) const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -183,7 +183,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
@@ -197,7 +197,7 @@ void setBottom(int)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setBottom ( (int) hb_parni(1) );
@@ -211,10 +211,10 @@ void setLocale(const QLocale & locale)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qtxhb_itemGetPtr(1);
+    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
     obj->setLocale ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -226,7 +226,7 @@ virtual void setRange(int bottom, int top)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -240,7 +240,7 @@ void setTop(int)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setTop ( (int) hb_parni(1) );
@@ -254,7 +254,7 @@ int top() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->top (  ) );
@@ -267,7 +267,7 @@ virtual State validate(QString & input, int & pos) const = 0
 */
 HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {
-  QIntValidator * obj = (QIntValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

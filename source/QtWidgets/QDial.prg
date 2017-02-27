@@ -82,7 +82,7 @@ QDial ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QDIAL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDial * o = new QDial ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDial *) o );
@@ -115,7 +115,7 @@ int notchSize () const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->notchSize (  ) );
@@ -128,7 +128,7 @@ qreal notchTarget () const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->notchTarget (  ) );
@@ -141,7 +141,7 @@ bool notchesVisible () const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->notchesVisible (  ) );
@@ -154,7 +154,7 @@ void setNotchTarget ( double target )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     double par1 = hb_parnd(1);
@@ -169,7 +169,7 @@ bool wrapping () const
 */
 HB_FUNC_STATIC( QDIAL_WRAPPING )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->wrapping (  ) );
@@ -182,7 +182,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -196,7 +196,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QDIAL_SIZEHINT )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -210,7 +210,7 @@ void setNotchesVisible ( bool visible )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setNotchesVisible ( (bool) hb_parl(1) );
@@ -224,7 +224,7 @@ void setWrapping ( bool on )
 */
 HB_FUNC_STATIC( QDIAL_SETWRAPPING )
 {
-  QDial * obj = (QDial *) _qtxhb_itemGetPtrStackSelfItem();
+  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setWrapping ( (bool) hb_parl(1) );

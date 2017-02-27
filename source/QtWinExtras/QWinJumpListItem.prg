@@ -127,7 +127,7 @@ Type type() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -141,7 +141,7 @@ void setType(Type type)
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -158,7 +158,7 @@ QString filePath() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_FILEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->filePath (  ).toLatin1().data() );
@@ -172,7 +172,7 @@ void setFilePath(const QString &filePath)
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETFILEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -189,7 +189,7 @@ QString workingDirectory() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_WORKINGDIRECTORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->workingDirectory (  ).toLatin1().data() );
@@ -203,7 +203,7 @@ void setWorkingDirectory(const QString &workingDirectory)
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETWORKINGDIRECTORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -220,7 +220,7 @@ QIcon icon() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
@@ -235,10 +235,10 @@ void setIcon(const QIcon &icon)
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
+    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     obj->setIcon ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,7 +252,7 @@ QString title() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -266,7 +266,7 @@ void setTitle(const QString &title)
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -283,7 +283,7 @@ QString description() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_DESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->description (  ).toLatin1().data() );
@@ -297,7 +297,7 @@ void setDescription(const QString &description)
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -314,11 +314,11 @@ QStringList arguments() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_ARGUMENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->arguments (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
 }
@@ -329,7 +329,7 @@ void setArguments(const QStringList &arguments)
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETARGUMENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;

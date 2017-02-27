@@ -81,7 +81,7 @@ QGraphicsProxyWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qtxhb_itemGetPtr(1);
+  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QGraphicsProxyWidget * o = new QGraphicsProxyWidget ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -115,10 +115,10 @@ QGraphicsProxyWidget * createProxyForChildWidget ( QWidget * child )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
   }
@@ -130,10 +130,10 @@ void setWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -145,10 +145,10 @@ QRectF subWidgetRect ( const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QWidget * par1 = (const QWidget *) _qtxhb_itemGetPtr(1);
+    const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->subWidgetRect ( par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
@@ -160,7 +160,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
@@ -174,12 +174,12 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qtxhb_itemGetPtr(1);
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qtxhb_itemGetPtr(2);
-    QWidget * par3 = (QWidget *) _qtxhb_itemGetPtr(3);
+    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
+    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
+    QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
     obj->paint ( par1, par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -191,10 +191,10 @@ virtual void setGeometry ( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     obj->setGeometry ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -206,7 +206,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );

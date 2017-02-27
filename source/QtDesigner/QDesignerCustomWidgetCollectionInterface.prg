@@ -95,7 +95,7 @@ virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
 {
-  QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets (  );

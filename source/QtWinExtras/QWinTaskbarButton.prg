@@ -84,7 +84,7 @@ explicit QWinTaskbarButton(QObject *parent = 0)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QWinTaskbarButton * o = new QWinTaskbarButton ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWinTaskbarButton *) o );
@@ -118,7 +118,7 @@ QWindow *window() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWindow * ptr = obj->window (  );
@@ -133,10 +133,10 @@ void setWindow(QWindow *window)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+    QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
     obj->setWindow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -150,7 +150,7 @@ QIcon overlayIcon() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->overlayIcon (  ) );
@@ -165,10 +165,10 @@ void setOverlayIcon(const QIcon &icon)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
+    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     obj->setOverlayIcon ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -181,7 +181,7 @@ void clearOverlayIcon()
 HB_FUNC_STATIC( QWINTASKBARBUTTON_CLEAROVERLAYICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clearOverlayIcon (  );
@@ -197,7 +197,7 @@ QString overlayAccessibleDescription() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->overlayAccessibleDescription (  ).toLatin1().data() );
@@ -211,7 +211,7 @@ void setOverlayAccessibleDescription(const QString &description)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -228,7 +228,7 @@ QWinTaskbarProgress *progress() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWinTaskbarProgress * ptr = obj->progress (  );
@@ -244,11 +244,11 @@ bool eventFilter(QObject *, QEvent *)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_EVENTFILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-    QEvent * par2 = (QEvent *) _qtxhb_itemGetPtr(2);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->eventFilter ( par1, par2 ) );
   }
 #endif

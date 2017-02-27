@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QHelpEngineCore * o = new QHelpEngineCore ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpEngineCore *) o );
@@ -141,7 +141,7 @@ bool addCustomFilter ( const QString & filterName, const QStringList & attribute
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -164,7 +164,7 @@ bool autoSaveFilter () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->autoSaveFilter (  ) );
@@ -177,7 +177,7 @@ QString collectionFile () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->collectionFile (  ).toLatin1().data() );
@@ -190,7 +190,7 @@ bool copyCollectionFile ( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -204,7 +204,7 @@ QString currentFilter () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->currentFilter (  ).toLatin1().data() );
@@ -217,11 +217,11 @@ QStringList customFilters () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->customFilters (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -231,11 +231,11 @@ QVariant customValue ( const QString & key, const QVariant & defaultValue = QVar
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->customValue ( par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -247,7 +247,7 @@ QString documentationFileName ( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -261,7 +261,7 @@ QString error () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->error (  ).toLatin1().data() );
@@ -274,10 +274,10 @@ QByteArray fileData ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QByteArray * ptr = new QByteArray( obj->fileData ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
@@ -291,11 +291,11 @@ QStringList filterAttributes () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->filterAttributes (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -305,12 +305,12 @@ QStringList filterAttributes ( const QString & filterName ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES2 )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QStringList strl = obj->filterAttributes ( par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -339,10 +339,10 @@ QUrl findFile ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->findFile ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -355,7 +355,7 @@ bool registerDocumentation ( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -369,11 +369,11 @@ QStringList registeredDocumentations () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->registeredDocumentations (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -383,7 +383,7 @@ bool removeCustomFilter ( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -397,7 +397,7 @@ bool removeCustomValue ( const QString & key )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -411,7 +411,7 @@ void setAutoSaveFilter ( bool save )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAutoSaveFilter ( (bool) hb_parl(1) );
@@ -425,7 +425,7 @@ void setCollectionFile ( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -440,7 +440,7 @@ void setCurrentFilter ( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -455,11 +455,11 @@ bool setCustomValue ( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->setCustomValue ( par1, *par2 ) );
   }
 }
@@ -470,7 +470,7 @@ bool setupData ()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->setupData (  ) );
@@ -483,7 +483,7 @@ bool unregisterDocumentation ( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

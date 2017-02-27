@@ -96,10 +96,10 @@ virtual void setVideoSettings(const QVideoEncoderSettings & settings) = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
 {
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qtxhb_itemGetPtr(1);
+    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
     obj->setVideoSettings ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -111,13 +111,13 @@ virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings,
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
 {
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qtxhb_itemGetPtr(1);
+    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
     QList<qreal> list = obj->supportedFrameRates ( *par1, &par2 );
-    _qtxhb_convert_qlist_qreal_to_array ( list );
+    _qt5xhb_convert_qlist_qreal_to_array ( list );
     hb_storl( par2, 2 );
   }
 }
@@ -128,10 +128,10 @@ virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
 {
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qtxhb_itemGetPtr(1);
+    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
     QList<QSize> list = obj->supportedResolutions ( *par1, &par2 );
     PHB_DYNS pDynSym;
@@ -179,11 +179,11 @@ virtual QStringList supportedVideoCodecs() const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS )
 {
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->supportedVideoCodecs (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -193,7 +193,7 @@ virtual QString videoCodecDescription(const QString & codec) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION )
 {
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -207,7 +207,7 @@ virtual QVideoEncoderSettings videoSettings() const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS )
 {
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings (  ) );

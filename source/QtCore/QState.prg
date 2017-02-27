@@ -92,7 +92,7 @@ QState ( QState * parent = 0 )
 HB_FUNC_STATIC( QSTATE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qtxhb_itemGetPtr(1);
+  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QState * o = new QState ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QState *) o );
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSTATE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QState * par2 = ISNIL(2)? 0 : (QState *) _qtxhb_itemGetPtr(2);
+  QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
   QState * o = new QState (  (QState::ChildMode) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QState *) o );
@@ -161,10 +161,10 @@ void addTransition ( QAbstractTransition * transition )
 */
 HB_FUNC_STATIC( QSTATE_ADDTRANSITION1 )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractTransition * par1 = (QAbstractTransition *) _qtxhb_itemGetPtr(1);
+    QAbstractTransition * par1 = (QAbstractTransition *) _qt5xhb_itemGetPtr(1);
     obj->addTransition ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -176,12 +176,12 @@ QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbst
 */
 HB_FUNC_STATIC( QSTATE_ADDTRANSITION2 )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
-    QAbstractState * par3 = (QAbstractState *) _qtxhb_itemGetPtr(3);
+    QAbstractState * par3 = (QAbstractState *) _qt5xhb_itemGetPtr(3);
     QSignalTransition * ptr = obj->addTransition ( par1,  (const char *) par2, par3 );
     _qt5xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
   }
@@ -193,10 +193,10 @@ QAbstractTransition * addTransition ( QAbstractState * target )
 */
 HB_FUNC_STATIC( QSTATE_ADDTRANSITION3 )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractState * par1 = (QAbstractState *) _qtxhb_itemGetPtr(1);
+    QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
     QAbstractTransition * ptr = obj->addTransition ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );
   }
@@ -232,12 +232,12 @@ void assignProperty ( QObject * object, const char * name, const QVariant & valu
 */
 HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
-    QVariant * par3 = (QVariant *) _qtxhb_itemGetPtr(3);
+    QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
     obj->assignProperty ( par1,  (const char *) par2, *par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -249,7 +249,7 @@ ChildMode childMode () const
 */
 HB_FUNC_STATIC( QSTATE_CHILDMODE )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->childMode (  ) );
@@ -262,7 +262,7 @@ QAbstractState * errorState () const
 */
 HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAbstractState * ptr = obj->errorState (  );
@@ -276,7 +276,7 @@ QAbstractState * initialState () const
 */
 HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAbstractState * ptr = obj->initialState (  );
@@ -290,10 +290,10 @@ void removeTransition ( QAbstractTransition * transition )
 */
 HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractTransition * par1 = (QAbstractTransition *) _qtxhb_itemGetPtr(1);
+    QAbstractTransition * par1 = (QAbstractTransition *) _qt5xhb_itemGetPtr(1);
     obj->removeTransition ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -305,7 +305,7 @@ void setChildMode ( ChildMode mode )
 */
 HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -320,10 +320,10 @@ void setErrorState ( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractState * par1 = (QAbstractState *) _qtxhb_itemGetPtr(1);
+    QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
     obj->setErrorState ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -335,10 +335,10 @@ void setInitialState ( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractState * par1 = (QAbstractState *) _qtxhb_itemGetPtr(1);
+    QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
     obj->setInitialState ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -350,7 +350,7 @@ QList<QAbstractTransition *> transitions () const
 */
 HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 {
-  QState * obj = (QState *) _qtxhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QAbstractTransition *> list = obj->transitions (  );

@@ -81,7 +81,7 @@ QStatusBar ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QStatusBar * o = new QStatusBar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStatusBar *) o );
@@ -114,10 +114,10 @@ void addPermanentWidget ( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->addPermanentWidget ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,10 +129,10 @@ void addWidget ( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->addWidget ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -144,7 +144,7 @@ QString currentMessage () const
 */
 HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->currentMessage (  ).toLatin1().data() );
@@ -157,10 +157,10 @@ int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     hb_retni( obj->insertPermanentWidget ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
@@ -171,10 +171,10 @@ int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     hb_retni( obj->insertWidget ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
@@ -185,7 +185,7 @@ bool isSizeGripEnabled () const
 */
 HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSizeGripEnabled (  ) );
@@ -198,10 +198,10 @@ void removeWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->removeWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -213,7 +213,7 @@ void setSizeGripEnabled ( bool )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSizeGripEnabled ( (bool) hb_parl(1) );
@@ -227,7 +227,7 @@ void clearMessage ()
 */
 HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clearMessage (  );
@@ -241,7 +241,7 @@ void showMessage ( const QString & message, int timeout = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 {
-  QStatusBar * obj = (QStatusBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

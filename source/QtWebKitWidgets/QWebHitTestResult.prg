@@ -123,7 +123,7 @@ QWebHitTestResult ( const QWebHitTestResult & other )
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWebHitTestResult * par1 = (QWebHitTestResult *) _qtxhb_itemGetPtr(1);
+  QWebHitTestResult * par1 = (QWebHitTestResult *) _qt5xhb_itemGetPtr(1);
   QWebHitTestResult * o = new QWebHitTestResult ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebHitTestResult *) o );
@@ -178,7 +178,7 @@ QString alternateText () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->alternateText (  ).toLatin1().data() );
@@ -191,7 +191,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->boundingRect (  ) );
@@ -205,7 +205,7 @@ QWebElement element () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->element (  ) );
@@ -219,7 +219,7 @@ QWebElement enclosingBlockElement () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->enclosingBlockElement (  ) );
@@ -233,7 +233,7 @@ QWebFrame * frame () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebFrame * ptr = obj->frame (  );
@@ -247,7 +247,7 @@ QUrl imageUrl () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->imageUrl (  ) );
@@ -261,7 +261,7 @@ bool isContentEditable () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isContentEditable (  ) );
@@ -274,7 +274,7 @@ bool isContentSelected () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isContentSelected (  ) );
@@ -287,7 +287,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -300,7 +300,7 @@ QWebElement linkElement () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->linkElement (  ) );
@@ -314,7 +314,7 @@ QWebFrame * linkTargetFrame () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebFrame * ptr = obj->linkTargetFrame (  );
@@ -328,7 +328,7 @@ QString linkText () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->linkText (  ).toLatin1().data() );
@@ -341,7 +341,7 @@ QUrl linkTitle () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->linkTitle (  ) );
@@ -355,7 +355,7 @@ QUrl linkUrl () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->linkUrl (  ) );
@@ -369,7 +369,7 @@ QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
@@ -383,7 +383,7 @@ QPoint pos () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->pos (  ) );
@@ -397,7 +397,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );

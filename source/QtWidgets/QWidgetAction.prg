@@ -77,7 +77,7 @@ QWidgetAction(QObject * parent)
 HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QWidgetAction * o = new QWidgetAction ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWidgetAction *) o );
@@ -110,7 +110,7 @@ QWidget * defaultWidget() const
 */
 HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->defaultWidget (  );
@@ -124,10 +124,10 @@ void releaseWidget(QWidget * widget)
 */
 HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->releaseWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,10 +139,10 @@ QWidget * requestWidget(QWidget * parent)
 */
 HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->requestWidget ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -154,10 +154,10 @@ void setDefaultWidget(QWidget * widget)
 */
 HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) _qtxhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setDefaultWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

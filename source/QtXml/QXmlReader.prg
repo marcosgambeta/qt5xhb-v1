@@ -118,7 +118,7 @@ virtual QXmlDTDHandler * DTDHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlDTDHandler * ptr = obj->DTDHandler (  );
@@ -132,7 +132,7 @@ virtual QXmlContentHandler * contentHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlContentHandler * ptr = obj->contentHandler (  );
@@ -146,7 +146,7 @@ virtual QXmlDeclHandler * declHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlDeclHandler * ptr = obj->declHandler (  );
@@ -160,7 +160,7 @@ virtual QXmlEntityResolver * entityResolver () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlEntityResolver * ptr = obj->entityResolver (  );
@@ -174,7 +174,7 @@ virtual QXmlErrorHandler * errorHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlErrorHandler * ptr = obj->errorHandler (  );
@@ -188,7 +188,7 @@ virtual bool feature ( const QString & name, bool * ok = 0 ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_FEATURE )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -204,7 +204,7 @@ virtual bool hasFeature ( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -218,7 +218,7 @@ virtual bool hasProperty ( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -232,7 +232,7 @@ virtual QXmlLexicalHandler * lexicalHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlLexicalHandler * ptr = obj->lexicalHandler (  );
@@ -246,10 +246,10 @@ virtual bool parse ( const QXmlInputSource * input ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_PARSE )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlInputSource * par1 = (QXmlInputSource *) _qtxhb_itemGetPtr(1);
+    QXmlInputSource * par1 = (QXmlInputSource *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->parse ( par1 ) );
   }
 }
@@ -260,7 +260,7 @@ virtual void * property ( const QString & name, bool * ok = 0 ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_PROPERTY )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -276,10 +276,10 @@ virtual void setContentHandler ( QXmlContentHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETCONTENTHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlContentHandler * par1 = (QXmlContentHandler *) _qtxhb_itemGetPtr(1);
+    QXmlContentHandler * par1 = (QXmlContentHandler *) _qt5xhb_itemGetPtr(1);
     obj->setContentHandler ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -291,10 +291,10 @@ virtual void setDTDHandler ( QXmlDTDHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETDTDHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlDTDHandler * par1 = (QXmlDTDHandler *) _qtxhb_itemGetPtr(1);
+    QXmlDTDHandler * par1 = (QXmlDTDHandler *) _qt5xhb_itemGetPtr(1);
     obj->setDTDHandler ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -306,10 +306,10 @@ virtual void setDeclHandler ( QXmlDeclHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETDECLHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlDeclHandler * par1 = (QXmlDeclHandler *) _qtxhb_itemGetPtr(1);
+    QXmlDeclHandler * par1 = (QXmlDeclHandler *) _qt5xhb_itemGetPtr(1);
     obj->setDeclHandler ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -321,10 +321,10 @@ virtual void setEntityResolver ( QXmlEntityResolver * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETENTITYRESOLVER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlEntityResolver * par1 = (QXmlEntityResolver *) _qtxhb_itemGetPtr(1);
+    QXmlEntityResolver * par1 = (QXmlEntityResolver *) _qt5xhb_itemGetPtr(1);
     obj->setEntityResolver ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -336,10 +336,10 @@ virtual void setErrorHandler ( QXmlErrorHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETERRORHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlErrorHandler * par1 = (QXmlErrorHandler *) _qtxhb_itemGetPtr(1);
+    QXmlErrorHandler * par1 = (QXmlErrorHandler *) _qt5xhb_itemGetPtr(1);
     obj->setErrorHandler ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -351,7 +351,7 @@ virtual void setFeature ( const QString & name, bool value ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -366,10 +366,10 @@ virtual void setLexicalHandler ( QXmlLexicalHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETLEXICALHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlLexicalHandler * par1 = (QXmlLexicalHandler *) _qtxhb_itemGetPtr(1);
+    QXmlLexicalHandler * par1 = (QXmlLexicalHandler *) _qt5xhb_itemGetPtr(1);
     obj->setLexicalHandler ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -381,7 +381,7 @@ virtual void setProperty ( const QString & name, void * value ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
 {
-  QXmlReader * obj = (QXmlReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

@@ -92,7 +92,7 @@ QWebHistoryItem ( const QWebHistoryItem & other )
 HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWebHistoryItem * par1 = (QWebHistoryItem *) _qtxhb_itemGetPtr(1);
+  QWebHistoryItem * par1 = (QWebHistoryItem *) _qt5xhb_itemGetPtr(1);
   QWebHistoryItem * o = new QWebHistoryItem ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebHistoryItem *) o );
@@ -128,7 +128,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
@@ -142,7 +142,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -155,7 +155,7 @@ QDateTime lastVisited () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastVisited (  ) );
@@ -169,7 +169,7 @@ QUrl originalUrl () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->originalUrl (  ) );
@@ -183,10 +183,10 @@ void setUserData ( const QVariant & userData )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setUserData ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -198,7 +198,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -211,7 +211,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
@@ -225,7 +225,7 @@ QVariant userData () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->userData (  ) );

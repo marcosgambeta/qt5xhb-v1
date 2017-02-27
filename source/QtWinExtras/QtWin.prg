@@ -117,7 +117,7 @@ static HBITMAP createMask(const QBitmap &bitmap)
 HB_FUNC_STATIC( QTWIN_CREATEMASK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBitmap * par1 = (QBitmap *) _qtxhb_itemGetPtr(1);
+  QBitmap * par1 = (QBitmap *) _qt5xhb_itemGetPtr(1);
   hb_retptr( (HBITMAP) QtWin::createMask ( *par1 ) );
 #endif
 }
@@ -129,7 +129,7 @@ static HBITMAP toHBITMAP(const QPixmap &p, HBitmapFormat format = HBitmapNoAlpha
 HB_FUNC_STATIC( QTWIN_TOHBITMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QPixmap * par1 = (QPixmap *) _qtxhb_itemGetPtr(1);
+  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QtWin::HBitmapNoAlpha : hb_parni(2);
   hb_retptr( (HBITMAP) QtWin::toHBITMAP ( *par1,  (QtWin::HBitmapFormat) par2 ) );
 #endif
@@ -156,7 +156,7 @@ static HICON toHICON(const QPixmap &p)
 HB_FUNC_STATIC( QTWIN_TOHICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QPixmap * par1 = (QPixmap *) _qtxhb_itemGetPtr(1);
+  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   hb_retptr( (HICON) QtWin::toHICON ( *par1 ) );
 #endif
 }
@@ -195,7 +195,7 @@ static HRGN toHRGN(const QRegion &region)
 HB_FUNC_STATIC( QTWIN_TOHRGN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QRegion * par1 = (QRegion *) _qtxhb_itemGetPtr(1);
+  QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
   hb_retptr( (HRGN) QtWin::toHRGN ( *par1 ) );
 #endif
 }
@@ -274,7 +274,7 @@ static void setWindowExcludedFromPeek(QWindow *window, bool exclude)
 HB_FUNC_STATIC( QTWIN_SETWINDOWEXCLUDEDFROMPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::setWindowExcludedFromPeek ( par1, (bool) hb_parl(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -287,7 +287,7 @@ static bool isWindowExcludedFromPeek(QWindow *window)
 HB_FUNC_STATIC( QTWIN_ISWINDOWEXCLUDEDFROMPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   hb_retl( QtWin::isWindowExcludedFromPeek ( par1 ) );
 #endif
 }
@@ -299,7 +299,7 @@ static void setWindowDisallowPeek(QWindow *window, bool disallow)
 HB_FUNC_STATIC( QTWIN_SETWINDOWDISALLOWPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::setWindowDisallowPeek ( par1, (bool) hb_parl(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -312,7 +312,7 @@ static bool isWindowPeekDisallowed(QWindow *window)
 HB_FUNC_STATIC( QTWIN_ISWINDOWPEEKDISALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   hb_retl( QtWin::isWindowPeekDisallowed ( par1 ) );
 #endif
 }
@@ -324,7 +324,7 @@ static void setWindowFlip3DPolicy(QWindow *window, WindowFlip3DPolicy policy)
 HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QtWin::setWindowFlip3DPolicy ( par1,  (QtWin::WindowFlip3DPolicy) par2 );
   hb_itemReturn( hb_stackSelfItem() );
@@ -338,7 +338,7 @@ static WindowFlip3DPolicy windowFlip3DPolicy(QWindow *)
 HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   hb_retni( QtWin::windowFlip3DPolicy ( par1 ) );
 #endif
 }
@@ -350,7 +350,7 @@ static void extendFrameIntoClientArea(QWindow *window, int left, int top, int ri
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::extendFrameIntoClientArea ( par1, (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) hb_parni(5) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -362,8 +362,8 @@ static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
-  QMargins * par2 = (QMargins *) _qtxhb_itemGetPtr(2);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
+  QMargins * par2 = (QMargins *) _qt5xhb_itemGetPtr(2);
   QtWin::extendFrameIntoClientArea ( par1, *par2 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -395,7 +395,7 @@ static void resetExtendedFrame(QWindow *window)
 HB_FUNC_STATIC( QTWIN_RESETEXTENDEDFRAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::resetExtendedFrame ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -408,8 +408,8 @@ static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
-  QRegion * par2 = (QRegion *) _qtxhb_itemGetPtr(2);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
+  QRegion * par2 = (QRegion *) _qt5xhb_itemGetPtr(2);
   QtWin::enableBlurBehindWindow ( par1, *par2 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -421,7 +421,7 @@ static void enableBlurBehindWindow(QWindow *window)
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::enableBlurBehindWindow ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -453,7 +453,7 @@ static void disableBlurBehindWindow(QWindow *window)
 HB_FUNC_STATIC( QTWIN_DISABLEBLURBEHINDWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::disableBlurBehindWindow ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -513,7 +513,7 @@ static void markFullscreenWindow(QWindow *, bool fullscreen = true)
 HB_FUNC_STATIC( QTWIN_MARKFULLSCREENWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::markFullscreenWindow ( par1, (bool) ISNIL(2)? true : hb_parl(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -526,7 +526,7 @@ static void taskbarActivateTab(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETAB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::taskbarActivateTab ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -539,7 +539,7 @@ static void taskbarActivateTabAlt(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETABALT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::taskbarActivateTabAlt ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -552,7 +552,7 @@ static void taskbarAddTab(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARADDTAB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::taskbarAddTab ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -565,7 +565,7 @@ static void taskbarDeleteTab(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARDELETETAB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QtWin::taskbarDeleteTab ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -108,9 +108,9 @@ QQmlListReference(QObject * object, const char * property, QQmlEngine * engine =
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
-  QQmlEngine * par3 = ISNIL(3)? 0 : (QQmlEngine *) _qtxhb_itemGetPtr(3);
+  QQmlEngine * par3 = ISNIL(3)? 0 : (QQmlEngine *) _qt5xhb_itemGetPtr(3);
   QQmlListReference * o = new QQmlListReference ( par1,  (const char *) par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlListReference *) o );
@@ -162,10 +162,10 @@ bool append(QObject * object) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->append ( par1 ) );
   }
 }
@@ -176,7 +176,7 @@ QObject * at(int index) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->at ( (int) hb_parni(1) );
@@ -190,7 +190,7 @@ bool canAppend() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canAppend (  ) );
@@ -203,7 +203,7 @@ bool canAt() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canAt (  ) );
@@ -216,7 +216,7 @@ bool canClear() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canClear (  ) );
@@ -229,7 +229,7 @@ bool canCount() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canCount (  ) );
@@ -242,7 +242,7 @@ bool clear() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->clear (  ) );
@@ -255,7 +255,7 @@ int count() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -268,7 +268,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -281,7 +281,7 @@ const QMetaObject * listElementType() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QMetaObject * ptr = obj->listElementType (  );
@@ -295,7 +295,7 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->object (  );

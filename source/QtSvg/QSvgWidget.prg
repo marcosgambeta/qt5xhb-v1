@@ -81,7 +81,7 @@ QSvgWidget ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSVGWIDGET_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QSvgWidget * o = new QSvgWidget ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSvgWidget *) o );
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QSvgWidget * o = new QSvgWidget ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSvgWidget *) o );
@@ -150,7 +150,7 @@ QSvgRenderer * renderer () const
 */
 HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
-  QSvgWidget * obj = (QSvgWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSvgRenderer * ptr = obj->renderer (  );
@@ -164,7 +164,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {
-  QSvgWidget * obj = (QSvgWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -178,7 +178,7 @@ void load ( const QString & file )
 */
 HB_FUNC_STATIC( QSVGWIDGET_LOAD1 )
 {
-  QSvgWidget * obj = (QSvgWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -192,10 +192,10 @@ void load ( const QByteArray & contents )
 */
 HB_FUNC_STATIC( QSVGWIDGET_LOAD2 )
 {
-  QSvgWidget * obj = (QSvgWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->load ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

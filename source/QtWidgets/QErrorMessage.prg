@@ -75,7 +75,7 @@ explicit QErrorMessage ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QErrorMessage * o = new QErrorMessage ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QErrorMessage *) o );
@@ -108,7 +108,7 @@ void showMessage ( const QString & message )
 */
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE1 )
 {
-  QErrorMessage * obj = (QErrorMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -122,7 +122,7 @@ void showMessage ( const QString & message, const QString & type )
 */
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE2 )
 {
-  QErrorMessage * obj = (QErrorMessage *) _qtxhb_itemGetPtrStackSelfItem();
+  QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

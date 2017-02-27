@@ -76,7 +76,7 @@ QTranslator(QObject * parent = 0)
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QTranslator * o = new QTranslator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTranslator *) o );
@@ -109,7 +109,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
-  QTranslator * obj = (QTranslator *) _qtxhb_itemGetPtrStackSelfItem();
+  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -122,7 +122,7 @@ bool load(const QString & filename, const QString & directory = QString(), const
 */
 HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
 {
-  QTranslator * obj = (QTranslator *) _qtxhb_itemGetPtrStackSelfItem();
+  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -138,10 +138,10 @@ bool load(const QLocale & locale, const QString & filename, const QString & pref
 */
 HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
 {
-  QTranslator * obj = (QTranslator *) _qtxhb_itemGetPtrStackSelfItem();
+  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qtxhb_itemGetPtr(1);
+    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
@@ -155,10 +155,10 @@ bool load(const uchar * data, int len, const QString & directory = QString())
 */
 HB_FUNC_STATIC( QTRANSLATOR_LOAD3 )
 {
-  QTranslator * obj = (QTranslator *) _qtxhb_itemGetPtrStackSelfItem();
+  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const uchar * par1 = (const uchar *) _qtxhb_itemGetPtr(1);
+    const uchar * par1 = (const uchar *) _qt5xhb_itemGetPtr(1);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     hb_retl( obj->load ( par1, (int) hb_parni(2), par3 ) );
   }
@@ -194,7 +194,7 @@ virtual QString translate(const char * context, const char * sourceText, const c
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
-  QTranslator * obj = (QTranslator *) _qtxhb_itemGetPtrStackSelfItem();
+  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);

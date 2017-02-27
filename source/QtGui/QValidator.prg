@@ -93,7 +93,7 @@ virtual void fixup ( QString & input ) const
 */
 HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 {
-  QValidator * obj = (QValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -108,7 +108,7 @@ QLocale locale () const
 */
 HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {
-  QValidator * obj = (QValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
@@ -122,10 +122,10 @@ void setLocale ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {
-  QValidator * obj = (QValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qtxhb_itemGetPtr(1);
+    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
     obj->setLocale ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -137,7 +137,7 @@ virtual State validate ( QString & input, int & pos ) const = 0
 */
 HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
 {
-  QValidator * obj = (QValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

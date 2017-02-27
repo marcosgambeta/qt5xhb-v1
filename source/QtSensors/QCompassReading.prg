@@ -91,7 +91,7 @@ qreal azimuth() const
 HB_FUNC_STATIC( QCOMPASSREADING_AZIMUTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompassReading * obj = (QCompassReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QCompassReading * obj = (QCompassReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->azimuth (  ) );
@@ -106,7 +106,7 @@ void setAzimuth(qreal azimuth)
 HB_FUNC_STATIC( QCOMPASSREADING_SETAZIMUTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompassReading * obj = (QCompassReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QCompassReading * obj = (QCompassReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -123,7 +123,7 @@ qreal calibrationLevel() const
 HB_FUNC_STATIC( QCOMPASSREADING_CALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompassReading * obj = (QCompassReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QCompassReading * obj = (QCompassReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->calibrationLevel (  ) );
@@ -138,7 +138,7 @@ void setCalibrationLevel(qreal calibrationLevel)
 HB_FUNC_STATIC( QCOMPASSREADING_SETCALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompassReading * obj = (QCompassReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QCompassReading * obj = (QCompassReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

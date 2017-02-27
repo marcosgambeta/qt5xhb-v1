@@ -79,7 +79,7 @@ QGraphicsOpacityEffect ( QObject * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QGraphicsOpacityEffect * o = new QGraphicsOpacityEffect ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsOpacityEffect *) o );
@@ -112,7 +112,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->opacity (  ) );
@@ -125,7 +125,7 @@ QBrush opacityMask () const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->opacityMask (  ) );
@@ -139,7 +139,7 @@ void setOpacity ( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -154,10 +154,10 @@ void setOpacityMask ( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * par1 = (QBrush *) _qtxhb_itemGetPtr(1);
+    QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
     obj->setOpacityMask ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

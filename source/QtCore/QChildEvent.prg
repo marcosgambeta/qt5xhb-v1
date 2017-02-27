@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QChildEvent * o = new QChildEvent (  (QEvent::Type) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QChildEvent *) o );
@@ -111,7 +111,7 @@ bool added() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 {
-  QChildEvent * obj = (QChildEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->added (  ) );
@@ -124,7 +124,7 @@ QObject * child() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 {
-  QChildEvent * obj = (QChildEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->child (  );
@@ -138,7 +138,7 @@ bool polished() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 {
-  QChildEvent * obj = (QChildEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->polished (  ) );
@@ -151,7 +151,7 @@ bool removed() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
 {
-  QChildEvent * obj = (QChildEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->removed (  ) );

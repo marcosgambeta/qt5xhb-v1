@@ -88,7 +88,7 @@ QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QRegularExpressionMatchIterator * par1 = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtr(1);
+  QRegularExpressionMatchIterator * par1 = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtr(1);
   QRegularExpressionMatchIterator * o = new QRegularExpressionMatchIterator ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegularExpressionMatchIterator *) o );
@@ -124,7 +124,7 @@ bool hasNext() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_HASNEXT )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasNext (  ) );
@@ -137,7 +137,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_ISVALID )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -150,7 +150,7 @@ QRegularExpression::MatchOptions matchOptions() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_MATCHOPTIONS )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->matchOptions (  ) );
@@ -163,7 +163,7 @@ QRegularExpression::MatchType matchType() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_MATCHTYPE )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->matchType (  ) );
@@ -176,7 +176,7 @@ QRegularExpressionMatch next()
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEXT )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->next (  ) );
@@ -190,7 +190,7 @@ QRegularExpressionMatch peekNext() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_PEEKNEXT )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->peekNext (  ) );
@@ -204,7 +204,7 @@ QRegularExpression regularExpression() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
@@ -218,10 +218,10 @@ void swap(QRegularExpressionMatchIterator & other)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_SWAP )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegularExpressionMatchIterator * par1 = (QRegularExpressionMatchIterator *) _qtxhb_itemGetPtr(1);
+    QRegularExpressionMatchIterator * par1 = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

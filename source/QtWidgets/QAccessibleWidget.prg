@@ -91,7 +91,7 @@ QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const Q
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QAccessibleWidget * o = new QAccessibleWidget ( par1,  (QAccessible::Role) par2, par3 );
@@ -110,7 +110,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -123,7 +123,7 @@ QWindow *window() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWindow * ptr = obj->window (  );
@@ -137,7 +137,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->childCount (  ) );
@@ -150,10 +150,10 @@ int indexOfChild(const QAccessibleInterface *child) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QAccessibleInterface * par1 = (const QAccessibleInterface *) _qtxhb_itemGetPtr(1);
+    const QAccessibleInterface * par1 = (const QAccessibleInterface *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->indexOfChild ( par1 ) );
   }
 }
@@ -165,7 +165,7 @@ QAccessibleInterface *focusChild() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAccessibleInterface * ptr = obj->focusChild (  );
@@ -179,7 +179,7 @@ QRect rect() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->rect (  ) );
@@ -193,7 +193,7 @@ QAccessibleInterface *parent() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAccessibleInterface * ptr = obj->parent (  );
@@ -207,7 +207,7 @@ QAccessibleInterface *child(int index) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAccessibleInterface * ptr = obj->child ( (int) hb_parni(1) );
@@ -221,7 +221,7 @@ QString text(QAccessible::Text t) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -235,7 +235,7 @@ QAccessible::Role role() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->role (  ) );
@@ -249,7 +249,7 @@ QColor foregroundColor() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QColor * ptr = new QColor( obj->foregroundColor (  ) );
@@ -263,7 +263,7 @@ QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QColor * ptr = new QColor( obj->backgroundColor (  ) );
@@ -277,7 +277,7 @@ void *interface_cast(QAccessible::InterfaceType t)
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -291,11 +291,11 @@ QStringList actionNames() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONNAMES )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->actionNames (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -305,7 +305,7 @@ void doAction(const QString &actionName)
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -320,12 +320,12 @@ QStringList keyBindingsForAction(const QString &actionName) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_KEYBINDINGSFORACTION )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QStringList strl = obj->keyBindingsForAction ( par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

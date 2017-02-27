@@ -109,7 +109,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -122,7 +122,7 @@ void setName(const QString &name)
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -137,7 +137,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -150,7 +150,7 @@ void setWidth(qreal width)
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -165,7 +165,7 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->width (  ) );
@@ -178,7 +178,7 @@ void setHeight(qreal height)
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -193,7 +193,7 @@ qreal height() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->height (  ) );

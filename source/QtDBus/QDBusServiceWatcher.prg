@@ -87,7 +87,7 @@ explicit QDBusServiceWatcher(QObject *parent = 0)
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDBusServiceWatcher * o = new QDBusServiceWatcher ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusServiceWatcher *) o );
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par3 = ISNIL(3)? (int) QDBusServiceWatcher::WatchForOwnerChange : hb_parni(3);
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) _qtxhb_itemGetPtr(4);
+  QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
   QDBusServiceWatcher * o = new QDBusServiceWatcher ( par1,  (QDBusServiceWatcher::WatchMode) par3, par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusServiceWatcher *) o );
@@ -157,11 +157,11 @@ QStringList watchedServices() const
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHEDSERVICES )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->watchedServices (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -170,7 +170,7 @@ void setWatchedServices(const QStringList &services)
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHEDSERVICES )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -193,7 +193,7 @@ void addWatchedService(const QString &newService)
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -208,7 +208,7 @@ bool removeWatchedService(const QString &service)
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -222,7 +222,7 @@ WatchMode watchMode() const
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHMODE )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     WatchMode * ptr = new WatchMode( obj->watchMode (  ) );
@@ -235,7 +235,7 @@ void setWatchMode(WatchMode mode)
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHMODE )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setWatchMode (  );
@@ -249,7 +249,7 @@ QDBusConnection connection() const
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_CONNECTION )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
@@ -262,7 +262,7 @@ void setConnection(const QDBusConnection &connection)
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETCONNECTION )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setConnection (  );

@@ -96,11 +96,11 @@ virtual int addDynamicProperty ( const QString & propertyName, const QVariant & 
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     hb_retni( obj->addDynamicProperty ( par1, *par2 ) );
   }
 }
@@ -111,7 +111,7 @@ virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -125,7 +125,7 @@ virtual bool dynamicPropertiesAllowed () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->dynamicPropertiesAllowed (  ) );
@@ -138,7 +138,7 @@ virtual bool isDynamicProperty ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isDynamicProperty ( (int) hb_parni(1) ) );
@@ -151,7 +151,7 @@ virtual bool removeDynamicProperty ( int index ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->removeDynamicProperty ( (int) hb_parni(1) ) );

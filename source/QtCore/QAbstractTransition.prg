@@ -102,10 +102,10 @@ void addAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) _qtxhb_itemGetPtr(1);
+    QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
     obj->addAnimation ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -117,7 +117,7 @@ QList<QAbstractAnimation *> animations () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QAbstractAnimation *> list = obj->animations (  );
@@ -161,7 +161,7 @@ QStateMachine * machine () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStateMachine * ptr = obj->machine (  );
@@ -175,10 +175,10 @@ void removeAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) _qtxhb_itemGetPtr(1);
+    QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
     obj->removeAnimation ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -190,10 +190,10 @@ void setTargetState ( QAbstractState * target )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractState * par1 = (QAbstractState *) _qtxhb_itemGetPtr(1);
+    QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
     obj->setTargetState ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -205,7 +205,7 @@ void setTargetStates ( const QList<QAbstractState *> & targets )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QAbstractState *> par1;
@@ -227,7 +227,7 @@ QState * sourceState () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QState * ptr = obj->sourceState (  );
@@ -241,7 +241,7 @@ QAbstractState * targetState () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAbstractState * ptr = obj->targetState (  );
@@ -255,7 +255,7 @@ QList<QAbstractState *> targetStates () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QAbstractState *> list = obj->targetStates (  );

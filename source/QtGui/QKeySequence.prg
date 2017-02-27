@@ -171,7 +171,7 @@ QKeySequence ( const QKeySequence & keysequence )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QKeySequence * par1 = (QKeySequence *) _qtxhb_itemGetPtr(1);
+  QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
   QKeySequence * o = new QKeySequence ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
@@ -262,7 +262,7 @@ uint count () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
-  QKeySequence * obj = (QKeySequence *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -275,7 +275,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
-  QKeySequence * obj = (QKeySequence *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -288,10 +288,10 @@ SequenceMatch matches ( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
-  QKeySequence * obj = (QKeySequence *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) _qtxhb_itemGetPtr(1);
+    QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->matches ( *par1 ) );
   }
 }
@@ -302,7 +302,7 @@ QString toString ( SequenceFormat format = PortableText ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
-  QKeySequence * obj = (QKeySequence *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QKeySequence::PortableText : hb_parni(1);

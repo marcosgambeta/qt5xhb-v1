@@ -78,7 +78,7 @@ QCollatorSortKey(const QCollatorSortKey &other)
 HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QCollatorSortKey * par1 = (QCollatorSortKey *) _qtxhb_itemGetPtr(1);
+  QCollatorSortKey * par1 = (QCollatorSortKey *) _qt5xhb_itemGetPtr(1);
   QCollatorSortKey * o = new QCollatorSortKey ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCollatorSortKey *) o );
@@ -114,10 +114,10 @@ void swap(QCollatorSortKey &other)
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_SWAP )
 {
-  QCollatorSortKey * obj = (QCollatorSortKey *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollatorSortKey * obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCollatorSortKey * par1 = (QCollatorSortKey *) _qtxhb_itemGetPtr(1);
+    QCollatorSortKey * par1 = (QCollatorSortKey *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,10 +129,10 @@ int compare(const QCollatorSortKey &key) const
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
 {
-  QCollatorSortKey * obj = (QCollatorSortKey *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollatorSortKey * obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCollatorSortKey * par1 = (QCollatorSortKey *) _qtxhb_itemGetPtr(1);
+    QCollatorSortKey * par1 = (QCollatorSortKey *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->compare ( *par1 ) );
   }
 }

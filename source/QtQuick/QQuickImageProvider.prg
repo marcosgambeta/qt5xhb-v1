@@ -114,7 +114,7 @@ virtual Flags flags() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->flags (  ) );
@@ -127,7 +127,7 @@ virtual ImageType imageType() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->imageType (  ) );
@@ -140,12 +140,12 @@ virtual QImage requestImage(const QString & id, QSize * size, const QSize & requ
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
-    QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
+    QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
+    QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
     QImage * ptr = new QImage( obj->requestImage ( par1, par2, *par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
@@ -157,12 +157,12 @@ virtual QPixmap requestPixmap(const QString & id, QSize * size, const QSize & re
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
-    QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
+    QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
+    QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
     QPixmap * ptr = new QPixmap( obj->requestPixmap ( par1, par2, *par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
@@ -174,12 +174,12 @@ virtual QQuickTextureFactory * requestTexture(const QString & id, QSize * size, 
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
-    QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
+    QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
+    QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
     QQuickTextureFactory * ptr = obj->requestTexture ( par1, par2, *par3 );
     _qt5xhb_createReturnClass ( ptr, "QQUICKTEXTUREFACTORY" );
   }

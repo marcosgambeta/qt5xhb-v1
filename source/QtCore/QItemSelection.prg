@@ -101,8 +101,8 @@ QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 HB_FUNC_STATIC( QITEMSELECTION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-  QModelIndex * par2 = (QModelIndex *) _qtxhb_itemGetPtr(2);
+  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+  QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
   QItemSelection * o = new QItemSelection ( *par1, *par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelection *) o );
@@ -154,11 +154,11 @@ void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
 HB_FUNC_STATIC( QITEMSELECTION_SELECT )
 {
-  QItemSelection * obj = (QItemSelection *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelection * obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    QModelIndex * par2 = (QModelIndex *) _qtxhb_itemGetPtr(2);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+    QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
     obj->select ( *par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -170,10 +170,10 @@ bool contains(const QModelIndex &index) const
 */
 HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
 {
-  QItemSelection * obj = (QItemSelection *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelection * obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->contains ( *par1 ) );
   }
 }
@@ -184,7 +184,7 @@ QModelIndexList indexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
 {
-  QItemSelection * obj = (QItemSelection *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelection * obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QModelIndexList list = obj->indexes (  );
@@ -228,10 +228,10 @@ void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags comm
 */
 HB_FUNC_STATIC( QITEMSELECTION_MERGE )
 {
-  QItemSelection * obj = (QItemSelection *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemSelection * obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemSelection * par1 = (QItemSelection *) _qtxhb_itemGetPtr(1);
+    QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->merge ( *par1,  (QItemSelectionModel::SelectionFlags) par2 );
   }
@@ -244,9 +244,9 @@ static void split(const QItemSelectionRange &range,const QItemSelectionRange &ot
 */
 HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
 {
-  QItemSelectionRange * par1 = (QItemSelectionRange *) _qtxhb_itemGetPtr(1);
-  QItemSelectionRange * par2 = (QItemSelectionRange *) _qtxhb_itemGetPtr(2);
-  QItemSelection * par3 = (QItemSelection *) _qtxhb_itemGetPtr(3);
+  QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
+  QItemSelectionRange * par2 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(2);
+  QItemSelection * par3 = (QItemSelection *) _qt5xhb_itemGetPtr(3);
   QItemSelection::split ( *par1, *par2, par3 );
   hb_itemReturn( hb_stackSelfItem() );
 }

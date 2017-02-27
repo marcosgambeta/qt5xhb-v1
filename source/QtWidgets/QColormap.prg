@@ -88,7 +88,7 @@ QColormap ( const QColormap & colormap )
 HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QColormap * par1 = (QColormap *) _qtxhb_itemGetPtr(1);
+  QColormap * par1 = (QColormap *) _qt5xhb_itemGetPtr(1);
   QColormap * o = new QColormap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QColormap *) o );
@@ -121,7 +121,7 @@ const QColor colorAt ( uint pixel ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORAT )
 {
-  QColormap * obj = (QColormap *) _qtxhb_itemGetPtrStackSelfItem();
+  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QColor * ptr = new QColor( obj->colorAt ( (uint) hb_parni(1) ) );
@@ -135,7 +135,7 @@ const QVector<QColor> colormap () const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 {
-  QColormap * obj = (QColormap *) _qtxhb_itemGetPtrStackSelfItem();
+  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVector<QColor> list = obj->colormap (  );
@@ -179,7 +179,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QCOLORMAP_DEPTH )
 {
-  QColormap * obj = (QColormap *) _qtxhb_itemGetPtrStackSelfItem();
+  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->depth (  ) );
@@ -192,7 +192,7 @@ Mode mode () const
 */
 HB_FUNC_STATIC( QCOLORMAP_MODE )
 {
-  QColormap * obj = (QColormap *) _qtxhb_itemGetPtrStackSelfItem();
+  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->mode (  ) );
@@ -205,10 +205,10 @@ uint pixel ( const QColor & color ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_PIXEL )
 {
-  QColormap * obj = (QColormap *) _qtxhb_itemGetPtrStackSelfItem();
+  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qtxhb_itemGetPtr(1) : QColor(hb_parc(1));
+    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
     hb_retni( obj->pixel ( par1 ) );
   }
 }
@@ -219,7 +219,7 @@ int size () const
 */
 HB_FUNC_STATIC( QCOLORMAP_SIZE )
 {
-  QColormap * obj = (QColormap *) _qtxhb_itemGetPtrStackSelfItem();
+  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );

@@ -83,7 +83,7 @@ QThreadPool(QObject *parent = 0)
 HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QThreadPool * o = new QThreadPool ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QThreadPool *) o );
@@ -116,10 +116,10 @@ void start(QRunnable *runnable, int priority = 0)
 */
 HB_FUNC_STATIC( QTHREADPOOL_START )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRunnable * par1 = (QRunnable *) _qtxhb_itemGetPtr(1);
+    QRunnable * par1 = (QRunnable *) _qt5xhb_itemGetPtr(1);
     obj->start ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -131,10 +131,10 @@ bool tryStart(QRunnable *runnable)
 */
 HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRunnable * par1 = (QRunnable *) _qtxhb_itemGetPtr(1);
+    QRunnable * par1 = (QRunnable *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->tryStart ( par1 ) );
   }
 }
@@ -145,7 +145,7 @@ int expiryTimeout() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->expiryTimeout (  ) );
@@ -158,7 +158,7 @@ void setExpiryTimeout(int expiryTimeout)
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setExpiryTimeout ( (int) hb_parni(1) );
@@ -172,7 +172,7 @@ int maxThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->maxThreadCount (  ) );
@@ -185,7 +185,7 @@ void setMaxThreadCount(int maxThreadCount)
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMaxThreadCount ( (int) hb_parni(1) );
@@ -199,7 +199,7 @@ int activeThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->activeThreadCount (  ) );
@@ -212,7 +212,7 @@ void reserveThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reserveThread (  );
@@ -226,7 +226,7 @@ void releaseThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->releaseThread (  );
@@ -240,7 +240,7 @@ bool waitForDone(int msecs = -1)
 */
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->waitForDone ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
@@ -253,7 +253,7 @@ void clear()
 */
 HB_FUNC_STATIC( QTHREADPOOL_CLEAR )
 {
-  QThreadPool * obj = (QThreadPool *) _qtxhb_itemGetPtrStackSelfItem();
+  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );

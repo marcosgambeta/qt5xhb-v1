@@ -117,7 +117,7 @@ QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QLABEL_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QLabel * o = new QLabel ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QLABEL_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
   QLabel * o = new QLabel ( par1, par2,  (Qt::WindowFlags) par3 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -188,7 +188,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QLABEL_ALIGNMENT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->alignment (  ) );
@@ -201,7 +201,7 @@ QWidget * buddy () const
 */
 HB_FUNC_STATIC( QLABEL_BUDDY )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->buddy (  );
@@ -215,7 +215,7 @@ bool hasScaledContents () const
 */
 HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasScaledContents (  ) );
@@ -228,7 +228,7 @@ bool hasSelectedText () const
 */
 HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasSelectedText (  ) );
@@ -241,7 +241,7 @@ int indent () const
 */
 HB_FUNC_STATIC( QLABEL_INDENT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->indent (  ) );
@@ -254,7 +254,7 @@ int margin () const
 */
 HB_FUNC_STATIC( QLABEL_MARGIN )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->margin (  ) );
@@ -267,7 +267,7 @@ QMovie * movie () const
 */
 HB_FUNC_STATIC( QLABEL_MOVIE )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMovie * ptr = obj->movie (  );
@@ -281,7 +281,7 @@ bool openExternalLinks () const
 */
 HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->openExternalLinks (  ) );
@@ -294,7 +294,7 @@ const QPicture * picture () const
 */
 HB_FUNC_STATIC( QLABEL_PICTURE )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPicture * ptr = obj->picture (  );
@@ -308,7 +308,7 @@ const QPixmap * pixmap () const
 */
 HB_FUNC_STATIC( QLABEL_PIXMAP )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPixmap * ptr = obj->pixmap (  );
@@ -322,7 +322,7 @@ QString selectedText () const
 */
 HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->selectedText (  ).toLatin1().data() );
@@ -335,7 +335,7 @@ void setAlignment ( Qt::Alignment )
 */
 HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -350,10 +350,10 @@ void setBuddy ( QWidget * buddy )
 */
 HB_FUNC_STATIC( QLABEL_SETBUDDY )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setBuddy ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -365,7 +365,7 @@ void setIndent ( int )
 */
 HB_FUNC_STATIC( QLABEL_SETINDENT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setIndent ( (int) hb_parni(1) );
@@ -379,7 +379,7 @@ void setMargin ( int )
 */
 HB_FUNC_STATIC( QLABEL_SETMARGIN )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMargin ( (int) hb_parni(1) );
@@ -393,7 +393,7 @@ void setOpenExternalLinks ( bool open )
 */
 HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setOpenExternalLinks ( (bool) hb_parl(1) );
@@ -407,7 +407,7 @@ void setScaledContents ( bool )
 */
 HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setScaledContents ( (bool) hb_parl(1) );
@@ -421,7 +421,7 @@ void setSelection ( int start, int length )
 */
 HB_FUNC_STATIC( QLABEL_SETSELECTION )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -435,7 +435,7 @@ void setTextFormat ( Qt::TextFormat )
 */
 HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -450,7 +450,7 @@ void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -465,7 +465,7 @@ void setWordWrap ( bool on )
 */
 HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setWordWrap ( (bool) hb_parl(1) );
@@ -479,7 +479,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QLABEL_TEXT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
@@ -492,7 +492,7 @@ Qt::TextFormat textFormat () const
 */
 HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->textFormat (  ) );
@@ -505,7 +505,7 @@ Qt::TextInteractionFlags textInteractionFlags () const
 */
 HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->textInteractionFlags (  ) );
@@ -518,7 +518,7 @@ bool wordWrap () const
 */
 HB_FUNC_STATIC( QLABEL_WORDWRAP )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->wordWrap (  ) );
@@ -531,7 +531,7 @@ virtual int heightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
@@ -544,7 +544,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -558,7 +558,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLABEL_SIZEHINT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -572,7 +572,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QLABEL_CLEAR )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -586,10 +586,10 @@ void setMovie ( QMovie * movie )
 */
 HB_FUNC_STATIC( QLABEL_SETMOVIE )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMovie * par1 = (QMovie *) _qtxhb_itemGetPtr(1);
+    QMovie * par1 = (QMovie *) _qt5xhb_itemGetPtr(1);
     obj->setMovie ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -601,7 +601,7 @@ void setNum ( int num )
 */
 HB_FUNC_STATIC( QLABEL_SETNUM1 )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setNum ( (int) hb_parni(1) );
@@ -614,7 +614,7 @@ void setNum ( double num )
 */
 HB_FUNC_STATIC( QLABEL_SETNUM2 )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     double par1 = hb_parnd(1);
@@ -648,10 +648,10 @@ void setPicture ( const QPicture & picture )
 */
 HB_FUNC_STATIC( QLABEL_SETPICTURE )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPicture * par1 = (QPicture *) _qtxhb_itemGetPtr(1);
+    QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
     obj->setPicture ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -663,10 +663,10 @@ void setPixmap ( const QPixmap & )
 */
 HB_FUNC_STATIC( QLABEL_SETPIXMAP )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qtxhb_itemGetPtr(1);
+    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
     obj->setPixmap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -678,7 +678,7 @@ void setText ( const QString & )
 */
 HB_FUNC_STATIC( QLABEL_SETTEXT )
 {
-  QLabel * obj = (QLabel *) _qtxhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

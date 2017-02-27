@@ -93,7 +93,7 @@ QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWebSecurityOrigin * par1 = (QWebSecurityOrigin *) _qtxhb_itemGetPtr(1);
+  QWebSecurityOrigin * par1 = (QWebSecurityOrigin *) _qt5xhb_itemGetPtr(1);
   QWebSecurityOrigin * o = new QWebSecurityOrigin ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebSecurityOrigin *) o );
@@ -129,7 +129,7 @@ qint64 databaseQuota () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->databaseQuota (  ) );
@@ -142,7 +142,7 @@ qint64 databaseUsage () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->databaseUsage (  ) );
@@ -155,7 +155,7 @@ QList<QWebDatabase> databases () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWebDatabase> list = obj->databases (  );
@@ -203,7 +203,7 @@ QString host () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->host (  ).toLatin1().data() );
@@ -216,7 +216,7 @@ int port () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->port (  ) );
@@ -229,7 +229,7 @@ QString scheme () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->scheme (  ).toLatin1().data() );
@@ -242,7 +242,7 @@ void setDatabaseQuota ( qint64 quota )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDatabaseQuota ( (qint64) hb_parni(1) );
@@ -312,7 +312,7 @@ static QStringList localSchemes ()
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {
   QStringList strl = QWebSecurityOrigin::localSchemes (  );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
 

@@ -97,7 +97,7 @@ virtual qint64 cacheSize () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cacheSize (  ) );
@@ -110,10 +110,10 @@ virtual QIODevice * data ( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QIODevice * ptr = obj->data ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
@@ -125,10 +125,10 @@ virtual void insert ( QIODevice * device ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     obj->insert ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -140,10 +140,10 @@ virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
   }
@@ -155,10 +155,10 @@ virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qtxhb_itemGetPtr(1);
+    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtr(1);
     QIODevice * ptr = obj->prepare ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
@@ -170,10 +170,10 @@ virtual bool remove ( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->remove ( *par1 ) );
   }
 }
@@ -184,10 +184,10 @@ virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qtxhb_itemGetPtr(1);
+    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtr(1);
     obj->updateMetaData ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -199,7 +199,7 @@ virtual void clear () = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );

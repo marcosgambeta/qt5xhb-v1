@@ -83,7 +83,7 @@ QMouseEventTransition ( QState * sourceState = 0 )
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qtxhb_itemGetPtr(1);
+  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QMouseEventTransition * o = new QMouseEventTransition ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMouseEventTransition *) o );
@@ -99,10 +99,10 @@ QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton but
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QState * par4 = ISNIL(4)? 0 : (QState *) _qtxhb_itemGetPtr(4);
+  QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
   QMouseEventTransition * o = new QMouseEventTransition ( par1,  (QEvent::Type) par2,  (Qt::MouseButton) par3, par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMouseEventTransition *) o );
@@ -154,7 +154,7 @@ Qt::MouseButton button () const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 {
-  QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEventTransition * obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->button (  ) );
@@ -167,7 +167,7 @@ QPainterPath hitTestPath () const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 {
-  QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEventTransition * obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->hitTestPath (  ) );
@@ -181,7 +181,7 @@ Qt::KeyboardModifiers modifierMask () const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 {
-  QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEventTransition * obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->modifierMask (  ) );
@@ -194,7 +194,7 @@ void setButton ( Qt::MouseButton button )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
 {
-  QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEventTransition * obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -209,10 +209,10 @@ void setHitTestPath ( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
 {
-  QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEventTransition * obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     obj->setHitTestPath ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -224,7 +224,7 @@ void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
 {
-  QMouseEventTransition * obj = (QMouseEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QMouseEventTransition * obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

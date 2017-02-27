@@ -111,7 +111,7 @@ QTextTableCell(const QTextTableCell &o)
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QTextTableCell * par1 = (QTextTableCell *) _qtxhb_itemGetPtr(1);
+  QTextTableCell * par1 = (QTextTableCell *) _qt5xhb_itemGetPtr(1);
   QTextTableCell * o = new QTextTableCell ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextTableCell *) o );
@@ -163,10 +163,10 @@ void setFormat(const QTextCharFormat &format)
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextCharFormat * par1 = (QTextCharFormat *) _qtxhb_itemGetPtr(1);
+    QTextCharFormat * par1 = (QTextCharFormat *) _qt5xhb_itemGetPtr(1);
     obj->setFormat ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -178,7 +178,7 @@ QTextCharFormat format() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->format (  ) );
@@ -192,7 +192,7 @@ int row() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->row (  ) );
@@ -205,7 +205,7 @@ int column() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->column (  ) );
@@ -218,7 +218,7 @@ int rowSpan() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowSpan (  ) );
@@ -231,7 +231,7 @@ int columnSpan() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnSpan (  ) );
@@ -244,7 +244,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -257,7 +257,7 @@ QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition (  ) );
@@ -271,7 +271,7 @@ QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition (  ) );
@@ -285,7 +285,7 @@ int firstPosition() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTPOSITION )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->firstPosition (  ) );
@@ -298,7 +298,7 @@ int lastPosition() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_LASTPOSITION )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lastPosition (  ) );
@@ -313,7 +313,7 @@ int tableCellFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
 {
-  QTextTableCell * obj = (QTextTableCell *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->tableCellFormatIndex (  ) );

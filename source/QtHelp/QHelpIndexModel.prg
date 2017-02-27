@@ -76,7 +76,7 @@ void createIndex ( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -91,7 +91,7 @@ QModelIndex filter ( const QString & filter, const QString & wildcard = QString(
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -107,7 +107,7 @@ bool isCreatingIndex () const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCreatingIndex (  ) );

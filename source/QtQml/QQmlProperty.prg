@@ -136,7 +136,7 @@ QQmlProperty(QObject * obj)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlProperty * o = new QQmlProperty ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
@@ -152,8 +152,8 @@ QQmlProperty(QObject * obj, QQmlContext * ctxt)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-  QQmlContext * par2 = (QQmlContext *) _qtxhb_itemGetPtr(2);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+  QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
@@ -169,8 +169,8 @@ QQmlProperty(QObject * obj, QQmlEngine * engine)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-  QQmlEngine * par2 = (QQmlEngine *) _qtxhb_itemGetPtr(2);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+  QQmlEngine * par2 = (QQmlEngine *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
@@ -186,7 +186,7 @@ QQmlProperty(QObject * obj, const QString & name)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -203,9 +203,9 @@ QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QQmlContext * par3 = (QQmlContext *) _qtxhb_itemGetPtr(3);
+  QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
   QQmlProperty * o = new QQmlProperty ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
@@ -221,9 +221,9 @@ QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QQmlEngine * par3 = (QQmlEngine *) _qtxhb_itemGetPtr(3);
+  QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
   QQmlProperty * o = new QQmlProperty ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
@@ -239,7 +239,7 @@ QQmlProperty(const QQmlProperty & other)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW8 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QQmlProperty * par1 = (QQmlProperty *) _qtxhb_itemGetPtr(1);
+  QQmlProperty * par1 = (QQmlProperty *) _qt5xhb_itemGetPtr(1);
   QQmlProperty * o = new QQmlProperty ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
@@ -321,10 +321,10 @@ bool connectNotifySignal(QObject * dest, const char * slot) const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL1 )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
     hb_retl( obj->connectNotifySignal ( par1,  (const char *) par2 ) );
   }
@@ -335,10 +335,10 @@ bool connectNotifySignal(QObject * dest, int method) const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL2 )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->connectNotifySignal ( par1, (int) hb_parni(2) ) );
   }
 }
@@ -368,7 +368,7 @@ bool hasNotifySignal() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_HASNOTIFYSIGNAL )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasNotifySignal (  ) );
@@ -381,7 +381,7 @@ int index() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_INDEX )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->index (  ) );
@@ -394,7 +394,7 @@ bool isDesignable() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_ISDESIGNABLE )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isDesignable (  ) );
@@ -407,7 +407,7 @@ bool isProperty() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_ISPROPERTY )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isProperty (  ) );
@@ -420,7 +420,7 @@ bool isResettable() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_ISRESETTABLE )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isResettable (  ) );
@@ -433,7 +433,7 @@ bool isSignalProperty() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_ISSIGNALPROPERTY )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSignalProperty (  ) );
@@ -446,7 +446,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_ISVALID )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -459,7 +459,7 @@ bool isWritable() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_ISWRITABLE )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isWritable (  ) );
@@ -472,7 +472,7 @@ QMetaMethod method() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_METHOD )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMetaMethod * ptr = new QMetaMethod( obj->method (  ) );
@@ -486,7 +486,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NAME )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -499,7 +499,7 @@ bool needsNotifySignal() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEEDSNOTIFYSIGNAL )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->needsNotifySignal (  ) );
@@ -512,7 +512,7 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_OBJECT )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->object (  );
@@ -526,7 +526,7 @@ QMetaProperty property() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_PROPERTY )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMetaProperty * ptr = new QMetaProperty( obj->property (  ) );
@@ -540,7 +540,7 @@ int propertyType() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPE )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->propertyType (  ) );
@@ -553,7 +553,7 @@ PropertyTypeCategory propertyTypeCategory() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPECATEGORY )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->propertyTypeCategory (  ) );
@@ -566,7 +566,7 @@ const char * propertyTypeName() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->propertyTypeName (  );
@@ -580,7 +580,7 @@ QVariant read() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_READ1 )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->read (  ) );
@@ -593,7 +593,7 @@ static QVariant read(QObject * object, const QString & name)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_READ2 )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QVariant * ptr = new QVariant( QQmlProperty::read ( par1, par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
@@ -604,9 +604,9 @@ static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_READ3 )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QQmlContext * par3 = (QQmlContext *) _qtxhb_itemGetPtr(3);
+  QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
   QVariant * ptr = new QVariant( QQmlProperty::read ( par1, par2, par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
@@ -616,9 +616,9 @@ static QVariant read(QObject * object, const QString & name, QQmlEngine * engine
 */
 HB_FUNC_STATIC( QQMLPROPERTY_READ4 )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QQmlEngine * par3 = (QQmlEngine *) _qtxhb_itemGetPtr(3);
+  QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
   QVariant * ptr = new QVariant( QQmlProperty::read ( par1, par2, par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
@@ -658,7 +658,7 @@ bool reset() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_RESET )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->reset (  ) );
@@ -671,7 +671,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -684,10 +684,10 @@ bool write(const QVariant & value) const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE1 )
 {
-  QQmlProperty * obj = (QQmlProperty *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->write ( *par1 ) );
   }
 }
@@ -697,9 +697,9 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 */
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE2 )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QVariant * par3 = (QVariant *) _qtxhb_itemGetPtr(3);
+  QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
   hb_retl( QQmlProperty::write ( par1, par2, *par3 ) );
 }
 
@@ -708,10 +708,10 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 */
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE3 )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QVariant * par3 = (QVariant *) _qtxhb_itemGetPtr(3);
-  QQmlContext * par4 = (QQmlContext *) _qtxhb_itemGetPtr(4);
+  QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
+  QQmlContext * par4 = (QQmlContext *) _qt5xhb_itemGetPtr(4);
   hb_retl( QQmlProperty::write ( par1, par2, *par3, par4 ) );
 }
 
@@ -720,10 +720,10 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 */
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE4 )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QVariant * par3 = (QVariant *) _qtxhb_itemGetPtr(3);
-  QQmlEngine * par4 = (QQmlEngine *) _qtxhb_itemGetPtr(4);
+  QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
+  QQmlEngine * par4 = (QQmlEngine *) _qt5xhb_itemGetPtr(4);
   hb_retl( QQmlProperty::write ( par1, par2, *par3, par4 ) );
 }
 

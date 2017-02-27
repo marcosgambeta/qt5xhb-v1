@@ -106,7 +106,7 @@ QQmlError(const QQmlError & other)
 HB_FUNC_STATIC( QQMLERROR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QQmlError * par1 = (QQmlError *) _qtxhb_itemGetPtr(1);
+  QQmlError * par1 = (QQmlError *) _qt5xhb_itemGetPtr(1);
   QQmlError * o = new QQmlError ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlError *) o );
@@ -158,7 +158,7 @@ int column() const
 */
 HB_FUNC_STATIC( QQMLERROR_COLUMN )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->column (  ) );
@@ -171,7 +171,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->description (  ).toLatin1().data() );
@@ -184,7 +184,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLERROR_ISVALID )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -197,7 +197,7 @@ int line() const
 */
 HB_FUNC_STATIC( QQMLERROR_LINE )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->line (  ) );
@@ -210,7 +210,7 @@ void setColumn(int column)
 */
 HB_FUNC_STATIC( QQMLERROR_SETCOLUMN )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setColumn ( (int) hb_parni(1) );
@@ -224,7 +224,7 @@ void setDescription(const QString & description)
 */
 HB_FUNC_STATIC( QQMLERROR_SETDESCRIPTION )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -239,7 +239,7 @@ void setLine(int line)
 */
 HB_FUNC_STATIC( QQMLERROR_SETLINE )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLine ( (int) hb_parni(1) );
@@ -253,10 +253,10 @@ void setUrl(const QUrl & url)
 */
 HB_FUNC_STATIC( QQMLERROR_SETURL )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setUrl ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -268,7 +268,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QQMLERROR_TOSTRING )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
@@ -281,7 +281,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QQMLERROR_URL )
 {
-  QQmlError * obj = (QQmlError *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );

@@ -89,7 +89,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
 {
-  QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->widget (  );

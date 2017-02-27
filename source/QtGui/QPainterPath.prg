@@ -172,7 +172,7 @@ QPainterPath ( const QPointF & startPoint )
 HB_FUNC_STATIC( QPAINTERPATH_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPainterPath * o = new QPainterPath ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPainterPath *) o );
@@ -191,7 +191,7 @@ QPainterPath ( const QPainterPath & path )
 HB_FUNC_STATIC( QPAINTERPATH_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+  QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
   QPainterPath * o = new QPainterPath ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPainterPath *) o );
@@ -251,10 +251,10 @@ void addEllipse ( const QRectF & boundingRectangle )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     obj->addEllipse ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -266,7 +266,7 @@ void addEllipse ( qreal x, qreal y, qreal width, qreal height )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -284,10 +284,10 @@ void addEllipse ( const QPointF & center, qreal rx, qreal ry )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE3 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     qreal par2 = hb_parnd(2);
     qreal par3 = hb_parnd(3);
     obj->addEllipse ( *par1, par2, par3 );
@@ -325,10 +325,10 @@ void addPath ( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDPATH )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     obj->addPath ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -340,10 +340,10 @@ void addPolygon ( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDPOLYGON )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
+    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
     obj->addPolygon ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,10 +355,10 @@ void addRect ( const QRectF & rectangle )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDRECT1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     obj->addRect ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -370,7 +370,7 @@ void addRect ( qreal x, qreal y, qreal width, qreal height )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDRECT2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -407,10 +407,10 @@ void addRegion ( const QRegion & region )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDREGION )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * par1 = (QRegion *) _qtxhb_itemGetPtr(1);
+    QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
     obj->addRegion ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -422,10 +422,10 @@ void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::Siz
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     qreal par2 = hb_parnd(2);
     qreal par3 = hb_parnd(3);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
@@ -440,7 +440,7 @@ void addRoundedRect ( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal y
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -480,11 +480,11 @@ void addText ( const QPointF & point, const QFont & font, const QString & text )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
-    QFont * par2 = (QFont *) _qtxhb_itemGetPtr(2);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+    QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
     QString par3 = QLatin1String( hb_parc(3) );
     obj->addText ( *par1, *par2, par3 );
   }
@@ -497,12 +497,12 @@ void addText ( qreal x, qreal y, const QFont & font, const QString & text )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
-    QFont * par3 = (QFont *) _qtxhb_itemGetPtr(3);
+    QFont * par3 = (QFont *) _qt5xhb_itemGetPtr(3);
     QString par4 = QLatin1String( hb_parc(4) );
     obj->addText ( par1, par2, *par3, par4 );
   }
@@ -534,7 +534,7 @@ qreal angleAtPercent ( qreal t ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -548,10 +548,10 @@ void arcMoveTo ( const QRectF & rectangle, qreal angle )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     qreal par2 = hb_parnd(2);
     obj->arcMoveTo ( *par1, par2 );
   }
@@ -564,7 +564,7 @@ void arcMoveTo ( qreal x, qreal y, qreal width, qreal height, qreal angle )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -602,10 +602,10 @@ void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ARCTO1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     qreal par2 = hb_parnd(2);
     qreal par3 = hb_parnd(3);
     obj->arcTo ( *par1, par2, par3 );
@@ -619,7 +619,7 @@ void arcTo ( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qrea
 */
 HB_FUNC_STATIC( QPAINTERPATH_ARCTO2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -658,7 +658,7 @@ QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
@@ -672,7 +672,7 @@ void closeSubpath ()
 */
 HB_FUNC_STATIC( QPAINTERPATH_CLOSESUBPATH )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->closeSubpath (  );
@@ -686,10 +686,10 @@ void connectPath ( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTERPATH_CONNECTPATH )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     obj->connectPath ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -701,10 +701,10 @@ bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_CONTAINS1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->contains ( *par1 ) );
   }
 }
@@ -715,10 +715,10 @@ bool contains ( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_CONTAINS2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->contains ( *par1 ) );
   }
 }
@@ -729,10 +729,10 @@ bool contains ( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_CONTAINS3 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->contains ( *par1 ) );
   }
 }
@@ -767,7 +767,7 @@ QRectF controlPointRect () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->controlPointRect (  ) );
@@ -781,12 +781,12 @@ void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint 
 */
 HB_FUNC_STATIC( QPAINTERPATH_CUBICTO1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
-    QPointF * par3 = (QPointF *) _qtxhb_itemGetPtr(3);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
+    QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
     obj->cubicTo ( *par1, *par2, *par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -798,7 +798,7 @@ void cubicTo ( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qrea
 */
 HB_FUNC_STATIC( QPAINTERPATH_CUBICTO2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -837,7 +837,7 @@ QPointF currentPosition () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->currentPosition (  ) );
@@ -852,7 +852,7 @@ int elementCount () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->elementCount (  ) );
@@ -865,7 +865,7 @@ Qt::FillRule fillRule () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fillRule (  ) );
@@ -878,10 +878,10 @@ QPainterPath intersected ( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->intersected ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
@@ -893,10 +893,10 @@ bool intersects ( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->intersects ( *par1 ) );
   }
 }
@@ -907,10 +907,10 @@ bool intersects ( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->intersects ( *par1 ) );
   }
 }
@@ -940,7 +940,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -953,7 +953,7 @@ qreal length () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->length (  ) );
@@ -966,10 +966,10 @@ void lineTo ( const QPointF & endPoint )
 */
 HB_FUNC_STATIC( QPAINTERPATH_LINETO1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->lineTo ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -981,7 +981,7 @@ void lineTo ( qreal x, qreal y )
 */
 HB_FUNC_STATIC( QPAINTERPATH_LINETO2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1016,10 +1016,10 @@ void moveTo ( const QPointF & point )
 */
 HB_FUNC_STATIC( QPAINTERPATH_MOVETO1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->moveTo ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -1031,7 +1031,7 @@ void moveTo ( qreal x, qreal y )
 */
 HB_FUNC_STATIC( QPAINTERPATH_MOVETO2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1066,7 +1066,7 @@ qreal percentAtLength ( qreal len ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1080,7 +1080,7 @@ QPointF pointAtPercent ( qreal t ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1095,11 +1095,11 @@ void quadTo ( const QPointF & c, const QPointF & endPoint )
 */
 HB_FUNC_STATIC( QPAINTERPATH_QUADTO1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
     obj->quadTo ( *par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -1111,7 +1111,7 @@ void quadTo ( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
 */
 HB_FUNC_STATIC( QPAINTERPATH_QUADTO2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1148,7 +1148,7 @@ void setElementPositionAt ( int index, qreal x, qreal y )
 */
 HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -1164,7 +1164,7 @@ void setFillRule ( Qt::FillRule fillRule )
 */
 HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -1179,7 +1179,7 @@ QPainterPath simplified () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->simplified (  ) );
@@ -1193,7 +1193,7 @@ qreal slopeAtPercent ( qreal t ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1207,10 +1207,10 @@ QPainterPath subtracted ( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->subtracted ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
@@ -1222,10 +1222,10 @@ void swap ( QPainterPath & other )
 */
 HB_FUNC_STATIC( QPAINTERPATH_SWAP )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -1237,10 +1237,10 @@ QPolygonF toFillPolygon ( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTransform * par1 = (QTransform *) _qtxhb_itemGetPtr(1);
+    QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
@@ -1274,7 +1274,7 @@ QPainterPath toReversed () const
 */
 HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->toReversed (  ) );
@@ -1290,7 +1290,7 @@ void translate ( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1306,10 +1306,10 @@ void translate ( const QPointF & offset )
 */
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->translate ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -1340,7 +1340,7 @@ QPainterPath translated ( qreal dx, qreal dy ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED1 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -1356,10 +1356,10 @@ QPainterPath translated ( const QPointF & offset ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED2 )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->translated ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
@@ -1390,10 +1390,10 @@ QPainterPath united ( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_UNITED )
 {
-  QPainterPath * obj = (QPainterPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->united ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }

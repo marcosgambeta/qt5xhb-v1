@@ -89,12 +89,12 @@ virtual bool loadPicture(const QString &format, const QString &filename, QPictur
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
 {
-  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
-    QPicture * par3 = (QPicture *) _qtxhb_itemGetPtr(3);
+    QPicture * par3 = (QPicture *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->loadPicture ( par1, par2, par3 ) );
   }
 }
@@ -105,12 +105,12 @@ virtual bool savePicture(const QString &format, const QString &filename, const Q
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
 {
-  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
-    QPicture * par3 = (QPicture *) _qtxhb_itemGetPtr(3);
+    QPicture * par3 = (QPicture *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->savePicture ( par1, par2, *par3 ) );
   }
 }
@@ -121,7 +121,7 @@ virtual bool installIOHandler(const QString &format) = 0
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
 {
-  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

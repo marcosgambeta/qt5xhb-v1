@@ -89,7 +89,7 @@ QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDir * par1 = (QDir *) _qtxhb_itemGetPtr(1);
+  QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
   QDirIterator * o = new QDirIterator ( *par1,  (QDirIterator::IteratorFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -228,7 +228,7 @@ QFileInfo fileInfo () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 {
-  QDirIterator * obj = (QDirIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QFileInfo * ptr = new QFileInfo( obj->fileInfo (  ) );
@@ -242,7 +242,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 {
-  QDirIterator * obj = (QDirIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -255,7 +255,7 @@ QString filePath () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 {
-  QDirIterator * obj = (QDirIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->filePath (  ).toLatin1().data() );
@@ -268,7 +268,7 @@ bool hasNext () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 {
-  QDirIterator * obj = (QDirIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasNext (  ) );
@@ -281,7 +281,7 @@ QString next ()
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 {
-  QDirIterator * obj = (QDirIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->next (  ).toLatin1().data() );
@@ -294,7 +294,7 @@ QString path () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_PATH )
 {
-  QDirIterator * obj = (QDirIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->path (  ).toLatin1().data() );

@@ -85,7 +85,7 @@ QAccessibleEvent(QObject *obj, QAccessible::Event typ)
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QAccessibleEvent * o = new QAccessibleEvent ( par1,  (QAccessible::Event) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +119,7 @@ QAccessible::Event type() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -132,7 +132,7 @@ QObject *object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->object (  );
@@ -146,7 +146,7 @@ void setChild(int chld)
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setChild ( (int) hb_parni(1) );
@@ -160,7 +160,7 @@ int child() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->child (  ) );
@@ -173,7 +173,7 @@ virtual QAccessibleInterface *accessibleInterface() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAccessibleInterface * ptr = obj->accessibleInterface (  );

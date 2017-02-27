@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QGLSHADER_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QGLShader * o = new QGLShader (  (QGLShader::ShaderType) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLShader *) o );
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QGLSHADER_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QGLContext * par2 = (QGLContext *) _qtxhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QGLContext * par2 = (QGLContext *) _qt5xhb_itemGetPtr(2);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QGLShader * o = new QGLShader (  (QGLShader::ShaderType) par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLShader *) o );
@@ -157,7 +157,7 @@ bool compileSourceCode ( const char * source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -170,10 +170,10 @@ bool compileSourceCode ( const QByteArray & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->compileSourceCode ( *par1 ) );
   }
 }
@@ -183,7 +183,7 @@ bool compileSourceCode ( const QString & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -217,7 +217,7 @@ bool compileSourceFile ( const QString & fileName )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -231,7 +231,7 @@ bool isCompiled () const
 */
 HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCompiled (  ) );
@@ -244,7 +244,7 @@ QString log () const
 */
 HB_FUNC_STATIC( QGLSHADER_LOG )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->log (  ).toLatin1().data() );
@@ -257,7 +257,7 @@ GLuint shaderId () const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERID )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->shaderId (  ) );
@@ -270,7 +270,7 @@ QGLShader::ShaderType shaderType () const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->shaderType (  ) );
@@ -283,7 +283,7 @@ QByteArray sourceCode () const
 */
 HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
 {
-  QGLShader * obj = (QGLShader *) _qtxhb_itemGetPtrStackSelfItem();
+  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->sourceCode (  ) );
@@ -298,7 +298,7 @@ static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
 HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
 {
   int par1 = hb_parni(1);
-  const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) _qtxhb_itemGetPtr(2);
+  const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) _qt5xhb_itemGetPtr(2);
   hb_retl( QGLShader::hasOpenGLShaders (  (QGLShader::ShaderType) par1, par2 ) );
 }
 

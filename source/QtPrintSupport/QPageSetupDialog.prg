@@ -80,8 +80,8 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPrinter * par1 = (QPrinter *) _qtxhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QPageSetupDialog * o = new QPageSetupDialog ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPageSetupDialog *) o );
@@ -97,8 +97,8 @@ QPageSetupDialog ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPrinter * par1 = (QPrinter *) _qtxhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QPageSetupDialog * o = new QPageSetupDialog ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPageSetupDialog *) o );
@@ -150,11 +150,11 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-     const char * par2 = ( const char *) _qtxhb_itemGetPtr(2);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+     const char * par2 = ( const char *) _qt5xhb_itemGetPtr(2);
     obj->open ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -167,7 +167,7 @@ QPrinter * printer ()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPrinter * ptr = obj->printer (  );
@@ -184,7 +184,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
@@ -198,7 +198,7 @@ virtual int exec()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->exec (  ) );
@@ -211,7 +211,7 @@ void done(int result)
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->done ( (int) hb_parni(1) );

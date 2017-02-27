@@ -91,7 +91,7 @@ qreal x() const
 HB_FUNC_STATIC( QROTATIONREADING_X )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->x (  ) );
@@ -106,7 +106,7 @@ qreal y() const
 HB_FUNC_STATIC( QROTATIONREADING_Y )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->y (  ) );
@@ -121,7 +121,7 @@ qreal z() const
 HB_FUNC_STATIC( QROTATIONREADING_Z )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->z (  ) );
@@ -136,7 +136,7 @@ void setFromEuler(qreal x, qreal y, qreal z)
 HB_FUNC_STATIC( QROTATIONREADING_SETFROMEULER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

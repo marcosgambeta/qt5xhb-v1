@@ -99,7 +99,7 @@ FileError error() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_ERROR )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -112,7 +112,7 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_FILENAME )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -125,7 +125,7 @@ bool flush()
 */
 HB_FUNC_STATIC( QFILEDEVICE_FLUSH )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->flush (  ) );
@@ -138,7 +138,7 @@ int handle() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->handle (  ) );
@@ -152,7 +152,7 @@ virtual Permissions permissions() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->permissions (  ) );
@@ -165,7 +165,7 @@ virtual bool resize(qint64 sz)
 */
 HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->resize ( (qint64) hb_parni(1) ) );
@@ -178,7 +178,7 @@ virtual bool setPermissions(Permissions permissions)
 */
 HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -193,7 +193,7 @@ void unsetError()
 */
 HB_FUNC_STATIC( QFILEDEVICE_UNSETERROR )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unsetError (  );
@@ -207,7 +207,7 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_ATEND )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->atEnd (  ) );
@@ -220,7 +220,7 @@ virtual void close()
 */
 HB_FUNC_STATIC( QFILEDEVICE_CLOSE )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->close (  );
@@ -234,7 +234,7 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_ISSEQUENTIAL )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSequential (  ) );
@@ -247,7 +247,7 @@ virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_POS )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->pos (  ) );
@@ -260,7 +260,7 @@ virtual bool seek(qint64 pos)
 */
 HB_FUNC_STATIC( QFILEDEVICE_SEEK )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
@@ -273,7 +273,7 @@ virtual qint64 size() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_SIZE )
 {
-  QFileDevice * obj = (QFileDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );

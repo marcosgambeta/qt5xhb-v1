@@ -83,7 +83,7 @@ QPlainTextDocumentLayout ( QTextDocument * document )
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QTextDocument * par1 = (QTextDocument *) _qtxhb_itemGetPtr(1);
+  QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
   QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPlainTextDocumentLayout *) o );
@@ -116,7 +116,7 @@ int cursorWidth () const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cursorWidth (  ) );
@@ -129,10 +129,10 @@ void ensureBlockLayout ( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) _qtxhb_itemGetPtr(1);
+    QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
     obj->ensureBlockLayout ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -144,7 +144,7 @@ void requestUpdate ()
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->requestUpdate (  );
@@ -158,7 +158,7 @@ void setCursorWidth ( int width )
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCursorWidth ( (int) hb_parni(1) );
@@ -172,10 +172,10 @@ virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) _qtxhb_itemGetPtr(1);
+    QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->blockBoundingRect ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
@@ -187,7 +187,7 @@ virtual QSizeF documentSize () const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->documentSize (  ) );
@@ -202,10 +202,10 @@ virtual QRectF frameBoundingRect ( QTextFrame * ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrame * par1 = (QTextFrame *) _qtxhb_itemGetPtr(1);
+    QTextFrame * par1 = (QTextFrame *) _qt5xhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->frameBoundingRect ( par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
@@ -217,10 +217,10 @@ virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     hb_retni( obj->hitTest ( *par1,  (Qt::HitTestAccuracy) par2 ) );
   }
@@ -232,7 +232,7 @@ virtual int pageCount () const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
 {
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->pageCount (  ) );

@@ -81,7 +81,7 @@ QGraphicsItemGroup ( QGraphicsItem * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qtxhb_itemGetPtr(1);
+  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsItemGroup * o = new QGraphicsItemGroup ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsItemGroup *) o );
@@ -114,10 +114,10 @@ void addToGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
     obj->addToGroup ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,10 +129,10 @@ void removeFromGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
     obj->removeFromGroup ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -144,7 +144,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
@@ -158,10 +158,10 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) _qtxhb_itemGetPtr(1);
+    const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isObscuredBy ( par1 ) );
   }
 }
@@ -172,7 +172,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
@@ -186,12 +186,12 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qtxhb_itemGetPtr(1);
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qtxhb_itemGetPtr(2);
-    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qtxhb_itemGetPtr(3);
+    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
+    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
+    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
     obj->paint ( par1, par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -203,7 +203,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );

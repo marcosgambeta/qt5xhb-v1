@@ -101,7 +101,7 @@ void activate ()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->activate (  );
@@ -115,7 +115,7 @@ virtual int count () const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -128,7 +128,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->invalidate (  );
@@ -142,7 +142,7 @@ bool isActivated () const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isActivated (  ) );
@@ -155,7 +155,7 @@ virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
@@ -169,7 +169,7 @@ virtual void removeAt ( int index ) = 0
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->removeAt ( (int) hb_parni(1) );
@@ -183,7 +183,7 @@ void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -201,10 +201,10 @@ virtual void widgetEvent ( QEvent * e )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qtxhb_itemGetPtr(1);
+    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
     obj->widgetEvent ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -216,7 +216,7 @@ virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qrea
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1;
@@ -238,7 +238,7 @@ virtual void updateGeometry ()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
 {
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->updateGeometry (  );

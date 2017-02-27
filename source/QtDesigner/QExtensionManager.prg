@@ -76,7 +76,7 @@ QExtensionManager ( QObject * parent = 0 )
 HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QExtensionManager * o = new QExtensionManager ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QExtensionManager *) o );
@@ -109,10 +109,10 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
-  QExtensionManager * obj = (QExtensionManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QExtensionManager * obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     QObject * ptr = obj->extension ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
@@ -125,10 +125,10 @@ virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QSt
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  QExtensionManager * obj = (QExtensionManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QExtensionManager * obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qtxhb_itemGetPtr(1);
+    QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     obj->registerExtensions ( par1, par2 );
   }
@@ -141,10 +141,10 @@ virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const Q
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  QExtensionManager * obj = (QExtensionManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QExtensionManager * obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qtxhb_itemGetPtr(1);
+    QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     obj->unregisterExtensions ( par1, par2 );
   }

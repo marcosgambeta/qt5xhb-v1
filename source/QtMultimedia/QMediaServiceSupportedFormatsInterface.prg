@@ -94,7 +94,7 @@ virtual QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const 
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT )
 {
-  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -117,11 +117,11 @@ virtual QStringList supportedMimeTypes() const = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_SUPPORTEDMIMETYPES )
 {
-  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->supportedMimeTypes (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

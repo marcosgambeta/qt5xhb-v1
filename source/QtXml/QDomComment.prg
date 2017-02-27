@@ -91,7 +91,7 @@ QDomComment ( const QDomComment & x )
 HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomComment * par1 = (QDomComment *) _qtxhb_itemGetPtr(1);
+  QDomComment * par1 = (QDomComment *) _qt5xhb_itemGetPtr(1);
   QDomComment * o = new QDomComment ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomComment *) o );
@@ -147,7 +147,7 @@ QDomNode::NodeType nodeType () cons
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
-  QDomComment * obj = (QDomComment *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomComment * obj = (QDomComment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );

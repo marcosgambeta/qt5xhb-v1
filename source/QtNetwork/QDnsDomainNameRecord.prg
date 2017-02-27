@@ -97,7 +97,7 @@ QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qtxhb_itemGetPtr(1);
+  QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtr(1);
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsDomainNameRecord *) o );
@@ -149,7 +149,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -162,10 +162,10 @@ void swap(QDnsDomainNameRecord & other)
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SWAP )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qtxhb_itemGetPtr(1);
+    QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -177,7 +177,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_TIMETOLIVE )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->timeToLive (  ) );
@@ -190,7 +190,7 @@ QString value() const
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_VALUE )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->value (  ).toLatin1().data() );

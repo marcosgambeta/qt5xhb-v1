@@ -89,7 +89,7 @@ bool holstered() const
 HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QHolsterReading * obj = (QHolsterReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->holstered (  ) );
@@ -104,7 +104,7 @@ void setHolstered(bool holstered)
 HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QHolsterReading * obj = (QHolsterReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setHolstered ( (bool) hb_parl(1) );

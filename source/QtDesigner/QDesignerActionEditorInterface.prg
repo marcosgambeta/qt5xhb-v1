@@ -92,7 +92,7 @@ virtual QDesignerFormEditorInterface * core () const
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDesignerFormEditorInterface * ptr = obj->core (  );
@@ -106,10 +106,10 @@ virtual void manageAction ( QAction * action ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
+    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     obj->manageAction ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -121,10 +121,10 @@ virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qtxhb_itemGetPtr(1);
+    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
     obj->setFormWindow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

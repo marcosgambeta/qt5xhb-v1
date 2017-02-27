@@ -89,7 +89,7 @@ qreal altitude() const
 HB_FUNC_STATIC( QALTIMETERREADING_ALTITUDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeterReading * obj = (QAltimeterReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QAltimeterReading * obj = (QAltimeterReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->altitude (  ) );
@@ -104,7 +104,7 @@ void setAltitude(qreal altitude)
 HB_FUNC_STATIC( QALTIMETERREADING_SETALTITUDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeterReading * obj = (QAltimeterReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QAltimeterReading * obj = (QAltimeterReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

@@ -96,7 +96,7 @@ QXmlNamePool ( const QXmlNamePool & other )
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QXmlNamePool * par1 = (QXmlNamePool *) _qtxhb_itemGetPtr(1);
+  QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
   QXmlNamePool * o = new QXmlNamePool ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlNamePool *) o );

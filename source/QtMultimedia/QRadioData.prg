@@ -91,8 +91,8 @@ QRadioData(QMediaObject *mediaObject, QObject *parent = 0)
 HB_FUNC_STATIC( QRADIODATA_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QMediaObject * par1 = (QMediaObject *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QMediaObject * par1 = (QMediaObject *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QRadioData * o = new QRadioData ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadioData *) o );
@@ -125,7 +125,7 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->availability (  ) );
@@ -138,7 +138,7 @@ QMediaObject *mediaObject() const
 */
 HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
@@ -152,7 +152,7 @@ QString stationId() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONID )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->stationId (  ).toLatin1().data() );
@@ -165,7 +165,7 @@ ProgramType programType() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->programType (  ) );
@@ -178,7 +178,7 @@ QString programTypeName() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPENAME )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->programTypeName (  ).toLatin1().data() );
@@ -191,7 +191,7 @@ QString stationName() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONNAME )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->stationName (  ).toLatin1().data() );
@@ -204,7 +204,7 @@ QString radioText() const
 */
 HB_FUNC_STATIC( QRADIODATA_RADIOTEXT )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->radioText (  ).toLatin1().data() );
@@ -217,7 +217,7 @@ bool isAlternativeFrequenciesEnabled() const
 */
 HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAlternativeFrequenciesEnabled (  ) );
@@ -230,7 +230,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERROR )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -243,7 +243,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -256,7 +256,7 @@ void setAlternativeFrequenciesEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
 {
-  QRadioData * obj = (QRadioData *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAlternativeFrequenciesEnabled ( (bool) hb_parl(1) );

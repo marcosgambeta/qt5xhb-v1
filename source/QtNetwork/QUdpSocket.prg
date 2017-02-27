@@ -81,7 +81,7 @@ QUdpSocket ( QObject * parent = 0 )
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QUdpSocket * o = new QUdpSocket ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUdpSocket *) o );
@@ -114,10 +114,10 @@ bool bind ( const QHostAddress & address, quint16 port )
 */
 HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qtxhb_itemGetPtr(1);
+    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->bind ( *par1, (quint16) hb_parni(2) ) );
   }
 }
@@ -127,10 +127,10 @@ bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
 */
 HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qtxhb_itemGetPtr(1);
+    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->bind ( *par1, (quint16) hb_parni(2) ) );
   }
 }
@@ -140,7 +140,7 @@ bool bind ( quint16 port = 0 )
 */
 HB_FUNC_STATIC( QUDPSOCKET_BIND3 )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->bind ( (quint16) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -152,7 +152,7 @@ bool bind ( quint16 port, BindMode mode )
 */
 HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->bind ( (quint16) hb_parni(1) ) );
@@ -194,7 +194,7 @@ bool hasPendingDatagrams () const
 */
 HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasPendingDatagrams (  ) );
@@ -207,7 +207,7 @@ qint64 pendingDatagramSize () const
 */
 HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->pendingDatagramSize (  ) );
@@ -220,12 +220,12 @@ qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, q
 */
 HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    char * par1 = (char *) _qtxhb_itemGetPtr(1);
-    QHostAddress * par3 = ISNIL(3)? 0 : (QHostAddress *) _qtxhb_itemGetPtr(3);
-    quint16 * par4 = ISNIL(4)? 0 : (quint16 *) _qtxhb_itemGetPtr(4);
+    char * par1 = (char *) _qt5xhb_itemGetPtr(1);
+    QHostAddress * par3 = ISNIL(3)? 0 : (QHostAddress *) _qt5xhb_itemGetPtr(3);
+    quint16 * par4 = ISNIL(4)? 0 : (quint16 *) _qt5xhb_itemGetPtr(4);
     hb_retni( obj->readDatagram ( par1, (qint64) hb_parni(2), par3, par4 ) );
   }
 }
@@ -236,11 +236,11 @@ qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & addr
 */
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    QHostAddress * par3 = (QHostAddress *) _qtxhb_itemGetPtr(3);
+    QHostAddress * par3 = (QHostAddress *) _qt5xhb_itemGetPtr(3);
     hb_retni( obj->writeDatagram (  (const char *) par1, (qint64) hb_parni(2), *par3, (quint16) hb_parni(4) ) );
   }
 }
@@ -250,11 +250,11 @@ qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, q
 */
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
-    QHostAddress * par2 = (QHostAddress *) _qtxhb_itemGetPtr(2);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+    QHostAddress * par2 = (QHostAddress *) _qt5xhb_itemGetPtr(2);
     hb_retni( obj->writeDatagram ( *par1, *par2, (quint16) hb_parni(3) ) );
   }
 }

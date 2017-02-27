@@ -90,7 +90,7 @@ virtual QObject * create ( const QString & key, const QString & specification ) 
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QGenericPlugin * obj = (QGenericPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

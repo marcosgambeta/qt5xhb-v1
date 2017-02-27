@@ -106,7 +106,7 @@ QXmlParseException ( const QXmlParseException & other )
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QXmlParseException * par1 = (QXmlParseException *) _qtxhb_itemGetPtr(1);
+  QXmlParseException * par1 = (QXmlParseException *) _qt5xhb_itemGetPtr(1);
   QXmlParseException * o = new QXmlParseException ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlParseException *) o );
@@ -161,7 +161,7 @@ int columnNumber () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnNumber (  ) );
@@ -174,7 +174,7 @@ int lineNumber () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lineNumber (  ) );
@@ -187,7 +187,7 @@ QString message () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->message (  ).toLatin1().data() );
@@ -200,7 +200,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->publicId (  ).toLatin1().data() );
@@ -213,7 +213,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->systemId (  ).toLatin1().data() );

@@ -140,7 +140,7 @@ QCommandLineOption(const QCommandLineOption &other)
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QCommandLineOption * par1 = (QCommandLineOption *) _qtxhb_itemGetPtr(1);
+  QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
   QCommandLineOption * o = new QCommandLineOption ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCommandLineOption *) o );
@@ -200,10 +200,10 @@ void swap(QCommandLineOption &other)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCommandLineOption * par1 = (QCommandLineOption *) _qtxhb_itemGetPtr(1);
+    QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -215,11 +215,11 @@ QStringList names() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->names (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -229,7 +229,7 @@ void setValueName(const QString &name)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -244,7 +244,7 @@ QString valueName() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->valueName (  ).toLatin1().data() );
@@ -257,7 +257,7 @@ void setDescription(const QString &description)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -272,7 +272,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->description (  ).toLatin1().data() );
@@ -285,7 +285,7 @@ void setDefaultValue(const QString &defaultValue)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -300,7 +300,7 @@ void setDefaultValues(const QStringList &defaultValues)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -323,11 +323,11 @@ QStringList defaultValues() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qtxhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->defaultValues (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

@@ -78,7 +78,7 @@ QEventLoop ( QObject * parent = 0 )
 HB_FUNC_STATIC( QEVENTLOOP_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QEventLoop * o = new QEventLoop ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventLoop *) o );
@@ -111,7 +111,7 @@ int exec ( ProcessEventsFlags flags = AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
-  QEventLoop * obj = (QEventLoop *) _qtxhb_itemGetPtrStackSelfItem();
+  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
@@ -125,7 +125,7 @@ void exit ( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
-  QEventLoop * obj = (QEventLoop *) _qtxhb_itemGetPtrStackSelfItem();
+  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->exit ( (int) ISNIL(1)? 0 : hb_parni(1) );
@@ -139,7 +139,7 @@ bool isRunning () const
 */
 HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
-  QEventLoop * obj = (QEventLoop *) _qtxhb_itemGetPtrStackSelfItem();
+  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRunning (  ) );
@@ -152,7 +152,7 @@ bool processEvents ( ProcessEventsFlags flags = AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS1 )
 {
-  QEventLoop * obj = (QEventLoop *) _qtxhb_itemGetPtrStackSelfItem();
+  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
@@ -165,7 +165,7 @@ void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS2 )
 {
-  QEventLoop * obj = (QEventLoop *) _qtxhb_itemGetPtrStackSelfItem();
+  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -199,7 +199,7 @@ void wakeUp ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
-  QEventLoop * obj = (QEventLoop *) _qtxhb_itemGetPtrStackSelfItem();
+  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->wakeUp (  );
@@ -213,7 +213,7 @@ void quit ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {
-  QEventLoop * obj = (QEventLoop *) _qtxhb_itemGetPtrStackSelfItem();
+  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->quit (  );

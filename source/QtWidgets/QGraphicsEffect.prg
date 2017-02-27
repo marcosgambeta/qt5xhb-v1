@@ -95,7 +95,7 @@ QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
@@ -109,10 +109,10 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->boundingRectFor ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
@@ -124,7 +124,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEnabled (  ) );
@@ -137,7 +137,7 @@ void setEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setEnabled ( (bool) hb_parl(1) );
@@ -151,7 +151,7 @@ void update ()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->update (  );

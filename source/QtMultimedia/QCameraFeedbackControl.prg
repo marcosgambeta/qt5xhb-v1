@@ -90,7 +90,7 @@ virtual bool isEventFeedbackEnabled(EventType event) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -104,7 +104,7 @@ virtual bool isEventFeedbackLocked(EventType event) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -118,7 +118,7 @@ virtual void resetEventFeedback(EventType event) = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -133,7 +133,7 @@ virtual bool setEventFeedbackEnabled(EventType event, bool enabled) = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -147,7 +147,7 @@ virtual bool setEventFeedbackSound(EventType event, const QString & filePath) = 
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

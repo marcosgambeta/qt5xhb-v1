@@ -147,7 +147,7 @@ QDomDocument ( const QDomDocumentType & doctype )
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomDocumentType * par1 = (QDomDocumentType *) _qtxhb_itemGetPtr(1);
+  QDomDocumentType * par1 = (QDomDocumentType *) _qt5xhb_itemGetPtr(1);
   QDomDocument * o = new QDomDocument ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomDocument *) o );
@@ -166,7 +166,7 @@ QDomDocument ( const QDomDocument & x )
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomDocument * par1 = (QDomDocument *) _qtxhb_itemGetPtr(1);
+  QDomDocument * par1 = (QDomDocument *) _qt5xhb_itemGetPtr(1);
   QDomDocument * o = new QDomDocument ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomDocument *) o );
@@ -231,7 +231,7 @@ QDomAttr createAttribute ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -246,7 +246,7 @@ QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -262,7 +262,7 @@ QDomCDATASection createCDATASection ( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -277,7 +277,7 @@ QDomComment createComment ( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -292,7 +292,7 @@ QDomDocumentFragment createDocumentFragment ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment (  ) );
@@ -306,7 +306,7 @@ QDomElement createElement ( const QString & tagName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -321,7 +321,7 @@ QDomElement createElementNS ( const QString & nsURI, const QString & qName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -337,7 +337,7 @@ QDomEntityReference createEntityReference ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -352,7 +352,7 @@ QDomProcessingInstruction createProcessingInstruction ( const QString & target, 
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -368,7 +368,7 @@ QDomText createTextNode ( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -383,7 +383,7 @@ QDomDocumentType doctype () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomDocumentType * ptr = new QDomDocumentType( obj->doctype (  ) );
@@ -397,7 +397,7 @@ QDomElement documentElement () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomElement * ptr = new QDomElement( obj->documentElement (  ) );
@@ -411,7 +411,7 @@ QDomElement elementById ( const QString & elementId )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -426,7 +426,7 @@ QDomNodeList elementsByTagName ( const QString & tagname ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -441,7 +441,7 @@ QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localN
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -457,7 +457,7 @@ QDomImplementation implementation () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomImplementation * ptr = new QDomImplementation( obj->implementation (  ) );
@@ -471,10 +471,10 @@ QDomNode importNode ( const QDomNode & importedNode, bool deep )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) _qtxhb_itemGetPtr(1);
+    QDomNode * par1 = (QDomNode *) _qt5xhb_itemGetPtr(1);
     QDomNode * ptr = new QDomNode( obj->importNode ( *par1, (bool) hb_parl(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
@@ -486,7 +486,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );
@@ -514,7 +514,7 @@ QByteArray toByteArray ( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toByteArray ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
@@ -528,7 +528,7 @@ QString toString ( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
 {
-  QDomDocument * obj = (QDomDocument *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString ( (int) ISNIL(1)? 1 : hb_parni(1) ).toLatin1().data() );

@@ -80,7 +80,7 @@ QSignalTransition(QState *sourceState = 0)
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qtxhb_itemGetPtr(1);
+  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QSignalTransition * o = new QSignalTransition ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSignalTransition *) o );
@@ -99,9 +99,9 @@ QSignalTransition(const QObject *sender, const char *signal,QState *sourceState 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  const QObject * par1 = (const QObject *) _qtxhb_itemGetPtr(1);
+  const QObject * par1 = (const QObject *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
-  QState * par3 = ISNIL(3)? 0 : (QState *) _qtxhb_itemGetPtr(3);
+  QState * par3 = ISNIL(3)? 0 : (QState *) _qt5xhb_itemGetPtr(3);
   QSignalTransition * o = new QSignalTransition ( par1,  (const char *) par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSignalTransition *) o );
@@ -156,7 +156,7 @@ QObject *senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->senderObject (  );
@@ -170,10 +170,10 @@ void setSenderObject(const QObject *sender)
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QObject * par1 = (const QObject *) _qtxhb_itemGetPtr(1);
+    const QObject * par1 = (const QObject *) _qt5xhb_itemGetPtr(1);
     obj->setSenderObject ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -185,7 +185,7 @@ QByteArray signal() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->signal (  ) );
@@ -199,10 +199,10 @@ void setSignal(const QByteArray &signal)
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setSignal ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

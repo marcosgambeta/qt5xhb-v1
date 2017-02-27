@@ -96,7 +96,7 @@ QJSEngine(QObject * parent)
 HB_FUNC_STATIC( QJSENGINE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QJSEngine * o = new QJSEngine ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJSEngine *) o );
@@ -148,7 +148,7 @@ void collectGarbage()
 */
 HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
 {
-  QJSEngine * obj = (QJSEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->collectGarbage (  );
@@ -162,7 +162,7 @@ QJSValue evaluate(const QString & program, const QString & fileName = QString(),
 */
 HB_FUNC_STATIC( QJSENGINE_EVALUATE )
 {
-  QJSEngine * obj = (QJSEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -179,7 +179,7 @@ QJSValue globalObject() const
 */
 HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->globalObject (  ) );
@@ -193,7 +193,7 @@ QJSValue newArray(uint length = 0)
 */
 HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
 {
-  QJSEngine * obj = (QJSEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->newArray ( (uint) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -207,7 +207,7 @@ QJSValue newObject()
 */
 HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->newObject (  ) );
@@ -221,10 +221,10 @@ QJSValue newQObject(QObject * object)
 */
 HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QJSValue * ptr = new QJSValue( obj->newQObject ( par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }

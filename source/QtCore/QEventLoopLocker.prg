@@ -94,7 +94,7 @@ QEventLoopLocker(QEventLoop * loop)
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QEventLoop * par1 = (QEventLoop *) _qtxhb_itemGetPtr(1);
+  QEventLoop * par1 = (QEventLoop *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventLoopLocker *) o );
@@ -110,7 +110,7 @@ QEventLoopLocker(QThread * thread)
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QThread * par1 = (QThread *) _qtxhb_itemGetPtr(1);
+  QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventLoopLocker *) o );

@@ -74,7 +74,7 @@ QGyroscope(QObject *parent = 0)
 HB_FUNC_STATIC( QGYROSCOPE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QGyroscope * o = new QGyroscope ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGyroscope *) o );
@@ -108,7 +108,7 @@ QGyroscopeReading *reading() const
 HB_FUNC_STATIC( QGYROSCOPE_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscope * obj = (QGyroscope *) _qtxhb_itemGetPtrStackSelfItem();
+  QGyroscope * obj = (QGyroscope *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGyroscopeReading * ptr = obj->reading (  );

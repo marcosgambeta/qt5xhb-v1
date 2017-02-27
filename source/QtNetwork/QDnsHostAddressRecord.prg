@@ -102,7 +102,7 @@ QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDnsHostAddressRecord * par1 = (QDnsHostAddressRecord *) _qtxhb_itemGetPtr(1);
+  QDnsHostAddressRecord * par1 = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtr(1);
   QDnsHostAddressRecord * o = new QDnsHostAddressRecord ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsHostAddressRecord *) o );
@@ -154,7 +154,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -167,10 +167,10 @@ void swap(QDnsHostAddressRecord & other)
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDnsHostAddressRecord * par1 = (QDnsHostAddressRecord *) _qtxhb_itemGetPtr(1);
+    QDnsHostAddressRecord * par1 = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,7 +182,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->timeToLive (  ) );
@@ -195,7 +195,7 @@ QHostAddress value() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->value (  ) );

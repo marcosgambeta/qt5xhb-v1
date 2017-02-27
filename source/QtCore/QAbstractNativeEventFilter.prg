@@ -87,10 +87,10 @@ virtual bool nativeEventFilter(const QByteArray & eventType, void * message, lon
 */
 HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER )
 {
-  QAbstractNativeEventFilter * obj = (QAbstractNativeEventFilter *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractNativeEventFilter * obj = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     void * par2 = (void *) hb_parptr(2);
     long par3;
     hb_retl( obj->nativeEventFilter ( *par1, par2, &par3 ) );

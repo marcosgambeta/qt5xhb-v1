@@ -93,10 +93,10 @@ virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray &
 */
 HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
 {
-  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->supportedFeatures ( *par1 ) );
   }
 }

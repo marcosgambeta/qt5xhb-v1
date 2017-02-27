@@ -78,7 +78,7 @@ QPaintEvent ( const QRegion & paintRegion )
 HB_FUNC_STATIC( QPAINTEVENT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QRegion * par1 = (QRegion *) _qtxhb_itemGetPtr(1);
+  QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
   QPaintEvent * o = new QPaintEvent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPaintEvent *) o );
@@ -94,7 +94,7 @@ QPaintEvent ( const QRect & paintRect )
 HB_FUNC_STATIC( QPAINTEVENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+  QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
   QPaintEvent * o = new QPaintEvent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPaintEvent *) o );
@@ -146,7 +146,7 @@ const QRect & rect () const
 */
 HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
-  QPaintEvent * obj = (QPaintEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEvent * obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QRect * ptr = &obj->rect (  );
@@ -160,7 +160,7 @@ const QRegion & region () const
 */
 HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {
-  QPaintEvent * obj = (QPaintEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEvent * obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QRegion * ptr = &obj->region (  );

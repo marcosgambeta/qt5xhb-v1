@@ -93,7 +93,7 @@ QSystemTrayIcon(QObject * parent = 0)
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSystemTrayIcon * o = new QSystemTrayIcon ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSystemTrayIcon *) o );
@@ -109,8 +109,8 @@ QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QSystemTrayIcon * o = new QSystemTrayIcon ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSystemTrayIcon *) o );
@@ -162,7 +162,7 @@ QMenu * contextMenu() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMenu * ptr = obj->contextMenu (  );
@@ -176,7 +176,7 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
@@ -190,7 +190,7 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
@@ -204,7 +204,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isVisible (  ) );
@@ -217,10 +217,10 @@ void setContextMenu(QMenu * menu)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMenu * par1 = (QMenu *) _qtxhb_itemGetPtr(1);
+    QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
     obj->setContextMenu ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -232,10 +232,10 @@ void setIcon(const QIcon & icon)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
+    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     obj->setIcon ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -247,7 +247,7 @@ void setToolTip(const QString & tip)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -262,7 +262,7 @@ void showMessage(const QString & title, const QString & message, MessageIcon ico
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -279,7 +279,7 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toolTip (  ).toLatin1().data() );
@@ -292,7 +292,7 @@ void hide()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->hide (  );
@@ -306,7 +306,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
@@ -320,7 +320,7 @@ void show()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qtxhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->show (  );

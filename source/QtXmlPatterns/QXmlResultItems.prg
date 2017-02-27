@@ -119,7 +119,7 @@ QXmlItem current () const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 {
-  QXmlResultItems * obj = (QXmlResultItems *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlItem * ptr = new QXmlItem( obj->current (  ) );
@@ -133,7 +133,7 @@ bool hasError () const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 {
-  QXmlResultItems * obj = (QXmlResultItems *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasError (  ) );
@@ -146,7 +146,7 @@ QXmlItem next ()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
 {
-  QXmlResultItems * obj = (QXmlResultItems *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlItem * ptr = new QXmlItem( obj->next (  ) );

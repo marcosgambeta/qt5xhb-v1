@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #ifdef Q_OS_WIN
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QWinEventNotifier * o = new QWinEventNotifier ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWinEventNotifier *) o );
@@ -133,7 +133,7 @@ bool isEnabled() const
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * obj = (QWinEventNotifier *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinEventNotifier * obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEnabled (  ) );
@@ -147,7 +147,7 @@ void setEnabled(bool enable)
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_SETENABLED )
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * obj = (QWinEventNotifier *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinEventNotifier * obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setEnabled ( (bool) hb_parl(1) );

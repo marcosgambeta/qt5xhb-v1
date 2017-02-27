@@ -104,7 +104,7 @@ QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
+  QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlNodeModelIndex *) o );
@@ -159,7 +159,7 @@ qint64 additionalData () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->additionalData (  ) );
@@ -172,7 +172,7 @@ qint64 data () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->data (  ) );
@@ -185,7 +185,7 @@ void * internalPointer () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retptr( (void *) obj->internalPointer (  ) );
@@ -198,7 +198,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -211,7 +211,7 @@ const QAbstractXmlNodeModel * model () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QAbstractXmlNodeModel * ptr = obj->model (  );

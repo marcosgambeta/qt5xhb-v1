@@ -79,7 +79,7 @@ QGraphicsColorizeEffect ( QObject * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QGraphicsColorizeEffect * o = new QGraphicsColorizeEffect ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsColorizeEffect *) o );
@@ -112,7 +112,7 @@ QColor color () const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QColor * ptr = new QColor( obj->color (  ) );
@@ -126,7 +126,7 @@ qreal strength () const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->strength (  ) );
@@ -139,10 +139,10 @@ void setColor ( const QColor & c )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qtxhb_itemGetPtr(1) : QColor(hb_parc(1));
+    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
     obj->setColor ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -154,7 +154,7 @@ void setStrength ( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QAxScript * par2 = (QAxScript *) _qtxhb_itemGetPtr(2);
+  QAxScript * par2 = (QAxScript *) _qt5xhb_itemGetPtr(2);
   QAxScriptEngine * o = new QAxScriptEngine ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxScriptEngine *) o );
@@ -110,7 +110,7 @@ void addItem ( const QString & name )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -125,7 +125,7 @@ bool hasIntrospection () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasIntrospection (  ) );
@@ -138,7 +138,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -152,7 +152,7 @@ QString scriptLanguage () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->scriptLanguage (  ).toLatin1().data() );
@@ -165,7 +165,7 @@ void setState ( State st )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -180,7 +180,7 @@ State state () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );

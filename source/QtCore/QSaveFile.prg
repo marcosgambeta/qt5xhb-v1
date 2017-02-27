@@ -96,7 +96,7 @@ QSaveFile(QObject *parent = 0)
 HB_FUNC_STATIC( QSAVEFILE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSaveFile * o = new QSaveFile ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSaveFile *) o );
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSAVEFILE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QSaveFile * o = new QSaveFile ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSaveFile *) o );
@@ -173,7 +173,7 @@ QString fileName() const
 HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -188,7 +188,7 @@ void setFileName(const QString &name)
 HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -205,7 +205,7 @@ bool open(OpenMode flags)
 HB_FUNC_STATIC( QSAVEFILE_OPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -221,7 +221,7 @@ bool commit()
 HB_FUNC_STATIC( QSAVEFILE_COMMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->commit (  ) );
@@ -236,7 +236,7 @@ void cancelWriting()
 HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->cancelWriting (  );
@@ -252,7 +252,7 @@ void setDirectWriteFallback(bool enabled)
 HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDirectWriteFallback ( (bool) hb_parl(1) );
@@ -268,7 +268,7 @@ bool directWriteFallback() const
 HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->directWriteFallback (  ) );

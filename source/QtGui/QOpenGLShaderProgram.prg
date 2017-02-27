@@ -89,7 +89,7 @@ QOpenGLShaderProgram(QObject *parent = 0)
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QOpenGLShaderProgram * o = new QOpenGLShaderProgram ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLShaderProgram *) o );
@@ -122,10 +122,10 @@ bool addShader(QOpenGLShader *shader)
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADER )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLShader * par1 = (QOpenGLShader *) _qtxhb_itemGetPtr(1);
+    QOpenGLShader * par1 = (QOpenGLShader *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->addShader ( par1 ) );
   }
 }
@@ -136,10 +136,10 @@ void removeShader(QOpenGLShader *shader)
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVESHADER )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLShader * par1 = (QOpenGLShader *) _qtxhb_itemGetPtr(1);
+    QOpenGLShader * par1 = (QOpenGLShader *) _qt5xhb_itemGetPtr(1);
     obj->removeShader ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -151,7 +151,7 @@ QList<QOpenGLShader *> shaders() const
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
   }
@@ -163,7 +163,7 @@ bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -178,11 +178,11 @@ bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QByteArray& s
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->addShaderFromSourceCode (  (QOpenGLShader::ShaderType) par1, *par2 ) );
   }
 }
@@ -193,7 +193,7 @@ bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QString& sour
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -217,7 +217,7 @@ bool addShaderFromSourceFile(QOpenGLShader::ShaderType type, const QString& file
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -232,7 +232,7 @@ void removeAllShaders()
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVEALLSHADERS )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->removeAllShaders (  );
@@ -246,7 +246,7 @@ virtual bool link()
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LINK )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->link (  ) );
@@ -259,7 +259,7 @@ bool isLinked() const
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ISLINKED )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLinked (  ) );
@@ -272,7 +272,7 @@ QString log() const
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LOG )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->log (  ).toLatin1().data() );
@@ -285,7 +285,7 @@ bool bind()
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_BIND )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->bind (  ) );
@@ -298,7 +298,7 @@ void release()
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_RELEASE )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->release (  );
@@ -312,7 +312,7 @@ GLuint programId() const
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PROGRAMID )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->programId (  ) );
@@ -325,7 +325,7 @@ int maxGeometryOutputVertices() const
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->maxGeometryOutputVertices (  ) );
@@ -338,7 +338,7 @@ void setPatchVertexCount(int count)
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SETPATCHVERTEXCOUNT )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setPatchVertexCount ( (int) hb_parni(1) );
@@ -352,7 +352,7 @@ int patchVertexCount() const
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PATCHVERTEXCOUNT )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->patchVertexCount (  ) );
@@ -496,7 +496,7 @@ static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
-  QOpenGLContext * par1 = ISNIL(1)? 0 : (QOpenGLContext *) _qtxhb_itemGetPtr(1);
+  QOpenGLContext * par1 = ISNIL(1)? 0 : (QOpenGLContext *) _qt5xhb_itemGetPtr(1);
   hb_retl( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( par1 ) );
 }
 

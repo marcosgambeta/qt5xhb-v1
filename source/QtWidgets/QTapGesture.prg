@@ -90,7 +90,7 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 {
-  QTapGesture * obj = (QTapGesture *) _qtxhb_itemGetPtrStackSelfItem();
+  QTapGesture * obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->position (  ) );
@@ -104,10 +104,10 @@ void setPosition(const QPointF & pos)
 */
 HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
 {
-  QTapGesture * obj = (QTapGesture *) _qtxhb_itemGetPtrStackSelfItem();
+  QTapGesture * obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setPosition ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

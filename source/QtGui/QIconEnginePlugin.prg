@@ -90,7 +90,7 @@ virtual QIconEngine * create(const QString & filename = QString()) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QIconEnginePlugin * obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );

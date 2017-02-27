@@ -92,7 +92,7 @@ QCollator(const QLocale &locale = QLocale())
 HB_FUNC_STATIC( QCOLLATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QLocale par1 = ISNIL(1)? QLocale() : *(QLocale *) _qtxhb_itemGetPtr(1);
+  QLocale par1 = ISNIL(1)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(1);
   QCollator * o = new QCollator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCollator *) o );
@@ -111,7 +111,7 @@ QCollator(const QCollator &)
 HB_FUNC_STATIC( QCOLLATOR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * par1 = (QCollator *) _qtxhb_itemGetPtr(1);
+  QCollator * par1 = (QCollator *) _qt5xhb_itemGetPtr(1);
   QCollator * o = new QCollator ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCollator *) o );
@@ -167,10 +167,10 @@ void swap(QCollator &other)
 HB_FUNC_STATIC( QCOLLATOR_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCollator * par1 = (QCollator *) _qtxhb_itemGetPtr(1);
+    QCollator * par1 = (QCollator *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -184,10 +184,10 @@ void setLocale(const QLocale &locale)
 HB_FUNC_STATIC( QCOLLATOR_SETLOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qtxhb_itemGetPtr(1);
+    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
     obj->setLocale ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -201,7 +201,7 @@ QLocale locale() const
 HB_FUNC_STATIC( QCOLLATOR_LOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
@@ -217,7 +217,7 @@ Qt::CaseSensitivity caseSensitivity() const
 HB_FUNC_STATIC( QCOLLATOR_CASESENSITIVITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->caseSensitivity (  ) );
@@ -232,7 +232,7 @@ void setCaseSensitivity(Qt::CaseSensitivity cs)
 HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -249,7 +249,7 @@ void setNumericMode(bool on)
 HB_FUNC_STATIC( QCOLLATOR_SETNUMERICMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setNumericMode ( (bool) hb_parl(1) );
@@ -265,7 +265,7 @@ bool numericMode() const
 HB_FUNC_STATIC( QCOLLATOR_NUMERICMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->numericMode (  ) );
@@ -280,7 +280,7 @@ void setIgnorePunctuation(bool on)
 HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setIgnorePunctuation ( (bool) hb_parl(1) );
@@ -296,7 +296,7 @@ bool ignorePunctuation() const
 HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->ignorePunctuation (  ) );
@@ -315,7 +315,7 @@ QCollatorSortKey sortKey(const QString &string) const
 HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qtxhb_itemGetPtrStackSelfItem();
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

@@ -76,7 +76,7 @@ QAudioProbe(QObject * parent = 0)
 HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAudioProbe * o = new QAudioProbe ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioProbe *) o );
@@ -109,7 +109,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 {
-  QAudioProbe * obj = (QAudioProbe *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isActive (  ) );
@@ -122,10 +122,10 @@ bool setSource(QMediaObject * source)
 */
 HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE1 )
 {
-  QAudioProbe * obj = (QAudioProbe *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaObject * par1 = (QMediaObject *) _qtxhb_itemGetPtr(1);
+    QMediaObject * par1 = (QMediaObject *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->setSource ( par1 ) );
   }
 }
@@ -136,10 +136,10 @@ bool setSource(QMediaRecorder * mediaRecorder)
 */
 HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE2 )
 {
-  QAudioProbe * obj = (QAudioProbe *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaRecorder * par1 = (QMediaRecorder *) _qtxhb_itemGetPtr(1);
+    QMediaRecorder * par1 = (QMediaRecorder *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->setSource ( par1 ) );
   }
 }

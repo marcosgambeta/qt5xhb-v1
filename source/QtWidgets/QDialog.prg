@@ -95,7 +95,7 @@ explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QDIALOG_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QDialog * o = new QDialog ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -129,7 +129,7 @@ bool isSizeGripEnabled () const
 */
 HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSizeGripEnabled (  ) );
@@ -141,7 +141,7 @@ void setSizeGripEnabled ( bool )
 */
 HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSizeGripEnabled ( (bool) hb_parl(1) );
@@ -155,7 +155,7 @@ int result () const
 */
 HB_FUNC_STATIC( QDIALOG_RESULT )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->result (  ) );
@@ -168,7 +168,7 @@ void setModal ( bool modal )
 */
 HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setModal ( (bool) hb_parl(1) );
@@ -182,7 +182,7 @@ void setResult ( int i )
 */
 HB_FUNC_STATIC( QDIALOG_SETRESULT )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setResult ( (int) hb_parni(1) );
@@ -196,7 +196,7 @@ QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -210,7 +210,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
@@ -224,7 +224,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -238,7 +238,7 @@ virtual void accept ()
 */
 HB_FUNC_STATIC( QDIALOG_ACCEPT )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->accept (  );
@@ -252,7 +252,7 @@ virtual void done ( int r )
 */
 HB_FUNC_STATIC( QDIALOG_DONE )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->done ( (int) hb_parni(1) );
@@ -266,7 +266,7 @@ virtual int exec ()
 */
 HB_FUNC_STATIC( QDIALOG_EXEC )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->exec (  ) );
@@ -279,7 +279,7 @@ virtual void open ()
 */
 HB_FUNC_STATIC( QDIALOG_OPEN )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->open (  );
@@ -293,7 +293,7 @@ virtual void reject ()
 */
 HB_FUNC_STATIC( QDIALOG_REJECT )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reject (  );
@@ -307,7 +307,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QDIALOG_ORIENTATION )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );
@@ -319,7 +319,7 @@ void setOrientation (Qt::Orientation orientation)
 */
 HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -334,7 +334,7 @@ QWidget* extension () const
 */
 HB_FUNC_STATIC( QDIALOG_EXTENSION )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->extension (  );
@@ -347,10 +347,10 @@ void setExtension (QWidget* extension)
 */
 HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setExtension ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -362,7 +362,7 @@ void showExtension(bool)
 */
 HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
 {
-  QDialog * obj = (QDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->showExtension ( (bool) hb_parl(1) );

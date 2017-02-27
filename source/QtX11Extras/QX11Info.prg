@@ -258,7 +258,7 @@ static void setNextStartupId(const QByteArray &id)
 HB_FUNC_STATIC( QX11INFO_SETNEXTSTARTUPID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QX11Info::setNextStartupId ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif

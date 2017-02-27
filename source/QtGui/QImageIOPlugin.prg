@@ -91,11 +91,11 @@ virtual Capabilities capabilities ( QIODevice * device, const QByteArray & forma
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
-    QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
     hb_retni( obj->capabilities ( par1, *par2 ) );
   }
 }
@@ -106,11 +106,11 @@ virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
-    QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(2);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+    QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
     QImageIOHandler * ptr = obj->create ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
   }

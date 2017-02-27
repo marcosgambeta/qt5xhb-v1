@@ -98,7 +98,7 @@ QRectF cursorRectangle() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->cursorRectangle (  ) );
@@ -112,7 +112,7 @@ Qt::LayoutDirection inputDirection() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->inputDirection (  ) );
@@ -125,7 +125,7 @@ QTransform inputItemTransform() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->inputItemTransform (  ) );
@@ -139,7 +139,7 @@ bool isAnimating() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAnimating (  ) );
@@ -152,7 +152,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isVisible (  ) );
@@ -165,7 +165,7 @@ QRectF keyboardRectangle() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->keyboardRectangle (  ) );
@@ -179,7 +179,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
@@ -193,10 +193,10 @@ void setInputItemTransform(const QTransform & transform)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTransform * par1 = (QTransform *) _qtxhb_itemGetPtr(1);
+    QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
     obj->setInputItemTransform ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -208,7 +208,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
@@ -222,7 +222,7 @@ void commit()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_COMMIT )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->commit (  );
@@ -236,7 +236,7 @@ void hide()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->hide (  );
@@ -250,7 +250,7 @@ void invokeAction(Action a, int cursorPosition)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -265,7 +265,7 @@ void reset()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_RESET )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reset (  );
@@ -279,7 +279,7 @@ void show()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->show (  );
@@ -293,7 +293,7 @@ void update(Qt::InputMethodQueries queries)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
 {
-  QInputMethod * obj = (QInputMethod *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

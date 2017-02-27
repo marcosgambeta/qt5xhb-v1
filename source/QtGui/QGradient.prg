@@ -97,7 +97,7 @@ CoordinateMode coordinateMode () const
 */
 HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 {
-  QGradient * obj = (QGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->coordinateMode (  ) );
@@ -110,11 +110,11 @@ void setColorAt ( qreal position, const QColor & color )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
 {
-  QGradient * obj = (QGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
-    QColor par2 = ISOBJECT(2)? *(QColor *) _qtxhb_itemGetPtr(2) : QColor(hb_parc(2));
+    QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
     obj->setColorAt ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -126,7 +126,7 @@ void setCoordinateMode ( CoordinateMode mode )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
 {
-  QGradient * obj = (QGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -141,7 +141,7 @@ void setSpread ( Spread method )
 */
 HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
 {
-  QGradient * obj = (QGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -157,7 +157,7 @@ Spread spread () const
 */
 HB_FUNC_STATIC( QGRADIENT_SPREAD )
 {
-  QGradient * obj = (QGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->spread (  ) );
@@ -171,7 +171,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QGRADIENT_TYPE )
 {
-  QGradient * obj = (QGradient *) _qtxhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );

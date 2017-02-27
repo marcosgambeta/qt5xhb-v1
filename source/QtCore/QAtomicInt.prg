@@ -116,7 +116,7 @@ QAtomicInt ( const QAtomicInt & other )
 HB_FUNC_STATIC( QATOMICINT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QAtomicInt * par1 = (QAtomicInt *) _qtxhb_itemGetPtr(1);
+  QAtomicInt * par1 = (QAtomicInt *) _qt5xhb_itemGetPtr(1);
   QAtomicInt * o = new QAtomicInt ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAtomicInt *) o );
@@ -168,7 +168,7 @@ bool deref ()
 */
 HB_FUNC_STATIC( QATOMICINT_DEREF )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->deref (  ) );
@@ -181,7 +181,7 @@ int fetchAndAddAcquire ( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndAddAcquire ( (int) hb_parni(1) ) );
@@ -194,7 +194,7 @@ int fetchAndAddOrdered ( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndAddOrdered ( (int) hb_parni(1) ) );
@@ -207,7 +207,7 @@ int fetchAndAddRelaxed ( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndAddRelaxed ( (int) hb_parni(1) ) );
@@ -220,7 +220,7 @@ int fetchAndAddRelease ( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndAddRelease ( (int) hb_parni(1) ) );
@@ -233,7 +233,7 @@ int fetchAndStoreAcquire ( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndStoreAcquire ( (int) hb_parni(1) ) );
@@ -246,7 +246,7 @@ int fetchAndStoreOrdered ( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndStoreOrdered ( (int) hb_parni(1) ) );
@@ -259,7 +259,7 @@ int fetchAndStoreRelaxed ( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndStoreRelaxed ( (int) hb_parni(1) ) );
@@ -272,7 +272,7 @@ int fetchAndStoreRelease ( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fetchAndStoreRelease ( (int) hb_parni(1) ) );
@@ -285,7 +285,7 @@ bool ref ()
 */
 HB_FUNC_STATIC( QATOMICINT_REF )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->ref (  ) );
@@ -298,7 +298,7 @@ bool testAndSetAcquire ( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->testAndSetAcquire ( (int) hb_parni(1), (int) hb_parni(2) ) );
@@ -311,7 +311,7 @@ bool testAndSetOrdered ( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->testAndSetOrdered ( (int) hb_parni(1), (int) hb_parni(2) ) );
@@ -324,7 +324,7 @@ bool testAndSetRelaxed ( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->testAndSetRelaxed ( (int) hb_parni(1), (int) hb_parni(2) ) );
@@ -337,7 +337,7 @@ bool testAndSetRelease ( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qtxhb_itemGetPtrStackSelfItem();
+  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->testAndSetRelease ( (int) hb_parni(1), (int) hb_parni(2) ) );

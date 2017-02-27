@@ -121,7 +121,7 @@ QGraphicsGridLayout ( QGraphicsLayoutItem * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+  QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsGridLayout * o = new QGraphicsGridLayout ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsGridLayout *) o );
@@ -154,10 +154,10 @@ void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM1 )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
     obj->addItem ( par1, (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) hb_parni(5),  (Qt::Alignment) par6 );
   }
@@ -169,10 +169,10 @@ void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment al
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM2 )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
     obj->addItem ( par1, (int) hb_parni(2), (int) hb_parni(3),  (Qt::Alignment) par4 );
   }
@@ -204,10 +204,10 @@ Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ALIGNMENT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->alignment ( par1 ) );
   }
 }
@@ -218,7 +218,7 @@ Qt::Alignment columnAlignment ( int column ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnAlignment ( (int) hb_parni(1) ) );
@@ -231,7 +231,7 @@ int columnCount () const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNCOUNT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnCount (  ) );
@@ -244,7 +244,7 @@ qreal columnMaximumWidth ( int column ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMAXIMUMWIDTH )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->columnMaximumWidth ( (int) hb_parni(1) ) );
@@ -257,7 +257,7 @@ qreal columnMinimumWidth ( int column ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->columnMinimumWidth ( (int) hb_parni(1) ) );
@@ -270,7 +270,7 @@ qreal columnPreferredWidth ( int column ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNPREFERREDWIDTH )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->columnPreferredWidth ( (int) hb_parni(1) ) );
@@ -283,7 +283,7 @@ qreal columnSpacing ( int column ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->columnSpacing ( (int) hb_parni(1) ) );
@@ -296,7 +296,7 @@ int columnStretchFactor ( int column ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnStretchFactor ( (int) hb_parni(1) ) );
@@ -309,7 +309,7 @@ qreal horizontalSpacing () const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->horizontalSpacing (  ) );
@@ -322,7 +322,7 @@ QGraphicsLayoutItem * itemAt ( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT1 )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -335,7 +335,7 @@ virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT2 )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
@@ -368,10 +368,10 @@ void removeItem ( QGraphicsLayoutItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_REMOVEITEM )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     obj->removeItem ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -383,7 +383,7 @@ Qt::Alignment rowAlignment ( int row ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowAlignment ( (int) hb_parni(1) ) );
@@ -396,7 +396,7 @@ int rowCount () const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWCOUNT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowCount (  ) );
@@ -409,7 +409,7 @@ qreal rowMaximumHeight ( int row ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMAXIMUMHEIGHT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->rowMaximumHeight ( (int) hb_parni(1) ) );
@@ -422,7 +422,7 @@ qreal rowMinimumHeight ( int row ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMINIMUMHEIGHT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->rowMinimumHeight ( (int) hb_parni(1) ) );
@@ -435,7 +435,7 @@ qreal rowPreferredHeight ( int row ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWPREFERREDHEIGHT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->rowPreferredHeight ( (int) hb_parni(1) ) );
@@ -448,7 +448,7 @@ qreal rowSpacing ( int row ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->rowSpacing ( (int) hb_parni(1) ) );
@@ -461,7 +461,7 @@ int rowStretchFactor ( int row ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowStretchFactor ( (int) hb_parni(1) ) );
@@ -474,10 +474,10 @@ void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETALIGNMENT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->setAlignment ( par1,  (Qt::Alignment) par2 );
   }
@@ -490,7 +490,7 @@ void setColumnAlignment ( int column, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -505,7 +505,7 @@ void setColumnFixedWidth ( int column, qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNFIXEDWIDTH )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -520,7 +520,7 @@ void setColumnMaximumWidth ( int column, qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMAXIMUMWIDTH )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -535,7 +535,7 @@ void setColumnMinimumWidth ( int column, qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -550,7 +550,7 @@ void setColumnPreferredWidth ( int column, qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNPREFERREDWIDTH )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -565,7 +565,7 @@ void setColumnSpacing ( int column, qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -580,7 +580,7 @@ void setColumnStretchFactor ( int column, int stretch )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSTRETCHFACTOR )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setColumnStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -594,7 +594,7 @@ void setHorizontalSpacing ( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETHORIZONTALSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -609,7 +609,7 @@ void setRowAlignment ( int row, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -624,7 +624,7 @@ void setRowFixedHeight ( int row, qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWFIXEDHEIGHT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -639,7 +639,7 @@ void setRowMaximumHeight ( int row, qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMAXIMUMHEIGHT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -654,7 +654,7 @@ void setRowMinimumHeight ( int row, qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -669,7 +669,7 @@ void setRowPreferredHeight ( int row, qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWPREFERREDHEIGHT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -684,7 +684,7 @@ void setRowSpacing ( int row, qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -699,7 +699,7 @@ void setRowStretchFactor ( int row, int stretch )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSTRETCHFACTOR )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setRowStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -713,7 +713,7 @@ void setSpacing ( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -728,7 +728,7 @@ void setVerticalSpacing ( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -743,7 +743,7 @@ qreal verticalSpacing () const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_VERTICALSPACING )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->verticalSpacing (  ) );
@@ -756,7 +756,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COUNT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -769,7 +769,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_INVALIDATE )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->invalidate (  );
@@ -783,7 +783,7 @@ virtual void removeAt ( int index )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_REMOVEAT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->removeAt ( (int) hb_parni(1) );
@@ -797,10 +797,10 @@ virtual void setGeometry ( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETGEOMETRY )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     obj->setGeometry ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -812,11 +812,11 @@ virtual QSizeF  sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSize
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) _qtxhb_itemGetPtr(2);
+    QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2);
     QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }

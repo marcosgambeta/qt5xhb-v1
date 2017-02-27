@@ -90,8 +90,8 @@ QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QDeclarativeContext * o = new QDeclarativeContext ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeContext *) o );
@@ -107,8 +107,8 @@ QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDeclarativeContext * par1 = (QDeclarativeContext *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QDeclarativeContext * o = new QDeclarativeContext ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeContext *) o );
@@ -160,7 +160,7 @@ QUrl baseUrl () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->baseUrl (  ) );
@@ -174,7 +174,7 @@ QObject * contextObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->contextObject (  );
@@ -188,7 +188,7 @@ QVariant contextProperty ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -203,7 +203,7 @@ QDeclarativeEngine * engine () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDeclarativeEngine * ptr = obj->engine (  );
@@ -217,7 +217,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -230,7 +230,7 @@ QDeclarativeContext * parentContext () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDeclarativeContext * ptr = obj->parentContext (  );
@@ -244,10 +244,10 @@ QUrl resolvedUrl ( const QUrl & src )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->resolvedUrl ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -259,10 +259,10 @@ void setBaseUrl ( const QUrl & baseUrl )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setBaseUrl ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -274,10 +274,10 @@ void setContextObject ( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->setContextObject ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -289,11 +289,11 @@ void setContextProperty ( const QString & name, QObject * value )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     obj->setContextProperty ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -304,11 +304,11 @@ void setContextProperty ( const QString & name, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setContextProperty ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );

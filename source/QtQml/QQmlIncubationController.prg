@@ -115,7 +115,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
@@ -129,7 +129,7 @@ void incubateFor(int msecs)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->incubateFor ( (int) hb_parni(1) );
@@ -143,7 +143,7 @@ void incubateWhile(volatile bool * flag, int msecs = 0)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     bool par1;
@@ -159,7 +159,7 @@ int incubatingObjectCount() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->incubatingObjectCount (  ) );

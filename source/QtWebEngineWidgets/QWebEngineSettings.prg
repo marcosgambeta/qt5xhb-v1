@@ -101,7 +101,7 @@ QString fontFamily(FontFamily which) const
 HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTFAMILY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -116,7 +116,7 @@ void setFontFamily(FontFamily which, const QString &family)
 HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTFAMILY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -133,7 +133,7 @@ void resetFontFamily(FontFamily which)
 HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTFAMILY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -150,7 +150,7 @@ int fontSize(FontSize type) const
 HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -165,7 +165,7 @@ void setFontSize(FontSize type, int size)
 HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -181,7 +181,7 @@ void resetFontSize(FontSize type)
 HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -198,7 +198,7 @@ void setAttribute(WebAttribute attr, bool on)
 HB_FUNC_STATIC( QWEBENGINESETTINGS_SETATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -214,7 +214,7 @@ bool testAttribute(WebAttribute attr) const
 HB_FUNC_STATIC( QWEBENGINESETTINGS_TESTATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -229,7 +229,7 @@ void resetAttribute(WebAttribute attr)
 HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -246,7 +246,7 @@ QString defaultTextEncoding() const
 HB_FUNC_STATIC( QWEBENGINESETTINGS_DEFAULTTEXTENCODING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->defaultTextEncoding (  ).toLatin1().data() );
@@ -260,7 +260,7 @@ void setDefaultTextEncoding(const QString &encoding)
 HB_FUNC_STATIC( QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

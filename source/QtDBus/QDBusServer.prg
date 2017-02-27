@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDBUSSERVER_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QDBusServer * o = new QDBusServer ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusServer *) o );
@@ -96,7 +96,7 @@ QDBusServer(QObject *parent = 0)
 HB_FUNC_STATIC( QDBUSSERVER_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDBusServer * o = new QDBusServer ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusServer *) o );
@@ -137,7 +137,7 @@ bool isConnected() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
 {
-  QDBusServer * obj = (QDBusServer *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isConnected (  ) );
@@ -150,7 +150,7 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
 {
-  QDBusServer * obj = (QDBusServer *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->lastError (  ) );
@@ -164,7 +164,7 @@ QString address() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
 {
-  QDBusServer * obj = (QDBusServer *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->address (  ).toLatin1().data() );

@@ -89,7 +89,7 @@ qreal pressure() const
 HB_FUNC_STATIC( QPRESSUREREADING_PRESSURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QPressureReading * obj = (QPressureReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QPressureReading * obj = (QPressureReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->pressure (  ) );
@@ -104,7 +104,7 @@ void setPressure(qreal pressure)
 HB_FUNC_STATIC( QPRESSUREREADING_SETPRESSURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QPressureReading * obj = (QPressureReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QPressureReading * obj = (QPressureReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

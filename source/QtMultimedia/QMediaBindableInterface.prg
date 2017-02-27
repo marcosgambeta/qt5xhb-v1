@@ -96,7 +96,7 @@ virtual QMediaObject * mediaObject() const = 0
 */
 HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_MEDIAOBJECT )
 {
-  QMediaBindableInterface * obj = (QMediaBindableInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaBindableInterface * obj = (QMediaBindableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );

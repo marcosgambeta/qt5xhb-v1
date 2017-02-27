@@ -84,7 +84,7 @@ QDnsLookup(QObject * parent = 0)
 HB_FUNC_STATIC( QDNSLOOKUP_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDnsLookup * o = new QDnsLookup ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsLookup *) o );
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QDnsLookup * o = new QDnsLookup (  (QDnsLookup::Type) par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsLookup *) o );
@@ -155,7 +155,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -168,7 +168,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ERRORSTRING )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -182,7 +182,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ISFINISHED )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isFinished (  ) );
@@ -196,7 +196,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_NAME )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -212,7 +212,7 @@ void setName(const QString & name)
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -227,7 +227,7 @@ void setType(QDnsLookup::Type)
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -243,7 +243,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -256,7 +256,7 @@ void abort()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->abort (  );
@@ -270,7 +270,7 @@ void lookup()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->lookup (  );

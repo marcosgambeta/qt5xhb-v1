@@ -105,7 +105,7 @@ bool isCompositionEnabled() const
 HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCompositionEnabled (  ) );

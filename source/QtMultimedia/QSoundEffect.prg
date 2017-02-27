@@ -99,7 +99,7 @@ QSoundEffect(QObject *parent = 0)
 HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSoundEffect * o = new QSoundEffect ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSoundEffect *) o );
@@ -132,7 +132,7 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
@@ -146,10 +146,10 @@ void setSource(const QUrl &url)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setSource ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -161,7 +161,7 @@ int loopCount() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->loopCount (  ) );
@@ -174,7 +174,7 @@ int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->loopsRemaining (  ) );
@@ -187,7 +187,7 @@ void setLoopCount(int loopCount)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLoopCount ( (int) hb_parni(1) );
@@ -201,7 +201,7 @@ qreal volume() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->volume (  ) );
@@ -214,7 +214,7 @@ void setVolume(qreal volume)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -229,7 +229,7 @@ bool isMuted() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isMuted (  ) );
@@ -242,7 +242,7 @@ void setMuted(bool muted)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMuted ( (bool) hb_parl(1) );
@@ -256,7 +256,7 @@ bool isLoaded() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLoaded (  ) );
@@ -269,7 +269,7 @@ bool isPlaying() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isPlaying (  ) );
@@ -282,7 +282,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->status (  ) );
@@ -295,7 +295,7 @@ QString category() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->category (  ).toLatin1().data() );
@@ -308,7 +308,7 @@ void setCategory(const QString &category)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -323,7 +323,7 @@ void play()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->play (  );
@@ -337,7 +337,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
 {
-  QSoundEffect * obj = (QSoundEffect *) _qtxhb_itemGetPtrStackSelfItem();
+  QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );
@@ -352,7 +352,7 @@ static QStringList supportedMimeTypes()
 HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
 {
   QStringList strl = QSoundEffect::supportedMimeTypes (  );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
 

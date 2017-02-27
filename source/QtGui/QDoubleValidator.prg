@@ -82,7 +82,7 @@ QDoubleValidator ( QObject * parent = 0 )
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDoubleValidator * o = new QDoubleValidator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDoubleValidator *) o );
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
   double par1 = hb_parnd(1);
   double par2 = hb_parnd(2);
   int par3 = hb_parni(3);
-  QObject * par4 = (QObject *) _qtxhb_itemGetPtr(4);
+  QObject * par4 = (QObject *) _qt5xhb_itemGetPtr(4);
   QDoubleValidator * o = new QDoubleValidator ( par1, par2, par3, par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDoubleValidator *) o );
@@ -153,7 +153,7 @@ double bottom () const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->bottom (  ) );
@@ -166,7 +166,7 @@ int decimals () const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->decimals (  ) );
@@ -179,7 +179,7 @@ Notation notation () const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->notation (  ) );
@@ -192,7 +192,7 @@ void setBottom ( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     double par1 = hb_parnd(1);
@@ -207,7 +207,7 @@ void setDecimals ( int )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDecimals ( (int) hb_parni(1) );
@@ -221,7 +221,7 @@ void setNotation ( Notation )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -236,7 +236,7 @@ virtual void setRange ( double minimum, double maximum, int decimals = 0 )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     double par1 = hb_parnd(1);
@@ -252,7 +252,7 @@ void setTop ( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     double par1 = hb_parnd(1);
@@ -267,7 +267,7 @@ double top () const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->top (  ) );
@@ -280,7 +280,7 @@ virtual QValidator::State validate ( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

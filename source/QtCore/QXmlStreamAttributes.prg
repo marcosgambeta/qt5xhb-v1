@@ -128,7 +128,7 @@ void append(const QString & namespaceUri, const QString & name, const QString & 
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND1 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -144,10 +144,10 @@ void append(const QXmlStreamAttribute & attribute)
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND2 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) _qtxhb_itemGetPtr(1);
+    QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) _qt5xhb_itemGetPtr(1);
     obj->append ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -158,7 +158,7 @@ void append(const QString & qualifiedName, const QString & value)
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND3 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -198,7 +198,7 @@ bool hasAttribute(const QString & qualifiedName) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -211,10 +211,10 @@ bool hasAttribute(QLatin1String qualifiedName) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLatin1String * par1 = (QLatin1String *) _qtxhb_itemGetPtr(1);
+    QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->hasAttribute ( *par1 ) );
   }
 }
@@ -224,7 +224,7 @@ bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -264,7 +264,7 @@ QStringRef value(const QString & namespaceUri, const QString & name) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -279,11 +279,11 @@ QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QLatin1String * par2 = (QLatin1String *) _qtxhb_itemGetPtr(2);
+    QLatin1String * par2 = (QLatin1String *) _qt5xhb_itemGetPtr(2);
     QStringRef * ptr = new QStringRef( obj->value ( par1, *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
@@ -294,11 +294,11 @@ QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLatin1String * par1 = (QLatin1String *) _qtxhb_itemGetPtr(1);
-    QLatin1String * par2 = (QLatin1String *) _qtxhb_itemGetPtr(2);
+    QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
+    QLatin1String * par2 = (QLatin1String *) _qt5xhb_itemGetPtr(2);
     QStringRef * ptr = new QStringRef( obj->value ( *par1, *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
@@ -309,7 +309,7 @@ QStringRef value(const QString & qualifiedName) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -323,10 +323,10 @@ QStringRef value(QLatin1String qualifiedName) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLatin1String * par1 = (QLatin1String *) _qtxhb_itemGetPtr(1);
+    QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
     QStringRef * ptr = new QStringRef( obj->value ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }

@@ -107,7 +107,7 @@ QPointF(const QPoint & point)
 HB_FUNC_STATIC( QPOINTF_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QPointF * o = new QPointF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPointF *) o );
@@ -187,7 +187,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPOINTF_ISNULL )
 {
-  QPointF * obj = (QPointF *) _qtxhb_itemGetPtrStackSelfItem();
+  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -200,7 +200,7 @@ qreal manhattanLength() const
 */
 HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 {
-  QPointF * obj = (QPointF *) _qtxhb_itemGetPtrStackSelfItem();
+  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->manhattanLength (  ) );
@@ -215,7 +215,7 @@ void setX(qreal x)
 */
 HB_FUNC_STATIC( QPOINTF_SETX )
 {
-  QPointF * obj = (QPointF *) _qtxhb_itemGetPtrStackSelfItem();
+  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -230,7 +230,7 @@ void setY(qreal y)
 */
 HB_FUNC_STATIC( QPOINTF_SETY )
 {
-  QPointF * obj = (QPointF *) _qtxhb_itemGetPtrStackSelfItem();
+  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -245,7 +245,7 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QPOINTF_TOPOINT )
 {
-  QPointF * obj = (QPointF *) _qtxhb_itemGetPtrStackSelfItem();
+  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->toPoint (  ) );
@@ -259,7 +259,7 @@ qreal x() const
 */
 HB_FUNC_STATIC( QPOINTF_X )
 {
-  QPointF * obj = (QPointF *) _qtxhb_itemGetPtrStackSelfItem();
+  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->x (  ) );
@@ -272,7 +272,7 @@ qreal y() const
 */
 HB_FUNC_STATIC( QPOINTF_Y )
 {
-  QPointF * obj = (QPointF *) _qtxhb_itemGetPtrStackSelfItem();
+  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->y (  ) );

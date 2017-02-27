@@ -116,7 +116,7 @@ QUrlQuery(const QUrl & url)
 HB_FUNC_STATIC( QURLQUERY_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QUrlQuery * o = new QUrlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlQuery *) o );
@@ -148,7 +148,7 @@ QUrlQuery(const QUrlQuery & other)
 HB_FUNC_STATIC( QURLQUERY_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUrlQuery * par1 = (QUrlQuery *) _qtxhb_itemGetPtr(1);
+  QUrlQuery * par1 = (QUrlQuery *) _qt5xhb_itemGetPtr(1);
   QUrlQuery * o = new QUrlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlQuery *) o );
@@ -210,7 +210,7 @@ void addQueryItem(const QString & key, const QString & value)
 */
 HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -226,13 +226,13 @@ QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOpt
 */
 HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
     QStringList strl = obj->allQueryItemValues ( par1,  (QUrl::ComponentFormattingOptions) par2 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -242,7 +242,7 @@ void clear()
 */
 HB_FUNC_STATIC( QURLQUERY_CLEAR )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -256,7 +256,7 @@ bool hasQueryItem(const QString & key) const
 */
 HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -270,7 +270,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -283,7 +283,7 @@ QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) c
 */
 HB_FUNC_STATIC( QURLQUERY_QUERY )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QUrl::PrettyDecoded : hb_parni(1);
@@ -297,7 +297,7 @@ QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions enc
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -313,7 +313,7 @@ QChar queryPairDelimiter() const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->queryPairDelimiter (  ) );
@@ -327,7 +327,7 @@ QChar queryValueDelimiter() const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->queryValueDelimiter (  ) );
@@ -341,7 +341,7 @@ void removeAllQueryItems(const QString & key)
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -356,7 +356,7 @@ void removeQueryItem(const QString & key)
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -371,7 +371,7 @@ void setQuery(const QString & queryString)
 */
 HB_FUNC_STATIC( QURLQUERY_SETQUERY )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -388,10 +388,10 @@ void swap(QUrlQuery & other)
 */
 HB_FUNC_STATIC( QURLQUERY_SWAP )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrlQuery * par1 = (QUrlQuery *) _qtxhb_itemGetPtr(1);
+    QUrlQuery * par1 = (QUrlQuery *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -403,7 +403,7 @@ QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded
 */
 HB_FUNC_STATIC( QURLQUERY_TOSTRING )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QUrl::PrettyDecoded : hb_parni(1);

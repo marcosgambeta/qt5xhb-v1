@@ -75,8 +75,8 @@ QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
-  QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
+  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
+  QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   QResizeEvent * o = new QResizeEvent ( *par1, *par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QResizeEvent *) o );
@@ -109,7 +109,7 @@ const QSize &size() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QSize * ptr = &obj->size (  );
@@ -123,7 +123,7 @@ const QSize &oldSize() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QSize * ptr = &obj->oldSize (  );

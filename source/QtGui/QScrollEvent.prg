@@ -76,8 +76,8 @@ QScrollEvent(const QPointF &contentPos, const QPointF &overshoot, ScrollState sc
 HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
+  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
   QScrollEvent * o = new QScrollEvent ( *par1, *par2,  (QScrollEvent::ScrollState) par3 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -111,7 +111,7 @@ QPointF contentPos() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
 {
-  QScrollEvent * obj = (QScrollEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->contentPos (  ) );
@@ -125,7 +125,7 @@ QPointF overshootDistance() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
 {
-  QScrollEvent * obj = (QScrollEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->overshootDistance (  ) );
@@ -139,7 +139,7 @@ ScrollState scrollState() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
 {
-  QScrollEvent * obj = (QScrollEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->scrollState (  ) );

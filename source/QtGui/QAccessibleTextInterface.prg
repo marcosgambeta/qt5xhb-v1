@@ -108,7 +108,7 @@ virtual void selection(int selectionIndex, int *startOffset, int *endOffset) con
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTION )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2;
@@ -126,7 +126,7 @@ virtual int selectionCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTIONCOUNT )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->selectionCount (  ) );
@@ -139,7 +139,7 @@ virtual void addSelection(int startOffset, int endOffset) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ADDSELECTION )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->addSelection ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -153,7 +153,7 @@ virtual void removeSelection(int selectionIndex) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_REMOVESELECTION )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->removeSelection ( (int) hb_parni(1) );
@@ -167,7 +167,7 @@ virtual void setSelection(int selectionIndex, int startOffset, int endOffset) = 
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETSELECTION )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3) );
@@ -181,7 +181,7 @@ virtual int cursorPosition() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CURSORPOSITION )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cursorPosition (  ) );
@@ -194,7 +194,7 @@ virtual void setCursorPosition(int position) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETCURSORPOSITION )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCursorPosition ( (int) hb_parni(1) );
@@ -208,7 +208,7 @@ virtual QString text(int startOffset, int endOffset) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_TEXT )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text ( (int) hb_parni(1), (int) hb_parni(2) ).toLatin1().data() );
@@ -224,7 +224,7 @@ virtual int characterCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERCOUNT )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->characterCount (  ) );
@@ -237,7 +237,7 @@ virtual QRect characterRect(int offset) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERRECT )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->characterRect ( (int) hb_parni(1) ) );
@@ -251,10 +251,10 @@ virtual int offsetAtPoint(const QPoint &point) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_OFFSETATPOINT )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->offsetAtPoint ( *par1 ) );
   }
 }
@@ -265,7 +265,7 @@ virtual void scrollToSubstring(int startIndex, int endIndex) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SCROLLTOSUBSTRING )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->scrollToSubstring ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -279,7 +279,7 @@ virtual QString attributes(int offset, int *startOffset, int *endOffset) const =
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ATTRIBUTES )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2;

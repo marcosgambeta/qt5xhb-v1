@@ -90,7 +90,7 @@ QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::Keyboard
 HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
@@ -110,8 +110,8 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseBut
 HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
+  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
@@ -131,10 +131,10 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoi
 HB_FUNC_STATIC( QWHEELEVENT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
-  QPoint * par3 = (QPoint *) _qtxhb_itemGetPtr(3);
-  QPoint * par4 = (QPoint *) _qtxhb_itemGetPtr(4);
+  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
+  QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
+  QPoint * par4 = (QPoint *) _qt5xhb_itemGetPtr(4);
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
   int par7 = hb_parni(7);
@@ -180,7 +180,7 @@ QPoint pixelDelta() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_PIXELDELTA )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->pixelDelta (  ) );
@@ -194,7 +194,7 @@ QPoint angleDelta() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_ANGLEDELTA )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->angleDelta (  ) );
@@ -208,7 +208,7 @@ int delta() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_DELTA )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->delta (  ) );
@@ -221,7 +221,7 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );
@@ -234,7 +234,7 @@ QPoint pos() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_POS )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->pos (  ) );
@@ -248,7 +248,7 @@ QPoint globalPos() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->globalPos (  ) );
@@ -262,7 +262,7 @@ int x() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_X )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->x (  ) );
@@ -275,7 +275,7 @@ int y() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_Y )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->y (  ) );
@@ -288,7 +288,7 @@ int globalX() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalX (  ) );
@@ -301,7 +301,7 @@ int globalY() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalY (  ) );
@@ -314,7 +314,7 @@ const QPointF &posF() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_POSF )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->posF (  );
@@ -328,7 +328,7 @@ const QPointF &globalPosF() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOSF )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->globalPosF (  );
@@ -342,7 +342,7 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->buttons (  ) );

@@ -87,10 +87,10 @@ virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsTransform * obj = (QGraphicsTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMatrix4x4 * par1 = (QMatrix4x4 *) _qtxhb_itemGetPtr(1);
+    QMatrix4x4 * par1 = (QMatrix4x4 *) _qt5xhb_itemGetPtr(1);
     obj->applyTo ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

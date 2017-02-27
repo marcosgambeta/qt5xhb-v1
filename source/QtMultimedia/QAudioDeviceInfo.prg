@@ -110,7 +110,7 @@ QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) _qtxhb_itemGetPtr(1);
+  QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) _qt5xhb_itemGetPtr(1);
   QAudioDeviceInfo * o = new QAudioDeviceInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioDeviceInfo *) o );
@@ -162,7 +162,7 @@ QString deviceName () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->deviceName (  ).toLatin1().data() );
@@ -175,10 +175,10 @@ bool isFormatSupported ( const QAudioFormat & settings ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioFormat * par1 = (QAudioFormat *) _qtxhb_itemGetPtr(1);
+    QAudioFormat * par1 = (QAudioFormat *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isFormatSupported ( *par1 ) );
   }
 }
@@ -189,7 +189,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -202,10 +202,10 @@ QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioFormat * par1 = (QAudioFormat *) _qtxhb_itemGetPtr(1);
+    QAudioFormat * par1 = (QAudioFormat *) _qt5xhb_itemGetPtr(1);
     QAudioFormat * ptr = new QAudioFormat( obj->nearestFormat ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
   }
@@ -217,7 +217,7 @@ QAudioFormat preferredFormat () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAudioFormat * ptr = new QAudioFormat( obj->preferredFormat (  ) );
@@ -231,7 +231,7 @@ QList<QAudioFormat::Endian> supportedByteOrders () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QAudioFormat::Endian> list = obj->supportedByteOrders (  );
@@ -254,11 +254,11 @@ QList<int> supportedChannelCounts () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<int> list = obj->supportedChannelCounts (  );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -268,11 +268,11 @@ QStringList supportedCodecs () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->supportedCodecs (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -282,11 +282,11 @@ QList<int> supportedSampleRates () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<int> list = obj->supportedSampleRates (  );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -296,11 +296,11 @@ QList<int> supportedSampleSizes () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<int> list = obj->supportedSampleSizes (  );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -310,7 +310,7 @@ QList<QAudioFormat::SampleType> supportedSampleTypes () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes (  );

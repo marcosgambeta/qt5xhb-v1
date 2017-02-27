@@ -112,7 +112,7 @@ virtual QUuid appID () const
 */
 HB_FUNC_STATIC( QAXFACTORY_APPID )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUuid * ptr = new QUuid( obj->appID (  ) );
@@ -126,7 +126,7 @@ virtual QUuid classID ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_CLASSID )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -141,7 +141,7 @@ virtual QObject * createObject ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -157,7 +157,7 @@ virtual QUuid eventsID ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -172,7 +172,7 @@ virtual QString exposeToSuperClass ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -186,11 +186,11 @@ virtual QStringList featureList () const = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->featureList (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -200,7 +200,7 @@ virtual bool hasStockEvents ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -214,7 +214,7 @@ virtual QUuid interfaceID ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -229,7 +229,7 @@ virtual bool isService () const
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isService (  ) );
@@ -242,7 +242,7 @@ virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -257,11 +257,11 @@ virtual void registerClass ( const QString & key, QSettings * settings ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QSettings * par2 = (QSettings *) _qtxhb_itemGetPtr(2);
+    QSettings * par2 = (QSettings *) _qt5xhb_itemGetPtr(2);
     obj->registerClass ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -273,7 +273,7 @@ virtual bool stayTopLevel ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -287,7 +287,7 @@ virtual QUuid typeLibID () const
 */
 HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUuid * ptr = new QUuid( obj->typeLibID (  ) );
@@ -301,11 +301,11 @@ virtual void unregisterClass ( const QString & key, QSettings * settings ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QSettings * par2 = (QSettings *) _qtxhb_itemGetPtr(2);
+    QSettings * par2 = (QSettings *) _qt5xhb_itemGetPtr(2);
     obj->unregisterClass ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -317,7 +317,7 @@ virtual bool validateLicenseKey ( const QString & key, const QString & licenseKe
 */
 HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 {
-  QAxFactory * obj = (QAxFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -341,7 +341,7 @@ static bool registerActiveObject ( QObject * object )
 */
 HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   hb_retl( QAxFactory::registerActiveObject ( par1 ) );
 }
 

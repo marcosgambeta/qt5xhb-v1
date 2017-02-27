@@ -94,7 +94,7 @@ virtual void undo() = 0
 */
 HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->undo (  );
@@ -108,7 +108,7 @@ virtual void redo() = 0
 */
 HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->redo (  );

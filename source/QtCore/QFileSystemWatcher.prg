@@ -82,7 +82,7 @@ QFileSystemWatcher(QObject * parent = 0)
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSystemWatcher *) o );
@@ -107,7 +107,7 @@ for (i1=0;i1<nLen1;i1++)
 QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
 par1 << temp;
 }
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSystemWatcher *) o );
@@ -159,7 +159,7 @@ bool addPath(const QString & path)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -173,7 +173,7 @@ QStringList addPaths(const QStringList & paths)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -186,7 +186,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
 par1 << temp;
 }
     QStringList strl = obj->addPaths ( par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -196,11 +196,11 @@ QStringList directories() const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->directories (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -210,11 +210,11 @@ QStringList files() const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->files (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -224,7 +224,7 @@ bool removePath(const QString & path)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -238,7 +238,7 @@ QStringList removePaths(const QStringList & paths)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -251,7 +251,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
 par1 << temp;
 }
     QStringList strl = obj->removePaths ( par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

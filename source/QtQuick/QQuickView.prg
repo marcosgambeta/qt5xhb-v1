@@ -92,7 +92,7 @@ QQuickView(QWindow * parent = 0)
 HB_FUNC_STATIC( QQUICKVIEW_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWindow * par1 = ISNIL(1)? 0 : (QWindow *) _qtxhb_itemGetPtr(1);
+  QWindow * par1 = ISNIL(1)? 0 : (QWindow *) _qt5xhb_itemGetPtr(1);
   QQuickView * o = new QQuickView ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuickView *) o );
@@ -108,8 +108,8 @@ QQuickView(QQmlEngine * engine, QWindow * parent)
 HB_FUNC_STATIC( QQUICKVIEW_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QQmlEngine * par1 = (QQmlEngine *) _qtxhb_itemGetPtr(1);
-  QWindow * par2 = (QWindow *) _qtxhb_itemGetPtr(2);
+  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
+  QWindow * par2 = (QWindow *) _qt5xhb_itemGetPtr(2);
   QQuickView * o = new QQuickView ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuickView *) o );
@@ -125,8 +125,8 @@ QQuickView(const QUrl & source, QWindow * parent = 0)
 HB_FUNC_STATIC( QQUICKVIEW_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
-  QWindow * par2 = ISNIL(2)? 0 : (QWindow *) _qtxhb_itemGetPtr(2);
+  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
+  QWindow * par2 = ISNIL(2)? 0 : (QWindow *) _qt5xhb_itemGetPtr(2);
   QQuickView * o = new QQuickView ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuickView *) o );
@@ -183,7 +183,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
@@ -198,7 +198,7 @@ QSize initialSize() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->initialSize (  ) );
@@ -212,7 +212,7 @@ ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_RESIZEMODE )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->resizeMode (  ) );
@@ -225,7 +225,7 @@ QQmlContext * rootContext() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQmlContext * ptr = obj->rootContext (  );
@@ -239,7 +239,7 @@ QQuickItem * rootObject() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQuickItem * ptr = obj->rootObject (  );
@@ -253,7 +253,7 @@ void setResizeMode(ResizeMode)
 */
 HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -268,7 +268,7 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
@@ -282,7 +282,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_STATUS )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->status (  ) );
@@ -295,10 +295,10 @@ void setSource(const QUrl & url)
 */
 HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
 {
-  QQuickView * obj = (QQuickView *) _qtxhb_itemGetPtrStackSelfItem();
+  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setSource ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

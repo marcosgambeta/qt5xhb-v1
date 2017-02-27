@@ -105,7 +105,7 @@ QDomNodeList ( const QDomNodeList & n )
 HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomNodeList * par1 = (QDomNodeList *) _qtxhb_itemGetPtr(1);
+  QDomNodeList * par1 = (QDomNodeList *) _qt5xhb_itemGetPtr(1);
   QDomNodeList * o = new QDomNodeList ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomNodeList *) o );
@@ -160,7 +160,7 @@ QDomNode at ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomNode * ptr = new QDomNode( obj->at ( (int) hb_parni(1) ) );
@@ -174,7 +174,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -187,7 +187,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -200,7 +200,7 @@ QDomNode item ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomNode * ptr = new QDomNode( obj->item ( (int) hb_parni(1) ) );
@@ -214,7 +214,7 @@ uint length () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->length (  ) );
@@ -227,7 +227,7 @@ int size () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );

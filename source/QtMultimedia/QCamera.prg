@@ -117,7 +117,7 @@ QCamera(QObject * parent = 0)
 HB_FUNC_STATIC( QCAMERA_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QCamera * o = new QCamera ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCamera *) o );
@@ -133,8 +133,8 @@ QCamera(const QByteArray & device, QObject * parent = 0)
 HB_FUNC_STATIC( QCAMERA_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QCamera * o = new QCamera ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCamera *) o );
@@ -186,7 +186,7 @@ CaptureModes captureMode() const
 */
 HB_FUNC_STATIC( QCAMERA_CAPTUREMODE )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->captureMode (  ) );
@@ -199,7 +199,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QCAMERA_ERROR )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -212,7 +212,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QCAMERA_ERRORSTRING )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -225,7 +225,7 @@ QCameraExposure * exposure() const
 */
 HB_FUNC_STATIC( QCAMERA_EXPOSURE )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QCameraExposure * ptr = obj->exposure (  );
@@ -239,7 +239,7 @@ QCameraFocus * focus() const
 */
 HB_FUNC_STATIC( QCAMERA_FOCUS )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QCameraFocus * ptr = obj->focus (  );
@@ -253,7 +253,7 @@ QCameraImageProcessing * imageProcessing() const
 */
 HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QCameraImageProcessing * ptr = obj->imageProcessing (  );
@@ -267,7 +267,7 @@ bool isCaptureModeSupported(CaptureModes mode) const
 */
 HB_FUNC_STATIC( QCAMERA_ISCAPTUREMODESUPPORTED )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -281,7 +281,7 @@ QCamera::LockStatus lockStatus() const
 */
 HB_FUNC_STATIC( QCAMERA_LOCKSTATUS1 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lockStatus (  ) );
@@ -294,7 +294,7 @@ QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
 */
 HB_FUNC_STATIC( QCAMERA_LOCKSTATUS2 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -327,7 +327,7 @@ QCamera::LockTypes requestedLocks() const
 */
 HB_FUNC_STATIC( QCAMERA_REQUESTEDLOCKS )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->requestedLocks (  ) );
@@ -340,10 +340,10 @@ void setViewfinder(QVideoWidget * viewfinder)
 */
 HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER1 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoWidget * par1 = (QVideoWidget *) _qtxhb_itemGetPtr(1);
+    QVideoWidget * par1 = (QVideoWidget *) _qt5xhb_itemGetPtr(1);
     obj->setViewfinder ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,10 +355,10 @@ void setViewfinder(QGraphicsVideoItem * viewfinder)
 */
 HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER2 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsVideoItem * par1 = (QGraphicsVideoItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsVideoItem * par1 = (QGraphicsVideoItem *) _qt5xhb_itemGetPtr(1);
     obj->setViewfinder ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -370,10 +370,10 @@ void setViewfinder(QAbstractVideoSurface * surface)
 */
 HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER3 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractVideoSurface * par1 = (QAbstractVideoSurface *) _qtxhb_itemGetPtr(1);
+    QAbstractVideoSurface * par1 = (QAbstractVideoSurface *) _qt5xhb_itemGetPtr(1);
     obj->setViewfinder ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -409,7 +409,7 @@ State state() const
 */
 HB_FUNC_STATIC( QCAMERA_STATE )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -422,7 +422,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QCAMERA_STATUS )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->status (  ) );
@@ -435,7 +435,7 @@ QCamera::LockTypes supportedLocks() const
 */
 HB_FUNC_STATIC( QCAMERA_SUPPORTEDLOCKS )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->supportedLocks (  ) );
@@ -448,7 +448,7 @@ void load()
 */
 HB_FUNC_STATIC( QCAMERA_LOAD )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->load (  );
@@ -462,7 +462,7 @@ void searchAndLock()
 */
 HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK1 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->searchAndLock (  );
@@ -476,7 +476,7 @@ void searchAndLock(QCamera::LockTypes locks)
 */
 HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK2 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -510,7 +510,7 @@ void setCaptureMode(QCamera::CaptureModes mode)
 */
 HB_FUNC_STATIC( QCAMERA_SETCAPTUREMODE )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -525,7 +525,7 @@ void start()
 */
 HB_FUNC_STATIC( QCAMERA_START )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->start (  );
@@ -539,7 +539,7 @@ void stop()
 */
 HB_FUNC_STATIC( QCAMERA_STOP )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );
@@ -553,7 +553,7 @@ void unload()
 */
 HB_FUNC_STATIC( QCAMERA_UNLOAD )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unload (  );
@@ -567,7 +567,7 @@ void unlock()
 */
 HB_FUNC_STATIC( QCAMERA_UNLOCK1 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unlock (  );
@@ -581,7 +581,7 @@ void unlock(QCamera::LockTypes locks)
 */
 HB_FUNC_STATIC( QCAMERA_UNLOCK2 )
 {
-  QCamera * obj = (QCamera *) _qtxhb_itemGetPtrStackSelfItem();
+  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -655,7 +655,7 @@ static QString deviceDescription(const QByteArray & device)
 */
 HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   hb_retc( (const char *) QCamera::deviceDescription ( *par1 ).toLatin1().data() );
 }
 

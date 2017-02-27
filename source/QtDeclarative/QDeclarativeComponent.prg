@@ -95,8 +95,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QDeclarativeComponent * o = new QDeclarativeComponent ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeComponent *) o );
@@ -112,9 +112,9 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, Q
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qtxhb_itemGetPtr(1);
+  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QDeclarativeComponent * o = new QDeclarativeComponent ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeComponent *) o );
@@ -130,9 +130,9 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject *
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qtxhb_itemGetPtr(1);
-  QUrl * par2 = (QUrl *) _qtxhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
+  QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QDeclarativeComponent * o = new QDeclarativeComponent ( par1, *par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeComponent *) o );
@@ -189,10 +189,10 @@ virtual QObject * beginCreate ( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDeclarativeContext * par1 = (QDeclarativeContext *) _qtxhb_itemGetPtr(1);
+    QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
     QObject * ptr = obj->beginCreate ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
@@ -204,7 +204,7 @@ virtual void completeCreate ()
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->completeCreate (  );
@@ -218,10 +218,10 @@ virtual QObject * create ( QDeclarativeContext * context = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDeclarativeContext * par1 = ISNIL(1)? 0 : (QDeclarativeContext *) _qtxhb_itemGetPtr(1);
+    QDeclarativeContext * par1 = ISNIL(1)? 0 : (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
     QObject * ptr = obj->create ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
@@ -233,7 +233,7 @@ QDeclarativeContext * creationContext () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDeclarativeContext * ptr = obj->creationContext (  );
@@ -247,7 +247,7 @@ QList<QDeclarativeError> errors () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors (  );
@@ -291,7 +291,7 @@ bool isError () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isError (  ) );
@@ -304,7 +304,7 @@ bool isLoading () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLoading (  ) );
@@ -317,7 +317,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -330,7 +330,7 @@ bool isReady () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isReady (  ) );
@@ -343,10 +343,10 @@ void loadUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->loadUrl ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -358,7 +358,7 @@ qreal progress () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->progress (  ) );
@@ -371,11 +371,11 @@ void setData ( const QByteArray & data, const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
-    QUrl * par2 = (QUrl *) _qtxhb_itemGetPtr(2);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
     obj->setData ( *par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -387,7 +387,7 @@ Status status () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->status (  ) );
@@ -400,7 +400,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );

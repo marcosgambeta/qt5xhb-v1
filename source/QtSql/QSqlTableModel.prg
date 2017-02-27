@@ -117,8 +117,8 @@ explicit QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase()
 HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
-  QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qtxhb_itemGetPtr(2);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+  QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
   QSqlTableModel * o = new QSqlTableModel ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlTableModel *) o );
@@ -151,7 +151,7 @@ QSqlDatabase database () const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlDatabase * ptr = new QSqlDatabase( obj->database (  ) );
@@ -165,7 +165,7 @@ EditStrategy editStrategy () const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->editStrategy (  ) );
@@ -177,7 +177,7 @@ virtual void setEditStrategy ( EditStrategy strategy )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -192,7 +192,7 @@ int fieldIndex ( const QString & fieldName ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -206,7 +206,7 @@ QString filter () const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->filter (  ).toLatin1().data() );
@@ -218,7 +218,7 @@ virtual void setFilter ( const QString & filter )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -233,10 +233,10 @@ bool insertRecord ( int row, const QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSqlRecord * par2 = (QSqlRecord *) _qtxhb_itemGetPtr(2);
+    QSqlRecord * par2 = (QSqlRecord *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->insertRecord ( (int) hb_parni(1), *par2 ) );
   }
 }
@@ -247,7 +247,7 @@ bool isDirty() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ISDIRTY1 )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isDirty (  ) );
@@ -259,10 +259,10 @@ bool isDirty ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ISDIRTY2 )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isDirty ( *par1 ) );
   }
 }
@@ -292,7 +292,7 @@ QSqlIndex primaryKey () const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlIndex * ptr = new QSqlIndex( obj->primaryKey (  ) );
@@ -306,7 +306,7 @@ virtual void revertRow ( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->revertRow ( (int) hb_parni(1) );
@@ -320,7 +320,7 @@ virtual bool select ()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->select (  ) );
@@ -333,10 +333,10 @@ bool setRecord ( int row, const QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSqlRecord * par2 = (QSqlRecord *) _qtxhb_itemGetPtr(2);
+    QSqlRecord * par2 = (QSqlRecord *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->setRecord ( (int) hb_parni(1), *par2 ) );
   }
 }
@@ -347,7 +347,7 @@ void sort ( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -361,7 +361,7 @@ virtual void setSort ( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -376,7 +376,7 @@ virtual void setTable ( const QString & tableName )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -391,7 +391,7 @@ QString tableName () const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->tableName (  ).toLatin1().data() );
@@ -404,7 +404,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -418,10 +418,10 @@ QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -432,11 +432,11 @@ bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt:
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
   }
 }
@@ -447,10 +447,10 @@ Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->flags ( *par1 ) );
   }
 }
@@ -461,7 +461,7 @@ QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::D
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -476,10 +476,10 @@ bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -490,10 +490,10 @@ bool removeColumns ( int column, int count, const QModelIndex & parent = QModelI
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -504,10 +504,10 @@ bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -518,10 +518,10 @@ int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->rowCount ( par1 ) );
   }
 }
@@ -532,7 +532,7 @@ void revert ()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->revert (  );
@@ -546,7 +546,7 @@ void revertAll ()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->revertAll (  );
@@ -560,7 +560,7 @@ bool submit ()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->submit (  ) );
@@ -573,7 +573,7 @@ bool submitAll ()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->submitAll (  ) );
@@ -586,7 +586,7 @@ QSqlRecord record() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_RECORD1 )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
@@ -599,7 +599,7 @@ QSqlRecord record(int row) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_RECORD2 )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSqlRecord * ptr = new QSqlRecord( obj->record ( (int) hb_parni(1) ) );
@@ -632,7 +632,7 @@ virtual bool selectRow(int row)
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->selectRow ( (int) hb_parni(1) ) );

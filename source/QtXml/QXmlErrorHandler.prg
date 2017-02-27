@@ -95,10 +95,10 @@ virtual bool error ( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlParseException  * par1 = (QXmlParseException  *) _qtxhb_itemGetPtr(1);
+    QXmlParseException  * par1 = (QXmlParseException  *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->error ( *par1 ) );
   }
 }
@@ -109,7 +109,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -122,10 +122,10 @@ virtual bool fatalError ( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlParseException * par1 = (QXmlParseException *) _qtxhb_itemGetPtr(1);
+    QXmlParseException * par1 = (QXmlParseException *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->fatalError ( *par1 ) );
   }
 }
@@ -136,10 +136,10 @@ virtual bool warning ( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlParseException * par1 = (QXmlParseException *) _qtxhb_itemGetPtr(1);
+    QXmlParseException * par1 = (QXmlParseException *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->warning ( *par1 ) );
   }
 }

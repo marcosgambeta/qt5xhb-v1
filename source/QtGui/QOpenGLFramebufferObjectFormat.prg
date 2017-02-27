@@ -103,7 +103,7 @@ QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QOpenGLFramebufferObjectFormat * par1 = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtr(1);
+  QOpenGLFramebufferObjectFormat * par1 = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(1);
   QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLFramebufferObjectFormat *) o );
@@ -155,7 +155,7 @@ void setSamples(int samples)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSamples ( (int) hb_parni(1) );
@@ -169,7 +169,7 @@ int samples() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->samples (  ) );
@@ -182,7 +182,7 @@ void setMipmap(bool enabled)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETMIPMAP )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMipmap ( (bool) hb_parl(1) );
@@ -196,7 +196,7 @@ bool mipmap() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_MIPMAP )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->mipmap (  ) );
@@ -209,7 +209,7 @@ void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -224,7 +224,7 @@ QOpenGLFramebufferObject::Attachment attachment() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->attachment (  ) );
@@ -237,7 +237,7 @@ void setTextureTarget(GLenum target)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setTextureTarget ( (GLenum) hb_parni(1) );
@@ -251,7 +251,7 @@ GLenum textureTarget() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->textureTarget (  ) );
@@ -264,7 +264,7 @@ void setInternalTextureFormat(GLenum internalTextureFormat)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setInternalTextureFormat ( (GLenum) hb_parni(1) );
@@ -278,7 +278,7 @@ GLenum internalTextureFormat() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
 {
-  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->internalTextureFormat (  ) );

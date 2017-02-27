@@ -75,7 +75,7 @@ QTiltSensor(QObject *parent = 0)
 HB_FUNC_STATIC( QTILTSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QTiltSensor * o = new QTiltSensor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTiltSensor *) o );
@@ -109,7 +109,7 @@ QTiltReading *reading() const
 HB_FUNC_STATIC( QTILTSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * obj = (QTiltSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QTiltSensor * obj = (QTiltSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTiltReading * ptr = obj->reading (  );
@@ -125,7 +125,7 @@ void calibrate()
 HB_FUNC_STATIC( QTILTSENSOR_CALIBRATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * obj = (QTiltSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QTiltSensor * obj = (QTiltSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->calibrate (  );

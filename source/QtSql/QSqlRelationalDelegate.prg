@@ -75,7 +75,7 @@ explicit QSqlRelationalDelegate(QObject *aParent = 0)
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSqlRelationalDelegate * o = new QSqlRelationalDelegate ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlRelationalDelegate *) o );
@@ -108,12 +108,12 @@ QWidget *createEditor(QWidget *aParent, const QStyleOptionViewItem &option, cons
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qtxhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qtxhb_itemGetPtr(3);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
+    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     QWidget * ptr = obj->createEditor ( par1, *par2, *par3 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -125,12 +125,12 @@ void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex 
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
-    QAbstractItemModel * par2 = (QAbstractItemModel *) _qtxhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qtxhb_itemGetPtr(3);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+    QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
+    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     obj->setModelData ( par1, par2, *par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );

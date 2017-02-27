@@ -94,7 +94,7 @@ QUiLoader ( QObject * parent = 0 )
 HB_FUNC_STATIC( QUILOADER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QUiLoader * o = new QUiLoader ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUiLoader *) o );
@@ -127,7 +127,7 @@ void addPluginPath ( const QString & path )
 */
 HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -142,11 +142,11 @@ QStringList availableLayouts () const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->availableLayouts (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -156,11 +156,11 @@ QStringList availableWidgets () const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->availableWidgets (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -170,7 +170,7 @@ void clearPluginPaths ()
 */
 HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clearPluginPaths (  );
@@ -184,10 +184,10 @@ virtual QAction * createAction ( QObject * parent = 0, const QString & name = QS
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QAction * ptr = obj->createAction ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
@@ -200,10 +200,10 @@ virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString &
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QActionGroup * ptr = obj->createActionGroup ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
@@ -216,11 +216,11 @@ virtual QLayout * createLayout ( const QString & className, QObject * parent = 0
 */
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+    QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     QLayout * ptr = obj->createLayout ( par1, par2, par3 );
     _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
@@ -233,11 +233,11 @@ virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0
 */
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     QWidget * ptr = obj->createWidget ( par1, par2, par3 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
@@ -250,7 +250,7 @@ bool isLanguageChangeEnabled () const
 */
 HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLanguageChangeEnabled (  ) );
@@ -263,11 +263,11 @@ QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
-    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
     QWidget * ptr = obj->load ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -279,11 +279,11 @@ QStringList pluginPaths () const
 */
 HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->pluginPaths (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -293,7 +293,7 @@ void setLanguageChangeEnabled ( bool enabled )
 */
 HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLanguageChangeEnabled ( (bool) hb_parl(1) );
@@ -307,10 +307,10 @@ void setWorkingDirectory ( const QDir & dir )
 */
 HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDir * par1 = (QDir *) _qtxhb_itemGetPtr(1);
+    QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
     obj->setWorkingDirectory ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -322,7 +322,7 @@ QDir workingDirectory () const
 */
 HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
-  QUiLoader * obj = (QUiLoader *) _qtxhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDir * ptr = new QDir( obj->workingDirectory (  ) );

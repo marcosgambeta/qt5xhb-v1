@@ -153,7 +153,7 @@ QHostAddress ( const QHostAddress & address )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QHostAddress * par1 = (QHostAddress *) _qtxhb_itemGetPtr(1);
+  QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
   QHostAddress * o = new QHostAddress ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
@@ -241,7 +241,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -255,10 +255,10 @@ bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qtxhb_itemGetPtr(1);
+    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isInSubnet ( *par1, (int) hb_parni(2) ) );
   }
 }
@@ -296,7 +296,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -309,7 +309,7 @@ QAbstractSocket::NetworkLayerProtocol protocol () const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->protocol (  ) );
@@ -322,7 +322,7 @@ QString scopeId () const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->scopeId (  ).toLatin1().data() );
@@ -335,7 +335,7 @@ void setAddress ( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS1 )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAddress ( (quint32) hb_parni(1) );
@@ -351,7 +351,7 @@ bool setAddress ( const QString & address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -388,7 +388,7 @@ void setScopeId ( const QString & id )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -403,7 +403,7 @@ quint32 toIPv4Address () const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->toIPv4Address (  ) );
@@ -416,7 +416,7 @@ Q_IPV6ADDR toIPv6Address () const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     Q_IPV6ADDR * ptr = new Q_IPV6ADDR( obj->toIPv6Address (  ) );
@@ -430,7 +430,7 @@ QString toString () const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
 {
-  QHostAddress * obj = (QHostAddress *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString (  ).toLatin1().data() );

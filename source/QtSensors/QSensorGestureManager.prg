@@ -78,7 +78,7 @@ QSensorGestureManager(QObject *parent = 0)
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSensorGestureManager * o = new QSensorGestureManager ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSensorGestureManager *) o );
@@ -112,10 +112,10 @@ bool registerSensorGestureRecognizer(QSensorGestureRecognizer *recognizer)
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSensorGestureRecognizer * par1 = (QSensorGestureRecognizer *) _qtxhb_itemGetPtr(1);
+    QSensorGestureRecognizer * par1 = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->registerSensorGestureRecognizer ( par1 ) );
   }
 #endif
@@ -128,11 +128,11 @@ QStringList gestureIds() const
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->gestureIds (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
 }
@@ -144,12 +144,12 @@ QStringList recognizerSignals(const QString &recognizerId) const
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) _qtxhb_itemGetPtrStackSelfItem();
+  QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QStringList strl = obj->recognizerSignals ( par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
 }

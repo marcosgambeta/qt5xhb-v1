@@ -80,7 +80,7 @@ QAccessibleTableModelChangeEvent(QObject *obj, ModelChangeType changeType)
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QAccessibleTableModelChangeEvent * o = new QAccessibleTableModelChangeEvent ( par1,  (QAccessibleTableModelChangeEvent::ModelChangeType) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -114,7 +114,7 @@ void setModelChangeType(ModelChangeType changeType)
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -129,7 +129,7 @@ ModelChangeType modelChangeType() const
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->modelChangeType (  ) );
@@ -142,7 +142,7 @@ void setFirstRow(int row)
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setFirstRow ( (int) hb_parni(1) );
@@ -156,7 +156,7 @@ void setFirstColumn(int col)
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setFirstColumn ( (int) hb_parni(1) );
@@ -170,7 +170,7 @@ void setLastRow(int row)
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLastRow ( (int) hb_parni(1) );
@@ -184,7 +184,7 @@ void setLastColumn(int col)
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLastColumn ( (int) hb_parni(1) );
@@ -198,7 +198,7 @@ int firstRow() const
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->firstRow (  ) );
@@ -211,7 +211,7 @@ int firstColumn() const
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->firstColumn (  ) );
@@ -224,7 +224,7 @@ int lastRow() const
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lastRow (  ) );
@@ -237,7 +237,7 @@ int lastColumn() const
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lastColumn (  ) );

@@ -77,7 +77,7 @@ explicit QWebChannel(QObject *parent = 0)
 HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QWebChannel * o = new QWebChannel ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebChannel *) o );
@@ -113,11 +113,11 @@ Q_INVOKABLE void registerObject(const QString &id, QObject *object)
 HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     obj->registerObject ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -131,10 +131,10 @@ Q_INVOKABLE void deregisterObject(QObject *object)
 HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->deregisterObject ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -148,7 +148,7 @@ bool blockUpdates() const
 HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->blockUpdates (  ) );
@@ -162,7 +162,7 @@ void setBlockUpdates(bool block)
 HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setBlockUpdates ( (bool) hb_parl(1) );
@@ -178,10 +178,10 @@ void connectTo(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebChannelAbstractTransport * par1 = (QWebChannelAbstractTransport *) _qtxhb_itemGetPtr(1);
+    QWebChannelAbstractTransport * par1 = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtr(1);
     obj->connectTo ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -195,10 +195,10 @@ void disconnectFrom(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebChannelAbstractTransport * par1 = (QWebChannelAbstractTransport *) _qtxhb_itemGetPtr(1);
+    QWebChannelAbstractTransport * par1 = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtr(1);
     obj->disconnectFrom ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

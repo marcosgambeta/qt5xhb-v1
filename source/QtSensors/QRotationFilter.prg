@@ -88,10 +88,10 @@ virtual bool filter(QRotationReading *reading) = 0
 HB_FUNC_STATIC( QROTATIONFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationFilter * obj = (QRotationFilter *) _qtxhb_itemGetPtrStackSelfItem();
+  QRotationFilter * obj = (QRotationFilter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRotationReading * par1 = (QRotationReading *) _qtxhb_itemGetPtr(1);
+    QRotationReading * par1 = (QRotationReading *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->filter ( par1 ) );
   }
 #endif

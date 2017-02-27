@@ -77,7 +77,7 @@ QNetworkCookieJar ( QObject * parent = 0 )
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QNetworkCookieJar * o = new QNetworkCookieJar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkCookieJar *) o );
@@ -110,10 +110,10 @@ virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QList<QNetworkCookie> list = obj->cookiesForUrl ( *par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
@@ -159,7 +159,7 @@ virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QNetworkCookie> par1;
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
     {
       par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    QUrl * par2 = (QUrl *) _qtxhb_itemGetPtr(2);
+    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->setCookiesFromUrl ( par1, *par2 ) );
   }
 }

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QHelpEngine * o = new QHelpEngine ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpEngine *) o );
@@ -116,7 +116,7 @@ QHelpContentModel * contentModel () const
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHelpContentModel * ptr = obj->contentModel (  );
@@ -130,7 +130,7 @@ QHelpContentWidget * contentWidget ()
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHelpContentWidget * ptr = obj->contentWidget (  );
@@ -144,7 +144,7 @@ QHelpIndexModel * indexModel () const
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHelpIndexModel * ptr = obj->indexModel (  );
@@ -158,7 +158,7 @@ QHelpIndexWidget * indexWidget ()
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHelpIndexWidget * ptr = obj->indexWidget (  );
@@ -172,7 +172,7 @@ QHelpSearchEngine * searchEngine ()
 */
 HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHelpSearchEngine * ptr = obj->searchEngine (  );

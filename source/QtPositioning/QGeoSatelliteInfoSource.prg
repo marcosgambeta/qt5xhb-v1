@@ -105,7 +105,7 @@ QString sourceName() const
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SOURCENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->sourceName (  ).toLatin1().data() );
@@ -120,7 +120,7 @@ virtual void setUpdateInterval(int msec)
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setUpdateInterval ( (int) hb_parni(1) );
@@ -136,7 +136,7 @@ int updateInterval() const
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_UPDATEINTERVAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->updateInterval (  ) );
@@ -151,7 +151,7 @@ virtual int minimumUpdateInterval() const = 0
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->minimumUpdateInterval (  ) );
@@ -166,7 +166,7 @@ virtual Error error() const = 0
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -181,7 +181,7 @@ virtual void startUpdates() = 0
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STARTUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->startUpdates (  );
@@ -197,7 +197,7 @@ virtual void stopUpdates() = 0
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STOPUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stopUpdates (  );
@@ -213,7 +213,7 @@ virtual void requestUpdate(int timeout = 0) = 0
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_REQUESTUPDATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->requestUpdate ( (int) ISNIL(1)? 0 : hb_parni(1) );
@@ -229,7 +229,7 @@ static QGeoSatelliteInfoSource *createDefaultSource(QObject *parent)
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createDefaultSource ( par1 );
   _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE" );
 #endif
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATESOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createSource ( par1, par2 );
   _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE" );
 #endif
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QStringList strl = QGeoSatelliteInfoSource::availableSources (  );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 #endif
 }
 

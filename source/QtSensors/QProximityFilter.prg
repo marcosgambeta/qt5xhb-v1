@@ -88,10 +88,10 @@ virtual bool filter(QProximityReading *reading) = 0
 HB_FUNC_STATIC( QPROXIMITYFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityFilter * obj = (QProximityFilter *) _qtxhb_itemGetPtrStackSelfItem();
+  QProximityFilter * obj = (QProximityFilter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QProximityReading * par1 = (QProximityReading *) _qtxhb_itemGetPtr(1);
+    QProximityReading * par1 = (QProximityReading *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->filter ( par1 ) );
   }
 #endif

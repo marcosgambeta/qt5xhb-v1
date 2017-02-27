@@ -111,7 +111,7 @@ QRadioTuner(QObject *parent = 0)
 HB_FUNC_STATIC( QRADIOTUNER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QRadioTuner * o = new QRadioTuner ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadioTuner *) o );
@@ -144,7 +144,7 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_AVAILABILITY )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->availability (  ) );
@@ -157,7 +157,7 @@ State state() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_STATE )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -170,7 +170,7 @@ Band band() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_BAND )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->band (  ) );
@@ -183,7 +183,7 @@ bool isBandSupported(Band b) const
 */
 HB_FUNC_STATIC( QRADIOTUNER_ISBANDSUPPORTED )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -197,7 +197,7 @@ int frequency() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_FREQUENCY )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->frequency (  ) );
@@ -210,7 +210,7 @@ int frequencyStep(Band band) const
 */
 HB_FUNC_STATIC( QRADIOTUNER_FREQUENCYSTEP )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -225,7 +225,7 @@ bool isStereo() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_ISSTEREO )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isStereo (  ) );
@@ -238,7 +238,7 @@ void setStereoMode(QRadioTuner::StereoMode mode)
 */
 HB_FUNC_STATIC( QRADIOTUNER_SETSTEREOMODE )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -253,7 +253,7 @@ StereoMode stereoMode() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_STEREOMODE )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->stereoMode (  ) );
@@ -266,7 +266,7 @@ int signalStrength() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_SIGNALSTRENGTH )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->signalStrength (  ) );
@@ -279,7 +279,7 @@ int volume() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_VOLUME )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->volume (  ) );
@@ -292,7 +292,7 @@ bool isMuted() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_ISMUTED )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isMuted (  ) );
@@ -305,7 +305,7 @@ bool isSearching() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_ISSEARCHING )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSearching (  ) );
@@ -318,7 +318,7 @@ bool isAntennaConnected() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_ISANTENNACONNECTED )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAntennaConnected (  ) );
@@ -331,7 +331,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_ERROR )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -344,7 +344,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_ERRORSTRING )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -357,7 +357,7 @@ QRadioData *radioData() const
 */
 HB_FUNC_STATIC( QRADIOTUNER_RADIODATA )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRadioData * ptr = obj->radioData (  );
@@ -371,7 +371,7 @@ void searchForward()
 */
 HB_FUNC_STATIC( QRADIOTUNER_SEARCHFORWARD )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->searchForward (  );
@@ -385,7 +385,7 @@ void searchBackward()
 */
 HB_FUNC_STATIC( QRADIOTUNER_SEARCHBACKWARD )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->searchBackward (  );
@@ -399,7 +399,7 @@ void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchF
 */
 HB_FUNC_STATIC( QRADIOTUNER_SEARCHALLSTATIONS )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QRadioTuner::SearchFast : hb_parni(1);
@@ -414,7 +414,7 @@ void cancelSearch()
 */
 HB_FUNC_STATIC( QRADIOTUNER_CANCELSEARCH )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->cancelSearch (  );
@@ -428,7 +428,7 @@ void setBand(Band band)
 */
 HB_FUNC_STATIC( QRADIOTUNER_SETBAND )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -443,7 +443,7 @@ void setFrequency(int frequency)
 */
 HB_FUNC_STATIC( QRADIOTUNER_SETFREQUENCY )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setFrequency ( (int) hb_parni(1) );
@@ -457,7 +457,7 @@ void setVolume(int volume)
 */
 HB_FUNC_STATIC( QRADIOTUNER_SETVOLUME )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVolume ( (int) hb_parni(1) );
@@ -471,7 +471,7 @@ void setMuted(bool muted)
 */
 HB_FUNC_STATIC( QRADIOTUNER_SETMUTED )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMuted ( (bool) hb_parl(1) );
@@ -485,7 +485,7 @@ void start()
 */
 HB_FUNC_STATIC( QRADIOTUNER_START )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->start (  );
@@ -499,7 +499,7 @@ void stop()
 */
 HB_FUNC_STATIC( QRADIOTUNER_STOP )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );

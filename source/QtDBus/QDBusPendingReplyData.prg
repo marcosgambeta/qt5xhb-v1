@@ -110,7 +110,7 @@ void assign(const QDBusPendingCall &call)
 */
 HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ASSIGN1 )
 {
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->assign (  );
@@ -123,7 +123,7 @@ void assign(const QDBusMessage &message)
 */
 HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ASSIGN2 )
 {
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->assign (  );
@@ -156,7 +156,7 @@ QVariant argumentAt(int index) const
 */
 HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ARGUMENTAT )
 {
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->argumentAt ( (int) hb_parni(1) ) );
@@ -170,10 +170,10 @@ void setMetaTypes(int count, const int *metaTypes)
 */
 HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_SETMETATYPES )
 {
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const int * par2 = (const int *) _qtxhb_itemGetPtr(2);
+    const int * par2 = (const int *) _qt5xhb_itemGetPtr(2);
     obj->setMetaTypes ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );

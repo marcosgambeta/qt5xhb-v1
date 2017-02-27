@@ -100,7 +100,7 @@ QXmlNamePool & namePool () const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QXmlNamePool * ptr = &obj->namePool (  );
@@ -114,10 +114,10 @@ virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
+    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->baseUri ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -129,10 +129,10 @@ virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) _qtxhb_itemGetPtr(1);
+    QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
     QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
   }
@@ -144,10 +144,10 @@ virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) 
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
+    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
     QVector<QXmlName> list = obj->namespaceBindings ( *par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
@@ -189,10 +189,10 @@ virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) cons
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) _qtxhb_itemGetPtr(1);
+    QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
     QVector<QXmlNodeModelIndex> list = obj->nodesByIdref ( *par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
@@ -234,10 +234,10 @@ virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
+    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->stringValue ( *par1 ).toLatin1().data() );
   }
 }

@@ -75,8 +75,8 @@ QAccessibleValueChangeEvent(QObject *obj, const QVariant &val)
 HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-  QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+  QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
   QAccessibleValueChangeEvent * o = new QAccessibleValueChangeEvent ( par1, *par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAccessibleValueChangeEvent *) o );
@@ -109,10 +109,10 @@ void setValue(const QVariant & val)
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setValue ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -124,7 +124,7 @@ QVariant value() const
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->value (  ) );

@@ -92,7 +92,7 @@ virtual QString resolveUndeclaredEntity(const QString & name)
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
 {
-  QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

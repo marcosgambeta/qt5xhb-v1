@@ -94,7 +94,7 @@ static bool openUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
-  QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   hb_retl( QDesktopServices::openUrl ( *par1 ) );
 }
 
@@ -105,7 +105,7 @@ static void setUrlHandler ( const QString & scheme, QObject * receiver, const ch
 HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   const char * par3 = hb_parc(3);
   QDesktopServices::setUrlHandler ( par1, par2,  (const char *) par3 );
   hb_itemReturn( hb_stackSelfItem() );

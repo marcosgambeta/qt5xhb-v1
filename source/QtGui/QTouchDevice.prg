@@ -115,7 +115,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
 {
-  QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -128,7 +128,7 @@ DeviceType type() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
 {
-  QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -141,7 +141,7 @@ Capabilities capabilities() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
 {
-  QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->capabilities (  ) );
@@ -154,7 +154,7 @@ void setName(const QString &name)
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
 {
-  QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -169,7 +169,7 @@ void setType(DeviceType devType)
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
 {
-  QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -184,7 +184,7 @@ void setCapabilities(Capabilities caps)
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
 {
-  QTouchDevice * obj = (QTouchDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

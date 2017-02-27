@@ -89,7 +89,7 @@ Orientation orientation() const
 HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationReading * obj = (QOrientationReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );
@@ -104,7 +104,7 @@ void setOrientation(Orientation orientation)
 HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationReading * obj = (QOrientationReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

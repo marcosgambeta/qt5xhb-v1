@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QOpenGLTimeMonitor * o = new QOpenGLTimeMonitor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLTimeMonitor *) o );
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SAMPLECOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->sampleCount (  ) );
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SETSAMPLECOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSampleCount ( (int) hb_parni(1) );
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_CREATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->create (  ) );
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DESTROY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->destroy (  );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISCREATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCreated (  ) );
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_OBJECTIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVector<GLuint> list = obj->objectIds (  );
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RECORDSAMPLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->recordSample (  ) );
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISRESULTAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isResultAvailable (  ) );
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_WAITFORSAMPLES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVector<GLuint64> list = obj->waitForSamples (  );
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_WAITFORINTERVALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVector<GLuint64> list = obj->waitForIntervals (  );
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RESET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reset (  );

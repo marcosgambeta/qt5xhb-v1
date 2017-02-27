@@ -101,7 +101,7 @@ QDBusError(const DBusError *error)
 HB_FUNC_STATIC( QDBUSERROR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  DBusError * par1 = (DBusError *) _qtxhb_itemGetPtr(1);
+  DBusError * par1 = (DBusError *) _qt5xhb_itemGetPtr(1);
   QDBusError * o = new QDBusError ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
@@ -191,7 +191,7 @@ ErrorType type() const
 */
 HB_FUNC_STATIC( QDBUSERROR_TYPE )
 {
-  QDBusError * obj = (QDBusError *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -204,7 +204,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDBUSERROR_NAME )
 {
-  QDBusError * obj = (QDBusError *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -217,7 +217,7 @@ QString message() const
 */
 HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
 {
-  QDBusError * obj = (QDBusError *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->message (  ).toLatin1().data() );
@@ -230,7 +230,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDBUSERROR_ISVALID )
 {
-  QDBusError * obj = (QDBusError *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );

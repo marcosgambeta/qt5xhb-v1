@@ -235,7 +235,7 @@ QLocale ( const QLocale & other )
 HB_FUNC_STATIC( QLOCALE_NEW5 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QLocale * par1 = (QLocale *) _qtxhb_itemGetPtr(1);
+  QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
   QLocale * o = new QLocale ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLocale *) o );
@@ -304,7 +304,7 @@ QString amText () const
 */
 HB_FUNC_STATIC( QLOCALE_AMTEXT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->amText (  ).toLatin1().data() );
@@ -317,7 +317,7 @@ QString bcp47Name () const
 */
 HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->bcp47Name (  ).toLatin1().data() );
@@ -330,7 +330,7 @@ Country country () const
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRY )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->country (  ) );
@@ -343,7 +343,7 @@ QString createSeparatedList ( const QStringList & list ) const
 */
 HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -365,7 +365,7 @@ QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
 */
 HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QLocale::CurrencySymbol : hb_parni(1);
@@ -379,7 +379,7 @@ QString dateFormat ( FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
@@ -393,7 +393,7 @@ QString dateTimeFormat ( FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
@@ -407,7 +407,7 @@ QString dayName ( int day, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DAYNAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
@@ -421,7 +421,7 @@ QChar decimalPoint () const
 */
 HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->decimalPoint (  ) );
@@ -435,7 +435,7 @@ QChar exponential () const
 */
 HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->exponential (  ) );
@@ -449,7 +449,7 @@ Qt::DayOfWeek firstDayOfWeek () const
 */
 HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->firstDayOfWeek (  ) );
@@ -462,7 +462,7 @@ QChar groupSeparator () const
 */
 HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->groupSeparator (  ) );
@@ -476,7 +476,7 @@ Language language () const
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGE )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->language (  ) );
@@ -489,7 +489,7 @@ MeasurementSystem measurementSystem () const
 */
 HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->measurementSystem (  ) );
@@ -502,7 +502,7 @@ QString monthName ( int month, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_MONTHNAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
@@ -516,7 +516,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QLOCALE_NAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -529,7 +529,7 @@ QString nativeCountryName () const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->nativeCountryName (  ).toLatin1().data() );
@@ -542,7 +542,7 @@ QString nativeLanguageName () const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->nativeLanguageName (  ).toLatin1().data() );
@@ -555,7 +555,7 @@ QChar negativeSign () const
 */
 HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->negativeSign (  ) );
@@ -569,7 +569,7 @@ NumberOptions numberOptions () const
 */
 HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->numberOptions (  ) );
@@ -582,7 +582,7 @@ QChar percent () const
 */
 HB_FUNC_STATIC( QLOCALE_PERCENT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->percent (  ) );
@@ -596,7 +596,7 @@ QString pmText () const
 */
 HB_FUNC_STATIC( QLOCALE_PMTEXT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->pmText (  ).toLatin1().data() );
@@ -609,7 +609,7 @@ QChar positiveSign () const
 */
 HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->positiveSign (  ) );
@@ -623,7 +623,7 @@ QString quoteString ( const QString & str, QuotationStyle style = StandardQuotat
 */
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING1 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -638,10 +638,10 @@ QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuo
 */
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING2 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringRef * par1 = (QStringRef *) _qtxhb_itemGetPtr(1);
+    QStringRef * par1 = (QStringRef *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QLocale::StandardQuotation : hb_parni(2);
     hb_retc( (const char *) obj->quoteString ( *par1,  (QLocale::QuotationStyle) par2 ).toLatin1().data() );
   }
@@ -663,7 +663,7 @@ Script script () const
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->script (  ) );
@@ -676,7 +676,7 @@ void setNumberOptions ( NumberOptions options )
 */
 HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -691,7 +691,7 @@ QString standaloneDayName ( int day, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
@@ -705,7 +705,7 @@ QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
@@ -719,7 +719,7 @@ Qt::LayoutDirection textDirection () const
 */
 HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->textDirection (  ) );
@@ -732,7 +732,7 @@ QString timeFormat ( FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
@@ -746,7 +746,7 @@ QString toCurrencyString ( qlonglong value, const QString & symbol = QString() )
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qlonglong par1 = hb_parnl(1);
@@ -761,7 +761,7 @@ QString toCurrencyString ( short value, const QString & symbol = QString() ) con
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -775,7 +775,7 @@ QString toCurrencyString ( ushort value, const QString & symbol = QString() ) co
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -789,7 +789,7 @@ QString toCurrencyString ( int value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -803,7 +803,7 @@ QString toCurrencyString ( uint value, const QString & symbol = QString() ) cons
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -817,7 +817,7 @@ QString toCurrencyString ( float value, const QString & symbol = QString() ) con
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     float par1 = hb_parnd(1);
@@ -832,7 +832,7 @@ QString toCurrencyString ( qulonglong value, const QString & symbol = QString() 
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qulonglong par1 = hb_parnl(1);
@@ -847,7 +847,7 @@ QString toCurrencyString ( double value, const QString & symbol = QString() ) co
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     double par1 = hb_parnd(1);
@@ -877,7 +877,7 @@ QDate toDate ( const QString & string, FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODATE1 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -893,7 +893,7 @@ QDate toDate ( const QString & string, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODATE2 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -928,7 +928,7 @@ QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) 
 */
 HB_FUNC_STATIC( QLOCALE_TODATETIME1 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -944,7 +944,7 @@ QDateTime toDateTime ( const QString & string, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODATETIME2 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -979,7 +979,7 @@ double toDouble ( const QString & s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODOUBLE )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -995,7 +995,7 @@ float toFloat ( const QString & s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOFLOAT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -1013,7 +1013,7 @@ QString toLower ( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOLOWER )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -1028,7 +1028,7 @@ QString toString ( qlonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qlonglong par1 = hb_parnl(1);
@@ -1042,10 +1042,10 @@ QString toString ( const QDate & date, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING2 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qtxhb_itemGetPtr(1);
+    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     hb_retc( (const char *) obj->toString ( *par1, par2 ).toLatin1().data() );
   }
@@ -1057,10 +1057,10 @@ QString toString ( const QDate & date, FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qtxhb_itemGetPtr(1);
+    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
     hb_retc( (const char *) obj->toString ( *par1,  (QLocale::FormatType) par2 ).toLatin1().data() );
   }
@@ -1072,10 +1072,10 @@ QString toString ( const QTime & time, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING4 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTime * par1 = (QTime *) _qtxhb_itemGetPtr(1);
+    QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     hb_retc( (const char *) obj->toString ( *par1, par2 ).toLatin1().data() );
   }
@@ -1087,10 +1087,10 @@ QString toString ( const QTime & time, FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTime * par1 = (QTime *) _qtxhb_itemGetPtr(1);
+    QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
     hb_retc( (const char *) obj->toString ( *par1,  (QLocale::FormatType) par2 ).toLatin1().data() );
   }
@@ -1102,10 +1102,10 @@ QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) 
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
     hb_retc( (const char *) obj->toString ( *par1,  (QLocale::FormatType) par2 ).toLatin1().data() );
   }
@@ -1117,10 +1117,10 @@ QString toString ( const QDateTime & dateTime, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING7 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     hb_retc( (const char *) obj->toString ( *par1, par2 ).toLatin1().data() );
   }
@@ -1132,7 +1132,7 @@ QString toString ( short i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING8 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString ( (short) hb_parni(1) ).toLatin1().data() );
@@ -1145,7 +1145,7 @@ QString toString ( ushort i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING9 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString ( (ushort) hb_parni(1) ).toLatin1().data() );
@@ -1158,7 +1158,7 @@ QString toString ( int i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString ( (int) hb_parni(1) ).toLatin1().data() );
@@ -1171,7 +1171,7 @@ QString toString ( uint i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString ( (uint) hb_parni(1) ).toLatin1().data() );
@@ -1184,7 +1184,7 @@ QString toString ( float i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     float par1 = hb_parnd(1);
@@ -1199,7 +1199,7 @@ QString toString ( qulonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qulonglong par1 = hb_parnl(1);
@@ -1213,7 +1213,7 @@ QString toString ( double i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     double par1 = hb_parnd(1);
@@ -1281,7 +1281,7 @@ QTime toTime ( const QString & string, FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOTIME1 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -1297,7 +1297,7 @@ QTime toTime ( const QString & string, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOTIME2 )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -1335,7 +1335,7 @@ QString toUpper ( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUPPER )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -1349,11 +1349,11 @@ QStringList uiLanguages () const
 */
 HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->uiLanguages (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -1363,7 +1363,7 @@ QList<Qt::DayOfWeek> weekdays () const
 */
 HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<Qt::DayOfWeek> list = obj->weekdays (  );
@@ -1386,7 +1386,7 @@ QChar zeroDigit () const
 */
 HB_FUNC_STATIC( QLOCALE_ZERODIGIT )
 {
-  QLocale * obj = (QLocale *) _qtxhb_itemGetPtrStackSelfItem();
+  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->zeroDigit (  ) );
@@ -1483,7 +1483,7 @@ static void setDefault ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QLOCALE_SETDEFAULT )
 {
-  QLocale * par1 = (QLocale *) _qtxhb_itemGetPtr(1);
+  QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
   QLocale::setDefault ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }

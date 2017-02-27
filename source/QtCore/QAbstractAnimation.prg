@@ -110,7 +110,7 @@ int currentLoop () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentLoop (  ) );
@@ -123,7 +123,7 @@ int currentLoopTime () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentLoopTime (  ) );
@@ -136,7 +136,7 @@ int currentTime () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentTime (  ) );
@@ -148,7 +148,7 @@ void setCurrentTime ( int msecs )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCurrentTime ( (int) hb_parni(1) );
@@ -162,7 +162,7 @@ Direction direction () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->direction (  ) );
@@ -174,7 +174,7 @@ void  setDirection ( Direction direction )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -189,7 +189,7 @@ virtual int duration () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->duration (  ) );
@@ -202,7 +202,7 @@ QAnimationGroup * group () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAnimationGroup * ptr = obj->group (  );
@@ -216,7 +216,7 @@ int loopCount () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->loopCount (  ) );
@@ -228,7 +228,7 @@ void setLoopCount ( int loopCount )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLoopCount ( (int) hb_parni(1) );
@@ -242,7 +242,7 @@ State state () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -255,7 +255,7 @@ int totalDuration () const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->totalDuration (  ) );
@@ -268,7 +268,7 @@ void pause ()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->pause (  );
@@ -282,7 +282,7 @@ void resume ()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->resume (  );
@@ -296,7 +296,7 @@ void setPaused ( bool paused )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setPaused ( (bool) hb_parl(1) );
@@ -310,7 +310,7 @@ void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QAbstractAnimation::KeepWhenStopped : hb_parni(1);
@@ -325,7 +325,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );

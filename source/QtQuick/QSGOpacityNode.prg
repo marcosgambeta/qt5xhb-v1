@@ -104,7 +104,7 @@ qreal opacity() const
 */
 HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->opacity (  ) );
@@ -117,7 +117,7 @@ void setOpacity(qreal opacity)
 */
 HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

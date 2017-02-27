@@ -223,7 +223,7 @@ bool _qt5xhb_inherits ( int iPar, const char * classname )
 /*
   converte um objeto QList<int> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_int_to_array ( const QList<int> list )
+void _qt5xhb_convert_qlist_int_to_array ( const QList<int> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -240,7 +240,7 @@ void _qtxhb_convert_qlist_int_to_array ( const QList<int> list )
 /*
   converte um objeto QList<qint8> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_qint8_to_array ( const QList<qint8> list )
+void _qt5xhb_convert_qlist_qint8_to_array ( const QList<qint8> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -257,7 +257,7 @@ void _qtxhb_convert_qlist_qint8_to_array ( const QList<qint8> list )
 /*
   converte um objeto QList<qint16> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_qint16_to_array ( const QList<qint16> list )
+void _qt5xhb_convert_qlist_qint16_to_array ( const QList<qint16> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -274,7 +274,7 @@ void _qtxhb_convert_qlist_qint16_to_array ( const QList<qint16> list )
 /*
   converte um objeto QList<qint32> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_qint32_to_array ( const QList<qint32> list )
+void _qt5xhb_convert_qlist_qint32_to_array ( const QList<qint32> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -291,7 +291,7 @@ void _qtxhb_convert_qlist_qint32_to_array ( const QList<qint32> list )
 /*
   converte um objeto QList<qint64> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_qint64_to_array ( const QList<qint64> list )
+void _qt5xhb_convert_qlist_qint64_to_array ( const QList<qint64> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -308,7 +308,7 @@ void _qtxhb_convert_qlist_qint64_to_array ( const QList<qint64> list )
 /*
   converte um objeto QList<quint8> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_quint8_to_array ( const QList<quint8> list )
+void _qt5xhb_convert_qlist_quint8_to_array ( const QList<quint8> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -325,7 +325,7 @@ void _qtxhb_convert_qlist_quint8_to_array ( const QList<quint8> list )
 /*
   converte um objeto QList<quint16> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_quint16_to_array ( const QList<quint16> list )
+void _qt5xhb_convert_qlist_quint16_to_array ( const QList<quint16> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -342,7 +342,7 @@ void _qtxhb_convert_qlist_quint16_to_array ( const QList<quint16> list )
 /*
   converte um objeto QList<quint32> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_quint32_to_array ( const QList<quint32> list )
+void _qt5xhb_convert_qlist_quint32_to_array ( const QList<quint32> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -359,7 +359,7 @@ void _qtxhb_convert_qlist_quint32_to_array ( const QList<quint32> list )
 /*
   converte um objeto QList<quint64> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_quint64_to_array ( const QList<quint64> list )
+void _qt5xhb_convert_qlist_quint64_to_array ( const QList<quint64> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -376,7 +376,7 @@ void _qtxhb_convert_qlist_quint64_to_array ( const QList<quint64> list )
 /*
   converte um objeto QList<qreal> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_qreal_to_array ( const QList<qreal> list )
+void _qt5xhb_convert_qlist_qreal_to_array ( const QList<qreal> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -393,7 +393,7 @@ void _qtxhb_convert_qlist_qreal_to_array ( const QList<qreal> list )
 /*
   converte um objeto QList<double> em uma array do [x]Harbour
 */
-void _qtxhb_convert_qlist_double_to_array ( const QList<double> list )
+void _qt5xhb_convert_qlist_double_to_array ( const QList<double> list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -410,7 +410,7 @@ void _qtxhb_convert_qlist_double_to_array ( const QList<double> list )
 /*
   converte um objeto QStringList (QList<QString>) em uma array do [x]Harbour
 */
-void _qtxhb_convert_qstringlist_to_array ( const QStringList list )
+void _qt5xhb_convert_qstringlist_to_array ( const QStringList list )
 {
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
@@ -427,7 +427,7 @@ void _qtxhb_convert_qstringlist_to_array ( const QStringList list )
 /*
   obtém e retorna o valor da propriedade POINTER de um objeto [x]Harbour (tipo O)
 */
-void * _qtxhb_itemGetPtr( int numpar )
+void * _qt5xhb_itemGetPtr( int numpar )
 {
   return ( (void *) hb_itemGetPtr( hb_objSendMsg( hb_param( numpar, HB_IT_OBJECT ), "POINTER", 0 ) ) );
 }
@@ -435,7 +435,7 @@ void * _qtxhb_itemGetPtr( int numpar )
 /*
   obtém e retorna o valor da propriedade POINTER do objeto hb_stackSelfItem()
 */
-void * _qtxhb_itemGetPtrStackSelfItem ()
+void * _qt5xhb_itemGetPtrStackSelfItem ()
 {
   return ( (void *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) ) );
 }

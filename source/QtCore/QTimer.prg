@@ -82,7 +82,7 @@ QTimer ( QObject * parent = 0 )
 HB_FUNC_STATIC( QTIMER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QTimer * o = new QTimer ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimer *) o );
@@ -115,7 +115,7 @@ int interval () const
 */
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->interval (  ) );
@@ -128,7 +128,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isActive (  ) );
@@ -141,7 +141,7 @@ bool isSingleShot () const
 */
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSingleShot (  ) );
@@ -154,7 +154,7 @@ void setInterval ( int msec )
 */
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setInterval ( (int) hb_parni(1) );
@@ -168,7 +168,7 @@ void setSingleShot ( bool singleShot )
 */
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSingleShot ( (bool) hb_parl(1) );
@@ -182,7 +182,7 @@ int timerId () const
 */
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->timerId (  ) );
@@ -197,7 +197,7 @@ void start ( int msec )
 */
 HB_FUNC_STATIC( QTIMER_START1 )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->start ( (int) hb_parni(1) );
@@ -210,7 +210,7 @@ void start ()
 */
 HB_FUNC_STATIC( QTIMER_START2 )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->start (  );
@@ -243,7 +243,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QTIMER_STOP )
 {
-  QTimer * obj = (QTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );
@@ -257,7 +257,7 @@ static void singleShot ( int msec, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   const char * par3 = hb_parc(3);
   QTimer::singleShot ( (int) hb_parni(1), par2,  (const char *) par3 );
   hb_itemReturn( hb_stackSelfItem() );

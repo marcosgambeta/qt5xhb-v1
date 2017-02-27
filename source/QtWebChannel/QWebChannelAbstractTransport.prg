@@ -72,7 +72,7 @@ explicit QWebChannelAbstractTransport(QObject *parent = 0)
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QWebChannelAbstractTransport * o = new QWebChannelAbstractTransport ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebChannelAbstractTransport *) o );
@@ -106,10 +106,10 @@ virtual void sendMessage(const QJsonObject &message) = 0
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelAbstractTransport * obj = (QWebChannelAbstractTransport *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebChannelAbstractTransport * obj = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJsonObject * par1 = (QJsonObject *) _qtxhb_itemGetPtr(1);
+    QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
     obj->sendMessage ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

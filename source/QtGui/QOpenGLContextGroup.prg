@@ -89,7 +89,7 @@ QList<QOpenGLContext *> shares() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 {
-  QOpenGLContextGroup * obj = (QOpenGLContextGroup *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLContextGroup * obj = (QOpenGLContextGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
   }

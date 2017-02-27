@@ -95,11 +95,11 @@ virtual QStringList supportedImageCodecs() const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS )
 {
-  QImageEncoderControl * obj = (QImageEncoderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->supportedImageCodecs (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -109,7 +109,7 @@ virtual QString imageCodecDescription(const QString &codecName) const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
 {
-  QImageEncoderControl * obj = (QImageEncoderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -123,10 +123,10 @@ virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
 {
-  QImageEncoderControl * obj = (QImageEncoderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qtxhb_itemGetPtr(1);
+    QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
     QList<QSize> list = obj->supportedResolutions ( *par1, &par2 );
     PHB_DYNS pDynSym;
@@ -174,7 +174,7 @@ virtual QImageEncoderSettings imageSettings() const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
 {
-  QImageEncoderControl * obj = (QImageEncoderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->imageSettings (  ) );
@@ -188,10 +188,10 @@ virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SETIMAGESETTINGS )
 {
-  QImageEncoderControl * obj = (QImageEncoderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qtxhb_itemGetPtr(1);
+    QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
     obj->setImageSettings ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

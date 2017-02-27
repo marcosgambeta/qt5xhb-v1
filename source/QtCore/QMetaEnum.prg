@@ -124,7 +124,7 @@ const char *name() const
 */
 HB_FUNC_STATIC( QMETAENUM_NAME )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->name (  );
@@ -138,7 +138,7 @@ bool isFlag() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isFlag (  ) );
@@ -151,7 +151,7 @@ int keyCount() const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->keyCount (  ) );
@@ -164,7 +164,7 @@ const char *key(int index) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEY )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->key ( (int) hb_parni(1) );
@@ -178,7 +178,7 @@ int value(int index) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUE )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->value ( (int) hb_parni(1) ) );
@@ -191,7 +191,7 @@ const char *scope() const
 */
 HB_FUNC_STATIC( QMETAENUM_SCOPE )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->scope (  );
@@ -205,7 +205,7 @@ int keyToValue(const char *key) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -219,7 +219,7 @@ const char* valueToKey(int value) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->valueToKey ( (int) hb_parni(1) );
@@ -233,7 +233,7 @@ int keysToValue(const char * keys) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -247,7 +247,7 @@ QByteArray valueToKeys(int value) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->valueToKeys ( (int) hb_parni(1) ) );
@@ -261,7 +261,7 @@ const QMetaObject *enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );
@@ -275,7 +275,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISVALID )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );

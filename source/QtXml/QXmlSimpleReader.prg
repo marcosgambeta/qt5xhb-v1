@@ -107,10 +107,10 @@ virtual bool parse ( const QXmlInputSource * input, bool incremental )
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlInputSource * par1 = (QXmlInputSource *) _qtxhb_itemGetPtr(1);
+    QXmlInputSource * par1 = (QXmlInputSource *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->parse ( par1, (bool) hb_parl(2) ) );
   }
 }
@@ -121,7 +121,7 @@ virtual bool parseContinue ()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->parseContinue (  ) );

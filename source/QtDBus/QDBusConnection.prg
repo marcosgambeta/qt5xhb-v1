@@ -180,7 +180,7 @@ bool isConnected() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_ISCONNECTED )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isConnected (  ) );
@@ -193,7 +193,7 @@ QString baseService() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_BASESERVICE )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->baseService (  ).toLatin1().data() );
@@ -206,7 +206,7 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->lastError (  ) );
@@ -220,7 +220,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_NAME )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -233,7 +233,7 @@ ConnectionCapabilities connectionCapabilities() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTIONCAPABILITIES )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     ConnectionCapabilities * ptr = new ConnectionCapabilities( obj->connectionCapabilities (  ) );
@@ -247,7 +247,7 @@ bool send(const QDBusMessage &message) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->send (  ) );
@@ -260,10 +260,10 @@ bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char 
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK1 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
     const char * par4 = hb_parc(4);
     hb_retl( obj->callWithCallback ( par2,  (const char *) par3,  (const char *) par4, (int) ISNIL(5)? -1 : hb_parni(5) ) );
@@ -275,10 +275,10 @@ bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char 
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK2 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
     hb_retl( obj->callWithCallback ( par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) );
   }
@@ -298,7 +298,7 @@ QDBusMessage call(const QDBusMessage &message, QDBus::CallMode mode = QDBus::Blo
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QDBus::Block : hb_parni(2);
@@ -313,7 +313,7 @@ QDBusPendingCall asyncCall(const QDBusMessage &message, int timeout = -1) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( (int) ISNIL(2)? -1 : hb_parni(2) ) );
@@ -327,14 +327,14 @@ bool connect(const QString &service, const QString &path, const QString &interfa
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT1 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QString par3 = QLatin1String( hb_parc(3) );
     QString par4 = QLatin1String( hb_parc(4) );
-    QObject * par5 = (QObject *) _qtxhb_itemGetPtr(5);
+    QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
     const char * par6 = hb_parc(6);
     hb_retl( obj->connect ( par1, par2, par3, par4, par5,  (const char *) par6 ) );
   }
@@ -345,7 +345,7 @@ bool connect(const QString &service, const QString &path, const QString &interfa
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT2 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT2 )
     QString par3 = QLatin1String( hb_parc(3) );
     QString par4 = QLatin1String( hb_parc(4) );
     QString par5 = QLatin1String( hb_parc(5) );
-    QObject * par6 = (QObject *) _qtxhb_itemGetPtr(6);
+    QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
     const char * par7 = hb_parc(7);
     hb_retl( obj->connect ( par1, par2, par3, par4, par5, par6,  (const char *) par7 ) );
   }
@@ -364,7 +364,7 @@ bool connect(const QString &service, const QString &path, const QString &interfa
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -381,7 +381,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
 par5 << temp;
 }
     QString par6 = QLatin1String( hb_parc(6) );
-    QObject * par7 = (QObject *) _qtxhb_itemGetPtr(7);
+    QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
     hb_retl( obj->connect ( par1, par2, par3, par4, par5, par6, par7,  (const char *) par8 ) );
   }
@@ -402,14 +402,14 @@ bool disconnect(const QString &service, const QString &path, const QString &inte
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT1 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QString par3 = QLatin1String( hb_parc(3) );
     QString par4 = QLatin1String( hb_parc(4) );
-    QObject * par5 = (QObject *) _qtxhb_itemGetPtr(5);
+    QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
     const char * par6 = hb_parc(6);
     hb_retl( obj->disconnect ( par1, par2, par3, par4, par5,  (const char *) par6 ) );
   }
@@ -420,7 +420,7 @@ bool disconnect(const QString &service, const QString &path, const QString &inte
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT2 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT2 )
     QString par3 = QLatin1String( hb_parc(3) );
     QString par4 = QLatin1String( hb_parc(4) );
     QString par5 = QLatin1String( hb_parc(5) );
-    QObject * par6 = (QObject *) _qtxhb_itemGetPtr(6);
+    QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
     const char * par7 = hb_parc(7);
     hb_retl( obj->disconnect ( par1, par2, par3, par4, par5, par6,  (const char *) par7 ) );
   }
@@ -439,7 +439,7 @@ bool disconnect(const QString &service, const QString &path, const QString &inte
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -456,7 +456,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
 par5 << temp;
 }
     QString par6 = QLatin1String( hb_parc(6) );
-    QObject * par7 = (QObject *) _qtxhb_itemGetPtr(7);
+    QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
     hb_retl( obj->disconnect ( par1, par2, par3, par4, par5, par6, par7,  (const char *) par8 ) );
   }
@@ -477,11 +477,11 @@ bool registerObject(const QString &path, QObject *object,RegisterOptions options
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->registerObject ( par1, par2 ) );
   }
 }
@@ -492,7 +492,7 @@ void unregisterObject(const QString &path, UnregisterMode mode = UnregisterNode)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTEROBJECT )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -507,7 +507,7 @@ QObject *objectRegisteredAt(const QString &path) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -522,11 +522,11 @@ bool registerVirtualObject(const QString &path, QDBusVirtualObject *object,Virtu
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERVIRTUALOBJECT )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QDBusVirtualObject * par2 = (QDBusVirtualObject *) _qtxhb_itemGetPtr(2);
+    QDBusVirtualObject * par2 = (QDBusVirtualObject *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->registerVirtualObject ( par1, par2 ) );
   }
 }
@@ -537,7 +537,7 @@ bool registerService(const QString &serviceName)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERSERVICE )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -551,7 +551,7 @@ bool unregisterService(const QString &serviceName)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTERSERVICE )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -565,7 +565,7 @@ QDBusConnectionInterface *interface() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusConnectionInterface * ptr = obj->interface (  );
@@ -579,7 +579,7 @@ void *internalPointer() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retptr( (void *) obj->internalPointer (  ) );

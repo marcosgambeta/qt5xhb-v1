@@ -89,7 +89,7 @@ QWebDatabase ( const QWebDatabase & other )
 HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWebDatabase * par1 = (QWebDatabase *) _qtxhb_itemGetPtr(1);
+  QWebDatabase * par1 = (QWebDatabase *) _qt5xhb_itemGetPtr(1);
   QWebDatabase * o = new QWebDatabase ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebDatabase *) o );
@@ -125,7 +125,7 @@ QString displayName () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->displayName (  ).toLatin1().data() );
@@ -138,7 +138,7 @@ qint64 expectedSize () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->expectedSize (  ) );
@@ -151,7 +151,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -164,7 +164,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -177,7 +177,7 @@ QWebSecurityOrigin origin () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin (  ) );
@@ -191,7 +191,7 @@ qint64 size () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );
@@ -214,7 +214,7 @@ static void removeDatabase ( const QWebDatabase & db )
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
-  QWebDatabase * par1 = (QWebDatabase *) _qtxhb_itemGetPtr(1);
+  QWebDatabase * par1 = (QWebDatabase *) _qt5xhb_itemGetPtr(1);
   QWebDatabase::removeDatabase ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }

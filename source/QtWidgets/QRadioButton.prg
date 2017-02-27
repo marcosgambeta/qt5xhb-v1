@@ -76,7 +76,7 @@ QRadioButton ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QRADIOBUTTON_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QRadioButton * o = new QRadioButton ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadioButton *) o );
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QRadioButton * o = new QRadioButton ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadioButton *) o );
@@ -145,7 +145,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {
-  QRadioButton * obj = (QRadioButton *) _qtxhb_itemGetPtrStackSelfItem();
+  QRadioButton * obj = (QRadioButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );

@@ -70,7 +70,7 @@ QFinalState(QState * parent = 0)
 HB_FUNC_STATIC( QFINALSTATE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qtxhb_itemGetPtr(1);
+  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QFinalState * o = new QFinalState ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFinalState *) o );

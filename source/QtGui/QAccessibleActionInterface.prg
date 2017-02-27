@@ -103,11 +103,11 @@ virtual QStringList actionNames() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->actionNames (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -117,7 +117,7 @@ virtual QString localizedActionName(const QString &name) const
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -131,7 +131,7 @@ virtual QString localizedActionDescription(const QString &name) const
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -145,7 +145,7 @@ virtual void doAction(const QString &actionName) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -160,12 +160,12 @@ virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QStringList strl = obj->keyBindingsForAction ( par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

@@ -107,7 +107,7 @@ virtual QString codeTemplate () const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->codeTemplate (  ).toLatin1().data() );
@@ -120,10 +120,10 @@ virtual QWidget * createWidget ( QWidget * parent ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->createWidget ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -135,7 +135,7 @@ virtual QString domXml () const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->domXml (  ).toLatin1().data() );
@@ -148,7 +148,7 @@ virtual QString group () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->group (  ).toLatin1().data() );
@@ -161,7 +161,7 @@ virtual QIcon icon () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
@@ -175,7 +175,7 @@ virtual QString includeFile () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->includeFile (  ).toLatin1().data() );
@@ -188,10 +188,10 @@ virtual void initialize ( QDesignerFormEditorInterface * formEditor )
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDesignerFormEditorInterface * par1 = (QDesignerFormEditorInterface *) _qtxhb_itemGetPtr(1);
+    QDesignerFormEditorInterface * par1 = (QDesignerFormEditorInterface *) _qt5xhb_itemGetPtr(1);
     obj->initialize ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -203,7 +203,7 @@ virtual bool isContainer () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isContainer (  ) );
@@ -216,7 +216,7 @@ virtual bool isInitialized () const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isInitialized (  ) );
@@ -229,7 +229,7 @@ virtual QString name () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -242,7 +242,7 @@ virtual QString toolTip () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toolTip (  ).toLatin1().data() );
@@ -255,7 +255,7 @@ virtual QString whatsThis () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
 {
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->whatsThis (  ).toLatin1().data() );

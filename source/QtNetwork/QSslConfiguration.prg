@@ -124,7 +124,7 @@ QSslConfiguration ( const QSslConfiguration & other )
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QSslConfiguration * par1 = (QSslConfiguration *) _qtxhb_itemGetPtr(1);
+  QSslConfiguration * par1 = (QSslConfiguration *) _qt5xhb_itemGetPtr(1);
   QSslConfiguration * o = new QSslConfiguration ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslConfiguration *) o );
@@ -179,7 +179,7 @@ QList<QSslCertificate> caCertificates () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QSslCertificate> list = obj->caCertificates (  );
@@ -227,7 +227,7 @@ QList<QSslCipher> ciphers () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QSslCipher> list = obj->ciphers (  );
@@ -275,7 +275,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -288,7 +288,7 @@ QSslCertificate localCertificate () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSslCertificate * ptr = new QSslCertificate( obj->localCertificate (  ) );
@@ -302,7 +302,7 @@ QSslCertificate peerCertificate () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate (  ) );
@@ -316,7 +316,7 @@ QList<QSslCertificate> peerCertificateChain () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QSslCertificate> list = obj->peerCertificateChain (  );
@@ -364,7 +364,7 @@ int peerVerifyDepth () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->peerVerifyDepth (  ) );
@@ -377,7 +377,7 @@ QSslSocket::PeerVerifyMode peerVerifyMode () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->peerVerifyMode (  ) );
@@ -390,7 +390,7 @@ QSslKey privateKey () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSslKey * ptr = new QSslKey( obj->privateKey (  ) );
@@ -404,7 +404,7 @@ QSsl::SslProtocol protocol () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->protocol (  ) );
@@ -417,7 +417,7 @@ QSslCipher sessionCipher () const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSslCipher * ptr = new QSslCipher( obj->sessionCipher (  ) );
@@ -431,7 +431,7 @@ void setCaCertificates ( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QSslCertificate> par1;
@@ -453,7 +453,7 @@ void setCiphers ( const QList<QSslCipher> & ciphers )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QSslCipher> par1;
@@ -475,10 +475,10 @@ void setLocalCertificate ( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslCertificate * par1 = (QSslCertificate *) _qtxhb_itemGetPtr(1);
+    QSslCertificate * par1 = (QSslCertificate *) _qt5xhb_itemGetPtr(1);
     obj->setLocalCertificate ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -490,7 +490,7 @@ void setPeerVerifyDepth ( int depth )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setPeerVerifyDepth ( (int) hb_parni(1) );
@@ -504,7 +504,7 @@ void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -519,10 +519,10 @@ void setPrivateKey ( const QSslKey & key )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslKey * par1 = (QSslKey *) _qtxhb_itemGetPtr(1);
+    QSslKey * par1 = (QSslKey *) _qt5xhb_itemGetPtr(1);
     obj->setPrivateKey ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -534,7 +534,7 @@ void setProtocol ( QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -559,7 +559,7 @@ static void setDefaultConfiguration ( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 {
-  QSslConfiguration * par1 = (QSslConfiguration *) _qtxhb_itemGetPtr(1);
+  QSslConfiguration * par1 = (QSslConfiguration *) _qt5xhb_itemGetPtr(1);
   QSslConfiguration::setDefaultConfiguration ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }

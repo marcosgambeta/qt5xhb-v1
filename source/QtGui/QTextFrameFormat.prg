@@ -135,7 +135,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -148,7 +148,7 @@ void setPosition(Position f)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -163,7 +163,7 @@ Position position() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->position (  ) );
@@ -176,7 +176,7 @@ void setBorder(qreal border)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDER )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -191,7 +191,7 @@ qreal border() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->border (  ) );
@@ -204,10 +204,10 @@ void setBorderBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * par1 = (QBrush *) _qtxhb_itemGetPtr(1);
+    QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
     obj->setBorderBrush ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -219,7 +219,7 @@ QBrush borderBrush() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->borderBrush (  ) );
@@ -233,7 +233,7 @@ void setBorderStyle(BorderStyle style)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -248,7 +248,7 @@ BorderStyle borderStyle() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->borderStyle (  ) );
@@ -261,7 +261,7 @@ void setMargin(qreal margin)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -276,7 +276,7 @@ qreal margin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->margin (  ) );
@@ -289,7 +289,7 @@ void setTopMargin(qreal margin)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -304,7 +304,7 @@ qreal topMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->topMargin (  ) );
@@ -317,7 +317,7 @@ void setBottomMargin(qreal margin)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -332,7 +332,7 @@ qreal bottomMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->bottomMargin (  ) );
@@ -345,7 +345,7 @@ void setLeftMargin(qreal margin)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETLEFTMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -360,7 +360,7 @@ qreal leftMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->leftMargin (  ) );
@@ -373,7 +373,7 @@ void setRightMargin(qreal margin)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETRIGHTMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -388,7 +388,7 @@ qreal rightMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->rightMargin (  ) );
@@ -401,7 +401,7 @@ void setPadding(qreal padding)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPADDING )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -416,7 +416,7 @@ qreal padding() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->padding (  ) );
@@ -429,7 +429,7 @@ void setWidth(qreal width)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH1 )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -444,10 +444,10 @@ void setWidth(const QTextLength &length)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH2 )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextLength * par1 = (QTextLength *) _qtxhb_itemGetPtr(1);
+    QTextLength * par1 = (QTextLength *) _qt5xhb_itemGetPtr(1);
     obj->setWidth ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -459,7 +459,7 @@ QTextLength width() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextLength * ptr = new QTextLength( obj->width (  ) );
@@ -473,7 +473,7 @@ void setHeight(qreal height)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT1 )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -488,10 +488,10 @@ void setHeight(const QTextLength &height)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT2 )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextLength * par1 = (QTextLength *) _qtxhb_itemGetPtr(1);
+    QTextLength * par1 = (QTextLength *) _qt5xhb_itemGetPtr(1);
     obj->setHeight ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -503,7 +503,7 @@ QTextLength height() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextLength * ptr = new QTextLength( obj->height (  ) );
@@ -517,7 +517,7 @@ void setPageBreakPolicy(PageBreakFlags flags)
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -532,7 +532,7 @@ PageBreakFlags pageBreakPolicy() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
 {
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->pageBreakPolicy (  ) );

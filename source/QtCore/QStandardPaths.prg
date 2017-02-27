@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
 {
   int par1 = hb_parni(1);
   QStringList strl = QStandardPaths::standardLocations (  (QStandardPaths::StandardLocation) par1 );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
   QString par2 = QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
   QStringList strl = QStandardPaths::locateAll (  (QStandardPaths::StandardLocation) par1, par2,  (QStandardPaths::LocateOptions) par3 );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
 

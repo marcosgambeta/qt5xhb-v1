@@ -110,7 +110,7 @@ virtual void setUpdateInterval(int msec)
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SETUPDATEINTERVAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setUpdateInterval ( (int) hb_parni(1) );
@@ -126,7 +126,7 @@ int updateInterval() const
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_UPDATEINTERVAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->updateInterval (  ) );
@@ -141,7 +141,7 @@ virtual void setPreferredPositioningMethods(PositioningMethods methods)
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SETPREFERREDPOSITIONINGMETHODS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -158,7 +158,7 @@ PositioningMethods preferredPositioningMethods() const
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_PREFERREDPOSITIONINGMETHODS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->preferredPositioningMethods (  ) );
@@ -173,7 +173,7 @@ virtual QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsO
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGeoPositionInfo * ptr = new QGeoPositionInfo( obj->lastKnownPosition ( (bool) ISNIL(1)? false : hb_parl(1) ) );
@@ -189,7 +189,7 @@ virtual PositioningMethods supportedPositioningMethods() const = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->supportedPositioningMethods (  ) );
@@ -204,7 +204,7 @@ virtual int minimumUpdateInterval() const = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->minimumUpdateInterval (  ) );
@@ -219,7 +219,7 @@ QString sourceName() const
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SOURCENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->sourceName (  ).toLatin1().data() );
@@ -234,7 +234,7 @@ virtual Error error() const = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -249,7 +249,7 @@ virtual void startUpdates() = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_STARTUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->startUpdates (  );
@@ -265,7 +265,7 @@ virtual void stopUpdates() = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_STOPUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stopUpdates (  );
@@ -281,7 +281,7 @@ virtual void requestUpdate(int timeout = 0) = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_REQUESTUPDATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->requestUpdate ( (int) ISNIL(1)? 0 : hb_parni(1) );
@@ -297,7 +297,7 @@ static QGeoPositionInfoSource *createDefaultSource(QObject *parent)
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource ( par1 );
   _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
 #endif
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATESOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource ( par1, par2 );
   _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
 #endif
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_AVAILABLESOURCES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QStringList strl = QGeoPositionInfoSource::availableSources (  );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 #endif
 }
 

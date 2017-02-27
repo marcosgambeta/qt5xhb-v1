@@ -102,7 +102,7 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDeclarativeScriptString * par1 = (QDeclarativeScriptString *) _qtxhb_itemGetPtr(1);
+  QDeclarativeScriptString * par1 = (QDeclarativeScriptString *) _qt5xhb_itemGetPtr(1);
   QDeclarativeScriptString * o = new QDeclarativeScriptString ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeScriptString *) o );
@@ -138,7 +138,7 @@ QDeclarativeContext * context () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDeclarativeContext * ptr = obj->context (  );
@@ -152,7 +152,7 @@ QObject * scopeObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->scopeObject (  );
@@ -166,7 +166,7 @@ QString script () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->script (  ).toLatin1().data() );
@@ -179,10 +179,10 @@ void setContext ( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDeclarativeContext * par1 = (QDeclarativeContext *) _qtxhb_itemGetPtr(1);
+    QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
     obj->setContext ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -194,10 +194,10 @@ void setScopeObject ( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->setScopeObject ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,7 +209,7 @@ void setScript ( const QString & script )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

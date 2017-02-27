@@ -85,7 +85,7 @@ QScrollArea ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QScrollArea * o = new QScrollArea ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScrollArea *) o );
@@ -118,7 +118,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->alignment (  ) );
@@ -131,7 +131,7 @@ void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->ensureVisible ( (int) hb_parni(1), (int) hb_parni(2), (int) ISNIL(3)? 50 : hb_parni(3), (int) ISNIL(4)? 50 : hb_parni(4) );
@@ -145,10 +145,10 @@ void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin 
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->ensureWidgetVisible ( par1, (int) ISNIL(2)? 50 : hb_parni(2), (int) ISNIL(3)? 50 : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -160,7 +160,7 @@ void setAlignment ( Qt::Alignment )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -175,10 +175,10 @@ void setWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -190,7 +190,7 @@ void setWidgetResizable ( bool resizable )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setWidgetResizable ( (bool) hb_parl(1) );
@@ -204,7 +204,7 @@ QWidget * takeWidget ()
 */
 HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->takeWidget (  );
@@ -218,7 +218,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
@@ -232,7 +232,7 @@ bool widgetResizable () const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->widgetResizable (  ) );
@@ -245,7 +245,7 @@ virtual bool focusNextPrevChild ( bool next )
 */
 HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->focusNextPrevChild ( (bool) hb_parl(1) ) );
@@ -258,7 +258,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
 {
-  QScrollArea * obj = (QScrollArea *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );

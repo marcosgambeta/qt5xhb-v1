@@ -103,7 +103,7 @@ QHelpContentItem * child ( int row ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHelpContentItem * ptr = obj->child ( (int) hb_parni(1) );
@@ -117,7 +117,7 @@ int childCount () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->childCount (  ) );
@@ -130,10 +130,10 @@ int childPosition ( QHelpContentItem * child ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHelpContentItem * par1 = (QHelpContentItem *) _qtxhb_itemGetPtr(1);
+    QHelpContentItem * par1 = (QHelpContentItem *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->childPosition ( par1 ) );
   }
 }
@@ -144,7 +144,7 @@ QHelpContentItem * parent () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QHelpContentItem * ptr = obj->parent (  );
@@ -158,7 +158,7 @@ int row () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->row (  ) );
@@ -171,7 +171,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -184,7 +184,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );

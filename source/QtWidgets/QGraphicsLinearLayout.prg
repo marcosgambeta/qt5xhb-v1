@@ -97,7 +97,7 @@ QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+  QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsLinearLayout *) o );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QGraphicsLayoutItem * par2 = ISNIL(2)? 0 : (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(2);
+  QGraphicsLayoutItem * par2 = ISNIL(2)? 0 : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsLinearLayout * o = new QGraphicsLinearLayout (  (Qt::Orientation) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsLinearLayout *) o );
@@ -166,10 +166,10 @@ void addItem ( QGraphicsLayoutItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDITEM )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     obj->addItem ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -181,7 +181,7 @@ void addStretch ( int stretch = 1 )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->addStretch ( (int) ISNIL(1)? 1 : hb_parni(1) );
@@ -195,10 +195,10 @@ Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ALIGNMENT )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->alignment ( par1 ) );
   }
 }
@@ -209,10 +209,10 @@ void insertItem ( int index, QGraphicsLayoutItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTITEM )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par2 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(2);
+    QGraphicsLayoutItem * par2 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(2);
     obj->insertItem ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -224,7 +224,7 @@ void insertStretch ( int index, int stretch = 1 )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->insertStretch ( (int) hb_parni(1), (int) ISNIL(2)? 1 : hb_parni(2) );
@@ -238,7 +238,7 @@ qreal itemSpacing ( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->itemSpacing ( (int) hb_parni(1) ) );
@@ -251,7 +251,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );
@@ -264,10 +264,10 @@ void removeItem ( QGraphicsLayoutItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEITEM )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     obj->removeItem ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -279,10 +279,10 @@ void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETALIGNMENT )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->setAlignment ( par1,  (Qt::Alignment) par2 );
   }
@@ -295,7 +295,7 @@ void setItemSpacing ( int index, qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETITEMSPACING )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par2 = hb_parnd(2);
@@ -310,7 +310,7 @@ void setOrientation ( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -325,7 +325,7 @@ void setSpacing ( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSPACING )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -340,10 +340,10 @@ void setStretchFactor ( QGraphicsLayoutItem * item, int stretch )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     obj->setStretchFactor ( par1, (int) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,7 +355,7 @@ qreal spacing () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SPACING )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->spacing (  ) );
@@ -368,10 +368,10 @@ int stretchFactor ( QGraphicsLayoutItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(1);
+    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->stretchFactor ( par1 ) );
   }
 }
@@ -382,7 +382,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -395,7 +395,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INVALIDATE )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->invalidate (  );
@@ -409,7 +409,7 @@ virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
@@ -423,7 +423,7 @@ virtual void removeAt ( int index )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEAT )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->removeAt ( (int) hb_parni(1) );
@@ -437,10 +437,10 @@ virtual void setGeometry ( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETGEOMETRY )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     obj->setGeometry ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -452,11 +452,11 @@ virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
 {
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) _qtxhb_itemGetPtr(2);
+    QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2);
     QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }

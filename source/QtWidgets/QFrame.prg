@@ -88,7 +88,7 @@ QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QFRAME_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QFrame * o = new QFrame ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -122,7 +122,7 @@ QRect frameRect () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->frameRect (  ) );
@@ -136,7 +136,7 @@ Shadow frameShadow () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->frameShadow (  ) );
@@ -149,7 +149,7 @@ Shape frameShape () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->frameShape (  ) );
@@ -162,7 +162,7 @@ int frameStyle () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->frameStyle (  ) );
@@ -175,7 +175,7 @@ int frameWidth () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->frameWidth (  ) );
@@ -188,7 +188,7 @@ int lineWidth () const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lineWidth (  ) );
@@ -201,7 +201,7 @@ int midLineWidth () const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->midLineWidth (  ) );
@@ -214,10 +214,10 @@ void setFrameRect ( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->setFrameRect ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -229,7 +229,7 @@ void setFrameShadow ( Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -244,7 +244,7 @@ void setFrameShape ( Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -259,7 +259,7 @@ void setFrameStyle ( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setFrameStyle ( (int) hb_parni(1) );
@@ -273,7 +273,7 @@ void setLineWidth ( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLineWidth ( (int) hb_parni(1) );
@@ -287,7 +287,7 @@ void setMidLineWidth ( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMidLineWidth ( (int) hb_parni(1) );
@@ -301,7 +301,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
-  QFrame * obj = (QFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );

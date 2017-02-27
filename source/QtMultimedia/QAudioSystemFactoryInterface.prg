@@ -102,7 +102,7 @@ virtual QList<QByteArray> availableDevices(QAudio::Mode) const = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_AVAILABLEDEVICES )
 {
-  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -147,10 +147,10 @@ virtual QAbstractAudioInput* createInput(const QByteArray& device) = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEINPUT )
 {
-  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QAbstractAudioInput * ptr = obj->createInput ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTAUDIOINPUT" );
   }
@@ -162,10 +162,10 @@ virtual QAbstractAudioOutput* createOutput(const QByteArray& device) = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEOUTPUT )
 {
-  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QAbstractAudioOutput * ptr = obj->createOutput ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTAUDIOOUTPUT" );
   }
@@ -177,10 +177,10 @@ virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAu
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEDEVICEINFO )
 {
-  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     QAbstractAudioDeviceInfo * ptr = obj->createDeviceInfo ( *par1,  (QAudio::Mode) par2 );
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );

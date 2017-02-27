@@ -83,7 +83,7 @@ QJSValueIterator(const QJSValue & object)
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QJSValue * par1 = (QJSValue *) _qtxhb_itemGetPtr(1);
+  QJSValue * par1 = (QJSValue *) _qt5xhb_itemGetPtr(1);
   QJSValueIterator * o = new QJSValueIterator ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJSValueIterator *) o );
@@ -116,7 +116,7 @@ bool hasNext() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasNext (  ) );
@@ -129,7 +129,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NAME )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -142,7 +142,7 @@ bool next()
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->next (  ) );
@@ -155,7 +155,7 @@ QJSValue value() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qtxhb_itemGetPtrStackSelfItem();
+  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->value (  ) );

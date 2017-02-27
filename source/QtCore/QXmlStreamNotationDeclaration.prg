@@ -102,7 +102,7 @@ QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QXmlStreamNotationDeclaration * par1 = (QXmlStreamNotationDeclaration *) _qtxhb_itemGetPtr(1);
+  QXmlStreamNotationDeclaration * par1 = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtr(1);
   QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamNotationDeclaration *) o );
@@ -157,7 +157,7 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
 {
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->name (  ) );
@@ -171,7 +171,7 @@ QStringRef publicId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
 {
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->publicId (  ) );
@@ -185,7 +185,7 @@ QStringRef systemId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
 {
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->systemId (  ) );

@@ -108,7 +108,7 @@ QJsonObject(const QJsonObject & other)
 HB_FUNC_STATIC( QJSONOBJECT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QJsonObject * par1 = (QJsonObject *) _qtxhb_itemGetPtr(1);
+  QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
   QJsonObject * o = new QJsonObject ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJsonObject *) o );
@@ -165,7 +165,7 @@ bool contains(const QString & key) const
 */
 HB_FUNC_STATIC( QJSONOBJECT_CONTAINS )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -179,7 +179,7 @@ int count() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_COUNT )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -192,7 +192,7 @@ bool empty() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_EMPTY )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->empty (  ) );
@@ -211,7 +211,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_ISEMPTY )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -224,11 +224,11 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_KEYS )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->keys (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -238,7 +238,7 @@ int length() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_LENGTH )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->length (  ) );
@@ -251,7 +251,7 @@ void remove(const QString & key)
 */
 HB_FUNC_STATIC( QJSONOBJECT_REMOVE )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -266,7 +266,7 @@ int size() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_SIZE )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );
@@ -279,7 +279,7 @@ QJsonValue take(const QString & key)
 */
 HB_FUNC_STATIC( QJSONOBJECT_TAKE )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -295,7 +295,7 @@ QJsonValue value(const QString & key) const
 */
 HB_FUNC_STATIC( QJSONOBJECT_VALUE )
 {
-  QJsonObject * obj = (QJsonObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

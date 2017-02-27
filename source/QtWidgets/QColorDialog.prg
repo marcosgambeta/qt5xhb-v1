@@ -94,7 +94,7 @@ explicit QColorDialog ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QCOLORDIALOG_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QColorDialog * o = new QColorDialog ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QColorDialog *) o );
@@ -110,8 +110,8 @@ explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 HB_FUNC_STATIC( QCOLORDIALOG_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QColor par1 = ISOBJECT(1)? *(QColor *) _qtxhb_itemGetPtr(1) : QColor(hb_parc(1));
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QColorDialog * o = new QColorDialog ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QColorDialog *) o );
@@ -163,7 +163,7 @@ QColor currentColor () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QColor * ptr = new QColor( obj->currentColor (  ) );
@@ -176,10 +176,10 @@ void setCurrentColor ( const QColor & color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qtxhb_itemGetPtr(1) : QColor(hb_parc(1));
+    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
     obj->setCurrentColor ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -192,7 +192,7 @@ void open ()
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN1 )
 {
 #ifdef Q_NO_USING_KEYWORD
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->open (  );
@@ -206,10 +206,10 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN2 )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
     obj->open ( par1,  (const char *) par2 );
   }
@@ -241,7 +241,7 @@ ColorDialogOptions options () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->options (  ) );
@@ -253,7 +253,7 @@ void setOptions ( ColorDialogOptions options )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -268,7 +268,7 @@ QColor selectedColor () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QColor * ptr = new QColor( obj->selectedColor (  ) );
@@ -282,7 +282,7 @@ void setOption ( ColorDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -297,7 +297,7 @@ bool testOption ( ColorDialogOption option ) const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -311,7 +311,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
 {
-  QColorDialog * obj = (QColorDialog *) _qtxhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
@@ -335,7 +335,7 @@ static void setCustomColor(int index, QColor color)
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETCUSTOMCOLOR )
 {
-  QColor par2 = ISOBJECT(2)? *(QColor *) _qtxhb_itemGetPtr(2) : QColor(hb_parc(2));
+  QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
   QColorDialog::setCustomColor ( (int) hb_parni(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -355,8 +355,8 @@ static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, c
 */
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
-  QColor par1 = ISNIL(1)? Qt::white : ISOBJECT(1)? *(QColor *) _qtxhb_itemGetPtr(1) : QColor(hb_parc(1));
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QColor par1 = ISNIL(1)? Qt::white : ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
   QColor * ptr = new QColor( QColorDialog::getColor ( par1, par2, par3,  (QColorDialog::ColorDialogOptions) par4 ) );
@@ -401,7 +401,7 @@ static void setStandardColor(int index, QColor color)
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETSTANDARDCOLOR )
 {
-  QColor par2 = ISOBJECT(2)? *(QColor *) _qtxhb_itemGetPtr(2) : QColor(hb_parc(2));
+  QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
   QColorDialog::setStandardColor ( (int) hb_parni(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }

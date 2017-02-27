@@ -79,7 +79,7 @@ QAnimationDriver(QObject *parent = 0)
 HB_FUNC_STATIC( QANIMATIONDRIVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAnimationDriver * o = new QAnimationDriver ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAnimationDriver *) o );
@@ -112,7 +112,7 @@ virtual void advance()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ADVANCE )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->advance (  );
@@ -126,7 +126,7 @@ void install()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_INSTALL )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->install (  );
@@ -140,7 +140,7 @@ void uninstall()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_UNINSTALL )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->uninstall (  );
@@ -154,7 +154,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ISRUNNING )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRunning (  ) );
@@ -167,7 +167,7 @@ virtual qint64 elapsed() const
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ELAPSED )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->elapsed (  ) );
@@ -180,7 +180,7 @@ void setStartTime(qint64 startTime)
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_SETSTARTTIME )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setStartTime ( (qint64) hb_parni(1) );
@@ -194,7 +194,7 @@ qint64 startTime() const
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_STARTTIME )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->startTime (  ) );

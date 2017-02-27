@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QOpenGLTimerQuery * o = new QOpenGLTimerQuery ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLTimerQuery *) o );
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_CREATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->create (  ) );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_DESTROY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->destroy (  );
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISCREATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCreated (  ) );
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->objectId (  ) );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_BEGIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->begin (  );
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_END )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->end (  );
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     GLuint64 * ptr = new GLuint64( obj->waitForTimestamp (  ) );
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_RECORDTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->recordTimestamp (  );
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISRESULTAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isResultAvailable (  ) );
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     GLuint64 * ptr = new GLuint64( obj->waitForResult (  ) );

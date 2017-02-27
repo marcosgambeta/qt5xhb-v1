@@ -76,7 +76,7 @@ QOpenGLVertexArrayObject(QObject* parent = 0)
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QOpenGLVertexArrayObject * o = new QOpenGLVertexArrayObject ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLVertexArrayObject *) o );
@@ -109,7 +109,7 @@ bool create()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->create (  ) );
@@ -122,7 +122,7 @@ void destroy()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->destroy (  );
@@ -136,7 +136,7 @@ bool isCreated() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCreated (  ) );
@@ -149,7 +149,7 @@ GLuint objectId() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->objectId (  ) );
@@ -162,7 +162,7 @@ void bind()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->bind (  );
@@ -176,7 +176,7 @@ void release()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_RELEASE )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->release (  );

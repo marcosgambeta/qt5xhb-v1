@@ -91,7 +91,7 @@ QDomEntityReference ( const QDomEntityReference & x )
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomEntityReference * par1 = (QDomEntityReference *) _qtxhb_itemGetPtr(1);
+  QDomEntityReference * par1 = (QDomEntityReference *) _qt5xhb_itemGetPtr(1);
   QDomEntityReference * o = new QDomEntityReference ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomEntityReference *) o );
@@ -147,7 +147,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {
-  QDomEntityReference * obj = (QDomEntityReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomEntityReference * obj = (QDomEntityReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );

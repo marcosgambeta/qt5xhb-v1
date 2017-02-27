@@ -91,7 +91,7 @@ QBluetoothLocalDevice(QObject *parent = 0)
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothLocalDevice *) o );
@@ -107,8 +107,8 @@ QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * par1 = (QBluetoothAddress *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothLocalDevice *) o );
@@ -161,7 +161,7 @@ bool isValid() const
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -176,10 +176,10 @@ void requestPairing(const QBluetoothAddress &address, Pairing pairing)
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_REQUESTPAIRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBluetoothAddress * par1 = (QBluetoothAddress *) _qtxhb_itemGetPtr(1);
+    QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->requestPairing ( *par1,  (QBluetoothLocalDevice::Pairing) par2 );
   }
@@ -194,10 +194,10 @@ Pairing pairingStatus(const QBluetoothAddress &address) const
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBluetoothAddress * par1 = (QBluetoothAddress *) _qtxhb_itemGetPtr(1);
+    QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->pairingStatus ( *par1 ) );
   }
 #endif
@@ -210,7 +210,7 @@ void setHostMode(QBluetoothLocalDevice::HostMode mode)
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_SETHOSTMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -227,7 +227,7 @@ HostMode hostMode() const
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_HOSTMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->hostMode (  ) );
@@ -242,7 +242,7 @@ void powerOn()
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_POWERON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->powerOn (  );
@@ -258,7 +258,7 @@ QString name() const
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -273,7 +273,7 @@ QBluetoothAddress address() const
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->address (  ) );
@@ -289,7 +289,7 @@ void pairingConfirmation(bool confirmation)
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGCONFIRMATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->pairingConfirmation ( (bool) hb_parl(1) );

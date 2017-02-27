@@ -138,7 +138,7 @@ QPageLayout(const QPageLayout &other)
 HB_FUNC_STATIC( QPAGELAYOUT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPageLayout * par1 = (QPageLayout *) _qtxhb_itemGetPtr(1);
+  QPageLayout * par1 = (QPageLayout *) _qt5xhb_itemGetPtr(1);
   QPageLayout * o = new QPageLayout ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPageLayout *) o );
@@ -198,10 +198,10 @@ void swap(QPageLayout &other)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SWAP )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageLayout * par1 = (QPageLayout *) _qtxhb_itemGetPtr(1);
+    QPageLayout * par1 = (QPageLayout *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -213,10 +213,10 @@ bool isEquivalentTo(const QPageLayout &other) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ISEQUIVALENTTO )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageLayout * par1 = (QPageLayout *) _qtxhb_itemGetPtr(1);
+    QPageLayout * par1 = (QPageLayout *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->isEquivalentTo ( *par1 ) );
   }
 }
@@ -227,7 +227,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ISVALID )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -240,7 +240,7 @@ Mode mode() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MODE )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->mode (  ) );
@@ -252,7 +252,7 @@ void setMode(Mode mode)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMODE )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -267,7 +267,7 @@ QPageSize pageSize() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAGESIZE )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->pageSize (  ) );
@@ -281,7 +281,7 @@ Orientation orientation() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );
@@ -293,7 +293,7 @@ void setOrientation(Orientation orientation)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -308,7 +308,7 @@ Unit units() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->units (  ) );
@@ -320,7 +320,7 @@ void setUnits(Unit units)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -335,10 +335,10 @@ bool setMargins(const QMarginsF &margins)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMARGINS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * par1 = (QMarginsF *) _qtxhb_itemGetPtr(1);
+    QMarginsF * par1 = (QMarginsF *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->setMargins ( *par1 ) );
   }
 }
@@ -349,7 +349,7 @@ bool setLeftMargin(qreal leftMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETLEFTMARGIN )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -363,7 +363,7 @@ bool setRightMargin(qreal rightMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETRIGHTMARGIN )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -377,7 +377,7 @@ bool setTopMargin(qreal topMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETTOPMARGIN )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -391,7 +391,7 @@ bool setBottomMargin(qreal bottomMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETBOTTOMMARGIN )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -405,7 +405,7 @@ QMarginsF margins() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINS1 )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMarginsF * ptr = new QMarginsF( obj->margins (  ) );
@@ -418,7 +418,7 @@ QMarginsF margins(Unit units) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINS2 )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -452,7 +452,7 @@ QMargins marginsPoints() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPOINTS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->marginsPoints (  ) );
@@ -466,7 +466,7 @@ QMargins marginsPixels(int resolution) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->marginsPixels ( (int) hb_parni(1) ) );
@@ -480,10 +480,10 @@ void setMinimumMargins(const QMarginsF &minMargins)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMINIMUMMARGINS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * par1 = (QMarginsF *) _qtxhb_itemGetPtr(1);
+    QMarginsF * par1 = (QMarginsF *) _qt5xhb_itemGetPtr(1);
     obj->setMinimumMargins ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -495,7 +495,7 @@ QMarginsF minimumMargins() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MINIMUMMARGINS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMarginsF * ptr = new QMarginsF( obj->minimumMargins (  ) );
@@ -509,7 +509,7 @@ QMarginsF maximumMargins() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MAXIMUMMARGINS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMarginsF * ptr = new QMarginsF( obj->maximumMargins (  ) );
@@ -523,7 +523,7 @@ QRectF fullRect() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT1 )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->fullRect (  ) );
@@ -536,7 +536,7 @@ QRectF fullRect(Unit units) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT2 )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -570,7 +570,7 @@ QRect fullRectPoints() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPOINTS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->fullRectPoints (  ) );
@@ -584,7 +584,7 @@ QRect fullRectPixels(int resolution) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPIXELS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->fullRectPixels ( (int) hb_parni(1) ) );
@@ -598,7 +598,7 @@ QRectF paintRect() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT1 )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->paintRect (  ) );
@@ -611,7 +611,7 @@ QRectF paintRect(Unit units) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT2 )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -645,7 +645,7 @@ QRect paintRectPoints() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPOINTS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->paintRectPoints (  ) );
@@ -659,7 +659,7 @@ QRect paintRectPixels(int resolution) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPIXELS )
 {
-  QPageLayout * obj = (QPageLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->paintRectPixels ( (int) hb_parni(1) ) );

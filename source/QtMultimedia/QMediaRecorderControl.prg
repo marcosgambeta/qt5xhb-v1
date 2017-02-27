@@ -109,7 +109,7 @@ virtual void applySettings() = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_APPLYSETTINGS )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->applySettings (  );
@@ -123,7 +123,7 @@ virtual qint64 duration() const = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DURATION )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->duration (  ) );
@@ -136,7 +136,7 @@ virtual bool isMuted() const = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ISMUTED )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isMuted (  ) );
@@ -149,7 +149,7 @@ virtual QUrl outputLocation() const = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_OUTPUTLOCATION )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->outputLocation (  ) );
@@ -163,10 +163,10 @@ virtual bool setOutputLocation(const QUrl & location) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETOUTPUTLOCATION )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->setOutputLocation ( *par1 ) );
   }
 }
@@ -177,7 +177,7 @@ virtual QMediaRecorder::State state() const = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATE )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -190,7 +190,7 @@ virtual QMediaRecorder::Status status() const = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATUS )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->status (  ) );
@@ -203,7 +203,7 @@ virtual qreal volume() const = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_VOLUME )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->volume (  ) );
@@ -216,7 +216,7 @@ virtual void setMuted(bool muted) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETMUTED )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMuted ( (bool) hb_parl(1) );
@@ -230,7 +230,7 @@ virtual void setState(QMediaRecorder::State state) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -245,7 +245,7 @@ virtual void setVolume(qreal gain) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

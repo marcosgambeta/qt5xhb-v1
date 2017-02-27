@@ -83,7 +83,7 @@ explicit QWinJumpList(QObject *parent = 0)
 HB_FUNC_STATIC( QWINJUMPLIST_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QWinJumpList * o = new QWinJumpList ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWinJumpList *) o );
@@ -117,7 +117,7 @@ QString identifier() const
 HB_FUNC_STATIC( QWINJUMPLIST_IDENTIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->identifier (  ).toLatin1().data() );
@@ -131,7 +131,7 @@ void setIdentifier(const QString &identifier)
 HB_FUNC_STATIC( QWINJUMPLIST_SETIDENTIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -148,7 +148,7 @@ QWinJumpListCategory *recent() const
 HB_FUNC_STATIC( QWINJUMPLIST_RECENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWinJumpListCategory * ptr = obj->recent (  );
@@ -164,7 +164,7 @@ QWinJumpListCategory *frequent() const
 HB_FUNC_STATIC( QWINJUMPLIST_FREQUENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWinJumpListCategory * ptr = obj->frequent (  );
@@ -180,7 +180,7 @@ QWinJumpListCategory *tasks() const
 HB_FUNC_STATIC( QWINJUMPLIST_TASKS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWinJumpListCategory * ptr = obj->tasks (  );
@@ -196,7 +196,7 @@ QList<QWinJumpListCategory *> categories() const
 HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWinJumpListCategory *> list = obj->categories (  );
@@ -242,10 +242,10 @@ void addCategory(QWinJumpListCategory *category)
 HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWinJumpListCategory * par1 = (QWinJumpListCategory *) _qtxhb_itemGetPtr(1);
+    QWinJumpListCategory * par1 = (QWinJumpListCategory *) _qt5xhb_itemGetPtr(1);
     obj->addCategory ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -258,7 +258,7 @@ QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpList
 HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -303,7 +303,7 @@ void clear()
 HB_FUNC_STATIC( QWINJUMPLIST_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );

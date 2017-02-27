@@ -91,10 +91,10 @@ virtual void setSurface(QAbstractVideoSurface * surface) = 0
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SETSURFACE )
 {
-  QVideoRendererControl * obj = (QVideoRendererControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoRendererControl * obj = (QVideoRendererControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractVideoSurface * par1 = (QAbstractVideoSurface *) _qtxhb_itemGetPtr(1);
+    QAbstractVideoSurface * par1 = (QAbstractVideoSurface *) _qt5xhb_itemGetPtr(1);
     obj->setSurface ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -106,7 +106,7 @@ virtual QAbstractVideoSurface * surface() const = 0
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SURFACE )
 {
-  QVideoRendererControl * obj = (QVideoRendererControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoRendererControl * obj = (QVideoRendererControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAbstractVideoSurface * ptr = obj->surface (  );

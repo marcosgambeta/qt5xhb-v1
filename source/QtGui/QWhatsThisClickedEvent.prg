@@ -104,7 +104,7 @@ QString href() const
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->href (  ).toLatin1().data() );

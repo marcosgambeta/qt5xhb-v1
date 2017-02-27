@@ -104,7 +104,7 @@ QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QXmlStreamEntityDeclaration * par1 = (QXmlStreamEntityDeclaration *) _qtxhb_itemGetPtr(1);
+  QXmlStreamEntityDeclaration * par1 = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtr(1);
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamEntityDeclaration *) o );
@@ -159,7 +159,7 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->name (  ) );
@@ -173,7 +173,7 @@ QStringRef notationName() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->notationName (  ) );
@@ -187,7 +187,7 @@ QStringRef publicId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->publicId (  ) );
@@ -201,7 +201,7 @@ QStringRef systemId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->systemId (  ) );
@@ -215,7 +215,7 @@ QStringRef value() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->value (  ) );

@@ -137,7 +137,7 @@ QNetworkProxy ( const QNetworkProxy & other )
 HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QNetworkProxy * par1 = (QNetworkProxy *) _qtxhb_itemGetPtr(1);
+  QNetworkProxy * par1 = (QNetworkProxy *) _qt5xhb_itemGetPtr(1);
   QNetworkProxy * o = new QNetworkProxy ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxy *) o );
@@ -197,7 +197,7 @@ Capabilities capabilities () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->capabilities (  ) );
@@ -210,7 +210,7 @@ QString hostName () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->hostName (  ).toLatin1().data() );
@@ -223,7 +223,7 @@ bool isCachingProxy () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCachingProxy (  ) );
@@ -236,7 +236,7 @@ bool isTransparentProxy () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isTransparentProxy (  ) );
@@ -249,7 +249,7 @@ QString password () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->password (  ).toLatin1().data() );
@@ -262,7 +262,7 @@ quint16 port () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PORT )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->port (  ) );
@@ -275,7 +275,7 @@ void setCapabilities ( Capabilities capabilities )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -290,7 +290,7 @@ void setHostName ( const QString & hostName )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -305,7 +305,7 @@ void setPassword ( const QString & password )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -320,7 +320,7 @@ void setPort ( quint16 port )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setPort ( (quint16) hb_parni(1) );
@@ -334,7 +334,7 @@ void setType ( QNetworkProxy::ProxyType type )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -349,7 +349,7 @@ void setUser ( const QString & user )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -364,7 +364,7 @@ QNetworkProxy::ProxyType type () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -377,7 +377,7 @@ QString user () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_USER )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->user (  ).toLatin1().data() );
@@ -400,7 +400,7 @@ static void setApplicationProxy ( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
-  QNetworkProxy * par1 = (QNetworkProxy *) _qtxhb_itemGetPtr(1);
+  QNetworkProxy * par1 = (QNetworkProxy *) _qt5xhb_itemGetPtr(1);
   QNetworkProxy::setApplicationProxy ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }

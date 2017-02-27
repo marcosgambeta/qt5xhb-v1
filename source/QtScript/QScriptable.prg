@@ -103,7 +103,7 @@ QScriptValue argument(int index) const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
 {
-  QScriptable * obj = (QScriptable *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->argument ( (int) hb_parni(1) ) );
@@ -117,7 +117,7 @@ int argumentCount() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
 {
-  QScriptable * obj = (QScriptable *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->argumentCount (  ) );
@@ -130,7 +130,7 @@ QScriptContext * context() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
 {
-  QScriptable * obj = (QScriptable *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptContext * ptr = obj->context (  );
@@ -144,7 +144,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
 {
-  QScriptable * obj = (QScriptable *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptEngine * ptr = obj->engine (  );
@@ -158,7 +158,7 @@ QScriptValue thisObject() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
 {
-  QScriptable * obj = (QScriptable *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->thisObject (  ) );

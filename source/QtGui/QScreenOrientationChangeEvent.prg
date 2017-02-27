@@ -75,7 +75,7 @@ QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScreen * par1 = (QScreen *) _qtxhb_itemGetPtr(1);
+  QScreen * par1 = (QScreen *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QScreenOrientationChangeEvent * o = new QScreenOrientationChangeEvent ( par1,  (Qt::ScreenOrientation) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -109,7 +109,7 @@ QScreen *screen() const
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
 {
-  QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScreen * ptr = obj->screen (  );
@@ -123,7 +123,7 @@ Qt::ScreenOrientation orientation() const
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
 {
-  QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );

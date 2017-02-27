@@ -88,10 +88,10 @@ virtual bool filter(QAmbientTemperatureReading *reading) = 0
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) _qtxhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAmbientTemperatureReading * par1 = (QAmbientTemperatureReading *) _qtxhb_itemGetPtr(1);
+    QAmbientTemperatureReading * par1 = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->filter ( par1 ) );
   }
 #endif

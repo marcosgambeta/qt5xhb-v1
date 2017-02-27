@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-  QObject * par5 = ISNIL(5)? 0 : (QObject *) _qtxhb_itemGetPtr(5);
+  QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
   QDBusInterface * o = new QDBusInterface ( par1, par2, par3, par5 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusInterface *) o );
@@ -112,7 +112,7 @@ virtual const QMetaObject *metaObject() const
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
 {
-  QDBusInterface * obj = (QDBusInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QMetaObject * ptr = obj->metaObject (  );
@@ -126,7 +126,7 @@ virtual void *qt_metacast(const char *)
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
 {
-  QDBusInterface * obj = (QDBusInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -140,7 +140,7 @@ virtual int qt_metacall(QMetaObject::Call, int, void **)
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACALL )
 {
-  QDBusInterface * obj = (QDBusInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

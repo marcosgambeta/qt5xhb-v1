@@ -72,7 +72,7 @@ QAccessibleTextCursorEvent(QObject *obj, int cursorPos)
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QAccessibleTextCursorEvent * o = new QAccessibleTextCursorEvent ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -106,7 +106,7 @@ void setCursorPosition(int position)
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
 {
-  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCursorPosition ( (int) hb_parni(1) );
@@ -120,7 +120,7 @@ int cursorPosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION )
 {
-  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cursorPosition (  ) );

@@ -74,7 +74,7 @@ QAmbientLightSensor(QObject *parent = 0)
 HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAmbientLightSensor * o = new QAmbientLightSensor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAmbientLightSensor *) o );
@@ -108,7 +108,7 @@ QAmbientLightReading *reading() const
 HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientLightSensor * obj = (QAmbientLightSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QAmbientLightSensor * obj = (QAmbientLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAmbientLightReading * ptr = obj->reading (  );

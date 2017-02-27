@@ -97,7 +97,7 @@ QToolBox ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QToolBox * o = new QToolBox ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -131,11 +131,11 @@ int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 */
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM1 )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qtxhb_itemGetPtr(2) : QIcon(hb_parc(2));
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
     QString par3 = QLatin1String( hb_parc(3) );
     hb_retni( obj->addItem ( par1, par2, par3 ) );
   }
@@ -146,10 +146,10 @@ int addItem ( QWidget * w, const QString & text )
 */
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM2 )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     hb_retni( obj->addItem ( par1, par2 ) );
   }
@@ -180,7 +180,7 @@ int count () const
 */
 HB_FUNC_STATIC( QTOOLBOX_COUNT )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -193,7 +193,7 @@ int currentIndex () const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentIndex (  ) );
@@ -206,7 +206,7 @@ QWidget * currentWidget () const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->currentWidget (  );
@@ -220,10 +220,10 @@ int indexOf ( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->indexOf ( par1 ) );
   }
 }
@@ -234,11 +234,11 @@ int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString 
 */
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM1 )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
-    QIcon par3 = ISOBJECT(3)? *(QIcon *) _qtxhb_itemGetPtr(3) : QIcon(hb_parc(3));
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
+    QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
     QString par4 = QLatin1String( hb_parc(4) );
     hb_retni( obj->insertItem ( (int) hb_parni(1), par2, par3, par4 ) );
   }
@@ -249,10 +249,10 @@ int insertItem ( int index, QWidget * widget, const QString & text )
 */
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM2 )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     QString par3 = QLatin1String( hb_parc(3) );
     hb_retni( obj->insertItem ( (int) hb_parni(1), par2, par3 ) );
   }
@@ -283,7 +283,7 @@ bool isItemEnabled ( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isItemEnabled ( (int) hb_parni(1) ) );
@@ -296,7 +296,7 @@ QIcon itemIcon ( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->itemIcon ( (int) hb_parni(1) ) );
@@ -310,7 +310,7 @@ QString itemText ( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->itemText ( (int) hb_parni(1) ).toLatin1().data() );
@@ -323,7 +323,7 @@ QString itemToolTip ( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->itemToolTip ( (int) hb_parni(1) ).toLatin1().data() );
@@ -336,7 +336,7 @@ void removeItem ( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->removeItem ( (int) hb_parni(1) );
@@ -350,7 +350,7 @@ void setItemEnabled ( int index, bool enabled )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setItemEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
@@ -364,10 +364,10 @@ void setItemIcon ( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qtxhb_itemGetPtr(2) : QIcon(hb_parc(2));
+    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
     obj->setItemIcon ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -379,7 +379,7 @@ void setItemText ( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
@@ -394,7 +394,7 @@ void setItemToolTip ( int index, const QString & toolTip )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
@@ -409,7 +409,7 @@ QWidget * widget ( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->widget ( (int) hb_parni(1) );
@@ -423,7 +423,7 @@ void setCurrentIndex ( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCurrentIndex ( (int) hb_parni(1) );
@@ -437,10 +437,10 @@ void setCurrentWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
 {
-  QToolBox * obj = (QToolBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setCurrentWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

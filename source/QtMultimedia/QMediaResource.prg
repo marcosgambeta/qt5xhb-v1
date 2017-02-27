@@ -126,7 +126,7 @@ QMediaResource(const QUrl & url, const QString & mimeType = QString())
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QMediaResource * o = new QMediaResource ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -143,7 +143,7 @@ QMediaResource(const QNetworkRequest & request, const QString & mimeType = QStri
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QNetworkRequest * par1 = (QNetworkRequest *) _qtxhb_itemGetPtr(1);
+  QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QMediaResource * o = new QMediaResource ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -160,7 +160,7 @@ QMediaResource(const QMediaResource & other)
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QMediaResource * par1 = (QMediaResource *) _qtxhb_itemGetPtr(1);
+  QMediaResource * par1 = (QMediaResource *) _qt5xhb_itemGetPtr(1);
   QMediaResource * o = new QMediaResource ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaResource *) o );
@@ -222,7 +222,7 @@ int audioBitRate() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOBITRATE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->audioBitRate (  ) );
@@ -235,7 +235,7 @@ QString audioCodec() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOCODEC )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->audioCodec (  ).toLatin1().data() );
@@ -248,7 +248,7 @@ int channelCount() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_CHANNELCOUNT )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->channelCount (  ) );
@@ -261,7 +261,7 @@ qint64 dataSize() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_DATASIZE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->dataSize (  ) );
@@ -274,7 +274,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_ISNULL )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -287,7 +287,7 @@ QString language() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_LANGUAGE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->language (  ).toLatin1().data() );
@@ -300,7 +300,7 @@ QString mimeType() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_MIMETYPE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->mimeType (  ).toLatin1().data() );
@@ -313,7 +313,7 @@ QNetworkRequest request() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_REQUEST )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QNetworkRequest * ptr = new QNetworkRequest( obj->request (  ) );
@@ -327,7 +327,7 @@ QSize resolution() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_RESOLUTION )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->resolution (  ) );
@@ -341,7 +341,7 @@ int sampleRate() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SAMPLERATE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->sampleRate (  ) );
@@ -354,7 +354,7 @@ void setAudioBitRate(int rate)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOBITRATE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAudioBitRate ( (int) hb_parni(1) );
@@ -368,7 +368,7 @@ void setAudioCodec(const QString & codec)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOCODEC )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -383,7 +383,7 @@ void setChannelCount(int channels)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETCHANNELCOUNT )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setChannelCount ( (int) hb_parni(1) );
@@ -397,7 +397,7 @@ void setDataSize(const qint64 size)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETDATASIZE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDataSize ( (qint64) hb_parni(1) );
@@ -411,7 +411,7 @@ void setLanguage(const QString & language)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -426,10 +426,10 @@ void setResolution(const QSize & resolution)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION1 )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     obj->setResolution ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -441,7 +441,7 @@ void setResolution(int width, int height)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION2 )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setResolution ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -474,7 +474,7 @@ void setSampleRate(int sampleRate)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETSAMPLERATE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSampleRate ( (int) hb_parni(1) );
@@ -488,7 +488,7 @@ void setVideoBitRate(int rate)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOBITRATE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVideoBitRate ( (int) hb_parni(1) );
@@ -502,7 +502,7 @@ void setVideoCodec(const QString & codec)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOCODEC )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -517,7 +517,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_URL )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
@@ -531,7 +531,7 @@ int videoBitRate() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOBITRATE )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->videoBitRate (  ) );
@@ -544,7 +544,7 @@ QString videoCodec() const
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOCODEC )
 {
-  QMediaResource * obj = (QMediaResource *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->videoCodec (  ).toLatin1().data() );

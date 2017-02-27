@@ -89,7 +89,7 @@ qreal temperature() const
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->temperature (  ) );
@@ -104,7 +104,7 @@ void setTemperature(qreal temperature)
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

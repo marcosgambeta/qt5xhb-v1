@@ -96,7 +96,7 @@ virtual QAction * preferredEditAction () const
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 {
-  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAction * ptr = obj->preferredEditAction (  );
@@ -110,7 +110,7 @@ virtual QList<QAction *> taskActions () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
 {
-  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QAction *> list = obj->taskActions (  );

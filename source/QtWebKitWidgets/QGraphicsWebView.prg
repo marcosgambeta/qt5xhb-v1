@@ -113,7 +113,7 @@ QGraphicsWebView ( QGraphicsItem * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qtxhb_itemGetPtr(1);
+  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsWebView * o = new QGraphicsWebView ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsWebView *) o );
@@ -146,7 +146,7 @@ bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -161,7 +161,7 @@ QWebHistory * history () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebHistory * ptr = obj->history (  );
@@ -175,7 +175,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
@@ -189,7 +189,7 @@ bool isModified () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isModified (  ) );
@@ -202,7 +202,7 @@ bool isTiledBackingStoreFrozen () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isTiledBackingStoreFrozen (  ) );
@@ -215,10 +215,10 @@ void load ( const QUrl & url )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD1 )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->load ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -229,12 +229,12 @@ void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation op
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD2 )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkRequest * par1 = (QNetworkRequest *) _qtxhb_itemGetPtr(1);
+    QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
-    QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(3);
+    QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
     obj->load ( *par1,  (QNetworkAccessManager::Operation) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -265,7 +265,7 @@ QWebPage * page () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebPage * ptr = obj->page (  );
@@ -279,7 +279,7 @@ QAction * pageAction ( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -294,7 +294,7 @@ bool resizesToContents () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->resizesToContents (  ) );
@@ -307,12 +307,12 @@ void setContent ( const QByteArray & data, const QString & mimeType = QString(),
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qtxhb_itemGetPtr(3);
+    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
     obj->setContent ( *par1, par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -324,11 +324,11 @@ void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qtxhb_itemGetPtr(2);
+    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
     obj->setHtml ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -340,10 +340,10 @@ void setPage ( QWebPage * page )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebPage * par1 = (QWebPage *) _qtxhb_itemGetPtr(1);
+    QWebPage * par1 = (QWebPage *) _qt5xhb_itemGetPtr(1);
     obj->setPage ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,7 +355,7 @@ void setResizesToContents ( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setResizesToContents ( (bool) hb_parl(1) );
@@ -369,7 +369,7 @@ void setTiledBackingStoreFrozen ( bool frozen )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setTiledBackingStoreFrozen ( (bool) hb_parl(1) );
@@ -383,10 +383,10 @@ void setUrl ( const QUrl & )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     obj->setUrl ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -398,7 +398,7 @@ void setZoomFactor ( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -413,7 +413,7 @@ QWebSettings * settings () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebSettings * ptr = obj->settings (  );
@@ -427,7 +427,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -440,7 +440,7 @@ void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -455,7 +455,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
@@ -469,7 +469,7 @@ qreal zoomFactor () const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->zoomFactor (  ) );
@@ -482,7 +482,7 @@ void back ()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->back (  );
@@ -496,7 +496,7 @@ void forward ()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->forward (  );
@@ -510,7 +510,7 @@ void reload ()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reload (  );
@@ -524,7 +524,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );

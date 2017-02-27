@@ -121,7 +121,7 @@ void lockForRead()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qtxhb_itemGetPtrStackSelfItem();
+  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->lockForRead (  );
@@ -135,7 +135,7 @@ bool tryLockForRead()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD1 )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qtxhb_itemGetPtrStackSelfItem();
+  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->tryLockForRead (  ) );
@@ -148,7 +148,7 @@ bool tryLockForRead(int timeout)
 */
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD2 )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qtxhb_itemGetPtrStackSelfItem();
+  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->tryLockForRead ( (int) hb_parni(1) ) );
@@ -180,7 +180,7 @@ void lockForWrite()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qtxhb_itemGetPtrStackSelfItem();
+  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->lockForWrite (  );
@@ -194,7 +194,7 @@ bool tryLockForWrite()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE1 )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qtxhb_itemGetPtrStackSelfItem();
+  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->tryLockForWrite (  ) );
@@ -206,7 +206,7 @@ bool tryLockForWrite(int timeout)
 */
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE2 )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qtxhb_itemGetPtrStackSelfItem();
+  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->tryLockForWrite ( (int) hb_parni(1) ) );
@@ -238,7 +238,7 @@ void unlock()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qtxhb_itemGetPtrStackSelfItem();
+  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unlock (  );

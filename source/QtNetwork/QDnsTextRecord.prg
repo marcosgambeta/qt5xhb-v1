@@ -100,7 +100,7 @@ QDnsTextRecord(const QDnsTextRecord & other)
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDnsTextRecord * par1 = (QDnsTextRecord *) _qtxhb_itemGetPtr(1);
+  QDnsTextRecord * par1 = (QDnsTextRecord *) _qt5xhb_itemGetPtr(1);
   QDnsTextRecord * o = new QDnsTextRecord ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsTextRecord *) o );
@@ -152,7 +152,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_NAME )
 {
-  QDnsTextRecord * obj = (QDnsTextRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -165,10 +165,10 @@ void swap(QDnsTextRecord & other)
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_SWAP )
 {
-  QDnsTextRecord * obj = (QDnsTextRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDnsTextRecord * par1 = (QDnsTextRecord *) _qtxhb_itemGetPtr(1);
+    QDnsTextRecord * par1 = (QDnsTextRecord *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -180,7 +180,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_TIMETOLIVE )
 {
-  QDnsTextRecord * obj = (QDnsTextRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->timeToLive (  ) );
@@ -193,7 +193,7 @@ QList<QByteArray> values() const
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_VALUES )
 {
-  QDnsTextRecord * obj = (QDnsTextRecord *) _qtxhb_itemGetPtrStackSelfItem();
+  QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QByteArray> list = obj->values (  );

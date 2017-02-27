@@ -108,7 +108,7 @@ QPicture ( const QPicture & pic )
 HB_FUNC_STATIC( QPICTURE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPicture * par1 = (QPicture *) _qtxhb_itemGetPtr(1);
+  QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
   QPicture * o = new QPicture ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPicture *) o );
@@ -167,7 +167,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->boundingRect (  ) );
@@ -181,7 +181,7 @@ const char * data () const
 */
 HB_FUNC_STATIC( QPICTURE_DATA )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->data (  );
@@ -195,7 +195,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QPICTURE_ISNULL )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -208,7 +208,7 @@ bool load ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QPICTURE_LOAD1 )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -223,10 +223,10 @@ bool load ( QIODevice * dev, const char * format = 0 )
 */
 HB_FUNC_STATIC( QPICTURE_LOAD2 )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     hb_retl( obj->load ( par1,  (const char *) par2 ) );
   }
@@ -257,10 +257,10 @@ bool play ( QPainter * painter )
 */
 HB_FUNC_STATIC( QPICTURE_PLAY )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qtxhb_itemGetPtr(1);
+    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->play ( par1 ) );
   }
 }
@@ -271,7 +271,7 @@ bool save ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QPICTURE_SAVE1 )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -286,10 +286,10 @@ bool save ( QIODevice * dev, const char * format = 0 )
 */
 HB_FUNC_STATIC( QPICTURE_SAVE2 )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     hb_retl( obj->save ( par1,  (const char *) par2 ) );
   }
@@ -320,10 +320,10 @@ void setBoundingRect ( const QRect & r )
 */
 HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->setBoundingRect ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -335,7 +335,7 @@ virtual void setData ( const char * data, uint size )
 */
 HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -350,7 +350,7 @@ uint size () const
 */
 HB_FUNC_STATIC( QPICTURE_SIZE )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->size (  ) );
@@ -363,10 +363,10 @@ void swap ( QPicture & other )
 */
 HB_FUNC_STATIC( QPICTURE_SWAP )
 {
-  QPicture * obj = (QPicture *) _qtxhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPicture * par1 = (QPicture *) _qtxhb_itemGetPtr(1);
+    QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

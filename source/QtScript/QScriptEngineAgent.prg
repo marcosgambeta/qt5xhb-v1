@@ -92,7 +92,7 @@ QScriptEngineAgent(QScriptEngine * engine)
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScriptEngine * par1 = (QScriptEngine *) _qtxhb_itemGetPtr(1);
+  QScriptEngine * par1 = (QScriptEngine *) _qt5xhb_itemGetPtr(1);
   QScriptEngineAgent * o = new QScriptEngineAgent ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptEngineAgent *) o );
@@ -125,7 +125,7 @@ virtual void contextPop()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->contextPop (  );
@@ -139,7 +139,7 @@ virtual void contextPush()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->contextPush (  );
@@ -153,7 +153,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptEngine * ptr = obj->engine (  );
@@ -167,10 +167,10 @@ virtual void exceptionCatch(qint64 scriptId, const QScriptValue & exception)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par2 = (QScriptValue *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
     obj->exceptionCatch ( (qint64) hb_parni(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,10 +182,10 @@ virtual void exceptionThrow(qint64 scriptId, const QScriptValue & exception, boo
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par2 = (QScriptValue *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
     obj->exceptionThrow ( (qint64) hb_parni(1), *par2, (bool) hb_parl(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -197,11 +197,11 @@ virtual QVariant extension(Extension extension, const QVariant & argument = QVar
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->extension (  (QScriptEngineAgent::Extension) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -213,7 +213,7 @@ virtual void functionEntry(qint64 scriptId)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->functionEntry ( (qint64) hb_parni(1) );
@@ -227,10 +227,10 @@ virtual void functionExit(qint64 scriptId, const QScriptValue & returnValue)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par2 = (QScriptValue *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
     obj->functionExit ( (qint64) hb_parni(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -242,7 +242,7 @@ virtual void positionChange(qint64 scriptId, int lineNumber, int columnNumber)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->positionChange ( (qint64) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3) );
@@ -256,7 +256,7 @@ virtual void scriptLoad(qint64 id, const QString & program, const QString & file
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
@@ -272,7 +272,7 @@ virtual void scriptUnload(qint64 id)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->scriptUnload ( (qint64) hb_parni(1) );
@@ -286,7 +286,7 @@ virtual bool supportsExtension(Extension extension) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

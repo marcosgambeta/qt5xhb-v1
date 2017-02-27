@@ -88,7 +88,7 @@ explicit QSpinBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QSpinBox * o = new QSpinBox ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSpinBox *) o );
@@ -121,7 +121,7 @@ QString cleanText () const
 */
 HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->cleanText (  ).toLatin1().data() );
@@ -134,7 +134,7 @@ int maximum () const
 */
 HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->maximum (  ) );
@@ -146,7 +146,7 @@ void setMaximum ( int max )
 */
 HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMaximum ( (int) hb_parni(1) );
@@ -160,7 +160,7 @@ int minimum () const
 */
 HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->minimum (  ) );
@@ -172,7 +172,7 @@ void setMinimum ( int min )
 */
 HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMinimum ( (int) hb_parni(1) );
@@ -186,7 +186,7 @@ QString prefix () const
 */
 HB_FUNC_STATIC( QSPINBOX_PREFIX )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->prefix (  ).toLatin1().data() );
@@ -198,7 +198,7 @@ void setPrefix ( const QString & prefix )
 */
 HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -213,7 +213,7 @@ void setRange ( int min, int max )
 */
 HB_FUNC_STATIC( QSPINBOX_SETRANGE )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -227,7 +227,7 @@ int singleStep () const
 */
 HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->singleStep (  ) );
@@ -239,7 +239,7 @@ void setSingleStep ( int val )
 */
 HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSingleStep ( (int) hb_parni(1) );
@@ -253,7 +253,7 @@ QString suffix () const
 */
 HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->suffix (  ).toLatin1().data() );
@@ -265,7 +265,7 @@ void setSuffix ( const QString & suffix )
 */
 HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -280,7 +280,7 @@ int value () const
 */
 HB_FUNC_STATIC( QSPINBOX_VALUE )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->value (  ) );
@@ -292,7 +292,7 @@ void setValue ( int val )
 */
 HB_FUNC_STATIC( QSPINBOX_SETVALUE )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setValue ( (int) hb_parni(1) );
@@ -306,7 +306,7 @@ int displayIntegerBase() const
 */
 HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->displayIntegerBase (  ) );
@@ -318,7 +318,7 @@ void setDisplayIntegerBase(int base)
 */
 HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
 {
-  QSpinBox * obj = (QSpinBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDisplayIntegerBase ( (int) hb_parni(1) );

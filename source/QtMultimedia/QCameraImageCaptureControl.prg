@@ -97,7 +97,7 @@ virtual void cancelCapture() = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->cancelCapture (  );
@@ -111,7 +111,7 @@ virtual int capture(const QString & fileName) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -125,7 +125,7 @@ virtual QCameraImageCapture::DriveMode driveMode() const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->driveMode (  ) );
@@ -138,7 +138,7 @@ virtual bool isReadyForCapture() const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isReadyForCapture (  ) );
@@ -151,7 +151,7 @@ virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

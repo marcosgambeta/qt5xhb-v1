@@ -93,7 +93,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QJSONPARSEERROR_ERRORSTRING )
 {
-  QJsonParseError * obj = (QJsonParseError *) _qtxhb_itemGetPtrStackSelfItem();
+  QJsonParseError * obj = (QJsonParseError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );

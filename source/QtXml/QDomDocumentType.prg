@@ -100,7 +100,7 @@ QDomDocumentType ( const QDomDocumentType & n )
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomDocumentType * par1 = (QDomDocumentType *) _qtxhb_itemGetPtr(1);
+  QDomDocumentType * par1 = (QDomDocumentType *) _qt5xhb_itemGetPtr(1);
   QDomDocumentType * o = new QDomDocumentType ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomDocumentType *) o );
@@ -156,7 +156,7 @@ QDomNamedNodeMap entities () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities (  ) );
@@ -170,7 +170,7 @@ QString internalSubset () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->internalSubset (  ).toLatin1().data() );
@@ -183,7 +183,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -196,7 +196,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );
@@ -209,7 +209,7 @@ QDomNamedNodeMap notations () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations (  ) );
@@ -223,7 +223,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->publicId (  ).toLatin1().data() );
@@ -236,7 +236,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->systemId (  ).toLatin1().data() );

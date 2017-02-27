@@ -106,7 +106,7 @@ QWebElementCollection ( const QWebElement & contextElement, const QString & quer
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWebElement * par1 = (QWebElement *) _qtxhb_itemGetPtr(1);
+  QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QWebElementCollection * o = new QWebElementCollection ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -126,7 +126,7 @@ QWebElementCollection ( const QWebElementCollection & other )
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWebElementCollection * par1 = (QWebElementCollection *) _qtxhb_itemGetPtr(1);
+  QWebElementCollection * par1 = (QWebElementCollection *) _qt5xhb_itemGetPtr(1);
   QWebElementCollection * o = new QWebElementCollection ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebElementCollection *) o );
@@ -186,10 +186,10 @@ void append ( const QWebElementCollection & other )
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElementCollection * par1 = (QWebElementCollection *) _qtxhb_itemGetPtr(1);
+    QWebElementCollection * par1 = (QWebElementCollection *) _qt5xhb_itemGetPtr(1);
     obj->append ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -201,7 +201,7 @@ QWebElement at ( int i ) const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->at ( (int) hb_parni(1) ) );
@@ -219,7 +219,7 @@ int count () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -234,7 +234,7 @@ QWebElement first () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->first (  ) );
@@ -248,7 +248,7 @@ QWebElement last () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->last (  ) );
@@ -262,7 +262,7 @@ QList<QWebElement> toList () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qtxhb_itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWebElement> list = obj->toList (  );

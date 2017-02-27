@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(2);
+  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QMessageAuthenticationCode * o = new QMessageAuthenticationCode (  (QCryptographicHash::Algorithm) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMessageAuthenticationCode *) o );
@@ -121,7 +121,7 @@ void reset()
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESET )
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qtxhb_itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reset (  );
@@ -135,10 +135,10 @@ void setKey(const QByteArray &key)
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qtxhb_itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setKey ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -150,7 +150,7 @@ void addData(const char *data, int length)
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA1 )
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qtxhb_itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -165,10 +165,10 @@ void addData(const QByteArray &data)
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA2 )
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qtxhb_itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->addData ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -180,10 +180,10 @@ bool addData(QIODevice *device)
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA3 )
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qtxhb_itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->addData ( par1 ) );
   }
 }
@@ -218,7 +218,7 @@ QByteArray result() const
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qtxhb_itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->result (  ) );
@@ -232,8 +232,8 @@ static QByteArray hash(const QByteArray &message, const QByteArray &key,QCryptog
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
   QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *par1, *par2,  (QCryptographicHash::Algorithm) par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );

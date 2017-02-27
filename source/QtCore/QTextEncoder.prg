@@ -85,7 +85,7 @@ QTextEncoder(const QTextCodec * codec)
 HB_FUNC_STATIC( QTEXTENCODER_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  const QTextCodec * par1 = (const QTextCodec *) _qtxhb_itemGetPtr(1);
+  const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   QTextEncoder * o = new QTextEncoder ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextEncoder *) o );
@@ -101,7 +101,7 @@ QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 HB_FUNC_STATIC( QTEXTENCODER_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  const QTextCodec * par1 = (const QTextCodec *) _qtxhb_itemGetPtr(1);
+  const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QTextEncoder * o = new QTextEncoder ( par1,  (QTextCodec::ConversionFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -154,7 +154,7 @@ QByteArray fromUnicode(const QString & str)
 */
 HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE1 )
 {
-  QTextEncoder * obj = (QTextEncoder *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -168,10 +168,10 @@ QByteArray fromUnicode(const QChar * uc, int len)
 */
 HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE2 )
 {
-  QTextEncoder * obj = (QTextEncoder *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QChar * par1 = (const QChar *) _qtxhb_itemGetPtr(1);
+    const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
     QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1, (int) hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
@@ -202,7 +202,7 @@ bool hasFailure() const
 */
 HB_FUNC_STATIC( QTEXTENCODER_HASFAILURE )
 {
-  QTextEncoder * obj = (QTextEncoder *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasFailure (  ) );

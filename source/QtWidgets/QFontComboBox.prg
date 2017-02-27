@@ -82,7 +82,7 @@ QFontComboBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QFontComboBox * o = new QFontComboBox ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFontComboBox *) o );
@@ -115,7 +115,7 @@ QFont currentFont () const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QFont * ptr = new QFont( obj->currentFont (  ) );
@@ -129,7 +129,7 @@ FontFilters fontFilters () const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fontFilters (  ) );
@@ -142,7 +142,7 @@ void setFontFilters ( FontFilters filters )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -157,7 +157,7 @@ void setWritingSystem ( QFontDatabase::WritingSystem script )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -172,7 +172,7 @@ QFontDatabase::WritingSystem writingSystem () const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->writingSystem (  ) );
@@ -185,7 +185,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -199,10 +199,10 @@ void setCurrentFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qtxhb_itemGetPtr(1);
+    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
     obj->setCurrentFont ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

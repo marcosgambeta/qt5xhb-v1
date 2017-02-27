@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par1 = hb_parni(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QBluetoothSocket * o = new QBluetoothSocket (  (QBluetoothServiceInfo::Protocol) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothSocket *) o );
@@ -119,7 +119,7 @@ QBluetoothSocket(QObject *parent = 0)
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QBluetoothSocket * o = new QBluetoothSocket ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothSocket *) o );
@@ -172,7 +172,7 @@ void abort()
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ABORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->abort (  );
@@ -188,7 +188,7 @@ virtual void close()
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->close (  );
@@ -204,7 +204,7 @@ bool isSequential() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ISSEQUENTIAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSequential (  ) );
@@ -219,7 +219,7 @@ virtual qint64 bytesAvailable() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bytesAvailable (  ) );
@@ -234,7 +234,7 @@ virtual qint64 bytesToWrite() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESTOWRITE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bytesToWrite (  ) );
@@ -249,7 +249,7 @@ virtual bool canReadLine() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CANREADLINE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canReadLine (  ) );
@@ -264,10 +264,10 @@ void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBluetoothServiceInfo * par1 = (QBluetoothServiceInfo *) _qtxhb_itemGetPtr(1);
+    QBluetoothServiceInfo * par1 = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
     obj->connectToService ( *par1,  (QIODevice::OpenMode) par2 );
   }
@@ -281,11 +281,11 @@ void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uu
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBluetoothAddress * par1 = (QBluetoothAddress *) _qtxhb_itemGetPtr(1);
-    QBluetoothUuid * par2 = (QBluetoothUuid *) _qtxhb_itemGetPtr(2);
+    QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
+    QBluetoothUuid * par2 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
     obj->connectToService ( *par1, *par2,  (QIODevice::OpenMode) par3 );
   }
@@ -299,10 +299,10 @@ void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode o
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBluetoothAddress * par1 = (QBluetoothAddress *) _qtxhb_itemGetPtr(1);
+    QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
     obj->connectToService ( *par1, (quint16) hb_parni(2),  (QIODevice::OpenMode) par3 );
   }
@@ -341,7 +341,7 @@ void disconnectFromService()
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_DISCONNECTFROMSERVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->disconnectFromService (  );
@@ -357,7 +357,7 @@ QString localName() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->localName (  ).toLatin1().data() );
@@ -372,7 +372,7 @@ QBluetoothAddress localAddress() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->localAddress (  ) );
@@ -388,7 +388,7 @@ quint16 localPort() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->localPort (  ) );
@@ -403,7 +403,7 @@ QString peerName() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->peerName (  ).toLatin1().data() );
@@ -418,7 +418,7 @@ QBluetoothAddress peerAddress() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->peerAddress (  ) );
@@ -434,7 +434,7 @@ quint16 peerPort() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->peerPort (  ) );
@@ -449,7 +449,7 @@ bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol s
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -466,7 +466,7 @@ int socketDescriptor() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETDESCRIPTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->socketDescriptor (  ) );
@@ -481,7 +481,7 @@ QBluetoothServiceInfo::Protocol socketType() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->socketType (  ) );
@@ -496,7 +496,7 @@ SocketState state() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -511,7 +511,7 @@ SocketError error() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -526,7 +526,7 @@ QString errorString() const
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );

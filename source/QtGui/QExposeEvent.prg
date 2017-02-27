@@ -74,7 +74,7 @@ QExposeEvent(const QRegion & rgn)
 HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QRegion * par1 = (QRegion *) _qtxhb_itemGetPtr(1);
+  QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
   QExposeEvent * o = new QExposeEvent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QExposeEvent *) o );
@@ -107,7 +107,7 @@ const QRegion & region() const
 */
 HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
 {
-  QExposeEvent * obj = (QExposeEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QExposeEvent * obj = (QExposeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QRegion * ptr = &obj->region (  );

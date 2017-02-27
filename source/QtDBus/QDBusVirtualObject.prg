@@ -72,7 +72,7 @@ explicit QDBusVirtualObject(QObject *parent = 0)
 HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDBusVirtualObject * o = new QDBusVirtualObject ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusVirtualObject *) o );
@@ -105,7 +105,7 @@ virtual QString introspect(const QString &path) const = 0
 */
 HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_INTROSPECT )
 {
-  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -119,7 +119,7 @@ virtual bool handleMessage(const QDBusMessage &message, const QDBusConnection &c
 */
 HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_HANDLEMESSAGE )
 {
-  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->handleMessage (  ) );

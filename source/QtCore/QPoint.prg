@@ -158,7 +158,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPOINT_ISNULL )
 {
-  QPoint * obj = (QPoint *) _qtxhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -171,7 +171,7 @@ int manhattanLength() const
 */
 HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 {
-  QPoint * obj = (QPoint *) _qtxhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->manhattanLength (  ) );
@@ -186,7 +186,7 @@ void setX(int x)
 */
 HB_FUNC_STATIC( QPOINT_SETX )
 {
-  QPoint * obj = (QPoint *) _qtxhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setX ( (int) hb_parni(1) );
@@ -200,7 +200,7 @@ void setY(int y)
 */
 HB_FUNC_STATIC( QPOINT_SETY )
 {
-  QPoint * obj = (QPoint *) _qtxhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setY ( (int) hb_parni(1) );
@@ -214,7 +214,7 @@ int x() const
 */
 HB_FUNC_STATIC( QPOINT_X )
 {
-  QPoint * obj = (QPoint *) _qtxhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->x (  ) );
@@ -227,7 +227,7 @@ int y() const
 */
 HB_FUNC_STATIC( QPOINT_Y )
 {
-  QPoint * obj = (QPoint *) _qtxhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->y (  ) );

@@ -123,7 +123,7 @@ QFormLayout ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QFORMLAYOUT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QFormLayout * o = new QFormLayout ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFormLayout *) o );
@@ -156,11 +156,11 @@ void addRow ( QWidget * label, QWidget * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW1 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     obj->addRow ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -171,11 +171,11 @@ void addRow ( QWidget * label, QLayout * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW2 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
-    QLayout * par2 = (QLayout *) _qtxhb_itemGetPtr(2);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+    QLayout * par2 = (QLayout *) _qt5xhb_itemGetPtr(2);
     obj->addRow ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -186,11 +186,11 @@ void addRow ( const QString & labelText, QWidget * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW3 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     obj->addRow ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -201,11 +201,11 @@ void addRow ( const QString & labelText, QLayout * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW4 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QLayout * par2 = (QLayout *) _qtxhb_itemGetPtr(2);
+    QLayout * par2 = (QLayout *) _qt5xhb_itemGetPtr(2);
     obj->addRow ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -216,10 +216,10 @@ void addRow ( QWidget * widget )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW5 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->addRow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -230,10 +230,10 @@ void addRow ( QLayout * layout )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW6 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLayout * par1 = (QLayout *) _qtxhb_itemGetPtr(1);
+    QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
     obj->addRow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -284,7 +284,7 @@ FieldGrowthPolicy fieldGrowthPolicy () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->fieldGrowthPolicy (  ) );
@@ -297,7 +297,7 @@ Qt::Alignment formAlignment () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->formAlignment (  ) );
@@ -313,7 +313,7 @@ int horizontalSpacing () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->horizontalSpacing (  ) );
@@ -326,11 +326,11 @@ void insertRow ( int row, QWidget * label, QWidget * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW1 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
-    QWidget * par3 = (QWidget *) _qtxhb_itemGetPtr(3);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
+    QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
     obj->insertRow ( (int) hb_parni(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -341,11 +341,11 @@ void insertRow ( int row, QWidget * label, QLayout * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW2 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
-    QLayout * par3 = (QLayout *) _qtxhb_itemGetPtr(3);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
+    QLayout * par3 = (QLayout *) _qt5xhb_itemGetPtr(3);
     obj->insertRow ( (int) hb_parni(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -356,11 +356,11 @@ void insertRow ( int row, const QString & labelText, QWidget * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW3 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
-    QWidget * par3 = (QWidget *) _qtxhb_itemGetPtr(3);
+    QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
     obj->insertRow ( (int) hb_parni(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -371,11 +371,11 @@ void insertRow ( int row, const QString & labelText, QLayout * field )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW4 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
-    QLayout * par3 = (QLayout *) _qtxhb_itemGetPtr(3);
+    QLayout * par3 = (QLayout *) _qt5xhb_itemGetPtr(3);
     obj->insertRow ( (int) hb_parni(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -386,10 +386,10 @@ void insertRow ( int row, QWidget * widget )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW5 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     obj->insertRow ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -400,10 +400,10 @@ void insertRow ( int row, QLayout * layout )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW6 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLayout * par2 = (QLayout *) _qtxhb_itemGetPtr(2);
+    QLayout * par2 = (QLayout *) _qt5xhb_itemGetPtr(2);
     obj->insertRow ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -454,7 +454,7 @@ QLayoutItem * itemAt ( int row, ItemRole role ) const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT1 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -468,7 +468,7 @@ virtual QLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT2 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
@@ -501,7 +501,7 @@ Qt::Alignment labelAlignment () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->labelAlignment (  ) );
@@ -514,10 +514,10 @@ QWidget * labelForField ( QWidget * field ) const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD1 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->labelForField ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -528,10 +528,10 @@ QWidget * labelForField ( QLayout * field ) const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD2 )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLayout * par1 = (QLayout *) _qtxhb_itemGetPtr(1);
+    QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->labelForField ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -562,7 +562,7 @@ int rowCount () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowCount (  ) );
@@ -575,7 +575,7 @@ RowWrapPolicy rowWrapPolicy () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowWrapPolicy (  ) );
@@ -588,7 +588,7 @@ void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETFIELDGROWTHPOLICY )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -603,7 +603,7 @@ void setFormAlignment ( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETFORMALIGNMENT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -618,7 +618,7 @@ void setHorizontalSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setHorizontalSpacing ( (int) hb_parni(1) );
@@ -632,11 +632,11 @@ void setItem ( int row, ItemRole role, QLayoutItem * item )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETITEM )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
-    QLayout * par3 = (QLayout *) _qtxhb_itemGetPtr(3);
+    QLayout * par3 = (QLayout *) _qt5xhb_itemGetPtr(3);
     obj->setItem ( (int) hb_parni(1),  (QFormLayout::ItemRole) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -648,7 +648,7 @@ void setLabelAlignment ( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETLABELALIGNMENT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -663,11 +663,11 @@ void setLayout ( int row, ItemRole role, QLayout * layout )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETLAYOUT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
-    QLayout * par3 = (QLayout *) _qtxhb_itemGetPtr(3);
+    QLayout * par3 = (QLayout *) _qt5xhb_itemGetPtr(3);
     obj->setLayout ( (int) hb_parni(1),  (QFormLayout::ItemRole) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -679,7 +679,7 @@ void setRowWrapPolicy ( RowWrapPolicy policy )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETROWWRAPPOLICY )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -694,7 +694,7 @@ void setSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSpacing ( (int) hb_parni(1) );
@@ -708,7 +708,7 @@ void setVerticalSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVerticalSpacing ( (int) hb_parni(1) );
@@ -722,11 +722,11 @@ void setWidget ( int row, ItemRole role, QWidget * widget )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
-    QWidget * par3 = (QWidget *) _qtxhb_itemGetPtr(3);
+    QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
     obj->setWidget ( (int) hb_parni(1),  (QFormLayout::ItemRole) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -738,7 +738,7 @@ int spacing () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->spacing (  ) );
@@ -751,7 +751,7 @@ int verticalSpacing () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->verticalSpacing (  ) );
@@ -764,10 +764,10 @@ virtual void addItem ( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLayoutItem * par1 = (QLayoutItem *) _qtxhb_itemGetPtr(1);
+    QLayoutItem * par1 = (QLayoutItem *) _qt5xhb_itemGetPtr(1);
     obj->addItem ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -779,7 +779,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -792,7 +792,7 @@ virtual Qt::Orientations expandingDirections () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->expandingDirections (  ) );
@@ -805,7 +805,7 @@ virtual bool hasHeightForWidth () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasHeightForWidth (  ) );
@@ -818,7 +818,7 @@ virtual int heightForWidth ( int width ) const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
@@ -831,7 +831,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->invalidate (  );
@@ -845,7 +845,7 @@ virtual QSize minimumSize () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
@@ -859,10 +859,10 @@ virtual void setGeometry ( const QRect & rect )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->setGeometry ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -874,7 +874,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -888,7 +888,7 @@ virtual QLayoutItem * takeAt ( int index )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
 {
-  QFormLayout * obj = (QFormLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );

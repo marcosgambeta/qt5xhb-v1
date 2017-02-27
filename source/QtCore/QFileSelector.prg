@@ -81,7 +81,7 @@ QFileSelector(QObject *parent = 0)
 HB_FUNC_STATIC( QFILESELECTOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QFileSelector * o = new QFileSelector ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSelector *) o );
@@ -114,7 +114,7 @@ QString select(const QString &filePath) const
 */
 HB_FUNC_STATIC( QFILESELECTOR_SELECT1 )
 {
-  QFileSelector * obj = (QFileSelector *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -128,10 +128,10 @@ QUrl select(const QUrl &filePath) const
 */
 HB_FUNC_STATIC( QFILESELECTOR_SELECT2 )
 {
-  QFileSelector * obj = (QFileSelector *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->select ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -162,11 +162,11 @@ QStringList extraSelectors() const
 */
 HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 {
-  QFileSelector * obj = (QFileSelector *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->extraSelectors (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -176,7 +176,7 @@ void setExtraSelectors(const QStringList &list)
 */
 HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
 {
-  QFileSelector * obj = (QFileSelector *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
 QStringList par1;
@@ -199,11 +199,11 @@ QStringList allSelectors() const
 */
 HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
 {
-  QFileSelector * obj = (QFileSelector *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->allSelectors (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

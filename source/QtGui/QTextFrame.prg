@@ -87,7 +87,7 @@ QTextFrame(QTextDocument *doc)
 HB_FUNC_STATIC( QTEXTFRAME_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QTextDocument * par1 = (QTextDocument *) _qtxhb_itemGetPtr(1);
+  QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
   QTextFrame * o = new QTextFrame ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextFrame *) o );
@@ -120,10 +120,10 @@ void setFrameFormat(const QTextFrameFormat &format)
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrameFormat * par1 = (QTextFrameFormat *) _qtxhb_itemGetPtr(1);
+    QTextFrameFormat * par1 = (QTextFrameFormat *) _qt5xhb_itemGetPtr(1);
     obj->setFrameFormat ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -135,7 +135,7 @@ QTextFrameFormat frameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat (  ) );
@@ -149,7 +149,7 @@ QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition (  ) );
@@ -163,7 +163,7 @@ QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition (  ) );
@@ -177,7 +177,7 @@ int firstPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->firstPosition (  ) );
@@ -190,7 +190,7 @@ int lastPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lastPosition (  ) );
@@ -203,7 +203,7 @@ QTextFrameLayoutData *layoutData() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LAYOUTDATA )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextFrameLayoutData * ptr = obj->layoutData (  );
@@ -217,10 +217,10 @@ void setLayoutData(QTextFrameLayoutData *data)
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETLAYOUTDATA )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrameLayoutData * par1 = (QTextFrameLayoutData *) _qtxhb_itemGetPtr(1);
+    QTextFrameLayoutData * par1 = (QTextFrameLayoutData *) _qt5xhb_itemGetPtr(1);
     obj->setLayoutData ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -232,7 +232,7 @@ QList<QTextFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QTextFrame *> list = obj->childFrames (  );
@@ -276,7 +276,7 @@ QTextFrame *parentFrame() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {
-  QTextFrame * obj = (QTextFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTextFrame * ptr = obj->parentFrame (  );

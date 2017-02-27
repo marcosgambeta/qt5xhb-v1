@@ -100,7 +100,7 @@ virtual bool abort () = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->abort (  ) );
@@ -113,7 +113,7 @@ virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -127,7 +127,7 @@ virtual bool newPage () = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->newPage (  ) );
@@ -140,7 +140,7 @@ virtual QPrinter::PrinterState printerState () const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->printerState (  ) );
@@ -153,7 +153,7 @@ virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -168,11 +168,11 @@ virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) 
 */
 HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setProperty (  (QPrintEngine::PrintEnginePropertyKey) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );

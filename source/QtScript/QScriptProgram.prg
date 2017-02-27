@@ -116,7 +116,7 @@ QScriptProgram(const QScriptProgram & other)
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScriptProgram * par1 = (QScriptProgram *) _qtxhb_itemGetPtr(1);
+  QScriptProgram * par1 = (QScriptProgram *) _qt5xhb_itemGetPtr(1);
   QScriptProgram * o = new QScriptProgram ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptProgram *) o );
@@ -173,7 +173,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -186,7 +186,7 @@ int firstLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->firstLineNumber (  ) );
@@ -199,7 +199,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -212,7 +212,7 @@ QString sourceCode() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->sourceCode (  ).toLatin1().data() );

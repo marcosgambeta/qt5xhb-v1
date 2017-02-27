@@ -120,7 +120,7 @@ bool calledFromDBus() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
 {
-  QDBusContext * obj = (QDBusContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->calledFromDBus (  ) );
@@ -133,7 +133,7 @@ QDBusConnection connection() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
 {
-  QDBusContext * obj = (QDBusContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
@@ -147,7 +147,7 @@ const QDBusMessage &message() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
 {
-  QDBusContext * obj = (QDBusContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QDBusMessage * ptr = &obj->message (  );
@@ -161,7 +161,7 @@ bool isDelayedReply() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
 {
-  QDBusContext * obj = (QDBusContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isDelayedReply (  ) );
@@ -174,7 +174,7 @@ void setDelayedReply(bool enable) const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 {
-  QDBusContext * obj = (QDBusContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDelayedReply ( (bool) hb_parl(1) );
@@ -188,7 +188,7 @@ void sendErrorReply(const QString &name, const QString &msg = QString()) const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY1 )
 {
-  QDBusContext * obj = (QDBusContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -203,7 +203,7 @@ void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) 
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY2 )
 {
-  QDBusContext * obj = (QDBusContext *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

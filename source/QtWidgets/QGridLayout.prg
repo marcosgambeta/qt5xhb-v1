@@ -117,7 +117,7 @@ QGridLayout ( QWidget * parent )
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QGridLayout * o = new QGridLayout ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGridLayout *) o );
@@ -184,10 +184,10 @@ void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int col
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLayoutItem * par1 = (QLayoutItem *) _qtxhb_itemGetPtr(1);
+    QLayoutItem * par1 = (QLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
     obj->addItem ( par1, (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 1 : hb_parni(4), (int) ISNIL(5)? 1 : hb_parni(5),  (Qt::Alignment) par6 );
   }
@@ -200,10 +200,10 @@ void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment 
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT1 )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLayout * par1 = (QLayout *) _qtxhb_itemGetPtr(1);
+    QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
     obj->addLayout ( par1, (int) hb_parni(2), (int) hb_parni(3),  (Qt::Alignment) par4 );
   }
@@ -215,10 +215,10 @@ void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnS
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT2 )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLayout * par1 = (QLayout *) _qtxhb_itemGetPtr(1);
+    QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
     obj->addLayout ( par1, (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) hb_parni(5),  (Qt::Alignment) par6 );
   }
@@ -250,10 +250,10 @@ void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment 
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET1 )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
     obj->addWidget ( par1, (int) hb_parni(2), (int) hb_parni(3),  (Qt::Alignment) par4 );
   }
@@ -265,10 +265,10 @@ void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET2 )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
     obj->addWidget ( par1, (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) hb_parni(5),  (Qt::Alignment) par6 );
   }
@@ -300,7 +300,7 @@ QRect cellRect ( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->cellRect ( (int) hb_parni(1), (int) hb_parni(2) ) );
@@ -314,7 +314,7 @@ int columnCount () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnCount (  ) );
@@ -327,7 +327,7 @@ int columnMinimumWidth ( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnMinimumWidth ( (int) hb_parni(1) ) );
@@ -340,7 +340,7 @@ int columnStretch ( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnStretch ( (int) hb_parni(1) ) );
@@ -353,7 +353,7 @@ void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * 
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2;
@@ -375,7 +375,7 @@ int horizontalSpacing () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->horizontalSpacing (  ) );
@@ -388,7 +388,7 @@ QLayoutItem * itemAtPosition ( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLayoutItem * ptr = obj->itemAtPosition ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -402,7 +402,7 @@ Qt::Corner originCorner () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->originCorner (  ) );
@@ -415,7 +415,7 @@ int rowCount () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowCount (  ) );
@@ -428,7 +428,7 @@ int rowMinimumHeight ( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowMinimumHeight ( (int) hb_parni(1) ) );
@@ -441,7 +441,7 @@ int rowStretch ( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowStretch ( (int) hb_parni(1) ) );
@@ -454,7 +454,7 @@ void setColumnMinimumWidth ( int column, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setColumnMinimumWidth ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -468,7 +468,7 @@ void setColumnStretch ( int column, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setColumnStretch ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -482,7 +482,7 @@ void setHorizontalSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setHorizontalSpacing ( (int) hb_parni(1) );
@@ -496,7 +496,7 @@ void setOriginCorner ( Qt::Corner corner )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -511,7 +511,7 @@ void setRowMinimumHeight ( int row, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setRowMinimumHeight ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -525,7 +525,7 @@ void setRowStretch ( int row, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setRowStretch ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -539,7 +539,7 @@ void setSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSpacing ( (int) hb_parni(1) );
@@ -553,7 +553,7 @@ void setVerticalSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setVerticalSpacing ( (int) hb_parni(1) );
@@ -567,7 +567,7 @@ int spacing () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->spacing (  ) );
@@ -580,7 +580,7 @@ int verticalSpacing () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->verticalSpacing (  ) );
@@ -593,7 +593,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -606,7 +606,7 @@ virtual Qt::Orientations expandingDirections () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->expandingDirections (  ) );
@@ -619,7 +619,7 @@ virtual bool hasHeightForWidth () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasHeightForWidth (  ) );
@@ -632,7 +632,7 @@ virtual int heightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
@@ -645,7 +645,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->invalidate (  );
@@ -659,7 +659,7 @@ virtual QLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
@@ -673,7 +673,7 @@ virtual QSize maximumSize () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
@@ -687,7 +687,7 @@ virtual int minimumHeightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->minimumHeightForWidth ( (int) hb_parni(1) ) );
@@ -700,7 +700,7 @@ virtual QSize minimumSize () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
@@ -714,10 +714,10 @@ virtual void setGeometry ( const QRect & rect )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->setGeometry ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -729,7 +729,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -743,7 +743,7 @@ virtual QLayoutItem * takeAt ( int index )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
 {
-  QGridLayout * obj = (QGridLayout *) _qtxhb_itemGetPtrStackSelfItem();
+  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );

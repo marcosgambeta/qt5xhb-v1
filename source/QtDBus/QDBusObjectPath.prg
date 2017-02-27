@@ -113,7 +113,7 @@ explicit QDBusObjectPath(QLatin1String path)
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QLatin1String * par1 = (QLatin1String *) _qtxhb_itemGetPtr(1);
+  QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
   QDBusObjectPath * o = new QDBusObjectPath ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusObjectPath *) o );
@@ -193,7 +193,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->path (  ).toLatin1().data() );
@@ -205,7 +205,7 @@ void setPath(const QString &path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) _qtxhb_itemGetPtrStackSelfItem();
+  QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

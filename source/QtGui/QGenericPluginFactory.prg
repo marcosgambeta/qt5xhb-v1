@@ -96,7 +96,7 @@ QObject * create ( const QString & key, const QString & specification )
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 {
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -112,11 +112,11 @@ QStringList keys ()
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 {
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->keys (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

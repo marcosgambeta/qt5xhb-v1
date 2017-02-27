@@ -100,7 +100,7 @@ QBluetoothHostInfo(const QBluetoothHostInfo &other)
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * par1 = (QBluetoothHostInfo *) _qtxhb_itemGetPtr(1);
+  QBluetoothHostInfo * par1 = (QBluetoothHostInfo *) _qt5xhb_itemGetPtr(1);
   QBluetoothHostInfo * o = new QBluetoothHostInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothHostInfo *) o );
@@ -153,7 +153,7 @@ QBluetoothAddress address() const
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_ADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->address (  ) );
@@ -169,10 +169,10 @@ void setAddress(const QBluetoothAddress &address)
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBluetoothAddress * par1 = (QBluetoothAddress *) _qtxhb_itemGetPtr(1);
+    QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
     obj->setAddress ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -186,7 +186,7 @@ QString name() const
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -201,7 +201,7 @@ void setName(const QString &name)
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

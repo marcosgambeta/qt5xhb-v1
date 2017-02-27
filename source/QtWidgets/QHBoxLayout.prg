@@ -87,7 +87,7 @@ QHBoxLayout ( QWidget * parent )
 HB_FUNC_STATIC( QHBOXLAYOUT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QHBoxLayout * o = new QHBoxLayout ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHBoxLayout *) o );

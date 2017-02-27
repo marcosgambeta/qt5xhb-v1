@@ -311,7 +311,7 @@ Category category () const
 */
 HB_FUNC_STATIC( QCHAR_CATEGORY )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->category (  ) );
@@ -324,7 +324,7 @@ uchar cell () const
 */
 HB_FUNC_STATIC( QCHAR_CELL )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cell (  ) );
@@ -337,7 +337,7 @@ unsigned char combiningClass () const
 */
 HB_FUNC_STATIC( QCHAR_COMBININGCLASS )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->combiningClass (  ) );
@@ -351,7 +351,7 @@ Decomposition decompositionTag () const
 */
 HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->decompositionTag (  ) );
@@ -364,7 +364,7 @@ int digitValue () const
 */
 HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->digitValue (  ) );
@@ -377,7 +377,7 @@ Direction direction () const
 */
 HB_FUNC_STATIC( QCHAR_DIRECTION )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->direction (  ) );
@@ -390,7 +390,7 @@ bool hasMirrored () const
 */
 HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasMirrored (  ) );
@@ -403,7 +403,7 @@ bool isDigit () const
 */
 HB_FUNC_STATIC( QCHAR_ISDIGIT )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isDigit (  ) );
@@ -416,7 +416,7 @@ bool isHighSurrogate () const
 */
 HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isHighSurrogate (  ) );
@@ -429,7 +429,7 @@ bool isLetter () const
 */
 HB_FUNC_STATIC( QCHAR_ISLETTER )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLetter (  ) );
@@ -442,7 +442,7 @@ bool isLetterOrNumber () const
 */
 HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLetterOrNumber (  ) );
@@ -455,7 +455,7 @@ bool isLowSurrogate () const
 */
 HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLowSurrogate (  ) );
@@ -468,7 +468,7 @@ bool isLower () const
 */
 HB_FUNC_STATIC( QCHAR_ISLOWER )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLower (  ) );
@@ -481,7 +481,7 @@ bool isMark () const
 */
 HB_FUNC_STATIC( QCHAR_ISMARK )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isMark (  ) );
@@ -494,7 +494,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QCHAR_ISNULL )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -507,7 +507,7 @@ bool isNumber () const
 */
 HB_FUNC_STATIC( QCHAR_ISNUMBER )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNumber (  ) );
@@ -520,7 +520,7 @@ bool isPrint () const
 */
 HB_FUNC_STATIC( QCHAR_ISPRINT )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isPrint (  ) );
@@ -533,7 +533,7 @@ bool isPunct () const
 */
 HB_FUNC_STATIC( QCHAR_ISPUNCT )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isPunct (  ) );
@@ -546,7 +546,7 @@ bool isSpace () const
 */
 HB_FUNC_STATIC( QCHAR_ISSPACE )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSpace (  ) );
@@ -559,7 +559,7 @@ bool isSymbol () const
 */
 HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSymbol (  ) );
@@ -572,7 +572,7 @@ bool isTitleCase () const
 */
 HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isTitleCase (  ) );
@@ -585,7 +585,7 @@ bool isUpper () const
 */
 HB_FUNC_STATIC( QCHAR_ISUPPER )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isUpper (  ) );
@@ -598,7 +598,7 @@ Joining joining () const
 */
 HB_FUNC_STATIC( QCHAR_JOINING )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->joining (  ) );
@@ -611,7 +611,7 @@ QChar mirroredChar () const
 */
 HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->mirroredChar (  ) );
@@ -625,7 +625,7 @@ uchar row () const
 */
 HB_FUNC_STATIC( QCHAR_ROW )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->row (  ) );
@@ -639,7 +639,7 @@ QChar toCaseFolded () const
 */
 HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->toCaseFolded (  ) );
@@ -653,7 +653,7 @@ char toLatin1 () const
 */
 HB_FUNC_STATIC( QCHAR_TOLATIN1 )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->toLatin1 (  ) );
@@ -666,7 +666,7 @@ QChar toLower () const
 */
 HB_FUNC_STATIC( QCHAR_TOLOWER )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->toLower (  ) );
@@ -680,7 +680,7 @@ QChar toTitleCase () const
 */
 HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->toTitleCase (  ) );
@@ -694,7 +694,7 @@ QChar toUpper () const
 */
 HB_FUNC_STATIC( QCHAR_TOUPPER )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->toUpper (  ) );
@@ -709,7 +709,7 @@ ushort unicode () const
 */
 HB_FUNC_STATIC( QCHAR_UNICODE )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->unicode (  ) );
@@ -722,7 +722,7 @@ UnicodeVersion unicodeVersion () const
 */
 HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
 {
-  QChar * obj = (QChar *) _qtxhb_itemGetPtrStackSelfItem();
+  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->unicodeVersion (  ) );

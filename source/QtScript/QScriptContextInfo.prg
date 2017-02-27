@@ -89,7 +89,7 @@ QScriptContextInfo(const QScriptContext * context)
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  const QScriptContext * par1 = (const QScriptContext *) _qtxhb_itemGetPtr(1);
+  const QScriptContext * par1 = (const QScriptContext *) _qt5xhb_itemGetPtr(1);
   QScriptContextInfo * o = new QScriptContextInfo ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptContextInfo *) o );
@@ -105,7 +105,7 @@ QScriptContextInfo(const QScriptContextInfo & other)
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScriptContextInfo * par1 = (QScriptContextInfo *) _qtxhb_itemGetPtr(1);
+  QScriptContextInfo * par1 = (QScriptContextInfo *) _qt5xhb_itemGetPtr(1);
   QScriptContextInfo * o = new QScriptContextInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptContextInfo *) o );
@@ -177,7 +177,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -190,7 +190,7 @@ int functionEndLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->functionEndLineNumber (  ) );
@@ -203,7 +203,7 @@ int functionMetaIndex() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->functionMetaIndex (  ) );
@@ -216,7 +216,7 @@ QString functionName() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->functionName (  ).toLatin1().data() );
@@ -229,11 +229,11 @@ QStringList functionParameterNames() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->functionParameterNames (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -243,7 +243,7 @@ int functionStartLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->functionStartLineNumber (  ) );
@@ -256,7 +256,7 @@ FunctionType functionType() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->functionType (  ) );
@@ -269,7 +269,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -282,7 +282,7 @@ int lineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lineNumber (  ) );
@@ -295,7 +295,7 @@ qint64 scriptId() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->scriptId (  ) );

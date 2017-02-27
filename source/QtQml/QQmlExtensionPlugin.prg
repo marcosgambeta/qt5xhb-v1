@@ -88,10 +88,10 @@ virtual void initializeEngine(QQmlEngine * engine, const char * uri)
 */
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
-  QQmlExtensionPlugin * obj = (QQmlExtensionPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlExtensionPlugin * obj = (QQmlExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlEngine * par1 = (QQmlEngine *) _qtxhb_itemGetPtr(1);
+    QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
     obj->initializeEngine ( par1,  (const char *) par2 );
   }
@@ -104,7 +104,7 @@ virtual void registerTypes(const char * uri) = 0
 */
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_REGISTERTYPES )
 {
-  QQmlExtensionPlugin * obj = (QQmlExtensionPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlExtensionPlugin * obj = (QQmlExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);

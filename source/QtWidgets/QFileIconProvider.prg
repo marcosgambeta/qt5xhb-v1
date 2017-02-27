@@ -115,7 +115,7 @@ virtual QIcon icon(IconType type) const
 */
 HB_FUNC_STATIC( QFILEICONPROVIDER_ICON1 )
 {
-  QFileIconProvider * obj = (QFileIconProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -130,10 +130,10 @@ virtual QIcon icon(const QFileInfo & info) const
 */
 HB_FUNC_STATIC( QFILEICONPROVIDER_ICON2 )
 {
-  QFileIconProvider * obj = (QFileIconProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFileInfo * par1 = (QFileInfo *) _qtxhb_itemGetPtr(1);
+    QFileInfo * par1 = (QFileInfo *) _qt5xhb_itemGetPtr(1);
     QIcon * ptr = new QIcon( obj->icon ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
@@ -164,10 +164,10 @@ virtual QString type(const QFileInfo & info) const
 */
 HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
 {
-  QFileIconProvider * obj = (QFileIconProvider *) _qtxhb_itemGetPtrStackSelfItem();
+  QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFileInfo * par1 = (QFileInfo *) _qtxhb_itemGetPtr(1);
+    QFileInfo * par1 = (QFileInfo *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->type ( *par1 ).toLatin1().data() );
   }
 }

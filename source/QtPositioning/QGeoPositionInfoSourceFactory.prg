@@ -84,10 +84,10 @@ virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QGeoPositionInfoSource * ptr = obj->positionInfoSource ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
   }
@@ -101,10 +101,10 @@ virtual QGeoSatelliteInfoSource *satelliteInfoSource(QObject *parent) = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QGeoSatelliteInfoSource * ptr = obj->satelliteInfoSource ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE" );
   }
@@ -118,10 +118,10 @@ virtual QGeoAreaMonitorSource *areaMonitor(QObject *parent) = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QGeoAreaMonitorSource * ptr = obj->areaMonitor ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
   }

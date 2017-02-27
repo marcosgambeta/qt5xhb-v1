@@ -137,7 +137,7 @@ explicit QStorageInfo(const QDir &dir)
 HB_FUNC_STATIC( QSTORAGEINFO_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QDir * par1 = (QDir *) _qtxhb_itemGetPtr(1);
+  QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
   QStorageInfo * o = new QStorageInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStorageInfo *) o );
@@ -156,7 +156,7 @@ QStorageInfo(const QStorageInfo &other)
 HB_FUNC_STATIC( QSTORAGEINFO_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * par1 = (QStorageInfo *) _qtxhb_itemGetPtr(1);
+  QStorageInfo * par1 = (QStorageInfo *) _qt5xhb_itemGetPtr(1);
   QStorageInfo * o = new QStorageInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStorageInfo *) o );
@@ -222,10 +222,10 @@ void swap(QStorageInfo &other)
 HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStorageInfo * par1 = (QStorageInfo *) _qtxhb_itemGetPtr(1);
+    QStorageInfo * par1 = (QStorageInfo *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -239,7 +239,7 @@ void setPath(const QString &path)
 HB_FUNC_STATIC( QSTORAGEINFO_SETPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -256,7 +256,7 @@ QString rootPath() const
 HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->rootPath (  ).toLatin1().data() );
@@ -271,7 +271,7 @@ QByteArray device() const
 HB_FUNC_STATIC( QSTORAGEINFO_DEVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->device (  ) );
@@ -287,7 +287,7 @@ QByteArray fileSystemType() const
 HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->fileSystemType (  ) );
@@ -303,7 +303,7 @@ QString name() const
 HB_FUNC_STATIC( QSTORAGEINFO_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -318,7 +318,7 @@ QString displayName() const
 HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->displayName (  ).toLatin1().data() );
@@ -333,7 +333,7 @@ qint64 bytesTotal() const
 HB_FUNC_STATIC( QSTORAGEINFO_BYTESTOTAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bytesTotal (  ) );
@@ -348,7 +348,7 @@ qint64 bytesFree() const
 HB_FUNC_STATIC( QSTORAGEINFO_BYTESFREE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bytesFree (  ) );
@@ -363,7 +363,7 @@ qint64 bytesAvailable() const
 HB_FUNC_STATIC( QSTORAGEINFO_BYTESAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bytesAvailable (  ) );
@@ -378,7 +378,7 @@ bool isRoot() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISROOT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRoot (  ) );
@@ -393,7 +393,7 @@ bool isReadOnly() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISREADONLY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isReadOnly (  ) );
@@ -408,7 +408,7 @@ bool isReady() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISREADY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isReady (  ) );
@@ -423,7 +423,7 @@ bool isValid() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -438,7 +438,7 @@ void refresh()
 HB_FUNC_STATIC( QSTORAGEINFO_REFRESH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->refresh (  );

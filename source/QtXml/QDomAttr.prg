@@ -99,7 +99,7 @@ QDomAttr ( const QDomAttr & x )
 HB_FUNC_STATIC( QDOMATTR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomAttr * par1 = (QDomAttr *) _qtxhb_itemGetPtr(1);
+  QDomAttr * par1 = (QDomAttr *) _qt5xhb_itemGetPtr(1);
   QDomAttr * o = new QDomAttr ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomAttr *) o );
@@ -154,7 +154,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QDOMATTR_NAME )
 {
-  QDomAttr * obj = (QDomAttr *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -167,7 +167,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 {
-  QDomAttr * obj = (QDomAttr *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );
@@ -180,7 +180,7 @@ QDomElement ownerElement () const
 */
 HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
 {
-  QDomAttr * obj = (QDomAttr *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDomElement * ptr = new QDomElement( obj->ownerElement (  ) );
@@ -194,7 +194,7 @@ void setValue ( const QString & v )
 */
 HB_FUNC_STATIC( QDOMATTR_SETVALUE )
 {
-  QDomAttr * obj = (QDomAttr *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -209,7 +209,7 @@ bool specified () const
 */
 HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 {
-  QDomAttr * obj = (QDomAttr *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->specified (  ) );
@@ -222,7 +222,7 @@ QString value () const
 */
 HB_FUNC_STATIC( QDOMATTR_VALUE )
 {
-  QDomAttr * obj = (QDomAttr *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->value (  ).toLatin1().data() );

@@ -88,10 +88,10 @@ virtual bool filter(QCompassReading *reading) = 0
 HB_FUNC_STATIC( QCOMPASSFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompassFilter * obj = (QCompassFilter *) _qtxhb_itemGetPtrStackSelfItem();
+  QCompassFilter * obj = (QCompassFilter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCompassReading * par1 = (QCompassReading *) _qtxhb_itemGetPtr(1);
+    QCompassReading * par1 = (QCompassReading *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->filter ( par1 ) );
   }
 #endif

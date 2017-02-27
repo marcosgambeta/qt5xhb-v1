@@ -163,7 +163,7 @@ QAndroidJniObject callObjectMethod(const char *methodName) const
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -195,7 +195,7 @@ QAndroidJniObject getObjectField(const char *fieldName) const
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -212,7 +212,7 @@ QString toString() const
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_TOSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
@@ -227,7 +227,7 @@ bool isValid() const
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) _qtxhb_itemGetPtrStackSelfItem();
+  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );

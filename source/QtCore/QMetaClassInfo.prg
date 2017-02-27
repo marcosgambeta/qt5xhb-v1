@@ -114,7 +114,7 @@ const char *name() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_NAME )
 {
-  QMetaClassInfo * obj = (QMetaClassInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaClassInfo * obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->name (  );
@@ -128,7 +128,7 @@ const char *value() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
 {
-  QMetaClassInfo * obj = (QMetaClassInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaClassInfo * obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * str1 = obj->value (  );
@@ -142,7 +142,7 @@ const QMetaObject *enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
 {
-  QMetaClassInfo * obj = (QMetaClassInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaClassInfo * obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );

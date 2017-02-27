@@ -76,7 +76,7 @@ QExtensionFactory ( QExtensionManager * parent = 0 )
 HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) _qtxhb_itemGetPtr(1);
+  QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) _qt5xhb_itemGetPtr(1);
   QExtensionFactory * o = new QExtensionFactory ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QExtensionFactory *) o );
@@ -109,7 +109,7 @@ QExtensionManager * extensionManager () const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = (QExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QExtensionManager * ptr = obj->extensionManager (  );
@@ -123,10 +123,10 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = (QExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     QObject * ptr = obj->extension ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QOBJECT" );

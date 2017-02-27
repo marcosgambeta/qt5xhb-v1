@@ -111,7 +111,7 @@ QAudioEncoderSettings(const QAudioEncoderSettings & other)
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qtxhb_itemGetPtr(1);
+  QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
   QAudioEncoderSettings * o = new QAudioEncoderSettings ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioEncoderSettings *) o );
@@ -163,7 +163,7 @@ int bitRate() const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_BITRATE )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bitRate (  ) );
@@ -176,7 +176,7 @@ int channelCount() const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CHANNELCOUNT )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->channelCount (  ) );
@@ -189,7 +189,7 @@ QString codec() const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CODEC )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->codec (  ).toLatin1().data() );
@@ -202,7 +202,7 @@ QMultimedia::EncodingMode encodingMode() const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGMODE )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->encodingMode (  ) );
@@ -215,7 +215,7 @@ QVariant encodingOption(const QString & option) const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGOPTION )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -231,7 +231,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ISNULL )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -244,7 +244,7 @@ QMultimedia::EncodingQuality quality() const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_QUALITY )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->quality (  ) );
@@ -257,7 +257,7 @@ int sampleRate() const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SAMPLERATE )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->sampleRate (  ) );
@@ -270,7 +270,7 @@ void setBitRate(int rate)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETBITRATE )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setBitRate ( (int) hb_parni(1) );
@@ -284,7 +284,7 @@ void setChannelCount(int channels)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCHANNELCOUNT )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setChannelCount ( (int) hb_parni(1) );
@@ -298,7 +298,7 @@ void setCodec(const QString & codec)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCODEC )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -313,7 +313,7 @@ void setEncodingMode(QMultimedia::EncodingMode mode)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGMODE )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -328,11 +328,11 @@ void setEncodingOption(const QString & option, const QVariant & value)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGOPTION )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setEncodingOption ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -345,7 +345,7 @@ void setQuality(QMultimedia::EncodingQuality quality)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETQUALITY )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -360,7 +360,7 @@ void setSampleRate(int rate)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETSAMPLERATE )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSampleRate ( (int) hb_parni(1) );

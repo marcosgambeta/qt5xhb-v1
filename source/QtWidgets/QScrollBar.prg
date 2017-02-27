@@ -77,7 +77,7 @@ QScrollBar ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSCROLLBAR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QScrollBar * o = new QScrollBar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScrollBar *) o );
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QScrollBar * o = new QScrollBar (  (Qt::Orientation) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScrollBar *) o );
@@ -146,10 +146,10 @@ virtual bool event ( QEvent * event )
 */
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
-  QScrollBar * obj = (QScrollBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollBar * obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qtxhb_itemGetPtr(1);
+    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->event ( par1 ) );
   }
 }
@@ -160,7 +160,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {
-  QScrollBar * obj = (QScrollBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QScrollBar * obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );

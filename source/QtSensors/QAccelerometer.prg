@@ -77,7 +77,7 @@ QAccelerometer(QObject *parent = 0)
 HB_FUNC_STATIC( QACCELEROMETER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAccelerometer * o = new QAccelerometer ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAccelerometer *) o );
@@ -111,7 +111,7 @@ AccelerationMode accelerationMode() const
 HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->accelerationMode (  ) );
@@ -126,7 +126,7 @@ void setAccelerationMode(AccelerationMode accelerationMode)
 HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -143,7 +143,7 @@ QAccelerometerReading *reading() const
 HB_FUNC_STATIC( QACCELEROMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAccelerometerReading * ptr = obj->reading (  );

@@ -94,7 +94,7 @@ QIdentityProxyModel(QObject* parent = 0)
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QIdentityProxyModel * o = new QIdentityProxyModel ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QIdentityProxyModel *) o );
@@ -127,10 +127,10 @@ int columnCount(const QModelIndex& parent = QModelIndex()) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->columnCount ( par1 ) );
   }
 }
@@ -141,10 +141,10 @@ QModelIndex index(int row, int column, const QModelIndex& parent = QModelIndex()
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
@@ -156,10 +156,10 @@ QModelIndex mapFromSource(const QModelIndex& sourceIndex) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
@@ -171,10 +171,10 @@ QModelIndex mapToSource(const QModelIndex& proxyIndex) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
@@ -186,10 +186,10 @@ QModelIndex parent(const QModelIndex& child) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
@@ -201,10 +201,10 @@ int rowCount(const QModelIndex& parent = QModelIndex()) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->rowCount ( par1 ) );
   }
 }
@@ -215,7 +215,7 @@ QVariant headerData(int section, Qt::Orientation orientation, int role) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_HEADERDATA )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -230,12 +230,12 @@ bool dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int col
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMimeData * par1 = (const QMimeData *) _qtxhb_itemGetPtr(1);
+    const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QModelIndex * par5 = (QModelIndex *) _qtxhb_itemGetPtr(5);
+    QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
     hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, (int) hb_parni(3), (int) hb_parni(4), *par5 ) );
   }
 }
@@ -246,10 +246,10 @@ QModelIndex sibling(int row, int column, const QModelIndex &idx) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SIBLING )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par3 = (QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
@@ -261,10 +261,10 @@ QItemSelection mapSelectionFromSource(const QItemSelection& selection) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemSelection * par1 = (QItemSelection *) _qtxhb_itemGetPtr(1);
+    QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
     QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
   }
@@ -276,10 +276,10 @@ QItemSelection mapSelectionToSource(const QItemSelection& selection) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemSelection * par1 = (QItemSelection *) _qtxhb_itemGetPtr(1);
+    QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
     QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
   }
@@ -291,11 +291,11 @@ QModelIndexList match(const QModelIndex& start, int role, const QVariant& value,
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
-    QVariant * par3 = (QVariant *) _qtxhb_itemGetPtr(3);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+    QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
     int par5 = ISNIL(5)? (int) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : hb_parni(5);
     QModelIndexList list = obj->match ( *par1, (int) hb_parni(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) par5 );
     PHB_DYNS pDynSym;
@@ -338,10 +338,10 @@ void setSourceModel(QAbstractItemModel* sourceModel)
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractItemModel * par1 = (QAbstractItemModel *) _qtxhb_itemGetPtr(1);
+    QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
     obj->setSourceModel ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -353,10 +353,10 @@ bool insertColumns(int column, int count, const QModelIndex& parent = QModelInde
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->insertColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -367,10 +367,10 @@ bool insertRows(int row, int count, const QModelIndex& parent = QModelIndex())
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -381,10 +381,10 @@ bool removeColumns(int column, int count, const QModelIndex& parent = QModelInde
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }
@@ -395,10 +395,10 @@ bool removeRows(int row, int count, const QModelIndex& parent = QModelIndex())
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
 {
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
   }
 }

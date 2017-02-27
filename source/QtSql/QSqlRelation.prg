@@ -157,7 +157,7 @@ QString displayColumn () const
 */
 HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->displayColumn (  ).toLatin1().data() );
@@ -170,7 +170,7 @@ QString indexColumn () const
 */
 HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->indexColumn (  ).toLatin1().data() );
@@ -183,7 +183,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -196,7 +196,7 @@ QString tableName () const
 */
 HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->tableName (  ).toLatin1().data() );

@@ -106,7 +106,7 @@ QXmlInputSource ( QIODevice * dev )
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QXmlInputSource * o = new QXmlInputSource ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlInputSource *) o );
@@ -161,7 +161,7 @@ virtual QString data () const
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->data (  ).toLatin1().data() );
@@ -174,7 +174,7 @@ virtual void fetchData ()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->fetchData (  );
@@ -188,7 +188,7 @@ virtual QChar next ()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QChar * ptr = new QChar( obj->next (  ) );
@@ -202,7 +202,7 @@ virtual void reset ()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reset (  );
@@ -216,7 +216,7 @@ virtual void setData ( const QString & dat )
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -230,10 +230,10 @@ virtual void setData ( const QByteArray & dat )
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setData ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

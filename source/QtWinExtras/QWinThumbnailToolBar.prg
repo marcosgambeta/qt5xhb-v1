@@ -82,7 +82,7 @@ explicit QWinThumbnailToolBar(QObject *parent = 0)
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QWinThumbnailToolBar * o = new QWinThumbnailToolBar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWinThumbnailToolBar *) o );
@@ -116,7 +116,7 @@ QWindow *window() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWindow * ptr = obj->window (  );
@@ -131,10 +131,10 @@ void setWindow(QWindow *window)
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWindow * par1 = (QWindow *) _qtxhb_itemGetPtr(1);
+    QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
     obj->setWindow ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -148,10 +148,10 @@ void addButton(QWinThumbnailToolButton *button)
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWinThumbnailToolButton * par1 = (QWinThumbnailToolButton *) _qtxhb_itemGetPtr(1);
+    QWinThumbnailToolButton * par1 = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtr(1);
     obj->addButton ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -165,10 +165,10 @@ void removeButton(QWinThumbnailToolButton *button)
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWinThumbnailToolButton * par1 = (QWinThumbnailToolButton *) _qtxhb_itemGetPtr(1);
+    QWinThumbnailToolButton * par1 = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtr(1);
     obj->removeButton ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,7 +182,7 @@ void setButtons(const QList<QWinThumbnailToolButton *> &buttons)
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWinThumbnailToolButton *> par1;
@@ -206,7 +206,7 @@ QList<QWinThumbnailToolButton *> buttons() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QWinThumbnailToolButton *> list = obj->buttons (  );
@@ -252,7 +252,7 @@ int count() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -267,7 +267,7 @@ void clear()
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qtxhb_itemGetPtrStackSelfItem();
+  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );

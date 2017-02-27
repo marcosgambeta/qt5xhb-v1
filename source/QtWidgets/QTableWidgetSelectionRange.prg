@@ -119,7 +119,7 @@ QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QTableWidgetSelectionRange * par1 = (QTableWidgetSelectionRange *) _qtxhb_itemGetPtr(1);
+  QTableWidgetSelectionRange * par1 = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtr(1);
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetSelectionRange *) o );
@@ -176,7 +176,7 @@ int bottomRow() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
 {
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bottomRow (  ) );
@@ -189,7 +189,7 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
 {
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->columnCount (  ) );
@@ -202,7 +202,7 @@ int leftColumn() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
 {
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->leftColumn (  ) );
@@ -215,7 +215,7 @@ int rightColumn() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
 {
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rightColumn (  ) );
@@ -228,7 +228,7 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
 {
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->rowCount (  ) );
@@ -241,7 +241,7 @@ int topRow() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
 {
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qtxhb_itemGetPtrStackSelfItem();
+  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->topRow (  ) );

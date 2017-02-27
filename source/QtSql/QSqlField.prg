@@ -127,7 +127,7 @@ QSqlField ( const QSqlField & other )
 HB_FUNC_STATIC( QSQLFIELD_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QSqlField * par1 = (QSqlField *) _qtxhb_itemGetPtr(1);
+  QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
   QSqlField * o = new QSqlField ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlField *) o );
@@ -182,7 +182,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSQLFIELD_CLEAR )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -196,7 +196,7 @@ QVariant defaultValue () const
 */
 HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->defaultValue (  ) );
@@ -209,10 +209,10 @@ void setDefaultValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setDefaultValue ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -224,7 +224,7 @@ bool isAutoValue () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAutoValue (  ) );
@@ -236,7 +236,7 @@ void setAutoValue ( bool autoVal )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETAUTOVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAutoValue ( (bool) hb_parl(1) );
@@ -250,7 +250,7 @@ bool isGenerated () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isGenerated (  ) );
@@ -262,7 +262,7 @@ void setGenerated ( bool gen )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETGENERATED )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setGenerated ( (bool) hb_parl(1) );
@@ -276,7 +276,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -289,7 +289,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isReadOnly (  ) );
@@ -301,7 +301,7 @@ void setReadOnly ( bool readOnly )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREADONLY )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setReadOnly ( (bool) hb_parl(1) );
@@ -315,7 +315,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -328,7 +328,7 @@ int length () const
 */
 HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->length (  ) );
@@ -340,7 +340,7 @@ void setLength ( int fieldLength )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETLENGTH )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLength ( (int) hb_parni(1) );
@@ -354,7 +354,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QSQLFIELD_NAME )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -366,7 +366,7 @@ void setName ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETNAME )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -381,7 +381,7 @@ int precision () const
 */
 HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->precision (  ) );
@@ -393,7 +393,7 @@ void setPrecision ( int precision )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETPRECISION )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setPrecision ( (int) hb_parni(1) );
@@ -407,7 +407,7 @@ RequiredStatus requiredStatus () const
 */
 HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->requiredStatus (  ) );
@@ -419,7 +419,7 @@ void setRequiredStatus ( RequiredStatus required )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -434,7 +434,7 @@ void setRequired ( bool required )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREQUIRED )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setRequired ( (bool) hb_parl(1) );
@@ -448,7 +448,7 @@ QVariant::Type type () const
 */
 HB_FUNC_STATIC( QSQLFIELD_TYPE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -460,7 +460,7 @@ void setType ( QVariant::Type type )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -475,7 +475,7 @@ QVariant value () const
 */
 HB_FUNC_STATIC( QSQLFIELD_VALUE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->value (  ) );
@@ -488,10 +488,10 @@ void setValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setValue ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -503,7 +503,7 @@ void setSqlType(int type)
 */
 HB_FUNC_STATIC( QSQLFIELD_SETSQLTYPE )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSqlType ( (int) hb_parni(1) );
@@ -517,7 +517,7 @@ int typeID() const
 */
 HB_FUNC_STATIC( QSQLFIELD_TYPEID )
 {
-  QSqlField * obj = (QSqlField *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->typeID (  ) );

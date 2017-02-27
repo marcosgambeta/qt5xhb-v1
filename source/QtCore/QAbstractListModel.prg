@@ -91,12 +91,12 @@ virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int r
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 {
-  QAbstractListModel * obj = (QAbstractListModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractListModel * obj = (QAbstractListModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMimeData * par1 = (const QMimeData *) _qtxhb_itemGetPtr(1);
+    const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QModelIndex * par5 = (QModelIndex *) _qtxhb_itemGetPtr(5);
+    QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
     hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, (int) hb_parni(3), (int) hb_parni(4), *par5 ) );
   }
 }
@@ -107,10 +107,10 @@ virtual QModelIndex index ( int row, int column = 0, const QModelIndex & parent 
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
 {
-  QAbstractListModel * obj = (QAbstractListModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractListModel * obj = (QAbstractListModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2), par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }

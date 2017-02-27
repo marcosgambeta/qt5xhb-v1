@@ -142,7 +142,7 @@ QScriptEngine(QObject * parent)
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QScriptEngine * o = new QScriptEngine ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptEngine *) o );
@@ -194,10 +194,10 @@ void abortEvaluation(const QScriptValue & result = QScriptValue())
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_ABORTEVALUATION )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
     obj->abortEvaluation ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,7 +209,7 @@ QScriptEngineAgent * agent() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptEngineAgent * ptr = obj->agent (  );
@@ -223,11 +223,11 @@ QStringList availableExtensions() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->availableExtensions (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -237,7 +237,7 @@ void clearExceptions()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clearExceptions (  );
@@ -251,7 +251,7 @@ void collectGarbage()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->collectGarbage (  );
@@ -265,7 +265,7 @@ QScriptContext * currentContext() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptContext * ptr = obj->currentContext (  );
@@ -279,7 +279,7 @@ QScriptValue defaultPrototype(int metaTypeId) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->defaultPrototype ( (int) hb_parni(1) ) );
@@ -293,7 +293,7 @@ QScriptValue evaluate(const QString & program, const QString & fileName = QStrin
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -308,10 +308,10 @@ QScriptValue evaluate(const QScriptProgram & program)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE2 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptProgram * par1 = (QScriptProgram *) _qtxhb_itemGetPtr(1);
+    QScriptProgram * par1 = (QScriptProgram *) _qt5xhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->evaluate ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -343,7 +343,7 @@ QScriptValue globalObject() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->globalObject (  ) );
@@ -357,7 +357,7 @@ bool hasUncaughtException() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasUncaughtException (  ) );
@@ -370,7 +370,7 @@ QScriptValue importExtension(const QString & extension)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -385,11 +385,11 @@ QStringList importedExtensions() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->importedExtensions (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -399,10 +399,10 @@ void installTranslatorFunctions(const QScriptValue & object = QScriptValue())
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue par1 = ISNIL(1)? QScriptValue() : *(QScriptValue *) _qtxhb_itemGetPtr(1);
+    QScriptValue par1 = ISNIL(1)? QScriptValue() : *(QScriptValue *) _qt5xhb_itemGetPtr(1);
     obj->installTranslatorFunctions ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -414,7 +414,7 @@ bool isEvaluating() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEvaluating (  ) );
@@ -427,7 +427,7 @@ QScriptValue newArray(uint length = 0)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->newArray ( (uint) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -442,10 +442,10 @@ QScriptValue newDate(const QDateTime & value)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWDATE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
+    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->newDate ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -459,7 +459,7 @@ QScriptValue newObject()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT1 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->newObject (  ) );
@@ -472,11 +472,11 @@ QScriptValue newObject(QScriptClass * scriptClass, const QScriptValue & data = Q
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT2 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptClass * par1 = (QScriptClass *) _qtxhb_itemGetPtr(1);
-    QScriptValue par2 = ISNIL(2)? QScriptValue() : *(QScriptValue *) _qtxhb_itemGetPtr(2);
+    QScriptClass * par1 = (QScriptClass *) _qt5xhb_itemGetPtr(1);
+    QScriptValue par2 = ISNIL(2)? QScriptValue() : *(QScriptValue *) _qt5xhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->newObject ( par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -507,11 +507,11 @@ QScriptValue newQMetaObject(const QMetaObject * metaObject, const QScriptValue &
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWQMETAOBJECT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMetaObject * par1 = (const QMetaObject *) _qtxhb_itemGetPtr(1);
-    QScriptValue par2 = ISNIL(2)? QScriptValue() : *(QScriptValue *) _qtxhb_itemGetPtr(2);
+    const QMetaObject * par1 = (const QMetaObject *) _qt5xhb_itemGetPtr(1);
+    QScriptValue par2 = ISNIL(2)? QScriptValue() : *(QScriptValue *) _qt5xhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->newQMetaObject ( par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -532,10 +532,10 @@ QScriptValue newRegExp(const QRegExp & regexp)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP1 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegExp * par1 = (QRegExp *) _qtxhb_itemGetPtr(1);
+    QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->newRegExp ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -546,7 +546,7 @@ QScriptValue newRegExp(const QString & pattern, const QString & flags)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP2 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -581,10 +581,10 @@ QScriptValue newVariant(const QVariant & value)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT1 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -595,11 +595,11 @@ QScriptValue newVariant(const QScriptValue & object, const QVariant & value)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT2 )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1, *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -630,7 +630,7 @@ QScriptValue nullValue()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->nullValue (  ) );
@@ -644,7 +644,7 @@ void popContext()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->popContext (  );
@@ -658,7 +658,7 @@ int processEventsInterval() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->processEventsInterval (  ) );
@@ -671,7 +671,7 @@ QScriptContext * pushContext()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptContext * ptr = obj->pushContext (  );
@@ -685,7 +685,7 @@ void reportAdditionalMemoryCost(int size)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reportAdditionalMemoryCost ( (int) hb_parni(1) );
@@ -700,10 +700,10 @@ void setAgent(QScriptEngineAgent * agent)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETAGENT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptEngineAgent * par1 = (QScriptEngineAgent *) _qtxhb_itemGetPtr(1);
+    QScriptEngineAgent * par1 = (QScriptEngineAgent *) _qt5xhb_itemGetPtr(1);
     obj->setAgent ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -715,10 +715,10 @@ void setDefaultPrototype(int metaTypeId, const QScriptValue & prototype)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par2 = (QScriptValue *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
     obj->setDefaultPrototype ( (int) hb_parni(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -730,10 +730,10 @@ void setGlobalObject(const QScriptValue & object)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETGLOBALOBJECT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
     obj->setGlobalObject ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -745,7 +745,7 @@ void setProcessEventsInterval(int interval)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setProcessEventsInterval ( (int) hb_parni(1) );
@@ -759,10 +759,10 @@ QScriptValue toObject(const QScriptValue & value)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->toObject ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -775,7 +775,7 @@ QScriptString toStringHandle(const QString & str)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -790,7 +790,7 @@ QScriptValue uncaughtException() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->uncaughtException (  ) );
@@ -804,11 +804,11 @@ QStringList uncaughtExceptionBacktrace() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->uncaughtExceptionBacktrace (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -818,7 +818,7 @@ int uncaughtExceptionLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->uncaughtExceptionLineNumber (  ) );
@@ -831,7 +831,7 @@ QScriptValue undefinedValue()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->undefinedValue (  ) );

@@ -89,7 +89,7 @@ LightLevel lightLevel() const
 HB_FUNC_STATIC( QAMBIENTLIGHTREADING_LIGHTLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientLightReading * obj = (QAmbientLightReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QAmbientLightReading * obj = (QAmbientLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lightLevel (  ) );
@@ -104,7 +104,7 @@ void setLightLevel(LightLevel lightLevel)
 HB_FUNC_STATIC( QAMBIENTLIGHTREADING_SETLIGHTLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientLightReading * obj = (QAmbientLightReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QAmbientLightReading * obj = (QAmbientLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

@@ -106,7 +106,7 @@ QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QAXWIDGET_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QAxWidget * o = new QAxWidget ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QAXWIDGET_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
   QAxWidget * o = new QAxWidget ( par1, par2,  (Qt::WindowFlags) par3 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -141,8 +141,8 @@ QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QAXWIDGET_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  IUnknown * par1 = (IUnknown *) _qtxhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  IUnknown * par1 = (IUnknown *) _qt5xhb_itemGetPtr(1);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
   QAxWidget * o = new QAxWidget ( par1, par2,  (Qt::WindowFlags) par3 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -200,7 +200,7 @@ virtual QAxAggregated * createAggregate ()
 */
 HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAxAggregated * ptr = obj->createAggregate (  );
@@ -214,7 +214,7 @@ bool doVerb ( const QString & verb )
 */
 HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -228,7 +228,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -242,7 +242,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -256,7 +256,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -273,7 +273,7 @@ QVariant asVariant () const
 */
 HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->asVariant (  ) );
@@ -288,7 +288,7 @@ QString control () const
 */
 HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->control (  ).toLatin1().data() );
@@ -301,7 +301,7 @@ void disableClassInfo ()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->disableClassInfo (  );
@@ -315,7 +315,7 @@ void disableEventSink ()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->disableEventSink (  );
@@ -329,7 +329,7 @@ void disableMetaObject ()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->disableMetaObject (  );
@@ -343,18 +343,18 @@ QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant()
 */
 HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL1 )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(3);
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(4);
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(5);
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(6);
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(7);
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
+    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
+    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
+    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
+    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6);
+    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
+    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
+    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
     QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -365,7 +365,7 @@ QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 */
 HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL2 )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -407,7 +407,7 @@ QString generateDocumentation ()
 */
 HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->generateDocumentation (  ).toLatin1().data() );
@@ -420,7 +420,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -434,7 +434,7 @@ virtual bool propertyWritable ( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -449,18 +449,18 @@ QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant
 */
 HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT1 )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(3);
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(4);
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(5);
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(6);
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(7);
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
+    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
+    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
+    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
+    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6);
+    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
+    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
+    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
     QAxObject * ptr = obj->querySubObject (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 );
     _qt5xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
@@ -471,7 +471,7 @@ QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
 */
 HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT2 )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -513,7 +513,7 @@ bool setControl ( const QString & )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -528,7 +528,7 @@ virtual void setPropertyWritable ( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -543,11 +543,11 @@ QStringList verbs () const
 */
 HB_FUNC_STATIC( QAXWIDGET_VERBS )
 {
-  QAxWidget * obj = (QAxWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->verbs (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

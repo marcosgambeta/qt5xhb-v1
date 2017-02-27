@@ -95,7 +95,7 @@ qreal x() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_X )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->x (  ) );
@@ -110,7 +110,7 @@ void setX(qreal x)
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -127,7 +127,7 @@ qreal y() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_Y )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->y (  ) );
@@ -142,7 +142,7 @@ void setY(qreal y)
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -159,7 +159,7 @@ qreal z() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_Z )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->z (  ) );
@@ -174,7 +174,7 @@ void setZ(qreal z)
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -191,7 +191,7 @@ qreal calibrationLevel() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_CALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->calibrationLevel (  ) );
@@ -206,7 +206,7 @@ void setCalibrationLevel(qreal calibrationLevel)
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETCALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);

@@ -119,7 +119,7 @@ QBrush backgroundBrush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->backgroundBrush (  ) );
@@ -133,7 +133,7 @@ Qt::BGMode backgroundMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->backgroundMode (  ) );
@@ -146,7 +146,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->brush (  ) );
@@ -160,7 +160,7 @@ bool brushNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->brushNeedsResolving (  ) );
@@ -173,7 +173,7 @@ QPointF brushOrigin () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->brushOrigin (  ) );
@@ -187,7 +187,7 @@ Qt::ClipOperation clipOperation () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->clipOperation (  ) );
@@ -200,7 +200,7 @@ QPainterPath clipPath () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->clipPath (  ) );
@@ -214,7 +214,7 @@ QRegion clipRegion () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->clipRegion (  ) );
@@ -228,7 +228,7 @@ QPainter::CompositionMode compositionMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->compositionMode (  ) );
@@ -241,7 +241,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
@@ -255,7 +255,7 @@ bool isClipEnabled () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isClipEnabled (  ) );
@@ -268,7 +268,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->opacity (  ) );
@@ -281,7 +281,7 @@ QPainter * painter () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPainter * ptr = obj->painter (  );
@@ -295,7 +295,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPen * ptr = new QPen( obj->pen (  ) );
@@ -309,7 +309,7 @@ bool penNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->penNeedsResolving (  ) );
@@ -322,7 +322,7 @@ QPainter::RenderHints renderHints () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->renderHints (  ) );
@@ -335,7 +335,7 @@ QPaintEngine::DirtyFlags state () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -348,7 +348,7 @@ QTransform transform () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qtxhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->transform (  ) );

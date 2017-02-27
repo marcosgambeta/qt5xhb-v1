@@ -94,7 +94,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -107,7 +107,7 @@ virtual bool notationDecl ( const QString & name, const QString & publicId, cons
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -123,7 +123,7 @@ virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

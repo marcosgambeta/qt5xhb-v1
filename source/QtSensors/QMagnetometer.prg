@@ -77,7 +77,7 @@ QMagnetometer(QObject *parent = 0)
 HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QMagnetometer * o = new QMagnetometer ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMagnetometer *) o );
@@ -111,7 +111,7 @@ QMagnetometerReading *reading() const
 HB_FUNC_STATIC( QMAGNETOMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMagnetometerReading * ptr = obj->reading (  );
@@ -127,7 +127,7 @@ bool returnGeoValues() const
 HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->returnGeoValues (  ) );
@@ -142,7 +142,7 @@ void setReturnGeoValues(bool returnGeoValues)
 HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qtxhb_itemGetPtrStackSelfItem();
+  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setReturnGeoValues ( (bool) hb_parl(1) );

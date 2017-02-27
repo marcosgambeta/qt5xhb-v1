@@ -116,11 +116,11 @@ virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
-    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
     QWidget * ptr = obj->load ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -132,11 +132,11 @@ virtual void save ( QIODevice * device, QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     obj->save ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -148,10 +148,10 @@ void setWorkingDirectory ( const QDir & directory )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDir * par1 = (QDir *) _qtxhb_itemGetPtr(1);
+    QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
     obj->setWorkingDirectory ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -163,7 +163,7 @@ QDir workingDirectory () const
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QDir * ptr = new QDir( obj->workingDirectory (  ) );

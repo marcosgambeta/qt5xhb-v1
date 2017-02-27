@@ -103,7 +103,7 @@ virtual bool characters ( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -117,7 +117,7 @@ virtual bool endDocument () = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->endDocument (  ) );
@@ -130,7 +130,7 @@ virtual bool endElement ( const QString & namespaceURI, const QString & localNam
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -146,7 +146,7 @@ virtual bool endPrefixMapping ( const QString & prefix ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -160,7 +160,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -173,7 +173,7 @@ virtual bool ignorableWhitespace ( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -187,7 +187,7 @@ virtual bool processingInstruction ( const QString & target, const QString & dat
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -202,10 +202,10 @@ virtual void setDocumentLocator ( QXmlLocator * locator ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlLocator * par1 = (QXmlLocator *) _qtxhb_itemGetPtr(1);
+    QXmlLocator * par1 = (QXmlLocator *) _qt5xhb_itemGetPtr(1);
     obj->setDocumentLocator ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,7 +217,7 @@ virtual bool skippedEntity ( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -231,7 +231,7 @@ virtual bool startDocument () = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->startDocument (  ) );
@@ -244,13 +244,13 @@ virtual bool startElement ( const QString & namespaceURI, const QString & localN
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QString par3 = QLatin1String( hb_parc(3) );
-    QXmlAttributes * par4 = (QXmlAttributes *) _qtxhb_itemGetPtr(4);
+    QXmlAttributes * par4 = (QXmlAttributes *) _qt5xhb_itemGetPtr(4);
     hb_retl( obj->startElement ( par1, par2, par3, *par4 ) );
   }
 }
@@ -261,7 +261,7 @@ virtual bool startPrefixMapping ( const QString & prefix, const QString & uri ) 
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

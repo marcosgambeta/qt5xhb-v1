@@ -116,7 +116,7 @@ void accept ()
 */
 HB_FUNC_STATIC( QEVENT_ACCEPT )
 {
-  QEvent * obj = (QEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->accept (  );
@@ -130,7 +130,7 @@ void ignore ()
 */
 HB_FUNC_STATIC( QEVENT_IGNORE )
 {
-  QEvent * obj = (QEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->ignore (  );
@@ -144,7 +144,7 @@ bool isAccepted () const
 */
 HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 {
-  QEvent * obj = (QEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAccepted (  ) );
@@ -157,7 +157,7 @@ void setAccepted ( bool accepted )
 */
 HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 {
-  QEvent * obj = (QEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAccepted ( (bool) hb_parl(1) );
@@ -171,7 +171,7 @@ bool spontaneous () const
 */
 HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 {
-  QEvent * obj = (QEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->spontaneous (  ) );
@@ -184,7 +184,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QEVENT_TYPE )
 {
-  QEvent * obj = (QEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );

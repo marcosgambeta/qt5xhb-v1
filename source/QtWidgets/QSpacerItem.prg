@@ -119,7 +119,7 @@ void changeSize(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum
 */
 HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
@@ -135,7 +135,7 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->expandingDirections (  ) );
@@ -148,7 +148,7 @@ virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
@@ -162,7 +162,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
@@ -175,7 +175,7 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
@@ -189,7 +189,7 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
@@ -203,10 +203,10 @@ virtual void setGeometry(const QRect & r)
 */
 HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->setGeometry ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -218,7 +218,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -232,7 +232,7 @@ virtual QSpacerItem * spacerItem()
 */
 HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSpacerItem * ptr = obj->spacerItem (  );

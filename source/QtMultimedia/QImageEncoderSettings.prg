@@ -108,7 +108,7 @@ QImageEncoderSettings(const QImageEncoderSettings& other)
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qtxhb_itemGetPtr(1);
+  QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
   QImageEncoderSettings * o = new QImageEncoderSettings ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QImageEncoderSettings *) o );
@@ -160,7 +160,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ISNULL )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -173,7 +173,7 @@ QString codec() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_CODEC )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->codec (  ).toLatin1().data() );
@@ -186,7 +186,7 @@ void setCodec(const QString &)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETCODEC )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -201,7 +201,7 @@ QSize resolution() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->resolution (  ) );
@@ -215,10 +215,10 @@ void setResolution(const QSize &)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION1 )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     obj->setResolution ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -230,7 +230,7 @@ void setResolution(int width, int height)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION2 )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setResolution ( (int) hb_parni(1), (int) hb_parni(2) );
@@ -263,7 +263,7 @@ QMultimedia::EncodingQuality quality() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_QUALITY )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->quality (  ) );
@@ -276,7 +276,7 @@ void setQuality(QMultimedia::EncodingQuality quality)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -291,7 +291,7 @@ QVariant encodingOption(const QString &option) const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ENCODINGOPTION )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -307,11 +307,11 @@ void setEncodingOption(const QString &option, const QVariant &value)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETENCODINGOPTION )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setEncodingOption ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );

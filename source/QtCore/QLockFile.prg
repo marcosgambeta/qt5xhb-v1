@@ -121,7 +121,7 @@ bool lock()
 HB_FUNC_STATIC( QLOCKFILE_LOCK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->lock (  ) );
@@ -136,7 +136,7 @@ bool tryLock(int timeout = 0)
 HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->tryLock ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
@@ -151,7 +151,7 @@ void unlock()
 HB_FUNC_STATIC( QLOCKFILE_UNLOCK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unlock (  );
@@ -167,7 +167,7 @@ void setStaleLockTime(int)
 HB_FUNC_STATIC( QLOCKFILE_SETSTALELOCKTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setStaleLockTime ( (int) hb_parni(1) );
@@ -183,7 +183,7 @@ int staleLockTime() const
 HB_FUNC_STATIC( QLOCKFILE_STALELOCKTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->staleLockTime (  ) );
@@ -198,7 +198,7 @@ bool isLocked() const
 HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isLocked (  ) );
@@ -213,10 +213,10 @@ bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
 HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qint64 * par1 = (qint64 *) _qtxhb_itemGetPtr(1);
+    qint64 * par1 = (qint64 *) _qt5xhb_itemGetPtr(1);
     QString par2 = hb_parc(2);
     QString par3 = hb_parc(3);
     hb_retl( obj->getLockInfo ( par1, &par2, &par3 ) );
@@ -231,7 +231,7 @@ bool removeStaleLockFile()
 HB_FUNC_STATIC( QLOCKFILE_REMOVESTALELOCKFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qtxhb_itemGetPtrStackSelfItem();
+  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->removeStaleLockFile (  ) );

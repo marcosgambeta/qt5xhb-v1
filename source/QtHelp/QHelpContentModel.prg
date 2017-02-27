@@ -100,10 +100,10 @@ QHelpContentItem * contentItemAt ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QHelpContentItem * ptr = obj->contentItemAt ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
@@ -115,7 +115,7 @@ void createContents ( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -130,7 +130,7 @@ bool isCreatingContents () const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCreatingContents (  ) );
@@ -143,10 +143,10 @@ virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->columnCount ( par1 ) );
   }
 }
@@ -157,10 +157,10 @@ virtual QVariant data ( const QModelIndex & index, int role ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QVariant * ptr = new QVariant( obj->data ( *par1, (int) hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -172,10 +172,10 @@ virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QM
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
+    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
@@ -187,10 +187,10 @@ virtual QModelIndex parent ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
@@ -202,10 +202,10 @@ virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(1);
+    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->rowCount ( par1 ) );
   }
 }

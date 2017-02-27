@@ -104,7 +104,7 @@ QSslError ( SslError error )
 HB_FUNC_STATIC( QSSLERROR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QSslError * par1 = (QSslError *) _qtxhb_itemGetPtr(1);
+  QSslError * par1 = (QSslError *) _qt5xhb_itemGetPtr(1);
   QSslError * o = new QSslError ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslError *) o );
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QSslCertificate * par2 = (QSslCertificate *) _qtxhb_itemGetPtr(2);
+  QSslCertificate * par2 = (QSslCertificate *) _qt5xhb_itemGetPtr(2);
   QSslError * o = new QSslError (  (QSslError::SslError) par1, *par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslError *) o );
@@ -143,7 +143,7 @@ QSslError ( const QSslError & other )
 HB_FUNC_STATIC( QSSLERROR_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QSslError * par1 = (QSslError *) _qtxhb_itemGetPtr(1);
+  QSslError * par1 = (QSslError *) _qt5xhb_itemGetPtr(1);
   QSslError * o = new QSslError ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslError *) o );
@@ -208,7 +208,7 @@ QSslCertificate certificate () const
 */
 HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 {
-  QSslError * obj = (QSslError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSslCertificate * ptr = new QSslCertificate( obj->certificate (  ) );
@@ -222,7 +222,7 @@ SslError error () const
 */
 HB_FUNC_STATIC( QSSLERROR_ERROR )
 {
-  QSslError * obj = (QSslError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -235,7 +235,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 {
-  QSslError * obj = (QSslError *) _qtxhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );

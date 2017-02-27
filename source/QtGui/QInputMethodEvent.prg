@@ -92,7 +92,7 @@ QInputMethodEvent ( const QInputMethodEvent & other )
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QInputMethodEvent * par1 = (QInputMethodEvent *) _qtxhb_itemGetPtr(1);
+  QInputMethodEvent * par1 = (QInputMethodEvent *) _qt5xhb_itemGetPtr(1);
   QInputMethodEvent * o = new QInputMethodEvent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QInputMethodEvent *) o );
@@ -150,7 +150,7 @@ const QString & commitString () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->commitString (  ).toLatin1().data() );
@@ -163,7 +163,7 @@ const QString & preeditString () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->preeditString (  ).toLatin1().data() );
@@ -176,7 +176,7 @@ int replacementLength () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->replacementLength (  ) );
@@ -189,7 +189,7 @@ int replacementStart () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->replacementStart (  ) );
@@ -202,7 +202,7 @@ void setCommitString ( const QString & commitString, int replaceFrom = 0, int re
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

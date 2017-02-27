@@ -149,7 +149,7 @@ static bool save(QDataStream &stream, int type, const void *data)
 */
 HB_FUNC_STATIC( QMETATYPE_SAVE )
 {
-  QDataStream * par1 = (QDataStream *) _qtxhb_itemGetPtr(1);
+  QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
   const void * par3 = (const void *) hb_parptr(3);
   hb_retl( QMetaType::save ( *par1, (int) hb_parni(2), par3 ) );
 }
@@ -160,7 +160,7 @@ static bool load(QDataStream &stream, int type, void *data)
 */
 HB_FUNC_STATIC( QMETATYPE_LOAD )
 {
-  QDataStream * par1 = (QDataStream *) _qtxhb_itemGetPtr(1);
+  QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
   void * par3 = (void *) hb_parptr(3);
   hb_retl( QMetaType::load ( *par1, (int) hb_parni(2), par3 ) );
 }

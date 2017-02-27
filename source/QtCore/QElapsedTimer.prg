@@ -123,7 +123,7 @@ qint64 elapsed() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->elapsed (  ) );
@@ -136,7 +136,7 @@ bool hasExpired(qint64 timeout) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasExpired ( (qint64) hb_parni(1) ) );
@@ -149,7 +149,7 @@ void invalidate()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->invalidate (  );
@@ -163,7 +163,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -176,7 +176,7 @@ qint64 msecsSinceReference() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->msecsSinceReference (  ) );
@@ -189,10 +189,10 @@ qint64 msecsTo(const QElapsedTimer & other) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QElapsedTimer * par1 = (QElapsedTimer *) _qtxhb_itemGetPtr(1);
+    QElapsedTimer * par1 = (QElapsedTimer *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->msecsTo ( *par1 ) );
   }
 }
@@ -203,7 +203,7 @@ qint64 nsecsElapsed() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nsecsElapsed (  ) );
@@ -216,7 +216,7 @@ qint64 restart()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->restart (  ) );
@@ -229,10 +229,10 @@ qint64 secsTo(const QElapsedTimer & other) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QElapsedTimer * par1 = (QElapsedTimer *) _qtxhb_itemGetPtr(1);
+    QElapsedTimer * par1 = (QElapsedTimer *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->secsTo ( *par1 ) );
   }
 }
@@ -243,7 +243,7 @@ void start()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_START )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qtxhb_itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->start (  );

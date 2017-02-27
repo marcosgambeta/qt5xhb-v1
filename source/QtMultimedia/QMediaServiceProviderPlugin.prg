@@ -91,7 +91,7 @@ virtual QMediaService * create(const QString & key) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
 {
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -106,10 +106,10 @@ virtual void release(QMediaService * service) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_RELEASE )
 {
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaService * par1 = (QMediaService *) _qtxhb_itemGetPtr(1);
+    QMediaService * par1 = (QMediaService *) _qt5xhb_itemGetPtr(1);
     obj->release ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

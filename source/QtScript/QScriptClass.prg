@@ -92,7 +92,7 @@ QScriptClass(QScriptEngine * engine)
 HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QScriptEngine * par1 = (QScriptEngine *) _qtxhb_itemGetPtr(1);
+  QScriptEngine * par1 = (QScriptEngine *) _qt5xhb_itemGetPtr(1);
   QScriptClass * o = new QScriptClass ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptClass *) o );
@@ -125,7 +125,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_ENGINE )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptEngine * ptr = obj->engine (  );
@@ -139,11 +139,11 @@ virtual QVariant extension(Extension extension, const QVariant & argument = QVar
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->extension (  (QScriptClass::Extension) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
@@ -155,7 +155,7 @@ virtual QString name() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -168,10 +168,10 @@ virtual QScriptClassPropertyIterator * newIterator(const QScriptValue & object)
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
     QScriptClassPropertyIterator * ptr = obj->newIterator ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTCLASSPROPERTYITERATOR" );
   }
@@ -183,11 +183,11 @@ virtual QScriptValue property(const QScriptValue & object, const QScriptString &
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
-    QScriptString * par2 = (QScriptString *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
+    QScriptString * par2 = (QScriptString *) _qt5xhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->property ( *par1, *par2, (uint) hb_parni(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -199,11 +199,11 @@ virtual QScriptValue::PropertyFlags propertyFlags(const QScriptValue & object, c
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
-    QScriptString * par2 = (QScriptString *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
+    QScriptString * par2 = (QScriptString *) _qt5xhb_itemGetPtr(2);
     hb_retni( obj->propertyFlags ( *par1, *par2, (uint) hb_parni(3) ) );
   }
 }
@@ -214,7 +214,7 @@ virtual QScriptValue prototype() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->prototype (  ) );
@@ -228,13 +228,13 @@ virtual QueryFlags queryProperty(const QScriptValue & object, const QScriptStrin
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
-    QScriptString * par2 = (QScriptString *) _qtxhb_itemGetPtr(2);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
+    QScriptString * par2 = (QScriptString *) _qt5xhb_itemGetPtr(2);
     int par3 = hb_parni(3);
-    uint * par4 = (uint *) _qtxhb_itemGetPtr(4);
+    uint * par4 = (uint *) _qt5xhb_itemGetPtr(4);
     hb_retni( obj->queryProperty ( *par1, *par2,  (QScriptClass::QueryFlags) par3, par4 ) );
   }
 }
@@ -245,12 +245,12 @@ virtual void setProperty(QScriptValue & object, const QScriptString & name, uint
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
-    QScriptString * par2 = (QScriptString *) _qtxhb_itemGetPtr(2);
-    QScriptValue * par4 = (QScriptValue *) _qtxhb_itemGetPtr(4);
+    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
+    QScriptString * par2 = (QScriptString *) _qt5xhb_itemGetPtr(2);
+    QScriptValue * par4 = (QScriptValue *) _qt5xhb_itemGetPtr(4);
     obj->setProperty ( *par1, *par2, (uint) hb_parni(3), *par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -262,7 +262,7 @@ virtual bool supportsExtension(Extension extension) const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
 {
-  QScriptClass * obj = (QScriptClass *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

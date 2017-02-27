@@ -87,7 +87,7 @@ QNetworkDiskCache ( QObject * parent = 0 )
 HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QNetworkDiskCache * o = new QNetworkDiskCache ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkDiskCache *) o );
@@ -120,7 +120,7 @@ QString cacheDirectory () const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->cacheDirectory (  ).toLatin1().data() );
@@ -133,7 +133,7 @@ QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -148,7 +148,7 @@ qint64 maximumCacheSize () const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->maximumCacheSize (  ) );
@@ -161,7 +161,7 @@ void setCacheDirectory ( const QString & cacheDir )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -176,7 +176,7 @@ void setMaximumCacheSize ( qint64 size )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setMaximumCacheSize ( (qint64) hb_parni(1) );
@@ -190,7 +190,7 @@ virtual qint64 cacheSize () const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cacheSize (  ) );
@@ -203,10 +203,10 @@ virtual QIODevice * data ( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QIODevice * ptr = obj->data ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
@@ -218,10 +218,10 @@ virtual void insert ( QIODevice * device )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     obj->insert ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -233,10 +233,10 @@ virtual QNetworkCacheMetaData metaData ( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
   }
@@ -248,10 +248,10 @@ virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qtxhb_itemGetPtr(1);
+    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtr(1);
     QIODevice * ptr = obj->prepare ( *par1 );
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
@@ -263,10 +263,10 @@ virtual bool remove ( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
+    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->remove ( *par1 ) );
   }
 }
@@ -277,10 +277,10 @@ virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qtxhb_itemGetPtr(1);
+    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtr(1);
     obj->updateMetaData ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -292,7 +292,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qtxhb_itemGetPtrStackSelfItem();
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );

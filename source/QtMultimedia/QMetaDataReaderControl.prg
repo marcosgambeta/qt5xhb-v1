@@ -95,7 +95,7 @@ virtual bool isMetaDataAvailable() const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ISMETADATAAVAILABLE )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isMetaDataAvailable (  ) );
@@ -108,7 +108,7 @@ virtual QVariant metaData(const QString &key) const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_METADATA )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -123,11 +123,11 @@ virtual QStringList availableMetaData() const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->availableMetaData (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

@@ -104,7 +104,7 @@ QUndoStack(QObject * parent = 0)
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QUndoStack * o = new QUndoStack ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoStack *) o );
@@ -137,7 +137,7 @@ void beginMacro(const QString & text)
 */
 HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -152,7 +152,7 @@ bool canRedo() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canRedo (  ) );
@@ -165,7 +165,7 @@ bool canUndo() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canUndo (  ) );
@@ -178,7 +178,7 @@ int cleanIndex() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cleanIndex (  ) );
@@ -191,7 +191,7 @@ void clear()
 */
 HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -205,7 +205,7 @@ const QUndoCommand * command(int index) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QUndoCommand * ptr = obj->command ( (int) hb_parni(1) );
@@ -219,7 +219,7 @@ int count() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -232,10 +232,10 @@ QAction * createRedoAction(QObject * parent, const QString & prefix = QString())
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QAction * ptr = obj->createRedoAction ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
@@ -248,10 +248,10 @@ QAction * createUndoAction(QObject * parent, const QString & prefix = QString())
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QAction * ptr = obj->createUndoAction ( par1, par2 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
@@ -264,7 +264,7 @@ void endMacro()
 */
 HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->endMacro (  );
@@ -278,7 +278,7 @@ int index() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_INDEX )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->index (  ) );
@@ -291,7 +291,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isActive (  ) );
@@ -304,7 +304,7 @@ bool isClean() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isClean (  ) );
@@ -317,10 +317,10 @@ void push(QUndoCommand * cmd)
 */
 HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoCommand * par1 = (QUndoCommand *) _qtxhb_itemGetPtr(1);
+    QUndoCommand * par1 = (QUndoCommand *) _qt5xhb_itemGetPtr(1);
     obj->push ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -332,7 +332,7 @@ QString redoText() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->redoText (  ).toLatin1().data() );
@@ -345,7 +345,7 @@ void setUndoLimit(int limit)
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setUndoLimit ( (int) hb_parni(1) );
@@ -359,7 +359,7 @@ QString text(int idx) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text ( (int) hb_parni(1) ).toLatin1().data() );
@@ -372,7 +372,7 @@ int undoLimit() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->undoLimit (  ) );
@@ -385,7 +385,7 @@ QString undoText() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->undoText (  ).toLatin1().data() );
@@ -398,7 +398,7 @@ void redo()
 */
 HB_FUNC_STATIC( QUNDOSTACK_REDO )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->redo (  );
@@ -412,7 +412,7 @@ void setActive(bool active = true)
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setActive ( (bool) ISNIL(1)? true : hb_parl(1) );
@@ -426,7 +426,7 @@ void setClean()
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setClean (  );
@@ -440,7 +440,7 @@ void setIndex(int idx)
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setIndex ( (int) hb_parni(1) );
@@ -454,7 +454,7 @@ void undo()
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDO )
 {
-  QUndoStack * obj = (QUndoStack *) _qtxhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->undo (  );

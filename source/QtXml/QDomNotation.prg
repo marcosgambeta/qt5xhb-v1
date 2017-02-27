@@ -93,7 +93,7 @@ QDomNotation ( const QDomNotation & x )
 HB_FUNC_STATIC( QDOMNOTATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QDomNotation * par1 = (QDomNotation *) _qtxhb_itemGetPtr(1);
+  QDomNotation * par1 = (QDomNotation *) _qt5xhb_itemGetPtr(1);
   QDomNotation * o = new QDomNotation ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomNotation *) o );
@@ -149,7 +149,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 {
-  QDomNotation * obj = (QDomNotation *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nodeType (  ) );
@@ -162,7 +162,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
-  QDomNotation * obj = (QDomNotation *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->publicId (  ).toLatin1().data() );
@@ -175,7 +175,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {
-  QDomNotation * obj = (QDomNotation *) _qtxhb_itemGetPtrStackSelfItem();
+  QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->systemId (  ).toLatin1().data() );

@@ -216,7 +216,7 @@ bool isSessionRestored () const
 */
 HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isSessionRestored (  ) );
@@ -233,7 +233,7 @@ QString sessionId () const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->sessionId (  ).toLatin1().data() );
@@ -246,7 +246,7 @@ QString sessionKey () const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->sessionKey (  ).toLatin1().data() );
@@ -260,7 +260,7 @@ QString styleSheet () const
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->styleSheet (  ).toLatin1().data() );
@@ -277,11 +277,11 @@ virtual bool notify ( QObject * receiver, QEvent * e )
 */
 HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
-    QEvent * par2 = (QEvent *) _qtxhb_itemGetPtr(2);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
     hb_retl( obj->notify ( par1, par2 ) );
   }
 }
@@ -292,7 +292,7 @@ void aboutQt ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->aboutQt (  );
@@ -308,7 +308,7 @@ void closeAllWindows ()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->closeAllWindows (  );
@@ -324,7 +324,7 @@ void setStyleSheet ( const QString & sheet )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
-  QApplication * obj = (QApplication *) _qtxhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -369,7 +369,7 @@ static void alert ( QWidget * widget, int msec = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QApplication::alert ( par1, (int) hb_parni(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -430,7 +430,7 @@ static void changeOverrideCursor ( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qtxhb_itemGetPtr(1);
+  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
   QApplication::changeOverrideCursor ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -525,7 +525,7 @@ static QFont font ( const QWidget * widget )
 */
 HB_FUNC_STATIC( QAPPLICATION_FONT2 )
 {
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QFont * ptr = new QFont( QApplication::font ( par1 ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
@@ -677,7 +677,7 @@ static QPalette palette ( const QWidget * widget )
 */
 HB_FUNC_STATIC( QAPPLICATION_PALETTE2 )
 {
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QPalette * ptr = new QPalette( QApplication::palette ( par1 ) );
   _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
@@ -753,7 +753,7 @@ static void setActiveWindow ( QWidget * active )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 {
-  QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QApplication::setActiveWindow ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -815,7 +815,7 @@ static void setFont ( const QFont & font, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
-  QFont * par1 = (QFont *) _qtxhb_itemGetPtr(1);
+  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   QApplication::setFont ( *par1,  (const char *) par2 );
   hb_itemReturn( hb_stackSelfItem() );
@@ -827,7 +827,7 @@ static void setGlobalStrut ( const QSize & )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 {
-  QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QApplication::setGlobalStrut ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -861,7 +861,7 @@ static void setOverrideCursor ( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qtxhb_itemGetPtr(1);
+  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
   QApplication::setOverrideCursor ( *par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -872,7 +872,7 @@ static void setPalette ( const QPalette & palette, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
-  QPalette * par1 = (QPalette *) _qtxhb_itemGetPtr(1);
+  QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   QApplication::setPalette ( *par1,  (const char *) par2 );
   hb_itemReturn( hb_stackSelfItem() );
@@ -914,7 +914,7 @@ static void setStyle ( QStyle * style )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLE1 )
 {
-  QStyle * par1 = (QStyle *) _qtxhb_itemGetPtr(1);
+  QStyle * par1 = (QStyle *) _qt5xhb_itemGetPtr(1);
   QApplication::setStyle ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -964,7 +964,7 @@ static void setWindowIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 {
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
+  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QApplication::setWindowIcon ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1004,7 +1004,7 @@ static QWidget * topLevelAt ( const QPoint & point )
 */
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
 {
-  QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QWidget * ptr = QApplication::topLevelAt ( *par1 );
   _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
@@ -1093,7 +1093,7 @@ static QWidget * widgetAt ( const QPoint & point )
 */
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
 {
-  QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QWidget * ptr = QApplication::widgetAt ( *par1 );
   _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }

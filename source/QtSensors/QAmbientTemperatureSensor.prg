@@ -74,7 +74,7 @@ QAmbientTemperatureSensor(QObject *parent = 0)
 HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAmbientTemperatureSensor * o = new QAmbientTemperatureSensor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAmbientTemperatureSensor *) o );
@@ -108,7 +108,7 @@ QAmbientTemperatureReading *reading() const
 HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureSensor * obj = (QAmbientTemperatureSensor *) _qtxhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureSensor * obj = (QAmbientTemperatureSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAmbientTemperatureReading * ptr = obj->reading (  );

@@ -97,11 +97,11 @@ virtual QString deviceDescription(const QByteArray & service, const QByteArray &
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION )
 {
-  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
-    QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
     hb_retc( (const char *) obj->deviceDescription ( *par1, *par2 ).toLatin1().data() );
   }
 }
@@ -112,10 +112,10 @@ virtual QList<QByteArray> devices(const QByteArray & service) const = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
 {
-  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QList<QByteArray> list = obj->devices ( *par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__

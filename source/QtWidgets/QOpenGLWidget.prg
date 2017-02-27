@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QOpenGLWidget * o = new QOpenGLWidget ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_SETFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurfaceFormat * par1 = (QSurfaceFormat *) _qtxhb_itemGetPtr(1);
+    QSurfaceFormat * par1 = (QSurfaceFormat *) _qt5xhb_itemGetPtr(1);
     obj->setFormat ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_MAKECURRENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->makeCurrent (  );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DONECURRENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->doneCurrent (  );
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QOpenGLContext * ptr = obj->context (  );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->defaultFramebufferObject (  ) );
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QImage * ptr = new QImage( obj->grabFramebuffer (  ) );

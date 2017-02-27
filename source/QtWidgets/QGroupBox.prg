@@ -88,7 +88,7 @@ QGroupBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QGROUPBOX_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QGroupBox * o = new QGroupBox ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGroupBox *) o );
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QGroupBox * o = new QGroupBox ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGroupBox *) o );
@@ -157,7 +157,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->alignment (  ) );
@@ -170,7 +170,7 @@ bool isCheckable () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isCheckable (  ) );
@@ -183,7 +183,7 @@ bool isChecked () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isChecked (  ) );
@@ -196,7 +196,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isFlat (  ) );
@@ -209,7 +209,7 @@ void setAlignment ( int alignment )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setAlignment ( (int) hb_parni(1) );
@@ -223,7 +223,7 @@ void setCheckable ( bool checkable )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCheckable ( (bool) hb_parl(1) );
@@ -237,7 +237,7 @@ void setFlat ( bool flat )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setFlat ( (bool) hb_parl(1) );
@@ -251,7 +251,7 @@ void setTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -266,7 +266,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QGROUPBOX_TITLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -279,7 +279,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -293,7 +293,7 @@ void setChecked ( bool checked )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {
-  QGroupBox * obj = (QGroupBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setChecked ( (bool) hb_parl(1) );

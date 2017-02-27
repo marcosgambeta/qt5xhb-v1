@@ -75,7 +75,7 @@ QHelpSearchQueryWidget ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QHelpSearchQueryWidget * o = new QHelpSearchQueryWidget ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpSearchQueryWidget *) o );
@@ -108,7 +108,7 @@ QList<QHelpSearchQuery> query () const
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {
-  QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QHelpSearchQuery> list = obj->query (  );

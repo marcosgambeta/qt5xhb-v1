@@ -149,7 +149,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {
-  QTextLength * obj = (QTextLength *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -162,7 +162,7 @@ qreal value(qreal maximumLength) const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {
-  QTextLength * obj = (QTextLength *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -176,7 +176,7 @@ qreal rawValue() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 {
-  QTextLength * obj = (QTextLength *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->rawValue (  ) );

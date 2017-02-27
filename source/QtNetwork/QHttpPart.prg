@@ -99,7 +99,7 @@ QHttpPart ( const QHttpPart & other )
 HB_FUNC_STATIC( QHTTPPART_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QHttpPart * par1 = (QHttpPart *) _qtxhb_itemGetPtr(1);
+  QHttpPart * par1 = (QHttpPart *) _qt5xhb_itemGetPtr(1);
   QHttpPart * o = new QHttpPart ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHttpPart *) o );
@@ -154,10 +154,10 @@ void setBody ( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
-  QHttpPart * obj = (QHttpPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setBody ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -169,10 +169,10 @@ void setBodyDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
-  QHttpPart * obj = (QHttpPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     obj->setBodyDevice ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -184,11 +184,11 @@ void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setHeader (  (QNetworkRequest::KnownHeaders) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -200,11 +200,11 @@ void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValu
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) _qtxhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
-    QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
     obj->setRawHeader ( *par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );

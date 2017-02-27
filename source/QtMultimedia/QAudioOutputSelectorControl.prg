@@ -93,7 +93,7 @@ virtual QString activeOutput() const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT )
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->activeOutput (  ).toLatin1().data() );
@@ -106,11 +106,11 @@ virtual QList<QString> availableOutputs() const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QString> strl = obj->availableOutputs (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -120,7 +120,7 @@ virtual QString defaultOutput() const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT )
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->defaultOutput (  ).toLatin1().data() );
@@ -133,7 +133,7 @@ virtual QString outputDescription(const QString & name) const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION )
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -147,7 +147,7 @@ virtual void setActiveOutput(const QString & name) = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

@@ -94,11 +94,11 @@ QScriptValue setupPackage(const QString & key, QScriptEngine * engine) const
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QScriptEngine * par2 = (QScriptEngine *) _qtxhb_itemGetPtr(2);
+    QScriptEngine * par2 = (QScriptEngine *) _qt5xhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->setupPackage ( par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -110,11 +110,11 @@ virtual void initialize(const QString & key, QScriptEngine * engine) = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QScriptEngine * par2 = ISNIL(2)? 0 : (QScriptEngine *) _qtxhb_itemGetPtr(2);
+    QScriptEngine * par2 = ISNIL(2)? 0 : (QScriptEngine *) _qt5xhb_itemGetPtr(2);
     obj->initialize ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -126,11 +126,11 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->keys (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 

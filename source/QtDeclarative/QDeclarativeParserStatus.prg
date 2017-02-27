@@ -76,7 +76,7 @@ virtual void classBegin () = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
 {
-  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->classBegin (  );
@@ -90,7 +90,7 @@ virtual void componentComplete () = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
 {
-  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->componentComplete (  );

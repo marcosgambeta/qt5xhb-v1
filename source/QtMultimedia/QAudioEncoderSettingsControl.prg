@@ -94,7 +94,7 @@ virtual QAudioEncoderSettings audioSettings() const = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
 {
-  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings (  ) );
@@ -108,7 +108,7 @@ virtual QString codecDescription(const QString & codec) const = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION )
 {
-  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -122,10 +122,10 @@ virtual void setAudioSettings(const QAudioEncoderSettings & settings) = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS )
 {
-  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qtxhb_itemGetPtr(1);
+    QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
     obj->setAudioSettings ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -137,11 +137,11 @@ virtual QStringList supportedAudioCodecs() const = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS )
 {
-  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->supportedAudioCodecs (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -151,13 +151,13 @@ virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, 
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
 {
-  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qtxhb_itemGetPtr(1);
+    QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
     QList<int> list = obj->supportedSampleRates ( *par1, &par2 );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
     hb_storl( par2, 2 );
   }
 }

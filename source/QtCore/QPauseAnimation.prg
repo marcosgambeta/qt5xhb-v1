@@ -74,7 +74,7 @@ QPauseAnimation ( QObject * parent = 0 )
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QPauseAnimation * o = new QPauseAnimation ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPauseAnimation *) o );
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QPauseAnimation * o = new QPauseAnimation ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPauseAnimation *) o );
@@ -143,7 +143,7 @@ void setDuration ( int msecs )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setDuration ( (int) hb_parni(1) );
@@ -157,7 +157,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) _qtxhb_itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->duration (  ) );

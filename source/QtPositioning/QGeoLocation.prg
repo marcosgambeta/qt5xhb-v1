@@ -112,7 +112,7 @@ QGeoLocation(const QGeoLocation &other)
 HB_FUNC_STATIC( QGEOLOCATION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * par1 = (QGeoLocation *) _qtxhb_itemGetPtr(1);
+  QGeoLocation * par1 = (QGeoLocation *) _qt5xhb_itemGetPtr(1);
   QGeoLocation * o = new QGeoLocation ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGeoLocation *) o );
@@ -168,7 +168,7 @@ QGeoAddress address() const
 HB_FUNC_STATIC( QGEOLOCATION_ADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGeoAddress * ptr = new QGeoAddress( obj->address (  ) );
@@ -184,10 +184,10 @@ void setAddress(const QGeoAddress &address)
 HB_FUNC_STATIC( QGEOLOCATION_SETADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoAddress * par1 = (QGeoAddress *) _qtxhb_itemGetPtr(1);
+    QGeoAddress * par1 = (QGeoAddress *) _qt5xhb_itemGetPtr(1);
     obj->setAddress ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -201,7 +201,7 @@ QGeoCoordinate coordinate() const
 HB_FUNC_STATIC( QGEOLOCATION_COORDINATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->coordinate (  ) );
@@ -217,10 +217,10 @@ void setCoordinate(const QGeoCoordinate &position)
 HB_FUNC_STATIC( QGEOLOCATION_SETCOORDINATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * par1 = (QGeoCoordinate *) _qtxhb_itemGetPtr(1);
+    QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
     obj->setCoordinate ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -234,7 +234,7 @@ QGeoRectangle boundingBox() const
 HB_FUNC_STATIC( QGEOLOCATION_BOUNDINGBOX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QGeoRectangle * ptr = new QGeoRectangle( obj->boundingBox (  ) );
@@ -250,10 +250,10 @@ void setBoundingBox(const QGeoRectangle &box)
 HB_FUNC_STATIC( QGEOLOCATION_SETBOUNDINGBOX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRectangle * par1 = (QGeoRectangle *) _qtxhb_itemGetPtr(1);
+    QGeoRectangle * par1 = (QGeoRectangle *) _qt5xhb_itemGetPtr(1);
     obj->setBoundingBox ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -267,7 +267,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QGEOLOCATION_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qtxhb_itemGetPtrStackSelfItem();
+  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );

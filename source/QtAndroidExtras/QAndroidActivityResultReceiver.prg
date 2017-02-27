@@ -94,10 +94,10 @@ virtual void handleActivityResult(int receiverRequestCode, int resultCode, const
 HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidActivityResultReceiver * obj = (QAndroidActivityResultReceiver *) _qtxhb_itemGetPtrStackSelfItem();
+  QAndroidActivityResultReceiver * obj = (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAndroidJniObject * par3 = (QAndroidJniObject *) _qtxhb_itemGetPtr(3);
+    QAndroidJniObject * par3 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(3);
     obj->handleActivityResult ( (int) hb_parni(1), (int) hb_parni(2), *par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );

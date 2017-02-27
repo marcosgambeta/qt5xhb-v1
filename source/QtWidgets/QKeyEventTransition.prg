@@ -76,7 +76,7 @@ QKeyEventTransition ( QState * sourceState = 0 )
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qtxhb_itemGetPtr(1);
+  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QKeyEventTransition * o = new QKeyEventTransition ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeyEventTransition *) o );
@@ -92,10 +92,10 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QState * par4 = ISNIL(4)? 0 : (QState *) _qtxhb_itemGetPtr(4);
+  QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
   QKeyEventTransition * o = new QKeyEventTransition ( par1,  (QEvent::Type) par2, par3, par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeyEventTransition *) o );
@@ -147,7 +147,7 @@ int key () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->key (  ) );
@@ -160,7 +160,7 @@ Qt::KeyboardModifiers modifierMask () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->modifierMask (  ) );
@@ -173,7 +173,7 @@ void setKey ( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setKey ( (int) hb_parni(1) );
@@ -187,7 +187,7 @@ void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qtxhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

@@ -118,7 +118,7 @@ virtual bool canRead () const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canRead (  ) );
@@ -131,7 +131,7 @@ virtual int currentImageNumber () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentImageNumber (  ) );
@@ -144,7 +144,7 @@ virtual QRect currentImageRect () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->currentImageRect (  ) );
@@ -158,7 +158,7 @@ QIODevice * device () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
@@ -172,7 +172,7 @@ QByteArray format () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->format (  ) );
@@ -186,7 +186,7 @@ virtual int imageCount () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->imageCount (  ) );
@@ -199,7 +199,7 @@ virtual bool jumpToImage ( int imageNumber )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->jumpToImage ( (int) hb_parni(1) ) );
@@ -212,7 +212,7 @@ virtual bool jumpToNextImage ()
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->jumpToNextImage (  ) );
@@ -225,7 +225,7 @@ virtual int loopCount () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->loopCount (  ) );
@@ -238,7 +238,7 @@ virtual int nextImageDelay () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nextImageDelay (  ) );
@@ -251,7 +251,7 @@ virtual QVariant option ( ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -266,10 +266,10 @@ virtual bool read ( QImage * image ) = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qtxhb_itemGetPtr(1);
+    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->read ( par1 ) );
   }
 }
@@ -280,10 +280,10 @@ void setDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     obj->setDevice ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -295,10 +295,10 @@ void setFormat ( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setFormat ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -311,11 +311,11 @@ virtual void setOption ( ImageOption option, const QVariant & value )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setOption (  (QImageIOHandler::ImageOption) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -327,7 +327,7 @@ virtual bool supportsOption ( ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -341,10 +341,10 @@ virtual bool write ( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qtxhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qtxhb_itemGetPtr(1);
+    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->write ( *par1 ) );
   }
 }

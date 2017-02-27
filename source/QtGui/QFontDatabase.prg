@@ -140,7 +140,7 @@ bool bold ( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_BOLD )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -155,12 +155,12 @@ QStringList families ( WritingSystem writingSystem = Any ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QFontDatabase::Any : hb_parni(1);
     QStringList strl = obj->families (  (QFontDatabase::WritingSystem) par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -170,7 +170,7 @@ QFont font ( const QString & family, const QString & style, int pointSize ) cons
 */
 HB_FUNC_STATIC( QFONTDATABASE_FONT )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -186,7 +186,7 @@ bool isBitmapScalable ( const QString & family, const QString & style = QString(
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -201,7 +201,7 @@ bool isFixedPitch ( const QString & family, const QString & style = QString() ) 
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -216,7 +216,7 @@ bool isScalable ( const QString & family, const QString & style = QString() ) co
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -231,7 +231,7 @@ bool isSmoothlyScalable ( const QString & family, const QString & style = QStrin
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -246,7 +246,7 @@ bool italic ( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -261,13 +261,13 @@ QList<int> pointSizes ( const QString & family, const QString & style = QString(
 */
 HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QList<int> list = obj->pointSizes ( par1, par2 );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -277,13 +277,13 @@ QList<int> smoothSizes ( const QString & family, const QString & style )
 */
 HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QList<int> list = obj->smoothSizes ( par1, par2 );
-    _qtxhb_convert_qlist_int_to_array ( list );
+    _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
 
@@ -293,10 +293,10 @@ QString styleString ( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qtxhb_itemGetPtr(1);
+    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->styleString ( *par1 ).toLatin1().data() );
   }
 }
@@ -307,10 +307,10 @@ QString styleString ( const QFontInfo & fontInfo )
 */
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFontInfo * par1 = (QFontInfo *) _qtxhb_itemGetPtr(1);
+    QFontInfo * par1 = (QFontInfo *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->styleString ( *par1 ).toLatin1().data() );
   }
 }
@@ -340,12 +340,12 @@ QStringList styles ( const QString & family ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_STYLES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QStringList strl = obj->styles ( par1 );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -355,7 +355,7 @@ int weight ( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qtxhb_itemGetPtrStackSelfItem();
+  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -382,7 +382,7 @@ static int addApplicationFontFromData ( const QByteArray & fontData )
 */
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 {
-  QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   hb_retni( QFontDatabase::addApplicationFontFromData ( *par1 ) );
 }
 
@@ -393,7 +393,7 @@ static QStringList applicationFontFamilies ( int id )
 HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
   QStringList strl = QFontDatabase::applicationFontFamilies ( (int) hb_parni(1) );
-  _qtxhb_convert_qstringlist_to_array ( strl );
+  _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
 
@@ -421,7 +421,7 @@ static QList<int> standardSizes ()
 HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 {
   QList<int> list = QFontDatabase::standardSizes (  );
-  _qtxhb_convert_qlist_int_to_array ( list );
+  _qt5xhb_convert_qlist_int_to_array ( list );
 }
 
 

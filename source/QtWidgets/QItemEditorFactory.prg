@@ -117,10 +117,10 @@ virtual QWidget *createEditor(int userType, QWidget *parent) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemEditorFactory * obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
+    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     QWidget * ptr = obj->createEditor ( (int) hb_parni(1), par2 );
     _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
@@ -132,7 +132,7 @@ virtual QByteArray valuePropertyName(int userType) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemEditorFactory * obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->valuePropertyName ( (int) hb_parni(1) ) );
@@ -146,10 +146,10 @@ void registerEditor(int userType, QItemEditorCreatorBase *creator)
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) _qtxhb_itemGetPtrStackSelfItem();
+  QItemEditorFactory * obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemEditorCreatorBase * par2 = (QItemEditorCreatorBase *) _qtxhb_itemGetPtr(2);
+    QItemEditorCreatorBase * par2 = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtr(2);
     obj->registerEditor ( (int) hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -171,7 +171,7 @@ static void setDefaultFactory(QItemEditorFactory *factory)
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_SETDEFAULTFACTORY )
 {
-  QItemEditorFactory * par1 = (QItemEditorFactory *) _qtxhb_itemGetPtr(1);
+  QItemEditorFactory * par1 = (QItemEditorFactory *) _qt5xhb_itemGetPtr(1);
   QItemEditorFactory::setDefaultFactory ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }

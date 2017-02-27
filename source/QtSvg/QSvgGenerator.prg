@@ -125,7 +125,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->description (  ).toLatin1().data() );
@@ -138,7 +138,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -151,7 +151,7 @@ QIODevice * outputDevice () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIODevice * ptr = obj->outputDevice (  );
@@ -165,7 +165,7 @@ int resolution () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->resolution (  ) );
@@ -178,7 +178,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -193,7 +193,7 @@ void setFileName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -208,10 +208,10 @@ void setOutputDevice ( QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     obj->setOutputDevice ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -223,7 +223,7 @@ void setResolution ( int dpi )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setResolution ( (int) hb_parni(1) );
@@ -237,10 +237,10 @@ void setSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     obj->setSize ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,7 +252,7 @@ void setTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -267,10 +267,10 @@ void setViewBox ( const QRect & viewBox )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX1 )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     obj->setViewBox ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -281,10 +281,10 @@ void setViewBox ( const QRectF & viewBox )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX2 )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     obj->setViewBox ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -315,7 +315,7 @@ QSize size () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
@@ -329,7 +329,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -342,7 +342,7 @@ QRect viewBox () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->viewBox (  ) );
@@ -356,7 +356,7 @@ QRectF viewBoxF () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->viewBoxF (  ) );

@@ -97,7 +97,7 @@ explicit QPdfWriter(QIODevice * device)
 HB_FUNC_STATIC( QPDFWRITER_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QPdfWriter * o = new QPdfWriter ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPdfWriter *) o );
@@ -149,7 +149,7 @@ QString title() const
 */
 HB_FUNC_STATIC( QPDFWRITER_TITLE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->title (  ).toLatin1().data() );
@@ -161,7 +161,7 @@ void setTitle(const QString & title)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETTITLE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -176,7 +176,7 @@ QString creator() const
 */
 HB_FUNC_STATIC( QPDFWRITER_CREATOR )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->creator (  ).toLatin1().data() );
@@ -188,7 +188,7 @@ void setCreator(const QString & creator)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETCREATOR )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -203,7 +203,7 @@ bool newPage()
 */
 HB_FUNC_STATIC( QPDFWRITER_NEWPAGE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->newPage (  ) );
@@ -216,7 +216,7 @@ void setPageSize(PageSize size)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -231,10 +231,10 @@ void setPageSizeMM(const QSizeF & size)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZEMM )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qtxhb_itemGetPtr(1);
+    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     obj->setPageSizeMM ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -247,7 +247,7 @@ int resolution() const
 */
 HB_FUNC_STATIC( QPDFWRITER_RESOLUTION )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->resolution (  ) );
@@ -259,7 +259,7 @@ void setResolution(int resolution)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qtxhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setResolution ( (int) hb_parni(1) );

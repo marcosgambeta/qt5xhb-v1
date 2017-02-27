@@ -88,7 +88,7 @@ QGraphicsVideoItem(QGraphicsItem *parent = 0)
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qtxhb_itemGetPtr(1);
+  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsVideoItem * o = new QGraphicsVideoItem ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsVideoItem *) o );
@@ -121,7 +121,7 @@ QMediaObject *mediaObject() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
@@ -135,7 +135,7 @@ Qt::AspectRatioMode aspectRatioMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ASPECTRATIOMODE )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->aspectRatioMode (  ) );
@@ -148,7 +148,7 @@ void setAspectRatioMode(Qt::AspectRatioMode mode)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -163,7 +163,7 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_OFFSET )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->offset (  ) );
@@ -177,10 +177,10 @@ void setOffset(const QPointF &offset)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETOFFSET )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setOffset ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -192,7 +192,7 @@ QSizeF size() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SIZE )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->size (  ) );
@@ -206,10 +206,10 @@ void setSize(const QSizeF &size)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETSIZE )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qtxhb_itemGetPtr(1);
+    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     obj->setSize ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -221,7 +221,7 @@ QSizeF nativeSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NATIVESIZE )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->nativeSize (  ) );
@@ -235,7 +235,7 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
@@ -249,12 +249,12 @@ void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *w
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qtxhb_itemGetPtrStackSelfItem();
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qtxhb_itemGetPtr(1);
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qtxhb_itemGetPtr(2);
-    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qtxhb_itemGetPtr(3);
+    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
+    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
+    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
     obj->paint ( par1, par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );

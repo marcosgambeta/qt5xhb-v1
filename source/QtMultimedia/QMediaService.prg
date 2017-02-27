@@ -91,10 +91,10 @@ virtual void releaseControl(QMediaControl * control) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
 {
-  QMediaService * obj = (QMediaService *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaService * obj = (QMediaService *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaControl * par1 = (QMediaControl *) _qtxhb_itemGetPtr(1);
+    QMediaControl * par1 = (QMediaControl *) _qt5xhb_itemGetPtr(1);
     obj->releaseControl ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -106,7 +106,7 @@ virtual QMediaControl * requestControl(const char * interface) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
 {
-  QMediaService * obj = (QMediaService *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaService * obj = (QMediaService *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const char * par1 = hb_parc(1);

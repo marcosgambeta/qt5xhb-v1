@@ -75,7 +75,7 @@ QFocusFrame ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QFocusFrame * o = new QFocusFrame ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFocusFrame *) o );
@@ -108,10 +108,10 @@ void setWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
 {
-  QFocusFrame * obj = (QFocusFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFocusFrame * obj = (QFocusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
+    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setWidget ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -123,7 +123,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
 {
-  QFocusFrame * obj = (QFocusFrame *) _qtxhb_itemGetPtrStackSelfItem();
+  QFocusFrame * obj = (QFocusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QWidget * ptr = obj->widget (  );

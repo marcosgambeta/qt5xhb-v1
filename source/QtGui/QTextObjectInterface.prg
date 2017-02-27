@@ -97,11 +97,11 @@ virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextF
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextObjectInterface * obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextDocument * par1 = (QTextDocument *) _qtxhb_itemGetPtr(1);
-    QTextFormat * par3 = (QTextFormat *) _qtxhb_itemGetPtr(3);
+    QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
+    QTextFormat * par3 = (QTextFormat *) _qt5xhb_itemGetPtr(3);
     QSizeF * ptr = new QSizeF( obj->intrinsicSize ( par1, (int) hb_parni(2), *par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
@@ -113,13 +113,13 @@ virtual void drawObject(QPainter *painter, const QRectF &rect, QTextDocument *do
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QTextObjectInterface * obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qtxhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qtxhb_itemGetPtr(2);
-    QTextDocument * par3 = (QTextDocument *) _qtxhb_itemGetPtr(3);
-    QTextFormat * par5 = (QTextFormat *) _qtxhb_itemGetPtr(5);
+    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
+    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
+    QTextDocument * par3 = (QTextDocument *) _qt5xhb_itemGetPtr(3);
+    QTextFormat * par5 = (QTextFormat *) _qt5xhb_itemGetPtr(5);
     obj->drawObject ( par1, *par2, par3, (int) hb_parni(4), *par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );

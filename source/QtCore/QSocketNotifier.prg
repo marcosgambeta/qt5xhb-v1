@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qintptr par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QSocketNotifier * o = new QSocketNotifier ( par1,  (QSocketNotifier::Type) par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSocketNotifier *) o );
@@ -109,7 +109,7 @@ qintptr socket() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) _qtxhb_itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->socket (  ) );
@@ -122,7 +122,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) _qtxhb_itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -135,7 +135,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) _qtxhb_itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isEnabled (  ) );
@@ -148,7 +148,7 @@ void setEnabled(bool)
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) _qtxhb_itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setEnabled ( (bool) hb_parl(1) );

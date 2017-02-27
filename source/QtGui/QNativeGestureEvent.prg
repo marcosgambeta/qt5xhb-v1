@@ -81,9 +81,9 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QPointF * par2 = (QPointF *) _qtxhb_itemGetPtr(2);
-  QPointF * par3 = (QPointF *) _qtxhb_itemGetPtr(3);
-  QPointF * par4 = (QPointF *) _qtxhb_itemGetPtr(4);
+  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
+  QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
+  QPointF * par4 = (QPointF *) _qt5xhb_itemGetPtr(4);
   qreal par5 = hb_parnd(5);
   ulong par6 = hb_parnl(6);
   quint64 par7 = hb_parni(7);
@@ -119,7 +119,7 @@ Qt::NativeGestureType gestureType() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->gestureType (  ) );
@@ -132,7 +132,7 @@ qreal value() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_VALUE )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->value (  ) );
@@ -145,7 +145,7 @@ const QPoint pos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_POS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
   }
@@ -157,7 +157,7 @@ const QPoint globalPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GLOBALPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
   }
@@ -169,7 +169,7 @@ const QPointF &localPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_LOCALPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->localPos (  );
@@ -183,7 +183,7 @@ const QPointF &windowPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_WINDOWPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->windowPos (  );
@@ -197,7 +197,7 @@ const QPointF &screenPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_SCREENPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPointF * ptr = &obj->screenPos (  );

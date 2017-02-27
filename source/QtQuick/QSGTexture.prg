@@ -108,7 +108,7 @@ virtual void bind() = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_BIND )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->bind (  );
@@ -122,10 +122,10 @@ QRectF convertToNormalizedSourceRect(const QRectF & rect) const
 */
 HB_FUNC_STATIC( QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->convertToNormalizedSourceRect ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
@@ -137,7 +137,7 @@ QSGTexture::Filtering filtering() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_FILTERING )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->filtering (  ) );
@@ -150,7 +150,7 @@ virtual bool hasAlphaChannel() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_HASALPHACHANNEL )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasAlphaChannel (  ) );
@@ -163,7 +163,7 @@ virtual bool hasMipmaps() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_HASMIPMAPS )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasMipmaps (  ) );
@@ -176,7 +176,7 @@ QSGTexture::WrapMode horizontalWrapMode() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_HORIZONTALWRAPMODE )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->horizontalWrapMode (  ) );
@@ -189,7 +189,7 @@ virtual bool isAtlasTexture() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_ISATLASTEXTURE )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAtlasTexture (  ) );
@@ -202,7 +202,7 @@ QSGTexture::Filtering mipmapFiltering() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_MIPMAPFILTERING )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->mipmapFiltering (  ) );
@@ -215,7 +215,7 @@ virtual QRectF normalizedTextureSubRect() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_NORMALIZEDTEXTURESUBRECT )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->normalizedTextureSubRect (  ) );
@@ -229,7 +229,7 @@ virtual QSGTexture * removedFromAtlas() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_REMOVEDFROMATLAS )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSGTexture * ptr = obj->removedFromAtlas (  );
@@ -243,7 +243,7 @@ void setFiltering(Filtering filter)
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETFILTERING )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -258,7 +258,7 @@ void setHorizontalWrapMode(WrapMode hwrap)
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETHORIZONTALWRAPMODE )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -273,7 +273,7 @@ void setMipmapFiltering(Filtering filter)
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETMIPMAPFILTERING )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -288,7 +288,7 @@ void setVerticalWrapMode(WrapMode vwrap)
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETVERTICALWRAPMODE )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -303,7 +303,7 @@ virtual int textureId() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_TEXTUREID )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->textureId (  ) );
@@ -316,7 +316,7 @@ virtual QSize textureSize() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_TEXTURESIZE )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->textureSize (  ) );
@@ -330,7 +330,7 @@ void updateBindOptions(bool force = false)
 */
 HB_FUNC_STATIC( QSGTEXTURE_UPDATEBINDOPTIONS )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->updateBindOptions ( (bool) ISNIL(1)? false : hb_parl(1) );
@@ -344,7 +344,7 @@ QSGTexture::WrapMode verticalWrapMode() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_VERTICALWRAPMODE )
 {
-  QSGTexture * obj = (QSGTexture *) _qtxhb_itemGetPtrStackSelfItem();
+  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->verticalWrapMode (  ) );

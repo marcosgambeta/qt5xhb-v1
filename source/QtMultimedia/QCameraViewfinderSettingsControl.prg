@@ -91,7 +91,7 @@ virtual bool isViewfinderParameterSupported(ViewfinderParameter parameter) const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED )
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -105,11 +105,11 @@ virtual void setViewfinderParameter(ViewfinderParameter parameter, const QVarian
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setViewfinderParameter (  (QCameraViewfinderSettingsControl::ViewfinderParameter) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -121,7 +121,7 @@ virtual QVariant viewfinderParameter(ViewfinderParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER )
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);

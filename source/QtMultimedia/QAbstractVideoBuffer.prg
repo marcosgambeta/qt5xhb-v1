@@ -103,7 +103,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->handle (  ) );
@@ -117,7 +117,7 @@ HandleType handleType () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->handleType (  ) );
@@ -130,7 +130,7 @@ virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAP )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -149,7 +149,7 @@ virtual MapMode mapMode () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->mapMode (  ) );
@@ -162,7 +162,7 @@ virtual void unmap () = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->unmap (  );

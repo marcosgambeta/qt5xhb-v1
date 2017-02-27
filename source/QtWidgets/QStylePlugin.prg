@@ -90,7 +90,7 @@ virtual QStyle *create(const QString &key) = 0
 */
 HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
 {
-  QStylePlugin * obj = (QStylePlugin *) _qtxhb_itemGetPtrStackSelfItem();
+  QStylePlugin * obj = (QStylePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

@@ -120,7 +120,7 @@ QMovie ( QObject * parent = 0 )
 HB_FUNC_STATIC( QMOVIE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QMovie * o = new QMovie ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMovie *) o );
@@ -136,9 +136,9 @@ QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject *
 HB_FUNC_STATIC( QMOVIE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QMovie * o = new QMovie ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMovie *) o );
@@ -155,8 +155,8 @@ HB_FUNC_STATIC( QMOVIE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qtxhb_itemGetPtr(3);
+  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
+  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QMovie * o = new QMovie ( par1, par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMovie *) o );
@@ -213,7 +213,7 @@ QColor  backgroundColor () const
 */
 HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QColor * ptr = new QColor( obj->backgroundColor (  ) );
@@ -227,7 +227,7 @@ CacheMode  cacheMode () const
 */
 HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->cacheMode (  ) );
@@ -240,7 +240,7 @@ int  currentFrameNumber () const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->currentFrameNumber (  ) );
@@ -253,7 +253,7 @@ QImage  currentImage () const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QImage * ptr = new QImage( obj->currentImage (  ) );
@@ -267,7 +267,7 @@ QPixmap  currentPixmap () const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->currentPixmap (  ) );
@@ -281,7 +281,7 @@ QIODevice *  device () const
 */
 HB_FUNC_STATIC( QMOVIE_DEVICE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
@@ -295,7 +295,7 @@ QString  fileName () const
 */
 HB_FUNC_STATIC( QMOVIE_FILENAME )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -308,7 +308,7 @@ QByteArray  format () const
 */
 HB_FUNC_STATIC( QMOVIE_FORMAT )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->format (  ) );
@@ -322,7 +322,7 @@ int  frameCount () const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->frameCount (  ) );
@@ -335,7 +335,7 @@ QRect  frameRect () const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRect * ptr = new QRect( obj->frameRect (  ) );
@@ -349,7 +349,7 @@ bool  isValid () const
 */
 HB_FUNC_STATIC( QMOVIE_ISVALID )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -362,7 +362,7 @@ bool  jumpToFrame ( int frameNumber )
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->jumpToFrame ( (int) hb_parni(1) ) );
@@ -375,7 +375,7 @@ int  loopCount () const
 */
 HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->loopCount (  ) );
@@ -388,7 +388,7 @@ int  nextFrameDelay () const
 */
 HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nextFrameDelay (  ) );
@@ -401,7 +401,7 @@ QSize  scaledSize ()
 */
 HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->scaledSize (  ) );
@@ -415,10 +415,10 @@ void  setBackgroundColor ( const QColor & color )
 */
 HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qtxhb_itemGetPtr(1) : QColor(hb_parc(1));
+    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
     obj->setBackgroundColor ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -430,7 +430,7 @@ void  setCacheMode ( CacheMode mode )
 */
 HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -445,10 +445,10 @@ void  setDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
+    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     obj->setDevice ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -460,7 +460,7 @@ void  setFileName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -475,10 +475,10 @@ void  setFormat ( const QByteArray & format )
 */
 HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setFormat ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -490,10 +490,10 @@ void  setScaledSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     obj->setScaledSize ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -505,7 +505,7 @@ int  speed () const
 */
 HB_FUNC_STATIC( QMOVIE_SPEED )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->speed (  ) );
@@ -518,7 +518,7 @@ MovieState  state () const
 */
 HB_FUNC_STATIC( QMOVIE_STATE )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->state (  ) );
@@ -533,7 +533,7 @@ bool jumpToNextFrame ()
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->jumpToNextFrame (  ) );
@@ -546,7 +546,7 @@ void setPaused ( bool paused )
 */
 HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setPaused ( (bool) hb_parl(1) );
@@ -560,7 +560,7 @@ void setSpeed ( int percentSpeed )
 */
 HB_FUNC_STATIC( QMOVIE_SETSPEED )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setSpeed ( (int) hb_parni(1) );
@@ -574,7 +574,7 @@ void start ()
 */
 HB_FUNC_STATIC( QMOVIE_START )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->start (  );
@@ -588,7 +588,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QMOVIE_STOP )
 {
-  QMovie * obj = (QMovie *) _qtxhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->stop (  );

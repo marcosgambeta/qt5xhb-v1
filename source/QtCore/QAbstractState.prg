@@ -93,7 +93,7 @@ QStateMachine * machine () const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
-  QAbstractState * obj = (QAbstractState *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStateMachine * ptr = obj->machine (  );
@@ -107,7 +107,7 @@ QState * parentState () const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
-  QAbstractState * obj = (QAbstractState *) _qtxhb_itemGetPtrStackSelfItem();
+  QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QState * ptr = obj->parentState (  );

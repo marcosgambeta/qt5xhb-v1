@@ -73,7 +73,7 @@ QAccessibleTextUpdateEvent(QObject *obj, int position, const QString &oldText, c
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QString par3 = QLatin1String( hb_parc(3) );
   QString par4 = QLatin1String( hb_parc(4) );
@@ -109,7 +109,7 @@ QString textRemoved() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED )
 {
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->textRemoved (  ).toLatin1().data() );
@@ -122,7 +122,7 @@ QString textInserted() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED )
 {
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->textInserted (  ).toLatin1().data() );
@@ -135,7 +135,7 @@ int changePosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_CHANGEPOSITION )
 {
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->changePosition (  ) );

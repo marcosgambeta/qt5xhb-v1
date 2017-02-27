@@ -96,7 +96,7 @@ virtual bool isActive(int stream) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isActive ( (int) hb_parni(1) ) );
@@ -109,7 +109,7 @@ virtual QVariant metaData(int stream, const QString & key) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
@@ -124,7 +124,7 @@ virtual void setActive(int stream, bool state) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setActive ( (int) hb_parni(1), (bool) hb_parl(2) );
@@ -138,7 +138,7 @@ virtual int streamCount() = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->streamCount (  ) );
@@ -151,7 +151,7 @@ virtual StreamType streamType(int stream) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qtxhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->streamType ( (int) hb_parni(1) ) );

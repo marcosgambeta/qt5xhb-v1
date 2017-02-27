@@ -281,7 +281,7 @@ bool isAffine() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAffine (  ) );
@@ -294,7 +294,7 @@ bool isIdentity() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isIdentity (  ) );
@@ -307,7 +307,7 @@ bool isInvertible() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isInvertible (  ) );
@@ -320,7 +320,7 @@ bool isScaling() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isScaling (  ) );
@@ -333,7 +333,7 @@ bool isRotating() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isRotating (  ) );
@@ -346,7 +346,7 @@ bool isTranslating() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isTranslating (  ) );
@@ -359,7 +359,7 @@ TransformationType type() const
 */
 HB_FUNC_STATIC( QTRANSFORM_TYPE )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->type (  ) );
@@ -372,7 +372,7 @@ qreal determinant() const
 */
 HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->determinant (  ) );
@@ -385,7 +385,7 @@ qreal det() const
 */
 HB_FUNC_STATIC( QTRANSFORM_DET )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->det (  ) );
@@ -398,7 +398,7 @@ qreal m11() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M11 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m11 (  ) );
@@ -411,7 +411,7 @@ qreal m12() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M12 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m12 (  ) );
@@ -424,7 +424,7 @@ qreal m13() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M13 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m13 (  ) );
@@ -437,7 +437,7 @@ qreal m21() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M21 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m21 (  ) );
@@ -450,7 +450,7 @@ qreal m22() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M22 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m22 (  ) );
@@ -463,7 +463,7 @@ qreal m23() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M23 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m23 (  ) );
@@ -476,7 +476,7 @@ qreal m31() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M31 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m31 (  ) );
@@ -489,7 +489,7 @@ qreal m32() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M32 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m32 (  ) );
@@ -502,7 +502,7 @@ qreal m33() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M33 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->m33 (  ) );
@@ -515,7 +515,7 @@ qreal dx() const
 */
 HB_FUNC_STATIC( QTRANSFORM_DX )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->dx (  ) );
@@ -528,7 +528,7 @@ qreal dy() const
 */
 HB_FUNC_STATIC( QTRANSFORM_DY )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->dy (  ) );
@@ -541,7 +541,7 @@ void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,q
 */
 HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -564,7 +564,7 @@ QTransform inverted(bool *invertible = 0) const
 */
 HB_FUNC_STATIC( QTRANSFORM_INVERTED )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     bool par1;
@@ -580,7 +580,7 @@ QTransform adjoint() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->adjoint (  ) );
@@ -594,7 +594,7 @@ QTransform transposed() const
 */
 HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->transposed (  ) );
@@ -608,7 +608,7 @@ QTransform &translate(qreal dx, qreal dy)
 */
 HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -624,7 +624,7 @@ QTransform &scale(qreal sx, qreal sy)
 */
 HB_FUNC_STATIC( QTRANSFORM_SCALE )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -640,7 +640,7 @@ QTransform &shear(qreal sh, qreal sv)
 */
 HB_FUNC_STATIC( QTRANSFORM_SHEAR )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -656,7 +656,7 @@ QTransform &rotate(qreal a, Qt::Axis axis = Qt::ZAxis)
 */
 HB_FUNC_STATIC( QTRANSFORM_ROTATE )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -672,7 +672,7 @@ QTransform &rotateRadians(qreal a, Qt::Axis axis = Qt::ZAxis)
 */
 HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -688,7 +688,7 @@ void reset()
 */
 HB_FUNC_STATIC( QTRANSFORM_RESET )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->reset (  );
@@ -702,10 +702,10 @@ QPoint map(const QPoint &p) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP1 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
+    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
     QPoint * ptr = new QPoint( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
@@ -717,10 +717,10 @@ QPointF map(const QPointF &p) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP2 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
+    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     QPointF * ptr = new QPointF( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
@@ -732,10 +732,10 @@ QLine map(const QLine &l) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP3 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLine * par1 = (QLine *) _qtxhb_itemGetPtr(1);
+    QLine * par1 = (QLine *) _qt5xhb_itemGetPtr(1);
     QLine * ptr = new QLine( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
@@ -747,10 +747,10 @@ QLineF map(const QLineF &l) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP4 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLineF * par1 = (QLineF *) _qtxhb_itemGetPtr(1);
+    QLineF * par1 = (QLineF *) _qt5xhb_itemGetPtr(1);
     QLineF * ptr = new QLineF( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
@@ -762,10 +762,10 @@ QPolygonF map(const QPolygonF &a) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP5 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
+    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
@@ -777,10 +777,10 @@ QPolygon map(const QPolygon &a) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP6 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) _qtxhb_itemGetPtr(1);
+    QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
@@ -792,10 +792,10 @@ QRegion map(const QRegion &r) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP7 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * par1 = (QRegion *) _qtxhb_itemGetPtr(1);
+    QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
     QRegion * ptr = new QRegion( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
@@ -807,10 +807,10 @@ QPainterPath map(const QPainterPath &p) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP8 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
+    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->map ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
@@ -822,10 +822,10 @@ QPolygon mapToPolygon(const QRect &r) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
@@ -837,10 +837,10 @@ QRect mapRect(const QRect &) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
+    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->mapRect ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
@@ -852,10 +852,10 @@ QRectF mapRect(const QRectF &) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
+    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->mapRect ( *par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
@@ -867,7 +867,7 @@ void map(int x, int y, int *tx, int *ty) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP9 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par3;
@@ -885,7 +885,7 @@ void map(qreal x, qreal y, qreal *tx, qreal *ty) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP10 )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -905,7 +905,7 @@ const QMatrix &toAffine() const
 */
 HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
 {
-  QTransform * obj = (QTransform *) _qtxhb_itemGetPtrStackSelfItem();
+  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QMatrix * ptr = &obj->toAffine (  );
@@ -919,8 +919,8 @@ static bool squareToQuad(const QPolygonF &square, QTransform &result)
 */
 HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {
-  QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
-  QTransform * par2 = (QTransform *) _qtxhb_itemGetPtr(2);
+  QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
+  QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
   hb_retl( QTransform::squareToQuad ( *par1, *par2 ) );
 }
 
@@ -930,8 +930,8 @@ static bool quadToSquare(const QPolygonF &quad, QTransform &result)
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 {
-  QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
-  QTransform * par2 = (QTransform *) _qtxhb_itemGetPtr(2);
+  QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
+  QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
   hb_retl( QTransform::quadToSquare ( *par1, *par2 ) );
 }
 
@@ -941,9 +941,9 @@ static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &res
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
-  QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
-  QPolygonF * par2 = (QPolygonF *) _qtxhb_itemGetPtr(2);
-  QTransform * par3 = (QTransform *) _qtxhb_itemGetPtr(3);
+  QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
+  QPolygonF * par2 = (QPolygonF *) _qt5xhb_itemGetPtr(2);
+  QTransform * par3 = (QTransform *) _qt5xhb_itemGetPtr(3);
   hb_retl( QTransform::quadToQuad ( *par1, *par2, *par3 ) );
 }
 

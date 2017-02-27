@@ -76,7 +76,7 @@ QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QKeySequence * par1 = (QKeySequence *) _qtxhb_itemGetPtr(1);
+  QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   bool par3 = ISNIL(3)? false : hb_parl(3);
   QShortcutEvent * o = new QShortcutEvent ( *par1, par2, par3 );
@@ -111,7 +111,7 @@ const QKeySequence &key() const
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QKeySequence * ptr = &obj->key (  );
@@ -125,7 +125,7 @@ int shortcutId() const
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->shortcutId (  ) );
@@ -138,7 +138,7 @@ bool isAmbiguous() const
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isAmbiguous (  ) );

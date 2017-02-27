@@ -131,7 +131,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QMIMEDATA_CLEAR )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -145,7 +145,7 @@ QVariant colorData () const
 */
 HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->colorData (  ) );
@@ -159,7 +159,7 @@ QByteArray data ( const QString & mimeType ) const
 */
 HB_FUNC_STATIC( QMIMEDATA_DATA )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -174,11 +174,11 @@ virtual QStringList formats () const
 */
 HB_FUNC_STATIC( QMIMEDATA_FORMATS )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->formats (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -188,7 +188,7 @@ bool hasColor () const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasColor (  ) );
@@ -201,7 +201,7 @@ virtual bool hasFormat ( const QString & mimeType ) const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -215,7 +215,7 @@ bool hasHtml () const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASHTML )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasHtml (  ) );
@@ -228,7 +228,7 @@ bool hasImage () const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasImage (  ) );
@@ -241,7 +241,7 @@ bool hasText () const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasText (  ) );
@@ -254,7 +254,7 @@ bool hasUrls () const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASURLS )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->hasUrls (  ) );
@@ -267,7 +267,7 @@ QString html () const
 */
 HB_FUNC_STATIC( QMIMEDATA_HTML )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->html (  ).toLatin1().data() );
@@ -280,7 +280,7 @@ QVariant imageData () const
 */
 HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->imageData (  ) );
@@ -294,7 +294,7 @@ void removeFormat ( const QString & mimeType )
 */
 HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -309,10 +309,10 @@ void setColorData ( const QVariant & color )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setColorData ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -324,11 +324,11 @@ void setData ( const QString & mimeType, const QByteArray & data )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETDATA )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
+    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
     obj->setData ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -340,7 +340,7 @@ void setHtml ( const QString & html )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETHTML )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -355,10 +355,10 @@ void setImageData ( const QVariant & image )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
+    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     obj->setImageData ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -370,7 +370,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -385,7 +385,7 @@ void setUrls ( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETURLS )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QUrl> par1;
@@ -407,7 +407,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QMIMEDATA_TEXT )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
@@ -420,7 +420,7 @@ QList<QUrl> urls () const
 */
 HB_FUNC_STATIC( QMIMEDATA_URLS )
 {
-  QMimeData * obj = (QMimeData *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QUrl> list = obj->urls (  );

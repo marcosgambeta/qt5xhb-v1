@@ -75,8 +75,8 @@ QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
-  QPoint * par2 = (QPoint *) _qtxhb_itemGetPtr(2);
+  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
+  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QMoveEvent * o = new QMoveEvent ( *par1, *par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMoveEvent *) o );
@@ -109,7 +109,7 @@ const QPoint & oldPos () const
 */
 HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 {
-  QMoveEvent * obj = (QMoveEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPoint * ptr = &obj->oldPos (  );
@@ -123,7 +123,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QMOVEEVENT_POS )
 {
-  QMoveEvent * obj = (QMoveEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPoint * ptr = &obj->pos (  );

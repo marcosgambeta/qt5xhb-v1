@@ -113,7 +113,7 @@ QMimeType(const QMimeType &other)
 HB_FUNC_STATIC( QMIMETYPE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QMimeType * par1 = (QMimeType *) _qtxhb_itemGetPtr(1);
+  QMimeType * par1 = (QMimeType *) _qt5xhb_itemGetPtr(1);
   QMimeType * o = new QMimeType ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMimeType *) o );
@@ -168,10 +168,10 @@ void swap(QMimeType &other)
 */
 HB_FUNC_STATIC( QMIMETYPE_SWAP )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMimeType * par1 = (QMimeType *) _qtxhb_itemGetPtr(1);
+    QMimeType * par1 = (QMimeType *) _qt5xhb_itemGetPtr(1);
     obj->swap ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -183,7 +183,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ISVALID )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -196,7 +196,7 @@ bool isDefault() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ISDEFAULT )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isDefault (  ) );
@@ -209,7 +209,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QMIMETYPE_NAME )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->name (  ).toLatin1().data() );
@@ -222,7 +222,7 @@ QString comment() const
 */
 HB_FUNC_STATIC( QMIMETYPE_COMMENT )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->comment (  ).toLatin1().data() );
@@ -235,7 +235,7 @@ QString genericIconName() const
 */
 HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->genericIconName (  ).toLatin1().data() );
@@ -248,7 +248,7 @@ QString iconName() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->iconName (  ).toLatin1().data() );
@@ -261,11 +261,11 @@ QStringList globPatterns() const
 */
 HB_FUNC_STATIC( QMIMETYPE_GLOBPATTERNS )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->globPatterns (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -275,11 +275,11 @@ QStringList parentMimeTypes() const
 */
 HB_FUNC_STATIC( QMIMETYPE_PARENTMIMETYPES )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->parentMimeTypes (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -289,11 +289,11 @@ QStringList allAncestors() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ALLANCESTORS )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->allAncestors (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -303,11 +303,11 @@ QStringList aliases() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ALIASES )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->aliases (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -317,11 +317,11 @@ QStringList suffixes() const
 */
 HB_FUNC_STATIC( QMIMETYPE_SUFFIXES )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QStringList strl = obj->suffixes (  );
-    _qtxhb_convert_qstringlist_to_array ( strl );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
 
@@ -331,7 +331,7 @@ QString preferredSuffix() const
 */
 HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->preferredSuffix (  ).toLatin1().data() );
@@ -344,7 +344,7 @@ bool inherits(const QString &mimeTypeName) const
 */
 HB_FUNC_STATIC( QMIMETYPE_INHERITS )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -358,7 +358,7 @@ QString filterString() const
 */
 HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
 {
-  QMimeType * obj = (QMimeType *) _qtxhb_itemGetPtrStackSelfItem();
+  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->filterString (  ).toLatin1().data() );

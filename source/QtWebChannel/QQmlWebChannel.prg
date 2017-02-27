@@ -80,7 +80,7 @@ explicit QQmlWebChannel(QObject *parent = 0)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlWebChannel * o = new QQmlWebChannel ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlWebChannel *) o );
@@ -114,7 +114,7 @@ Q_INVOKABLE void registerObjects(const QVariantMap &objects)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_REGISTEROBJECTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->registerObjects (  );
@@ -130,7 +130,7 @@ QQmlListProperty<QObject> registeredObjects()
 HB_FUNC_STATIC( QQMLWEBCHANNEL_REGISTEREDOBJECTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->registeredObjects (  ) );
@@ -146,7 +146,7 @@ QQmlListProperty<QObject> transports()
 HB_FUNC_STATIC( QQMLWEBCHANNEL_TRANSPORTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->transports (  ) );
@@ -162,7 +162,7 @@ static QQmlWebChannelAttached *qmlAttachedProperties(QObject *obj)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_QMLATTACHEDPROPERTIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlWebChannelAttached * ptr = QQmlWebChannel::qmlAttachedProperties ( par1 );
   _qt5xhb_createReturnClass ( ptr, "QQMLWEBCHANNELATTACHED" );
 #endif
@@ -175,10 +175,10 @@ Q_INVOKABLE void connectTo(QObject *transport)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->connectTo ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -192,10 +192,10 @@ Q_INVOKABLE void disconnectFrom(QObject *transport)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_DISCONNECTFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qtxhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->disconnectFrom ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

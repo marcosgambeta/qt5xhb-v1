@@ -78,7 +78,7 @@ QRegularExpressionValidator(QObject *parent = 0)
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QRegularExpressionValidator * o = new QRegularExpressionValidator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegularExpressionValidator *) o );
@@ -94,8 +94,8 @@ QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QRegularExpression * par1 = (QRegularExpression *) _qtxhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
+  QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
+  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QRegularExpressionValidator * o = new QRegularExpressionValidator ( *par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegularExpressionValidator *) o );
@@ -148,7 +148,7 @@ QRegularExpression regularExpression() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
@@ -162,10 +162,10 @@ void setRegularExpression(const QRegularExpression &re)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qtxhb_itemGetPtrStackSelfItem();
+  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegularExpression * par1 = (QRegularExpression *) _qtxhb_itemGetPtr(1);
+    QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
     obj->setRegularExpression ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

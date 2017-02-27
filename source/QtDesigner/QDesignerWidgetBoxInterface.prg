@@ -90,7 +90,7 @@ virtual QString fileName () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
@@ -103,7 +103,7 @@ virtual bool load () = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->load (  ) );
@@ -116,7 +116,7 @@ virtual bool save () = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->save (  ) );
@@ -129,7 +129,7 @@ virtual void setFileName ( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qtxhb_itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );

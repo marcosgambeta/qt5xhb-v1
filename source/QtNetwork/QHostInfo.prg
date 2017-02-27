@@ -115,7 +115,7 @@ QHostInfo ( const QHostInfo & other )
 HB_FUNC_STATIC( QHOSTINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QHostInfo * par1 = (QHostInfo *) _qtxhb_itemGetPtr(1);
+  QHostInfo * par1 = (QHostInfo *) _qt5xhb_itemGetPtr(1);
   QHostInfo * o = new QHostInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostInfo *) o );
@@ -170,7 +170,7 @@ QList<QHostAddress> addresses () const
 */
 HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QHostAddress> list = obj->addresses (  );
@@ -218,7 +218,7 @@ HostInfoError error () const
 */
 HB_FUNC_STATIC( QHOSTINFO_ERROR )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -231,7 +231,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
@@ -244,7 +244,7 @@ QString hostName () const
 */
 HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->hostName (  ).toLatin1().data() );
@@ -257,7 +257,7 @@ int lookupId () const
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->lookupId (  ) );
@@ -270,7 +270,7 @@ void setAddresses ( const QList<QHostAddress> & addresses )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QHostAddress> par1;
@@ -292,7 +292,7 @@ void setError ( HostInfoError error )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -307,7 +307,7 @@ void setErrorString ( const QString & str )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -322,7 +322,7 @@ void setHostName ( const QString & hostName )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -337,7 +337,7 @@ void setLookupId ( int id )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 {
-  QHostInfo * obj = (QHostInfo *) _qtxhb_itemGetPtrStackSelfItem();
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setLookupId ( (int) hb_parni(1) );
@@ -391,7 +391,7 @@ static int lookupHost ( const QString & name, QObject * receiver, const char * m
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
   QString par1 = QLatin1String( hb_parc(1) );
-  QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
+  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   const char * par3 = hb_parc(3);
   hb_retni( QHostInfo::lookupHost ( par1, par2,  (const char *) par3 ) );
 }

@@ -95,7 +95,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QSQLRESULT_HANDLE )
 {
-  QSqlResult * obj = (QSqlResult *) _qtxhb_itemGetPtrStackSelfItem();
+  QSqlResult * obj = (QSqlResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->handle (  ) );

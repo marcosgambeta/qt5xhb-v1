@@ -114,7 +114,7 @@ QVideoEncoderSettings(const QVideoEncoderSettings & other)
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qtxhb_itemGetPtr(1);
+  QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
   QVideoEncoderSettings * o = new QVideoEncoderSettings ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoEncoderSettings *) o );
@@ -166,7 +166,7 @@ int bitRate() const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_BITRATE )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->bitRate (  ) );
@@ -179,7 +179,7 @@ QString codec() const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_CODEC )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retc( (const char *) obj->codec (  ).toLatin1().data() );
@@ -192,7 +192,7 @@ QMultimedia::EncodingMode encodingMode() const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ENCODINGMODE )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->encodingMode (  ) );
@@ -205,7 +205,7 @@ QVariant encodingOption(const QString & option) const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ENCODINGOPTION )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -221,7 +221,7 @@ qreal frameRate() const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_FRAMERATE )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retnd( obj->frameRate (  ) );
@@ -234,7 +234,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ISNULL )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
@@ -247,7 +247,7 @@ QMultimedia::EncodingQuality quality() const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_QUALITY )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->quality (  ) );
@@ -260,7 +260,7 @@ QSize resolution() const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_RESOLUTION )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QSize * ptr = new QSize( obj->resolution (  ) );
@@ -274,7 +274,7 @@ void setBitRate(int value)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETBITRATE )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setBitRate ( (int) hb_parni(1) );
@@ -288,7 +288,7 @@ void setCodec(const QString & codec)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETCODEC )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -303,7 +303,7 @@ void setEncodingMode(QMultimedia::EncodingMode mode)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETENCODINGMODE )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -318,11 +318,11 @@ void setEncodingOption(const QString & option, const QVariant & value)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETENCODINGOPTION )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
+    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     obj->setEncodingOption ( par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -335,7 +335,7 @@ void setFrameRate(qreal rate)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETFRAMERATE )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     qreal par1 = hb_parnd(1);
@@ -350,7 +350,7 @@ void setQuality(QMultimedia::EncodingQuality quality)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETQUALITY )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -365,10 +365,10 @@ void setResolution(const QSize & resolution)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION1 )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
+    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     obj->setResolution ( *par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -380,7 +380,7 @@ void setResolution(int width, int height)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION2 )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qtxhb_itemGetPtrStackSelfItem();
+  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setResolution ( (int) hb_parni(1), (int) hb_parni(2) );

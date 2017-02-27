@@ -95,7 +95,7 @@ QDialogButtonBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
+  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDialogButtonBox * o = new QDialogButtonBox ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDialogButtonBox *) o );
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
+  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDialogButtonBox * o = new QDialogButtonBox (  (Qt::Orientation) par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDialogButtonBox *) o );
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::Horizontal : hb_parni(2);
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qtxhb_itemGetPtr(3);
+  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
   QDialogButtonBox * o = new QDialogButtonBox (  (QDialogButtonBox::StandardButtons) par1,  (Qt::Orientation) par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDialogButtonBox *) o );
@@ -187,10 +187,10 @@ void addButton ( QAbstractButton * button, ButtonRole role )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON1 )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
+    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->addButton ( par1,  (QDialogButtonBox::ButtonRole) par2 );
   }
@@ -202,7 +202,7 @@ QPushButton * addButton ( const QString & text, ButtonRole role )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON2 )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -217,7 +217,7 @@ QPushButton * addButton ( StandardButton button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON3 )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -256,7 +256,7 @@ QPushButton * button ( StandardButton which ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -271,10 +271,10 @@ ButtonRole buttonRole ( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
+    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->buttonRole ( par1 ) );
   }
 }
@@ -286,7 +286,7 @@ bool centerButtons () const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->centerButtons (  ) );
@@ -299,7 +299,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->clear (  );
@@ -313,7 +313,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->orientation (  ) );
@@ -326,10 +326,10 @@ void removeButton ( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
+    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
     obj->removeButton ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -341,7 +341,7 @@ void setCenterButtons ( bool center )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     obj->setCenterButtons ( (bool) hb_parl(1) );
@@ -355,7 +355,7 @@ void setOrientation ( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -370,7 +370,7 @@ void setStandardButtons ( StandardButtons buttons )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -385,10 +385,10 @@ StandardButton standardButton ( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qtxhb_itemGetPtr(1);
+    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->standardButton ( par1 ) );
   }
 }
@@ -399,7 +399,7 @@ StandardButtons standardButtons () const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qtxhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->standardButtons (  ) );

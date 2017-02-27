@@ -105,9 +105,9 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
-  QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) _qtxhb_itemGetPtr(3);
+  QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
   QDeclarativeListReference * o = new QDeclarativeListReference ( par1,  (const char *) par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeListReference *) o );
@@ -143,10 +143,10 @@ bool append ( QObject * object ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
+    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     hb_retl( obj->append ( par1 ) );
   }
 }
@@ -157,7 +157,7 @@ QObject * at ( int index ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->at ( (int) hb_parni(1) );
@@ -171,7 +171,7 @@ bool canAppend () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canAppend (  ) );
@@ -184,7 +184,7 @@ bool canAt () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canAt (  ) );
@@ -197,7 +197,7 @@ bool canClear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canClear (  ) );
@@ -210,7 +210,7 @@ bool canCount () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->canCount (  ) );
@@ -223,7 +223,7 @@ bool clear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->clear (  ) );
@@ -236,7 +236,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -249,7 +249,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -263,7 +263,7 @@ QObject * object () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qtxhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QObject * ptr = obj->object (  );

@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) _qtxhb_itemGetPtr(2);
-  QPoint * par3 = (QPoint *) _qtxhb_itemGetPtr(3);
+  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
+  QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
   QHelpEvent * o = new QHelpEvent (  (QEvent::Type) par1, *par2, *par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpEvent *) o );
@@ -114,7 +114,7 @@ const QPoint & globalPos () const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 {
-  QHelpEvent * obj = (QHelpEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEvent * obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPoint * ptr = &obj->globalPos (  );
@@ -128,7 +128,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 {
-  QHelpEvent * obj = (QHelpEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEvent * obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalX (  ) );
@@ -141,7 +141,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 {
-  QHelpEvent * obj = (QHelpEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEvent * obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->globalY (  ) );
@@ -154,7 +154,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QHELPEVENT_POS )
 {
-  QHelpEvent * obj = (QHelpEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEvent * obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     const QPoint * ptr = &obj->pos (  );
@@ -168,7 +168,7 @@ int x () const
 */
 HB_FUNC_STATIC( QHELPEVENT_X )
 {
-  QHelpEvent * obj = (QHelpEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEvent * obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->x (  ) );
@@ -181,7 +181,7 @@ int y () const
 */
 HB_FUNC_STATIC( QHELPEVENT_Y )
 {
-  QHelpEvent * obj = (QHelpEvent *) _qtxhb_itemGetPtrStackSelfItem();
+  QHelpEvent * obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->y (  ) );

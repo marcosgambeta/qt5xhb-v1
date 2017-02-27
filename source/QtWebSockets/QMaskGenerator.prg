@@ -89,7 +89,7 @@ virtual bool seed() = 0
 HB_FUNC_STATIC( QMASKGENERATOR_SEED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMaskGenerator * obj = (QMaskGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QMaskGenerator * obj = (QMaskGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->seed (  ) );
@@ -104,7 +104,7 @@ virtual quint32 nextMask() = 0
 HB_FUNC_STATIC( QMASKGENERATOR_NEXTMASK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMaskGenerator * obj = (QMaskGenerator *) _qtxhb_itemGetPtrStackSelfItem();
+  QMaskGenerator * obj = (QMaskGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->nextMask (  ) );

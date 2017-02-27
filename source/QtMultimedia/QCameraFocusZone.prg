@@ -82,7 +82,7 @@ QCameraFocusZone(const QCameraFocusZone & other)
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-  QCameraFocusZone * par1 = (QCameraFocusZone *) _qtxhb_itemGetPtr(1);
+  QCameraFocusZone * par1 = (QCameraFocusZone *) _qt5xhb_itemGetPtr(1);
   QCameraFocusZone * o = new QCameraFocusZone ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCameraFocusZone *) o );
@@ -115,7 +115,7 @@ QRectF area() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
 {
-  QCameraFocusZone * obj = (QCameraFocusZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->area (  ) );
@@ -129,7 +129,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_ISVALID )
 {
-  QCameraFocusZone * obj = (QCameraFocusZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
@@ -142,7 +142,7 @@ FocusZoneStatus status() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
 {
-  QCameraFocusZone * obj = (QCameraFocusZone *) _qtxhb_itemGetPtrStackSelfItem();
+  QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     hb_retni( obj->status (  ) );
