@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
     QTextDocument * par1 = (QTextDocument *) _qtxhb_itemGetPtr(1);
     QTextFormat * par3 = (QTextFormat *) _qtxhb_itemGetPtr(3);
     QSizeF * ptr = new QSizeF( obj->intrinsicSize ( par1, (int) hb_parni(2), *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 

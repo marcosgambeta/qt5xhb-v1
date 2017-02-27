@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSENSORBACKENDFACTORY_CREATEBACKEND )
   {
     QSensor * par1 = (QSensor *) _qtxhb_itemGetPtr(1);
     QSensorBackend * ptr = obj->createBackend ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QSENSORBACKEND" );
+    _qt5xhb_createReturnClass ( ptr, "QSENSORBACKEND" );
   }
 #endif
 }

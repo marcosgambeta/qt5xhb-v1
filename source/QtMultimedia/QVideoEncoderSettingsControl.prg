@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS )
   if( obj )
   {
     QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS" );
+    _qt5xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS" );
   }
 }
 

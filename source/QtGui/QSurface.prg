@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSURFACE_FORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACEHANDLE )
   if( obj )
   {
     QPlatformSurface * ptr = obj->surfaceHandle (  );
-    _qt4xhb_createReturnClass ( ptr, "QPLATFORMSURFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QPLATFORMSURFACE" );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSURFACE_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

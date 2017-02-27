@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->transposed (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED1 )
     qreal par2 = hb_parnd(2);
     int par3 = hb_parni(3);
     QSizeF * ptr = new QSizeF( obj->scaled ( par1, par2,  (Qt::AspectRatioMode) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED2 )
     QSizeF * par1 = (QSizeF *) _qtxhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     QSizeF * ptr = new QSizeF( obj->scaled ( *par1,  (Qt::AspectRatioMode) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
   {
     QSizeF * par1 = (QSizeF *) _qtxhb_itemGetPtr(1);
     QSizeF * ptr = new QSizeF( obj->expandedTo ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
   {
     QSizeF * par1 = (QSizeF *) _qtxhb_itemGetPtr(1);
     QSizeF * ptr = new QSizeF( obj->boundedTo ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->toSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

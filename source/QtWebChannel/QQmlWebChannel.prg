@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_REGISTEREDOBJECTS )
   if( obj )
   {
     QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->registeredObjects (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QQMLLISTPROPERTY<QOBJECT>" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLLISTPROPERTY<QOBJECT>" );
   }
 #endif
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_TRANSPORTS )
   if( obj )
   {
     QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->transports (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QQMLLISTPROPERTY<QOBJECT>" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLLISTPROPERTY<QOBJECT>" );
   }
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_QMLATTACHEDPROPERTIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
   QQmlWebChannelAttached * ptr = QQmlWebChannel::qmlAttachedProperties ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QQMLWEBCHANNELATTACHED" );
+  _qt5xhb_createReturnClass ( ptr, "QQMLWEBCHANNELATTACHED" );
 #endif
 }
 

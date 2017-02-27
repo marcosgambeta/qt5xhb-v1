@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->asVariant (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE1 )
 {
   QFile * par1 = (QFile *) _qtxhb_itemGetPtr(1);
   QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( *par1 );
-  _qt4xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
+  _qt5xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
 }
 
 /*
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE2 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
+  _qt5xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
 }
 
 

@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
     }
     QString par3 = QLatin1String( hb_parc(3) );
     QVariant * ptr = new QVariant( obj->convertToMime ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 #endif
 }

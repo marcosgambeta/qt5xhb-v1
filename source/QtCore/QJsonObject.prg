@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QJSONOBJECT_TAKE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QJsonValue * ptr = new QJsonValue( obj->take ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QJSONOBJECT_VALUE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QJsonValue * ptr = new QJsonValue( obj->value ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
   }
 }
 

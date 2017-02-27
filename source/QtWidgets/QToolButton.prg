@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
   if( obj )
   {
     QAction * ptr = obj->defaultAction (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
   if( obj )
   {
     QMenu * ptr = obj->menu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTMEDIA )
   if( obj )
   {
     QMediaContent * ptr = new QMediaContent( obj->currentMedia (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIA )
   if( obj )
   {
     QMediaContent * ptr = new QMediaContent( obj->media ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIAOBJECT )
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
 

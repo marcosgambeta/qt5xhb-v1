@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->cellAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->caption (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->summary (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 

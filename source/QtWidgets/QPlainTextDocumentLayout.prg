@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
   {
     QTextBlock * par1 = (QTextBlock *) _qtxhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->blockBoundingRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->documentSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
   {
     QTextFrame * par1 = (QTextFrame *) _qtxhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->frameBoundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

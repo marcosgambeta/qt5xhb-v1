@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
     QString par2 = QLatin1String( hb_parc(2) );
     QDomDocumentType * par3 = (QDomDocumentType *) _qtxhb_itemGetPtr(3);
     QDomDocument * ptr = new QDomDocument( obj->createDocument ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
     QString par2 = QLatin1String( hb_parc(2) );
     QString par3 = QLatin1String( hb_parc(3) );
     QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
   }
 }
 

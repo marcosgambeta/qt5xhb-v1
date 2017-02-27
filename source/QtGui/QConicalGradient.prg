@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->center (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 

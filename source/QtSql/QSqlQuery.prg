@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE1 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant * ptr = new QVariant( obj->boundValue ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE2 )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->boundValue ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
   if( obj )
   {
     const QSqlDriver * ptr = obj->driver (  );
-    _qt4xhb_createReturnClass ( ptr, "QSQLDRIVER" );
+    _qt5xhb_createReturnClass ( ptr, "QSQLDRIVER" );
   }
 }
 
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
   if( obj )
   {
     QSqlError * ptr = new QSqlError( obj->lastError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
 
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->lastInsertId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
   if( obj )
   {
     QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
   if( obj )
   {
     const QSqlResult * ptr = obj->result (  );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRESULT" );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRESULT" );
   }
 }
 
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE1 )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->value ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant * ptr = new QVariant( obj->value ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

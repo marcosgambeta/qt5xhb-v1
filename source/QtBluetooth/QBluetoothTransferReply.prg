@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
   if( obj )
   {
     QBluetoothTransferManager * ptr = obj->manager (  );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERMANAGER" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERMANAGER" );
   }
 #endif
 }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_REQUEST )
   if( obj )
   {
     QBluetoothTransferRequest * ptr = new QBluetoothTransferRequest( obj->request (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREQUEST" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREQUEST" );
   }
 #endif
 }

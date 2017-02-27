@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
     QString par1 = QLatin1String( hb_parc(1) );
     QScriptEngine * par2 = (QScriptEngine *) _qtxhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->setupPackage ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 

@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QALTIMETER_READING )
   if( obj )
   {
     QAltimeterReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QALTIMETERREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QALTIMETERREADING" );
   }
 #endif
 }

@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->parameter (  (QCameraImageProcessingControl::ProcessingParameter) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

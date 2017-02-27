@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
     QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qtxhb_itemGetPtr(2);
     QModelIndex * par3 = (QModelIndex *) _qtxhb_itemGetPtr(3);
     QWidget * ptr = obj->createEditor ( par1, *par2, *par3 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

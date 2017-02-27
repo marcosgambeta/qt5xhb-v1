@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHMODE )
   if( obj )
   {
     WatchMode * ptr = new WatchMode( obj->watchMode (  ) );
-    _qt4xhb_createReturnClass ( ptr, "WATCHMODE" );
+    _qt5xhb_createReturnClass ( ptr, "WATCHMODE" );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_CONNECTION )
   if( obj )
   {
     QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
   }
 }
 

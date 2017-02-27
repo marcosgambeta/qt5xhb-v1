@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
   if( obj )
   {
     QAbstractEventDispatcher * ptr = obj->eventDispatcher (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
   }
 }
 
@@ -310,7 +310,7 @@ static QThread * currentThread()
 HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
   QThread * ptr = QThread::currentThread (  );
-  _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
+  _qt5xhb_createReturnClass ( ptr, "QTHREAD" );
 }
 
 

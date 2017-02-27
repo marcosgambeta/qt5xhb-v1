@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->underlineColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
   if( obj )
   {
     QPen * ptr = new QPen( obj->textOutline (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
+    _qt5xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
 

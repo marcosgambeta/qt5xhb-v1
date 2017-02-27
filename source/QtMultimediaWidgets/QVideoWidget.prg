@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_MEDIAOBJECT )
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTEREDSERVICENAMES )
   if( obj )
   {
     QDBusReply<QStringList> * ptr = new QDBusReply<QStringList>( obj->registeredServiceNames (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRINGLIST>" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRINGLIST>" );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ISSERVICEREGISTERED )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->isServiceRegistered ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEOWNER )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDBusReply<QString> * ptr = new QDBusReply<QString>( obj->serviceOwner ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRING>" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRING>" );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_UNREGISTERSERVICE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->unregisterService ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEPID )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->servicePid ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEUID )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->serviceUid ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_STARTSERVICE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDBusReply<void> * ptr = new QDBusReply<void>( obj->startService ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSREPLY<VOID>" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<VOID>" );
   }
 }
 

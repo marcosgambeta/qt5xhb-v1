@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->color (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->offset (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
   {
     QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->boundingRectFor ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

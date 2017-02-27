@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
   if( obj )
   {
     QAccelerometerReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCELEROMETERREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QACCELEROMETERREADING" );
   }
 #endif
 }

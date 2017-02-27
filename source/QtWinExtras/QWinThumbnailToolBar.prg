@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
   if( obj )
   {
     QWindow * ptr = obj->window (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 #endif
 }

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT )
   {
     QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->convertToNormalizedSourceRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSGTEXTURE_NORMALIZEDTEXTURESUBRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->normalizedTextureSubRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSGTEXTURE_REMOVEDFROMATLAS )
   if( obj )
   {
     QSGTexture * ptr = obj->removedFromAtlas (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGTEXTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSGTEXTURE_TEXTURESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->textureSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

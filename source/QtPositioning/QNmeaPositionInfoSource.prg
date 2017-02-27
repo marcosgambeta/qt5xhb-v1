@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 #endif
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
   if( obj )
   {
     QGeoPositionInfo * ptr = new QGeoPositionInfo( obj->lastKnownPosition ( (bool) ISNIL(1)? false : hb_parl(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOPOSITIONINFO", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFO", true );
   }
 #endif
 }

@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORAT )
   if( obj )
   {
     QColor * ptr = new QColor( obj->colorAt ( (uint) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -234,7 +234,7 @@ static QColormap instance ( int screen = -1 )
 HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
   QColormap * ptr = new QColormap( QColormap::instance ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLORMAP" );
+  _qt5xhb_createReturnClass ( ptr, "QCOLORMAP" );
 }
 
 

@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_CURRENTVALUE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->currentValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->maximumValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->minimumValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MINIMUMSTEPSIZE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->minimumStepSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
   if( obj )
   {
     QChar * ptr = new QChar( obj->decimalPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
   if( obj )
   {
     QChar * ptr = new QChar( obj->exponential (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
   if( obj )
   {
     QChar * ptr = new QChar( obj->groupSeparator (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
   if( obj )
   {
     QChar * ptr = new QChar( obj->negativeSign (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QLOCALE_PERCENT )
   if( obj )
   {
     QChar * ptr = new QChar( obj->percent (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
   if( obj )
   {
     QChar * ptr = new QChar( obj->positiveSign (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QLOCALE_TODATE1 )
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
     QDate * ptr = new QDate( obj->toDate ( par1,  (QLocale::FormatType) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
 
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QLOCALE_TODATE2 )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDate * ptr = new QDate( obj->toDate ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
 
@@ -934,7 +934,7 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME1 )
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
     QDateTime * ptr = new QDateTime( obj->toDateTime ( par1,  (QLocale::FormatType) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME2 )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDateTime * ptr = new QDateTime( obj->toDateTime ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC( QLOCALE_TOTIME1 )
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
     QTime * ptr = new QTime( obj->toTime ( par1,  (QLocale::FormatType) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
 
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QLOCALE_TOTIME2 )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QTime * ptr = new QTime( obj->toTime ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
 
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QLOCALE_ZERODIGIT )
   if( obj )
   {
     QChar * ptr = new QChar( obj->zeroDigit (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -1401,7 +1401,7 @@ static QLocale c ()
 HB_FUNC_STATIC( QLOCALE_C )
 {
   QLocale * ptr = new QLocale( QLocale::c (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+  _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
 }
 
 
@@ -1495,7 +1495,7 @@ static QLocale system ()
 HB_FUNC_STATIC( QLOCALE_SYSTEM )
 {
   QLocale * ptr = new QLocale( QLocale::system (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+  _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
 }
 
 

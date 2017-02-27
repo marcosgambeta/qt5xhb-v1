@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QFont * ptr = new QFont( obj->font ( par1, par2, (int) hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 

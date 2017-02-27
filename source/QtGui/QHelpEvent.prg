@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
   if( obj )
   {
     const QPoint * ptr = &obj->globalPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
   if( obj )
   {
     const QPoint * ptr = &obj->pos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
 

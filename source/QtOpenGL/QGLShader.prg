@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->sourceCode (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 

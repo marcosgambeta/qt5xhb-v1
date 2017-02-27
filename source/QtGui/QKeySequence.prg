@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QKeySequence::PortableText : hb_parni(2);
   QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( par1,  (QKeySequence::SequenceFormat) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+  _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
 
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+  _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
 
 

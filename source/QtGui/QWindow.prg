@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QWINDOW_BASESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->baseSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QWINDOW_CURSOR )
   if( obj )
   {
     QCursor * ptr = new QCursor( obj->cursor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCURSOR", true );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QWINDOW_FOCUSOBJECT )
   if( obj )
   {
     QObject * ptr = obj->focusObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEGEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->frameGeometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEMARGINS )
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->frameMargins (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QWINDOW_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QPoint * ptr = new QPoint( obj->mapFromGlobal ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QWINDOW_MAPTOGLOBAL )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QPoint * ptr = new QPoint( obj->mapToGlobal ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QWINDOW_PARENT )
   if( obj )
   {
     QWindow * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->requestedFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
 
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QWINDOW_SCREEN )
   if( obj )
   {
     QScreen * ptr = obj->screen (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCREEN" );
+    _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
   }
 }
 
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QWINDOW_SIZEINCREMENT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeIncrement (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QWINDOW_TRANSIENTPARENT )
   if( obj )
   {
     QWindow * ptr = obj->transientParent (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }
 
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QWINDOW_FORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
 
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QWINDOW_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
   if( obj )
   {
     QLineF * ptr = new QLineF( obj->line (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
   if( obj )
   {
     QPen * ptr = new QPen( obj->pen (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
+    _qt5xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 

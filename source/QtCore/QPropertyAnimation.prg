@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->propertyName (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
   if( obj )
   {
     QObject * ptr = obj->targetObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
   if( obj )
   {
     QObject * ptr = obj->at ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
   if( obj )
   {
     const QMetaObject * ptr = obj->listElementType (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

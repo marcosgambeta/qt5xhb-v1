@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->contentsBoundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->contentsSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_FILLCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->fillColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 

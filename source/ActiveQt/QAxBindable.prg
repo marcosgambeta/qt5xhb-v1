@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
   if( obj )
   {
     QAxAggregated * ptr = obj->createAggregate (  );
-    _qt4xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
+    _qt5xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
   }
 }
 

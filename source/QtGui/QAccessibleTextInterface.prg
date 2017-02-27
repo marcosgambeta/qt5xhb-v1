@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERRECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->characterRect ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

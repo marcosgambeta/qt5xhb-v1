@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED1 )
   if( obj )
   {
     QPolygon * ptr = new QPolygon( obj->translated ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED2 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->translated ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT2 )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->point ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QPOLYGON_UNITED )
   {
     QPolygon * par1 = (QPolygon *) _qtxhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->united ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
   {
     QPolygon * par1 = (QPolygon *) _qtxhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->intersected ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
   {
     QPolygon * par1 = (QPolygon *) _qtxhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->subtracted ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 

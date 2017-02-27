@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->historyUrl ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
   {
     QUrl * par2 = (QUrl *) _qtxhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->loadResource ( (int) hb_parni(1), *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

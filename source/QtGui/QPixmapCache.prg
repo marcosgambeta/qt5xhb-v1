@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QPixmap * ptr = QPixmapCache::find ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QPIXMAP" );
+  _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
 }
 
 

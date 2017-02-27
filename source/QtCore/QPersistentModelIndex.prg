@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALID )
   if( obj )
   {
     quintptr * ptr = new quintptr( obj->internalId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QUINTPTR" );
+    _qt5xhb_createReturnClass ( ptr, "QUINTPTR" );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->parent (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->child ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->data ( (int) ISNIL(1)? Qt::DisplayRole : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
   if( obj )
   {
     const QAbstractItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
 

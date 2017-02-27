@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ATTRIBUTES )
   if( obj )
   {
     QXmlStreamAttributes * ptr = new QXmlStreamAttributes( obj->attributes (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMATTRIBUTES", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMATTRIBUTES", true );
   }
 }
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTENCODING )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->documentEncoding (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTVERSION )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->documentVersion (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDNAME )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->dtdName (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDPUBLICID )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->dtdPublicId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDSYSTEMID )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->dtdSystemId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYDECLARATIONS )
   if( obj )
   {
     QXmlStreamEntityDeclarations * ptr = new QXmlStreamEntityDeclarations( obj->entityDeclarations (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYDECLARATIONS" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYDECLARATIONS" );
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYRESOLVER )
   if( obj )
   {
     QXmlStreamEntityResolver * ptr = obj->entityResolver (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYRESOLVER" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYRESOLVER" );
   }
 }
 
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAME )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->name (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEDECLARATIONS )
   if( obj )
   {
     QXmlStreamNamespaceDeclarations * ptr = new QXmlStreamNamespaceDeclarations( obj->namespaceDeclarations (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMNAMESPACEDECLARATIONS" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMNAMESPACEDECLARATIONS" );
   }
 }
 
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEURI )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->namespaceUri (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NOTATIONDECLARATIONS )
   if( obj )
   {
     QXmlStreamNotationDeclarations * ptr = new QXmlStreamNotationDeclarations( obj->notationDeclarations (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMNOTATIONDECLARATIONS" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMNOTATIONDECLARATIONS" );
   }
 }
 
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PREFIX )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->prefix (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->processingInstructionData (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->processingInstructionTarget (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_QUALIFIEDNAME )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->qualifiedName (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TEXT )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->text (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 

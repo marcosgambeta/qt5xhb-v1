@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
   if( obj )
   {
     QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS" );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS" );
   }
 }
 

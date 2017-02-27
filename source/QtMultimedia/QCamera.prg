@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QCAMERA_EXPOSURE )
   if( obj )
   {
     QCameraExposure * ptr = obj->exposure (  );
-    _qt4xhb_createReturnClass ( ptr, "QCAMERAEXPOSURE" );
+    _qt5xhb_createReturnClass ( ptr, "QCAMERAEXPOSURE" );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCAMERA_FOCUS )
   if( obj )
   {
     QCameraFocus * ptr = obj->focus (  );
-    _qt4xhb_createReturnClass ( ptr, "QCAMERAFOCUS" );
+    _qt5xhb_createReturnClass ( ptr, "QCAMERAFOCUS" );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
   if( obj )
   {
     QCameraImageProcessing * ptr = obj->imageProcessing (  );
-    _qt4xhb_createReturnClass ( ptr, "QCAMERAIMAGEPROCESSING" );
+    _qt5xhb_createReturnClass ( ptr, "QCAMERAIMAGEPROCESSING" );
   }
 }
 

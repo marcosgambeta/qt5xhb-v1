@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
   if( obj )
   {
     const QAbstractXmlNodeModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTXMLNODEMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTXMLNODEMODEL" );
   }
 }
 

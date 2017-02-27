@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->toMargins (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
 

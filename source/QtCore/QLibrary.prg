@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE1 )
   {
     const char * par1 = hb_parc(1);
     QFunctionPointer * ptr = new QFunctionPointer( obj->resolve (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
+    _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE2 )
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = hb_parc(2);
   QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( par1,  (const char *) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
+  _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE3 )
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par3 = hb_parc(3);
   QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( par1, (int) hb_parni(2),  (const char *) par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
+  _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE4 )
   QString par2 = QLatin1String( hb_parc(2) );
   const char * par3 = hb_parc(3);
   QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( par1, par2,  (const char *) par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
+  _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
 

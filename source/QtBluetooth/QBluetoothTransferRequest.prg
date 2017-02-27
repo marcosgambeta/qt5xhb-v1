@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ATTRIBUTE )
     int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->attribute (  (QBluetoothTransferRequest::Attribute) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 #endif
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ADDRESS )
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->address (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
 }

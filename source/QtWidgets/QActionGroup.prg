@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
   {
     QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
     QAction * ptr = obj->addAction ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QAction * ptr = obj->addAction ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION3 )
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
     QString par2 = QLatin1String( hb_parc(2) );
     QAction * ptr = obj->addAction ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
   if( obj )
   {
     QAction * ptr = obj->checkedAction (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 

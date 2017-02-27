@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
   if( obj )
   {
     QAbstractButton * ptr = obj->button ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
   if( obj )
   {
     QAbstractButton * ptr = obj->checkedButton (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
 

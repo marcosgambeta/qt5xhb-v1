@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
   {
     QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->indexOf ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 

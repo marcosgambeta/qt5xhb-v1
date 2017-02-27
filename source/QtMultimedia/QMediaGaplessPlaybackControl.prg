@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
   if( obj )
   {
     QMediaContent * ptr = new QMediaContent( obj->nextMedia (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
 

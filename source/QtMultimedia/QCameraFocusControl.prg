@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_CUSTOMFOCUSPOINT )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->customFocusPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_FOCUSZONES )
   if( obj )
   {
     QCameraFocusZoneList * ptr = new QCameraFocusZoneList( obj->focusZones (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCAMERAFOCUSZONELIST" );
+    _qt5xhb_createReturnClass ( ptr, "QCAMERAFOCUSZONELIST" );
   }
 }
 

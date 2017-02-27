@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
   if( obj )
   {
     QMetaMethod * ptr = new QMetaMethod( obj->method (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
+    _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
   if( obj )
   {
     QMetaProperty * ptr = new QMetaProperty( obj->property (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
+    _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
   }
 }
 
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ1 )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->read (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ2 )
   QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 /*
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ3 )
   QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeContext * par3 = (QDeclarativeContext *) _qtxhb_itemGetPtr(3);
   QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, par2, par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 /*
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ4 )
   QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeEngine * par3 = (QDeclarativeEngine *) _qtxhb_itemGetPtr(3);
   QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, par2, par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 

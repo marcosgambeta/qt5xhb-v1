@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT2 )
   {
     QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->select ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

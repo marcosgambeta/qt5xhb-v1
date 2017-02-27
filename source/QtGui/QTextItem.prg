@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 

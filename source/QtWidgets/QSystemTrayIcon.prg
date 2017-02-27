@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
   if( obj )
   {
     QMenu * ptr = obj->contextMenu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 

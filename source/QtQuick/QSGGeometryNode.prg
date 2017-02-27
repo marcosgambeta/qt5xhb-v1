@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
   if( obj )
   {
     QSGMaterial * ptr = obj->material (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGMATERIAL" );
+    _qt5xhb_createReturnClass ( ptr, "QSGMATERIAL" );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
   if( obj )
   {
     QSGMaterial * ptr = obj->opaqueMaterial (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGMATERIAL" );
+    _qt5xhb_createReturnClass ( ptr, "QSGMATERIAL" );
   }
 }
 

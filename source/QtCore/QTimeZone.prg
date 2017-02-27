@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTIMEZONE_ID )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->id (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
 }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTIMEZONE_SYSTEMTIMEZONEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QByteArray * ptr = new QByteArray( QTimeZone::systemTimeZoneId (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
 
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QTIMEZONE_IANAIDTOWINDOWSID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QByteArray * ptr = new QByteArray( QTimeZone::ianaIdToWindowsId ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
 
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
 
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID2 )
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *par1,  (QLocale::Country) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
 

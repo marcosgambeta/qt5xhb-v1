@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->value (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 

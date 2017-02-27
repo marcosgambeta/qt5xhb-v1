@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
   {
     const char * par1 = hb_parc(1);
     QMediaControl * ptr = obj->requestControl (  (const char *) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIACONTROL" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTROL" );
   }
 }
 

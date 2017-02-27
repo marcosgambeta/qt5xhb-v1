@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN2 )
     QBluetoothUuid * par1 = (QBluetoothUuid *) _qtxhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO" );
   }
 #endif
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
   if( obj )
   {
     QBluetoothSocket * ptr = obj->nextPendingConnection (  );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHSOCKET" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSOCKET" );
   }
 #endif
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERADDRESS )
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->serverAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
 }

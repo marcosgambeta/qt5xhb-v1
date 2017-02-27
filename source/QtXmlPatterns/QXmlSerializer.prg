@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
   if( obj )
   {
     const QTextCodec * ptr = obj->codec (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->outputDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 

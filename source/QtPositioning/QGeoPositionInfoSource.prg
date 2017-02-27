@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
   if( obj )
   {
     QGeoPositionInfo * ptr = new QGeoPositionInfo( obj->lastKnownPosition ( (bool) ISNIL(1)? false : hb_parl(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOPOSITIONINFO", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFO", true );
   }
 #endif
 }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
   QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
+  _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
 #endif
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATESOURCE )
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
   QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource ( par1, par2 );
-  _qt4xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
+  _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
 #endif
 }
 

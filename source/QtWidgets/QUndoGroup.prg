@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
   if( obj )
   {
     QUndoStack * ptr = obj->activeStack (  );
-    _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
+    _qt5xhb_createReturnClass ( ptr, "QUNDOSTACK" );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
     QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QAction * ptr = obj->createRedoAction ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
     QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QAction * ptr = obj->createUndoAction ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 {
   QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
   QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+  _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
 }
 
 

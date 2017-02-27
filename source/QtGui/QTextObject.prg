@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
   if( obj )
   {
     QTextFormat * ptr = new QTextFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
   if( obj )
   {
     QTextDocument * ptr = obj->document (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCHANDLE )
   if( obj )
   {
     QTextDocumentPrivate * ptr = obj->docHandle (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTPRIVATE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTPRIVATE" );
   }
 }
 

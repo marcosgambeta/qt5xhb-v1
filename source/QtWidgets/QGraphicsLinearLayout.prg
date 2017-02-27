@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
   }
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
     int par1 = hb_parni(1);
     QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) _qtxhb_itemGetPtr(2);
     QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 

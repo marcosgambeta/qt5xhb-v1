@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
   if( obj )
   {
     QDeclarativeEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->initialSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
   if( obj )
   {
     QDeclarativeContext * ptr = obj->rootContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
   if( obj )
   {
     QGraphicsObject * ptr = obj->rootObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
   if( obj )
   {
     QXmlNamePool * ptr = &obj->namePool (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL" );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->baseUri ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
   {
     QXmlName * par1 = (QXmlName *) _qtxhb_itemGetPtr(1);
     QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
   }
 }
 

@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSGNODE_CHILDATINDEX )
   if( obj )
   {
     QSGNode * ptr = obj->childAtIndex ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSGNODE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSGNODE_FIRSTCHILD )
   if( obj )
   {
     QSGNode * ptr = obj->firstChild (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGNODE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSGNODE_LASTCHILD )
   if( obj )
   {
     QSGNode * ptr = obj->lastChild (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGNODE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSGNODE_NEXTSIBLING )
   if( obj )
   {
     QSGNode * ptr = obj->nextSibling (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGNODE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSGNODE_PARENT )
   if( obj )
   {
     QSGNode * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGNODE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSGNODE_PREVIOUSSIBLING )
   if( obj )
   {
     QSGNode * ptr = obj->previousSibling (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGNODE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
 

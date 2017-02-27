@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->initialSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
   if( obj )
   {
     QQmlContext * ptr = obj->rootContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
   if( obj )
   {
     QQuickItem * ptr = obj->rootObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QQUICKITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

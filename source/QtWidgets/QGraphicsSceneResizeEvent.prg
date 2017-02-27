@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->newSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->oldSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 

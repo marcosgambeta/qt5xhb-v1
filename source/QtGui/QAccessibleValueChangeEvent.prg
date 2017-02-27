@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->value (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

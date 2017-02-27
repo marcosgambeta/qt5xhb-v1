@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
   {
     QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
     QTextDocument * ptr = obj->clone ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
   if( obj )
   {
     QAbstractTextDocumentLayout * ptr = obj->documentLayout (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTTEXTDOCUMENTLAYOUT" );
   }
 }
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
   if( obj )
   {
     QChar * ptr = new QChar( obj->characterAt ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND1 )
     QString par1 = QLatin1String( hb_parc(1) );
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
     QTextCursor * ptr = new QTextCursor( obj->find ( par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND2 )
     QTextCursor * par2 = (QTextCursor *) _qtxhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
     QTextCursor * ptr = new QTextCursor( obj->find ( par1, *par2,  (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
     QRegExp * par1 = (QRegExp *) _qtxhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
     QTextCursor * ptr = new QTextCursor( obj->find ( *par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND4 )
     QTextCursor * par2 = (QTextCursor *) _qtxhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
     QTextCursor * ptr = new QTextCursor( obj->find ( *par1, *par2,  (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
   if( obj )
   {
     QTextFrame * ptr = obj->frameAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
   if( obj )
   {
     QTextFrame * ptr = obj->rootFrame (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
   if( obj )
   {
     QTextObject * ptr = obj->object ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
   }
 }
 
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
   {
     QTextFormat * par1 = (QTextFormat *) _qtxhb_itemGetPtr(1);
     QTextObject * ptr = obj->objectForFormat ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
   }
 }
 
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->findBlock ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->findBlockByNumber ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->findBlockByLineNumber ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->begin (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_END )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->end (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->firstBlock (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->lastBlock (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->pageSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->defaultFont (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
   {
     QUrl * par2 = (QUrl *) _qtxhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->resource ( (int) hb_parni(1), *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
   if( obj )
   {
     QTextOption * ptr = new QTextOption( obj->defaultTextOption (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTOPTION" );
   }
 }
 
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCHANDLE )
   if( obj )
   {
     QTextDocumentPrivate * ptr = obj->docHandle (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTPRIVATE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTPRIVATE" );
   }
 }
 

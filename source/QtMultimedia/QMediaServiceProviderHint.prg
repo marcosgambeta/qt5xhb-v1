@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DEVICE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->device (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 

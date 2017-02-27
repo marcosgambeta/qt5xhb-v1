@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
   if( obj )
   {
     QHelpContentItem * ptr = obj->child ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
   if( obj )
   {
     QHelpContentItem * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomAttr * ptr = new QDomAttr( obj->attributeNode ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomAttr * ptr = new QDomAttr( obj->attributeNodeNS ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
   if( obj )
   {
     QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAME )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
   {
     QDomAttr * par1 = (QDomAttr *) _qtxhb_itemGetPtr(1);
     QDomAttr * ptr = new QDomAttr( obj->removeAttributeNode ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
 
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
   {
     QDomAttr * par1 = (QDomAttr *) _qtxhb_itemGetPtr(1);
     QDomAttr * ptr = new QDomAttr( obj->setAttributeNode ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
 
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
   {
     QDomAttr * par1 = (QDomAttr *) _qtxhb_itemGetPtr(1);
     QDomAttr * ptr = new QDomAttr( obj->setAttributeNodeNS ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
 

@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
   {
     int par1 = hb_parni(1);
     QAction * ptr = obj->action (  (QWebPage::WebAction) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
   if( obj )
   {
     QMenu * ptr = obj->createStandardContextMenu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
   if( obj )
   {
     QWebFrame * ptr = obj->currentFrame (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QWebFrame * ptr = obj->frameAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QWEBPAGE_HISTORY )
   if( obj )
   {
     QWebHistory * ptr = obj->history (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORY" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBHISTORY" );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
   if( obj )
   {
     QWebFrame * ptr = obj->mainFrame (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
   if( obj )
   {
     QNetworkAccessManager * ptr = obj->networkAccessManager (  );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QWEBPAGE_PALETTE )
   if( obj )
   {
     QPalette * ptr = new QPalette( obj->palette (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
   if( obj )
   {
     QWebPluginFactory * ptr = obj->pluginFactory (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBPLUGINFACTORY" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBPLUGINFACTORY" );
   }
 }
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->preferredContentsSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
   if( obj )
   {
     QWebSettings * ptr = obj->settings (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
   }
 }
 
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
   if( obj )
   {
     QUndoStack * ptr = obj->undoStack (  );
-    _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
+    _qt5xhb_createReturnClass ( ptr, "QUNDOSTACK" );
   }
 }
 
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
   if( obj )
   {
     QWidget * ptr = obj->view (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->viewportSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

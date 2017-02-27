@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->outputDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
   if( obj )
   {
     QRect * ptr = new QRect( obj->viewBox (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->viewBoxF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

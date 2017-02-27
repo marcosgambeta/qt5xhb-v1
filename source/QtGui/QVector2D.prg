@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
   if( obj )
   {
     QVector2D * ptr = new QVector2D( obj->normalized (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR2D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR2D" );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
   if( obj )
   {
     QVector3D * ptr = new QVector3D( obj->toVector3D (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
   if( obj )
   {
     QVector4D * ptr = new QVector4D( obj->toVector4D (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
   }
 }
 
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->toPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->toPointF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 

@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
   if( obj )
   {
     QGeoPositionInfoSource * ptr = obj->positionInfoSource (  );
-    _qt4xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
+    _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
   }
 #endif
 }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
   QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createDefaultSource ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
+  _qt5xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
 #endif
 }
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATESOURCE )
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
   QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource ( par1, par2 );
-  _qt4xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
+  _qt5xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
 #endif
 }
 

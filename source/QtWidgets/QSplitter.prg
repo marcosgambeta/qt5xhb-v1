@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
   if( obj )
   {
     QSplitterHandle * ptr = obj->handle ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSPLITTERHANDLE" );
+    _qt5xhb_createReturnClass ( ptr, "QSPLITTERHANDLE" );
   }
 }
 
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->saveState (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

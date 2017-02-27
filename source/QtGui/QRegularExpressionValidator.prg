@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
   if( obj )
   {
     QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
+    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
   }
 }
 

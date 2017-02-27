@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATE )
   if( obj )
   {
     QSslCertificate * ptr = new QSslCertificate( obj->localCertificate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
 
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATE )
   if( obj )
   {
     QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
 
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PRIVATEKEY )
   if( obj )
   {
     QSslKey * ptr = new QSslKey( obj->privateKey (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
   }
 }
 
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONCIPHER )
   if( obj )
   {
     QSslCipher * ptr = new QSslCipher( obj->sessionCipher (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
   }
 }
 
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->socketOption (  (QAbstractSocket::SocketOption) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
   if( obj )
   {
     QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 }
 

@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->originalUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastVisited (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 #endif
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->iconUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
 }

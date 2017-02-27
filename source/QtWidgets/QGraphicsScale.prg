@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
   if( obj )
   {
     QVector3D * ptr = new QVector3D( obj->origin (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
 

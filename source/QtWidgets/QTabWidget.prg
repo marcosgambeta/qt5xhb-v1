@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
   {
     int par1 = ISNIL(1)? (int) Qt::TopRightCorner : hb_parni(1);
     QWidget * ptr = obj->cornerWidget (  (Qt::Corner) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->currentWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QTABWIDGET_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->tabIcon ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QTABWIDGET_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QTABWIDGET_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
   if( obj )
   {
     QTabBar * ptr = obj->tabBar (  );
-    _qt4xhb_createReturnClass ( ptr, "QTABBAR" );
+    _qt5xhb_createReturnClass ( ptr, "QTABBAR" );
   }
 }
 

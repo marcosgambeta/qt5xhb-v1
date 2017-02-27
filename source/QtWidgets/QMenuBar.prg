@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
   if( obj )
   {
     QAction * ptr = obj->activeAction (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION1 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QAction * ptr = obj->addAction ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION2 )
     QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
     char * par3 = (char *) _qtxhb_itemGetPtr(3);
     QAction * ptr = obj->addAction ( par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU1 )
   {
     QMenu * par1 = (QMenu *) _qtxhb_itemGetPtr(1);
     QAction * ptr = obj->addMenu ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QMenu * ptr = obj->addMenu ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU3 )
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
     QString par2 = QLatin1String( hb_parc(2) );
     QMenu * ptr = obj->addMenu ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
   if( obj )
   {
     QAction * ptr = obj->addSeparator (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
     QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
     QMenu * par2 = (QMenu *) _qtxhb_itemGetPtr(2);
     QAction * ptr = obj->insertMenu ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
   {
     QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
     QAction * ptr = obj->insertSeparator ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONGEOMETRY )
   {
     QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->actionGeometry ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QAction * ptr = obj->actionAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
   {
     int par1 = ISNIL(1)? (int) Qt::TopRightCorner : hb_parni(1);
     QWidget * ptr = obj->cornerWidget (  (Qt::Corner) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QMENUBAR_DEFAULTACTION )
   if( obj )
   {
     QAction * ptr = obj->defaultAction (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 #endif
 }

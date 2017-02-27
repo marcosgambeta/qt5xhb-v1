@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->expirationDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastModified (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_GLOBALMATCH )
     int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);
     int par4 = ISNIL(4)? (int) QRegularExpression::NoMatchOption : hb_parni(4);
     QRegularExpressionMatchIterator * ptr = new QRegularExpressionMatchIterator( obj->globalMatch ( par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCHITERATOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCHITERATOR", true );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_MATCH )
     int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);
     int par4 = ISNIL(4)? (int) QRegularExpression::NoMatchOption : hb_parni(4);
     QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->match ( par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
+    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
   }
 }
 

@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
   if( obj )
   {
     QTextDocumentFragment * ptr = new QTextDocumentFragment( obj->selection (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
   }
 }
 
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->block (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
   if( obj )
   {
     QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
   }
 }
 
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->blockCharFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
 
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST1 )
   {
     QTextListFormat * par1 = (QTextListFormat *) _qtxhb_itemGetPtr(1);
     QTextList * ptr = obj->insertList ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST2 )
   {
     int par1 = hb_parni(1);
     QTextList * ptr = obj->insertList (  (QTextListFormat::Style) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST1 )
   {
     QTextListFormat * par1 = (QTextListFormat *) _qtxhb_itemGetPtr(1);
     QTextList * ptr = obj->createList ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST2 )
   {
     int par1 = hb_parni(1);
     QTextList * ptr = obj->createList (  (QTextListFormat::Style) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
   if( obj )
   {
     QTextList * ptr = obj->currentList (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE1 )
   {
     QTextTableFormat * par3 = (QTextTableFormat *) _qtxhb_itemGetPtr(3);
     QTextTable * ptr = obj->insertTable ( (int) hb_parni(1), (int) hb_parni(2), *par3 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
   }
 }
 
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE2 )
   if( obj )
   {
     QTextTable * ptr = obj->insertTable ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
   }
 }
 
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
   if( obj )
   {
     QTextTable * ptr = obj->currentTable (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
   }
 }
 
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
   {
     QTextFrameFormat * par1 = (QTextFrameFormat *) _qtxhb_itemGetPtr(1);
     QTextFrame * ptr = obj->insertFrame ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }
 
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
   if( obj )
   {
     QTextFrame * ptr = obj->currentFrame (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }
 
@@ -1265,7 +1265,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
   if( obj )
   {
     QTextDocument * ptr = obj->document (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
 

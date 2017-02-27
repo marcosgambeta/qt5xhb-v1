@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERADDRESS )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->serverAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 #endif
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEXTPENDINGCONNECTION )
   if( obj )
   {
     QWebSocket * ptr = obj->nextPendingConnection (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBSOCKET" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBSOCKET" );
   }
 #endif
 }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PROXY )
   if( obj )
   {
     QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 #endif
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SSLCONFIGURATION )
   if( obj )
   {
     QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 #endif
 }

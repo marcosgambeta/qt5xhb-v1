@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGYROSCOPE_READING )
   if( obj )
   {
     QGyroscopeReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QGYROSCOPEREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QGYROSCOPEREADING" );
   }
 #endif
 }

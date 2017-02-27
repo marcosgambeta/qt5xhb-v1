@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
   if( obj )
   {
     QSGGeometry * ptr = obj->geometry (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGGEOMETRY" );
+    _qt5xhb_createReturnClass ( ptr, "QSGGEOMETRY" );
   }
 }
 

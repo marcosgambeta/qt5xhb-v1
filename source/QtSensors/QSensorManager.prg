@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensor * par1 = (QSensor *) _qtxhb_itemGetPtr(1);
   QSensorBackend * ptr = QSensorManager::createBackend ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QSENSORBACKEND" );
+  _qt5xhb_createReturnClass ( ptr, "QSENSORBACKEND" );
 #endif
 }
 

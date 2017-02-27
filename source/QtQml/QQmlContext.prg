@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_BASEURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->baseUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
   if( obj )
   {
     QObject * ptr = obj->contextObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant * ptr = new QVariant( obj->contextProperty ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_ENGINE )
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
   if( obj )
   {
     QQmlContext * ptr = obj->parentContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
   {
     QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->resolvedUrl ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

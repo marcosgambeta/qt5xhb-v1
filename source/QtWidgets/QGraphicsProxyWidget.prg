@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
   {
     QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
     QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
   {
     const QWidget * par1 = (const QWidget *) _qtxhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->subWidgetRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

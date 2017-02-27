@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
   if( obj )
   {
     const QPersistentModelIndex * ptr = &obj->topLeft (  );
-    _qt4xhb_createReturnClass ( ptr, "QPERSISTENTMODELINDEX" );
+    _qt5xhb_createReturnClass ( ptr, "QPERSISTENTMODELINDEX" );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
   if( obj )
   {
     const QPersistentModelIndex * ptr = &obj->bottomRight (  );
-    _qt4xhb_createReturnClass ( ptr, "QPERSISTENTMODELINDEX" );
+    _qt5xhb_createReturnClass ( ptr, "QPERSISTENTMODELINDEX" );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->parent (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
   if( obj )
   {
     const QAbstractItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
   {
     QItemSelectionRange * par1 = (QItemSelectionRange *) _qtxhb_itemGetPtr(1);
     QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE" );
+    _qt5xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE" );
   }
 }
 

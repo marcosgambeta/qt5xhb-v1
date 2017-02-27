@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 #endif
 #endif
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
   if( obj )
   {
     QOpenGLContext * ptr = obj->context (  );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
   }
 #endif
 #endif
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
   if( obj )
   {
     QImage * ptr = new QImage( obj->grabFramebuffer (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 #endif
 #endif

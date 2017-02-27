@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE1 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
   {
     int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
     QTextDecoder * ptr = obj->makeDecoder (  (QTextCodec::ConversionFlags) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDECODER" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDECODER" );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
   {
     int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
     QTextEncoder * ptr = obj->makeEncoder (  (QTextCodec::ConversionFlags) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTENCODER" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTENCODER" );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QTEXTCODEC_NAME )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->name (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME1 )
 {
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QTextCodec * ptr = QTextCodec::codecForName ( *par1 );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 /*
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME2 )
 {
   const char * par1 = hb_parc(1);
   QTextCodec * ptr = QTextCodec::codecForName (  (const char *) par1 );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 
@@ -374,7 +374,7 @@ static QTextCodec* codecForMib(int mib)
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
 {
   QTextCodec * ptr = QTextCodec::codecForMib ( (int) hb_parni(1) );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 
@@ -434,7 +434,7 @@ static QTextCodec* codecForLocale()
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 {
   QTextCodec * ptr = QTextCodec::codecForLocale (  );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML1 )
 {
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QTextCodec * ptr = QTextCodec::codecForHtml ( *par1 );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 /*
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML2 )
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QTextCodec * par2 = (QTextCodec *) _qtxhb_itemGetPtr(2);
   QTextCodec * ptr = QTextCodec::codecForHtml ( *par1, par2 );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT1 )
 {
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QTextCodec * ptr = QTextCodec::codecForUtfText ( *par1 );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 /*
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT2 )
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QTextCodec * par2 = (QTextCodec *) _qtxhb_itemGetPtr(2);
   QTextCodec * ptr = QTextCodec::codecForUtfText ( *par1, par2 );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
 

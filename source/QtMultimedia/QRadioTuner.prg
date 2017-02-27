@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QRADIOTUNER_RADIODATA )
   if( obj )
   {
     QRadioData * ptr = obj->radioData (  );
-    _qt4xhb_createReturnClass ( ptr, "QRADIODATA" );
+    _qt5xhb_createReturnClass ( ptr, "QRADIODATA" );
   }
 }
 

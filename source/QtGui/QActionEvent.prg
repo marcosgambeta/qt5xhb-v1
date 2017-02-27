@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
   if( obj )
   {
     QAction * ptr = obj->action (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
   if( obj )
   {
     QAction * ptr = obj->before (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 

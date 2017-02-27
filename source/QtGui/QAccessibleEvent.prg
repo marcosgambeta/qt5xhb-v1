@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->accessibleInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 

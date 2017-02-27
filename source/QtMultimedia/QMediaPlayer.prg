@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTMEDIA )
   if( obj )
   {
     QMediaContent * ptr = new QMediaContent( obj->currentMedia (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
   if( obj )
   {
     QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentNetworkConfiguration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
   if( obj )
   {
     QMediaContent * ptr = new QMediaContent( obj->media (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
   if( obj )
   {
     const QIODevice * ptr = obj->mediaStream (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
   if( obj )
   {
     QMediaPlaylist * ptr = obj->playlist (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
   }
 }
 

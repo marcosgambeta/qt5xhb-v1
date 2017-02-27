@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->currentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->headerItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->invisibleRootItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
   {
     const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) _qtxhb_itemGetPtr(1);
     QTreeWidgetItem * ptr = obj->itemAbove ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT1 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QTreeWidgetItem * ptr = obj->itemAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT2 )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
   {
     const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) _qtxhb_itemGetPtr(1);
     QTreeWidgetItem * ptr = obj->itemBelow ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qtxhb_itemGetPtr(1);
     QWidget * ptr = obj->itemWidget ( par1, (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->takeTopLevelItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->topLevelItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
 
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

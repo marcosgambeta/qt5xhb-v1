@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->defaultTextColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
   if( obj )
   {
     QTextDocument * ptr = obj->document (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->textCursor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 

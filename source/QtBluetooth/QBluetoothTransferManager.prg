@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
     QBluetoothTransferRequest * par1 = (QBluetoothTransferRequest *) _qtxhb_itemGetPtr(1);
     QIODevice * par2 = (QIODevice *) _qtxhb_itemGetPtr(2);
     QBluetoothTransferReply * ptr = obj->put ( *par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREPLY" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREPLY" );
   }
 #endif
 }

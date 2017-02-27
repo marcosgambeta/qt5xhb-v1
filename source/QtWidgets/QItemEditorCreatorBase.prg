@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
   {
     QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
     QWidget * ptr = obj->createWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->valuePropertyName (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 

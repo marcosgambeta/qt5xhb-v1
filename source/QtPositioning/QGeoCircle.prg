@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_CENTER )
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->center (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATED )
     double par1 = hb_parnd(1);
     double par2 = hb_parnd(2);
     QGeoCircle * ptr = new QGeoCircle( obj->translated ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCIRCLE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCIRCLE", true );
   }
 #endif
 }

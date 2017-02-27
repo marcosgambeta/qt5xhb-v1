@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
   if( obj )
   {
     QSqlDriver * ptr = obj->driver (  );
-    _qt4xhb_createReturnClass ( ptr, "QSQLDRIVER" );
+    _qt5xhb_createReturnClass ( ptr, "QSQLDRIVER" );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
   {
     QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
     QSqlQuery * ptr = new QSqlQuery( obj->exec ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLQUERY", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
   }
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
   if( obj )
   {
     QSqlError * ptr = new QSqlError( obj->lastError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
 
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QSqlRecord * ptr = new QSqlRecord( obj->record ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE1 )
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
 /*
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE2 )
   QSqlDriver * par1 = (QSqlDriver *) _qtxhb_itemGetPtr(1);
   QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
 
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
   QSqlDatabase * par1 = (QSqlDatabase *) _qtxhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
 
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
   QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, (bool) ISNIL(2)? true : hb_parl(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
 

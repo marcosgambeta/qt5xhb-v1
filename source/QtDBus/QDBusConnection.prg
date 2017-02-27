@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->lastError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSERROR" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTIONCAPABILITIES )
   if( obj )
   {
     ConnectionCapabilities * ptr = new ConnectionCapabilities( obj->connectionCapabilities (  ) );
-    _qt4xhb_createReturnClass ( ptr, "CONNECTIONCAPABILITIES" );
+    _qt5xhb_createReturnClass ( ptr, "CONNECTIONCAPABILITIES" );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
   {
     int par2 = ISNIL(2)? (int) QDBus::Block : hb_parni(2);
     QDBusMessage * ptr = new QDBusMessage( obj->call (  (QDBus::CallMode) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
   if( obj )
   {
     QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( (int) ISNIL(2)? -1 : hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
   }
 }
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QObject * ptr = obj->objectRegisteredAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
   if( obj )
   {
     QDBusConnectionInterface * ptr = obj->interface (  );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTIONINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTIONINTERFACE" );
   }
 }
 
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS1 )
 {
   QString par2 = QLatin1String( hb_parc(2) );
   QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
 /*
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS2 )
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
 
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOPEER )
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToPeer ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
 
@@ -657,7 +657,7 @@ static QByteArray localMachineId()
 HB_FUNC_STATIC( QDBUSCONNECTION_LOCALMACHINEID )
 {
   QByteArray * ptr = new QByteArray( QDBusConnection::localMachineId (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
 
@@ -667,7 +667,7 @@ static QDBusConnection sessionBus()
 HB_FUNC_STATIC( QDBUSCONNECTION_SESSIONBUS )
 {
   QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sessionBus (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
 
@@ -677,7 +677,7 @@ static QDBusConnection systemBus()
 HB_FUNC_STATIC( QDBUSCONNECTION_SYSTEMBUS )
 {
   QDBusConnection * ptr = new QDBusConnection( QDBusConnection::systemBus (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
 
@@ -687,7 +687,7 @@ static QDBusConnection sender()
 HB_FUNC_STATIC( QDBUSCONNECTION_SENDER )
 {
   QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sender (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
 

@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->cellWidget ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->currentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_HORIZONTALHEADERITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->horizontalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->item ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT1 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QTableWidgetItem * ptr = obj->itemAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT2 )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->takeItem ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->takeVerticalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VERTICALHEADERITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->verticalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
 
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
   {
     const QTableWidgetItem * par1 = (const QTableWidgetItem *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

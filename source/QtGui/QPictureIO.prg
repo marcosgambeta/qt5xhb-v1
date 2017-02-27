@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QPICTUREIO_PICTURE )
   if( obj )
   {
     const QPicture * ptr = &obj->picture (  );
-    _qt4xhb_createReturnClass ( ptr, "QPICTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QPICTURE" );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->ioDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT1 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
 /*
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT2 )
 {
   QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
   QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
 

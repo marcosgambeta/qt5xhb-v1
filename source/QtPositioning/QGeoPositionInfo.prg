@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_TIMESTAMP )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->timestamp (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 #endif
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_COORDINATE )
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->coordinate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }

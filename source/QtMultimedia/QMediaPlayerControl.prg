@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_AVAILABLEPLAYBACKRANGES )
   if( obj )
   {
     QMediaTimeRange * ptr = new QMediaTimeRange( obj->availablePlaybackRanges (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIATIMERANGE" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIATIMERANGE" );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_MEDIA )
   if( obj )
   {
     QMediaContent * ptr = new QMediaContent( obj->media (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_MEDIASTREAM )
   if( obj )
   {
     const QIODevice * ptr = obj->mediaStream (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 

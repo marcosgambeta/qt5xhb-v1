@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QSENSORGESTURERECOGNIZER" );
+  _qt5xhb_createReturnClass ( ptr, "QSENSORGESTURERECOGNIZER" );
 #endif
 }
 

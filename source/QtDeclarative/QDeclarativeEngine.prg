@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->baseUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDeclarativeImageProvider * ptr = obj->imageProvider ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEIMAGEPROVIDER" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEIMAGEPROVIDER" );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
   if( obj )
   {
     QNetworkAccessManager * ptr = obj->networkAccessManager (  );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
   if( obj )
   {
     QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY" );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
   if( obj )
   {
     QDeclarativeContext * ptr = obj->rootContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 {
   const QObject * par1 = (const QObject *) _qtxhb_itemGetPtr(1);
   QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+  _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
 }
 
 

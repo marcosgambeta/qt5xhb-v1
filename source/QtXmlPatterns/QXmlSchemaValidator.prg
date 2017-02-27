@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
   if( obj )
   {
     QAbstractMessageHandler * ptr = obj->messageHandler (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
   if( obj )
   {
     QXmlNamePool * ptr = new QXmlNamePool( obj->namePool (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
   if( obj )
   {
     QNetworkAccessManager * ptr = obj->networkAccessManager (  );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
   if( obj )
   {
     QXmlSchema * ptr = new QXmlSchema( obj->schema (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSCHEMA", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLSCHEMA", true );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
   if( obj )
   {
     const QAbstractUriResolver * ptr = obj->uriResolver (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
   }
 }
 

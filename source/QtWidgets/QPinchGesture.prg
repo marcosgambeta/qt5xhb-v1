@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->centerPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTCENTERPOINT )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->lastCenterPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->startCenterPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 

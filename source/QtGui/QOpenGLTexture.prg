@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_CREATETEXTUREVIEW )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QOpenGLTexture * ptr = obj->createTextureView (  (QOpenGLTexture::Target) par1,  (QOpenGLTexture::TextureFormat) par2, (int) hb_parni(3), (int) hb_parni(4), (int) hb_parni(5), (int) hb_parni(6) );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLTEXTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLTEXTURE" );
   }
 #endif
 }
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR1 )
   if( obj )
   {
     QColor * ptr = new QColor( obj->borderColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 #endif
 }

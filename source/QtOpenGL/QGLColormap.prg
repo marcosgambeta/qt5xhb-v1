@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->entryColor ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 

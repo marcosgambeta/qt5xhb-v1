@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
     QWidget * ptr = obj->load ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
   if( obj )
   {
     QDir * ptr = new QDir( obj->workingDirectory (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
 

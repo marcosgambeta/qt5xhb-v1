@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_READING )
   if( obj )
   {
     QRotationReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QROTATIONREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QROTATIONREADING" );
   }
 #endif
 }

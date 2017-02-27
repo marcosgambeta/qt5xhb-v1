@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
   if( obj )
   {
     const QPoint * ptr = &obj->oldPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMOVEEVENT_POS )
   if( obj )
   {
     const QPoint * ptr = &obj->pos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
 

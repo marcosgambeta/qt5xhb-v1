@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
   if( obj )
   {
     QCompleter * ptr = obj->completer (  );
-    _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );
+    _qt5xhb_createReturnClass ( ptr, "QCOMPLETER" );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
   if( obj )
   {
     QMenu * ptr = obj->createStandardContextMenu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
   if( obj )
   {
     const QValidator * ptr = obj->validator (  );
-    _qt4xhb_createReturnClass ( ptr, "QVALIDATOR" );
+    _qt5xhb_createReturnClass ( ptr, "QVALIDATOR" );
   }
 }
 
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->textMargins (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
 
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION2 )
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
     int par2 = hb_parni(2);
     QAction * ptr = obj->addAction ( par1,  (QLineEdit::ActionPosition) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 

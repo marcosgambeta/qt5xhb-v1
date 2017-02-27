@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
   QString par1 = QLatin1String( hb_parc(1) );
   QXmlNamePool * par2 = (QXmlNamePool *) _qtxhb_itemGetPtr(2);
   QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( par1, *par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
+  _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
 }
 
 

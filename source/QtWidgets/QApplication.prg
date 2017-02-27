@@ -340,7 +340,7 @@ static QWidget * activeModalWidget ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 {
   QWidget * ptr = QApplication::activeModalWidget (  );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 
@@ -350,7 +350,7 @@ static QWidget * activePopupWidget ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 {
   QWidget * ptr = QApplication::activePopupWidget (  );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 
@@ -360,7 +360,7 @@ static QWidget * activeWindow ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 {
   QWidget * ptr = QApplication::activeWindow (  );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 
@@ -442,7 +442,7 @@ static QClipboard * clipboard ()
 HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
 {
   QClipboard * ptr = QApplication::clipboard (  );
-  _qt4xhb_createReturnClass ( ptr, "QCLIPBOARD" );
+  _qt5xhb_createReturnClass ( ptr, "QCLIPBOARD" );
 }
 
 
@@ -470,7 +470,7 @@ static QDesktopWidget * desktop ()
 HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
 {
   QDesktopWidget * ptr = QApplication::desktop (  );
-  _qt4xhb_createReturnClass ( ptr, "QDESKTOPWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QDESKTOPWIDGET" );
 }
 
 
@@ -507,7 +507,7 @@ static QWidget * focusWidget ()
 HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 {
   QWidget * ptr = QApplication::focusWidget (  );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 
@@ -517,7 +517,7 @@ static QFont font ()
 HB_FUNC_STATIC( QAPPLICATION_FONT1 )
 {
   QFont * ptr = new QFont( QApplication::font (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
 /*
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT2 )
 {
   QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
   QFont * ptr = new QFont( QApplication::font ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
 /*
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT3 )
 {
   const char * par1 = hb_parc(1);
   QFont * ptr = new QFont( QApplication::font (  (const char *) par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
 
@@ -571,7 +571,7 @@ static QFontMetrics fontMetrics ()
 HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
 {
   QFontMetrics * ptr = new QFontMetrics( QApplication::fontMetrics (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
+  _qt5xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
 }
 
 
@@ -581,7 +581,7 @@ static QSize globalStrut ()
 HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
 {
   QSize * ptr = new QSize( QApplication::globalStrut (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 }
 
 
@@ -659,7 +659,7 @@ static QCursor * overrideCursor ()
 HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
 {
   QCursor * ptr = QApplication::overrideCursor (  );
-  _qt4xhb_createReturnClass ( ptr, "QCURSOR" );
+  _qt5xhb_createReturnClass ( ptr, "QCURSOR" );
 }
 
 
@@ -669,7 +669,7 @@ static QPalette palette ()
 HB_FUNC_STATIC( QAPPLICATION_PALETTE1 )
 {
   QPalette * ptr = new QPalette( QApplication::palette (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+  _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
 /*
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE2 )
 {
   QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
   QPalette * ptr = new QPalette( QApplication::palette ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+  _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
 /*
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE3 )
 {
   const char * par1 = hb_parc(1);
   QPalette * ptr = new QPalette( QApplication::palette (  (const char *) par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+  _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
 
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE2 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QStyle * ptr = QApplication::setStyle ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
+  _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
 }
 
 
@@ -994,7 +994,7 @@ static QStyle * style ()
 HB_FUNC_STATIC( QAPPLICATION_STYLE )
 {
   QStyle * ptr = QApplication::style (  );
-  _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
+  _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
 }
 
 
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
 {
   QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
   QWidget * ptr = QApplication::topLevelAt ( *par1 );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 /*
@@ -1015,7 +1015,7 @@ static QWidget * topLevelAt ( int x, int y )
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT2 )
 {
   QWidget * ptr = QApplication::topLevelAt ( (int) hb_parni(1), (int) hb_parni(2) );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
 {
   QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
   QWidget * ptr = QApplication::widgetAt ( *par1 );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 /*
@@ -1104,7 +1104,7 @@ static QWidget * widgetAt ( int x, int y )
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT2 )
 {
   QWidget * ptr = QApplication::widgetAt ( (int) hb_parni(1), (int) hb_parni(2) );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
 
@@ -1133,7 +1133,7 @@ static QIcon windowIcon ()
 HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
 {
   QIcon * ptr = new QIcon( QApplication::windowIcon (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  _qt5xhb_createReturnClass ( ptr, "QICON", true );
 }
 
 

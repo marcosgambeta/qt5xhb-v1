@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT1 )
   if( obj )
   {
     QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT2 )
   if( obj )
   {
     QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT3 )
   {
     QTextCursor * par1 = (QTextCursor *) _qtxhb_itemGetPtr(1);
     QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
   }
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
   {
     QTextCursor * par1 = (QTextCursor *) _qtxhb_itemGetPtr(1);
     QTextCursor * ptr = new QTextCursor( obj->rowStart ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
   {
     QTextCursor * par1 = (QTextCursor *) _qtxhb_itemGetPtr(1);
     QTextCursor * ptr = new QTextCursor( obj->rowEnd ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
   if( obj )
   {
     QTextTableFormat * ptr = new QTextTableFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );
   }
 }
 

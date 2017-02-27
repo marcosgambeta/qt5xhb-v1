@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
   if( obj )
   {
     QRegExp * ptr = new QRegExp( obj->regExp (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
+    _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 }
 

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
   if( obj )
   {
     const QSize * ptr = &obj->size (  );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE" );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE" );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
   if( obj )
   {
     const QSize * ptr = &obj->oldSize (  );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE" );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE" );
   }
 }
 

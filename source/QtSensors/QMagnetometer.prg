@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
   if( obj )
   {
     QMagnetometerReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QMAGNETOMETERREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QMAGNETOMETERREADING" );
   }
 #endif
 }

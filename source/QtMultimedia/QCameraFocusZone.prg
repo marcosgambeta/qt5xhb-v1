@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->area (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

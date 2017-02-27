@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
   if( obj )
   {
     QWindow * ptr = obj->window (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
   if( obj )
   {
     QObject * ptr = obj->target (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
   if( obj )
   {
     QTouchDevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QTOUCHDEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QTOUCHDEVICE" );
   }
 }
 

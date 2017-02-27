@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
   if( obj )
   {
     const QRegion * ptr = &obj->region (  );
-    _qt4xhb_createReturnClass ( ptr, "QREGION" );
+    _qt5xhb_createReturnClass ( ptr, "QREGION" );
   }
 }
 

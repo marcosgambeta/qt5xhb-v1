@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF1 )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->capturedRef ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QStringRef * ptr = new QStringRef( obj->capturedRef ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_REGULAREXPRESSION )
   if( obj )
   {
     QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
+    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
   }
 }
 

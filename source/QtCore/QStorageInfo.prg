@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DEVICE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->device (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
 }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->fileSystemType (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
 }
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QSTORAGEINFO", true );
+  _qt5xhb_createReturnClass ( ptr, "QSTORAGEINFO", true );
 #endif
 }
 

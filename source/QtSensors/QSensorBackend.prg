@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_READING )
   if( obj )
   {
     QSensorReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QSENSORREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QSENSORREADING" );
   }
 #endif
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
   if( obj )
   {
     QSensor * ptr = obj->sensor (  );
-    _qt4xhb_createReturnClass ( ptr, "QSENSOR" );
+    _qt5xhb_createReturnClass ( ptr, "QSENSOR" );
   }
 #endif
 }

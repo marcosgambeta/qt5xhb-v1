@@ -309,7 +309,7 @@ static QPrinterInfo defaultPrinter ()
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
   QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+  _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 }
 
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->defaultPageSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
 
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+  _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 }
 
 

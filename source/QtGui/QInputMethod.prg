@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->cursorRectangle (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->inputItemTransform (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->keyboardRectangle (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
 

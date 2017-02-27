@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
   if( obj )
   {
     QKeySequence * ptr = new QKeySequence( obj->shortcut (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
   }
 #endif
 }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
   if( obj )
   {
     QButtonGroup * ptr = obj->group (  );
-    _qt4xhb_createReturnClass ( ptr, "QBUTTONGROUP" );
+    _qt5xhb_createReturnClass ( ptr, "QBUTTONGROUP" );
   }
 #endif
 }

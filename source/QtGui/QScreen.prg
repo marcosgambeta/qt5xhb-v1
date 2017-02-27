@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSCREEN_HANDLE )
   if( obj )
   {
     QPlatformScreen * ptr = obj->handle (  );
-    _qt4xhb_createReturnClass ( ptr, "QPLATFORMSCREEN" );
+    _qt5xhb_createReturnClass ( ptr, "QPLATFORMSCREEN" );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSCREEN_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSCREEN_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->physicalSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->availableSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEGEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->availableGeometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->virtualSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALGEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->virtualGeometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->availableVirtualSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALGEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->availableVirtualGeometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
     int par2 = hb_parni(2);
     QRect * par3 = (QRect *) _qtxhb_itemGetPtr(3);
     QTransform * ptr = new QTransform( obj->transformBetween (  (Qt::ScreenOrientation) par1,  (Qt::ScreenOrientation) par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
     int par2 = hb_parni(2);
     QRect * par3 = (QRect *) _qtxhb_itemGetPtr(3);
     QRect * ptr = new QRect( obj->mapBetween (  (Qt::ScreenOrientation) par1,  (Qt::ScreenOrientation) par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QSCREEN_GRABWINDOW )
   {
     WId par1 = (WId) hb_parptr(1);
     QPixmap * ptr = new QPixmap( obj->grabWindow ( par1, (int) ISNIL(2)? 0 : hb_parni(2), (int) ISNIL(3)? 0 : hb_parni(3), (int) ISNIL(4)? -1 : hb_parni(4), (int) ISNIL(5)? -1 : hb_parni(5) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 

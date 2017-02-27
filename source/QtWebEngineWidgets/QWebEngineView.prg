@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
   if( obj )
   {
     QWebEnginePage * ptr = obj->page (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBENGINEPAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEPAGE" );
   }
 #endif
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
   if( obj )
   {
     QWebEngineHistory * ptr = obj->history (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBENGINEHISTORY" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORY" );
   }
 #endif
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ICONURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->iconUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
   {
     int par1 = hb_parni(1);
     QAction * ptr = obj->pageAction (  (QWebEnginePage::WebAction) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 #endif
 #endif
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
 }

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
   if( obj )
   {
     QTextDocument * ptr = obj->document (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
 

@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX1 )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QModelIndex * ptr = new QModelIndex( obj->index ( par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QDIRMODEL_PARENT )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDIRMODEL_DATA )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
   {
     int par2 = hb_parni(2);
     QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
   if( obj )
   {
     QFileIconProvider * ptr = obj->iconProvider (  );
-    _qt4xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
+    _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
   }
 }
 
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QDIRMODEL_MKDIR )
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEICON )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QIcon * ptr = new QIcon( obj->fileIcon ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
+    _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
   }
 }
 

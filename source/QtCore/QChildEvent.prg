@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
   if( obj )
   {
     QObject * ptr = obj->child (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

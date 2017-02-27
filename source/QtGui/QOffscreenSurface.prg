@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_FORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_REQUESTEDFORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->requestedFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
   if( obj )
   {
     QScreen * ptr = obj->screen (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCREEN" );
+    _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_HANDLE )
   if( obj )
   {
     QPlatformOffscreenSurface * ptr = obj->handle (  );
-    _qt4xhb_createReturnClass ( ptr, "QPLATFORMOFFSCREENSURFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QPLATFORMOFFSCREENSURFACE" );
   }
 }
 

@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
   if( obj )
   {
     QAbstractState * ptr = obj->defaultState (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
 

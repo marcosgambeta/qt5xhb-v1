@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
   if( obj )
   {
     QChar * ptr = new QChar( obj->next (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 

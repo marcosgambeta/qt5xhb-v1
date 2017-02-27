@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
   if( obj )
   {
     GLuint64 * ptr = new GLuint64( obj->waitForTimestamp (  ) );
-    _qt4xhb_createReturnClass ( ptr, "GLUINT64" );
+    _qt5xhb_createReturnClass ( ptr, "GLUINT64" );
   }
 #endif
 #endif
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
   if( obj )
   {
     GLuint64 * ptr = new GLuint64( obj->waitForResult (  ) );
-    _qt4xhb_createReturnClass ( ptr, "GLUINT64" );
+    _qt5xhb_createReturnClass ( ptr, "GLUINT64" );
   }
 #endif
 #endif

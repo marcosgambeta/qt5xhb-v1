@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
   if( obj )
   {
     QDomText * ptr = new QDomText( obj->splitText ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMTEXT", true );
   }
 }
 

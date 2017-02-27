@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QQMLENGINE_BASEURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->baseUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QQMLENGINE_IMAGEPROVIDER )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QQmlImageProviderBase * ptr = obj->imageProvider ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QQMLIMAGEPROVIDERBASE" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLIMAGEPROVIDERBASE" );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QQMLENGINE_INCUBATIONCONTROLLER )
   if( obj )
   {
     QQmlIncubationController * ptr = obj->incubationController (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLINCUBATIONCONTROLLER" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLINCUBATIONCONTROLLER" );
   }
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGER )
   if( obj )
   {
     QNetworkAccessManager * ptr = obj->networkAccessManager (  );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGERFACTORY )
   if( obj )
   {
     QQmlNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLNETWORKACCESSMANAGERFACTORY" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLNETWORKACCESSMANAGERFACTORY" );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QQMLENGINE_ROOTCONTEXT )
   if( obj )
   {
     QQmlContext * ptr = obj->rootContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QQMLENGINE_CONTEXTFOROBJECT )
 {
   const QObject * par1 = (const QObject *) _qtxhb_itemGetPtr(1);
   QQmlContext * ptr = QQmlEngine::contextForObject ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
+  _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
 }
 
 

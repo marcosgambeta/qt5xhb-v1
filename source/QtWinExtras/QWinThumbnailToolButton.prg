@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 #endif
 }

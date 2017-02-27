@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
   {
     int par1 = hb_parni(1);
     QPointF * ptr = new QPointF( obj->buttonDownPos (  (Qt::MouseButton) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
   {
     int par1 = hb_parni(1);
     QPointF * ptr = new QPointF( obj->buttonDownScenePos (  (Qt::MouseButton) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
   {
     int par1 = hb_parni(1);
     QPoint * ptr = new QPoint( obj->buttonDownScreenPos (  (Qt::MouseButton) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->lastPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->lastScenePos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->lastScreenPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->pos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->scenePos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->screenPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 

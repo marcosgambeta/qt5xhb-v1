@@ -30,7 +30,7 @@
 /*
   cria um objeto da classe 'classname', com o ponteiro 'ptr'
 */
-void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
+void _qt5xhb_createReturnClass ( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
@@ -61,7 +61,7 @@ void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
 /*
   cria um objeto da classe 'classname', com o ponteiro 'ptr'
 */
-void _qt4xhb_createReturnClass ( const void * ptr, const char * classname )
+void _qt5xhb_createReturnClass ( const void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
@@ -92,7 +92,7 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname )
 /*
   cria um objeto da classe 'classname', com o ponteiro 'ptr'
 */
-void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destroy )
+void _qt5xhb_createReturnClass ( void * ptr, const char * classname, bool destroy )
 {
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
@@ -130,7 +130,7 @@ void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destro
 /*
   cria um objeto da classe 'classname', com o ponteiro 'ptr'
 */
-void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy )
+void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy )
 {
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
@@ -170,7 +170,7 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool 
   retorno: true ou false
 */
 
-bool _qt4xhb_checkclsid ( int iPar, int iClsId )
+bool _qt5xhb_checkclsid ( int iPar, int iClsId )
 {
   if( ISOBJECT(iPar) )
   {
@@ -187,7 +187,7 @@ bool _qt4xhb_checkclsid ( int iPar, int iClsId )
   retorno: true ou false
 */
 
-bool _qt4xhb_inherits ( int iPar, const char * classname )
+bool _qt5xhb_inherits ( int iPar, const char * classname )
 {
   if( ISOBJECT(iPar) )
   {

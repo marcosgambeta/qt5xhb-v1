@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ERROR )
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->error (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSERROR" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
   }
 #endif
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_REPLY )
   if( obj )
   {
     QDBusMessage * ptr = new QDBusMessage( obj->reply (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 #endif
 }
@@ -229,7 +229,7 @@ static QDBusPendingCall fromError(const QDBusError &error)
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
 {
   QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromError (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
 }
 
 
@@ -239,7 +239,7 @@ static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMCOMPLETEDCALL )
 {
   QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromCompletedCall (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
+  _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
 }
 
 

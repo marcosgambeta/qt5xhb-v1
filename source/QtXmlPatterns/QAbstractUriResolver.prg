@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
     QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
     QUrl * par2 = (QUrl *) _qtxhb_itemGetPtr(2);
     QUrl * ptr = new QUrl( obj->resolve ( *par1, *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_VALUE )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->value (  (Qt::InputMethodQuery) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

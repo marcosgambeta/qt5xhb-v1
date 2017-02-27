@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
   QAction * ptr = QWhatsThis::createAction ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  _qt5xhb_createReturnClass ( ptr, "QACTION" );
 }
 
 

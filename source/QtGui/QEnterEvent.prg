@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QENTEREVENT_POS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->pos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALPOS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->globalPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QENTEREVENT_LOCALPOS )
   if( obj )
   {
     const QPointF * ptr = &obj->localPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QENTEREVENT_WINDOWPOS )
   if( obj )
   {
     const QPointF * ptr = &obj->windowPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QENTEREVENT_SCREENPOS )
   if( obj )
   {
     const QPointF * ptr = &obj->screenPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 

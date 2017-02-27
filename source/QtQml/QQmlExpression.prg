@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
   if( obj )
   {
     QQmlContext * ptr = obj->context (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
   if( obj )
   {
     QQmlError * ptr = new QQmlError( obj->error (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QQMLERROR" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLERROR" );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
   {
     bool par1;
     QVariant * ptr = new QVariant( obj->evaluate ( &par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     hb_storl( par1, 1 );
   }
 }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
   if( obj )
   {
     QObject * ptr = obj->scopeObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

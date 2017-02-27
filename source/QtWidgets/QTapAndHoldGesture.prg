@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->position (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 

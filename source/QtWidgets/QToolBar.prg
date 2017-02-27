@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT1 )
   if( obj )
   {
     QAction * ptr = obj->actionAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT2 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QAction * ptr = obj->actionAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QAction * ptr = obj->addAction ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION3 )
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qtxhb_itemGetPtr(1) : QIcon(hb_parc(1));
     QString par2 = QLatin1String( hb_parc(2) );
     QAction * ptr = obj->addAction ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION4 )
     QObject * par2 = (QObject *) _qtxhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
     QAction * ptr = obj->addAction ( par1, par2,  (const char *) par3 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION5 )
     QObject * par3 = (QObject *) _qtxhb_itemGetPtr(3);
     const char * par4 = hb_parc(4);
     QAction * ptr = obj->addAction ( par1, par2, par3,  (const char *) par4 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
   if( obj )
   {
     QAction * ptr = obj->addSeparator (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
   {
     QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
     QAction * ptr = obj->addWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
   {
     QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
     QAction * ptr = obj->insertSeparator ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
     QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
     QWidget * par2 = (QWidget *) _qtxhb_itemGetPtr(2);
     QAction * ptr = obj->insertWidget ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
   if( obj )
   {
     QAction * ptr = obj->toggleViewAction (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
   {
     QAction * par1 = (QAction *) _qtxhb_itemGetPtr(1);
     QWidget * ptr = obj->widgetForAction ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->currentColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->selectedColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -327,7 +327,7 @@ static QColor customColor(int index)
 HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
 {
   QColor * ptr = new QColor( QColorDialog::customColor ( (int) hb_parni(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
 /*
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
   QColor * ptr = new QColor( QColorDialog::getColor ( par1, par2, par3,  (QColorDialog::ColorDialogOptions) par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
 
@@ -393,7 +393,7 @@ static QColor standardColor(int index)
 HB_FUNC_STATIC( QCOLORDIALOG_STANDARDCOLOR )
 {
   QColor * ptr = new QColor( QColorDialog::standardColor ( (int) hb_parni(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
 /*

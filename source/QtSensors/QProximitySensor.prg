@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_READING )
   if( obj )
   {
     QProximityReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QPROXIMITYREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QPROXIMITYREADING" );
   }
 #endif
 }

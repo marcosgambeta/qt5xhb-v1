@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPRESSURESENSOR_READING )
   if( obj )
   {
     QPressureReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QPRESSUREREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QPRESSUREREADING" );
   }
 #endif
 }

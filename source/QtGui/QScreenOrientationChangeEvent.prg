@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
   if( obj )
   {
     QScreen * ptr = obj->screen (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCREEN" );
+    _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
   }
 }
 

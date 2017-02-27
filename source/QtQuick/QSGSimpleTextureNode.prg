@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_RECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->rect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_TEXTURE )
   if( obj )
   {
     QSGTexture * ptr = obj->texture (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGTEXTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
 

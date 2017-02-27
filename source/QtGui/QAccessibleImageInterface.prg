@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->imageSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

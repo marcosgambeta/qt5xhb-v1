@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_DISPLAYRECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->displayRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_NATIVESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->nativeSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

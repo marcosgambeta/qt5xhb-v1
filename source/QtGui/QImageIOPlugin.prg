@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
     QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qtxhb_itemGetPtr(2);
     QImageIOHandler * ptr = obj->create ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
   }
 }
 

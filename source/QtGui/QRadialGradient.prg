@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTER )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->center (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALPOINT )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->focalPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 

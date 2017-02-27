@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MENU )
   if( obj )
   {
     QMenu * ptr = obj->menu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 

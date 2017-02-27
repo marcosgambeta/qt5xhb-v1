@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
   if( obj )
   {
     const QMimeData * ptr = obj->mimeData (  );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+    _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->pos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->scenePos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->screenPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
   if( obj )
   {
     QWidget * ptr = obj->source (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

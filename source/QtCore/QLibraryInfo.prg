@@ -119,7 +119,7 @@ static QDate buildDate()
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
   QDate * ptr = new QDate( QLibraryInfo::buildDate (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
 

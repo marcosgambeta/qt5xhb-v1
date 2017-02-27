@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->cellRect ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
   if( obj )
   {
     QLayoutItem * ptr = obj->itemAtPosition ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
 
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
   if( obj )
   {
     QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
 
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
   if( obj )
   {
     QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
 

@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_START2 )
   if( obj )
   {
     QIODevice * ptr = obj->start (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_FORMAT )
   if( obj )
   {
     QAudioFormat * ptr = new QAudioFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
   }
 }
 

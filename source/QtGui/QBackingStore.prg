@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_HANDLE )
   if( obj )
   {
     QPlatformBackingStore * ptr = obj->handle (  );
-    _qt4xhb_createReturnClass ( ptr, "QPLATFORMBACKINGSTORE" );
+    _qt5xhb_createReturnClass ( ptr, "QPLATFORMBACKINGSTORE" );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_PAINTDEVICE )
   if( obj )
   {
     QPaintDevice * ptr = obj->paintDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_STATICCONTENTS )
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->staticContents (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_WINDOW )
   if( obj )
   {
     QWindow * ptr = obj->window (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }
 

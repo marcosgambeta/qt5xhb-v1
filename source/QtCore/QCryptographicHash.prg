@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->result (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *par1,  (QCryptographicHash::Algorithm) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
 

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_AUDIOFORMAT )
   if( obj )
   {
     QAudioFormat * ptr = new QAudioFormat( obj->audioFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_READ )
   if( obj )
   {
     QAudioBuffer * ptr = new QAudioBuffer( obj->read (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOBUFFER" );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIOBUFFER" );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_SOURCEDEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->sourceDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 

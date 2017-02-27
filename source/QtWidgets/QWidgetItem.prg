@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

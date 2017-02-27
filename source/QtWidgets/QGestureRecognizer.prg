@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
   {
     QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
     QGesture * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGESTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QGESTURE" );
   }
 }
 

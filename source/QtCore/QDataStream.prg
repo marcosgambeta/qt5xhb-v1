@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QDATASTREAM_READBYTES )
     char * * par1 = (char * *) _qtxhb_itemGetPtr(1);
     uint  * par2 = (uint  *) _qtxhb_itemGetPtr(2);
     QDataStream * ptr = &obj->readBytes ( *par1, *par2 );
-    _qt4xhb_createReturnClass ( ptr, "QDATASTREAM" );
+    _qt5xhb_createReturnClass ( ptr, "QDATASTREAM" );
   }
 }
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
   {
     const char * par1 = hb_parc(1);
     QDataStream * ptr = &obj->writeBytes (  (const char *) par1, (uint) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QDATASTREAM" );
+    _qt5xhb_createReturnClass ( ptr, "QDATASTREAM" );
   }
 }
 

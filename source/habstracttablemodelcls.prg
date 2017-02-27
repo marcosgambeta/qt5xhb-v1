@@ -397,7 +397,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_RELOADDATA )
 //   if( obj )
 //   {
 //     QModelIndex * ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2) ) );
-//     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX" );  }
+//     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX" );  }
 // }
 
 #pragma ENDDUMP

@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
   if( obj )
   {
     QDeclarativeContext * ptr = obj->context (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
   if( obj )
   {
     QDeclarativeEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
   if( obj )
   {
     QDeclarativeError * ptr = new QDeclarativeError( obj->error (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEERROR" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEERROR" );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
   {
     bool par1;
     QVariant * ptr = new QVariant( obj->evaluate ( &par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     hb_storl( par1, 1 );
   }
 }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
   if( obj )
   {
     QObject * ptr = obj->scopeObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

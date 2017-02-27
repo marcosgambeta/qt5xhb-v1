@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
   if( obj )
   {
     QNetworkRequest * ptr = new QNetworkRequest( obj->canonicalRequest (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
   if( obj )
   {
     QMediaResource * ptr = new QMediaResource( obj->canonicalResource (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIARESOURCE" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIARESOURCE" );
   }
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->canonicalUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
   if( obj )
   {
     QMediaPlaylist * ptr = obj->playlist (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
   }
 }
 

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->attribute (  (QNetworkRequest::Attribute) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->header (  (QNetworkRequest::KnownHeaders) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
   if( obj )
   {
     QNetworkAccessManager * ptr = obj->manager (  );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
   {
     QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
     QByteArray * ptr = new QByteArray( obj->rawHeader ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
   if( obj )
   {
     QNetworkRequest * ptr = new QNetworkRequest( obj->request (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
   }
 }
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
   if( obj )
   {
     QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 }
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

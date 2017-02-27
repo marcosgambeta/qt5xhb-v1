@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
   {
     QQmlContext * par1 = (QQmlContext *) _qtxhb_itemGetPtr(1);
     QObject * ptr = obj->beginCreate ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE1 )
   {
     QQmlContext * par1 = ISNIL(1)? 0 : (QQmlContext *) _qtxhb_itemGetPtr(1);
     QObject * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATIONCONTEXT )
   if( obj )
   {
     QQmlContext * ptr = obj->creationContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

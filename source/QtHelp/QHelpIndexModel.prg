@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QModelIndex * ptr = new QModelIndex( obj->filter ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 

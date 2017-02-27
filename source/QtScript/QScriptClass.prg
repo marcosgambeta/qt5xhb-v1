@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_ENGINE )
   if( obj )
   {
     QScriptEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
     int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->extension (  (QScriptClass::Extension) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
   {
     QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
     QScriptClassPropertyIterator * ptr = obj->newIterator ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCLASSPROPERTYITERATOR" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTCLASSPROPERTYITERATOR" );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
     QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
     QScriptString * par2 = (QScriptString *) _qtxhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->property ( *par1, *par2, (uint) hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->prototype (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 

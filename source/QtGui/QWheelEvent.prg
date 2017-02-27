@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QWHEELEVENT_PIXELDELTA )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->pixelDelta (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QWHEELEVENT_ANGLEDELTA )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->angleDelta (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->pos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->globalPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POSF )
   if( obj )
   {
     const QPointF * ptr = &obj->posF (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOSF )
   if( obj )
   {
     const QPointF * ptr = &obj->globalPosF (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 

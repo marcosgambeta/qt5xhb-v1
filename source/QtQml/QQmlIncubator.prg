@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
     QDeclarativeItem * ptr = obj->childAt ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->childrenRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     qreal par2 = hb_parnd(2);
     qreal par3 = hb_parnd(3);
     QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     qreal par2 = hb_parnd(2);
     qreal par3 = hb_parnd(3);
     QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
   if( obj )
   {
     QDeclarativeItem * ptr = obj->parentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
   }
 }
 

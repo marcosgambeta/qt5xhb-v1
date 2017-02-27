@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
   if( obj )
   {
     QJsonArray * ptr = new QJsonArray( obj->toArray (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
   if( obj )
   {
     QJsonObject * ptr = new QJsonObject( obj->toObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }
 

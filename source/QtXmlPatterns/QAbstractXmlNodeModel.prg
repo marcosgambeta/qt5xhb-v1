@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->baseUri ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
     QUrl * ptr = new QUrl( obj->documentUri ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
   {
     QXmlName * par1 = (QXmlName *) _qtxhb_itemGetPtr(1);
     QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
     QXmlName * ptr = new QXmlName( obj->name ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
     QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
     QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSOURCELOCATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QSOURCELOCATION", true );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qtxhb_itemGetPtr(1);
     QVariant * ptr = new QVariant( obj->typedValue ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

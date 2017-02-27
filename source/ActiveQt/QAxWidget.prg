@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
   if( obj )
   {
     QAxAggregated * ptr = obj->createAggregate (  );
-    _qt4xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
+    _qt5xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->asVariant (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL1 )
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
     QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL2 )
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT1 )
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
     QAxObject * ptr = obj->querySubObject (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 );
-    _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT2 )
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QAxObject * ptr = obj->querySubObject (  (const char *) par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
 

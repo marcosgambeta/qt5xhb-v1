@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
     qreal par2 = hb_parnd(2);
     qreal par3 = ISNIL(3)? 0.0 : hb_parnd(3);
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->atDistanceAndAzimuth ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }

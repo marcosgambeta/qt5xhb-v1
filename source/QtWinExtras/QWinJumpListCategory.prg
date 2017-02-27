@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QWinJumpListItem * ptr = obj->addDestination ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif
 }
@@ -331,7 +331,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings3, i3+1) );
 par3 << temp;
 }
     QWinJumpListItem * ptr = obj->addLink ( par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif
 }
@@ -358,7 +358,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings4, i4+1) );
 par4 << temp;
 }
     QWinJumpListItem * ptr = obj->addLink ( par1, par2, par3, par4 );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif
 }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
   if( obj )
   {
     QWinJumpListItem * ptr = obj->addSeparator (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif
 }

@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
   if( obj )
   {
     QFileIconProvider * ptr = obj->iconProvider (  );
-    _qt4xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
+    _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
   }
 }
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
   if( obj )
   {
     QAbstractItemDelegate * ptr = obj->itemDelegate (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
   if( obj )
   {
     QAbstractProxyModel * ptr = obj->proxyModel (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTPROXYMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTPROXYMODEL" );
   }
 #endif
 }
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->saveState (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
   if( obj )
   {
     QDir * ptr = new QDir( obj->directory (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
 
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORYURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->directoryUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -1188,7 +1188,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
 par7 << temp;
 }
   QUrl * ptr = new QUrl( QFileDialog::getOpenFileUrl ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6, par7 ) );
-  _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  _qt5xhb_createReturnClass ( ptr, "QURL", true );
 }
 
 
@@ -1213,7 +1213,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
 par7 << temp;
 }
   QUrl * ptr = new QUrl( QFileDialog::getSaveFileUrl ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6, par7 ) );
-  _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  _qt5xhb_createReturnClass ( ptr, "QURL", true );
 }
 
 
@@ -1236,7 +1236,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
 par5 << temp;
 }
   QUrl * ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( par1, par2, par3,  (QFileDialog::Options) par4, par5 ) );
-  _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  _qt5xhb_createReturnClass ( ptr, "QURL", true );
 }
 
 

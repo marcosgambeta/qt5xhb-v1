@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_RECENT )
   if( obj )
   {
     QWinJumpListCategory * ptr = obj->recent (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
   }
 #endif
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_FREQUENT )
   if( obj )
   {
     QWinJumpListCategory * ptr = obj->frequent (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
   }
 #endif
 }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_TASKS )
   if( obj )
   {
     QWinJumpListCategory * ptr = obj->tasks (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
   }
 #endif
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY2 )
       par2 << (QWinJumpListItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QWinJumpListCategory * ptr = obj->addCategory ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
   }
 #endif
 }

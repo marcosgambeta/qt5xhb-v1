@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
   {
     QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->boundingRectFor ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

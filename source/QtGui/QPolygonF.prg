@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED1 )
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
     QPolygonF * ptr = new QPolygonF( obj->translated ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED2 )
   {
     QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->translated ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
   if( obj )
   {
     QPolygon * ptr = new QPolygon( obj->toPolygon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QPOLYGONF_UNITED )
   {
     QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->united ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
   {
     QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->intersected ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
   {
     QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->subtracted ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 

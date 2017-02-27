@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->item ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
   if( obj )
   {
     QTextListFormat * ptr = new QTextListFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
   }
 }
 

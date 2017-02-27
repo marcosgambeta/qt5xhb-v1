@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
   if( obj )
   {
     QDomElement * ptr = new QDomElement( obj->ownerElement (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
 

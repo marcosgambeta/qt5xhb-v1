@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->pageSizeMM (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
   if( obj )
   {
     QPageLayout * ptr = new QPageLayout( obj->pageLayout (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAGELAYOUT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAGELAYOUT", true );
   }
 }
 

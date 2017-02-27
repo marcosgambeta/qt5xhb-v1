@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant * ptr = new QVariant( obj->metaData ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
   if( obj )
   {
     QMediaService * ptr = obj->service (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIASERVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIASERVICE" );
   }
 }
 

@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSQLRESULT_HANDLE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->handle (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

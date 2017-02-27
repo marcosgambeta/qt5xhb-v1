@@ -268,7 +268,7 @@ static QThreadPool *globalInstance()
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
   QThreadPool * ptr = QThreadPool::globalInstance (  );
-  _qt4xhb_createReturnClass ( ptr, "QTHREADPOOL" );
+  _qt5xhb_createReturnClass ( ptr, "QTHREADPOOL" );
 }
 
 

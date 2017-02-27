@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
   if( obj )
   {
     QUuid * ptr = new QUuid( obj->appID (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QUuid * ptr = new QUuid( obj->classID ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QObject * ptr = obj->createObject ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QUuid * ptr = new QUuid( obj->eventsID ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QUuid * ptr = new QUuid( obj->interfaceID ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     const QMetaObject * ptr = obj->metaObject ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
   if( obj )
   {
     QUuid * ptr = new QUuid( obj->typeLibID (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
 

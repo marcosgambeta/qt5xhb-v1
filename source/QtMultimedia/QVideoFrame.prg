@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS1 )
   if( obj )
   {
     uchar * ptr = obj->bits (  );
-    _qt4xhb_createReturnClass ( ptr, "UCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS2 )
   if( obj )
   {
     const uchar * ptr = obj->bits (  );
-    _qt4xhb_createReturnClass ( ptr, "UCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->handle (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

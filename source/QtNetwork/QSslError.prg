@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
   if( obj )
   {
     QSslCertificate * ptr = new QSslCertificate( obj->certificate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
 

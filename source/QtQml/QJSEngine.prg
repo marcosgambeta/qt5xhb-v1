@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QJSValue * ptr = new QJSValue( obj->evaluate ( par1, par2, (int) ISNIL(3)? 1 : hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->globalObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->newArray ( (uint) ISNIL(1)? 0 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->newObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
   {
     QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
     QJSValue * ptr = new QJSValue( obj->newQObject ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 

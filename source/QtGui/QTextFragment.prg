@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
 

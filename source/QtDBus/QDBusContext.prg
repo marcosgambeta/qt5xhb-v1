@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
   if( obj )
   {
     QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
   if( obj )
   {
     const QDBusMessage * ptr = &obj->message (  );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
 

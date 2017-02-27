@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->controlPointRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->currentPosition (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
   {
     QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->intersected ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
   {
     qreal par1 = hb_parnd(1);
     QPointF * ptr = new QPointF( obj->pointAtPercent ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->simplified (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
   {
     QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->subtracted ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON1 )
   {
     QTransform * par1 = (QTransform *) _qtxhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->toReversed (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED1 )
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
     QPainterPath * ptr = new QPainterPath( obj->translated ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED2 )
   {
     QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->translated ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QPAINTERPATH_UNITED )
   {
     QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->united ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 

@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomAttr * ptr = new QDomAttr( obj->createAttribute ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomAttr * ptr = new QDomAttr( obj->createAttributeNS ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
   }
 }
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomComment * ptr = new QDomComment( obj->createComment ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
   if( obj )
   {
     QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomElement * ptr = new QDomElement( obj->createElement ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomElement * ptr = new QDomElement( obj->createElementNS ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMPROCESSINGINSTRUCTION", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMPROCESSINGINSTRUCTION", true );
   }
 }
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomText * ptr = new QDomText( obj->createTextNode ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMTEXT", true );
   }
 }
 
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
   if( obj )
   {
     QDomDocumentType * ptr = new QDomDocumentType( obj->doctype (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
   }
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
   if( obj )
   {
     QDomElement * ptr = new QDomElement( obj->documentElement (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
 
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomElement * ptr = new QDomElement( obj->elementById ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
   }
 }
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
   if( obj )
   {
     QDomImplementation * ptr = new QDomImplementation( obj->implementation (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMIMPLEMENTATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMIMPLEMENTATION", true );
   }
 }
 
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
   {
     QDomNode * par1 = (QDomNode *) _qtxhb_itemGetPtr(1);
     QDomNode * ptr = new QDomNode( obj->importNode ( *par1, (bool) hb_parl(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toByteArray ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 

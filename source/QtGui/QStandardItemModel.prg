@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HORIZONTALHEADERITEM )
   if( obj )
   {
     QStandardItem * ptr = obj->horizontalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEXFROMITEM )
   {
     QStandardItem * par1 = (QStandardItem *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->indexFromItem ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
   if( obj )
   {
     QStandardItem * ptr = obj->invisibleRootItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEM )
   if( obj )
   {
     QStandardItem * ptr = obj->item ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMFROMINDEX )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QStandardItem * ptr = obj->itemFromIndex ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
   if( obj )
   {
     const QStandardItem * ptr = obj->itemPrototype (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEX )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT1 )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT2 )
   if( obj )
   {
     QObject * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SIBLING )
   {
     QModelIndex * par3 = (QModelIndex *) _qtxhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DATA )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
   {
     int par2 = hb_parni(2);
     QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_VERTICALHEADERITEM )
   if( obj )
   {
     QStandardItem * ptr = obj->verticalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEITEM )
   if( obj )
   {
     QStandardItem * ptr = obj->takeItem ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEHORIZONTALHEADERITEM )
   if( obj )
   {
     QStandardItem * ptr = obj->takeHorizontalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEVERTICALHEADERITEM )
   if( obj )
   {
     QStandardItem * ptr = obj->takeVerticalHeaderItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -1209,7 +1209,7 @@ for (i1=0;i1<nLen1;i1++)
 par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
     QMimeData * ptr = obj->mimeData ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+    _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
 

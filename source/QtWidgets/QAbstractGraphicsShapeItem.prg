@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->brush (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
   if( obj )
   {
     QPen * ptr = new QPen( obj->pen (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
+    _qt5xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 

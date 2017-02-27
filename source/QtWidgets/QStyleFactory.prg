@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSTYLEFACTORY_CREATE )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QStyle * ptr = QStyleFactory::create ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
+  _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
 }
 
 

@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qtxhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_HEADERDATA )
   {
     int par2 = hb_parni(2);
     QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SIBLING )
   {
     QModelIndex * par3 = (QModelIndex *) _qtxhb_itemGetPtr(3);
     QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
   {
     QItemSelection * par1 = (QItemSelection *) _qtxhb_itemGetPtr(1);
     QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QITEMSELECTION" );
+    _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
   {
     QItemSelection * par1 = (QItemSelection *) _qtxhb_itemGetPtr(1);
     QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QITEMSELECTION" );
+    _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
   }
 }
 

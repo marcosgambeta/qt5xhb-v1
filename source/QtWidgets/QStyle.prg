@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
     QPixmap * par2 = (QPixmap *) _qtxhb_itemGetPtr(2);
     const QStyleOption * par3 = (const QStyleOption *) _qtxhb_itemGetPtr(3);
     QPixmap * ptr = new QPixmap( obj->generatedIconPixmap (  (QIcon::Mode) par1, *par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
     QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
     QPixmap * par3 = (QPixmap *) _qtxhb_itemGetPtr(3);
     QRect * ptr = new QRect( obj->itemPixmapRect ( *par1, (int) hb_parni(2), *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
     QRect * par2 = (QRect *) _qtxhb_itemGetPtr(2);
     QString par5 = QLatin1String( hb_parc(5) );
     QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, (int) hb_parni(3), (bool) hb_parl(4), par5 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSTYLE_PROXY )
   if( obj )
   {
     const QStyle * ptr = obj->proxy (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
+    _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
   }
 }
 
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
     QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qtxhb_itemGetPtr(4);
     QSize * ptr = new QSize( obj->sizeFromContents (  (QStyle::ContentsType) par1, par2, *par3, par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDICON )
     const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qtxhb_itemGetPtr(2);
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qtxhb_itemGetPtr(3);
     QIcon * ptr = new QIcon( obj->standardIcon (  (QStyle::StandardPixmap) par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
   if( obj )
   {
     QPalette * ptr = new QPalette( obj->standardPalette (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
     int par3 = hb_parni(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qtxhb_itemGetPtr(4);
     QRect * ptr = new QRect( obj->subControlRect (  (QStyle::ComplexControl) par1, par2,  (QStyle::SubControl) par3, par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
     const QStyleOption * par2 = (const QStyleOption *) _qtxhb_itemGetPtr(2);
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qtxhb_itemGetPtr(3);
     QRect * ptr = new QRect( obj->subElementRect (  (QStyle::SubElement) par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
   QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
   QRect * par4 = (QRect *) _qtxhb_itemGetPtr(4);
   QRect * ptr = new QRect( QStyle::alignedRect (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2, *par3, *par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 }
 
 
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALPOS )
   QRect * par2 = (QRect *) _qtxhb_itemGetPtr(2);
   QPoint * par3 = (QPoint *) _qtxhb_itemGetPtr(3);
   QPoint * ptr = new QPoint( QStyle::visualPos (  (Qt::LayoutDirection) par1, *par2, *par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 }
 
 
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALRECT )
   QRect * par2 = (QRect *) _qtxhb_itemGetPtr(2);
   QRect * par3 = (QRect *) _qtxhb_itemGetPtr(3);
   QRect * ptr = new QRect( QStyle::visualRect (  (Qt::LayoutDirection) par1, *par2, *par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 }
 
 

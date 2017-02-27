@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 #endif
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
   if( obj )
   {
     QQmlContext * ptr = obj->rootContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 #endif
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
   if( obj )
   {
     QQuickItem * ptr = obj->rootObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QQUICKITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
   }
 #endif
 }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
 }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->initialSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
 }
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 #endif
 }

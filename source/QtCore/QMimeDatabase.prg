@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORNAME )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QMimeType * ptr = new QMimeType( obj->mimeTypeForName ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE1 )
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QMimeDatabase::MatchDefault : hb_parni(2);
     QMimeType * ptr = new QMimeType( obj->mimeTypeForFile ( par1,  (QMimeDatabase::MatchMode) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE2 )
     QFileInfo * par1 = (QFileInfo *) _qtxhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QMimeDatabase::MatchDefault : hb_parni(2);
     QMimeType * ptr = new QMimeType( obj->mimeTypeForFile ( *par1,  (QMimeDatabase::MatchMode) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA1 )
   {
     QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
     QMimeType * ptr = new QMimeType( obj->mimeTypeForData ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA2 )
   {
     QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
     QMimeType * ptr = new QMimeType( obj->mimeTypeForData ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
   {
     QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
     QMimeType * ptr = new QMimeType( obj->mimeTypeForUrl ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA1 )
     QString par1 = QLatin1String( hb_parc(1) );
     QIODevice * par2 = (QIODevice *) _qtxhb_itemGetPtr(2);
     QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA2 )
     QString par1 = QLatin1String( hb_parc(1) );
     QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
     QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( par1, *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 

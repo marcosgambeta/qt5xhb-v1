@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
   if( obj )
   {
     QXmlItem * ptr = new QXmlItem( obj->current (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
   if( obj )
   {
     QXmlItem * ptr = new QXmlItem( obj->next (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+    _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
   }
 }
 

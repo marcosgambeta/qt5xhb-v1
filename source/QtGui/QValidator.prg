@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
 

@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->currentWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->itemIcon ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

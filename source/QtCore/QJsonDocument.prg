@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ARRAY )
   if( obj )
   {
     QJsonArray * ptr = new QJsonArray( obj->array (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_OBJECT )
   if( obj )
   {
     QJsonObject * ptr = new QJsonObject( obj->object (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOBINARYDATA )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toBinaryData (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOJSON )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toJson (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOVARIANT )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->toVariant (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QJsonDocument::Validate : hb_parni(2);
   QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromBinaryData ( *par1,  (QJsonDocument::DataValidation) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
+  _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
 }
 
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QJsonParseError * par2 = ISNIL(2)? 0 : (QJsonParseError *) _qtxhb_itemGetPtr(2);
   QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromJson ( *par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
+  _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
 }
 
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMRAWDATA )
   const char * par1 = hb_parc(1);
   int par3 = ISNIL(3)? (int) QJsonDocument::Validate : hb_parni(3);
   QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromRawData (  (const char *) par1, (int) hb_parni(2),  (QJsonDocument::DataValidation) par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
+  _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
 }
 
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMVARIANT )
 {
   QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
   QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromVariant ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
+  _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
 }
 
 

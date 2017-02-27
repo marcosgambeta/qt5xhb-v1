@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
   if( obj )
   {
     QXmlDTDHandler * ptr = obj->DTDHandler (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLDTDHANDLER" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLDTDHANDLER" );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
   if( obj )
   {
     QXmlContentHandler * ptr = obj->contentHandler (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLCONTENTHANDLER" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLCONTENTHANDLER" );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
   if( obj )
   {
     QXmlDeclHandler * ptr = obj->declHandler (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLDECLHANDLER" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLDECLHANDLER" );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
   if( obj )
   {
     QXmlEntityResolver * ptr = obj->entityResolver (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLENTITYRESOLVER" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLENTITYRESOLVER" );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
   if( obj )
   {
     QXmlErrorHandler * ptr = obj->errorHandler (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLERRORHANDLER" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLERRORHANDLER" );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
   if( obj )
   {
     QXmlLexicalHandler * ptr = obj->lexicalHandler (  );
-    _qt4xhb_createReturnClass ( ptr, "QXMLLEXICALHANDLER" );
+    _qt5xhb_createReturnClass ( ptr, "QXMLLEXICALHANDLER" );
   }
 }
 

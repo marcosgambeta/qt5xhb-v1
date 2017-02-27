@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_GLOBALSETTINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEngineSettings * ptr = QWebEngineSettings::globalSettings (  );
-  _qt4xhb_createReturnClass ( ptr, "QWEBENGINESETTINGS" );
+  _qt5xhb_createReturnClass ( ptr, "QWEBENGINESETTINGS" );
 #endif
 }
 

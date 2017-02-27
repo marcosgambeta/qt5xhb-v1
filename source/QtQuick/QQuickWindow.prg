@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ACTIVEFOCUSITEM )
   if( obj )
   {
     QQuickItem * ptr = obj->activeFocusItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QQUICKITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_COLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->color (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CONTENTITEM )
   if( obj )
   {
     QQuickItem * ptr = obj->contentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QQUICKITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
     QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
     int par3 = hb_parni(3);
     QSGTexture * ptr = obj->createTextureFromId ( (uint) hb_parni(1), *par2,  (QQuickWindow::CreateTextureOptions) par3 );
-    _qt4xhb_createReturnClass ( ptr, "QSGTEXTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
   {
     QImage * par1 = (QImage *) _qtxhb_itemGetPtr(1);
     QSGTexture * ptr = obj->createTextureFromImage ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QSGTEXTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_GRABWINDOW )
   if( obj )
   {
     QImage * ptr = new QImage( obj->grabWindow (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_INCUBATIONCONTROLLER )
   if( obj )
   {
     QQmlIncubationController * ptr = obj->incubationController (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLINCUBATIONCONTROLLER" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLINCUBATIONCONTROLLER" );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_MOUSEGRABBERITEM )
   if( obj )
   {
     QQuickItem * ptr = obj->mouseGrabberItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QQUICKITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_OPENGLCONTEXT )
   if( obj )
   {
     QOpenGLContext * ptr = obj->openglContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGET )
   if( obj )
   {
     QOpenGLFramebufferObject * ptr = obj->renderTarget (  );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLFRAMEBUFFEROBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLFRAMEBUFFEROBJECT" );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGETSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->renderTargetSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ACCESSIBLEROOT )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->accessibleRoot (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 

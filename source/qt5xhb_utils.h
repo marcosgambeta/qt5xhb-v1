@@ -8,13 +8,13 @@
 
 #include <QStringList>
 
-void _qt4xhb_createReturnClass ( void * ptr, const char * classname );
-void _qt4xhb_createReturnClass ( const void * ptr, const char * classname );
-void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destroy );
-void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy );
+void _qt5xhb_createReturnClass ( void * ptr, const char * classname );
+void _qt5xhb_createReturnClass ( const void * ptr, const char * classname );
+void _qt5xhb_createReturnClass ( void * ptr, const char * classname, bool destroy );
+void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy );
 
-bool _qt4xhb_checkclsid ( int par, int clsid );
-bool _qt4xhb_inherits ( int par, const char * classname );
+bool _qt5xhb_checkclsid ( int par, int clsid );
+bool _qt5xhb_inherits ( int par, const char * classname );
 
 void _qtxhb_convert_qlist_int_to_array ( const QList<int> list );
 void _qtxhb_convert_qlist_qint8_to_array ( const QList<qint8> list );

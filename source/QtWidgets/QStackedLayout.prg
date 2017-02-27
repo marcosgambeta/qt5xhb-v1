@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->currentWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

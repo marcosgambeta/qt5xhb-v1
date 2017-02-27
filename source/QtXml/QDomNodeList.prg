@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
   if( obj )
   {
     QDomNode * ptr = new QDomNode( obj->at ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
   if( obj )
   {
     QDomNode * ptr = new QDomNode( obj->item ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 

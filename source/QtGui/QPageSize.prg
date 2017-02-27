@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE1 )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->definitionSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE2 )
 {
   int par1 = hb_parni(1);
   QSizeF * ptr = new QSizeF( QPageSize::definitionSize (  (QPageSize::PageSizeId) par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 }
 
 
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZE1 )
   {
     int par1 = hb_parni(1);
     QSizeF * ptr = new QSizeF( obj->size (  (QPageSize::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZE2 )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QSizeF * ptr = new QSizeF( QPageSize::size (  (QPageSize::PageSizeId) par1,  (QPageSize::Unit) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 }
 
 
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS1 )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizePoints (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS2 )
 {
   int par1 = hb_parni(1);
   QSize * ptr = new QSize( QPageSize::sizePoints (  (QPageSize::PageSizeId) par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 }
 
 
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS1 )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizePixels ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS2 )
 {
   int par1 = hb_parni(1);
   QSize * ptr = new QSize( QPageSize::sizePixels (  (QPageSize::PageSizeId) par1, (int) hb_parni(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 }
 
 
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECT )
   {
     int par1 = hb_parni(1);
     QRectF * ptr = new QRectF( obj->rect (  (QPageSize::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPOINTS )
   if( obj )
   {
     QRect * ptr = new QRect( obj->rectPoints (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPIXELS )
   if( obj )
   {
     QRect * ptr = new QRect( obj->rectPixels ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

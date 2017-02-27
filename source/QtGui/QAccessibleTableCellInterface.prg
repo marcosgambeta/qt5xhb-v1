@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_TABLE )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->table (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 

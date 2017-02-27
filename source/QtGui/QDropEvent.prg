@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
   if( obj )
   {
     const QMimeData * ptr = obj->mimeData (  );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+    _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
   if( obj )
   {
     QObject * ptr = obj->source (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

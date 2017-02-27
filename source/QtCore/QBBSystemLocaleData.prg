@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->timeFormat (  (QLocale::FormatType) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->dateTimeFormat (  (QLocale::FormatType) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->languageLocale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->regionLocale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
 

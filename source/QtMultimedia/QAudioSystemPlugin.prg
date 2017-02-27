@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEINPUT )
   {
     QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
     QAbstractAudioInput * ptr = obj->createInput ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTAUDIOINPUT" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTAUDIOINPUT" );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEOUTPUT )
   {
     QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
     QAbstractAudioOutput * ptr = obj->createOutput ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTAUDIOOUTPUT" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTAUDIOOUTPUT" );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO )
     QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     QAbstractAudioDeviceInfo * ptr = obj->createDeviceInfo ( *par1,  (QAudio::Mode) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );
   }
 }
 

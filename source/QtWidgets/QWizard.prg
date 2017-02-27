@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
   {
     int par1 = hb_parni(1);
     QAbstractButton * ptr = obj->button (  (QWizard::WizardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
   if( obj )
   {
     QWizardPage * ptr = obj->currentPage (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant * ptr = new QVariant( obj->field ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
   if( obj )
   {
     QWizardPage * ptr = obj->page ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
   }
 }
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
   {
     int par1 = hb_parni(1);
     QPixmap * ptr = new QPixmap( obj->pixmap (  (QWizard::WizardPixmap) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->sideWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QWIZARD_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

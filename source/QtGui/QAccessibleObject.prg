@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->rect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->childAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 

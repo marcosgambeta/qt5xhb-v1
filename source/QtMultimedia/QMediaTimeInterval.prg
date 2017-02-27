@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NORMALIZED )
   if( obj )
   {
     QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->normalized (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_TRANSLATED )
   if( obj )
   {
     QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->translated ( (qint64) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
   }
 }
 

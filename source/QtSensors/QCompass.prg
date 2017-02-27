@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCOMPASS_READING )
   if( obj )
   {
     QCompassReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QCOMPASSREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QCOMPASSREADING" );
   }
 #endif
 }

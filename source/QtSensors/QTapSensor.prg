@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTAPSENSOR_READING )
   if( obj )
   {
     QTapReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QTAPREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QTAPREADING" );
   }
 #endif
 }

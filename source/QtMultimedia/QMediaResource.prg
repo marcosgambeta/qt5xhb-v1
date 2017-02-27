@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_REQUEST )
   if( obj )
   {
     QNetworkRequest * ptr = new QNetworkRequest( obj->request (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
   }
 }
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_RESOLUTION )
   if( obj )
   {
     QSize * ptr = new QSize( obj->resolution (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

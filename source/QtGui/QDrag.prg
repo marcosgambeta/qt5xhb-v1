@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
   {
     int par1 = hb_parni(1);
     QPixmap * ptr = new QPixmap( obj->dragCursor (  (Qt::DropAction) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->hotSpot (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
   if( obj )
   {
     QMimeData * ptr = obj->mimeData (  );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+    _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   if( obj )
   {
     QObject * ptr = obj->source (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   if( obj )
   {
     QObject * ptr = obj->target (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

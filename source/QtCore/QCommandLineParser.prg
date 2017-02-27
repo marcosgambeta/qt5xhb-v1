@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDVERSIONOPTION )
   if( obj )
   {
     QCommandLineOption * ptr = new QCommandLineOption( obj->addVersionOption (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
   }
 #endif
 }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDHELPOPTION )
   if( obj )
   {
     QCommandLineOption * ptr = new QCommandLineOption( obj->addHelpOption (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
   }
 #endif
 }

@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TOPLEFT )
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->topLeft (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TOPRIGHT )
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->topRight (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_BOTTOMLEFT )
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->bottomLeft (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_BOTTOMRIGHT )
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->bottomRight (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_CENTER )
   if( obj )
   {
     QGeoCoordinate * ptr = new QGeoCoordinate( obj->center (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
 }
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATED )
     double par1 = hb_parnd(1);
     double par2 = hb_parnd(2);
     QGeoRectangle * ptr = new QGeoRectangle( obj->translated ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEORECTANGLE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEORECTANGLE", true );
   }
 #endif
 }
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_UNITED )
   {
     QGeoRectangle * par1 = (QGeoRectangle *) _qtxhb_itemGetPtr(1);
     QGeoRectangle * ptr = new QGeoRectangle( obj->united ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEORECTANGLE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEORECTANGLE", true );
   }
 #endif
 }

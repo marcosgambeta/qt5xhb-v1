@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
   if( obj )
   {
     QAbstractItemDelegate * ptr = obj->itemDelegate (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
   {
     QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
     QByteArray * ptr = new QByteArray( obj->mappedPropertyName ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
   if( obj )
   {
     QWidget * ptr = obj->mappedWidgetAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
   if( obj )
   {
     QAbstractItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->rootIndex (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 

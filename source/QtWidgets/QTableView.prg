@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
   if( obj )
   {
     QHeaderView * ptr = obj->horizontalHeader (  );
-    _qt4xhb_createReturnClass ( ptr, "QHEADERVIEW" );
+    _qt5xhb_createReturnClass ( ptr, "QHEADERVIEW" );
   }
 }
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
   if( obj )
   {
     QHeaderView * ptr = obj->verticalHeader (  );
-    _qt4xhb_createReturnClass ( ptr, "QHEADERVIEW" );
+    _qt5xhb_createReturnClass ( ptr, "QHEADERVIEW" );
   }
 }
 
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 

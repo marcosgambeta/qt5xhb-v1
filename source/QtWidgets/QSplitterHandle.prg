@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
   if( obj )
   {
     QSplitter * ptr = obj->splitter (  );
-    _qt4xhb_createReturnClass ( ptr, "QSPLITTER" );
+    _qt5xhb_createReturnClass ( ptr, "QSPLITTER" );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

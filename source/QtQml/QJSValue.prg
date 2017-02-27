@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY1 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QJSValue * ptr = new QJSValue( obj->property ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY2 )
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->property ( (quint32) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
   if( obj )
   {
     QJSValue * ptr = new QJSValue( obj->prototype (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
 
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QJSVALUE_TODATETIME )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->toDateTime (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QJSVALUE_TOQOBJECT )
   if( obj )
   {
     QObject * ptr = obj->toQObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QJSVALUE_TOVARIANT )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->toVariant (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

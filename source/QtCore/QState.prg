@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION2 )
     const char * par2 = hb_parc(2);
     QAbstractState * par3 = (QAbstractState *) _qtxhb_itemGetPtr(3);
     QSignalTransition * ptr = obj->addTransition ( par1,  (const char *) par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
+    _qt5xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION3 )
   {
     QAbstractState * par1 = (QAbstractState *) _qtxhb_itemGetPtr(1);
     QAbstractTransition * ptr = obj->addTransition ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
   if( obj )
   {
     QAbstractState * ptr = obj->errorState (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
   if( obj )
   {
     QAbstractState * ptr = obj->initialState (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
 

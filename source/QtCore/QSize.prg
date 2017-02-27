@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
   {
     QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
     QSize * ptr = new QSize( obj->boundedTo ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
   {
     QSize * par1 = (QSize *) _qtxhb_itemGetPtr(1);
     QSize * ptr = new QSize( obj->expandedTo ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

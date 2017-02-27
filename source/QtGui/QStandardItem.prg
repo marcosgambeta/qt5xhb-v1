@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->data ( (int) ISNIL(1)? Qt::UserRole+1 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->background (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->foreground (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
   if( obj )
   {
     QStandardItem * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->index (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
   if( obj )
   {
     QStandardItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEMMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEMMODEL" );
   }
 }
 
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
   if( obj )
   {
     QStandardItem * ptr = obj->child ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
   if( obj )
   {
     QStandardItem * ptr = obj->takeChild ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
   if( obj )
   {
     QStandardItem * ptr = obj->clone (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
 

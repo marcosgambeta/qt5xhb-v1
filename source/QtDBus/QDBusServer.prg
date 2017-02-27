@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->lastError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSERROR" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
   }
 }
 

@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
   if( obj )
   {
     QListWidgetItem * ptr = obj->currentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
   if( obj )
   {
     QListWidgetItem * ptr = obj->item ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT1 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QListWidgetItem * ptr = obj->itemAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT2 )
   if( obj )
   {
     QListWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
   {
     QListWidgetItem * par1 = (QListWidgetItem *) _qtxhb_itemGetPtr(1);
     QWidget * ptr = obj->itemWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
   if( obj )
   {
     QListWidgetItem * ptr = obj->takeItem ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
 
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
   {
     const QListWidgetItem * par1 = (const QListWidgetItem *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

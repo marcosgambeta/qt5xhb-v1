@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSCROLLER_FINALPOSITION )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->finalPosition (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSCROLLER_PIXELPERMETER )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->pixelPerMeter (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLERPROPERTIES )
   if( obj )
   {
     QScrollerProperties * ptr = new QScrollerProperties( obj->scrollerProperties (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCROLLERPROPERTIES" );
+    _qt5xhb_createReturnClass ( ptr, "QSCROLLERPROPERTIES" );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QSCROLLER_TARGET )
   if( obj )
   {
     QObject * ptr = obj->target (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSCROLLER_VELOCITY )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->velocity (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLER1 )
 {
   QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
   QScroller * ptr = QScroller::scroller ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QSCROLLER" );
+  _qt5xhb_createReturnClass ( ptr, "QSCROLLER" );
 }
 
 /*
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLER2 )
 {
   const QObject * par1 = (const QObject *) _qtxhb_itemGetPtr(1);
   const QScroller * ptr = QScroller::scroller ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QSCROLLER" );
+  _qt5xhb_createReturnClass ( ptr, "QSCROLLER" );
 }
 
 

@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CONNECTION )
   if( obj )
   {
     QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->lastError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSERROR" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL1 )
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
     QDBusMessage * ptr = new QDBusMessage( obj->call ( par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL2 )
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
     QVariant par10 = ISNIL(10)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(10);
     QDBusMessage * ptr = new QDBusMessage( obj->call (  (QDBus::CallMode) par1, par2, par3, par4, par5, par6, par7, par8, par9, par10 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
       par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
     }
     QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList (  (QDBus::CallMode) par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(9);
     QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
   }
 }
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCallWithArgumentList ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
   }
 }
 

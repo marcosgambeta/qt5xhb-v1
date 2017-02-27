@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

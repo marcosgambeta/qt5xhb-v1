@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD1 )
   {
     const char * par1 = hb_parc(1);
     QAndroidJniObject * ptr = new QAndroidJniObject( obj->callObjectMethod<const char*> (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
   }
 #endif
 }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
   {
     const char * par1 = hb_parc(1);
     QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField<const char*> (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
   }
 #endif
 }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD1 )
   const char * par1 = hb_parc(1);
   const char * par2 = hb_parc(2);
   QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::callStaticObjectMethod<const char*> (  (const char *) par1,  (const char *) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+  _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD1 )
   const char * par1 = hb_parc(1);
   const char * par2 = hb_parc(2);
   QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField<const char*> (  (const char *) par1,  (const char *) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+  _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD2 )
   const char * par2 = hb_parc(2);
   const char * par3 = hb_parc(3);
   QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField<const char*> (  (const char *) par1,  (const char *) par2,  (const char *) par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+  _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::fromString ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+  _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
 

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
     QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
     QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
     QImage * ptr = new QImage( obj->requestImage ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
     QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
     QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
     QPixmap * ptr = new QPixmap( obj->requestPixmap ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
     QSize * par2 = (QSize *) _qtxhb_itemGetPtr(2);
     QSize * par3 = (QSize *) _qtxhb_itemGetPtr(3);
     QQuickTextureFactory * ptr = obj->requestTexture ( par1, par2, *par3 );
-    _qt4xhb_createReturnClass ( ptr, "QQUICKTEXTUREFACTORY" );
+    _qt5xhb_createReturnClass ( ptr, "QQUICKTEXTUREFACTORY" );
   }
 }
 

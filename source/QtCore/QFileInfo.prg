@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
   if( obj )
   {
     QDir * ptr = new QDir( obj->absoluteDir (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
 
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QFILEINFO_CREATED )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->created (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QFILEINFO_DIR )
   if( obj )
   {
     QDir * ptr = new QDir( obj->dir (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
 
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastModified (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTREAD )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastRead (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 

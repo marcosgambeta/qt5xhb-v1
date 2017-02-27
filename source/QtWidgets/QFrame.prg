@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->frameRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QFRAME_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT1 )
   {
     int par2 = hb_parni(2);
     QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1),  (QFormLayout::ItemRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT2 )
   if( obj )
   {
     QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD1 )
   {
     QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
     QWidget * ptr = obj->labelForField ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD2 )
   {
     QLayout * par1 = (QLayout *) _qtxhb_itemGetPtr(1);
     QWidget * ptr = obj->labelForField ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
   if( obj )
   {
     QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
 

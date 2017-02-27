@@ -381,7 +381,7 @@ static QNetworkInterface interfaceFromIndex ( int index )
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
   QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( (int) hb_parni(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+  _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 }
 
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+  _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 }
 
 

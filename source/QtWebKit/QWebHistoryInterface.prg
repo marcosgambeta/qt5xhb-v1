@@ -121,7 +121,7 @@ static QWebHistoryInterface * defaultInterface ()
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
 {
   QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface (  );
-  _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYINTERFACE" );
+  _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYINTERFACE" );
 }
 
 

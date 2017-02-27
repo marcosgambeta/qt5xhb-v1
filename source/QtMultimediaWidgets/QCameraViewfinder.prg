@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_MEDIAOBJECT )
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
 

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
   if( obj )
   {
     QQmlEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QQMLENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 }
 

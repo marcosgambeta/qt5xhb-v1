@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->defaultValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSQLFIELD_VALUE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->value (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

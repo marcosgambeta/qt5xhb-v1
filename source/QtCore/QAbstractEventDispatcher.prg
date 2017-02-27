@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {
   QThread * par1 = ISNIL(1)? 0 : (QThread *) _qtxhb_itemGetPtr(1);
   QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
+  _qt5xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
 }
 
 

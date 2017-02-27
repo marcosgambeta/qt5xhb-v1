@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
   if( obj )
   {
     QPaintEngine * ptr = obj->paintEngine (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE" );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
   if( obj )
   {
     QOpenGLContext * ptr = obj->context (  );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
   if( obj )
   {
     QWindow * ptr = obj->window (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 #endif
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->overlayIcon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 #endif
 }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
   if( obj )
   {
     QWinTaskbarProgress * ptr = obj->progress (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINTASKBARPROGRESS" );
+    _qt5xhb_createReturnClass ( ptr, "QWINTASKBARPROGRESS" );
   }
 #endif
 }

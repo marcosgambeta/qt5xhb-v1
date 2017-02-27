@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->background (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
   if( obj )
   {
     QListWidgetItem * ptr = obj->clone (  );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->data ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->foreground (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
   if( obj )
   {
     QListWidget * ptr = obj->listWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGET" );
   }
 }
 
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUNDCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->backgroundColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->textColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 

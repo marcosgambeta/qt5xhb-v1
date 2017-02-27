@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ACTUALLOCATION )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->actualLocation (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AUDIOSETTINGS )
   if( obj )
   {
     QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS" );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS" );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_METADATA )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant * ptr = new QVariant( obj->metaData ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_OUTPUTLOCATION )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->outputLocation (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VIDEOSETTINGS )
   if( obj )
   {
     QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS" );
+    _qt5xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS" );
   }
 }
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_MEDIAOBJECT )
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
 

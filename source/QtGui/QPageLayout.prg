@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAGESIZE )
   if( obj )
   {
     QPageSize * ptr = new QPageSize( obj->pageSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
 
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS1 )
   if( obj )
   {
     QMarginsF * ptr = new QMarginsF( obj->margins (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINSF", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
 
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS2 )
   {
     int par1 = hb_parni(1);
     QMarginsF * ptr = new QMarginsF( obj->margins (  (QPageLayout::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINSF", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPOINTS )
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->marginsPoints (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->marginsPixels ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MINIMUMMARGINS )
   if( obj )
   {
     QMarginsF * ptr = new QMarginsF( obj->minimumMargins (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINSF", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MAXIMUMMARGINS )
   if( obj )
   {
     QMarginsF * ptr = new QMarginsF( obj->maximumMargins (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINSF", true );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
 
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT1 )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->fullRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT2 )
   {
     int par1 = hb_parni(1);
     QRectF * ptr = new QRectF( obj->fullRect (  (QPageLayout::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPOINTS )
   if( obj )
   {
     QRect * ptr = new QRect( obj->fullRectPoints (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPIXELS )
   if( obj )
   {
     QRect * ptr = new QRect( obj->fullRectPixels ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT1 )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->paintRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT2 )
   {
     int par1 = hb_parni(1);
     QRectF * ptr = new QRectF( obj->paintRect (  (QPageLayout::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPOINTS )
   if( obj )
   {
     QRect * ptr = new QRect( obj->paintRectPoints (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPIXELS )
   if( obj )
   {
     QRect * ptr = new QRect( obj->paintRectPixels ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

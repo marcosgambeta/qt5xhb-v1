@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
 

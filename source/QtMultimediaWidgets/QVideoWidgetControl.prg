@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_VIDEOWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->videoWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

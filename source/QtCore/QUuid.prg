@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toByteArray (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toRfc4122 (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV31 )
   QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
   QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
   QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, *par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 /*
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV32 )
   QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV51 )
   QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
   QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
   QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, *par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 /*
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV52 )
   QUuid * par1 = (QUuid *) _qtxhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 

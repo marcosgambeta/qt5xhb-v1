@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
   if( obj )
   {
     QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->imageSettings (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS" );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS" );
   }
 }
 

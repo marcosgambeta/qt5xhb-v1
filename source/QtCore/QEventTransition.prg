@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
   if( obj )
   {
     QObject * ptr = obj->eventSource (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

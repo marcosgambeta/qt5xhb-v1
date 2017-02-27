@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
     QGraphicsLayoutItem * par3 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(3);
     int par4 = hb_parni(4);
     QGraphicsAnchor * ptr = obj->addAnchor ( par1,  (Qt::AnchorPoint) par2, par3,  (Qt::AnchorPoint) par4 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
     QGraphicsLayoutItem * par3 = (QGraphicsLayoutItem *) _qtxhb_itemGetPtr(3);
     int par4 = hb_parni(4);
     QGraphicsAnchor * ptr = obj->anchor ( par1,  (Qt::AnchorPoint) par2, par3,  (Qt::AnchorPoint) par4 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
   }
 }
 

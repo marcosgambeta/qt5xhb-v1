@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
   {
     QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
     QObject * ptr = obj->add ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

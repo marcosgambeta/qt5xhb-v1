@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
   if( obj )
   {
     const QRect * ptr = &obj->rect (  );
-    _qt4xhb_createReturnClass ( ptr, "QRECT" );
+    _qt5xhb_createReturnClass ( ptr, "QRECT" );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPAINTEVENT_REGION )
   if( obj )
   {
     const QRegion * ptr = &obj->region (  );
-    _qt4xhb_createReturnClass ( ptr, "QREGION" );
+    _qt5xhb_createReturnClass ( ptr, "QREGION" );
   }
 }
 

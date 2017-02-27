@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
   {
     int par1 = hb_parni(1);
     QAction * ptr = obj->action (  (QScriptEngineDebugger::DebuggerAction) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
     QMenu * ptr = obj->createStandardMenu ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+    _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qtxhb_itemGetPtr(1);
     QToolBar * ptr = obj->createStandardToolBar ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTOOLBAR" );
+    _qt5xhb_createReturnClass ( ptr, "QTOOLBAR" );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
   if( obj )
   {
     QMainWindow * ptr = obj->standardWindow (  );
-    _qt4xhb_createReturnClass ( ptr, "QMAINWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QMAINWINDOW" );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
   {
     int par1 = hb_parni(1);
     QWidget * ptr = obj->widget (  (QScriptEngineDebugger::DebuggerWidget) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

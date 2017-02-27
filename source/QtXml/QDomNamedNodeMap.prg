@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
   if( obj )
   {
     QDomNode * ptr = new QDomNode( obj->item ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomNode * ptr = new QDomNode( obj->namedItem ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomNode * ptr = new QDomNode( obj->namedItemNS ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QDomNode * ptr = new QDomNode( obj->removeNamedItem ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QDomNode * ptr = new QDomNode( obj->removeNamedItemNS ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
   {
     QDomNode * par1 = (QDomNode *) _qtxhb_itemGetPtr(1);
     QDomNode * ptr = new QDomNode( obj->setNamedItem ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
   {
     QDomNode * par1 = (QDomNode *) _qtxhb_itemGetPtr(1);
     QDomNode * ptr = new QDomNode( obj->setNamedItemNS ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
 

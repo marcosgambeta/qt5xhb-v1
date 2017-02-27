@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
   if( obj )
   {
     const QBrush * ptr = &obj->alternateBase (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QPALETTE_BASE )
   if( obj )
   {
     const QBrush * ptr = &obj->base (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
   if( obj )
   {
     const QBrush * ptr = &obj->brightText (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     const QBrush * ptr = &obj->brush (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH2 )
   {
     int par1 = hb_parni(1);
     const QBrush * ptr = &obj->brush (  (QPalette::ColorRole) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTON )
   if( obj )
   {
     const QBrush * ptr = &obj->button (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
   if( obj )
   {
     const QBrush * ptr = &obj->buttonText (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     const QColor * ptr = &obj->color (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR" );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR2 )
   {
     int par1 = hb_parni(1);
     const QColor * ptr = &obj->color (  (QPalette::ColorRole) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR" );
   }
 }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QPALETTE_DARK )
   if( obj )
   {
     const QBrush * ptr = &obj->dark (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
   if( obj )
   {
     const QBrush * ptr = &obj->highlight (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
   if( obj )
   {
     const QBrush * ptr = &obj->highlightedText (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QPALETTE_LIGHT )
   if( obj )
   {
     const QBrush * ptr = &obj->light (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QPALETTE_LINK )
   if( obj )
   {
     const QBrush * ptr = &obj->link (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QPALETTE_LINKVISITED )
   if( obj )
   {
     const QBrush * ptr = &obj->linkVisited (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QPALETTE_MID )
   if( obj )
   {
     const QBrush * ptr = &obj->mid (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
   if( obj )
   {
     const QBrush * ptr = &obj->midlight (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
   {
     QPalette * par1 = (QPalette *) _qtxhb_itemGetPtr(1);
     QPalette * ptr = new QPalette( obj->resolve ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
 
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QPALETTE_SHADOW )
   if( obj )
   {
     const QBrush * ptr = &obj->shadow (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QPALETTE_TEXT )
   if( obj )
   {
     const QBrush * ptr = &obj->text (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
   if( obj )
   {
     const QBrush * ptr = &obj->toolTipBase (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
   if( obj )
   {
     const QBrush * ptr = &obj->toolTipText (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QPALETTE_WINDOW )
   if( obj )
   {
     const QBrush * ptr = &obj->window (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
   if( obj )
   {
     const QBrush * ptr = &obj->windowText (  );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
 

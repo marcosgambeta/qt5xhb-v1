@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
   if( obj )
   {
     QWebPage * ptr = obj->page (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBPAGE" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBPAGE" );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

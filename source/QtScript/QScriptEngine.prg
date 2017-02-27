@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
   if( obj )
   {
     QScriptEngineAgent * ptr = obj->agent (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINEAGENT" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINEAGENT" );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
   if( obj )
   {
     QScriptContext * ptr = obj->currentContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->defaultPrototype ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QScriptValue * ptr = new QScriptValue( obj->evaluate ( par1, par2, (int) ISNIL(3)? 1 : hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE2 )
   {
     QScriptProgram * par1 = (QScriptProgram *) _qtxhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->evaluate ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->globalObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QScriptValue * ptr = new QScriptValue( obj->importExtension ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->newArray ( (uint) ISNIL(1)? 0 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWDATE )
   {
     QDateTime * par1 = (QDateTime *) _qtxhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->newDate ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT1 )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->newObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT2 )
     QScriptClass * par1 = (QScriptClass *) _qtxhb_itemGetPtr(1);
     QScriptValue par2 = ISNIL(2)? QScriptValue() : *(QScriptValue *) _qtxhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->newObject ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWQMETAOBJECT )
     const QMetaObject * par1 = (const QMetaObject *) _qtxhb_itemGetPtr(1);
     QScriptValue par2 = ISNIL(2)? QScriptValue() : *(QScriptValue *) _qtxhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->newQMetaObject ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP1 )
   {
     QRegExp * par1 = (QRegExp *) _qtxhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->newRegExp ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP2 )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QScriptValue * ptr = new QScriptValue( obj->newRegExp ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT1 )
   {
     QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT2 )
     QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
     QVariant * par2 = (QVariant *) _qtxhb_itemGetPtr(2);
     QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1, *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->nullValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
   if( obj )
   {
     QScriptContext * ptr = obj->pushContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
 
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
   {
     QScriptValue * par1 = (QScriptValue *) _qtxhb_itemGetPtr(1);
     QScriptValue * ptr = new QScriptValue( obj->toObject ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QScriptString * ptr = new QScriptString( obj->toStringHandle ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
   }
 }
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->uncaughtException (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->undefinedValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT" );
+  _qt5xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT" );
 }
 
 

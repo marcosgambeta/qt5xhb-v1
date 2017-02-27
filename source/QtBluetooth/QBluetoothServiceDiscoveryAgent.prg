@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_REMOTEADDRESS )
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->remoteAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
 }

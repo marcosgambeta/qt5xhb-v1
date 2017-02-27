@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SURFACE )
   if( obj )
   {
     QAbstractVideoSurface * ptr = obj->surface (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTVIDEOSURFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTVIDEOSURFACE" );
   }
 }
 

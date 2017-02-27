@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->value (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
 

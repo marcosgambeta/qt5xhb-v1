@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_CLIPRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->clipRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

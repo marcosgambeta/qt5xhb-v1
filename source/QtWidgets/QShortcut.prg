@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSHORTCUT_KEY )
   if( obj )
   {
     QKeySequence * ptr = new QKeySequence( obj->key (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->parentWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 

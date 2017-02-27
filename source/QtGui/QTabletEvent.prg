@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOSF )
   if( obj )
   {
     const QPointF * ptr = &obj->globalPosF (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POSF )
   if( obj )
   {
     const QPointF * ptr = &obj->posF (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 

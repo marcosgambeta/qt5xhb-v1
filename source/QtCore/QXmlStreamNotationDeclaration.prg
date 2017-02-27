@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->name (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->publicId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->systemId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
 

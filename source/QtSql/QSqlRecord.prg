@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD1 )
   if( obj )
   {
     QSqlField * ptr = new QSqlField( obj->field ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLFIELD", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QSqlField * ptr = new QSqlField( obj->field ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLFIELD", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
 
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE1 )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->value ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant * ptr = new QVariant( obj->value ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QSQLRECORD_KEYVALUES )
   {
     QSqlRecord * par1 = (QSqlRecord *) _qtxhb_itemGetPtr(1);
     QSqlRecord * ptr = new QSqlRecord( obj->keyValues ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 

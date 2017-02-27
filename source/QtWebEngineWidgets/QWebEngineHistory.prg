@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
   if( obj )
   {
     QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->items (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
+    _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
   }
 #endif
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
   if( obj )
   {
     QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->backItems ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
+    _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
   }
 #endif
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
   if( obj )
   {
     QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->forwardItems ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
+    _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
   }
 #endif
 }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->backItem (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->currentItem (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
 }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->forwardItem (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
   if( obj )
   {
     QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->itemAt ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
 }

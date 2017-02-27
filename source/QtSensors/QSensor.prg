@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSENSOR_IDENTIFIER )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->identifier (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSENSOR_TYPE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->type (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
 }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSENSOR_AVAILABLEDATARATES )
   if( obj )
   {
     qrangelist * ptr = new qrangelist( obj->availableDataRates (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRANGELIST" );
+    _qt5xhb_createReturnClass ( ptr, "QRANGELIST" );
   }
 #endif
 }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSENSOR_OUTPUTRANGES )
   if( obj )
   {
     qoutputrangelist * ptr = new qoutputrangelist( obj->outputRanges (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QOUTPUTRANGELIST" );
+    _qt5xhb_createReturnClass ( ptr, "QOUTPUTRANGELIST" );
   }
 #endif
 }
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QSENSOR_READING )
   if( obj )
   {
     QSensorReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QSENSORREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QSENSORREADING" );
   }
 #endif
 }
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
   QByteArray * ptr = new QByteArray( QSensor::defaultSensorForType ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
 

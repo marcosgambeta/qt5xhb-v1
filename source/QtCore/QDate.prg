@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDATE_ADDDAYS )
   if( obj )
   {
     QDate * ptr = new QDate( obj->addDays ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDATE_ADDMONTHS )
   if( obj )
   {
     QDate * ptr = new QDate( obj->addMonths ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDATE_ADDYEARS )
   if( obj )
   {
     QDate * ptr = new QDate( obj->addYears ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
 
@@ -475,7 +475,7 @@ static QDate currentDate ()
 HB_FUNC_STATIC( QDATE_CURRENTDATE )
 {
   QDate * ptr = new QDate( QDate::currentDate (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
 
@@ -485,7 +485,7 @@ static QDate fromJulianDay ( int jd )
 HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 {
   QDate * ptr = new QDate( QDate::fromJulianDay ( (int) hb_parni(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QDATE_FROMSTRING1 )
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
   QDate * ptr = new QDate( QDate::fromString ( par1,  (Qt::DateFormat) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
 /*
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QDATE_FROMSTRING2 )
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   QDate * ptr = new QDate( QDate::fromString ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
 

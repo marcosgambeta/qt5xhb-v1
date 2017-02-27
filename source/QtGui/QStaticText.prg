@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
   if( obj )
   {
     QTextOption * ptr = new QTextOption( obj->textOption (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTOPTION" );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 

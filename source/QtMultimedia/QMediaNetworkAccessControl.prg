@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
   if( obj )
   {
     QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentConfiguration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
 

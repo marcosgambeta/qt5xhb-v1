@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
   if( obj )
   {
     QChar * ptr = new QChar( obj->mirroredChar (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
   if( obj )
   {
     QChar * ptr = new QChar( obj->toCaseFolded (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
   if( obj )
   {
     QChar * ptr = new QChar( obj->toLower (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
   if( obj )
   {
     QChar * ptr = new QChar( obj->toTitleCase (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
   if( obj )
   {
     QChar * ptr = new QChar( obj->toUpper (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
 

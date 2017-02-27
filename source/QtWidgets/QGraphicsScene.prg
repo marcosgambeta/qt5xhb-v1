@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEPANEL )
   if( obj )
   {
     QGraphicsItem * ptr = obj->activePanel (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
   if( obj )
   {
     QGraphicsWidget * ptr = obj->activeWindow (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSWIDGET" );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE1 )
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qtxhb_itemGetPtr(2);
     QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qtxhb_itemGetPtr(3);
     QGraphicsEllipseItem * ptr = obj->addEllipse ( *par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM" );
   }
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE2 )
     QPen par5 = ISNIL(5)? QPen() : *(QPen *) _qtxhb_itemGetPtr(5);
     QBrush par6 = ISNIL(6)? QBrush() : *(QBrush *) _qtxhb_itemGetPtr(6);
     QGraphicsEllipseItem * ptr = obj->addEllipse ( par1, par2, par3, par4, par5, par6 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM" );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE1 )
     QLineF * par1 = (QLineF *) _qtxhb_itemGetPtr(1);
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qtxhb_itemGetPtr(2);
     QGraphicsLineItem * ptr = obj->addLine ( *par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM" );
   }
 }
 
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE2 )
     qreal par4 = hb_parnd(4);
     QPen par5 = ISNIL(5)? QPen() : *(QPen *) _qtxhb_itemGetPtr(5);
     QGraphicsLineItem * ptr = obj->addLine ( par1, par2, par3, par4, par5 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM" );
   }
 }
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPATH )
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qtxhb_itemGetPtr(2);
     QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qtxhb_itemGetPtr(3);
     QGraphicsPathItem * ptr = obj->addPath ( *par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSPATHITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPATHITEM" );
   }
 }
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPIXMAP )
   {
     QPixmap * par1 = (QPixmap *) _qtxhb_itemGetPtr(1);
     QGraphicsPixmapItem * ptr = obj->addPixmap ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSPIXMAPITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPIXMAPITEM" );
   }
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPOLYGON )
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qtxhb_itemGetPtr(2);
     QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qtxhb_itemGetPtr(3);
     QGraphicsPolygonItem * ptr = obj->addPolygon ( *par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSPOLYGONITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPOLYGONITEM" );
   }
 }
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT1 )
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qtxhb_itemGetPtr(2);
     QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qtxhb_itemGetPtr(3);
     QGraphicsRectItem * ptr = obj->addRect ( *par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM" );
   }
 }
 
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT2 )
     QPen par5 = ISNIL(5)? QPen() : *(QPen *) _qtxhb_itemGetPtr(5);
     QBrush par6 = ISNIL(6)? QBrush() : *(QBrush *) _qtxhb_itemGetPtr(6);
     QGraphicsRectItem * ptr = obj->addRect ( par1, par2, par3, par4, par5, par6 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM" );
   }
 }
 
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDSIMPLETEXT )
     QString par1 = QLatin1String( hb_parc(1) );
     QFont par2 = ISNIL(2)? QFont() : *(QFont *) _qtxhb_itemGetPtr(2);
     QGraphicsSimpleTextItem * ptr = obj->addSimpleText ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSSIMPLETEXTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSSIMPLETEXTITEM" );
   }
 }
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDTEXT )
     QString par1 = QLatin1String( hb_parc(1) );
     QFont par2 = ISNIL(2)? QFont() : *(QFont *) _qtxhb_itemGetPtr(2);
     QGraphicsTextItem * ptr = obj->addText ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSTEXTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSTEXTITEM" );
   }
 }
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
     QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
     QGraphicsProxyWidget * ptr = obj->addWidget ( par1,  (Qt::WindowFlags) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
   }
 }
 
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->backgroundBrush (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
 
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
       par1 << (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
     QGraphicsItemGroup * ptr = obj->createItemGroup ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEMGROUP" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEMGROUP" );
   }
 }
 
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOCUSITEM )
   if( obj )
   {
     QGraphicsItem * ptr = obj->focusItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
 
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->foregroundBrush (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
 
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT1 )
     QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
     QTransform * par2 = (QTransform *) _qtxhb_itemGetPtr(2);
     QGraphicsItem * ptr = obj->itemAt ( *par1, *par2 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
 
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT2 )
     qreal par2 = hb_parnd(2);
     QTransform * par3 = (QTransform *) _qtxhb_itemGetPtr(3);
     QGraphicsItem * ptr = obj->itemAt ( par1, par2, *par3 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
 
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->itemsBoundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_MOUSEGRABBERITEM )
   if( obj )
   {
     QGraphicsItem * ptr = obj->mouseGrabberItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
 
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
   if( obj )
   {
     QPalette * ptr = new QPalette( obj->palette (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+    _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
 
@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->sceneRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->selectionArea (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1314,7 +1314,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
   if( obj )
   {
     QStyle * ptr = obj->style (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
+    _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
   }
 }
 

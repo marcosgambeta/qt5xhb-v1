@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING1 )
   if( obj )
   {
     QObject * ptr = obj->mapping ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING2 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QObject * ptr = obj->mapping ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING3 )
   {
     QWidget * par1 = (QWidget *) _qtxhb_itemGetPtr(1);
     QObject * ptr = obj->mapping ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING4 )
   {
     QObject * par1 = (QObject *) _qtxhb_itemGetPtr(1);
     QObject * ptr = obj->mapping ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

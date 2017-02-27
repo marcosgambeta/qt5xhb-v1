@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
   if( obj )
   {
     QMediaObject * ptr = obj->mediaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_OFFSET )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->offset (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NATIVESIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->nativeSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

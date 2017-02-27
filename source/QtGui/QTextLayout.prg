@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
   if( obj )
   {
     const QTextOption * ptr = &obj->textOption (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTOPTION" );
   }
 }
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
   if( obj )
   {
     QTextLine * ptr = new QTextLine( obj->createLine (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLINE" );
   }
 }
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
   if( obj )
   {
     QTextLine * ptr = new QTextLine( obj->lineAt ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLINE" );
   }
 }
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
   if( obj )
   {
     QTextLine * ptr = new QTextLine( obj->lineForTextPosition ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTLINE" );
   }
 }
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->position (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ENGINE )
   if( obj )
   {
     QTextEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTENGINE" );
   }
 }
 

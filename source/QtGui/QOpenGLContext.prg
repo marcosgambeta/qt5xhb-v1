@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FORMAT )
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
   if( obj )
   {
     QOpenGLFunctions * ptr = obj->functions (  );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLFUNCTIONS" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLFUNCTIONS" );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_GETPROCADDRESS )
   {
     QByteArray * par1 = (QByteArray *) _qtxhb_itemGetPtr(1);
     QFunctionPointer * ptr = new QFunctionPointer( obj->getProcAddress ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
+    _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
   if( obj )
   {
     QScreen * ptr = obj->screen (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCREEN" );
+    _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
   if( obj )
   {
     QOpenGLContext * ptr = obj->shareContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
   if( obj )
   {
     QOpenGLContextGroup * ptr = obj->shareGroup (  );
-    _qt4xhb_createReturnClass ( ptr, "QOPENGLCONTEXTGROUP" );
+    _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXTGROUP" );
   }
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
   if( obj )
   {
     QSurface * ptr = obj->surface (  );
-    _qt4xhb_createReturnClass ( ptr, "QSURFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACE" );
   }
 }
 
@@ -384,7 +384,7 @@ static QOpenGLContext * currentContext()
 HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
 {
   QOpenGLContext * ptr = QOpenGLContext::currentContext (  );
-  _qt4xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
+  _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
 }
 
 

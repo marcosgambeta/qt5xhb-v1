@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->rect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
   if( obj )
   {
     QTextFormat * ptr = new QTextFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
   }
 }
 

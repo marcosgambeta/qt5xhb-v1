@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
   if( obj )
   {
     QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
 

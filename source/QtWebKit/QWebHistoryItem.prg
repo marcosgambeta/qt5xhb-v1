@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastVisited (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->originalUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->userData (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_FORMAT )
   if( obj )
   {
     QAudioFormat * ptr = new QAudioFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
   }
 }
 

@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDACTIVITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * ptr = new QAndroidJniObject( QtAndroid::androidActivity (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+  _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
 

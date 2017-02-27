@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_AREA )
   if( obj )
   {
     QGeoShape * ptr = new QGeoShape( obj->area (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
+    _qt5xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
   }
 #endif
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_EXPIRATION )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->expiration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 #endif
 }

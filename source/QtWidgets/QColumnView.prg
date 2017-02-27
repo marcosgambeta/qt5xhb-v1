@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->previewWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->visualRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

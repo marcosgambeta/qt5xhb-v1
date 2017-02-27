@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
   if( obj )
   {
     QLightReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QLIGHTREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QLIGHTREADING" );
   }
 #endif
 }

@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QAction * ptr = obj->createAction ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     QObject * par1 = ISNIL(1)? 0 : (QObject *) _qtxhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QActionGroup * ptr = obj->createActionGroup ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTIONGROUP" );
+    _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     QObject * par2 = ISNIL(2)? 0 : (QObject *) _qtxhb_itemGetPtr(2);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     QLayout * ptr = obj->createLayout ( par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUT" );
+    _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     QWidget * ptr = obj->createWidget ( par1, par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
     QIODevice * par1 = (QIODevice *) _qtxhb_itemGetPtr(1);
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
     QWidget * ptr = obj->load ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
   if( obj )
   {
     QDir * ptr = new QDir( obj->workingDirectory (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
 

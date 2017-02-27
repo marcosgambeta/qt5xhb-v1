@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOARRAY1 )
   {
     QJsonArray * par1 = (QJsonArray *) _qtxhb_itemGetPtr(1);
     QJsonArray * ptr = new QJsonArray( obj->toArray ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOARRAY2 )
   if( obj )
   {
     QJsonArray * ptr = new QJsonArray( obj->toArray (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOOBJECT1 )
   {
     QJsonObject * par1 = (QJsonObject *) _qtxhb_itemGetPtr(1);
     QJsonObject * ptr = new QJsonObject( obj->toObject ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOOBJECT2 )
   if( obj )
   {
     QJsonObject * ptr = new QJsonObject( obj->toObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QJSONOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }
 
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOVARIANT )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->toVariant (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QJSONVALUE_FROMVARIANT )
 {
   QVariant * par1 = (QVariant *) _qtxhb_itemGetPtr(1);
   QJsonValue * ptr = new QJsonValue( QJsonValue::fromVariant ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QJSONVALUE" );
+  _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
 }
 
 

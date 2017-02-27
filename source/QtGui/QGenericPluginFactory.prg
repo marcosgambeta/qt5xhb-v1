@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QObject * ptr = obj->create ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 

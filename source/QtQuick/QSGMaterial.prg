@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
   if( obj )
   {
     QSGMaterialShader * ptr = obj->createShader (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGMATERIALSHADER" );
+    _qt5xhb_createReturnClass ( ptr, "QSGMATERIALSHADER" );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSGMATERIAL_TYPE )
   if( obj )
   {
     QSGMaterialType * ptr = obj->type (  );
-    _qt4xhb_createReturnClass ( ptr, "QSGMATERIALTYPE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGMATERIALTYPE" );
   }
 }
 

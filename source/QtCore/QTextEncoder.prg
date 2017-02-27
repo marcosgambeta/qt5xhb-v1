@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE1 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE2 )
   {
     const QChar * par1 = (const QChar *) _qtxhb_itemGetPtr(1);
     QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1, (int) hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 

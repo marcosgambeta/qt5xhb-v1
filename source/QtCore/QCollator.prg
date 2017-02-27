@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QCOLLATOR_LOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 #endif
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLLATORSORTKEY", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLLATORSORTKEY", true );
   }
 #endif
 }

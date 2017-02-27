@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_COLOR )
   if( obj )
   {
     const QColor * ptr = &obj->color (  );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR" );
   }
 }
 

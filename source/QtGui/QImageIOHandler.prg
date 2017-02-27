@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->currentImageRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->option (  (QImageIOHandler::ImageOption) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

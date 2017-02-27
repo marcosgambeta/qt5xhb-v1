@@ -236,7 +236,7 @@ static QClipboard * clipboard()
 HB_FUNC_STATIC( QGUIAPPLICATION_CLIPBOARD )
 {
   QClipboard * ptr = QGuiApplication::clipboard (  );
-  _qt4xhb_createReturnClass ( ptr, "QCLIPBOARD" );
+  _qt5xhb_createReturnClass ( ptr, "QCLIPBOARD" );
 }
 
 
@@ -264,7 +264,7 @@ static QObject * focusObject()
 HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSOBJECT )
 {
   QObject * ptr = QGuiApplication::focusObject (  );
-  _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
 }
 
 
@@ -274,7 +274,7 @@ static QWindow * focusWindow()
 HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSWINDOW )
 {
   QWindow * ptr = QGuiApplication::focusWindow (  );
-  _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+  _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }
 
 
@@ -284,7 +284,7 @@ static QFont font()
 HB_FUNC_STATIC( QGUIAPPLICATION_FONT )
 {
   QFont * ptr = new QFont( QGuiApplication::font (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
 
@@ -294,7 +294,7 @@ static QInputMethod * inputMethod()
 HB_FUNC_STATIC( QGUIAPPLICATION_INPUTMETHOD )
 {
   QInputMethod * ptr = QGuiApplication::inputMethod (  );
-  _qt4xhb_createReturnClass ( ptr, "QINPUTMETHOD" );
+  _qt5xhb_createReturnClass ( ptr, "QINPUTMETHOD" );
 }
 
 
@@ -340,7 +340,7 @@ static QWindow * modalWindow()
 HB_FUNC_STATIC( QGUIAPPLICATION_MODALWINDOW )
 {
   QWindow * ptr = QGuiApplication::modalWindow (  );
-  _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+  _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }
 
 
@@ -359,7 +359,7 @@ static QCursor * overrideCursor()
 HB_FUNC_STATIC( QGUIAPPLICATION_OVERRIDECURSOR )
 {
   QCursor * ptr = QGuiApplication::overrideCursor (  );
-  _qt4xhb_createReturnClass ( ptr, "QCURSOR" );
+  _qt5xhb_createReturnClass ( ptr, "QCURSOR" );
 }
 
 
@@ -369,7 +369,7 @@ static QPalette palette()
 HB_FUNC_STATIC( QGUIAPPLICATION_PALETTE )
 {
   QPalette * ptr = new QPalette( QGuiApplication::palette (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+  _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
 
@@ -388,7 +388,7 @@ static QPlatformNativeInterface * platformNativeInterface()
 HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNATIVEINTERFACE )
 {
   QPlatformNativeInterface * ptr = QGuiApplication::platformNativeInterface (  );
-  _qt4xhb_createReturnClass ( ptr, "QPLATFORMNATIVEINTERFACE" );
+  _qt5xhb_createReturnClass ( ptr, "QPLATFORMNATIVEINTERFACE" );
 }
 
 
@@ -398,7 +398,7 @@ static QScreen * primaryScreen()
 HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
 {
   QScreen * ptr = QGuiApplication::primaryScreen (  );
-  _qt4xhb_createReturnClass ( ptr, "QSCREEN" );
+  _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
 }
 
 
@@ -519,7 +519,7 @@ static QStyleHints * styleHints()
 HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
 {
   QStyleHints * ptr = QGuiApplication::styleHints (  );
-  _qt4xhb_createReturnClass ( ptr, "QSTYLEHINTS" );
+  _qt5xhb_createReturnClass ( ptr, "QSTYLEHINTS" );
 }
 
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
 {
   QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
   QWindow * ptr = QGuiApplication::topLevelAt ( *par1 );
-  _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+  _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }
 
 

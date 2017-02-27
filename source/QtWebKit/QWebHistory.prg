@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
   if( obj )
   {
     QWebHistoryItem * ptr = new QWebHistoryItem( obj->backItem (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
+    _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
   if( obj )
   {
     QWebHistoryItem * ptr = new QWebHistoryItem( obj->currentItem (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
+    _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
   if( obj )
   {
     QWebHistoryItem * ptr = new QWebHistoryItem( obj->forwardItem (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
+    _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
   if( obj )
   {
     QWebHistoryItem * ptr = new QWebHistoryItem( obj->itemAt ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
+    _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
 

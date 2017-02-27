@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
   {
     bool par1;
     QTransform * ptr = new QTransform( obj->inverted ( &par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
     hb_storl( par1, 1 );
   }
 }
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->adjoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->transposed (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
 
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
     QTransform * ptr = &obj->translate ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QTRANSFORM_SCALE )
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
     QTransform * ptr = &obj->scale ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
 
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QTRANSFORM_SHEAR )
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
     QTransform * ptr = &obj->shear ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
 
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATE )
     qreal par1 = hb_parnd(1);
     int par2 = ISNIL(2)? (int) Qt::ZAxis : hb_parni(2);
     QTransform * ptr = &obj->rotate ( par1,  (Qt::Axis) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
 
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
     qreal par1 = hb_parnd(1);
     int par2 = ISNIL(2)? (int) Qt::ZAxis : hb_parni(2);
     QTransform * ptr = &obj->rotateRadians ( par1,  (Qt::Axis) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
 
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP1 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QPoint * ptr = new QPoint( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP2 )
   {
     QPointF * par1 = (QPointF *) _qtxhb_itemGetPtr(1);
     QPointF * ptr = new QPointF( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP3 )
   {
     QLine * par1 = (QLine *) _qtxhb_itemGetPtr(1);
     QLine * ptr = new QLine( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
 
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP4 )
   {
     QLineF * par1 = (QLineF *) _qtxhb_itemGetPtr(1);
     QLineF * ptr = new QLineF( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP5 )
   {
     QPolygonF * par1 = (QPolygonF *) _qtxhb_itemGetPtr(1);
     QPolygonF * ptr = new QPolygonF( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP6 )
   {
     QPolygon * par1 = (QPolygon *) _qtxhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP7 )
   {
     QRegion * par1 = (QRegion *) _qtxhb_itemGetPtr(1);
     QRegion * ptr = new QRegion( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP8 )
   {
     QPainterPath * par1 = (QPainterPath *) _qtxhb_itemGetPtr(1);
     QPainterPath * ptr = new QPainterPath( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
   {
     QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
     QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
   {
     QRect * par1 = (QRect *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->mapRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
   {
     QRectF * par1 = (QRectF *) _qtxhb_itemGetPtr(1);
     QRectF * ptr = new QRectF( obj->mapRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
   if( obj )
   {
     const QMatrix * ptr = &obj->toAffine (  );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
+    _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
 
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   QTransform * ptr = new QTransform( QTransform::fromTranslate ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 
 
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   QTransform * ptr = new QTransform( QTransform::fromScale ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 
 

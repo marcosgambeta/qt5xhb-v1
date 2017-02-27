@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QPOINTF_TOPOINT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->toPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 

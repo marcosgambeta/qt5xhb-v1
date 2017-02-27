@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
   if( obj )
   {
     QVector3D * ptr = new QVector3D( obj->normalized (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR2D )
   if( obj )
   {
     QVector2D * ptr = new QVector2D( obj->toVector2D (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR2D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR2D" );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR4D )
   if( obj )
   {
     QVector4D * ptr = new QVector4D( obj->toVector4D (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
   }
 }
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->toPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINTF )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->toPointF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
   QVector3D * par1 = (QVector3D *) _qtxhb_itemGetPtr(1);
   QVector3D * par2 = (QVector3D *) _qtxhb_itemGetPtr(2);
   QVector3D * ptr = new QVector3D( QVector3D::crossProduct ( *par1, *par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+  _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
 }
 
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL1 )
   QVector3D * par1 = (QVector3D *) _qtxhb_itemGetPtr(1);
   QVector3D * par2 = (QVector3D *) _qtxhb_itemGetPtr(2);
   QVector3D * ptr = new QVector3D( QVector3D::normal ( *par1, *par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+  _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
 }
 
 /*
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL2 )
   QVector3D * par2 = (QVector3D *) _qtxhb_itemGetPtr(2);
   QVector3D * par3 = (QVector3D *) _qtxhb_itemGetPtr(3);
   QVector3D * ptr = new QVector3D( QVector3D::normal ( *par1, *par2, *par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+  _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
 }
 
 

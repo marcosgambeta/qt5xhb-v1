@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QQUATERNION_VECTOR )
   if( obj )
   {
     QVector3D * ptr = new QVector3D( obj->vector (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
   if( obj )
   {
     QQuaternion * ptr = new QQuaternion( obj->normalized (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QQUATERNION", true );
+    _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
   }
 }
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
   if( obj )
   {
     QQuaternion * ptr = new QQuaternion( obj->conjugate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QQUATERNION", true );
+    _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
   }
 }
 
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
   {
     QVector3D * par1 = (QVector3D *) _qtxhb_itemGetPtr(1);
     QVector3D * ptr = new QVector3D( obj->rotatedVector ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
 
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
   if( obj )
   {
     QVector4D * ptr = new QVector4D( obj->toVector4D (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
   }
 }
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE1 )
   QVector3D * par1 = (QVector3D *) _qtxhb_itemGetPtr(1);
   float par2 = hb_parnd(2);
   QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle ( *par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QQUATERNION", true );
+  _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 }
 
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE2 )
   float par3 = hb_parnd(3);
   float par4 = hb_parnd(4);
   QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle ( par1, par2, par3, par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QQUATERNION", true );
+  _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 }
 
 
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QQUATERNION_SLERP )
   QQuaternion * par2 = (QQuaternion *) _qtxhb_itemGetPtr(2);
   float par3 = hb_parnd(3);
   QQuaternion * ptr = new QQuaternion( QQuaternion::slerp ( *par1, *par2, par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QQUATERNION", true );
+  _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 }
 
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QQUATERNION_NLERP )
   QQuaternion * par2 = (QQuaternion *) _qtxhb_itemGetPtr(2);
   float par3 = hb_parnd(3);
   QQuaternion * ptr = new QQuaternion( QQuaternion::nlerp ( *par1, *par2, par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QQUATERNION", true );
+  _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 }
 
 

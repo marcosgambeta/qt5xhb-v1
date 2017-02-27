@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_LOCALPOS )
   if( obj )
   {
     const QPointF * ptr = &obj->localPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_WINDOWPOS )
   if( obj )
   {
     const QPointF * ptr = &obj->windowPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_SCREENPOS )
   if( obj )
   {
     const QPointF * ptr = &obj->screenPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
 

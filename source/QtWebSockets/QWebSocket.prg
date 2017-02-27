@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QWEBSOCKET_LOCALADDRESS )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->localAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 #endif
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERADDRESS )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->peerAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 #endif
 }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PROXY )
   if( obj )
   {
     QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 #endif
 }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QWEBSOCKET_MASKGENERATOR )
   if( obj )
   {
     const QMaskGenerator * ptr = obj->maskGenerator (  );
-    _qt4xhb_createReturnClass ( ptr, "QMASKGENERATOR" );
+    _qt5xhb_createReturnClass ( ptr, "QMASKGENERATOR" );
   }
 #endif
 }
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QWEBSOCKET_REQUESTURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->requestUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
 }
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SSLCONFIGURATION )
   if( obj )
   {
     QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+    _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 #endif
 }

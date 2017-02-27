@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
   if( obj )
   {
     QSqlError * ptr = new QSqlError( obj->lastError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
   if( obj )
   {
     QSqlQuery * ptr = new QSqlQuery( obj->query (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLQUERY", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD1 )
   if( obj )
   {
     QSqlRecord * ptr = new QSqlRecord( obj->record ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD2 )
   if( obj )
   {
     QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
   {
     int par2 = hb_parni(2);
     QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

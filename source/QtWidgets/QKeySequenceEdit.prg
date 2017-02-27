@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
   if( obj )
   {
     QKeySequence * ptr = new QKeySequence( obj->keySequence (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
   }
 #endif
 }

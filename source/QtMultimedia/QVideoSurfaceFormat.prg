@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->frameSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELASPECTRATIO )
   if( obj )
   {
     QSize * ptr = new QSize( obj->pixelAspectRatio (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTY )
   {
     const char * par1 = hb_parc(1);
     QVariant * ptr = new QVariant( obj->property (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_VIEWPORT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->viewport (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

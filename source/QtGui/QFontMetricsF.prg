@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT1 )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QRectF * ptr = new QRectF( obj->boundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
     QString par2 = QLatin1String( hb_parc(2) );
     int par4;
     QSizeF * ptr = new QSizeF( obj->size ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3), &par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
     hb_storni( par4, 4 );
   }
 }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QRectF * ptr = new QRectF( obj->tightBoundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

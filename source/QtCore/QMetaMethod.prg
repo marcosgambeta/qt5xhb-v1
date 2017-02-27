@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODSIGNATURE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->methodSignature (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NAME )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->name (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 

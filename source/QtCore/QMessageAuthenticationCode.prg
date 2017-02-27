@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->result (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
   QByteArray * par2 = (QByteArray *) _qtxhb_itemGetPtr(2);
   int par3 = hb_parni(3);
   QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *par1, *par2,  (QCryptographicHash::Algorithm) par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
 

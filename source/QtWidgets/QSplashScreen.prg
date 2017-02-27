@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 

@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK2 )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->peek ( (qint64) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QIODEVICE_READ2 )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->read ( (qint64) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readAll (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE2 )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readLine ( (qint64) ISNIL(1)? 0 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 

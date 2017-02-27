@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_WINDOW )
   if( obj )
   {
     QWindow * ptr = obj->window (  );
-    _qt4xhb_createReturnClass ( ptr, "QWINDOW" );
+    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_FOCUSCHILD )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->focusChild (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->childAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_PARENT )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILD )
   if( obj )
   {
     QAccessibleInterface * ptr = obj->child ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->rect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_FOREGROUNDCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->foregroundColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_BACKGROUNDCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->backgroundColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXTINTERFACE )
   if( obj )
   {
     QAccessibleTextInterface * ptr = obj->textInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLETEXTINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLETEXTINTERFACE" );
   }
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE )
   if( obj )
   {
     QAccessibleEditableTextInterface * ptr = obj->editableTextInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEEDITABLETEXTINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEEDITABLETEXTINTERFACE" );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VALUEINTERFACE )
   if( obj )
   {
     QAccessibleValueInterface * ptr = obj->valueInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEVALUEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEVALUEINTERFACE" );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONINTERFACE )
   if( obj )
   {
     QAccessibleActionInterface * ptr = obj->actionInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEACTIONINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEACTIONINTERFACE" );
   }
 }
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_IMAGEINTERFACE )
   if( obj )
   {
     QAccessibleImageInterface * ptr = obj->imageInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEIMAGEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEIMAGEINTERFACE" );
   }
 }
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLEINTERFACE )
   if( obj )
   {
     QAccessibleTableInterface * ptr = obj->tableInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLETABLEINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLETABLEINTERFACE" );
   }
 }
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLECELLINTERFACE )
   if( obj )
   {
     QAccessibleTableCellInterface * ptr = obj->tableCellInterface (  );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLETABLECELLINTERFACE" );
+    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLETABLECELLINTERFACE" );
   }
 }
 

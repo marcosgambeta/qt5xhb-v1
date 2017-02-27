@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERFACTORYINTERFACE_CREATE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QMediaService * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMEDIASERVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QMEDIASERVICE" );
   }
 }
 

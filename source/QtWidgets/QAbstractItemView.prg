@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->currentIndex (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QWidget * ptr = obj->indexWidget ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE1 )
   if( obj )
   {
     QAbstractItemDelegate * ptr = obj->itemDelegate (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE2 )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QAbstractItemDelegate * ptr = obj->itemDelegate ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
   if( obj )
   {
     QAbstractItemDelegate * ptr = obj->itemDelegateForColumn ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
   if( obj )
   {
     QAbstractItemDelegate * ptr = obj->itemDelegateForRow ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
   if( obj )
   {
     QAbstractItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
 
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->rootIndex (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
   if( obj )
   {
     QItemSelectionModel * ptr = obj->selectionModel (  );
-    _qt4xhb_createReturnClass ( ptr, "QITEMSELECTIONMODEL" );
+    _qt5xhb_createReturnClass ( ptr, "QITEMSELECTIONMODEL" );
   }
 }
 
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORINDEX )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QSize * ptr = new QSize( obj->sizeHintForIndex ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VISUALRECT )
   {
     QModelIndex * par1 = (QModelIndex *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->visualRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QIRPROXIMITYSENSOR_READING )
   if( obj )
   {
     QIRProximityReading * ptr = obj->reading (  );
-    _qt4xhb_createReturnClass ( ptr, "QIRPROXIMITYREADING" );
+    _qt5xhb_createReturnClass ( ptr, "QIRPROXIMITYREADING" );
   }
 #endif
 }

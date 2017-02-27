@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
   {
     QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
     QIODevice * ptr = obj->data ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
   {
     QUrl * par1 = (QUrl *) _qtxhb_itemGetPtr(1);
     QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
   {
     QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qtxhb_itemGetPtr(1);
     QIODevice * ptr = obj->prepare ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 

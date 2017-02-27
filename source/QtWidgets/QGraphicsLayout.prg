@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
   }
 }
 

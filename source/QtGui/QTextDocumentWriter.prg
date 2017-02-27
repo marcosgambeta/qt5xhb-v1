@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
   if( obj )
   {
     QTextCodec * ptr = obj->codec (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
 

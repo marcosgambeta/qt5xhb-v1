@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->currentFont (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->selectedFont (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT1 )
   bool par1;
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qtxhb_itemGetPtr(2);
   QFont * ptr = new QFont( QFontDialog::getFont ( &par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT2 )
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   int par5 = ISNIL(5)? (int) 0 : hb_parni(5);
   QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *par2, par3, par4,  (QFontDialog::FontDialogOptions) par5 ) );
-  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
 

@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->contentPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->overshootDistance (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 

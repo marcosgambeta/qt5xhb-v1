@@ -204,7 +204,7 @@ static QLoggingCategory *defaultCategory()
 HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
 {
   QLoggingCategory * ptr = QLoggingCategory::defaultCategory (  );
-  _qt4xhb_createReturnClass ( ptr, "QLOGGINGCATEGORY" );
+  _qt5xhb_createReturnClass ( ptr, "QLOGGINGCATEGORY" );
 }
 
 

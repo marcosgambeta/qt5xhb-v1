@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
   if( obj )
   {
     QRect * ptr = new QRect( obj->availableGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 )
   {
     const QWidget * par1 = (const QWidget *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->availableGeometry ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->availableGeometry ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   if( obj )
   {
     QWidget * ptr = obj->screen ( (int) ISNIL(1)? -1 : hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
   if( obj )
   {
     QRect * ptr = new QRect( obj->screenGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY2 )
   {
     const QWidget * par1 = (const QWidget *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->screenGeometry ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY3 )
   {
     QPoint * par1 = (QPoint *) _qtxhb_itemGetPtr(1);
     QRect * ptr = new QRect( obj->screenGeometry ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
   {
     QQuickWindow * par1 = (QQuickWindow *) _qtxhb_itemGetPtr(1);
     QSGTexture * ptr = obj->createTexture ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QSGTEXTURE" );
+    _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
   if( obj )
   {
     QImage * ptr = new QImage( obj->image (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->textureSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

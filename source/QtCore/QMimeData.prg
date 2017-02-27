@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->colorData (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QByteArray * ptr = new QByteArray( obj->data ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->imageData (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

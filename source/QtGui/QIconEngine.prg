@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     QSize * ptr = new QSize( obj->actualSize ( *par1,  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QICONENGINE_CLONE )
   if( obj )
   {
     QIconEngine * ptr = obj->clone (  );
-    _qt4xhb_createReturnClass ( ptr, "QICONENGINE" );
+    _qt5xhb_createReturnClass ( ptr, "QICONENGINE" );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     QPixmap * ptr = new QPixmap( obj->pixmap ( *par1,  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 

@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->backgroundColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
   if( obj )
   {
     QImage * ptr = new QImage( obj->currentImage (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->currentPixmap (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->frameRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->scaledSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

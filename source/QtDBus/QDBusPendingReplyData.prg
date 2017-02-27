@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ARGUMENTAT )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->argumentAt ( (int) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QFILE_MAP )
   {
     int par3 = ISNIL(3)? (int) QFile::NoOptions : hb_parni(3);
     uchar * ptr = obj->map ( (qint64) hb_parni(1), (qint64) hb_parni(2),  (QFile::MemoryMapFlags) par3 );
-    _qt4xhb_createReturnClass ( ptr, "UCHAR" );
+    _qt5xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
 
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QFILE_ENCODENAME )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QByteArray * ptr = new QByteArray( QFile::encodeName ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
 

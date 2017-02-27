@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QX11INFO_NEXTSTARTUPID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QByteArray * ptr = new QByteArray( QX11Info::nextStartupId (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
 

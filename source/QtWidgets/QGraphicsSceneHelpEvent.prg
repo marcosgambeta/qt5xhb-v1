@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->scenePos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->screenPos (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 

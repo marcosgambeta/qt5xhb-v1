@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
   if( obj )
   {
     QTextCodec * ptr = obj->iniCodec (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
     QString par1 = QLatin1String( hb_parc(1) );
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qtxhb_itemGetPtr(2);
     QVariant * ptr = new QVariant( obj->value ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
