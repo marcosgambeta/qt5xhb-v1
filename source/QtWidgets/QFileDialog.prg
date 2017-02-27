@@ -158,11 +158,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW1 )
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QFileDialog * o = new QFileDialog ( par1,  (Qt::WindowFlags) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileDialog *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -177,11 +173,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW2 )
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   QFileDialog * o = new QFileDialog ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileDialog *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

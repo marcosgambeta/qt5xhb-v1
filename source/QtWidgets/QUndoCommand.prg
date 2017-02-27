@@ -90,11 +90,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(1);
   QUndoCommand * o = new QUndoCommand ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoCommand *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -107,11 +103,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW2 )
   QString par1 = QLatin1String( hb_parc(1) );
   QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(2);
   QUndoCommand * o = new QUndoCommand ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUndoCommand *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

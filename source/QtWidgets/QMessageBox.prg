@@ -131,11 +131,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QMessageBox * o = new QMessageBox ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMessageBox *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -152,11 +148,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
   QWidget * par5 = ISNIL(5)? 0 : (QWidget *) _qt5xhb_itemGetPtr(5);
   int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
   QMessageBox * o = new QMessageBox (  (QMessageBox::Icon) par1, par2, par3,  (QMessageBox::StandardButtons) par4, par5,  (Qt::WindowFlags) par6 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMessageBox *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

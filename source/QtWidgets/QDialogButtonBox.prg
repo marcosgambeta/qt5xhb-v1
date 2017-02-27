@@ -97,11 +97,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDialogButtonBox * o = new QDialogButtonBox ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDialogButtonBox *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -114,11 +110,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW2 )
   int par1 = hb_parni(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDialogButtonBox * o = new QDialogButtonBox (  (Qt::Orientation) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDialogButtonBox *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -132,11 +124,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW3 )
   int par2 = ISNIL(2)? (int) Qt::Horizontal : hb_parni(2);
   QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
   QDialogButtonBox * o = new QDialogButtonBox (  (QDialogButtonBox::StandardButtons) par1,  (Qt::Orientation) par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDialogButtonBox *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

@@ -34,3 +34,4 @@ void _qt5xhb_convert_qstringlist_to_array ( const QStringList list );
 
 void * _qt5xhb_itemGetPtr ( int numpar );
 void * _qt5xhb_itemGetPtrStackSelfItem ();
+void _qt5xhb_storePointerAndFlag (void * pointer, bool flag);

@@ -125,11 +125,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? QTableWidgetItem::Type : hb_parni(1);
   QTableWidgetItem * o = new QTableWidgetItem ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -142,11 +138,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW2 )
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? QTableWidgetItem::Type : hb_parni(2);
   QTableWidgetItem * o = new QTableWidgetItem ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -160,11 +152,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW3 )
   QString par2 = QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? QTableWidgetItem::Type : hb_parni(3);
   QTableWidgetItem * o = new QTableWidgetItem ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -176,11 +164,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW4 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
   QTableWidgetItem * o = new QTableWidgetItem ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

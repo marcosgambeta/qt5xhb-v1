@@ -156,11 +156,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? QTreeWidgetItem::Type : hb_parni(1);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -181,11 +177,7 @@ par1 << temp;
 }
   int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -198,11 +190,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW3 )
   QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -224,11 +212,7 @@ par2 << temp;
 }
   int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -242,11 +226,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW5 )
   QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -259,11 +239,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW6 )
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -285,11 +261,7 @@ par2 << temp;
 }
   int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -303,11 +275,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW8 )
   QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -319,11 +287,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW9 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
   QTreeWidgetItem * o = new QTreeWidgetItem ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

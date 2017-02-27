@@ -131,11 +131,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW1 )
   QListWidget * par1 = ISNIL(1)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? QListWidgetItem::Type : hb_parni(2);
   QListWidgetItem * o = new QListWidgetItem ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QListWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -149,11 +145,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW2 )
   QListWidget * par2 = ISNIL(2)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? QListWidgetItem::Type : hb_parni(3);
   QListWidgetItem * o = new QListWidgetItem ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QListWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -168,11 +160,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW3 )
   QListWidget * par3 = ISNIL(3)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? QListWidgetItem::Type : hb_parni(4);
   QListWidgetItem * o = new QListWidgetItem ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QListWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -184,11 +172,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW4 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
   QListWidgetItem * o = new QListWidgetItem ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QListWidgetItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

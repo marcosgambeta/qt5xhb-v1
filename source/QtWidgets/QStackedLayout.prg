@@ -88,11 +88,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QStackedLayout * o = new QStackedLayout (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStackedLayout *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -104,11 +100,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QStackedLayout * o = new QStackedLayout ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStackedLayout *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -120,11 +112,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
   QStackedLayout * o = new QStackedLayout ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStackedLayout *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

@@ -96,11 +96,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsLineItem * o = new QGraphicsLineItem ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsLineItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -113,11 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW2 )
   QLineF * par1 = (QLineF *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsLineItem * o = new QGraphicsLineItem ( *par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsLineItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -133,11 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW3 )
   qreal par4 = hb_parnd(4);
   QGraphicsItem * par5 = ISNIL(5)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(5);
   QGraphicsLineItem * o = new QGraphicsLineItem ( par1, par2, par3, par4, par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsLineItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

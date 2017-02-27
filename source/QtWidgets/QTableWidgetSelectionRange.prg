@@ -86,11 +86,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -105,11 +101,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -121,11 +113,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetSelectionRange * par1 = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtr(1);
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

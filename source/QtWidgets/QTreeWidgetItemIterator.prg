@@ -81,11 +81,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTreeWidgetItemIterator * par1 = (QTreeWidgetItemIterator *) _qt5xhb_itemGetPtr(1);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItemIterator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -98,11 +94,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
   QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( par1,  (QTreeWidgetItemIterator::IteratorFlags) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItemIterator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -115,11 +107,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW3 )
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( par1,  (QTreeWidgetItemIterator::IteratorFlags) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTreeWidgetItemIterator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

@@ -71,11 +71,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QStyleHintReturnVariant * o = new QStyleHintReturnVariant (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStyleHintReturnVariant *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

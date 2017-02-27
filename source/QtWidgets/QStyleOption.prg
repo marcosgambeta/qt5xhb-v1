@@ -83,11 +83,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW1 )
   int par1 = ISNIL(1)? QStyleOption::Version : hb_parni(1);
   int par2 = ISNIL(2)? QStyleOption::SO_Default : hb_parni(2);
   QStyleOption * o = new QStyleOption ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStyleOption *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -99,11 +95,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QStyleOption * par1 = (QStyleOption *) _qt5xhb_itemGetPtr(1);
   QStyleOption * o = new QStyleOption ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStyleOption *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
