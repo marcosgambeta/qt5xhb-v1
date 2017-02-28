@@ -21,7 +21,6 @@ SlotsQAction::~SlotsQAction()
 
 void SlotsQAction::changed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "changed()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQAction::changed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAction::hovered()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQAction::hovered()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAction::toggled( bool checked )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQAction::toggled( bool checked )
     hb_itemRelease( psender );
     hb_itemRelease( pchecked );
   }
-#endif
 }
 
 void SlotsQAction::triggered( bool checked )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(bool)" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQAction::triggered( bool checked )
     hb_itemRelease( psender );
     hb_itemRelease( pchecked );
   }
-#endif
 }
 
 HB_FUNC( QACTION_ONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAction(QCoreApplication::instance());
@@ -138,14 +129,10 @@ HB_FUNC( QACTION_ONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QACTION_ONHOVERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAction(QCoreApplication::instance());
@@ -202,14 +189,10 @@ HB_FUNC( QACTION_ONHOVERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QACTION_ONTOGGLED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAction(QCoreApplication::instance());
@@ -266,14 +249,10 @@ HB_FUNC( QACTION_ONTOGGLED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QACTION_ONTRIGGERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAction(QCoreApplication::instance());
@@ -330,8 +309,4 @@ HB_FUNC( QACTION_ONTRIGGERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

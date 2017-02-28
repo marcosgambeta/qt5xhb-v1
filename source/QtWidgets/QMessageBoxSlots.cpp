@@ -21,7 +21,6 @@ SlotsQMessageBox::~SlotsQMessageBox()
 
 void SlotsQMessageBox::buttonClicked ( QAbstractButton * button )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMessageBox::buttonClicked ( QAbstractButton * button )
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
-#endif
 }
 
 HB_FUNC( QMESSAGEBOX_ONBUTTONCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMessageBox(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QMESSAGEBOX_ONBUTTONCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

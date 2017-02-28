@@ -21,7 +21,6 @@ SlotsQLCDNumber::~SlotsQLCDNumber()
 
 void SlotsQLCDNumber::overflow ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "overflow()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQLCDNumber::overflow ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QLCDNUMBER_ONOVERFLOW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLCDNumber(QCoreApplication::instance());
@@ -92,8 +89,4 @@ HB_FUNC( QLCDNUMBER_ONOVERFLOW )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

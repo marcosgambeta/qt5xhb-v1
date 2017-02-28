@@ -67,9 +67,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QUndoStack>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -93,9 +91,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QUndoStack>
-#endif
 #endif
 
 /*
@@ -103,17 +99,14 @@ QUndoStack(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QUndoStack * o = new QUndoStack ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
 HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -125,7 +118,6 @@ HB_FUNC_STATIC( QUNDOSTACK_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

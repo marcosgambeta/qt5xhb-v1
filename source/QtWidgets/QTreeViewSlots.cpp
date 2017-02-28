@@ -21,7 +21,6 @@ SlotsQTreeView::~SlotsQTreeView()
 
 void SlotsQTreeView::collapsed ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "collapsed(QModelIndex)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQTreeView::collapsed ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQTreeView::expanded ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "expanded(QModelIndex)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQTreeView::expanded ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 HB_FUNC( QTREEVIEW_ONCOLLAPSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeView(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QTREEVIEW_ONCOLLAPSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEVIEW_ONEXPANDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeView(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QTREEVIEW_ONEXPANDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -63,9 +63,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QProgressDialog>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -89,9 +87,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QProgressDialog>
-#endif
 #endif
 
 /*
@@ -99,12 +95,10 @@ explicit QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QProgressDialog * o = new QProgressDialog ( par1,  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -112,7 +106,6 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   int par3 = hb_parni(3);
@@ -121,7 +114,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW2 )
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
   QProgressDialog * o = new QProgressDialog ( par1, par2, par3, par4, par5,  (Qt::WindowFlags) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -146,7 +138,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -158,7 +149,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

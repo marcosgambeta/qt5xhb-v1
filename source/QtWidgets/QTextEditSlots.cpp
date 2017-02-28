@@ -21,7 +21,6 @@ SlotsQTextEdit::~SlotsQTextEdit()
 
 void SlotsQTextEdit::copyAvailable ( bool yes )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "copyAvailable(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQTextEdit::copyAvailable ( bool yes )
     hb_itemRelease( psender );
     hb_itemRelease( pyes );
   }
-#endif
 }
 
 void SlotsQTextEdit::currentCharFormatChanged ( const QTextCharFormat & f )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentCharFormatChanged(QTextCharFormat)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQTextEdit::currentCharFormatChanged ( const QTextCharFormat & f )
     hb_itemRelease( psender );
     hb_itemRelease( pf );
   }
-#endif
 }
 
 void SlotsQTextEdit::cursorPositionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQTextEdit::cursorPositionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQTextEdit::redoAvailable ( bool available )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "redoAvailable(bool)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQTextEdit::redoAvailable ( bool available )
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQTextEdit::selectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQTextEdit::selectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQTextEdit::textChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged()" );
   if( cb )
@@ -106,12 +95,10 @@ void SlotsQTextEdit::textChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQTextEdit::undoAvailable ( bool available )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "undoAvailable(bool)" );
   if( cb )
@@ -122,12 +109,10 @@ void SlotsQTextEdit::undoAvailable ( bool available )
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 HB_FUNC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextEdit(QCoreApplication::instance());
@@ -184,14 +169,10 @@ HB_FUNC( QTEXTEDIT_ONCOPYAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextEdit(QCoreApplication::instance());
@@ -248,14 +229,10 @@ HB_FUNC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextEdit(QCoreApplication::instance());
@@ -312,14 +289,10 @@ HB_FUNC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTEDIT_ONREDOAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextEdit(QCoreApplication::instance());
@@ -376,14 +349,10 @@ HB_FUNC( QTEXTEDIT_ONREDOAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextEdit(QCoreApplication::instance());
@@ -440,14 +409,10 @@ HB_FUNC( QTEXTEDIT_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTEDIT_ONTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextEdit(QCoreApplication::instance());
@@ -504,14 +469,10 @@ HB_FUNC( QTEXTEDIT_ONTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextEdit(QCoreApplication::instance());
@@ -568,8 +529,4 @@ HB_FUNC( QTEXTEDIT_ONUNDOAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

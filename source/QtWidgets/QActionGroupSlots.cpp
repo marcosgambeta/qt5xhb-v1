@@ -21,7 +21,6 @@ SlotsQActionGroup::~SlotsQActionGroup()
 
 void SlotsQActionGroup::hovered ( QAction * action )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQActionGroup::hovered ( QAction * action )
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 void SlotsQActionGroup::triggered ( QAction * action )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQActionGroup::triggered ( QAction * action )
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 HB_FUNC( QACTIONGROUP_ONHOVERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQActionGroup(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QACTIONGROUP_ONHOVERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QACTIONGROUP_ONTRIGGERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQActionGroup(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QACTIONGROUP_ONTRIGGERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

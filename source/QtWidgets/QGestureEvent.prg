@@ -60,9 +60,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGestureEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -86,9 +84,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGestureEvent>
-#endif
 #endif
 
 /*
@@ -96,7 +92,6 @@ QGestureEvent ( const QList<QGesture *> & gestures )
 */
 HB_FUNC_STATIC( QGESTUREEVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QList<QGesture *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -106,13 +101,11 @@ for (i1=0;i1<nLen1;i1++)
 par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );}
   QGestureEvent * o = new QGestureEvent ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
 HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -124,7 +117,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

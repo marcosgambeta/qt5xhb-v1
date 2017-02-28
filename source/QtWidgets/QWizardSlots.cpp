@@ -21,7 +21,6 @@ SlotsQWizard::~SlotsQWizard()
 
 void SlotsQWizard::currentIdChanged ( int id )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIdChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQWizard::currentIdChanged ( int id )
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
-#endif
 }
 
 void SlotsQWizard::customButtonClicked ( int which )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "customButtonClicked(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQWizard::customButtonClicked ( int which )
     hb_itemRelease( psender );
     hb_itemRelease( pwhich );
   }
-#endif
 }
 
 void SlotsQWizard::helpRequested ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQWizard::helpRequested ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWizard::pageAdded ( int id )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageAdded(int)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQWizard::pageAdded ( int id )
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
-#endif
 }
 
 void SlotsQWizard::pageRemoved ( int id )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageRemoved(int)" );
   if( cb )
@@ -94,12 +85,10 @@ void SlotsQWizard::pageRemoved ( int id )
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
-#endif
 }
 
 HB_FUNC( QWIZARD_ONCURRENTIDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWizard(QCoreApplication::instance());
@@ -156,14 +145,10 @@ HB_FUNC( QWIZARD_ONCURRENTIDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWizard(QCoreApplication::instance());
@@ -220,14 +205,10 @@ HB_FUNC( QWIZARD_ONCUSTOMBUTTONCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWIZARD_ONHELPREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWizard(QCoreApplication::instance());
@@ -284,14 +265,10 @@ HB_FUNC( QWIZARD_ONHELPREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWIZARD_ONPAGEADDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWizard(QCoreApplication::instance());
@@ -348,14 +325,10 @@ HB_FUNC( QWIZARD_ONPAGEADDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWIZARD_ONPAGEREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWizard(QCoreApplication::instance());
@@ -412,8 +385,4 @@ HB_FUNC( QWIZARD_ONPAGEREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQInputDialog::~SlotsQInputDialog()
 
 void SlotsQInputDialog::doubleValueChanged ( double value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueChanged(double)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQInputDialog::doubleValueChanged ( double value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQInputDialog::doubleValueSelected ( double value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueSelected(double)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQInputDialog::doubleValueSelected ( double value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQInputDialog::intValueChanged ( int value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueChanged(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQInputDialog::intValueChanged ( int value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQInputDialog::intValueSelected ( int value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueSelected(int)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQInputDialog::intValueSelected ( int value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQInputDialog::textValueChanged ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueChanged(QString)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQInputDialog::textValueChanged ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQInputDialog::textValueSelected ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueSelected(QString)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQInputDialog::textValueSelected ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputDialog(QCoreApplication::instance());
@@ -174,14 +161,10 @@ HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputDialog(QCoreApplication::instance());
@@ -238,14 +221,10 @@ HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTDIALOG_ONINTVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputDialog(QCoreApplication::instance());
@@ -302,14 +281,10 @@ HB_FUNC( QINPUTDIALOG_ONINTVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTDIALOG_ONINTVALUESELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputDialog(QCoreApplication::instance());
@@ -366,14 +341,10 @@ HB_FUNC( QINPUTDIALOG_ONINTVALUESELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputDialog(QCoreApplication::instance());
@@ -430,14 +401,10 @@ HB_FUNC( QINPUTDIALOG_ONTEXTVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputDialog(QCoreApplication::instance());
@@ -494,8 +461,4 @@ HB_FUNC( QINPUTDIALOG_ONTEXTVALUESELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

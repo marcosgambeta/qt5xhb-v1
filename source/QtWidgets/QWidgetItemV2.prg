@@ -40,9 +40,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWidgetItemV2>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -66,9 +64,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWidgetItemV2>
-#endif
 #endif
 
 /*
@@ -76,17 +72,14 @@ QWidgetItemV2(QWidget *widget)
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QWidgetItemV2 * o = new QWidgetItemV2 ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
 HB_FUNC_STATIC( QWIDGETITEMV2_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidgetItemV2 * obj = (QWidgetItemV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -98,7 +91,6 @@ HB_FUNC_STATIC( QWIDGETITEMV2_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

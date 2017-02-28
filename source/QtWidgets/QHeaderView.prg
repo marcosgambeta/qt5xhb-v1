@@ -115,9 +115,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHeaderView>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -141,9 +139,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHeaderView>
-#endif
 #endif
 
 /*
@@ -151,18 +147,15 @@ explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QHeaderView * o = new QHeaderView (  (Qt::Orientation) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
 HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QHEADERVIEW_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

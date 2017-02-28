@@ -49,9 +49,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QColormap>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -75,9 +73,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QColormap>
-#endif
 #endif
 
 #include <QColor>
@@ -87,17 +83,14 @@ QColormap ( const QColormap & colormap )
 */
 HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QColormap * par1 = (QColormap *) _qt5xhb_itemGetPtr(1);
   QColormap * o = new QColormap ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
 HB_FUNC_STATIC( QCOLORMAP_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -109,7 +102,6 @@ HB_FUNC_STATIC( QCOLORMAP_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -92,9 +92,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMessageBox>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -118,9 +116,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMessageBox>
-#endif
 #endif
 
 /*
@@ -128,11 +124,9 @@ explicit QMessageBox ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QMessageBox * o = new QMessageBox ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -140,7 +134,6 @@ QMessageBox ( Icon icon, const QString & title, const QString & text, StandardBu
 */
 HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QString par3 = QLatin1String( hb_parc(3) );
@@ -149,7 +142,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
   int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
   QMessageBox * o = new QMessageBox (  (QMessageBox::Icon) par1, par2, par3,  (QMessageBox::StandardButtons) par4, par5,  (Qt::WindowFlags) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -174,7 +166,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 
 HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -186,7 +177,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

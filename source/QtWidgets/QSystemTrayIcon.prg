@@ -56,9 +56,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSystemTrayIcon>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -82,9 +80,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSystemTrayIcon>
-#endif
 #endif
 
 /*
@@ -92,11 +88,9 @@ QSystemTrayIcon(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSystemTrayIcon * o = new QSystemTrayIcon ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -104,12 +98,10 @@ QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QSystemTrayIcon * o = new QSystemTrayIcon ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -134,7 +126,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -146,7 +137,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

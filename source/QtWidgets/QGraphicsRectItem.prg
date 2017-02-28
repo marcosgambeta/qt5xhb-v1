@@ -51,9 +51,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsRectItem>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -77,9 +75,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsRectItem>
-#endif
 #endif
 
 /*
@@ -87,11 +83,9 @@ QGraphicsRectItem ( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsRectItem * o = new QGraphicsRectItem ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -99,12 +93,10 @@ QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsRectItem * o = new QGraphicsRectItem ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -112,7 +104,6 @@ QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem *
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -120,7 +111,6 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW3 )
   QGraphicsItem * par5 = ISNIL(5)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(5);
   QGraphicsRectItem * o = new QGraphicsRectItem ( par1, par2, par3, par4, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -150,7 +140,6 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -162,7 +151,6 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

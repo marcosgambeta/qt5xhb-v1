@@ -43,9 +43,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QStyleOption>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -69,9 +67,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QStyleOption>
-#endif
 #endif
 
 /*
@@ -79,12 +75,10 @@ QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 */
 HB_FUNC_STATIC( QSTYLEOPTION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? QStyleOption::Version : hb_parni(1);
   int par2 = ISNIL(2)? QStyleOption::SO_Default : hb_parni(2);
   QStyleOption * o = new QStyleOption ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -92,11 +86,9 @@ QStyleOption(const QStyleOption &other)
 */
 HB_FUNC_STATIC( QSTYLEOPTION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QStyleOption * par1 = (QStyleOption *) _qt5xhb_itemGetPtr(1);
   QStyleOption * o = new QStyleOption ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -121,7 +113,6 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 
 HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -133,7 +124,6 @@ HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

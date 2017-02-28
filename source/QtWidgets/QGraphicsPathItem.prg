@@ -48,9 +48,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsPathItem>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -74,9 +72,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsPathItem>
-#endif
 #endif
 
 /*
@@ -84,11 +80,9 @@ QGraphicsPathItem ( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsPathItem * o = new QGraphicsPathItem ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -96,12 +90,10 @@ QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsPathItem * o = new QGraphicsPathItem ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -126,7 +118,6 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsPathItem * obj = (QGraphicsPathItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -138,7 +129,6 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

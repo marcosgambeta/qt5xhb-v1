@@ -21,7 +21,6 @@ SlotsQFileDialog::~SlotsQFileDialog()
 
 void SlotsQFileDialog::currentChanged ( const QString & path )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQFileDialog::currentChanged ( const QString & path )
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
-#endif
 }
 
 void SlotsQFileDialog::directoryEntered ( const QString & directory )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryEntered(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQFileDialog::directoryEntered ( const QString & directory )
     hb_itemRelease( psender );
     hb_itemRelease( pdirectory );
   }
-#endif
 }
 
 void SlotsQFileDialog::fileSelected ( const QString & file )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fileSelected(QString)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQFileDialog::fileSelected ( const QString & file )
     hb_itemRelease( psender );
     hb_itemRelease( pfile );
   }
-#endif
 }
 
 void SlotsQFileDialog::filesSelected ( const QStringList & selected )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "filesSelected(QStringList)" );
   if( cb )
@@ -87,12 +80,10 @@ void SlotsQFileDialog::filesSelected ( const QStringList & selected )
     hb_itemRelease( psender );
     hb_itemRelease( pselected );
   }
-#endif
 }
 
 void SlotsQFileDialog::filterSelected ( const QString & filter )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "filterSelected(QString)" );
   if( cb )
@@ -103,12 +94,10 @@ void SlotsQFileDialog::filterSelected ( const QString & filter )
     hb_itemRelease( psender );
     hb_itemRelease( pfilter );
   }
-#endif
 }
 
 void SlotsQFileDialog::urlSelected(const QUrl &url)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlSelected(QUrl)" );
   if( cb )
@@ -119,12 +108,10 @@ void SlotsQFileDialog::urlSelected(const QUrl &url)
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 void SlotsQFileDialog::urlsSelected(const QList<QUrl> &urls)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlsSelected(QList<QUrl>)" );
   if( cb )
@@ -163,12 +150,10 @@ void SlotsQFileDialog::urlsSelected(const QList<QUrl> &urls)
     hb_itemRelease( psender );
     hb_itemRelease( purls );
   }
-#endif
 }
 
 void SlotsQFileDialog::currentUrlChanged(const QUrl &url)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentUrlChanged(QUrl)" );
   if( cb )
@@ -179,12 +164,10 @@ void SlotsQFileDialog::currentUrlChanged(const QUrl &url)
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 void SlotsQFileDialog::directoryUrlEntered(const QUrl &directory)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryUrlEntered(QUrl)" );
   if( cb )
@@ -195,12 +178,10 @@ void SlotsQFileDialog::directoryUrlEntered(const QUrl &directory)
     hb_itemRelease( psender );
     hb_itemRelease( pdirectory );
   }
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONCURRENTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -257,14 +238,10 @@ HB_FUNC( QFILEDIALOG_ONCURRENTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -321,14 +298,10 @@ HB_FUNC( QFILEDIALOG_ONDIRECTORYENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONFILESELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -385,14 +358,10 @@ HB_FUNC( QFILEDIALOG_ONFILESELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONFILESSELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -449,14 +418,10 @@ HB_FUNC( QFILEDIALOG_ONFILESSELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONFILTERSELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -513,14 +478,10 @@ HB_FUNC( QFILEDIALOG_ONFILTERSELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONURLSELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -577,14 +538,10 @@ HB_FUNC( QFILEDIALOG_ONURLSELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONURLSSELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -641,14 +598,10 @@ HB_FUNC( QFILEDIALOG_ONURLSSELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -705,14 +658,10 @@ HB_FUNC( QFILEDIALOG_ONCURRENTURLCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileDialog(QCoreApplication::instance());
@@ -769,8 +718,4 @@ HB_FUNC( QFILEDIALOG_ONDIRECTORYURLENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

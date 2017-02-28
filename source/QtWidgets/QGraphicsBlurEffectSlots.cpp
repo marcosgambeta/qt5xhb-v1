@@ -21,7 +21,6 @@ SlotsQGraphicsBlurEffect::~SlotsQGraphicsBlurEffect()
 
 void SlotsQGraphicsBlurEffect::blurHintsChanged ( QGraphicsBlurEffect::BlurHints hints )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQGraphicsBlurEffect::blurHintsChanged ( QGraphicsBlurEffect::BlurHints
     hb_itemRelease( psender );
     hb_itemRelease( phints );
   }
-#endif
 }
 
 void SlotsQGraphicsBlurEffect::blurRadiusChanged ( qreal radius )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQGraphicsBlurEffect::blurRadiusChanged ( qreal radius )
     hb_itemRelease( psender );
     hb_itemRelease( pradius );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQFileSystemModel::~SlotsQFileSystemModel()
 
 void SlotsQFileSystemModel::directoryLoaded ( const QString & path )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryLoaded(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQFileSystemModel::directoryLoaded ( const QString & path )
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
-#endif
 }
 
 void SlotsQFileSystemModel::fileRenamed ( const QString & path, const QString & oldName, const QString & newName )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fileRenamed(QString,QString,QString)" );
   if( cb )
@@ -52,12 +49,10 @@ void SlotsQFileSystemModel::fileRenamed ( const QString & path, const QString & 
     hb_itemRelease( poldName );
     hb_itemRelease( pnewName );
   }
-#endif
 }
 
 void SlotsQFileSystemModel::rootPathChanged ( const QString & newPath )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rootPathChanged(QString)" );
   if( cb )
@@ -68,12 +63,10 @@ void SlotsQFileSystemModel::rootPathChanged ( const QString & newPath )
     hb_itemRelease( psender );
     hb_itemRelease( pnewPath );
   }
-#endif
 }
 
 HB_FUNC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileSystemModel(QCoreApplication::instance());
@@ -130,14 +123,10 @@ HB_FUNC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILESYSTEMMODEL_ONFILERENAMED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileSystemModel(QCoreApplication::instance());
@@ -194,14 +183,10 @@ HB_FUNC( QFILESYSTEMMODEL_ONFILERENAMED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileSystemModel(QCoreApplication::instance());
@@ -258,8 +243,4 @@ HB_FUNC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

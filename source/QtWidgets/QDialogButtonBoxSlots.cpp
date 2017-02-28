@@ -21,7 +21,6 @@ SlotsQDialogButtonBox::~SlotsQDialogButtonBox()
 
 void SlotsQDialogButtonBox::accepted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQDialogButtonBox::accepted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQDialogButtonBox::clicked ( QAbstractButton * button )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QAbstractButton)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQDialogButtonBox::clicked ( QAbstractButton * button )
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
-#endif
 }
 
 void SlotsQDialogButtonBox::helpRequested ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQDialogButtonBox::helpRequested ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQDialogButtonBox::rejected ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQDialogButtonBox::rejected ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDialogButtonBox(QCoreApplication::instance());
@@ -136,14 +127,10 @@ HB_FUNC( QDIALOGBUTTONBOX_ONACCEPTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDIALOGBUTTONBOX_ONCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDialogButtonBox(QCoreApplication::instance());
@@ -200,14 +187,10 @@ HB_FUNC( QDIALOGBUTTONBOX_ONCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDialogButtonBox(QCoreApplication::instance());
@@ -264,14 +247,10 @@ HB_FUNC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDIALOGBUTTONBOX_ONREJECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDialogButtonBox(QCoreApplication::instance());
@@ -328,8 +307,4 @@ HB_FUNC( QDIALOGBUTTONBOX_ONREJECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

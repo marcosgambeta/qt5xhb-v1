@@ -21,7 +21,6 @@ SlotsQGraphicsScene::~SlotsQGraphicsScene()
 
 void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QList<QRectF>)" );
   if( cb )
@@ -60,12 +59,10 @@ void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
     hb_itemRelease( psender );
     hb_itemRelease( pregion );
   }
-#endif
 }
 
 void SlotsQGraphicsScene::sceneRectChanged ( const QRectF & rect )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
   if( cb )
@@ -76,12 +73,10 @@ void SlotsQGraphicsScene::sceneRectChanged ( const QRectF & rect )
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
-#endif
 }
 
 void SlotsQGraphicsScene::selectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
@@ -90,12 +85,10 @@ void SlotsQGraphicsScene::selectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSSCENE_ONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsScene(QCoreApplication::instance());
@@ -152,14 +145,10 @@ HB_FUNC( QGRAPHICSSCENE_ONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsScene(QCoreApplication::instance());
@@ -216,14 +205,10 @@ HB_FUNC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsScene(QCoreApplication::instance());
@@ -280,8 +265,4 @@ HB_FUNC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

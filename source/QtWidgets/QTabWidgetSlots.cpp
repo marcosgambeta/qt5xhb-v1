@@ -21,7 +21,6 @@ SlotsQTabWidget::~SlotsQTabWidget()
 
 void SlotsQTabWidget::currentChanged ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQTabWidget::currentChanged ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQTabWidget::tabCloseRequested ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
   if( cb )
@@ -48,13 +45,11 @@ void SlotsQTabWidget::tabCloseRequested ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQTabWidget::tabBarClicked(int index)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarClicked(int)" );
   if( cb )
@@ -65,14 +60,12 @@ void SlotsQTabWidget::tabBarClicked(int index)
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 #endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQTabWidget::tabBarDoubleClicked(int index)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarDoubleClicked(int)" );
   if( cb )
@@ -83,13 +76,11 @@ void SlotsQTabWidget::tabBarDoubleClicked(int index)
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 #endif
 
 HB_FUNC( QTABWIDGET_ONCURRENTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTabWidget(QCoreApplication::instance());
@@ -146,14 +137,10 @@ HB_FUNC( QTABWIDGET_ONCURRENTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABWIDGET_ONTABCLOSEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTabWidget(QCoreApplication::instance());
@@ -210,14 +197,10 @@ HB_FUNC( QTABWIDGET_ONTABCLOSEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABWIDGET_ONTABBARCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTabWidget(QCoreApplication::instance());
@@ -274,14 +257,10 @@ HB_FUNC( QTABWIDGET_ONTABBARCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTabWidget(QCoreApplication::instance());
@@ -338,8 +317,4 @@ HB_FUNC( QTABWIDGET_ONTABBARDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

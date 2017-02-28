@@ -21,7 +21,6 @@ SlotsQStyle::~SlotsQStyle()
 
 void SlotsQStyle::currentChanged ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQStyle::currentChanged ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQStyle::tabCloseRequested ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQStyle::tabCloseRequested ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQStyle::tabMoved ( int from, int to )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved(int,int)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQStyle::tabMoved ( int from, int to )
     hb_itemRelease( pfrom );
     hb_itemRelease( pto );
   }
-#endif
 }
 
 HB_FUNC( QSTYLE_ONCURRENTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStyle(QCoreApplication::instance());
@@ -128,14 +121,10 @@ HB_FUNC( QSTYLE_ONCURRENTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSTYLE_ONTABCLOSEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStyle(QCoreApplication::instance());
@@ -192,14 +181,10 @@ HB_FUNC( QSTYLE_ONTABCLOSEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSTYLE_ONTABMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStyle(QCoreApplication::instance());
@@ -256,8 +241,4 @@ HB_FUNC( QSTYLE_ONTABMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

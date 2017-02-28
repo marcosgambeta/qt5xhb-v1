@@ -21,7 +21,6 @@ SlotsQColorDialog::~SlotsQColorDialog()
 
 void SlotsQColorDialog::colorSelected ( const QColor & color )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorSelected(QColor)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQColorDialog::colorSelected ( const QColor & color )
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
-#endif
 }
 
 void SlotsQColorDialog::currentColorChanged ( const QColor & color )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColorChanged(QColor)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQColorDialog::currentColorChanged ( const QColor & color )
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
-#endif
 }
 
 HB_FUNC( QCOLORDIALOG_ONCOLORSELECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQColorDialog(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QCOLORDIALOG_ONCOLORSELECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQColorDialog(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

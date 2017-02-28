@@ -21,7 +21,6 @@ SlotsQGraphicsEffect::~SlotsQGraphicsEffect()
 
 void SlotsQGraphicsEffect::enabledChanged ( bool enabled )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQGraphicsEffect::enabledChanged ( bool enabled )
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsEffect(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

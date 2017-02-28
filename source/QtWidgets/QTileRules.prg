@@ -41,9 +41,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTileRules>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -67,9 +65,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTileRules>
-#endif
 #endif
 
 /*
@@ -77,12 +73,10 @@ QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 */
 HB_FUNC_STATIC( QTILERULES_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QTileRules * o = new QTileRules (  (Qt::TileRule) par1,  (Qt::TileRule) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -90,11 +84,9 @@ QTileRules(Qt::TileRule rule = Qt::StretchTile)
 */
 HB_FUNC_STATIC( QTILERULES_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? (int) Qt::StretchTile : hb_parni(1);
   QTileRules * o = new QTileRules (  (Qt::TileRule) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -119,7 +111,6 @@ HB_FUNC_STATIC( QTILERULES_NEW )
 
 HB_FUNC_STATIC( QTILERULES_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTileRules * obj = (QTileRules *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -131,7 +122,6 @@ HB_FUNC_STATIC( QTILERULES_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

@@ -21,7 +21,6 @@ SlotsQCheckBox::~SlotsQCheckBox()
 
 void SlotsQCheckBox::stateChanged ( int state )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCheckBox::stateChanged ( int state )
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 HB_FUNC( QCHECKBOX_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCheckBox(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QCHECKBOX_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

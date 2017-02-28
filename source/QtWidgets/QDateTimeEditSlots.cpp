@@ -21,7 +21,6 @@ SlotsQDateTimeEdit::~SlotsQDateTimeEdit()
 
 void SlotsQDateTimeEdit::dateChanged ( const QDate & date )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dateChanged(QDate)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDateTimeEdit::dateChanged ( const QDate & date )
     hb_itemRelease( psender );
     hb_itemRelease( pdate );
   }
-#endif
 }
 
 void SlotsQDateTimeEdit::dateTimeChanged ( const QDateTime & datetime )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDateTimeEdit::dateTimeChanged ( const QDateTime & datetime )
     hb_itemRelease( psender );
     hb_itemRelease( pdatetime );
   }
-#endif
 }
 
 void SlotsQDateTimeEdit::timeChanged ( const QTime & time )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "timeChanged(QTime)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQDateTimeEdit::timeChanged ( const QTime & time )
     hb_itemRelease( psender );
     hb_itemRelease( ptime );
   }
-#endif
 }
 
 HB_FUNC( QDATETIMEEDIT_ONDATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDateTimeEdit(QCoreApplication::instance());
@@ -126,14 +119,10 @@ HB_FUNC( QDATETIMEEDIT_ONDATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDateTimeEdit(QCoreApplication::instance());
@@ -190,14 +179,10 @@ HB_FUNC( QDATETIMEEDIT_ONDATETIMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDATETIMEEDIT_ONTIMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDateTimeEdit(QCoreApplication::instance());
@@ -254,8 +239,4 @@ HB_FUNC( QDATETIMEEDIT_ONTIMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

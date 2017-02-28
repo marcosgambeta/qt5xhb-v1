@@ -33,9 +33,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCommonStyle>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -59,9 +57,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCommonStyle>
-#endif
 #endif
 
 /*
@@ -69,16 +65,13 @@ QCommonStyle ()
 */
 HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCommonStyle * o = new QCommonStyle (  );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
 HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -90,7 +83,6 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

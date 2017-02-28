@@ -21,7 +21,6 @@ SlotsQGraphicsWidget::~SlotsQGraphicsWidget()
 
 void SlotsQGraphicsWidget::geometryChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQGraphicsWidget::geometryChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWidget(QCoreApplication::instance());
@@ -92,8 +89,4 @@ HB_FUNC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

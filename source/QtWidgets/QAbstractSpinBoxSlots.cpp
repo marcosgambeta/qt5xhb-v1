@@ -21,7 +21,6 @@ SlotsQAbstractSpinBox::~SlotsQAbstractSpinBox()
 
 void SlotsQAbstractSpinBox::editingFinished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQAbstractSpinBox::editingFinished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSpinBox(QCoreApplication::instance());
@@ -92,8 +89,4 @@ HB_FUNC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

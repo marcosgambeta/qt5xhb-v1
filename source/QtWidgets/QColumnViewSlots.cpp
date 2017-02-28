@@ -21,7 +21,6 @@ SlotsQColumnView::~SlotsQColumnView()
 
 void SlotsQColumnView::updatePreviewWidget ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQColumnView::updatePreviewWidget ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 HB_FUNC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQColumnView(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

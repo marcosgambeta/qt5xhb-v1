@@ -21,7 +21,6 @@ SlotsQGraphicsObject::~SlotsQGraphicsObject()
 
 void SlotsQGraphicsObject::enabledChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQGraphicsObject::enabledChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::opacityChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQGraphicsObject::opacityChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::parentChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "parentChanged()" );
   if( cb )
@@ -58,12 +53,10 @@ void SlotsQGraphicsObject::parentChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::rotationChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationChanged()" );
   if( cb )
@@ -72,12 +65,10 @@ void SlotsQGraphicsObject::rotationChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::scaleChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scaleChanged()" );
   if( cb )
@@ -86,12 +77,10 @@ void SlotsQGraphicsObject::scaleChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::visibleChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
   if( cb )
@@ -100,12 +89,10 @@ void SlotsQGraphicsObject::visibleChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::xChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xChanged()" );
   if( cb )
@@ -114,12 +101,10 @@ void SlotsQGraphicsObject::xChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::yChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yChanged()" );
   if( cb )
@@ -128,12 +113,10 @@ void SlotsQGraphicsObject::yChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsObject::zChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zChanged()" );
   if( cb )
@@ -142,12 +125,10 @@ void SlotsQGraphicsObject::zChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -204,14 +185,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -268,14 +245,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONPARENTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -332,14 +305,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONPARENTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -396,14 +365,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONSCALECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -460,14 +425,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONSCALECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -524,14 +485,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONXCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -588,14 +545,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONXCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -652,14 +605,10 @@ HB_FUNC( QGRAPHICSOBJECT_ONYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONZCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsObject(QCoreApplication::instance());
@@ -716,8 +665,4 @@ HB_FUNC( QGRAPHICSOBJECT_ONZCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQToolButton::~SlotsQToolButton()
 
 void SlotsQToolButton::triggered ( QAction * action )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQToolButton::triggered ( QAction * action )
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolButton(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQMainWindow::~SlotsQMainWindow()
 
 void SlotsQMainWindow::iconSizeChanged ( const QSize & iconSize )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMainWindow::iconSizeChanged ( const QSize & iconSize )
     hb_itemRelease( psender );
     hb_itemRelease( piconSize );
   }
-#endif
 }
 
 void SlotsQMainWindow::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQMainWindow::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonSt
     hb_itemRelease( psender );
     hb_itemRelease( ptoolButtonStyle );
   }
-#endif
 }
 
 HB_FUNC( QMAINWINDOW_ONICONSIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMainWindow(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QMAINWINDOW_ONICONSIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMainWindow(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

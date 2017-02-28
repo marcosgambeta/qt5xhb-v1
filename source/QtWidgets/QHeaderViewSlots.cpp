@@ -21,7 +21,6 @@ SlotsQHeaderView::~SlotsQHeaderView()
 
 void SlotsQHeaderView::geometriesChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "geometriesChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQHeaderView::geometriesChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionAutoResize ( int logicalIndex, QHeaderView::ResizeMode mode )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionAutoResize(int,QHeaderView::ResizeMode)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQHeaderView::sectionAutoResize ( int logicalIndex, QHeaderView::Resize
     hb_itemRelease( plogicalIndex );
     hb_itemRelease( pmode );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionClicked ( int logicalIndex )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionClicked(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQHeaderView::sectionClicked ( int logicalIndex )
     hb_itemRelease( psender );
     hb_itemRelease( plogicalIndex );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionCountChanged ( int oldCount, int newCount )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionCountChanged(int,int)" );
   if( cb )
@@ -82,12 +75,10 @@ void SlotsQHeaderView::sectionCountChanged ( int oldCount, int newCount )
     hb_itemRelease( poldCount );
     hb_itemRelease( pnewCount );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionDoubleClicked ( int logicalIndex )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionDoubleClicked(int)" );
   if( cb )
@@ -98,12 +89,10 @@ void SlotsQHeaderView::sectionDoubleClicked ( int logicalIndex )
     hb_itemRelease( psender );
     hb_itemRelease( plogicalIndex );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionEntered ( int logicalIndex )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionEntered(int)" );
   if( cb )
@@ -114,12 +103,10 @@ void SlotsQHeaderView::sectionEntered ( int logicalIndex )
     hb_itemRelease( psender );
     hb_itemRelease( plogicalIndex );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionHandleDoubleClicked ( int logicalIndex )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionHandleDoubleClicked(int)" );
   if( cb )
@@ -130,12 +117,10 @@ void SlotsQHeaderView::sectionHandleDoubleClicked ( int logicalIndex )
     hb_itemRelease( psender );
     hb_itemRelease( plogicalIndex );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionMoved ( int logicalIndex, int oldVisualIndex, int newVisualIndex )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionMoved(int,int,int)" );
   if( cb )
@@ -150,12 +135,10 @@ void SlotsQHeaderView::sectionMoved ( int logicalIndex, int oldVisualIndex, int 
     hb_itemRelease( poldVisualIndex );
     hb_itemRelease( pnewVisualIndex );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionPressed ( int logicalIndex )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionPressed(int)" );
   if( cb )
@@ -166,12 +149,10 @@ void SlotsQHeaderView::sectionPressed ( int logicalIndex )
     hb_itemRelease( psender );
     hb_itemRelease( plogicalIndex );
   }
-#endif
 }
 
 void SlotsQHeaderView::sectionResized ( int logicalIndex, int oldSize, int newSize )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionResized(int,int,int)" );
   if( cb )
@@ -186,12 +167,10 @@ void SlotsQHeaderView::sectionResized ( int logicalIndex, int oldSize, int newSi
     hb_itemRelease( poldSize );
     hb_itemRelease( pnewSize );
   }
-#endif
 }
 
 void SlotsQHeaderView::sortIndicatorChanged ( int logicalIndex, Qt::SortOrder order )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sortIndicatorChanged(int,Qt::SortOrder)" );
   if( cb )
@@ -204,12 +183,10 @@ void SlotsQHeaderView::sortIndicatorChanged ( int logicalIndex, Qt::SortOrder or
     hb_itemRelease( plogicalIndex );
     hb_itemRelease( porder );
   }
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -266,14 +243,10 @@ HB_FUNC( QHEADERVIEW_ONGEOMETRIESCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONAUTORESIZE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -330,14 +303,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONAUTORESIZE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -394,14 +363,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -458,14 +423,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -522,14 +483,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -586,14 +543,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -650,14 +603,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -714,14 +663,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -778,14 +723,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONRESIZED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -842,14 +783,10 @@ HB_FUNC( QHEADERVIEW_ONSECTIONRESIZED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHeaderView(QCoreApplication::instance());
@@ -906,8 +843,4 @@ HB_FUNC( QHEADERVIEW_ONSORTINDICATORCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

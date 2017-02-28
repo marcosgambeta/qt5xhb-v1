@@ -21,7 +21,6 @@ SlotsQMdiSubWindow::~SlotsQMdiSubWindow()
 
 void SlotsQMdiSubWindow::aboutToActivate ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToActivate()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQMdiSubWindow::aboutToActivate ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMdiSubWindow::windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQMdiSubWindow::windowStateChanged ( Qt::WindowStates oldState, Qt::Win
     hb_itemRelease( poldState );
     hb_itemRelease( pnewState );
   }
-#endif
 }
 
 HB_FUNC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMdiSubWindow(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMdiSubWindow(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

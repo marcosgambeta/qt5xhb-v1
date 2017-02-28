@@ -21,7 +21,6 @@ SlotsQCompleter::~SlotsQCompleter()
 
 void SlotsQCompleter::activated ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCompleter::activated ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQCompleter::activated ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQCompleter::activated ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQCompleter::highlighted ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQCompleter::highlighted ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQCompleter::highlighted ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QModelIndex)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQCompleter::highlighted ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 HB_FUNC( QCOMPLETER_ONACTIVATED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCompleter(QCoreApplication::instance());
@@ -142,14 +133,10 @@ HB_FUNC( QCOMPLETER_ONACTIVATED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMPLETER_ONACTIVATED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCompleter(QCoreApplication::instance());
@@ -206,14 +193,10 @@ HB_FUNC( QCOMPLETER_ONACTIVATED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCompleter(QCoreApplication::instance());
@@ -270,14 +253,10 @@ HB_FUNC( QCOMPLETER_ONHIGHLIGHTED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCompleter(QCoreApplication::instance());
@@ -334,8 +313,4 @@ HB_FUNC( QCOMPLETER_ONHIGHLIGHTED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

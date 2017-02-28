@@ -21,7 +21,6 @@ SlotsQCalendarWidget::~SlotsQCalendarWidget()
 
 void SlotsQCalendarWidget::activated ( const QDate & date )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QDate)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCalendarWidget::activated ( const QDate & date )
     hb_itemRelease( psender );
     hb_itemRelease( pdate );
   }
-#endif
 }
 
 void SlotsQCalendarWidget::clicked ( const QDate & date )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QDate)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQCalendarWidget::clicked ( const QDate & date )
     hb_itemRelease( psender );
     hb_itemRelease( pdate );
   }
-#endif
 }
 
 void SlotsQCalendarWidget::currentPageChanged ( int year, int month )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentPageChanged(int,int)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQCalendarWidget::currentPageChanged ( int year, int month )
     hb_itemRelease( pyear );
     hb_itemRelease( pmonth );
   }
-#endif
 }
 
 void SlotsQCalendarWidget::selectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQCalendarWidget::selectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QCALENDARWIDGET_ONACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCalendarWidget(QCoreApplication::instance());
@@ -142,14 +133,10 @@ HB_FUNC( QCALENDARWIDGET_ONACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCALENDARWIDGET_ONCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCalendarWidget(QCoreApplication::instance());
@@ -206,14 +193,10 @@ HB_FUNC( QCALENDARWIDGET_ONCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCalendarWidget(QCoreApplication::instance());
@@ -270,14 +253,10 @@ HB_FUNC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCalendarWidget(QCoreApplication::instance());
@@ -334,8 +313,4 @@ HB_FUNC( QCALENDARWIDGET_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

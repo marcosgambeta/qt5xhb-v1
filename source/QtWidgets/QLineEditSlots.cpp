@@ -21,7 +21,6 @@ SlotsQLineEdit::~SlotsQLineEdit()
 
 void SlotsQLineEdit::cursorPositionChanged ( int iold, int inew )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged(int,int)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQLineEdit::cursorPositionChanged ( int iold, int inew )
     hb_itemRelease( piold );
     hb_itemRelease( pinew );
   }
-#endif
 }
 
 void SlotsQLineEdit::editingFinished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQLineEdit::editingFinished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQLineEdit::returnPressed ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "returnPressed()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQLineEdit::returnPressed ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQLineEdit::selectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQLineEdit::selectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQLineEdit::textChanged ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged(QString)" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQLineEdit::textChanged ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQLineEdit::textEdited ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textEdited(QString)" );
   if( cb )
@@ -108,12 +97,10 @@ void SlotsQLineEdit::textEdited ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 HB_FUNC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLineEdit(QCoreApplication::instance());
@@ -170,14 +157,10 @@ HB_FUNC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLINEEDIT_ONEDITINGFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLineEdit(QCoreApplication::instance());
@@ -234,14 +217,10 @@ HB_FUNC( QLINEEDIT_ONEDITINGFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLINEEDIT_ONRETURNPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLineEdit(QCoreApplication::instance());
@@ -298,14 +277,10 @@ HB_FUNC( QLINEEDIT_ONRETURNPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLINEEDIT_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLineEdit(QCoreApplication::instance());
@@ -362,14 +337,10 @@ HB_FUNC( QLINEEDIT_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLINEEDIT_ONTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLineEdit(QCoreApplication::instance());
@@ -426,14 +397,10 @@ HB_FUNC( QLINEEDIT_ONTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLINEEDIT_ONTEXTEDITED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLineEdit(QCoreApplication::instance());
@@ -490,8 +457,4 @@ HB_FUNC( QLINEEDIT_ONTEXTEDITED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

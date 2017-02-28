@@ -44,9 +44,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMouseEventTransition>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -70,9 +68,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMouseEventTransition>
-#endif
 #endif
 
 #include <QPainterPath>
@@ -82,11 +78,9 @@ QMouseEventTransition ( QState * sourceState = 0 )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QMouseEventTransition * o = new QMouseEventTransition ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -94,14 +88,12 @@ QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton but
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
   QMouseEventTransition * o = new QMouseEventTransition ( par1,  (QEvent::Type) par2,  (Qt::MouseButton) par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -126,7 +118,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -138,7 +129,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

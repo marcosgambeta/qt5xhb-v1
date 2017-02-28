@@ -21,7 +21,6 @@ SlotsQStackedLayout::~SlotsQStackedLayout()
 
 void SlotsQStackedLayout::setCurrentIndex ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentIndex(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQStackedLayout::setCurrentIndex ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQStackedLayout::setCurrentWidget (QWidget * widget )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQStackedLayout::setCurrentWidget (QWidget * widget )
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
   }
-#endif
 }
 
 HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTINDEX )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStackedLayout(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTINDEX )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStackedLayout(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

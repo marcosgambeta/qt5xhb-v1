@@ -35,9 +35,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTimeEdit>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -61,9 +59,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTimeEdit>
-#endif
 #endif
 
 /*
@@ -71,11 +67,9 @@ QTimeEdit ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMEEDIT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QTimeEdit * o = new QTimeEdit ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -83,12 +77,10 @@ QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMEEDIT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QTimeEdit * o = new QTimeEdit ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -113,7 +105,6 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW )
 
 HB_FUNC_STATIC( QTIMEEDIT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTimeEdit * obj = (QTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -125,7 +116,6 @@ HB_FUNC_STATIC( QTIMEEDIT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

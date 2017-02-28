@@ -21,7 +21,6 @@ SlotsQGraphicsDropShadowEffect::~SlotsQGraphicsDropShadowEffect()
 
 void SlotsQGraphicsDropShadowEffect::blurRadiusChanged ( qreal blurRadius )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQGraphicsDropShadowEffect::blurRadiusChanged ( qreal blurRadius )
     hb_itemRelease( psender );
     hb_itemRelease( pblurRadius );
   }
-#endif
 }
 
 void SlotsQGraphicsDropShadowEffect::colorChanged ( const QColor & color )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQGraphicsDropShadowEffect::colorChanged ( const QColor & color )
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
-#endif
 }
 
 void SlotsQGraphicsDropShadowEffect::offsetChanged ( const QPointF & offset )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "offsetChanged(QPointF)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQGraphicsDropShadowEffect::offsetChanged ( const QPointF & offset )
     hb_itemRelease( psender );
     hb_itemRelease( poffset );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
@@ -126,14 +119,10 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
@@ -190,14 +179,10 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
@@ -254,8 +239,4 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

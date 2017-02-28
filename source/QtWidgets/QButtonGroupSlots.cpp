@@ -21,7 +21,6 @@ SlotsQButtonGroup::~SlotsQButtonGroup()
 
 void SlotsQButtonGroup::buttonClicked ( QAbstractButton * button )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQButtonGroup::buttonClicked ( QAbstractButton * button )
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
-#endif
 }
 
 void SlotsQButtonGroup::buttonClicked ( int id )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQButtonGroup::buttonClicked ( int id )
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
-#endif
 }
 
 void SlotsQButtonGroup::buttonPressed ( QAbstractButton * button )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonPressed(QAbstractButton*)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQButtonGroup::buttonPressed ( QAbstractButton * button )
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
-#endif
 }
 
 void SlotsQButtonGroup::buttonPressed ( int id )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonPressed(int)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQButtonGroup::buttonPressed ( int id )
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
-#endif
 }
 
 void SlotsQButtonGroup::buttonReleased ( QAbstractButton * button )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonReleased(QAbstractButton*)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQButtonGroup::buttonReleased ( QAbstractButton * button )
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
-#endif
 }
 
 void SlotsQButtonGroup::buttonReleased ( int id )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonReleased(int)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQButtonGroup::buttonReleased ( int id )
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
-#endif
 }
 
 HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQButtonGroup(QCoreApplication::instance());
@@ -174,14 +161,10 @@ HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQButtonGroup(QCoreApplication::instance());
@@ -238,14 +221,10 @@ HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQButtonGroup(QCoreApplication::instance());
@@ -302,14 +281,10 @@ HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQButtonGroup(QCoreApplication::instance());
@@ -366,14 +341,10 @@ HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQButtonGroup(QCoreApplication::instance());
@@ -430,14 +401,10 @@ HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQButtonGroup(QCoreApplication::instance());
@@ -494,8 +461,4 @@ HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

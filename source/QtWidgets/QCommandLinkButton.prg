@@ -40,9 +40,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCommandLinkButton>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -66,9 +64,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCommandLinkButton>
-#endif
 #endif
 
 /*
@@ -76,11 +72,9 @@ QCommandLinkButton ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QCommandLinkButton * o = new QCommandLinkButton ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -88,12 +82,10 @@ QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QCommandLinkButton * o = new QCommandLinkButton ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -101,13 +93,11 @@ QCommandLinkButton ( const QString & text, const QString & description, QWidget 
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
   QCommandLinkButton * o = new QCommandLinkButton ( par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -137,7 +127,6 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -149,7 +138,6 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -42,9 +42,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTreeWidgetItemIterator>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -68,9 +66,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTreeWidgetItemIterator>
-#endif
 #endif
 
 /*
@@ -78,11 +74,9 @@ QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
 */
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTreeWidgetItemIterator * par1 = (QTreeWidgetItemIterator *) _qt5xhb_itemGetPtr(1);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -90,12 +84,10 @@ QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
 */
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( par1,  (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -103,12 +95,10 @@ QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
 */
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( par1,  (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -138,7 +128,6 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -150,7 +139,6 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

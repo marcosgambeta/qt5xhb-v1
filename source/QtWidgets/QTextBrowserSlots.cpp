@@ -21,7 +21,6 @@ SlotsQTextBrowser::~SlotsQTextBrowser()
 
 void SlotsQTextBrowser::anchorClicked ( const QUrl & link )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "anchorClicked(QUrl)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQTextBrowser::anchorClicked ( const QUrl & link )
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
-#endif
 }
 
 void SlotsQTextBrowser::backwardAvailable ( bool available )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "backwardAvailable(bool)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQTextBrowser::backwardAvailable ( bool available )
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQTextBrowser::forwardAvailable ( bool available )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "forwardAvailable(bool)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQTextBrowser::forwardAvailable ( bool available )
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQTextBrowser::highlighted ( const QUrl & link )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QUrl)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQTextBrowser::highlighted ( const QUrl & link )
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
-#endif
 }
 
 void SlotsQTextBrowser::highlighted ( const QString & link )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQTextBrowser::highlighted ( const QString & link )
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
-#endif
 }
 
 void SlotsQTextBrowser::historyChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "historyChanged()" );
   if( cb )
@@ -110,12 +99,10 @@ void SlotsQTextBrowser::historyChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQTextBrowser::sourceChanged ( const QUrl & src )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged(QUrl)" );
   if( cb )
@@ -126,12 +113,10 @@ void SlotsQTextBrowser::sourceChanged ( const QUrl & src )
     hb_itemRelease( psender );
     hb_itemRelease( psrc );
   }
-#endif
 }
 
 HB_FUNC( QTEXTBROWSER_ONANCHORCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextBrowser(QCoreApplication::instance());
@@ -188,14 +173,10 @@ HB_FUNC( QTEXTBROWSER_ONANCHORCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextBrowser(QCoreApplication::instance());
@@ -252,14 +233,10 @@ HB_FUNC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextBrowser(QCoreApplication::instance());
@@ -316,14 +293,10 @@ HB_FUNC( QTEXTBROWSER_ONFORWARDAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextBrowser(QCoreApplication::instance());
@@ -380,14 +353,10 @@ HB_FUNC( QTEXTBROWSER_ONHIGHLIGHTED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextBrowser(QCoreApplication::instance());
@@ -444,14 +413,10 @@ HB_FUNC( QTEXTBROWSER_ONHIGHLIGHTED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextBrowser(QCoreApplication::instance());
@@ -508,14 +473,10 @@ HB_FUNC( QTEXTBROWSER_ONHISTORYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTBROWSER_ONSOURCECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextBrowser(QCoreApplication::instance());
@@ -572,8 +533,4 @@ HB_FUNC( QTEXTBROWSER_ONSOURCECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

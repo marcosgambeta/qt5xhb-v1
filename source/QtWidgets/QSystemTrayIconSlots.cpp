@@ -21,7 +21,6 @@ SlotsQSystemTrayIcon::~SlotsQSystemTrayIcon()
 
 void SlotsQSystemTrayIcon::activated(QSystemTrayIcon::ActivationReason reason)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQSystemTrayIcon::activated(QSystemTrayIcon::ActivationReason reason)
     hb_itemRelease( psender );
     hb_itemRelease( preason );
   }
-#endif
 }
 
 void SlotsQSystemTrayIcon::messageClicked()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQSystemTrayIcon::messageClicked()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QSYSTEMTRAYICON_ONACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSystemTrayIcon(QCoreApplication::instance());
@@ -108,14 +103,10 @@ HB_FUNC( QSYSTEMTRAYICON_ONACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSystemTrayIcon(QCoreApplication::instance());
@@ -172,8 +163,4 @@ HB_FUNC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQGraphicsOpacityEffect::~SlotsQGraphicsOpacityEffect()
 
 void SlotsQGraphicsOpacityEffect::opacityChanged ( qreal opacity )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged(qreal)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQGraphicsOpacityEffect::opacityChanged ( qreal opacity )
     hb_itemRelease( psender );
     hb_itemRelease( popacity );
   }
-#endif
 }
 
 void SlotsQGraphicsOpacityEffect::opacityMaskChanged ( const QBrush & mask )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQGraphicsOpacityEffect::opacityMaskChanged ( const QBrush & mask )
     hb_itemRelease( psender );
     hb_itemRelease( pmask );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsOpacityEffect(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsOpacityEffect(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

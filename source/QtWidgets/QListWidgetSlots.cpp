@@ -21,7 +21,6 @@ SlotsQListWidget::~SlotsQListWidget()
 
 void SlotsQListWidget::currentItemChanged ( QListWidgetItem * current, QListWidgetItem * previous )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQListWidget::currentItemChanged ( QListWidgetItem * current, QListWidg
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
-#endif
 }
 
 void SlotsQListWidget::currentRowChanged ( int currentRow )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(int)" );
   if( cb )
@@ -50,12 +47,10 @@ void SlotsQListWidget::currentRowChanged ( int currentRow )
     hb_itemRelease( psender );
     hb_itemRelease( pcurrentRow );
   }
-#endif
 }
 
 void SlotsQListWidget::currentTextChanged ( const QString & currentText )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentTextChanged(QString)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQListWidget::currentTextChanged ( const QString & currentText )
     hb_itemRelease( psender );
     hb_itemRelease( pcurrentText );
   }
-#endif
 }
 
 void SlotsQListWidget::itemActivated ( QListWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QListWidgetItem*)" );
   if( cb )
@@ -82,12 +75,10 @@ void SlotsQListWidget::itemActivated ( QListWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQListWidget::itemChanged ( QListWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QListWidgetItem*)" );
   if( cb )
@@ -98,12 +89,10 @@ void SlotsQListWidget::itemChanged ( QListWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQListWidget::itemClicked ( QListWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QListWidgetItem*)" );
   if( cb )
@@ -114,12 +103,10 @@ void SlotsQListWidget::itemClicked ( QListWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQListWidget::itemDoubleClicked ( QListWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QListWidgetItem*)" );
   if( cb )
@@ -130,12 +117,10 @@ void SlotsQListWidget::itemDoubleClicked ( QListWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQListWidget::itemEntered ( QListWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QListWidgetItem*)" );
   if( cb )
@@ -146,12 +131,10 @@ void SlotsQListWidget::itemEntered ( QListWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQListWidget::itemPressed ( QListWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QListWidgetItem*)" );
   if( cb )
@@ -162,12 +145,10 @@ void SlotsQListWidget::itemPressed ( QListWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQListWidget::itemSelectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
   if( cb )
@@ -176,12 +157,10 @@ void SlotsQListWidget::itemSelectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -238,14 +217,10 @@ HB_FUNC( QLISTWIDGET_ONCURRENTITEMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -302,14 +277,10 @@ HB_FUNC( QLISTWIDGET_ONCURRENTROWCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -366,14 +337,10 @@ HB_FUNC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -430,14 +397,10 @@ HB_FUNC( QLISTWIDGET_ONITEMACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -494,14 +457,10 @@ HB_FUNC( QLISTWIDGET_ONITEMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -558,14 +517,10 @@ HB_FUNC( QLISTWIDGET_ONITEMCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -622,14 +577,10 @@ HB_FUNC( QLISTWIDGET_ONITEMDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -686,14 +637,10 @@ HB_FUNC( QLISTWIDGET_ONITEMENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -750,14 +697,10 @@ HB_FUNC( QLISTWIDGET_ONITEMPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQListWidget(QCoreApplication::instance());
@@ -814,8 +757,4 @@ HB_FUNC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

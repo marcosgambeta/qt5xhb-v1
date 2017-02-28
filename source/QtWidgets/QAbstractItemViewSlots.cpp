@@ -21,7 +21,6 @@ SlotsQAbstractItemView::~SlotsQAbstractItemView()
 
 void SlotsQAbstractItemView::activated ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAbstractItemView::activated ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQAbstractItemView::clicked ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QModelIndex)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQAbstractItemView::clicked ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQAbstractItemView::doubleClicked ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QModelIndex)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQAbstractItemView::doubleClicked ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQAbstractItemView::entered ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "entered(QModelIndex)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQAbstractItemView::entered ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQAbstractItemView::pressed ( const QModelIndex & index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QModelIndex)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQAbstractItemView::pressed ( const QModelIndex & index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQAbstractItemView::viewportEntered ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "viewportEntered()" );
   if( cb )
@@ -110,12 +99,10 @@ void SlotsQAbstractItemView::viewportEntered ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemView(QCoreApplication::instance());
@@ -172,14 +159,10 @@ HB_FUNC( QABSTRACTITEMVIEW_ONACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMVIEW_ONCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemView(QCoreApplication::instance());
@@ -236,14 +219,10 @@ HB_FUNC( QABSTRACTITEMVIEW_ONCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemView(QCoreApplication::instance());
@@ -300,14 +279,10 @@ HB_FUNC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMVIEW_ONENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemView(QCoreApplication::instance());
@@ -364,14 +339,10 @@ HB_FUNC( QABSTRACTITEMVIEW_ONENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMVIEW_ONPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemView(QCoreApplication::instance());
@@ -428,14 +399,10 @@ HB_FUNC( QABSTRACTITEMVIEW_ONPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemView(QCoreApplication::instance());
@@ -492,8 +459,4 @@ HB_FUNC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQSplitter::~SlotsQSplitter()
 
 void SlotsQSplitter::splitterMoved ( int pos, int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "splitterMoved(int,int)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQSplitter::splitterMoved ( int pos, int index )
     hb_itemRelease( ppos );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 HB_FUNC( QSPLITTER_ONSPLITTERMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSplitter(QCoreApplication::instance());
@@ -96,8 +93,4 @@ HB_FUNC( QSPLITTER_ONSPLITTERMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQTableWidget::~SlotsQTableWidget()
 
 void SlotsQTableWidget::cellActivated ( int row, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellActivated(int,int)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQTableWidget::cellActivated ( int row, int column )
     hb_itemRelease( prow );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTableWidget::cellChanged ( int row, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellChanged(int,int)" );
   if( cb )
@@ -52,12 +49,10 @@ void SlotsQTableWidget::cellChanged ( int row, int column )
     hb_itemRelease( prow );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTableWidget::cellClicked ( int row, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellClicked(int,int)" );
   if( cb )
@@ -70,12 +65,10 @@ void SlotsQTableWidget::cellClicked ( int row, int column )
     hb_itemRelease( prow );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTableWidget::cellDoubleClicked ( int row, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellDoubleClicked(int,int)" );
   if( cb )
@@ -88,12 +81,10 @@ void SlotsQTableWidget::cellDoubleClicked ( int row, int column )
     hb_itemRelease( prow );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTableWidget::cellEntered ( int row, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellEntered(int,int)" );
   if( cb )
@@ -106,12 +97,10 @@ void SlotsQTableWidget::cellEntered ( int row, int column )
     hb_itemRelease( prow );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTableWidget::cellPressed ( int row, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellPressed(int,int)" );
   if( cb )
@@ -124,12 +113,10 @@ void SlotsQTableWidget::cellPressed ( int row, int column )
     hb_itemRelease( prow );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTableWidget::currentCellChanged ( int currentRow, int currentColumn, int previousRow, int previousColumn )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentCellChanged(int,int,int,int)" );
   if( cb )
@@ -146,12 +133,10 @@ void SlotsQTableWidget::currentCellChanged ( int currentRow, int currentColumn, 
     hb_itemRelease( ppreviousRow );
     hb_itemRelease( ppreviousColumn );
   }
-#endif
 }
 
 void SlotsQTableWidget::currentItemChanged ( QTableWidgetItem * current, QTableWidgetItem * previous )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
   if( cb )
@@ -164,12 +149,10 @@ void SlotsQTableWidget::currentItemChanged ( QTableWidgetItem * current, QTableW
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
-#endif
 }
 
 void SlotsQTableWidget::itemActivated ( QTableWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QTableWidgetItem*)" );
   if( cb )
@@ -180,12 +163,10 @@ void SlotsQTableWidget::itemActivated ( QTableWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTableWidget::itemChanged ( QTableWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QTableWidgetItem*)" );
   if( cb )
@@ -196,12 +177,10 @@ void SlotsQTableWidget::itemChanged ( QTableWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTableWidget::itemClicked ( QTableWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QTableWidgetItem*)" );
   if( cb )
@@ -212,12 +191,10 @@ void SlotsQTableWidget::itemClicked ( QTableWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTableWidget::itemDoubleClicked ( QTableWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QTableWidgetItem*)" );
   if( cb )
@@ -228,12 +205,10 @@ void SlotsQTableWidget::itemDoubleClicked ( QTableWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTableWidget::itemEntered ( QTableWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QTableWidgetItem*)" );
   if( cb )
@@ -244,12 +219,10 @@ void SlotsQTableWidget::itemEntered ( QTableWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTableWidget::itemPressed ( QTableWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QTableWidgetItem*)" );
   if( cb )
@@ -260,12 +233,10 @@ void SlotsQTableWidget::itemPressed ( QTableWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTableWidget::itemSelectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
   if( cb )
@@ -274,12 +245,10 @@ void SlotsQTableWidget::itemSelectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -336,14 +305,10 @@ HB_FUNC( QTABLEWIDGET_ONCELLACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -400,14 +365,10 @@ HB_FUNC( QTABLEWIDGET_ONCELLCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -464,14 +425,10 @@ HB_FUNC( QTABLEWIDGET_ONCELLCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -528,14 +485,10 @@ HB_FUNC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -592,14 +545,10 @@ HB_FUNC( QTABLEWIDGET_ONCELLENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -656,14 +605,10 @@ HB_FUNC( QTABLEWIDGET_ONCELLPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -720,14 +665,10 @@ HB_FUNC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -784,14 +725,10 @@ HB_FUNC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -848,14 +785,10 @@ HB_FUNC( QTABLEWIDGET_ONITEMACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -912,14 +845,10 @@ HB_FUNC( QTABLEWIDGET_ONITEMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -976,14 +905,10 @@ HB_FUNC( QTABLEWIDGET_ONITEMCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -1040,14 +965,10 @@ HB_FUNC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -1104,14 +1025,10 @@ HB_FUNC( QTABLEWIDGET_ONITEMENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -1168,14 +1085,10 @@ HB_FUNC( QTABLEWIDGET_ONITEMPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTableWidget(QCoreApplication::instance());
@@ -1232,8 +1145,4 @@ HB_FUNC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQApplication::~SlotsQApplication()
 
 void SlotsQApplication::aboutToReleaseGpuResources()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToReleaseGpuResources()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQApplication::aboutToReleaseGpuResources()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQApplication::aboutToUseGpuResources()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToUseGpuResources()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQApplication::aboutToUseGpuResources()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQApplication::commitDataRequest(QSessionManager & manager)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "commitDataRequest(QSessionManager)" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQApplication::commitDataRequest(QSessionManager & manager)
     hb_itemRelease( psender );
     hb_itemRelease( pmanager );
   }
-#endif
 }
 
 void SlotsQApplication::focusChanged(QWidget * old, QWidget * now)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusChanged(QWidget*,QWidget*)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQApplication::focusChanged(QWidget * old, QWidget * now)
     hb_itemRelease( pold );
     hb_itemRelease( pnow );
   }
-#endif
 }
 
 void SlotsQApplication::fontDatabaseChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQApplication::fontDatabaseChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQApplication::lastWindowClosed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
   if( cb )
@@ -106,12 +95,10 @@ void SlotsQApplication::lastWindowClosed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQApplication::saveStateRequest(QSessionManager & manager)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "saveStateRequest(QSessionManager)" );
   if( cb )
@@ -122,12 +109,10 @@ void SlotsQApplication::saveStateRequest(QSessionManager & manager)
     hb_itemRelease( psender );
     hb_itemRelease( pmanager );
   }
-#endif
 }
 
 HB_FUNC( QAPPLICATION_ONABOUTTORELEASEGPURESOURCES )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQApplication(QCoreApplication::instance());
@@ -184,14 +169,10 @@ HB_FUNC( QAPPLICATION_ONABOUTTORELEASEGPURESOURCES )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAPPLICATION_ONABOUTTOUSEGPURESOURCES )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQApplication(QCoreApplication::instance());
@@ -248,14 +229,10 @@ HB_FUNC( QAPPLICATION_ONABOUTTOUSEGPURESOURCES )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAPPLICATION_ONCOMMITDATAREQUEST )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQApplication(QCoreApplication::instance());
@@ -312,14 +289,10 @@ HB_FUNC( QAPPLICATION_ONCOMMITDATAREQUEST )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAPPLICATION_ONFOCUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQApplication(QCoreApplication::instance());
@@ -376,14 +349,10 @@ HB_FUNC( QAPPLICATION_ONFOCUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAPPLICATION_ONFONTDATABASECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQApplication(QCoreApplication::instance());
@@ -440,14 +409,10 @@ HB_FUNC( QAPPLICATION_ONFONTDATABASECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAPPLICATION_ONLASTWINDOWCLOSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQApplication(QCoreApplication::instance());
@@ -504,14 +469,10 @@ HB_FUNC( QAPPLICATION_ONLASTWINDOWCLOSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAPPLICATION_ONSAVESTATEREQUEST )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQApplication(QCoreApplication::instance());
@@ -568,8 +529,4 @@ HB_FUNC( QAPPLICATION_ONSAVESTATEREQUEST )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

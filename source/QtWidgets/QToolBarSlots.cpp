@@ -21,7 +21,6 @@ SlotsQToolBar::~SlotsQToolBar()
 
 void SlotsQToolBar::actionTriggered ( QAction * action )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actionTriggered(QAction*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQToolBar::actionTriggered ( QAction * action )
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 void SlotsQToolBar::allowedAreasChanged ( Qt::ToolBarAreas allowedAreas )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "allowedAreasChanged(Qt::ToolBarAreas)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQToolBar::allowedAreasChanged ( Qt::ToolBarAreas allowedAreas )
     hb_itemRelease( psender );
     hb_itemRelease( pallowedAreas );
   }
-#endif
 }
 
 void SlotsQToolBar::iconSizeChanged ( const QSize & iconSize )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQToolBar::iconSizeChanged ( const QSize & iconSize )
     hb_itemRelease( psender );
     hb_itemRelease( piconSize );
   }
-#endif
 }
 
 void SlotsQToolBar::movableChanged ( bool movable )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "movableChanged(bool)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQToolBar::movableChanged ( bool movable )
     hb_itemRelease( psender );
     hb_itemRelease( pmovable );
   }
-#endif
 }
 
 void SlotsQToolBar::orientationChanged ( Qt::Orientation orientation )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "orientationChanged(Qt::Orientation)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQToolBar::orientationChanged ( Qt::Orientation orientation )
     hb_itemRelease( psender );
     hb_itemRelease( porientation );
   }
-#endif
 }
 
 void SlotsQToolBar::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQToolBar::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle
     hb_itemRelease( psender );
     hb_itemRelease( ptoolButtonStyle );
   }
-#endif
 }
 
 void SlotsQToolBar::topLevelChanged ( bool topLevel )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "topLevelChanged(bool)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQToolBar::topLevelChanged ( bool topLevel )
     hb_itemRelease( psender );
     hb_itemRelease( ptopLevel );
   }
-#endif
 }
 
 void SlotsQToolBar::visibilityChanged ( bool visible )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );
   if( cb )
@@ -144,12 +129,10 @@ void SlotsQToolBar::visibilityChanged ( bool visible )
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONACTIONTRIGGERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -206,14 +189,10 @@ HB_FUNC( QTOOLBAR_ONACTIONTRIGGERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -270,14 +249,10 @@ HB_FUNC( QTOOLBAR_ONALLOWEDAREASCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONICONSIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -334,14 +309,10 @@ HB_FUNC( QTOOLBAR_ONICONSIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONMOVABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -398,14 +369,10 @@ HB_FUNC( QTOOLBAR_ONMOVABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONORIENTATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -462,14 +429,10 @@ HB_FUNC( QTOOLBAR_ONORIENTATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -526,14 +489,10 @@ HB_FUNC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONTOPLEVELCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -590,14 +549,10 @@ HB_FUNC( QTOOLBAR_ONTOPLEVELCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTOOLBAR_ONVISIBILITYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBar(QCoreApplication::instance());
@@ -654,8 +609,4 @@ HB_FUNC( QTOOLBAR_ONVISIBILITYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

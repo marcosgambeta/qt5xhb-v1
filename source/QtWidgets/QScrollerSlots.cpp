@@ -21,7 +21,6 @@ SlotsQScroller::~SlotsQScroller()
 
 void SlotsQScroller::scrollerPropertiesChanged(const QScrollerProperties & newProperties)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scrollerPropertiesChanged(QScrollerProperties)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQScroller::scrollerPropertiesChanged(const QScrollerProperties & newPr
     hb_itemRelease( psender );
     hb_itemRelease( pnewProperties );
   }
-#endif
 }
 
 void SlotsQScroller::stateChanged(QScroller::State newState)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QScroller::State)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQScroller::stateChanged(QScroller::State newState)
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
   }
-#endif
 }
 
 HB_FUNC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScroller(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCROLLER_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScroller(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QSCROLLER_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

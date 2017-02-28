@@ -21,7 +21,6 @@ SlotsQDoubleSpinBox::~SlotsQDoubleSpinBox()
 
 void SlotsQDoubleSpinBox::valueChanged ( double d )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(double)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDoubleSpinBox::valueChanged ( double d )
     hb_itemRelease( psender );
     hb_itemRelease( pd );
   }
-#endif
 }
 
 void SlotsQDoubleSpinBox::valueChanged ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDoubleSpinBox::valueChanged ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDoubleSpinBox(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDoubleSpinBox(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

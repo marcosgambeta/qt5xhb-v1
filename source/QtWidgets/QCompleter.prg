@@ -77,9 +77,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCompleter>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -103,9 +101,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCompleter>
-#endif
 #endif
 
 #include <QStringList>
@@ -115,11 +111,9 @@ QCompleter ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMPLETER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QCompleter * o = new QCompleter ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -127,12 +121,10 @@ QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMPLETER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QCompleter * o = new QCompleter ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -140,7 +132,6 @@ QCompleter ( const QStringList & list, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMPLETER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QStringList par1;
 PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -153,7 +144,6 @@ par1 << temp;
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QCompleter * o = new QCompleter ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -183,7 +173,6 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
 
 HB_FUNC_STATIC( QCOMPLETER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -195,7 +184,6 @@ HB_FUNC_STATIC( QCOMPLETER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

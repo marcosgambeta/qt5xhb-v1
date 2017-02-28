@@ -48,9 +48,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTableWidgetSelectionRange>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -74,9 +72,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTableWidgetSelectionRange>
-#endif
 #endif
 
 /*
@@ -84,10 +80,8 @@ QTableWidgetSelectionRange()
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange (  );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -95,14 +89,12 @@ QTableWidgetSelectionRange(int top, int left, int bottom, int right)
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( par1, par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -110,11 +102,9 @@ QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetSelectionRange * par1 = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtr(1);
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -144,7 +134,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -156,7 +145,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

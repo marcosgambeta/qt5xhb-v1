@@ -21,7 +21,6 @@ SlotsQUndoGroup::~SlotsQUndoGroup()
 
 void SlotsQUndoGroup::activeStackChanged(QUndoStack * stack)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeStackChanged(QUndoStack*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQUndoGroup::activeStackChanged(QUndoStack * stack)
     hb_itemRelease( psender );
     hb_itemRelease( pstack );
   }
-#endif
 }
 
 void SlotsQUndoGroup::canRedoChanged(bool canRedo)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "canRedoChanged(bool)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQUndoGroup::canRedoChanged(bool canRedo)
     hb_itemRelease( psender );
     hb_itemRelease( pcanRedo );
   }
-#endif
 }
 
 void SlotsQUndoGroup::canUndoChanged(bool canUndo)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "canUndoChanged(bool)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQUndoGroup::canUndoChanged(bool canUndo)
     hb_itemRelease( psender );
     hb_itemRelease( pcanUndo );
   }
-#endif
 }
 
 void SlotsQUndoGroup::cleanChanged(bool clean)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cleanChanged(bool)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQUndoGroup::cleanChanged(bool clean)
     hb_itemRelease( psender );
     hb_itemRelease( pclean );
   }
-#endif
 }
 
 void SlotsQUndoGroup::indexChanged(int idx)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexChanged(int)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQUndoGroup::indexChanged(int idx)
     hb_itemRelease( psender );
     hb_itemRelease( pidx );
   }
-#endif
 }
 
 void SlotsQUndoGroup::redoTextChanged(const QString & redoText)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "redoTextChanged(QString)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQUndoGroup::redoTextChanged(const QString & redoText)
     hb_itemRelease( psender );
     hb_itemRelease( predoText );
   }
-#endif
 }
 
 void SlotsQUndoGroup::undoTextChanged(const QString & undoText)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "undoTextChanged(QString)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQUndoGroup::undoTextChanged(const QString & undoText)
     hb_itemRelease( psender );
     hb_itemRelease( pundoText );
   }
-#endif
 }
 
 HB_FUNC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQUndoGroup(QCoreApplication::instance());
@@ -190,14 +175,10 @@ HB_FUNC( QUNDOGROUP_ONACTIVESTACKCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QUNDOGROUP_ONCANREDOCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQUndoGroup(QCoreApplication::instance());
@@ -254,14 +235,10 @@ HB_FUNC( QUNDOGROUP_ONCANREDOCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QUNDOGROUP_ONCANUNDOCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQUndoGroup(QCoreApplication::instance());
@@ -318,14 +295,10 @@ HB_FUNC( QUNDOGROUP_ONCANUNDOCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QUNDOGROUP_ONCLEANCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQUndoGroup(QCoreApplication::instance());
@@ -382,14 +355,10 @@ HB_FUNC( QUNDOGROUP_ONCLEANCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QUNDOGROUP_ONINDEXCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQUndoGroup(QCoreApplication::instance());
@@ -446,14 +415,10 @@ HB_FUNC( QUNDOGROUP_ONINDEXCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QUNDOGROUP_ONREDOTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQUndoGroup(QCoreApplication::instance());
@@ -510,14 +475,10 @@ HB_FUNC( QUNDOGROUP_ONREDOTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQUndoGroup(QCoreApplication::instance());
@@ -574,8 +535,4 @@ HB_FUNC( QUNDOGROUP_ONUNDOTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

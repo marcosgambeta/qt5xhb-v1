@@ -48,9 +48,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QItemEditorFactory>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -74,9 +72,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QItemEditorFactory>
-#endif
 #endif
 
 /*
@@ -84,16 +80,13 @@ QItemEditorFactory()
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QItemEditorFactory * o = new QItemEditorFactory (  );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -105,7 +98,6 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

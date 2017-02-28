@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAccessibleWidget>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAccessibleWidget>
-#endif
 #endif
 
 /*
@@ -90,13 +86,11 @@ QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const Q
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QAccessibleWidget * o = new QAccessibleWidget ( par1,  (QAccessible::Role) par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 

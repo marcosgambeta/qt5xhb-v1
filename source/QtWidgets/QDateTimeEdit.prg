@@ -95,9 +95,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDateTimeEdit>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -121,9 +119,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDateTimeEdit>
-#endif
 #endif
 
 /*
@@ -131,11 +127,9 @@ QDateTimeEdit ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDateTimeEdit * o = new QDateTimeEdit ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -143,12 +137,10 @@ QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDateTimeEdit * o = new QDateTimeEdit ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -156,12 +148,10 @@ QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDateTimeEdit * o = new QDateTimeEdit ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -169,12 +159,10 @@ QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDateTimeEdit * o = new QDateTimeEdit ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -209,7 +197,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 
 HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -221,7 +208,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

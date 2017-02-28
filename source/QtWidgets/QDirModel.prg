@@ -79,9 +79,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDirModel>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -105,9 +103,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDirModel>
-#endif
 #endif
 
 /*
@@ -115,7 +111,6 @@ QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags 
 */
 HB_FUNC_STATIC( QDIRMODEL_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QStringList par1;
 PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -130,7 +125,6 @@ par1 << temp;
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
   QDirModel * o = new QDirModel ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -138,11 +132,9 @@ QDirModel(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QDIRMODEL_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDirModel * o = new QDirModel ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -167,7 +159,6 @@ HB_FUNC_STATIC( QDIRMODEL_NEW )
 
 HB_FUNC_STATIC( QDIRMODEL_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDirModel * obj = (QDirModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -179,7 +170,6 @@ HB_FUNC_STATIC( QDIRMODEL_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

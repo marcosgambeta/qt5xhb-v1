@@ -57,9 +57,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSizePolicy>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -83,9 +81,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSizePolicy>
-#endif
 #endif
 
 /*
@@ -93,10 +89,8 @@ QSizePolicy()
 */
 HB_FUNC_STATIC( QSIZEPOLICY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSizePolicy * o = new QSizePolicy (  );
   _qt5xhb_storePointerAndFlag( o, true );
-#endif
 }
 
 /*
@@ -104,13 +98,11 @@ QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
 */
 HB_FUNC_STATIC( QSIZEPOLICY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSizePolicy::DefaultType : hb_parni(3);
   QSizePolicy * o = new QSizePolicy (  (QSizePolicy::Policy) par1,  (QSizePolicy::Policy) par2,  (QSizePolicy::ControlType) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
-#endif
 }
 
 
@@ -135,7 +127,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 
 HB_FUNC_STATIC( QSIZEPOLICY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -147,7 +138,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

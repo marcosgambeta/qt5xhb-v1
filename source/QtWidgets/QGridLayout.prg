@@ -80,9 +80,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGridLayout>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -106,9 +104,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGridLayout>
-#endif
 #endif
 
 /*
@@ -116,11 +112,9 @@ QGridLayout ( QWidget * parent )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QGridLayout * o = new QGridLayout ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -128,10 +122,8 @@ QGridLayout ()
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGridLayout * o = new QGridLayout (  );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -156,7 +148,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -168,7 +159,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

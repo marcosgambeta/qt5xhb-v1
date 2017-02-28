@@ -21,7 +21,6 @@ SlotsQAbstractSlider::~SlotsQAbstractSlider()
 
 void SlotsQAbstractSlider::actionTriggered(int action)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actionTriggered(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAbstractSlider::actionTriggered(int action)
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 void SlotsQAbstractSlider::rangeChanged ( int min, int max )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(int,int)" );
   if( cb )
@@ -50,12 +47,10 @@ void SlotsQAbstractSlider::rangeChanged ( int min, int max )
     hb_itemRelease( pmin );
     hb_itemRelease( pmax );
   }
-#endif
 }
 
 void SlotsQAbstractSlider::sliderMoved ( int value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderMoved(int)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQAbstractSlider::sliderMoved ( int value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQAbstractSlider::sliderPressed ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderPressed()" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQAbstractSlider::sliderPressed ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractSlider::sliderReleased ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderReleased()" );
   if( cb )
@@ -94,12 +85,10 @@ void SlotsQAbstractSlider::sliderReleased ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractSlider::valueChanged ( int value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
@@ -110,12 +99,10 @@ void SlotsQAbstractSlider::valueChanged ( int value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSlider(QCoreApplication::instance());
@@ -172,14 +159,10 @@ HB_FUNC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONRANGECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSlider(QCoreApplication::instance());
@@ -236,14 +219,10 @@ HB_FUNC( QABSTRACTSLIDER_ONRANGECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONSLIDERMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSlider(QCoreApplication::instance());
@@ -300,14 +279,10 @@ HB_FUNC( QABSTRACTSLIDER_ONSLIDERMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSlider(QCoreApplication::instance());
@@ -364,14 +339,10 @@ HB_FUNC( QABSTRACTSLIDER_ONSLIDERPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSlider(QCoreApplication::instance());
@@ -428,14 +399,10 @@ HB_FUNC( QABSTRACTSLIDER_ONSLIDERRELEASED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSlider(QCoreApplication::instance());
@@ -492,8 +459,4 @@ HB_FUNC( QABSTRACTSLIDER_ONVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

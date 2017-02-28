@@ -21,7 +21,6 @@ SlotsQGraphicsColorizeEffect::~SlotsQGraphicsColorizeEffect()
 
 void SlotsQGraphicsColorizeEffect::colorChanged ( const QColor & color )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQGraphicsColorizeEffect::colorChanged ( const QColor & color )
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
-#endif
 }
 
 void SlotsQGraphicsColorizeEffect::strengthChanged ( qreal strength )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "strengthChanged(qreal)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQGraphicsColorizeEffect::strengthChanged ( qreal strength )
     hb_itemRelease( psender );
     hb_itemRelease( pstrength );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsColorizeEffect(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsColorizeEffect(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

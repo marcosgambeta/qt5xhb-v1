@@ -21,7 +21,6 @@ SlotsQDialog::~SlotsQDialog()
 
 void SlotsQDialog::accepted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQDialog::accepted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQDialog::finished ( int result )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQDialog::finished ( int result )
     hb_itemRelease( psender );
     hb_itemRelease( presult );
   }
-#endif
 }
 
 void SlotsQDialog::rejected ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQDialog::rejected ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QDIALOG_ONACCEPTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDialog(QCoreApplication::instance());
@@ -122,14 +115,10 @@ HB_FUNC( QDIALOG_ONACCEPTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDIALOG_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDialog(QCoreApplication::instance());
@@ -186,14 +175,10 @@ HB_FUNC( QDIALOG_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDIALOG_ONREJECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDialog(QCoreApplication::instance());
@@ -250,8 +235,4 @@ HB_FUNC( QDIALOG_ONREJECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

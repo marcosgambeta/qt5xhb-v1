@@ -21,7 +21,6 @@ SlotsQLabel::~SlotsQLabel()
 
 void SlotsQLabel::linkActivated ( const QString & link )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQLabel::linkActivated ( const QString & link )
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
-#endif
 }
 
 void SlotsQLabel::linkHovered ( const QString & link )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQLabel::linkHovered ( const QString & link )
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
-#endif
 }
 
 HB_FUNC( QLABEL_ONLINKACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLabel(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QLABEL_ONLINKACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLABEL_ONLINKHOVERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLabel(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QLABEL_ONLINKHOVERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

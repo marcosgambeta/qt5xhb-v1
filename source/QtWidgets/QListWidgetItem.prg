@@ -91,9 +91,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QListWidgetItem>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -117,9 +115,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QListWidgetItem>
-#endif
 #endif
 
 /*
@@ -127,12 +123,10 @@ QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QListWidget * par1 = ISNIL(1)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? QListWidgetItem::Type : hb_parni(2);
   QListWidgetItem * o = new QListWidgetItem ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -140,13 +134,11 @@ QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Typ
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QListWidget * par2 = ISNIL(2)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? QListWidgetItem::Type : hb_parni(3);
   QListWidgetItem * o = new QListWidgetItem ( par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -154,14 +146,12 @@ QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QString par2 = QLatin1String( hb_parc(2) );
   QListWidget * par3 = ISNIL(3)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? QListWidgetItem::Type : hb_parni(4);
   QListWidgetItem * o = new QListWidgetItem ( par1, par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -169,11 +159,9 @@ QListWidgetItem ( const QListWidgetItem & other )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
   QListWidgetItem * o = new QListWidgetItem ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -208,7 +196,6 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -220,7 +207,6 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

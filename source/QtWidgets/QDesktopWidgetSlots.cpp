@@ -21,7 +21,6 @@ SlotsQDesktopWidget::~SlotsQDesktopWidget()
 
 void SlotsQDesktopWidget::resized ( int screen )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "resized(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDesktopWidget::resized ( int screen )
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }
-#endif
 }
 
 void SlotsQDesktopWidget::screenCountChanged ( int newCount )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "screenCountChanged(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDesktopWidget::screenCountChanged ( int newCount )
     hb_itemRelease( psender );
     hb_itemRelease( pnewCount );
   }
-#endif
 }
 
 void SlotsQDesktopWidget::workAreaResized ( int screen )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "workAreaResized(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQDesktopWidget::workAreaResized ( int screen )
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }
-#endif
 }
 
 HB_FUNC( QDESKTOPWIDGET_ONRESIZED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDesktopWidget(QCoreApplication::instance());
@@ -126,14 +119,10 @@ HB_FUNC( QDESKTOPWIDGET_ONRESIZED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDesktopWidget(QCoreApplication::instance());
@@ -190,14 +179,10 @@ HB_FUNC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDesktopWidget(QCoreApplication::instance());
@@ -254,8 +239,4 @@ HB_FUNC( QDESKTOPWIDGET_ONWORKAREARESIZED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

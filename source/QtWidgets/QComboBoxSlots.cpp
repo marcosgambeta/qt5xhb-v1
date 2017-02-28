@@ -21,7 +21,6 @@ SlotsQComboBox::~SlotsQComboBox()
 
 void SlotsQComboBox::activated ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQComboBox::activated ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQComboBox::activated ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQComboBox::activated ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQComboBox::currentIndexChanged ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQComboBox::currentIndexChanged ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQComboBox::currentIndexChanged ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(QString)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQComboBox::currentIndexChanged ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQComboBox::editTextChanged ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editTextChanged(QString)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQComboBox::editTextChanged ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQComboBox::highlighted ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(int)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQComboBox::highlighted ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQComboBox::highlighted ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQComboBox::highlighted ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 HB_FUNC( QCOMBOBOX_ONACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQComboBox(QCoreApplication::instance());
@@ -190,14 +175,10 @@ HB_FUNC( QCOMBOBOX_ONACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMBOBOX_ONACTIVATEDC )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQComboBox(QCoreApplication::instance());
@@ -254,14 +235,10 @@ HB_FUNC( QCOMBOBOX_ONACTIVATEDC )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQComboBox(QCoreApplication::instance());
@@ -318,14 +295,10 @@ HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQComboBox(QCoreApplication::instance());
@@ -382,14 +355,10 @@ HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQComboBox(QCoreApplication::instance());
@@ -446,14 +415,10 @@ HB_FUNC( QCOMBOBOX_ONEDITTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQComboBox(QCoreApplication::instance());
@@ -510,14 +475,10 @@ HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCOMBOBOX_ONHIGHLIGHTEDC )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQComboBox(QCoreApplication::instance());
@@ -574,8 +535,4 @@ HB_FUNC( QCOMBOBOX_ONHIGHLIGHTEDC )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

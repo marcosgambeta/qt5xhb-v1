@@ -116,9 +116,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFileDialog>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -142,9 +140,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFileDialog>
-#endif
 #endif
 
 #include <QUrl>
@@ -154,12 +150,10 @@ QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 */
 HB_FUNC_STATIC( QFILEDIALOG_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QFileDialog * o = new QFileDialog ( par1,  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -167,14 +161,12 @@ QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const Q
 */
 HB_FUNC_STATIC( QFILEDIALOG_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   QFileDialog * o = new QFileDialog ( par1, par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -199,7 +191,6 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
 
 HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -211,7 +202,6 @@ HB_FUNC_STATIC( QFILEDIALOG_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

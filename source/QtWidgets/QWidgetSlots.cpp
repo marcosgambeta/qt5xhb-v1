@@ -21,7 +21,6 @@ SlotsQWidget::~SlotsQWidget()
 
 void SlotsQWidget::windowTitleChanged(const QString &title)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowTitleChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQWidget::windowTitleChanged(const QString &title)
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
-#endif
 }
 
 void SlotsQWidget::windowIconChanged(const QIcon &icon)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowIconChanged(QIcon)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQWidget::windowIconChanged(const QIcon &icon)
     hb_itemRelease( psender );
     hb_itemRelease( picon );
   }
-#endif
 }
 
 void SlotsQWidget::windowIconTextChanged(const QString &iconText)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowIconTextChanged(QString)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQWidget::windowIconTextChanged(const QString &iconText)
     hb_itemRelease( psender );
     hb_itemRelease( piconText );
   }
-#endif
 }
 
 void SlotsQWidget::customContextMenuRequested(const QPoint &pos)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQWidget::customContextMenuRequested(const QPoint &pos)
     hb_itemRelease( psender );
     hb_itemRelease( ppos );
   }
-#endif
 }
 
 HB_FUNC( QWIDGET_ONWINDOWTITLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWidget(QCoreApplication::instance());
@@ -142,14 +133,10 @@ HB_FUNC( QWIDGET_ONWINDOWTITLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWIDGET_ONWINDOWICONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWidget(QCoreApplication::instance());
@@ -206,14 +193,10 @@ HB_FUNC( QWIDGET_ONWINDOWICONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWidget(QCoreApplication::instance());
@@ -270,14 +253,10 @@ HB_FUNC( QWIDGET_ONWINDOWICONTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWidget(QCoreApplication::instance());
@@ -334,8 +313,4 @@ HB_FUNC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

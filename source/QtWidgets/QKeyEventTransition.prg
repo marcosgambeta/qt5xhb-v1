@@ -39,9 +39,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QKeyEventTransition>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -65,9 +63,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QKeyEventTransition>
-#endif
 #endif
 
 /*
@@ -75,11 +71,9 @@ QKeyEventTransition ( QState * sourceState = 0 )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QKeyEventTransition * o = new QKeyEventTransition ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -87,14 +81,12 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
   QKeyEventTransition * o = new QKeyEventTransition ( par1,  (QEvent::Type) par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -119,7 +111,6 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -131,7 +122,6 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

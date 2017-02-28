@@ -21,7 +21,6 @@ SlotsQFontComboBox::~SlotsQFontComboBox()
 
 void SlotsQFontComboBox::currentFontChanged ( const QFont & font )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFontChanged(QFont)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQFontComboBox::currentFontChanged ( const QFont & font )
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
   }
-#endif
 }
 
 HB_FUNC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFontComboBox(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

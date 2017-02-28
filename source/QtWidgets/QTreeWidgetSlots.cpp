@@ -21,7 +21,6 @@ SlotsQTreeWidget::~SlotsQTreeWidget()
 
 void SlotsQTreeWidget::currentItemChanged ( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQTreeWidget::currentItemChanged ( QTreeWidgetItem * current, QTreeWidg
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemActivated ( QTreeWidgetItem * item, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QTreeWidgetItem*,int)" );
   if( cb )
@@ -52,12 +49,10 @@ void SlotsQTreeWidget::itemActivated ( QTreeWidgetItem * item, int column )
     hb_itemRelease( pitem );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemChanged ( QTreeWidgetItem * item, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QTreeWidgetItem*,int)" );
   if( cb )
@@ -70,12 +65,10 @@ void SlotsQTreeWidget::itemChanged ( QTreeWidgetItem * item, int column )
     hb_itemRelease( pitem );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemClicked ( QTreeWidgetItem * item, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QTreeWidgetItem*,int)" );
   if( cb )
@@ -88,12 +81,10 @@ void SlotsQTreeWidget::itemClicked ( QTreeWidgetItem * item, int column )
     hb_itemRelease( pitem );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemCollapsed ( QTreeWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemCollapsed(QTreeWidgetItem*)" );
   if( cb )
@@ -104,12 +95,10 @@ void SlotsQTreeWidget::itemCollapsed ( QTreeWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemDoubleClicked ( QTreeWidgetItem * item, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QTreeWidgetItem*,int)" );
   if( cb )
@@ -122,12 +111,10 @@ void SlotsQTreeWidget::itemDoubleClicked ( QTreeWidgetItem * item, int column )
     hb_itemRelease( pitem );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemEntered ( QTreeWidgetItem * item, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QTreeWidgetItem*,int)" );
   if( cb )
@@ -140,12 +127,10 @@ void SlotsQTreeWidget::itemEntered ( QTreeWidgetItem * item, int column )
     hb_itemRelease( pitem );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemExpanded ( QTreeWidgetItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemExpanded(QTreeWidgetItem*)" );
   if( cb )
@@ -156,12 +141,10 @@ void SlotsQTreeWidget::itemExpanded ( QTreeWidgetItem * item )
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemPressed ( QTreeWidgetItem * item, int column )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QTreeWidgetItem*,int)" );
   if( cb )
@@ -174,12 +157,10 @@ void SlotsQTreeWidget::itemPressed ( QTreeWidgetItem * item, int column )
     hb_itemRelease( pitem );
     hb_itemRelease( pcolumn );
   }
-#endif
 }
 
 void SlotsQTreeWidget::itemSelectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
   if( cb )
@@ -188,12 +169,10 @@ void SlotsQTreeWidget::itemSelectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -250,14 +229,10 @@ HB_FUNC( QTREEWIDGET_ONCURRENTITEMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -314,14 +289,10 @@ HB_FUNC( QTREEWIDGET_ONITEMACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -378,14 +349,10 @@ HB_FUNC( QTREEWIDGET_ONITEMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -442,14 +409,10 @@ HB_FUNC( QTREEWIDGET_ONITEMCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -506,14 +469,10 @@ HB_FUNC( QTREEWIDGET_ONITEMCOLLAPSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -570,14 +529,10 @@ HB_FUNC( QTREEWIDGET_ONITEMDOUBLECLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -634,14 +589,10 @@ HB_FUNC( QTREEWIDGET_ONITEMENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMEXPANDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -698,14 +649,10 @@ HB_FUNC( QTREEWIDGET_ONITEMEXPANDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -762,14 +709,10 @@ HB_FUNC( QTREEWIDGET_ONITEMPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
@@ -826,8 +769,4 @@ HB_FUNC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

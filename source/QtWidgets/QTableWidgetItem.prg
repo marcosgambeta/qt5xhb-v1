@@ -86,9 +86,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTableWidgetItem>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -112,9 +110,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTableWidgetItem>
-#endif
 #endif
 
 /*
@@ -122,11 +118,9 @@ QTableWidgetItem ( int type = Type )
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? QTableWidgetItem::Type : hb_parni(1);
   QTableWidgetItem * o = new QTableWidgetItem ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -134,12 +128,10 @@ QTableWidgetItem ( const QString & text, int type = Type )
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? QTableWidgetItem::Type : hb_parni(2);
   QTableWidgetItem * o = new QTableWidgetItem ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -147,13 +139,11 @@ QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QString par2 = QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? QTableWidgetItem::Type : hb_parni(3);
   QTableWidgetItem * o = new QTableWidgetItem ( par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -161,11 +151,9 @@ QTableWidgetItem ( const QTableWidgetItem & other )
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
   QTableWidgetItem * o = new QTableWidgetItem ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -200,7 +188,6 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -212,7 +199,6 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

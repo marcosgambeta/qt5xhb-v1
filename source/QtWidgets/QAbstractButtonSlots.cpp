@@ -21,7 +21,6 @@ SlotsQAbstractButton::~SlotsQAbstractButton()
 
 void SlotsQAbstractButton::clicked(bool checked)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAbstractButton::clicked(bool checked)
     hb_itemRelease( psender );
     hb_itemRelease( pchecked );
   }
-#endif
 }
 
 void SlotsQAbstractButton::pressed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQAbstractButton::pressed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractButton::released()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQAbstractButton::released()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractButton::toggled(bool checked)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQAbstractButton::toggled(bool checked)
     hb_itemRelease( psender );
     hb_itemRelease( pchecked );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTBUTTON_ONCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractButton(QCoreApplication::instance());
@@ -138,14 +129,10 @@ HB_FUNC( QABSTRACTBUTTON_ONCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTBUTTON_ONPRESSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractButton(QCoreApplication::instance());
@@ -202,14 +189,10 @@ HB_FUNC( QABSTRACTBUTTON_ONPRESSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTBUTTON_ONRELEASED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractButton(QCoreApplication::instance());
@@ -266,14 +249,10 @@ HB_FUNC( QABSTRACTBUTTON_ONRELEASED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTBUTTON_ONTOGGLED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractButton(QCoreApplication::instance());
@@ -330,8 +309,4 @@ HB_FUNC( QABSTRACTBUTTON_ONTOGGLED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

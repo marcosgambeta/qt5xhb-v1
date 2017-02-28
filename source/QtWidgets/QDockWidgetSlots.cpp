@@ -21,7 +21,6 @@ SlotsQDockWidget::~SlotsQDockWidget()
 
 void SlotsQDockWidget::allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDockWidget::allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas )
     hb_itemRelease( psender );
     hb_itemRelease( pallowedAreas );
   }
-#endif
 }
 
 void SlotsQDockWidget::dockLocationChanged ( Qt::DockWidgetArea area )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDockWidget::dockLocationChanged ( Qt::DockWidgetArea area )
     hb_itemRelease( psender );
     hb_itemRelease( parea );
   }
-#endif
 }
 
 void SlotsQDockWidget::featuresChanged ( QDockWidget::DockWidgetFeatures features )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQDockWidget::featuresChanged ( QDockWidget::DockWidgetFeatures feature
     hb_itemRelease( psender );
     hb_itemRelease( pfeatures );
   }
-#endif
 }
 
 void SlotsQDockWidget::topLevelChanged ( bool topLevel )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "topLevelChanged(bool)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQDockWidget::topLevelChanged ( bool topLevel )
     hb_itemRelease( psender );
     hb_itemRelease( ptopLevel );
   }
-#endif
 }
 
 void SlotsQDockWidget::visibilityChanged ( bool visible )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQDockWidget::visibilityChanged ( bool visible )
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
-#endif
 }
 
 HB_FUNC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDockWidget(QCoreApplication::instance());
@@ -158,14 +147,10 @@ HB_FUNC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDockWidget(QCoreApplication::instance());
@@ -222,14 +207,10 @@ HB_FUNC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDOCKWIDGET_ONFEATURESCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDockWidget(QCoreApplication::instance());
@@ -286,14 +267,10 @@ HB_FUNC( QDOCKWIDGET_ONFEATURESCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDockWidget(QCoreApplication::instance());
@@ -350,14 +327,10 @@ HB_FUNC( QDOCKWIDGET_ONTOPLEVELCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDockWidget(QCoreApplication::instance());
@@ -414,8 +387,4 @@ HB_FUNC( QDOCKWIDGET_ONVISIBILITYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

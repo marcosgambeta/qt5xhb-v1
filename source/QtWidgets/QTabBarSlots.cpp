@@ -21,7 +21,6 @@ SlotsQTabBar::~SlotsQTabBar()
 
 void SlotsQTabBar::currentChanged ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQTabBar::currentChanged ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQTabBar::tabCloseRequested ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQTabBar::tabCloseRequested ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQTabBar::tabMoved ( int from, int to )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved(int,int)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQTabBar::tabMoved ( int from, int to )
     hb_itemRelease( pfrom );
     hb_itemRelease( pto );
   }
-#endif
 }
 
 HB_FUNC( QTABBAR_ONCURRENTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTabBar(QCoreApplication::instance());
@@ -128,14 +121,10 @@ HB_FUNC( QTABBAR_ONCURRENTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABBAR_ONTABCLOSEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTabBar(QCoreApplication::instance());
@@ -192,14 +181,10 @@ HB_FUNC( QTABBAR_ONTABCLOSEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTABBAR_ONTABMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTabBar(QCoreApplication::instance());
@@ -256,8 +241,4 @@ HB_FUNC( QTABBAR_ONTABMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

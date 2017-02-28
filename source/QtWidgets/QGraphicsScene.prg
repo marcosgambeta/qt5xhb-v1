@@ -134,9 +134,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsScene>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -160,9 +158,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsScene>
-#endif
 #endif
 
 #include <QVariant>
@@ -173,11 +169,9 @@ QGraphicsScene ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QGraphicsScene * o = new QGraphicsScene ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -185,12 +179,10 @@ QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QGraphicsScene * o = new QGraphicsScene ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -198,7 +190,6 @@ QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent =
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -206,7 +197,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_NEW3 )
   QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
   QGraphicsScene * o = new QGraphicsScene ( par1, par2, par3, par4, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -236,7 +226,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -248,7 +237,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

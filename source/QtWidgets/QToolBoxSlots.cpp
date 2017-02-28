@@ -21,7 +21,6 @@ SlotsQToolBox::~SlotsQToolBox()
 
 void SlotsQToolBox::currentChanged ( int index )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQToolBox::currentChanged ( int index )
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 HB_FUNC( QTOOLBOX_ONCURRENTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQToolBox(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QTOOLBOX_ONCURRENTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

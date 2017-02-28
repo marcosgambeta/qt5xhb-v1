@@ -55,9 +55,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsEllipseItem>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -81,9 +79,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QGraphicsEllipseItem>
-#endif
 #endif
 
 /*
@@ -91,11 +87,9 @@ QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -103,12 +97,10 @@ QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -116,7 +108,6 @@ QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsIte
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -124,7 +115,6 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW3 )
   QGraphicsItem * par5 = ISNIL(5)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(5);
   QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( par1, par2, par3, par4, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -154,7 +144,6 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -166,7 +155,6 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

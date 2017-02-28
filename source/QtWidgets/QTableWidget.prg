@@ -103,9 +103,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTableWidget>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -129,9 +127,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTableWidget>
-#endif
 #endif
 
 /*
@@ -139,11 +135,9 @@ QTableWidget ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QTableWidget * o = new QTableWidget ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -151,13 +145,11 @@ QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
   QTableWidget * o = new QTableWidget ( par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -182,7 +174,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 
 HB_FUNC_STATIC( QTABLEWIDGET_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -194,7 +185,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

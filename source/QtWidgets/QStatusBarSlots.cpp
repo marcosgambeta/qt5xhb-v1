@@ -21,7 +21,6 @@ SlotsQStatusBar::~SlotsQStatusBar()
 
 void SlotsQStatusBar::messageChanged ( const QString & message )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQStatusBar::messageChanged ( const QString & message )
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );
   }
-#endif
 }
 
 HB_FUNC( QSTATUSBAR_ONMESSAGECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStatusBar(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QSTATUSBAR_ONMESSAGECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

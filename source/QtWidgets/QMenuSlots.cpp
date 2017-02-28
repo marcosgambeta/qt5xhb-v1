@@ -21,7 +21,6 @@ SlotsQMenu::~SlotsQMenu()
 
 void SlotsQMenu::aboutToHide ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToHide()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQMenu::aboutToHide ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMenu::aboutToShow ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToShow()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQMenu::aboutToShow ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMenu::hovered ( QAction * action )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQMenu::hovered ( QAction * action )
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 void SlotsQMenu::triggered ( QAction * action )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQMenu::triggered ( QAction * action )
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 HB_FUNC( QMENU_ONABOUTTOHIDE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMenu(QCoreApplication::instance());
@@ -138,14 +129,10 @@ HB_FUNC( QMENU_ONABOUTTOHIDE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMENU_ONABOUTTOSHOW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMenu(QCoreApplication::instance());
@@ -202,14 +189,10 @@ HB_FUNC( QMENU_ONABOUTTOSHOW )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMENU_ONHOVERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMenu(QCoreApplication::instance());
@@ -266,14 +249,10 @@ HB_FUNC( QMENU_ONHOVERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMENU_ONTRIGGERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMenu(QCoreApplication::instance());
@@ -330,8 +309,4 @@ HB_FUNC( QMENU_ONTRIGGERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

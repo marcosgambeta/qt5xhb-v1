@@ -105,9 +105,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAction>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -131,9 +129,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAction>
-#endif
 #endif
 
 /*
@@ -141,11 +137,9 @@ QAction ( QObject * parent )
 */
 HB_FUNC_STATIC( QACTION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QAction * o = new QAction ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -153,12 +147,10 @@ QAction ( const QString & text, QObject * parent )
 */
 HB_FUNC_STATIC( QACTION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QAction * o = new QAction ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 /*
@@ -166,13 +158,11 @@ QAction ( const QIcon & icon, const QString & text, QObject * parent )
 */
 HB_FUNC_STATIC( QACTION_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QString par2 = QLatin1String( hb_parc(2) );
   QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
   QAction * o = new QAction ( par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
-#endif
 }
 
 
@@ -202,7 +192,6 @@ HB_FUNC_STATIC( QACTION_NEW )
 
 HB_FUNC_STATIC( QACTION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -214,7 +203,6 @@ HB_FUNC_STATIC( QACTION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*
