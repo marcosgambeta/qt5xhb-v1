@@ -61,9 +61,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QBitArray>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -87,9 +85,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QBitArray>
-#endif
 #endif
 
 /*
@@ -97,14 +93,12 @@ QBitArray ()
 */
 HB_FUNC_STATIC( QBITARRAY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBitArray * o = new QBitArray (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitArray *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -112,7 +106,6 @@ QBitArray ( int size, bool value = false )
 */
 HB_FUNC_STATIC( QBITARRAY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   bool par2 = ISNIL(2)? false : hb_parl(2);
   QBitArray * o = new QBitArray ( par1, par2 );
@@ -121,7 +114,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -129,7 +121,6 @@ QBitArray ( const QBitArray & other )
 */
 HB_FUNC_STATIC( QBITARRAY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBitArray * par1 = (QBitArray *) _qt5xhb_itemGetPtr(1);
   QBitArray * o = new QBitArray ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -137,7 +128,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -167,7 +157,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
 
 HB_FUNC_STATIC( QBITARRAY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -179,7 +168,6 @@ HB_FUNC_STATIC( QBITARRAY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -36,9 +36,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWinEventNotifier>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -62,9 +60,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWinEventNotifier>
-#endif
 #endif
 
 /*
@@ -72,7 +68,6 @@ explicit QWinEventNotifier(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #ifdef Q_OS_WIN
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QWinEventNotifier * o = new QWinEventNotifier ( par1 );
@@ -81,7 +76,6 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 #endif
 }
 
@@ -109,7 +103,6 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #ifdef Q_OS_WIN
   QWinEventNotifier * obj = (QWinEventNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -122,7 +115,6 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 #endif
 }
 

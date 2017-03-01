@@ -21,7 +21,6 @@ SlotsQObject::~SlotsQObject()
 
 void SlotsQObject::destroyed(QObject * obj)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "destroyed(QObject*)" );
   if( cb )
@@ -33,12 +32,10 @@ void SlotsQObject::destroyed(QObject * obj)
     hb_itemRelease( pobj );
     Signals_disconnect_signal( object, "destroyed(QObject*)" );
   }
-#endif
 }
 
 void SlotsQObject::objectNameChanged(const QString & objectName)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "objectNameChanged(QString)" );
   if( cb )
@@ -49,12 +46,10 @@ void SlotsQObject::objectNameChanged(const QString & objectName)
     hb_itemRelease( psender );
     hb_itemRelease( pobjectName );
   }
-#endif
 }
 
 HB_FUNC( QOBJECT_ONDESTROYED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQObject(QCoreApplication::instance());
@@ -111,14 +106,10 @@ HB_FUNC( QOBJECT_ONDESTROYED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QOBJECT_ONOBJECTNAMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQObject(QCoreApplication::instance());
@@ -175,8 +166,4 @@ HB_FUNC( QOBJECT_ONOBJECTNAMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

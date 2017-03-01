@@ -52,9 +52,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDirIterator>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -78,9 +76,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDirIterator>
-#endif
 #endif
 
 /*
@@ -88,7 +84,6 @@ QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
   QDirIterator * o = new QDirIterator ( *par1,  (QDirIterator::IteratorFlags) par2 );
@@ -100,7 +95,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -108,7 +102,6 @@ QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
   QDirIterator * o = new QDirIterator ( par1,  (QDirIterator::IteratorFlags) par2 );
@@ -120,7 +113,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -128,7 +120,6 @@ QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags 
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QDirIterator::NoIteratorFlags : hb_parni(3);
@@ -141,7 +132,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -149,7 +139,6 @@ QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filt
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
@@ -171,7 +160,6 @@ par2 << temp;
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -208,7 +196,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
 
 HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -220,7 +207,6 @@ HB_FUNC_STATIC( QDIRITERATOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

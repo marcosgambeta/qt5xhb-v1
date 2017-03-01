@@ -21,7 +21,6 @@ SlotsQItemSelectionModel::~SlotsQItemSelectionModel()
 
 void SlotsQItemSelectionModel::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQItemSelectionModel::selectionChanged(const QItemSelection &selected, 
     hb_itemRelease( pselected );
     hb_itemRelease( pdeselected );
   }
-#endif
 }
 
 void SlotsQItemSelectionModel::currentChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
   if( cb )
@@ -52,12 +49,10 @@ void SlotsQItemSelectionModel::currentChanged(const QModelIndex &current, const 
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
-#endif
 }
 
 void SlotsQItemSelectionModel::currentRowChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
   if( cb )
@@ -70,12 +65,10 @@ void SlotsQItemSelectionModel::currentRowChanged(const QModelIndex &current, con
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
-#endif
 }
 
 void SlotsQItemSelectionModel::currentColumnChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColumnChanged(QModelIndex current,QModelIndex previous)" );
   if( cb )
@@ -88,12 +81,10 @@ void SlotsQItemSelectionModel::currentColumnChanged(const QModelIndex &current, 
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
-#endif
 }
 
 HB_FUNC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQItemSelectionModel(QCoreApplication::instance());
@@ -150,14 +141,10 @@ HB_FUNC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQItemSelectionModel(QCoreApplication::instance());
@@ -214,14 +201,10 @@ HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQItemSelectionModel(QCoreApplication::instance());
@@ -278,14 +261,10 @@ HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQItemSelectionModel(QCoreApplication::instance());
@@ -342,8 +321,4 @@ HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

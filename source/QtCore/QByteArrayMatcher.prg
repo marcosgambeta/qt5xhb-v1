@@ -51,9 +51,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QByteArrayMatcher>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -77,9 +75,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QByteArrayMatcher>
-#endif
 #endif
 
 /*
@@ -87,14 +83,12 @@ QByteArrayMatcher ()
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArrayMatcher * o = new QByteArrayMatcher (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArrayMatcher *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -102,7 +96,6 @@ QByteArrayMatcher ( const QByteArray & pattern )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QByteArrayMatcher * o = new QByteArrayMatcher ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -110,7 +103,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -118,7 +110,6 @@ QByteArrayMatcher ( const char * pattern, int length )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
   QByteArrayMatcher * o = new QByteArrayMatcher (  (const char *) par1, par2 );
@@ -127,7 +118,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -135,7 +125,6 @@ QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArrayMatcher * par1 = (QByteArrayMatcher *) _qt5xhb_itemGetPtr(1);
   QByteArrayMatcher * o = new QByteArrayMatcher ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -143,7 +132,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -178,7 +166,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -190,7 +177,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

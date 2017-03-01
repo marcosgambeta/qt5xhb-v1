@@ -48,9 +48,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QReadWriteLock>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -74,9 +72,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QReadWriteLock>
-#endif
 #endif
 
 /*
@@ -84,7 +80,6 @@ QReadWriteLock(RecursionMode recursionMode = NonRecursive)
 */
 HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? (int) QReadWriteLock::NonRecursive : hb_parni(1);
   QReadWriteLock * o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -95,13 +90,11 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QREADWRITELOCK_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -113,7 +106,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

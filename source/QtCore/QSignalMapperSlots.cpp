@@ -21,7 +21,6 @@ SlotsQSignalMapper::~SlotsQSignalMapper()
 
 void SlotsQSignalMapper::mapped(int arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQSignalMapper::mapped(int arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 void SlotsQSignalMapper::mapped(const QString &arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQSignalMapper::mapped(const QString &arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 void SlotsQSignalMapper::mapped(QWidget *arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QWidget*)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQSignalMapper::mapped(QWidget *arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 void SlotsQSignalMapper::mapped(QObject *arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QObject*)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQSignalMapper::mapped(QObject *arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 HB_FUNC( QSIGNALMAPPER_ONMAPPED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSignalMapper(QCoreApplication::instance());
@@ -142,14 +133,10 @@ HB_FUNC( QSIGNALMAPPER_ONMAPPED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSIGNALMAPPER_ONMAPPED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSignalMapper(QCoreApplication::instance());
@@ -206,14 +193,10 @@ HB_FUNC( QSIGNALMAPPER_ONMAPPED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSIGNALMAPPER_ONMAPPED3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSignalMapper(QCoreApplication::instance());
@@ -270,14 +253,10 @@ HB_FUNC( QSIGNALMAPPER_ONMAPPED3 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSIGNALMAPPER_ONMAPPED4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSignalMapper(QCoreApplication::instance());
@@ -334,8 +313,4 @@ HB_FUNC( QSIGNALMAPPER_ONMAPPED4 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

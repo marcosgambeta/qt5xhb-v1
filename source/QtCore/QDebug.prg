@@ -48,9 +48,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDebug>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -74,9 +72,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDebug>
-#endif
 #endif
 
 /*
@@ -84,7 +80,6 @@ QDebug(QIODevice *device)
 */
 HB_FUNC_STATIC( QDEBUG_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QDebug * o = new QDebug ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -95,7 +90,6 @@ HB_FUNC_STATIC( QDEBUG_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -103,7 +97,6 @@ QDebug(const QDebug &o)
 */
 HB_FUNC_STATIC( QDEBUG_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDebug * par1 = (QDebug *) _qt5xhb_itemGetPtr(1);
   QDebug * o = new QDebug ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -114,7 +107,6 @@ HB_FUNC_STATIC( QDEBUG_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -141,7 +133,6 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 HB_FUNC_STATIC( QDEBUG_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -153,7 +144,6 @@ HB_FUNC_STATIC( QDEBUG_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

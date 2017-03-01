@@ -21,7 +21,6 @@ SlotsQAnimationDriver::~SlotsQAnimationDriver()
 
 void SlotsQAnimationDriver::started()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQAnimationDriver::started()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAnimationDriver::stopped()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stopped()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQAnimationDriver::stopped()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QANIMATIONDRIVER_ONSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAnimationDriver(QCoreApplication::instance());
@@ -106,14 +101,10 @@ HB_FUNC( QANIMATIONDRIVER_ONSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QANIMATIONDRIVER_ONSTOPPED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAnimationDriver(QCoreApplication::instance());
@@ -170,8 +161,4 @@ HB_FUNC( QANIMATIONDRIVER_ONSTOPPED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -65,9 +65,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTime>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -91,9 +89,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTime>
-#endif
 #endif
 
 /*
@@ -101,7 +97,6 @@ QTime()
 */
 HB_FUNC_STATIC( QTIME_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTime * o = new QTime (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTime *) o );
@@ -111,7 +106,6 @@ HB_FUNC_STATIC( QTIME_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -119,7 +113,6 @@ QTime(int h, int m, int s = 0, int ms = 0)
 */
 HB_FUNC_STATIC( QTIME_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = ISNIL(3)? 0 : hb_parni(3);
@@ -133,7 +126,6 @@ HB_FUNC_STATIC( QTIME_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -158,7 +150,6 @@ HB_FUNC_STATIC( QTIME_NEW )
 
 HB_FUNC_STATIC( QTIME_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -170,7 +161,6 @@ HB_FUNC_STATIC( QTIME_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

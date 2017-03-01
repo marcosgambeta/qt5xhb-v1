@@ -42,9 +42,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHistoryState>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -68,9 +66,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHistoryState>
-#endif
 #endif
 
 /*
@@ -78,7 +74,6 @@ QHistoryState(QState *parent = 0)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QHistoryState * o = new QHistoryState ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -86,7 +81,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -94,7 +88,6 @@ QHistoryState(HistoryType type, QState *parent = 0)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
   QHistoryState * o = new QHistoryState (  (QHistoryState::HistoryType) par1, par2 );
@@ -103,7 +96,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -128,7 +120,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 
 HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -140,7 +131,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

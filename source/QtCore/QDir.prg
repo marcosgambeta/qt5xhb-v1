@@ -108,9 +108,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDir>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -134,9 +132,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDir>
-#endif
 #endif
 
 /*
@@ -144,7 +140,6 @@ QDir(const QDir & dir)
 */
 HB_FUNC_STATIC( QDIR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
   QDir * o = new QDir ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -155,7 +150,6 @@ HB_FUNC_STATIC( QDIR_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -163,7 +157,6 @@ QDir(const QString & path = QString())
 */
 HB_FUNC_STATIC( QDIR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
   QDir * o = new QDir ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QDIR_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -182,7 +174,6 @@ QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlag
 */
 HB_FUNC_STATIC( QDIR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QDir::Name | QDir::IgnoreCase : hb_parni(3);
@@ -196,7 +187,6 @@ HB_FUNC_STATIC( QDIR_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -226,7 +216,6 @@ HB_FUNC_STATIC( QDIR_NEW )
 
 HB_FUNC_STATIC( QDIR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -238,7 +227,6 @@ HB_FUNC_STATIC( QDIR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

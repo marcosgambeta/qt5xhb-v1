@@ -46,9 +46,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAxBindable>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -72,9 +70,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAxBindable>
-#endif
 #endif
 
 /*
@@ -82,20 +78,17 @@ QAxBindable ()
 */
 HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAxBindable * o = new QAxBindable (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxBindable *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -107,7 +100,6 @@ HB_FUNC_STATIC( QAXBINDABLE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

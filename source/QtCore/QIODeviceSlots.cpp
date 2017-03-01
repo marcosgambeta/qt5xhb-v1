@@ -21,7 +21,6 @@ SlotsQIODevice::~SlotsQIODevice()
 
 void SlotsQIODevice::aboutToClose ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToClose()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQIODevice::aboutToClose ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQIODevice::bytesWritten ( qint64 bytes )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "bytesWritten(qint64)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQIODevice::bytesWritten ( qint64 bytes )
     hb_itemRelease( psender );
     hb_itemRelease( pbytes );
   }
-#endif
 }
 
 void SlotsQIODevice::readChannelFinished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "readChannelFinished()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQIODevice::readChannelFinished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQIODevice::readyRead ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "readyRead()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQIODevice::readyRead ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QIODEVICE_ONABOUTTOCLOSE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQIODevice(QCoreApplication::instance());
@@ -136,14 +127,10 @@ HB_FUNC( QIODEVICE_ONABOUTTOCLOSE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QIODEVICE_ONBYTESWRITTEN )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQIODevice(QCoreApplication::instance());
@@ -200,14 +187,10 @@ HB_FUNC( QIODEVICE_ONBYTESWRITTEN )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QIODEVICE_ONREADCHANNELFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQIODevice(QCoreApplication::instance());
@@ -264,14 +247,10 @@ HB_FUNC( QIODEVICE_ONREADCHANNELFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QIODEVICE_ONREADYREAD )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQIODevice(QCoreApplication::instance());
@@ -328,8 +307,4 @@ HB_FUNC( QIODEVICE_ONREADYREAD )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

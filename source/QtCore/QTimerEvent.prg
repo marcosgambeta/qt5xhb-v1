@@ -34,9 +34,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTimerEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -60,9 +58,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTimerEvent>
-#endif
 #endif
 
 /*
@@ -70,7 +66,6 @@ QTimerEvent(int timerId)
 */
 HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QTimerEvent * o = new QTimerEvent ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -78,13 +73,11 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QTIMEREVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -96,7 +89,6 @@ HB_FUNC_STATIC( QTIMEREVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

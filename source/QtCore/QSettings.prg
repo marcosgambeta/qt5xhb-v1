@@ -74,9 +74,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSettings>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -100,9 +98,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSettings>
-#endif
 #endif
 
 #include <QStringList>
@@ -112,7 +108,6 @@ QSettings ( const QString & organization, const QString & application = QString(
 */
 HB_FUNC_STATIC( QSETTINGS_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
@@ -122,7 +117,6 @@ HB_FUNC_STATIC( QSETTINGS_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -130,7 +124,6 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 */
 HB_FUNC_STATIC( QSETTINGS_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
@@ -141,7 +134,6 @@ HB_FUNC_STATIC( QSETTINGS_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -149,7 +141,6 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 */
 HB_FUNC_STATIC( QSETTINGS_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QString par3 = QLatin1String( hb_parc(3) );
@@ -161,7 +152,6 @@ HB_FUNC_STATIC( QSETTINGS_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -169,7 +159,6 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSETTINGS_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
@@ -179,7 +168,6 @@ HB_FUNC_STATIC( QSETTINGS_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -187,7 +175,6 @@ QSettings ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSETTINGS_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSettings * o = new QSettings ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -195,7 +182,6 @@ HB_FUNC_STATIC( QSETTINGS_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -235,7 +221,6 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
 
 HB_FUNC_STATIC( QSETTINGS_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -247,7 +232,6 @@ HB_FUNC_STATIC( QSETTINGS_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

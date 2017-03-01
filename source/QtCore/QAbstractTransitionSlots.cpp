@@ -21,7 +21,6 @@ SlotsQAbstractTransition::~SlotsQAbstractTransition()
 
 void SlotsQAbstractTransition::triggered()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQAbstractTransition::triggered()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTTRANSITION_ONTRIGGERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractTransition(QCoreApplication::instance());
@@ -92,8 +89,4 @@ HB_FUNC( QABSTRACTTRANSITION_ONTRIGGERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

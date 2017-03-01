@@ -21,7 +21,6 @@ SlotsQAxScript::~SlotsQAxScript()
 
 void SlotsQAxScript::entered ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "entered()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQAxScript::entered ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAxScript::error ( int code, const QString & description, int sourcePosition, const QString & sourceText )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QString,int,QString)" );
   if( cb )
@@ -52,12 +49,10 @@ void SlotsQAxScript::error ( int code, const QString & description, int sourcePo
     hb_itemRelease( psourcePosition );
     hb_itemRelease( psourceText );
   }
-#endif
 }
 
 void SlotsQAxScript::finished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQAxScript::finished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAxScript::finished ( const QVariant & result )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QVariant)" );
   if( cb )
@@ -82,12 +75,10 @@ void SlotsQAxScript::finished ( const QVariant & result )
     hb_itemRelease( psender );
     hb_itemRelease( presult );
   }
-#endif
 }
 
 void SlotsQAxScript::finished ( int code, const QString & source, const QString & description, const QString & help )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int,QString,QString,QString)" );
   if( cb )
@@ -104,12 +95,10 @@ void SlotsQAxScript::finished ( int code, const QString & source, const QString 
     hb_itemRelease( pdescription );
     hb_itemRelease( phelp );
   }
-#endif
 }
 
 void SlotsQAxScript::stateChanged ( int state )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
   if( cb )
@@ -120,12 +109,10 @@ void SlotsQAxScript::stateChanged ( int state )
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 HB_FUNC( QAXSCRIPT_ONENTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxScript(QCoreApplication::instance());
@@ -182,14 +169,10 @@ HB_FUNC( QAXSCRIPT_ONENTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAXSCRIPT_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxScript(QCoreApplication::instance());
@@ -246,14 +229,10 @@ HB_FUNC( QAXSCRIPT_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAXSCRIPT_ONFINISHED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxScript(QCoreApplication::instance());
@@ -310,14 +289,10 @@ HB_FUNC( QAXSCRIPT_ONFINISHED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAXSCRIPT_ONFINISHED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxScript(QCoreApplication::instance());
@@ -374,14 +349,10 @@ HB_FUNC( QAXSCRIPT_ONFINISHED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAXSCRIPT_ONFINISHED3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxScript(QCoreApplication::instance());
@@ -438,14 +409,10 @@ HB_FUNC( QAXSCRIPT_ONFINISHED3 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAXSCRIPT_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxScript(QCoreApplication::instance());
@@ -502,8 +469,5 @@ HB_FUNC( QAXSCRIPT_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 

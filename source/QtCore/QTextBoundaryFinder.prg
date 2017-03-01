@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextBoundaryFinder>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextBoundaryFinder>
-#endif
 #endif
 
 /*
@@ -90,7 +86,6 @@ QTextBoundaryFinder()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBoundaryFinder * o = new QTextBoundaryFinder (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
@@ -100,7 +95,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -108,7 +102,6 @@ QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBoundaryFinder * par1 = (QTextBoundaryFinder *) _qt5xhb_itemGetPtr(1);
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +112,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -127,7 +119,6 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2 );
@@ -139,7 +130,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -147,7 +137,6 @@ QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned 
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   const QChar * par2 = (const QChar *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
@@ -162,7 +151,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -197,7 +185,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -209,7 +196,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

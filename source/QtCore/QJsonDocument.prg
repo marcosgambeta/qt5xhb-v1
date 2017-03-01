@@ -65,9 +65,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonDocument>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -91,9 +89,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonDocument>
-#endif
 #endif
 
 #include <QJsonArray>
@@ -105,14 +101,12 @@ QJsonDocument()
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonDocument * o = new QJsonDocument (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJsonDocument *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -120,7 +114,6 @@ QJsonDocument(const QJsonObject & object)
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
   QJsonDocument * o = new QJsonDocument ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -128,7 +121,6 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -136,7 +128,6 @@ QJsonDocument(const QJsonArray & array)
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
   QJsonDocument * o = new QJsonDocument ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -144,7 +135,6 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +142,6 @@ QJsonDocument(const QJsonDocument & other)
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonDocument * par1 = (QJsonDocument *) _qt5xhb_itemGetPtr(1);
   QJsonDocument * o = new QJsonDocument ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -160,7 +149,6 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -195,7 +183,6 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
 
 HB_FUNC_STATIC( QJSONDOCUMENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonDocument * obj = (QJsonDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -207,7 +194,6 @@ HB_FUNC_STATIC( QJSONDOCUMENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

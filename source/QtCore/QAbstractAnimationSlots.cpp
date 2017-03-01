@@ -21,7 +21,6 @@ SlotsQAbstractAnimation::~SlotsQAbstractAnimation()
 
 void SlotsQAbstractAnimation::currentLoopChanged ( int currentLoop )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentLoopChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAbstractAnimation::currentLoopChanged ( int currentLoop )
     hb_itemRelease( psender );
     hb_itemRelease( pcurrentLoop );
   }
-#endif
 }
 
 void SlotsQAbstractAnimation::directionChanged ( QAbstractAnimation::Direction newDirection )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQAbstractAnimation::directionChanged ( QAbstractAnimation::Direction n
     hb_itemRelease( psender );
     hb_itemRelease( pnewDirection );
   }
-#endif
 }
 
 void SlotsQAbstractAnimation::finished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQAbstractAnimation::finished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractAnimation::stateChanged ( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQAbstractAnimation::stateChanged ( QAbstractAnimation::State newState,
     hb_itemRelease( pnewState );
     hb_itemRelease( poldState );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractAnimation(QCoreApplication::instance());
@@ -142,14 +133,10 @@ HB_FUNC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractAnimation(QCoreApplication::instance());
@@ -206,14 +193,10 @@ HB_FUNC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTANIMATION_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractAnimation(QCoreApplication::instance());
@@ -270,14 +253,10 @@ HB_FUNC( QABSTRACTANIMATION_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTANIMATION_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractAnimation(QCoreApplication::instance());
@@ -334,8 +313,4 @@ HB_FUNC( QABSTRACTANIMATION_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

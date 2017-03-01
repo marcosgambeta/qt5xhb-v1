@@ -21,7 +21,6 @@ SlotsQVariantAnimation::~SlotsQVariantAnimation()
 
 void SlotsQVariantAnimation::valueChanged ( const QVariant & value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QVariant)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQVariantAnimation::valueChanged ( const QVariant & value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 HB_FUNC( QVARIANTANIMATION_ONVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVariantAnimation(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QVARIANTANIMATION_ONVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -42,9 +42,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QEventLoopLocker>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -68,9 +66,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QEventLoopLocker>
-#endif
 #endif
 
 /*
@@ -78,14 +74,12 @@ QEventLoopLocker()
 */
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QEventLoopLocker * o = new QEventLoopLocker (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventLoopLocker *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -93,7 +87,6 @@ QEventLoopLocker(QEventLoop * loop)
 */
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QEventLoop * par1 = (QEventLoop *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +94,6 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +101,6 @@ QEventLoopLocker(QThread * thread)
 */
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -117,7 +108,6 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -147,7 +137,6 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QEventLoopLocker * obj = (QEventLoopLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -159,7 +148,6 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

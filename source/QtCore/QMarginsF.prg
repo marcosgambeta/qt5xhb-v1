@@ -55,9 +55,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMarginsF>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -81,9 +79,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMarginsF>
-#endif
 #endif
 
 /*
@@ -91,7 +87,6 @@ QMarginsF()
 */
 HB_FUNC_STATIC( QMARGINSF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMarginsF * o = new QMarginsF (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMarginsF *) o );
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QMARGINSF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 */
 HB_FUNC_STATIC( QMARGINSF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -123,7 +116,6 @@ HB_FUNC_STATIC( QMARGINSF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -131,7 +123,6 @@ QMarginsF(const QMargins &margins)
 */
 HB_FUNC_STATIC( QMARGINSF_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMargins * par1 = (QMargins *) _qt5xhb_itemGetPtr(1);
   QMarginsF * o = new QMarginsF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -142,7 +133,6 @@ HB_FUNC_STATIC( QMARGINSF_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -172,7 +162,6 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
 
 HB_FUNC_STATIC( QMARGINSF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMarginsF * obj = (QMarginsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -184,7 +173,6 @@ HB_FUNC_STATIC( QMARGINSF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

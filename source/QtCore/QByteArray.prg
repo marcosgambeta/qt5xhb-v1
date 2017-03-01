@@ -173,9 +173,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QByteArray>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -199,9 +197,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QByteArray>
-#endif
 #endif
 
 #include <QString>
@@ -212,14 +208,12 @@ QByteArray ()
 */
 HB_FUNC_STATIC( QBYTEARRAY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * o = new QByteArray (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArray *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -227,7 +221,6 @@ QByteArray ( const char * str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   QByteArray * o = new QByteArray (  (const char *) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -235,7 +228,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -243,7 +235,6 @@ QByteArray ( const char * data, int size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
   QByteArray * o = new QByteArray (  (const char *) par1, par2 );
@@ -252,7 +243,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -260,7 +250,6 @@ QByteArray ( int size, char ch )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QByteArray * o = new QByteArray ( par1, par2 );
@@ -269,7 +258,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -277,7 +265,6 @@ QByteArray ( const QByteArray & other )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QByteArray * o = new QByteArray ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -285,7 +272,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -325,7 +311,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
 
 HB_FUNC_STATIC( QBYTEARRAY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -337,7 +322,6 @@ HB_FUNC_STATIC( QBYTEARRAY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

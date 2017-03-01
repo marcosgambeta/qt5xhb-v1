@@ -21,7 +21,6 @@ SlotsQAxWidget::~SlotsQAxWidget()
 
 void SlotsQAxWidget::exception ( int code, const QString & source, const QString & desc, const QString & help )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
   if( cb )
@@ -38,12 +37,10 @@ void SlotsQAxWidget::exception ( int code, const QString & source, const QString
     hb_itemRelease( pdesc );
     hb_itemRelease( phelp );
   }
-#endif
 }
 
 void SlotsQAxWidget::propertyChanged ( const QString & name )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString)" );
   if( cb )
@@ -54,12 +51,10 @@ void SlotsQAxWidget::propertyChanged ( const QString & name )
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
-#endif
 }
 
 void SlotsQAxWidget::signal ( const QString & name, int argc, void * argv )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "signal(QString,int,void *)" );
   if( cb )
@@ -74,12 +69,10 @@ void SlotsQAxWidget::signal ( const QString & name, int argc, void * argv )
     hb_itemRelease( pargc );
     hb_itemRelease( pargv );
   }
-#endif
 }
 
 HB_FUNC( QAXWIDGET_ONEXCEPTION )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxWidget(QCoreApplication::instance());
@@ -136,14 +129,10 @@ HB_FUNC( QAXWIDGET_ONEXCEPTION )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAXWIDGET_ONPROPERTYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxWidget(QCoreApplication::instance());
@@ -200,14 +189,10 @@ HB_FUNC( QAXWIDGET_ONPROPERTYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAXWIDGET_ONSIGNAL )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAxWidget(QCoreApplication::instance());
@@ -264,8 +249,5 @@ HB_FUNC( QAXWIDGET_ONSIGNAL )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 

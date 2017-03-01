@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonObject>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonObject>
-#endif
 #endif
 
 #include <QStringList>
@@ -92,14 +88,12 @@ QJsonObject()
 */
 HB_FUNC_STATIC( QJSONOBJECT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonObject * o = new QJsonObject (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJsonObject *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -107,7 +101,6 @@ QJsonObject(const QJsonObject & other)
 */
 HB_FUNC_STATIC( QJSONOBJECT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
   QJsonObject * o = new QJsonObject ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -115,7 +108,6 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -140,7 +132,6 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
 
 HB_FUNC_STATIC( QJSONOBJECT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonObject * obj = (QJsonObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -152,7 +143,6 @@ HB_FUNC_STATIC( QJSONOBJECT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

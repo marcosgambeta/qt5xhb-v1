@@ -39,9 +39,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDebugStateSaver>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -65,9 +63,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDebugStateSaver>
-#endif
 #endif
 
 /*
@@ -75,7 +71,6 @@ QDebugStateSaver(QDebug &dbg)
 */
 HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDebug  * par1 = (QDebug  *) _qt5xhb_itemGetPtr(1);
   QDebugStateSaver * o = new QDebugStateSaver ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -86,13 +81,11 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QDEBUGSTATESAVER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDebugStateSaver * obj = (QDebugStateSaver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -104,7 +97,6 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

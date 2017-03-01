@@ -64,9 +64,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDataStream>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -90,9 +88,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDataStream>
-#endif
 #endif
 
 /*
@@ -100,7 +96,6 @@ QDataStream()
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDataStream * o = new QDataStream (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDataStream *) o );
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -118,7 +112,6 @@ QDataStream(QIODevice *)
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QDataStream * o = new QDataStream ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -129,7 +122,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -137,7 +129,6 @@ QDataStream(QByteArray *, QIODevice::OpenMode flags)
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QDataStream * o = new QDataStream ( par1,  (QIODevice::OpenMode) par2 );
@@ -149,7 +140,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -157,7 +147,6 @@ QDataStream(const QByteArray &)
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QDataStream * o = new QDataStream ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -168,7 +157,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -203,7 +191,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
 
 HB_FUNC_STATIC( QDATASTREAM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -215,7 +202,6 @@ HB_FUNC_STATIC( QDATASTREAM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

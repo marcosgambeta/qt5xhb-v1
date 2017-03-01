@@ -21,7 +21,6 @@ SlotsQTimeLine::~SlotsQTimeLine()
 
 void SlotsQTimeLine::finished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQTimeLine::finished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQTimeLine::frameChanged ( int frame )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameChanged(int)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQTimeLine::frameChanged ( int frame )
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
-#endif
 }
 
 void SlotsQTimeLine::stateChanged ( QTimeLine::State newState )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTimeLine::State)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQTimeLine::stateChanged ( QTimeLine::State newState )
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
   }
-#endif
 }
 
 void SlotsQTimeLine::valueChanged ( qreal value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(qreal)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQTimeLine::valueChanged ( qreal value )
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 HB_FUNC( QTIMELINE_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTimeLine(QCoreApplication::instance());
@@ -140,14 +131,10 @@ HB_FUNC( QTIMELINE_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTIMELINE_ONFRAMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTimeLine(QCoreApplication::instance());
@@ -204,14 +191,10 @@ HB_FUNC( QTIMELINE_ONFRAMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTIMELINE_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTimeLine(QCoreApplication::instance());
@@ -268,14 +251,10 @@ HB_FUNC( QTIMELINE_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTIMELINE_ONVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTimeLine(QCoreApplication::instance());
@@ -332,8 +311,4 @@ HB_FUNC( QTIMELINE_ONVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

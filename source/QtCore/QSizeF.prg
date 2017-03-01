@@ -63,9 +63,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSizeF>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -89,9 +87,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSizeF>
-#endif
 #endif
 
 /*
@@ -99,7 +95,6 @@ QSizeF()
 */
 HB_FUNC_STATIC( QSIZEF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSizeF * o = new QSizeF (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSizeF *) o );
@@ -109,7 +104,6 @@ HB_FUNC_STATIC( QSIZEF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -117,7 +111,6 @@ QSizeF(const QSize &sz)
 */
 HB_FUNC_STATIC( QSIZEF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QSizeF * o = new QSizeF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -128,7 +121,6 @@ HB_FUNC_STATIC( QSIZEF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -136,7 +128,6 @@ QSizeF(qreal w, qreal h)
 */
 HB_FUNC_STATIC( QSIZEF_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   QSizeF * o = new QSizeF ( par1, par2 );
@@ -148,7 +139,6 @@ HB_FUNC_STATIC( QSIZEF_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -178,7 +168,6 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 
 HB_FUNC_STATIC( QSIZEF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -190,7 +179,6 @@ HB_FUNC_STATIC( QSIZEF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

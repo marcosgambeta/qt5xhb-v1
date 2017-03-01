@@ -58,9 +58,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegularExpression>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -84,9 +82,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegularExpression>
-#endif
 #endif
 
 /*
@@ -94,7 +90,6 @@ QRegularExpression()
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegularExpression * o = new QRegularExpression (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegularExpression *) o );
@@ -104,7 +99,6 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -112,7 +106,6 @@ QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOp
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QRegularExpression::NoPatternOption : hb_parni(2);
   QRegularExpression * o = new QRegularExpression ( par1,  (QRegularExpression::PatternOptions) par2 );
@@ -124,7 +117,6 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -132,7 +124,6 @@ QRegularExpression(const QRegularExpression & re)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
   QRegularExpression * o = new QRegularExpression ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -143,7 +134,6 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -173,7 +163,6 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 
 HB_FUNC_STATIC( QREGULAREXPRESSION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegularExpression * obj = (QRegularExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -185,7 +174,6 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

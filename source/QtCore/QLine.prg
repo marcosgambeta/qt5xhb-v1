@@ -64,9 +64,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QLine>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -90,9 +88,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QLine>
-#endif
 #endif
 
 /*
@@ -100,7 +96,6 @@ QLine()
 */
 HB_FUNC_STATIC( QLINE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLine * o = new QLine (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLine *) o );
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QLINE_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -118,7 +112,6 @@ QLine(const QPoint & p1, const QPoint & p2)
 */
 HB_FUNC_STATIC( QLINE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QLine * o = new QLine ( *par1, *par2 );
@@ -130,7 +123,6 @@ HB_FUNC_STATIC( QLINE_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -138,7 +130,6 @@ QLine(int x1, int y1, int x2, int y2)
 */
 HB_FUNC_STATIC( QLINE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -152,7 +143,6 @@ HB_FUNC_STATIC( QLINE_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -182,7 +172,6 @@ HB_FUNC_STATIC( QLINE_NEW )
 
 HB_FUNC_STATIC( QLINE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -194,7 +183,6 @@ HB_FUNC_STATIC( QLINE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

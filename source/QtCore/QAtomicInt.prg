@@ -63,9 +63,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAtomicInt>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -89,9 +87,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAtomicInt>
-#endif
 #endif
 
 /*
@@ -99,7 +95,6 @@ QAtomicInt ( int value = 0 )
 */
 HB_FUNC_STATIC( QATOMICINT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? 0 : hb_parni(1);
   QAtomicInt * o = new QAtomicInt ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -107,7 +102,6 @@ HB_FUNC_STATIC( QATOMICINT_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -115,7 +109,6 @@ QAtomicInt ( const QAtomicInt & other )
 */
 HB_FUNC_STATIC( QATOMICINT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAtomicInt * par1 = (QAtomicInt *) _qt5xhb_itemGetPtr(1);
   QAtomicInt * o = new QAtomicInt ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -123,7 +116,6 @@ HB_FUNC_STATIC( QATOMICINT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -148,7 +140,6 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
 
 HB_FUNC_STATIC( QATOMICINT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -160,7 +151,6 @@ HB_FUNC_STATIC( QATOMICINT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

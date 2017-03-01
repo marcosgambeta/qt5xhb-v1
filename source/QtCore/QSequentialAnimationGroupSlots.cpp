@@ -21,7 +21,6 @@ SlotsQSequentialAnimationGroup::~SlotsQSequentialAnimationGroup()
 
 void SlotsQSequentialAnimationGroup::currentAnimationChanged ( QAbstractAnimation * current )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQSequentialAnimationGroup::currentAnimationChanged ( QAbstractAnimatio
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
   }
-#endif
 }
 
 HB_FUNC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSequentialAnimationGroup(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -71,9 +71,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonValue>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -97,9 +95,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonValue>
-#endif
 #endif
 
 #include <QJsonArray>
@@ -111,7 +107,6 @@ QJsonValue(Type type = Null)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? (int) QJsonValue::Null : hb_parni(1);
   QJsonValue * o = new QJsonValue (  (QJsonValue::Type) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +114,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -127,7 +121,6 @@ QJsonValue(bool b)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   bool par1 = hb_parl(1);
   QJsonValue * o = new QJsonValue ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -135,7 +128,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -143,7 +135,6 @@ QJsonValue(double n)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   double par1 = hb_parnd(1);
   QJsonValue * o = new QJsonValue ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -151,7 +142,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -159,7 +149,6 @@ QJsonValue(const QString & s)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QJsonValue * o = new QJsonValue ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -167,7 +156,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -175,7 +163,6 @@ QJsonValue(const QJsonArray & a)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
   QJsonValue * o = new QJsonValue ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -183,7 +170,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -191,7 +177,6 @@ QJsonValue(const QJsonObject & o)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
   QJsonValue * o = new QJsonValue ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -199,7 +184,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW7 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -207,7 +191,6 @@ QJsonValue(const QJsonValue & other)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW8 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonValue * par1 = (QJsonValue *) _qt5xhb_itemGetPtr(1);
   QJsonValue * o = new QJsonValue ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -215,7 +198,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW8 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -223,7 +205,6 @@ QJsonValue(int n)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW9 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QJsonValue * o = new QJsonValue ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -231,7 +212,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW9 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -284,7 +264,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW )
 
 HB_FUNC_STATIC( QJSONVALUE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonValue * obj = (QJsonValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -296,7 +275,6 @@ HB_FUNC_STATIC( QJSONVALUE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

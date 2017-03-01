@@ -59,9 +59,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonValueRef>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -85,9 +83,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QJsonValueRef>
-#endif
 #endif
 
 #include <QJsonArray>
@@ -98,7 +94,6 @@ QJsonValueRef(QJsonArray *array, int idx)
 */
 HB_FUNC_STATIC( QJSONVALUEREF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QJsonValueRef * o = new QJsonValueRef ( par1, par2 );
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -118,7 +112,6 @@ QJsonValueRef(QJsonObject *object, int idx)
 */
 HB_FUNC_STATIC( QJSONVALUEREF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QJsonValueRef * o = new QJsonValueRef ( par1, par2 );
@@ -130,7 +123,6 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -155,7 +147,6 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 
 HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QJsonValueRef * obj = (QJsonValueRef *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -167,7 +158,6 @@ HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

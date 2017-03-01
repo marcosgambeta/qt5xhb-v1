@@ -51,9 +51,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAxScript>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -77,9 +75,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAxScript>
-#endif
 #endif
 
 #include <QStringList>
@@ -89,7 +85,6 @@ QAxScript ( const QString & name, QAxScriptManager * manager )
 */
 HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QAxScriptManager * par2 = (QAxScriptManager *) _qt5xhb_itemGetPtr(2);
   QAxScript * o = new QAxScript ( par1, par2 );
@@ -98,13 +93,11 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -116,7 +109,6 @@ HB_FUNC_STATIC( QAXSCRIPT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

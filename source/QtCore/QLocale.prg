@@ -129,9 +129,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QLocale>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -155,9 +153,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QLocale>
-#endif
 #endif
 
 #include <QDate>
@@ -168,14 +164,12 @@ QLocale ()
 */
 HB_FUNC_STATIC( QLOCALE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLocale * o = new QLocale (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLocale *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -183,7 +177,6 @@ QLocale ( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QLocale * o = new QLocale ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -191,7 +184,6 @@ HB_FUNC_STATIC( QLOCALE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -199,7 +191,6 @@ QLocale ( Language language, Country country = AnyCountry )
 */
 HB_FUNC_STATIC( QLOCALE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) QLocale::AnyCountry : hb_parni(2);
   QLocale * o = new QLocale (  (QLocale::Language) par1,  (QLocale::Country) par2 );
@@ -208,7 +199,6 @@ HB_FUNC_STATIC( QLOCALE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -216,7 +206,6 @@ QLocale ( Language language, Script script, Country country )
 */
 HB_FUNC_STATIC( QLOCALE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -226,7 +215,6 @@ HB_FUNC_STATIC( QLOCALE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -234,7 +222,6 @@ QLocale ( const QLocale & other )
 */
 HB_FUNC_STATIC( QLOCALE_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
   QLocale * o = new QLocale ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -242,7 +229,6 @@ HB_FUNC_STATIC( QLOCALE_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -284,7 +270,6 @@ HB_FUNC_STATIC( QLOCALE_NEW )
 
 HB_FUNC_STATIC( QLOCALE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -296,7 +281,6 @@ HB_FUNC_STATIC( QLOCALE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

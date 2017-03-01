@@ -95,9 +95,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFileInfo>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -121,9 +119,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFileInfo>
-#endif
 #endif
 
 #include <QDir>
@@ -134,7 +130,6 @@ QFileInfo()
 */
 HB_FUNC_STATIC( QFILEINFO_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFileInfo * o = new QFileInfo (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileInfo *) o );
@@ -144,7 +139,6 @@ HB_FUNC_STATIC( QFILEINFO_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +146,6 @@ QFileInfo(const QString & file)
 */
 HB_FUNC_STATIC( QFILEINFO_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QFileInfo * o = new QFileInfo ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -163,7 +156,6 @@ HB_FUNC_STATIC( QFILEINFO_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -171,7 +163,6 @@ QFileInfo(const QFile & file)
 */
 HB_FUNC_STATIC( QFILEINFO_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFile * par1 = (QFile *) _qt5xhb_itemGetPtr(1);
   QFileInfo * o = new QFileInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -182,7 +173,6 @@ HB_FUNC_STATIC( QFILEINFO_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -190,7 +180,6 @@ QFileInfo(const QDir & dir, const QString & file)
 */
 HB_FUNC_STATIC( QFILEINFO_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QFileInfo * o = new QFileInfo ( *par1, par2 );
@@ -202,7 +191,6 @@ HB_FUNC_STATIC( QFILEINFO_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -210,7 +198,6 @@ QFileInfo(const QFileInfo & fileinfo)
 */
 HB_FUNC_STATIC( QFILEINFO_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFileInfo * par1 = (QFileInfo *) _qt5xhb_itemGetPtr(1);
   QFileInfo * o = new QFileInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -221,7 +208,6 @@ HB_FUNC_STATIC( QFILEINFO_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -261,7 +247,6 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
 
 HB_FUNC_STATIC( QFILEINFO_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -273,7 +258,6 @@ HB_FUNC_STATIC( QFILEINFO_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQStateMachine::~SlotsQStateMachine()
 
 void SlotsQStateMachine::started ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQStateMachine::started ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQStateMachine::stopped ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stopped()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQStateMachine::stopped ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QSTATEMACHINE_ONSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStateMachine(QCoreApplication::instance());
@@ -106,14 +101,10 @@ HB_FUNC( QSTATEMACHINE_ONSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSTATEMACHINE_ONSTOPPED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQStateMachine(QCoreApplication::instance());
@@ -170,8 +161,4 @@ HB_FUNC( QSTATEMACHINE_ONSTOPPED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

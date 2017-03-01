@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QProcessEnvironment>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QProcessEnvironment>
-#endif
 #endif
 
 /*
@@ -90,7 +86,6 @@ QProcessEnvironment()
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QProcessEnvironment * o = new QProcessEnvironment (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QProcessEnvironment *) o );
@@ -100,7 +95,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -108,7 +102,6 @@ QProcessEnvironment(const QProcessEnvironment &other)
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QProcessEnvironment * par1 = (QProcessEnvironment *) _qt5xhb_itemGetPtr(1);
   QProcessEnvironment * o = new QProcessEnvironment ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +112,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -144,7 +136,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -156,7 +147,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

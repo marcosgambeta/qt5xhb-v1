@@ -49,9 +49,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QStringListModel>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -75,9 +73,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QStringListModel>
-#endif
 #endif
 
 /*
@@ -85,7 +81,6 @@ QStringListModel(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QStringListModel * o = new QStringListModel ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -93,7 +88,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -101,7 +95,6 @@ QStringListModel(const QStringList & strings, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QStringList par1;
 PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -118,7 +111,6 @@ par1 << temp;
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 

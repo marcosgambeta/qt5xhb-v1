@@ -41,9 +41,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCollatorSortKey>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -67,9 +65,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCollatorSortKey>
-#endif
 #endif
 
 /*
@@ -77,7 +73,6 @@ QCollatorSortKey(const QCollatorSortKey &other)
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCollatorSortKey * par1 = (QCollatorSortKey *) _qt5xhb_itemGetPtr(1);
   QCollatorSortKey * o = new QCollatorSortKey ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -88,13 +83,11 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QCOLLATORSORTKEY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCollatorSortKey * obj = (QCollatorSortKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -106,7 +99,6 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

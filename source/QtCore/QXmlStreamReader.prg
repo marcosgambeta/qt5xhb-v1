@@ -106,9 +106,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlStreamReader>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -132,9 +130,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlStreamReader>
-#endif
 #endif
 
 /*
@@ -142,7 +138,6 @@ QXmlStreamReader()
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlStreamReader * o = new QXmlStreamReader (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamReader *) o );
@@ -152,7 +147,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -160,7 +154,6 @@ QXmlStreamReader(QIODevice * device)
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QXmlStreamReader * o = new QXmlStreamReader ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -171,7 +164,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -179,7 +171,6 @@ QXmlStreamReader(const QByteArray & data)
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QXmlStreamReader * o = new QXmlStreamReader ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -190,7 +181,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -198,7 +188,6 @@ QXmlStreamReader(const QString & data)
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QXmlStreamReader * o = new QXmlStreamReader ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -209,7 +198,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -245,7 +233,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMREADER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -257,7 +244,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -62,9 +62,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QUrlQuery>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -88,9 +86,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QUrlQuery>
-#endif
 #endif
 
 #include <QStringList>
@@ -100,14 +96,12 @@ QUrlQuery()
 */
 HB_FUNC_STATIC( QURLQUERY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrlQuery * o = new QUrlQuery (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlQuery *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -115,7 +109,6 @@ QUrlQuery(const QUrl & url)
 */
 HB_FUNC_STATIC( QURLQUERY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QUrlQuery * o = new QUrlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -123,7 +116,6 @@ HB_FUNC_STATIC( QURLQUERY_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -131,7 +123,6 @@ QUrlQuery(const QString & queryString)
 */
 HB_FUNC_STATIC( QURLQUERY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QUrlQuery * o = new QUrlQuery ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -139,7 +130,6 @@ HB_FUNC_STATIC( QURLQUERY_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -147,7 +137,6 @@ QUrlQuery(const QUrlQuery & other)
 */
 HB_FUNC_STATIC( QURLQUERY_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrlQuery * par1 = (QUrlQuery *) _qt5xhb_itemGetPtr(1);
   QUrlQuery * o = new QUrlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -155,7 +144,6 @@ HB_FUNC_STATIC( QURLQUERY_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -190,7 +178,6 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
 
 HB_FUNC_STATIC( QURLQUERY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrlQuery * obj = (QUrlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -202,7 +189,6 @@ HB_FUNC_STATIC( QURLQUERY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

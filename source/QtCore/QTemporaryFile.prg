@@ -47,9 +47,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTemporaryFile>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -73,9 +71,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTemporaryFile>
-#endif
 #endif
 
 /*
@@ -83,14 +79,12 @@ QTemporaryFile()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTemporaryFile * o = new QTemporaryFile (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTemporaryFile *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -98,7 +92,6 @@ QTemporaryFile(const QString & templateName)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QTemporaryFile * o = new QTemporaryFile ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -106,7 +99,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -114,7 +106,6 @@ QTemporaryFile(QObject * parent)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QTemporaryFile * o = new QTemporaryFile ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -122,7 +113,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -130,7 +120,6 @@ QTemporaryFile(const QString & templateName, QObject * parent)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QTemporaryFile * o = new QTemporaryFile ( par1, par2 );
@@ -139,7 +128,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -174,7 +162,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -186,7 +173,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

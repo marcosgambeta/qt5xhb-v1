@@ -45,9 +45,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSystemSemaphore>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -71,9 +69,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSystemSemaphore>
-#endif
 #endif
 
 /*
@@ -81,7 +77,6 @@ QSystemSemaphore(const QString &key, int initialValue = 0, AccessMode mode = Ope
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? 0 : hb_parni(2);
   int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
@@ -94,13 +89,11 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -112,7 +105,6 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -42,9 +42,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QEventTransition>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -68,9 +66,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QEventTransition>
-#endif
 #endif
 
 /*
@@ -78,7 +74,6 @@ QEventTransition(QState * sourceState = 0)
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QEventTransition * o = new QEventTransition ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -86,7 +81,6 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -94,7 +88,6 @@ QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QState * par3 = ISNIL(3)? 0 : (QState *) _qt5xhb_itemGetPtr(3);
@@ -104,7 +97,6 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -129,7 +121,6 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -141,7 +132,6 @@ HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

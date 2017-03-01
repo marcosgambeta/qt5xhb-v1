@@ -21,7 +21,6 @@ SlotsQFileSystemWatcher::~SlotsQFileSystemWatcher()
 
 void SlotsQFileSystemWatcher::directoryChanged(const QString & path)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQFileSystemWatcher::directoryChanged(const QString & path)
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
-#endif
 }
 
 void SlotsQFileSystemWatcher::fileChanged(const QString & path)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fileChanged(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQFileSystemWatcher::fileChanged(const QString & path)
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
-#endif
 }
 
 HB_FUNC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileSystemWatcher(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QFILESYSTEMWATCHER_ONFILECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQFileSystemWatcher(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QFILESYSTEMWATCHER_ONFILECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

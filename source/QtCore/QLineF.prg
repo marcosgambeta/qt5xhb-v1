@@ -77,9 +77,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QLineF>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -103,9 +101,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QLineF>
-#endif
 #endif
 
 /*
@@ -113,7 +109,6 @@ QLineF()
 */
 HB_FUNC_STATIC( QLINEF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLineF * o = new QLineF (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLineF *) o );
@@ -123,7 +118,6 @@ HB_FUNC_STATIC( QLINEF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -131,7 +125,6 @@ QLineF(const QPointF & p1, const QPointF & p2)
 */
 HB_FUNC_STATIC( QLINEF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   QLineF * o = new QLineF ( *par1, *par2 );
@@ -143,7 +136,6 @@ HB_FUNC_STATIC( QLINEF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -151,7 +143,6 @@ QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
 HB_FUNC_STATIC( QLINEF_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -165,7 +156,6 @@ HB_FUNC_STATIC( QLINEF_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -173,7 +163,6 @@ QLineF(const QLine & line)
 */
 HB_FUNC_STATIC( QLINEF_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLine * par1 = (QLine *) _qt5xhb_itemGetPtr(1);
   QLineF * o = new QLineF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -184,7 +173,6 @@ HB_FUNC_STATIC( QLINEF_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -219,7 +207,6 @@ HB_FUNC_STATIC( QLINEF_NEW )
 
 HB_FUNC_STATIC( QLINEF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -231,7 +218,6 @@ HB_FUNC_STATIC( QLINEF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

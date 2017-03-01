@@ -113,9 +113,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRectF>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -139,9 +137,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRectF>
-#endif
 #endif
 
 /*
@@ -149,7 +145,6 @@ QRectF ()
 */
 HB_FUNC_STATIC( QRECTF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRectF * o = new QRectF (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRectF *) o );
@@ -159,7 +154,6 @@ HB_FUNC_STATIC( QRECTF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -167,7 +161,6 @@ QRectF ( const QPointF & topLeft, const QSizeF & size )
 */
 HB_FUNC_STATIC( QRECTF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QSizeF * par2 = (QSizeF *) _qt5xhb_itemGetPtr(2);
   QRectF * o = new QRectF ( *par1, *par2 );
@@ -179,7 +172,6 @@ HB_FUNC_STATIC( QRECTF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -187,7 +179,6 @@ QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
 */
 HB_FUNC_STATIC( QRECTF_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   QRectF * o = new QRectF ( *par1, *par2 );
@@ -199,7 +190,6 @@ HB_FUNC_STATIC( QRECTF_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -207,7 +197,6 @@ QRectF ( qreal x, qreal y, qreal width, qreal height )
 */
 HB_FUNC_STATIC( QRECTF_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -221,7 +210,6 @@ HB_FUNC_STATIC( QRECTF_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -229,7 +217,6 @@ QRectF ( const QRect & rectangle )
 */
 HB_FUNC_STATIC( QRECTF_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
   QRectF * o = new QRectF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -240,7 +227,6 @@ HB_FUNC_STATIC( QRECTF_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -280,7 +266,6 @@ HB_FUNC_STATIC( QRECTF_NEW )
 
 HB_FUNC_STATIC( QRECTF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -292,7 +277,6 @@ HB_FUNC_STATIC( QRECTF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

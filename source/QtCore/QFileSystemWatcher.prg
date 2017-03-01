@@ -43,9 +43,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFileSystemWatcher>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -69,9 +67,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFileSystemWatcher>
-#endif
 #endif
 
 #include <QStringList>
@@ -81,7 +77,6 @@ QFileSystemWatcher(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -89,7 +84,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -97,7 +91,6 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QStringList par1;
 PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -114,7 +107,6 @@ par1 << temp;
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -139,7 +131,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -151,7 +142,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

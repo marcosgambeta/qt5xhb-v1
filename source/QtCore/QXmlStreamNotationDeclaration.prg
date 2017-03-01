@@ -47,9 +47,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlStreamNotationDeclaration>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -73,9 +71,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlStreamNotationDeclaration>
-#endif
 #endif
 
 /*
@@ -83,7 +79,6 @@ QXmlStreamNotationDeclaration()
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamNotationDeclaration *) o );
@@ -93,7 +88,6 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -101,7 +95,6 @@ QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlStreamNotationDeclaration * par1 = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtr(1);
   QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -112,7 +105,6 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -137,7 +129,6 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -149,7 +140,6 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

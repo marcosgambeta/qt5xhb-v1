@@ -45,9 +45,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSemaphore>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -71,9 +69,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSemaphore>
-#endif
 #endif
 
 /*
@@ -81,7 +77,6 @@ QSemaphore(int n = 0)
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? 0 : hb_parni(1);
   QSemaphore * o = new QSemaphore ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -92,13 +87,11 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QSEMAPHORE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -110,7 +103,6 @@ HB_FUNC_STATIC( QSEMAPHORE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

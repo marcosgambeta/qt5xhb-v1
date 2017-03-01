@@ -63,9 +63,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QItemSelectionModel>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -89,9 +87,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QItemSelectionModel>
-#endif
 #endif
 
 /*
@@ -99,7 +95,6 @@ QItemSelectionModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
   QItemSelectionModel * o = new QItemSelectionModel ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -107,7 +102,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -115,7 +109,6 @@ QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QItemSelectionModel * o = new QItemSelectionModel ( par1, par2 );
@@ -124,7 +117,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -149,7 +141,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -161,7 +152,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQProcess::~SlotsQProcess()
 
 void SlotsQProcess::error ( QProcess::ProcessError error )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QProcess::ProcessError)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQProcess::error ( QProcess::ProcessError error )
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
 
 void SlotsQProcess::finished ( int exitCode, QProcess::ExitStatus exitStatus )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int,QProcess::ExitStatus)" );
   if( cb )
@@ -50,12 +47,10 @@ void SlotsQProcess::finished ( int exitCode, QProcess::ExitStatus exitStatus )
     hb_itemRelease( pexitCode );
     hb_itemRelease( pexitStatus );
   }
-#endif
 }
 
 void SlotsQProcess::readyReadStandardError ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "readyReadStandardError()" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQProcess::readyReadStandardError ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQProcess::readyReadStandardOutput ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "readyReadStandardOutput()" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQProcess::readyReadStandardOutput ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQProcess::started ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQProcess::started ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQProcess::stateChanged ( QProcess::ProcessState newState )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QProcess::ProcessState)" );
   if( cb )
@@ -108,12 +97,10 @@ void SlotsQProcess::stateChanged ( QProcess::ProcessState newState )
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
   }
-#endif
 }
 
 HB_FUNC( QPROCESS_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQProcess(QCoreApplication::instance());
@@ -170,14 +157,10 @@ HB_FUNC( QPROCESS_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QPROCESS_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQProcess(QCoreApplication::instance());
@@ -234,14 +217,10 @@ HB_FUNC( QPROCESS_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQProcess(QCoreApplication::instance());
@@ -298,14 +277,10 @@ HB_FUNC( QPROCESS_ONREADYREADSTANDARDERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQProcess(QCoreApplication::instance());
@@ -362,14 +337,10 @@ HB_FUNC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QPROCESS_ONSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQProcess(QCoreApplication::instance());
@@ -426,14 +397,10 @@ HB_FUNC( QPROCESS_ONSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QPROCESS_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQProcess(QCoreApplication::instance());
@@ -490,8 +457,4 @@ HB_FUNC( QPROCESS_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

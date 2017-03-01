@@ -65,9 +65,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMetaMethod>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -91,9 +89,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMetaMethod>
-#endif
 #endif
 
 /*
@@ -101,20 +97,17 @@ QMetaMethod()
 */
 HB_FUNC_STATIC( QMETAMETHOD_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMetaMethod * o = new QMetaMethod (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMetaMethod *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -126,7 +119,6 @@ HB_FUNC_STATIC( QMETAMETHOD_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

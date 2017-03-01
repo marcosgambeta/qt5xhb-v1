@@ -42,9 +42,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMessageLogger>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -68,9 +66,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMessageLogger>
-#endif
 #endif
 
 /*
@@ -78,7 +74,6 @@ QMessageLogger()
 */
 HB_FUNC_STATIC( QMESSAGELOGGER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMessageLogger * o = new QMessageLogger (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMessageLogger *) o );
@@ -88,7 +83,6 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -96,7 +90,6 @@ QMessageLogger(const char *file, int line, const char *function)
 */
 HB_FUNC_STATIC( QMESSAGELOGGER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
   const char * par3 = hb_parc(3);
@@ -109,7 +102,6 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -117,7 +109,6 @@ QMessageLogger(const char *file, int line, const char *function, const char *cat
 */
 HB_FUNC_STATIC( QMESSAGELOGGER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
   const char * par3 = hb_parc(3);
@@ -131,7 +122,6 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -161,7 +151,6 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 
 HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMessageLogger * obj = (QMessageLogger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -173,7 +162,6 @@ HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

@@ -21,7 +21,6 @@ SlotsQAbstractItemModel::~SlotsQAbstractItemModel()
 
 void SlotsQAbstractItemModel::columnsAboutToBeInserted ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeInserted(QModelIndex,int,int)" );
   if( cb )
@@ -36,12 +35,10 @@ void SlotsQAbstractItemModel::columnsAboutToBeInserted ( const QModelIndex & par
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::columnsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
@@ -60,12 +57,10 @@ void SlotsQAbstractItemModel::columnsAboutToBeMoved ( const QModelIndex & source
     hb_itemRelease( pdestinationParent );
     hb_itemRelease( pdestinationColumn );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::columnsAboutToBeRemoved ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
   if( cb )
@@ -80,12 +75,10 @@ void SlotsQAbstractItemModel::columnsAboutToBeRemoved ( const QModelIndex & pare
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::columnsInserted ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsInserted(QModelIndex,int,int)" );
   if( cb )
@@ -100,12 +93,10 @@ void SlotsQAbstractItemModel::columnsInserted ( const QModelIndex & parent, int 
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::columnsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
@@ -124,12 +115,10 @@ void SlotsQAbstractItemModel::columnsMoved ( const QModelIndex & sourceParent, i
     hb_itemRelease( pdestinationParent );
     hb_itemRelease( pdestinationColumn );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::columnsRemoved ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsRemoved(QModelIndex,int,int)" );
   if( cb )
@@ -144,12 +133,10 @@ void SlotsQAbstractItemModel::columnsRemoved ( const QModelIndex & parent, int s
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged(QModelIndex,QModelIndex)" );
   if( cb )
@@ -162,12 +149,10 @@ void SlotsQAbstractItemModel::dataChanged ( const QModelIndex & topLeft, const Q
     hb_itemRelease( ptopLeft );
     hb_itemRelease( pbottomRight );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::headerDataChanged ( Qt::Orientation orientation, int first, int last )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "headerDataChanged(Qt::Orientation,int,int)" );
   if( cb )
@@ -182,12 +167,10 @@ void SlotsQAbstractItemModel::headerDataChanged ( Qt::Orientation orientation, i
     hb_itemRelease( pfirst );
     hb_itemRelease( plast );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::layoutAboutToBeChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "layoutAboutToBeChanged()" );
   if( cb )
@@ -196,12 +179,10 @@ void SlotsQAbstractItemModel::layoutAboutToBeChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::layoutChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "layoutChanged()" );
   if( cb )
@@ -210,12 +191,10 @@ void SlotsQAbstractItemModel::layoutChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::modelAboutToBeReset ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelAboutToBeReset()" );
   if( cb )
@@ -224,12 +203,10 @@ void SlotsQAbstractItemModel::modelAboutToBeReset ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::modelReset ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReset()" );
   if( cb )
@@ -238,12 +215,10 @@ void SlotsQAbstractItemModel::modelReset ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::rowsAboutToBeInserted ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeInserted(QModelIndex,int,int)" );
   if( cb )
@@ -258,12 +233,10 @@ void SlotsQAbstractItemModel::rowsAboutToBeInserted ( const QModelIndex & parent
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::rowsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
@@ -282,12 +255,10 @@ void SlotsQAbstractItemModel::rowsAboutToBeMoved ( const QModelIndex & sourcePar
     hb_itemRelease( pdestinationParent );
     hb_itemRelease( pdestinationRow );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::rowsAboutToBeRemoved ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
   if( cb )
@@ -302,12 +273,10 @@ void SlotsQAbstractItemModel::rowsAboutToBeRemoved ( const QModelIndex & parent,
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::rowsInserted ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(QModelIndex,int,int)" );
   if( cb )
@@ -322,12 +291,10 @@ void SlotsQAbstractItemModel::rowsInserted ( const QModelIndex & parent, int sta
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::rowsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
@@ -346,12 +313,10 @@ void SlotsQAbstractItemModel::rowsMoved ( const QModelIndex & sourceParent, int 
     hb_itemRelease( pdestinationParent );
     hb_itemRelease( pdestinationRow );
   }
-#endif
 }
 
 void SlotsQAbstractItemModel::rowsRemoved ( const QModelIndex & parent, int start, int end )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(QModelIndex,int,int)" );
   if( cb )
@@ -366,12 +331,10 @@ void SlotsQAbstractItemModel::rowsRemoved ( const QModelIndex & parent, int star
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -428,14 +391,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -492,14 +451,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -556,14 +511,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -620,14 +571,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -684,14 +631,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -748,14 +691,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONDATACHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -812,14 +751,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONDATACHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -876,14 +811,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -940,14 +871,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1004,14 +931,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1068,14 +991,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONMODELRESET )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1132,14 +1051,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONMODELRESET )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1196,14 +1111,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1260,14 +1171,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1324,14 +1231,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1388,14 +1291,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONROWSINSERTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONROWSMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1452,14 +1351,10 @@ HB_FUNC( QABSTRACTITEMMODEL_ONROWSMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractItemModel(QCoreApplication::instance());
@@ -1516,8 +1411,4 @@ HB_FUNC( QABSTRACTITEMMODEL_ONROWSREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

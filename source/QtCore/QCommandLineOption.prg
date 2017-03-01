@@ -51,9 +51,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCommandLineOption>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -77,9 +75,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCommandLineOption>
-#endif
 #endif
 
 /*
@@ -87,7 +83,6 @@ QCommandLineOption(const QString &name, const QString &description = QString(),c
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QCommandLineOption(const QStringList &names, const QString &description = QStrin
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QStringList par1;
 PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -131,7 +124,6 @@ par1 << temp;
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -139,7 +131,6 @@ QCommandLineOption(const QCommandLineOption &other)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
   QCommandLineOption * o = new QCommandLineOption ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -150,7 +141,6 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -180,7 +170,6 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCommandLineOption * obj = (QCommandLineOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -192,7 +181,6 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

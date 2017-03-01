@@ -93,9 +93,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFile>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -119,9 +117,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFile>
-#endif
 #endif
 
 /*
@@ -129,14 +125,12 @@ QFile()
 */
 HB_FUNC_STATIC( QFILE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFile * o = new QFile (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFile *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -144,7 +138,6 @@ QFile(const QString &name)
 */
 HB_FUNC_STATIC( QFILE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QFile * o = new QFile ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -152,7 +145,6 @@ HB_FUNC_STATIC( QFILE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -160,7 +152,6 @@ explicit QFile(QObject *parent)
 */
 HB_FUNC_STATIC( QFILE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QFile * o = new QFile ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -168,7 +159,6 @@ HB_FUNC_STATIC( QFILE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -176,7 +166,6 @@ QFile(const QString &name, QObject *parent)
 */
 HB_FUNC_STATIC( QFILE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QFile * o = new QFile ( par1, par2 );
@@ -185,7 +174,6 @@ HB_FUNC_STATIC( QFILE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -220,7 +208,6 @@ HB_FUNC_STATIC( QFILE_NEW )
 
 HB_FUNC_STATIC( QFILE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -232,7 +219,6 @@ HB_FUNC_STATIC( QFILE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

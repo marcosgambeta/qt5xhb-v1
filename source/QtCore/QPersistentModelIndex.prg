@@ -60,9 +60,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPersistentModelIndex>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -86,9 +84,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPersistentModelIndex>
-#endif
 #endif
 
 /*
@@ -96,14 +92,12 @@ QPersistentModelIndex()
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPersistentModelIndex * o = new QPersistentModelIndex (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPersistentModelIndex *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -111,7 +105,6 @@ QPersistentModelIndex(const QModelIndex &index)
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +112,6 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -127,7 +119,6 @@ QPersistentModelIndex(const QPersistentModelIndex &other)
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPersistentModelIndex * par1 = (QPersistentModelIndex *) _qt5xhb_itemGetPtr(1);
   QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -135,7 +126,6 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -165,7 +155,6 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPersistentModelIndex * obj = (QPersistentModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -177,7 +166,6 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

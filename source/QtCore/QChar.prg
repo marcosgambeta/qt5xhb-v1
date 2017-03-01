@@ -82,9 +82,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QChar>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -108,9 +106,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QChar>
-#endif
 #endif
 
 /*
@@ -118,14 +114,12 @@ QChar ()
 */
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QChar * o = new QChar (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QChar *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -133,7 +127,6 @@ QChar ( char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   QChar * o = new QChar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -141,7 +134,6 @@ HB_FUNC_STATIC( QCHAR_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -149,7 +141,6 @@ QChar ( uchar ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   QChar * o = new QChar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -157,7 +148,6 @@ HB_FUNC_STATIC( QCHAR_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -165,14 +155,12 @@ QChar ( QLatin1Char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QChar * o = new QChar (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QChar *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -180,7 +168,6 @@ QChar ( uchar cell, uchar row )
 */
 HB_FUNC_STATIC( QCHAR_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   uchar par2 = ISCHAR(2)? (uchar) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QChar * o = new QChar ( par1, par2 );
@@ -189,7 +176,6 @@ HB_FUNC_STATIC( QCHAR_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -197,7 +183,6 @@ QChar ( ushort code )
 */
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   ushort par1 = hb_parni(1);
   QChar * o = new QChar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -205,7 +190,6 @@ HB_FUNC_STATIC( QCHAR_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -213,7 +197,6 @@ QChar ( short code )
 */
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   short par1 = hb_parni(1);
   QChar * o = new QChar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -221,7 +204,6 @@ HB_FUNC_STATIC( QCHAR_NEW7 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -229,7 +211,6 @@ QChar ( uint code )
 */
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   uint par1 = hb_parni(1);
   QChar * o = new QChar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -237,7 +218,6 @@ HB_FUNC_STATIC( QCHAR_NEW8 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -245,7 +225,6 @@ QChar ( int code )
 */
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QChar * o = new QChar ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -253,7 +232,6 @@ HB_FUNC_STATIC( QCHAR_NEW9 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -261,7 +239,6 @@ QChar ( SpecialCharacter ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QChar * o = new QChar (  (QChar::SpecialCharacter) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -269,7 +246,6 @@ HB_FUNC_STATIC( QCHAR_NEW10 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -291,7 +267,6 @@ HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
 
 HB_FUNC_STATIC( QCHAR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -303,7 +278,6 @@ HB_FUNC_STATIC( QCHAR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

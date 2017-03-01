@@ -62,9 +62,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegExp>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -88,9 +86,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegExp>
-#endif
 #endif
 
 #include <QStringList>
@@ -100,7 +96,6 @@ QRegExp ()
 */
 HB_FUNC_STATIC( QREGEXP_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegExp * o = new QRegExp (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExp *) o );
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QREGEXP_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -118,7 +112,6 @@ QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, P
 */
 HB_FUNC_STATIC( QREGEXP_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
   int par3 = ISNIL(3)? (int) QRegExp::RegExp : hb_parni(3);
@@ -131,7 +124,6 @@ HB_FUNC_STATIC( QREGEXP_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -139,7 +131,6 @@ QRegExp ( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXP_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
   QRegExp * o = new QRegExp ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -150,7 +141,6 @@ HB_FUNC_STATIC( QREGEXP_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -180,7 +170,6 @@ HB_FUNC_STATIC( QREGEXP_NEW )
 
 HB_FUNC_STATIC( QREGEXP_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -192,7 +181,6 @@ HB_FUNC_STATIC( QREGEXP_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

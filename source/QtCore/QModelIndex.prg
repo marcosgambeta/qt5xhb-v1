@@ -57,9 +57,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QModelIndex>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -83,9 +81,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QModelIndex>
-#endif
 #endif
 
 /*
@@ -93,7 +89,6 @@ QModelIndex ()
 */
 HB_FUNC_STATIC( QMODELINDEX_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QModelIndex * o = new QModelIndex (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QModelIndex *) o );
@@ -103,7 +98,6 @@ HB_FUNC_STATIC( QMODELINDEX_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -111,7 +105,6 @@ QModelIndex ( const QModelIndex & other )
 */
 HB_FUNC_STATIC( QMODELINDEX_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QModelIndex * o = new QModelIndex ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -122,7 +115,6 @@ HB_FUNC_STATIC( QMODELINDEX_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -147,7 +139,6 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
 
 HB_FUNC_STATIC( QMODELINDEX_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -159,7 +150,6 @@ HB_FUNC_STATIC( QMODELINDEX_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

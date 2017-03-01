@@ -52,9 +52,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPointF>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -78,9 +76,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPointF>
-#endif
 #endif
 
 /*
@@ -88,7 +84,6 @@ QPointF()
 */
 HB_FUNC_STATIC( QPOINTF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * o = new QPointF (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPointF *) o );
@@ -98,7 +93,6 @@ HB_FUNC_STATIC( QPOINTF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -106,7 +100,6 @@ QPointF(const QPoint & point)
 */
 HB_FUNC_STATIC( QPOINTF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QPointF * o = new QPointF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QPOINTF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -125,7 +117,6 @@ QPointF(qreal xpos, qreal ypos)
 */
 HB_FUNC_STATIC( QPOINTF_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   QPointF * o = new QPointF ( par1, par2 );
@@ -137,7 +128,6 @@ HB_FUNC_STATIC( QPOINTF_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -167,7 +157,6 @@ HB_FUNC_STATIC( QPOINTF_NEW )
 
 HB_FUNC_STATIC( QPOINTF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -179,7 +168,6 @@ HB_FUNC_STATIC( QPOINTF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

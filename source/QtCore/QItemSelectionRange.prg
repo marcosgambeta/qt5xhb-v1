@@ -66,9 +66,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QItemSelectionRange>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -92,9 +90,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QItemSelectionRange>
-#endif
 #endif
 
 /*
@@ -102,14 +98,12 @@ QItemSelectionRange()
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QItemSelectionRange * o = new QItemSelectionRange (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -117,7 +111,6 @@ QItemSelectionRange(const QItemSelectionRange &other)
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -125,7 +118,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -133,7 +125,6 @@ QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1, *par2 );
@@ -142,7 +133,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -150,7 +140,6 @@ QItemSelectionRange(const QModelIndex &index)
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -158,7 +147,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -193,7 +181,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -205,7 +192,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

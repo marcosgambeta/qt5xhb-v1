@@ -81,9 +81,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDateTime>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -107,9 +105,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDateTime>
-#endif
 #endif
 
 /*
@@ -117,7 +113,6 @@ QDateTime ()
 */
 HB_FUNC_STATIC( QDATETIME_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDateTime * o = new QDateTime (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDateTime *) o );
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QDATETIME_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -135,7 +129,6 @@ QDateTime ( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIME_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
   QDateTime * o = new QDateTime ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -146,7 +139,6 @@ HB_FUNC_STATIC( QDATETIME_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -154,7 +146,6 @@ QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::Loca
 */
 HB_FUNC_STATIC( QDATETIME_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
   QTime * par2 = (QTime *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) Qt::LocalTime : hb_parni(3);
@@ -167,7 +158,6 @@ HB_FUNC_STATIC( QDATETIME_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -175,7 +165,6 @@ QDateTime ( const QDateTime & other )
 */
 HB_FUNC_STATIC( QDATETIME_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
   QDateTime * o = new QDateTime ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -186,7 +175,6 @@ HB_FUNC_STATIC( QDATETIME_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -221,7 +209,6 @@ HB_FUNC_STATIC( QDATETIME_NEW )
 
 HB_FUNC_STATIC( QDATETIME_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -233,7 +220,6 @@ HB_FUNC_STATIC( QDATETIME_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*
