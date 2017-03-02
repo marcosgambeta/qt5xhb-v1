@@ -53,9 +53,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeListReference>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -79,9 +77,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeListReference>
-#endif
 #endif
 
 /*
@@ -89,14 +85,12 @@ QDeclarativeListReference ()
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDeclarativeListReference * o = new QDeclarativeListReference (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeListReference *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -104,7 +98,6 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
   QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
@@ -114,7 +107,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 

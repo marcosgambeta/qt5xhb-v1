@@ -49,9 +49,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusUnixFileDescriptor>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -75,9 +73,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusUnixFileDescriptor>
-#endif
 #endif
 
 /*
@@ -85,14 +81,12 @@ QDBusUnixFileDescriptor()
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusUnixFileDescriptor *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -100,7 +94,6 @@ explicit QDBusUnixFileDescriptor(int fileDescriptor)
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -108,7 +101,6 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -116,14 +108,12 @@ QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusUnixFileDescriptor *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -153,7 +143,6 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -165,7 +154,6 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

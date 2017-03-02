@@ -52,9 +52,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusPendingCall>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -78,9 +76,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusPendingCall>
-#endif
 #endif
 
 /*
@@ -88,20 +84,17 @@ QDBusPendingCall(const QDBusPendingCall &other)
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusPendingCall * o = new QDBusPendingCall (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusPendingCall *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QDBUSPENDINGCALL_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusPendingCall * obj = (QDBusPendingCall *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -113,7 +106,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

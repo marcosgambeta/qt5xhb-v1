@@ -21,7 +21,6 @@ SlotsQDBusPendingCallWatcher::~SlotsQDBusPendingCallWatcher()
 
 void SlotsQDBusPendingCallWatcher::finished(QDBusPendingCallWatcher *self)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
   if( cb )
@@ -31,12 +30,10 @@ void SlotsQDBusPendingCallWatcher::finished(QDBusPendingCallWatcher *self)
     hb_itemRelease( psender );
     hb_itemRelease( pself );
   }
-#endif
 }
 
 HB_FUNC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusPendingCallWatcher(QCoreApplication::instance());
@@ -93,8 +90,4 @@ HB_FUNC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

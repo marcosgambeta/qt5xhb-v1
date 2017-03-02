@@ -83,9 +83,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeProperty>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -109,9 +107,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeProperty>
-#endif
 #endif
 
 /*
@@ -119,14 +115,12 @@ QDeclarativeProperty ()
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDeclarativeProperty * o = new QDeclarativeProperty (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -134,7 +128,6 @@ QDeclarativeProperty ( QObject * obj )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QDeclarativeProperty * o = new QDeclarativeProperty ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -142,7 +135,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -150,7 +142,6 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QDeclarativeContext * par2 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(2);
   QDeclarativeProperty * o = new QDeclarativeProperty ( par1, par2 );
@@ -159,7 +150,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -167,7 +157,6 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QDeclarativeEngine * par2 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(2);
   QDeclarativeProperty * o = new QDeclarativeProperty ( par1, par2 );
@@ -176,7 +165,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -184,7 +172,6 @@ QDeclarativeProperty ( QObject * obj, const QString & name )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QDeclarativeProperty * o = new QDeclarativeProperty ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -192,7 +179,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -200,7 +186,6 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext 
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeContext * par3 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(3);
@@ -210,7 +195,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -218,7 +202,6 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine *
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeEngine * par3 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
@@ -228,7 +211,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW7 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -236,7 +218,6 @@ QDeclarativeProperty ( const QDeclarativeProperty & other )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW8 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDeclarativeProperty * par1 = (QDeclarativeProperty *) _qt5xhb_itemGetPtr(1);
   QDeclarativeProperty * o = new QDeclarativeProperty ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -244,7 +225,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW8 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 

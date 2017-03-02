@@ -21,7 +21,6 @@ SlotsQDBusConnectionInterface::~SlotsQDBusConnectionInterface()
 
 void SlotsQDBusConnectionInterface::serviceRegistered(const QString &service)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceRegistered(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDBusConnectionInterface::serviceRegistered(const QString &service)
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
-#endif
 }
 
 void SlotsQDBusConnectionInterface::serviceUnregistered(const QString &service)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceUnregistered(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDBusConnectionInterface::serviceUnregistered(const QString &service)
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
-#endif
 }
 
 void SlotsQDBusConnectionInterface::serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceOwnerChanged(QString,QString,QString)" );
   if( cb )
@@ -68,12 +63,10 @@ void SlotsQDBusConnectionInterface::serviceOwnerChanged(const QString &name, con
     hb_itemRelease( poldOwner );
     hb_itemRelease( pnewOwner );
   }
-#endif
 }
 
 void SlotsQDBusConnectionInterface::callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
   if( cb )
@@ -84,12 +77,10 @@ void SlotsQDBusConnectionInterface::callWithCallbackFailed(const QDBusError &err
     hb_itemRelease( perror );
     hb_itemRelease( pcall );
   }
-#endif
 }
 
 HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
@@ -146,14 +137,10 @@ HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
@@ -210,14 +197,10 @@ HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
@@ -274,14 +257,10 @@ HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
@@ -338,8 +317,4 @@ HB_FUNC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

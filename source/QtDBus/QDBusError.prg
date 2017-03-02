@@ -49,9 +49,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusError>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -75,9 +73,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusError>
-#endif
 #endif
 
 /*
@@ -85,14 +81,12 @@ QDBusError()
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusError * o = new QDBusError (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -100,7 +94,6 @@ QDBusError(const DBusError *error)
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   DBusError * par1 = (DBusError *) _qt5xhb_itemGetPtr(1);
   QDBusError * o = new QDBusError ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -108,7 +101,6 @@ HB_FUNC_STATIC( QDBUSERROR_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -116,14 +108,12 @@ QDBusError(const QDBusMessage& msg)
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusError * o = new QDBusError (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -131,7 +121,6 @@ QDBusError(ErrorType error, const QString &message)
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QDBusError * o = new QDBusError (  (QDBusError::ErrorType) par1, par2 );
@@ -140,7 +129,6 @@ HB_FUNC_STATIC( QDBUSERROR_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -148,14 +136,12 @@ QDBusError(const QDBusError &other)
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusError * o = new QDBusError (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -171,7 +157,6 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
 
 HB_FUNC_STATIC( QDBUSERROR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusError * obj = (QDBusError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -183,7 +168,6 @@ HB_FUNC_STATIC( QDBUSERROR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

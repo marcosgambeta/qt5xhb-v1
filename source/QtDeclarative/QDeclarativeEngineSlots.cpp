@@ -21,7 +21,6 @@ SlotsQDeclarativeEngine::~SlotsQDeclarativeEngine()
 
 void SlotsQDeclarativeEngine::quit ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "quit()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQDeclarativeEngine::quit ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnings )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
   if( cb )
@@ -74,12 +71,10 @@ void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnin
     hb_itemRelease( psender );
     hb_itemRelease( pwarnings );
   }
-#endif
 }
 
 HB_FUNC( QDECLARATIVEENGINE_ONQUIT )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDeclarativeEngine(QCoreApplication::instance());
@@ -136,14 +131,10 @@ HB_FUNC( QDECLARATIVEENGINE_ONQUIT )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDECLARATIVEENGINE_ONWARNINGS )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDeclarativeEngine(QCoreApplication::instance());
@@ -200,8 +191,4 @@ HB_FUNC( QDECLARATIVEENGINE_ONWARNINGS )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

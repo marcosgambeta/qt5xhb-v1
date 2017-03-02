@@ -21,7 +21,6 @@ SlotsQDesignerPropertyEditorInterface::~SlotsQDesignerPropertyEditorInterface()
 
 void SlotsQDesignerPropertyEditorInterface::propertyChanged ( const QString & name, const QVariant & value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQDesignerPropertyEditorInterface::propertyChanged ( const QString & na
     hb_itemRelease( pname );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDesignerPropertyEditorInterface(QCoreApplication::instance());
@@ -96,8 +93,4 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

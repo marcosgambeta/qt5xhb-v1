@@ -45,9 +45,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusSignature>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -71,9 +69,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusSignature>
-#endif
 #endif
 
 /*
@@ -81,14 +77,12 @@ QDBusSignature()
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusSignature * o = new QDBusSignature (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusSignature *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -96,7 +90,6 @@ explicit QDBusSignature(const char *signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   QDBusSignature * o = new QDBusSignature (  (const char *) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -104,7 +97,6 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -112,7 +104,6 @@ explicit QDBusSignature(QLatin1String signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
   QDBusSignature * o = new QDBusSignature ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -120,7 +111,6 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -128,7 +118,6 @@ explicit QDBusSignature(const QString &signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QDBusSignature * o = new QDBusSignature ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -136,7 +125,6 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -173,7 +161,6 @@ HB_FUNC( QDBUSSIGNATURE_NEW )
 
 HB_FUNC_STATIC( QDBUSSIGNATURE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusSignature * obj = (QDBusSignature *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -185,7 +172,6 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

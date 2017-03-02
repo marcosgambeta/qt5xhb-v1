@@ -21,7 +21,6 @@ SlotsQDBusServiceWatcher::~SlotsQDBusServiceWatcher()
 
 void SlotsQDBusServiceWatcher::serviceRegistered(const QString &service)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceRegistered(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDBusServiceWatcher::serviceRegistered(const QString &service)
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
-#endif
 }
 
 void SlotsQDBusServiceWatcher::serviceUnregistered(const QString &service)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceUnregistered(QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDBusServiceWatcher::serviceUnregistered(const QString &service)
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
-#endif
 }
 
 void SlotsQDBusServiceWatcher::serviceOwnerChanged(const QString &service, const QString &oldOwner, const QString &newOwner)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceOwnerChanged(QString,QString,QString)" );
   if( cb )
@@ -68,12 +63,10 @@ void SlotsQDBusServiceWatcher::serviceOwnerChanged(const QString &service, const
     hb_itemRelease( poldOwner );
     hb_itemRelease( pnewOwner );
   }
-#endif
 }
 
 HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusServiceWatcher(QCoreApplication::instance());
@@ -130,14 +123,10 @@ HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusServiceWatcher(QCoreApplication::instance());
@@ -194,14 +183,10 @@ HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDBusServiceWatcher(QCoreApplication::instance());
@@ -258,8 +243,4 @@ HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

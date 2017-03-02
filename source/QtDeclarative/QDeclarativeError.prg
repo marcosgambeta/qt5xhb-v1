@@ -53,9 +53,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeError>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -79,9 +77,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeError>
-#endif
 #endif
 
 /*
@@ -89,14 +85,12 @@ QDeclarativeError ()
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDeclarativeError * o = new QDeclarativeError (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeError *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -104,7 +98,6 @@ QDeclarativeError ( const QDeclarativeError & other )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDeclarativeError * par1 = (QDeclarativeError *) _qt5xhb_itemGetPtr(1);
   QDeclarativeError * o = new QDeclarativeError ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -112,7 +105,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 

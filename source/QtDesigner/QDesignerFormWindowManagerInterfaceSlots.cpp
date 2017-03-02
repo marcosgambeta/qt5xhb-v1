@@ -21,7 +21,6 @@ SlotsQDesignerFormWindowManagerInterface::~SlotsQDesignerFormWindowManagerInterf
 
 void SlotsQDesignerFormWindowManagerInterface::activeFormWindowChanged ( QDesignerFormWindowInterface * formWindow )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDesignerFormWindowManagerInterface::activeFormWindowChanged ( QDesign
     hb_itemRelease( psender );
     hb_itemRelease( pformWindow );
   }
-#endif
 }
 
 void SlotsQDesignerFormWindowManagerInterface::formWindowAdded ( QDesignerFormWindowInterface * formWindow )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "formWindowAdded(QDesignerFormWindowInterface*)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDesignerFormWindowManagerInterface::formWindowAdded ( QDesignerFormWi
     hb_itemRelease( psender );
     hb_itemRelease( pformWindow );
   }
-#endif
 }
 
 void SlotsQDesignerFormWindowManagerInterface::formWindowRemoved ( QDesignerFormWindowInterface * formWindow )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "formWindowRemoved(QDesignerFormWindowInterface*)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQDesignerFormWindowManagerInterface::formWindowRemoved ( QDesignerForm
     hb_itemRelease( psender );
     hb_itemRelease( pformWindow );
   }
-#endif
 }
 
 HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDesignerFormWindowManagerInterface(QCoreApplication::instance());
@@ -126,14 +119,10 @@ HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDesignerFormWindowManagerInterface(QCoreApplication::instance());
@@ -190,14 +179,10 @@ HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDesignerFormWindowManagerInterface(QCoreApplication::instance());
@@ -254,8 +239,4 @@ HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQDeclarativeView::~SlotsQDeclarativeView()
 
 void SlotsQDeclarativeView::sceneResized ( QSize size )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneResized(QSize)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDeclarativeView::sceneResized ( QSize size )
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
-#endif
 }
 
 void SlotsQDeclarativeView::statusChanged ( QDeclarativeView::Status status )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDeclarativeView::statusChanged ( QDeclarativeView::Status status )
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
-#endif
 }
 
 HB_FUNC( QDECLARATIVEVIEW_ONSCENERESIZED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDeclarativeView(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QDECLARATIVEVIEW_ONSCENERESIZED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDeclarativeView(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

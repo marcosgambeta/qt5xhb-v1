@@ -72,9 +72,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusMessage>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -98,9 +96,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusMessage>
-#endif
 #endif
 
 /*
@@ -108,14 +104,12 @@ QDBusMessage()
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusMessage * o = new QDBusMessage (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusMessage *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -123,14 +117,12 @@ QDBusMessage(const QDBusMessage &other)
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusMessage * o = new QDBusMessage (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusMessage *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -144,7 +136,6 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 
 HB_FUNC_STATIC( QDBUSMESSAGE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusMessage * obj = (QDBusMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -156,7 +147,6 @@ HB_FUNC_STATIC( QDBUSMESSAGE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

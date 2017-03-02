@@ -50,9 +50,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusServiceWatcher>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -76,9 +74,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusServiceWatcher>
-#endif
 #endif
 
 /*
@@ -86,7 +82,6 @@ explicit QDBusServiceWatcher(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDBusServiceWatcher * o = new QDBusServiceWatcher ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -94,7 +89,6 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -102,7 +96,6 @@ QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, W
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par3 = ISNIL(3)? (int) QDBusServiceWatcher::WatchForOwnerChange : hb_parni(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
@@ -112,7 +105,6 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -137,7 +129,6 @@ HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -149,7 +140,6 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

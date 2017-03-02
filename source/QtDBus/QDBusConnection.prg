@@ -87,9 +87,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusConnection>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -113,9 +111,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusConnection>
-#endif
 #endif
 
 /*
@@ -123,7 +119,6 @@ QDBusConnection(const QString &name)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QDBusConnection * o = new QDBusConnection ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -131,7 +126,6 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -139,14 +133,12 @@ QDBusConnection(const QDBusConnection &other)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusConnection * o = new QDBusConnection (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusConnection *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -160,7 +152,6 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
 
 HB_FUNC_STATIC( QDBUSCONNECTION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusConnection * obj = (QDBusConnection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -172,7 +163,6 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

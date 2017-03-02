@@ -21,7 +21,6 @@ SlotsQDeclarativePropertyMap::~SlotsQDeclarativePropertyMap()
 
 void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVariant & value )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVa
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 HB_FUNC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDeclarativePropertyMap(QCoreApplication::instance());
@@ -96,8 +93,4 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

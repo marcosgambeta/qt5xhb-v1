@@ -51,9 +51,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusContext>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -77,9 +75,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDBusContext>
-#endif
 #endif
 
 /*
@@ -87,20 +83,17 @@ QDBusContext()
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusContext * o = new QDBusContext (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusContext *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QDBUSCONTEXT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDBusContext * obj = (QDBusContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -112,7 +105,6 @@ HB_FUNC_STATIC( QDBUSCONTEXT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

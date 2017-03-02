@@ -55,9 +55,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeView>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -81,9 +79,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDeclarativeView>
-#endif
 #endif
 
 #include <QDeclarativeError>
@@ -93,7 +89,6 @@ QDeclarativeView ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDeclarativeView * o = new QDeclarativeView ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDeclarativeView * o = new QDeclarativeView ( *par1, par2 );
@@ -118,7 +111,6 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -143,7 +135,6 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -155,7 +146,6 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*
