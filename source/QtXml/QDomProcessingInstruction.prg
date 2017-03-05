@@ -39,9 +39,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDomProcessingInstruction>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -65,9 +63,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDomProcessingInstruction>
-#endif
 #endif
 
 /*
@@ -75,7 +71,6 @@ QDomProcessingInstruction ()
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDomProcessingInstruction * o = new QDomProcessingInstruction (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomProcessingInstruction *) o );
@@ -85,7 +80,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -93,7 +87,6 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDomProcessingInstruction * par1 = (QDomProcessingInstruction *) _qt5xhb_itemGetPtr(1);
   QDomProcessingInstruction * o = new QDomProcessingInstruction ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -104,7 +97,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -129,7 +121,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -141,7 +132,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 

@@ -21,7 +21,6 @@ SlotsQHelpContentModel::~SlotsQHelpContentModel()
 
 void SlotsQHelpContentModel::contentsCreated ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreated()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQHelpContentModel::contentsCreated ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQHelpContentModel::contentsCreationStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreationStarted()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQHelpContentModel::contentsCreationStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpContentModel(QCoreApplication::instance());
@@ -106,14 +101,10 @@ HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpContentModel(QCoreApplication::instance());
@@ -170,8 +161,4 @@ HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

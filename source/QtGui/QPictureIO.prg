@@ -72,9 +72,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPictureIO>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -98,9 +96,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPictureIO>
-#endif
 #endif
 
 /*
@@ -108,14 +104,12 @@ QPictureIO()
 */
 HB_FUNC_STATIC( QPICTUREIO_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPictureIO * o = new QPictureIO (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPictureIO *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -123,7 +117,6 @@ QPictureIO(QIODevice *ioDevice, const char *format)
 */
 HB_FUNC_STATIC( QPICTUREIO_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
   QPictureIO * o = new QPictureIO ( par1,  (const char *) par2 );
@@ -132,7 +125,6 @@ HB_FUNC_STATIC( QPICTUREIO_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -140,7 +132,6 @@ QPictureIO(const QString &fileName, const char *format)
 */
 HB_FUNC_STATIC( QPICTUREIO_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = hb_parc(2);
   QPictureIO * o = new QPictureIO ( par1,  (const char *) par2 );
@@ -149,7 +140,6 @@ HB_FUNC_STATIC( QPICTUREIO_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -164,7 +154,6 @@ HB_FUNC_STATIC( QPICTUREIO_NEW )
 
 HB_FUNC_STATIC( QPICTUREIO_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPictureIO * obj = (QPictureIO *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -176,7 +165,6 @@ HB_FUNC_STATIC( QPICTUREIO_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

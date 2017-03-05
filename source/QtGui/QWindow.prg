@@ -121,9 +121,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWindow>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -147,9 +145,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWindow>
-#endif
 #endif
 
 /*
@@ -157,7 +153,6 @@ QWindow(QScreen * targetScreen = 0)
 */
 HB_FUNC_STATIC( QWINDOW_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QScreen * par1 = ISNIL(1)? 0 : (QScreen *) _qt5xhb_itemGetPtr(1);
   QWindow * o = new QWindow ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -165,7 +160,6 @@ HB_FUNC_STATIC( QWINDOW_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -173,7 +167,6 @@ QWindow(QWindow * parent)
 */
 HB_FUNC_STATIC( QWINDOW_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QWindow * o = new QWindow ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -181,7 +174,6 @@ HB_FUNC_STATIC( QWINDOW_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -206,7 +198,6 @@ HB_FUNC_STATIC( QWINDOW_NEW )
 
 HB_FUNC_STATIC( QWINDOW_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWindow * obj = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -218,7 +209,6 @@ HB_FUNC_STATIC( QWINDOW_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

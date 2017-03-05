@@ -46,9 +46,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlParseException>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -72,9 +70,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlParseException>
-#endif
 #endif
 
 /*
@@ -82,7 +78,6 @@ QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, c
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? -1 : hb_parni(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
@@ -97,7 +92,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -105,7 +99,6 @@ QXmlParseException ( const QXmlParseException & other )
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlParseException * par1 = (QXmlParseException *) _qt5xhb_itemGetPtr(1);
   QXmlParseException * o = new QXmlParseException ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -116,7 +109,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -141,7 +133,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -153,7 +144,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

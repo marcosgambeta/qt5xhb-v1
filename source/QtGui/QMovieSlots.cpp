@@ -21,7 +21,6 @@ SlotsQMovie::~SlotsQMovie()
 
 void SlotsQMovie::error ( QImageReader::ImageReaderError error )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QImageReader::ImageReaderError)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMovie::error ( QImageReader::ImageReaderError error )
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
 
 void SlotsQMovie::finished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQMovie::finished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMovie::frameChanged ( int frameNumber )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameChanged(int)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQMovie::frameChanged ( int frameNumber )
     hb_itemRelease( psender );
     hb_itemRelease( pframeNumber );
   }
-#endif
 }
 
 void SlotsQMovie::resized ( const QSize & size )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "resized(QSize)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQMovie::resized ( const QSize & size )
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
-#endif
 }
 
 void SlotsQMovie::started ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQMovie::started ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMovie::stateChanged ( QMovie::MovieState state )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QMovie::MovieState)" );
   if( cb )
@@ -108,12 +97,10 @@ void SlotsQMovie::stateChanged ( QMovie::MovieState state )
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 void SlotsQMovie::updated ( const QRect & rect )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updated(QRect)" );
   if( cb )
@@ -124,12 +111,10 @@ void SlotsQMovie::updated ( const QRect & rect )
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
-#endif
 }
 
 HB_FUNC( QMOVIE_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMovie(QCoreApplication::instance());
@@ -186,14 +171,10 @@ HB_FUNC( QMOVIE_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMOVIE_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMovie(QCoreApplication::instance());
@@ -250,14 +231,10 @@ HB_FUNC( QMOVIE_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMOVIE_ONFRAMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMovie(QCoreApplication::instance());
@@ -314,14 +291,10 @@ HB_FUNC( QMOVIE_ONFRAMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMOVIE_ONRESIZED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMovie(QCoreApplication::instance());
@@ -378,14 +351,10 @@ HB_FUNC( QMOVIE_ONRESIZED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMOVIE_ONSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMovie(QCoreApplication::instance());
@@ -442,14 +411,10 @@ HB_FUNC( QMOVIE_ONSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMOVIE_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMovie(QCoreApplication::instance());
@@ -506,14 +471,10 @@ HB_FUNC( QMOVIE_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMOVIE_ONUPDATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMovie(QCoreApplication::instance());
@@ -570,8 +531,4 @@ HB_FUNC( QMOVIE_ONUPDATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

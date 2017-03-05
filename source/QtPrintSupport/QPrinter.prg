@@ -117,9 +117,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPrinter>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -143,9 +141,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPrinter>
-#endif
 #endif
 
 /*
@@ -153,7 +149,6 @@ QPrinter ( PrinterMode mode = ScreenResolution )
 */
 HB_FUNC_STATIC( QPRINTER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? (int) QPrinter::ScreenResolution : hb_parni(1);
   QPrinter * o = new QPrinter (  (QPrinter::PrinterMode) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -161,7 +156,6 @@ HB_FUNC_STATIC( QPRINTER_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -169,7 +163,6 @@ QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 */
 HB_FUNC_STATIC( QPRINTER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinterInfo * par1 = (QPrinterInfo *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QPrinter::ScreenResolution : hb_parni(2);
   QPrinter * o = new QPrinter ( *par1,  (QPrinter::PrinterMode) par2 );
@@ -178,7 +171,6 @@ HB_FUNC_STATIC( QPRINTER_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -203,7 +195,6 @@ HB_FUNC_STATIC( QPRINTER_NEW )
 
 HB_FUNC_STATIC( QPRINTER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -215,7 +206,6 @@ HB_FUNC_STATIC( QPRINTER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

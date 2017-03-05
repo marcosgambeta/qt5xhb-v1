@@ -45,9 +45,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDoubleValidator>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -71,9 +69,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDoubleValidator>
-#endif
 #endif
 
 /*
@@ -81,7 +77,6 @@ QDoubleValidator ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDoubleValidator * o = new QDoubleValidator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -89,7 +84,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -97,7 +91,6 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   double par1 = hb_parnd(1);
   double par2 = hb_parnd(2);
   int par3 = hb_parni(3);
@@ -108,7 +101,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -133,7 +125,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -145,7 +136,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

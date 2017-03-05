@@ -69,9 +69,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPen>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -95,9 +93,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPen>
-#endif
 #endif
 
 /*
@@ -105,7 +101,6 @@ QPen ()
 */
 HB_FUNC_STATIC( QPEN_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPen * o = new QPen (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPen *) o );
@@ -115,7 +110,6 @@ HB_FUNC_STATIC( QPEN_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -123,7 +117,6 @@ QPen ( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QPEN_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QPen * o = new QPen (  (Qt::PenStyle) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -134,7 +127,6 @@ HB_FUNC_STATIC( QPEN_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -142,7 +134,6 @@ QPen ( const QColor & color )
 */
 HB_FUNC_STATIC( QPEN_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QPen * o = new QPen ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -153,7 +144,6 @@ HB_FUNC_STATIC( QPEN_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -161,7 +151,6 @@ QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt
 */
 HB_FUNC_STATIC( QPEN_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) Qt::SolidLine : hb_parni(3);
@@ -176,7 +165,6 @@ HB_FUNC_STATIC( QPEN_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -184,7 +172,6 @@ QPen ( const QPen & pen )
 */
 HB_FUNC_STATIC( QPEN_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPen * par1 = (QPen *) _qt5xhb_itemGetPtr(1);
   QPen * o = new QPen ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -195,7 +182,6 @@ HB_FUNC_STATIC( QPEN_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -235,7 +221,6 @@ HB_FUNC_STATIC( QPEN_NEW )
 
 HB_FUNC_STATIC( QPEN_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -247,7 +232,6 @@ HB_FUNC_STATIC( QPEN_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -46,9 +46,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QEnterEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -72,9 +70,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QEnterEvent>
-#endif
 #endif
 
 /*
@@ -82,7 +78,6 @@ QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &sc
 */
 HB_FUNC_STATIC( QENTEREVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
@@ -92,13 +87,11 @@ HB_FUNC_STATIC( QENTEREVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QENTEREVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QEnterEvent * obj = (QEnterEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -110,7 +103,6 @@ HB_FUNC_STATIC( QENTEREVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

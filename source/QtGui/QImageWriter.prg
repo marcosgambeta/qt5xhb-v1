@@ -65,9 +65,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImageWriter>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -91,9 +89,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImageWriter>
-#endif
 #endif
 
 /*
@@ -101,7 +97,6 @@ QImageWriter ()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImageWriter * o = new QImageWriter (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QImageWriter *) o );
@@ -111,7 +106,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -119,7 +113,6 @@ QImageWriter ( QIODevice * device, const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageWriter * o = new QImageWriter ( par1, *par2 );
@@ -131,7 +124,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -139,7 +131,6 @@ QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 HB_FUNC_STATIC( QIMAGEWRITER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageWriter * o = new QImageWriter ( par1, par2 );
@@ -151,7 +142,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -181,7 +171,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 
 HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -193,7 +182,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

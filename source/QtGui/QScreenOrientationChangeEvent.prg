@@ -38,9 +38,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QScreenOrientationChangeEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -64,9 +62,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QScreenOrientationChangeEvent>
-#endif
 #endif
 
 /*
@@ -74,7 +70,6 @@ QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QScreen * par1 = (QScreen *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QScreenOrientationChangeEvent * o = new QScreenOrientationChangeEvent ( par1,  (Qt::ScreenOrientation) par2 );
@@ -83,13 +78,11 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -101,7 +94,6 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

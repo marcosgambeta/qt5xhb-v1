@@ -121,9 +121,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextCursor>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -147,9 +145,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextCursor>
-#endif
 #endif
 
 #include <QTextDocumentFragment>
@@ -160,7 +156,6 @@ QTextCursor()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextCursor * o = new QTextCursor (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextCursor *) o );
@@ -170,7 +165,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -178,7 +172,6 @@ QTextCursor(QTextDocument *document)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
   QTextCursor * o = new QTextCursor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -189,7 +182,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -197,7 +189,6 @@ QTextCursor(QTextFrame *frame)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextFrame * par1 = (QTextFrame *) _qt5xhb_itemGetPtr(1);
   QTextCursor * o = new QTextCursor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -208,7 +199,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -216,7 +206,6 @@ QTextCursor(const QTextBlock &block)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
   QTextCursor * o = new QTextCursor ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -227,7 +216,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -235,7 +223,6 @@ QTextCursor(const QTextCursor &cursor)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextCursor * o = new QTextCursor (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextCursor *) o );
@@ -245,7 +232,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW7 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -297,7 +283,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 
 HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -309,7 +294,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

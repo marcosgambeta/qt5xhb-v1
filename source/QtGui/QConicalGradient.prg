@@ -45,9 +45,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QConicalGradient>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -71,9 +69,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QConicalGradient>
-#endif
 #endif
 
 /*
@@ -81,14 +77,12 @@ QConicalGradient ()
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QConicalGradient * o = new QConicalGradient (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QConicalGradient *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -96,7 +90,6 @@ QConicalGradient ( const QPointF & center, qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   QConicalGradient * o = new QConicalGradient ( *par1, par2 );
@@ -105,7 +98,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -113,7 +105,6 @@ QConicalGradient ( qreal cx, qreal cy, qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -123,7 +114,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -153,7 +143,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 
 HB_FUNC_STATIC( QCONICALGRADIENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -165,7 +154,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

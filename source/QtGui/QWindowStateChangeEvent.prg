@@ -35,9 +35,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWindowStateChangeEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -61,9 +59,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWindowStateChangeEvent>
-#endif
 #endif
 
 /*
@@ -71,7 +67,6 @@ QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   bool par2 = ISNIL(2)? false : hb_parl(2);
   QWindowStateChangeEvent * o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1, par2 );
@@ -80,13 +75,11 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -98,7 +91,6 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

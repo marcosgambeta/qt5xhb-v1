@@ -256,9 +256,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPainter>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -282,9 +280,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPainter>
-#endif
 #endif
 
 /*
@@ -292,7 +288,6 @@ QPainter ()
 */
 HB_FUNC_STATIC( QPAINTER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPainter * o = new QPainter (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPainter *) o );
@@ -302,7 +297,6 @@ HB_FUNC_STATIC( QPAINTER_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -310,7 +304,6 @@ QPainter ( QPaintDevice * device )
 */
 HB_FUNC_STATIC( QPAINTER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPaintDevice * par1 = (QPaintDevice *) _qt5xhb_itemGetPtr(1);
   QPainter * o = new QPainter ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -321,7 +314,6 @@ HB_FUNC_STATIC( QPAINTER_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -346,7 +338,6 @@ HB_FUNC_STATIC( QPAINTER_NEW )
 
 HB_FUNC_STATIC( QPAINTER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -358,7 +349,6 @@ HB_FUNC_STATIC( QPAINTER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

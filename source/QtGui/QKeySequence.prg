@@ -53,9 +53,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QKeySequence>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -79,9 +77,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QKeySequence>
-#endif
 #endif
 
 #include <QList>
@@ -91,7 +87,6 @@ QKeySequence ()
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QKeySequence * o = new QKeySequence (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QKeySequence ( const QString & key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QKeySequence * o = new QKeySequence ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -120,7 +113,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -128,7 +120,6 @@ QKeySequence ( const QString & key, SequenceFormat format )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QKeySequence * o = new QKeySequence ( par1,  (QKeySequence::SequenceFormat) par2 );
@@ -140,7 +131,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -148,7 +138,6 @@ QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? 0 : hb_parni(2);
   int par3 = ISNIL(3)? 0 : hb_parni(3);
@@ -162,7 +151,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -170,7 +158,6 @@ QKeySequence ( const QKeySequence & keysequence )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
   QKeySequence * o = new QKeySequence ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -181,7 +168,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -189,7 +175,6 @@ QKeySequence ( StandardKey key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QKeySequence * o = new QKeySequence (  (QKeySequence::StandardKey) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -200,7 +185,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -242,7 +226,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -254,7 +237,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

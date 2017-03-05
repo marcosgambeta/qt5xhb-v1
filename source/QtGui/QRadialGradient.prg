@@ -57,9 +57,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRadialGradient>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -83,9 +81,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRadialGradient>
-#endif
 #endif
 
 /*
@@ -93,14 +89,12 @@ QRadialGradient()
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRadialGradient * o = new QRadialGradient (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -108,7 +102,6 @@ QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
@@ -118,7 +111,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -126,7 +118,6 @@ QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -138,7 +129,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -146,7 +136,6 @@ QRadialGradient(const QPointF & center, qreal radius)
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   QRadialGradient * o = new QRadialGradient ( *par1, par2 );
@@ -155,7 +144,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -163,7 +151,6 @@ QRadialGradient(qreal cx, qreal cy, qreal radius)
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -173,7 +160,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -181,7 +167,6 @@ QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & foca
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
@@ -192,7 +177,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -200,7 +184,6 @@ QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qrea
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -213,7 +196,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW7 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -263,7 +245,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 
 HB_FUNC_STATIC( QRADIALGRADIENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -275,7 +256,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

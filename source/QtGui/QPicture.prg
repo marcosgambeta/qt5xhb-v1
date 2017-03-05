@@ -52,9 +52,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPicture>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -78,9 +76,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPicture>
-#endif
 #endif
 
 /*
@@ -88,7 +84,6 @@ QPicture ( int formatVersion = -1 )
 */
 HB_FUNC_STATIC( QPICTURE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? -1 : hb_parni(1);
   QPicture * o = new QPicture ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -99,7 +94,6 @@ HB_FUNC_STATIC( QPICTURE_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -107,7 +101,6 @@ QPicture ( const QPicture & pic )
 */
 HB_FUNC_STATIC( QPICTURE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
   QPicture * o = new QPicture ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -118,7 +111,6 @@ HB_FUNC_STATIC( QPICTURE_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -147,7 +139,6 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 
 HB_FUNC_STATIC( QPICTURE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -159,7 +150,6 @@ HB_FUNC_STATIC( QPICTURE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

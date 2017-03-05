@@ -21,7 +21,6 @@ SlotsQWebView::~SlotsQWebView()
 
 void SlotsQWebView::iconChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQWebView::iconChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebView::linkClicked ( const QUrl & url )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkClicked(QUrl)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQWebView::linkClicked ( const QUrl & url )
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 void SlotsQWebView::loadFinished ( bool ok )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQWebView::loadFinished ( bool ok )
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
-#endif
 }
 
 void SlotsQWebView::loadProgress ( int progress )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadProgress(int)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQWebView::loadProgress ( int progress )
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
-#endif
 }
 
 void SlotsQWebView::loadStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQWebView::loadStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebView::selectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
@@ -106,12 +95,10 @@ void SlotsQWebView::selectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebView::statusBarMessage ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarMessage(QString)" );
   if( cb )
@@ -122,12 +109,10 @@ void SlotsQWebView::statusBarMessage ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQWebView::titleChanged ( const QString & title )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
   if( cb )
@@ -138,12 +123,10 @@ void SlotsQWebView::titleChanged ( const QString & title )
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
-#endif
 }
 
 void SlotsQWebView::urlChanged ( const QUrl & url )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlChanged(QUrl)" );
   if( cb )
@@ -154,12 +137,10 @@ void SlotsQWebView::urlChanged ( const QUrl & url )
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONICONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -216,14 +197,10 @@ HB_FUNC( QWEBVIEW_ONICONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONLINKCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -280,14 +257,10 @@ HB_FUNC( QWEBVIEW_ONLINKCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONLOADFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -344,14 +317,10 @@ HB_FUNC( QWEBVIEW_ONLOADFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONLOADPROGRESS )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -408,14 +377,10 @@ HB_FUNC( QWEBVIEW_ONLOADPROGRESS )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONLOADSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -472,14 +437,10 @@ HB_FUNC( QWEBVIEW_ONLOADSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -536,14 +497,10 @@ HB_FUNC( QWEBVIEW_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -600,14 +557,10 @@ HB_FUNC( QWEBVIEW_ONSTATUSBARMESSAGE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONTITLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -664,14 +617,10 @@ HB_FUNC( QWEBVIEW_ONTITLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBVIEW_ONURLCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebView(QCoreApplication::instance());
@@ -728,8 +677,4 @@ HB_FUNC( QWEBVIEW_ONURLCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

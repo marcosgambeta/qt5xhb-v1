@@ -38,9 +38,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QResizeEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -64,9 +62,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QResizeEvent>
-#endif
 #endif
 
 /*
@@ -74,7 +70,6 @@ QResizeEvent(const QSize &size, const QSize &oldSize)
 */
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   QResizeEvent * o = new QResizeEvent ( *par1, *par2 );
@@ -83,13 +78,11 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -101,7 +94,6 @@ HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

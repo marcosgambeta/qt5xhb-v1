@@ -84,9 +84,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlQuery>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -110,9 +108,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlQuery>
-#endif
 #endif
 
 /*
@@ -120,7 +116,6 @@ QXmlQuery ()
 */
 HB_FUNC_STATIC( QXMLQUERY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlQuery * o = new QXmlQuery (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlQuery *) o );
@@ -130,7 +125,6 @@ HB_FUNC_STATIC( QXMLQUERY_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -138,7 +132,6 @@ QXmlQuery ( const QXmlQuery & other )
 */
 HB_FUNC_STATIC( QXMLQUERY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlQuery * par1 = (QXmlQuery *) _qt5xhb_itemGetPtr(1);
   QXmlQuery * o = new QXmlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -149,7 +142,6 @@ HB_FUNC_STATIC( QXMLQUERY_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -157,7 +149,6 @@ QXmlQuery ( const QXmlNamePool & np )
 */
 HB_FUNC_STATIC( QXMLQUERY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
   QXmlQuery * o = new QXmlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -168,7 +159,6 @@ HB_FUNC_STATIC( QXMLQUERY_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -176,7 +166,6 @@ QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool(
 */
 HB_FUNC_STATIC( QXMLQUERY_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QXmlNamePool par2 = ISNIL(2)? QXmlNamePool() : *(QXmlNamePool *) _qt5xhb_itemGetPtr(2);
   QXmlQuery * o = new QXmlQuery (  (QXmlQuery::QueryLanguage) par1, par2 );
@@ -188,7 +177,6 @@ HB_FUNC_STATIC( QXMLQUERY_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -223,7 +211,6 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
 
 HB_FUNC_STATIC( QXMLQUERY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -235,7 +222,6 @@ HB_FUNC_STATIC( QXMLQUERY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

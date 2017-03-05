@@ -52,9 +52,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlItem>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -78,9 +76,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlItem>
-#endif
 #endif
 
 #include <QVariant>
@@ -90,7 +86,6 @@ QXmlItem ()
 */
 HB_FUNC_STATIC( QXMLITEM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlItem * o = new QXmlItem (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlItem *) o );
@@ -100,7 +95,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -108,7 +102,6 @@ QXmlItem ( const QXmlItem & other )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlItem * par1 = (QXmlItem *) _qt5xhb_itemGetPtr(1);
   QXmlItem * o = new QXmlItem ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +112,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -127,7 +119,6 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
   QXmlItem * o = new QXmlItem ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -138,7 +129,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -146,7 +136,6 @@ QXmlItem ( const QVariant & atomicValue )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
   QXmlItem * o = new QXmlItem ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -157,7 +146,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -192,7 +180,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 
 HB_FUNC_STATIC( QXMLITEM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -204,7 +191,6 @@ HB_FUNC_STATIC( QXMLITEM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

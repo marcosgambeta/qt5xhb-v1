@@ -122,9 +122,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImage>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -148,9 +146,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImage>
-#endif
 #endif
 
 #include <QStringList>
@@ -161,7 +157,6 @@ QImage ()
 */
 HB_FUNC_STATIC( QIMAGE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImage * o = new QImage (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QImage *) o );
@@ -171,7 +166,6 @@ HB_FUNC_STATIC( QIMAGE_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -179,7 +173,6 @@ QImage ( const QSize & size, Format format )
 */
 HB_FUNC_STATIC( QIMAGE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QImage * o = new QImage ( *par1,  (QImage::Format) par2 );
@@ -191,7 +184,6 @@ HB_FUNC_STATIC( QIMAGE_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -199,7 +191,6 @@ QImage ( int width, int height, Format format )
 */
 HB_FUNC_STATIC( QIMAGE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -212,7 +203,6 @@ HB_FUNC_STATIC( QIMAGE_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -220,7 +210,6 @@ QImage ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   QImage * o = new QImage ( par1,  (const char *) par2 );
@@ -232,7 +221,6 @@ HB_FUNC_STATIC( QIMAGE_NEW9 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -240,7 +228,6 @@ QImage ( const char * fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   QImage * o = new QImage (  (const char *) par1,  (const char *) par2 );
@@ -252,7 +239,6 @@ HB_FUNC_STATIC( QIMAGE_NEW10 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -260,7 +246,6 @@ QImage ( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGE_NEW11 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
   QImage * o = new QImage ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -271,7 +256,6 @@ HB_FUNC_STATIC( QIMAGE_NEW11 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -317,7 +301,6 @@ HB_FUNC_STATIC( QIMAGE_NEW )
 
 HB_FUNC_STATIC( QIMAGE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -329,7 +312,6 @@ HB_FUNC_STATIC( QIMAGE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

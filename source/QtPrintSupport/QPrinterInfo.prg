@@ -65,9 +65,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPrinterInfo>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -91,9 +89,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPrinterInfo>
-#endif
 #endif
 
 #include <QStringList>
@@ -103,7 +99,6 @@ QPrinterInfo ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinterInfo * o = new QPrinterInfo (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPrinterInfo *) o );
@@ -113,7 +108,6 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -121,7 +115,6 @@ QPrinterInfo ( const QPrinterInfo & src )
 */
 HB_FUNC_STATIC( QPRINTERINFO_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinterInfo * par1 = (QPrinterInfo *) _qt5xhb_itemGetPtr(1);
   QPrinterInfo * o = new QPrinterInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -132,7 +125,6 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -140,7 +132,6 @@ explicit QPrinterInfo ( const QPrinter & printer )
 */
 HB_FUNC_STATIC( QPRINTERINFO_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QPrinterInfo * o = new QPrinterInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -151,7 +142,6 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -181,7 +171,6 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 
 HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -193,7 +182,6 @@ HB_FUNC_STATIC( QPRINTERINFO_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

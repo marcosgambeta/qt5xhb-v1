@@ -105,9 +105,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPixmap>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -131,9 +129,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPixmap>
-#endif
 #endif
 
 #include <QBitmap>
@@ -143,7 +139,6 @@ QPixmap ()
 */
 HB_FUNC_STATIC( QPIXMAP_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPixmap * o = new QPixmap (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPixmap *) o );
@@ -153,7 +148,6 @@ HB_FUNC_STATIC( QPIXMAP_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -161,7 +155,6 @@ QPixmap ( int width, int height )
 */
 HB_FUNC_STATIC( QPIXMAP_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QPixmap * o = new QPixmap ( par1, par2 );
@@ -173,7 +166,6 @@ HB_FUNC_STATIC( QPIXMAP_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -181,7 +173,6 @@ QPixmap ( const QSize & size )
 */
 HB_FUNC_STATIC( QPIXMAP_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QPixmap * o = new QPixmap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -192,7 +183,6 @@ HB_FUNC_STATIC( QPIXMAP_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -200,7 +190,6 @@ QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversion
 */
 HB_FUNC_STATIC( QPIXMAP_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
@@ -213,7 +202,6 @@ HB_FUNC_STATIC( QPIXMAP_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -221,7 +209,6 @@ QPixmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QPIXMAP_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   QPixmap * o = new QPixmap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -232,7 +219,6 @@ HB_FUNC_STATIC( QPIXMAP_NEW7 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -278,7 +264,6 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
 
 HB_FUNC_STATIC( QPIXMAP_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -290,7 +275,6 @@ HB_FUNC_STATIC( QPIXMAP_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -57,9 +57,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextTableCell>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -83,9 +81,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextTableCell>
-#endif
 #endif
 
 #include <QTextCursor>
@@ -95,14 +91,12 @@ QTextTableCell()
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextTableCell * o = new QTextTableCell (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextTableCell *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -110,7 +104,6 @@ QTextTableCell(const QTextTableCell &o)
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextTableCell * par1 = (QTextTableCell *) _qt5xhb_itemGetPtr(1);
   QTextTableCell * o = new QTextTableCell ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -118,7 +111,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -143,7 +135,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 
 HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -155,7 +146,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

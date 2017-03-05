@@ -71,9 +71,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLFramebufferObject>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -97,9 +95,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLFramebufferObject>
-#endif
 #endif
 
 #include <QImage>
@@ -109,7 +105,6 @@ QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
   QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *par1, par2 );
@@ -118,7 +113,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -127,7 +121,6 @@ QOpenGLFramebufferObject(int width, int height, GLenum target = GL_TEXTURE_2D)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
@@ -137,7 +130,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -147,7 +139,6 @@ QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target 
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
@@ -158,7 +149,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -166,7 +156,6 @@ QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum tar
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -178,7 +167,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
@@ -199,7 +187,6 @@ QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target 
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
@@ -210,7 +197,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -218,7 +204,6 @@ QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum tar
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -230,7 +215,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 #endif
@@ -240,7 +224,6 @@ QOpenGLFramebufferObject(const QSize &size, const QOpenGLFramebufferObjectFormat
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QOpenGLFramebufferObjectFormat * par2 = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(2);
   QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *par1, *par2 );
@@ -249,7 +232,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW7 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -258,7 +240,6 @@ QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFo
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW8 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QOpenGLFramebufferObjectFormat * par3 = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(3);
@@ -268,7 +249,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW8 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -326,7 +306,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW )
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -338,7 +317,6 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

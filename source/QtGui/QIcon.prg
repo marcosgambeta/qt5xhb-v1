@@ -67,9 +67,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QIcon>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -93,9 +91,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QIcon>
-#endif
 #endif
 
 /*
@@ -103,7 +99,6 @@ QIcon ()
 */
 HB_FUNC_STATIC( QICON_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIcon * o = new QIcon (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QIcon *) o );
@@ -113,7 +108,6 @@ HB_FUNC_STATIC( QICON_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -121,7 +115,6 @@ QIcon ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QICON_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   QIcon * o = new QIcon ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -132,7 +125,6 @@ HB_FUNC_STATIC( QICON_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -140,7 +132,6 @@ QIcon ( const QIcon & other )
 */
 HB_FUNC_STATIC( QICON_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QIcon * o = new QIcon ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -151,7 +142,6 @@ HB_FUNC_STATIC( QICON_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -159,7 +149,6 @@ QIcon ( const QString & fileName )
 */
 HB_FUNC_STATIC( QICON_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QIcon * o = new QIcon ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -170,7 +159,6 @@ HB_FUNC_STATIC( QICON_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -207,7 +195,6 @@ HB_FUNC_STATIC( QICON_NEW )
 
 HB_FUNC_STATIC( QICON_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -219,7 +206,6 @@ HB_FUNC_STATIC( QICON_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

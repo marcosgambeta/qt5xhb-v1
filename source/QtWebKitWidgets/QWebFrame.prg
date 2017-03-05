@@ -102,9 +102,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWebFrame>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -128,9 +126,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWebFrame>
-#endif
 #endif
 
 #include <QWebElement>

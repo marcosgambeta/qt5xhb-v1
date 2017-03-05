@@ -65,9 +65,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegion>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -91,9 +89,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegion>
-#endif
 #endif
 
 /*
@@ -101,7 +97,6 @@ QRegion()
 */
 HB_FUNC_STATIC( QREGION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegion * o = new QRegion (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegion *) o );
@@ -111,7 +106,6 @@ HB_FUNC_STATIC( QREGION_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -119,7 +113,6 @@ QRegion(int x, int y, int w, int h, RegionType t = Rectangle)
 */
 HB_FUNC_STATIC( QREGION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -134,7 +127,6 @@ HB_FUNC_STATIC( QREGION_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -142,7 +134,6 @@ QRegion(const QRect &r, RegionType t = Rectangle)
 */
 HB_FUNC_STATIC( QREGION_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QRegion::Rectangle : hb_parni(2);
   QRegion * o = new QRegion ( *par1,  (QRegion::RegionType) par2 );
@@ -154,7 +145,6 @@ HB_FUNC_STATIC( QREGION_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -162,7 +152,6 @@ QRegion(const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill)
 */
 HB_FUNC_STATIC( QREGION_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) Qt::OddEvenFill : hb_parni(2);
   QRegion * o = new QRegion ( *par1,  (Qt::FillRule) par2 );
@@ -174,7 +163,6 @@ HB_FUNC_STATIC( QREGION_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -182,7 +170,6 @@ QRegion(const QRegion &region)
 */
 HB_FUNC_STATIC( QREGION_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
   QRegion * o = new QRegion ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -193,7 +180,6 @@ HB_FUNC_STATIC( QREGION_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -201,7 +187,6 @@ QRegion(const QBitmap &bitmap)
 */
 HB_FUNC_STATIC( QREGION_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBitmap * par1 = (QBitmap *) _qt5xhb_itemGetPtr(1);
   QRegion * o = new QRegion ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -212,7 +197,6 @@ HB_FUNC_STATIC( QREGION_NEW6 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -257,7 +241,6 @@ HB_FUNC_STATIC( QREGION_NEW )
 
 HB_FUNC_STATIC( QREGION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -269,7 +252,6 @@ HB_FUNC_STATIC( QREGION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

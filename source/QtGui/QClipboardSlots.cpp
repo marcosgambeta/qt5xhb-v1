@@ -21,7 +21,6 @@ SlotsQClipboard::~SlotsQClipboard()
 
 void SlotsQClipboard::changed ( QClipboard::Mode mode )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QClipboard::Mode)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQClipboard::changed ( QClipboard::Mode mode )
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
-#endif
 }
 
 void SlotsQClipboard::dataChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQClipboard::dataChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQClipboard::findBufferChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "findBufferChanged()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQClipboard::findBufferChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQClipboard::selectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQClipboard::selectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QCLIPBOARD_ONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQClipboard(QCoreApplication::instance());
@@ -136,14 +127,10 @@ HB_FUNC( QCLIPBOARD_ONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCLIPBOARD_ONDATACHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQClipboard(QCoreApplication::instance());
@@ -200,14 +187,10 @@ HB_FUNC( QCLIPBOARD_ONDATACHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCLIPBOARD_ONFINDBUFFERCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQClipboard(QCoreApplication::instance());
@@ -264,14 +247,10 @@ HB_FUNC( QCLIPBOARD_ONFINDBUFFERCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCLIPBOARD_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQClipboard(QCoreApplication::instance());
@@ -328,8 +307,4 @@ HB_FUNC( QCLIPBOARD_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

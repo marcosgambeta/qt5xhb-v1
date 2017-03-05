@@ -21,7 +21,6 @@ SlotsQAbstractTextDocumentLayout::~SlotsQAbstractTextDocumentLayout()
 
 void SlotsQAbstractTextDocumentLayout::documentSizeChanged ( const QSizeF & newSize )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAbstractTextDocumentLayout::documentSizeChanged ( const QSizeF & newS
     hb_itemRelease( psender );
     hb_itemRelease( pnewSize );
   }
-#endif
 }
 
 void SlotsQAbstractTextDocumentLayout::pageCountChanged ( int newPages )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageCountChanged(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQAbstractTextDocumentLayout::pageCountChanged ( int newPages )
     hb_itemRelease( psender );
     hb_itemRelease( pnewPages );
   }
-#endif
 }
 
 void SlotsQAbstractTextDocumentLayout::update ( const QRectF & rect )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "update(QRectF)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQAbstractTextDocumentLayout::update ( const QRectF & rect )
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
-#endif
 }
 
 void SlotsQAbstractTextDocumentLayout::updateBlock ( const QTextBlock & block )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQAbstractTextDocumentLayout::updateBlock ( const QTextBlock & block )
     hb_itemRelease( psender );
     hb_itemRelease( pblock );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractTextDocumentLayout(QCoreApplication::instance());
@@ -142,14 +133,10 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractTextDocumentLayout(QCoreApplication::instance());
@@ -206,14 +193,10 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractTextDocumentLayout(QCoreApplication::instance());
@@ -270,14 +253,10 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractTextDocumentLayout(QCoreApplication::instance());
@@ -334,8 +313,4 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

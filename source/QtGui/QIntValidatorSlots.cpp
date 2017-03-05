@@ -21,7 +21,6 @@ SlotsQIntValidator::~SlotsQIntValidator()
 
 void SlotsQIntValidator::changed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "changed()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQIntValidator::changed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QINTVALIDATOR_ONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQIntValidator(QCoreApplication::instance());
@@ -92,8 +89,4 @@ HB_FUNC( QINTVALIDATOR_ONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

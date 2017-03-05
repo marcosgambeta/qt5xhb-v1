@@ -39,9 +39,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QShortcutEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -65,9 +63,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QShortcutEvent>
-#endif
 #endif
 
 /*
@@ -75,7 +71,6 @@ QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   bool par3 = ISNIL(3)? false : hb_parl(3);
@@ -85,13 +80,11 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -103,7 +96,6 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

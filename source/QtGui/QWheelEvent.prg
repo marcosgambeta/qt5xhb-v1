@@ -53,9 +53,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWheelEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -79,9 +77,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QWheelEvent>
-#endif
 #endif
 
 /*
@@ -89,7 +85,6 @@ QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::Keyboard
 */
 HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseBut
 */
 HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
@@ -122,7 +115,6 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -130,7 +122,6 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoi
 */
 HB_FUNC_STATIC( QWHEELEVENT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
@@ -145,7 +136,6 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -160,7 +150,6 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
 
 HB_FUNC_STATIC( QWHEELEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -172,7 +161,6 @@ HB_FUNC_STATIC( QWHEELEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

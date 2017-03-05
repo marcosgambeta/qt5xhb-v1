@@ -43,9 +43,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPageSetupDialog>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -69,9 +67,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPageSetupDialog>
-#endif
 #endif
 
 /*
@@ -79,7 +75,6 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QPageSetupDialog * o = new QPageSetupDialog ( par1, par2 );
@@ -88,7 +83,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -96,7 +90,6 @@ QPageSetupDialog ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QPageSetupDialog * o = new QPageSetupDialog ( par1, par2 );
@@ -105,7 +98,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -130,7 +122,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -142,7 +133,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

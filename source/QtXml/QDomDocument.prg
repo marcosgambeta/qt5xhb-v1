@@ -73,9 +73,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDomDocument>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -99,9 +97,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDomDocument>
-#endif
 #endif
 
 /*
@@ -109,7 +105,6 @@ QDomDocument ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDomDocument * o = new QDomDocument (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomDocument *) o );
@@ -119,7 +114,6 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -127,7 +121,6 @@ QDomDocument ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QDomDocument * o = new QDomDocument ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -138,7 +131,6 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -146,7 +138,6 @@ QDomDocument ( const QDomDocumentType & doctype )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDomDocumentType * par1 = (QDomDocumentType *) _qt5xhb_itemGetPtr(1);
   QDomDocument * o = new QDomDocument ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -157,7 +148,6 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -165,7 +155,6 @@ QDomDocument ( const QDomDocument & x )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDomDocument * par1 = (QDomDocument *) _qt5xhb_itemGetPtr(1);
   QDomDocument * o = new QDomDocument ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -176,7 +165,6 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -211,7 +199,6 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 
 HB_FUNC_STATIC( QDOMDOCUMENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -223,7 +210,6 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

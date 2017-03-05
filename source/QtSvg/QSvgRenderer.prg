@@ -65,9 +65,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSvgRenderer>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -91,9 +89,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSvgRenderer>
-#endif
 #endif
 
 /*
@@ -101,7 +97,6 @@ QSvgRenderer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSvgRenderer * o = new QSvgRenderer ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -109,7 +104,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -117,7 +111,6 @@ QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QSvgRenderer * o = new QSvgRenderer ( par1, par2 );
@@ -126,7 +119,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -134,7 +126,6 @@ QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QSvgRenderer * o = new QSvgRenderer ( *par1, par2 );
@@ -143,7 +134,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -151,7 +141,6 @@ QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlStreamReader * par1 = (QXmlStreamReader *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QSvgRenderer * o = new QSvgRenderer ( par1, par2 );
@@ -160,7 +149,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -195,7 +183,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW )
 
 HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -207,7 +194,6 @@ HB_FUNC_STATIC( QSVGRENDERER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

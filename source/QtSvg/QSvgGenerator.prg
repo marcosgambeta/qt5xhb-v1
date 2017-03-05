@@ -56,9 +56,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSvgGenerator>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -82,9 +80,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSvgGenerator>
-#endif
 #endif
 
 /*
@@ -92,20 +88,17 @@ QSvgGenerator ()
 */
 HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSvgGenerator * o = new QSvgGenerator (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSvgGenerator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QSVGGENERATOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QSVGGENERATOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

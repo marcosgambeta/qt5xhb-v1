@@ -105,9 +105,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTransform>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -131,9 +129,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTransform>
-#endif
 #endif
 
 /*
@@ -141,7 +137,6 @@ QTransform(Qt::Initialization)
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QTransform * o = new QTransform (  (Qt::Initialization) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -152,7 +147,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -160,7 +154,6 @@ QTransform()
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTransform * o = new QTransform (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTransform *) o );
@@ -170,7 +163,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -178,7 +170,6 @@ QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -197,7 +188,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -205,7 +195,6 @@ QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -221,7 +210,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -261,7 +249,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
 
 HB_FUNC_STATIC( QTRANSFORM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -273,7 +260,6 @@ HB_FUNC_STATIC( QTRANSFORM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

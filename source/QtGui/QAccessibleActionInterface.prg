@@ -49,9 +49,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAccessibleActionInterface>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -75,15 +73,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAccessibleActionInterface>
-#endif
 #endif
 
 
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -95,7 +90,6 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

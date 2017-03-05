@@ -21,7 +21,6 @@ SlotsQHelpSearchEngine::~SlotsQHelpSearchEngine()
 
 void SlotsQHelpSearchEngine::indexingFinished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexingFinished()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQHelpSearchEngine::indexingFinished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQHelpSearchEngine::indexingStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexingStarted()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQHelpSearchEngine::indexingStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQHelpSearchEngine::searchingFinished ( int hits )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "searchingFinished(int)" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQHelpSearchEngine::searchingFinished ( int hits )
     hb_itemRelease( psender );
     hb_itemRelease( phits );
   }
-#endif
 }
 
 void SlotsQHelpSearchEngine::searchingStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "searchingStarted()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQHelpSearchEngine::searchingStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
@@ -136,14 +127,10 @@ HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
@@ -200,14 +187,10 @@ HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
@@ -264,14 +247,10 @@ HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
@@ -328,8 +307,4 @@ HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQWebPage::~SlotsQWebPage()
 
 void SlotsQWebPage::contentsChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQWebPage::contentsChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebPage::databaseQuotaExceeded ( QWebFrame * frame, QString databaseName )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "databaseQuotaExceeded(QWebFrame*,QString)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQWebPage::databaseQuotaExceeded ( QWebFrame * frame, QString databaseN
     hb_itemRelease( pframe );
     hb_itemRelease( pdatabaseName );
   }
-#endif
 }
 
 void SlotsQWebPage::downloadRequested ( const QNetworkRequest & request )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "downloadRequested(QNetworkRequest)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQWebPage::downloadRequested ( const QNetworkRequest & request )
     hb_itemRelease( psender );
     hb_itemRelease( prequest );
   }
-#endif
 }
 
 void SlotsQWebPage::frameCreated ( QWebFrame * frame )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameCreated(QWebFrame*)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQWebPage::frameCreated ( QWebFrame * frame )
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
-#endif
 }
 
 void SlotsQWebPage::geometryChangeRequested ( const QRect & geom )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChangeRequested(QRect)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQWebPage::geometryChangeRequested ( const QRect & geom )
     hb_itemRelease( psender );
     hb_itemRelease( pgeom );
   }
-#endif
 }
 
 void SlotsQWebPage::linkClicked ( const QUrl & url )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkClicked(QUrl)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQWebPage::linkClicked ( const QUrl & url )
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 void SlotsQWebPage::linkHovered ( const QString & link, const QString & title, const QString & textContent )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString,QString,QString)" );
   if( cb )
@@ -132,12 +119,10 @@ void SlotsQWebPage::linkHovered ( const QString & link, const QString & title, c
     hb_itemRelease( ptitle );
     hb_itemRelease( ptextContent );
   }
-#endif
 }
 
 void SlotsQWebPage::loadFinished ( bool ok )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
   if( cb )
@@ -148,12 +133,10 @@ void SlotsQWebPage::loadFinished ( bool ok )
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
-#endif
 }
 
 void SlotsQWebPage::loadProgress ( int progress )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadProgress(int)" );
   if( cb )
@@ -164,12 +147,10 @@ void SlotsQWebPage::loadProgress ( int progress )
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
-#endif
 }
 
 void SlotsQWebPage::loadStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
   if( cb )
@@ -178,12 +159,10 @@ void SlotsQWebPage::loadStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebPage::menuBarVisibilityChangeRequested ( bool visible )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "menuBarVisibilityChangeRequested(bool)" );
   if( cb )
@@ -194,12 +173,10 @@ void SlotsQWebPage::menuBarVisibilityChangeRequested ( bool visible )
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
-#endif
 }
 
 void SlotsQWebPage::microFocusChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "microFocusChanged()" );
   if( cb )
@@ -208,12 +185,10 @@ void SlotsQWebPage::microFocusChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebPage::printRequested ( QWebFrame * frame )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "printRequested(QWebFrame*)" );
   if( cb )
@@ -224,12 +199,10 @@ void SlotsQWebPage::printRequested ( QWebFrame * frame )
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
-#endif
 }
 
 void SlotsQWebPage::repaintRequested ( const QRect & dirtyRect )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "repaintRequested(QRect)" );
   if( cb )
@@ -240,12 +213,10 @@ void SlotsQWebPage::repaintRequested ( const QRect & dirtyRect )
     hb_itemRelease( psender );
     hb_itemRelease( pdirtyRect );
   }
-#endif
 }
 
 void SlotsQWebPage::restoreFrameStateRequested ( QWebFrame * frame )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "restoreFrameStateRequested(QWebFrame*)" );
   if( cb )
@@ -256,12 +227,10 @@ void SlotsQWebPage::restoreFrameStateRequested ( QWebFrame * frame )
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
-#endif
 }
 
 void SlotsQWebPage::saveFrameStateRequested ( QWebFrame * frame, QWebHistoryItem * item )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
   if( cb )
@@ -274,12 +243,10 @@ void SlotsQWebPage::saveFrameStateRequested ( QWebFrame * frame, QWebHistoryItem
     hb_itemRelease( pframe );
     hb_itemRelease( pitem );
   }
-#endif
 }
 
 void SlotsQWebPage::scrollRequested ( int dx, int dy, const QRect & rectToScroll )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scrollRequested(int,int,QRect)" );
   if( cb )
@@ -294,12 +261,10 @@ void SlotsQWebPage::scrollRequested ( int dx, int dy, const QRect & rectToScroll
     hb_itemRelease( pdy );
     hb_itemRelease( prectToScroll );
   }
-#endif
 }
 
 void SlotsQWebPage::selectionChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
@@ -308,12 +273,10 @@ void SlotsQWebPage::selectionChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebPage::statusBarMessage ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarMessage(QString)" );
   if( cb )
@@ -324,12 +287,10 @@ void SlotsQWebPage::statusBarMessage ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQWebPage::statusBarVisibilityChangeRequested ( bool visible )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarVisibilityChangeRequested(bool)" );
   if( cb )
@@ -340,12 +301,10 @@ void SlotsQWebPage::statusBarVisibilityChangeRequested ( bool visible )
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
-#endif
 }
 
 void SlotsQWebPage::toolBarVisibilityChangeRequested ( bool visible )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toolBarVisibilityChangeRequested(bool)" );
   if( cb )
@@ -356,12 +315,10 @@ void SlotsQWebPage::toolBarVisibilityChangeRequested ( bool visible )
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
-#endif
 }
 
 void SlotsQWebPage::unsupportedContent ( QNetworkReply * reply )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "unsupportedContent(QNetworkReply*)" );
   if( cb )
@@ -372,12 +329,10 @@ void SlotsQWebPage::unsupportedContent ( QNetworkReply * reply )
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
-#endif
 }
 
 void SlotsQWebPage::windowCloseRequested ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowCloseRequested()" );
   if( cb )
@@ -386,12 +341,10 @@ void SlotsQWebPage::windowCloseRequested ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONCONTENTSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -448,14 +401,10 @@ HB_FUNC( QWEBPAGE_ONCONTENTSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -512,14 +461,10 @@ HB_FUNC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONDOWNLOADREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -576,14 +521,10 @@ HB_FUNC( QWEBPAGE_ONDOWNLOADREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONFRAMECREATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -640,14 +581,10 @@ HB_FUNC( QWEBPAGE_ONFRAMECREATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -704,14 +641,10 @@ HB_FUNC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONLINKCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -768,14 +701,10 @@ HB_FUNC( QWEBPAGE_ONLINKCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONLINKHOVERED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -832,14 +761,10 @@ HB_FUNC( QWEBPAGE_ONLINKHOVERED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONLOADFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -896,14 +821,10 @@ HB_FUNC( QWEBPAGE_ONLOADFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONLOADPROGRESS )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -960,14 +881,10 @@ HB_FUNC( QWEBPAGE_ONLOADPROGRESS )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONLOADSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1024,14 +941,10 @@ HB_FUNC( QWEBPAGE_ONLOADSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_OMMENUBARVISIBILITYCHANGEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1088,14 +1001,10 @@ HB_FUNC( QWEBPAGE_OMMENUBARVISIBILITYCHANGEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_OMMICROFOCUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1152,14 +1061,10 @@ HB_FUNC( QWEBPAGE_OMMICROFOCUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONPRINTREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1216,14 +1121,10 @@ HB_FUNC( QWEBPAGE_ONPRINTREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONREPAINTREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1280,14 +1181,10 @@ HB_FUNC( QWEBPAGE_ONREPAINTREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1344,14 +1241,10 @@ HB_FUNC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1408,14 +1301,10 @@ HB_FUNC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONSCROLLREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1472,14 +1361,10 @@ HB_FUNC( QWEBPAGE_ONSCROLLREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONSELECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1536,14 +1421,10 @@ HB_FUNC( QWEBPAGE_ONSELECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONSTATUSBARMESSAGE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1600,14 +1481,10 @@ HB_FUNC( QWEBPAGE_ONSTATUSBARMESSAGE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1664,14 +1541,10 @@ HB_FUNC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1728,14 +1601,10 @@ HB_FUNC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1792,14 +1661,10 @@ HB_FUNC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebPage(QCoreApplication::instance());
@@ -1856,8 +1721,4 @@ HB_FUNC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

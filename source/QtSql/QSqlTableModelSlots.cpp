@@ -21,7 +21,6 @@ SlotsQSqlTableModel::~SlotsQSqlTableModel()
 
 void SlotsQSqlTableModel::beforeDelete ( int row )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeDelete(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQSqlTableModel::beforeDelete ( int row )
     hb_itemRelease( psender );
     hb_itemRelease( prow );
   }
-#endif
 }
 
 void SlotsQSqlTableModel::beforeInsert ( QSqlRecord & record )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQSqlTableModel::beforeInsert ( QSqlRecord & record )
     hb_itemRelease( psender );
     hb_itemRelease( precord );
   }
-#endif
 }
 
 void SlotsQSqlTableModel::beforeUpdate ( int row, QSqlRecord & record )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQSqlTableModel::beforeUpdate ( int row, QSqlRecord & record )
     hb_itemRelease( prow );
     hb_itemRelease( precord );
   }
-#endif
 }
 
 void SlotsQSqlTableModel::primeInsert ( int row, QSqlRecord & record )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
   if( cb )
@@ -84,12 +77,10 @@ void SlotsQSqlTableModel::primeInsert ( int row, QSqlRecord & record )
     hb_itemRelease( prow );
     hb_itemRelease( precord );
   }
-#endif
 }
 
 HB_FUNC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSqlTableModel(QCoreApplication::instance());
@@ -146,14 +137,10 @@ HB_FUNC( QSQLTABLEMODEL_ONBEFOREDELETE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSqlTableModel(QCoreApplication::instance());
@@ -210,14 +197,10 @@ HB_FUNC( QSQLTABLEMODEL_ONBEFOREINSERT )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSqlTableModel(QCoreApplication::instance());
@@ -274,14 +257,10 @@ HB_FUNC( QSQLTABLEMODEL_ONBEFOREUPDATE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSqlTableModel(QCoreApplication::instance());
@@ -338,8 +317,4 @@ HB_FUNC( QSQLTABLEMODEL_ONPRIMEINSERT )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

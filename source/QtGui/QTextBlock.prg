@@ -81,9 +81,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextBlock>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -107,9 +105,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextBlock>
-#endif
 #endif
 
 /*
@@ -117,7 +113,6 @@ QTextBlock(QTextDocumentPrivate *priv, int b)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextDocumentPrivate * par1 = (QTextDocumentPrivate *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QTextBlock * o = new QTextBlock ( par1, par2 );
@@ -126,7 +121,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -134,14 +128,12 @@ QTextBlock()
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBlock * o = new QTextBlock (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBlock *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -149,7 +141,6 @@ QTextBlock(const QTextBlock &o)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
   QTextBlock * o = new QTextBlock ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -157,7 +148,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -187,7 +177,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 
 HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -199,7 +188,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

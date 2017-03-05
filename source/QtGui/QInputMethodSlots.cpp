@@ -21,7 +21,6 @@ SlotsQInputMethod::~SlotsQInputMethod()
 
 void SlotsQInputMethod::animatingChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "animatingChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQInputMethod::animatingChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQInputMethod::cursorRectangleChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorRectangleChanged()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQInputMethod::cursorRectangleChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQInputMethod::inputDirectionChanged(Qt::LayoutDirection newDirection)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "inputDirectionChanged(Qt::LayoutDirection)" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQInputMethod::inputDirectionChanged(Qt::LayoutDirection newDirection)
     hb_itemRelease( psender );
     hb_itemRelease( pnewDirection );
   }
-#endif
 }
 
 void SlotsQInputMethod::keyboardRectangleChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "keyboardRectangleChanged()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQInputMethod::keyboardRectangleChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQInputMethod::localeChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "localeChanged()" );
   if( cb )
@@ -88,12 +79,10 @@ void SlotsQInputMethod::localeChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQInputMethod::visibleChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
   if( cb )
@@ -102,12 +91,10 @@ void SlotsQInputMethod::visibleChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QINPUTMETHOD_ONANIMATINGCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputMethod(QCoreApplication::instance());
@@ -164,14 +151,10 @@ HB_FUNC( QINPUTMETHOD_ONANIMATINGCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputMethod(QCoreApplication::instance());
@@ -228,14 +211,10 @@ HB_FUNC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputMethod(QCoreApplication::instance());
@@ -292,14 +271,10 @@ HB_FUNC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputMethod(QCoreApplication::instance());
@@ -356,14 +331,10 @@ HB_FUNC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTMETHOD_ONLOCALECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputMethod(QCoreApplication::instance());
@@ -420,14 +391,10 @@ HB_FUNC( QINPUTMETHOD_ONLOCALECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QINPUTMETHOD_ONVISIBLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQInputMethod(QCoreApplication::instance());
@@ -484,8 +451,4 @@ HB_FUNC( QINPUTMETHOD_ONVISIBLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

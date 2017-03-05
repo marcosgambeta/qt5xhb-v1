@@ -61,9 +61,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPolygonF>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -87,9 +85,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPolygonF>
-#endif
 #endif
 
 /*
@@ -97,7 +93,6 @@ QPolygonF()
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPolygonF * o = new QPolygonF (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPolygonF *) o );
@@ -107,7 +102,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -115,7 +109,6 @@ QPolygonF(int size)
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QPolygonF * o = new QPolygonF ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -126,7 +119,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -134,7 +126,6 @@ QPolygonF(const QPolygonF &a)
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
   QPolygonF * o = new QPolygonF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -145,7 +136,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -153,7 +143,6 @@ QPolygonF(const QVector<QPointF> &v)
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QVector<QPointF> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -171,7 +160,6 @@ par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -179,7 +167,6 @@ QPolygonF(const QRectF &r)
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
   QPolygonF * o = new QPolygonF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -190,7 +177,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -198,7 +184,6 @@ QPolygonF(const QPolygon &a)
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
   QPolygonF * o = new QPolygonF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -209,7 +194,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW6 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -254,7 +238,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
 
 HB_FUNC_STATIC( QPOLYGONF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -266,7 +249,6 @@ HB_FUNC_STATIC( QPOLYGONF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

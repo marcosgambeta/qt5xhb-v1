@@ -21,7 +21,6 @@ SlotsQTextDocument::~SlotsQTextDocument()
 
 void SlotsQTextDocument::contentsChange(int from, int charsRemoves, int charsAdded)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsChange(int,int,int)" );
   if( cb )
@@ -36,12 +35,10 @@ void SlotsQTextDocument::contentsChange(int from, int charsRemoves, int charsAdd
     hb_itemRelease( pcharsRemoves );
     hb_itemRelease( pcharsAdded );
   }
-#endif
 }
 
 void SlotsQTextDocument::contentsChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsChanged()" );
   if( cb )
@@ -50,12 +47,10 @@ void SlotsQTextDocument::contentsChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQTextDocument::undoAvailable(bool b)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "undoAvailable(bool)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQTextDocument::undoAvailable(bool b)
     hb_itemRelease( psender );
     hb_itemRelease( pb );
   }
-#endif
 }
 
 void SlotsQTextDocument::redoAvailable(bool b)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "redoAvailable(bool)" );
   if( cb )
@@ -82,12 +75,10 @@ void SlotsQTextDocument::redoAvailable(bool b)
     hb_itemRelease( psender );
     hb_itemRelease( pb );
   }
-#endif
 }
 
 void SlotsQTextDocument::undoCommandAdded()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "undoCommandAdded()" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQTextDocument::undoCommandAdded()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQTextDocument::modificationChanged(bool m)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modificationChanged(bool)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQTextDocument::modificationChanged(bool m)
     hb_itemRelease( psender );
     hb_itemRelease( pm );
   }
-#endif
 }
 
 void SlotsQTextDocument::cursorPositionChanged(const QTextCursor &cursor)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged(QTextCursor)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQTextDocument::cursorPositionChanged(const QTextCursor &cursor)
     hb_itemRelease( psender );
     hb_itemRelease( pcursor );
   }
-#endif
 }
 
 void SlotsQTextDocument::blockCountChanged(int newBlockCount)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blockCountChanged(int)" );
   if( cb )
@@ -144,12 +129,10 @@ void SlotsQTextDocument::blockCountChanged(int newBlockCount)
     hb_itemRelease( psender );
     hb_itemRelease( pnewBlockCount );
   }
-#endif
 }
 
 void SlotsQTextDocument::documentLayoutChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "documentLayoutChanged()" );
   if( cb )
@@ -158,12 +141,10 @@ void SlotsQTextDocument::documentLayoutChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -220,14 +201,10 @@ HB_FUNC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -284,14 +261,10 @@ HB_FUNC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -348,14 +321,10 @@ HB_FUNC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -412,14 +381,10 @@ HB_FUNC( QTEXTDOCUMENT_ONREDOAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -476,14 +441,10 @@ HB_FUNC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -540,14 +501,10 @@ HB_FUNC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -604,14 +561,10 @@ HB_FUNC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_OBBLOCKCOUNTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -668,14 +621,10 @@ HB_FUNC( QTEXTDOCUMENT_OBBLOCKCOUNTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQTextDocument(QCoreApplication::instance());
@@ -732,8 +681,4 @@ HB_FUNC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

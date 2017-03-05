@@ -44,9 +44,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSqlIndex>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -70,9 +68,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSqlIndex>
-#endif
 #endif
 
 /*
@@ -80,7 +76,6 @@ explicit QSqlIndex ( const QString & cursorname = QString(), const QString & nam
 */
 HB_FUNC_STATIC( QSQLINDEX_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QSqlIndex * o = new QSqlIndex ( par1, par2 );
@@ -92,7 +87,6 @@ HB_FUNC_STATIC( QSQLINDEX_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -100,7 +94,6 @@ QSqlIndex ( const QSqlIndex & other )
 */
 HB_FUNC_STATIC( QSQLINDEX_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlIndex * par1 = (QSqlIndex *) _qt5xhb_itemGetPtr(1);
   QSqlIndex * o = new QSqlIndex ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -111,7 +104,6 @@ HB_FUNC_STATIC( QSQLINDEX_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -136,7 +128,6 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
 
 HB_FUNC_STATIC( QSQLINDEX_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -148,7 +139,6 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

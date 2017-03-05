@@ -101,9 +101,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextFormat>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -127,9 +125,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextFormat>
-#endif
 #endif
 
 /*
@@ -137,14 +133,12 @@ QTextFormat()
 */
 HB_FUNC_STATIC( QTEXTFORMAT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextFormat * o = new QTextFormat (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextFormat *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +146,6 @@ QTextFormat(int type)
 */
 HB_FUNC_STATIC( QTEXTFORMAT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QTextFormat * o = new QTextFormat ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -160,7 +153,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -168,7 +160,6 @@ QTextFormat(const QTextFormat &rhs)
 */
 HB_FUNC_STATIC( QTEXTFORMAT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextFormat * par1 = (QTextFormat *) _qt5xhb_itemGetPtr(1);
   QTextFormat * o = new QTextFormat ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -176,7 +167,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -206,7 +196,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -218,7 +207,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -132,9 +132,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QColor>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -158,9 +156,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QColor>
-#endif
 #endif
 
 /*
@@ -168,7 +164,6 @@ QColor ()
 */
 HB_FUNC_STATIC( QCOLOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QColor * o = new QColor (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QColor *) o );
@@ -178,7 +173,6 @@ HB_FUNC_STATIC( QCOLOR_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -186,7 +180,6 @@ QColor ( int r, int g, int b, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
@@ -200,7 +193,6 @@ HB_FUNC_STATIC( QCOLOR_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -208,7 +200,6 @@ QColor ( QRgb color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRgb par1 = hb_parni(1);
   QColor * o = new QColor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -219,7 +210,6 @@ HB_FUNC_STATIC( QCOLOR_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -227,7 +217,6 @@ QColor ( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QColor * o = new QColor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -238,7 +227,6 @@ HB_FUNC_STATIC( QCOLOR_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -246,7 +234,6 @@ QColor ( const char * name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   const char * par1 = hb_parc(1);
   QColor * o = new QColor (  (const char *) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -257,7 +244,6 @@ HB_FUNC_STATIC( QCOLOR_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -265,7 +251,6 @@ QColor ( const QColor & color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QColor * o = new QColor ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -276,7 +261,6 @@ HB_FUNC_STATIC( QCOLOR_NEW6 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -284,7 +268,6 @@ QColor ( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QColor * o = new QColor (  (Qt::GlobalColor) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -295,7 +278,6 @@ HB_FUNC_STATIC( QCOLOR_NEW7 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -337,7 +319,6 @@ HB_FUNC_STATIC( QCOLOR_NEW )
 
 HB_FUNC_STATIC( QCOLOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -349,7 +330,6 @@ HB_FUNC_STATIC( QCOLOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

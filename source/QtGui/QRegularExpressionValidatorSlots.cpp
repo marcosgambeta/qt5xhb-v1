@@ -21,7 +21,6 @@ SlotsQRegularExpressionValidator::~SlotsQRegularExpressionValidator()
 
 void SlotsQRegularExpressionValidator::regularExpressionChanged(const QRegularExpression &re)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "regularExpressionChanged(QRegularExpression)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQRegularExpressionValidator::regularExpressionChanged(const QRegularEx
     hb_itemRelease( psender );
     hb_itemRelease( pre );
   }
-#endif
 }
 
 HB_FUNC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRegularExpressionValidator(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -93,9 +93,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSqlQuery>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -119,9 +117,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSqlQuery>
-#endif
 #endif
 
 #include <QVariant>
@@ -133,7 +129,6 @@ explicit QSqlQuery ( QSqlResult * result )
 */
 HB_FUNC_STATIC( QSQLQUERY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlResult * par1 = (QSqlResult *) _qt5xhb_itemGetPtr(1);
   QSqlQuery * o = new QSqlQuery ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -144,7 +139,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +146,6 @@ explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDa
 */
 HB_FUNC_STATIC( QSQLQUERY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
   QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
   QSqlQuery * o = new QSqlQuery ( par1, par2 );
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -172,7 +164,6 @@ explicit QSqlQuery ( QSqlDatabase db )
 */
 HB_FUNC_STATIC( QSQLQUERY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlDatabase * par1 = (QSqlDatabase *) _qt5xhb_itemGetPtr(1);
   QSqlQuery * o = new QSqlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -183,7 +174,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -191,7 +181,6 @@ QSqlQuery ( const QSqlQuery & other )
 */
 HB_FUNC_STATIC( QSQLQUERY_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlQuery * par1 = (QSqlQuery *) _qt5xhb_itemGetPtr(1);
   QSqlQuery * o = new QSqlQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -202,7 +191,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -237,7 +225,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
 
 HB_FUNC_STATIC( QSQLQUERY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -249,7 +236,6 @@ HB_FUNC_STATIC( QSQLQUERY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

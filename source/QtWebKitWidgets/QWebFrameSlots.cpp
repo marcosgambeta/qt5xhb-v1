@@ -21,7 +21,6 @@ SlotsQWebFrame::~SlotsQWebFrame()
 
 void SlotsQWebFrame::contentsSizeChanged ( const QSize & size )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsSizeChanged(QSize)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQWebFrame::contentsSizeChanged ( const QSize & size )
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
-#endif
 }
 
 void SlotsQWebFrame::iconChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconChanged()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQWebFrame::iconChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebFrame::initialLayoutCompleted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "initialLayoutCompleted()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQWebFrame::initialLayoutCompleted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebFrame::javaScriptWindowObjectCleared ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "javaScriptWindowObjectCleared()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQWebFrame::javaScriptWindowObjectCleared ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebFrame::loadFinished ( bool ok )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
   if( cb )
@@ -90,12 +81,10 @@ void SlotsQWebFrame::loadFinished ( bool ok )
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
-#endif
 }
 
 void SlotsQWebFrame::loadStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
   if( cb )
@@ -104,12 +93,10 @@ void SlotsQWebFrame::loadStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebFrame::pageChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageChanged()" );
   if( cb )
@@ -118,12 +105,10 @@ void SlotsQWebFrame::pageChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQWebFrame::titleChanged ( const QString & title )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
   if( cb )
@@ -134,12 +119,10 @@ void SlotsQWebFrame::titleChanged ( const QString & title )
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
-#endif
 }
 
 void SlotsQWebFrame::urlChanged ( const QUrl & url )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlChanged(QUrl)" );
   if( cb )
@@ -150,12 +133,10 @@ void SlotsQWebFrame::urlChanged ( const QUrl & url )
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONCONTENTSSIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -212,14 +193,10 @@ HB_FUNC( QWEBFRAME_ONCONTENTSSIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONICONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -276,14 +253,10 @@ HB_FUNC( QWEBFRAME_ONICONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -340,14 +313,10 @@ HB_FUNC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -404,14 +373,10 @@ HB_FUNC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONLOADFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -468,14 +433,10 @@ HB_FUNC( QWEBFRAME_ONLOADFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONLOADSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -532,14 +493,10 @@ HB_FUNC( QWEBFRAME_ONLOADSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONPAGECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -596,14 +553,10 @@ HB_FUNC( QWEBFRAME_ONPAGECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONTITLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -660,14 +613,10 @@ HB_FUNC( QWEBFRAME_ONTITLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWEBFRAME_ONURLCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWebFrame(QCoreApplication::instance());
@@ -724,8 +673,4 @@ HB_FUNC( QWEBFRAME_ONURLCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -38,9 +38,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMoveEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -64,9 +62,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMoveEvent>
-#endif
 #endif
 
 /*
@@ -74,7 +70,6 @@ QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 */
 HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QMoveEvent * o = new QMoveEvent ( *par1, *par2 );
@@ -83,13 +78,11 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QMOVEEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMoveEvent * obj = (QMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -101,7 +94,6 @@ HB_FUNC_STATIC( QMOVEEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

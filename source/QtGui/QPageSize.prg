@@ -85,9 +85,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPageSize>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -111,9 +109,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QPageSize>
-#endif
 #endif
 
 #include <QSize>
@@ -124,7 +120,6 @@ QPageSize()
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPageSize * o = new QPageSize (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPageSize *) o );
@@ -134,7 +129,6 @@ HB_FUNC_STATIC( QPAGESIZE_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -142,7 +136,6 @@ explicit QPageSize(PageSizeId pageSizeId)
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QPageSize * o = new QPageSize (  (QPageSize::PageSizeId) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -153,7 +146,6 @@ HB_FUNC_STATIC( QPAGESIZE_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -161,7 +153,6 @@ explicit QPageSize(const QSize &pointSize, const QString &name = QString(), Size
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QPageSize::FuzzyMatch : hb_parni(3);
@@ -174,7 +165,6 @@ HB_FUNC_STATIC( QPAGESIZE_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -182,7 +172,6 @@ explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
@@ -196,7 +185,6 @@ HB_FUNC_STATIC( QPAGESIZE_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -204,7 +192,6 @@ QPageSize(const QPageSize &other)
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPageSize * par1 = (QPageSize *) _qt5xhb_itemGetPtr(1);
   QPageSize * o = new QPageSize ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -215,7 +202,6 @@ HB_FUNC_STATIC( QPAGESIZE_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -255,7 +241,6 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
 
 HB_FUNC_STATIC( QPAGESIZE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPageSize * obj = (QPageSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -267,7 +252,6 @@ HB_FUNC_STATIC( QPAGESIZE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

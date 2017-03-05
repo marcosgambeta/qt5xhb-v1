@@ -58,9 +58,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLPixelTransferOptions>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -84,9 +82,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLPixelTransferOptions>
-#endif
 #endif
 
 /*
@@ -94,14 +90,12 @@ QOpenGLPixelTransferOptions()
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLPixelTransferOptions *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLPixelTransferOptions * par1 = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(1);
   QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -142,7 +134,6 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -154,7 +145,6 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

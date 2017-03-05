@@ -21,7 +21,6 @@ SlotsQDrag::~SlotsQDrag()
 
 void SlotsQDrag::actionChanged ( Qt::DropAction action )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQDrag::actionChanged ( Qt::DropAction action )
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
-#endif
 }
 
 void SlotsQDrag::targetChanged ( QObject * newTarget )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "targetChanged(QObject*)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQDrag::targetChanged ( QObject * newTarget )
     hb_itemRelease( psender );
     hb_itemRelease( pnewTarget );
   }
-#endif
 }
 
 HB_FUNC( QDRAG_ONACTIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDrag(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QDRAG_ONACTIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDRAG_ONTARGETCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDrag(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QDRAG_ONTARGETCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

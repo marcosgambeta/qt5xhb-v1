@@ -70,9 +70,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSqlField>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -96,9 +94,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSqlField>
-#endif
 #endif
 
 /*
@@ -106,7 +102,6 @@ explicit QSqlField ( const QString & fieldName = QString(), QVariant::Type type 
 */
 HB_FUNC_STATIC( QSQLFIELD_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QVariant::Invalid : hb_parni(2);
   QSqlField * o = new QSqlField ( par1,  (QVariant::Type) par2 );
@@ -118,7 +113,6 @@ HB_FUNC_STATIC( QSQLFIELD_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -126,7 +120,6 @@ QSqlField ( const QSqlField & other )
 */
 HB_FUNC_STATIC( QSQLFIELD_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
   QSqlField * o = new QSqlField ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -137,7 +130,6 @@ HB_FUNC_STATIC( QSQLFIELD_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -162,7 +154,6 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
 
 HB_FUNC_STATIC( QSQLFIELD_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -174,7 +165,6 @@ HB_FUNC_STATIC( QSQLFIELD_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

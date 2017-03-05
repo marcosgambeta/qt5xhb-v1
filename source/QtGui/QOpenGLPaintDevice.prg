@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLPaintDevice>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLPaintDevice>
-#endif
 #endif
 
 /*
@@ -90,14 +86,12 @@ QOpenGLPaintDevice()
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLPaintDevice *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -105,7 +99,6 @@ QOpenGLPaintDevice(const QSize &size)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -113,7 +106,6 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -121,7 +113,6 @@ QOpenGLPaintDevice(int width, int height)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( par1, par2 );
@@ -130,7 +121,6 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -145,7 +135,6 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -157,7 +146,6 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQGuiApplication::~SlotsQGuiApplication()
 
 void SlotsQGuiApplication::focusObjectChanged(QObject * focusObject)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusObjectChanged(QObject*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQGuiApplication::focusObjectChanged(QObject * focusObject)
     hb_itemRelease( psender );
     hb_itemRelease( pfocusObject );
   }
-#endif
 }
 
 void SlotsQGuiApplication::focusWindowChanged(QWindow * focusWindow)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusWindowChanged(QWindow*)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQGuiApplication::focusWindowChanged(QWindow * focusWindow)
     hb_itemRelease( psender );
     hb_itemRelease( pfocusWindow );
   }
-#endif
 }
 
 void SlotsQGuiApplication::fontDatabaseChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQGuiApplication::fontDatabaseChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGuiApplication::lastWindowClosed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQGuiApplication::lastWindowClosed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGuiApplication::screenAdded(QScreen * screen)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "screenAdded(QScreen*)" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQGuiApplication::screenAdded(QScreen * screen)
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }
-#endif
 }
 
 HB_FUNC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGuiApplication(QCoreApplication::instance());
@@ -154,14 +143,10 @@ HB_FUNC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGuiApplication(QCoreApplication::instance());
@@ -218,14 +203,10 @@ HB_FUNC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGuiApplication(QCoreApplication::instance());
@@ -282,14 +263,10 @@ HB_FUNC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGuiApplication(QCoreApplication::instance());
@@ -346,14 +323,10 @@ HB_FUNC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGUIAPPLICATION_ONSCREENADDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGuiApplication(QCoreApplication::instance());
@@ -410,8 +383,4 @@ HB_FUNC( QGUIAPPLICATION_ONSCREENADDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

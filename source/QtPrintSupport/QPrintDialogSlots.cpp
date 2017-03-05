@@ -21,7 +21,6 @@ SlotsQPrintDialog::~SlotsQPrintDialog()
 
 void SlotsQPrintDialog::accepted ( QPrinter * printer )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted(QPrinter*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQPrintDialog::accepted ( QPrinter * printer )
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
   }
-#endif
 }
 
 HB_FUNC( QPRINTDIALOG_ONACCEPTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQPrintDialog(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QPRINTDIALOG_ONACCEPTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

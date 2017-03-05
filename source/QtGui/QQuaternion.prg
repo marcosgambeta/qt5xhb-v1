@@ -71,9 +71,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuaternion>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -97,9 +95,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuaternion>
-#endif
 #endif
 
 /*
@@ -107,7 +103,6 @@ QQuaternion()
 */
 HB_FUNC_STATIC( QQUATERNION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQuaternion * o = new QQuaternion (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuaternion *) o );
@@ -117,7 +112,6 @@ HB_FUNC_STATIC( QQUATERNION_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -125,7 +119,6 @@ QQuaternion(float scalar, float xpos, float ypos, float zpos)
 */
 HB_FUNC_STATIC( QQUATERNION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   float par1 = hb_parnd(1);
   float par2 = hb_parnd(2);
   float par3 = hb_parnd(3);
@@ -139,7 +132,6 @@ HB_FUNC_STATIC( QQUATERNION_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -147,7 +139,6 @@ QQuaternion(float scalar, const QVector3D& vector)
 */
 HB_FUNC_STATIC( QQUATERNION_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   float par1 = hb_parnd(1);
   QVector3D * par2 = (QVector3D *) _qt5xhb_itemGetPtr(2);
   QQuaternion * o = new QQuaternion ( par1, *par2 );
@@ -159,7 +150,6 @@ HB_FUNC_STATIC( QQUATERNION_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -167,7 +157,6 @@ QQuaternion(const QVector4D& vector)
 */
 HB_FUNC_STATIC( QQUATERNION_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVector4D * par1 = (QVector4D *) _qt5xhb_itemGetPtr(1);
   QQuaternion * o = new QQuaternion ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -178,7 +167,6 @@ HB_FUNC_STATIC( QQUATERNION_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -213,7 +201,6 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
 
 HB_FUNC_STATIC( QQUATERNION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQuaternion * obj = (QQuaternion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -225,7 +212,6 @@ HB_FUNC_STATIC( QQUATERNION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

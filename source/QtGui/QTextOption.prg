@@ -56,9 +56,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextOption>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -82,9 +80,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextOption>
-#endif
 #endif
 
 #include <QList>
@@ -94,14 +90,12 @@ QTextOption()
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextOption * o = new QTextOption (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextOption *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QTextOption(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QTextOption * o = new QTextOption (  (Qt::Alignment) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -125,7 +117,6 @@ QTextOption(const QTextOption &o)
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextOption * par1 = (QTextOption *) _qt5xhb_itemGetPtr(1);
   QTextOption * o = new QTextOption ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -133,7 +124,6 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -163,7 +153,6 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 
 HB_FUNC_STATIC( QTEXTOPTION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -175,7 +164,6 @@ HB_FUNC_STATIC( QTEXTOPTION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

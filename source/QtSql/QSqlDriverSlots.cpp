@@ -21,7 +21,6 @@ SlotsQSqlDriver::~SlotsQSqlDriver()
 
 void SlotsQSqlDriver::notification ( const QString & name )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQSqlDriver::notification ( const QString & name )
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
-#endif
 }
 
 void SlotsQSqlDriver::notification(const QString &name, QSqlDriver::NotificationSource source, const QVariant &payload)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
   if( cb )
@@ -52,12 +49,10 @@ void SlotsQSqlDriver::notification(const QString &name, QSqlDriver::Notification
     hb_itemRelease( psource );
     hb_itemRelease( ppayload );
   }
-#endif
 }
 
 HB_FUNC( QSQLDRIVER_ONNOTIFICATION1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSqlDriver(QCoreApplication::instance());
@@ -114,14 +109,10 @@ HB_FUNC( QSQLDRIVER_ONNOTIFICATION1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSQLDRIVER_ONNOTIFICATION2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSqlDriver(QCoreApplication::instance());
@@ -178,8 +169,4 @@ HB_FUNC( QSQLDRIVER_ONNOTIFICATION2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

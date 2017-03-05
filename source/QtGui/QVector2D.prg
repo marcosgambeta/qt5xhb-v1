@@ -67,9 +67,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QVector2D>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -93,9 +91,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QVector2D>
-#endif
 #endif
 
 #include <QVector3D>
@@ -106,14 +102,12 @@ QVector2D()
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVector2D * o = new QVector2D (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -121,7 +115,6 @@ QVector2D(float xpos, float ypos)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   float par1 = hb_parnd(1);
   float par2 = hb_parnd(2);
   QVector2D * o = new QVector2D ( par1, par2 );
@@ -130,7 +123,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -138,7 +130,6 @@ QVector2D(const QPoint& point)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -146,7 +137,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -154,7 +144,6 @@ QVector2D(const QPointF& point)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -162,7 +151,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -170,7 +158,6 @@ QVector2D(const QVector3D& vector)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVector3D * par1 = (QVector3D *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -178,7 +165,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -186,7 +172,6 @@ QVector2D(const QVector4D& vector)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVector4D * par1 = (QVector4D *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -194,7 +179,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -212,7 +196,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
 
 HB_FUNC_STATIC( QVECTOR2D_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -224,7 +207,6 @@ HB_FUNC_STATIC( QVECTOR2D_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

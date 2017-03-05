@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFontInfo>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFontInfo>
-#endif
 #endif
 
 /*
@@ -90,7 +86,6 @@ QFontInfo ( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTINFO_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QFontInfo * o = new QFontInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QFONTINFO_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QFontInfo ( const QFontInfo & fi )
 */
 HB_FUNC_STATIC( QFONTINFO_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFontInfo * par1 = (QFontInfo *) _qt5xhb_itemGetPtr(1);
   QFontInfo * o = new QFontInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -120,7 +113,6 @@ HB_FUNC_STATIC( QFONTINFO_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -145,7 +137,6 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
 
 HB_FUNC_STATIC( QFONTINFO_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -157,7 +148,6 @@ HB_FUNC_STATIC( QFONTINFO_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -59,9 +59,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCursor>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -85,9 +83,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCursor>
-#endif
 #endif
 
 #include <QPixmap>
@@ -97,7 +93,6 @@ QCursor ()
 */
 HB_FUNC_STATIC( QCURSOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCursor * o = new QCursor (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCursor *) o );
@@ -107,7 +102,6 @@ HB_FUNC_STATIC( QCURSOR_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -115,7 +109,6 @@ QCursor ( Qt::CursorShape shape )
 */
 HB_FUNC_STATIC( QCURSOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QCursor * o = new QCursor (  (Qt::CursorShape) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -126,7 +119,6 @@ HB_FUNC_STATIC( QCURSOR_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -134,7 +126,6 @@ QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY 
 */
 HB_FUNC_STATIC( QCURSOR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBitmap * par1 = (QBitmap *) _qt5xhb_itemGetPtr(1);
   QBitmap * par2 = (QBitmap *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
@@ -148,7 +139,6 @@ HB_FUNC_STATIC( QCURSOR_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -156,7 +146,6 @@ QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
 HB_FUNC_STATIC( QCURSOR_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? -1 : hb_parni(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
@@ -169,7 +158,6 @@ HB_FUNC_STATIC( QCURSOR_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -177,7 +165,6 @@ QCursor ( const QCursor & c )
 */
 HB_FUNC_STATIC( QCURSOR_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
   QCursor * o = new QCursor ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -188,7 +175,6 @@ HB_FUNC_STATIC( QCURSOR_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -230,7 +216,6 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 
 HB_FUNC_STATIC( QCURSOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -242,7 +227,6 @@ HB_FUNC_STATIC( QCURSOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

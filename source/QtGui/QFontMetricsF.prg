@@ -68,9 +68,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFontMetricsF>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -94,9 +92,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QFontMetricsF>
-#endif
 #endif
 
 /*
@@ -104,7 +100,6 @@ QFontMetricsF ( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTMETRICSF_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QFontMetricsF * o = new QFontMetricsF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -115,7 +110,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -123,7 +117,6 @@ QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
 */
 HB_FUNC_STATIC( QFONTMETRICSF_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QPaintDevice * par2 = (QPaintDevice *) _qt5xhb_itemGetPtr(2);
   QFontMetricsF * o = new QFontMetricsF ( *par1, par2 );
@@ -135,7 +128,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -143,7 +135,6 @@ QFontMetricsF ( const QFontMetrics & fontMetrics )
 */
 HB_FUNC_STATIC( QFONTMETRICSF_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
   QFontMetricsF * o = new QFontMetricsF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -154,7 +145,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -162,7 +152,6 @@ QFontMetricsF ( const QFontMetricsF & fm )
 */
 HB_FUNC_STATIC( QFONTMETRICSF_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFontMetricsF * par1 = (QFontMetricsF *) _qt5xhb_itemGetPtr(1);
   QFontMetricsF * o = new QFontMetricsF ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -173,7 +162,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -208,7 +196,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 
 HB_FUNC_STATIC( QFONTMETRICSF_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -220,7 +207,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

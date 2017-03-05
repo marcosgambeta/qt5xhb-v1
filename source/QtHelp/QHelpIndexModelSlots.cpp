@@ -21,7 +21,6 @@ SlotsQHelpIndexModel::~SlotsQHelpIndexModel()
 
 void SlotsQHelpIndexModel::indexCreated ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreated()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQHelpIndexModel::indexCreated ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQHelpIndexModel::indexCreationStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreationStarted()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQHelpIndexModel::indexCreationStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpIndexModel(QCoreApplication::instance());
@@ -106,14 +101,10 @@ HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpIndexModel(QCoreApplication::instance());
@@ -170,8 +161,4 @@ HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

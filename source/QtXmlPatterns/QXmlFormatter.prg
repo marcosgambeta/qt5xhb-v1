@@ -46,9 +46,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlFormatter>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -72,9 +70,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QXmlFormatter>
-#endif
 #endif
 
 /*
@@ -82,7 +78,6 @@ QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice
 */
 HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlQuery * par1 = (QXmlQuery *) _qt5xhb_itemGetPtr(1);
   QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
   QXmlFormatter * o = new QXmlFormatter ( *par1, par2 );
@@ -94,13 +89,11 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QXMLFORMATTER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -112,7 +105,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

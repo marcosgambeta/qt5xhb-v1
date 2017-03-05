@@ -21,7 +21,6 @@ SlotsQHelpSearchResultWidget::~SlotsQHelpSearchResultWidget()
 
 void SlotsQHelpSearchResultWidget::requestShowLink ( const QUrl & link )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "requestShowLink(QUrl)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQHelpSearchResultWidget::requestShowLink ( const QUrl & link )
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
-#endif
 }
 
 HB_FUNC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpSearchResultWidget(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

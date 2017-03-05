@@ -21,7 +21,6 @@ SlotsQPrintPreviewWidget::~SlotsQPrintPreviewWidget()
 
 void SlotsQPrintPreviewWidget::paintRequested ( QPrinter * printer )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQPrintPreviewWidget::paintRequested ( QPrinter * printer )
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
   }
-#endif
 }
 
 void SlotsQPrintPreviewWidget::previewChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "previewChanged()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQPrintPreviewWidget::previewChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQPrintPreviewWidget(QCoreApplication::instance());
@@ -108,14 +103,10 @@ HB_FUNC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQPrintPreviewWidget(QCoreApplication::instance());
@@ -172,8 +163,4 @@ HB_FUNC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

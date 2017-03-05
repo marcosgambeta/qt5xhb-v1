@@ -47,9 +47,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLShader>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -73,9 +71,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLShader>
-#endif
 #endif
 
 /*
@@ -83,7 +79,6 @@ QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QOpenGLShader * o = new QOpenGLShader (  (QOpenGLShader::ShaderType) par1, par2 );
@@ -92,13 +87,11 @@ HB_FUNC_STATIC( QOPENGLSHADER_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QOPENGLSHADER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLShader * obj = (QOpenGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -110,7 +103,6 @@ HB_FUNC_STATIC( QOPENGLSHADER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

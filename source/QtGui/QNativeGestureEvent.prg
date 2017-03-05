@@ -43,9 +43,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNativeGestureEvent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -69,9 +67,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNativeGestureEvent>
-#endif
 #endif
 
 /*
@@ -79,7 +75,6 @@ QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const Q
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
@@ -93,13 +88,11 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNativeGestureEvent * obj = (QNativeGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -111,7 +104,6 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQWindow::~SlotsQWindow()
 
 void SlotsQWindow::contentOrientationChanged(Qt::ScreenOrientation orientation)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentOrientationChanged(Qt::ScreenOrientation)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQWindow::contentOrientationChanged(Qt::ScreenOrientation orientation)
     hb_itemRelease( psender );
     hb_itemRelease( porientation );
   }
-#endif
 }
 
 void SlotsQWindow::focusObjectChanged(QObject * focusObject)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusObjectChanged(QObject*)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQWindow::focusObjectChanged(QObject * focusObject)
     hb_itemRelease( psender );
     hb_itemRelease( pfocusObject );
   }
-#endif
 }
 
 void SlotsQWindow::heightChanged(int arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "heightChanged(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQWindow::heightChanged(int arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 void SlotsQWindow::screenChanged(QScreen * screen)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "screenChanged(QScreen*)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQWindow::screenChanged(QScreen * screen)
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }
-#endif
 }
 
 void SlotsQWindow::visibleChanged(bool arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged(bool)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQWindow::visibleChanged(bool arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 void SlotsQWindow::widthChanged(int arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "widthChanged(int)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQWindow::widthChanged(int arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 void SlotsQWindow::windowModalityChanged(Qt::WindowModality windowModality)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowModalityChanged(Qt::WindowModality)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQWindow::windowModalityChanged(Qt::WindowModality windowModality)
     hb_itemRelease( psender );
     hb_itemRelease( pwindowModality );
   }
-#endif
 }
 
 void SlotsQWindow::xChanged(int arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xChanged(int)" );
   if( cb )
@@ -144,12 +129,10 @@ void SlotsQWindow::xChanged(int arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 void SlotsQWindow::yChanged(int arg)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yChanged(int)" );
   if( cb )
@@ -160,12 +143,10 @@ void SlotsQWindow::yChanged(int arg)
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
-#endif
 }
 
 HB_FUNC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -222,14 +203,10 @@ HB_FUNC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONFOCUSOBJECTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -286,14 +263,10 @@ HB_FUNC( QWINDOW_ONFOCUSOBJECTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONHEIGHTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -350,14 +323,10 @@ HB_FUNC( QWINDOW_ONHEIGHTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONSCREENCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -414,14 +383,10 @@ HB_FUNC( QWINDOW_ONSCREENCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONVISIBLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -478,14 +443,10 @@ HB_FUNC( QWINDOW_ONVISIBLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONWIDTHCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -542,14 +503,10 @@ HB_FUNC( QWINDOW_ONWIDTHCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONWINDOWMODALITYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -606,14 +563,10 @@ HB_FUNC( QWINDOW_ONWINDOWMODALITYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONXCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -670,14 +623,10 @@ HB_FUNC( QWINDOW_ONXCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QWINDOW_ONYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQWindow(QCoreApplication::instance());
@@ -734,8 +683,4 @@ HB_FUNC( QWINDOW_ONYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

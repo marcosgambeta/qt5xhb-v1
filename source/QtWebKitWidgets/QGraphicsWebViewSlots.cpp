@@ -21,7 +21,6 @@ SlotsQGraphicsWebView::~SlotsQGraphicsWebView()
 
 void SlotsQGraphicsWebView::iconChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQGraphicsWebView::iconChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsWebView::linkClicked ( const QUrl & url )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkClicked(QUrl)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQGraphicsWebView::linkClicked ( const QUrl & url )
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 void SlotsQGraphicsWebView::loadFinished ( bool ok )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQGraphicsWebView::loadFinished ( bool ok )
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
-#endif
 }
 
 void SlotsQGraphicsWebView::loadProgress ( int progress )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadProgress(int)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQGraphicsWebView::loadProgress ( int progress )
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
-#endif
 }
 
 void SlotsQGraphicsWebView::loadStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQGraphicsWebView::loadStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQGraphicsWebView::statusBarMessage ( const QString & text )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarMessage(QString)" );
   if( cb )
@@ -108,12 +97,10 @@ void SlotsQGraphicsWebView::statusBarMessage ( const QString & text )
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
-#endif
 }
 
 void SlotsQGraphicsWebView::titleChanged ( const QString & title )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
   if( cb )
@@ -124,12 +111,10 @@ void SlotsQGraphicsWebView::titleChanged ( const QString & title )
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
-#endif
 }
 
 void SlotsQGraphicsWebView::urlChanged ( const QUrl & url )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlChanged(QUrl)" );
   if( cb )
@@ -140,12 +125,10 @@ void SlotsQGraphicsWebView::urlChanged ( const QUrl & url )
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONICONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -202,14 +185,10 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONICONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -266,14 +245,10 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -330,14 +305,10 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -394,14 +365,10 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -458,14 +425,10 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -522,14 +485,10 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -586,14 +545,10 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QGRAPHICSWEBVIEW_ONURLCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsWebView(QCoreApplication::instance());
@@ -650,8 +605,4 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONURLCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

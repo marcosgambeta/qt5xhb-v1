@@ -21,7 +21,6 @@ SlotsQHelpEngineCore::~SlotsQHelpEngineCore()
 
 void SlotsQHelpEngineCore::currentFilterChanged ( const QString & newFilter )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFilterChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQHelpEngineCore::currentFilterChanged ( const QString & newFilter )
     hb_itemRelease( psender );
     hb_itemRelease( pnewFilter );
   }
-#endif
 }
 
 void SlotsQHelpEngineCore::setupFinished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setupFinished()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQHelpEngineCore::setupFinished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQHelpEngineCore::setupStarted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setupStarted()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQHelpEngineCore::setupStarted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQHelpEngineCore::warning ( const QString & msg )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "warning(QString)" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQHelpEngineCore::warning ( const QString & msg )
     hb_itemRelease( psender );
     hb_itemRelease( pmsg );
   }
-#endif
 }
 
 HB_FUNC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpEngineCore(QCoreApplication::instance());
@@ -138,14 +129,10 @@ HB_FUNC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPENGINECORE_ONSETUPFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpEngineCore(QCoreApplication::instance());
@@ -202,14 +189,10 @@ HB_FUNC( QHELPENGINECORE_ONSETUPFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPENGINECORE_ONSETUPSTARTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpEngineCore(QCoreApplication::instance());
@@ -266,14 +249,10 @@ HB_FUNC( QHELPENGINECORE_ONSETUPSTARTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QHELPENGINECORE_ONWARNING )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpEngineCore(QCoreApplication::instance());
@@ -330,8 +309,4 @@ HB_FUNC( QHELPENGINECORE_ONWARNING )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

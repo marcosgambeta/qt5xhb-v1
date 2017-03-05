@@ -44,9 +44,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextLength>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -70,9 +68,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextLength>
-#endif
 #endif
 
 /*
@@ -80,14 +76,12 @@ QTextLength()
 */
 HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextLength * o = new QTextLength (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLength *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -95,7 +89,6 @@ QTextLength(Type type, qreal value)
 */
 HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   qreal par2 = hb_parnd(2);
   QTextLength * o = new QTextLength (  (QTextLength::Type) par1, par2 );
@@ -104,7 +97,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -129,7 +121,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 
 HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -141,7 +132,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

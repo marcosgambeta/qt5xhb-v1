@@ -21,7 +21,6 @@ SlotsQHelpContentWidget::~SlotsQHelpContentWidget()
 
 void SlotsQHelpContentWidget::linkActivated ( const QUrl & link )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QUrl)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQHelpContentWidget::linkActivated ( const QUrl & link )
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
-#endif
 }
 
 HB_FUNC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQHelpContentWidget(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQPrintPreviewDialog::~SlotsQPrintPreviewDialog()
 
 void SlotsQPrintPreviewDialog::paintRequested ( QPrinter * printer )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQPrintPreviewDialog::paintRequested ( QPrinter * printer )
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
   }
-#endif
 }
 
 HB_FUNC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQPrintPreviewDialog(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

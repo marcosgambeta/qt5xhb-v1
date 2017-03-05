@@ -93,9 +93,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImageReader>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -119,9 +117,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImageReader>
-#endif
 #endif
 
 #include <QColor>
@@ -131,7 +127,6 @@ QImageReader ()
 */
 HB_FUNC_STATIC( QIMAGEREADER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImageReader * o = new QImageReader (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QImageReader *) o );
@@ -141,7 +136,6 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -149,7 +143,6 @@ QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
 HB_FUNC_STATIC( QIMAGEREADER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageReader * o = new QImageReader ( par1, par2 );
@@ -161,7 +154,6 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -169,7 +161,6 @@ QImageReader ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 HB_FUNC_STATIC( QIMAGEREADER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageReader * o = new QImageReader ( par1, par2 );
@@ -181,7 +172,6 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -211,7 +201,6 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
 
 HB_FUNC_STATIC( QIMAGEREADER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -223,7 +212,6 @@ HB_FUNC_STATIC( QIMAGEREADER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

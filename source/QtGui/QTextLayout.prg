@@ -87,9 +87,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextLayout>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -113,9 +111,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QTextLayout>
-#endif
 #endif
 
 #include <QTextCursor>
@@ -126,14 +122,12 @@ QTextLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextLayout * o = new QTextLayout (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLayout *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -141,7 +135,6 @@ QTextLayout(const QString& text)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QTextLayout * o = new QTextLayout ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -149,7 +142,6 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -157,7 +149,6 @@ QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
   QPaintDevice * par3 = ISNIL(3)? 0 : (QPaintDevice *) _qt5xhb_itemGetPtr(3);
@@ -167,7 +158,6 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -175,7 +165,6 @@ QTextLayout(const QTextBlock &b)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
   QTextLayout * o = new QTextLayout ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -183,7 +172,6 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -218,7 +206,6 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -230,7 +217,6 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

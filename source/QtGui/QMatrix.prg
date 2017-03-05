@@ -83,9 +83,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMatrix>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -109,9 +107,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMatrix>
-#endif
 #endif
 
 #include <QPainterPath>
@@ -121,7 +117,6 @@ QMatrix(Qt::Initialization)
 */
 HB_FUNC_STATIC( QMATRIX_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QMatrix * o = new QMatrix (  (Qt::Initialization) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -129,7 +124,6 @@ HB_FUNC_STATIC( QMATRIX_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -137,14 +131,12 @@ QMatrix()
 */
 HB_FUNC_STATIC( QMATRIX_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMatrix * o = new QMatrix (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMatrix *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +144,6 @@ QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
 */
 HB_FUNC_STATIC( QMATRIX_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
@@ -165,7 +156,6 @@ HB_FUNC_STATIC( QMATRIX_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -200,7 +190,6 @@ HB_FUNC_STATIC( QMATRIX_NEW )
 
 HB_FUNC_STATIC( QMATRIX_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMatrix * obj = (QMatrix *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -212,7 +201,6 @@ HB_FUNC_STATIC( QMATRIX_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

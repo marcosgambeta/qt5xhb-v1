@@ -21,7 +21,6 @@ SlotsQScreen::~SlotsQScreen()
 
 void SlotsQScreen::geometryChanged(const QRect &geometry)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged(QRect)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQScreen::geometryChanged(const QRect &geometry)
     hb_itemRelease( psender );
     hb_itemRelease( pgeometry );
   }
-#endif
 }
 
 void SlotsQScreen::physicalSizeChanged(const QSizeF &size)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "physicalSizeChanged(QSizeF)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQScreen::physicalSizeChanged(const QSizeF &size)
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
-#endif
 }
 
 void SlotsQScreen::physicalDotsPerInchChanged(qreal dpi)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "physicalDotsPerInchChanged(qreal)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQScreen::physicalDotsPerInchChanged(qreal dpi)
     hb_itemRelease( psender );
     hb_itemRelease( pdpi );
   }
-#endif
 }
 
 void SlotsQScreen::logicalDotsPerInchChanged(qreal dpi)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "logicalDotsPerInchChanged(qreal)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQScreen::logicalDotsPerInchChanged(qreal dpi)
     hb_itemRelease( psender );
     hb_itemRelease( pdpi );
   }
-#endif
 }
 
 void SlotsQScreen::virtualGeometryChanged(const QRect &rect)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "virtualGeometryChanged(QRect)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQScreen::virtualGeometryChanged(const QRect &rect)
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
-#endif
 }
 
 void SlotsQScreen::primaryOrientationChanged(Qt::ScreenOrientation orientation)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "primaryOrientationChanged(Qt::ScreenOrientation)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQScreen::primaryOrientationChanged(Qt::ScreenOrientation orientation)
     hb_itemRelease( psender );
     hb_itemRelease( porientation );
   }
-#endif
 }
 
 void SlotsQScreen::orientationChanged(Qt::ScreenOrientation orientation)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "orientationChanged(Qt::ScreenOrientation)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQScreen::orientationChanged(Qt::ScreenOrientation orientation)
     hb_itemRelease( psender );
     hb_itemRelease( porientation );
   }
-#endif
 }
 
 void SlotsQScreen::refreshRateChanged(qreal refreshRate)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "refreshRateChanged(qreal)" );
   if( cb )
@@ -144,12 +129,10 @@ void SlotsQScreen::refreshRateChanged(qreal refreshRate)
     hb_itemRelease( psender );
     hb_itemRelease( prefreshRate );
   }
-#endif
 }
 
 HB_FUNC( QSCREEN_ONGEOMETRYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -206,14 +189,10 @@ HB_FUNC( QSCREEN_ONGEOMETRYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCREEN_ONPHYSICALSIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -270,14 +249,10 @@ HB_FUNC( QSCREEN_ONPHYSICALSIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -334,14 +309,10 @@ HB_FUNC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -398,14 +369,10 @@ HB_FUNC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -462,14 +429,10 @@ HB_FUNC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -526,14 +489,10 @@ HB_FUNC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCREEN_ONORIENTATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -590,14 +549,10 @@ HB_FUNC( QSCREEN_ONORIENTATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCREEN_ONREFRESHRATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
@@ -654,8 +609,4 @@ HB_FUNC( QSCREEN_ONREFRESHRATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

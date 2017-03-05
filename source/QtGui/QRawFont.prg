@@ -82,9 +82,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRawFont>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -108,9 +106,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRawFont>
-#endif
 #endif
 
 #include <QImage>
@@ -120,7 +116,6 @@ QRawFont()
 */
 HB_FUNC_STATIC( QRAWFONT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRawFont * o = new QRawFont (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
@@ -130,7 +125,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -138,7 +132,6 @@ QRawFont(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintin
 */
 HB_FUNC_STATIC( QRAWFONT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
@@ -151,7 +144,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -159,7 +151,6 @@ QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hin
 */
 HB_FUNC_STATIC( QRAWFONT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
@@ -172,7 +163,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -180,7 +170,6 @@ QRawFont(const QRawFont &other)
 */
 HB_FUNC_STATIC( QRAWFONT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRawFont * par1 = (QRawFont *) _qt5xhb_itemGetPtr(1);
   QRawFont * o = new QRawFont ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -191,7 +180,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -226,7 +214,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
 
 HB_FUNC_STATIC( QRAWFONT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -238,7 +225,6 @@ HB_FUNC_STATIC( QRAWFONT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

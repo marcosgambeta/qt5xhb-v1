@@ -50,9 +50,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLDebugMessage>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -76,9 +74,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QOpenGLDebugMessage>
-#endif
 #endif
 
 /*
@@ -86,14 +82,12 @@ QOpenGLDebugMessage()
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLDebugMessage * o = new QOpenGLDebugMessage (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLDebugMessage *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -101,7 +95,6 @@ QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtr(1);
   QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -109,7 +102,6 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -120,7 +112,6 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -132,7 +123,6 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

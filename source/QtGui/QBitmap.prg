@@ -43,9 +43,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QBitmap>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -69,9 +67,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QBitmap>
-#endif
 #endif
 
 /*
@@ -79,7 +75,6 @@ QBitmap ()
 */
 HB_FUNC_STATIC( QBITMAP_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBitmap * o = new QBitmap (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitmap *) o );
@@ -89,7 +84,6 @@ HB_FUNC_STATIC( QBITMAP_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -97,7 +91,6 @@ QBitmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBITMAP_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   QBitmap * o = new QBitmap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -108,7 +101,6 @@ HB_FUNC_STATIC( QBITMAP_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -116,7 +108,6 @@ QBitmap ( int width, int height )
 */
 HB_FUNC_STATIC( QBITMAP_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QBitmap * o = new QBitmap ( par1, par2 );
@@ -128,7 +119,6 @@ HB_FUNC_STATIC( QBITMAP_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -136,7 +126,6 @@ QBitmap ( const QSize & size )
 */
 HB_FUNC_STATIC( QBITMAP_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QBitmap * o = new QBitmap ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -147,7 +136,6 @@ HB_FUNC_STATIC( QBITMAP_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -155,7 +143,6 @@ QBitmap ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QBITMAP_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   QBitmap * o = new QBitmap ( par1,  (const char *) par2 );
@@ -167,7 +154,6 @@ HB_FUNC_STATIC( QBITMAP_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -207,7 +193,6 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 
 HB_FUNC_STATIC( QBITMAP_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -219,7 +204,6 @@ HB_FUNC_STATIC( QBITMAP_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -41,9 +41,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegExpValidator>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -67,9 +65,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QRegExpValidator>
-#endif
 #endif
 
 /*
@@ -77,7 +73,6 @@ QRegExpValidator ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QRegExpValidator * o = new QRegExpValidator ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -85,7 +80,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -93,7 +87,6 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
   QRegExpValidator * o = new QRegExpValidator ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +94,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -126,7 +118,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -138,7 +129,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*
