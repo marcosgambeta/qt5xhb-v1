@@ -52,9 +52,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkAddressEntry>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -78,9 +76,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkAddressEntry>
-#endif
 #endif
 
 /*
@@ -88,7 +84,6 @@ QNetworkAddressEntry ()
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkAddressEntry * o = new QNetworkAddressEntry (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkAddressEntry *) o );
@@ -98,7 +93,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -106,7 +100,6 @@ QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkAddressEntry * par1 = (QNetworkAddressEntry *) _qt5xhb_itemGetPtr(1);
   QNetworkAddressEntry * o = new QNetworkAddressEntry ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -142,7 +134,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -154,7 +145,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

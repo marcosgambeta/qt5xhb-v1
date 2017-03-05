@@ -21,7 +21,6 @@ SlotsQNetworkReply::~SlotsQNetworkReply()
 
 void SlotsQNetworkReply::downloadProgress ( qint64 bytesReceived, qint64 bytesTotal )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "downloadProgress(qint64,qint64)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQNetworkReply::downloadProgress ( qint64 bytesReceived, qint64 bytesTo
     hb_itemRelease( pbytesReceived );
     hb_itemRelease( pbytesTotal );
   }
-#endif
 }
 
 void SlotsQNetworkReply::error ( QNetworkReply::NetworkError code )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkReply::NetworkError)" );
   if( cb )
@@ -50,12 +47,10 @@ void SlotsQNetworkReply::error ( QNetworkReply::NetworkError code )
     hb_itemRelease( psender );
     hb_itemRelease( pcode );
   }
-#endif
 }
 
 void SlotsQNetworkReply::finished ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQNetworkReply::finished ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQNetworkReply::metaDataChanged ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQNetworkReply::metaDataChanged ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQNetworkReply::uploadProgress ( qint64 bytesSent, qint64 bytesTotal )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "uploadProgress(qint64,qint64)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQNetworkReply::uploadProgress ( qint64 bytesSent, qint64 bytesTotal )
     hb_itemRelease( pbytesSent );
     hb_itemRelease( pbytesTotal );
   }
-#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkReply(QCoreApplication::instance());
@@ -158,14 +147,10 @@ HB_FUNC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkReply(QCoreApplication::instance());
@@ -222,14 +207,10 @@ HB_FUNC( QNETWORKREPLY_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkReply(QCoreApplication::instance());
@@ -286,14 +267,10 @@ HB_FUNC( QNETWORKREPLY_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONMETADATACHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkReply(QCoreApplication::instance());
@@ -350,14 +327,10 @@ HB_FUNC( QNETWORKREPLY_ONMETADATACHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkReply(QCoreApplication::instance());
@@ -414,8 +387,4 @@ HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

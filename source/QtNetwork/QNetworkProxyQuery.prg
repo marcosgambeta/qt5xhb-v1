@@ -62,9 +62,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkProxyQuery>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -88,9 +86,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkProxyQuery>
-#endif
 #endif
 
 #include <QUrl>
@@ -100,7 +96,6 @@ QNetworkProxyQuery ()
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkProxyQuery * o = new QNetworkProxyQuery (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -118,7 +112,6 @@ QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QNetworkProxyQuery::UrlRequest : hb_parni(2);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1,  (QNetworkProxyQuery::QueryType) par2 );
@@ -130,7 +123,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -138,7 +130,6 @@ QNetworkProxyQuery ( const QString & hostname, int port, const QString & protoco
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
@@ -152,7 +143,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -160,7 +150,6 @@ QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), 
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   quint16 par1 = hb_parni(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::TcpServer : hb_parni(3);
@@ -173,7 +162,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -181,7 +169,6 @@ QNetworkProxyQuery ( const QNetworkProxyQuery & other )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -192,7 +179,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -200,7 +186,6 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::UrlRequest : hb_parni(3);
@@ -213,7 +198,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW6 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -221,7 +205,6 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   int par3 = hb_parni(3);
@@ -236,7 +219,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW7 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -244,7 +226,6 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   quint16 par2 = hb_parni(2);
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
@@ -258,7 +239,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -313,7 +293,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -325,7 +304,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -45,9 +45,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDnsDomainNameRecord>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -71,9 +69,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QDnsDomainNameRecord>
-#endif
 #endif
 
 /*
@@ -81,14 +77,12 @@ QDnsDomainNameRecord()
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsDomainNameRecord *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -96,7 +90,6 @@ QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtr(1);
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -104,7 +97,6 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -129,7 +121,6 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -141,7 +132,6 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

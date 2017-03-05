@@ -59,9 +59,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHostInfo>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -85,9 +83,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHostInfo>
-#endif
 #endif
 
 /*
@@ -95,7 +91,6 @@ QHostInfo ( int id = -1 )
 */
 HB_FUNC_STATIC( QHOSTINFO_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = ISNIL(1)? -1 : hb_parni(1);
   QHostInfo * o = new QHostInfo ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -106,7 +101,6 @@ HB_FUNC_STATIC( QHOSTINFO_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -114,7 +108,6 @@ QHostInfo ( const QHostInfo & other )
 */
 HB_FUNC_STATIC( QHOSTINFO_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QHostInfo * par1 = (QHostInfo *) _qt5xhb_itemGetPtr(1);
   QHostInfo * o = new QHostInfo ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -125,7 +118,6 @@ HB_FUNC_STATIC( QHOSTINFO_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -150,7 +142,6 @@ HB_FUNC_STATIC( QHOSTINFO_NEW )
 
 HB_FUNC_STATIC( QHOSTINFO_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -162,7 +153,6 @@ HB_FUNC_STATIC( QHOSTINFO_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

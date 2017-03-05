@@ -51,9 +51,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSslCipher>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -77,9 +75,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSslCipher>
-#endif
 #endif
 
 /*
@@ -87,7 +83,6 @@ QSslCipher ()
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslCipher * o = new QSslCipher (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslCipher *) o );
@@ -97,7 +92,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -105,7 +99,6 @@ QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QSslCipher * o = new QSslCipher ( par1,  (QSsl::SslProtocol) par2 );
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -125,7 +117,6 @@ QSslCipher ( const QSslCipher & other )
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslCipher * par1 = (QSslCipher *) _qt5xhb_itemGetPtr(1);
   QSslCipher * o = new QSslCipher ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -136,7 +127,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -166,7 +156,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
 
 HB_FUNC_STATIC( QSSLCIPHER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -178,7 +167,6 @@ HB_FUNC_STATIC( QSSLCIPHER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

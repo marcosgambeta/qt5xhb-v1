@@ -62,9 +62,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlComponent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -88,9 +86,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlComponent>
-#endif
 #endif
 
 /*
@@ -98,7 +94,6 @@ QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QQmlComponent * o = new QQmlComponent ( par1, par2 );
@@ -107,7 +102,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -115,7 +109,6 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
@@ -125,7 +118,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -133,7 +125,6 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mod
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   int par3 = hb_parni(3);
@@ -144,7 +135,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +142,6 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
@@ -162,7 +151,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -170,7 +158,6 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObje
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
@@ -181,7 +168,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -221,7 +207,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 
 HB_FUNC_STATIC( QQMLCOMPONENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlComponent * obj = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -233,7 +218,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQDnsLookup::~SlotsQDnsLookup()
 
 void SlotsQDnsLookup::finished()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQDnsLookup::finished()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQDnsLookup::nameChanged(const QString & name)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged(QString)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQDnsLookup::nameChanged(const QString & name)
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
-#endif
 }
 
 void SlotsQDnsLookup::typeChanged(QDnsLookup::Type type)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQDnsLookup::typeChanged(QDnsLookup::Type type)
     hb_itemRelease( psender );
     hb_itemRelease( ptype );
   }
-#endif
 }
 
 HB_FUNC( QDNSLOOKUP_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDnsLookup(QCoreApplication::instance());
@@ -124,14 +117,10 @@ HB_FUNC( QDNSLOOKUP_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDNSLOOKUP_ONNAMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDnsLookup(QCoreApplication::instance());
@@ -188,14 +177,10 @@ HB_FUNC( QDNSLOOKUP_ONNAMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QDNSLOOKUP_ONTYPECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQDnsLookup(QCoreApplication::instance());
@@ -252,8 +237,4 @@ HB_FUNC( QDNSLOOKUP_ONTYPECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

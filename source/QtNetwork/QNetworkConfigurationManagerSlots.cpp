@@ -21,7 +21,6 @@ SlotsQNetworkConfigurationManager::~SlotsQNetworkConfigurationManager()
 
 void SlotsQNetworkConfigurationManager::updateCompleted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updateCompleted()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQNetworkConfigurationManager::updateCompleted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkConfigurationManager(QCoreApplication::instance());
@@ -92,14 +89,10 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkConfigurationManager(QCoreApplication::instance());
@@ -156,14 +149,10 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkConfigurationManager(QCoreApplication::instance());
@@ -220,14 +209,10 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkConfigurationManager(QCoreApplication::instance());
@@ -284,14 +269,10 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkConfigurationManager(QCoreApplication::instance());
@@ -348,8 +329,4 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

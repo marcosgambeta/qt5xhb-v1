@@ -21,7 +21,6 @@ SlotsQNetworkSession::~SlotsQNetworkSession()
 
 void SlotsQNetworkSession::closed ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "closed()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQNetworkSession::closed ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQNetworkSession::error ( QNetworkSession::SessionError error )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQNetworkSession::error ( QNetworkSession::SessionError error )
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
 
 void SlotsQNetworkSession::newConfigurationActivated ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "newConfigurationActivated()" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQNetworkSession::newConfigurationActivated ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQNetworkSession::opened ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opened()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQNetworkSession::opened ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQNetworkSession::preferredConfigurationChanged ( const QNetworkConfiguration & config, bool isSeamless )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQNetworkSession::preferredConfigurationChanged ( const QNetworkConfigu
     hb_itemRelease( pconfig );
     hb_itemRelease( pisSeamless );
   }
-#endif
 }
 
 void SlotsQNetworkSession::stateChanged ( QNetworkSession::State state )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
   if( cb )
@@ -108,12 +97,10 @@ void SlotsQNetworkSession::stateChanged ( QNetworkSession::State state )
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 HB_FUNC( QNETWORKSESSION_ONCLOSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkSession(QCoreApplication::instance());
@@ -170,14 +157,10 @@ HB_FUNC( QNETWORKSESSION_ONCLOSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKSESSION_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkSession(QCoreApplication::instance());
@@ -234,14 +217,10 @@ HB_FUNC( QNETWORKSESSION_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkSession(QCoreApplication::instance());
@@ -298,14 +277,10 @@ HB_FUNC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKSESSION_ONOPENED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkSession(QCoreApplication::instance());
@@ -362,14 +337,10 @@ HB_FUNC( QNETWORKSESSION_ONOPENED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkSession(QCoreApplication::instance());
@@ -426,14 +397,10 @@ HB_FUNC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKSESSION_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkSession(QCoreApplication::instance());
@@ -490,8 +457,4 @@ HB_FUNC( QNETWORKSESSION_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

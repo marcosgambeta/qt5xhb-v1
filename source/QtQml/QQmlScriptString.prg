@@ -47,9 +47,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlScriptString>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -73,9 +71,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlScriptString>
-#endif
 #endif
 
 /*
@@ -83,14 +79,12 @@ QQmlScriptString()
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlScriptString * o = new QQmlScriptString (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlScriptString *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -98,7 +92,6 @@ QQmlScriptString(const QQmlScriptString & other)
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlScriptString * par1 = (QQmlScriptString *) _qt5xhb_itemGetPtr(1);
   QQmlScriptString * o = new QQmlScriptString ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -106,7 +99,6 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -131,7 +123,6 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlScriptString * obj = (QQmlScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -143,7 +134,6 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

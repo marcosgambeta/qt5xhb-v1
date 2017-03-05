@@ -21,7 +21,6 @@ SlotsQAbstractSocket::~SlotsQAbstractSocket()
 
 void SlotsQAbstractSocket::connected ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQAbstractSocket::connected ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractSocket::disconnected ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQAbstractSocket::disconnected ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractSocket::error ( QAbstractSocket::SocketError socketError )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQAbstractSocket::error ( QAbstractSocket::SocketError socketError )
     hb_itemRelease( psender );
     hb_itemRelease( psocketError );
   }
-#endif
 }
 
 void SlotsQAbstractSocket::hostFound ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hostFound()" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQAbstractSocket::hostFound ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAbstractSocket::proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQAbstractSocket::proxyAuthenticationRequired ( const QNetworkProxy & p
     hb_itemRelease( pproxy );
     hb_itemRelease( pauthenticator );
   }
-#endif
 }
 
 void SlotsQAbstractSocket::stateChanged ( QAbstractSocket::SocketState socketState )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
   if( cb )
@@ -108,12 +97,10 @@ void SlotsQAbstractSocket::stateChanged ( QAbstractSocket::SocketState socketSta
     hb_itemRelease( psender );
     hb_itemRelease( psocketState );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTSOCKET_ONCONNECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSocket(QCoreApplication::instance());
@@ -170,14 +157,10 @@ HB_FUNC( QABSTRACTSOCKET_ONCONNECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSOCKET_ONDISCONNECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSocket(QCoreApplication::instance());
@@ -234,14 +217,10 @@ HB_FUNC( QABSTRACTSOCKET_ONDISCONNECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSOCKET_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSocket(QCoreApplication::instance());
@@ -298,14 +277,10 @@ HB_FUNC( QABSTRACTSOCKET_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSOCKET_ONHOSTFOUND )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSocket(QCoreApplication::instance());
@@ -362,14 +337,10 @@ HB_FUNC( QABSTRACTSOCKET_ONHOSTFOUND )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSocket(QCoreApplication::instance());
@@ -426,14 +397,10 @@ HB_FUNC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTSOCKET_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractSocket(QCoreApplication::instance());
@@ -490,8 +457,4 @@ HB_FUNC( QABSTRACTSOCKET_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

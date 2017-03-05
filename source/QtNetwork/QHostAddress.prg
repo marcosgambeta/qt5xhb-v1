@@ -60,9 +60,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHostAddress>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -86,9 +84,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QHostAddress>
-#endif
 #endif
 
 /*
@@ -96,7 +92,6 @@ QHostAddress ()
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QHostAddress * o = new QHostAddress (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
@@ -106,7 +101,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -114,7 +108,6 @@ QHostAddress ( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   quint32 par1 = hb_parni(1);
   QHostAddress * o = new QHostAddress ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -125,7 +118,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -133,7 +125,6 @@ QHostAddress ( const QString & address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QHostAddress * o = new QHostAddress ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -144,7 +135,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +142,6 @@ QHostAddress ( const QHostAddress & address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
   QHostAddress * o = new QHostAddress ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -163,7 +152,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -171,7 +159,6 @@ QHostAddress ( SpecialAddress address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QHostAddress * o = new QHostAddress (  (QHostAddress::SpecialAddress) par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -182,7 +169,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -221,7 +207,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 
 HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -233,7 +218,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQNetworkAccessManager::~SlotsQNetworkAccessManager()
 
 void SlotsQNetworkAccessManager::authenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "authenticationRequired(QNetworkReply,QAuthenticator*)" );
   if( cb )
@@ -34,12 +33,10 @@ void SlotsQNetworkAccessManager::authenticationRequired ( QNetworkReply * reply,
     hb_itemRelease( preply );
     hb_itemRelease( pauthenticator );
   }
-#endif
 }
 
 void SlotsQNetworkAccessManager::finished ( QNetworkReply * reply )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QNetworkReply*)" );
   if( cb )
@@ -50,12 +47,10 @@ void SlotsQNetworkAccessManager::finished ( QNetworkReply * reply )
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
-#endif
 }
 
 void SlotsQNetworkAccessManager::networkAccessibleChanged ( QNetworkAccessManager::NetworkAccessibility accessible )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
   if( cb )
@@ -66,12 +61,10 @@ void SlotsQNetworkAccessManager::networkAccessibleChanged ( QNetworkAccessManage
     hb_itemRelease( psender );
     hb_itemRelease( paccessible );
   }
-#endif
 }
 
 void SlotsQNetworkAccessManager::proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
   if( cb )
@@ -84,12 +77,10 @@ void SlotsQNetworkAccessManager::proxyAuthenticationRequired ( const QNetworkPro
     hb_itemRelease( pproxy );
     hb_itemRelease( pauthenticator );
   }
-#endif
 }
 
 HB_FUNC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
@@ -146,14 +137,10 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKACCESSMANAGER_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
@@ -210,14 +197,10 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
@@ -274,14 +257,10 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
@@ -338,8 +317,4 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -68,9 +68,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSslCertificate>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -94,9 +92,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSslCertificate>
-#endif
 #endif
 
 #include <QDateTime>
@@ -108,7 +104,6 @@ QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   QSslCertificate * o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
@@ -120,7 +115,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -128,7 +122,6 @@ QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat f
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   QSslCertificate * o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
@@ -140,7 +133,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -148,7 +140,6 @@ QSslCertificate ( const QSslCertificate & other )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslCertificate * par1 = (QSslCertificate *) _qt5xhb_itemGetPtr(1);
   QSslCertificate * o = new QSslCertificate ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -159,7 +150,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -189,7 +179,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -201,7 +190,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

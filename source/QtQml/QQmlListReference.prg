@@ -56,9 +56,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlListReference>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -82,9 +80,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlListReference>
-#endif
 #endif
 
 /*
@@ -92,14 +88,12 @@ QQmlListReference()
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlListReference * o = new QQmlListReference (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlListReference *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -107,7 +101,6 @@ QQmlListReference(QObject * object, const char * property, QQmlEngine * engine =
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
   QQmlEngine * par3 = ISNIL(3)? 0 : (QQmlEngine *) _qt5xhb_itemGetPtr(3);
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -142,7 +134,6 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 
 HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlListReference * obj = (QQmlListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -154,7 +145,6 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

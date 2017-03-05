@@ -21,7 +21,6 @@ SlotsQQmlComponent::~SlotsQQmlComponent()
 
 void SlotsQQmlComponent::progressChanged(qreal progress)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "progressChanged(qreal)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQQmlComponent::progressChanged(qreal progress)
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
-#endif
 }
 
 void SlotsQQmlComponent::statusChanged(QQmlComponent::Status status)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QQmlComponent::Status)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQQmlComponent::statusChanged(QQmlComponent::Status status)
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
-#endif
 }
 
 HB_FUNC( QQMLCOMPONENT_ONPROGRESSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQmlComponent(QCoreApplication::instance());
@@ -110,14 +105,10 @@ HB_FUNC( QQMLCOMPONENT_ONPROGRESSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQMLCOMPONENT_ONSTATUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQmlComponent(QCoreApplication::instance());
@@ -174,8 +165,4 @@ HB_FUNC( QQMLCOMPONENT_ONSTATUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

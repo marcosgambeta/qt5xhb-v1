@@ -21,7 +21,6 @@ SlotsQLocalSocket::~SlotsQLocalSocket()
 
 void SlotsQLocalSocket::connected ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQLocalSocket::connected ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQLocalSocket::disconnected ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQLocalSocket::disconnected ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQLocalSocket::error ( QLocalSocket::LocalSocketError socketError )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QLocalSocket::LocalSocketError)" );
   if( cb )
@@ -60,12 +55,10 @@ void SlotsQLocalSocket::error ( QLocalSocket::LocalSocketError socketError )
     hb_itemRelease( psender );
     hb_itemRelease( psocketError );
   }
-#endif
 }
 
 void SlotsQLocalSocket::stateChanged ( QLocalSocket::LocalSocketState socketState )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QLocalSocket::LocalSocketState)" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQLocalSocket::stateChanged ( QLocalSocket::LocalSocketState socketStat
     hb_itemRelease( psender );
     hb_itemRelease( psocketState );
   }
-#endif
 }
 
 HB_FUNC( QLOCALSOCKET_ONCONNECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLocalSocket(QCoreApplication::instance());
@@ -138,14 +129,10 @@ HB_FUNC( QLOCALSOCKET_ONCONNECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLOCALSOCKET_ONDISCONNECTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLocalSocket(QCoreApplication::instance());
@@ -202,14 +189,10 @@ HB_FUNC( QLOCALSOCKET_ONDISCONNECTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLOCALSOCKET_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLocalSocket(QCoreApplication::instance());
@@ -266,14 +249,10 @@ HB_FUNC( QLOCALSOCKET_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QLOCALSOCKET_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQLocalSocket(QCoreApplication::instance());
@@ -330,8 +309,4 @@ HB_FUNC( QLOCALSOCKET_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

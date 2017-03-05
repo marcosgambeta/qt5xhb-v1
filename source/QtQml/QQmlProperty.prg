@@ -84,9 +84,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlProperty>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -110,9 +108,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQmlProperty>
-#endif
 #endif
 
 /*
@@ -120,14 +116,12 @@ QQmlProperty()
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlProperty * o = new QQmlProperty (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -135,7 +129,6 @@ QQmlProperty(QObject * obj)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlProperty * o = new QQmlProperty ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -143,7 +136,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -151,7 +143,6 @@ QQmlProperty(QObject * obj, QQmlContext * ctxt)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
@@ -160,7 +151,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -168,7 +158,6 @@ QQmlProperty(QObject * obj, QQmlEngine * engine)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlEngine * par2 = (QQmlEngine *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
@@ -177,7 +166,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -185,7 +173,6 @@ QQmlProperty(QObject * obj, const QString & name)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
@@ -194,7 +181,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -202,7 +188,6 @@ QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
@@ -212,7 +197,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -220,7 +204,6 @@ QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
@@ -230,7 +213,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -238,7 +220,6 @@ QQmlProperty(const QQmlProperty & other)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW8 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlProperty * par1 = (QQmlProperty *) _qt5xhb_itemGetPtr(1);
   QQmlProperty * o = new QQmlProperty ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -246,7 +227,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW8 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -301,7 +281,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
 
 HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlProperty * obj = (QQmlProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -313,7 +292,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

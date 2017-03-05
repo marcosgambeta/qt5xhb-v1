@@ -21,7 +21,6 @@ SlotsQSslSocket::~SlotsQSslSocket()
 
 void SlotsQSslSocket::encrypted ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "encrypted()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQSslSocket::encrypted ()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSslSocket::encryptedBytesWritten ( qint64 written )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "encryptedBytesWritten(qint64)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQSslSocket::encryptedBytesWritten ( qint64 written )
     hb_itemRelease( psender );
     hb_itemRelease( pwritten );
   }
-#endif
 }
 
 void SlotsQSslSocket::modeChanged ( QSslSocket::SslMode mode )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modeChanged(QSslSocket::SslMode)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQSslSocket::modeChanged ( QSslSocket::SslMode mode )
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
-#endif
 }
 
 void SlotsQSslSocket::peerVerifyError ( const QSslError & error )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQSslSocket::peerVerifyError ( const QSslError & error )
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
 
 void SlotsQSslSocket::sslErrors ( const QList<QSslError> & errors )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
   if( cb )
@@ -122,12 +113,10 @@ void SlotsQSslSocket::sslErrors ( const QList<QSslError> & errors )
     hb_itemRelease( psender );
     hb_itemRelease( perrors );
   }
-#endif
 }
 
 HB_FUNC( QSSLSOCKET_ONENCRYPTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSslSocket(QCoreApplication::instance());
@@ -184,14 +173,10 @@ HB_FUNC( QSSLSOCKET_ONENCRYPTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSslSocket(QCoreApplication::instance());
@@ -248,14 +233,10 @@ HB_FUNC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSSLSOCKET_ONMODECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSslSocket(QCoreApplication::instance());
@@ -312,14 +293,10 @@ HB_FUNC( QSSLSOCKET_ONMODECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSslSocket(QCoreApplication::instance());
@@ -376,14 +353,10 @@ HB_FUNC( QSSLSOCKET_ONPEERVERIFYERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSSLSOCKET_ONSSLERRORS )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSslSocket(QCoreApplication::instance());
@@ -440,8 +413,4 @@ HB_FUNC( QSSLSOCKET_ONSSLERRORS )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

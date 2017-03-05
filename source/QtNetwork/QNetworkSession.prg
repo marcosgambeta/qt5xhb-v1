@@ -63,9 +63,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkSession>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -89,9 +87,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkSession>
-#endif
 #endif
 
 /*
@@ -99,7 +95,6 @@ QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * pare
 */
 HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QNetworkSession * o = new QNetworkSession ( *par1, par2 );
@@ -108,13 +103,11 @@ HB_FUNC_STATIC( QNETWORKSESSION_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -126,7 +119,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

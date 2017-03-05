@@ -49,9 +49,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSslError>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -75,9 +73,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QSslError>
-#endif
 #endif
 
 /*
@@ -85,7 +81,6 @@ QSslError ()
 */
 HB_FUNC_STATIC( QSSLERROR_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslError * o = new QSslError (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslError *) o );
@@ -95,7 +90,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -103,7 +97,6 @@ QSslError ( SslError error )
 */
 HB_FUNC_STATIC( QSSLERROR_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslError * par1 = (QSslError *) _qt5xhb_itemGetPtr(1);
   QSslError * o = new QSslError ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -114,7 +107,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -122,7 +114,6 @@ QSslError ( SslError error, const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLERROR_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QSslCertificate * par2 = (QSslCertificate *) _qt5xhb_itemGetPtr(2);
   QSslError * o = new QSslError (  (QSslError::SslError) par1, *par2 );
@@ -134,7 +125,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -142,7 +132,6 @@ QSslError ( const QSslError & other )
 */
 HB_FUNC_STATIC( QSSLERROR_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslError * par1 = (QSslError *) _qt5xhb_itemGetPtr(1);
   QSslError * o = new QSslError ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -153,7 +142,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -188,7 +176,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 
 HB_FUNC_STATIC( QSSLERROR_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -200,7 +187,6 @@ HB_FUNC_STATIC( QSSLERROR_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

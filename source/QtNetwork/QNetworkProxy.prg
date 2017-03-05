@@ -59,9 +59,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkProxy>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -85,9 +83,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QNetworkProxy>
-#endif
 #endif
 
 /*
@@ -95,7 +91,6 @@ QNetworkProxy ()
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkProxy * o = new QNetworkProxy (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxy *) o );
@@ -105,7 +100,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -113,7 +107,6 @@ QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 po
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   quint16 par3 = ISNIL(3)? 0 : hb_parni(3);
@@ -128,7 +121,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -136,7 +128,6 @@ QNetworkProxy ( const QNetworkProxy & other )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkProxy * par1 = (QNetworkProxy *) _qt5xhb_itemGetPtr(1);
   QNetworkProxy * o = new QNetworkProxy ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -147,7 +138,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -177,7 +167,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 
 HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -189,7 +178,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*
