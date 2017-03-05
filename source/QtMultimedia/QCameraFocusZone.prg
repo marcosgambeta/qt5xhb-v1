@@ -45,9 +45,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCameraFocusZone>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -71,9 +69,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCameraFocusZone>
-#endif
 #endif
 
 /*
@@ -81,7 +77,6 @@ QCameraFocusZone(const QCameraFocusZone & other)
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCameraFocusZone * par1 = (QCameraFocusZone *) _qt5xhb_itemGetPtr(1);
   QCameraFocusZone * o = new QCameraFocusZone ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -89,13 +84,11 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCameraFocusZone * obj = (QCameraFocusZone *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -107,7 +100,6 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

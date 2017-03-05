@@ -21,7 +21,6 @@ SlotsQAudioDecoder::~SlotsQAudioDecoder()
 
 void SlotsQAudioDecoder::bufferAvailableChanged(bool available)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferAvailableChanged(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAudioDecoder::bufferAvailableChanged(bool available)
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::bufferReady()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferReady()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQAudioDecoder::bufferReady()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::durationChanged(qint64 duration)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "durationChanged(qint64)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQAudioDecoder::durationChanged(qint64 duration)
     hb_itemRelease( psender );
     hb_itemRelease( pduration );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::error(QAudioDecoder::Error error)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAudioDecoder::Error)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQAudioDecoder::error(QAudioDecoder::Error error)
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::finished()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -92,12 +83,10 @@ void SlotsQAudioDecoder::finished()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::formatChanged(const QAudioFormat & format)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "formatChanged(QAudioFormat)" );
   if( cb )
@@ -108,12 +97,10 @@ void SlotsQAudioDecoder::formatChanged(const QAudioFormat & format)
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::positionChanged(qint64 position)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(qint64)" );
   if( cb )
@@ -124,12 +111,10 @@ void SlotsQAudioDecoder::positionChanged(qint64 position)
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::sourceChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged()" );
   if( cb )
@@ -138,12 +123,10 @@ void SlotsQAudioDecoder::sourceChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQAudioDecoder::stateChanged(QAudioDecoder::State state)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAudioDecoder::State)" );
   if( cb )
@@ -154,12 +137,10 @@ void SlotsQAudioDecoder::stateChanged(QAudioDecoder::State state)
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -216,14 +197,10 @@ HB_FUNC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONBUFFERREADY )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -280,14 +257,10 @@ HB_FUNC( QAUDIODECODER_ONBUFFERREADY )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONDURATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -344,14 +317,10 @@ HB_FUNC( QAUDIODECODER_ONDURATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -408,14 +377,10 @@ HB_FUNC( QAUDIODECODER_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONFINISHED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -472,14 +437,10 @@ HB_FUNC( QAUDIODECODER_ONFINISHED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONFORMATCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -536,14 +497,10 @@ HB_FUNC( QAUDIODECODER_ONFORMATCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONPOSITIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -600,14 +557,10 @@ HB_FUNC( QAUDIODECODER_ONPOSITIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONSOURCECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -664,14 +617,10 @@ HB_FUNC( QAUDIODECODER_ONSOURCECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIODECODER_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioDecoder(QCoreApplication::instance());
@@ -728,8 +677,4 @@ HB_FUNC( QAUDIODECODER_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

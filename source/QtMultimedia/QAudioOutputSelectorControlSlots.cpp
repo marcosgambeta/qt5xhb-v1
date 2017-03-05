@@ -21,7 +21,6 @@ SlotsQAudioOutputSelectorControl::~SlotsQAudioOutputSelectorControl()
 
 void SlotsQAudioOutputSelectorControl::activeOutputChanged(const QString & name)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeOutputChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAudioOutputSelectorControl::activeOutputChanged(const QString & name)
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
-#endif
 }
 
 void SlotsQAudioOutputSelectorControl::availableOutputsChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availableOutputsChanged()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQAudioOutputSelectorControl::availableOutputsChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioOutputSelectorControl(QCoreApplication::instance());
@@ -108,14 +103,10 @@ HB_FUNC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioOutputSelectorControl(QCoreApplication::instance());
@@ -172,8 +163,4 @@ HB_FUNC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQCameraZoomControl::~SlotsQCameraZoomControl()
 
 void SlotsQCameraZoomControl::currentDigitalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentDigitalZoomChanged(qreal)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraZoomControl::currentDigitalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 void SlotsQCameraZoomControl::currentOpticalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentOpticalZoomChanged(qreal)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQCameraZoomControl::currentOpticalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 void SlotsQCameraZoomControl::maximumDigitalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maximumDigitalZoomChanged(qreal)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQCameraZoomControl::maximumDigitalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 void SlotsQCameraZoomControl::maximumOpticalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maximumOpticalZoomChanged(qreal)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQCameraZoomControl::maximumOpticalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 void SlotsQCameraZoomControl::requestedDigitalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "requestedDigitalZoomChanged(qreal)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQCameraZoomControl::requestedDigitalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 void SlotsQCameraZoomControl::requestedOpticalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "requestedOpticalZoomChanged(qreal)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQCameraZoomControl::requestedOpticalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
@@ -174,14 +161,10 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
@@ -238,14 +221,10 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
@@ -302,14 +281,10 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
@@ -366,14 +341,10 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
@@ -430,14 +401,10 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
@@ -494,8 +461,4 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

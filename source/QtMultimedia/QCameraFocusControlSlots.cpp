@@ -21,7 +21,6 @@ SlotsQCameraFocusControl::~SlotsQCameraFocusControl()
 
 void SlotsQCameraFocusControl::customFocusPointChanged(const QPointF & point)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "customFocusPointChanged(QPointF)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraFocusControl::customFocusPointChanged(const QPointF & point)
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
-#endif
 }
 
 void SlotsQCameraFocusControl::focusModeChanged(QCameraFocus::FocusModes mode)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusModeChanged(QCameraFocus::FocusModes)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQCameraFocusControl::focusModeChanged(QCameraFocus::FocusModes mode)
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
-#endif
 }
 
 void SlotsQCameraFocusControl::focusPointModeChanged(QCameraFocus::FocusPointMode mode)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQCameraFocusControl::focusPointModeChanged(QCameraFocus::FocusPointMod
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
-#endif
 }
 
 void SlotsQCameraFocusControl::focusZonesChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusZonesChanged()" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQCameraFocusControl::focusZonesChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocusControl(QCoreApplication::instance());
@@ -140,14 +131,10 @@ HB_FUNC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocusControl(QCoreApplication::instance());
@@ -204,14 +191,10 @@ HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocusControl(QCoreApplication::instance());
@@ -268,14 +251,10 @@ HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocusControl(QCoreApplication::instance());
@@ -332,8 +311,4 @@ HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

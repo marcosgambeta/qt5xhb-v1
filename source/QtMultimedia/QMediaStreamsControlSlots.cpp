@@ -21,7 +21,6 @@ SlotsQMediaStreamsControl::~SlotsQMediaStreamsControl()
 
 void SlotsQMediaStreamsControl::activeStreamsChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeStreamsChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQMediaStreamsControl::activeStreamsChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMediaStreamsControl::streamsChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "streamsChanged()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQMediaStreamsControl::streamsChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaStreamsControl(QCoreApplication::instance());
@@ -106,14 +101,10 @@ HB_FUNC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaStreamsControl(QCoreApplication::instance());
@@ -170,8 +161,4 @@ HB_FUNC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

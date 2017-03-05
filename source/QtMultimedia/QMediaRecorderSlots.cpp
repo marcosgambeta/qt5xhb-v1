@@ -21,7 +21,6 @@ SlotsQMediaRecorder::~SlotsQMediaRecorder()
 
 void SlotsQMediaRecorder::actualLocationChanged(const QUrl & location)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actualLocationChanged(QUrl)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMediaRecorder::actualLocationChanged(const QUrl & location)
     hb_itemRelease( psender );
     hb_itemRelease( plocation );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::availabilityChanged(bool available)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(bool)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQMediaRecorder::availabilityChanged(bool available)
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::availabilityChanged(QMultimedia::AvailabilityStatus availability)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQMediaRecorder::availabilityChanged(QMultimedia::AvailabilityStatus av
     hb_itemRelease( psender );
     hb_itemRelease( pavailability );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::durationChanged(qint64 duration)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "durationChanged(qint64)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQMediaRecorder::durationChanged(qint64 duration)
     hb_itemRelease( psender );
     hb_itemRelease( pduration );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::error(QMediaRecorder::Error error)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QMediaRecorder::Error)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQMediaRecorder::error(QMediaRecorder::Error error)
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::metaDataAvailableChanged(bool available)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQMediaRecorder::metaDataAvailableChanged(bool available)
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::metaDataChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
@@ -126,12 +113,10 @@ void SlotsQMediaRecorder::metaDataChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::metaDataChanged(const QString & key, const QVariant & value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
   if( cb )
@@ -144,12 +129,10 @@ void SlotsQMediaRecorder::metaDataChanged(const QString & key, const QVariant & 
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::metaDataWritableChanged(bool writable)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataWritableChanged(bool)" );
   if( cb )
@@ -160,12 +143,10 @@ void SlotsQMediaRecorder::metaDataWritableChanged(bool writable)
     hb_itemRelease( psender );
     hb_itemRelease( pwritable );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::mutedChanged(bool muted)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mutedChanged(bool)" );
   if( cb )
@@ -176,12 +157,10 @@ void SlotsQMediaRecorder::mutedChanged(bool muted)
     hb_itemRelease( psender );
     hb_itemRelease( pmuted );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::stateChanged(QMediaRecorder::State state)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QMediaRecorder::State)" );
   if( cb )
@@ -192,12 +171,10 @@ void SlotsQMediaRecorder::stateChanged(QMediaRecorder::State state)
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::statusChanged(QMediaRecorder::Status status)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QMediaRecorder::Status)" );
   if( cb )
@@ -208,12 +185,10 @@ void SlotsQMediaRecorder::statusChanged(QMediaRecorder::Status status)
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
-#endif
 }
 
 void SlotsQMediaRecorder::volumeChanged(qreal volume)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged(qreal)" );
   if( cb )
@@ -224,12 +199,10 @@ void SlotsQMediaRecorder::volumeChanged(qreal volume)
     hb_itemRelease( psender );
     hb_itemRelease( pvolume );
   }
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -286,14 +259,10 @@ HB_FUNC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -350,14 +319,10 @@ HB_FUNC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -414,14 +379,10 @@ HB_FUNC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONDURATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -478,14 +439,10 @@ HB_FUNC( QMEDIARECORDER_ONDURATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -542,14 +499,10 @@ HB_FUNC( QMEDIARECORDER_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -606,14 +559,10 @@ HB_FUNC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONMETADATACHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -670,14 +619,10 @@ HB_FUNC( QMEDIARECORDER_ONMETADATACHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONMETADATACHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -734,14 +679,10 @@ HB_FUNC( QMEDIARECORDER_ONMETADATACHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -798,14 +739,10 @@ HB_FUNC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONMUTEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -862,14 +799,10 @@ HB_FUNC( QMEDIARECORDER_ONMUTEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -926,14 +859,10 @@ HB_FUNC( QMEDIARECORDER_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONSTATUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -990,14 +919,10 @@ HB_FUNC( QMEDIARECORDER_ONSTATUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIARECORDER_ONVOLUMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaRecorder(QCoreApplication::instance());
@@ -1054,8 +979,4 @@ HB_FUNC( QMEDIARECORDER_ONVOLUMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

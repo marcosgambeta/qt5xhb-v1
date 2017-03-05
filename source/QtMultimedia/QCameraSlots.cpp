@@ -21,7 +21,6 @@ SlotsQCamera::~SlotsQCamera()
 
 void SlotsQCamera::captureModeChanged(QCamera::CaptureModes mode)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "captureModeChanged(QCamera::CaptureModes)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCamera::captureModeChanged(QCamera::CaptureModes mode)
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
-#endif
 }
 
 void SlotsQCamera::error(QCamera::Error value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QCamera::Error)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQCamera::error(QCamera::Error value)
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQCamera::lockFailed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lockFailed()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQCamera::lockFailed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQCamera::lockStatusChanged(QCamera::LockStatus status, QCamera::LockChangeReason reason)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQCamera::lockStatusChanged(QCamera::LockStatus status, QCamera::LockCh
     hb_itemRelease( pstatus );
     hb_itemRelease( preason );
   }
-#endif
 }
 
 void SlotsQCamera::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
   if( cb )
@@ -100,12 +91,10 @@ void SlotsQCamera::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus
     hb_itemRelease( pstatus );
     hb_itemRelease( preason );
   }
-#endif
 }
 
 void SlotsQCamera::locked()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "locked()" );
   if( cb )
@@ -114,12 +103,10 @@ void SlotsQCamera::locked()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQCamera::stateChanged(QCamera::State state)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QCamera::State)" );
   if( cb )
@@ -130,12 +117,10 @@ void SlotsQCamera::stateChanged(QCamera::State state)
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 void SlotsQCamera::statusChanged(QCamera::Status status)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QCamera::Status)" );
   if( cb )
@@ -146,12 +131,10 @@ void SlotsQCamera::statusChanged(QCamera::Status status)
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
-#endif
 }
 
 HB_FUNC( QCAMERA_ONCAPTUREMODECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -208,14 +191,10 @@ HB_FUNC( QCAMERA_ONCAPTUREMODECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERA_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -272,14 +251,10 @@ HB_FUNC( QCAMERA_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERA_ONLOCKFAILED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -336,14 +311,10 @@ HB_FUNC( QCAMERA_ONLOCKFAILED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERA_ONLOCKSTATUSCHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -400,14 +371,10 @@ HB_FUNC( QCAMERA_ONLOCKSTATUSCHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERA_ONLOCKSTATUSCHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -464,14 +431,10 @@ HB_FUNC( QCAMERA_ONLOCKSTATUSCHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERA_ONLOCKED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -528,14 +491,10 @@ HB_FUNC( QCAMERA_ONLOCKED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERA_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -592,14 +551,10 @@ HB_FUNC( QCAMERA_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERA_ONSTATUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCamera(QCoreApplication::instance());
@@ -656,8 +611,4 @@ HB_FUNC( QCAMERA_ONSTATUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

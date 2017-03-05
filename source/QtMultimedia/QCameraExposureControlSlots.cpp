@@ -21,7 +21,6 @@ SlotsQCameraExposureControl::~SlotsQCameraExposureControl()
 
 void SlotsQCameraExposureControl::actualValueChanged(int parameter)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actualValueChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraExposureControl::actualValueChanged(int parameter)
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }
-#endif
 }
 
 void SlotsQCameraExposureControl::parameterRangeChanged(int parameter)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "parameterRangeChanged(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQCameraExposureControl::parameterRangeChanged(int parameter)
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }
-#endif
 }
 
 void SlotsQCameraExposureControl::requestedValueChanged(int parameter)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "requestedValueChanged(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQCameraExposureControl::requestedValueChanged(int parameter)
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposureControl(QCoreApplication::instance());
@@ -126,14 +119,10 @@ HB_FUNC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposureControl(QCoreApplication::instance());
@@ -190,14 +179,10 @@ HB_FUNC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposureControl(QCoreApplication::instance());
@@ -254,8 +239,4 @@ HB_FUNC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

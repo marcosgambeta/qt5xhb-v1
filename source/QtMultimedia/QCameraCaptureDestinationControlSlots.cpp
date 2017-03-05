@@ -21,7 +21,6 @@ SlotsQCameraCaptureDestinationControl::~SlotsQCameraCaptureDestinationControl()
 
 void SlotsQCameraCaptureDestinationControl::captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraCaptureDestinationControl::captureDestinationChanged(QCameraIma
     hb_itemRelease( psender );
     hb_itemRelease( pdestination );
   }
-#endif
 }
 
 HB_FUNC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraCaptureDestinationControl(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

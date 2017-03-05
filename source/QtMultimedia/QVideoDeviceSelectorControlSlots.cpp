@@ -21,7 +21,6 @@ SlotsQVideoDeviceSelectorControl::~SlotsQVideoDeviceSelectorControl()
 
 void SlotsQVideoDeviceSelectorControl::devicesChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "devicesChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQVideoDeviceSelectorControl::devicesChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(int index)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedDeviceChanged(int)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(int index)
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
-#endif
 }
 
 void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(const QString & name)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedDeviceChanged(QString)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(const QString & nam
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
-#endif
 }
 
 HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
@@ -124,14 +117,10 @@ HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
@@ -188,14 +177,10 @@ HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
@@ -252,8 +237,4 @@ HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

@@ -21,7 +21,6 @@ SlotsQVideoWindowControl::~SlotsQVideoWindowControl()
 
 void SlotsQVideoWindowControl::fullScreenChanged(bool fullScreen)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fullScreenChanged(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQVideoWindowControl::fullScreenChanged(bool fullScreen)
     hb_itemRelease( psender );
     hb_itemRelease( pfullScreen );
   }
-#endif
 }
 
 void SlotsQVideoWindowControl::brightnessChanged(int brightness)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "brightnessChanged(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQVideoWindowControl::brightnessChanged(int brightness)
     hb_itemRelease( psender );
     hb_itemRelease( pbrightness );
   }
-#endif
 }
 
 void SlotsQVideoWindowControl::contrastChanged(int contrast)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contrastChanged(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQVideoWindowControl::contrastChanged(int contrast)
     hb_itemRelease( psender );
     hb_itemRelease( pcontrast );
   }
-#endif
 }
 
 void SlotsQVideoWindowControl::hueChanged(int hue)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hueChanged(int)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQVideoWindowControl::hueChanged(int hue)
     hb_itemRelease( psender );
     hb_itemRelease( phue );
   }
-#endif
 }
 
 void SlotsQVideoWindowControl::saturationChanged(int saturation)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "saturationChanged(int)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQVideoWindowControl::saturationChanged(int saturation)
     hb_itemRelease( psender );
     hb_itemRelease( psaturation );
   }
-#endif
 }
 
 void SlotsQVideoWindowControl::nativeSizeChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nativeSizeChanged()" );
   if( cb )
@@ -110,12 +99,10 @@ void SlotsQVideoWindowControl::nativeSizeChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWindowControl(QCoreApplication::instance());
@@ -172,14 +159,10 @@ HB_FUNC( QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWindowControl(QCoreApplication::instance());
@@ -236,14 +219,10 @@ HB_FUNC( QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWindowControl(QCoreApplication::instance());
@@ -300,14 +279,10 @@ HB_FUNC( QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWINDOWCONTROL_ONHUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWindowControl(QCoreApplication::instance());
@@ -364,14 +339,10 @@ HB_FUNC( QVIDEOWINDOWCONTROL_ONHUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWindowControl(QCoreApplication::instance());
@@ -428,14 +399,10 @@ HB_FUNC( QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWindowControl(QCoreApplication::instance());
@@ -492,8 +459,4 @@ HB_FUNC( QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

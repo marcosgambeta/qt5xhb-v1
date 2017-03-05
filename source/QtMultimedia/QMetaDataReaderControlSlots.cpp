@@ -21,7 +21,6 @@ SlotsQMetaDataReaderControl::~SlotsQMetaDataReaderControl()
 
 void SlotsQMetaDataReaderControl::metaDataChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQMetaDataReaderControl::metaDataChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMetaDataReaderControl::metaDataChanged(const QString &key, const QVariant &value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQMetaDataReaderControl::metaDataChanged(const QString &key, const QVar
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQMetaDataReaderControl::metaDataAvailableChanged(bool available)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQMetaDataReaderControl::metaDataAvailableChanged(bool available)
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 HB_FUNC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMetaDataReaderControl(QCoreApplication::instance());
@@ -126,14 +119,10 @@ HB_FUNC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMetaDataReaderControl(QCoreApplication::instance());
@@ -190,14 +179,10 @@ HB_FUNC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMetaDataReaderControl(QCoreApplication::instance());
@@ -254,8 +239,4 @@ HB_FUNC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

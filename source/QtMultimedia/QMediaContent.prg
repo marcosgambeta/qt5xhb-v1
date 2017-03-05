@@ -58,9 +58,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaContent>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -84,9 +82,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaContent>
-#endif
 #endif
 
 /*
@@ -94,14 +90,12 @@ QMediaContent()
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaContent * o = new QMediaContent (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -109,7 +103,6 @@ QMediaContent(const QUrl & url)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -125,7 +117,6 @@ QMediaContent(const QNetworkRequest & request)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -133,7 +124,6 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -141,7 +131,6 @@ QMediaContent(const QMediaResource & resource)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaResource * par1 = (QMediaResource *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -149,7 +138,6 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -157,7 +145,6 @@ QMediaContent(const QMediaResourceList & resources)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 QMediaResourceList par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -172,7 +159,6 @@ par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aL
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -180,7 +166,6 @@ QMediaContent(const QMediaContent & other)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW6 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -188,7 +173,6 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW6 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -196,7 +180,6 @@ QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool 
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW7 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaPlaylist * par1 = (QMediaPlaylist *) _qt5xhb_itemGetPtr(1);
   QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
   bool par3 = ISNIL(3)? false : hb_parl(3);
@@ -206,7 +189,6 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW7 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -256,7 +238,6 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 
 HB_FUNC_STATIC( QMEDIACONTENT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaContent * obj = (QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -268,7 +249,6 @@ HB_FUNC_STATIC( QMEDIACONTENT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

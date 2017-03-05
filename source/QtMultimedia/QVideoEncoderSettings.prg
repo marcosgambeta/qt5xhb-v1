@@ -62,9 +62,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QVideoEncoderSettings>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -88,9 +86,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QVideoEncoderSettings>
-#endif
 #endif
 
 /*
@@ -98,14 +94,12 @@ QVideoEncoderSettings()
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVideoEncoderSettings * o = new QVideoEncoderSettings (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoEncoderSettings *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -113,7 +107,6 @@ QVideoEncoderSettings(const QVideoEncoderSettings & other)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
   QVideoEncoderSettings * o = new QVideoEncoderSettings ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -121,7 +114,6 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -146,7 +138,6 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -158,7 +149,6 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

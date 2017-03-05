@@ -21,7 +21,6 @@ SlotsQSoundEffect::~SlotsQSoundEffect()
 
 void SlotsQSoundEffect::sourceChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQSoundEffect::sourceChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::loopCountChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loopCountChanged()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQSoundEffect::loopCountChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::loopsRemainingChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loopsRemainingChanged()" );
   if( cb )
@@ -58,12 +53,10 @@ void SlotsQSoundEffect::loopsRemainingChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::volumeChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged()" );
   if( cb )
@@ -72,12 +65,10 @@ void SlotsQSoundEffect::volumeChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::mutedChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mutedChanged()" );
   if( cb )
@@ -86,12 +77,10 @@ void SlotsQSoundEffect::mutedChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::loadedChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadedChanged()" );
   if( cb )
@@ -100,12 +89,10 @@ void SlotsQSoundEffect::loadedChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::playingChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "playingChanged()" );
   if( cb )
@@ -114,12 +101,10 @@ void SlotsQSoundEffect::playingChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::statusChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged()" );
   if( cb )
@@ -128,12 +113,10 @@ void SlotsQSoundEffect::statusChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQSoundEffect::categoryChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "categoryChanged()" );
   if( cb )
@@ -142,12 +125,10 @@ void SlotsQSoundEffect::categoryChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONSOURCECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -204,14 +185,10 @@ HB_FUNC( QSOUNDEFFECT_ONSOURCECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -268,14 +245,10 @@ HB_FUNC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -332,14 +305,10 @@ HB_FUNC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONVOLUMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -396,14 +365,10 @@ HB_FUNC( QSOUNDEFFECT_ONVOLUMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONMUTEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -460,14 +425,10 @@ HB_FUNC( QSOUNDEFFECT_ONMUTEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONLOADEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -524,14 +485,10 @@ HB_FUNC( QSOUNDEFFECT_ONLOADEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -588,14 +545,10 @@ HB_FUNC( QSOUNDEFFECT_ONPLAYINGCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONSTATUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -652,14 +605,10 @@ HB_FUNC( QSOUNDEFFECT_ONSTATUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQSoundEffect(QCoreApplication::instance());
@@ -716,8 +665,4 @@ HB_FUNC( QSOUNDEFFECT_ONCATEGORYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

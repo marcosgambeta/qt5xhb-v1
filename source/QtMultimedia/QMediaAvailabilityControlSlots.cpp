@@ -21,7 +21,6 @@ SlotsQMediaAvailabilityControl::~SlotsQMediaAvailabilityControl()
 
 void SlotsQMediaAvailabilityControl::availabilityChanged(QMultimedia::AvailabilityStatus availability)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMediaAvailabilityControl::availabilityChanged(QMultimedia::Availabili
     hb_itemRelease( psender );
     hb_itemRelease( pavailability );
   }
-#endif
 }
 
 HB_FUNC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaAvailabilityControl(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

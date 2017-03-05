@@ -72,9 +72,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaResource>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -98,9 +96,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaResource>
-#endif
 #endif
 
 #include <QSize>
@@ -110,14 +106,12 @@ QMediaResource()
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaResource * o = new QMediaResource (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaResource *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -125,7 +119,6 @@ QMediaResource(const QUrl & url, const QString & mimeType = QString())
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QMediaResource * o = new QMediaResource ( *par1, par2 );
@@ -134,7 +127,6 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -142,7 +134,6 @@ QMediaResource(const QNetworkRequest & request, const QString & mimeType = QStri
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QMediaResource * o = new QMediaResource ( *par1, par2 );
@@ -151,7 +142,6 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -159,7 +149,6 @@ QMediaResource(const QMediaResource & other)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaResource * par1 = (QMediaResource *) _qt5xhb_itemGetPtr(1);
   QMediaResource * o = new QMediaResource ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -167,7 +156,6 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -202,7 +190,6 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 
 HB_FUNC_STATIC( QMEDIARESOURCE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaResource * obj = (QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -214,7 +201,6 @@ HB_FUNC_STATIC( QMEDIARESOURCE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

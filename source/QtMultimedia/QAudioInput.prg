@@ -57,9 +57,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioInput>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -83,9 +81,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioInput>
-#endif
 #endif
 
 /*
@@ -93,7 +89,6 @@ QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioFormat par1 = ISNIL(1)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QAudioInput * o = new QAudioInput ( par1, par2 );
@@ -102,7 +97,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -110,7 +104,6 @@ QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format 
 */
 HB_FUNC_STATIC( QAUDIOINPUT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) _qt5xhb_itemGetPtr(1);
   QAudioFormat par2 = ISNIL(2)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
@@ -120,7 +113,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -145,7 +137,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 
 HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -157,7 +148,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

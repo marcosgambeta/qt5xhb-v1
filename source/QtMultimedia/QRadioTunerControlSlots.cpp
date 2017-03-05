@@ -21,7 +21,6 @@ SlotsQRadioTunerControl::~SlotsQRadioTunerControl()
 
 void SlotsQRadioTunerControl::stateChanged(QRadioTuner::State state)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QRadioTuner::State)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQRadioTunerControl::stateChanged(QRadioTuner::State state)
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::bandChanged(QRadioTuner::Band band)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "bandChanged(QRadioTuner::Band)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQRadioTunerControl::bandChanged(QRadioTuner::Band band)
     hb_itemRelease( psender );
     hb_itemRelease( pband );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::frequencyChanged(int frequency)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frequencyChanged(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQRadioTunerControl::frequencyChanged(int frequency)
     hb_itemRelease( psender );
     hb_itemRelease( pfrequency );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::stereoStatusChanged(bool stereo)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stereoStatusChanged(bool)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQRadioTunerControl::stereoStatusChanged(bool stereo)
     hb_itemRelease( psender );
     hb_itemRelease( pstereo );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::searchingChanged(bool searching)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "searchingChanged(bool)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQRadioTunerControl::searchingChanged(bool searching)
     hb_itemRelease( psender );
     hb_itemRelease( psearching );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::signalStrengthChanged(int signalStrength)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "signalStrengthChanged(int)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQRadioTunerControl::signalStrengthChanged(int signalStrength)
     hb_itemRelease( psender );
     hb_itemRelease( psignalStrength );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::volumeChanged(int volume)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged(int)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQRadioTunerControl::volumeChanged(int volume)
     hb_itemRelease( psender );
     hb_itemRelease( pvolume );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::mutedChanged(bool muted)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mutedChanged(bool)" );
   if( cb )
@@ -144,12 +129,10 @@ void SlotsQRadioTunerControl::mutedChanged(bool muted)
     hb_itemRelease( psender );
     hb_itemRelease( pmuted );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::error(QRadioTuner::Error err)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QRadioTuner::Error)" );
   if( cb )
@@ -160,12 +143,10 @@ void SlotsQRadioTunerControl::error(QRadioTuner::Error err)
     hb_itemRelease( psender );
     hb_itemRelease( perr );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::stationFound(int frequency, QString stationId)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stationFound(int,QString)" );
   if( cb )
@@ -178,12 +159,10 @@ void SlotsQRadioTunerControl::stationFound(int frequency, QString stationId)
     hb_itemRelease( pfrequency );
     hb_itemRelease( pstationId );
   }
-#endif
 }
 
 void SlotsQRadioTunerControl::antennaConnectedChanged(bool connectionStatus)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "antennaConnectedChanged(bool)" );
   if( cb )
@@ -194,12 +173,10 @@ void SlotsQRadioTunerControl::antennaConnectedChanged(bool connectionStatus)
     hb_itemRelease( psender );
     hb_itemRelease( pconnectionStatus );
   }
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -256,14 +233,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONBANDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -320,14 +293,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONBANDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -384,14 +353,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -448,14 +413,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -512,14 +473,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -576,14 +533,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -640,14 +593,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -704,14 +653,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -768,14 +713,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -832,14 +773,10 @@ HB_FUNC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioTunerControl(QCoreApplication::instance());
@@ -896,8 +833,4 @@ HB_FUNC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

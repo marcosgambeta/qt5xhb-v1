@@ -49,9 +49,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaTimeInterval>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -75,9 +73,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaTimeInterval>
-#endif
 #endif
 
 /*
@@ -85,14 +81,12 @@ QMediaTimeInterval()
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaTimeInterval * o = new QMediaTimeInterval (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaTimeInterval *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -100,7 +94,6 @@ QMediaTimeInterval(qint64 start, qint64 end)
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qint64 par1 = hb_parni(1);
   qint64 par2 = hb_parni(2);
   QMediaTimeInterval * o = new QMediaTimeInterval ( par1, par2 );
@@ -109,7 +102,6 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -117,7 +109,6 @@ QMediaTimeInterval(const QMediaTimeInterval & other)
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
   QMediaTimeInterval * o = new QMediaTimeInterval ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -125,7 +116,6 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -155,7 +145,6 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
 
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaTimeInterval * obj = (QMediaTimeInterval *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -167,7 +156,6 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

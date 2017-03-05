@@ -21,7 +21,6 @@ SlotsQMetaDataWriterControl::~SlotsQMetaDataWriterControl()
 
 void SlotsQMetaDataWriterControl::metaDataChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQMetaDataWriterControl::metaDataChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMetaDataWriterControl::metaDataChanged(const QString &key, const QVariant &value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQMetaDataWriterControl::metaDataChanged(const QString &key, const QVar
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQMetaDataWriterControl::writableChanged(bool writable)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "writableChanged(bool)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQMetaDataWriterControl::writableChanged(bool writable)
     hb_itemRelease( psender );
     hb_itemRelease( pwritable );
   }
-#endif
 }
 
 void SlotsQMetaDataWriterControl::metaDataAvailableChanged(bool available)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQMetaDataWriterControl::metaDataAvailableChanged(bool available)
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
@@ -142,14 +133,10 @@ HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
@@ -206,14 +193,10 @@ HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
@@ -270,14 +253,10 @@ HB_FUNC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
@@ -334,8 +313,4 @@ HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

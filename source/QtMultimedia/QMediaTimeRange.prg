@@ -61,9 +61,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaTimeRange>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -87,9 +85,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QMediaTimeRange>
-#endif
 #endif
 
 #include <QList>
@@ -99,14 +95,12 @@ QMediaTimeRange()
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaTimeRange * o = new QMediaTimeRange (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaTimeRange *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -114,7 +108,6 @@ QMediaTimeRange(qint64 start, qint64 end)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   qint64 par1 = hb_parni(1);
   qint64 par2 = hb_parni(2);
   QMediaTimeRange * o = new QMediaTimeRange ( par1, par2 );
@@ -123,7 +116,6 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -131,7 +123,6 @@ QMediaTimeRange(const QMediaTimeInterval & interval)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
   QMediaTimeRange * o = new QMediaTimeRange ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -139,7 +130,6 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -147,7 +137,6 @@ QMediaTimeRange(const QMediaTimeRange & range)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaTimeRange * par1 = (QMediaTimeRange *) _qt5xhb_itemGetPtr(1);
   QMediaTimeRange * o = new QMediaTimeRange ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -155,7 +144,6 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -190,7 +178,6 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaTimeRange * obj = (QMediaTimeRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -202,7 +189,6 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

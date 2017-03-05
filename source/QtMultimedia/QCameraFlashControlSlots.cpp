@@ -21,7 +21,6 @@ SlotsQCameraFlashControl::~SlotsQCameraFlashControl()
 
 void SlotsQCameraFlashControl::flashReady(bool ready)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flashReady(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraFlashControl::flashReady(bool ready)
     hb_itemRelease( psender );
     hb_itemRelease( pready );
   }
-#endif
 }
 
 HB_FUNC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFlashControl(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QCAMERAFLASHCONTROL_ONFLASHREADY )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

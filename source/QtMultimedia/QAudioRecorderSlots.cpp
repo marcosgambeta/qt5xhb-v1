@@ -21,7 +21,6 @@ SlotsQAudioRecorder::~SlotsQAudioRecorder()
 
 void SlotsQAudioRecorder::audioInputChanged(const QString & name)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "audioInputChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAudioRecorder::audioInputChanged(const QString & name)
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
-#endif
 }
 
 void SlotsQAudioRecorder::availableAudioInputsChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availableAudioInputsChanged()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQAudioRecorder::availableAudioInputsChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioRecorder(QCoreApplication::instance());
@@ -108,14 +103,10 @@ HB_FUNC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioRecorder(QCoreApplication::instance());
@@ -172,8 +163,4 @@ HB_FUNC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

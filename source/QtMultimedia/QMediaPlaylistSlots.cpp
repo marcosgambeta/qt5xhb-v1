@@ -21,7 +21,6 @@ SlotsQMediaPlaylist::~SlotsQMediaPlaylist()
 
 void SlotsQMediaPlaylist::currentIndexChanged(int position)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(int)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMediaPlaylist::currentIndexChanged(int position)
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::currentMediaChanged(const QMediaContent & content)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentMediaChanged(QMediaContent)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQMediaPlaylist::currentMediaChanged(const QMediaContent & content)
     hb_itemRelease( psender );
     hb_itemRelease( pcontent );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::loadFailed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFailed()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQMediaPlaylist::loadFailed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::loaded()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loaded()" );
   if( cb )
@@ -76,12 +69,10 @@ void SlotsQMediaPlaylist::loaded()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::mediaAboutToBeInserted(int start, int end)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mediaAboutToBeInserted(int,int)" );
   if( cb )
@@ -94,12 +85,10 @@ void SlotsQMediaPlaylist::mediaAboutToBeInserted(int start, int end)
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::mediaAboutToBeRemoved(int start, int end)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mediaAboutToBeRemoved(int,int)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQMediaPlaylist::mediaAboutToBeRemoved(int start, int end)
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::mediaChanged(int start, int end)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mediaChanged(int,int)" );
   if( cb )
@@ -130,12 +117,10 @@ void SlotsQMediaPlaylist::mediaChanged(int start, int end)
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::mediaInserted(int start, int end)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mediaInserted(int,int)" );
   if( cb )
@@ -148,12 +133,10 @@ void SlotsQMediaPlaylist::mediaInserted(int start, int end)
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::mediaRemoved(int start, int end)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "mediaRemoved(int,int)" );
   if( cb )
@@ -166,12 +149,10 @@ void SlotsQMediaPlaylist::mediaRemoved(int start, int end)
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
   }
-#endif
 }
 
 void SlotsQMediaPlaylist::playbackModeChanged(QMediaPlaylist::PlaybackMode mode)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
   if( cb )
@@ -182,12 +163,10 @@ void SlotsQMediaPlaylist::playbackModeChanged(QMediaPlaylist::PlaybackMode mode)
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -244,14 +223,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -308,14 +283,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONLOADFAILED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -372,14 +343,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONLOADFAILED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONLOADED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -436,14 +403,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONLOADED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -500,14 +463,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -564,14 +523,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONMEDIACHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -628,14 +583,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONMEDIACHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -692,14 +643,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -756,14 +703,10 @@ HB_FUNC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaPlaylist(QCoreApplication::instance());
@@ -820,8 +763,4 @@ HB_FUNC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

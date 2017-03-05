@@ -21,7 +21,6 @@ SlotsQVideoWidget::~SlotsQVideoWidget()
 
 void SlotsQVideoWidget::fullScreenChanged(bool fullScreen)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fullScreenChanged(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQVideoWidget::fullScreenChanged(bool fullScreen)
     hb_itemRelease( psender );
     hb_itemRelease( pfullScreen );
   }
-#endif
 }
 
 void SlotsQVideoWidget::brightnessChanged(int brightness)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "brightnessChanged(int)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQVideoWidget::brightnessChanged(int brightness)
     hb_itemRelease( psender );
     hb_itemRelease( pbrightness );
   }
-#endif
 }
 
 void SlotsQVideoWidget::contrastChanged(int contrast)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contrastChanged(int)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQVideoWidget::contrastChanged(int contrast)
     hb_itemRelease( psender );
     hb_itemRelease( pcontrast );
   }
-#endif
 }
 
 void SlotsQVideoWidget::hueChanged(int hue)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hueChanged(int)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQVideoWidget::hueChanged(int hue)
     hb_itemRelease( psender );
     hb_itemRelease( phue );
   }
-#endif
 }
 
 void SlotsQVideoWidget::saturationChanged(int saturation)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "saturationChanged(int)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQVideoWidget::saturationChanged(int saturation)
     hb_itemRelease( psender );
     hb_itemRelease( psaturation );
   }
-#endif
 }
 
 HB_FUNC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
@@ -158,14 +147,10 @@ HB_FUNC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
@@ -222,14 +207,10 @@ HB_FUNC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWIDGET_ONCONTRASTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
@@ -286,14 +267,10 @@ HB_FUNC( QVIDEOWIDGET_ONCONTRASTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWIDGET_ONHUECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
@@ -350,14 +327,10 @@ HB_FUNC( QVIDEOWIDGET_ONHUECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QVIDEOWIDGET_ONSATURATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
@@ -414,8 +387,4 @@ HB_FUNC( QVIDEOWIDGET_ONSATURATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

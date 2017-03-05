@@ -21,7 +21,6 @@ SlotsQCameraImageCaptureControl::~SlotsQCameraImageCaptureControl()
 
 void SlotsQCameraImageCaptureControl::error(int id, int error, const QString & errorString)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,int,QString)" );
   if( cb )
@@ -36,12 +35,10 @@ void SlotsQCameraImageCaptureControl::error(int id, int error, const QString & e
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
   }
-#endif
 }
 
 void SlotsQCameraImageCaptureControl::imageAvailable(int requestId, const QVideoFrame & buffer)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "imageAvailable(int,QVideoFrame)" );
   if( cb )
@@ -54,12 +51,10 @@ void SlotsQCameraImageCaptureControl::imageAvailable(int requestId, const QVideo
     hb_itemRelease( prequestId );
     hb_itemRelease( pbuffer );
   }
-#endif
 }
 
 void SlotsQCameraImageCaptureControl::imageCaptured(int requestId, const QImage & preview)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "imageCaptured(int,QImage)" );
   if( cb )
@@ -72,12 +67,10 @@ void SlotsQCameraImageCaptureControl::imageCaptured(int requestId, const QImage 
     hb_itemRelease( prequestId );
     hb_itemRelease( ppreview );
   }
-#endif
 }
 
 void SlotsQCameraImageCaptureControl::imageExposed(int requestId)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "imageExposed(int)" );
   if( cb )
@@ -88,12 +81,10 @@ void SlotsQCameraImageCaptureControl::imageExposed(int requestId)
     hb_itemRelease( psender );
     hb_itemRelease( prequestId );
   }
-#endif
 }
 
 void SlotsQCameraImageCaptureControl::imageMetadataAvailable(int id, const QString & key, const QVariant & value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "imageMetadataAvailable(int,QString,QVariant)" );
   if( cb )
@@ -108,12 +99,10 @@ void SlotsQCameraImageCaptureControl::imageMetadataAvailable(int id, const QStri
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQCameraImageCaptureControl::imageSaved(int requestId, const QString & fileName)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "imageSaved(int,QString)" );
   if( cb )
@@ -126,12 +115,10 @@ void SlotsQCameraImageCaptureControl::imageSaved(int requestId, const QString & 
     hb_itemRelease( prequestId );
     hb_itemRelease( pfileName );
   }
-#endif
 }
 
 void SlotsQCameraImageCaptureControl::readyForCaptureChanged(bool ready)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "readyForCaptureChanged(bool)" );
   if( cb )
@@ -142,12 +129,10 @@ void SlotsQCameraImageCaptureControl::readyForCaptureChanged(bool ready)
     hb_itemRelease( psender );
     hb_itemRelease( pready );
   }
-#endif
 }
 
 HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
@@ -204,14 +189,10 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
@@ -268,14 +249,10 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
@@ -332,14 +309,10 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
@@ -396,14 +369,10 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
@@ -460,14 +429,10 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
@@ -524,14 +489,10 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
@@ -588,8 +549,4 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

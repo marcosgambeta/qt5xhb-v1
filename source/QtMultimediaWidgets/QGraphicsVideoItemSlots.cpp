@@ -21,7 +21,6 @@ SlotsQGraphicsVideoItem::~SlotsQGraphicsVideoItem()
 
 void SlotsQGraphicsVideoItem::nativeSizeChanged(const QSizeF &size)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nativeSizeChanged(QSizeF)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQGraphicsVideoItem::nativeSizeChanged(const QSizeF &size)
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
-#endif
 }
 
 HB_FUNC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQGraphicsVideoItem(QCoreApplication::instance());
@@ -94,8 +91,5 @@ HB_FUNC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 

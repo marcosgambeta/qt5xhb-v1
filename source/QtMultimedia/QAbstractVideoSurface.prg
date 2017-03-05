@@ -43,9 +43,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAbstractVideoSurface>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -69,9 +67,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAbstractVideoSurface>
-#endif
 #endif
 
 #include <QVideoSurfaceFormat>
@@ -79,7 +75,6 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -91,7 +86,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

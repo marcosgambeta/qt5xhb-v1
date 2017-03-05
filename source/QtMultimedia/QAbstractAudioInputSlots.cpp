@@ -21,7 +21,6 @@ SlotsQAbstractAudioInput::~SlotsQAbstractAudioInput()
 
 void SlotsQAbstractAudioInput::errorChanged(QAudio::Error error)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "errorChanged(QAudio::Error)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAbstractAudioInput::errorChanged(QAudio::Error error)
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
 
 void SlotsQAbstractAudioInput::stateChanged(QAudio::State state)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQAbstractAudioInput::stateChanged(QAudio::State state)
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
 
 void SlotsQAbstractAudioInput::notify()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "notify()" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQAbstractAudioInput::notify()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QABSTRACTAUDIOINPUT_ONERRORCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractAudioInput(QCoreApplication::instance());
@@ -124,14 +117,10 @@ HB_FUNC( QABSTRACTAUDIOINPUT_ONERRORCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTAUDIOINPUT_ONSTATECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractAudioInput(QCoreApplication::instance());
@@ -188,14 +177,10 @@ HB_FUNC( QABSTRACTAUDIOINPUT_ONSTATECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QABSTRACTAUDIOINPUT_ONNOTIFY )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAbstractAudioInput(QCoreApplication::instance());
@@ -252,8 +237,4 @@ HB_FUNC( QABSTRACTAUDIOINPUT_ONNOTIFY )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

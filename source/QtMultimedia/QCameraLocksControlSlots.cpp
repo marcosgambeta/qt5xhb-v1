@@ -21,7 +21,6 @@ SlotsQCameraLocksControl::~SlotsQCameraLocksControl()
 
 void SlotsQCameraLocksControl::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
   if( cb )
@@ -36,12 +35,10 @@ void SlotsQCameraLocksControl::lockStatusChanged(QCamera::LockType lock, QCamera
     hb_itemRelease( pstatus );
     hb_itemRelease( preason );
   }
-#endif
 }
 
 HB_FUNC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraLocksControl(QCoreApplication::instance());
@@ -98,8 +95,4 @@ HB_FUNC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

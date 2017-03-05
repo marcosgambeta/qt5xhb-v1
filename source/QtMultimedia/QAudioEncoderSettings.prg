@@ -59,9 +59,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioEncoderSettings>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -85,9 +83,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioEncoderSettings>
-#endif
 #endif
 
 /*
@@ -95,14 +91,12 @@ QAudioEncoderSettings()
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioEncoderSettings * o = new QAudioEncoderSettings (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioEncoderSettings *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -110,7 +104,6 @@ QAudioEncoderSettings(const QAudioEncoderSettings & other)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
   QAudioEncoderSettings * o = new QAudioEncoderSettings ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -118,7 +111,6 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -143,7 +135,6 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -155,7 +146,6 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

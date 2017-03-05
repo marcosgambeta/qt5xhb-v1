@@ -21,7 +21,6 @@ SlotsQMediaObject::~SlotsQMediaObject()
 
 void SlotsQMediaObject::availabilityChanged(bool available)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(bool)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMediaObject::availabilityChanged(bool available)
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQMediaObject::availabilityChanged(QMultimedia::AvailabilityStatus availability)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQMediaObject::availabilityChanged(QMultimedia::AvailabilityStatus avai
     hb_itemRelease( psender );
     hb_itemRelease( pavailability );
   }
-#endif
 }
 
 void SlotsQMediaObject::metaDataAvailableChanged(bool available)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQMediaObject::metaDataAvailableChanged(bool available)
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
-#endif
 }
 
 void SlotsQMediaObject::metaDataChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQMediaObject::metaDataChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMediaObject::metaDataChanged(const QString & key, const QVariant & value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQMediaObject::metaDataChanged(const QString & key, const QVariant & va
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQMediaObject::notifyIntervalChanged(int milliseconds)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "notifyIntervalChanged(int)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQMediaObject::notifyIntervalChanged(int milliseconds)
     hb_itemRelease( psender );
     hb_itemRelease( pmilliseconds );
   }
-#endif
 }
 
 HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaObject(QCoreApplication::instance());
@@ -174,14 +161,10 @@ HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaObject(QCoreApplication::instance());
@@ -238,14 +221,10 @@ HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaObject(QCoreApplication::instance());
@@ -302,14 +281,10 @@ HB_FUNC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaObject(QCoreApplication::instance());
@@ -366,14 +341,10 @@ HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED1 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaObject(QCoreApplication::instance());
@@ -430,14 +401,10 @@ HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED2 )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaObject(QCoreApplication::instance());
@@ -494,8 +461,4 @@ HB_FUNC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

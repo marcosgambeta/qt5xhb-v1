@@ -21,7 +21,6 @@ SlotsQMediaGaplessPlaybackControl::~SlotsQMediaGaplessPlaybackControl()
 
 void SlotsQMediaGaplessPlaybackControl::advancedToNextMedia()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "advancedToNextMedia()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQMediaGaplessPlaybackControl::advancedToNextMedia()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMediaGaplessPlaybackControl::crossfadeTimeChanged(qreal crossfadeTime)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "crossfadeTimeChanged(qreal)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQMediaGaplessPlaybackControl::crossfadeTimeChanged(qreal crossfadeTime
     hb_itemRelease( psender );
     hb_itemRelease( pcrossfadeTime );
   }
-#endif
 }
 
 void SlotsQMediaGaplessPlaybackControl::nextMediaChanged(const QMediaContent & media)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nextMediaChanged(QMediaContent)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQMediaGaplessPlaybackControl::nextMediaChanged(const QMediaContent & m
     hb_itemRelease( psender );
     hb_itemRelease( pmedia );
   }
-#endif
 }
 
 HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
@@ -124,14 +117,10 @@ HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
@@ -188,14 +177,10 @@ HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
@@ -252,8 +237,4 @@ HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

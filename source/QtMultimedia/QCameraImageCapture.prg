@@ -66,9 +66,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCameraImageCapture>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -92,9 +90,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QCameraImageCapture>
-#endif
 #endif
 
 /*
@@ -102,7 +98,6 @@ QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QMediaObject * par1 = (QMediaObject *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QCameraImageCapture * o = new QCameraImageCapture ( par1, par2 );
@@ -111,13 +106,11 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QCameraImageCapture * obj = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -129,7 +122,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

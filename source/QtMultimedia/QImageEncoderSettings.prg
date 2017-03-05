@@ -56,9 +56,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImageEncoderSettings>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -82,9 +80,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QImageEncoderSettings>
-#endif
 #endif
 
 /*
@@ -92,14 +88,12 @@ QImageEncoderSettings()
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImageEncoderSettings * o = new QImageEncoderSettings (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QImageEncoderSettings *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -107,7 +101,6 @@ QImageEncoderSettings(const QImageEncoderSettings& other)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
   QImageEncoderSettings * o = new QImageEncoderSettings ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -115,7 +108,6 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -140,7 +132,6 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImageEncoderSettings * obj = (QImageEncoderSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -152,7 +143,6 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

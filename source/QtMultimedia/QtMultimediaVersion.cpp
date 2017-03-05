@@ -9,9 +9,7 @@
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QtMultimediaVersion>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -35,25 +33,15 @@
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QtMultimediaVersion>
-#endif
 #endif
 
 HB_FUNC( QTMULTIMEDIA_VERSION_STR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   hb_retc( (const char *) QTMULTIMEDIA_VERSION_STR );
-#else
-  hb_retc( (const char *) "" );
-#endif
 }
 
 HB_FUNC( QTMULTIMEDIA_VERSION )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   hb_retni( QTMULTIMEDIA_VERSION );
-#else
-  hb_retni( 0 );
-#endif
 }

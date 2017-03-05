@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioBuffer>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioBuffer>
-#endif
 #endif
 
 /*
@@ -90,14 +86,12 @@ QAudioBuffer()
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioBuffer * o = new QAudioBuffer (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioBuffer *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -105,7 +99,6 @@ QAudioBuffer(const QAudioBuffer & other)
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioBuffer * par1 = (QAudioBuffer *) _qt5xhb_itemGetPtr(1);
   QAudioBuffer * o = new QAudioBuffer ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -113,7 +106,6 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -121,7 +113,6 @@ QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startT
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QAudioFormat * par2 = (QAudioFormat *) _qt5xhb_itemGetPtr(2);
   qint64 par3 = ISNIL(3)? -1 : hb_parni(3);
@@ -131,7 +122,6 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -139,7 +129,6 @@ QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QAudioFormat * par2 = (QAudioFormat *) _qt5xhb_itemGetPtr(2);
   qint64 par3 = ISNIL(3)? -1 : hb_parni(3);
@@ -149,7 +138,6 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW4 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -184,7 +172,6 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 
 HB_FUNC_STATIC( QAUDIOBUFFER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioBuffer * obj = (QAudioBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -196,7 +183,6 @@ HB_FUNC_STATIC( QAUDIOBUFFER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

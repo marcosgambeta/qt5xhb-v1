@@ -21,7 +21,6 @@ SlotsQMediaVideoProbeControl::~SlotsQMediaVideoProbeControl()
 
 void SlotsQMediaVideoProbeControl::flush()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQMediaVideoProbeControl::flush()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQMediaVideoProbeControl::videoFrameProbed(const QVideoFrame & frame)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQMediaVideoProbeControl::videoFrameProbed(const QVideoFrame & frame)
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
-#endif
 }
 
 HB_FUNC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaVideoProbeControl(QCoreApplication::instance());
@@ -108,14 +103,10 @@ HB_FUNC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaVideoProbeControl(QCoreApplication::instance());
@@ -172,8 +163,4 @@ HB_FUNC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

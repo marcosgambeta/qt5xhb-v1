@@ -54,9 +54,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioFormat>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -80,9 +78,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QAudioFormat>
-#endif
 #endif
 
 /*
@@ -90,14 +86,12 @@ QAudioFormat ()
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioFormat * o = new QAudioFormat (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioFormat *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -105,7 +99,6 @@ QAudioFormat ( const QAudioFormat & other )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioFormat * par1 = (QAudioFormat *) _qt5xhb_itemGetPtr(1);
   QAudioFormat * o = new QAudioFormat ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -113,7 +106,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -138,7 +130,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 
 HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -150,7 +141,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

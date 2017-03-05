@@ -21,7 +21,6 @@ SlotsQRadioDataControl::~SlotsQRadioDataControl()
 
 void SlotsQRadioDataControl::stationIdChanged(QString stationId)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stationIdChanged(QString)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQRadioDataControl::stationIdChanged(QString stationId)
     hb_itemRelease( psender );
     hb_itemRelease( pstationId );
   }
-#endif
 }
 
 void SlotsQRadioDataControl::programTypeChanged(QRadioData::ProgramType programType)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "programTypeChanged(QRadioData::ProgramType)" );
   if( cb )
@@ -48,12 +45,10 @@ void SlotsQRadioDataControl::programTypeChanged(QRadioData::ProgramType programT
     hb_itemRelease( psender );
     hb_itemRelease( pprogramType );
   }
-#endif
 }
 
 void SlotsQRadioDataControl::programTypeNameChanged(QString programTypeName)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "programTypeNameChanged(QString)" );
   if( cb )
@@ -64,12 +59,10 @@ void SlotsQRadioDataControl::programTypeNameChanged(QString programTypeName)
     hb_itemRelease( psender );
     hb_itemRelease( pprogramTypeName );
   }
-#endif
 }
 
 void SlotsQRadioDataControl::stationNameChanged(QString stationName)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stationNameChanged(QString)" );
   if( cb )
@@ -80,12 +73,10 @@ void SlotsQRadioDataControl::stationNameChanged(QString stationName)
     hb_itemRelease( psender );
     hb_itemRelease( pstationName );
   }
-#endif
 }
 
 void SlotsQRadioDataControl::radioTextChanged(QString radioText)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "radioTextChanged(QString)" );
   if( cb )
@@ -96,12 +87,10 @@ void SlotsQRadioDataControl::radioTextChanged(QString radioText)
     hb_itemRelease( psender );
     hb_itemRelease( pradioText );
   }
-#endif
 }
 
 void SlotsQRadioDataControl::alternativeFrequenciesEnabledChanged(bool enabled)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "alternativeFrequenciesEnabledChanged(bool)" );
   if( cb )
@@ -112,12 +101,10 @@ void SlotsQRadioDataControl::alternativeFrequenciesEnabledChanged(bool enabled)
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
-#endif
 }
 
 void SlotsQRadioDataControl::error(QRadioData::Error err)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QRadioData::Error)" );
   if( cb )
@@ -128,12 +115,10 @@ void SlotsQRadioDataControl::error(QRadioData::Error err)
     hb_itemRelease( psender );
     hb_itemRelease( perr );
   }
-#endif
 }
 
 HB_FUNC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioDataControl(QCoreApplication::instance());
@@ -190,14 +175,10 @@ HB_FUNC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIODATACONTROL_ONPROGRAMTYPECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioDataControl(QCoreApplication::instance());
@@ -254,14 +235,10 @@ HB_FUNC( QRADIODATACONTROL_ONPROGRAMTYPECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioDataControl(QCoreApplication::instance());
@@ -318,14 +295,10 @@ HB_FUNC( QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIODATACONTROL_ONSTATIONNAMECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioDataControl(QCoreApplication::instance());
@@ -382,14 +355,10 @@ HB_FUNC( QRADIODATACONTROL_ONSTATIONNAMECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIODATACONTROL_ONRADIOTEXTCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioDataControl(QCoreApplication::instance());
@@ -446,14 +415,10 @@ HB_FUNC( QRADIODATACONTROL_ONRADIOTEXTCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioDataControl(QCoreApplication::instance());
@@ -510,14 +475,10 @@ HB_FUNC( QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QRADIODATACONTROL_ONERROR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQRadioDataControl(QCoreApplication::instance());
@@ -574,8 +535,4 @@ HB_FUNC( QRADIODATACONTROL_ONERROR )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

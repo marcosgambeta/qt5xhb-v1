@@ -21,7 +21,6 @@ SlotsQCameraFocus::~SlotsQCameraFocus()
 
 void SlotsQCameraFocus::digitalZoomChanged(qreal value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "digitalZoomChanged(qreal)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraFocus::digitalZoomChanged(qreal value)
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQCameraFocus::focusZonesChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusZonesChanged()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQCameraFocus::focusZonesChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQCameraFocus::maximumDigitalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maximumDigitalZoomChanged(qreal)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQCameraFocus::maximumDigitalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 void SlotsQCameraFocus::maximumOpticalZoomChanged(qreal zoom)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maximumOpticalZoomChanged(qreal)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQCameraFocus::maximumOpticalZoomChanged(qreal zoom)
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
-#endif
 }
 
 void SlotsQCameraFocus::opticalZoomChanged(qreal value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opticalZoomChanged(qreal)" );
   if( cb )
@@ -94,12 +85,10 @@ void SlotsQCameraFocus::opticalZoomChanged(qreal value)
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocus(QCoreApplication::instance());
@@ -156,14 +145,10 @@ HB_FUNC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocus(QCoreApplication::instance());
@@ -220,14 +205,10 @@ HB_FUNC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocus(QCoreApplication::instance());
@@ -284,14 +265,10 @@ HB_FUNC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocus(QCoreApplication::instance());
@@ -348,14 +325,10 @@ HB_FUNC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraFocus(QCoreApplication::instance());
@@ -412,8 +385,4 @@ HB_FUNC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

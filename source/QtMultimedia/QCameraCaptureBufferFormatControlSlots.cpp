@@ -21,7 +21,6 @@ SlotsQCameraCaptureBufferFormatControl::~SlotsQCameraCaptureBufferFormatControl(
 
 void SlotsQCameraCaptureBufferFormatControl::bufferFormatChanged(QVideoFrame::PixelFormat format)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraCaptureBufferFormatControl::bufferFormatChanged(QVideoFrame::Pi
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
-#endif
 }
 
 HB_FUNC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraCaptureBufferFormatControl(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

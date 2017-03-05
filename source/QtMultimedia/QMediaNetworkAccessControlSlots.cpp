@@ -21,7 +21,6 @@ SlotsQMediaNetworkAccessControl::~SlotsQMediaNetworkAccessControl()
 
 void SlotsQMediaNetworkAccessControl::configurationChanged(const QNetworkConfiguration & configuration)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQMediaNetworkAccessControl::configurationChanged(const QNetworkConfigu
     hb_itemRelease( psender );
     hb_itemRelease( pconfiguration );
   }
-#endif
 }
 
 HB_FUNC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQMediaNetworkAccessControl(QCoreApplication::instance());
@@ -94,8 +91,4 @@ HB_FUNC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

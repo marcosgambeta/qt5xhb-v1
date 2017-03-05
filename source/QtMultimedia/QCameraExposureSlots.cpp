@@ -21,7 +21,6 @@ SlotsQCameraExposure::~SlotsQCameraExposure()
 
 void SlotsQCameraExposure::apertureChanged(qreal value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "apertureChanged(qreal)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQCameraExposure::apertureChanged(qreal value)
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQCameraExposure::apertureRangeChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "apertureRangeChanged()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQCameraExposure::apertureRangeChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQCameraExposure::exposureCompensationChanged(qreal value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "exposureCompensationChanged(qreal)" );
   if( cb )
@@ -62,12 +57,10 @@ void SlotsQCameraExposure::exposureCompensationChanged(qreal value)
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQCameraExposure::flashReady(bool ready)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flashReady(bool)" );
   if( cb )
@@ -78,12 +71,10 @@ void SlotsQCameraExposure::flashReady(bool ready)
     hb_itemRelease( psender );
     hb_itemRelease( pready );
   }
-#endif
 }
 
 void SlotsQCameraExposure::isoSensitivityChanged(int value)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "isoSensitivityChanged(int)" );
   if( cb )
@@ -94,12 +85,10 @@ void SlotsQCameraExposure::isoSensitivityChanged(int value)
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
-#endif
 }
 
 void SlotsQCameraExposure::shutterSpeedChanged(qreal speed)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shutterSpeedChanged(qreal)" );
   if( cb )
@@ -110,12 +99,10 @@ void SlotsQCameraExposure::shutterSpeedChanged(qreal speed)
     hb_itemRelease( psender );
     hb_itemRelease( pspeed );
   }
-#endif
 }
 
 void SlotsQCameraExposure::shutterSpeedRangeChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shutterSpeedRangeChanged()" );
   if( cb )
@@ -124,12 +111,10 @@ void SlotsQCameraExposure::shutterSpeedRangeChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposure(QCoreApplication::instance());
@@ -186,14 +171,10 @@ HB_FUNC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposure(QCoreApplication::instance());
@@ -250,14 +231,10 @@ HB_FUNC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposure(QCoreApplication::instance());
@@ -314,14 +291,10 @@ HB_FUNC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURE_ONFLASHREADY )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposure(QCoreApplication::instance());
@@ -378,14 +351,10 @@ HB_FUNC( QCAMERAEXPOSURE_ONFLASHREADY )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposure(QCoreApplication::instance());
@@ -442,14 +411,10 @@ HB_FUNC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposure(QCoreApplication::instance());
@@ -506,14 +471,10 @@ HB_FUNC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQCameraExposure(QCoreApplication::instance());
@@ -570,8 +531,4 @@ HB_FUNC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

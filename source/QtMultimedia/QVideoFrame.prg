@@ -75,9 +75,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QVideoFrame>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -101,9 +99,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QVideoFrame>
-#endif
 #endif
 
 #include <QVariant>
@@ -113,7 +109,6 @@ QVideoFrame ()
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVideoFrame * o = new QVideoFrame (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
@@ -123,7 +118,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW1 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -131,7 +125,6 @@ QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat for
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QAbstractVideoBuffer * par1 = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtr(1);
   QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
@@ -144,7 +137,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -152,7 +144,6 @@ QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat forma
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
@@ -166,7 +157,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -174,7 +164,6 @@ QVideoFrame ( const QImage & image )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW4 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
   QVideoFrame * o = new QVideoFrame ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -185,7 +174,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW4 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -193,7 +181,6 @@ QVideoFrame ( const QVideoFrame & other )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW5 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVideoFrame * par1 = (QVideoFrame *) _qt5xhb_itemGetPtr(1);
   QVideoFrame * o = new QVideoFrame ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -204,7 +191,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW5 )
   hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
   hb_itemRelease( des );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -244,7 +230,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 
 HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -256,7 +241,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQAudioProbe::~SlotsQAudioProbe()
 
 void SlotsQAudioProbe::audioBufferProbed(const QAudioBuffer & buffer)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
   if( cb )
@@ -32,12 +31,10 @@ void SlotsQAudioProbe::audioBufferProbed(const QAudioBuffer & buffer)
     hb_itemRelease( psender );
     hb_itemRelease( pbuffer );
   }
-#endif
 }
 
 void SlotsQAudioProbe::flush()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
   if( cb )
@@ -46,12 +43,10 @@ void SlotsQAudioProbe::flush()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioProbe(QCoreApplication::instance());
@@ -108,14 +103,10 @@ HB_FUNC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QAUDIOPROBE_ONFLUSH )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQAudioProbe(QCoreApplication::instance());
@@ -172,8 +163,4 @@ HB_FUNC( QAUDIOPROBE_ONFLUSH )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-
