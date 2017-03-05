@@ -125,9 +125,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuickItem>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -151,9 +149,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuickItem>
-#endif
 #endif
 
 #include <QCursor>
@@ -163,7 +159,6 @@ QQuickItem(QQuickItem * parent = 0)
 */
 HB_FUNC_STATIC( QQUICKITEM_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQuickItem * par1 = ISNIL(1)? 0 : (QQuickItem *) _qt5xhb_itemGetPtr(1);
   QQuickItem * o = new QQuickItem ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -171,13 +166,11 @@ HB_FUNC_STATIC( QQUICKITEM_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QQUICKITEM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQuickItem * obj = (QQuickItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -189,7 +182,6 @@ HB_FUNC_STATIC( QQUICKITEM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

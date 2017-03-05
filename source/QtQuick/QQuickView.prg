@@ -53,9 +53,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuickView>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -79,9 +77,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuickView>
-#endif
 #endif
 
 #include <QList>
@@ -91,7 +87,6 @@ QQuickView(QWindow * parent = 0)
 */
 HB_FUNC_STATIC( QQUICKVIEW_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QWindow * par1 = ISNIL(1)? 0 : (QWindow *) _qt5xhb_itemGetPtr(1);
   QQuickView * o = new QQuickView ( par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -99,7 +94,6 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW1 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -107,7 +101,6 @@ QQuickView(QQmlEngine * engine, QWindow * parent)
 */
 HB_FUNC_STATIC( QQUICKVIEW_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QWindow * par2 = (QWindow *) _qt5xhb_itemGetPtr(2);
   QQuickView * o = new QQuickView ( par1, par2 );
@@ -116,7 +109,6 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -124,7 +116,6 @@ QQuickView(const QUrl & source, QWindow * parent = 0)
 */
 HB_FUNC_STATIC( QQUICKVIEW_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QWindow * par2 = ISNIL(2)? 0 : (QWindow *) _qt5xhb_itemGetPtr(2);
   QQuickView * o = new QQuickView ( *par1, par2 );
@@ -133,7 +124,6 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -163,7 +153,6 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW )
 
 HB_FUNC_STATIC( QQUICKVIEW_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQuickView * obj = (QQuickView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -175,7 +164,6 @@ HB_FUNC_STATIC( QQUICKVIEW_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

@@ -21,7 +21,6 @@ SlotsQQuickPaintedItem::~SlotsQQuickPaintedItem()
 
 void SlotsQQuickPaintedItem::contentsScaleChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsScaleChanged()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQQuickPaintedItem::contentsScaleChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickPaintedItem::contentsSizeChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsSizeChanged()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQQuickPaintedItem::contentsSizeChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickPaintedItem::fillColorChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fillColorChanged()" );
   if( cb )
@@ -58,12 +53,10 @@ void SlotsQQuickPaintedItem::fillColorChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickPaintedItem::renderTargetChanged()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "renderTargetChanged()" );
   if( cb )
@@ -72,12 +65,10 @@ void SlotsQQuickPaintedItem::renderTargetChanged()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
@@ -134,14 +125,10 @@ HB_FUNC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
@@ -198,14 +185,10 @@ HB_FUNC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
@@ -262,14 +245,10 @@ HB_FUNC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
@@ -326,8 +305,4 @@ HB_FUNC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

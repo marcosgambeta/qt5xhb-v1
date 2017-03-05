@@ -21,7 +21,6 @@ SlotsQScriptEngineDebugger::~SlotsQScriptEngineDebugger()
 
 void SlotsQScriptEngineDebugger::evaluationResumed()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "evaluationResumed()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQScriptEngineDebugger::evaluationResumed()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQScriptEngineDebugger::evaluationSuspended()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "evaluationSuspended()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQScriptEngineDebugger::evaluationSuspended()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScriptEngineDebugger(QCoreApplication::instance());
@@ -106,14 +101,10 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQScriptEngineDebugger(QCoreApplication::instance());
@@ -170,8 +161,4 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

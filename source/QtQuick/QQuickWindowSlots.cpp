@@ -21,7 +21,6 @@ SlotsQQuickWindow::~SlotsQQuickWindow()
 
 void SlotsQQuickWindow::afterRendering()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "afterRendering()" );
   if( cb )
@@ -30,12 +29,10 @@ void SlotsQQuickWindow::afterRendering()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickWindow::beforeRendering()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeRendering()" );
   if( cb )
@@ -44,12 +41,10 @@ void SlotsQQuickWindow::beforeRendering()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickWindow::beforeSynchronizing()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeSynchronizing()" );
   if( cb )
@@ -58,12 +53,10 @@ void SlotsQQuickWindow::beforeSynchronizing()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickWindow::colorChanged(const QColor & color)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
@@ -74,12 +67,10 @@ void SlotsQQuickWindow::colorChanged(const QColor & color)
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
-#endif
 }
 
 void SlotsQQuickWindow::frameSwapped()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameSwapped()" );
   if( cb )
@@ -88,12 +79,10 @@ void SlotsQQuickWindow::frameSwapped()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickWindow::sceneGraphInitialized()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneGraphInitialized()" );
   if( cb )
@@ -102,12 +91,10 @@ void SlotsQQuickWindow::sceneGraphInitialized()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 void SlotsQQuickWindow::sceneGraphInvalidated()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneGraphInvalidated()" );
   if( cb )
@@ -116,12 +103,10 @@ void SlotsQQuickWindow::sceneGraphInvalidated()
      hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
 
 HB_FUNC( QQUICKWINDOW_ONAFTERRENDERING )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickWindow(QCoreApplication::instance());
@@ -178,14 +163,10 @@ HB_FUNC( QQUICKWINDOW_ONAFTERRENDERING )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKWINDOW_ONBEFORERENDERING )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickWindow(QCoreApplication::instance());
@@ -242,14 +223,10 @@ HB_FUNC( QQUICKWINDOW_ONBEFORERENDERING )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickWindow(QCoreApplication::instance());
@@ -306,14 +283,10 @@ HB_FUNC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKWINDOW_ONCOLORCHANGED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickWindow(QCoreApplication::instance());
@@ -370,14 +343,10 @@ HB_FUNC( QQUICKWINDOW_ONCOLORCHANGED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKWINDOW_ONFRAMESWAPPED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickWindow(QCoreApplication::instance());
@@ -434,14 +403,10 @@ HB_FUNC( QQUICKWINDOW_ONFRAMESWAPPED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickWindow(QCoreApplication::instance());
@@ -498,14 +463,10 @@ HB_FUNC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
 
 HB_FUNC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   if( s == NULL )
   {
     s = new SlotsQQuickWindow(QCoreApplication::instance());
@@ -562,8 +523,4 @@ HB_FUNC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
   {
     hb_retl(false);
   }
-#else
-  hb_retl(false);
-#endif
 }
-

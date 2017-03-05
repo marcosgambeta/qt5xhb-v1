@@ -46,9 +46,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QScriptProgram>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -72,9 +70,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QScriptProgram>
-#endif
 #endif
 
 /*
@@ -82,14 +78,12 @@ QScriptProgram()
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QScriptProgram * o = new QScriptProgram (  );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptProgram *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -97,7 +91,6 @@ QScriptProgram(const QString & sourceCode, const QString fileName = QString(), i
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? 1 : hb_parni(3);
@@ -107,7 +100,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 /*
@@ -115,7 +107,6 @@ QScriptProgram(const QScriptProgram & other)
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QScriptProgram * par1 = (QScriptProgram *) _qt5xhb_itemGetPtr(1);
   QScriptProgram * o = new QScriptProgram ( *par1 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -123,7 +114,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
@@ -153,7 +143,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 
 HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -165,7 +154,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*

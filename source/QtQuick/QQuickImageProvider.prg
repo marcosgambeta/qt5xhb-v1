@@ -43,9 +43,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuickImageProvider>
-#endif
 #endif
 
 #include "hbapi.h"
@@ -69,9 +67,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 #include <QQuickImageProvider>
-#endif
 #endif
 
 /*
@@ -79,7 +75,6 @@ QQuickImageProvider(ImageType type, Flags flags = 0)
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QQuickImageProvider * o = new QQuickImageProvider (  (QQmlImageProviderBase::ImageType) par1,  (QQmlImageProviderBase::Flags) par2 );
@@ -88,13 +83,11 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
-#endif
 }
 
 
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_DELETE )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   QQuickImageProvider * obj = (QQuickImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
@@ -106,7 +99,6 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_DELETE )
     hb_itemRelease( ptr );
   }
   hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 /*
