@@ -82,6 +82,10 @@ hbmk2 QTimeEdit            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QTimer1              %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QTimer2              %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QTimer3              %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QToolButton1         %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QToolButton2         %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QToolButton3         %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QToolButton4         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QTreeWidget          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QtSqlDemo            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QUiLoader            %1 %2 %3 ..\qt5xhb.hbc
