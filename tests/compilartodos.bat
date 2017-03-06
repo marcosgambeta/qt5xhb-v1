@@ -24,6 +24,9 @@ hbmk2 QBoxLayout2          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout3          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout4          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QCalendarWidget      %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QCheckBox1           %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QCheckBox2           %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QCheckBox3           %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QColorDialog1        %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QColorDialog2        %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QCombobox            %1 %2 %3 ..\qt5xhb.hbc

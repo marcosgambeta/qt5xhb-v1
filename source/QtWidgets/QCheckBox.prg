@@ -19,8 +19,6 @@ CLASS QCheckBox INHERIT QAbstractButton
    DATA class_flags INIT 1
    DATA self_destruction INIT .f.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD checkState
@@ -73,9 +71,9 @@ RETURN
 #endif
 
 /*
-QCheckBox ( QWidget * parent = 0 )
+explicit QCheckBox ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QCHECKBOX_NEW1 )
+void QCheckBox_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QCheckBox * o = new QCheckBox ( par1 );
@@ -83,9 +81,9 @@ HB_FUNC_STATIC( QCHECKBOX_NEW1 )
 }
 
 /*
-QCheckBox ( const QString & text, QWidget * parent = 0 )
+explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QCHECKBOX_NEW2 )
+void QCheckBox_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -93,19 +91,18 @@ HB_FUNC_STATIC( QCHECKBOX_NEW2 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
-//[1]QCheckBox ( QWidget * parent = 0 )
-//[2]QCheckBox ( const QString & text, QWidget * parent = 0 )
+//[1]explicit QCheckBox ( QWidget * parent = 0 )
+//[2]explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QCHECKBOX_NEW1 );
+    QCheckBox_new1 ();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCHECKBOX_NEW2 );
+    QCheckBox_new2 ();
   }
   else
   {
@@ -116,6 +113,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 HB_FUNC_STATIC( QCHECKBOX_DELETE )
 {
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -125,6 +123,7 @@ HB_FUNC_STATIC( QCHECKBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -134,12 +133,12 @@ Qt::CheckState checkState () const
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
   QCheckBox * obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->checkState (  ) );
   }
 }
-
 
 /*
 bool isTristate () const
@@ -147,12 +146,12 @@ bool isTristate () const
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
   QCheckBox * obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isTristate (  ) );
   }
 }
-
 
 /*
 void setCheckState ( Qt::CheckState state )
@@ -160,14 +159,15 @@ void setCheckState ( Qt::CheckState state )
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
   QCheckBox * obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setCheckState (  (Qt::CheckState) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTristate ( bool y = true )
@@ -175,20 +175,22 @@ void setTristate ( bool y = true )
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
   QCheckBox * obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setTristate ( (bool) ISNIL(1)? true : hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
-virtual QSize minimumSizeHint () const
+QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
   QCheckBox * obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -196,13 +198,13 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
-virtual QSize sizeHint () const
+QSize sizeHint () const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
   QCheckBox * obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -210,8 +212,4 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-
