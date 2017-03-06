@@ -137,58 +137,9 @@ HB_FUNC( QSCREEN_ONGEOMETRYCHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "geometryChanged(QRect)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(geometryChanged(QRect)), s, SLOT(geometryChanged(QRect)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "geometryChanged(QRect)";
-    ret = object->disconnect(object, SIGNAL(geometryChanged(QRect)), s, SLOT(geometryChanged(QRect)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "geometryChanged(QRect)", "geometryChanged(QRect)" ) );
+
 }
 
 HB_FUNC( QSCREEN_ONPHYSICALSIZECHANGED )
@@ -197,58 +148,9 @@ HB_FUNC( QSCREEN_ONPHYSICALSIZECHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "physicalSizeChanged(QSizeF)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(physicalSizeChanged(QSizeF)), s, SLOT(physicalSizeChanged(QSizeF)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "physicalSizeChanged(QSizeF)";
-    ret = object->disconnect(object, SIGNAL(physicalSizeChanged(QSizeF)), s, SLOT(physicalSizeChanged(QSizeF)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "physicalSizeChanged(QSizeF)", "physicalSizeChanged(QSizeF)" ) );
+
 }
 
 HB_FUNC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
@@ -257,58 +159,9 @@ HB_FUNC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "physicalDotsPerInchChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(physicalDotsPerInchChanged(qreal)), s, SLOT(physicalDotsPerInchChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "physicalDotsPerInchChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(physicalDotsPerInchChanged(qreal)), s, SLOT(physicalDotsPerInchChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "physicalDotsPerInchChanged(qreal)", "physicalDotsPerInchChanged(qreal)" ) );
+
 }
 
 HB_FUNC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
@@ -317,58 +170,9 @@ HB_FUNC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "logicalDotsPerInchChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(logicalDotsPerInchChanged(qreal)), s, SLOT(logicalDotsPerInchChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "logicalDotsPerInchChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(logicalDotsPerInchChanged(qreal)), s, SLOT(logicalDotsPerInchChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "logicalDotsPerInchChanged(qreal)", "logicalDotsPerInchChanged(qreal)" ) );
+
 }
 
 HB_FUNC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
@@ -377,58 +181,9 @@ HB_FUNC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "virtualGeometryChanged(QRect)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(virtualGeometryChanged(QRect)), s, SLOT(virtualGeometryChanged(QRect)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "virtualGeometryChanged(QRect)";
-    ret = object->disconnect(object, SIGNAL(virtualGeometryChanged(QRect)), s, SLOT(virtualGeometryChanged(QRect)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "virtualGeometryChanged(QRect)", "virtualGeometryChanged(QRect)" ) );
+
 }
 
 HB_FUNC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
@@ -437,58 +192,9 @@ HB_FUNC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "primaryOrientationChanged(Qt::ScreenOrientation)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(primaryOrientationChanged(Qt::ScreenOrientation)), s, SLOT(primaryOrientationChanged(Qt::ScreenOrientation)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "primaryOrientationChanged(Qt::ScreenOrientation)";
-    ret = object->disconnect(object, SIGNAL(primaryOrientationChanged(Qt::ScreenOrientation)), s, SLOT(primaryOrientationChanged(Qt::ScreenOrientation)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "primaryOrientationChanged(Qt::ScreenOrientation)", "primaryOrientationChanged(Qt::ScreenOrientation)" ) );
+
 }
 
 HB_FUNC( QSCREEN_ONORIENTATIONCHANGED )
@@ -497,58 +203,9 @@ HB_FUNC( QSCREEN_ONORIENTATIONCHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "orientationChanged(Qt::ScreenOrientation)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(orientationChanged(Qt::ScreenOrientation)), s, SLOT(orientationChanged(Qt::ScreenOrientation)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "orientationChanged(Qt::ScreenOrientation)";
-    ret = object->disconnect(object, SIGNAL(orientationChanged(Qt::ScreenOrientation)), s, SLOT(orientationChanged(Qt::ScreenOrientation)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "orientationChanged(Qt::ScreenOrientation)", "orientationChanged(Qt::ScreenOrientation)" ) );
+
 }
 
 HB_FUNC( QSCREEN_ONREFRESHRATECHANGED )
@@ -557,56 +214,7 @@ HB_FUNC( QSCREEN_ONREFRESHRATECHANGED )
   {
     s = new SlotsQScreen(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "refreshRateChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(refreshRateChanged(qreal)), s, SLOT(refreshRateChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "refreshRateChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(refreshRateChanged(qreal)), s, SLOT(refreshRateChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "refreshRateChanged(qreal)", "refreshRateChanged(qreal)" ) );
+
 }
