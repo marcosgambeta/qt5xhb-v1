@@ -53,58 +53,8 @@ HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
   {
     s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "blurHintsChanged(QGraphicsBlurEffect::BlurHints)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(blurHintsChanged(QGraphicsBlurEffect::BlurHints)), s, SLOT(blurHintsChanged(QGraphicsBlurEffect::BlurHints)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "blurHintsChanged(QGraphicsBlurEffect::BlurHints)";
-    ret = object->disconnect(object, SIGNAL(blurHintsChanged(QGraphicsBlurEffect::BlurHints)), s, SLOT(blurHintsChanged(QGraphicsBlurEffect::BlurHints)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) );
 }
 
 HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
@@ -113,56 +63,6 @@ HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
   {
     s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "blurRadiusChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(blurRadiusChanged(qreal)), s, SLOT(blurRadiusChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "blurRadiusChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(blurRadiusChanged(qreal)), s, SLOT(blurRadiusChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
 }

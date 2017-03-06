@@ -295,6 +295,54 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
 }
 
 /*
+  conecta/desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
+*/
+bool Signals_connection_disconnection ( QObject * s, QString signal, QString slot )
+{
+  bool ret = false;
+
+  if( hb_pcount() == 1 )
+  {
+    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+    bool connected = Signals_is_signal_connected( object, signal );
+    if( !connected )
+    {
+      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      if( codeblock )
+      {
+        ret = object->connect( object,
+                               object->metaObject()->method(object->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
+                               s,
+                               s->metaObject()->method(s->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
+                             );
+        if( ret )
+        {
+          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
+        }
+        else
+        {
+          hb_itemRelease( codeblock );
+        }
+      }
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+    ret = object->disconnect( object,
+                              object->metaObject()->method(object->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
+                              s,
+                              s->metaObject()->method(s->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
+                            );
+    if( ret )
+    {
+      Signals_disconnect_signal( object, signal ); // se desconectado, remove
+    }
+  }
+  return ret;
+}
+
+/*
   Retorna o tamanho da lista de sinais.
   Atenção: está função não faz parte da API pública, podendo
   ser removida ou sofrer modificações futuramente.

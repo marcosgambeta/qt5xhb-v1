@@ -166,7 +166,7 @@ void SlotsQTreeWidget::itemSelectionChanged ()
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -177,58 +177,8 @@ HB_FUNC( QTREEWIDGET_ONCURRENTITEMCHANGED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), s, SLOT(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)";
-    ret = object->disconnect(object, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), s, SLOT(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)", "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMACTIVATED )
@@ -237,58 +187,8 @@ HB_FUNC( QTREEWIDGET_ONITEMACTIVATED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemActivated(QTreeWidgetItem*,int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemActivated(QTreeWidgetItem*,int)), s, SLOT(itemActivated(QTreeWidgetItem*,int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemActivated(QTreeWidgetItem*,int)";
-    ret = object->disconnect(object, SIGNAL(itemActivated(QTreeWidgetItem*,int)), s, SLOT(itemActivated(QTreeWidgetItem*,int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemActivated(QTreeWidgetItem*,int)", "itemActivated(QTreeWidgetItem*,int)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMCHANGED )
@@ -297,58 +197,8 @@ HB_FUNC( QTREEWIDGET_ONITEMCHANGED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemChanged(QTreeWidgetItem*,int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemChanged(QTreeWidgetItem*,int)), s, SLOT(itemChanged(QTreeWidgetItem*,int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemChanged(QTreeWidgetItem*,int)";
-    ret = object->disconnect(object, SIGNAL(itemChanged(QTreeWidgetItem*,int)), s, SLOT(itemChanged(QTreeWidgetItem*,int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemChanged(QTreeWidgetItem*,int)", "itemChanged(QTreeWidgetItem*,int)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMCLICKED )
@@ -357,58 +207,8 @@ HB_FUNC( QTREEWIDGET_ONITEMCLICKED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemClicked(QTreeWidgetItem*,int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemClicked(QTreeWidgetItem*,int)), s, SLOT(itemClicked(QTreeWidgetItem*,int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemClicked(QTreeWidgetItem*,int)";
-    ret = object->disconnect(object, SIGNAL(itemClicked(QTreeWidgetItem*,int)), s, SLOT(itemClicked(QTreeWidgetItem*,int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemClicked(QTreeWidgetItem*,int)", "itemClicked(QTreeWidgetItem*,int)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMCOLLAPSED )
@@ -417,58 +217,8 @@ HB_FUNC( QTREEWIDGET_ONITEMCOLLAPSED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemCollapsed(QTreeWidgetItem*)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemCollapsed(QTreeWidgetItem*)), s, SLOT(itemCollapsed(QTreeWidgetItem*)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemCollapsed(QTreeWidgetItem*)";
-    ret = object->disconnect(object, SIGNAL(itemCollapsed(QTreeWidgetItem*)), s, SLOT(itemCollapsed(QTreeWidgetItem*)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemCollapsed(QTreeWidgetItem*)", "itemCollapsed(QTreeWidgetItem*)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMDOUBLECLICKED )
@@ -477,58 +227,8 @@ HB_FUNC( QTREEWIDGET_ONITEMDOUBLECLICKED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemDoubleClicked(QTreeWidgetItem*,int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), s, SLOT(itemDoubleClicked(QTreeWidgetItem*,int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemDoubleClicked(QTreeWidgetItem*,int)";
-    ret = object->disconnect(object, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), s, SLOT(itemDoubleClicked(QTreeWidgetItem*,int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemDoubleClicked(QTreeWidgetItem*,int)", "itemDoubleClicked(QTreeWidgetItem*,int)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMENTERED )
@@ -537,58 +237,8 @@ HB_FUNC( QTREEWIDGET_ONITEMENTERED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemEntered(QTreeWidgetItem*,int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemEntered(QTreeWidgetItem*,int)), s, SLOT(itemEntered(QTreeWidgetItem*,int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemEntered(QTreeWidgetItem*,int)";
-    ret = object->disconnect(object, SIGNAL(itemEntered(QTreeWidgetItem*,int)), s, SLOT(itemEntered(QTreeWidgetItem*,int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemEntered(QTreeWidgetItem*,int)", "itemEntered(QTreeWidgetItem*,int)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMEXPANDED )
@@ -597,58 +247,8 @@ HB_FUNC( QTREEWIDGET_ONITEMEXPANDED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemExpanded(QTreeWidgetItem*)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemExpanded(QTreeWidgetItem*)), s, SLOT(itemExpanded(QTreeWidgetItem*)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemExpanded(QTreeWidgetItem*)";
-    ret = object->disconnect(object, SIGNAL(itemExpanded(QTreeWidgetItem*)), s, SLOT(itemExpanded(QTreeWidgetItem*)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemExpanded(QTreeWidgetItem*)", "itemExpanded(QTreeWidgetItem*)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMPRESSED )
@@ -657,58 +257,8 @@ HB_FUNC( QTREEWIDGET_ONITEMPRESSED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemPressed(QTreeWidgetItem*,int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemPressed(QTreeWidgetItem*,int)), s, SLOT(itemPressed(QTreeWidgetItem*,int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemPressed(QTreeWidgetItem*,int)";
-    ret = object->disconnect(object, SIGNAL(itemPressed(QTreeWidgetItem*,int)), s, SLOT(itemPressed(QTreeWidgetItem*,int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemPressed(QTreeWidgetItem*,int)", "itemPressed(QTreeWidgetItem*,int)" ) );
 }
 
 HB_FUNC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
@@ -717,56 +267,6 @@ HB_FUNC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
   {
     s = new SlotsQTreeWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemSelectionChanged()";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(itemSelectionChanged()), s, SLOT(itemSelectionChanged()) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "itemSelectionChanged()";
-    ret = object->disconnect(object, SIGNAL(itemSelectionChanged()), s, SLOT(itemSelectionChanged()) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
 }
