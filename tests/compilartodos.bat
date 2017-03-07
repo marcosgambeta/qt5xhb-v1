@@ -53,6 +53,7 @@ hbmk2 QHBoxLayout          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QInputDialog         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QLabel1              %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QLabel2              %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QLabel3              %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QLCDNumber           %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QListView            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QMainWindow          %1 %2 %3 ..\qt5xhb.hbc
