@@ -40,3 +40,6 @@ void _qt5xhb_storePointerAndFlag (void * pointer, bool flag);
 
 void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname );
 void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname );
+
+void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname );
+void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classname );
