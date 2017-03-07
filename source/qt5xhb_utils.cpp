@@ -455,3 +455,93 @@ void _qt5xhb_storePointerAndFlag (void * pointer, bool flag)
   hb_itemRelease( des );
   hb_itemReturn( self );
 }
+
+/*
+  cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
+*/
+void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
+{
+  PHB_DYNS pDynSym;
+  #ifdef __XHARBOUR__
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFind( classname );
+  }
+  #else
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+  #endif
+  if( pDynSym )
+  {
+    #ifdef __XHARBOUR__
+    hb_vmPushSymbol( pDynSym->pSymbol );
+    #else
+    hb_vmPushDynSym( pDynSym );
+    #endif
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    PHB_ITEM pObject = hb_itemNew( NULL );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (QObject *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemReturn( pObject );
+    hb_itemRelease( pObject );
+    hb_itemRelease( pItem );
+  }
+}
+
+/*
+  cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
+*/
+void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname )
+{
+  PHB_DYNS pDynSym;
+  #ifdef __XHARBOUR__
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFind( classname );
+  }
+  #else
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+  #endif
+  if( pDynSym )
+  {
+    #ifdef __XHARBOUR__
+    hb_vmPushSymbol( pDynSym->pSymbol );
+    #else
+    hb_vmPushDynSym( pDynSym );
+    #endif
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    PHB_ITEM pObject = hb_itemNew( NULL );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (QObject *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemReturn( pObject );
+    hb_itemRelease( pObject );
+    hb_itemRelease( pItem );
+  }
+}
