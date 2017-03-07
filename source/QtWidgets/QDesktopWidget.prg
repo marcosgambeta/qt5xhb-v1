@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   if( obj )
   {
     QWidget * ptr = obj->screen ( (int) ISNIL(1)? -1 : hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

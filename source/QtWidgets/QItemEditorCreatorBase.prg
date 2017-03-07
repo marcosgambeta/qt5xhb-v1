@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->createWidget ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

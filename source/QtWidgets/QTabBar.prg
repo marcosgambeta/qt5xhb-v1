@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
   {
     int par2 = hb_parni(2);
     QWidget * ptr = obj->tabButton ( (int) hb_parni(1),  (QTabBar::ButtonPosition) par2 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

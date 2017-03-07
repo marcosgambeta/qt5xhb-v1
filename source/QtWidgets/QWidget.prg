@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT1 )
   if( obj )
   {
     QWidget * ptr = obj->childAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT2 )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->childAt ( *par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPROXY )
   if( obj )
   {
     QWidget * ptr = obj->focusProxy (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->focusWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -2062,7 +2062,7 @@ HB_FUNC_STATIC( QWIDGET_NATIVEPARENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->nativeParentWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -2076,7 +2076,7 @@ HB_FUNC_STATIC( QWIDGET_NEXTINFOCUSCHAIN )
   if( obj )
   {
     QWidget * ptr = obj->nextInFocusChain (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -2147,7 +2147,7 @@ HB_FUNC_STATIC( QWIDGET_PARENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->parentWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -2161,7 +2161,7 @@ HB_FUNC_STATIC( QWIDGET_PREVIOUSINFOCUSCHAIN )
   if( obj )
   {
     QWidget * ptr = obj->previousInFocusChain (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -3631,7 +3631,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOW )
   if( obj )
   {
     QWidget * ptr = obj->window (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -4111,7 +4111,7 @@ HB_FUNC_STATIC( QWIDGET_TOPLEVELWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->topLevelWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -4349,7 +4349,7 @@ HB_FUNC_STATIC( QWIDGET_FIND )
 {
   WId par1 = (WId) hb_parptr(1);
   QWidget * ptr = QWidget::find ( par1 );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -4359,7 +4359,7 @@ static QWidget * keyboardGrabber ()
 HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
 {
   QWidget * ptr = QWidget::keyboardGrabber (  );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -4369,7 +4369,7 @@ static QWidget * mouseGrabber ()
 HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
 {
   QWidget * ptr = QWidget::mouseGrabber (  );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -4394,7 +4394,7 @@ HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
   QWidget * ptr = QWidget::createWindowContainer ( par1, par2,  (Qt::WindowFlags) par3 );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 

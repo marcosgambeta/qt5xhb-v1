@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

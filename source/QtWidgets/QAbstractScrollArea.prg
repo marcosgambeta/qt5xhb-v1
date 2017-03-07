@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->cornerWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
   if( obj )
   {
     QWidget * ptr = obj->viewport (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

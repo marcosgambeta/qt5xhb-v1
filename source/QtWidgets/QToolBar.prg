@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
   {
     QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->widgetForAction ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

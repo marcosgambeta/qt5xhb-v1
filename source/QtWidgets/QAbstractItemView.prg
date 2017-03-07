@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->indexWidget ( *par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

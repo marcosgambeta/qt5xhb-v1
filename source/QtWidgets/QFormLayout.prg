@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD1 )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->labelForField ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD2 )
   {
     QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->labelForField ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

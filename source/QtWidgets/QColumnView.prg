@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->previewWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

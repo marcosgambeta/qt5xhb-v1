@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
   {
     QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->itemWidget ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

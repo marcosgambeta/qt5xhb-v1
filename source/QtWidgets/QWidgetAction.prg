@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->defaultWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->requestWidget ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

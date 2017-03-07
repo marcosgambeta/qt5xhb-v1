@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
     QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
     QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     QWidget * ptr = obj->createEditor ( par1, *par2, *par3 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
   if( obj )
   {
     QWidget * ptr = obj->buddy (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

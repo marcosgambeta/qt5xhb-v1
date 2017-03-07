@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
     QWidget * ptr = obj->itemWidget ( par1, (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

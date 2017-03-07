@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
   if( obj )
   {
     QWidget * ptr = obj->extension (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

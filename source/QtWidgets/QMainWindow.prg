@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->centralWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->menuWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

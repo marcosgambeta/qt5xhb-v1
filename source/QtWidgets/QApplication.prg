@@ -330,7 +330,7 @@ static QWidget * activeModalWidget ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 {
   QWidget * ptr = QApplication::activeModalWidget (  );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -340,7 +340,7 @@ static QWidget * activePopupWidget ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 {
   QWidget * ptr = QApplication::activePopupWidget (  );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -350,7 +350,7 @@ static QWidget * activeWindow ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 {
   QWidget * ptr = QApplication::activeWindow (  );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -497,7 +497,7 @@ static QWidget * focusWidget ()
 HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 {
   QWidget * ptr = QApplication::focusWidget (  );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
 {
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QWidget * ptr = QApplication::topLevelAt ( *par1 );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 /*
@@ -1005,7 +1005,7 @@ static QWidget * topLevelAt ( int x, int y )
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT2 )
 {
   QWidget * ptr = QApplication::topLevelAt ( (int) hb_parni(1), (int) hb_parni(2) );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
 {
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QWidget * ptr = QApplication::widgetAt ( *par1 );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 /*
@@ -1094,7 +1094,7 @@ static QWidget * widgetAt ( int x, int y )
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT2 )
 {
   QWidget * ptr = QApplication::widgetAt ( (int) hb_parni(1), (int) hb_parni(2) );
-  _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 

@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
   if( obj )
   {
     QWidget * ptr = obj->menuBar (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->parentWidget (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

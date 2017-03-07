@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->cellWidget ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

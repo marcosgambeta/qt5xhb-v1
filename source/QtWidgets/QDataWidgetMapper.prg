@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
   if( obj )
   {
     QWidget * ptr = obj->mappedWidgetAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
