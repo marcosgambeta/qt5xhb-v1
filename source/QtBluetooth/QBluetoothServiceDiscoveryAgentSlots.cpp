@@ -43,7 +43,7 @@ void SlotsQBluetoothServiceDiscoveryAgent::finished()
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 #endif
@@ -57,7 +57,7 @@ void SlotsQBluetoothServiceDiscoveryAgent::canceled()
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 #endif
@@ -86,58 +86,8 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
   {
     s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "serviceDiscovered(QBluetoothServiceInfo)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(serviceDiscovered(QBluetoothServiceInfo)), s, SLOT(serviceDiscovered(QBluetoothServiceInfo)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "serviceDiscovered(QBluetoothServiceInfo)";
-    ret = object->disconnect(object, SIGNAL(serviceDiscovered(QBluetoothServiceInfo)), s, SLOT(serviceDiscovered(QBluetoothServiceInfo)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "serviceDiscovered(QBluetoothServiceInfo)", "serviceDiscovered(QBluetoothServiceInfo)" ) );
 #else
   hb_retl(false);
 #endif
@@ -150,58 +100,8 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
   {
     s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "finished()";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(finished()), s, SLOT(finished()) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "finished()";
-    ret = object->disconnect(object, SIGNAL(finished()), s, SLOT(finished()) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
 #else
   hb_retl(false);
 #endif
@@ -214,58 +114,8 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
   {
     s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "canceled()";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(canceled()), s, SLOT(canceled()) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "canceled()";
-    ret = object->disconnect(object, SIGNAL(canceled()), s, SLOT(canceled()) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "canceled()", "canceled()" ) );
 #else
   hb_retl(false);
 #endif
@@ -278,60 +128,9 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
   {
     s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "error(QBluetoothServiceDiscoveryAgent::Error)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(error(QBluetoothServiceDiscoveryAgent::Error)), s, SLOT(error(QBluetoothServiceDiscoveryAgent::Error)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "error(QBluetoothServiceDiscoveryAgent::Error)";
-    ret = object->disconnect(object, SIGNAL(error(QBluetoothServiceDiscoveryAgent::Error)), s, SLOT(error(QBluetoothServiceDiscoveryAgent::Error)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothServiceDiscoveryAgent::Error)", "error(QBluetoothServiceDiscoveryAgent::Error)" ) );
 #else
   hb_retl(false);
 #endif
 }
-

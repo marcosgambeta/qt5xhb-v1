@@ -112,58 +112,8 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED )
   {
     s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "hostModeStateChanged(QBluetoothLocalDevice::HostMode)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(hostModeStateChanged(QBluetoothLocalDevice::HostMode)), s, SLOT(hostModeStateChanged(QBluetoothLocalDevice::HostMode)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "hostModeStateChanged(QBluetoothLocalDevice::HostMode)";
-    ret = object->disconnect(object, SIGNAL(hostModeStateChanged(QBluetoothLocalDevice::HostMode)), s, SLOT(hostModeStateChanged(QBluetoothLocalDevice::HostMode)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)", "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" ) );
 #else
   hb_retl(false);
 #endif
@@ -176,58 +126,8 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED )
   {
     s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)), s, SLOT(pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)";
-    ret = object->disconnect(object, SIGNAL(pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)), s, SLOT(pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)", "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" ) );
 #else
   hb_retl(false);
 #endif
@@ -240,58 +140,8 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE )
   {
     s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pairingDisplayPinCode(QBluetoothAddress,QString)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(pairingDisplayPinCode(QBluetoothAddress,QString)), s, SLOT(pairingDisplayPinCode(QBluetoothAddress,QString)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pairingDisplayPinCode(QBluetoothAddress,QString)";
-    ret = object->disconnect(object, SIGNAL(pairingDisplayPinCode(QBluetoothAddress,QString)), s, SLOT(pairingDisplayPinCode(QBluetoothAddress,QString)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "pairingDisplayPinCode(QBluetoothAddress,QString)", "pairingDisplayPinCode(QBluetoothAddress,QString)" ) );
 #else
   hb_retl(false);
 #endif
@@ -304,58 +154,8 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION )
   {
     s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pairingDisplayConfirmation(QBluetoothAddress,QString)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(pairingDisplayConfirmation(QBluetoothAddress,QString)), s, SLOT(pairingDisplayConfirmation(QBluetoothAddress,QString)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pairingDisplayConfirmation(QBluetoothAddress,QString)";
-    ret = object->disconnect(object, SIGNAL(pairingDisplayConfirmation(QBluetoothAddress,QString)), s, SLOT(pairingDisplayConfirmation(QBluetoothAddress,QString)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "pairingDisplayConfirmation(QBluetoothAddress,QString)", "pairingDisplayConfirmation(QBluetoothAddress,QString)" ) );
 #else
   hb_retl(false);
 #endif
@@ -368,60 +168,9 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONERROR )
   {
     s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "error(QBluetoothLocalDevice::Error)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(error(QBluetoothLocalDevice::Error)), s, SLOT(error(QBluetoothLocalDevice::Error)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "error(QBluetoothLocalDevice::Error)";
-    ret = object->disconnect(object, SIGNAL(error(QBluetoothLocalDevice::Error)), s, SLOT(error(QBluetoothLocalDevice::Error)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothLocalDevice::Error)", "error(QBluetoothLocalDevice::Error)" ) );
 #else
   hb_retl(false);
 #endif
 }
-
