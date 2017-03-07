@@ -95,58 +95,8 @@ HB_FUNC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "fullScreenChanged(bool)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(fullScreenChanged(bool)), s, SLOT(fullScreenChanged(bool)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "fullScreenChanged(bool)";
-    ret = object->disconnect(object, SIGNAL(fullScreenChanged(bool)), s, SLOT(fullScreenChanged(bool)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "fullScreenChanged(bool)", "fullScreenChanged(bool)" ) );
 }
 
 HB_FUNC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
@@ -155,58 +105,8 @@ HB_FUNC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "brightnessChanged(int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(brightnessChanged(int)), s, SLOT(brightnessChanged(int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "brightnessChanged(int)";
-    ret = object->disconnect(object, SIGNAL(brightnessChanged(int)), s, SLOT(brightnessChanged(int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "brightnessChanged(int)", "brightnessChanged(int)" ) );
 }
 
 HB_FUNC( QVIDEOWIDGET_ONCONTRASTCHANGED )
@@ -215,58 +115,8 @@ HB_FUNC( QVIDEOWIDGET_ONCONTRASTCHANGED )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "contrastChanged(int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(contrastChanged(int)), s, SLOT(contrastChanged(int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "contrastChanged(int)";
-    ret = object->disconnect(object, SIGNAL(contrastChanged(int)), s, SLOT(contrastChanged(int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "contrastChanged(int)", "contrastChanged(int)" ) );
 }
 
 HB_FUNC( QVIDEOWIDGET_ONHUECHANGED )
@@ -275,58 +125,8 @@ HB_FUNC( QVIDEOWIDGET_ONHUECHANGED )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "hueChanged(int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(hueChanged(int)), s, SLOT(hueChanged(int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "hueChanged(int)";
-    ret = object->disconnect(object, SIGNAL(hueChanged(int)), s, SLOT(hueChanged(int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "hueChanged(int)", "hueChanged(int)" ) );
 }
 
 HB_FUNC( QVIDEOWIDGET_ONSATURATIONCHANGED )
@@ -335,56 +135,6 @@ HB_FUNC( QVIDEOWIDGET_ONSATURATIONCHANGED )
   {
     s = new SlotsQVideoWidget(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "saturationChanged(int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(saturationChanged(int)), s, SLOT(saturationChanged(int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "saturationChanged(int)";
-    ret = object->disconnect(object, SIGNAL(saturationChanged(int)), s, SLOT(saturationChanged(int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "saturationChanged(int)", "saturationChanged(int)" ) );
 }
