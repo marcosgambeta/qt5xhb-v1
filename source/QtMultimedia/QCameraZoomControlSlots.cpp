@@ -109,58 +109,8 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "currentDigitalZoomChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(currentDigitalZoomChanged(qreal)), s, SLOT(currentDigitalZoomChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "currentDigitalZoomChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(currentDigitalZoomChanged(qreal)), s, SLOT(currentDigitalZoomChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "currentDigitalZoomChanged(qreal)", "currentDigitalZoomChanged(qreal)" ) );
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
@@ -169,58 +119,8 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "currentOpticalZoomChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(currentOpticalZoomChanged(qreal)), s, SLOT(currentOpticalZoomChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "currentOpticalZoomChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(currentOpticalZoomChanged(qreal)), s, SLOT(currentOpticalZoomChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "currentOpticalZoomChanged(qreal)", "currentOpticalZoomChanged(qreal)" ) );
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
@@ -229,58 +129,8 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "maximumDigitalZoomChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(maximumDigitalZoomChanged(qreal)), s, SLOT(maximumDigitalZoomChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "maximumDigitalZoomChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(maximumDigitalZoomChanged(qreal)), s, SLOT(maximumDigitalZoomChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)" ) );
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
@@ -289,58 +139,8 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "maximumOpticalZoomChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(maximumOpticalZoomChanged(qreal)), s, SLOT(maximumOpticalZoomChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "maximumOpticalZoomChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(maximumOpticalZoomChanged(qreal)), s, SLOT(maximumOpticalZoomChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)" ) );
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
@@ -349,58 +149,8 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "requestedDigitalZoomChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(requestedDigitalZoomChanged(qreal)), s, SLOT(requestedDigitalZoomChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "requestedDigitalZoomChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(requestedDigitalZoomChanged(qreal)), s, SLOT(requestedDigitalZoomChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "requestedDigitalZoomChanged(qreal)", "requestedDigitalZoomChanged(qreal)" ) );
 }
 
 HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
@@ -409,56 +159,6 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
   {
     s = new SlotsQCameraZoomControl(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "requestedOpticalZoomChanged(qreal)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(requestedOpticalZoomChanged(qreal)), s, SLOT(requestedOpticalZoomChanged(qreal)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "requestedOpticalZoomChanged(qreal)";
-    ret = object->disconnect(object, SIGNAL(requestedOpticalZoomChanged(qreal)), s, SLOT(requestedOpticalZoomChanged(qreal)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "requestedOpticalZoomChanged(qreal)", "requestedOpticalZoomChanged(qreal)" ) );
 }
