@@ -27,7 +27,7 @@ void SlotsQWinThumbnailToolButton::clicked()
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 #endif
@@ -41,7 +41,7 @@ void SlotsQWinThumbnailToolButton::changed()
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 #endif
@@ -54,58 +54,8 @@ HB_FUNC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
   {
     s = new SlotsQWinThumbnailToolButton(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "clicked()";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(clicked()), s, SLOT(clicked()) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "clicked()";
-    ret = object->disconnect(object, SIGNAL(clicked()), s, SLOT(clicked()) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "clicked()", "clicked()" ) );
 #else
   hb_retl(false);
 #endif
@@ -118,60 +68,9 @@ HB_FUNC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
   {
     s = new SlotsQWinThumbnailToolButton(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "changed()";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(changed()), s, SLOT(changed()) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "changed()";
-    ret = object->disconnect(object, SIGNAL(changed()), s, SLOT(changed()) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "changed()", "changed()" ) );
 #else
   hb_retl(false);
 #endif
 }
-

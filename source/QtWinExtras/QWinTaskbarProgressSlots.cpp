@@ -122,58 +122,8 @@ HB_FUNC( QWINTASKBARPROGRESS_ONVALUECHANGED )
   {
     s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "valueChanged(int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(valueChanged(int)), s, SLOT(valueChanged(int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "valueChanged(int)";
-    ret = object->disconnect(object, SIGNAL(valueChanged(int)), s, SLOT(valueChanged(int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
 #else
   hb_retl(false);
 #endif
@@ -186,58 +136,8 @@ HB_FUNC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
   {
     s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "minimumChanged(int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(minimumChanged(int)), s, SLOT(minimumChanged(int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "minimumChanged(int)";
-    ret = object->disconnect(object, SIGNAL(minimumChanged(int)), s, SLOT(minimumChanged(int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "minimumChanged(int)", "minimumChanged(int)" ) );
 #else
   hb_retl(false);
 #endif
@@ -250,58 +150,8 @@ HB_FUNC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
   {
     s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "maximumChanged(int)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(maximumChanged(int)), s, SLOT(maximumChanged(int)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "maximumChanged(int)";
-    ret = object->disconnect(object, SIGNAL(maximumChanged(int)), s, SLOT(maximumChanged(int)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "maximumChanged(int)", "maximumChanged(int)" ) );
 #else
   hb_retl(false);
 #endif
@@ -314,58 +164,8 @@ HB_FUNC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
   {
     s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "visibilityChanged(bool)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(visibilityChanged(bool)), s, SLOT(visibilityChanged(bool)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "visibilityChanged(bool)";
-    ret = object->disconnect(object, SIGNAL(visibilityChanged(bool)), s, SLOT(visibilityChanged(bool)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );
 #else
   hb_retl(false);
 #endif
@@ -378,58 +178,8 @@ HB_FUNC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
   {
     s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pausedChanged(bool)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(pausedChanged(bool)), s, SLOT(pausedChanged(bool)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "pausedChanged(bool)";
-    ret = object->disconnect(object, SIGNAL(pausedChanged(bool)), s, SLOT(pausedChanged(bool)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "pausedChanged(bool)", "pausedChanged(bool)" ) );
 #else
   hb_retl(false);
 #endif
@@ -442,60 +192,9 @@ HB_FUNC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
   {
     s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
   }
-  bool ret = false;
-  if( hb_pcount() == 1 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "stoppedChanged(bool)";
-    bool connected = Signals_is_signal_connected( object, signal );
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-      if( codeblock )
-      {
-        ret = object->connect( object, SIGNAL(stoppedChanged(bool)), s, SLOT(stoppedChanged(bool)) );
-        if( ret )
-        {
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          hb_retl(ret);
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-          hb_retl(ret);
-        }
-      }
-      else
-      {
-        hb_retl(false);
-      }
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-    QString signal = "stoppedChanged(bool)";
-    ret = object->disconnect(object, SIGNAL(stoppedChanged(bool)), s, SLOT(stoppedChanged(bool)) );
-    if( ret )
-    {
-      Signals_disconnect_signal( object, signal );
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl( Signals_connection_disconnection ( s, "stoppedChanged(bool)", "stoppedChanged(bool)" ) );
 #else
   hb_retl(false);
 #endif
 }
-
