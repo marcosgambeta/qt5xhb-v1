@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-#ifndef QTXHB_NO_REQUESTS
+#ifndef QT5XHB_NO_REQUESTS
 REQUEST QABSTRACTANIMATION
 REQUEST QSTATEMACHINE
 REQUEST QSTATE
