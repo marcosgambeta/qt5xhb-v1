@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
     QWidget * ptr = obj->load ( par1, par2 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

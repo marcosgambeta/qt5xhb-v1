@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
   {
     int par1 = hb_parni(1);
     QWidget * ptr = obj->widget (  (QScriptEngineDebugger::DebuggerWidget) par1 );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

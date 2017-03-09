@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
   if( obj )
   {
     QWidget * ptr = obj->view (  );
-    _qt5xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
