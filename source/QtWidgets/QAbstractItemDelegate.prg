@@ -77,10 +77,10 @@ RETURN
 #include <QAbstractItemDelegate>
 #endif
 
-
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -90,6 +90,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -99,6 +100,7 @@ virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
@@ -109,13 +111,13 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
   }
 }
 
-
 /*
 virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
@@ -126,13 +128,13 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
   }
 }
 
-
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
@@ -140,9 +142,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
     QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     obj->paint ( par1, *par2, *par3 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
@@ -150,15 +152,16 @@ virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
     obj->setEditorData ( par1, *par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
@@ -166,6 +169,7 @@ virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
@@ -173,9 +177,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
     QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     obj->setModelData ( par1, par2, *par3 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
@@ -183,6 +187,7 @@ virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStyleOptionViewItem * par1 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(1);
@@ -192,13 +197,13 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
   }
 }
 
-
 /*
 virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
@@ -206,9 +211,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
     QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
     obj->updateEditorGeometry ( par1, *par2, *par3 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
@@ -216,6 +221,7 @@ virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QSt
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QHelpEvent * par1 = (QHelpEvent *) _qt5xhb_itemGetPtr(1);
@@ -226,22 +232,22 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
   }
 }
 
-
 /*
 virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
     obj->destroyEditor ( par1, *par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextElideMode mode, const QString &text)
@@ -254,13 +260,13 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
   hb_retc( (const char *) QAbstractItemDelegate::elidedText ( *par1, (int) hb_parni(2),  (Qt::TextElideMode) par3, par4 ).toLatin1().data() );
 }
 
-
 /*
 virtual QVector<int> paintingRoles() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QVector<int> list = obj->paintingRoles (  );
@@ -277,8 +283,4 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

@@ -77,10 +77,10 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 {
   QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -90,6 +90,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -99,6 +100,7 @@ bool hasClipping () const
 HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 {
   QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasClipping (  ) );
@@ -112,6 +114,7 @@ QItemEditorFactory * itemEditorFactory () const
 HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 {
   QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QItemEditorFactory * ptr = obj->itemEditorFactory (  );
@@ -126,10 +129,12 @@ void setClipping ( bool clip )
 HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 {
   QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setClipping ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -140,15 +145,14 @@ void setItemEditorFactory ( QItemEditorFactory * factory )
 HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 {
   QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QItemEditorFactory * par1 = (QItemEditorFactory *) _qt5xhb_itemGetPtr(1);
     obj->setItemEditorFactory ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-
