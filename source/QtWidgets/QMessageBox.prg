@@ -167,6 +167,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 {
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -176,6 +177,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -185,12 +187,14 @@ void addButton ( QAbstractButton * button, ButtonRole role )
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON1 )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->addButton ( par1,  (QMessageBox::ButtonRole) par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -200,6 +204,7 @@ QPushButton * addButton ( const QString & text, ButtonRole role )
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON2 )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -215,6 +220,7 @@ QPushButton * addButton ( StandardButton button )
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON3 )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -254,11 +260,12 @@ QAbstractButton * button ( StandardButton which ) const
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     QAbstractButton * ptr = obj->button (  (QMessageBox::StandardButton) par1 );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+    _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
   }
 }
 
@@ -269,6 +276,7 @@ ButtonRole buttonRole ( QAbstractButton * button ) const
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
@@ -283,6 +291,7 @@ QList<QAbstractButton *> buttons () const
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QList<QAbstractButton *> list = obj->buttons (  );
@@ -316,6 +325,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
         hb_itemRelease( pItem );
       }
     }
+
     hb_itemReturnRelease(pArray);
   }
 }
@@ -327,10 +337,11 @@ QAbstractButton * clickedButton () const
 HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractButton * ptr = obj->clickedButton (  );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+    _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
   }
 }
 
@@ -341,6 +352,7 @@ QPushButton * defaultButton () const
 HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPushButton * ptr = obj->defaultButton (  );
@@ -356,6 +368,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 {
 #ifndef QT_NO_TEXTEDIT
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->detailedText (  ).toLatin1().data() );
@@ -370,6 +383,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
 {
 #ifndef QT_NO_TEXTEDIT
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -386,10 +400,11 @@ QAbstractButton * escapeButton () const
 HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractButton * ptr = obj->escapeButton (  );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+    _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
   }
 }
 
@@ -400,6 +415,7 @@ Icon icon () const
 HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->icon (  ) );
@@ -412,11 +428,13 @@ void setIcon ( Icon )
 HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setIcon (  (QMessageBox::Icon) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -427,6 +445,7 @@ QPixmap iconPixmap () const
 HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->iconPixmap (  ) );
@@ -440,11 +459,13 @@ void setIconPixmap ( const QPixmap & pixmap )
 HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
     obj->setIconPixmap ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -455,6 +476,7 @@ QString informativeText () const
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->informativeText (  ).toLatin1().data() );
@@ -467,11 +489,13 @@ void setInformativeText ( const QString & text )
 HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setInformativeText ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -482,12 +506,14 @@ void open ( QObject * receiver, const char * member )
 HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
     obj->open ( par1,  (const char *) par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -498,11 +524,13 @@ void removeButton ( QAbstractButton * button )
 HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
     obj->removeButton ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -513,11 +541,13 @@ void setDefaultButton ( QPushButton * button )
 HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON1 )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPushButton * par1 = (QPushButton *) _qt5xhb_itemGetPtr(1);
     obj->setDefaultButton ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -527,11 +557,13 @@ void setDefaultButton ( StandardButton button )
 HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON2 )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setDefaultButton (  (QMessageBox::StandardButton) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -561,11 +593,13 @@ void setEscapeButton ( QAbstractButton * button )
 HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON1 )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
     obj->setEscapeButton ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -575,11 +609,13 @@ void setEscapeButton ( StandardButton button )
 HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON2 )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setEscapeButton (  (QMessageBox::StandardButton) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -609,11 +645,13 @@ void setWindowModality ( Qt::WindowModality windowModality )
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setWindowModality (  (Qt::WindowModality) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -624,11 +662,13 @@ void setWindowTitle ( const QString & title )
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setWindowTitle ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -639,6 +679,7 @@ StandardButton standardButton ( QAbstractButton * button ) const
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
@@ -653,6 +694,7 @@ StandardButtons standardButtons () const
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->standardButtons (  ) );
@@ -665,11 +707,13 @@ void setStandardButtons ( StandardButtons buttons )
 HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setStandardButtons (  (QMessageBox::StandardButtons) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -680,6 +724,7 @@ QString text () const
 HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
@@ -692,11 +737,13 @@ void setText ( const QString & text )
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setText ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -707,6 +754,7 @@ Qt::TextFormat textFormat () const
 HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->textFormat (  ) );
@@ -719,11 +767,13 @@ void setTextFormat ( Qt::TextFormat format )
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setTextFormat (  (Qt::TextFormat) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -735,10 +785,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
 {
 #ifdef Q_OS_WINCE
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -750,6 +802,7 @@ int exec ()
 HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->exec (  ) );
@@ -844,6 +897,7 @@ Qt::TextInteractionFlags textInteractionFlags() const
 HB_FUNC_STATIC( QMESSAGEBOX_TEXTINTERACTIONFLAGS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->textInteractionFlags (  ) );
@@ -856,11 +910,13 @@ void setTextInteractionFlags (Qt::TextInteractionFlags flags)
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTINTERACTIONFLAGS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -871,6 +927,7 @@ QCheckBox * checkBox() const
 HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QCheckBox * ptr = obj->checkBox (  );
@@ -884,11 +941,13 @@ void setCheckBox (QCheckBox *cb)
 HB_FUNC_STATIC( QMESSAGEBOX_SETCHECKBOX )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QCheckBox * par1 = (QCheckBox *) _qt5xhb_itemGetPtr(1);
     obj->setCheckBox ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -910,6 +969,7 @@ QString buttonText(int button) const
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONTEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->buttonText ( (int) hb_parni(1) ).toLatin1().data() );
@@ -922,16 +982,14 @@ void setButtonText(int button, const QString &text)
 HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par2 = QLatin1String( hb_parc(2) );
     obj->setButtonText ( (int) hb_parni(1), par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-
