@@ -23,6 +23,7 @@ hbmk2 QBoxLayout1          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout2          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout3          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout4          %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QButtonGroup         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QCalendarWidget      %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QCheckBox1           %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QCheckBox2           %1 %2 %3 ..\qt5xhb.hbc
@@ -60,7 +61,8 @@ hbmk2 QMainWindow          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QMdiArea             %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QMenu1               %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QMenu2               %1 %2 %3 ..\qt5xhb.hbc
-hbmk2 QMessageBox          %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QMessageBox1         %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QMessageBox2         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QMovie               %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QPlainTextEdit       %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QPrintPreviewDialog  %1 %2 %3 ..\qt5xhb.hbc
