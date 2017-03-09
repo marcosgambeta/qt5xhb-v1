@@ -25,7 +25,7 @@ REQUEST HB_GT_WIN
 
 PROCEDURE Main ()
 
-   lOCAL oApp
+   LOCAL oApp
    LOCAL oWindow
    LOCAL oButton
 
