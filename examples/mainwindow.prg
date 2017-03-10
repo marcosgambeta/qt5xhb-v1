@@ -1,17 +1,24 @@
 /*
 
-  Exemplo de criação da janela principal de uma aplicação
-
-  Data: 30/01/2017 03:55:57
+  Qt5xHb Project - Example Program
 
   Copyright (C) 2012-2017 Marcos Antonio Gambeta
 
-  E-mail: marcosgambeta@uol.com.br
+  E-mail:
+  marcosgambeta AT outlook DOT com
+  marcosgambeta AT gmail DOT com
 
-  Website: https://github.com/marcosgambeta/Qt5xHb
+  Website:
+  https://github.com/marcosgambeta/Qt5xHb
 
-  Grupo de usuários: http://br.groups.yahoo.com/neo/groups/qt4xhb/info
+  Users Groups:
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb-br [PORTUGUESE]
 
+*/
+
+/*
+  Exemplo de criação da janela principal de uma aplicação
 */
 
 /*
@@ -26,19 +33,19 @@ STATIC oMainWindow
 
 /*
   a função principal (main) cria um objeto da classe QApplication,
-  um objeto da classe HMainWindow e inicia o loop de eventos
+  um objeto da classe MainWindow e inicia o loop de eventos
 */
 
 PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oMainWindow := HMainWindow():new()
+   oMainWindow := MainWindow():new()
 
    oMainWindow:show()
 
    oApp:exec()
-   
+
    oMainWindow:disconnectAll(.T.)
 
    oMainWindow:delete()
@@ -48,7 +55,7 @@ PROCEDURE Main ()
 RETURN
 
 /*
-  a classe HMainWindow é uma classe derivada da classe QMainWindow, com métodos para:
+  a classe MainWindow é uma classe derivada da classe QMainWindow, com métodos para:
   . definir as propriedades da janela
   . criar a barra de menus e as ações
   . criar a barra de ferramentas
@@ -59,7 +66,7 @@ RETURN
 
 #include "hbclass.ch"
 
-CLASS HMainWindow INHERIT QMainWindow
+CLASS MainWindow INHERIT QMainWindow
 
    DATA oMenuBar
    DATA oMenu1
@@ -95,7 +102,7 @@ END CLASS
  e configura a janela principal
 */
 
-METHOD new () CLASS HMainWindow
+METHOD new () CLASS MainWindow
 
    #ifdef __XHARBOUR__
    super:new()
@@ -116,9 +123,9 @@ RETURN self
   'title' e 'size' da janela principal
 */
 
-METHOD defineProperties () CLASS HMainWindow
+METHOD defineProperties () CLASS MainWindow
 
-   ::setWindowTitle("Qt5xHb - exemplo de criação da janela principal")
+   ::setWindowTitle("Exemplo de criação da janela principal")
    ::resize(800,600)
 
 RETURN self
@@ -128,7 +135,7 @@ RETURN self
   e configura a ação que cada item do menu irá executar
 */
 
-METHOD createMenuBar () CLASS HMainWindow
+METHOD createMenuBar () CLASS MainWindow
 
    ::oMenuBar := ::menuBar()
 
@@ -189,7 +196,7 @@ RETURN self
   e configura a ação que cada botão irá executar
 */
 
-METHOD createToolBar () CLASS HMainWindow
+METHOD createToolBar () CLASS MainWindow
 
    ::oToolBar := ::addToolBar("")
 
@@ -209,7 +216,7 @@ RETURN self
   o método 'createStatusBar' cria a barra de status
 */
 
-METHOD createStatusBar () CLASS HMainWindow
+METHOD createStatusBar () CLASS MainWindow
 
    ::oStatusBar := ::statusBar()
 
@@ -219,7 +226,7 @@ RETURN self
  o método 'defineEvent' define os eventos que serão processados
 */
 
-METHOD defineEvents () CLASS HMainWindow
+METHOD defineEvents () CLASS MainWindow
 
    ::onCloseEvent({|w,e|::CloseMainWindow(w,e)})
 
@@ -230,7 +237,7 @@ RETURN self
  realmente sair do programa
 */
 
-METHOD closeMainWindow (w,e) CLASS HMainWindow
+METHOD closeMainWindow (w,e) CLASS MainWindow
 
    LOCAL oMB
    LOCAL nRet
@@ -262,7 +269,7 @@ RETURN .T.
   usando a classe QMessageBox
 */
 
-METHOD showMessage (cText) CLASS HMainWindow
+METHOD showMessage (cText) CLASS MainWindow
 
    LOCAL oMB
 

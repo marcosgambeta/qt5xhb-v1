@@ -18,7 +18,6 @@ hbmk2 HAbstractTableModel4 %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HAbstractTableModel5 %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HCodeblockValidator1 %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HCodeblockValidator2 %1 %2 %3 ..\qt5xhb.hbc
-hbmk2 mainwindow           %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout1          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout2          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout3          %1 %2 %3 ..\qt5xhb.hbc
