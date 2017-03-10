@@ -33,9 +33,6 @@ CLASS QObject
    METHOD event
    METHOD eventFilter
    METHOD findChild
-   METHOD findChildren1
-   METHOD findChildren2
-   METHOD findChildren3
    METHOD findChildren
    METHOD inherits
    METHOD installEventFilter
@@ -297,10 +294,10 @@ HB_FUNC_STATIC( QOBJECT_NEW )
   hb_itemReturn( self );
 }
 
-
 HB_FUNC_STATIC( QOBJECT_DELETE )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -310,6 +307,7 @@ HB_FUNC_STATIC( QOBJECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -319,12 +317,12 @@ bool blockSignals ( bool block )
 HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->blockSignals ( (bool) hb_parl(1) ) );
   }
 }
-
 
 /*
 const QObjectList & children () const
@@ -332,6 +330,7 @@ const QObjectList & children () const
 HB_FUNC_STATIC( QOBJECT_CHILDREN )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObjectList list = obj->children (  );
@@ -369,23 +368,20 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
   }
 }
 
-
-
-
-
 /*
 void dumpObjectInfo ()
 */
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->dumpObjectInfo (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void dumpObjectTree ()
@@ -393,13 +389,14 @@ void dumpObjectTree ()
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->dumpObjectTree (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QByteArray> dynamicPropertyNames () const
@@ -408,6 +405,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 {
 #ifndef QT_NO_PROPERTIES
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QList<QByteArray> list = obj->dynamicPropertyNames (  );
@@ -446,13 +444,13 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 #endif
 }
 
-
 /*
 virtual bool event ( QEvent * e )
 */
 HB_FUNC_STATIC( QOBJECT_EVENT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
@@ -460,13 +458,13 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
   }
 }
 
-
 /*
 virtual bool eventFilter ( QObject * watched, QEvent * event )
 */
 HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
@@ -475,30 +473,29 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
   }
 }
 
-
 /*
 T findChild(const QString & name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 */
 HB_FUNC_STATIC( QOBJECT_FINDCHILD )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
     QObject * ptr = obj->findChild<QObject *> ( par1,  (Qt::FindChildOptions) par2 );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( (QObject *) ptr, "QOBJECT" );
   }
 }
-
-
 
 /*
 QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 */
-HB_FUNC_STATIC( QOBJECT_FINDCHILDREN1 )
+void QObject_findChildren1 ()
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
@@ -541,10 +538,11 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN1 )
 /*
 QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 */
-HB_FUNC_STATIC( QOBJECT_FINDCHILDREN2 )
+void QObject_findChildren2 ()
 {
 #ifndef QT_NO_REGEXP
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
@@ -588,10 +586,11 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN2 )
 /*
 QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 */
-HB_FUNC_STATIC( QOBJECT_FINDCHILDREN3 )
+void QObject_findChildren3 ()
 {
 #ifndef QT_NO_REGULAREXPRESSION
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
@@ -632,7 +631,6 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN3 )
 #endif
 }
 
-
 //[1]QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 //[2]QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 //[3]QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
@@ -641,15 +639,15 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
   if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QOBJECT_FINDCHILDREN1 );
+    QObject_findChildren1();
   }
   else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QOBJECT_FINDCHILDREN2 );
+    QObject_findChildren2();
   }
   else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QOBJECT_FINDCHILDREN3 );
+    QObject_findChildren3();
   }
   else
   {
@@ -663,6 +661,7 @@ bool inherits ( const char * className ) const
 HB_FUNC_STATIC( QOBJECT_INHERITS )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -670,21 +669,21 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   }
 }
 
-
 /*
 void installEventFilter ( QObject * filterObj )
 */
 HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->installEventFilter ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isWidgetType () const
@@ -692,12 +691,12 @@ bool isWidgetType () const
 HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isWidgetType (  ) );
   }
 }
-
 
 /*
 bool isWindowType() const
@@ -705,12 +704,12 @@ bool isWindowType() const
 HB_FUNC_STATIC( QOBJECT_ISWINDOWTYPE )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isWindowType (  ) );
   }
 }
-
 
 /*
 void killTimer ( int id )
@@ -718,13 +717,14 @@ void killTimer ( int id )
 HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->killTimer ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual const QMetaObject * metaObject () const
@@ -732,6 +732,7 @@ virtual const QMetaObject * metaObject () const
 HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QMetaObject * ptr = obj->metaObject (  );
@@ -739,21 +740,21 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
   }
 }
 
-
 /*
 void moveToThread ( QThread * targetThread )
 */
 HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
     obj->moveToThread ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString objectName () const
@@ -761,6 +762,7 @@ QString objectName () const
 HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->objectName (  ).toLatin1().data() );
@@ -773,14 +775,15 @@ void setObjectName ( const QString & name )
 HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setObjectName ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QObject * parent () const
@@ -788,10 +791,11 @@ QObject * parent () const
 HB_FUNC_STATIC( QOBJECT_PARENT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * ptr = obj->parent (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -801,14 +805,15 @@ void setParent ( QObject * parent )
 HB_FUNC_STATIC( QOBJECT_SETPARENT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->setParent ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVariant property ( const char * name ) const
@@ -817,6 +822,7 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
 {
 #ifndef QT_NO_PROPERTIES
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -833,6 +839,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 {
 #ifndef QT_NO_PROPERTIES
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -842,21 +849,21 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 #endif
 }
 
-
 /*
 void removeEventFilter ( QObject * obj )
 */
 HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->removeEventFilter ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool signalsBlocked () const
@@ -864,12 +871,12 @@ bool signalsBlocked () const
 HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->signalsBlocked (  ) );
   }
 }
-
 
 /*
 int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
@@ -877,6 +884,7 @@ int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
 HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::CoarseTimer : hb_parni(2);
@@ -884,13 +892,13 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   }
 }
 
-
 /*
 QThread * thread () const
 */
 HB_FUNC_STATIC( QOBJECT_THREAD )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QThread * ptr = obj->thread (  );
@@ -898,20 +906,20 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
   }
 }
 
-
 /*
 void deleteLater ()
 */
 HB_FUNC_STATIC( QOBJECT_DELETELATER )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->deleteLater (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
@@ -923,14 +931,10 @@ HB_FUNC_STATIC( QOBJECT_TR )
   hb_retc( (const char *) QObject::tr (  (const char *) par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ).toLatin1().data() );
 }
 
-
-
-
-
-
 HB_FUNC_STATIC( QOBJECT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -949,6 +953,7 @@ HB_FUNC_STATIC( QOBJECT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -970,12 +975,14 @@ HB_FUNC_STATIC( QOBJECT_SELFDESTRUCTION )
 HB_FUNC_STATIC( QOBJECT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -1895,7 +1902,4 @@ HB_FUNC_STATIC( QOBJECT_ONZORDERCHANGEEVENT )
   _qtxhb_processOnEventMethod( QEvent::ZOrderChange );
 }
 
-
-
 #pragma ENDDUMP
-
