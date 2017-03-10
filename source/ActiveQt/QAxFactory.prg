@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QObject * ptr = obj->createObject ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

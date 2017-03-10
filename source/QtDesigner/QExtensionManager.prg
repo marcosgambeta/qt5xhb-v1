@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     QObject * ptr = obj->extension ( par1, par2 );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

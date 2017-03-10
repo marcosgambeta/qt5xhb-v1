@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QObject * ptr = obj->objectRegisteredAt ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

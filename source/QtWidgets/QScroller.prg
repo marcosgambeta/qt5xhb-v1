@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSCROLLER_TARGET )
   if( obj )
   {
     QObject * ptr = obj->target (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

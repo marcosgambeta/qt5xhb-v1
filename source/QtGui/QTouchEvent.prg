@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
   if( obj )
   {
     QObject * ptr = obj->target (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

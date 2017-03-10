@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
   if( obj )
   {
     QObject * ptr = obj->contextObject (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

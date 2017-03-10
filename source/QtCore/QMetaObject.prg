@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWINSTANCE )
   if( obj )
   {
     QObject * ptr = obj->newInstance (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

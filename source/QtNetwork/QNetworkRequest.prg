@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
   if( obj )
   {
     QObject * ptr = obj->originatingObject (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

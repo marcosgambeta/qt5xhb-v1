@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
   if( obj )
   {
     QObject * ptr = obj->source (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

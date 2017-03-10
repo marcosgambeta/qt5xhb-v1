@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   if( obj )
   {
     QObject * ptr = obj->source (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   if( obj )
   {
     QObject * ptr = obj->target (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

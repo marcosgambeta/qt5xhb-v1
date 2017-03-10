@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
   if( obj )
   {
     QObject * ptr = obj->toQObject (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

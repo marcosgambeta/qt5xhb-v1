@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
   if( obj )
   {
     QObject * ptr = obj->scopeObject (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

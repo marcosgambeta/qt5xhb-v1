@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
   {
     QQmlContext * par1 = (QQmlContext *) _qt5xhb_itemGetPtr(1);
     QObject * ptr = obj->beginCreate ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE1 )
   {
     QQmlContext * par1 = ISNIL(1)? 0 : (QQmlContext *) _qt5xhb_itemGetPtr(1);
     QObject * ptr = obj->create ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

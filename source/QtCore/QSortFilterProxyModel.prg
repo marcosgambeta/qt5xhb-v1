@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT1 )
   if( obj )
   {
     QObject * ptr = obj->parent (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QWINDOW_FOCUSOBJECT )
   if( obj )
   {
     QObject * ptr = obj->focusObject (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

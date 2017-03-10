@@ -258,7 +258,7 @@ static QObject * focusObject()
 HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSOBJECT )
 {
   QObject * ptr = QGuiApplication::focusObject (  );
-  _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+  _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
 }
 
 

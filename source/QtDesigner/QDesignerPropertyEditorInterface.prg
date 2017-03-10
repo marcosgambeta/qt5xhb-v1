@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt5xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
