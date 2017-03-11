@@ -82,10 +82,10 @@ HB_FUNC_STATIC( QDIAL_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 HB_FUNC_STATIC( QDIAL_DELETE )
 {
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -95,6 +95,7 @@ HB_FUNC_STATIC( QDIAL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -104,12 +105,12 @@ int notchSize () const
 HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->notchSize (  ) );
   }
 }
-
 
 /*
 qreal notchTarget () const
@@ -117,12 +118,12 @@ qreal notchTarget () const
 HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->notchTarget (  ) );
   }
 }
-
 
 /*
 bool notchesVisible () const
@@ -130,12 +131,12 @@ bool notchesVisible () const
 HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->notchesVisible (  ) );
   }
 }
-
 
 /*
 void setNotchTarget ( double target )
@@ -143,14 +144,15 @@ void setNotchTarget ( double target )
 HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     double par1 = hb_parnd(1);
     obj->setNotchTarget ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool wrapping () const
@@ -158,12 +160,12 @@ bool wrapping () const
 HB_FUNC_STATIC( QDIAL_WRAPPING )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->wrapping (  ) );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -171,6 +173,7 @@ virtual QSize minimumSizeHint () const
 HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -178,13 +181,13 @@ HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QDIAL_SIZEHINT )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -192,20 +195,20 @@ HB_FUNC_STATIC( QDIAL_SIZEHINT )
   }
 }
 
-
 /*
 void setNotchesVisible ( bool visible )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setNotchesVisible ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWrapping ( bool on )
@@ -213,14 +216,13 @@ void setWrapping ( bool on )
 HB_FUNC_STATIC( QDIAL_SETWRAPPING )
 {
   QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setWrapping ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

@@ -8,7 +8,6 @@
 
 #include "QAbstractSliderSlots.h"
 
-
 static SlotsQAbstractSlider * s = NULL;
 
 SlotsQAbstractSlider::SlotsQAbstractSlider(QObject *parent) : QObject(parent)

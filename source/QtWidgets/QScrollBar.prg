@@ -19,8 +19,6 @@ CLASS QScrollBar INHERIT QAbstractSlider
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD event
@@ -70,7 +68,7 @@ RETURN
 /*
 QScrollBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSCROLLBAR_NEW1 )
+void QScrollBar_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QScrollBar * o = new QScrollBar ( par1 );
@@ -80,14 +78,13 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW1 )
 /*
 QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSCROLLBAR_NEW2 )
+void QScrollBar_new2 ()
 {
   int par1 = hb_parni(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QScrollBar * o = new QScrollBar (  (Qt::Orientation) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QScrollBar ( QWidget * parent = 0 )
 //[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -96,11 +93,11 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSCROLLBAR_NEW1 );
+    QScrollBar_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSCROLLBAR_NEW2 );
+    QScrollBar_new2();
   }
   else
   {
@@ -111,6 +108,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 {
   QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -120,6 +118,7 @@ HB_FUNC_STATIC( QSCROLLBAR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -129,6 +128,7 @@ virtual bool event ( QEvent * event )
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
   QScrollBar * obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
@@ -136,13 +136,13 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {
   QScrollBar * obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -150,7 +150,4 @@ HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
   }
 }
 
-
-
 #pragma ENDDUMP
-
