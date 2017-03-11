@@ -40,7 +40,7 @@ PROCEDURE Main ()
    oSlider:move(20,20)
    oSlider:resize(20,400)
    oSlider:setTooltip("Eu sou um QSlider")
-   oSlider:onSliderMoved( {|w,v|test(w,v)} )
+   ? oSlider:onSliderMoved( {|w,v|test(w,v)} )
    oSlider:show()
 
    oApp:exec()

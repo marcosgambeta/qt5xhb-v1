@@ -35,7 +35,7 @@ PROCEDURE Main ()
    oWindow := QWidget():new():setWindowTitle("Teste"):resize(640,480)
 
    oButton := QPushButton():new("Diálogo",oWindow):move(20,20)
-   oButton:onClicked({||dialogo(oWindow)})
+   ? oButton:onClicked({||dialogo(oWindow)})
 
    oWindow:show()
 
@@ -84,7 +84,7 @@ STATIC FUNCTION dialogo (oParent)
    #endif
    oLineEdit1 := QLineEdit():new(oDialog):move(10,10):setValidator(oCBValidator1)
    oLabel1 := QLabel():new(oDialog):move(200,10):resize(40,30)
-   oLineEdit1:onFocusOutEvent({||oLabel1:setText(iif(oLineEdit1:hasAcceptableInput(),".T.",".F."))})
+   ? oLineEdit1:onFocusOutEvent({||oLabel1:setText(iif(oLineEdit1:hasAcceptableInput(),".T.",".F."))})
 
    // aceita apenas numeros
    // campo não deve ser vazio
@@ -105,12 +105,12 @@ STATIC FUNCTION dialogo (oParent)
    #endif
    oLineEdit2 := QLineEdit():new(oDialog):move(10,50):setValidator(oCBValidator2)
    oLabel2 := QLabel():new(oDialog):move(200,50):resize(40,30)
-   oLineEdit2:onFocusOutEvent({||oLabel2:setText(iif(oLineEdit2:hasAcceptableInput(),".T.",".F."))})
+   ? oLineEdit2:onFocusOutEvent({||oLabel2:setText(iif(oLineEdit2:hasAcceptableInput(),".T.",".F."))})
 
    oDialog:exec()
 
-   oLineEdit1:onFocusOutEvent()
-   oLineEdit2:onFocusOutEvent()
+   ? oLineEdit1:onFocusOutEvent()
+   ? oLineEdit2:onFocusOutEvent()
 
    oDialog:delete()
 

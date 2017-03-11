@@ -72,7 +72,7 @@ PROCEDURE Main ()
    oComboBox:move(10,10)
    oComboBox:resize(200,20)
    oComboBox:setModel(oModel)
-   oComboBox:onActivated({|pWidget,nIndex|qout(strzero(nIndex,4)),qout(aEstados[nIndex+1,2])})
+   ? oComboBox:onActivated({|pWidget,nIndex|qout(strzero(nIndex,4)),qout(aEstados[nIndex+1,2])})
 
    oWindow:show()
 

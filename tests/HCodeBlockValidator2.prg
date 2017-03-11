@@ -39,7 +39,7 @@ PROCEDURE Main ()
    oWindow := QWidget():new():setWindowTitle("Teste"):resize(640,480)
 
    oButton := QPushButton():new("Inclusão",oWindow):move(20,20)
-   oButton:onClicked({||dialogo(oWindow)})
+   ? oButton:onClicked({||dialogo(oWindow)})
 
    oWindow:show()
 
@@ -115,8 +115,8 @@ STATIC FUNCTION dialogo (oParent)
    oButtonIncluir := QPushButton():new("Incluir",oDialog):move(20,240-40)
    oButtonCancelar := QPushButton():new("Cancelar",oDialog):move(120,240-40)
 
-   oButtonIncluir:onClicked({||iif(oLineEdit1:hasAcceptableInput().and.oLineEdit2:hasAcceptableInput(),oDialog:accept(),qout("campos incorretos"))})
-   oButtonCancelar:onClicked({||oDialog:reject()})
+   ? oButtonIncluir:onClicked({||iif(oLineEdit1:hasAcceptableInput().and.oLineEdit2:hasAcceptableInput(),oDialog:accept(),qout("campos incorretos"))})
+   ? oButtonCancelar:onClicked({||oDialog:reject()})
 
    nRet := oDialog:exec()
 
@@ -126,8 +126,8 @@ STATIC FUNCTION dialogo (oParent)
       ? "inclusao cancelada"
    ENDIF
 
-   oButtonIncluir:onClicked()
-   oButtonCancelar:onClicked()
+   ? oButtonIncluir:onClicked()
+   ? oButtonCancelar:onClicked()
 
    oDialog:delete()
 

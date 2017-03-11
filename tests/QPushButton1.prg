@@ -35,9 +35,9 @@ PROCEDURE Main ()
 
    oButton := QPushButton():new("Clique aqui",oWindow)
    oButton:move(20,20)
-   oButton:onClicked({|w|qout("clicked")})
-   oButton:onPressed({|w|qout("pressed")})
-   oButton:onReleased({|w|qout("released")})
+   ? oButton:onClicked({|w|qout("clicked")})
+   ? oButton:onPressed({|w|qout("pressed")})
+   ? oButton:onReleased({|w|qout("released")})
 
    oWindow:show()
 

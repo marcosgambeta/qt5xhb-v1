@@ -39,7 +39,7 @@ PROCEDURE Main ()
    oDial := QDial():new(oWindow)
    oDial:move(20,20)
    oDial:setTooltip("Eu sou um QDial")
-   oDial:onSliderMoved( {|pWidget,nValue|test(pWidget,nValue)} )
+   ? oDial:onSliderMoved( {|pWidget,nValue|test(pWidget,nValue)} )
    oDial:show()
 
    oApp:exec()

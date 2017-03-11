@@ -34,7 +34,7 @@ PROCEDURE Main ()
    oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
    oButton:move(20,20)
    oButton:show()
-   oButton:onClicked({|w|ShowColorDialog(oWindow)})
+   ? oButton:onClicked({|w|ShowColorDialog(oWindow)})
 
    oApp:exec()
    

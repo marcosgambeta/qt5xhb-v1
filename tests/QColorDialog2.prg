@@ -38,7 +38,7 @@ PROCEDURE Main ()
    oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
    oButton:move(20,20)
    oButton:show()
-   oButton:onClicked({||ShowColorDialog(oWindow)})
+   ? oButton:onClicked({||ShowColorDialog(oWindow)})
 
    oApp:exec()
 
@@ -54,11 +54,11 @@ STATIC FUNCTION ShowColorDialog (oWindow)
 
    oColorDialog := QColorDialog():new(oWindow)
 
-   oColorDialog:onColorSelected({|pWidget,pColor|ShowColorSelected(pColor)})
+   ? oColorDialog:onColorSelected({|pWidget,pColor|ShowColorSelected(pColor)})
 
    oColorDialog:exec()
 
-   oColorDialog:onColorSelected()
+   ? oColorDialog:onColorSelected()
 
    oColorDialog:delete()
 

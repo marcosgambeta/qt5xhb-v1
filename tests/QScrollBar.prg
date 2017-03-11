@@ -40,7 +40,7 @@ PROCEDURE Main ()
    oScrollBar:move(20,20)
    oScrollBar:resize(20,400)
    oScrollBar:setTooltip("Eu sou um QScrollBar")
-   oScrollBar:onSliderMoved( {|w,v|test(w,v)} )
+   ? oScrollBar:onSliderMoved( {|w,v|test(w,v)} )
    oScrollBar:show()
 
    oApp:exec()

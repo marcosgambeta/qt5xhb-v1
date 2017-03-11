@@ -30,7 +30,7 @@ PROCEDURE Main ()
    oWindow := QWidget():new():resize(640,480)
 
    oButton := QPushButton():new("Mostrar janela de diálogo",oWindow):move(20,20)
-   oButton:onClicked({||dialog(oWindow)})
+   ? oButton:onClicked({||dialog(oWindow)})
 
    oWindow:show()
 
