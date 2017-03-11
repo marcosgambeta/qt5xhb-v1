@@ -23,7 +23,7 @@ CLASS QPixmap INHERIT QPaintDevice
 
    DATA class_id INIT Class_Id_QPixmap
    DATA class_flags INIT 0
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new3

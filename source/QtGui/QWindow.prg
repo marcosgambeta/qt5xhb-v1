@@ -24,7 +24,7 @@ CLASS QWindow INHERIT QObject,QSurface
 
    DATA class_id INIT Class_Id_QWindow
    DATA class_flags INIT 0
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new2

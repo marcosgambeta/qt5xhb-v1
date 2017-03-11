@@ -40,7 +40,7 @@ CLASS QWidget INHERIT QObject
 
    DATA class_id INIT Class_Id_QWidget
    DATA class_flags INIT 1
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

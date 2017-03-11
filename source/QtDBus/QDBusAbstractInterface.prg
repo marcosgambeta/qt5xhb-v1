@@ -20,7 +20,7 @@ CLASS QDBusAbstractInterface INHERIT QDBusAbstractInterfaceBase
 
    DATA class_id INIT Class_Id_QDBusAbstractInterface
    DATA class_flags INIT 0
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD isValid

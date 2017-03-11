@@ -20,7 +20,7 @@ CLASS QAbstractTransition INHERIT QObject
 
    DATA class_id INIT Class_Id_QAbstractTransition
    DATA class_flags INIT 1
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD addAnimation

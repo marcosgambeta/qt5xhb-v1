@@ -15,7 +15,7 @@ CLASS HAbstractTableModel INHERIT QAbstractTableModel
 
    DATA class_id INIT Class_Id_QAbstractTableModel
    DATA class_flags INIT 1
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete
