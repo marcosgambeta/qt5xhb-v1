@@ -53,6 +53,8 @@ CLASS QObject
    METHOD thread
    METHOD deleteLater
    METHOD tr
+   METHOD connect
+   METHOD disconnect
    METHOD onAcceptDropsChangeEvent
    METHOD onActionAddedEvent
    METHOD onActionChangedEvent
@@ -263,6 +265,7 @@ bool Events_disconnect_event ( QObject * object, int type );
 void Events_disconnect_all_events ( QObject * object, bool children );
 void Signals_disconnect_all_signals ( QObject * object, bool children );
 void _qtxhb_processOnEventMethod (QEvent::Type event);
+void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
 /*
 Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
@@ -1057,6 +1060,35 @@ void _qtxhb_processOnEventMethod (QEvent::Type event)
     hb_retl(0);
   }
 }
+
+void _qtxhb_processOnEventMethod2 (QEvent::Type event)
+{
+  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( hb_pcount() == 2 )
+  {
+    PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+    if( item )
+    {
+      //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
+      hb_retl( Events_connect_event( obj, event, item ) );
+    }
+    else
+    {
+      hb_retl(0);
+    }
+  }
+  else if( hb_pcount() == 1 )
+  {
+    //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
+    hb_retl( Events_disconnect_event( obj, event ) );
+  }
+  else
+  {
+    hb_retl(0);
+  }
+}
+
 HB_FUNC_STATIC( QOBJECT_ONACCEPTDROPSCHANGEEVENT )
 {
   _qtxhb_processOnEventMethod( QEvent::AcceptDropsChange );
@@ -1884,6 +1916,113 @@ HB_FUNC_STATIC( QOBJECT_ONZEROTIMEREVENTEVENT )
 HB_FUNC_STATIC( QOBJECT_ONZORDERCHANGEEVENT )
 {
   _qtxhb_processOnEventMethod( QEvent::ZOrderChange );
+}
+
+HB_FUNC_STATIC( QOBJECT_CONNECT )
+{
+  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(2) && ISCHAR(1) )
+    {
+      QString signal = hb_parc(1);
+      int pos = signal.indexOf("(");
+      QString method = signal.left(pos).toUpper();
+      method.prepend("ON");
+
+      PHB_DYNS pDynSym;
+      #ifdef __XHARBOUR__
+      pDynSym = hb_dynsymFind( method.toLatin1().data() );
+      #else
+      pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      #endif
+      if( pDynSym )
+      {
+        #ifdef __XHARBOUR__
+        hb_vmPushSymbol( pDynSym->pSymbol );
+        #else
+        hb_vmPushDynSym( pDynSym );
+        #endif
+        hb_vmPush( hb_stackSelfItem() );
+        PHB_ITEM codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
+        hb_vmPush( codeblock );
+        hb_vmSend( 1 );
+      }
+    }
+    else if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QString signal = hb_parc(1);
+      int pos = signal.indexOf("(");
+      QString method = signal.left(pos).toUpper();
+      method.prepend("ON");
+
+      PHB_DYNS pDynSym;
+      #ifdef __XHARBOUR__
+      pDynSym = hb_dynsymFind( method.toLatin1().data() );
+      #else
+      pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      #endif
+      if( pDynSym )
+      {
+        #ifdef __XHARBOUR__
+        hb_vmPushSymbol( pDynSym->pSymbol );
+        #else
+        hb_vmPushDynSym( pDynSym );
+        #endif
+        hb_vmPush( hb_stackSelfItem() );
+        hb_vmSend( 0 );
+      }
+    }
+    else if( ISNUMPAR(2) && ISNUM(1) )
+    {
+      int event = hb_parni(1);
+      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+    }
+    else if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      int event = hb_parni(1);
+      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+    }
+  }
+}
+
+HB_FUNC_STATIC( QOBJECT_DISCONNECT )
+{
+  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QString signal = hb_parc(1);
+      int pos = signal.indexOf("(");
+      QString method = signal.left(pos).toUpper();
+      method.prepend("ON");
+
+      PHB_DYNS pDynSym;
+      #ifdef __XHARBOUR__
+      pDynSym = hb_dynsymFind( method.toLatin1().data() );
+      #else
+      pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      #endif
+      if( pDynSym )
+      {
+        #ifdef __XHARBOUR__
+        hb_vmPushSymbol( pDynSym->pSymbol );
+        #else
+        hb_vmPushDynSym( pDynSym );
+        #endif
+        hb_vmPush( hb_stackSelfItem() );
+        hb_vmSend( 0 );
+      }
+    }
+    else if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      int event = hb_parni(1);
+      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+    }
+  }
 }
 
 #pragma ENDDUMP
