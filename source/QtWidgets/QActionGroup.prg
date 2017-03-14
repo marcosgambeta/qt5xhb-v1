@@ -21,9 +21,6 @@ CLASS QActionGroup INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD addAction1
-   METHOD addAction2
-   METHOD addAction3
    METHOD addAction
    METHOD checkedAction
    METHOD isEnabled
@@ -72,10 +69,10 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -85,16 +82,17 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QAction * addAction ( QAction * action )
 */
-HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
+void QActionGroup_addAction1 ()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
@@ -106,9 +104,10 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC_STATIC( QACTIONGROUP_ADDACTION2 )
+void QActionGroup_addAction2 ()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -120,9 +119,10 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION2 )
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-HB_FUNC_STATIC( QACTIONGROUP_ADDACTION3 )
+void QActionGroup_addAction3 ()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
@@ -132,7 +132,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION3 )
   }
 }
 
-
 //[1]QAction * addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
 //[3]QAction * addAction ( const QIcon & icon, const QString & text )
@@ -141,15 +140,15 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 {
   if( ISNUMPAR(1) && ISQACTION(1) )
   {
-    HB_FUNC_EXEC( QACTIONGROUP_ADDACTION1 );
+    QActionGroup_addAction1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QACTIONGROUP_ADDACTION2 );
+    QActionGroup_addAction2();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QACTIONGROUP_ADDACTION3 );
+    QActionGroup_addAction3();
   }
   else
   {
@@ -163,6 +162,7 @@ QAction * checkedAction () const
 HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAction * ptr = obj->checkedAction (  );
@@ -170,19 +170,18 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
   }
 }
 
-
 /*
 bool isEnabled () const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isEnabled (  ) );
   }
 }
-
 
 /*
 bool isExclusive () const
@@ -190,12 +189,12 @@ bool isExclusive () const
 HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isExclusive (  ) );
   }
 }
-
 
 /*
 bool isVisible () const
@@ -203,12 +202,12 @@ bool isVisible () const
 HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isVisible (  ) );
   }
 }
-
 
 /*
 void removeAction ( QAction * action )
@@ -216,14 +215,15 @@ void removeAction ( QAction * action )
 HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     obj->removeAction ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDisabled ( bool b )
@@ -231,13 +231,14 @@ void setDisabled ( bool b )
 HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setDisabled ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEnabled ( bool )
@@ -245,13 +246,14 @@ void setEnabled ( bool )
 HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setEnabled ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setExclusive ( bool )
@@ -259,13 +261,14 @@ void setExclusive ( bool )
 HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setExclusive ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVisible ( bool )
@@ -273,15 +276,13 @@ void setVisible ( bool )
 HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setVisible ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-
