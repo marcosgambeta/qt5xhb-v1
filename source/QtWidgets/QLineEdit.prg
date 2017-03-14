@@ -25,8 +25,6 @@ CLASS QLineEdit INHERIT QWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD alignment
@@ -73,8 +71,6 @@ CLASS QLineEdit INHERIT QWidget
    METHOD hasFrame
    METHOD setFrame
    METHOD setSelection
-   METHOD setTextMargins1
-   METHOD setTextMargins2
    METHOD setTextMargins
    METHOD setValidator
    METHOD validator
@@ -93,8 +89,6 @@ CLASS QLineEdit INHERIT QWidget
    METHOD setCursorMoveStyle
    METHOD cursorMoveStyle
    METHOD clear
-   METHOD addAction1
-   METHOD addAction2
    METHOD addAction
    METHOD setClearButtonEnabled
    METHOD isClearButtonEnabled
@@ -136,7 +130,7 @@ RETURN
 /*
 explicit QLineEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QLINEEDIT_NEW1 )
+void QLineEdit_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QLineEdit * o = new QLineEdit ( par1 );
@@ -146,14 +140,13 @@ HB_FUNC_STATIC( QLINEEDIT_NEW1 )
 /*
 explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QLINEEDIT_NEW2 )
+void QLineEdit_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QLineEdit * o = new QLineEdit ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]explicit QLineEdit ( QWidget * parent = 0 )
 //[2]explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
@@ -162,11 +155,11 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_NEW1 );
+    QLineEdit_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_NEW2 );
+    QLineEdit_new2();
   }
   else
   {
@@ -177,6 +170,7 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
 HB_FUNC_STATIC( QLINEEDIT_DELETE )
 {
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -186,6 +180,7 @@ HB_FUNC_STATIC( QLINEEDIT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -195,6 +190,7 @@ Qt::Alignment alignment () const
 HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->alignment (  ) );
@@ -207,14 +203,15 @@ void setAlignment ( Qt::Alignment flag )
 HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setAlignment (  (Qt::Alignment) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void backspace ()
@@ -222,13 +219,14 @@ void backspace ()
 HB_FUNC_STATIC( QLINEEDIT_BACKSPACE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->backspace (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QCompleter * completer () const
@@ -236,6 +234,7 @@ QCompleter * completer () const
 HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QCompleter * ptr = obj->completer (  );
@@ -249,14 +248,15 @@ void setCompleter ( QCompleter * c )
 HB_FUNC_STATIC( QLINEEDIT_SETCOMPLETER )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QCompleter * par1 = (QCompleter *) _qt5xhb_itemGetPtr(1);
+    QCompleter * par1 = ISNIL(1)? 0 : (QCompleter *) _qt5xhb_itemGetPtr(1);
     obj->setCompleter ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QMenu * createStandardContextMenu ()
@@ -264,6 +264,7 @@ QMenu * createStandardContextMenu ()
 HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QMenu * ptr = obj->createStandardContextMenu (  );
@@ -271,20 +272,20 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
   }
 }
 
-
 /*
 void cursorBackward ( bool mark, int steps = 1 )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->cursorBackward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void cursorForward ( bool mark, int steps = 1 )
@@ -292,13 +293,14 @@ void cursorForward ( bool mark, int steps = 1 )
 HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->cursorForward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int cursorPosition () const
@@ -306,6 +308,7 @@ int cursorPosition () const
 HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->cursorPosition (  ) );
@@ -318,13 +321,14 @@ void setCursorPosition ( int )
 HB_FUNC_STATIC( QLINEEDIT_SETCURSORPOSITION )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setCursorPosition ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int cursorPositionAt ( const QPoint & pos )
@@ -332,6 +336,7 @@ int cursorPositionAt ( const QPoint & pos )
 HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
@@ -339,13 +344,13 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
   }
 }
 
-
 /*
 void cursorWordBackward ( bool mark )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORWORDBACKWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->cursorWordBackward ( (bool) hb_parl(1) );
@@ -353,20 +358,20 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDBACKWARD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void cursorWordForward ( bool mark )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORWORDFORWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->cursorWordForward ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void del ()
@@ -374,13 +379,14 @@ void del ()
 HB_FUNC_STATIC( QLINEEDIT_DEL )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->del (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void deselect ()
@@ -388,13 +394,14 @@ void deselect ()
 HB_FUNC_STATIC( QLINEEDIT_DESELECT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->deselect (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString displayText () const
@@ -402,12 +409,12 @@ QString displayText () const
 HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->displayText (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool dragEnabled () const
@@ -415,6 +422,7 @@ bool dragEnabled () const
 HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->dragEnabled (  ) );
@@ -427,13 +435,14 @@ void setDragEnabled ( bool b )
 HB_FUNC_STATIC( QLINEEDIT_SETDRAGENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setDragEnabled ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 EchoMode echoMode () const
@@ -441,6 +450,7 @@ EchoMode echoMode () const
 HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->echoMode (  ) );
@@ -453,14 +463,15 @@ void setEchoMode ( EchoMode )
 HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setEchoMode (  (QLineEdit::EchoMode) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void end ( bool mark )
@@ -468,13 +479,14 @@ void end ( bool mark )
 HB_FUNC_STATIC( QLINEEDIT_END )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->end ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void getTextMargins ( int * left, int * top, int * right, int * bottom ) const
@@ -482,6 +494,7 @@ void getTextMargins ( int * left, int * top, int * right, int * bottom ) const
 HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1;
@@ -494,9 +507,9 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
     hb_storni( par3, 3 );
     hb_storni( par4, 4 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool hasAcceptableInput () const
@@ -504,12 +517,12 @@ bool hasAcceptableInput () const
 HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasAcceptableInput (  ) );
   }
 }
-
 
 /*
 bool hasSelectedText () const
@@ -517,12 +530,12 @@ bool hasSelectedText () const
 HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasSelectedText (  ) );
   }
 }
-
 
 /*
 void home ( bool mark )
@@ -530,13 +543,14 @@ void home ( bool mark )
 HB_FUNC_STATIC( QLINEEDIT_HOME )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->home ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString inputMask () const
@@ -544,6 +558,7 @@ QString inputMask () const
 HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->inputMask (  ).toLatin1().data() );
@@ -556,14 +571,15 @@ void setInputMask ( const QString & inputMask )
 HB_FUNC_STATIC( QLINEEDIT_SETINPUTMASK )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setInputMask ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void insert ( const QString & newText )
@@ -571,14 +587,15 @@ void insert ( const QString & newText )
 HB_FUNC_STATIC( QLINEEDIT_INSERT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->insert ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isModified () const
@@ -586,6 +603,7 @@ bool isModified () const
 HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isModified (  ) );
@@ -598,13 +616,14 @@ void setModified ( bool )
 HB_FUNC_STATIC( QLINEEDIT_SETMODIFIED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setModified ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isReadOnly () const
@@ -612,6 +631,7 @@ bool isReadOnly () const
 HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isReadOnly (  ) );
@@ -624,13 +644,14 @@ void setReadOnly ( bool )
 HB_FUNC_STATIC( QLINEEDIT_SETREADONLY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setReadOnly ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isRedoAvailable () const
@@ -638,12 +659,12 @@ bool isRedoAvailable () const
 HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isRedoAvailable (  ) );
   }
 }
-
 
 /*
 bool isUndoAvailable () const
@@ -651,12 +672,12 @@ bool isUndoAvailable () const
 HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isUndoAvailable (  ) );
   }
 }
-
 
 /*
 int maxLength () const
@@ -664,6 +685,7 @@ int maxLength () const
 HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->maxLength (  ) );
@@ -676,13 +698,14 @@ void setMaxLength ( int )
 HB_FUNC_STATIC( QLINEEDIT_SETMAXLENGTH )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setMaxLength ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString placeholderText () const
@@ -690,6 +713,7 @@ QString placeholderText () const
 HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->placeholderText (  ).toLatin1().data() );
@@ -702,14 +726,15 @@ void setPlaceholderText ( const QString & )
 HB_FUNC_STATIC( QLINEEDIT_SETPLACEHOLDERTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setPlaceholderText ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QSize minimumSizeHint () const
@@ -717,6 +742,7 @@ QSize minimumSizeHint () const
 HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -724,19 +750,18 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 QString selectedText () const
 */
 HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->selectedText (  ).toLatin1().data() );
   }
 }
-
 
 /*
 int selectionStart () const
@@ -744,12 +769,12 @@ int selectionStart () const
 HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->selectionStart (  ) );
   }
 }
-
 
 /*
 bool hasFrame () const
@@ -757,6 +782,7 @@ bool hasFrame () const
 HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasFrame (  ) );
@@ -769,13 +795,14 @@ void setFrame ( bool )
 HB_FUNC_STATIC( QLINEEDIT_SETFRAME )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setFrame ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSelection ( int start, int length )
@@ -783,41 +810,45 @@ void setSelection ( int start, int length )
 HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextMargins ( int left, int top, int right, int bottom )
 */
-HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS1 )
+void QLineEdit_setTextMargins1 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setTextMargins ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setTextMargins ( const QMargins & margins )
 */
-HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS2 )
+void QLineEdit_setTextMargins2 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QMargins * par1 = (QMargins *) _qt5xhb_itemGetPtr(1);
     obj->setTextMargins ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setTextMargins ( int left, int top, int right, int bottom )
 //[2]void setTextMargins ( const QMargins & margins )
@@ -826,11 +857,11 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_SETTEXTMARGINS1 );
+    QLineEdit_setTextMargins1();
   }
   else if( ISNUMPAR(1) && ISQMARGINS(1) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_SETTEXTMARGINS2 );
+    QLineEdit_setTextMargins2();
   }
   else
   {
@@ -844,11 +875,13 @@ void setValidator ( const QValidator * v )
 HB_FUNC_STATIC( QLINEEDIT_SETVALIDATOR )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const QValidator * par1 = (const QValidator *) _qt5xhb_itemGetPtr(1);
+    const QValidator * par1 = ISNIL(1)? 0 : (const QValidator *) _qt5xhb_itemGetPtr(1);
     obj->setValidator ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -858,6 +891,7 @@ const QValidator * validator () const
 HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QValidator * ptr = obj->validator (  );
@@ -865,13 +899,13 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
   }
 }
 
-
 /*
 QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -879,13 +913,13 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
   }
 }
 
-
 /*
 QString text () const
 */
 HB_FUNC_STATIC( QLINEEDIT_TEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
@@ -898,14 +932,15 @@ void setText ( const QString & )
 HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setText ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QMargins textMargins () const
@@ -913,6 +948,7 @@ QMargins textMargins () const
 HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->textMargins (  ) );
@@ -920,13 +956,13 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
   }
 }
 
-
 /*
 bool event ( QEvent * e )
 */
 HB_FUNC_STATIC( QLINEEDIT_EVENT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
@@ -934,13 +970,13 @@ HB_FUNC_STATIC( QLINEEDIT_EVENT )
   }
 }
 
-
 /*
 QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 */
 HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -949,22 +985,20 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
   }
 }
 
-
-
-
 /*
 void copy () const
 */
 HB_FUNC_STATIC( QLINEEDIT_COPY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->copy (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void cut ()
@@ -972,13 +1006,14 @@ void cut ()
 HB_FUNC_STATIC( QLINEEDIT_CUT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->cut (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void paste ()
@@ -986,13 +1021,14 @@ void paste ()
 HB_FUNC_STATIC( QLINEEDIT_PASTE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->paste (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void redo ()
@@ -1000,13 +1036,14 @@ void redo ()
 HB_FUNC_STATIC( QLINEEDIT_REDO )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->redo (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void selectAll ()
@@ -1014,13 +1051,14 @@ void selectAll ()
 HB_FUNC_STATIC( QLINEEDIT_SELECTALL )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->selectAll (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void undo ()
@@ -1028,13 +1066,14 @@ void undo ()
 HB_FUNC_STATIC( QLINEEDIT_UNDO )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->undo (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCursorMoveStyle(Qt::CursorMoveStyle style)
@@ -1042,11 +1081,13 @@ void setCursorMoveStyle(Qt::CursorMoveStyle style)
 HB_FUNC_STATIC( QLINEEDIT_SETCURSORMOVESTYLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setCursorMoveStyle (  (Qt::CursorMoveStyle) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1056,12 +1097,12 @@ Qt::CursorMoveStyle cursorMoveStyle() const
 HB_FUNC_STATIC( QLINEEDIT_CURSORMOVESTYLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->cursorMoveStyle (  ) );
   }
 }
-
 
 /*
 void clear()
@@ -1069,35 +1110,39 @@ void clear()
 HB_FUNC_STATIC( QLINEEDIT_CLEAR )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clear (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addAction(QAction *action, ActionPosition position)
 */
-HB_FUNC_STATIC( QLINEEDIT_ADDACTION1 )
+void QLineEdit_addAction1 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     obj->addAction ( par1,  (QLineEdit::ActionPosition) par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 QAction * addAction(const QIcon &icon, ActionPosition position)
 */
-HB_FUNC_STATIC( QLINEEDIT_ADDACTION2 )
+void QLineEdit_addAction2 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
@@ -1107,7 +1152,6 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION2 )
   }
 }
 
-
 //[1]void addAction(QAction *action, ActionPosition position)
 //[2]QAction *addAction(const QIcon &icon, ActionPosition position)
 
@@ -1115,11 +1159,11 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
 {
   if( ISNUMPAR(2) && ISQACTION(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_ADDACTION1 );
+    QLineEdit_addAction1();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_ADDACTION2 );
+    QLineEdit_addAction2();
   }
   else
   {
@@ -1133,10 +1177,12 @@ void setClearButtonEnabled(bool enable)
 HB_FUNC_STATIC( QLINEEDIT_SETCLEARBUTTONENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setClearButtonEnabled ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1146,14 +1192,11 @@ bool isClearButtonEnabled() const
 HB_FUNC_STATIC( QLINEEDIT_ISCLEARBUTTONENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isClearButtonEnabled (  ) );
   }
 }
 
-
-
-
 #pragma ENDDUMP
-
