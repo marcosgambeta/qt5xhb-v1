@@ -23,8 +23,6 @@ CLASS QLabel INHERIT QFrame
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD alignment
@@ -57,8 +55,6 @@ CLASS QLabel INHERIT QFrame
    METHOD sizeHint
    METHOD clear
    METHOD setMovie
-   METHOD setNum1
-   METHOD setNum2
    METHOD setNum
    METHOD setPicture
    METHOD setPixmap
@@ -94,7 +90,7 @@ RETURN
 /*
 QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QLABEL_NEW1 )
+void QLabel_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
@@ -105,7 +101,7 @@ HB_FUNC_STATIC( QLABEL_NEW1 )
 /*
 QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QLABEL_NEW2 )
+void QLabel_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -114,7 +110,6 @@ HB_FUNC_STATIC( QLABEL_NEW2 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 //[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 //[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 
@@ -122,11 +117,11 @@ HB_FUNC_STATIC( QLABEL_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLABEL_NEW1 );
+    QLabel_new1();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QLABEL_NEW2 );
+    QLabel_new2();
   }
   else
   {
@@ -137,6 +132,7 @@ HB_FUNC_STATIC( QLABEL_NEW )
 HB_FUNC_STATIC( QLABEL_DELETE )
 {
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -146,6 +142,7 @@ HB_FUNC_STATIC( QLABEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -155,12 +152,12 @@ Qt::Alignment alignment () const
 HB_FUNC_STATIC( QLABEL_ALIGNMENT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->alignment (  ) );
   }
 }
-
 
 /*
 QWidget * buddy () const
@@ -168,6 +165,7 @@ QWidget * buddy () const
 HB_FUNC_STATIC( QLABEL_BUDDY )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * ptr = obj->buddy (  );
@@ -175,19 +173,18 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
   }
 }
 
-
 /*
 bool hasScaledContents () const
 */
 HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasScaledContents (  ) );
   }
 }
-
 
 /*
 bool hasSelectedText () const
@@ -195,12 +192,12 @@ bool hasSelectedText () const
 HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasSelectedText (  ) );
   }
 }
-
 
 /*
 int indent () const
@@ -208,12 +205,12 @@ int indent () const
 HB_FUNC_STATIC( QLABEL_INDENT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->indent (  ) );
   }
 }
-
 
 /*
 int margin () const
@@ -221,12 +218,12 @@ int margin () const
 HB_FUNC_STATIC( QLABEL_MARGIN )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->margin (  ) );
   }
 }
-
 
 /*
 QMovie * movie () const
@@ -234,6 +231,7 @@ QMovie * movie () const
 HB_FUNC_STATIC( QLABEL_MOVIE )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QMovie * ptr = obj->movie (  );
@@ -241,19 +239,18 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
   }
 }
 
-
 /*
 bool openExternalLinks () const
 */
 HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->openExternalLinks (  ) );
   }
 }
-
 
 /*
 const QPicture * picture () const
@@ -261,6 +258,7 @@ const QPicture * picture () const
 HB_FUNC_STATIC( QLABEL_PICTURE )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QPicture * ptr = obj->picture (  );
@@ -268,13 +266,13 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
   }
 }
 
-
 /*
 const QPixmap * pixmap () const
 */
 HB_FUNC_STATIC( QLABEL_PIXMAP )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QPixmap * ptr = obj->pixmap (  );
@@ -282,19 +280,18 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
   }
 }
 
-
 /*
 QString selectedText () const
 */
 HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->selectedText (  ).toLatin1().data() );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment )
@@ -302,14 +299,15 @@ void setAlignment ( Qt::Alignment )
 HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setAlignment (  (Qt::Alignment) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBuddy ( QWidget * buddy )
@@ -317,14 +315,15 @@ void setBuddy ( QWidget * buddy )
 HB_FUNC_STATIC( QLABEL_SETBUDDY )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+    QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setBuddy ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setIndent ( int )
@@ -332,13 +331,14 @@ void setIndent ( int )
 HB_FUNC_STATIC( QLABEL_SETINDENT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setIndent ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMargin ( int )
@@ -346,13 +346,14 @@ void setMargin ( int )
 HB_FUNC_STATIC( QLABEL_SETMARGIN )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setMargin ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOpenExternalLinks ( bool open )
@@ -360,13 +361,14 @@ void setOpenExternalLinks ( bool open )
 HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setOpenExternalLinks ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setScaledContents ( bool )
@@ -374,13 +376,14 @@ void setScaledContents ( bool )
 HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setScaledContents ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSelection ( int start, int length )
@@ -388,13 +391,14 @@ void setSelection ( int start, int length )
 HB_FUNC_STATIC( QLABEL_SETSELECTION )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextFormat ( Qt::TextFormat )
@@ -402,14 +406,15 @@ void setTextFormat ( Qt::TextFormat )
 HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setTextFormat (  (Qt::TextFormat) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
@@ -417,14 +422,15 @@ void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWordWrap ( bool on )
@@ -432,13 +438,14 @@ void setWordWrap ( bool on )
 HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setWordWrap ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString text () const
@@ -446,12 +453,12 @@ QString text () const
 HB_FUNC_STATIC( QLABEL_TEXT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->text (  ).toLatin1().data() );
   }
 }
-
 
 /*
 Qt::TextFormat textFormat () const
@@ -459,12 +466,12 @@ Qt::TextFormat textFormat () const
 HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->textFormat (  ) );
   }
 }
-
 
 /*
 Qt::TextInteractionFlags textInteractionFlags () const
@@ -472,12 +479,12 @@ Qt::TextInteractionFlags textInteractionFlags () const
 HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->textInteractionFlags (  ) );
   }
 }
-
 
 /*
 bool wordWrap () const
@@ -485,12 +492,12 @@ bool wordWrap () const
 HB_FUNC_STATIC( QLABEL_WORDWRAP )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->wordWrap (  ) );
   }
 }
-
 
 /*
 virtual int heightForWidth ( int w ) const
@@ -498,12 +505,12 @@ virtual int heightForWidth ( int w ) const
 HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -511,6 +518,7 @@ virtual QSize minimumSizeHint () const
 HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
@@ -518,13 +526,13 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLABEL_SIZEHINT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -532,20 +540,20 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
   }
 }
 
-
 /*
 void clear ()
 */
 HB_FUNC_STATIC( QLABEL_CLEAR )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clear (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMovie ( QMovie * movie )
@@ -553,55 +561,70 @@ void setMovie ( QMovie * movie )
 HB_FUNC_STATIC( QLABEL_SETMOVIE )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QMovie * par1 = (QMovie *) _qt5xhb_itemGetPtr(1);
     obj->setMovie ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNum ( int num )
 */
-HB_FUNC_STATIC( QLABEL_SETNUM1 )
+void QLabel_setNum1 ()
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setNum ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setNum ( double num )
 */
-HB_FUNC_STATIC( QLABEL_SETNUM2 )
+void QLabel_setNum2 ()
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     double par1 = hb_parnd(1);
     obj->setNum ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+//[1]void setNum ( int num )
+//[2]void setNum ( double num )
 
-HB_FUNC_STATIC( QLABEL_SETNUM ) // TODO: int ou double ?
+HB_FUNC_STATIC( QLABEL_SETNUM )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    //if( HB_IS_DOUBLE(1) )
-    //{
-      HB_FUNC_EXEC( QLABEL_SETNUM2 );
-    //}
-    //else
-    //{
-    //  HB_FUNC_EXEC( QLABEL_SETNUM1 );
-    //}
+    PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
+    if( pNum )
+    {
+      if( HB_IS_DOUBLE(pNum) )
+      {
+        QLabel_setNum2();
+      }
+      else if( HB_IS_INTEGER(pNum) )
+      {
+        QLabel_setNum1();
+      }
+      else
+      {
+        hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      }
+    }
   }
   else
   {
@@ -615,14 +638,15 @@ void setPicture ( const QPicture & picture )
 HB_FUNC_STATIC( QLABEL_SETPICTURE )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
     obj->setPicture ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPixmap ( const QPixmap & )
@@ -630,14 +654,15 @@ void setPixmap ( const QPixmap & )
 HB_FUNC_STATIC( QLABEL_SETPIXMAP )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
     obj->setPixmap ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setText ( const QString & )
@@ -645,16 +670,14 @@ void setText ( const QString & )
 HB_FUNC_STATIC( QLABEL_SETTEXT )
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setText ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-
