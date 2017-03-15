@@ -23,10 +23,6 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD calendarPopup
@@ -109,7 +105,7 @@ RETURN
 /*
 QDateTimeEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW1 )
+void QDateTimeEdit_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDateTimeEdit * o = new QDateTimeEdit ( par1 );
@@ -119,7 +115,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW1 )
 /*
 QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW2 )
+void QDateTimeEdit_new2 ()
 {
   QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -130,7 +126,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW2 )
 /*
 QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW3 )
+void QDateTimeEdit_new3 ()
 {
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -141,14 +137,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW3 )
 /*
 QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW4 )
+void QDateTimeEdit_new4 ()
 {
   QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDateTimeEdit * o = new QDateTimeEdit ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QDateTimeEdit ( QWidget * parent = 0 )
 //[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
@@ -159,19 +154,19 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW1 );
+    QDateTimeEdit_new1();
   }
   else if( ISBETWEEN(1,2) && ISQDATETIME(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW2 );
+    QDateTimeEdit_new2();
   }
   else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW3 );
+    QDateTimeEdit_new3();
   }
   else if( ISBETWEEN(1,2) && ISQTIME(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW4 );
+    QDateTimeEdit_new4();
   }
   else
   {
@@ -182,6 +177,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -191,6 +187,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -200,12 +197,12 @@ bool calendarPopup () const
 HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->calendarPopup (  ) );
   }
 }
-
 
 /*
 QCalendarWidget * calendarWidget () const
@@ -213,6 +210,7 @@ QCalendarWidget * calendarWidget () const
 HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QCalendarWidget * ptr = obj->calendarWidget (  );
@@ -220,20 +218,20 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
   }
 }
 
-
 /*
 void clearMaximumDate ()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearMaximumDate (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMaximumDateTime ()
@@ -241,13 +239,14 @@ void clearMaximumDateTime ()
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearMaximumDateTime (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMaximumTime ()
@@ -255,13 +254,14 @@ void clearMaximumTime ()
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMTIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearMaximumTime (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMinimumDate ()
@@ -269,13 +269,14 @@ void clearMinimumDate ()
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearMinimumDate (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMinimumDateTime ()
@@ -283,13 +284,14 @@ void clearMinimumDateTime ()
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearMinimumDateTime (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMinimumTime ()
@@ -297,13 +299,14 @@ void clearMinimumTime ()
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMTIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearMinimumTime (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Section currentSection () const
@@ -311,12 +314,12 @@ Section currentSection () const
 HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->currentSection (  ) );
   }
 }
-
 
 /*
 int currentSectionIndex () const
@@ -324,12 +327,12 @@ int currentSectionIndex () const
 HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->currentSectionIndex (  ) );
   }
 }
-
 
 /*
 QDate date () const
@@ -337,6 +340,7 @@ QDate date () const
 HB_FUNC_STATIC( QDATETIMEEDIT_DATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDate * ptr = new QDate( obj->date (  ) );
@@ -344,13 +348,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATE )
   }
 }
 
-
 /*
 QDateTime dateTime () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->dateTime (  ) );
@@ -358,19 +362,18 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
   }
 }
 
-
 /*
 QString displayFormat () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->displayFormat (  ).toLatin1().data() );
   }
 }
-
 
 /*
 Sections displayedSections () const
@@ -378,12 +381,12 @@ Sections displayedSections () const
 HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->displayedSections (  ) );
   }
 }
-
 
 /*
 QDate maximumDate () const
@@ -391,6 +394,7 @@ QDate maximumDate () const
 HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDate * ptr = new QDate( obj->maximumDate (  ) );
@@ -398,13 +402,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATE )
   }
 }
 
-
 /*
 QDateTime maximumDateTime () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->maximumDateTime (  ) );
@@ -412,13 +416,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATETIME )
   }
 }
 
-
 /*
 QTime maximumTime () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMTIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QTime * ptr = new QTime( obj->maximumTime (  ) );
@@ -426,13 +430,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMTIME )
   }
 }
 
-
 /*
 QDate minimumDate () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDate * ptr = new QDate( obj->minimumDate (  ) );
@@ -440,13 +444,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATE )
   }
 }
 
-
 /*
 QDateTime minimumDateTime () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->minimumDateTime (  ) );
@@ -454,13 +458,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATETIME )
   }
 }
 
-
 /*
 QTime minimumTime () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMTIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QTime * ptr = new QTime( obj->minimumTime (  ) );
@@ -468,19 +472,18 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMTIME )
   }
 }
 
-
 /*
 Section sectionAt ( int index ) const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->sectionAt ( (int) hb_parni(1) ) );
   }
 }
-
 
 /*
 int sectionCount () const
@@ -488,12 +491,12 @@ int sectionCount () const
 HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->sectionCount (  ) );
   }
 }
-
 
 /*
 QString sectionText ( Section section ) const
@@ -501,6 +504,7 @@ QString sectionText ( Section section ) const
 HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -508,20 +512,20 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
   }
 }
 
-
 /*
 void setCalendarPopup ( bool enable )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARPOPUP )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setCalendarPopup ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCalendarWidget ( QCalendarWidget * calendarWidget )
@@ -529,14 +533,15 @@ void setCalendarWidget ( QCalendarWidget * calendarWidget )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARWIDGET )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QCalendarWidget * par1 = (QCalendarWidget *) _qt5xhb_itemGetPtr(1);
     obj->setCalendarWidget ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCurrentSection ( Section section )
@@ -544,14 +549,15 @@ void setCurrentSection ( Section section )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTION )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setCurrentSection (  (QDateTimeEdit::Section) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCurrentSectionIndex ( int index )
@@ -559,13 +565,14 @@ void setCurrentSectionIndex ( int index )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTIONINDEX )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setCurrentSectionIndex ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDateRange ( const QDate & min, const QDate & max )
@@ -573,15 +580,16 @@ void setDateRange ( const QDate & min, const QDate & max )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETDATERANGE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
     QDate * par2 = (QDate *) _qt5xhb_itemGetPtr(2);
     obj->setDateRange ( *par1, *par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDateTimeRange ( const QDateTime & min, const QDateTime & max )
@@ -589,15 +597,16 @@ void setDateTimeRange ( const QDateTime & min, const QDateTime & max )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIMERANGE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     QDateTime * par2 = (QDateTime *) _qt5xhb_itemGetPtr(2);
     obj->setDateTimeRange ( *par1, *par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDisplayFormat ( const QString & format )
@@ -605,14 +614,15 @@ void setDisplayFormat ( const QString & format )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETDISPLAYFORMAT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     obj->setDisplayFormat ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMaximumDate ( const QDate & max )
@@ -620,14 +630,15 @@ void setMaximumDate ( const QDate & max )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
     obj->setMaximumDate ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMaximumDateTime ( const QDateTime & dt )
@@ -635,14 +646,15 @@ void setMaximumDateTime ( const QDateTime & dt )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     obj->setMaximumDateTime ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMaximumTime ( const QTime & max )
@@ -650,14 +662,15 @@ void setMaximumTime ( const QTime & max )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMTIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     obj->setMaximumTime ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimumDate ( const QDate & min )
@@ -665,14 +678,15 @@ void setMinimumDate ( const QDate & min )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
     obj->setMinimumDate ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimumDateTime ( const QDateTime & dt )
@@ -680,14 +694,15 @@ void setMinimumDateTime ( const QDateTime & dt )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     obj->setMinimumDateTime ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimumTime ( const QTime & min )
@@ -695,14 +710,15 @@ void setMinimumTime ( const QTime & min )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMTIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     obj->setMinimumTime ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSelectedSection ( Section section )
@@ -710,14 +726,15 @@ void setSelectedSection ( Section section )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETSELECTEDSECTION )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setSelectedSection (  (QDateTimeEdit::Section) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTimeRange ( const QTime & min, const QTime & max )
@@ -725,15 +742,16 @@ void setTimeRange ( const QTime & min, const QTime & max )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMERANGE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     QTime * par2 = (QTime *) _qt5xhb_itemGetPtr(2);
     obj->setTimeRange ( *par1, *par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTimeSpec ( Qt::TimeSpec spec )
@@ -741,14 +759,15 @@ void setTimeSpec ( Qt::TimeSpec spec )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMESPEC )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setTimeSpec (  (Qt::TimeSpec) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QTime time () const
@@ -756,6 +775,7 @@ QTime time () const
 HB_FUNC_STATIC( QDATETIMEEDIT_TIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QTime * ptr = new QTime( obj->time (  ) );
@@ -763,19 +783,18 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIME )
   }
 }
 
-
 /*
 Qt::TimeSpec timeSpec () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->timeSpec (  ) );
   }
 }
-
 
 /*
 virtual void clear ()
@@ -783,13 +802,14 @@ virtual void clear ()
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEAR )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clear (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool event ( QEvent * event )
@@ -797,6 +817,7 @@ virtual bool event ( QEvent * event )
 HB_FUNC_STATIC( QDATETIMEEDIT_EVENT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
@@ -804,13 +825,13 @@ HB_FUNC_STATIC( QDATETIMEEDIT_EVENT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_SIZEHINT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
@@ -818,20 +839,20 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SIZEHINT )
   }
 }
 
-
 /*
 virtual void stepBy ( int steps )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_STEPBY )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->stepBy ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDate ( const QDate & date )
@@ -839,14 +860,15 @@ void setDate ( const QDate & date )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETDATE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDate  * par1 = (QDate  *) _qt5xhb_itemGetPtr(1);
     obj->setDate ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDateTime ( const QDateTime & dateTime )
@@ -854,14 +876,15 @@ void setDateTime ( const QDateTime & dateTime )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     obj->setDateTime ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTime ( const QTime & time )
@@ -869,16 +892,14 @@ void setTime ( const QTime & time )
 HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
     obj->setTime ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-

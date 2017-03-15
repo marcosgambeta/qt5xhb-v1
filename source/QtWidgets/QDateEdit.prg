@@ -9,15 +9,12 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDateEdit INHERIT QDateTimeEdit
 
    DATA class_id INIT Class_Id_QDateEdit
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    DESTRUCTOR destroyObject
@@ -49,7 +46,7 @@ RETURN
 /*
 QDateEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATEEDIT_NEW1 )
+void QDateEdit_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDateEdit * o = new QDateEdit ( par1 );
@@ -59,14 +56,13 @@ HB_FUNC_STATIC( QDATEEDIT_NEW1 )
 /*
 QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATEEDIT_NEW2 )
+void QDateEdit_new2 ()
 {
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QDateEdit * o = new QDateEdit ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QDateEdit ( QWidget * parent = 0 )
 //[2]QDateEdit ( const QDate & date, QWidget * parent = 0 )
@@ -75,11 +71,11 @@ HB_FUNC_STATIC( QDATEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDATEEDIT_NEW1 );
+    QDateEdit_new1();
   }
   else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATEEDIT_NEW2 );
+    QDateEdit_new2();
   }
   else
   {
@@ -90,6 +86,7 @@ HB_FUNC_STATIC( QDATEEDIT_NEW )
 HB_FUNC_STATIC( QDATEEDIT_DELETE )
 {
   QDateEdit * obj = (QDateEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -99,9 +96,8 @@ HB_FUNC_STATIC( QDATEEDIT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 #pragma ENDDUMP
-
