@@ -9,15 +9,12 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QVBoxLayout INHERIT QBoxLayout
 
    DATA class_id INIT Class_Id_QVBoxLayout
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    DESTRUCTOR destroyObject
@@ -49,7 +46,7 @@ RETURN
 /*
 QVBoxLayout ()
 */
-HB_FUNC_STATIC( QVBOXLAYOUT_NEW1 )
+void QVBoxLayout_new1 ()
 {
   QVBoxLayout * o = new QVBoxLayout (  );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -58,13 +55,12 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW1 )
 /*
 QVBoxLayout ( QWidget * parent )
 */
-HB_FUNC_STATIC( QVBOXLAYOUT_NEW2 )
+void QVBoxLayout_new2 ()
 {
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QVBoxLayout * o = new QVBoxLayout ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QVBoxLayout ()
 //[2]QVBoxLayout ( QWidget * parent )
@@ -73,11 +69,11 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QVBOXLAYOUT_NEW1 );
+    QVBoxLayout_new1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QVBOXLAYOUT_NEW2 );
+    QVBoxLayout_new2();
   }
   else
   {
@@ -88,6 +84,7 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
 {
   QVBoxLayout * obj = (QVBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -97,9 +94,8 @@ HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 #pragma ENDDUMP
-

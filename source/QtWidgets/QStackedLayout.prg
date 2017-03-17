@@ -19,9 +19,6 @@ CLASS QStackedLayout INHERIT QLayout
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD addWidget
@@ -64,7 +61,7 @@ RETURN
 /*
 QStackedLayout ()
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW1 )
+void QStackedLayout_new1 ()
 {
   QStackedLayout * o = new QStackedLayout (  );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -73,7 +70,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW1 )
 /*
 QStackedLayout ( QWidget * parent )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW2 )
+void QStackedLayout_new2 ()
 {
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QStackedLayout * o = new QStackedLayout ( par1 );
@@ -83,13 +80,12 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW2 )
 /*
 QStackedLayout ( QLayout * parentLayout )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW3 )
+void QStackedLayout_new3 ()
 {
   QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
   QStackedLayout * o = new QStackedLayout ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QStackedLayout ()
 //[2]QStackedLayout ( QWidget * parent )
@@ -99,15 +95,15 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSTACKEDLAYOUT_NEW1 );
+    QStackedLayout_new1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QSTACKEDLAYOUT_NEW2 );
+    QStackedLayout_new2();
   }
   else if( ISNUMPAR(1) && ISQLAYOUT(1) )
   {
-    HB_FUNC_EXEC( QSTACKEDLAYOUT_NEW3 );
+    QStackedLayout_new3();
   }
   else
   {
@@ -118,6 +114,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -127,6 +124,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -136,6 +134,7 @@ int addWidget ( QWidget * widget )
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
@@ -143,19 +142,18 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
   }
 }
 
-
 /*
 int currentIndex () const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->currentIndex (  ) );
   }
 }
-
 
 /*
 QWidget * currentWidget () const
@@ -163,6 +161,7 @@ QWidget * currentWidget () const
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * ptr = obj->currentWidget (  );
@@ -170,13 +169,13 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
   }
 }
 
-
 /*
 int insertWidget ( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -184,21 +183,21 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
   }
 }
 
-
 /*
 void setStackingMode ( StackingMode stackingMode )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setStackingMode (  (QStackedLayout::StackingMode) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 StackingMode stackingMode () const
@@ -206,12 +205,12 @@ StackingMode stackingMode () const
 HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->stackingMode (  ) );
   }
 }
-
 
 /*
 QWidget * widget ( int index ) const
@@ -219,6 +218,7 @@ QWidget * widget ( int index ) const
 HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * ptr = obj->widget ( (int) hb_parni(1) );
@@ -226,20 +226,20 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
   }
 }
 
-
 /*
 void setCurrentIndex ( int index )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setCurrentIndex ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCurrentWidget ( QWidget * widget )
@@ -247,17 +247,14 @@ void setCurrentWidget ( QWidget * widget )
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     obj->setCurrentWidget ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
-
 #pragma ENDDUMP
-
