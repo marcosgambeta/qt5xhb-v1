@@ -73,6 +73,8 @@ hbmk2 QPushButton1         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QPushButton2         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QPushButton3         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QPushButton4         %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QPushButton5         %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QPushButton6         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QQuickView           %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QQuickWidget         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QRadioButton1        %1 %2 %3 ..\qt5xhb.hbc
