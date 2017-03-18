@@ -190,10 +190,19 @@ void setCheckable ( bool checkable )
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
   QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setCheckable ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setCheckable ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -206,7 +215,14 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
   QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFlat ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setFlat ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -260,10 +276,19 @@ void setChecked ( bool checked )
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {
   QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setChecked ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setChecked ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

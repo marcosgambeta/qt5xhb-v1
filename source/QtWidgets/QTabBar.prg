@@ -394,10 +394,19 @@ void setDocumentMode ( bool set )
 HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
 {
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setDocumentMode ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDocumentMode ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -408,10 +417,19 @@ void setDrawBase ( bool drawTheBase )
 HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
 {
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setDrawBase ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDrawBase ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -437,10 +455,19 @@ void setExpanding ( bool enabled )
 HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
 {
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setExpanding ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setExpanding ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -466,10 +493,19 @@ void setMovable ( bool movable )
 HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
 {
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setMovable ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setMovable ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -630,10 +666,19 @@ void setTabsClosable ( bool closable )
 HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
 {
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setTabsClosable ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setTabsClosable ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -644,10 +689,19 @@ void setUsesScrollButtons ( bool useButtons )
 HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
 {
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setUsesScrollButtons ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setUsesScrollButtons ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

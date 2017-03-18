@@ -364,7 +364,14 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
 
   if( obj )
   {
-    obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -379,7 +386,14 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
 
   if( obj )
   {
-    obj->setScaledContents ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setScaledContents ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -441,7 +455,14 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
 
   if( obj )
   {
-    obj->setWordWrap ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWordWrap ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

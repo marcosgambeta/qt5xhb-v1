@@ -334,10 +334,19 @@ void setChildrenCollapsible ( bool )
 HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setChildrenCollapsible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setChildrenCollapsible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -376,10 +385,19 @@ void setOpaqueResize ( bool opaque = true )
 HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setOpaqueResize ( (bool) ISNIL(1)? true : hb_parl(1) );
+    if( (ISLOG(1)||ISNIL(1)) )
+    {
+      obj->setOpaqueResize ( (bool) ISNIL(1)? true : hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

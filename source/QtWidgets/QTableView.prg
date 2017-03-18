@@ -350,10 +350,19 @@ void setCornerButtonEnabled ( bool enable )
 HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
 {
   QTableView * obj = (QTableView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setCornerButtonEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setCornerButtonEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -422,10 +431,19 @@ void setSortingEnabled ( bool enable )
 HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
 {
   QTableView * obj = (QTableView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSortingEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSortingEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -465,10 +483,19 @@ void setWordWrap ( bool on )
 HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
 {
   QTableView * obj = (QTableView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setWordWrap ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWordWrap ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -706,10 +733,19 @@ void setShowGrid ( bool show )
 HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
 {
   QTableView * obj = (QTableView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setShowGrid ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setShowGrid ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

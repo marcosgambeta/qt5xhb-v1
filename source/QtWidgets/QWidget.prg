@@ -360,7 +360,14 @@ HB_FUNC_STATIC( QWIDGET_SETACCEPTDROPS )
 
   if( obj )
   {
-    obj->setAcceptDrops ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAcceptDrops ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -572,7 +579,14 @@ HB_FUNC_STATIC( QWIDGET_SETAUTOFILLBACKGROUND )
 
   if( obj )
   {
-    obj->setAutoFillBackground ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoFillBackground ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1310,7 +1324,14 @@ HB_FUNC_STATIC( QWIDGET_SETMOUSETRACKING )
 
   if( obj )
   {
-    obj->setMouseTracking ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setMouseTracking ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1559,7 +1580,14 @@ HB_FUNC_STATIC( QWIDGET_SETVISIBLE )
 
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1614,7 +1642,14 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODIFIED )
 
   if( obj )
   {
-    obj->setWindowModified ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWindowModified ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2618,8 +2653,16 @@ HB_FUNC_STATIC( QWIDGET_SETEDITFOCUS )
 
   if( obj )
   {
-    obj->setEditFocus ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setEditFocus ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -3630,7 +3673,14 @@ HB_FUNC_STATIC( QWIDGET_SETUPDATESENABLED )
 
   if( obj )
   {
-    obj->setUpdatesEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setUpdatesEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4059,7 +4109,14 @@ HB_FUNC_STATIC( QWIDGET_SETDISABLED )
 
   if( obj )
   {
-    obj->setDisabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDisabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4087,7 +4144,14 @@ HB_FUNC_STATIC( QWIDGET_SETENABLED )
 
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4102,7 +4166,14 @@ HB_FUNC_STATIC( QWIDGET_SETHIDDEN )
 
   if( obj )
   {
-    obj->setHidden ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setHidden ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

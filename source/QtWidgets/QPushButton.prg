@@ -213,7 +213,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 
   if( obj )
   {
-    obj->setAutoDefault ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoDefault ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -228,7 +235,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 
   if( obj )
   {
-    obj->setDefault ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDefault ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -243,7 +257,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 
   if( obj )
   {
-    obj->setFlat ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setFlat ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

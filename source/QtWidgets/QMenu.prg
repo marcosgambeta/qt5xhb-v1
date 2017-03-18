@@ -633,10 +633,19 @@ void setTearOffEnabled ( bool )
 HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 {
   QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setTearOffEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setTearOffEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -703,10 +712,19 @@ void setSeparatorsCollapsible ( bool collapse )
 HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 {
   QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSeparatorsCollapsible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSeparatorsCollapsible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

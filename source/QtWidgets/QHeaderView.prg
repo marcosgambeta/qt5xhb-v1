@@ -171,10 +171,19 @@ void setCascadingSectionResizes ( bool enable )
 HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setCascadingSectionResizes ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setCascadingSectionResizes ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -290,10 +299,19 @@ void setHighlightSections ( bool highlight )
 HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setHighlightSections ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setHighlightSections ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -331,10 +349,19 @@ void setSortIndicatorShown ( bool show )
 HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSortIndicatorShown ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSortIndicatorShown ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -680,10 +707,19 @@ void setStretchLastSection ( bool stretch )
 HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setStretchLastSection ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setStretchLastSection ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

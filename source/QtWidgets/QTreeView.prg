@@ -395,10 +395,19 @@ void setAllColumnsShowFocus ( bool enable )
 HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAllColumnsShowFocus ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAllColumnsShowFocus ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -409,10 +418,19 @@ void setAnimated ( bool enable )
 HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAnimated ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAnimated ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -480,10 +498,19 @@ void setExpandsOnDoubleClick ( bool enable )
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setExpandsOnDoubleClick ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setExpandsOnDoubleClick ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -524,10 +551,19 @@ void setHeaderHidden ( bool hide )
 HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setHeaderHidden ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setHeaderHidden ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -552,10 +588,19 @@ void setItemsExpandable ( bool enable )
 HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setItemsExpandable ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setItemsExpandable ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -566,10 +611,19 @@ void setRootIsDecorated ( bool show )
 HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setRootIsDecorated ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setRootIsDecorated ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -595,10 +649,19 @@ void setSortingEnabled ( bool enable )
 HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSortingEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSortingEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -609,10 +672,19 @@ void setUniformRowHeights ( bool uniform )
 HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setUniformRowHeights ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setUniformRowHeights ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -623,10 +695,19 @@ void setWordWrap ( bool on )
 HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
 {
   QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setWordWrap ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWordWrap ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

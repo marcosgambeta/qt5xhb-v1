@@ -118,8 +118,16 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 
   if( obj )
   {
-    obj->setAutoExclusive ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoExclusive ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -145,7 +153,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 
   if( obj )
   {
-    obj->setAutoRepeat ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoRepeat ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -291,7 +306,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 
   if( obj )
   {
-    obj->setCheckable ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setCheckable ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -319,7 +341,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 
   if( obj )
   {
-    obj->setChecked ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setChecked ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -347,8 +376,16 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 
   if( obj )
   {
-    obj->setDown ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDown ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -153,10 +153,19 @@ void setAutoClose ( bool close )
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
 {
   QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAutoClose ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoClose ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -179,10 +188,19 @@ void setAutoReset ( bool reset )
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
 {
   QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAutoReset ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoReset ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

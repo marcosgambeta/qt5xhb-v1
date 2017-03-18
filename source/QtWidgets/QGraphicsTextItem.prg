@@ -278,10 +278,19 @@ void setOpenExternalLinks ( bool open )
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
 {
   QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -307,10 +316,19 @@ void setTabChangesFocus ( bool b )
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
 {
   QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setTabChangesFocus ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setTabChangesFocus ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

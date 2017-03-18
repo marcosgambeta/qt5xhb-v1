@@ -281,7 +281,14 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
 
   if( obj )
   {
-    obj->cursorBackward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
+    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      obj->cursorBackward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -296,7 +303,14 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 
   if( obj )
   {
-    obj->cursorForward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
+    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      obj->cursorForward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -353,7 +367,14 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDBACKWARD )
 
   if( obj )
   {
-    obj->cursorWordBackward ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->cursorWordBackward ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -367,7 +388,14 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDFORWARD )
 
   if( obj )
   {
-    obj->cursorWordForward ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->cursorWordForward ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -438,7 +466,14 @@ HB_FUNC_STATIC( QLINEEDIT_SETDRAGENABLED )
 
   if( obj )
   {
-    obj->setDragEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDragEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -482,7 +517,14 @@ HB_FUNC_STATIC( QLINEEDIT_END )
 
   if( obj )
   {
-    obj->end ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->end ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -546,7 +588,14 @@ HB_FUNC_STATIC( QLINEEDIT_HOME )
 
   if( obj )
   {
-    obj->home ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->home ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -619,7 +668,14 @@ HB_FUNC_STATIC( QLINEEDIT_SETMODIFIED )
 
   if( obj )
   {
-    obj->setModified ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setModified ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -647,7 +703,14 @@ HB_FUNC_STATIC( QLINEEDIT_SETREADONLY )
 
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setReadOnly ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -798,7 +861,14 @@ HB_FUNC_STATIC( QLINEEDIT_SETFRAME )
 
   if( obj )
   {
-    obj->setFrame ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setFrame ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

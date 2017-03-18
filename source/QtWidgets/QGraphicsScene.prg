@@ -1215,10 +1215,19 @@ void setSortCacheEnabled ( bool enabled )
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
 {
   QGraphicsScene * obj = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSortCacheEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSortCacheEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1231,7 +1240,14 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
   QGraphicsScene * obj = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setStickyFocus ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setStickyFocus ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

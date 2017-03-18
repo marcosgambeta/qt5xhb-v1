@@ -337,10 +337,19 @@ void setDefaultUp ( bool )
 HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 {
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setDefaultUp ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDefaultUp ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -363,10 +372,19 @@ void setNativeMenuBar ( bool nativeMenuBar )
 HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 {
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setNativeMenuBar ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setNativeMenuBar ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -434,10 +452,19 @@ virtual void setVisible ( bool visible )
 HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
 {
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

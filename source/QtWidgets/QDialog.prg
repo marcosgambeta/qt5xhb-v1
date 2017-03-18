@@ -114,10 +114,19 @@ void setSizeGripEnabled ( bool )
 HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSizeGripEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSizeGripEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -141,10 +150,19 @@ void setModal ( bool modal )
 HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setModal ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setModal ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -183,10 +201,19 @@ void setVisible ( bool visible )
 HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

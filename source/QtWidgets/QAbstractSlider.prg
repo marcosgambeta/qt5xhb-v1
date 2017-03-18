@@ -224,7 +224,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 
   if( obj )
   {
-    obj->setInvertedAppearance ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setInvertedAppearance ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,7 +259,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 
   if( obj )
   {
-    obj->setInvertedControls ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setInvertedControls ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -295,7 +309,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 
   if( obj )
   {
-    obj->setSliderDown ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSliderDown ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -423,7 +444,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
 
   if( obj )
   {
-    obj->setTracking ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setTracking ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

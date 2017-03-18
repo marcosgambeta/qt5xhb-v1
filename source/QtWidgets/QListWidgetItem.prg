@@ -419,10 +419,19 @@ void setHidden ( bool hide )
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
 {
   QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setHidden ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setHidden ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -445,10 +454,19 @@ void setSelected ( bool select )
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
 {
   QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSelected ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSelected ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -163,10 +163,19 @@ void setWidgetResizable ( bool resizable )
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setWidgetResizable ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWidgetResizable ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -218,9 +227,17 @@ virtual bool focusNextPrevChild ( bool next )
 HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->focusNextPrevChild ( (bool) hb_parl(1) ) );
+    if( ISLOG(1) )
+    {
+      hb_retl( obj->focusNextPrevChild ( (bool) hb_parl(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

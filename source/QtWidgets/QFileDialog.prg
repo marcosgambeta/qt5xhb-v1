@@ -233,10 +233,19 @@ void setConfirmOverwrite ( bool enabled )
 HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
 {
   QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setConfirmOverwrite ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setConfirmOverwrite ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -404,10 +413,19 @@ void setNameFilterDetailsVisible ( bool enabled )
 HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
 {
   QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setNameFilterDetailsVisible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setNameFilterDetailsVisible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -430,10 +448,19 @@ void setReadOnly ( bool enabled )
 HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
 {
   QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setReadOnly ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -624,10 +651,19 @@ void setResolveSymlinks ( bool enabled )
 HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
 {
   QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setResolveSymlinks ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setResolveSymlinks ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -924,10 +960,19 @@ void setVisible ( bool visible )
 HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
 {
   QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

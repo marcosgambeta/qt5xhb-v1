@@ -188,7 +188,14 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 
   if( obj )
   {
-    obj->setNotchesVisible ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setNotchesVisible ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -203,7 +210,14 @@ HB_FUNC_STATIC( QDIAL_SETWRAPPING )
 
   if( obj )
   {
-    obj->setWrapping ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWrapping ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

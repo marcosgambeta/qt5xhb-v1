@@ -165,7 +165,14 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 
   if( obj )
   {
-    obj->setAccelerated ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAccelerated ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -280,7 +287,14 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 
   if( obj )
   {
-    obj->setFrame ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setFrame ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -308,7 +322,14 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 
   if( obj )
   {
-    obj->setKeyboardTracking ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setKeyboardTracking ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -336,7 +357,14 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setReadOnly ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -393,7 +421,14 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 
   if( obj )
   {
-    obj->setWrapping ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWrapping ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -593,10 +593,19 @@ void setWrapAround ( bool wrap )
 HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
 {
   QCompleter * obj = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setWrapAround ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setWrapAround ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

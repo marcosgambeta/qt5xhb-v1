@@ -674,10 +674,19 @@ void setAcceptRichText ( bool accept )
 HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
 {
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAcceptRichText ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAcceptRichText ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -792,10 +801,19 @@ void setOverwriteMode ( bool overwrite )
 HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
 {
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setOverwriteMode ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setOverwriteMode ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -806,10 +824,19 @@ void setReadOnly ( bool ro )
 HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
 {
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setReadOnly ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -820,10 +847,19 @@ void setTabChangesFocus ( bool b )
 HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
 {
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setTabChangesFocus ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setTabChangesFocus ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -878,10 +914,19 @@ void setUndoRedoEnabled ( bool enable )
 HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
 {
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1216,10 +1261,19 @@ void setFontItalic ( bool italic )
 HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
 {
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setFontItalic ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setFontItalic ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1245,10 +1299,19 @@ void setFontUnderline ( bool underline )
 HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
 {
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setFontUnderline ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setFontUnderline ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
