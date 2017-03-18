@@ -51,6 +51,7 @@ RETURN
 HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 {
   QTapGesture * obj = (QTapGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,6 +61,7 @@ HB_FUNC_STATIC( QTAPGESTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -69,6 +71,7 @@ QPointF position() const
 HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 {
   QTapGesture * obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->position (  ) );
@@ -76,13 +79,13 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
   }
 }
 
-
 /*
 void setPosition(const QPointF & pos)
 */
 HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
 {
   QTapGesture * obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
@@ -91,7 +94,4 @@ HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

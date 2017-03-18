@@ -53,6 +53,7 @@ RETURN
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 {
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -62,6 +63,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -71,6 +73,7 @@ QPointF position() const
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 {
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->position (  ) );
@@ -78,21 +81,21 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
   }
 }
 
-
 /*
 void setPosition(const QPointF & pos)
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
 {
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setPosition ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static void setTimeout(int msecs)
@@ -103,7 +106,6 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static int timeout()
 */
@@ -112,7 +114,4 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
   hb_retni( QTapAndHoldGesture::timeout (  ) );
 }
 
-
-
 #pragma ENDDUMP
-

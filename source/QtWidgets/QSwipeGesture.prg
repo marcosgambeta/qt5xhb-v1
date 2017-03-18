@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSwipeGesture INHERIT QGesture
 
    DATA class_id INIT Class_Id_QSwipeGesture
@@ -50,6 +49,7 @@ RETURN
 HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 {
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -59,6 +59,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -68,12 +69,12 @@ SwipeDirection horizontalDirection() const
 HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 {
   QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->horizontalDirection (  ) );
   }
 }
-
 
 /*
 void setSwipeAngle(qreal value)
@@ -81,14 +82,15 @@ void setSwipeAngle(qreal value)
 HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 {
   QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setSwipeAngle ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal swipeAngle() const
@@ -96,12 +98,12 @@ qreal swipeAngle() const
 HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 {
   QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->swipeAngle (  ) );
   }
 }
-
 
 /*
 SwipeDirection verticalDirection() const
@@ -109,13 +111,11 @@ SwipeDirection verticalDirection() const
 HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
 {
   QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->verticalDirection (  ) );
   }
 }
 
-
-
 #pragma ENDDUMP
-

@@ -71,6 +71,7 @@ RETURN
 HB_FUNC_STATIC( QPINCHGESTURE_DELETE )
 {
   QPinchGesture * obj = (QPinchGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -80,6 +81,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -89,6 +91,7 @@ QPointF centerPoint() const
 HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->centerPoint (  ) );
@@ -96,19 +99,18 @@ HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
   }
 }
 
-
 /*
 ChangeFlags changeFlags() const
 */
 HB_FUNC_STATIC( QPINCHGESTURE_CHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->changeFlags (  ) );
   }
 }
-
 
 /*
 QPointF lastCenterPoint() const
@@ -116,6 +118,7 @@ QPointF lastCenterPoint() const
 HB_FUNC_STATIC( QPINCHGESTURE_LASTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->lastCenterPoint (  ) );
@@ -123,19 +126,18 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTCENTERPOINT )
   }
 }
 
-
 /*
 qreal lastRotationAngle() const
 */
 HB_FUNC_STATIC( QPINCHGESTURE_LASTROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->lastRotationAngle (  ) );
   }
 }
-
 
 /*
 qreal lastScaleFactor() const
@@ -143,12 +145,12 @@ qreal lastScaleFactor() const
 HB_FUNC_STATIC( QPINCHGESTURE_LASTSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->lastScaleFactor (  ) );
   }
 }
-
 
 /*
 qreal rotationAngle() const
@@ -156,12 +158,12 @@ qreal rotationAngle() const
 HB_FUNC_STATIC( QPINCHGESTURE_ROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->rotationAngle (  ) );
   }
 }
-
 
 /*
 qreal scaleFactor() const
@@ -169,12 +171,12 @@ qreal scaleFactor() const
 HB_FUNC_STATIC( QPINCHGESTURE_SCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->scaleFactor (  ) );
   }
 }
-
 
 /*
 void setCenterPoint(const QPointF & value)
@@ -182,14 +184,15 @@ void setCenterPoint(const QPointF & value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setCenterPoint ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setChangeFlags(ChangeFlags value)
@@ -197,14 +200,15 @@ void setChangeFlags(ChangeFlags value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setChangeFlags (  (QPinchGesture::ChangeFlags) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLastCenterPoint(const QPointF & value)
@@ -212,14 +216,15 @@ void setLastCenterPoint(const QPointF & value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setLastCenterPoint ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLastRotationAngle(qreal value)
@@ -227,14 +232,15 @@ void setLastRotationAngle(qreal value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setLastRotationAngle ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLastScaleFactor(qreal value)
@@ -242,14 +248,15 @@ void setLastScaleFactor(qreal value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setLastScaleFactor ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRotationAngle(qreal value)
@@ -257,14 +264,15 @@ void setRotationAngle(qreal value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setRotationAngle ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setScaleFactor(qreal value)
@@ -272,14 +280,15 @@ void setScaleFactor(qreal value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setScaleFactor ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStartCenterPoint(const QPointF & value)
@@ -287,14 +296,15 @@ void setStartCenterPoint(const QPointF & value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setStartCenterPoint ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTotalChangeFlags(ChangeFlags value)
@@ -302,14 +312,15 @@ void setTotalChangeFlags(ChangeFlags value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
     obj->setTotalChangeFlags (  (QPinchGesture::ChangeFlags) par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTotalRotationAngle(qreal value)
@@ -317,14 +328,15 @@ void setTotalRotationAngle(qreal value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setTotalRotationAngle ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTotalScaleFactor(qreal value)
@@ -332,14 +344,15 @@ void setTotalScaleFactor(qreal value)
 HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setTotalScaleFactor ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPointF startCenterPoint() const
@@ -347,6 +360,7 @@ QPointF startCenterPoint() const
 HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->startCenterPoint (  ) );
@@ -354,19 +368,18 @@ HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
   }
 }
 
-
 /*
 ChangeFlags totalChangeFlags() const
 */
 HB_FUNC_STATIC( QPINCHGESTURE_TOTALCHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->totalChangeFlags (  ) );
   }
 }
-
 
 /*
 qreal totalRotationAngle() const
@@ -374,12 +387,12 @@ qreal totalRotationAngle() const
 HB_FUNC_STATIC( QPINCHGESTURE_TOTALROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->totalRotationAngle (  ) );
   }
 }
-
 
 /*
 qreal totalScaleFactor() const
@@ -387,13 +400,11 @@ qreal totalScaleFactor() const
 HB_FUNC_STATIC( QPINCHGESTURE_TOTALSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->totalScaleFactor (  ) );
   }
 }
 
-
-
 #pragma ENDDUMP
-

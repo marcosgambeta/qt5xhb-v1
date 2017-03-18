@@ -56,6 +56,7 @@ RETURN
 HB_FUNC_STATIC( QPANGESTURE_DELETE )
 {
   QPanGesture * obj = (QPanGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -65,6 +66,7 @@ HB_FUNC_STATIC( QPANGESTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -74,12 +76,12 @@ qreal acceleration() const
 HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
 {
   QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->acceleration (  ) );
   }
 }
-
 
 /*
 QPointF delta() const
@@ -87,6 +89,7 @@ QPointF delta() const
 HB_FUNC_STATIC( QPANGESTURE_DELTA )
 {
   QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->delta (  ) );
@@ -94,13 +97,13 @@ HB_FUNC_STATIC( QPANGESTURE_DELTA )
   }
 }
 
-
 /*
 QPointF lastOffset() const
 */
 HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
 {
   QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->lastOffset (  ) );
@@ -108,13 +111,13 @@ HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
   }
 }
 
-
 /*
 QPointF offset() const
 */
 HB_FUNC_STATIC( QPANGESTURE_OFFSET )
 {
   QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->offset (  ) );
@@ -122,21 +125,21 @@ HB_FUNC_STATIC( QPANGESTURE_OFFSET )
   }
 }
 
-
 /*
 void setAcceleration(qreal value)
 */
 HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
 {
   QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     qreal par1 = hb_parnd(1);
     obj->setAcceleration ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLastOffset(const QPointF & value)
@@ -144,14 +147,15 @@ void setLastOffset(const QPointF & value)
 HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
 {
   QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setLastOffset ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOffset(const QPointF & value)
@@ -159,15 +163,14 @@ void setOffset(const QPointF & value)
 HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
 {
   QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     obj->setOffset ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-
