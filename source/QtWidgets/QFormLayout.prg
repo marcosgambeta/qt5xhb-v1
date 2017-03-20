@@ -602,7 +602,14 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
 
   if( obj )
   {
-    obj->setHorizontalSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setHorizontalSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -683,7 +690,14 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
 
   if( obj )
   {
-    obj->setSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -698,7 +712,14 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
 
   if( obj )
   {
-    obj->setVerticalSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setVerticalSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -811,7 +832,14 @@ HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -883,8 +911,15 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

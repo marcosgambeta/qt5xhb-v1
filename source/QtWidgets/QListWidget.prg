@@ -355,8 +355,15 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * ptr = obj->item ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    if( ISNUM(1) )
+    {
+      QListWidgetItem * ptr = obj->item ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -383,8 +390,15 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT2 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QListWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -525,7 +539,14 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW1 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentRow ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentRow ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -538,8 +559,15 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW2 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->setCurrentRow ( (int) hb_parni(1),  (QItemSelectionModel::SelectionFlags) par2 );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      int par2 = hb_parni(2);
+      obj->setCurrentRow ( (int) hb_parni(1),  (QItemSelectionModel::SelectionFlags) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -626,8 +654,15 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * ptr = obj->takeItem ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    if( ISNUM(1) )
+    {
+      QListWidgetItem * ptr = obj->takeItem ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

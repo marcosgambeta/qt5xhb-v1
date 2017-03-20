@@ -256,7 +256,14 @@ HB_FUNC_STATIC( QTABWIDGET_SETCURRENTINDEX )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentIndex ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentIndex ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -486,7 +493,14 @@ HB_FUNC_STATIC( QTABWIDGET_ISTABENABLED )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTabEnabled ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isTabEnabled ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -498,7 +512,14 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABENABLED )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
+    if( ISNUM(1) && ISLOG(2) )
+    {
+      obj->setTabEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -512,7 +533,14 @@ HB_FUNC_STATIC( QTABWIDGET_REMOVETAB )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeTab ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->removeTab ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -526,8 +554,15 @@ HB_FUNC_STATIC( QTABWIDGET_TABICON )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->tabIcon ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    if( ISNUM(1) )
+    {
+      QIcon * ptr = new QIcon( obj->tabIcon ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -608,7 +643,14 @@ HB_FUNC_STATIC( QTABWIDGET_TABTEXT )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tabText ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->tabText ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -636,7 +678,14 @@ HB_FUNC_STATIC( QTABWIDGET_TABTOOLTIP )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tabToolTip ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->tabToolTip ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -667,7 +716,14 @@ HB_FUNC_STATIC( QTABWIDGET_TABWHATSTHIS )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tabWhatsThis ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->tabWhatsThis ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -767,8 +823,15 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUM(1) )
+    {
+      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -170,7 +170,14 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRowHidden ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isRowHidden ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -261,7 +268,14 @@ HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBatchSize ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setBatchSize ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -320,7 +334,14 @@ HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setModelColumn ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setModelColumn ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -364,7 +385,14 @@ HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRowHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+    if( ISNUM(1) && ISLOG(2) )
+    {
+      obj->setRowHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -401,7 +429,14 @@ HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -367,7 +367,14 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RELEASESHORTCUT )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->releaseShortcut ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->releaseShortcut ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -627,7 +634,14 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setShortcutAutoRepeat ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    {
+      obj->setShortcutAutoRepeat ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -641,7 +655,14 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setShortcutEnabled ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    {
+      obj->setShortcutEnabled ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

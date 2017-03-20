@@ -252,7 +252,14 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
   QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaximum ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaximum ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -278,7 +285,14 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
   QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMinimum ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMinimum ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -304,7 +318,14 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
   QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMinimumDuration ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMinimumDuration ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -391,7 +412,14 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
   QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setValue ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setValue ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -475,7 +503,14 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
   QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

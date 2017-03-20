@@ -196,10 +196,19 @@ void setAutoScrollMargin ( int margin )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN )
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAutoScrollMargin ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setAutoScrollMargin ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -601,10 +610,18 @@ QAbstractItemDelegate * itemDelegateForColumn ( int column ) const
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractItemDelegate * ptr = obj->itemDelegateForColumn ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    if( ISNUM(1) )
+    {
+      QAbstractItemDelegate * ptr = obj->itemDelegateForColumn ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -614,11 +631,20 @@ void setItemDelegateForColumn ( int column, QAbstractItemDelegate * delegate )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN )
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractItemDelegate * par2 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(2);
-    obj->setItemDelegateForColumn ( (int) hb_parni(1), par2 );
+    if( ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
+    {
+      QAbstractItemDelegate * par2 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(2);
+      obj->setItemDelegateForColumn ( (int) hb_parni(1), par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -629,10 +655,18 @@ QAbstractItemDelegate * itemDelegateForRow ( int row ) const
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractItemDelegate * ptr = obj->itemDelegateForRow ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    if( ISNUM(1) )
+    {
+      QAbstractItemDelegate * ptr = obj->itemDelegateForRow ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -642,11 +676,20 @@ void setItemDelegateForRow ( int row, QAbstractItemDelegate * delegate )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW )
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractItemDelegate * par2 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(2);
-    obj->setItemDelegateForRow ( (int) hb_parni(1), par2 );
+    if( ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
+    {
+      QAbstractItemDelegate * par2 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(2);
+      obj->setItemDelegateForRow ( (int) hb_parni(1), par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -965,9 +1008,17 @@ virtual int sizeHintForColumn ( int column ) const
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN )
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retni( obj->sizeHintForColumn ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->sizeHintForColumn ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -993,9 +1044,17 @@ virtual int sizeHintForRow ( int row ) const
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORROW )
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retni( obj->sizeHintForRow ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->sizeHintForRow ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -481,7 +481,14 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
 
   if( obj )
   {
-    hb_retni( obj->sectionAt ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->sectionAt ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -575,7 +582,14 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTIONINDEX )
 
   if( obj )
   {
-    obj->setCurrentSectionIndex ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentSectionIndex ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -855,7 +869,14 @@ HB_FUNC_STATIC( QDATETIMEEDIT_STEPBY )
 
   if( obj )
   {
-    obj->stepBy ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->stepBy ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

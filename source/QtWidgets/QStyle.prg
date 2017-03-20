@@ -542,7 +542,14 @@ static int sliderPositionFromValue ( int min, int max, int logicalValue, int spa
 */
 HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
-  hb_retni( QStyle::sliderPositionFromValue ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISLOG(5)||ISNIL(5)) )
+  {
+    hb_retni( QStyle::sliderPositionFromValue ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 
@@ -551,7 +558,14 @@ static int sliderValueFromPosition ( int min, int max, int position, int span, b
 */
 HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
-  hb_retni( QStyle::sliderValueFromPosition ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISLOG(5)||ISNIL(5)) )
+  {
+    hb_retni( QStyle::sliderValueFromPosition ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 
@@ -560,9 +574,12 @@ static Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignm
 */
 HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  hb_retni( QStyle::visualAlignment (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2 ) );
+  if( ISNUM(1) && ISNUM(2) )
+  {
+    int par1 = hb_parni(1);
+    int par2 = hb_parni(2);
+    hb_retni( QStyle::visualAlignment (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2 ) );
+  }
 }
 
 

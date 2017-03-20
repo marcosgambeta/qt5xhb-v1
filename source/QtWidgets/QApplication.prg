@@ -738,7 +738,15 @@ static void setColorSpec ( int spec )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 {
-  QApplication::setColorSpec ( (int) hb_parni(1) );
+  if( ISNUM(1) )
+  {
+    QApplication::setColorSpec ( (int) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -748,7 +756,15 @@ static void setCursorFlashTime ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 {
-  QApplication::setCursorFlashTime ( (int) hb_parni(1) );
+  if( ISNUM(1) )
+  {
+    QApplication::setCursorFlashTime ( (int) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -776,7 +792,15 @@ static void setDoubleClickInterval ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 {
-  QApplication::setDoubleClickInterval ( (int) hb_parni(1) );
+  if( ISNUM(1) )
+  {
+    QApplication::setDoubleClickInterval ( (int) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -821,7 +845,15 @@ static void setKeyboardInputInterval ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 {
-  QApplication::setKeyboardInputInterval ( (int) hb_parni(1) );
+  if( ISNUM(1) )
+  {
+    QApplication::setKeyboardInputInterval ( (int) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -884,7 +916,15 @@ static void setStartDragDistance ( int l )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 {
-  QApplication::setStartDragDistance ( (int) hb_parni(1) );
+  if( ISNUM(1) )
+  {
+    QApplication::setStartDragDistance ( (int) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -894,7 +934,15 @@ static void setStartDragTime ( int ms )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 {
-  QApplication::setStartDragTime ( (int) hb_parni(1) );
+  if( ISNUM(1) )
+  {
+    QApplication::setStartDragTime ( (int) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -944,7 +992,15 @@ static void setWheelScrollLines ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 {
-  QApplication::setWheelScrollLines ( (int) hb_parni(1) );
+  if( ISNUM(1) )
+  {
+    QApplication::setWheelScrollLines ( (int) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

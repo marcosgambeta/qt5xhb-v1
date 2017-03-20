@@ -193,7 +193,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnAlignment ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->columnAlignment ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -219,7 +226,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMAXIMUMWIDTH )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->columnMaximumWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->columnMaximumWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -232,7 +246,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMINIMUMWIDTH )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->columnMinimumWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->columnMinimumWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -245,7 +266,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNPREFERREDWIDTH )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->columnPreferredWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->columnPreferredWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -258,7 +286,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->columnSpacing ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->columnSpacing ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -271,7 +306,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnStretchFactor ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->columnStretchFactor ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -297,8 +339,15 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT1 )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -310,8 +359,15 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT2 )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -358,7 +414,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowAlignment ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->rowAlignment ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -384,7 +447,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMAXIMUMHEIGHT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rowMaximumHeight ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->rowMaximumHeight ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -397,7 +467,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMINIMUMHEIGHT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rowMinimumHeight ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->rowMinimumHeight ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -410,7 +487,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWPREFERREDHEIGHT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rowPreferredHeight ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->rowPreferredHeight ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -423,7 +507,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rowSpacing ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retnd( obj->rowSpacing ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -436,7 +527,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowStretchFactor ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->rowStretchFactor ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -555,7 +653,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSTRETCHFACTOR )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setColumnStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+       obj->setColumnStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -674,7 +779,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSTRETCHFACTOR )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRowStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setRowStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -758,7 +870,14 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_REMOVEAT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeAt ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->removeAt ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

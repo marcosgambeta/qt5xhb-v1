@@ -211,7 +211,14 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEDECIMALS )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDoubleDecimals ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setDoubleDecimals ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -345,7 +352,14 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTMAXIMUM )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIntMaximum ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setIntMaximum ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -371,7 +385,14 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTMINIMUM )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIntMinimum ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setIntMinimum ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -397,7 +418,14 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTSTEP )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIntStep ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setIntStep ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -423,7 +451,14 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIntValue ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setIntValue ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -585,7 +620,14 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTRANGE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIntRange ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setIntRange ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -682,7 +724,14 @@ HB_FUNC_STATIC( QINPUTDIALOG_DONE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->done ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->done ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

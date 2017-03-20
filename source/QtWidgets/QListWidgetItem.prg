@@ -270,8 +270,15 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
   QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->data ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->data ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -602,7 +609,14 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
   QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTextAlignment ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setTextAlignment ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

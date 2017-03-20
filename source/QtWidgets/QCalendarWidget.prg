@@ -324,7 +324,14 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDateEditAcceptDelay ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setDateEditAcceptDelay ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -567,7 +574,14 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETCURRENTPAGE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentPage ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setCurrentPage ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

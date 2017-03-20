@@ -214,7 +214,14 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSpanAngle ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSpanAngle ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -228,7 +235,14 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setStartAngle ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setStartAngle ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

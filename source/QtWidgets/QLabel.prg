@@ -334,7 +334,14 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
 
   if( obj )
   {
-    obj->setIndent ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setIndent ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -349,7 +356,14 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
 
   if( obj )
   {
-    obj->setMargin ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMargin ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -408,7 +422,14 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
 
   if( obj )
   {
-    obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -529,7 +550,14 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

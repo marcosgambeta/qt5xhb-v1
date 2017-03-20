@@ -338,7 +338,14 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORPOSITION )
 
   if( obj )
   {
-    obj->setCursorPosition ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCursorPosition ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -764,7 +771,14 @@ HB_FUNC_STATIC( QLINEEDIT_SETMAXLENGTH )
 
   if( obj )
   {
-    obj->setMaxLength ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaxLength ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -883,7 +897,14 @@ HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
 
   if( obj )
   {
-    obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

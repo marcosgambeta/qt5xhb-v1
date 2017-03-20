@@ -248,7 +248,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDefaultSectionSize ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setDefaultSectionSize ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -275,7 +282,14 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->hideSection ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->hideSection ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -326,7 +340,14 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSectionHidden ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isSectionHidden ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -387,7 +408,14 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->logicalIndex ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->logicalIndex ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -400,7 +428,14 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT1 )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->logicalIndexAt ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->logicalIndexAt ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -412,7 +447,14 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT2 )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->logicalIndexAt ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      hb_retni( obj->logicalIndexAt ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -474,7 +516,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMinimumSectionSize ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMinimumSectionSize ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -488,7 +537,14 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->moveSection ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->moveSection ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -529,7 +585,14 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->resizeSection ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->resizeSection ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -586,7 +649,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sectionPosition ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->sectionPosition ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -599,7 +669,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sectionSize ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->sectionSize ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -612,7 +689,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sectionSizeHint ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->sectionSizeHint ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -625,7 +709,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sectionViewportPosition ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->sectionViewportPosition ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -668,7 +759,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSectionHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+    if( ISNUM(1) && ISLOG(2) )
+    {
+      obj->setSectionHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -682,8 +780,15 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->setSortIndicator ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      int par2 = hb_parni(2);
+      obj->setSortIndicator ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -732,7 +837,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->showSection ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->showSection ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -786,7 +898,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->swapSections ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->swapSections ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -800,7 +919,14 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->visualIndex ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->visualIndex ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -813,7 +939,14 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->visualIndexAt ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->visualIndexAt ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -884,7 +1017,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setOffset ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setOffset ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -912,7 +1052,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setOffsetToSectionPosition ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setOffsetToSectionPosition ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

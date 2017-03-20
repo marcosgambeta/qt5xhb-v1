@@ -88,8 +88,15 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->availableGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      QRect * ptr = new QRect( obj->availableGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -180,8 +187,15 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->screen ( (int) ISNIL(1)? -1 : hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      QWidget * ptr = obj->screen ( (int) ISNIL(1)? -1 : hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -207,8 +221,15 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->screenGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      QRect * ptr = new QRect( obj->screenGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

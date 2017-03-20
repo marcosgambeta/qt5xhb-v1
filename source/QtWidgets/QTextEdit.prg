@@ -729,7 +729,14 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURSORWIDTH )
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCursorWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCursorWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -774,7 +781,14 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLineWrapColumnOrWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setLineWrapColumnOrWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -872,7 +886,14 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABSTOPWIDTH )
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabStopWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setTabStopWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1324,7 +1345,14 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontWeight ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setFontWeight ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1427,7 +1455,14 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->zoomIn ( (int) ISNIL(1)? 1 : hb_parni(1) );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      obj->zoomIn ( (int) ISNIL(1)? 1 : hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1441,7 +1476,14 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->zoomOut ( (int) ISNIL(1)? 1 : hb_parni(1) );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      obj->zoomOut ( (int) ISNIL(1)? 1 : hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

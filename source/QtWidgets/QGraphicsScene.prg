@@ -1010,7 +1010,14 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETBSPTREEDEPTH )
   QGraphicsScene * obj = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBspTreeDepth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setBspTreeDepth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

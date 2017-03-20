@@ -148,7 +148,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
 
   if( obj )
   {
-    obj->addSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->addSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -163,7 +170,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 
   if( obj )
   {
-    obj->addStretch ( (int) ISNIL(1)? 0 : hb_parni(1) );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      obj->addStretch ( (int) ISNIL(1)? 0 : hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -178,7 +192,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
 
   if( obj )
   {
-    obj->addStrut ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->addStrut ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -255,7 +276,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
 
   if( obj )
   {
-    obj->insertSpacing ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->insertSpacing ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -270,7 +298,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
 
   if( obj )
   {
-    obj->insertStretch ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      obj->insertStretch ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -318,7 +353,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
 
   if( obj )
   {
-    obj->setSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -333,7 +375,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
 
   if( obj )
   {
-    obj->setStretch ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setStretch ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -408,7 +457,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
 
   if( obj )
   {
-    hb_retni( obj->stretch ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->stretch ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -476,7 +532,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -504,8 +567,15 @@ HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -532,7 +602,14 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->minimumHeightForWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->minimumHeightForWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -589,8 +666,15 @@ HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

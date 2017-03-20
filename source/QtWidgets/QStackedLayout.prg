@@ -221,8 +221,15 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUM(1) )
+    {
+      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -235,7 +242,14 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 
   if( obj )
   {
-    obj->setCurrentIndex ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentIndex ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

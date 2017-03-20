@@ -234,7 +234,14 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFrameStyle ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setFrameStyle ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -248,7 +255,14 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLineWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setLineWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -262,7 +276,14 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMidLineWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMidLineWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

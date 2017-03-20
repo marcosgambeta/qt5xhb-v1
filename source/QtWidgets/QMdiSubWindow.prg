@@ -156,7 +156,14 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setKeyboardPageStep ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setKeyboardPageStep ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -170,7 +177,14 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setKeyboardSingleStep ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setKeyboardSingleStep ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

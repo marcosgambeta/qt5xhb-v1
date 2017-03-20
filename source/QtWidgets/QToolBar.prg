@@ -155,8 +155,15 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT1 )
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * ptr = obj->actionAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QAction * ptr = obj->actionAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      _qt5xhb_createReturnClass ( ptr, "QACTION" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

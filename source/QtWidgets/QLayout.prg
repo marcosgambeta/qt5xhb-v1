@@ -236,8 +236,15 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -484,7 +491,14 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
 
   if( obj )
   {
-    obj->setSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -525,8 +539,15 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

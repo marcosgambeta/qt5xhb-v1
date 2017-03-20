@@ -342,7 +342,14 @@ HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTabEnabled ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isTabEnabled ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -355,7 +362,14 @@ HB_FUNC_STATIC( QTABBAR_MOVETAB )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->moveTab ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->moveTab ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -369,7 +383,14 @@ HB_FUNC_STATIC( QTABBAR_REMOVETAB )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeTab ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->removeTab ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -579,7 +600,14 @@ HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
+    if( ISNUM(1) && ISLOG(2) )
+    {
+      obj->setTabEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -741,9 +769,16 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    QWidget * ptr = obj->tabButton ( (int) hb_parni(1),  (QTabBar::ButtonPosition) par2 );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      int par2 = hb_parni(2);
+      QWidget * ptr = obj->tabButton ( (int) hb_parni(1),  (QTabBar::ButtonPosition) par2 );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -756,8 +791,11 @@ HB_FUNC_STATIC( QTABBAR_TABDATA )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->tabData ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->tabData ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
   }
 }
 
@@ -770,8 +808,15 @@ HB_FUNC_STATIC( QTABBAR_TABICON )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->tabIcon ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    if( ISNUM(1) )
+    {
+      QIcon * ptr = new QIcon( obj->tabIcon ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -784,8 +829,15 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->tabRect ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    if( ISNUM(1) )
+    {
+      QRect * ptr = new QRect( obj->tabRect ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -798,7 +850,14 @@ HB_FUNC_STATIC( QTABBAR_TABTEXT )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tabText ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->tabText ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -811,8 +870,15 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor * ptr = new QColor( obj->tabTextColor ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    if( ISNUM(1) )
+    {
+      QColor * ptr = new QColor( obj->tabTextColor ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -825,7 +891,14 @@ HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tabToolTip ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->tabToolTip ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -838,7 +911,14 @@ HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tabWhatsThis ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->tabWhatsThis ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -905,7 +985,14 @@ HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentIndex ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentIndex ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

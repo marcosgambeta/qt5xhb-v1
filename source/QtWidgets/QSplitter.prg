@@ -199,8 +199,15 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSplitterHandle * ptr = obj->handle ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QSPLITTERHANDLE" );
+    if( ISNUM(1) )
+    {
+      QSplitterHandle * ptr = obj->handle ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QSPLITTERHANDLE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -255,7 +262,14 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCollapsible ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isCollapsible ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -359,7 +373,14 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCollapsible ( (int) hb_parni(1), (bool) hb_parl(2) );
+    if( ISNUM(1) && ISLOG(2) )
+    {
+      obj->setCollapsible ( (int) hb_parni(1), (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -373,7 +394,14 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setHandleWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setHandleWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -426,7 +454,14 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -441,8 +476,15 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUM(1) )
+    {
+      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

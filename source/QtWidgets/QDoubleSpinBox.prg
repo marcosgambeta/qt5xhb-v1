@@ -127,7 +127,14 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 
   if( obj )
   {
-    obj->setDecimals ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setDecimals ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

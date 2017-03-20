@@ -1359,7 +1359,14 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1937,7 +1944,14 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMHEIGHT )
 
   if( obj )
   {
-    obj->setMaximumHeight ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaximumHeight ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1965,7 +1979,14 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMWIDTH )
 
   if( obj )
   {
-    obj->setMaximumWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaximumWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1993,7 +2014,14 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMHEIGHT )
 
   if( obj )
   {
-    obj->setMinimumHeight ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMinimumHeight ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2035,7 +2063,14 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMWIDTH )
 
   if( obj )
   {
-    obj->setMinimumWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMinimumWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2276,7 +2311,14 @@ HB_FUNC_STATIC( QWIDGET_RELEASESHORTCUT )
 
   if( obj )
   {
-    obj->releaseShortcut ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->releaseShortcut ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2676,7 +2718,14 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDHEIGHT )
 
   if( obj )
   {
-    obj->setFixedHeight ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setFixedHeight ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2741,7 +2790,14 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDWIDTH )
 
   if( obj )
   {
-    obj->setFixedWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setFixedWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3083,7 +3139,14 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
 
   if( obj )
   {
-    obj->setShortcutAutoRepeat ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    {
+      obj->setShortcutAutoRepeat ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -3099,7 +3162,14 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
 
   if( obj )
   {
-    obj->setShortcutEnabled ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    {
+      obj->setShortcutEnabled ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

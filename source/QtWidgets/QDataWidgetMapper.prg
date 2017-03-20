@@ -234,8 +234,15 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->mappedWidgetAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUM(1) )
+    {
+      QWidget * ptr = obj->mappedWidgetAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -406,7 +413,14 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentIndex ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentIndex ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

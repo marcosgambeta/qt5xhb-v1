@@ -599,7 +599,14 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURSORWIDTH )
   QPlainTextEdit * obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCursorWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCursorWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -659,7 +666,14 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETMAXIMUMBLOCKCOUNT )
   QPlainTextEdit * obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaximumBlockCount ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaximumBlockCount ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -736,7 +750,14 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABSTOPWIDTH )
   QPlainTextEdit * obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabStopWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setTabStopWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

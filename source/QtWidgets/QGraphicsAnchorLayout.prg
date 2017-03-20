@@ -265,8 +265,15 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -279,7 +286,14 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeAt ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->removeAt ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

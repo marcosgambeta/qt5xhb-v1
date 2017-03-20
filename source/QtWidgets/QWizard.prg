@@ -259,7 +259,14 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
 
   if( obj )
   {
-    hb_retl( obj->hasVisitedPage ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->hasVisitedPage ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -317,8 +324,15 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
 
   if( obj )
   {
-    QWizardPage * ptr = obj->page ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
+    if( ISNUM(1) )
+    {
+      QWizardPage * ptr = obj->page ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -363,7 +377,14 @@ HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
 
   if( obj )
   {
-    obj->removePage ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->removePage ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -539,7 +560,14 @@ HB_FUNC_STATIC( QWIZARD_SETSTARTID )
 
   if( obj )
   {
-    obj->setStartId ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setStartId ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

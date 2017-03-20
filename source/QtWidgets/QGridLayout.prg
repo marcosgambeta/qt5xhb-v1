@@ -272,8 +272,15 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->cellRect ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QRect * ptr = new QRect( obj->cellRect ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -299,7 +306,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->columnMinimumWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->columnMinimumWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -312,7 +326,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
 
   if( obj )
   {
-    hb_retni( obj->columnStretch ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->columnStretch ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -361,8 +382,15 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->itemAtPosition ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QLayoutItem * ptr = obj->itemAtPosition ( (int) hb_parni(1), (int) hb_parni(2) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -401,7 +429,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->rowMinimumHeight ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->rowMinimumHeight ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -414,7 +449,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
 
   if( obj )
   {
-    hb_retni( obj->rowStretch ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->rowStretch ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -427,7 +469,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 
   if( obj )
   {
-    obj->setColumnMinimumWidth ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setColumnMinimumWidth ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -442,7 +491,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
 
   if( obj )
   {
-    obj->setColumnStretch ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setColumnStretch ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -457,7 +513,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
 
   if( obj )
   {
-    obj->setHorizontalSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setHorizontalSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -488,7 +551,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 
   if( obj )
   {
-    obj->setRowMinimumHeight ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setRowMinimumHeight ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -503,7 +573,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
 
   if( obj )
   {
-    obj->setRowStretch ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setRowStretch ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -518,7 +595,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
 
   if( obj )
   {
-    obj->setSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -533,7 +617,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 
   if( obj )
   {
-    obj->setVerticalSpacing ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setVerticalSpacing ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -613,7 +704,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -641,8 +739,15 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -669,7 +774,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->minimumHeightForWidth ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->minimumHeightForWidth ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -726,8 +838,15 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
 
   if( obj )
   {
-    QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    if( ISNUM(1) )
+    {
+      QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

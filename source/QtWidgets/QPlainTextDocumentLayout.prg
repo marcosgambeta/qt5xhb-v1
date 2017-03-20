@@ -133,7 +133,14 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCursorWidth ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCursorWidth ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

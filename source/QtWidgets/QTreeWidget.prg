@@ -321,8 +321,15 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT2 )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QTreeWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -415,7 +422,14 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setColumnCount ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setColumnCount ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -594,8 +608,15 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->sortItems ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      int par2 = hb_parni(2);
+      obj->sortItems ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -609,8 +630,15 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->takeTopLevelItem ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    if( ISNUM(1) )
+    {
+      QTreeWidgetItem * ptr = obj->takeTopLevelItem ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -623,8 +651,15 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->topLevelItem ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    if( ISNUM(1) )
+    {
+      QTreeWidgetItem * ptr = obj->topLevelItem ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

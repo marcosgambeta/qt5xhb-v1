@@ -111,7 +111,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 
   if( obj )
   {
-    obj->setMaximum ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaximum ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,7 +146,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 
   if( obj )
   {
-    obj->setMinimum ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMinimum ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -196,7 +210,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 
   if( obj )
   {
-    obj->setPageStep ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setPageStep ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -281,7 +302,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 
   if( obj )
   {
-    obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -344,7 +372,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 
   if( obj )
   {
-    obj->setSingleStep ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSingleStep ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -372,7 +407,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 
   if( obj )
   {
-    obj->setSliderPosition ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setSliderPosition ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -416,7 +458,14 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
 
   if( obj )
   {
-    obj->setValue ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setValue ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

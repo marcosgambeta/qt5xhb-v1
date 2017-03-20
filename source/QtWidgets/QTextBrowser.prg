@@ -149,7 +149,14 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->historyTitle ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->historyTitle ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -162,8 +169,15 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->historyUrl ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUM(1) )
+    {
+      QUrl * ptr = new QUrl( obj->historyUrl ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

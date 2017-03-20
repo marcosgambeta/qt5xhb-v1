@@ -189,7 +189,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 
   if( obj )
   {
-    obj->setAutoRepeatDelay ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setAutoRepeatDelay ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -218,7 +225,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 
   if( obj )
   {
-    obj->setAutoRepeatInterval ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setAutoRepeatInterval ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -476,7 +490,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 
   if( obj )
   {
-    obj->animateClick ( (int) ISNIL(1)? 100 : hb_parni(1) );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      obj->animateClick ( (int) ISNIL(1)? 100 : hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

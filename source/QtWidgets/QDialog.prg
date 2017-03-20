@@ -175,7 +175,14 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setResult ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setResult ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -254,7 +261,14 @@ HB_FUNC_STATIC( QDIALOG_DONE )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->done ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->done ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

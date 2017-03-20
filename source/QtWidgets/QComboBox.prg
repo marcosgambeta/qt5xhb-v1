@@ -459,7 +459,14 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->insertSeparator ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->insertSeparator ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -484,10 +491,18 @@ QVariant itemData ( int index, int role = Qt::UserRole ) const
 HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->itemData ( (int) hb_parni(1), (int) ISNIL(2)? Qt::UserRole : hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      QVariant * ptr = new QVariant( obj->itemData ( (int) hb_parni(1), (int) ISNIL(2)? Qt::UserRole : hb_parni(2) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -514,8 +529,15 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->itemIcon ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    if( ISNUM(1) )
+    {
+      QIcon * ptr = new QIcon( obj->itemIcon ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -528,7 +550,14 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->itemText ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->itemText ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -621,7 +650,14 @@ HB_FUNC_STATIC( QCOMBOBOX_REMOVEITEM )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeItem ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->removeItem ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -836,7 +872,14 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXCOUNT )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaxCount ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaxCount ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -850,7 +893,14 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXVISIBLEITEMS )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaxVisibleItems ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaxVisibleItems ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -864,7 +914,14 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMINIMUMCONTENTSLENGTH )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMinimumContentsLength ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMinimumContentsLength ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -893,7 +950,14 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMODELCOLUMN )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setModelColumn ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setModelColumn ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1092,7 +1156,14 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCURRENTINDEX )
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentIndex ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentIndex ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
