@@ -358,24 +358,6 @@ CINCLUDES += -I$(HB_INC_DIR)
 # pasta do moc
 MOC = $(QTDIR)\bin\moc
 
-# OBJECTS
-OBJECTS =
-OBJECTS += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/dummy$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/qtdefs$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
-OBJECTS += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
-
 # include mak/*.mak
 ifeq ($(MODULE_ACTIVEQT),yes)
    include mak/QAxContainer.mak
@@ -470,6 +452,23 @@ endif
 ifeq ($(MODULE_QTXMLPATTERNS),yes)
    include mak/QtXmlPatterns.mak
 endif
+
+# OBJECTS
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/dummy$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qtdefs$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
+OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
+OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
 
 # ALLLIBS
 ALLLIBS =
@@ -575,7 +574,7 @@ $(QT5XHB_LIB_DIR)/hbqaxserver5$(LIBEXT)           : $(OBJECTS_QAXSERVER)
 	link /lib /out:$@ $^
 $(QT5XHB_LIB_DIR)/hbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
 	link /lib /out:$@ $^
-$(QT5XHB_LIB_DIR)/hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE) $(OBJECTS)
+$(QT5XHB_LIB_DIR)/hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
 	link /lib /out:$@ $^
 $(QT5XHB_LIB_DIR)/hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
 	link /lib /out:$@ $^
