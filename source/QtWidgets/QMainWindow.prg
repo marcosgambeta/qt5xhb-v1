@@ -70,6 +70,7 @@ CLASS QMainWindow INHERIT QWidget
    METHOD toolButtonStyle
    METHOD setAnimated
    METHOD setDockNestingEnabled
+   METHOD takeCentralWidget
    METHOD onIconSizeChanged
    METHOD onToolButtonStyleChanged
    DESTRUCTOR destroyObject
@@ -1067,6 +1068,22 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QWidget * takeCentralWidget ()
+*/
+HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    QWidget * ptr = obj->takeCentralWidget (  );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+  }
+#endif
 }
 
 #pragma ENDDUMP
