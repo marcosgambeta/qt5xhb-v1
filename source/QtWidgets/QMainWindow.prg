@@ -788,9 +788,9 @@ HB_FUNC_STATIC( QMAINWINDOW_SETSTATUSBAR )
 
   if( obj )
   {
-    if( ISQSTATUSBAR(1) )
+    if( (ISQSTATUSBAR(1)||ISNIL(1)) )
     {
-      QStatusBar * par1 = (QStatusBar *) _qt5xhb_itemGetPtr(1);
+      QStatusBar * par1 = ISNIL(1)? 0 : (QStatusBar *) _qt5xhb_itemGetPtr(1);
       obj->setStatusBar ( par1 );
     }
     else
