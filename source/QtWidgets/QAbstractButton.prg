@@ -261,8 +261,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
+    if( (ISQICON(1)||ISCHAR(1)) )
+    {
+      QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
+      obj->setIcon ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -291,8 +298,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setIconSize ( *par1 );
+    if( ISQSIZE(1) )
+    {
+      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
+      obj->setIconSize ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -426,12 +440,20 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 {
 #ifndef QT_NO_SHORTCUT
   QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
 
+  if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-    obj->setShortcut ( *par1 );
+    if( ISQKEYSEQUENCE(1) )
+    {
+      QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
+      obj->setShortcut ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -458,8 +480,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setText ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setText ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

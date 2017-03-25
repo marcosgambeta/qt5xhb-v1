@@ -172,8 +172,15 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setArrowType (  (Qt::ArrowType) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setArrowType (  (Qt::ArrowType) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -211,8 +218,15 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
 
   if( obj )
   {
-    QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-    obj->setMenu ( par1 );
+    if( ISQMENU(1) )
+    {
+      QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
+      obj->setMenu ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -229,8 +243,15 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPopupMode (  (QToolButton::ToolButtonPopupMode) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setPopupMode (  (QToolButton::ToolButtonPopupMode) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -287,8 +308,15 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->setDefaultAction ( par1 );
+    if( ISQACTION(1) )
+    {
+      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
+      obj->setDefaultAction ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -303,8 +331,15 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setToolButtonStyle (  (Qt::ToolButtonStyle) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setToolButtonStyle (  (Qt::ToolButtonStyle) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

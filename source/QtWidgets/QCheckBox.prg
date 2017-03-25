@@ -146,8 +146,15 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCheckState (  (Qt::CheckState) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setCheckState (  (Qt::CheckState) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -280,8 +280,15 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETMENU )
 
   if( obj )
   {
-    QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-    obj->setMenu ( par1 );
+    if( ISQMENU(1) )
+    {
+      QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
+      obj->setMenu ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
