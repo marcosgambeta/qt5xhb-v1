@@ -21,8 +21,6 @@ CLASS QGraphicsPolygonItem INHERIT QAbstractGraphicsShapeItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD fillRule
@@ -65,7 +63,7 @@ RETURN
 /*
 QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW1 )
+void QGraphicsPolygonItem_new1 ()
 {
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( par1 );
@@ -75,14 +73,13 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW1 )
 /*
 QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW2 )
+void QGraphicsPolygonItem_new2 ()
 {
   QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( *par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
@@ -91,11 +88,11 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPOLYGONITEM_NEW1 );
+    QGraphicsPolygonItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPOLYGONITEM_NEW2 );
+    QGraphicsPolygonItem_new2();
   }
   else
   {
@@ -106,6 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -115,6 +113,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -124,12 +123,12 @@ Qt::FillRule fillRule () const
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->fillRule (  ) );
   }
 }
-
 
 /*
 QPolygonF polygon () const
@@ -137,6 +136,7 @@ QPolygonF polygon () const
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPolygonF * ptr = new QPolygonF( obj->polygon (  ) );
@@ -144,21 +144,28 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
   }
 }
 
-
 /*
 void setFillRule ( Qt::FillRule rule )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFillRule (  (Qt::FillRule) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setFillRule (  (Qt::FillRule) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPolygon ( const QPolygonF & polygon )
@@ -166,14 +173,22 @@ void setPolygon ( const QPolygonF & polygon )
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-    obj->setPolygon ( *par1 );
+    if( ISQPOLYGONF(1) )
+    {
+      QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
+      obj->setPolygon ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QRectF boundingRect () const
@@ -181,6 +196,7 @@ virtual QRectF boundingRect () const
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
@@ -188,20 +204,26 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1 ) );
+    if( ISQPOINTF(1) )
+    {
+      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->contains ( *par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -209,13 +231,20 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isObscuredBy ( par1 ) );
+    if( ISQGRAPHICSITEM(1) )
+    {
+      const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->isObscuredBy ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QPainterPath opaqueArea () const
@@ -223,6 +252,7 @@ virtual QPainterPath opaqueArea () const
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
@@ -230,23 +260,30 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
   }
 }
 
-
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->paint ( par1, par2, par3 );
+    if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+    {
+      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
+      const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
+      QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
+      obj->paint ( par1, par2, par3 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QPainterPath shape () const
@@ -254,6 +291,7 @@ virtual QPainterPath shape () const
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
@@ -261,20 +299,17 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
   }
 }
 
-
 /*
 virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->type (  ) );
   }
 }
 
-
-
 #pragma ENDDUMP
-
