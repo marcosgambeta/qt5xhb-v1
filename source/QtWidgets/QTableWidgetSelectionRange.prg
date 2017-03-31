@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTableWidgetSelectionRange
 
    DATA pointer
@@ -17,9 +16,6 @@ CLASS QTableWidgetSelectionRange
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD bottomRow
@@ -62,7 +58,7 @@ RETURN
 /*
 QTableWidgetSelectionRange()
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
+void QTableWidgetSelectionRange_new1 ()
 {
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange (  );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -71,7 +67,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
 /*
 QTableWidgetSelectionRange(int top, int left, int bottom, int right)
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
+void QTableWidgetSelectionRange_new2 ()
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -84,13 +80,12 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
 /*
 QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
+void QTableWidgetSelectionRange_new3 ()
 {
   QTableWidgetSelectionRange * par1 = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtr(1);
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QTableWidgetSelectionRange()
 //[2]QTableWidgetSelectionRange(int top, int left, int bottom, int right)
@@ -100,15 +95,15 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETSELECTIONRANGE_NEW1 );
+    QTableWidgetSelectionRange_new1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETSELECTIONRANGE_NEW2 );
+    QTableWidgetSelectionRange_new2();
   }
   else if( ISNUMPAR(1) && ISQTABLEWIDGETSELECTIONRANGE(1) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETSELECTIONRANGE_NEW3 );
+    QTableWidgetSelectionRange_new3();
   }
   else
   {
@@ -119,6 +114,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -128,6 +124,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -137,12 +134,12 @@ int bottomRow() const
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->bottomRow (  ) );
   }
 }
-
 
 /*
 int columnCount() const
@@ -150,12 +147,12 @@ int columnCount() const
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->columnCount (  ) );
   }
 }
-
 
 /*
 int leftColumn() const
@@ -163,12 +160,12 @@ int leftColumn() const
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->leftColumn (  ) );
   }
 }
-
 
 /*
 int rightColumn() const
@@ -176,12 +173,12 @@ int rightColumn() const
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->rightColumn (  ) );
   }
 }
-
 
 /*
 int rowCount() const
@@ -189,12 +186,12 @@ int rowCount() const
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->rowCount (  ) );
   }
 }
-
 
 /*
 int topRow() const
@@ -202,17 +199,17 @@ int topRow() const
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->topRow (  ) );
   }
 }
 
-
-
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -231,6 +228,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -252,14 +250,15 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

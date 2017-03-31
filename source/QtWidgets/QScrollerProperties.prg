@@ -20,8 +20,6 @@ CLASS QScrollerProperties
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD scrollMetric
@@ -62,7 +60,7 @@ RETURN
 /*
 QScrollerProperties()
 */
-HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW1 )
+void QScrollerProperties_new1 ()
 {
   QScrollerProperties * o = new QScrollerProperties (  );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -71,13 +69,12 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW1 )
 /*
 QScrollerProperties(const QScrollerProperties & sp)
 */
-HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW2 )
+void QScrollerProperties_new2 ()
 {
   QScrollerProperties * par1 = (QScrollerProperties *) _qt5xhb_itemGetPtr(1);
   QScrollerProperties * o = new QScrollerProperties ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QScrollerProperties()
 //[2]QScrollerProperties(const QScrollerProperties & sp)
@@ -86,11 +83,11 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSCROLLERPROPERTIES_NEW1 );
+    QScrollerProperties_new1();
   }
   else if( ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1) )
   {
-    HB_FUNC_EXEC( QSCROLLERPROPERTIES_NEW2 );
+    QScrollerProperties_new2();
   }
   else
   {
@@ -101,6 +98,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_DELETE )
 {
   QScrollerProperties * obj = (QScrollerProperties *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -110,6 +108,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -119,11 +118,19 @@ QVariant scrollMetric(ScrollMetric metric) const
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
 {
   QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->scrollMetric (  (QScrollerProperties::ScrollMetric) par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      QVariant * ptr = new QVariant( obj->scrollMetric (  (QScrollerProperties::ScrollMetric) par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -133,15 +140,23 @@ void setScrollMetric(ScrollMetric metric, const QVariant & value)
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
 {
   QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setScrollMetric (  (QScrollerProperties::ScrollMetric) par1, *par2 );
+    if( ISNUM(1) && ISQVARIANT(2) )
+    {
+      int par1 = hb_parni(1);
+      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
+      obj->setScrollMetric (  (QScrollerProperties::ScrollMetric) par1, *par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDefaultScrollerProperties(const QScrollerProperties & sp)
@@ -149,14 +164,22 @@ void setDefaultScrollerProperties(const QScrollerProperties & sp)
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES )
 {
   QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QScrollerProperties * par1 = (QScrollerProperties *) _qt5xhb_itemGetPtr(1);
-    obj->setDefaultScrollerProperties ( *par1 );
+    if( ISQSCROLLERPROPERTIES(1) )
+    {
+      QScrollerProperties * par1 = (QScrollerProperties *) _qt5xhb_itemGetPtr(1);
+      obj->setDefaultScrollerProperties ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void unsetDefaultScrollerProperties()
@@ -164,18 +187,19 @@ void unsetDefaultScrollerProperties()
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES )
 {
   QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->unsetDefaultScrollerProperties (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -194,6 +218,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -215,14 +240,15 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SELFDESTRUCTION )
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
