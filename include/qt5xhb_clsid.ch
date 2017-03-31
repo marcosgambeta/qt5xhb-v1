@@ -968,3 +968,5 @@
 #define Class_Id_QXmlStreamNotationDeclaration                       960
 #define Class_Id_QXmlStreamReader                                    961
 #define Class_Id_QXmlStreamWriter                                    962
+#define Class_Id_QStyleOptionGraphicsItem                            963
+#define Class_Id_QStyleOptionComplex                                 964

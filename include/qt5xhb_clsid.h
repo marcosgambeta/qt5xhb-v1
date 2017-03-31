@@ -968,6 +968,8 @@
 #define Class_Id_QXmlStreamNotationDeclaration                       960
 #define Class_Id_QXmlStreamReader                                    961
 #define Class_Id_QXmlStreamWriter                                    962
+#define Class_Id_QStyleOptionGraphicsItem                            963
+#define Class_Id_QStyleOptionComplex                                 964
 
 #define ISQABSTRACTANIMATION(n)                             _qt5xhb_inherits(n,"QAbstractAnimation")
 #define ISQABSTRACTAUDIODEVICEINFO(n)                       _qt5xhb_checkclsid(n,Class_Id_QAbstractAudioDeviceInfo)
@@ -1742,6 +1744,8 @@
 #define ISQSTYLEHINTRETURNVARIANT(n)                        _qt5xhb_checkclsid(n,Class_Id_QStyleHintReturnVariant)
 #define ISQSTYLEHINTS(n)                                    _qt5xhb_checkclsid(n,Class_Id_QStyleHints)
 #define ISQSTYLEOPTION(n)                                   _qt5xhb_checkclsid(n,Class_Id_QStyleOption)
+#define ISQSTYLEOPTIONCOMPLEX(n)                            _qt5xhb_checkclsid(n,Class_Id_QStyleOptionComplex)
+#define ISQSTYLEOPTIONGRAPHICSITEM(n)                       _qt5xhb_checkclsid(n,Class_Id_QStyleOptionGraphicsItem)
 #define ISQSTYLEOPTIONVIEWITEM(n)                           _qt5xhb_checkclsid(n,Class_Id_QStyleOptionViewItem)
 #define ISQSTYLEPLUGIN(n)                                   _qt5xhb_inherits(n,"QStylePlugin")
 #define ISQSURFACE(n)                                       _qt5xhb_checkclsid(n,Class_Id_QSurface)
