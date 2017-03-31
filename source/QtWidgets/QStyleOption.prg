@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QStyleOption
 
    DATA pointer
@@ -17,8 +16,6 @@ CLASS QStyleOption
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD init
@@ -57,7 +54,7 @@ RETURN
 /*
 QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 */
-HB_FUNC_STATIC( QSTYLEOPTION_NEW1 )
+void QStyleOption_new1 ()
 {
   int par1 = ISNIL(1)? QStyleOption::Version : hb_parni(1);
   int par2 = ISNIL(2)? QStyleOption::SO_Default : hb_parni(2);
@@ -68,13 +65,12 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW1 )
 /*
 QStyleOption(const QStyleOption &other)
 */
-HB_FUNC_STATIC( QSTYLEOPTION_NEW2 )
+void QStyleOption_new2 ()
 {
   QStyleOption * par1 = (QStyleOption *) _qt5xhb_itemGetPtr(1);
   QStyleOption * o = new QStyleOption ( *par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 //[2]QStyleOption(const QStyleOption &other)
@@ -83,11 +79,11 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 {
   if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSTYLEOPTION_NEW1 );
+    QStyleOption_new1();
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTION(1) )
   {
-    HB_FUNC_EXEC( QSTYLEOPTION_NEW2 );
+    QStyleOption_new2();
   }
   else
   {
@@ -98,6 +94,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 {
   QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -107,6 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -116,14 +114,22 @@ void init(const QWidget *w)
 HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 {
   QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->init ( par1 );
+    if( ISQWIDGET(1) )
+    {
+      const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
+      obj->init ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void initFrom(const QWidget *w)
@@ -131,19 +137,27 @@ void initFrom(const QWidget *w)
 HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 {
   QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->initFrom ( par1 );
+    if( ISQWIDGET(1) )
+    {
+      const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
+      obj->initFrom ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QSTYLEOPTION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -162,6 +176,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -183,14 +198,15 @@ HB_FUNC_STATIC( QSTYLEOPTION_SELFDESTRUCTION )
 HB_FUNC_STATIC( QSTYLEOPTION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

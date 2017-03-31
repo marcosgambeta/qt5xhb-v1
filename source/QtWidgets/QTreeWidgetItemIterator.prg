@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTreeWidgetItemIterator
 
    DATA pointer
@@ -17,9 +16,6 @@ CLASS QTreeWidgetItemIterator
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD newFrom
@@ -56,7 +52,7 @@ RETURN
 /*
 QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
 */
-HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW1 )
+void QTreeWidgetItemIterator_new1 ()
 {
   QTreeWidgetItemIterator * par1 = (QTreeWidgetItemIterator *) _qt5xhb_itemGetPtr(1);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( *par1 );
@@ -66,7 +62,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW1 )
 /*
 QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
 */
-HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
+void QTreeWidgetItemIterator_new2 ()
 {
   QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
@@ -77,14 +73,13 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
 /*
 QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
 */
-HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW3 )
+void QTreeWidgetItemIterator_new3 ()
 {
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( par1,  (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
 //[2]QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
@@ -94,15 +89,15 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 {
   if( ISNUMPAR(1) && ISQTREEWIDGETITEMITERATOR(1) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEMITERATOR_NEW1 );
+    QTreeWidgetItemIterator_new1();
   }
   else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEMITERATOR_NEW2 );
+    QTreeWidgetItemIterator_new2();
   }
   else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEMITERATOR_NEW3 );
+    QTreeWidgetItemIterator_new3();
   }
   else
   {
@@ -113,6 +108,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
 {
   QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -122,14 +118,14 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -148,6 +144,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -169,14 +166,15 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

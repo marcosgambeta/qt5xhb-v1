@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTileRules
 
    DATA pointer
@@ -17,8 +16,6 @@ CLASS QTileRules
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD newFrom
@@ -55,7 +52,7 @@ RETURN
 /*
 QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 */
-HB_FUNC_STATIC( QTILERULES_NEW1 )
+void QTileRules_new1 ()
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -66,26 +63,25 @@ HB_FUNC_STATIC( QTILERULES_NEW1 )
 /*
 QTileRules(Qt::TileRule rule = Qt::StretchTile)
 */
-HB_FUNC_STATIC( QTILERULES_NEW2 )
+void QTileRules_new2 ()
 {
   int par1 = ISNIL(1)? (int) Qt::StretchTile : hb_parni(1);
   QTileRules * o = new QTileRules (  (Qt::TileRule) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 //[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 //[2]QTileRules(Qt::TileRule rule = Qt::StretchTile)
 
 HB_FUNC_STATIC( QTILERULES_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTILERULES_NEW1 );
+    QTileRules_new1();
   }
   else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QTILERULES_NEW2 );
+    QTileRules_new2();
   }
   else
   {
@@ -96,6 +92,7 @@ HB_FUNC_STATIC( QTILERULES_NEW )
 HB_FUNC_STATIC( QTILERULES_DELETE )
 {
   QTileRules * obj = (QTileRules *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -105,13 +102,14 @@ HB_FUNC_STATIC( QTILERULES_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QTILERULES_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -130,6 +128,7 @@ HB_FUNC_STATIC( QTILERULES_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -151,14 +150,15 @@ HB_FUNC_STATIC( QTILERULES_SELFDESTRUCTION )
 HB_FUNC_STATIC( QTILERULES_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
