@@ -21,9 +21,6 @@ CLASS QUndoView INHERIT QWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD cleanIcon
@@ -63,7 +60,7 @@ RETURN
 /*
 QUndoView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOVIEW_NEW1 )
+void QUndoView_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QUndoView * o = new QUndoView ( par1 );
@@ -73,7 +70,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW1 )
 /*
 QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOVIEW_NEW2 )
+void QUndoView_new2 ()
 {
   QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -84,14 +81,13 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW2 )
 /*
 QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOVIEW_NEW3 )
+void QUndoView_new3 ()
 {
   QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QUndoView * o = new QUndoView ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QUndoView ( QWidget * parent = 0 )
 //[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
@@ -101,15 +97,15 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QUNDOVIEW_NEW1 );
+    QUndoView_new1();
   }
   else if( ISBETWEEN(1,2) && ISQUNDOSTACK(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QUNDOVIEW_NEW2 );
+    QUndoView_new2();
   }
   else if( ISBETWEEN(1,2) && ISQUNDOGROUP(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QUNDOVIEW_NEW3 );
+    QUndoView_new3();
   }
   else
   {
@@ -120,6 +116,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 {
   QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -129,6 +126,7 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -138,6 +136,7 @@ QIcon cleanIcon () const
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->cleanIcon (  ) );
@@ -145,19 +144,18 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
   }
 }
 
-
 /*
 QString emptyLabel () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->emptyLabel (  ).toLatin1().data() );
   }
 }
-
 
 /*
 QUndoGroup * group () const
@@ -165,6 +163,7 @@ QUndoGroup * group () const
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QUndoGroup * ptr = obj->group (  );
@@ -172,21 +171,28 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
   }
 }
 
-
 /*
 void setCleanIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    obj->setCleanIcon ( par1 );
+    if( (ISQICON(1)||ISCHAR(1)) )
+    {
+      QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
+      obj->setCleanIcon ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEmptyLabel ( const QString & label )
@@ -194,14 +200,22 @@ void setEmptyLabel ( const QString & label )
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setEmptyLabel ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setEmptyLabel ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QUndoStack * stack () const
@@ -209,6 +223,7 @@ QUndoStack * stack () const
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QUndoStack * ptr = obj->stack (  );
@@ -216,21 +231,28 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
   }
 }
 
-
 /*
 void setGroup ( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
-    obj->setGroup ( par1 );
+    if( ISQUNDOGROUP(1) )
+    {
+      QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
+      obj->setGroup ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStack ( QUndoStack * stack )
@@ -238,15 +260,21 @@ void setStack ( QUndoStack * stack )
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {
   QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
-    obj->setStack ( par1 );
+    if( ISQUNDOSTACK(1) )
+    {
+      QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
+      obj->setStack ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-
