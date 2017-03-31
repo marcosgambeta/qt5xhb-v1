@@ -19,8 +19,6 @@ CLASS QSplashScreen INHERIT QWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD finish
@@ -59,7 +57,7 @@ RETURN
 /*
 QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_NEW1 )
+void QSplashScreen_new1 ()
 {
   QPixmap par1 = ISNIL(1)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
@@ -70,7 +68,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW1 )
 /*
 QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_NEW2 )
+void QSplashScreen_new2 ()
 {
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QPixmap par2 = ISNIL(2)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(2);
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW2 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 //[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 
@@ -87,11 +84,11 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSPLASHSCREEN_NEW1 );
+    QSplashScreen_new1();
   }
   else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSPLASHSCREEN_NEW2 );
+    QSplashScreen_new2();
   }
   else
   {
@@ -102,6 +99,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -111,6 +109,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -120,14 +119,22 @@ void finish ( QWidget * mainWin )
 HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
   QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->finish ( par1 );
+    if( ISQWIDGET(1) )
+    {
+      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+      obj->finish ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QPixmap pixmap () const
@@ -135,6 +142,7 @@ const QPixmap pixmap () const
 HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
   QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
@@ -148,14 +156,22 @@ void setPixmap ( const QPixmap & pixmap )
 HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {
   QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-    obj->setPixmap ( *par1 );
+    if( ISQPIXMAP(1) )
+    {
+      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
+      obj->setPixmap ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void repaint ()
@@ -163,13 +179,14 @@ void repaint ()
 HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
   QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->repaint (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMessage ()
@@ -177,13 +194,14 @@ void clearMessage ()
 HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {
   QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearMessage (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
@@ -191,17 +209,22 @@ void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const
 HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {
   QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QColor par3 = ISNIL(3)? Qt::black : ISOBJECT(3)? *(QColor *) _qt5xhb_itemGetPtr(3) : QColor(hb_parc(3));
-    obj->showMessage ( par1, (int) ISNIL(2)? Qt::AlignLeft : hb_parni(2), par3 );
+    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISQCOLOR(3)||ISCHAR(3)||ISNIL(3)) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QColor par3 = ISNIL(3)? Qt::black : ISOBJECT(3)? *(QColor *) _qt5xhb_itemGetPtr(3) : QColor(hb_parc(3));
+      obj->showMessage ( par1, (int) ISNIL(2)? Qt::AlignLeft : hb_parni(2), par3 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-
