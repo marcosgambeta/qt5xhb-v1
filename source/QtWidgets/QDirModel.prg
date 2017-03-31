@@ -23,12 +23,8 @@ CLASS QDirModel INHERIT QAbstractItemModel
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
-   METHOD index1
-   METHOD index2
    METHOD index
    METHOD parent
    METHOD rowCount
@@ -93,17 +89,17 @@ RETURN
 /*
 QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QDIRMODEL_NEW1 )
+void QDirModel_new1 ()
 {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+  QStringList par1;
+  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aStrings1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    par1 << temp;
+  }
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
@@ -114,13 +110,12 @@ par1 << temp;
 /*
 QDirModel(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QDIRMODEL_NEW2 )
+void QDirModel_new2 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDirModel * o = new QDirModel ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
 //[2]QDirModel(QObject *parent = 0)
@@ -129,11 +124,11 @@ HB_FUNC_STATIC( QDIRMODEL_NEW )
 {
   if( ISBETWEEN(3,4) && ISARRAY(1) && ISNUM(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QDIRMODEL_NEW1 );
+    QDirModel_new1();
   }
   else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDIRMODEL_NEW2 );
+    QDirModel_new2();
   }
   else
   {
@@ -144,6 +139,7 @@ HB_FUNC_STATIC( QDIRMODEL_NEW )
 HB_FUNC_STATIC( QDIRMODEL_DELETE )
 {
   QDirModel * obj = (QDirModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -153,15 +149,17 @@ HB_FUNC_STATIC( QDIRMODEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QDIRMODEL_INDEX1 )
+void QDirModel_index1 ()
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
@@ -173,9 +171,10 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX1 )
 /*
 QModelIndex index(const QString &path, int column = 0) const
 */
-HB_FUNC_STATIC( QDIRMODEL_INDEX2 )
+void QDirModel_index2 ()
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -184,7 +183,6 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX2 )
   }
 }
 
-
 //[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 //[2]QModelIndex index(const QString &path, int column = 0) const
 
@@ -192,11 +190,11 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDIRMODEL_INDEX1 );
+    QDirModel_index1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDIRMODEL_INDEX2 );
+    QDirModel_index2();
   }
   else
   {
@@ -210,14 +208,21 @@ QModelIndex parent(const QModelIndex &child) const
 HB_FUNC_STATIC( QDIRMODEL_PARENT )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 int rowCount(const QModelIndex &parent = QModelIndex()) const
@@ -225,13 +230,20 @@ int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC( QDIRMODEL_ROWCOUNT )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->rowCount ( par1 ) );
+    if( (ISQMODELINDEX(1)||ISNIL(1)) )
+    {
+      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retni( obj->rowCount ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 int columnCount(const QModelIndex &parent = QModelIndex()) const
@@ -239,13 +251,20 @@ int columnCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC( QDIRMODEL_COLUMNCOUNT )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->columnCount ( par1 ) );
+    if( (ISQMODELINDEX(1)||ISNIL(1)) )
+    {
+      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retni( obj->columnCount ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
@@ -253,14 +272,21 @@ QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC( QDIRMODEL_DATA )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
@@ -268,14 +294,21 @@ bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::Edi
 HB_FUNC_STATIC( QDIRMODEL_SETDATA )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+    if( ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
+      hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
@@ -283,14 +316,21 @@ QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::Dis
 HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par2 = hb_parni(2);
-    QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+    {
+      int par2 = hb_parni(2);
+      QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool hasChildren(const QModelIndex &index = QModelIndex()) const
@@ -298,13 +338,20 @@ bool hasChildren(const QModelIndex &index = QModelIndex()) const
 HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->hasChildren ( par1 ) );
+    if( (ISQMODELINDEX(1)||ISNIL(1)) )
+    {
+      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->hasChildren ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 Qt::ItemFlags flags(const QModelIndex &index) const
@@ -312,13 +359,20 @@ Qt::ItemFlags flags(const QModelIndex &index) const
 HB_FUNC_STATIC( QDIRMODEL_FLAGS )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->flags ( *par1 ) );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retni( obj->flags ( *par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
@@ -326,14 +380,22 @@ void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 HB_FUNC_STATIC( QDIRMODEL_SORT )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
+      obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList mimeTypes() const
@@ -341,6 +403,7 @@ QStringList mimeTypes() const
 HB_FUNC_STATIC( QDIRMODEL_MIMETYPES )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->mimeTypes (  );
@@ -348,21 +411,18 @@ HB_FUNC_STATIC( QDIRMODEL_MIMETYPES )
   }
 }
 
-
-
-
 /*
 Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QDIRMODEL_SUPPORTEDDROPACTIONS )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->supportedDropActions (  ) );
   }
 }
-
 
 /*
 void setIconProvider(QFileIconProvider *provider)
@@ -370,14 +430,22 @@ void setIconProvider(QFileIconProvider *provider)
 HB_FUNC_STATIC( QDIRMODEL_SETICONPROVIDER )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QFileIconProvider * par1 = (QFileIconProvider *) _qt5xhb_itemGetPtr(1);
-    obj->setIconProvider ( par1 );
+    if( ISQFILEICONPROVIDER(1) )
+    {
+      QFileIconProvider * par1 = (QFileIconProvider *) _qt5xhb_itemGetPtr(1);
+      obj->setIconProvider ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QFileIconProvider *iconProvider() const
@@ -385,6 +453,7 @@ QFileIconProvider *iconProvider() const
 HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QFileIconProvider * ptr = obj->iconProvider (  );
@@ -392,29 +461,36 @@ HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
   }
 }
 
-
 /*
 void setNameFilters(const QStringList &filters)
 */
 HB_FUNC_STATIC( QDIRMODEL_SETNAMEFILTERS )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
-    obj->setNameFilters ( par1 );
+    if( ISARRAY(1) )
+    {
+      QStringList par1;
+      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aStrings1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+        par1 << temp;
+      }
+      obj->setNameFilters ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList nameFilters() const
@@ -422,6 +498,7 @@ QStringList nameFilters() const
 HB_FUNC_STATIC( QDIRMODEL_NAMEFILTERS )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->nameFilters (  );
@@ -429,21 +506,28 @@ HB_FUNC_STATIC( QDIRMODEL_NAMEFILTERS )
   }
 }
 
-
 /*
 void setFilter(QDir::Filters filters)
 */
 HB_FUNC_STATIC( QDIRMODEL_SETFILTER )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFilter (  (QDir::Filters) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setFilter (  (QDir::Filters) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QDir::Filters filter() const
@@ -451,12 +535,12 @@ QDir::Filters filter() const
 HB_FUNC_STATIC( QDIRMODEL_FILTER )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->filter (  ) );
   }
 }
-
 
 /*
 void setSorting(QDir::SortFlags sort)
@@ -464,14 +548,22 @@ void setSorting(QDir::SortFlags sort)
 HB_FUNC_STATIC( QDIRMODEL_SETSORTING )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSorting (  (QDir::SortFlags) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setSorting (  (QDir::SortFlags) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QDir::SortFlags sorting() const
@@ -479,12 +571,12 @@ QDir::SortFlags sorting() const
 HB_FUNC_STATIC( QDIRMODEL_SORTING )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->sorting (  ) );
   }
 }
-
 
 /*
 void setResolveSymlinks(bool enable)
@@ -492,13 +584,21 @@ void setResolveSymlinks(bool enable)
 HB_FUNC_STATIC( QDIRMODEL_SETRESOLVESYMLINKS )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setResolveSymlinks ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setResolveSymlinks ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool resolveSymlinks() const
@@ -506,12 +606,12 @@ bool resolveSymlinks() const
 HB_FUNC_STATIC( QDIRMODEL_RESOLVESYMLINKS )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->resolveSymlinks (  ) );
   }
 }
-
 
 /*
 void setReadOnly(bool enable)
@@ -519,13 +619,21 @@ void setReadOnly(bool enable)
 HB_FUNC_STATIC( QDIRMODEL_SETREADONLY )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setReadOnly ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isReadOnly() const
@@ -533,12 +641,12 @@ bool isReadOnly() const
 HB_FUNC_STATIC( QDIRMODEL_ISREADONLY )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isReadOnly (  ) );
   }
 }
-
 
 /*
 void setLazyChildCount(bool enable)
@@ -546,13 +654,21 @@ void setLazyChildCount(bool enable)
 HB_FUNC_STATIC( QDIRMODEL_SETLAZYCHILDCOUNT )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setLazyChildCount ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setLazyChildCount ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool lazyChildCount() const
@@ -560,13 +676,12 @@ bool lazyChildCount() const
 HB_FUNC_STATIC( QDIRMODEL_LAZYCHILDCOUNT )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->lazyChildCount (  ) );
   }
 }
-
-
 
 /*
 bool isDir(const QModelIndex &index) const
@@ -574,13 +689,20 @@ bool isDir(const QModelIndex &index) const
 HB_FUNC_STATIC( QDIRMODEL_ISDIR )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isDir ( *par1 ) );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->isDir ( *par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QModelIndex mkdir(const QModelIndex &parent, const QString &name)
@@ -588,15 +710,22 @@ QModelIndex mkdir(const QModelIndex &parent, const QString &name)
 HB_FUNC_STATIC( QDIRMODEL_MKDIR )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISQMODELINDEX(1) && ISCHAR(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QString par2 = QLatin1String( hb_parc(2) );
+      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, par2 ) );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool rmdir(const QModelIndex &index)
@@ -604,13 +733,20 @@ bool rmdir(const QModelIndex &index)
 HB_FUNC_STATIC( QDIRMODEL_RMDIR )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->rmdir ( *par1 ) );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->rmdir ( *par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool remove(const QModelIndex &index)
@@ -618,13 +754,20 @@ bool remove(const QModelIndex &index)
 HB_FUNC_STATIC( QDIRMODEL_REMOVE )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->remove ( *par1 ) );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->remove ( *par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QString filePath(const QModelIndex &index) const
@@ -632,13 +775,20 @@ QString filePath(const QModelIndex &index) const
 HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->filePath ( *par1 ).toLatin1().data() );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retc( (const char *) obj->filePath ( *par1 ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QString fileName(const QModelIndex &index) const
@@ -646,13 +796,20 @@ QString fileName(const QModelIndex &index) const
 HB_FUNC_STATIC( QDIRMODEL_FILENAME )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->fileName ( *par1 ).toLatin1().data() );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retc( (const char *) obj->fileName ( *par1 ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QIcon fileIcon(const QModelIndex &index) const
@@ -660,14 +817,21 @@ QIcon fileIcon(const QModelIndex &index) const
 HB_FUNC_STATIC( QDIRMODEL_FILEICON )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QIcon * ptr = new QIcon( obj->fileIcon ( *par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QIcon * ptr = new QIcon( obj->fileIcon ( *par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QFileInfo fileInfo(const QModelIndex &index) const
@@ -675,14 +839,21 @@ QFileInfo fileInfo(const QModelIndex &index) const
 HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void refresh(const QModelIndex &parent = QModelIndex())
@@ -690,15 +861,21 @@ void refresh(const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC( QDIRMODEL_REFRESH )
 {
   QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    obj->refresh ( par1 );
+    if( (ISQMODELINDEX(1)||ISNIL(1)) )
+    {
+      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
+      obj->refresh ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

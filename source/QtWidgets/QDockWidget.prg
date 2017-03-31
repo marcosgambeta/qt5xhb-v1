@@ -20,8 +20,6 @@ CLASS QDockWidget INHERIT QWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD allowedAreas
@@ -70,7 +68,7 @@ RETURN
 /*
 QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_NEW1 )
+void QDockWidget_new1 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -82,14 +80,13 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW1 )
 /*
 QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_NEW2 )
+void QDockWidget_new2 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QDockWidget * o = new QDockWidget ( par1,  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -98,11 +95,11 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDOCKWIDGET_NEW1 );
+    QDockWidget_new1();
   }
   else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDOCKWIDGET_NEW2 );
+    QDockWidget_new2();
   }
   else
   {
@@ -113,6 +110,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 {
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -122,6 +120,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -131,12 +130,12 @@ Qt::DockWidgetAreas allowedAreas () const
 HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->allowedAreas (  ) );
   }
 }
-
 
 /*
 DockWidgetFeatures features () const
@@ -144,12 +143,12 @@ DockWidgetFeatures features () const
 HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->features (  ) );
   }
 }
-
 
 /*
 bool	isAreaAllowed ( Qt::DockWidgetArea area ) const
@@ -157,13 +156,20 @@ bool	isAreaAllowed ( Qt::DockWidgetArea area ) const
 HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isAreaAllowed (  (Qt::DockWidgetArea) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retl( obj->isAreaAllowed (  (Qt::DockWidgetArea) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool	isFloating () const
@@ -171,12 +177,12 @@ bool	isFloating () const
 HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isFloating (  ) );
   }
 }
-
 
 /*
 void setAllowedAreas ( Qt::DockWidgetAreas areas )
@@ -184,14 +190,22 @@ void setAllowedAreas ( Qt::DockWidgetAreas areas )
 HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAllowedAreas (  (Qt::DockWidgetAreas) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setAllowedAreas (  (Qt::DockWidgetAreas) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFeatures ( DockWidgetFeatures features )
@@ -199,14 +213,22 @@ void setFeatures ( DockWidgetFeatures features )
 HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFeatures (  (QDockWidget::DockWidgetFeatures) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setFeatures (  (QDockWidget::DockWidgetFeatures) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFloating ( bool floating )
@@ -230,21 +252,28 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTitleBarWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setTitleBarWidget ( par1 );
+    if( ISQWIDGET(1) )
+    {
+      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+      obj->setTitleBarWidget ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidget ( QWidget * widget )
@@ -252,14 +281,22 @@ void setWidget ( QWidget * widget )
 HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setWidget ( par1 );
+    if( ISQWIDGET(1) )
+    {
+      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+      obj->setWidget ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWidget * titleBarWidget () const
@@ -267,6 +304,7 @@ QWidget * titleBarWidget () const
 HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * ptr = obj->titleBarWidget (  );
@@ -274,13 +312,13 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
   }
 }
 
-
 /*
 QAction * toggleViewAction () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAction * ptr = obj->toggleViewAction (  );
@@ -288,13 +326,13 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
   }
 }
 
-
 /*
 QWidget * widget () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
@@ -302,8 +340,4 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-
