@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSqlDriverCreator INHERIT QSqlDriverCreatorBase
 
    DATA class_id INIT Class_Id_QSqlDriverCreator
@@ -42,8 +41,4 @@ RETURN
 #include <QSqlDriverCreator>
 #endif
 
-
-
-
 #pragma ENDDUMP
-

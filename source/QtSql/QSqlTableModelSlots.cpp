@@ -8,7 +8,6 @@
 
 #include "QSqlTableModelSlots.h"
 
-
 static SlotsQSqlTableModel * s = NULL;
 
 SlotsQSqlTableModel::SlotsQSqlTableModel(QObject *parent) : QObject(parent)

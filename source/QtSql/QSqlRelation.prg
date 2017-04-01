@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSqlRelation
 
    DATA pointer
@@ -17,8 +16,6 @@ CLASS QSqlRelation
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD displayColumn
@@ -59,7 +56,7 @@ RETURN
 /*
 QSqlRelation ()
 */
-HB_FUNC_STATIC( QSQLRELATION_NEW1 )
+void QSqlRelation_new1 ()
 {
   QSqlRelation * o = new QSqlRelation (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -75,7 +72,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW1 )
 /*
 QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
-HB_FUNC_STATIC( QSQLRELATION_NEW2 )
+void QSqlRelation_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
@@ -91,7 +88,6 @@ HB_FUNC_STATIC( QSQLRELATION_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QSqlRelation ()
 //[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 
@@ -99,11 +95,11 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSQLRELATION_NEW1 );
+    QSqlRelation_new1();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QSQLRELATION_NEW2 );
+    QSqlRelation_new2();
   }
   else
   {
@@ -114,6 +110,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
 HB_FUNC_STATIC( QSQLRELATION_DELETE )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -123,6 +120,7 @@ HB_FUNC_STATIC( QSQLRELATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -132,12 +130,12 @@ QString displayColumn () const
 HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 {
   QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->displayColumn (  ).toLatin1().data() );
   }
 }
-
 
 /*
 QString indexColumn () const
@@ -145,12 +143,12 @@ QString indexColumn () const
 HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 {
   QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->indexColumn (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool isValid () const
@@ -158,12 +156,12 @@ bool isValid () const
 HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 {
   QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 }
-
 
 /*
 QString tableName () const
@@ -171,17 +169,17 @@ QString tableName () const
 HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 {
   QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->tableName (  ).toLatin1().data() );
   }
 }
 
-
-
 HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -200,6 +198,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -221,14 +220,15 @@ HB_FUNC_STATIC( QSQLRELATION_SELFDESTRUCTION )
 HB_FUNC_STATIC( QSQLRELATION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

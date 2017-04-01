@@ -63,10 +63,10 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
   hb_itemReturn( self );
 }
 
-
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -76,6 +76,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -85,16 +86,23 @@ QWidget *createEditor(QWidget *aParent, const QStyleOptionViewItem &option, cons
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QWidget * ptr = obj->createEditor ( par1, *par2, *par3 );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    {
+      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+      QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
+      QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
+      QWidget * ptr = obj->createEditor ( par1, *par2, *par3 );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
@@ -102,17 +110,23 @@ void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex 
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    obj->setModelData ( par1, par2, *par3 );
+    if( ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
+    {
+      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+      QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
+      QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
+      obj->setModelData ( par1, par2, *par3 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-
