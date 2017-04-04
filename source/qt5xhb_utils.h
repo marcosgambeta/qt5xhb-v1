@@ -43,3 +43,6 @@ void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
 
 void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname );
 void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classname );
+
+bool _qt5xhb_isClassDerivedFrom ( const char * className1, const char * className2 );
+bool _qt5xhb_isObjectDerivedFrom ( int numpar, const char * className );

@@ -636,3 +636,23 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
     hb_itemRelease( pItem );
   }
 }
+
+bool _qt5xhb_isClassDerivedFrom ( const char * className1, const char * className2 )
+{
+  HB_USHORT uiClass = hb_clsFindClass( className1, NULL );
+  return hb_clsIsParent( uiClass, className2 );
+}
+
+bool _qt5xhb_isObjectDerivedFrom ( int numpar, const QString className )
+{
+  PHB_ITEM pItem = hb_param( numpar, HB_IT_OBJECT );
+
+  if( pItem )
+  {
+    return hb_clsIsParent( hb_objGetClass( pItem ), (const char *) className.toUpper().toLatin1().data() );
+  }
+  else
+  {
+    return false;
+  }
+}
