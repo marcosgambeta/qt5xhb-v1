@@ -19,9 +19,6 @@ CLASS QAxObject INHERIT QObject,QAxBase
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD doVerb
@@ -31,21 +28,19 @@ CLASS QAxObject INHERIT QObject,QAxBase
    METHOD disableClassInfo
    METHOD disableEventSink
    METHOD disableMetaObject
-   METHOD dynamicCall1
-   METHOD dynamicCall2
    METHOD dynamicCall
    METHOD generateDocumentation
    METHOD isNull
    METHOD propertyWritable
-   METHOD querySubObject1
-   METHOD querySubObject2
    METHOD querySubObject
    METHOD setControl
    METHOD setPropertyWritable
    METHOD verbs
+
    METHOD onException
    METHOD onPropertyChanged
    METHOD onSignal
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -77,7 +72,7 @@ RETURN
 /*
 QAxObject ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QAXOBJECT_NEW1 )
+void QAxObject_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QAxObject * o = new QAxObject ( par1 );
@@ -91,7 +86,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW1 )
 /*
 QAxObject ( const QString & c, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QAXOBJECT_NEW2 )
+void QAxObject_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
@@ -106,7 +101,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW2 )
 /*
 QAxObject ( IUnknown * iface, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QAXOBJECT_NEW3 )
+void QAxObject_new3 ()
 {
   IUnknown * par1 = (IUnknown *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
@@ -118,7 +113,6 @@ HB_FUNC_STATIC( QAXOBJECT_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QAxObject ( QObject * parent = 0 )
 //[2]QAxObject ( const QString & c, QObject * parent = 0 )
 //[3]QAxObject ( IUnknown * iface, QObject * parent = 0 )
@@ -127,15 +121,15 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QAXOBJECT_NEW1 );
+    QAxObject_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QAXOBJECT_NEW2 );
+    QAxObject_new2();
   }
   else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QAXOBJECT_NEW3 ); // TODO: implementar new3
+    QAxObject_new3(); // TODO: revisar parametro 'IUnknown * iface'
   }
   else
   {
@@ -146,6 +140,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
 HB_FUNC_STATIC( QAXOBJECT_DELETE )
 {
   QAxObject * obj = (QAxObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -155,6 +150,7 @@ HB_FUNC_STATIC( QAXOBJECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -164,13 +160,20 @@ bool doVerb ( const QString & verb )
 HB_FUNC_STATIC( QAXOBJECT_DOVERB )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->doVerb ( par1 ) );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      hb_retl( obj->doVerb ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 // métodos da classe QAxBase, adicionados aqui, para
 // resolver problemas na utilização dos métodos
@@ -181,6 +184,7 @@ QVariant asVariant () const
 HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->asVariant (  ) );
@@ -188,20 +192,20 @@ HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
   }
 }
 
-
 /*
 virtual void clear ()
 */
 HB_FUNC_STATIC( QAXOBJECT_CLEAR )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clear (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString control () const
@@ -209,12 +213,12 @@ QString control () const
 HB_FUNC_STATIC( QAXOBJECT_CONTROL )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->control (  ).toLatin1().data() );
   }
 }
-
 
 /*
 void disableClassInfo ()
@@ -222,13 +226,14 @@ void disableClassInfo ()
 HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->disableClassInfo (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void disableEventSink ()
@@ -236,13 +241,14 @@ void disableEventSink ()
 HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->disableEventSink (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void disableMetaObject ()
@@ -250,20 +256,22 @@ void disableMetaObject ()
 HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->disableMetaObject (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL1 )
+void QAxObject_dynamicCall1 ()
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -283,9 +291,10 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL1 )
 /*
 QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 */
-HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL2 )
+void QAxObject_dynamicCall2 ()
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -302,7 +311,6 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL2 )
   }
 }
 
-
 //[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 
@@ -310,11 +318,11 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
 {
   if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
   {
-    HB_FUNC_EXEC( QAXOBJECT_DYNAMICCALL1 );
+    QAxObject_dynamicCall1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QAXOBJECT_DYNAMICCALL2 );
+    QAxObject_dynamicCall2();
   }
   else
   {
@@ -328,12 +336,12 @@ QString generateDocumentation ()
 HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->generateDocumentation (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool isNull () const
@@ -341,13 +349,12 @@ bool isNull () const
 HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
   }
 }
-
-
 
 /*
 virtual bool propertyWritable ( const char * prop ) const
@@ -355,21 +362,28 @@ virtual bool propertyWritable ( const char * prop ) const
 HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retl( obj->propertyWritable (  (const char *) par1 ) );
+    if( ISCHAR(1) )
+    {
+      const char * par1 = hb_parc(1);
+      hb_retl( obj->propertyWritable (  (const char *) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 /*
 QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT1 )
+void QAxObject_querySubObject1 ()
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -389,9 +403,10 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT1 )
 /*
 QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
 */
-HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT2 )
+void QAxObject_querySubObject2 ()
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -408,7 +423,6 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT2 )
   }
 }
 
-
 //[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
 
@@ -416,11 +430,11 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
 {
   if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
   {
-    HB_FUNC_EXEC( QAXOBJECT_QUERYSUBOBJECT1 );
+    QAxObject_querySubObject1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QAXOBJECT_QUERYSUBOBJECT2 );
+    QAxObject_querySubObject2();
   }
   else
   {
@@ -434,14 +448,20 @@ bool setControl ( const QString & )
 HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->setControl ( par1 ) );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      hb_retl( obj->setControl ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 /*
 virtual void setPropertyWritable ( const char * prop, bool ok )
@@ -449,14 +469,22 @@ virtual void setPropertyWritable ( const char * prop, bool ok )
 HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setPropertyWritable (  (const char *) par1, (bool) hb_parl(2) );
+    if( ISCHAR(1) && ISLOG(2) )
+    {
+      const char * par1 = hb_parc(1);
+      obj->setPropertyWritable (  (const char *) par1, (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList verbs () const
@@ -464,6 +492,7 @@ QStringList verbs () const
 HB_FUNC_STATIC( QAXOBJECT_VERBS )
 {
   QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->verbs (  );
@@ -471,8 +500,4 @@ HB_FUNC_STATIC( QAXOBJECT_VERBS )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

@@ -22,20 +22,20 @@ CLASS QAxScript INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD call1
-   METHOD call2
    METHOD call
    METHOD functions
    METHOD load
    METHOD scriptCode
    METHOD scriptEngine
    METHOD scriptName
+
    METHOD onEntered
    METHOD onError
    METHOD onFinished1
    METHOD onFinished2
    METHOD onFinished3
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,20 +69,27 @@ QAxScript ( const QString & name, QAxScriptManager * manager )
 */
 HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QAxScriptManager * par2 = (QAxScriptManager *) _qt5xhb_itemGetPtr(2);
-  QAxScript * o = new QAxScript ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxScript *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
+  {
+    QString par1 = QLatin1String( hb_parc(1) );
+    QAxScriptManager * par2 = (QAxScriptManager *) _qt5xhb_itemGetPtr(2);
+    QAxScript * o = new QAxScript ( par1, par2 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxScript *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,15 +99,17 @@ HB_FUNC_STATIC( QAXSCRIPT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-HB_FUNC_STATIC( QAXSCRIPT_CALL1 )
+void QAxScript_call1 ()
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -120,9 +129,10 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL1 )
 /*
 QVariant call ( const QString & function, QList<QVariant> & arguments )
 */
-HB_FUNC_STATIC( QAXSCRIPT_CALL2 )
+void QAxScript_call2 ()
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -139,7 +149,6 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL2 )
   }
 }
 
-
 //[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
 
@@ -147,11 +156,11 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
 {
   if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
   {
-    HB_FUNC_EXEC( QAXSCRIPT_CALL1 );
+    QAxScript_call1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QAXSCRIPT_CALL2 );
+    QAxScript_call2();
   }
   else
   {
@@ -165,14 +174,21 @@ QStringList functions ( FunctionFlags flags = FunctionNames ) const
 HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1);
-    QStringList strl = obj->functions (  (QAxScript::FunctionFlags) par1 );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      int par1 = ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1);
+      QStringList strl = obj->functions (  (QAxScript::FunctionFlags) par1 );
+      _qt5xhb_convert_qstringlist_to_array ( strl );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool load ( const QString & code, const QString & language = QString() )
@@ -180,14 +196,21 @@ bool load ( const QString & code, const QString & language = QString() )
 HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( obj->load ( par1, par2 ) );
+    if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      hb_retl( obj->load ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QString scriptCode () const
@@ -195,12 +218,12 @@ QString scriptCode () const
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->scriptCode (  ).toLatin1().data() );
   }
 }
-
 
 /*
 QAxScriptEngine * scriptEngine () const
@@ -208,6 +231,7 @@ QAxScriptEngine * scriptEngine () const
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAxScriptEngine * ptr = obj->scriptEngine (  );
@@ -215,21 +239,17 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
   }
 }
 
-
 /*
 QString scriptName () const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->scriptName (  ).toLatin1().data() );
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

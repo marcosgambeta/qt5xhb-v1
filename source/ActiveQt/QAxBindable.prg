@@ -26,11 +26,13 @@ CLASS QAxBindable
    METHOD readData
    METHOD reportError
    METHOD writeData
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,10 +72,10 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
   hb_itemReturn( self );
 }
 
-
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 {
   QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -83,6 +85,7 @@ HB_FUNC_STATIC( QAXBINDABLE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -92,6 +95,7 @@ virtual QAxAggregated * createAggregate ()
 HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {
   QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAxAggregated * ptr = obj->createAggregate (  );
@@ -99,21 +103,27 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
   }
 }
 
-
 /*
 virtual bool readData ( QIODevice * source, const QString & format )
 */
 HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 {
   QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->readData ( par1, par2 ) );
+    if( ISQIODEVICE(1) && ISCHAR(2) )
+    {
+      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+      QString par2 = QLatin1String( hb_parc(2) );
+      hb_retl( obj->readData ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
@@ -121,16 +131,24 @@ void reportError ( int code, const QString & src, const QString & desc, const QS
 HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 {
   QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-    obj->reportError ( (int) hb_parni(1), par2, par3, par4 );
+    if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) )
+    {
+      QString par2 = QLatin1String( hb_parc(2) );
+      QString par3 = QLatin1String( hb_parc(3) );
+      QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
+      obj->reportError ( (int) hb_parni(1), par2, par3, par4 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool writeData ( QIODevice * sink )
@@ -138,18 +156,25 @@ virtual bool writeData ( QIODevice * sink )
 HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 {
   QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->writeData ( par1 ) );
+    if( ISQIODEVICE(1) )
+    {
+      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->writeData ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 HB_FUNC_STATIC( QAXBINDABLE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -168,6 +193,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -189,14 +215,15 @@ HB_FUNC_STATIC( QAXBINDABLE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QAXBINDABLE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
