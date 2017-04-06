@@ -21,18 +21,18 @@ CLASS QBluetoothTransferRequest
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD attribute
    METHOD setAttribute
    METHOD address
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,7 +66,7 @@ RETURN
 /*
 QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW1 )
+void QBluetoothTransferRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW1 )
 /*
 QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW2 )
+void QBluetoothTransferRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferRequest * par1 = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtr(1);
@@ -95,7 +95,6 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW2 )
 #endif
 }
 
-
 //[1]QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
 //[2]QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
 
@@ -103,11 +102,11 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQBLUETOOTHADDRESS(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHTRANSFERREQUEST_NEW1 );
+    QBluetoothTransferRequest_new1();
   }
   else if( ISNUMPAR(1) && ISQBLUETOOTHTRANSFERREQUEST(1) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHTRANSFERREQUEST_NEW1 );
+    QBluetoothTransferRequest_new2();
   }
   else
   {
@@ -119,6 +118,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferRequest * obj = (QBluetoothTransferRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -128,6 +128,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -139,12 +140,20 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferRequest * obj = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->attribute (  (QBluetoothTransferRequest::Attribute) par1, par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
+    {
+      int par1 = hb_parni(1);
+      QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
+      QVariant * ptr = new QVariant( obj->attribute (  (QBluetoothTransferRequest::Attribute) par1, par2 ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -156,16 +165,24 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_SETATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferRequest * obj = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setAttribute (  (QBluetoothTransferRequest::Attribute) par1, *par2 );
+    if( ISNUM(1) && ISQVARIANT(2) )
+    {
+      int par1 = hb_parni(1);
+      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
+      obj->setAttribute (  (QBluetoothTransferRequest::Attribute) par1, *par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 QBluetoothAddress address() const
@@ -174,6 +191,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferRequest * obj = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->address (  ) );
@@ -182,11 +200,10 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ADDRESS )
 #endif
 }
 
-
-
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -205,6 +222,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -226,14 +244,15 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_SELFDESTRUCTION )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

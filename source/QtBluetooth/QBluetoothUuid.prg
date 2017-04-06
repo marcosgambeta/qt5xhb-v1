@@ -30,6 +30,7 @@ CLASS QBluetoothUuid INHERIT QUuid
    METHOD minimumSize
    METHOD toUInt16
    METHOD toUInt32
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -202,7 +203,6 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW9 )
 #endif
 }
 
-
 //[1]QBluetoothUuid()
 //[2]QBluetoothUuid(ProtocolUuid uuid)
 //[3]QBluetoothUuid(ServiceClassUuid uuid)
@@ -213,9 +213,8 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW9 )
 //[8]QBluetoothUuid(const QBluetoothUuid &uuid)
 //[9]QBluetoothUuid(const QUuid &uuid)
 
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW )
+HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
 {
-  // TODO: resolver conflitos
   if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QBLUETOOTHUUID_NEW1 );
@@ -262,6 +261,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * obj = (QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -271,6 +271,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -282,6 +283,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->minimumSize (  ) );
@@ -289,42 +291,52 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 #endif
 }
 
-
 /*
 quint16 toUInt16(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
+HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 ) // TODO: revisar e implementar parametro opcional
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    bool par1;
-    hb_retni( obj->toUInt16 ( &par1 ) );
-    hb_storl( par1, 1 );
+    if( ISLOG(1) )
+    {
+      bool par1;
+      hb_retni( obj->toUInt16 ( &par1 ) );
+      hb_storl( par1, 1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
-
 
 /*
 quint32 toUInt32(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
+HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 ) // TODO: revisar e implementar parametro opcional
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    bool par1;
-    hb_retni( obj->toUInt32 ( &par1 ) );
-    hb_storl( par1, 1 );
+    if( ISLOG(1) )
+    {
+      bool par1;
+      hb_retni( obj->toUInt32 ( &par1 ) );
+      hb_storl( par1, 1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
 
-
-
-
 #pragma ENDDUMP
-

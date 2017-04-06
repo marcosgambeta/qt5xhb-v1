@@ -19,8 +19,6 @@ CLASS QBluetoothDeviceDiscoveryAgent INHERIT QObject
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD inquiryType
@@ -31,10 +29,12 @@ CLASS QBluetoothDeviceDiscoveryAgent INHERIT QObject
    METHOD discoveredDevices
    METHOD start
    METHOD stop
+
    METHOD onDeviceDiscovered
    METHOD onFinished
    METHOD onError
    METHOD onCanceled
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -68,7 +68,7 @@ RETURN
 /*
 QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW1 )
+void QBluetoothDeviceDiscoveryAgent_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW1 )
 /*
 QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW2 )
+void QBluetoothDeviceDiscoveryAgent_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW2 )
 #endif
 }
 
-
 //[1]QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
 //[2]QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
 
@@ -106,11 +105,11 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW1 );
+    QBluetoothDeviceDiscoveryAgent_new1();
   }
   else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW2 );
+    QBluetoothDeviceDiscoveryAgent_new2();
   }
   else
   {
@@ -122,6 +121,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -131,6 +131,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -142,13 +143,13 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_INQUIRYTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->inquiryType (  ) );
   }
 #endif
 }
-
 
 /*
 void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
@@ -157,15 +158,23 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setInquiryType (  (QBluetoothDeviceDiscoveryAgent::InquiryType) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setInquiryType (  (QBluetoothDeviceDiscoveryAgent::InquiryType) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 bool isActive() const
@@ -174,13 +183,13 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isActive (  ) );
   }
 #endif
 }
-
 
 /*
 Error error() const
@@ -189,13 +198,13 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->error (  ) );
   }
 #endif
 }
-
 
 /*
 QString errorString() const
@@ -204,13 +213,13 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
   }
 #endif
 }
-
 
 /*
 QList<QBluetoothDeviceInfo> discoveredDevices() const
@@ -219,6 +228,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QList<QBluetoothDeviceInfo> list = obj->discoveredDevices (  );
@@ -257,7 +267,6 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES )
 #endif
 }
 
-
 /*
 void start()
 */
@@ -265,14 +274,15 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_START )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->start (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 void stop()
@@ -281,16 +291,14 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->stop (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
 
-
-
-
 #pragma ENDDUMP
-

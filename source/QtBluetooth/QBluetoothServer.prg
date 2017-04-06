@@ -24,8 +24,6 @@ CLASS QBluetoothServer INHERIT QObject
    METHOD new
    METHOD delete
    METHOD close
-   METHOD listen1
-   METHOD listen2
    METHOD listen
    METHOD isListening
    METHOD setMaxPendingConnections
@@ -38,8 +36,10 @@ CLASS QBluetoothServer INHERIT QObject
    METHOD securityFlags
    METHOD serverType
    METHOD error
+
    METHOD onNewConnection
    METHOD onError
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -76,22 +76,29 @@ QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = 0
 HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QBluetoothServer * o = new QBluetoothServer (  (QBluetoothServiceInfo::Protocol) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothServer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  {
+    int par1 = hb_parni(1);
+    QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
+    QBluetoothServer * o = new QBluetoothServer (  (QBluetoothServiceInfo::Protocol) par1, par2 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothServer *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
-
 
 HB_FUNC_STATIC( QBLUETOOTHSERVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -101,6 +108,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -112,22 +120,24 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->close (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
 
-
 /*
 bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN1 )
+void QBluetoothServer_listen1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
@@ -139,10 +149,11 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN1 )
 /*
 QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN2 )
+void QBluetoothServer_listen2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QBluetoothUuid * par1 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(1);
@@ -153,7 +164,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN2 )
 #endif
 }
 
-
 //[1]bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
 //[2]QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
 
@@ -161,11 +171,11 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
 {
   if( ISBETWEEN(0,2) && (ISQBLUETOOTHADDRESS(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHSERVER_LISTEN1 );
+    QBluetoothServer_listen1();
   }
   else if( ISBETWEEN(1,2) && ISQBLUETOOTHUUID(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHSERVER_LISTEN2 );
+    QBluetoothServer_listen2();
   }
   else
   {
@@ -180,13 +190,13 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ISLISTENING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isListening (  ) );
   }
 #endif
 }
-
 
 /*
 void setMaxPendingConnections(int numConnections)
@@ -195,14 +205,22 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setMaxPendingConnections ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setMaxPendingConnections ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 int maxPendingConnections() const
@@ -211,13 +229,13 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_MAXPENDINGCONNECTIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->maxPendingConnections (  ) );
   }
 #endif
 }
-
 
 /*
 bool hasPendingConnections() const
@@ -226,13 +244,13 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_HASPENDINGCONNECTIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasPendingConnections (  ) );
   }
 #endif
 }
-
 
 /*
 QBluetoothSocket *nextPendingConnection()
@@ -241,6 +259,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QBluetoothSocket * ptr = obj->nextPendingConnection (  );
@@ -249,7 +268,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
 #endif
 }
 
-
 /*
 QBluetoothAddress serverAddress() const
 */
@@ -257,6 +275,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QBluetoothAddress * ptr = new QBluetoothAddress( obj->serverAddress (  ) );
@@ -265,7 +284,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERADDRESS )
 #endif
 }
 
-
 /*
 quint16 serverPort() const
 */
@@ -273,13 +291,13 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->serverPort (  ) );
   }
 #endif
 }
-
 
 /*
 void setSecurityFlags(QBluetooth::SecurityFlags security)
@@ -288,15 +306,23 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETSECURITYFLAGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSecurityFlags (  (QBluetooth::SecurityFlags) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setSecurityFlags (  (QBluetooth::SecurityFlags) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 QBluetooth::SecurityFlags securityFlags() const
@@ -305,13 +331,13 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SECURITYFLAGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->securityFlags (  ) );
   }
 #endif
 }
-
 
 /*
 QBluetoothServiceInfo::Protocol serverType() const
@@ -320,13 +346,13 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->serverType (  ) );
   }
 #endif
 }
-
 
 /*
 Error error() const
@@ -335,6 +361,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->error (  ) );
@@ -342,8 +369,4 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
 #endif
 }
 
-
-
-
 #pragma ENDDUMP
-

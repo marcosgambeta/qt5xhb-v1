@@ -22,7 +22,9 @@ CLASS QBluetoothTransferManager INHERIT QObject
    METHOD new
    METHOD delete
    METHOD put
+
    METHOD onFinished
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,21 +61,28 @@ QBluetoothTransferManager(QObject *parent = 0)
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QBluetoothTransferManager * o = new QBluetoothTransferManager ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothTransferManager *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QBluetoothTransferManager * o = new QBluetoothTransferManager ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothTransferManager *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
-
 
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferManager * obj = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -83,6 +92,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -94,18 +104,22 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferManager * obj = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QBluetoothTransferRequest * par1 = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtr(1);
-    QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
-    QBluetoothTransferReply * ptr = obj->put ( *par1, par2 );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREPLY" );
+    if( ISQBLUETOOTHTRANSFERREQUEST(1) && ISQIODEVICE(2) )
+    {
+      QBluetoothTransferRequest * par1 = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtr(1);
+      QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
+      QBluetoothTransferReply * ptr = obj->put ( *par1, par2 );
+      _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREPLY" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
 
-
-
-
 #pragma ENDDUMP
-
