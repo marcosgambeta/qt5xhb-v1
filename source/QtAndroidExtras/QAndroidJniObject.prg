@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QAndroidJniObject
 
    DATA pointer
@@ -34,11 +32,13 @@ CLASS QAndroidJniObject
    METHOD getStaticObjectField
    METHOD fromString
    METHOD isClassAvailable
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW2 )
 #endif
 }
 
-
+// TODO: revisar e implementar(?) construtores
 //[1]QAndroidJniObject()
 //[2]QAndroidJniObject(const char *className)
 //[3]QAndroidJniObject(const char *className, const char *sig, ...)
@@ -128,6 +128,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -137,6 +138,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -148,6 +150,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -157,7 +160,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD1 )
 #endif
 }
 
-
+// TODO: revisar e implementar(?) caso [2]
 //[1]QAndroidJniObject callObjectMethod(const char *methodName) const
 //[2]QAndroidJniObject callObjectMethod(const char *methodName, const char *sig, ...) const
 
@@ -180,15 +183,22 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField<const char*> (  (const char *) par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+    if( ISCHAR(1) )
+    {
+      const char * par1 = hb_parc(1);
+      QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField<const char*> (  (const char *) par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
-
 
 /*
 QString toString() const
@@ -197,13 +207,13 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_TOSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
   }
 #endif
 }
-
 
 /*
 bool isValid() const
@@ -212,13 +222,13 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 #endif
 }
-
 
 /*
 static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName)
@@ -233,7 +243,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD1 )
 #endif
 }
 
-
+// TODO: revisar e implementar(?) metodos
 //[1]static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName)
 //[2]static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName, const char *sig, ...)
 //[3]static QAndroidJniObject callStaticObjectMethod(jclass clazz, const char *methodName)
@@ -278,7 +288,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD2 )
 #endif
 }
 
-
+// TODO: revisar e implementar(?) metodos
 //[1]static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName)
 //[2]static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName, const char *sig)
 //[3]static QAndroidJniObject getStaticObjectField(jclass clazz, const char *fieldName)
@@ -306,12 +316,18 @@ static QAndroidJniObject fromString(const QString &string)
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::fromString ( par1 ) );
-  _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+  if( ISCHAR(1) )
+  {
+    QString par1 = QLatin1String( hb_parc(1) );
+    QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::fromString ( par1 ) );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
-
 
 /*
 static bool isClassAvailable(const char *className)
@@ -319,16 +335,22 @@ static bool isClassAvailable(const char *className)
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISCLASSAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  const char * par1 = hb_parc(1);
-  hb_retl( QAndroidJniObject::isClassAvailable (  (const char *) par1 ) );
+  if( ISCHAR(1) )
+  {
+    const char * par1 = hb_parc(1);
+    hb_retl( QAndroidJniObject::isClassAvailable (  (const char *) par1 ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
-
-
 
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -347,6 +369,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -368,14 +391,15 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_SELFDESTRUCTION )
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

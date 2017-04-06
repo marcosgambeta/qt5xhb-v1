@@ -24,11 +24,13 @@ CLASS QtAndroid
    METHOD androidSdkVersion
    METHOD startIntentSender
    METHOD startActivity
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,8 +61,6 @@ RETURN
 #endif
 #endif
 
-
-
 /*
 static QAndroidJniObject androidActivity()
 */
@@ -72,7 +72,6 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDACTIVITY )
 #endif
 }
 
-
 /*
 static int androidSdkVersion()
 */
@@ -83,20 +82,25 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDSDKVERSION )
 #endif
 }
 
-
 /*
 static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = 0)
 */
 HB_FUNC_STATIC( QTANDROID_STARTINTENTSENDER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
-  QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
-  QtAndroid::startIntentSender ( *par1, (int) hb_parni(2), par3 );
-  hb_itemReturn( hb_stackSelfItem() );
+  if( ISQANDROIDJNIOBJECT(1) && ISNUM(2) && (ISQANDROIDACTIVITYRESULTRECEIVER(3)||ISNIL(3)) )
+  {
+    QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
+    QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
+    QtAndroid::startIntentSender ( *par1, (int) hb_parni(2), par3 );
+    hb_itemReturn( hb_stackSelfItem() );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
-
 
 /*
 static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = 0)
@@ -104,18 +108,24 @@ static void startActivity(const QAndroidJniObject &intent, int receiverRequestCo
 HB_FUNC_STATIC( QTANDROID_STARTACTIVITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
-  QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
-  QtAndroid::startActivity ( *par1, (int) hb_parni(2), par3 );
-  hb_itemReturn( hb_stackSelfItem() );
+  if( ISQANDROIDJNIOBJECT(1) && ISNUM(2) && (ISQANDROIDACTIVITYRESULTRECEIVER(3)||ISNIL(3)) )
+  {
+    QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
+    QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
+    QtAndroid::startActivity ( *par1, (int) hb_parni(2), par3 );
+    hb_itemReturn( hb_stackSelfItem() );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
-
-
 
 HB_FUNC_STATIC( QTANDROID_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -134,6 +144,7 @@ HB_FUNC_STATIC( QTANDROID_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -155,14 +166,15 @@ HB_FUNC_STATIC( QTANDROID_SELFDESTRUCTION )
 HB_FUNC_STATIC( QTANDROID_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
