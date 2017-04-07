@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCommandLineOption
 
    DATA pointer
@@ -17,9 +16,6 @@ CLASS QCommandLineOption
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD swap
@@ -31,11 +27,13 @@ CLASS QCommandLineOption
    METHOD setDefaultValue
    METHOD setDefaultValues
    METHOD defaultValues
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,7 +63,7 @@ RETURN
 /*
 QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 */
-HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW1 )
+void QCommandLineOption_new1 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -85,17 +83,17 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW1 )
 /*
 QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 */
-HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW2 )
+void QCommandLineOption_new2 ()
 {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+  QStringList par1;
+  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aStrings1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    par1 << temp;
+  }
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
@@ -113,7 +111,7 @@ par1 << temp;
 /*
 QCommandLineOption(const QCommandLineOption &other)
 */
-HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW3 )
+void QCommandLineOption_new3 ()
 {
   QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
   QCommandLineOption * o = new QCommandLineOption ( *par1 );
@@ -127,7 +125,6 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 //[2]QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 //[3]QCommandLineOption(const QCommandLineOption &other)
@@ -136,15 +133,15 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 {
   if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCOMMANDLINEOPTION_NEW1 );
+    QCommandLineOption_new1();
   }
   else if( ISBETWEEN(1,4) && ISARRAY(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCOMMANDLINEOPTION_NEW2 );
+    QCommandLineOption_new2();
   }
   else if( ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1) )
   {
-    HB_FUNC_EXEC( QCOMMANDLINEOPTION_NEW3 );
+    QCommandLineOption_new3();
   }
   else
   {
@@ -155,6 +152,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
 {
   QCommandLineOption * obj = (QCommandLineOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -164,6 +162,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -173,14 +172,22 @@ void swap(QCommandLineOption &other)
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
+    if( ISQCOMMANDLINEOPTION(1) )
+    {
+      QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
+      obj->swap ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList names() const
@@ -188,6 +195,7 @@ QStringList names() const
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->names (  );
@@ -195,21 +203,28 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
   }
 }
 
-
 /*
 void setValueName(const QString &name)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setValueName ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setValueName ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString valueName() const
@@ -217,12 +232,12 @@ QString valueName() const
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->valueName (  ).toLatin1().data() );
   }
 }
-
 
 /*
 void setDescription(const QString &description)
@@ -230,14 +245,22 @@ void setDescription(const QString &description)
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDescription ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setDescription ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString description() const
@@ -245,12 +268,12 @@ QString description() const
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->description (  ).toLatin1().data() );
   }
 }
-
 
 /*
 void setDefaultValue(const QString &defaultValue)
@@ -258,14 +281,22 @@ void setDefaultValue(const QString &defaultValue)
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDefaultValue ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setDefaultValue ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDefaultValues(const QStringList &defaultValues)
@@ -273,22 +304,30 @@ void setDefaultValues(const QStringList &defaultValues)
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
-    obj->setDefaultValues ( par1 );
+    if( ISARRAY(1) )
+    {
+      QStringList par1;
+      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aStrings1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+        par1 << temp;
+      }
+      obj->setDefaultValues ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList defaultValues() const
@@ -296,6 +335,7 @@ QStringList defaultValues() const
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
 {
   QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->defaultValues (  );
@@ -303,11 +343,10 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
   }
 }
 
-
-
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -326,6 +365,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -347,14 +387,15 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SELFDESTRUCTION )
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

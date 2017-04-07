@@ -21,8 +21,6 @@ CLASS QCollator
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD swap
@@ -35,11 +33,13 @@ CLASS QCollator
    METHOD setIgnorePunctuation
    METHOD ignorePunctuation
    METHOD sortKey
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -73,7 +73,7 @@ RETURN
 /*
 QCollator(const QLocale &locale = QLocale())
 */
-HB_FUNC_STATIC( QCOLLATOR_NEW1 )
+void QCollator_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QLocale par1 = ISNIL(1)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(1);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEW1 )
 /*
 QCollator(const QCollator &)
 */
-HB_FUNC_STATIC( QCOLLATOR_NEW2 )
+void QCollator_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * par1 = (QCollator *) _qt5xhb_itemGetPtr(1);
@@ -108,7 +108,6 @@ HB_FUNC_STATIC( QCOLLATOR_NEW2 )
 #endif
 }
 
-
 //[1]QCollator(const QLocale &locale = QLocale())
 //[2]QCollator(const QCollator &)
 
@@ -116,11 +115,11 @@ HB_FUNC_STATIC( QCOLLATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQLOCALE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QCOLLATOR_NEW1 );
+    QCollator_new1();
   }
   else if( ISNUMPAR(1) && ISQCOLLATOR(1) )
   {
-    HB_FUNC_EXEC( QCOLLATOR_NEW2 );
+    QCollator_new2();
   }
   else
   {
@@ -132,6 +131,7 @@ HB_FUNC_STATIC( QCOLLATOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -141,6 +141,7 @@ HB_FUNC_STATIC( QCOLLATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -152,15 +153,23 @@ HB_FUNC_STATIC( QCOLLATOR_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QCollator * par1 = (QCollator *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
+    if( ISQCOLLATOR(1) )
+    {
+      QCollator * par1 = (QCollator *) _qt5xhb_itemGetPtr(1);
+      obj->swap ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 void setLocale(const QLocale &locale)
@@ -169,15 +178,23 @@ HB_FUNC_STATIC( QCOLLATOR_SETLOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    obj->setLocale ( *par1 );
+    if( ISQLOCALE(1) )
+    {
+      QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
+      obj->setLocale ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 QLocale locale() const
@@ -186,6 +203,7 @@ HB_FUNC_STATIC( QCOLLATOR_LOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
@@ -194,7 +212,6 @@ HB_FUNC_STATIC( QCOLLATOR_LOCALE )
 #endif
 }
 
-
 /*
 Qt::CaseSensitivity caseSensitivity() const
 */
@@ -202,13 +219,13 @@ HB_FUNC_STATIC( QCOLLATOR_CASESENSITIVITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->caseSensitivity (  ) );
   }
 #endif
 }
-
 
 /*
 void setCaseSensitivity(Qt::CaseSensitivity cs)
@@ -217,15 +234,23 @@ HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCaseSensitivity (  (Qt::CaseSensitivity) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setCaseSensitivity (  (Qt::CaseSensitivity) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 void setNumericMode(bool on)
@@ -234,14 +259,22 @@ HB_FUNC_STATIC( QCOLLATOR_SETNUMERICMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setNumericMode ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setNumericMode ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 bool numericMode() const
@@ -250,13 +283,13 @@ HB_FUNC_STATIC( QCOLLATOR_NUMERICMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->numericMode (  ) );
   }
 #endif
 }
-
 
 /*
 void setIgnorePunctuation(bool on)
@@ -265,14 +298,22 @@ HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setIgnorePunctuation ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setIgnorePunctuation ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 bool ignorePunctuation() const
@@ -281,17 +322,13 @@ HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->ignorePunctuation (  ) );
   }
 #endif
 }
-
-
-
-
-
 
 /*
 QCollatorSortKey sortKey(const QString &string) const
@@ -300,20 +337,27 @@ HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey ( par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLLATORSORTKEY", true );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey ( par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QCOLLATORSORTKEY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
 
-
-
 HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -332,6 +376,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -353,14 +398,15 @@ HB_FUNC_STATIC( QCOLLATOR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QCOLLATOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

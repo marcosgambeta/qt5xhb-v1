@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QChar
 
    DATA pointer
@@ -62,11 +60,13 @@ CLASS QChar
    METHOD toUpper
    METHOD unicode
    METHOD unicodeVersion
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -232,7 +232,6 @@ HB_FUNC_STATIC( QCHAR_NEW10 )
   hb_itemReturn( self );
 }
 
-
 //[01]QChar ()
 //[02]QChar ( char ch )
 //[03]QChar ( uchar ch )
@@ -252,6 +251,7 @@ HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
 HB_FUNC_STATIC( QCHAR_DELETE )
 {
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -261,6 +261,7 @@ HB_FUNC_STATIC( QCHAR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -270,12 +271,12 @@ Category category () const
 HB_FUNC_STATIC( QCHAR_CATEGORY )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->category (  ) );
   }
 }
-
 
 /*
 uchar cell () const
@@ -283,12 +284,12 @@ uchar cell () const
 HB_FUNC_STATIC( QCHAR_CELL )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->cell (  ) );
   }
 }
-
 
 /*
 unsigned char combiningClass () const
@@ -296,13 +297,12 @@ unsigned char combiningClass () const
 HB_FUNC_STATIC( QCHAR_COMBININGCLASS )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->combiningClass (  ) );
   }
 }
-
-
 
 /*
 Decomposition decompositionTag () const
@@ -310,12 +310,12 @@ Decomposition decompositionTag () const
 HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->decompositionTag (  ) );
   }
 }
-
 
 /*
 int digitValue () const
@@ -323,12 +323,12 @@ int digitValue () const
 HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->digitValue (  ) );
   }
 }
-
 
 /*
 Direction direction () const
@@ -336,12 +336,12 @@ Direction direction () const
 HB_FUNC_STATIC( QCHAR_DIRECTION )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->direction (  ) );
   }
 }
-
 
 /*
 bool hasMirrored () const
@@ -349,12 +349,12 @@ bool hasMirrored () const
 HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasMirrored (  ) );
   }
 }
-
 
 /*
 bool isDigit () const
@@ -362,12 +362,12 @@ bool isDigit () const
 HB_FUNC_STATIC( QCHAR_ISDIGIT )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isDigit (  ) );
   }
 }
-
 
 /*
 bool isHighSurrogate () const
@@ -375,12 +375,12 @@ bool isHighSurrogate () const
 HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isHighSurrogate (  ) );
   }
 }
-
 
 /*
 bool isLetter () const
@@ -388,12 +388,12 @@ bool isLetter () const
 HB_FUNC_STATIC( QCHAR_ISLETTER )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isLetter (  ) );
   }
 }
-
 
 /*
 bool isLetterOrNumber () const
@@ -401,12 +401,12 @@ bool isLetterOrNumber () const
 HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isLetterOrNumber (  ) );
   }
 }
-
 
 /*
 bool isLowSurrogate () const
@@ -414,12 +414,12 @@ bool isLowSurrogate () const
 HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isLowSurrogate (  ) );
   }
 }
-
 
 /*
 bool isLower () const
@@ -427,12 +427,12 @@ bool isLower () const
 HB_FUNC_STATIC( QCHAR_ISLOWER )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isLower (  ) );
   }
 }
-
 
 /*
 bool isMark () const
@@ -440,12 +440,12 @@ bool isMark () const
 HB_FUNC_STATIC( QCHAR_ISMARK )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isMark (  ) );
   }
 }
-
 
 /*
 bool isNull () const
@@ -453,12 +453,12 @@ bool isNull () const
 HB_FUNC_STATIC( QCHAR_ISNULL )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
   }
 }
-
 
 /*
 bool isNumber () const
@@ -466,12 +466,12 @@ bool isNumber () const
 HB_FUNC_STATIC( QCHAR_ISNUMBER )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNumber (  ) );
   }
 }
-
 
 /*
 bool isPrint () const
@@ -479,12 +479,12 @@ bool isPrint () const
 HB_FUNC_STATIC( QCHAR_ISPRINT )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isPrint (  ) );
   }
 }
-
 
 /*
 bool isPunct () const
@@ -492,12 +492,12 @@ bool isPunct () const
 HB_FUNC_STATIC( QCHAR_ISPUNCT )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isPunct (  ) );
   }
 }
-
 
 /*
 bool isSpace () const
@@ -505,12 +505,12 @@ bool isSpace () const
 HB_FUNC_STATIC( QCHAR_ISSPACE )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isSpace (  ) );
   }
 }
-
 
 /*
 bool isSymbol () const
@@ -518,12 +518,12 @@ bool isSymbol () const
 HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isSymbol (  ) );
   }
 }
-
 
 /*
 bool isTitleCase () const
@@ -531,12 +531,12 @@ bool isTitleCase () const
 HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isTitleCase (  ) );
   }
 }
-
 
 /*
 bool isUpper () const
@@ -544,12 +544,12 @@ bool isUpper () const
 HB_FUNC_STATIC( QCHAR_ISUPPER )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isUpper (  ) );
   }
 }
-
 
 /*
 Joining joining () const
@@ -557,12 +557,12 @@ Joining joining () const
 HB_FUNC_STATIC( QCHAR_JOINING )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->joining (  ) );
   }
 }
-
 
 /*
 QChar mirroredChar () const
@@ -570,6 +570,7 @@ QChar mirroredChar () const
 HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QChar * ptr = new QChar( obj->mirroredChar (  ) );
@@ -577,20 +578,18 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
   }
 }
 
-
 /*
 uchar row () const
 */
 HB_FUNC_STATIC( QCHAR_ROW )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->row (  ) );
   }
 }
-
-
 
 /*
 QChar toCaseFolded () const
@@ -598,6 +597,7 @@ QChar toCaseFolded () const
 HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QChar * ptr = new QChar( obj->toCaseFolded (  ) );
@@ -605,19 +605,18 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
   }
 }
 
-
 /*
 char toLatin1 () const
 */
 HB_FUNC_STATIC( QCHAR_TOLATIN1 )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->toLatin1 (  ) );
   }
 }
-
 
 /*
 QChar toLower () const
@@ -625,6 +624,7 @@ QChar toLower () const
 HB_FUNC_STATIC( QCHAR_TOLOWER )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QChar * ptr = new QChar( obj->toLower (  ) );
@@ -632,13 +632,13 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
   }
 }
 
-
 /*
 QChar toTitleCase () const
 */
 HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QChar * ptr = new QChar( obj->toTitleCase (  ) );
@@ -646,13 +646,13 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
   }
 }
 
-
 /*
 QChar toUpper () const
 */
 HB_FUNC_STATIC( QCHAR_TOUPPER )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QChar * ptr = new QChar( obj->toUpper (  ) );
@@ -660,20 +660,18 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
   }
 }
 
-
-
 /*
 ushort unicode () const
 */
 HB_FUNC_STATIC( QCHAR_UNICODE )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->unicode (  ) );
   }
 }
-
 
 /*
 UnicodeVersion unicodeVersion () const
@@ -681,52 +679,19 @@ UnicodeVersion unicodeVersion () const
 HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
 {
   QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->unicodeVersion (  ) );
   }
 }
 
-
 // TODO: implementar metódos estáticos
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 HB_FUNC_STATIC( QCHAR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -745,6 +710,7 @@ HB_FUNC_STATIC( QCHAR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -766,14 +732,15 @@ HB_FUNC_STATIC( QCHAR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QCHAR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
