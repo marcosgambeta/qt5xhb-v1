@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QBitArray
 
    DATA pointer
@@ -17,35 +16,28 @@ CLASS QBitArray
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD at
    METHOD clear
    METHOD clearBit
-   METHOD count1
-   METHOD count2
    METHOD count
-   METHOD fill1
-   METHOD fill2
    METHOD fill
    METHOD isEmpty
    METHOD isNull
    METHOD resize
-   METHOD setBit1
-   METHOD setBit2
    METHOD setBit
    METHOD size
    METHOD testBit
    METHOD toggleBit
    METHOD truncate
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -75,7 +67,7 @@ RETURN
 /*
 QBitArray ()
 */
-HB_FUNC_STATIC( QBITARRAY_NEW1 )
+void QBitArray_new1 ()
 {
   QBitArray * o = new QBitArray (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -88,7 +80,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW1 )
 /*
 QBitArray ( int size, bool value = false )
 */
-HB_FUNC_STATIC( QBITARRAY_NEW2 )
+void QBitArray_new2 ()
 {
   int par1 = hb_parni(1);
   bool par2 = ISNIL(2)? false : hb_parl(2);
@@ -103,7 +95,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW2 )
 /*
 QBitArray ( const QBitArray & other )
 */
-HB_FUNC_STATIC( QBITARRAY_NEW3 )
+void QBitArray_new3 ()
 {
   QBitArray * par1 = (QBitArray *) _qt5xhb_itemGetPtr(1);
   QBitArray * o = new QBitArray ( *par1 );
@@ -114,7 +106,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QBitArray ()
 //[2]QBitArray ( int size, bool value = false )
 //[3]QBitArray ( const QBitArray & other )
@@ -123,15 +114,15 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBITARRAY_NEW1 );
+    QBitArray_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBITARRAY_NEW2 );
+    QBitArray_new2();
   }
   else if( ISNUMPAR(1) && ISQBITARRAY(1) )
   {
-    HB_FUNC_EXEC( QBITARRAY_NEW3 );
+    QBitArray_new3();
   }
   else
   {
@@ -142,6 +133,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
 HB_FUNC_STATIC( QBITARRAY_DELETE )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -151,6 +143,7 @@ HB_FUNC_STATIC( QBITARRAY_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -160,12 +153,19 @@ bool at ( int i ) const
 HB_FUNC_STATIC( QBITARRAY_AT )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->at ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->at ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void clear ()
@@ -173,13 +173,14 @@ void clear ()
 HB_FUNC_STATIC( QBITARRAY_CLEAR )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clear (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearBit ( int i )
@@ -187,20 +188,29 @@ void clearBit ( int i )
 HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->clearBit ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->clearBit ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QBITARRAY_COUNT1 )
+void QBitArray_count1 ()
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->count (  ) );
@@ -210,15 +220,15 @@ HB_FUNC_STATIC( QBITARRAY_COUNT1 )
 /*
 int count ( bool on ) const
 */
-HB_FUNC_STATIC( QBITARRAY_COUNT2 )
+void QBitArray_count2 ()
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->count ( (bool) hb_parl(1) ) );
   }
 }
-
 
 //[1]int count () const
 //[2]int count ( bool on ) const
@@ -227,11 +237,11 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBITARRAY_COUNT1 );
+    QBitArray_count1();
   }
   else if( ISNUMPAR(1) && ISLOG(1) )
   {
-    HB_FUNC_EXEC( QBITARRAY_COUNT2 );
+    QBitArray_count2();
   }
   else
   {
@@ -242,9 +252,10 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 /*
 bool fill ( bool value, int size = -1 )
 */
-HB_FUNC_STATIC( QBITARRAY_FILL1 )
+void QBitArray_fill1 ()
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->fill ( (bool) hb_parl(1), (int) ISNIL(2)? -1 : hb_parni(2) ) );
@@ -254,7 +265,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL1 )
 /*
 void fill ( bool value, int begin, int end )
 */
-HB_FUNC_STATIC( QBITARRAY_FILL2 )
+void QBitArray_fill2 ()
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -264,7 +275,6 @@ HB_FUNC_STATIC( QBITARRAY_FILL2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 //[1]bool fill ( bool value, int size = -1 )
 //[2]void fill ( bool value, int begin, int end )
 
@@ -272,11 +282,11 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 {
   if( ISBETWEEN(1,2) && ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBITARRAY_FILL1 );
+    QBitArray_fill1();
   }
   else if( ISNUMPAR(3) && ISLOG(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QBITARRAY_FILL2 );
+    QBitArray_fill2();
   }
   else
   {
@@ -290,12 +300,12 @@ bool isEmpty () const
 HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
   }
 }
-
 
 /*
 bool isNull () const
@@ -303,12 +313,12 @@ bool isNull () const
 HB_FUNC_STATIC( QBITARRAY_ISNULL )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
   }
 }
-
 
 /*
 void resize ( int size )
@@ -316,40 +326,51 @@ void resize ( int size )
 HB_FUNC_STATIC( QBITARRAY_RESIZE )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->resize ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->resize ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBit ( int i )
 */
-HB_FUNC_STATIC( QBITARRAY_SETBIT1 )
+void QBitArray_setBit1 ()
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setBit ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setBit ( int i, bool value )
 */
-HB_FUNC_STATIC( QBITARRAY_SETBIT2 )
+void QBitArray_setBit2 ()
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setBit ( (int) hb_parni(1), (bool) hb_parl(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setBit ( int i )
 //[2]void setBit ( int i, bool value )
@@ -358,11 +379,11 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBITARRAY_SETBIT1 );
+    QBitArray_setBit1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
-    HB_FUNC_EXEC( QBITARRAY_SETBIT2 );
+    QBitArray_setBit2();
   }
   else
   {
@@ -376,12 +397,12 @@ int size () const
 HB_FUNC_STATIC( QBITARRAY_SIZE )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->size (  ) );
   }
 }
-
 
 /*
 bool testBit ( int i ) const
@@ -389,12 +410,19 @@ bool testBit ( int i ) const
 HB_FUNC_STATIC( QBITARRAY_TESTBIT )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->testBit ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->testBit ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool toggleBit ( int i )
@@ -402,12 +430,19 @@ bool toggleBit ( int i )
 HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->toggleBit ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->toggleBit ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void truncate ( int pos )
@@ -415,18 +450,26 @@ void truncate ( int pos )
 HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
 {
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->truncate ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->truncate ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QBITARRAY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -445,6 +488,7 @@ HB_FUNC_STATIC( QBITARRAY_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -466,14 +510,15 @@ HB_FUNC_STATIC( QBITARRAY_SELFDESTRUCTION )
 HB_FUNC_STATIC( QBITARRAY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

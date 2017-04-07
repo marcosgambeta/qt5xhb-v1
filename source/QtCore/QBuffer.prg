@@ -19,8 +19,6 @@ CLASS QBuffer INHERIT QIODevice
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD buffer1
@@ -28,8 +26,6 @@ CLASS QBuffer INHERIT QIODevice
    METHOD buffer
    METHOD data
    METHOD setBuffer
-   METHOD setData1
-   METHOD setData2
    METHOD setData
    METHOD atEnd
    METHOD canReadLine
@@ -38,6 +34,7 @@ CLASS QBuffer INHERIT QIODevice
    METHOD pos
    METHOD seek
    METHOD size
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +64,7 @@ RETURN
 /*
 QBuffer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUFFER_NEW1 )
+void QBuffer_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QBuffer * o = new QBuffer ( par1 );
@@ -81,7 +78,7 @@ HB_FUNC_STATIC( QBUFFER_NEW1 )
 /*
 QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUFFER_NEW2 )
+void QBuffer_new2 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
@@ -93,7 +90,6 @@ HB_FUNC_STATIC( QBUFFER_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QBuffer ( QObject * parent = 0 )
 //[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 
@@ -101,11 +97,11 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QBUFFER_NEW1 );
+    QBuffer_new1();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBUFFER_NEW2 );
+    QBuffer_new2();
   }
   else
   {
@@ -116,6 +112,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 HB_FUNC_STATIC( QBUFFER_DELETE )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -125,6 +122,7 @@ HB_FUNC_STATIC( QBUFFER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -134,6 +132,7 @@ QByteArray & buffer ()
 HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = &obj->buffer (  );
@@ -141,20 +140,19 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
   }
 }
 
-
 /*
 const QByteArray & buffer () const
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QByteArray * ptr = &obj->buffer (  );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]QByteArray & buffer ()
 //[2]const QByteArray & buffer () const
@@ -172,6 +170,7 @@ const QByteArray & data () const
 HB_FUNC_STATIC( QBUFFER_DATA )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QByteArray * ptr = &obj->data (  );
@@ -179,50 +178,60 @@ HB_FUNC_STATIC( QBUFFER_DATA )
   }
 }
 
-
 /*
 void setBuffer ( QByteArray * byteArray )
 */
 HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setBuffer ( par1 );
+    if( ISQBYTEARRAY(1) )
+    {
+      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+      obj->setBuffer ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setData ( const QByteArray & data )
 */
-HB_FUNC_STATIC( QBUFFER_SETDATA1 )
+void QBuffer_setData1 ()
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     obj->setData ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setData ( const char * data, int size )
 */
-HB_FUNC_STATIC( QBUFFER_SETDATA2 )
+void QBuffer_setData2 ()
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
     obj->setData (  (const char *) par1, (int) hb_parni(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setData ( const QByteArray & data )
 //[2]void setData ( const char * data, int size )
@@ -231,11 +240,11 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBUFFER_SETDATA1 );
+    QBuffer_setData1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBUFFER_SETDATA2 );
+    QBuffer_setData2();
   }
   else
   {
@@ -249,12 +258,12 @@ virtual bool atEnd () const
 HB_FUNC_STATIC( QBUFFER_ATEND )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->atEnd (  ) );
   }
 }
-
 
 /*
 virtual bool canReadLine () const
@@ -262,12 +271,12 @@ virtual bool canReadLine () const
 HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->canReadLine (  ) );
   }
 }
-
 
 /*
 virtual void close ()
@@ -275,13 +284,14 @@ virtual void close ()
 HB_FUNC_STATIC( QBUFFER_CLOSE )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->close (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool open ( OpenMode flags )
@@ -289,13 +299,20 @@ virtual bool open ( OpenMode flags )
 HB_FUNC_STATIC( QBUFFER_OPEN )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QBuffer::OpenMode) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retl( obj->open (  (QBuffer::OpenMode) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual qint64 pos () const
@@ -303,12 +320,12 @@ virtual qint64 pos () const
 HB_FUNC_STATIC( QBUFFER_POS )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->pos (  ) );
   }
 }
-
 
 /*
 virtual bool seek ( qint64 pos )
@@ -316,12 +333,19 @@ virtual bool seek ( qint64 pos )
 HB_FUNC_STATIC( QBUFFER_SEEK )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual qint64 size () const
@@ -329,13 +353,11 @@ virtual qint64 size () const
 HB_FUNC_STATIC( QBUFFER_SIZE )
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->size (  ) );
   }
 }
 
-
-
 #pragma ENDDUMP
-

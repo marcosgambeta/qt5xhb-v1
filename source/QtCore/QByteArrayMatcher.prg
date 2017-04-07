@@ -20,22 +20,18 @@ CLASS QByteArrayMatcher
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
-   METHOD indexIn1
-   METHOD indexIn2
    METHOD indexIn
    METHOD pattern
    METHOD setPattern
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,7 +61,7 @@ RETURN
 /*
 QByteArrayMatcher ()
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
+void QByteArrayMatcher_new1 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -78,7 +74,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
 /*
 QByteArrayMatcher ( const QByteArray & pattern )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
+void QByteArrayMatcher_new2 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QByteArrayMatcher * o = new QByteArrayMatcher ( *par1 );
@@ -92,7 +88,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
 /*
 QByteArrayMatcher ( const char * pattern, int length )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
+void QByteArrayMatcher_new3 ()
 {
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
@@ -107,7 +103,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
 /*
 QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
+void QByteArrayMatcher_new4 ()
 {
   QByteArrayMatcher * par1 = (QByteArrayMatcher *) _qt5xhb_itemGetPtr(1);
   QByteArrayMatcher * o = new QByteArrayMatcher ( *par1 );
@@ -118,7 +114,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
   hb_itemReturn( self );
 }
 
-
 //[1]QByteArrayMatcher()
 //[2]QByteArrayMatcher(const QByteArray & pattern)
 //[3]QByteArrayMatcher(const char * pattern, int length)
@@ -128,19 +123,19 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW1 );
+    QByteArrayMatcher_new1();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW2 );
+    QByteArrayMatcher_new2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW3 );
+    QByteArrayMatcher_new3();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW4 );
+    QByteArrayMatcher_new4();
   }
   else
   {
@@ -151,6 +146,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -160,15 +156,17 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN1 )
+void QByteArrayMatcher_indexIn1 ()
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
@@ -179,16 +177,16 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN1 )
 /*
 int indexIn ( const char * str, int len, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
+void QByteArrayMatcher_indexIn2 ()
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
     hb_retni( obj->indexIn (  (const char *) par1, (int) hb_parni(2), (int) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
-
 
 //[1]int indexIn(const QByteArray & ba, int from = 0) const
 //[2]int indexIn(const char * str, int len, int from = 0) const
@@ -197,11 +195,11 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_INDEXIN1 );
+    QByteArrayMatcher_indexIn1();
   }
   else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_INDEXIN2 );
+    QByteArrayMatcher_indexIn2();
   }
   else
   {
@@ -215,6 +213,7 @@ QByteArray pattern () const
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->pattern (  ) );
@@ -222,26 +221,33 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
   }
 }
 
-
 /*
 void setPattern ( const QByteArray & pattern )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setPattern ( *par1 );
+    if( ISQBYTEARRAY(1) )
+    {
+      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+      obj->setPattern ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -260,6 +266,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -281,14 +288,15 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SELFDESTRUCTION )
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

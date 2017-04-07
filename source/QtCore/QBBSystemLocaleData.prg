@@ -32,6 +32,7 @@ CLASS QBBSystemLocaleData INHERIT QObject
    METHOD readRegionLocale
    METHOD readMeasurementSystem
    METHOD readHourFormat
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -71,10 +72,10 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
   hb_itemReturn( self );
 }
 
-
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DELETE )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -84,6 +85,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -93,12 +95,12 @@ uint measurementSystem()
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->measurementSystem (  ) );
   }
 }
-
 
 /*
 QVariant timeFormat(QLocale::FormatType)
@@ -106,6 +108,7 @@ QVariant timeFormat(QLocale::FormatType)
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -114,13 +117,13 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
   }
 }
 
-
 /*
 QVariant dateTimeFormat(QLocale::FormatType)
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     int par1 = hb_parni(1);
@@ -129,13 +132,13 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
   }
 }
 
-
 /*
 QLocale languageLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->languageLocale (  ) );
@@ -143,13 +146,13 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
   }
 }
 
-
 /*
 QLocale regionLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->regionLocale (  ) );
@@ -157,21 +160,20 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
   }
 }
 
-
-
 /*
 void installSocketNotifiers()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->installSocketNotifiers (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void readLanguageLocale()
@@ -179,13 +181,14 @@ void readLanguageLocale()
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->readLanguageLocale (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void readRegionLocale()
@@ -193,13 +196,14 @@ void readRegionLocale()
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READREGIONLOCALE )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->readRegionLocale (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void readMeasurementSystem()
@@ -207,13 +211,14 @@ void readMeasurementSystem()
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->readMeasurementSystem (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void readHourFormat()
@@ -221,14 +226,13 @@ void readHourFormat()
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READHOURFORMAT )
 {
   QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->readHourFormat (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-
