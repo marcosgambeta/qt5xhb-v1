@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAbstractNativeEventFilter INHERIT QObject
 
    DATA class_id INIT Class_Id_QAbstractNativeEventFilter
@@ -18,6 +17,7 @@ CLASS QAbstractNativeEventFilter INHERIT QObject
 
    METHOD delete
    METHOD nativeEventFilter
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,10 +44,10 @@ RETURN
 #include <QAbstractNativeEventFilter>
 #endif
 
-
 HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_DELETE )
 {
   QAbstractNativeEventFilter * obj = (QAbstractNativeEventFilter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -57,6 +57,7 @@ HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -66,17 +67,22 @@ virtual bool nativeEventFilter(const QByteArray & eventType, void * message, lon
 HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER )
 {
   QAbstractNativeEventFilter * obj = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    void * par2 = (void *) hb_parptr(2);
-    long par3;
-    hb_retl( obj->nativeEventFilter ( *par1, par2, &par3 ) );
-    hb_stornl( par3, 3 );
+    if( ISQBYTEARRAY(1) && ISPOINTER(2) && ISNUM(3) )
+    {
+      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+      void * par2 = (void *) hb_parptr(2);
+      long par3;
+      hb_retl( obj->nativeEventFilter ( *par1, par2, &par3 ) );
+      hb_stornl( par3, 3 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
-
-
 #pragma ENDDUMP
-

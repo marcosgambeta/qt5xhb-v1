@@ -28,6 +28,7 @@ CLASS QAnimationGroup INHERIT QAbstractAnimation
    METHOD insertAnimation
    METHOD removeAnimation
    METHOD takeAnimation
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,10 +55,10 @@ RETURN
 #include <QAnimationGroup>
 #endif
 
-
 HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -67,6 +68,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -76,14 +78,22 @@ void addAnimation ( QAbstractAnimation * animation )
 HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-    obj->addAnimation ( par1 );
+    if( ISQABSTRACTANIMATION(1) )
+    {
+      QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
+      obj->addAnimation ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QAbstractAnimation * animationAt ( int index ) const
@@ -91,13 +101,20 @@ QAbstractAnimation * animationAt ( int index ) const
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractAnimation * ptr = obj->animationAt ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
+    if( ISNUM(1) )
+    {
+      QAbstractAnimation * ptr = obj->animationAt ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 int animationCount () const
@@ -105,12 +122,12 @@ int animationCount () const
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->animationCount (  ) );
   }
 }
-
 
 /*
 void clear ()
@@ -118,13 +135,14 @@ void clear ()
 HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clear (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int indexOfAnimation ( QAbstractAnimation * animation ) const
@@ -132,13 +150,20 @@ int indexOfAnimation ( QAbstractAnimation * animation ) const
 HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexOfAnimation ( par1 ) );
+    if( ISQABSTRACTANIMATION(1) )
+    {
+      QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
+      hb_retni( obj->indexOfAnimation ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void insertAnimation ( int index, QAbstractAnimation * animation )
@@ -146,14 +171,22 @@ void insertAnimation ( int index, QAbstractAnimation * animation )
 HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractAnimation * par2 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(2);
-    obj->insertAnimation ( (int) hb_parni(1), par2 );
+    if( ISNUM(1) && ISQABSTRACTANIMATION(2) )
+    {
+      QAbstractAnimation * par2 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(2);
+      obj->insertAnimation ( (int) hb_parni(1), par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeAnimation ( QAbstractAnimation * animation )
@@ -161,14 +194,22 @@ void removeAnimation ( QAbstractAnimation * animation )
 HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-    obj->removeAnimation ( par1 );
+    if( ISQABSTRACTANIMATION(1) )
+    {
+      QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
+      obj->removeAnimation ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QAbstractAnimation *	takeAnimation ( int index )
@@ -176,14 +217,19 @@ QAbstractAnimation *	takeAnimation ( int index )
 HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAbstractAnimation * ptr = obj->takeAnimation ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
+    if( ISNUM(1) )
+    {
+      QAbstractAnimation * ptr = obj->takeAnimation ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
-
-
 #pragma ENDDUMP
-

@@ -23,8 +23,10 @@ CLASS QAbstractState INHERIT QObject
    METHOD delete
    METHOD machine
    METHOD parentState
+
    METHOD onEntered
    METHOD onExited
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,6 +56,7 @@ RETURN
 HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -63,6 +66,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -72,6 +76,7 @@ QStateMachine * machine () const
 HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
   QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStateMachine * ptr = obj->machine (  );
@@ -79,13 +84,13 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
   }
 }
 
-
 /*
 QState * parentState () const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
   QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QState * ptr = obj->parentState (  );
@@ -93,8 +98,4 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-
