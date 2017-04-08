@@ -32,11 +32,13 @@ CLASS QDirIterator
    METHOD hasNext
    METHOD next
    METHOD path
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -124,15 +126,15 @@ QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filt
 HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
-QStringList par2;
-PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aStrings2);
-for (i2=0;i2<nLen2;i2++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-par2 << temp;
-}
+  QStringList par2;
+  PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+  int i2;
+  int nLen2 = hb_arrayLen(aStrings2);
+  for (i2=0;i2<nLen2;i2++)
+  {
+    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
+    par2 << temp;
+  }
   int par3 = ISNIL(3)? (int) QDir::NoFilter : hb_parni(3);
   int par4 = ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4);
   QDirIterator * o = new QDirIterator ( par1, par2,  (QDir::Filters) par3,  (QDirIterator::IteratorFlags) par4 );
@@ -145,7 +147,6 @@ par2 << temp;
   hb_itemRelease( des );
   hb_itemReturn( self );
 }
-
 
 //[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 //[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
@@ -181,6 +182,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
 HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -190,6 +192,7 @@ HB_FUNC_STATIC( QDIRITERATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -199,6 +202,7 @@ QFileInfo fileInfo () const
 HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 {
   QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QFileInfo * ptr = new QFileInfo( obj->fileInfo (  ) );
@@ -206,19 +210,18 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
   }
 }
 
-
 /*
 QString fileName () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 {
   QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
   }
 }
-
 
 /*
 QString filePath () const
@@ -226,12 +229,12 @@ QString filePath () const
 HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 {
   QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->filePath (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool hasNext () const
@@ -239,12 +242,12 @@ bool hasNext () const
 HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 {
   QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->hasNext (  ) );
   }
 }
-
 
 /*
 QString next ()
@@ -252,12 +255,12 @@ QString next ()
 HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 {
   QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->next (  ).toLatin1().data() );
   }
 }
-
 
 /*
 QString path () const
@@ -265,17 +268,17 @@ QString path () const
 HB_FUNC_STATIC( QDIRITERATOR_PATH )
 {
   QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->path (  ).toLatin1().data() );
   }
 }
 
-
-
 HB_FUNC_STATIC( QDIRITERATOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -294,6 +297,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -315,14 +319,15 @@ HB_FUNC_STATIC( QDIRITERATOR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDIRITERATOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

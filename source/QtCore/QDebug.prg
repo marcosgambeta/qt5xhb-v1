@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QDebug
 
    DATA pointer
@@ -28,11 +26,13 @@ CLASS QDebug
    METHOD maybeSpace
    METHOD autoInsertSpaces
    METHOD setAutoInsertSpaces
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -93,10 +93,9 @@ HB_FUNC_STATIC( QDEBUG_NEW4 )
   hb_itemReturn( self );
 }
 
-
 //[1]QDebug(QIODevice *device)
-//[2]QDebug(QString *string)
-//[3]QDebug(QtMsgType t)
+//[2]QDebug(QString *string)   // TODO: implementar
+//[3]QDebug(QtMsgType t)       // TODO: implementar
 //[4]QDebug(const QDebug &o)
 
 HB_FUNC_STATIC( QDEBUG_NEW )
@@ -118,6 +117,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 HB_FUNC_STATIC( QDEBUG_DELETE )
 {
   QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -127,6 +127,7 @@ HB_FUNC_STATIC( QDEBUG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -136,14 +137,22 @@ void swap(QDebug &other)
 HB_FUNC_STATIC( QDEBUG_SWAP )
 {
   QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QDebug  * par1 = (QDebug  *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
+    if( ISQDEBUG(1) )
+    {
+      QDebug  * par1 = (QDebug  *) _qt5xhb_itemGetPtr(1);
+      obj->swap ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QDebug &space()
@@ -151,6 +160,7 @@ QDebug &space()
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {
   QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDebug * ptr = &obj->space (  );
@@ -158,13 +168,13 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
   }
 }
 
-
 /*
 QDebug &nospace()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
   QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDebug * ptr = &obj->nospace (  );
@@ -172,13 +182,13 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
   }
 }
 
-
 /*
 QDebug &maybeSpace()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
   QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDebug * ptr = &obj->maybeSpace (  );
@@ -186,19 +196,18 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
   }
 }
 
-
 /*
 bool autoInsertSpaces() const
 */
 HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
 {
   QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->autoInsertSpaces (  ) );
   }
 }
-
 
 /*
 void setAutoInsertSpaces(bool b)
@@ -206,18 +215,26 @@ void setAutoInsertSpaces(bool b)
 HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
 {
   QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAutoInsertSpaces ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoInsertSpaces ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QDEBUG_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -236,6 +253,7 @@ HB_FUNC_STATIC( QDEBUG_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -257,14 +275,15 @@ HB_FUNC_STATIC( QDEBUG_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDEBUG_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
