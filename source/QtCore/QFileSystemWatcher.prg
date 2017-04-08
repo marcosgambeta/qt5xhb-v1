@@ -9,15 +9,12 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QFileSystemWatcher INHERIT QObject
 
    DATA class_id INIT Class_Id_QFileSystemWatcher
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addPath
@@ -26,8 +23,10 @@ CLASS QFileSystemWatcher INHERIT QObject
    METHOD files
    METHOD removePath
    METHOD removePaths
+
    METHOD onDirectoryChanged
    METHOD onFileChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,7 +58,7 @@ RETURN
 /*
 QFileSystemWatcher(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
+void QFileSystemWatcher_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1 );
@@ -73,17 +72,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
 /*
 QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW2 )
+void QFileSystemWatcher_new2 ()
 {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+  QStringList par1;
+  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aStrings1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    par1 << temp;
+  }
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -93,7 +92,6 @@ par1 << temp;
   hb_itemReturn( self );
 }
 
-
 //[1]QFileSystemWatcher(QObject * parent = 0)
 //[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 
@@ -101,11 +99,11 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMWATCHER_NEW1 );
+    QFileSystemWatcher_new1();
   }
   else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMWATCHER_NEW2 );
+    QFileSystemWatcher_new2();
   }
   else
   {
@@ -116,6 +114,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -125,6 +124,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -134,13 +134,20 @@ bool addPath(const QString & path)
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->addPath ( par1 ) );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      hb_retl( obj->addPath ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QStringList addPaths(const QStringList & paths)
@@ -148,22 +155,29 @@ QStringList addPaths(const QStringList & paths)
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
-    QStringList strl = obj->addPaths ( par1 );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    if( ISARRAY(1) )
+    {
+      QStringList par1;
+      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aStrings1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+        par1 << temp;
+      }
+      QStringList strl = obj->addPaths ( par1 );
+      _qt5xhb_convert_qstringlist_to_array ( strl );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QStringList directories() const
@@ -171,6 +185,7 @@ QStringList directories() const
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->directories (  );
@@ -178,13 +193,13 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
   }
 }
 
-
 /*
 QStringList files() const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->files (  );
@@ -192,20 +207,26 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
   }
 }
 
-
 /*
 bool removePath(const QString & path)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->removePath ( par1 ) );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      hb_retl( obj->removePath ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QStringList removePaths(const QStringList & paths)
@@ -213,24 +234,28 @@ QStringList removePaths(const QStringList & paths)
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
-    QStringList strl = obj->removePaths ( par1 );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    if( ISARRAY(1) )
+    {
+      QStringList par1;
+      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aStrings1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+        par1 << temp;
+      }
+      QStringList strl = obj->removePaths ( par1 );
+      _qt5xhb_convert_qstringlist_to_array ( strl );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

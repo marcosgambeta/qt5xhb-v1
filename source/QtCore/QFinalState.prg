@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QFinalState INHERIT QAbstractState
 
    DATA class_id INIT Class_Id_QFinalState
@@ -18,6 +17,7 @@ CLASS QFinalState INHERIT QAbstractState
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,19 +49,26 @@ QFinalState(QState * parent = 0)
 */
 HB_FUNC_STATIC( QFINALSTATE_NEW )
 {
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
-  QFinalState * o = new QFinalState ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFinalState *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
+  {
+    QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
+    QFinalState * o = new QFinalState ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFinalState *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QFINALSTATE_DELETE )
 {
   QFinalState * obj = (QFinalState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -71,9 +78,8 @@ HB_FUNC_STATIC( QFINALSTATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 #pragma ENDDUMP
-

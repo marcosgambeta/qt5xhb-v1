@@ -21,12 +21,11 @@ CLASS QFileSelector INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD select1
-   METHOD select2
    METHOD select
    METHOD extraSelectors
    METHOD setExtraSelectors
    METHOD allSelectors
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,19 +59,26 @@ QFileSelector(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QFILESELECTOR_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QFileSelector * o = new QFileSelector ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSelector *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QFileSelector * o = new QFileSelector ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSelector *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 {
   QFileSelector * obj = (QFileSelector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -82,15 +88,17 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 QString select(const QString &filePath) const
 */
-HB_FUNC_STATIC( QFILESELECTOR_SELECT1 )
+void QFileSelector_select1 ()
 {
   QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -98,13 +106,13 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT1 )
   }
 }
 
-
 /*
 QUrl select(const QUrl &filePath) const
 */
-HB_FUNC_STATIC( QFILESELECTOR_SELECT2 )
+void QFileSelector_select2 ()
 {
   QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
@@ -113,7 +121,6 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT2 )
   }
 }
 
-
 //[1]QString select(const QString &filePath) const
 //[2]QUrl select(const QUrl &filePath) const
 
@@ -121,11 +128,11 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFILESELECTOR_SELECT1 );
+    QFileSelector_select1();
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QFILESELECTOR_SELECT2 );
+    QFileSelector_select2();
   }
   else
   {
@@ -139,6 +146,7 @@ QStringList extraSelectors() const
 HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 {
   QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->extraSelectors (  );
@@ -146,29 +154,36 @@ HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
   }
 }
 
-
 /*
 void setExtraSelectors(const QStringList &list)
 */
 HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
 {
   QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
-    obj->setExtraSelectors ( par1 );
+    if( ISARRAY(1) )
+    {
+      QStringList par1;
+      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aStrings1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+        par1 << temp;
+      }
+      obj->setExtraSelectors ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList allSelectors() const
@@ -176,6 +191,7 @@ QStringList allSelectors() const
 HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
 {
   QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->allSelectors (  );
@@ -183,7 +199,4 @@ HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
   }
 }
 
-
-
 #pragma ENDDUMP
-
