@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QEventLoopLocker
 
    DATA pointer
@@ -17,16 +16,15 @@ CLASS QEventLoopLocker
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,7 +54,7 @@ RETURN
 /*
 QEventLoopLocker()
 */
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW1 )
+void QEventLoopLocker_new1 ()
 {
   QEventLoopLocker * o = new QEventLoopLocker (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -69,7 +67,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW1 )
 /*
 QEventLoopLocker(QEventLoop * loop)
 */
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW2 )
+void QEventLoopLocker_new2 ()
 {
   QEventLoop * par1 = (QEventLoop *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
@@ -83,7 +81,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW2 )
 /*
 QEventLoopLocker(QThread * thread)
 */
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW3 )
+void QEventLoopLocker_new3 ()
 {
   QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
@@ -94,7 +92,6 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QEventLoopLocker()
 //[2]QEventLoopLocker(QEventLoop * loop)
 //[3]QEventLoopLocker(QThread * thread)
@@ -103,15 +100,15 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QEVENTLOOPLOCKER_NEW1 );
+    QEventLoopLocker_new1();
   }
   else if( ISNUMPAR(1) && ISQEVENTLOOP(1) )
   {
-    HB_FUNC_EXEC( QEVENTLOOPLOCKER_NEW2 );
+    QEventLoopLocker_new2();
   }
   else if( ISNUMPAR(1) && ISQTHREAD(1) )
   {
-    HB_FUNC_EXEC( QEVENTLOOPLOCKER_NEW3 );
+    QEventLoopLocker_new3();
   }
   else
   {
@@ -122,6 +119,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
 {
   QEventLoopLocker * obj = (QEventLoopLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -131,13 +129,14 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -156,6 +155,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -177,14 +177,15 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_SELFDESTRUCTION )
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

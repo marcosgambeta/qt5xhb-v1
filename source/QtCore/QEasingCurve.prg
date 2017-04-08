@@ -20,8 +20,6 @@ CLASS QEasingCurve
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addCubicBezierSegment
@@ -37,11 +35,13 @@ CLASS QEasingCurve
    METHOD toCubicSpline
    METHOD type
    METHOD valueForProgress
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -73,7 +73,7 @@ RETURN
 /*
 QEasingCurve ( Type type = Linear )
 */
-HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
+void QEasingCurve_new1 ()
 {
   int par1 = ISNIL(1)? (int) QEasingCurve::Linear : hb_parni(1);
   QEasingCurve * o = new QEasingCurve (  (QEasingCurve::Type) par1 );
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
-HB_FUNC_STATIC( QEASINGCURVE_NEW2 )
+void QEasingCurve_new2 ()
 {
   QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
   QEasingCurve * o = new QEasingCurve ( *par1 );
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QEasingCurve(Type type = Linear)
 //[2]QEasingCurve(const QEasingCurve & other)
 
@@ -106,11 +105,11 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QEASINGCURVE_NEW1 );
+    QEasingCurve_new1();
   }
   else if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
   {
-    HB_FUNC_EXEC( QEASINGCURVE_NEW2 );
+    QEasingCurve_new2();
   }
   else
   {
@@ -121,6 +120,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -130,6 +130,7 @@ HB_FUNC_STATIC( QEASINGCURVE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -139,16 +140,24 @@ void addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF
 HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
-    obj->addCubicBezierSegment ( *par1, *par2, *par3 );
+    if( ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
+    {
+      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+      QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
+      QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
+      obj->addCubicBezierSegment ( *par1, *par2, *par3 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
@@ -156,17 +165,25 @@ void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
 HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->addTCBSegment ( *par1, par2, par3, par4 );
+    if( ISQPOINTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    {
+      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
+      qreal par2 = hb_parnd(2);
+      qreal par3 = hb_parnd(3);
+      qreal par4 = hb_parnd(4);
+      obj->addTCBSegment ( *par1, par2, par3, par4 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal amplitude() const
@@ -174,13 +191,12 @@ qreal amplitude() const
 HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->amplitude (  ) );
   }
 }
-
-
 
 /*
 qreal overshoot() const
@@ -188,12 +204,12 @@ qreal overshoot() const
 HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->overshoot (  ) );
   }
 }
-
 
 /*
 qreal period() const
@@ -201,12 +217,12 @@ qreal period() const
 HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->period (  ) );
   }
 }
-
 
 /*
 void setAmplitude(qreal amplitude)
@@ -214,15 +230,22 @@ void setAmplitude(qreal amplitude)
 HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setAmplitude ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setAmplitude ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setOvershoot(qreal overshoot)
@@ -230,14 +253,22 @@ void setOvershoot(qreal overshoot)
 HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setOvershoot ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setOvershoot ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPeriod(qreal period)
@@ -245,14 +276,22 @@ void setPeriod(qreal period)
 HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setPeriod ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setPeriod ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setType(Type type)
@@ -260,14 +299,22 @@ void setType(Type type)
 HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setType (  (QEasingCurve::Type) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setType (  (QEasingCurve::Type) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void swap(QEasingCurve & other)
@@ -275,14 +322,22 @@ void swap(QEasingCurve & other)
 HB_FUNC_STATIC( QEASINGCURVE_SWAP )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
+    if( ISQEASINGCURVE(1) )
+    {
+      QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
+      obj->swap ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVector<QPointF> toCubicSpline() const
@@ -290,6 +345,7 @@ QVector<QPointF> toCubicSpline() const
 HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QVector<QPointF> list = obj->toCubicSpline (  );
@@ -327,19 +383,18 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
   }
 }
 
-
 /*
 Type type() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->type (  ) );
   }
 }
-
 
 /*
 qreal valueForProgress(qreal progress) const
@@ -347,18 +402,25 @@ qreal valueForProgress(qreal progress) const
 HB_FUNC_STATIC( QEASINGCURVE_VALUEFORPROGRESS )
 {
   QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    hb_retnd( obj->valueForProgress ( par1 ) );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      hb_retnd( obj->valueForProgress ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 HB_FUNC_STATIC( QEASINGCURVE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -377,6 +439,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -398,14 +461,15 @@ HB_FUNC_STATIC( QEASINGCURVE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QEASINGCURVE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
