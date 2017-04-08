@@ -159,6 +159,10 @@ endif
 ifneq (,$(findstring 5.8,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
+# Qt 5.9.x requer C++11
+ifneq (,$(findstring 5.9,$(shell qmake -v)))
+    CFLAGS += -std=c++11
+endif
 CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
