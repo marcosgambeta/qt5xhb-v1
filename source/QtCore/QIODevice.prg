@@ -34,17 +34,11 @@ CLASS QIODevice INHERIT QObject
    METHOD isWritable
    METHOD open
    METHOD openMode
-   METHOD peek1
-   METHOD peek2
    METHOD peek
    METHOD pos
    METHOD putChar
-   METHOD read1
-   METHOD read2
    METHOD read
    METHOD readAll
-   METHOD readLine1
-   METHOD readLine2
    METHOD readLine
    METHOD reset
    METHOD seek
@@ -53,14 +47,13 @@ CLASS QIODevice INHERIT QObject
    METHOD ungetChar
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
-   METHOD write1
-   METHOD write2
-   METHOD write3
    METHOD write
+
    METHOD onAboutToClose
    METHOD onBytesWritten
    METHOD onReadChannelFinished
    METHOD onReadyRead
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -87,7 +80,6 @@ RETURN
 #include <QIODevice>
 #endif
 
-
 //[1]QIODevice ()
 //[2]QIODevice ( QObject * parent )
 
@@ -106,6 +98,7 @@ RETURN
 HB_FUNC_STATIC( QIODEVICE_DELETE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -115,6 +108,7 @@ HB_FUNC_STATIC( QIODEVICE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -124,12 +118,12 @@ virtual bool atEnd () const
 HB_FUNC_STATIC( QIODEVICE_ATEND )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->atEnd (  ) );
   }
 }
-
 
 /*
 virtual qint64 bytesAvailable () const
@@ -137,12 +131,12 @@ virtual qint64 bytesAvailable () const
 HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->bytesAvailable (  ) );
   }
 }
-
 
 /*
 virtual qint64 bytesToWrite () const
@@ -150,12 +144,12 @@ virtual qint64 bytesToWrite () const
 HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->bytesToWrite (  ) );
   }
 }
-
 
 /*
 virtual bool canReadLine () const
@@ -163,12 +157,12 @@ virtual bool canReadLine () const
 HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->canReadLine (  ) );
   }
 }
-
 
 /*
 virtual void close ()
@@ -176,13 +170,14 @@ virtual void close ()
 HB_FUNC_STATIC( QIODEVICE_CLOSE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->close (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString errorString () const
@@ -190,19 +185,20 @@ QString errorString () const
 HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
   }
 }
 
-
 /*
-bool getChar ( char * c )
+bool getChar ( char * c ) // TODO: revisar e implementar corretamente(?)
 */
 HB_FUNC_STATIC( QIODEVICE_GETCHAR )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
@@ -210,19 +206,18 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
   }
 }
 
-
 /*
 bool isOpen () const
 */
 HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isOpen (  ) );
   }
 }
-
 
 /*
 bool isReadable () const
@@ -230,12 +225,12 @@ bool isReadable () const
 HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isReadable (  ) );
   }
 }
-
 
 /*
 virtual bool isSequential () const
@@ -243,12 +238,12 @@ virtual bool isSequential () const
 HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isSequential (  ) );
   }
 }
-
 
 /*
 bool isTextModeEnabled () const
@@ -256,12 +251,12 @@ bool isTextModeEnabled () const
 HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isTextModeEnabled (  ) );
   }
 }
-
 
 /*
 bool isWritable () const
@@ -269,12 +264,12 @@ bool isWritable () const
 HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isWritable (  ) );
   }
 }
-
 
 /*
 virtual bool open ( OpenMode mode )
@@ -282,13 +277,20 @@ virtual bool open ( OpenMode mode )
 HB_FUNC_STATIC( QIODEVICE_OPEN )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 OpenMode openMode () const
@@ -296,19 +298,20 @@ OpenMode openMode () const
 HB_FUNC_STATIC( QIODEVICE_OPENMODE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->openMode (  ) );
   }
 }
 
-
 /*
 qint64 peek ( char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_PEEK1 )
+void QIODevice_peek1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
@@ -316,20 +319,19 @@ HB_FUNC_STATIC( QIODEVICE_PEEK1 )
   }
 }
 
-
 /*
 QByteArray peek ( qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_PEEK2 )
+void QIODevice_peek2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->peek ( (qint64) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]qint64 peek ( char * data, qint64 maxSize )
 //[2]QByteArray peek ( qint64 maxSize )
@@ -338,11 +340,11 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_PEEK1 );
+    QIODevice_peek1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_PEEK2 );
+    QIODevice_peek2();
   }
   else
   {
@@ -356,12 +358,12 @@ virtual qint64 pos () const
 HB_FUNC_STATIC( QIODEVICE_POS )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->pos (  ) );
   }
 }
-
 
 /*
 bool putChar ( char c )
@@ -369,20 +371,28 @@ bool putChar ( char c )
 HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    hb_retl( obj->putChar ( par1 ) );
+    if( (ISNUM(1)||ISCHAR(1)) )
+    {
+      char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
+      hb_retl( obj->putChar ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 qint64 read ( char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_READ1 )
+void QIODevice_read1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
@@ -390,20 +400,19 @@ HB_FUNC_STATIC( QIODEVICE_READ1 )
   }
 }
 
-
 /*
 QByteArray read ( qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_READ2 )
+void QIODevice_read2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->read ( (qint64) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]qint64 read ( char * data, qint64 maxSize )
 //[2]QByteArray read ( qint64 maxSize )
@@ -412,11 +421,11 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READ1 );
+    QIODevice_read1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READ2 );
+    QIODevice_read2();
   }
   else
   {
@@ -430,6 +439,7 @@ QByteArray readAll ()
 HB_FUNC_STATIC( QIODEVICE_READALL )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readAll (  ) );
@@ -437,13 +447,13 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
   }
 }
 
-
 /*
 qint64 readLine ( char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_READLINE1 )
+void QIODevice_readLine1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
@@ -451,20 +461,19 @@ HB_FUNC_STATIC( QIODEVICE_READLINE1 )
   }
 }
 
-
 /*
 QByteArray readLine ( qint64 maxSize = 0 )
 */
-HB_FUNC_STATIC( QIODEVICE_READLINE2 )
+void QIODevice_readLine2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readLine ( (qint64) ISNIL(1)? 0 : hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]qint64 readLine ( char * data, qint64 maxSize )
 //[2]QByteArray readLine ( qint64 maxSize = 0 )
@@ -473,11 +482,11 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READLINE1 );
+    QIODevice_readLine1();
   }
   else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READLINE2 );
+    QIODevice_readLine2();
   }
   else
   {
@@ -491,12 +500,12 @@ virtual bool reset ()
 HB_FUNC_STATIC( QIODEVICE_RESET )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->reset (  ) );
   }
 }
-
 
 /*
 virtual bool seek ( qint64 pos )
@@ -504,12 +513,19 @@ virtual bool seek ( qint64 pos )
 HB_FUNC_STATIC( QIODEVICE_SEEK )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void setTextModeEnabled ( bool enabled )
@@ -517,13 +533,21 @@ void setTextModeEnabled ( bool enabled )
 HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setTextModeEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setTextModeEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual qint64 size () const
@@ -531,12 +555,12 @@ virtual qint64 size () const
 HB_FUNC_STATIC( QIODEVICE_SIZE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->size (  ) );
   }
 }
-
 
 /*
 void ungetChar ( char c )
@@ -544,14 +568,22 @@ void ungetChar ( char c )
 HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    obj->ungetChar ( par1 );
+    if( (ISNUM(1)||ISCHAR(1)) )
+    {
+      char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
+      obj->ungetChar ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool waitForBytesWritten ( int msecs )
@@ -559,12 +591,19 @@ virtual bool waitForBytesWritten ( int msecs )
 HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->waitForBytesWritten ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool waitForReadyRead ( int msecs )
@@ -572,33 +611,48 @@ virtual bool waitForReadyRead ( int msecs )
 HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->waitForReadyRead ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 qint64 write ( const char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_WRITE1 )
+void QIODevice_write1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( obj->write (  (const char *) par1, (qint64) hb_parni(2) ) );
+    if( ISCHAR(1) && ISNUM(2) )
+    {
+      const char * par1 = hb_parc(1);
+      hb_retni( obj->write (  (const char *) par1, (qint64) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 qint64 write ( const char * data )
 */
-HB_FUNC_STATIC( QIODEVICE_WRITE2 )
+void QIODevice_write2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * par1 = hb_parc(1);
@@ -606,20 +660,19 @@ HB_FUNC_STATIC( QIODEVICE_WRITE2 )
   }
 }
 
-
 /*
 qint64 write ( const QByteArray & byteArray )
 */
-HB_FUNC_STATIC( QIODEVICE_WRITE3 )
+void QIODevice_write3 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->write ( *par1 ) );
   }
 }
-
 
 //[1]qint64 write ( const char * data, qint64 maxSize )
 //[2]qint64 write ( const char * data )
@@ -629,15 +682,15 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_WRITE1 );
+    QIODevice_write1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_WRITE2 );
+    QIODevice_write2();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_WRITE3 );
+    QIODevice_write3();
   }
   else
   {
@@ -645,9 +698,4 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
   }
 }
 
-//Signals
-
-
-
 #pragma ENDDUMP
-
