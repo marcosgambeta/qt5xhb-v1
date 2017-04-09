@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QJsonParseError
 
    DATA pointer
@@ -19,11 +18,13 @@ CLASS QJsonParseError
 
    METHOD delete
    METHOD errorString
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,10 +51,10 @@ RETURN
 #include <QJsonParseError>
 #endif
 
-
 HB_FUNC_STATIC( QJSONPARSEERROR_DELETE )
 {
   QJsonParseError * obj = (QJsonParseError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -63,6 +64,7 @@ HB_FUNC_STATIC( QJSONPARSEERROR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -72,17 +74,17 @@ QString errorString() const
 HB_FUNC_STATIC( QJSONPARSEERROR_ERRORSTRING )
 {
   QJsonParseError * obj = (QJsonParseError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
   }
 }
 
-
-
 HB_FUNC_STATIC( QJSONPARSEERROR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -101,6 +103,7 @@ HB_FUNC_STATIC( QJSONPARSEERROR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -122,14 +125,15 @@ HB_FUNC_STATIC( QJSONPARSEERROR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QJSONPARSEERROR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
