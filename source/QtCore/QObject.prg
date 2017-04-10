@@ -53,8 +53,7 @@ CLASS QObject
    METHOD thread
    METHOD deleteLater
    METHOD tr
-   METHOD connect
-   METHOD disconnect
+
    METHOD onAcceptDropsChangeEvent
    METHOD onActionAddedEvent
    METHOD onActionChangedEvent
@@ -220,16 +219,22 @@ CLASS QObject
    METHOD onWinIdChangeEvent
    METHOD onZeroTimerEventEvent
    METHOD onZOrderChangeEvent
+
    METHOD onDestroyed
    METHOD onObjectNameChanged
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
+   METHOD connect
+   METHOD disconnect
    METHOD disconnectAll
    METHOD disconnectAllEvents
    METHOD disconnectAllSignals
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -272,13 +277,20 @@ Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOBJECT_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QObject * o = new QObject ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QObject *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QObject * o = new QObject ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QObject *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QOBJECT_DELETE )
@@ -307,7 +319,14 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 
   if( obj )
   {
-    hb_retl( obj->blockSignals ( (bool) hb_parl(1) ) );
+    if( ISLOG(1) )
+    {
+      hb_retl( obj->blockSignals ( (bool) hb_parl(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -440,8 +459,15 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
 
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->event ( par1 ) );
+    if( ISQEVENT(1) )
+    {
+      QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->event ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -454,9 +480,16 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->eventFilter ( par1, par2 ) );
+    if( ISQOBJECT(1) && ISQEVENT(2) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
+      hb_retl( obj->eventFilter ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -469,10 +502,17 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
 
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-    int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-    QObject * ptr = obj->findChild<QObject *> ( par1,  (Qt::FindChildOptions) par2 );
-    _qt5xhb_createReturnQObjectClass ( (QObject *) ptr, "QOBJECT" );
+    if( (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+    {
+      QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
+      int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
+      QObject * ptr = obj->findChild<QObject *> ( par1,  (Qt::FindChildOptions) par2 );
+      _qt5xhb_createReturnQObjectClass ( (QObject *) ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -651,8 +691,15 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retl( obj->inherits (  (const char *) par1 ) );
+    if( ISCHAR(1) )
+    {
+      const char * par1 = hb_parc(1);
+      hb_retl( obj->inherits (  (const char *) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -665,8 +712,15 @@ HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->installEventFilter ( par1 );
+    if( ISQOBJECT(1) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      obj->installEventFilter ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -707,7 +761,14 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 
   if( obj )
   {
-    obj->killTimer ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->killTimer ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -736,8 +797,15 @@ HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 
   if( obj )
   {
-    QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
-    obj->moveToThread ( par1 );
+    if( ISQTHREAD(1) )
+    {
+      QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
+      obj->moveToThread ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -765,8 +833,15 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setObjectName ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setObjectName ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -795,8 +870,15 @@ HB_FUNC_STATIC( QOBJECT_SETPARENT )
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->setParent ( par1 );
+    if( ISQOBJECT(1) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      obj->setParent ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -812,9 +894,16 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QVariant * ptr = new QVariant( obj->property (  (const char *) par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISCHAR(1) )
+    {
+      const char * par1 = hb_parc(1);
+      QVariant * ptr = new QVariant( obj->property (  (const char *) par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -829,9 +918,16 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setProperty (  (const char *) par1, *par2 ) );
+    if( ISCHAR(1) && ISQVARIANT(2) )
+    {
+      const char * par1 = hb_parc(1);
+      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
+      hb_retl( obj->setProperty (  (const char *) par1, *par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -845,8 +941,15 @@ HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->removeEventFilter ( par1 );
+    if( ISQOBJECT(1) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      obj->removeEventFilter ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -874,8 +977,15 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 
   if( obj )
   {
-    int par2 = ISNIL(2)? (int) Qt::CoarseTimer : hb_parni(2);
-    hb_retni( obj->startTimer ( (int) hb_parni(1),  (Qt::TimerType) par2 ) );
+    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      int par2 = ISNIL(2)? (int) Qt::CoarseTimer : hb_parni(2);
+      hb_retni( obj->startTimer ( (int) hb_parni(1),  (Qt::TimerType) par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -913,9 +1023,16 @@ static QString tr ( const char * sourceText, const char * disambiguation = 0, in
 */
 HB_FUNC_STATIC( QOBJECT_TR )
 {
-  const char * par1 = hb_parc(1);
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  hb_retc( (const char *) QObject::tr (  (const char *) par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ).toLatin1().data() );
+  if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  {
+    const char * par1 = hb_parc(1);
+    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
+    hb_retc( (const char *) QObject::tr (  (const char *) par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ).toLatin1().data() );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QOBJECT_NEWFROM )
