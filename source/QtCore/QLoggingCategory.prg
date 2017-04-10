@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QLoggingCategory
 
    DATA pointer
@@ -28,11 +26,13 @@ CLASS QLoggingCategory
    METHOD categoryName
    METHOD defaultCategory
    METHOD setFilterRules
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -64,22 +64,29 @@ QLoggingCategory(const char *category)
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
 {
-  const char * par1 = hb_parc(1);
-  QLoggingCategory * o = new QLoggingCategory (  (const char *) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLoggingCategory *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    const char * par1 = hb_parc(1);
+    QLoggingCategory * o = new QLoggingCategory (  (const char *) par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLoggingCategory *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, true );
+    hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
+    hb_itemRelease( des );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QLOGGINGCATEGORY_DELETE )
 {
   QLoggingCategory * obj = (QLoggingCategory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -89,6 +96,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -98,13 +106,20 @@ bool isEnabled(QtMsgType type) const
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
 {
   QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isEnabled (  (QtMsgType) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retl( obj->isEnabled (  (QtMsgType) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void setEnabled(QtMsgType type, bool enable)
@@ -112,14 +127,22 @@ void setEnabled(QtMsgType type, bool enable)
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
 {
   QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setEnabled (  (QtMsgType) par1, (bool) hb_parl(2) );
+    if( ISNUM(1) && ISLOG(2) )
+    {
+      int par1 = hb_parni(1);
+      obj->setEnabled (  (QtMsgType) par1, (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isDebugEnabled() const
@@ -127,12 +150,12 @@ bool isDebugEnabled() const
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISDEBUGENABLED )
 {
   QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isDebugEnabled (  ) );
   }
 }
-
 
 /*
 bool isWarningEnabled() const
@@ -140,12 +163,12 @@ bool isWarningEnabled() const
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISWARNINGENABLED )
 {
   QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isWarningEnabled (  ) );
   }
 }
-
 
 /*
 bool isCriticalEnabled() const
@@ -153,12 +176,12 @@ bool isCriticalEnabled() const
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISCRITICALENABLED )
 {
   QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isCriticalEnabled (  ) );
   }
 }
-
 
 /*
 const char *categoryName() const
@@ -166,13 +189,13 @@ const char *categoryName() const
 HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
 {
   QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * str1 = obj->categoryName (  );
     hb_retc( str1 );
   }
 }
-
 
 /*
 static QLoggingCategory *defaultCategory()
@@ -183,23 +206,27 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
   _qt5xhb_createReturnClass ( ptr, "QLOGGINGCATEGORY" );
 }
 
-
-
 /*
 static void setFilterRules(const QString &rules)
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETFILTERRULES )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QLoggingCategory::setFilterRules ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
+  if( ISCHAR(1) )
+  {
+    QString par1 = QLatin1String( hb_parc(1) );
+    QLoggingCategory::setFilterRules ( par1 );
+    hb_itemReturn( hb_stackSelfItem() );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
-
 
 HB_FUNC_STATIC( QLOGGINGCATEGORY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -218,6 +245,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -239,14 +267,15 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_SELFDESTRUCTION )
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
