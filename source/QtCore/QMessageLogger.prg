@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMessageLogger
 
    DATA pointer
@@ -17,16 +16,15 @@ CLASS QMessageLogger
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,7 +54,7 @@ RETURN
 /*
 QMessageLogger()
 */
-HB_FUNC_STATIC( QMESSAGELOGGER_NEW1 )
+void QMessageLogger_new1 ()
 {
   QMessageLogger * o = new QMessageLogger (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -72,7 +70,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW1 )
 /*
 QMessageLogger(const char *file, int line, const char *function)
 */
-HB_FUNC_STATIC( QMESSAGELOGGER_NEW2 )
+void QMessageLogger_new2 ()
 {
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
@@ -91,7 +89,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW2 )
 /*
 QMessageLogger(const char *file, int line, const char *function, const char *category)
 */
-HB_FUNC_STATIC( QMESSAGELOGGER_NEW3 )
+void QMessageLogger_new3 ()
 {
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
@@ -108,7 +106,6 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QMessageLogger()
 //[2]QMessageLogger(const char *file, int line, const char *function)
 //[3]QMessageLogger(const char *file, int line, const char *function, const char *category)
@@ -117,15 +114,15 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMESSAGELOGGER_NEW1 );
+    QMessageLogger_new1();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QMESSAGELOGGER_NEW2 );
+    QMessageLogger_new2();
   }
   else if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) )
   {
-    HB_FUNC_EXEC( QMESSAGELOGGER_NEW3 );
+    QMessageLogger_new3();
   }
   else
   {
@@ -136,6 +133,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
 {
   QMessageLogger * obj = (QMessageLogger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -145,18 +143,14 @@ HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
-
 
 HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -175,6 +169,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -196,14 +191,15 @@ HB_FUNC_STATIC( QMESSAGELOGGER_SELFDESTRUCTION )
 HB_FUNC_STATIC( QMESSAGELOGGER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

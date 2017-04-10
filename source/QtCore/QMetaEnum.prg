@@ -35,11 +35,13 @@ CLASS QMetaEnum
    METHOD valueToKeys
    METHOD enclosingMetaObject
    METHOD isValid
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -79,10 +81,10 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
   hb_itemReturn( self );
 }
 
-
 HB_FUNC_STATIC( QMETAENUM_DELETE )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,6 +94,7 @@ HB_FUNC_STATIC( QMETAENUM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -101,6 +104,7 @@ const char *name() const
 HB_FUNC_STATIC( QMETAENUM_NAME )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * str1 = obj->name (  );
@@ -108,19 +112,18 @@ HB_FUNC_STATIC( QMETAENUM_NAME )
   }
 }
 
-
 /*
 bool isFlag() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isFlag (  ) );
   }
 }
-
 
 /*
 int keyCount() const
@@ -128,12 +131,12 @@ int keyCount() const
 HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->keyCount (  ) );
   }
 }
-
 
 /*
 const char *key(int index) const
@@ -141,13 +144,20 @@ const char *key(int index) const
 HB_FUNC_STATIC( QMETAENUM_KEY )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * str1 = obj->key ( (int) hb_parni(1) );
-    hb_retc( str1 );
+    if( ISNUM(1) )
+    {
+      const char * str1 = obj->key ( (int) hb_parni(1) );
+      hb_retc( str1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 int value(int index) const
@@ -155,12 +165,19 @@ int value(int index) const
 HB_FUNC_STATIC( QMETAENUM_VALUE )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retni( obj->value ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retni( obj->value ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 const char *scope() const
@@ -168,6 +185,7 @@ const char *scope() const
 HB_FUNC_STATIC( QMETAENUM_SCOPE )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * str1 = obj->scope (  );
@@ -175,20 +193,26 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
   }
 }
 
-
 /*
 int keyToValue(const char *key) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( obj->keyToValue (  (const char *) par1 ) );
+    if( ISCHAR(1) )
+    {
+      const char * par1 = hb_parc(1);
+      hb_retni( obj->keyToValue (  (const char *) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 const char* valueToKey(int value) const
@@ -196,13 +220,20 @@ const char* valueToKey(int value) const
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * str1 = obj->valueToKey ( (int) hb_parni(1) );
-    hb_retc( str1 );
+    if( ISNUM(1) )
+    {
+      const char * str1 = obj->valueToKey ( (int) hb_parni(1) );
+      hb_retc( str1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 int keysToValue(const char * keys) const
@@ -210,13 +241,20 @@ int keysToValue(const char * keys) const
 HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( obj->keysToValue (  (const char *) par1 ) );
+    if( ISCHAR(1) )
+    {
+      const char * par1 = hb_parc(1);
+      hb_retni( obj->keysToValue (  (const char *) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QByteArray valueToKeys(int value) const
@@ -224,13 +262,20 @@ QByteArray valueToKeys(int value) const
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->valueToKeys ( (int) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUM(1) )
+    {
+      QByteArray * ptr = new QByteArray( obj->valueToKeys ( (int) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 const QMetaObject *enclosingMetaObject() const
@@ -238,6 +283,7 @@ const QMetaObject *enclosingMetaObject() const
 HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );
@@ -245,24 +291,23 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
   }
 }
 
-
 /*
 bool isValid() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISVALID )
 {
   QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 }
 
-
-
 HB_FUNC_STATIC( QMETAENUM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -281,6 +326,7 @@ HB_FUNC_STATIC( QMETAENUM_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -302,14 +348,15 @@ HB_FUNC_STATIC( QMETAENUM_SELFDESTRUCTION )
 HB_FUNC_STATIC( QMETAENUM_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

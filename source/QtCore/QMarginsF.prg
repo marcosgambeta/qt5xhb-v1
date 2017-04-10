@@ -20,9 +20,6 @@ CLASS QMarginsF
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD isNull
@@ -35,11 +32,13 @@ CLASS QMarginsF
    METHOD setRight
    METHOD setBottom
    METHOD toMargins
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,7 +68,7 @@ RETURN
 /*
 QMarginsF()
 */
-HB_FUNC_STATIC( QMARGINSF_NEW1 )
+void QMarginsF_new1 ()
 {
   QMarginsF * o = new QMarginsF (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -85,7 +84,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW1 )
 /*
 QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 */
-HB_FUNC_STATIC( QMARGINSF_NEW2 )
+void QMarginsF_new2 ()
 {
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
@@ -105,7 +104,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW2 )
 /*
 QMarginsF(const QMargins &margins)
 */
-HB_FUNC_STATIC( QMARGINSF_NEW3 )
+void QMarginsF_new3 ()
 {
   QMargins * par1 = (QMargins *) _qt5xhb_itemGetPtr(1);
   QMarginsF * o = new QMarginsF ( *par1 );
@@ -119,7 +118,6 @@ HB_FUNC_STATIC( QMARGINSF_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QMarginsF()
 //[2]QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 //[3]QMarginsF(const QMargins &margins)
@@ -128,15 +126,15 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMARGINSF_NEW1 );
+    QMarginsF_new1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QMARGINSF_NEW2 );
+    QMarginsF_new2();
   }
   else if( ISNUMPAR(1) && ISQMARGINSF(1) )
   {
-    HB_FUNC_EXEC( QMARGINSF_NEW3 );
+    QMarginsF_new3();
   }
   else
   {
@@ -147,6 +145,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
 HB_FUNC_STATIC( QMARGINSF_DELETE )
 {
   QMarginsF * obj = (QMarginsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -156,6 +155,7 @@ HB_FUNC_STATIC( QMARGINSF_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -165,12 +165,12 @@ bool isNull() const
 HB_FUNC_STATIC( QMARGINSF_ISNULL )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
   }
 }
-
 
 /*
 qreal left() const
@@ -178,12 +178,12 @@ qreal left() const
 HB_FUNC_STATIC( QMARGINSF_LEFT )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->left (  ) );
   }
 }
-
 
 /*
 qreal top() const
@@ -191,12 +191,12 @@ qreal top() const
 HB_FUNC_STATIC( QMARGINSF_TOP )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->top (  ) );
   }
 }
-
 
 /*
 qreal right() const
@@ -204,12 +204,12 @@ qreal right() const
 HB_FUNC_STATIC( QMARGINSF_RIGHT )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->right (  ) );
   }
 }
-
 
 /*
 qreal bottom() const
@@ -217,12 +217,12 @@ qreal bottom() const
 HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->bottom (  ) );
   }
 }
-
 
 /*
 void setLeft(qreal left)
@@ -230,14 +230,22 @@ void setLeft(qreal left)
 HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setLeft ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setLeft ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTop(qreal top)
@@ -245,14 +253,22 @@ void setTop(qreal top)
 HB_FUNC_STATIC( QMARGINSF_SETTOP )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTop ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setTop ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRight(qreal right)
@@ -260,14 +276,22 @@ void setRight(qreal right)
 HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setRight ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setRight ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBottom(qreal bottom)
@@ -275,14 +299,22 @@ void setBottom(qreal bottom)
 HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setBottom ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setBottom ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QMargins toMargins() const
@@ -290,6 +322,7 @@ QMargins toMargins() const
 HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
 {
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->toMargins (  ) );
@@ -297,11 +330,10 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
   }
 }
 
-
-
 HB_FUNC_STATIC( QMARGINSF_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -320,6 +352,7 @@ HB_FUNC_STATIC( QMARGINSF_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -341,14 +374,15 @@ HB_FUNC_STATIC( QMARGINSF_SELFDESTRUCTION )
 HB_FUNC_STATIC( QMARGINSF_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

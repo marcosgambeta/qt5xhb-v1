@@ -25,11 +25,13 @@ CLASS QMetaClassInfo
    METHOD name
    METHOD value
    METHOD enclosingMetaObject
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,10 +71,10 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
   hb_itemReturn( self );
 }
 
-
 HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -82,6 +84,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -91,6 +94,7 @@ const char *name() const
 HB_FUNC_STATIC( QMETACLASSINFO_NAME )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * str1 = obj->name (  );
@@ -98,13 +102,13 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
   }
 }
 
-
 /*
 const char *value() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * str1 = obj->value (  );
@@ -112,13 +116,13 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
   }
 }
 
-
 /*
 const QMetaObject *enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );
@@ -126,11 +130,10 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
   }
 }
 
-
-
 HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -149,6 +152,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -170,14 +174,15 @@ HB_FUNC_STATIC( QMETACLASSINFO_SELFDESTRUCTION )
 HB_FUNC_STATIC( QMETACLASSINFO_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
