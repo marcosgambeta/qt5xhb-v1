@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QPoint
 
    DATA pointer
@@ -17,8 +16,6 @@ CLASS QPoint
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isNull
@@ -27,11 +24,13 @@ CLASS QPoint
    METHOD setY
    METHOD x
    METHOD y
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,7 +60,7 @@ RETURN
 /*
 QPoint()
 */
-HB_FUNC_STATIC( QPOINT_NEW1 )
+void QPoint_new1 ()
 {
   QPoint * o = new QPoint (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -77,7 +76,7 @@ HB_FUNC_STATIC( QPOINT_NEW1 )
 /*
 QPoint(int xpos, int ypos)
 */
-HB_FUNC_STATIC( QPOINT_NEW2 )
+void QPoint_new2 ()
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -92,7 +91,6 @@ HB_FUNC_STATIC( QPOINT_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QPoint()
 //[2]QPoint(int xpos, int ypos)
 
@@ -100,11 +98,11 @@ HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPOINT_NEW1 );
+    QPoint_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPOINT_NEW2 );
+    QPoint_new2();
   }
   else
   {
@@ -115,6 +113,7 @@ HB_FUNC_STATIC( QPOINT_NEW )
 HB_FUNC_STATIC( QPOINT_DELETE )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -124,6 +123,7 @@ HB_FUNC_STATIC( QPOINT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -133,12 +133,12 @@ bool isNull() const
 HB_FUNC_STATIC( QPOINT_ISNULL )
 {
   QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
   }
 }
-
 
 /*
 int manhattanLength() const
@@ -146,14 +146,12 @@ int manhattanLength() const
 HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 {
   QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->manhattanLength (  ) );
   }
 }
-
-
-
 
 /*
 void setX(int x)
@@ -161,13 +159,21 @@ void setX(int x)
 HB_FUNC_STATIC( QPOINT_SETX )
 {
   QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setX ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setX ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setY(int y)
@@ -175,13 +181,21 @@ void setY(int y)
 HB_FUNC_STATIC( QPOINT_SETY )
 {
   QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setY ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setY ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int x() const
@@ -189,12 +203,12 @@ int x() const
 HB_FUNC_STATIC( QPOINT_X )
 {
   QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->x (  ) );
   }
 }
-
 
 /*
 int y() const
@@ -202,17 +216,17 @@ int y() const
 HB_FUNC_STATIC( QPOINT_Y )
 {
   QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->y (  ) );
   }
 }
 
-
-
 HB_FUNC_STATIC( QPOINT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -231,6 +245,7 @@ HB_FUNC_STATIC( QPOINT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -252,14 +267,15 @@ HB_FUNC_STATIC( QPOINT_SELFDESTRUCTION )
 HB_FUNC_STATIC( QPOINT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

@@ -9,19 +9,17 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QPauseAnimation INHERIT QAbstractAnimation
 
    DATA class_id INIT Class_Id_QPauseAnimation
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setDuration
    METHOD duration
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,7 +49,7 @@ RETURN
 /*
 QPauseAnimation ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_NEW1 )
+void QPauseAnimation_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QPauseAnimation * o = new QPauseAnimation ( par1 );
@@ -65,7 +63,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW1 )
 /*
 QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
+void QPauseAnimation_new2 ()
 {
   int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
@@ -77,7 +75,6 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QPauseAnimation ( QObject * parent = 0 )
 //[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
 
@@ -85,11 +82,11 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPAUSEANIMATION_NEW1 );
+    QPauseAnimation_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPAUSEANIMATION_NEW2 );
+    QPauseAnimation_new2();
   }
   else
   {
@@ -100,6 +97,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 {
   QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -109,6 +107,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -118,13 +117,21 @@ void setDuration ( int msecs )
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
   QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setDuration ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setDuration ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual int duration () const
@@ -132,13 +139,11 @@ virtual int duration () const
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {
   QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->duration (  ) );
   }
 }
 
-
-
 #pragma ENDDUMP
-

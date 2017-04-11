@@ -23,9 +23,6 @@ CLASS QPersistentModelIndex
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD swap
@@ -40,11 +37,13 @@ CLASS QPersistentModelIndex
    METHOD flags
    METHOD model
    METHOD isValid
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -74,7 +73,7 @@ RETURN
 /*
 QPersistentModelIndex()
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW1 )
+void QPersistentModelIndex_new1 ()
 {
   QPersistentModelIndex * o = new QPersistentModelIndex (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -87,7 +86,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW1 )
 /*
 QPersistentModelIndex(const QModelIndex &index)
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW2 )
+void QPersistentModelIndex_new2 ()
 {
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
@@ -101,7 +100,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW2 )
 /*
 QPersistentModelIndex(const QPersistentModelIndex &other)
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW3 )
+void QPersistentModelIndex_new3 ()
 {
   QPersistentModelIndex * par1 = (QPersistentModelIndex *) _qt5xhb_itemGetPtr(1);
   QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
@@ -112,7 +111,6 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QPersistentModelIndex()
 //[2]QPersistentModelIndex(const QModelIndex &index)
 //[3]QPersistentModelIndex(const QPersistentModelIndex &other)
@@ -121,15 +119,15 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPERSISTENTMODELINDEX_NEW1 );
+    QPersistentModelIndex_new1();
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QPERSISTENTMODELINDEX_NEW2 );
+    QPersistentModelIndex_new2();
   }
   else if( ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QPERSISTENTMODELINDEX_NEW3 );
+    QPersistentModelIndex_new3();
   }
   else
   {
@@ -140,6 +138,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DELETE )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -149,6 +148,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -158,14 +158,22 @@ void swap(QPersistentModelIndex &other)
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SWAP )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPersistentModelIndex * par1 = (QPersistentModelIndex *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
+    if( ISQPERSISTENTMODELINDEX(1) )
+    {
+      QPersistentModelIndex * par1 = (QPersistentModelIndex *) _qt5xhb_itemGetPtr(1);
+      obj->swap ( *par1 );
+    }
+    else
+    {
+     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int row() const
@@ -173,12 +181,12 @@ int row() const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ROW )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->row (  ) );
   }
 }
-
 
 /*
 int column() const
@@ -186,12 +194,12 @@ int column() const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_COLUMN )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->column (  ) );
   }
 }
-
 
 /*
 void *internalPointer() const
@@ -199,12 +207,12 @@ void *internalPointer() const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALPOINTER )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retptr( (void *) obj->internalPointer (  ) );
   }
 }
-
 
 /*
 quintptr internalId() const
@@ -212,6 +220,7 @@ quintptr internalId() const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALID )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     quintptr * ptr = new quintptr( obj->internalId (  ) );
@@ -219,13 +228,13 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALID )
   }
 }
 
-
 /*
 QModelIndex parent() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->parent (  ) );
@@ -233,20 +242,26 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
   }
 }
 
-
 /*
 QModelIndex sibling(int row, int column) const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QModelIndex child(int row, int column) const
@@ -254,13 +269,20 @@ QModelIndex child(int row, int column) const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->child ( (int) hb_parni(1), (int) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->child ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QVariant data(int role = Qt::DisplayRole) const
@@ -268,13 +290,20 @@ QVariant data(int role = Qt::DisplayRole) const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->data ( (int) ISNIL(1)? Qt::DisplayRole : hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      QVariant * ptr = new QVariant( obj->data ( (int) ISNIL(1)? Qt::DisplayRole : hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 Qt::ItemFlags flags() const
@@ -282,12 +311,12 @@ Qt::ItemFlags flags() const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_FLAGS )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->flags (  ) );
   }
 }
-
 
 /*
 const QAbstractItemModel *model() const
@@ -295,6 +324,7 @@ const QAbstractItemModel *model() const
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QAbstractItemModel * ptr = obj->model (  );
@@ -302,24 +332,23 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
   }
 }
 
-
 /*
 bool isValid() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ISVALID )
 {
   QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 }
 
-
-
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -338,6 +367,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -359,14 +389,15 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SELFDESTRUCTION )
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

@@ -20,14 +20,13 @@ CLASS QPropertyAnimation INHERIT QVariantAnimation
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD propertyName
    METHOD setPropertyName
    METHOD setTargetObject
    METHOD targetObject
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,7 +56,7 @@ RETURN
 /*
 QPropertyAnimation ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_NEW1 )
+void QPropertyAnimation_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QPropertyAnimation * o = new QPropertyAnimation ( par1 );
@@ -71,7 +70,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW1 )
 /*
 QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_NEW2 )
+void QPropertyAnimation_new2 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
@@ -84,7 +83,6 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QPropertyAnimation ( QObject * parent = 0 )
 //[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 
@@ -92,11 +90,11 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPROPERTYANIMATION_NEW1 );
+    QPropertyAnimation_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPROPERTYANIMATION_NEW2 );
+    QPropertyAnimation_new2();
   }
   else
   {
@@ -107,6 +105,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -116,6 +115,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -125,6 +125,7 @@ QByteArray propertyName () const
 HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->propertyName (  ) );
@@ -132,21 +133,28 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
   }
 }
 
-
 /*
 void setPropertyName ( const QByteArray & propertyName )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setPropertyName ( *par1 );
+    if( ISQBYTEARRAY(1) )
+    {
+      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+      obj->setPropertyName ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTargetObject ( QObject * target )
@@ -154,14 +162,22 @@ void setTargetObject ( QObject * target )
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->setTargetObject ( par1 );
+    if( ISQOBJECT(1) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      obj->setTargetObject ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QObject * targetObject () const
@@ -169,6 +185,7 @@ QObject * targetObject () const
 HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * ptr = obj->targetObject (  );
@@ -176,7 +193,4 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
   }
 }
 
-
-
 #pragma ENDDUMP
-
