@@ -34,11 +34,13 @@ CLASS QResource
    METHOD size
    METHOD registerResource
    METHOD unregisterResource
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,23 +72,30 @@ QResource ( const QString & file = QString(), const QLocale & locale = QLocale()
 */
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {
-  QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-  QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(2);
-  QResource * o = new QResource ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QResource *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISQLOCALE(2)||ISNIL(2)) )
+  {
+    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
+    QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(2);
+    QResource * o = new QResource ( par1, par2 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QResource *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, true );
+    hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
+    hb_itemRelease( des );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -96,6 +105,7 @@ HB_FUNC_STATIC( QRESOURCE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -105,12 +115,12 @@ QString absoluteFilePath () const
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->absoluteFilePath (  ).toLatin1().data() );
   }
 }
-
 
 /*
 const uchar * data () const
@@ -118,6 +128,7 @@ const uchar * data () const
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const uchar * ptr = obj->data (  );
@@ -125,19 +136,18 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
   }
 }
 
-
 /*
 QString fileName () const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool isCompressed () const
@@ -145,12 +155,12 @@ bool isCompressed () const
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isCompressed (  ) );
   }
 }
-
 
 /*
 bool isValid () const
@@ -158,12 +168,12 @@ bool isValid () const
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 }
-
 
 /*
 QLocale locale () const
@@ -171,6 +181,7 @@ QLocale locale () const
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
@@ -178,21 +189,28 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
   }
 }
 
-
 /*
 void setFileName ( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFileName ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setFileName ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLocale ( const QLocale & locale )
@@ -200,14 +218,22 @@ void setLocale ( const QLocale & locale )
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    obj->setLocale ( *par1 );
+    if( ISQLOCALE(1) )
+    {
+      QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
+      obj->setLocale ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qint64 size () const
@@ -215,41 +241,51 @@ qint64 size () const
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->size (  ) );
   }
 }
 
-
 /*
 static bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-  hb_retl( QResource::registerResource ( par1, par2 ) );
+  if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  {
+    QString par1 = QLatin1String( hb_parc(1) );
+    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+    hb_retl( QResource::registerResource ( par1, par2 ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
-
 
 /*
 static bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-  hb_retl( QResource::unregisterResource ( par1, par2 ) );
+  if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  {
+    QString par1 = QLatin1String( hb_parc(1) );
+    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+    hb_retl( QResource::unregisterResource ( par1, par2 ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
-
-
 
 HB_FUNC_STATIC( QRESOURCE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -268,6 +304,7 @@ HB_FUNC_STATIC( QRESOURCE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -289,14 +326,15 @@ HB_FUNC_STATIC( QRESOURCE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QRESOURCE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

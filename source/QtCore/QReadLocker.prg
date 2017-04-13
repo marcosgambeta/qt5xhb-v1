@@ -25,11 +25,13 @@ CLASS QReadLocker
    METHOD unlock
    METHOD relock
    METHOD readWriteLock
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,22 +63,29 @@ QReadLocker(QReadWriteLock *readWriteLock)
 */
 HB_FUNC_STATIC( QREADLOCKER_NEW )
 {
-  QReadWriteLock * par1 = (QReadWriteLock *) _qt5xhb_itemGetPtr(1);
-  QReadLocker * o = new QReadLocker ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QReadLocker *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  if( ISNUMPAR(1) && ISQREADWRITELOCK(1) )
+  {
+    QReadWriteLock * par1 = (QReadWriteLock *) _qt5xhb_itemGetPtr(1);
+    QReadLocker * o = new QReadLocker ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QReadLocker *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, true );
+    hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
+    hb_itemRelease( des );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QREADLOCKER_DELETE )
 {
   QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -86,6 +95,7 @@ HB_FUNC_STATIC( QREADLOCKER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -95,13 +105,14 @@ void unlock()
 HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
 {
   QReadLocker * obj = (QReadLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->unlock (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void relock()
@@ -109,13 +120,14 @@ void relock()
 HB_FUNC_STATIC( QREADLOCKER_RELOCK )
 {
   QReadLocker * obj = (QReadLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->relock (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QReadWriteLock *readWriteLock() const
@@ -123,6 +135,7 @@ QReadWriteLock *readWriteLock() const
 HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
 {
   QReadLocker * obj = (QReadLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QReadWriteLock * ptr = obj->readWriteLock (  );
@@ -130,11 +143,10 @@ HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
   }
 }
 
-
-
 HB_FUNC_STATIC( QREADLOCKER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -153,6 +165,7 @@ HB_FUNC_STATIC( QREADLOCKER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -174,14 +187,15 @@ HB_FUNC_STATIC( QREADLOCKER_SELFDESTRUCTION )
 HB_FUNC_STATIC( QREADLOCKER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
