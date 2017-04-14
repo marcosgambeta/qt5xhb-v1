@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTextBoundaryFinder
 
    DATA pointer
@@ -17,10 +16,6 @@ CLASS QTextBoundaryFinder
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isValid
@@ -34,11 +29,13 @@ CLASS QTextBoundaryFinder
    METHOD toPreviousBoundary
    METHOD isAtBoundary
    METHOD boundaryReasons
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -68,7 +65,7 @@ RETURN
 /*
 QTextBoundaryFinder()
 */
-HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
+void QTextBoundaryFinder_new1 ()
 {
   QTextBoundaryFinder * o = new QTextBoundaryFinder (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -84,7 +81,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
 /*
 QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
-HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW2 )
+void QTextBoundaryFinder_new2 ()
 {
   QTextBoundaryFinder * par1 = (QTextBoundaryFinder *) _qt5xhb_itemGetPtr(1);
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( *par1 );
@@ -101,7 +98,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW2 )
 /*
 QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
-HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
+void QTextBoundaryFinder_new3 ()
 {
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
@@ -119,7 +116,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
 /*
 QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
 */
-HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
+void QTextBoundaryFinder_new4 ()
 {
   int par1 = hb_parni(1);
   const QChar * par2 = (const QChar *) _qt5xhb_itemGetPtr(2);
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
   hb_itemReturn( self );
 }
 
-
 //[1]QTextBoundaryFinder()
 //[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
 //[3]QTextBoundaryFinder(BoundaryType type, const QString &string)
@@ -147,19 +143,19 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW1 );
+    QTextBoundaryFinder_new1();
   }
   else if( ISNUMPAR(1) && ISQTEXTBOUNDARYFINDER(1) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW2 );
+    QTextBoundaryFinder_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW3 );
+    QTextBoundaryFinder_new3();
   }
   else if( ISBETWEEN(3,5) && ISNUM(1) && ISQCHAR(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW4 );
+    QTextBoundaryFinder_new4();
   }
   else
   {
@@ -170,6 +166,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_DELETE )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -179,6 +176,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -188,12 +186,12 @@ bool isValid() const
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 }
-
 
 /*
 BoundaryType type() const
@@ -201,12 +199,12 @@ BoundaryType type() const
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->type (  ) );
   }
 }
-
 
 /*
 QString string() const
@@ -214,12 +212,12 @@ QString string() const
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->string (  ).toLatin1().data() );
   }
 }
-
 
 /*
 void toStart()
@@ -227,13 +225,14 @@ void toStart()
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->toStart (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void toEnd()
@@ -241,13 +240,14 @@ void toEnd()
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->toEnd (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int position() const
@@ -255,12 +255,12 @@ int position() const
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->position (  ) );
   }
 }
-
 
 /*
 void setPosition(int position)
@@ -268,13 +268,21 @@ void setPosition(int position)
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setPosition ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setPosition ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int toNextBoundary()
@@ -282,12 +290,12 @@ int toNextBoundary()
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->toNextBoundary (  ) );
   }
 }
-
 
 /*
 int toPreviousBoundary()
@@ -295,12 +303,12 @@ int toPreviousBoundary()
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->toPreviousBoundary (  ) );
   }
 }
-
 
 /*
 bool isAtBoundary() const
@@ -308,12 +316,12 @@ bool isAtBoundary() const
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isAtBoundary (  ) );
   }
 }
-
 
 /*
 BoundaryReasons boundaryReasons() const
@@ -321,17 +329,17 @@ BoundaryReasons boundaryReasons() const
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
 {
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->boundaryReasons (  ) );
   }
 }
 
-
-
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -350,6 +358,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -371,14 +380,15 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SELFDESTRUCTION )
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

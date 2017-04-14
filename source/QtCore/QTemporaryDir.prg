@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTemporaryDir
 
    DATA pointer
@@ -17,8 +16,6 @@ CLASS QTemporaryDir
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD autoRemove
@@ -26,11 +23,13 @@ CLASS QTemporaryDir
    METHOD path
    METHOD remove
    METHOD setAutoRemove
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,7 +59,7 @@ RETURN
 /*
 QTemporaryDir()
 */
-HB_FUNC_STATIC( QTEMPORARYDIR_NEW1 )
+void QTemporaryDir_new1 ()
 {
   QTemporaryDir * o = new QTemporaryDir (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -73,7 +72,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW1 )
 /*
 QTemporaryDir(const QString & templateName)
 */
-HB_FUNC_STATIC( QTEMPORARYDIR_NEW2 )
+void QTemporaryDir_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QTemporaryDir * o = new QTemporaryDir ( par1 );
@@ -84,7 +83,6 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QTemporaryDir()
 //[2]QTemporaryDir(const QString & templateName)
 
@@ -92,11 +90,11 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEMPORARYDIR_NEW1 );
+    QTemporaryDir_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYDIR_NEW2 );
+    QTemporaryDir_new2();
   }
   else
   {
@@ -107,6 +105,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 HB_FUNC_STATIC( QTEMPORARYDIR_DELETE )
 {
   QTemporaryDir * obj = (QTemporaryDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -116,6 +115,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -125,12 +125,12 @@ bool autoRemove() const
 HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
 {
   QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->autoRemove (  ) );
   }
 }
-
 
 /*
 bool isValid() const
@@ -138,12 +138,12 @@ bool isValid() const
 HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
 {
   QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 }
-
 
 /*
 QString path() const
@@ -151,12 +151,12 @@ QString path() const
 HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 {
   QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->path (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool remove()
@@ -164,12 +164,12 @@ bool remove()
 HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 {
   QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->remove (  ) );
   }
 }
-
 
 /*
 void setAutoRemove(bool b)
@@ -177,18 +177,26 @@ void setAutoRemove(bool b)
 HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
 {
   QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAutoRemove ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoRemove ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QTEMPORARYDIR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -207,6 +215,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -228,14 +237,15 @@ HB_FUNC_STATIC( QTEMPORARYDIR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QTEMPORARYDIR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

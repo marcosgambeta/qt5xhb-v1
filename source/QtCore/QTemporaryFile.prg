@@ -9,18 +9,12 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QTemporaryFile INHERIT QFile
 
    DATA class_id INIT Class_Id_QTemporaryFile
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD autoRemove
@@ -29,9 +23,8 @@ CLASS QTemporaryFile INHERIT QFile
    METHOD setAutoRemove
    METHOD setFileTemplate
    METHOD fileName
-   METHOD createNativeFile1
-   METHOD createNativeFile2
    METHOD createNativeFile
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,7 +54,7 @@ RETURN
 /*
 QTemporaryFile()
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW1 )
+void QTemporaryFile_new1 ()
 {
   QTemporaryFile * o = new QTemporaryFile (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -74,7 +67,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW1 )
 /*
 QTemporaryFile(const QString & templateName)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW2 )
+void QTemporaryFile_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QTemporaryFile * o = new QTemporaryFile ( par1 );
@@ -88,7 +81,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW2 )
 /*
 QTemporaryFile(QObject * parent)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
+void QTemporaryFile_new3 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QTemporaryFile * o = new QTemporaryFile ( par1 );
@@ -102,7 +95,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
 /*
 QTemporaryFile(const QString & templateName, QObject * parent)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
+void QTemporaryFile_new4 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
@@ -114,7 +107,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
   hb_itemReturn( self );
 }
 
-
 //[1]QTemporaryFile()
 //[2]QTemporaryFile(const QString & templateName)
 //[3]QTemporaryFile(QObject * parent)
@@ -124,19 +116,19 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW1 );
+    QTemporaryFile_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW2 );
+    QTemporaryFile_new2();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW3 );
+    QTemporaryFile_new3();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW4 );
+    QTemporaryFile_new4();
   }
   else
   {
@@ -147,6 +139,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -156,6 +149,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -165,12 +159,12 @@ bool autoRemove() const
 HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 {
   QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->autoRemove (  ) );
   }
 }
-
 
 /*
 QString fileTemplate() const
@@ -178,12 +172,12 @@ QString fileTemplate() const
 HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 {
   QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->fileTemplate (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool open()
@@ -191,12 +185,12 @@ bool open()
 HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 {
   QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->open (  ) );
   }
 }
-
 
 /*
 void setAutoRemove(bool b)
@@ -204,13 +198,21 @@ void setAutoRemove(bool b)
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
   QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setAutoRemove ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoRemove ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFileTemplate(const QString & name)
@@ -218,14 +220,22 @@ void setFileTemplate(const QString & name)
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
   QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFileTemplate ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setFileTemplate ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QString fileName() const
@@ -233,17 +243,17 @@ virtual QString fileName() const
 HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 {
   QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
   }
 }
 
-
 /*
 static QTemporaryFile * createNativeFile(QFile & file)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE1 )
+void QTemporaryFile_createNativeFile1 ()
 {
   QFile * par1 = (QFile *) _qt5xhb_itemGetPtr(1);
   QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( *par1 );
@@ -253,13 +263,12 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE1 )
 /*
 static QTemporaryFile * createNativeFile(const QString & fileName)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE2 )
+void QTemporaryFile_createNativeFile2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( par1 );
   _qt5xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
 }
-
 
 //[1]QTemporaryFile * createNativeFile(QFile & file)
 //[2]QTemporaryFile * createNativeFile(const QString & fileName)
@@ -268,11 +277,11 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 {
   if( ISNUMPAR(1) && ISQFILE(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE1 );
+    QTemporaryFile_createNativeFile1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE2 );
+    QTemporaryFile_createNativeFile2();
   }
   else
   {
@@ -280,6 +289,4 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
   }
 }
 
-
 #pragma ENDDUMP
-

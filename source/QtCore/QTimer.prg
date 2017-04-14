@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTimer INHERIT QObject
 
    DATA class_id INIT Class_Id_QTimer
@@ -24,12 +23,12 @@ CLASS QTimer INHERIT QObject
    METHOD setInterval
    METHOD setSingleShot
    METHOD timerId
-   METHOD start1
-   METHOD start2
    METHOD start
    METHOD stop
    METHOD singleShot
+
    METHOD onTimeout
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,19 +60,26 @@ QTimer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMER_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QTimer * o = new QTimer ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QTimer * o = new QTimer ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimer *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QTIMER_DELETE )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -83,6 +89,7 @@ HB_FUNC_STATIC( QTIMER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -92,12 +99,12 @@ int interval () const
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->interval (  ) );
   }
 }
-
 
 /*
 bool isActive () const
@@ -105,12 +112,12 @@ bool isActive () const
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isActive (  ) );
   }
 }
-
 
 /*
 bool isSingleShot () const
@@ -118,12 +125,12 @@ bool isSingleShot () const
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isSingleShot (  ) );
   }
 }
-
 
 /*
 void setInterval ( int msec )
@@ -131,13 +138,21 @@ void setInterval ( int msec )
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setInterval ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setInterval ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSingleShot ( bool singleShot )
@@ -145,13 +160,21 @@ void setSingleShot ( bool singleShot )
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSingleShot ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSingleShot ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int timerId () const
@@ -159,41 +182,42 @@ int timerId () const
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->timerId (  ) );
   }
 }
 
-
-// Public Slots
-
 /*
 void start ( int msec )
 */
-HB_FUNC_STATIC( QTIMER_START1 )
+void QTimer_start1 ()
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->start ( (int) hb_parni(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void start ()
 */
-HB_FUNC_STATIC( QTIMER_START2 )
+void QTimer_start2 ()
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->start (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void start ( int msec )
 //[2]void start ()
@@ -202,11 +226,11 @@ HB_FUNC_STATIC( QTIMER_START )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTIMER_START1 );
+    QTimer_start1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTIMER_START2 );
+    QTimer_start2();
   }
   else
   {
@@ -220,27 +244,31 @@ void stop ()
 HB_FUNC_STATIC( QTIMER_STOP )
 {
   QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->stop (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static void singleShot ( int msec, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  const char * par3 = hb_parc(3);
-  QTimer::singleShot ( (int) hb_parni(1), par2,  (const char *) par3 );
-  hb_itemReturn( hb_stackSelfItem() );
+  if( ISNUM(1) && ISQOBJECT(2) && ISCHAR(3) )
+  {
+    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
+    const char * par3 = hb_parc(3);
+    QTimer::singleShot ( (int) hb_parni(1), par2,  (const char *) par3 );
+    hb_itemReturn( hb_stackSelfItem() );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
-
-
-
 #pragma ENDDUMP
-

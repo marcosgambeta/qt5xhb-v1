@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTranslator INHERIT QObject
 
    DATA class_id INIT Class_Id_QTranslator
@@ -19,11 +18,9 @@ CLASS QTranslator INHERIT QObject
    METHOD new
    METHOD delete
    METHOD isEmpty
-   METHOD load1
-   METHOD load2
-   METHOD load3
    METHOD load
    METHOD translate
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,19 +52,26 @@ QTranslator(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QTranslator * o = new QTranslator ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTranslator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QTranslator * o = new QTranslator ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTranslator *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -77,6 +81,7 @@ HB_FUNC_STATIC( QTRANSLATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -86,19 +91,20 @@ virtual bool isEmpty() const
 HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isEmpty (  ) );
   }
 }
 
-
 /*
 bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 */
-HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
+void QTranslator_load1 ()
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -112,9 +118,10 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
 /*
 bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
 */
-HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
+void QTranslator_load2 ()
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
@@ -129,9 +136,10 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
 /*
 bool load(const uchar * data, int len, const QString & directory = QString())
 */
-HB_FUNC_STATIC( QTRANSLATOR_LOAD3 )
+void QTranslator_load3 ()
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const uchar * par1 = (const uchar *) _qt5xhb_itemGetPtr(1);
@@ -139,7 +147,6 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD3 )
     hb_retl( obj->load ( par1, (int) hb_parni(2), par3 ) );
   }
 }
-
 
 //[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 //[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
@@ -149,15 +156,15 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
   if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QTRANSLATOR_LOAD1 );
+    QTranslator_load1();
   }
   else if( ISBETWEEN(2,5) && ISQLOCALE(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QTRANSLATOR_LOAD2 );
+    QTranslator_load2();
   }
   else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTRANSLATOR_LOAD3 );
+    QTranslator_load3();
   }
   else
   {
@@ -171,16 +178,21 @@ virtual QString translate(const char * context, const char * sourceText, const c
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    const char * par2 = hb_parc(2);
-    const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    hb_retc( (const char *) obj->translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ).toLatin1().data() );
+    if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    {
+      const char * par1 = hb_parc(1);
+      const char * par2 = hb_parc(2);
+      const char * par3 = ISNIL(3)? 0 : hb_parc(3);
+      hb_retc( (const char *) obj->translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
-
-
 #pragma ENDDUMP
-
