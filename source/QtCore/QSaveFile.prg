@@ -9,16 +9,12 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSaveFile INHERIT QFileDevice
 
    DATA class_id INIT Class_Id_QSaveFile
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD fileName
@@ -28,6 +24,7 @@ CLASS QSaveFile INHERIT QFileDevice
    METHOD cancelWriting
    METHOD setDirectWriteFallback
    METHOD directWriteFallback
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,7 +58,7 @@ RETURN
 /*
 QSaveFile(const QString &name)
 */
-HB_FUNC_STATIC( QSAVEFILE_NEW1 )
+void QSaveFile_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QString par1 = QLatin1String( hb_parc(1) );
@@ -77,7 +74,7 @@ HB_FUNC_STATIC( QSAVEFILE_NEW1 )
 /*
 QSaveFile(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSAVEFILE_NEW2 )
+void QSaveFile_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
@@ -93,7 +90,7 @@ HB_FUNC_STATIC( QSAVEFILE_NEW2 )
 /*
 QSaveFile(const QString &name, QObject *parent)
 */
-HB_FUNC_STATIC( QSAVEFILE_NEW3 )
+void QSaveFile_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QString par1 = QLatin1String( hb_parc(1) );
@@ -107,7 +104,6 @@ HB_FUNC_STATIC( QSAVEFILE_NEW3 )
 #endif
 }
 
-
 //[1]QSaveFile(const QString &name)
 //[2]QSaveFile(QObject *parent = 0)
 //[3]QSaveFile(const QString &name, QObject *parent)
@@ -117,15 +113,15 @@ HB_FUNC_STATIC( QSAVEFILE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSAVEFILE_NEW1 );
+    QSaveFile_new1();
   }
   else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSAVEFILE_NEW2 );
+    QSaveFile_new2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QSAVEFILE_NEW3 );
+    QSaveFile_new3();
   }
   else
   {
@@ -138,6 +134,7 @@ HB_FUNC_STATIC( QSAVEFILE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -147,6 +144,7 @@ HB_FUNC_STATIC( QSAVEFILE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -158,13 +156,13 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
   }
 #endif
 }
-
 
 /*
 void setFileName(const QString &name)
@@ -173,15 +171,23 @@ HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFileName ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setFileName ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 bool open(OpenMode flags)
@@ -190,14 +196,21 @@ HB_FUNC_STATIC( QSAVEFILE_OPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
-
 
 /*
 bool commit()
@@ -206,13 +219,13 @@ HB_FUNC_STATIC( QSAVEFILE_COMMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->commit (  ) );
   }
 #endif
 }
-
 
 /*
 void cancelWriting()
@@ -221,14 +234,15 @@ HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->cancelWriting (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 void setDirectWriteFallback(bool enabled)
@@ -237,14 +251,22 @@ HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setDirectWriteFallback ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDirectWriteFallback ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 bool directWriteFallback() const
@@ -253,6 +275,7 @@ HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->directWriteFallback (  ) );
@@ -260,7 +283,4 @@ HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
 #endif
 }
 
-
-
 #pragma ENDDUMP
-

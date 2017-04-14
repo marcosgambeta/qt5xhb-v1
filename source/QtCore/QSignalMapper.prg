@@ -21,24 +21,16 @@ CLASS QSignalMapper INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD setMapping1
-   METHOD setMapping2
-   METHOD setMapping3
-   METHOD setMapping4
    METHOD setMapping
    METHOD removeMappings
-   METHOD mapping1
-   METHOD mapping2
-   METHOD mapping3
-   METHOD mapping4
    METHOD mapping
-   METHOD map1
-   METHOD map2
    METHOD map
+
    METHOD onMapped1
    METHOD onMapped2
    METHOD onMapped3
    METHOD onMapped4
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,19 +62,26 @@ QSignalMapper(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSignalMapper * o = new QSignalMapper ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSignalMapper *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QSignalMapper * o = new QSignalMapper ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSignalMapper *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 {
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,71 +91,76 @@ HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setMapping(QObject *sender, int id)
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING1 )
+void QSignalMapper_setMapping1 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->setMapping ( par1, (int) hb_parni(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMapping(QObject *sender, const QString &text)
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING2 )
+void QSignalMapper_setMapping2 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
     obj->setMapping ( par1, par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMapping(QObject *sender, QWidget *widget)
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING3 )
+void QSignalMapper_setMapping3 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     obj->setMapping ( par1, par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMapping(QObject *sender, QObject *object)
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING4 )
+void QSignalMapper_setMapping4 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     obj->setMapping ( par1, par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setMapping(QObject *sender, int id)
 //[2]void setMapping(QObject *sender, const QString &text)
@@ -167,19 +171,19 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING1 );
+    QSignalMapper_setMapping1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING2 );
+    QSignalMapper_setMapping2();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING3 );
+    QSignalMapper_setMapping3();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING4 );
+    QSignalMapper_setMapping4();
   }
   else
   {
@@ -193,21 +197,30 @@ void removeMappings(QObject *sender)
 HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->removeMappings ( par1 );
+    if( ISQOBJECT(1) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      obj->removeMappings ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QObject *mapping(int id) const
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING1 )
+void QSignalMapper_mapping1 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * ptr = obj->mapping ( (int) hb_parni(1) );
@@ -215,13 +228,13 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING1 )
   }
 }
 
-
 /*
 QObject *mapping(const QString &text) const
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING2 )
+void QSignalMapper_mapping2 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -230,13 +243,13 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING2 )
   }
 }
 
-
 /*
 QObject *mapping(QWidget *widget) const
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING3 )
+void QSignalMapper_mapping3 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
@@ -245,13 +258,13 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING3 )
   }
 }
 
-
 /*
 QObject *mapping(QObject *object) const
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING4 )
+void QSignalMapper_mapping4 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
@@ -259,7 +272,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING4 )
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
 
 //[1]QObject *mapping(int id) const
 //[2]QObject *mapping(const QString &text) const
@@ -270,19 +282,19 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING1 );
+    QSignalMapper_mapping1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING2 );
+    QSignalMapper_mapping2();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING3 );
+    QSignalMapper_mapping3();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING4 );
+    QSignalMapper_mapping4();
   }
   else
   {
@@ -293,31 +305,33 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 /*
 void map()
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_MAP1 )
+void QSignalMapper_map1 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->map (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void map(QObject *sender)
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_MAP2 )
+void QSignalMapper_map2 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     obj->map ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void map()
 //[2]void map(QObject *sender)
@@ -326,11 +340,11 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAP1 );
+    QSignalMapper_map1();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAP2 );
+    QSignalMapper_map2();
   }
   else
   {
@@ -338,7 +352,4 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
   }
 }
 
-
-
 #pragma ENDDUMP
-

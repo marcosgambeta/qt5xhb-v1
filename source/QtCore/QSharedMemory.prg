@@ -9,15 +9,12 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSharedMemory INHERIT QObject
 
    DATA class_id INIT Class_Id_QSharedMemory
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setKey
@@ -34,6 +31,7 @@ CLASS QSharedMemory INHERIT QObject
    METHOD unlock
    METHOD error
    METHOD errorString
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,7 +61,7 @@ RETURN
 /*
 QSharedMemory(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NEW1 )
+void QSharedMemory_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSharedMemory * o = new QSharedMemory ( par1 );
@@ -77,7 +75,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW1 )
 /*
 QSharedMemory(const QString &key, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
+void QSharedMemory_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
@@ -89,7 +87,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QSharedMemory(QObject *parent = 0)
 //[2]QSharedMemory(const QString &key, QObject *parent = 0)
 
@@ -97,11 +94,11 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSHAREDMEMORY_NEW1 );
+    QSharedMemory_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSHAREDMEMORY_NEW2 );
+    QSharedMemory_new2();
   }
   else
   {
@@ -112,6 +109,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -121,6 +119,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -130,14 +129,22 @@ void setKey(const QString &key)
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setKey ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setKey ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString key() const
@@ -145,12 +152,12 @@ QString key() const
 HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->key (  ).toLatin1().data() );
   }
 }
-
 
 /*
 void setNativeKey(const QString &key)
@@ -158,14 +165,22 @@ void setNativeKey(const QString &key)
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setNativeKey ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setNativeKey ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString nativeKey() const
@@ -173,12 +188,12 @@ QString nativeKey() const
 HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->nativeKey (  ).toLatin1().data() );
   }
 }
-
 
 /*
 bool create(int size, AccessMode mode = ReadWrite)
@@ -186,13 +201,20 @@ bool create(int size, AccessMode mode = ReadWrite)
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par2 = ISNIL(2)? (int) QSharedMemory::ReadWrite : hb_parni(2);
-    hb_retl( obj->create ( (int) hb_parni(1),  (QSharedMemory::AccessMode) par2 ) );
+    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      int par2 = ISNIL(2)? (int) QSharedMemory::ReadWrite : hb_parni(2);
+      hb_retl( obj->create ( (int) hb_parni(1),  (QSharedMemory::AccessMode) par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 int size() const
@@ -200,12 +222,12 @@ int size() const
 HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->size (  ) );
   }
 }
-
 
 /*
 bool attach(AccessMode mode = ReadWrite)
@@ -213,13 +235,20 @@ bool attach(AccessMode mode = ReadWrite)
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QSharedMemory::ReadWrite : hb_parni(1);
-    hb_retl( obj->attach (  (QSharedMemory::AccessMode) par1 ) );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      int par1 = ISNIL(1)? (int) QSharedMemory::ReadWrite : hb_parni(1);
+      hb_retl( obj->attach (  (QSharedMemory::AccessMode) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool isAttached() const
@@ -227,12 +256,12 @@ bool isAttached() const
 HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isAttached (  ) );
   }
 }
-
 
 /*
 bool detach()
@@ -240,12 +269,12 @@ bool detach()
 HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->detach (  ) );
   }
 }
-
 
 /*
 void *data()
@@ -253,14 +282,12 @@ void *data()
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retptr( (void *) obj->data (  ) );
   }
 }
-
-
-
 
 /*
 bool lock()
@@ -268,12 +295,12 @@ bool lock()
 HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->lock (  ) );
   }
 }
-
 
 /*
 bool unlock()
@@ -281,12 +308,12 @@ bool unlock()
 HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->unlock (  ) );
   }
 }
-
 
 /*
 SharedMemoryError error() const
@@ -294,12 +321,12 @@ SharedMemoryError error() const
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->error (  ) );
   }
 }
-
 
 /*
 QString errorString() const
@@ -307,13 +334,11 @@ QString errorString() const
 HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 {
   QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
   }
 }
 
-
-
 #pragma ENDDUMP
-

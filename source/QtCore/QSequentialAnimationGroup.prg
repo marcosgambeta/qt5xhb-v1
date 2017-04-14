@@ -26,7 +26,9 @@ CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
    METHOD currentAnimation
    METHOD insertPause
    METHOD duration
+
    METHOD onCurrentAnimationChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,19 +60,26 @@ QSequentialAnimationGroup ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSequentialAnimationGroup * o = new QSequentialAnimationGroup ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSequentialAnimationGroup *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QSequentialAnimationGroup * o = new QSequentialAnimationGroup ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSequentialAnimationGroup *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -80,6 +89,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -89,13 +99,20 @@ QPauseAnimation * addPause ( int msecs )
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPauseAnimation * ptr = obj->addPause ( (int) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
+    if( ISNUM(1) )
+    {
+      QPauseAnimation * ptr = obj->addPause ( (int) hb_parni(1) );
+      _qt5xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QAbstractAnimation * currentAnimation () const
@@ -103,6 +120,7 @@ QAbstractAnimation * currentAnimation () const
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAbstractAnimation * ptr = obj->currentAnimation (  );
@@ -110,20 +128,26 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
   }
 }
 
-
 /*
 QPauseAnimation * insertPause ( int index, int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPauseAnimation * ptr = obj->insertPause ( (int) hb_parni(1), (int) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      QPauseAnimation * ptr = obj->insertPause ( (int) hb_parni(1), (int) hb_parni(2) );
+      _qt5xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual int duration () const
@@ -131,14 +155,11 @@ virtual int duration () const
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->duration (  ) );
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

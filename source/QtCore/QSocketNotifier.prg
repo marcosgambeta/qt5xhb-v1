@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSocketNotifier INHERIT QObject
 
    DATA class_id INIT Class_Id_QSocketNotifier
@@ -22,6 +21,7 @@ CLASS QSocketNotifier INHERIT QObject
    METHOD type
    METHOD isEnabled
    METHOD setEnabled
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,21 +53,28 @@ QSocketNotifier(qintptr socket, Type, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
-  qintptr par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QSocketNotifier * o = new QSocketNotifier ( par1,  (QSocketNotifier::Type) par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSocketNotifier *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  {
+    qintptr par1 = hb_parni(1);
+    int par2 = hb_parni(2);
+    QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
+    QSocketNotifier * o = new QSocketNotifier ( par1,  (QSocketNotifier::Type) par2, par3 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSocketNotifier *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -77,6 +84,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -86,12 +94,12 @@ qintptr socket() const
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 {
   QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->socket (  ) );
   }
 }
-
 
 /*
 Type type() const
@@ -99,12 +107,12 @@ Type type() const
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->type (  ) );
   }
 }
-
 
 /*
 bool isEnabled() const
@@ -112,12 +120,12 @@ bool isEnabled() const
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isEnabled (  ) );
   }
 }
-
 
 /*
 void setEnabled(bool)
@@ -125,15 +133,20 @@ void setEnabled(bool)
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-

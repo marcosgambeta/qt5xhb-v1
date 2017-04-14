@@ -20,8 +20,6 @@ CLASS QStringListModel INHERIT QAbstractListModel
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD setStringList
    METHOD stringList
@@ -34,6 +32,7 @@ CLASS QStringListModel INHERIT QAbstractListModel
    METHOD sibling
    METHOD sort
    METHOD supportedDropActions
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,7 +62,7 @@ RETURN
 /*
 QStringListModel(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW1 )
+void QStringListModel_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QStringListModel * o = new QStringListModel ( par1 );
@@ -77,17 +76,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW1 )
 /*
 QStringListModel(const QStringList & strings, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW2 )
+void QStringListModel_new2 ()
 {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+  QStringList par1;
+  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aStrings1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    par1 << temp;
+  }
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QStringListModel * o = new QStringListModel ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -97,7 +96,6 @@ par1 << temp;
   hb_itemReturn( self );
 }
 
-
 //[1]QStringListModel(QObject * parent = 0)
 //[2]QStringListModel(const QStringList & strings, QObject * parent = 0)
 
@@ -105,11 +103,11 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSTRINGLISTMODEL_NEW1 );
+    QStringListModel_new1();
   }
   else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSTRINGLISTMODEL_NEW2 );
+    QStringListModel_new2();
   }
   else
   {
@@ -117,29 +115,36 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
   }
 }
 
-
 /*
 void setStringList(const QStringList & strings)
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
-    obj->setStringList ( par1 );
+    if( ISARRAY(1) )
+    {
+      QStringList par1;
+      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aStrings1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+        par1 << temp;
+      }
+      obj->setStringList ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList stringList() const
@@ -147,6 +152,7 @@ QStringList stringList() const
 HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->stringList (  );
@@ -154,21 +160,27 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
   }
 }
 
-
 /*
 virtual QVariant data(const QModelIndex & index, int role) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * ptr = new QVariant( obj->data ( *par1, (int) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISQMODELINDEX(1) && ISNUM(2) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QVariant * ptr = new QVariant( obj->data ( *par1, (int) hb_parni(2) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual Qt::ItemFlags flags(const QModelIndex & index) const
@@ -176,13 +188,20 @@ virtual Qt::ItemFlags flags(const QModelIndex & index) const
 HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->flags ( *par1 ) );
+    if( ISQMODELINDEX(1) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retni( obj->flags ( *par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
@@ -190,13 +209,20 @@ virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelI
 HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    {
+      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
+      hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
@@ -204,13 +230,20 @@ virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelI
 HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    {
+      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
+      hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
@@ -218,13 +251,20 @@ virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
 HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->rowCount ( par1 ) );
+    if( (ISQMODELINDEX(1)||ISNIL(1)) )
+    {
+      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
+      hb_retni( obj->rowCount ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
@@ -232,14 +272,21 @@ virtual bool setData(const QModelIndex & index, const QVariant & value, int role
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+    if( ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+    {
+      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
+      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
+      hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QModelIndex sibling(int row, int column, const QModelIndex & idx) const
@@ -247,14 +294,21 @@ virtual QModelIndex sibling(int row, int column, const QModelIndex & idx) const
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUM(1) && ISNUM(2) && ISQMODELINDEX(3) )
+    {
+      QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
@@ -262,14 +316,22 @@ virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    {
+      int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
+      obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual Qt::DropActions supportedDropActions() const
@@ -277,13 +339,11 @@ virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
 {
   QStringListModel * obj = (QStringListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->supportedDropActions (  ) );
   }
 }
 
-
-
 #pragma ENDDUMP
-
