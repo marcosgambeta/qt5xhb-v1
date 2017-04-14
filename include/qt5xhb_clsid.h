@@ -1620,6 +1620,7 @@
 #define ISQROTATIONREADING(n)                               _qt5xhb_isObjectDerivedFrom(n,"QRotationReading")
 #define ISQROTATIONSENSOR(n)                                _qt5xhb_isObjectDerivedFrom(n,"QRotationSensor")
 #define ISQRUBBERBAND(n)                                    _qt5xhb_isObjectDerivedFrom(n,"QRubberBand")
+#define ISQRUNNABLE(n)                                      _qt5xhb_isObjectDerivedFrom(n,"QRunnable")
 #define ISQSAVEFILE(n)                                      _qt5xhb_isObjectDerivedFrom(n,"QSaveFile")
 #define ISQSCREEN(n)                                        _qt5xhb_isObjectDerivedFrom(n,"QScreen")
 #define ISQSCREENORIENTATIONCHANGEEVENT(n)                  _qt5xhb_isObjectDerivedFrom(n,"QScreenOrientationChangeEvent")
