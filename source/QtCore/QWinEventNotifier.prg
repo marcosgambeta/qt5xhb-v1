@@ -9,18 +9,17 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QWinEventNotifier INHERIT QObject
 
    DATA class_id INIT Class_Id_QWinEventNotifier
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
    METHOD new
    METHOD delete
    METHOD isEnabled
    METHOD setEnabled
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,7 +49,7 @@ RETURN
 /*
 explicit QWinEventNotifier(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW1 )
+void QWinEventNotifier_new1 ()
 {
 #ifdef Q_OS_WIN
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
@@ -63,6 +62,22 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW1 )
 #endif
 }
 
+/*
+explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0) // TODO: implementar
+*/
+// void QWinEventNotifier_new2 ()
+// {
+// #ifdef Q_OS_WIN
+//   HANDLE par1 = (HANDLE) hb_parptr(1);
+//   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
+//   QWinEventNotifier * o = new QWinEventNotifier ( par1, par2 );
+//   PHB_ITEM self = hb_stackSelfItem();
+//   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWinEventNotifier *) o );
+//   hb_objSendMsg( self, "_pointer", 1, ptr );
+//   hb_itemRelease( ptr );
+//   hb_itemReturn( self );
+// #endif
+// }
 
 //[1]explicit QWinEventNotifier(QObject *parent = 0)
 //[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
@@ -72,11 +87,11 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 #ifdef Q_OS_WIN
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QWINEVENTNOTIFIER_NEW1 );
+    QWinEventNotifier_new1();
   }
   //else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISQOBJECT(2)||ISNIL(2)) )
   //{
-  //  HB_FUNC_EXEC( QWINEVENTNOTIFIER_NEW2 );
+  //  QWinEventNotifier_new2();
   //}
   else
   {
@@ -89,6 +104,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
 {
 #ifdef Q_OS_WIN
   QWinEventNotifier * obj = (QWinEventNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -98,10 +114,10 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 bool isEnabled() const
@@ -110,6 +126,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
 {
 #ifdef Q_OS_WIN
   QWinEventNotifier * obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isEnabled (  ) );
@@ -124,16 +141,21 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_SETENABLED )
 {
 #ifdef Q_OS_WIN
   QWinEventNotifier * obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setEnabled ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
 
-
-
-
 #pragma ENDDUMP
-

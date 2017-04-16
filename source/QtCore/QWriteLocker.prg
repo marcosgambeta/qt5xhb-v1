@@ -25,11 +25,13 @@ CLASS QWriteLocker
    METHOD readWriteLock
    METHOD relock
    METHOD unlock
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,19 +63,26 @@ QWriteLocker(QReadWriteLock * lock)
 */
 HB_FUNC_STATIC( QWRITELOCKER_NEW )
 {
-  QReadWriteLock * par1 = (QReadWriteLock *) _qt5xhb_itemGetPtr(1);
-  QWriteLocker * o = new QWriteLocker ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWriteLocker *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISNUMPAR(1) && ISQREADWRITELOCK(1) )
+  {
+    QReadWriteLock * par1 = (QReadWriteLock *) _qt5xhb_itemGetPtr(1);
+    QWriteLocker * o = new QWriteLocker ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWriteLocker *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QWRITELOCKER_DELETE )
 {
   QWriteLocker * obj = (QWriteLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -83,6 +92,7 @@ HB_FUNC_STATIC( QWRITELOCKER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -92,6 +102,7 @@ QReadWriteLock * readWriteLock() const
 HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
 {
   QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QReadWriteLock * ptr = obj->readWriteLock (  );
@@ -99,20 +110,20 @@ HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
   }
 }
 
-
 /*
 void relock()
 */
 HB_FUNC_STATIC( QWRITELOCKER_RELOCK )
 {
   QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->relock (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void unlock()
@@ -120,18 +131,19 @@ void unlock()
 HB_FUNC_STATIC( QWRITELOCKER_UNLOCK )
 {
   QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->unlock (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QWRITELOCKER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -150,6 +162,7 @@ HB_FUNC_STATIC( QWRITELOCKER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -171,14 +184,15 @@ HB_FUNC_STATIC( QWRITELOCKER_SELFDESTRUCTION )
 HB_FUNC_STATIC( QWRITELOCKER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
