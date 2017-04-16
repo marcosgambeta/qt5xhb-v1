@@ -24,8 +24,6 @@ CLASS QDeclarativeView INHERIT QGraphicsView
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD engine
@@ -38,8 +36,10 @@ CLASS QDeclarativeView INHERIT QGraphicsView
    METHOD setSource
    METHOD source
    METHOD status
+
    METHOD onSceneResized
    METHOD onStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -71,7 +71,7 @@ RETURN
 /*
 QDeclarativeView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
+void QDeclarativeView_new1 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QDeclarativeView * o = new QDeclarativeView ( par1 );
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
 /*
 QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
+void QDeclarativeView_new2 ()
 {
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -97,7 +97,6 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QDeclarativeView ( QWidget * parent = 0 )
 //[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 
@@ -105,11 +104,11 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEVIEW_NEW1 );
+    QDeclarativeView_new1();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEVIEW_NEW2 );
+    QDeclarativeView_new2();
   }
   else
   {
@@ -120,6 +119,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -129,6 +129,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -138,6 +139,7 @@ QDeclarativeEngine * engine () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDeclarativeEngine * ptr = obj->engine (  );
@@ -145,13 +147,13 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
   }
 }
 
-
 /*
 QList<QDeclarativeError> errors () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors (  );
@@ -189,13 +191,13 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
   }
 }
 
-
 /*
 QSize initialSize () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->initialSize (  ) );
@@ -203,19 +205,18 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
   }
 }
 
-
 /*
 ResizeMode resizeMode () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->resizeMode (  ) );
   }
 }
-
 
 /*
 QDeclarativeContext * rootContext () const
@@ -223,6 +224,7 @@ QDeclarativeContext * rootContext () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDeclarativeContext * ptr = obj->rootContext (  );
@@ -230,13 +232,13 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
   }
 }
 
-
 /*
 QGraphicsObject * rootObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QGraphicsObject * ptr = obj->rootObject (  );
@@ -244,21 +246,28 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
   }
 }
 
-
 /*
 void setResizeMode ( ResizeMode )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setResizeMode (  (QDeclarativeView::ResizeMode) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setResizeMode (  (QDeclarativeView::ResizeMode) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSource ( const QUrl & url )
@@ -266,14 +275,22 @@ void setSource ( const QUrl & url )
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setSource ( *par1 );
+    if( ISQURL(1) )
+    {
+      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
+      obj->setSource ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QUrl source () const
@@ -281,6 +298,7 @@ QUrl source () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source (  ) );
@@ -288,21 +306,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
   }
 }
 
-
 /*
 Status status () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->status (  ) );
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

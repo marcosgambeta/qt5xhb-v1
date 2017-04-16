@@ -21,8 +21,6 @@ CLASS QDeclarativeScriptString
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD context
    METHOD scopeObject
@@ -30,11 +28,13 @@ CLASS QDeclarativeScriptString
    METHOD setContext
    METHOD setScopeObject
    METHOD setScript
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -64,7 +64,7 @@ RETURN
 /*
 QDeclarativeScriptString ()
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
+void QDeclarativeScriptString_new1 ()
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
 /*
 QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
+void QDeclarativeScriptString_new2 ()
 {
   QDeclarativeScriptString * par1 = (QDeclarativeScriptString *) _qt5xhb_itemGetPtr(1);
   QDeclarativeScriptString * o = new QDeclarativeScriptString ( *par1 );
@@ -88,7 +88,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QDeclarativeScriptString ()
 //[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 
@@ -96,11 +95,11 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEW1 );
+    QDeclarativeScriptString_new1();
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1) )
   {
-    HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEW2 );
+    QDeclarativeScriptString_new2();
   }
   else
   {
@@ -108,13 +107,13 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
   }
 }
 
-
 /*
 QDeclarativeContext * context () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDeclarativeContext * ptr = obj->context (  );
@@ -122,13 +121,13 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
   }
 }
 
-
 /*
 QObject * scopeObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * ptr = obj->scopeObject (  );
@@ -136,19 +135,18 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
   }
 }
 
-
 /*
 QString script () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->script (  ).toLatin1().data() );
   }
 }
-
 
 /*
 void setContext ( QDeclarativeContext * context )
@@ -156,14 +154,22 @@ void setContext ( QDeclarativeContext * context )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-    obj->setContext ( par1 );
+    if( ISQDECLARATIVECONTEXT(1) )
+    {
+      QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
+      obj->setContext ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setScopeObject ( QObject * object )
@@ -171,14 +177,22 @@ void setScopeObject ( QObject * object )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->setScopeObject ( par1 );
+    if( ISQOBJECT(1) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      obj->setScopeObject ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setScript ( const QString & script )
@@ -186,19 +200,27 @@ void setScript ( const QString & script )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setScript ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setScript ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -217,6 +239,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -238,14 +261,15 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

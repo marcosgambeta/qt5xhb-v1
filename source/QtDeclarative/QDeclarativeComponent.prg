@@ -22,9 +22,6 @@ CLASS QDeclarativeComponent INHERIT QObject
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD beginCreate
@@ -41,8 +38,10 @@ CLASS QDeclarativeComponent INHERIT QObject
    METHOD setData
    METHOD status
    METHOD url
+
    METHOD onProgressChanged
    METHOD onStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -72,7 +71,7 @@ RETURN
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW1 )
+void QDeclarativeComponent_new1 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
@@ -87,7 +86,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW1 )
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW2 )
+void QDeclarativeComponent_new2 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
@@ -103,7 +102,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW2 )
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW3 )
+void QDeclarativeComponent_new3 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
@@ -116,7 +115,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
 //[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
 //[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
@@ -125,15 +123,15 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECOMPONENT_NEW1 );
+    QDeclarativeComponent_new1();
   }
   else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECOMPONENT_NEW2 );
+    QDeclarativeComponent_new2();
   }
   else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECOMPONENT_NEW3 );
+    QDeclarativeComponent_new3();
   }
   else
   {
@@ -144,6 +142,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -153,6 +152,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -162,14 +162,21 @@ virtual QObject * beginCreate ( QDeclarativeContext * context )
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-    QObject * ptr = obj->beginCreate ( par1 );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISQDECLARATIVECONTEXT(1) )
+    {
+      QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
+      QObject * ptr = obj->beginCreate ( par1 );
+      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual void completeCreate ()
@@ -177,13 +184,14 @@ virtual void completeCreate ()
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->completeCreate (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QObject * create ( QDeclarativeContext * context = 0 )
@@ -191,14 +199,21 @@ virtual QObject * create ( QDeclarativeContext * context = 0 )
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QDeclarativeContext * par1 = ISNIL(1)? 0 : (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-    QObject * ptr = obj->create ( par1 );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( (ISQDECLARATIVECONTEXT(1)||ISNIL(1)) )
+    {
+      QDeclarativeContext * par1 = ISNIL(1)? 0 : (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
+      QObject * ptr = obj->create ( par1 );
+      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QDeclarativeContext * creationContext () const
@@ -206,6 +221,7 @@ QDeclarativeContext * creationContext () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDeclarativeContext * ptr = obj->creationContext (  );
@@ -213,13 +229,13 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
   }
 }
 
-
 /*
 QList<QDeclarativeError> errors () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors (  );
@@ -257,19 +273,18 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
   }
 }
 
-
 /*
 bool isError () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isError (  ) );
   }
 }
-
 
 /*
 bool isLoading () const
@@ -277,12 +292,12 @@ bool isLoading () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isLoading (  ) );
   }
 }
-
 
 /*
 bool isNull () const
@@ -290,12 +305,12 @@ bool isNull () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
   }
 }
-
 
 /*
 bool isReady () const
@@ -303,12 +318,12 @@ bool isReady () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isReady (  ) );
   }
 }
-
 
 /*
 void loadUrl ( const QUrl & url )
@@ -316,14 +331,22 @@ void loadUrl ( const QUrl & url )
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->loadUrl ( *par1 );
+    if( ISQURL(1) )
+    {
+      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
+      obj->loadUrl ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal progress () const
@@ -331,12 +354,12 @@ qreal progress () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->progress (  ) );
   }
 }
-
 
 /*
 void setData ( const QByteArray & data, const QUrl & url )
@@ -344,15 +367,23 @@ void setData ( const QByteArray & data, const QUrl & url )
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setData ( *par1, *par2 );
+    if( ISQBYTEARRAY(1) && ISQURL(2) )
+    {
+      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+      QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
+      obj->setData ( *par1, *par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Status status () const
@@ -360,12 +391,12 @@ Status status () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->status (  ) );
   }
 }
-
 
 /*
 QUrl url () const
@@ -373,6 +404,7 @@ QUrl url () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
@@ -380,8 +412,4 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

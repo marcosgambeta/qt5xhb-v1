@@ -20,8 +20,6 @@ CLASS QDeclarativeListReference
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD append
    METHOD at
@@ -33,11 +31,13 @@ CLASS QDeclarativeListReference
    METHOD count
    METHOD isValid
    METHOD object
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +67,7 @@ RETURN
 /*
 QDeclarativeListReference ()
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
+void QDeclarativeListReference_new1 ()
 {
   QDeclarativeListReference * o = new QDeclarativeListReference (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
 /*
 QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
+void QDeclarativeListReference_new2 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
@@ -93,7 +93,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QDeclarativeListReference ()
 //[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 
@@ -101,11 +100,11 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVELISTREFERENCE_NEW1 );
+    QDeclarativeListReference_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQDECLARATIVEENGINE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVELISTREFERENCE_NEW2 );
+    QDeclarativeListReference_new2();
   }
   else
   {
@@ -113,20 +112,26 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
   }
 }
 
-
 /*
 bool append ( QObject * object ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->append ( par1 ) );
+    if( ISQOBJECT(1) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->append ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QObject * at ( int index ) const
@@ -134,13 +139,20 @@ QObject * at ( int index ) const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * ptr = obj->at ( (int) hb_parni(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUM(1) )
+    {
+      QObject * ptr = obj->at ( (int) hb_parni(1) );
+      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool canAppend () const
@@ -148,12 +160,12 @@ bool canAppend () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->canAppend (  ) );
   }
 }
-
 
 /*
 bool canAt () const
@@ -161,12 +173,12 @@ bool canAt () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->canAt (  ) );
   }
 }
-
 
 /*
 bool canClear () const
@@ -174,12 +186,12 @@ bool canClear () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->canClear (  ) );
   }
 }
-
 
 /*
 bool canCount () const
@@ -187,12 +199,12 @@ bool canCount () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->canCount (  ) );
   }
 }
-
 
 /*
 bool clear () const
@@ -200,12 +212,12 @@ bool clear () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->clear (  ) );
   }
 }
-
 
 /*
 int count () const
@@ -213,12 +225,12 @@ int count () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->count (  ) );
   }
 }
-
 
 /*
 bool isValid () const
@@ -226,13 +238,12 @@ bool isValid () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid (  ) );
   }
 }
-
-
 
 /*
 QObject * object () const
@@ -240,6 +251,7 @@ QObject * object () const
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 {
   QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QObject * ptr = obj->object (  );
@@ -247,11 +259,10 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
   }
 }
 
-
-
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -270,6 +281,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -291,14 +303,15 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

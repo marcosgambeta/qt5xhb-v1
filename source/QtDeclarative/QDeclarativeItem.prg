@@ -41,6 +41,7 @@ CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
    METHOD setTransformOrigin
    METHOD smooth
    METHOD transformOrigin
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -72,19 +73,26 @@ QDeclarativeItem ( QDeclarativeItem * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 {
-  QDeclarativeItem * par1 = (QDeclarativeItem *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeItem * o = new QDeclarativeItem ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQDECLARATIVEITEM(1)||ISNIL(1)) )
+  {
+    QDeclarativeItem * par1 = (QDeclarativeItem *) _qt5xhb_itemGetPtr(1);
+    QDeclarativeItem * o = new QDeclarativeItem ( par1 );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeItem *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -94,6 +102,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -103,12 +112,12 @@ qreal baselineOffset () const
 HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->baselineOffset (  ) );
   }
 }
-
 
 /*
 QDeclarativeItem * childAt ( qreal x, qreal y ) const
@@ -116,15 +125,22 @@ QDeclarativeItem * childAt ( qreal x, qreal y ) const
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QDeclarativeItem * ptr = obj->childAt ( par1, par2 );
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
+    if( ISNUM(1) && ISNUM(2) )
+    {
+      qreal par1 = hb_parnd(1);
+      qreal par2 = hb_parnd(2);
+      QDeclarativeItem * ptr = obj->childAt ( par1, par2 );
+      _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QRectF childrenRect ()
@@ -132,6 +148,7 @@ QRectF childrenRect ()
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->childrenRect (  ) );
@@ -139,19 +156,18 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
   }
 }
 
-
 /*
 bool clip () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->clip (  ) );
   }
 }
-
 
 /*
 void forceActiveFocus ()
@@ -159,13 +175,14 @@ void forceActiveFocus ()
 HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->forceActiveFocus (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal implicitHeight () const
@@ -173,12 +190,12 @@ qreal implicitHeight () const
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->implicitHeight (  ) );
   }
 }
-
 
 /*
 qreal implicitWidth () const
@@ -186,12 +203,12 @@ qreal implicitWidth () const
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->implicitWidth (  ) );
   }
 }
-
 
 /*
 bool keepMouseGrab () const
@@ -199,12 +216,12 @@ bool keepMouseGrab () const
 HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->keepMouseGrab (  ) );
   }
 }
-
 
 /*
 QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
@@ -212,16 +229,23 @@ QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *par1, par2, par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    if( ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
+    {
+      QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
+      qreal par2 = hb_parnd(2);
+      qreal par3 = hb_parnd(3);
+      QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *par1, par2, par3 ) );
+      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
@@ -229,16 +253,23 @@ QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *par1, par2, par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    if( ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
+    {
+      QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
+      qreal par2 = hb_parnd(2);
+      qreal par3 = hb_parnd(3);
+      QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *par1, par2, par3 ) );
+      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QDeclarativeItem * parentItem () const
@@ -246,6 +277,7 @@ QDeclarativeItem * parentItem () const
 HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDeclarativeItem * ptr = obj->parentItem (  );
@@ -253,21 +285,28 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
   }
 }
 
-
 /*
 void setBaselineOffset ( qreal )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setBaselineOffset ( par1 );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      obj->setBaselineOffset ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setClip ( bool )
@@ -275,13 +314,21 @@ void setClip ( bool )
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setClip ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setClip ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setKeepMouseGrab ( bool keep )
@@ -289,13 +336,21 @@ void setKeepMouseGrab ( bool keep )
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setKeepMouseGrab ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setKeepMouseGrab ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setParentItem ( QDeclarativeItem * parent )
@@ -303,14 +358,22 @@ void setParentItem ( QDeclarativeItem * parent )
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QDeclarativeItem * par1 = (QDeclarativeItem *) _qt5xhb_itemGetPtr(1);
-    obj->setParentItem ( par1 );
+    if( ISQDECLARATIVEITEM(1) )
+    {
+      QDeclarativeItem * par1 = (QDeclarativeItem *) _qt5xhb_itemGetPtr(1);
+      obj->setParentItem ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSmooth ( bool smooth )
@@ -318,13 +381,21 @@ void setSmooth ( bool smooth )
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSmooth ( (bool) hb_parl(1) );
+    if( ISLOG(1) )
+    {
+      obj->setSmooth ( (bool) hb_parl(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTransformOrigin ( TransformOrigin origin )
@@ -332,14 +403,22 @@ void setTransformOrigin ( TransformOrigin origin )
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTransformOrigin (  (QDeclarativeItem::TransformOrigin) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setTransformOrigin (  (QDeclarativeItem::TransformOrigin) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool smooth () const
@@ -347,12 +426,12 @@ bool smooth () const
 HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->smooth (  ) );
   }
 }
-
 
 /*
 TransformOrigin transformOrigin () const
@@ -360,13 +439,11 @@ TransformOrigin transformOrigin () const
 HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->transformOrigin (  ) );
   }
 }
 
-
-
 #pragma ENDDUMP
-
