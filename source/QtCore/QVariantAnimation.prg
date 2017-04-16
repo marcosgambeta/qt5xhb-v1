@@ -31,7 +31,9 @@ CLASS QVariantAnimation INHERIT QAbstractAnimation
    METHOD setKeyValueAt
    METHOD setStartValue
    METHOD startValue
+
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,10 +60,10 @@ RETURN
 #include <QVariantAnimation>
 #endif
 
-
 HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -71,6 +73,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -80,6 +83,7 @@ QVariant currentValue () const
 HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->currentValue (  ) );
@@ -87,13 +91,13 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
   }
 }
 
-
 /*
 QEasingCurve easingCurve () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QEasingCurve * ptr = new QEasingCurve( obj->easingCurve (  ) );
@@ -101,13 +105,13 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
   }
 }
 
-
 /*
 QVariant endValue () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->endValue (  ) );
@@ -115,22 +119,27 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
   }
 }
 
-
 /*
 QVariant keyValueAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    QVariant * ptr = new QVariant( obj->keyValueAt ( par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) )
+    {
+      qreal par1 = hb_parnd(1);
+      QVariant * ptr = new QVariant( obj->keyValueAt ( par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 /*
 void setDuration ( int msecs )
@@ -138,13 +147,21 @@ void setDuration ( int msecs )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setDuration ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setDuration ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEasingCurve ( const QEasingCurve & easing )
@@ -152,14 +169,22 @@ void setEasingCurve ( const QEasingCurve & easing )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
-    obj->setEasingCurve ( *par1 );
+    if( ISQEASINGCURVE(1) )
+    {
+      QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
+      obj->setEasingCurve ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEndValue ( const QVariant & value )
@@ -167,14 +192,22 @@ void setEndValue ( const QVariant & value )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->setEndValue ( *par1 );
+    if( ISQVARIANT(1) )
+    {
+      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
+      obj->setEndValue ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setKeyValueAt ( qreal step, const QVariant & value )
@@ -182,16 +215,23 @@ void setKeyValueAt ( qreal step, const QVariant & value )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setKeyValueAt ( par1, *par2 );
+    if( ISNUM(1) && ISQVARIANT(2) )
+    {
+      qreal par1 = hb_parnd(1);
+      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
+      obj->setKeyValueAt ( par1, *par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setStartValue ( const QVariant & value )
@@ -199,14 +239,22 @@ void setStartValue ( const QVariant & value )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->setStartValue ( *par1 );
+    if( ISQVARIANT(1) )
+    {
+      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
+      obj->setStartValue ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVariant startValue () const
@@ -214,6 +262,7 @@ QVariant startValue () const
 HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->startValue (  ) );
@@ -221,8 +270,4 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-
