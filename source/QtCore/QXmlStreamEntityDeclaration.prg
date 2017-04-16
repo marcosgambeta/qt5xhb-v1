@@ -20,8 +20,6 @@ CLASS QXmlStreamEntityDeclaration
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD name
@@ -29,11 +27,13 @@ CLASS QXmlStreamEntityDeclaration
    METHOD publicId
    METHOD systemId
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,7 +63,7 @@ RETURN
 /*
 QXmlStreamEntityDeclaration()
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW1 )
+void QXmlStreamEntityDeclaration_new1 ()
 {
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration (  );
   PHB_ITEM self = hb_stackSelfItem();
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW1 )
 /*
 QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
+void QXmlStreamEntityDeclaration_new2 ()
 {
   QXmlStreamEntityDeclaration * par1 = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtr(1);
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *par1 );
@@ -93,7 +93,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QXmlStreamEntityDeclaration()
 //[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 
@@ -101,11 +100,11 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMENTITYDECLARATION_NEW1 );
+    QXmlStreamEntityDeclaration_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMENTITYDECLARATION(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMENTITYDECLARATION_NEW2 );
+    QXmlStreamEntityDeclaration_new2();
   }
   else
   {
@@ -116,6 +115,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_DELETE )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -125,6 +125,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -134,6 +135,7 @@ QStringRef name() const
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->name (  ) );
@@ -141,13 +143,13 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
   }
 }
 
-
 /*
 QStringRef notationName() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->notationName (  ) );
@@ -155,13 +157,13 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
   }
 }
 
-
 /*
 QStringRef publicId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->publicId (  ) );
@@ -169,13 +171,13 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
   }
 }
 
-
 /*
 QStringRef systemId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->systemId (  ) );
@@ -183,13 +185,13 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
   }
 }
 
-
 /*
 QStringRef value() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->value (  ) );
@@ -197,11 +199,10 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
   }
 }
 
-
-
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -220,6 +221,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -241,14 +243,15 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SELFDESTRUCTION )
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

@@ -22,25 +22,16 @@ CLASS QXmlStreamAttributes
 
    METHOD new
    METHOD delete
-   METHOD append1
-   METHOD append2
-   METHOD append3
    METHOD append
-   METHOD hasAttribute1
-   METHOD hasAttribute2
-   METHOD hasAttribute3
    METHOD hasAttribute
-   METHOD value1
-   METHOD value2
-   METHOD value3
-   METHOD value4
-   METHOD value5
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -72,21 +63,28 @@ QXmlStreamAttributes()
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
 {
-  QXmlStreamAttributes * o = new QXmlStreamAttributes (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamAttributes *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  if( ISNUMPAR(0) )
+  {
+    QXmlStreamAttributes * o = new QXmlStreamAttributes (  );
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamAttributes *) o );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, true );
+    hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
+    hb_itemRelease( des );
+    hb_itemReturn( self );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -96,15 +94,17 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void append(const QString & namespaceUri, const QString & name, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND1 )
+void QXmlStreamAttributes_append1 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -112,38 +112,42 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND1 )
     QString par3 = QLatin1String( hb_parc(3) );
     obj->append ( par1, par2, par3 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void append(const QXmlStreamAttribute & attribute)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND2 )
+void QXmlStreamAttributes_append2 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) _qt5xhb_itemGetPtr(1);
     obj->append ( *par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void append(const QString & qualifiedName, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND3 )
+void QXmlStreamAttributes_append3 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     obj->append ( par1, par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void append(const QXmlStreamAttribute & attribute)
@@ -153,15 +157,15 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 {
   if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_APPEND1 );
+    QXmlStreamAttributes_append1();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_APPEND2 );
+    QXmlStreamAttributes_append2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_APPEND3 );
+    QXmlStreamAttributes_append3();
   }
   else
   {
@@ -172,9 +176,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 /*
 bool hasAttribute(const QString & qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 )
+void QXmlStreamAttributes_hasAttribute1 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -185,9 +190,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 )
 /*
 bool hasAttribute(QLatin1String qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 )
+void QXmlStreamAttributes_hasAttribute2 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
@@ -198,9 +204,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 )
 /*
 bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 )
+void QXmlStreamAttributes_hasAttribute3 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -208,7 +215,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 )
     hb_retl( obj->hasAttribute ( par1, par2 ) );
   }
 }
-
 
 //[1]bool hasAttribute(const QString & qualifiedName) const
 //[2]bool hasAttribute(QLatin1String qualifiedName) const
@@ -218,16 +224,16 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 );
+    QXmlStreamAttributes_hasAttribute1();
   }
   //else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   else if( ISNUMPAR(1) && ISOBJECT(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 );
+    QXmlStreamAttributes_hasAttribute2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 );
+    QXmlStreamAttributes_hasAttribute3();
   }
   else
   {
@@ -238,9 +244,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 /*
 QStringRef value(const QString & namespaceUri, const QString & name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
+void QXmlStreamAttributes_value1 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -253,9 +260,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
 /*
 QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
+void QXmlStreamAttributes_value2 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -268,9 +276,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
 /*
 QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
+void QXmlStreamAttributes_value3 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
@@ -283,9 +292,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
 /*
 QStringRef value(const QString & qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
+void QXmlStreamAttributes_value4 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -297,9 +307,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
 /*
 QStringRef value(QLatin1String qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
+void QXmlStreamAttributes_value5 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
@@ -307,7 +318,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 //[1]QStringRef value(const QString & namespaceUri, const QString & name) const
 //[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const
@@ -319,26 +329,26 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE1 );
+    QXmlStreamAttributes_value1();
   }
   //else if( ISNUMPAR(2) && ISCHAR(1) && ISQLATIN1STRING(2) )
   else if( ISNUMPAR(2) && ISCHAR(1) && ISOBJECT(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE2 );
+    QXmlStreamAttributes_value2();
   }
   //else if( ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2) )
   else if( ISNUMPAR(2) && ISOBJECT(1) && ISOBJECT(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE3 );
+    QXmlStreamAttributes_value3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE4 );
+    QXmlStreamAttributes_value4();
   }
   //else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   else if( ISNUMPAR(1) && ISOBJECT(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE5 );
+    QXmlStreamAttributes_value5();
   }
   else
   {
@@ -346,10 +356,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
   }
 }
 
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -368,6 +378,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -389,14 +400,15 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_SELFDESTRUCTION )
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
