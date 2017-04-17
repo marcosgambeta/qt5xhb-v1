@@ -79,11 +79,7 @@ QUrlQuery()
 void QUrlQuery_new1 ()
 {
   QUrlQuery * o = new QUrlQuery (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -93,11 +89,7 @@ void QUrlQuery_new2 ()
 {
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QUrlQuery * o = new QUrlQuery ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -107,11 +99,7 @@ void QUrlQuery_new3 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QUrlQuery * o = new QUrlQuery ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -121,11 +109,7 @@ void QUrlQuery_new4 ()
 {
   QUrlQuery * par1 = (QUrlQuery *) _qt5xhb_itemGetPtr(1);
   QUrlQuery * o = new QUrlQuery ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QUrlQuery()

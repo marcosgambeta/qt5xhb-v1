@@ -62,11 +62,7 @@ void QFileSystemWatcher_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSystemWatcher *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -85,11 +81,7 @@ void QFileSystemWatcher_new2 ()
   }
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSystemWatcher *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QFileSystemWatcher(QObject * parent = 0)

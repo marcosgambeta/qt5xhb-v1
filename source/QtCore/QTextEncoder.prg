@@ -64,11 +64,7 @@ void QTextEncoder_new1 ()
 {
   const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   QTextEncoder * o = new QTextEncoder ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextEncoder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -79,11 +75,7 @@ void QTextEncoder_new2 ()
   const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QTextEncoder * o = new QTextEncoder ( par1,  (QTextCodec::ConversionFlags) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextEncoder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QTextEncoder(const QTextCodec * codec)

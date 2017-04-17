@@ -76,14 +76,7 @@ QLine()
 void Qline_new1 ()
 {
   QLine * o = new QLine (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLine *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -94,14 +87,7 @@ void Qline_new2 ()
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QLine * o = new QLine ( *par1, *par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLine *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -114,14 +100,7 @@ void Qline_new3 ()
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   QLine * o = new QLine ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLine *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QLine()

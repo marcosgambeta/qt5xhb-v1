@@ -140,11 +140,7 @@ QLocale ()
 void QLocale_new1 ()
 {
   QLocale * o = new QLocale (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLocale *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -154,11 +150,7 @@ void QLocale_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QLocale * o = new QLocale ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLocale *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -169,11 +161,7 @@ void QLocale_new3 ()
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) QLocale::AnyCountry : hb_parni(2);
   QLocale * o = new QLocale (  (QLocale::Language) par1,  (QLocale::Country) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLocale *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -185,11 +173,7 @@ void QLocale_new4 ()
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   QLocale * o = new QLocale (  (QLocale::Language) par1,  (QLocale::Script) par2,  (QLocale::Country) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLocale *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -199,11 +183,7 @@ void QLocale_new5 ()
 {
   QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
   QLocale * o = new QLocale ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLocale *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1] QLocale ()

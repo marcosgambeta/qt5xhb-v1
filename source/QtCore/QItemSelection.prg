@@ -66,11 +66,7 @@ QItemSelection()
 void QItemSelection_new1 ()
 {
   QItemSelection * o = new QItemSelection (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelection *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -81,11 +77,7 @@ void QItemSelection_new2 ()
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
   QItemSelection * o = new QItemSelection ( *par1, *par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelection *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QItemSelection()

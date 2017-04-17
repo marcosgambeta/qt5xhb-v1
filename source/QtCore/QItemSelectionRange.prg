@@ -79,11 +79,7 @@ QItemSelectionRange()
 void QItemSelectionRange_new1 ()
 {
   QItemSelectionRange * o = new QItemSelectionRange (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -93,11 +89,7 @@ void QItemSelectionRange_new2 ()
 {
   QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -108,11 +100,7 @@ void QItemSelectionRange_new3 ()
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1, *par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -122,11 +110,7 @@ void QItemSelectionRange_new4 ()
 {
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QItemSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QItemSelectionRange()

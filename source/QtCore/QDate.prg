@@ -83,14 +83,7 @@ QDate ()
 void QDate_new1 ()
 {
   QDate * o = new QDate (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -102,14 +95,7 @@ void QDate_new2 ()
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   QDate * o = new QDate ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDate ()

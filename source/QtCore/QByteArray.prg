@@ -165,11 +165,7 @@ QByteArray ()
 void QByteArray_new1 ()
 {
   QByteArray * o = new QByteArray (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -179,11 +175,7 @@ void QByteArray_new2 ()
 {
   const char * par1 = hb_parc(1);
   QByteArray * o = new QByteArray (  (const char *) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -194,11 +186,7 @@ void QByteArray_new3 ()
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
   QByteArray * o = new QByteArray (  (const char *) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -209,11 +197,7 @@ void QByteArray_new4 ()
   int par1 = hb_parni(1);
   char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QByteArray * o = new QByteArray ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -223,11 +207,7 @@ void QByteArray_new5 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QByteArray * o = new QByteArray ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QByteArray ()

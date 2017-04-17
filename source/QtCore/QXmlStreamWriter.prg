@@ -88,14 +88,7 @@ QXmlStreamWriter()
 void QXmlStreamWriter_new1 ()
 {
   QXmlStreamWriter * o = new QXmlStreamWriter (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamWriter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -105,14 +98,7 @@ void QXmlStreamWriter_new2 ()
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamWriter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -122,14 +108,7 @@ void QXmlStreamWriter_new3 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamWriter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -138,14 +117,7 @@ QXmlStreamWriter(QString * string)
 void QXmlStreamWriter_new4 ()
 {
   QXmlStreamWriter * o = new QXmlStreamWriter (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamWriter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QXmlStreamWriter()

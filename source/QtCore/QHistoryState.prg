@@ -59,11 +59,7 @@ void QHistoryState_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QHistoryState * o = new QHistoryState ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHistoryState *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -74,11 +70,7 @@ void QHistoryState_new2 ()
   int par1 = hb_parni(1);
   QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
   QHistoryState * o = new QHistoryState (  (QHistoryState::HistoryType) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHistoryState *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QHistoryState(QState *parent = 0)

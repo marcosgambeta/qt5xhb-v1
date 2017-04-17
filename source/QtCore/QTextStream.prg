@@ -103,11 +103,7 @@ QTextStream()
 void QTextStream_new1 ()
 {
   QTextStream * o = new QTextStream (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextStream *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -117,11 +113,7 @@ void QTextStream_new2 ()
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QTextStream * o = new QTextStream ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextStream *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -132,11 +124,7 @@ void QTextStream_new3 ()
   FILE * par1 = (FILE *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
   QTextStream * o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextStream *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -147,11 +135,7 @@ void QTextStream_new4 ()
   QString * par1 = NULL;
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
   QTextStream * o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextStream *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -162,11 +146,7 @@ void QTextStream_new5 ()
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
   QTextStream * o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextStream *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -177,11 +157,7 @@ void QTextStream_new6 ()
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QIODevice::ReadOnly : hb_parni(2);
   QTextStream * o = new QTextStream ( *par1,  (QIODevice::OpenMode) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextStream *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QTextStream()

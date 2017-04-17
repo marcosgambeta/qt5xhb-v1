@@ -63,14 +63,7 @@ QXmlStreamNamespaceDeclaration()
 void QXmlStreamNamespaceDeclaration_new1 ()
 {
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamNamespaceDeclaration *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -80,14 +73,7 @@ void QXmlStreamNamespaceDeclaration_new2 ()
 {
   QXmlStreamNamespaceDeclaration * par1 = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtr(1);
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamNamespaceDeclaration *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -98,14 +84,7 @@ void QXmlStreamNamespaceDeclaration_new3 ()
   QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = QLatin1String( hb_parc(2) );
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamNamespaceDeclaration *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QXmlStreamNamespaceDeclaration()

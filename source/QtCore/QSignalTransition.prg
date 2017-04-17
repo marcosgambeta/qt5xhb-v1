@@ -60,14 +60,7 @@ void QSignalTransition_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QSignalTransition * o = new QSignalTransition ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSignalTransition *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -79,14 +72,7 @@ void QSignalTransition_new2 ()
   const char * par2 = hb_parc(2);
   QState * par3 = ISNIL(3)? 0 : (QState *) _qt5xhb_itemGetPtr(3);
   QSignalTransition * o = new QSignalTransition ( par1,  (const char *) par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSignalTransition *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QSignalTransition(QState *sourceState = 0)

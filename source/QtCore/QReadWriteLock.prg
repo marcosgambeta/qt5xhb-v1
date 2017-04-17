@@ -65,14 +65,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW )
   {
     int par1 = ISNIL(1)? (int) QReadWriteLock::NonRecursive : hb_parni(1);
     QReadWriteLock * o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) par1 );
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QReadWriteLock *) o );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, true );
-    hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-    hb_itemRelease( des );
-    hb_itemReturn( self );
+    _qt5xhb_storePointerAndFlag( o, true );
   }
   else
   {

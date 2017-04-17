@@ -62,11 +62,7 @@ QTemporaryDir()
 void QTemporaryDir_new1 ()
 {
   QTemporaryDir * o = new QTemporaryDir (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTemporaryDir *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -76,11 +72,7 @@ void QTemporaryDir_new2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QTemporaryDir * o = new QTemporaryDir ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTemporaryDir *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QTemporaryDir()

@@ -68,14 +68,7 @@ QTextBoundaryFinder()
 void QTextBoundaryFinder_new1 ()
 {
   QTextBoundaryFinder * o = new QTextBoundaryFinder (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -85,14 +78,7 @@ void QTextBoundaryFinder_new2 ()
 {
   QTextBoundaryFinder * par1 = (QTextBoundaryFinder *) _qt5xhb_itemGetPtr(1);
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -103,14 +89,7 @@ void QTextBoundaryFinder_new3 ()
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -124,14 +103,7 @@ void QTextBoundaryFinder_new4 ()
   unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) _qt5xhb_itemGetPtr(4);
   int par5 = ISNIL(5)? 0 : hb_parni(5);
   QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2, par3, par4, par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QTextBoundaryFinder()

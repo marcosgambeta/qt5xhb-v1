@@ -76,11 +76,7 @@ QPersistentModelIndex()
 void QPersistentModelIndex_new1 ()
 {
   QPersistentModelIndex * o = new QPersistentModelIndex (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPersistentModelIndex *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -90,11 +86,7 @@ void QPersistentModelIndex_new2 ()
 {
   QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
   QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPersistentModelIndex *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -104,11 +96,7 @@ void QPersistentModelIndex_new3 ()
 {
   QPersistentModelIndex * par1 = (QPersistentModelIndex *) _qt5xhb_itemGetPtr(1);
   QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPersistentModelIndex *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QPersistentModelIndex()

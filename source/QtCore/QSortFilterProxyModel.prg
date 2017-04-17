@@ -117,11 +117,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSortFilterProxyModel * o = new QSortFilterProxyModel (  );
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSortFilterProxyModel *) o );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    hb_itemReturn( self );
+    _qt5xhb_storePointerAndFlag( o, false );
   }
   else
   {

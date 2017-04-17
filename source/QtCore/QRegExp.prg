@@ -79,14 +79,7 @@ QRegExp ()
 void QRegExp_new1 ()
 {
   QRegExp * o = new QRegExp (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExp *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -98,14 +91,7 @@ void QRegExp_new2 ()
   int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
   int par3 = ISNIL(3)? (int) QRegExp::RegExp : hb_parni(3);
   QRegExp * o = new QRegExp ( par1,  (Qt::CaseSensitivity) par2,  (QRegExp::PatternSyntax) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExp *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -115,14 +101,7 @@ void QRegExp_new3 ()
 {
   QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
   QRegExp * o = new QRegExp ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExp *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QRegExp ()

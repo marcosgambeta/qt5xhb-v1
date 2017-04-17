@@ -60,12 +60,15 @@ QBasicTimer ()
 */
 HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
-  QBasicTimer * o = new QBasicTimer (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBasicTimer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISNUMPAR(0) )
+  {
+    QBasicTimer * o = new QBasicTimer (  );
+    _qt5xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QBASICTIMER_DELETE )

@@ -59,11 +59,7 @@ void QEventTransition_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QEventTransition * o = new QEventTransition ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventTransition *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -75,11 +71,7 @@ void QEventTransition_new2 ()
   int par2 = hb_parni(2);
   QState * par3 = ISNIL(3)? 0 : (QState *) _qt5xhb_itemGetPtr(3);
   QEventTransition * o = new QEventTransition ( par1,  (QEvent::Type) par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventTransition *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QEventTransition(QState * sourceState = 0)

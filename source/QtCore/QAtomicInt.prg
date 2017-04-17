@@ -80,11 +80,7 @@ void QAtomicInt_new1 ()
 {
   int par1 = ISNIL(1)? 0 : hb_parni(1);
   QAtomicInt * o = new QAtomicInt ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAtomicInt *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -94,11 +90,7 @@ void QAtomicInt_new2 ()
 {
   QAtomicInt * par1 = (QAtomicInt *) _qt5xhb_itemGetPtr(1);
   QAtomicInt * o = new QAtomicInt ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAtomicInt *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QAtomicInt(int value = 0)

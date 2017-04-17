@@ -77,11 +77,7 @@ void QEasingCurve_new1 ()
 {
   int par1 = ISNIL(1)? (int) QEasingCurve::Linear : hb_parni(1);
   QEasingCurve * o = new QEasingCurve (  (QEasingCurve::Type) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEasingCurve *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -91,11 +87,7 @@ void QEasingCurve_new2 ()
 {
   QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
   QEasingCurve * o = new QEasingCurve ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEasingCurve *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QEasingCurve(Type type = Linear)

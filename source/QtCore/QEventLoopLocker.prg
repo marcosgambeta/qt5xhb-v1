@@ -57,11 +57,7 @@ QEventLoopLocker()
 void QEventLoopLocker_new1 ()
 {
   QEventLoopLocker * o = new QEventLoopLocker (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventLoopLocker *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -71,11 +67,7 @@ void QEventLoopLocker_new2 ()
 {
   QEventLoop * par1 = (QEventLoop *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventLoopLocker *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -85,11 +77,7 @@ void QEventLoopLocker_new3 ()
 {
   QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventLoopLocker *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QEventLoopLocker()

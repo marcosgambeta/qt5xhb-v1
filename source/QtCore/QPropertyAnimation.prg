@@ -60,11 +60,7 @@ void QPropertyAnimation_new1 ()
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QPropertyAnimation * o = new QPropertyAnimation ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPropertyAnimation *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -76,11 +72,7 @@ void QPropertyAnimation_new2 ()
   QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QPropertyAnimation * o = new QPropertyAnimation ( par1, *par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPropertyAnimation *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QPropertyAnimation ( QObject * parent = 0 )

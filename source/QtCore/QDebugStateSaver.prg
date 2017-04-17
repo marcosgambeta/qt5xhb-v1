@@ -60,14 +60,7 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
   {
     QDebug  * par1 = (QDebug  *) _qt5xhb_itemGetPtr(1);
     QDebugStateSaver * o = new QDebugStateSaver ( *par1 );
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDebugStateSaver *) o );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, true );
-    hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-    hb_itemRelease( des );
-    hb_itemReturn( self );
+    _qt5xhb_storePointerAndFlag( o, true );
   }
   else
   {

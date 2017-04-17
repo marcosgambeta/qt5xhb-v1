@@ -84,11 +84,7 @@ QJsonDocument()
 void QJsonDocument_new1 ()
 {
   QJsonDocument * o = new QJsonDocument (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJsonDocument *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -98,11 +94,7 @@ void QJsonDocument_new2 ()
 {
   QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
   QJsonDocument * o = new QJsonDocument ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJsonDocument *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -112,11 +104,7 @@ void QJsonDocument_new3 ()
 {
   QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
   QJsonDocument * o = new QJsonDocument ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJsonDocument *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -126,11 +114,7 @@ void QJsonDocument_new4 ()
 {
   QJsonDocument * par1 = (QJsonDocument *) _qt5xhb_itemGetPtr(1);
   QJsonDocument * o = new QJsonDocument ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJsonDocument *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QJsonDocument()

@@ -83,14 +83,7 @@ void QStorageInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QStorageInfo * o = new QStorageInfo (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStorageInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -102,14 +95,7 @@ void QStorageInfo_new2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QStorageInfo * o = new QStorageInfo ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStorageInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -121,14 +107,7 @@ void QStorageInfo_new3 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
   QStorageInfo * o = new QStorageInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStorageInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -140,14 +119,7 @@ void QStorageInfo_new4 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QStorageInfo * par1 = (QStorageInfo *) _qt5xhb_itemGetPtr(1);
   QStorageInfo * o = new QStorageInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStorageInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 

@@ -70,11 +70,7 @@ QBitArray ()
 void QBitArray_new1 ()
 {
   QBitArray * o = new QBitArray (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -85,11 +81,7 @@ void QBitArray_new2 ()
   int par1 = hb_parni(1);
   bool par2 = ISNIL(2)? false : hb_parl(2);
   QBitArray * o = new QBitArray ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -99,11 +91,7 @@ void QBitArray_new3 ()
 {
   QBitArray * par1 = (QBitArray *) _qt5xhb_itemGetPtr(1);
   QBitArray * o = new QBitArray ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitArray *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QBitArray ()

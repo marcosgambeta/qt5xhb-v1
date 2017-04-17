@@ -73,14 +73,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
   QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
   QDirIterator * o = new QDirIterator ( *par1,  (QDirIterator::IteratorFlags) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -91,14 +84,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
   QDirIterator * o = new QDirIterator ( par1,  (QDirIterator::IteratorFlags) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -110,14 +96,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
   int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QDirIterator::NoIteratorFlags : hb_parni(3);
   QDirIterator * o = new QDirIterator ( par1,  (QDir::Filters) par2,  (QDirIterator::IteratorFlags) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -138,14 +117,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
   int par3 = ISNIL(3)? (int) QDir::NoFilter : hb_parni(3);
   int par4 = ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4);
   QDirIterator * o = new QDirIterator ( par1, par2,  (QDir::Filters) par3,  (QDirIterator::IteratorFlags) par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )

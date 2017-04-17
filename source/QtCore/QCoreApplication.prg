@@ -94,11 +94,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtor
   argv = hb_cmdargARGV();
   QCoreApplication * o = NULL;
   o = new QCoreApplication( argc, argv );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,   (QCoreApplication *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )

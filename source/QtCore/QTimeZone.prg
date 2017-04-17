@@ -88,14 +88,7 @@ void QTimeZone_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * o = new QTimeZone (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeZone *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -107,14 +100,7 @@ void QTimeZone_new2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QTimeZone * o = new QTimeZone ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeZone *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -126,14 +112,7 @@ void QTimeZone_new3 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par1 = hb_parni(1);
   QTimeZone * o = new QTimeZone ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeZone *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -150,14 +129,7 @@ void QTimeZone_new4 ()
   int par5 = ISNIL(5)? (int) QLocale::AnyCountry : hb_parni(5);
   QString par6 = ISNIL(6)? QString() : QLatin1String( hb_parc(6) );
   QTimeZone * o = new QTimeZone ( *par1, par2, par3, par4,  (QLocale::Country) par5, par6 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeZone *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -169,14 +141,7 @@ void QTimeZone_new5 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * par1 = (QTimeZone *) _qt5xhb_itemGetPtr(1);
   QTimeZone * o = new QTimeZone ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTimeZone *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
