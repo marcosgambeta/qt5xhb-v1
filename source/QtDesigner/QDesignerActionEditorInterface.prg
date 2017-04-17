@@ -23,6 +23,7 @@ CLASS QDesignerActionEditorInterface INHERIT QWidget
    METHOD core
    METHOD manageAction
    METHOD setFormWindow
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,10 +50,10 @@ RETURN
 #include <QDesignerActionEditorInterface>
 #endif
 
-
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -62,6 +63,7 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -71,6 +73,7 @@ virtual QDesignerFormEditorInterface * core () const
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDesignerFormEditorInterface * ptr = obj->core (  );
@@ -78,21 +81,28 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
   }
 }
 
-
 /*
 virtual void manageAction ( QAction * action ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->manageAction ( par1 );
+    if( ISQACTION(1) )
+    {
+      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
+      obj->manageAction ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
@@ -100,15 +110,21 @@ virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
-    obj->setFormWindow ( par1 );
+    if( ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    {
+      QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
+      obj->setFormWindow ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

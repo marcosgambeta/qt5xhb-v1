@@ -24,6 +24,7 @@ CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
    METHOD delete
    METHOD extensionManager
    METHOD extension
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,19 +56,22 @@ QExtensionFactory ( QExtensionManager * parent = 0 )
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 {
-  QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) _qt5xhb_itemGetPtr(1);
-  QExtensionFactory * o = new QExtensionFactory ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QExtensionFactory *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  if( ISBETWEEN(0,1) && (ISQEXTENSIONMANAGER(1)||ISNIL(1)) )
+  {
+    QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) _qt5xhb_itemGetPtr(1);
+    QExtensionFactory * o = new QExtensionFactory ( par1 );
+    _qt5xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 {
   QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -77,6 +81,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -86,6 +91,7 @@ QExtensionManager * extensionManager () const
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 {
   QExtensionFactory * obj = (QExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QExtensionManager * ptr = obj->extensionManager (  );
@@ -93,23 +99,27 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
   }
 }
 
-
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
 {
   QExtensionFactory * obj = (QExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QObject * ptr = obj->extension ( par1, par2 );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISQOBJECT(1) && ISCHAR(2) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      QString par2 = QLatin1String( hb_parc(2) );
+      QObject * ptr = obj->extension ( par1, par2 );
+      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
-
-
 #pragma ENDDUMP
-

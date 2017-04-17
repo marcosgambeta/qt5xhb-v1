@@ -35,11 +35,13 @@ CLASS QDesignerMemberSheetExtension
    METHOD setMemberGroup
    METHOD setVisible
    METHOD signature
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,6 +71,7 @@ RETURN
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -78,6 +81,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -87,12 +91,12 @@ virtual int count () const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->count (  ) );
   }
 }
-
 
 /*
 virtual QString declaredInClass ( int index ) const = 0
@@ -100,12 +104,19 @@ virtual QString declaredInClass ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retc( (const char *) obj->declaredInClass ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->declaredInClass ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual int indexOf ( const QString & name ) const = 0
@@ -113,13 +124,20 @@ virtual int indexOf ( const QString & name ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->indexOf ( par1 ) );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      hb_retni( obj->indexOf ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool inheritedFromWidget ( int index ) const = 0
@@ -127,12 +145,19 @@ virtual bool inheritedFromWidget ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->inheritedFromWidget ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->inheritedFromWidget ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool isSignal ( int index ) const = 0
@@ -140,12 +165,19 @@ virtual bool isSignal ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->isSignal ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isSignal ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool isSlot ( int index ) const = 0
@@ -153,12 +185,19 @@ virtual bool isSlot ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->isSlot ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isSlot ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool isVisible ( int index ) const = 0
@@ -166,12 +205,19 @@ virtual bool isVisible ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->isVisible ( (int) hb_parni(1) ) );
+    if( ISNUM(1) )
+    {
+      hb_retl( obj->isVisible ( (int) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QString memberGroup ( int index ) const = 0
@@ -179,12 +225,19 @@ virtual QString memberGroup ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retc( (const char *) obj->memberGroup ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->memberGroup ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QString memberName ( int index ) const = 0
@@ -192,12 +245,19 @@ virtual QString memberName ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retc( (const char *) obj->memberName ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->memberName ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QList<QByteArray> parameterNames ( int index ) const = 0
@@ -205,43 +265,50 @@ virtual QList<QByteArray> parameterNames ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QList<QByteArray> list = obj->parameterNames ( (int) hb_parni(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
+    if( ISNUM(1) )
     {
-      if( pDynSym )
+      QList<QByteArray> list = obj->parameterNames ( (int) hb_parni(1) );
+      PHB_DYNS pDynSym;
+      #ifdef __XHARBOUR__
+      pDynSym = hb_dynsymFind( "QBYTEARRAY" );
+      #else
+      pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      #endif
+      PHB_ITEM pArray;
+      pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        if( pDynSym )
+        {
+          #ifdef __XHARBOUR__
+          hb_vmPushSymbol( pDynSym->pSymbol );
+          #else
+          hb_vmPushDynSym( pDynSym );
+          #endif
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
       }
+      hb_itemReturnRelease(pArray);
     }
-    hb_itemReturnRelease(pArray);
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QList<QByteArray> parameterTypes ( int index ) const = 0
@@ -249,43 +316,50 @@ virtual QList<QByteArray> parameterTypes ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QList<QByteArray> list = obj->parameterTypes ( (int) hb_parni(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
+    if( ISNUM(1) )
     {
-      if( pDynSym )
+      QList<QByteArray> list = obj->parameterTypes ( (int) hb_parni(1) );
+      PHB_DYNS pDynSym;
+      #ifdef __XHARBOUR__
+      pDynSym = hb_dynsymFind( "QBYTEARRAY" );
+      #else
+      pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      #endif
+      PHB_ITEM pArray;
+      pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        if( pDynSym )
+        {
+          #ifdef __XHARBOUR__
+          hb_vmPushSymbol( pDynSym->pSymbol );
+          #else
+          hb_vmPushDynSym( pDynSym );
+          #endif
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
       }
+      hb_itemReturnRelease(pArray);
     }
-    hb_itemReturnRelease(pArray);
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual void setMemberGroup ( int index, const QString & group ) = 0
@@ -293,14 +367,22 @@ virtual void setMemberGroup ( int index, const QString & group ) = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setMemberGroup ( (int) hb_parni(1), par2 );
+    if( ISNUM(1) && ISCHAR(2) )
+    {
+      QString par2 = QLatin1String( hb_parc(2) );
+      obj->setMemberGroup ( (int) hb_parni(1), par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setVisible ( int index, bool visible ) = 0
@@ -308,13 +390,21 @@ virtual void setVisible ( int index, bool visible ) = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( (int) hb_parni(1), (bool) hb_parl(2) );
+    if( ISNUM(1) && ISLOG(2) )
+    {
+      obj->setVisible ( (int) hb_parni(1), (bool) hb_parl(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QString signature ( int index ) const = 0
@@ -322,17 +412,24 @@ virtual QString signature ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retc( (const char *) obj->signature ( (int) hb_parni(1) ).toLatin1().data() );
+    if( ISNUM(1) )
+    {
+      hb_retc( (const char *) obj->signature ( (int) hb_parni(1) ).toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -351,6 +448,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -372,14 +470,15 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

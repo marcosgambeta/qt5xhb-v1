@@ -23,11 +23,13 @@ CLASS QDesignerTaskMenuExtension
    METHOD delete
    METHOD preferredEditAction
    METHOD taskActions
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,6 +59,7 @@ RETURN
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 {
   QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -66,6 +69,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -75,6 +79,7 @@ virtual QAction * preferredEditAction () const
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 {
   QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QAction * ptr = obj->preferredEditAction (  );
@@ -82,13 +87,13 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
   }
 }
 
-
 /*
 virtual QList<QAction *> taskActions () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
 {
   QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QList<QAction *> list = obj->taskActions (  );
@@ -126,11 +131,10 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
   }
 }
 
-
-
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -149,6 +153,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -170,14 +175,15 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

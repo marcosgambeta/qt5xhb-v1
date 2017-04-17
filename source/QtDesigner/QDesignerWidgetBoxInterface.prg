@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDesignerWidgetBoxInterface INHERIT QWidget
 
    DATA class_id INIT Class_Id_QDesignerWidgetBoxInterface
@@ -21,6 +20,7 @@ CLASS QDesignerWidgetBoxInterface INHERIT QWidget
    METHOD load
    METHOD save
    METHOD setFileName
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,10 +47,10 @@ RETURN
 #include <QDesignerWidgetBoxInterface>
 #endif
 
-
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,6 +60,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -69,12 +70,12 @@ virtual QString fileName () const = 0
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
   }
 }
-
 
 /*
 virtual bool load () = 0
@@ -82,12 +83,12 @@ virtual bool load () = 0
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->load (  ) );
   }
 }
-
 
 /*
 virtual bool save () = 0
@@ -95,12 +96,12 @@ virtual bool save () = 0
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->save (  ) );
   }
 }
-
 
 /*
 virtual void setFileName ( const QString & fileName ) = 0
@@ -108,15 +109,21 @@ virtual void setFileName ( const QString & fileName ) = 0
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFileName ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setFileName ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

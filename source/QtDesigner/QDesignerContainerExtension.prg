@@ -28,11 +28,13 @@ CLASS QDesignerContainerExtension
    METHOD remove
    METHOD setCurrentIndex
    METHOD widget
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,6 +64,7 @@ RETURN
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_DELETE )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -71,6 +74,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -80,14 +84,22 @@ virtual void addWidget ( QWidget * page ) = 0
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->addWidget ( par1 );
+    if( ISQWIDGET(1) )
+    {
+      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
+      obj->addWidget ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual int count () const = 0
@@ -95,12 +107,12 @@ virtual int count () const = 0
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->count (  ) );
   }
 }
-
 
 /*
 virtual int currentIndex () const = 0
@@ -108,12 +120,12 @@ virtual int currentIndex () const = 0
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->currentIndex (  ) );
   }
 }
-
 
 /*
 virtual void insertWidget ( int index, QWidget * page ) = 0
@@ -121,14 +133,22 @@ virtual void insertWidget ( int index, QWidget * page ) = 0
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    obj->insertWidget ( (int) hb_parni(1), par2 );
+    if( ISNUM(1) && ISQWIDGET(2) )
+    {
+      QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
+      obj->insertWidget ( (int) hb_parni(1), par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void remove ( int index ) = 0
@@ -136,13 +156,21 @@ virtual void remove ( int index ) = 0
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->remove ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->remove ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setCurrentIndex ( int index ) = 0
@@ -150,13 +178,21 @@ virtual void setCurrentIndex ( int index ) = 0
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setCurrentIndex ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentIndex ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QWidget * widget ( int index ) const = 0
@@ -164,18 +200,25 @@ virtual QWidget * widget ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * ptr = obj->widget ( (int) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUM(1) )
+    {
+      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -194,6 +237,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -215,14 +259,15 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
