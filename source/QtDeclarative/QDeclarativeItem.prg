@@ -77,11 +77,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
   {
     QDeclarativeItem * par1 = (QDeclarativeItem *) _qt5xhb_itemGetPtr(1);
     QDeclarativeItem * o = new QDeclarativeItem ( par1 );
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeItem *) o );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    hb_itemReturn( self );
+    _qt5xhb_storePointerAndFlag( o, false );
   }
   else
   {
