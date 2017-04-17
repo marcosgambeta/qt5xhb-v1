@@ -68,11 +68,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -84,11 +80,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par1 = hb_parni(1);
   QBluetoothUuid * o = new QBluetoothUuid (  (QBluetoothUuid::ProtocolUuid) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -100,11 +92,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par1 = hb_parni(1);
   QBluetoothUuid * o = new QBluetoothUuid (  (QBluetoothUuid::ServiceClassUuid) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -116,11 +104,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW4 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   quint16 par1 = hb_parni(1);
   QBluetoothUuid * o = new QBluetoothUuid ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -132,11 +116,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW5 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   quint32 par1 = hb_parni(1);
   QBluetoothUuid * o = new QBluetoothUuid ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -147,11 +127,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW6 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -163,11 +139,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW7 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QBluetoothUuid * o = new QBluetoothUuid ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -179,11 +151,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW8 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * par1 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(1);
   QBluetoothUuid * o = new QBluetoothUuid ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -195,11 +163,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW9 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
   QBluetoothUuid * o = new QBluetoothUuid ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBluetoothUuid *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
