@@ -76,11 +76,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * o = new QAndroidJniObject (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAndroidJniObject *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -92,11 +88,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   const char * par1 = hb_parc(1);
   QAndroidJniObject * o = new QAndroidJniObject (  (const char *) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAndroidJniObject *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
