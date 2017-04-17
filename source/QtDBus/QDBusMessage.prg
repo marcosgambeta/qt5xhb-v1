@@ -89,11 +89,7 @@ QDBusMessage()
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW1 )
 {
   QDBusMessage * o = new QDBusMessage (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusMessage *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -102,11 +98,7 @@ QDBusMessage(const QDBusMessage &other)
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW2 )
 {
   QDBusMessage * o = new QDBusMessage (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusMessage *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

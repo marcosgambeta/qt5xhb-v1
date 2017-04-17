@@ -66,11 +66,7 @@ QDBusError()
 HB_FUNC_STATIC( QDBUSERROR_NEW1 )
 {
   QDBusError * o = new QDBusError (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -80,11 +76,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW2 )
 {
   DBusError * par1 = (DBusError *) _qt5xhb_itemGetPtr(1);
   QDBusError * o = new QDBusError ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -93,11 +85,7 @@ QDBusError(const QDBusMessage& msg)
 HB_FUNC_STATIC( QDBUSERROR_NEW3 )
 {
   QDBusError * o = new QDBusError (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -108,11 +96,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW4 )
   int par1 = hb_parni(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QDBusError * o = new QDBusError (  (QDBusError::ErrorType) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -121,11 +105,7 @@ QDBusError(const QDBusError &other)
 HB_FUNC_STATIC( QDBUSERROR_NEW5 )
 {
   QDBusError * o = new QDBusError (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusError *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

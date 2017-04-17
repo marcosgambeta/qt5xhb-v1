@@ -70,11 +70,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_NEW )
 {
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QDBusConnectionInterface * o = new QDBusConnectionInterface ( par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusConnectionInterface *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -62,11 +62,7 @@ QDBusSignature()
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
 {
   QDBusSignature * o = new QDBusSignature (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusSignature *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -76,11 +72,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 {
   const char * par1 = hb_parc(1);
   QDBusSignature * o = new QDBusSignature (  (const char *) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusSignature *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -90,11 +82,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
   QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
   QDBusSignature * o = new QDBusSignature ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusSignature *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -104,11 +92,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QDBusSignature * o = new QDBusSignature ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusSignature *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

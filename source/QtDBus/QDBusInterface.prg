@@ -60,11 +60,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
   QDBusInterface * o = new QDBusInterface ( par1, par2, par3, par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusInterface *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

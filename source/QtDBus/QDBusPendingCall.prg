@@ -69,11 +69,7 @@ QDBusPendingCall(const QDBusPendingCall &other)
 HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 {
   QDBusPendingCall * o = new QDBusPendingCall (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusPendingCall *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

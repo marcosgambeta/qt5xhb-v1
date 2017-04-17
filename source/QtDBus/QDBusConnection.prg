@@ -105,11 +105,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW1 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QDBusConnection * o = new QDBusConnection ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusConnection *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -118,11 +114,7 @@ QDBusConnection(const QDBusConnection &other)
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW2 )
 {
   QDBusConnection * o = new QDBusConnection (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDBusConnection *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
