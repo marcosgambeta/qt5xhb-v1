@@ -74,11 +74,7 @@ QRadialGradient()
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW1 )
 {
   QRadialGradient * o = new QRadialGradient (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -90,11 +86,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW2 )
   qreal par2 = hb_parnd(2);
   QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
   QRadialGradient * o = new QRadialGradient ( *par1, par2, *par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -108,11 +100,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW3 )
   qreal par4 = hb_parnd(4);
   qreal par5 = hb_parnd(5);
   QRadialGradient * o = new QRadialGradient ( par1, par2, par3, par4, par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -123,11 +111,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW4 )
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   qreal par2 = hb_parnd(2);
   QRadialGradient * o = new QRadialGradient ( *par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -139,11 +123,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW5 )
   qreal par2 = hb_parnd(2);
   qreal par3 = hb_parnd(3);
   QRadialGradient * o = new QRadialGradient ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -156,11 +136,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW6 )
   QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
   qreal par4 = hb_parnd(4);
   QRadialGradient * o = new QRadialGradient ( *par1, par2, *par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -175,11 +151,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW7 )
   qreal par5 = hb_parnd(5);
   qreal par6 = hb_parnd(6);
   QRadialGradient * o = new QRadialGradient ( par1, par2, par3, par4, par5, par6 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadialGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

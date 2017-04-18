@@ -57,11 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
   QString par3 = QLatin1String( hb_parc(3) );
   QString par4 = QLatin1String( hb_parc(4) );
   QAccessibleTextUpdateEvent * o = new QAccessibleTextUpdateEvent ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAccessibleTextUpdateEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

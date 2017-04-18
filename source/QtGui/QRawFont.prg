@@ -101,14 +101,7 @@ QRawFont()
 HB_FUNC_STATIC( QRAWFONT_NEW1 )
 {
   QRawFont * o = new QRawFont (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -120,14 +113,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW2 )
   qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
   QRawFont * o = new QRawFont ( par1, par2,  (QFont::HintingPreference) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -139,14 +125,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW3 )
   qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
   QRawFont * o = new QRawFont ( *par1, par2,  (QFont::HintingPreference) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -156,14 +135,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW4 )
 {
   QRawFont * par1 = (QRawFont *) _qt5xhb_itemGetPtr(1);
   QRawFont * o = new QRawFont ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 

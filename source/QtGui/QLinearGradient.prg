@@ -64,11 +64,7 @@ QLinearGradient ()
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW1 )
 {
   QLinearGradient * o = new QLinearGradient (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLinearGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -79,11 +75,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW2 )
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   QLinearGradient * o = new QLinearGradient ( *par1, *par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLinearGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -96,11 +88,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW3 )
   qreal par3 = hb_parnd(3);
   qreal par4 = hb_parnd(4);
   QLinearGradient * o = new QLinearGradient ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLinearGradient *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

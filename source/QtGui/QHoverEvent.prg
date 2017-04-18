@@ -53,11 +53,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
   QHoverEvent * o = new QHoverEvent (  (QEvent::Type) par1, *par2, *par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHoverEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

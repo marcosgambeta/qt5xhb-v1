@@ -88,11 +88,7 @@ QSurfaceFormat()
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW1 )
 {
   QSurfaceFormat * o = new QSurfaceFormat (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSurfaceFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -102,11 +98,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
   QSurfaceFormat * o = new QSurfaceFormat (  (QSurfaceFormat::FormatOptions) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSurfaceFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -116,11 +108,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW3 )
 {
   QSurfaceFormat * par1 = (QSurfaceFormat *) _qt5xhb_itemGetPtr(1);
   QSurfaceFormat * o = new QSurfaceFormat ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSurfaceFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -52,11 +52,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QWhatsThisClickedEvent * o = new QWhatsThisClickedEvent ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWhatsThisClickedEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

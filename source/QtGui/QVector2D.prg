@@ -87,11 +87,7 @@ QVector2D()
 HB_FUNC_STATIC( QVECTOR2D_NEW1 )
 {
   QVector2D * o = new QVector2D (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -102,11 +98,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW2 )
   float par1 = hb_parnd(1);
   float par2 = hb_parnd(2);
   QVector2D * o = new QVector2D ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -116,11 +108,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW3 )
 {
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -130,11 +118,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW4 )
 {
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -144,11 +128,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW5 )
 {
   QVector3D * par1 = (QVector3D *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -158,11 +138,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW6 )
 {
   QVector4D * par1 = (QVector4D *) _qt5xhb_itemGetPtr(1);
   QVector2D * o = new QVector2D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

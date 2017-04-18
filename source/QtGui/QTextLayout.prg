@@ -107,11 +107,7 @@ QTextLayout()
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW1 )
 {
   QTextLayout * o = new QTextLayout (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLayout *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -121,11 +117,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW2 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QTextLayout * o = new QTextLayout ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLayout *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -137,11 +129,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW3 )
   QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
   QPaintDevice * par3 = ISNIL(3)? 0 : (QPaintDevice *) _qt5xhb_itemGetPtr(3);
   QTextLayout * o = new QTextLayout ( par1, *par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLayout *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -151,11 +139,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW4 )
 {
   QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
   QTextLayout * o = new QTextLayout ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLayout *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

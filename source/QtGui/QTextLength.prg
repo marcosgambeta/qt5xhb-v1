@@ -61,11 +61,7 @@ QTextLength()
 HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
 {
   QTextLength * o = new QTextLength (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLength *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -76,11 +72,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
   int par1 = hb_parni(1);
   qreal par2 = hb_parnd(2);
   QTextLength * o = new QTextLength (  (QTextLength::Type) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextLength *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -67,11 +67,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
   QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
   int par4 = hb_parni(4);
   QContextMenuEvent * o = new QContextMenuEvent (  (QContextMenuEvent::Reason) par1, *par2, *par3,  (Qt::KeyboardModifiers) par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QContextMenuEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -83,11 +79,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
   QContextMenuEvent * o = new QContextMenuEvent (  (QContextMenuEvent::Reason) par1, *par2, *par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QContextMenuEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -98,11 +90,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
   int par1 = hb_parni(1);
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QContextMenuEvent * o = new QContextMenuEvent (  (QContextMenuEvent::Reason) par1, *par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QContextMenuEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

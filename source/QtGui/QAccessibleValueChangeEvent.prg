@@ -57,11 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
   QAccessibleValueChangeEvent * o = new QAccessibleValueChangeEvent ( par1, *par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAccessibleValueChangeEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

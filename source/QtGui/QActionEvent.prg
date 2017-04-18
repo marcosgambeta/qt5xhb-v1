@@ -58,11 +58,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
   QAction * par2 = (QAction *) _qt5xhb_itemGetPtr(2);
   QAction * par3 = ISNIL(3)? 0 : (QAction *) _qt5xhb_itemGetPtr(3);
   QActionEvent * o = new QActionEvent ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QActionEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

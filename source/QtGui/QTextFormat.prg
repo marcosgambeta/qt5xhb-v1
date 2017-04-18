@@ -118,11 +118,7 @@ QTextFormat()
 HB_FUNC_STATIC( QTEXTFORMAT_NEW1 )
 {
   QTextFormat * o = new QTextFormat (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -132,11 +128,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
   QTextFormat * o = new QTextFormat ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -146,11 +138,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW3 )
 {
   QTextFormat * par1 = (QTextFormat *) _qt5xhb_itemGetPtr(1);
   QTextFormat * o = new QTextFormat ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

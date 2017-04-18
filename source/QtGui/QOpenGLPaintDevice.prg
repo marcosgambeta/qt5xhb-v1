@@ -71,11 +71,7 @@ QOpenGLPaintDevice()
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW1 )
 {
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLPaintDevice *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -85,11 +81,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW2 )
 {
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLPaintDevice *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -100,11 +92,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW3 )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLPaintDevice *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

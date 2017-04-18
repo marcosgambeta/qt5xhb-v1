@@ -71,11 +71,7 @@ QGlyphRun ()
 HB_FUNC_STATIC( QGLYPHRUN_NEW1 )
 {
   QGlyphRun * o = new QGlyphRun (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGlyphRun *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -85,11 +81,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW2 )
 {
   QGlyphRun * par1 = (QGlyphRun *) _qt5xhb_itemGetPtr(1);
   QGlyphRun * o = new QGlyphRun ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGlyphRun *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

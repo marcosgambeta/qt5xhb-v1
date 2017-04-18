@@ -89,11 +89,7 @@ QPictureIO()
 HB_FUNC_STATIC( QPICTUREIO_NEW1 )
 {
   QPictureIO * o = new QPictureIO (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPictureIO *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -104,11 +100,7 @@ HB_FUNC_STATIC( QPICTUREIO_NEW2 )
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
   QPictureIO * o = new QPictureIO ( par1,  (const char *) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPictureIO *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -119,11 +111,7 @@ HB_FUNC_STATIC( QPICTUREIO_NEW3 )
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = hb_parc(2);
   QPictureIO * o = new QPictureIO ( par1,  (const char *) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPictureIO *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

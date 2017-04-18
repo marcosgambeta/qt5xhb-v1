@@ -75,11 +75,7 @@ QOpenGLPixelTransferOptions()
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW1 )
 {
   QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLPixelTransferOptions *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -89,11 +85,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW2 )
 {
   QOpenGLPixelTransferOptions * par1 = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(1);
   QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLPixelTransferOptions *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -57,11 +57,7 @@ QInputMethodEvent ()
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
 {
   QInputMethodEvent * o = new QInputMethodEvent (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QInputMethodEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -71,11 +67,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
 {
   QInputMethodEvent * par1 = (QInputMethodEvent *) _qt5xhb_itemGetPtr(1);
   QInputMethodEvent * o = new QInputMethodEvent ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QInputMethodEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

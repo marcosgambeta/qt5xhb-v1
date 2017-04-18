@@ -66,11 +66,7 @@ HB_FUNC_STATIC( QENTEREVENT_NEW )
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
   QEnterEvent * o = new QEnterEvent ( *par1, *par2, *par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEnterEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -86,14 +86,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW1 )
 {
   QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QFontMetrics * o = new QFontMetrics ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFontMetrics *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -104,14 +97,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW2 )
   QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QPaintDevice * par2 = (QPaintDevice *) _qt5xhb_itemGetPtr(2);
   QFontMetrics * o = new QFontMetrics ( *par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFontMetrics *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -121,16 +107,8 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW3 )
 {
   QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
   QFontMetrics * o = new QFontMetrics ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFontMetrics *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
-
 
 //[1]QFontMetrics ( const QFont & font )
 //[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )

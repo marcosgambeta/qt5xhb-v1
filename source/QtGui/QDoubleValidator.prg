@@ -63,11 +63,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QDoubleValidator * o = new QDoubleValidator ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDoubleValidator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -80,11 +76,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
   int par3 = hb_parni(3);
   QObject * par4 = (QObject *) _qt5xhb_itemGetPtr(4);
   QDoubleValidator * o = new QDoubleValidator ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDoubleValidator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

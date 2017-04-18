@@ -103,11 +103,7 @@ HB_FUNC_STATIC( QMATRIX_NEW1 )
 {
   int par1 = hb_parni(1);
   QMatrix * o = new QMatrix (  (Qt::Initialization) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMatrix *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -116,11 +112,7 @@ QMatrix()
 HB_FUNC_STATIC( QMATRIX_NEW2 )
 {
   QMatrix * o = new QMatrix (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMatrix *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -135,11 +127,7 @@ HB_FUNC_STATIC( QMATRIX_NEW3 )
   qreal par5 = hb_parnd(5);
   qreal par6 = hb_parnd(6);
   QMatrix * o = new QMatrix ( par1, par2, par3, par4, par5, par6 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMatrix *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

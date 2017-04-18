@@ -56,11 +56,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   QAccessibleTextSelectionEvent * o = new QAccessibleTextSelectionEvent ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAccessibleTextSelectionEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

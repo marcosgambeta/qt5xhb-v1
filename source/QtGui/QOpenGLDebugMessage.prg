@@ -67,11 +67,7 @@ QOpenGLDebugMessage()
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW1 )
 {
   QOpenGLDebugMessage * o = new QOpenGLDebugMessage (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLDebugMessage *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -81,11 +77,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW2 )
 {
   QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtr(1);
   QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QOpenGLDebugMessage *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -69,11 +69,7 @@ HB_FUNC_STATIC( QDROPEVENT_NEW )
   int par5 = hb_parni(5);
   int par6 = ISNIL(6)? (int) QEvent::Drop : hb_parni(6);
   QDropEvent * o = new QDropEvent ( *par1,  (Qt::DropActions) par2, par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5,  (QEvent::Type) par6 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDropEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

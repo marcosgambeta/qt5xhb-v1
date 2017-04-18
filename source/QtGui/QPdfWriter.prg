@@ -62,11 +62,7 @@ HB_FUNC_STATIC( QPDFWRITER_NEW1 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QPdfWriter * o = new QPdfWriter ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPdfWriter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -76,11 +72,7 @@ HB_FUNC_STATIC( QPDFWRITER_NEW2 )
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QPdfWriter * o = new QPdfWriter ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPdfWriter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -72,14 +72,7 @@ QKeySequence ()
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
 {
   QKeySequence * o = new QKeySequence (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -89,14 +82,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QKeySequence * o = new QKeySequence ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -107,14 +93,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
   QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QKeySequence * o = new QKeySequence ( par1,  (QKeySequence::SequenceFormat) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -127,14 +106,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
   int par3 = ISNIL(3)? 0 : hb_parni(3);
   int par4 = ISNIL(4)? 0 : hb_parni(4);
   QKeySequence * o = new QKeySequence ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -144,14 +116,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
 {
   QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
   QKeySequence * o = new QKeySequence ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -161,14 +126,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
 {
   int par1 = hb_parni(1);
   QKeySequence * o = new QKeySequence (  (QKeySequence::StandardKey) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeySequence *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 

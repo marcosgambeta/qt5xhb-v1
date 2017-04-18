@@ -55,11 +55,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::OtherFocusReason : hb_parni(2);
   QFocusEvent * o = new QFocusEvent (  (QEvent::Type) par1,  (Qt::FocusReason) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFocusEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

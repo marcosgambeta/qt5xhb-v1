@@ -77,11 +77,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW1 )
   int par1 = hb_parni(1);
   QTextEngine * par2 = (QTextEngine *) _qt5xhb_itemGetPtr(2);
   QTextInlineObject * o = new QTextInlineObject ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextInlineObject *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -90,11 +86,7 @@ QTextInlineObject()
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW2 )
 {
   QTextInlineObject * o = new QTextInlineObject (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextInlineObject *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

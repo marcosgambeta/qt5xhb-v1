@@ -97,11 +97,7 @@ QVector3D()
 HB_FUNC_STATIC( QVECTOR3D_NEW1 )
 {
   QVector3D * o = new QVector3D (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -113,11 +109,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW2 )
   float par2 = hb_parnd(2);
   float par3 = hb_parnd(3);
   QVector3D * o = new QVector3D ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -127,11 +119,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW3 )
 {
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QVector3D * o = new QVector3D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -141,11 +129,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW4 )
 {
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QVector3D * o = new QVector3D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -155,11 +139,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW5 )
 {
   QVector2D * par1 = (QVector2D *) _qt5xhb_itemGetPtr(1);
   QVector3D * o = new QVector3D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -170,11 +150,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW6 )
   QVector2D * par1 = (QVector2D *) _qt5xhb_itemGetPtr(1);
   float par2 = hb_parnd(2);
   QVector3D * o = new QVector3D ( *par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -184,11 +160,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW7 )
 {
   QVector4D * par1 = (QVector4D *) _qt5xhb_itemGetPtr(1);
   QVector3D * o = new QVector3D ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

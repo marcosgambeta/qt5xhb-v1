@@ -85,11 +85,7 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
   int par12 = hb_parni(12);
   qint64 par13 = hb_parni(13);
   QTabletEvent * o = new QTabletEvent (  (QEvent::Type) par1, *par2, *par3, par4, par5, par6, par7, par8, par9, par10, par11,  (Qt::KeyboardModifiers) par12, par13 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTabletEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -65,11 +65,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   bool par5 = ISNIL(5)? false : hb_parl(5);
   ushort par6 = ISNIL(6)? 1 : hb_parni(6);
   QKeyEvent * o = new QKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, par4, par5, par6 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QKeyEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
