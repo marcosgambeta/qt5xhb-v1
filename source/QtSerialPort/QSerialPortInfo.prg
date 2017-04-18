@@ -82,14 +82,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPortInfo * o = new QSerialPortInfo (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSerialPortInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -101,14 +94,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * par1 = (QSerialPort *) _qt5xhb_itemGetPtr(1);
   QSerialPortInfo * o = new QSerialPortInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSerialPortInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -120,14 +106,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QString par1 = QLatin1String( hb_parc(1) );
   QSerialPortInfo * o = new QSerialPortInfo ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSerialPortInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
@@ -139,14 +118,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW4 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPortInfo * par1 = (QSerialPortInfo *) _qt5xhb_itemGetPtr(1);
   QSerialPortInfo * o = new QSerialPortInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSerialPortInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
 
