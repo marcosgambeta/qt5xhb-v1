@@ -9,22 +9,17 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QBluetoothUuid INHERIT QUuid
 
    DATA class_id INIT Class_Id_QBluetoothUuid
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
    METHOD new2
    METHOD new3
    METHOD new4
    METHOD new5
    METHOD new6
-   METHOD new7
-   METHOD new8
-   METHOD new9
    METHOD new
    METHOD delete
    METHOD minimumSize
@@ -64,7 +59,7 @@ RETURN
 /*
 QBluetoothUuid()
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW1 )
+void QBluetoothUuid_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid (  );
@@ -134,7 +129,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW6 )
 /*
 QBluetoothUuid(const QString &uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW7 )
+void QBluetoothUuid_new7 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QString par1 = QLatin1String( hb_parc(1) );
@@ -146,7 +141,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW7 )
 /*
 QBluetoothUuid(const QBluetoothUuid &uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW8 )
+void QBluetoothUuid_new8 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * par1 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(1);
@@ -158,7 +153,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW8 )
 /*
 QBluetoothUuid(const QUuid &uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW9 )
+void QBluetoothUuid_new9 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
@@ -181,7 +176,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHUUID_NEW1 );
+    QBluetoothUuid_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -205,15 +200,15 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHUUID_NEW7 );
+    QBluetoothUuid_new7();
   }
   else if( ISNUMPAR(1) && ISQBLUETOOTHUUID(1) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHUUID_NEW8 );
+    QBluetoothUuid_new8();
   }
   else if( ISNUMPAR(1) && ISQUUID(1) )
   {
-    HB_FUNC_EXEC( QBLUETOOTHUUID_NEW9 );
+    QBluetoothUuid_new9();
   }
   else
   {
@@ -265,7 +260,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 ) // TODO: revisar e implementar paramet
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( (ISLOG(1)||ISNIL(1)) )
     {
       bool par1;
       hb_retni( obj->toUInt16 ( &par1 ) );
@@ -289,7 +284,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 ) // TODO: revisar e implementar paramet
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( (ISLOG(1)||ISNIL(1)) )
     {
       bool par1;
       hb_retni( obj->toUInt32 ( &par1 ) );
