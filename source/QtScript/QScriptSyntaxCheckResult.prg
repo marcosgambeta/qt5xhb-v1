@@ -61,11 +61,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
   QScriptSyntaxCheckResult * par1 = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtr(1);
   QScriptSyntaxCheckResult * o = new QScriptSyntaxCheckResult ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptSyntaxCheckResult *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

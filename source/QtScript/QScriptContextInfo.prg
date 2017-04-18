@@ -70,11 +70,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
 {
   const QScriptContext * par1 = (const QScriptContext *) _qt5xhb_itemGetPtr(1);
   QScriptContextInfo * o = new QScriptContextInfo ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptContextInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -84,11 +80,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
 {
   QScriptContextInfo * par1 = (QScriptContextInfo *) _qt5xhb_itemGetPtr(1);
   QScriptContextInfo * o = new QScriptContextInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptContextInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -97,11 +89,7 @@ QScriptContextInfo()
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW3 )
 {
   QScriptContextInfo * o = new QScriptContextInfo (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptContextInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
