@@ -135,11 +135,7 @@ HB_FUNC_STATIC( QPRINTER_NEW1 )
 {
   int par1 = ISNIL(1)? (int) QPrinter::ScreenResolution : hb_parni(1);
   QPrinter * o = new QPrinter (  (QPrinter::PrinterMode) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPrinter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -150,11 +146,7 @@ HB_FUNC_STATIC( QPRINTER_NEW2 )
   QPrinterInfo * par1 = (QPrinterInfo *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QPrinter::ScreenResolution : hb_parni(2);
   QPrinter * o = new QPrinter ( *par1,  (QPrinter::PrinterMode) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPrinter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
