@@ -68,14 +68,7 @@ QXmlInputSource ()
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
 {
   QXmlInputSource * o = new QXmlInputSource (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlInputSource *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -85,14 +78,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QXmlInputSource * o = new QXmlInputSource ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlInputSource *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 
