@@ -145,11 +145,7 @@ HB_FUNC_STATIC( QQUICKITEM_NEW )
 {
   QQuickItem * par1 = ISNIL(1)? 0 : (QQuickItem *) _qt5xhb_itemGetPtr(1);
   QQuickItem * o = new QQuickItem ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuickItem *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
