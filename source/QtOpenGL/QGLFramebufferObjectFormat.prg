@@ -60,11 +60,7 @@ QGLFramebufferObjectFormat ()
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 {
   QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLFramebufferObjectFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -74,11 +70,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 {
   QGLFramebufferObjectFormat * par1 = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(1);
   QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLFramebufferObjectFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

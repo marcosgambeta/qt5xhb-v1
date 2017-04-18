@@ -81,11 +81,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW1 )
   QGLFormat par2 = ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(2);
   QGLWidget * par3 = ISNIL(3)? 0 : (QGLWidget *) _qt5xhb_itemGetPtr(3);
   QGLPixelBuffer * o = new QGLPixelBuffer ( *par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLPixelBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -98,11 +94,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW2 )
   QGLFormat par3 = ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(3);
   QGLWidget * par4 = ISNIL(4)? 0 : (QGLWidget *) _qt5xhb_itemGetPtr(4);
   QGLPixelBuffer * o = new QGLPixelBuffer ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLPixelBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

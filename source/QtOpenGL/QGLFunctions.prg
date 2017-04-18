@@ -135,11 +135,7 @@ QGLFunctions()
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW1 )
 {
   QGLFunctions * o = new QGLFunctions (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLFunctions *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -149,11 +145,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW2 )
 {
   QGLContext * par1 = (QGLContext *) _qt5xhb_itemGetPtr(1);
   QGLFunctions * o = new QGLFunctions ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLFunctions *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

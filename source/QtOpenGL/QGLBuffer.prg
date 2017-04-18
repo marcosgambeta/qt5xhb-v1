@@ -78,11 +78,7 @@ QGLBuffer ()
 HB_FUNC_STATIC( QGLBUFFER_NEW1 )
 {
   QGLBuffer * o = new QGLBuffer (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -92,11 +88,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW2 )
 {
   int par1 = hb_parni(1);
   QGLBuffer * o = new QGLBuffer (  (QGLBuffer::Type) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -106,11 +98,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW3 )
 {
   QGLBuffer * par1 = (QGLBuffer *) _qt5xhb_itemGetPtr(1);
   QGLBuffer * o = new QGLBuffer ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGLBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
