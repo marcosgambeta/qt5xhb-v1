@@ -59,11 +59,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
   QRgb par1 = hb_parni(1);
   bool par2 = hb_parl(2);
   QWinColorizationChangeEvent * o = new QWinColorizationChangeEvent ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWinColorizationChangeEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 

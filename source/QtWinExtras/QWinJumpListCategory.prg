@@ -80,11 +80,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
   QWinJumpListCategory * o = new QWinJumpListCategory ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWinJumpListCategory *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
