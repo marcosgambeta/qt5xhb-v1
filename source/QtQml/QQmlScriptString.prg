@@ -64,11 +64,7 @@ QQmlScriptString()
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW1 )
 {
   QQmlScriptString * o = new QQmlScriptString (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlScriptString *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -78,11 +74,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW2 )
 {
   QQmlScriptString * par1 = (QQmlScriptString *) _qt5xhb_itemGetPtr(1);
   QQmlScriptString * o = new QQmlScriptString ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlScriptString *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

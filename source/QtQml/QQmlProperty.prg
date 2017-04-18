@@ -101,11 +101,7 @@ QQmlProperty()
 HB_FUNC_STATIC( QQMLPROPERTY_NEW1 )
 {
   QQmlProperty * o = new QQmlProperty (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -115,11 +111,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlProperty * o = new QQmlProperty ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -130,11 +122,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -145,11 +133,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlEngine * par2 = (QQmlEngine *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -160,11 +144,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QQmlProperty * o = new QQmlProperty ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -176,11 +156,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
   QString par2 = QLatin1String( hb_parc(2) );
   QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
   QQmlProperty * o = new QQmlProperty ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -192,11 +168,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
   QString par2 = QLatin1String( hb_parc(2) );
   QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
   QQmlProperty * o = new QQmlProperty ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -206,11 +178,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW8 )
 {
   QQmlProperty * par1 = (QQmlProperty *) _qt5xhb_itemGetPtr(1);
   QQmlProperty * o = new QQmlProperty ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

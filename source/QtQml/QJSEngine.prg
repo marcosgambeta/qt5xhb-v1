@@ -61,11 +61,7 @@ QJSEngine()
 HB_FUNC_STATIC( QJSENGINE_NEW1 )
 {
   QJSEngine * o = new QJSEngine (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJSEngine *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -75,11 +71,7 @@ HB_FUNC_STATIC( QJSENGINE_NEW2 )
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QJSEngine * o = new QJSEngine ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QJSEngine *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

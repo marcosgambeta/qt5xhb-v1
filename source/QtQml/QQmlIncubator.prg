@@ -69,11 +69,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 {
   int par1 = ISNIL(1)? (int) QQmlIncubator::Asynchronous : hb_parni(1);
   QQmlIncubator * o = new QQmlIncubator (  (QQmlIncubator::IncubationMode) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlIncubator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

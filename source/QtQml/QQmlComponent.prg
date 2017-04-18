@@ -81,11 +81,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW1 )
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QQmlComponent * o = new QQmlComponent ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlComponent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -97,11 +93,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW2 )
   QString par2 = QLatin1String( hb_parc(2) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QQmlComponent * o = new QQmlComponent ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlComponent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -114,11 +106,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW3 )
   int par3 = hb_parni(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
   QQmlComponent * o = new QQmlComponent ( par1, par2,  (QQmlComponent::CompilationMode) par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlComponent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -130,11 +118,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW4 )
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QQmlComponent * o = new QQmlComponent ( par1, *par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlComponent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -147,11 +131,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW5 )
   int par3 = hb_parni(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
   QQmlComponent * o = new QQmlComponent ( par1, *par2,  (QQmlComponent::CompilationMode) par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlComponent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

@@ -73,11 +73,7 @@ QQmlListReference()
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW1 )
 {
   QQmlListReference * o = new QQmlListReference (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlListReference *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -89,11 +85,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW2 )
   const char * par2 = hb_parc(2);
   QQmlEngine * par3 = ISNIL(3)? 0 : (QQmlEngine *) _qt5xhb_itemGetPtr(3);
   QQmlListReference * o = new QQmlListReference ( par1,  (const char *) par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQmlListReference *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
