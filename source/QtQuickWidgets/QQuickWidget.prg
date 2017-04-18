@@ -86,11 +86,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QQuickWidget * o = new QQuickWidget ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuickWidget *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -103,11 +99,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW2 )
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
   QQuickWidget * o = new QQuickWidget ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuickWidget *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
@@ -120,11 +112,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW3 )
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QQuickWidget * o = new QQuickWidget ( *par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QQuickWidget *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
