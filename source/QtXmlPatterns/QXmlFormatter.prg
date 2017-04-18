@@ -65,14 +65,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
   QXmlQuery * par1 = (QXmlQuery *) _qt5xhb_itemGetPtr(1);
   QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
   QXmlFormatter * o = new QXmlFormatter ( *par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlFormatter *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 
