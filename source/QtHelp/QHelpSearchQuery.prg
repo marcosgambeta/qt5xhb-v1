@@ -58,11 +58,7 @@ QHelpSearchQuery ()
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW1 )
 {
   QHelpSearchQuery * o = new QHelpSearchQuery (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpSearchQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -81,11 +77,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
 par2 << temp;
 }
   QHelpSearchQuery * o = new QHelpSearchQuery (  (QHelpSearchQuery::FieldName) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpSearchQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
