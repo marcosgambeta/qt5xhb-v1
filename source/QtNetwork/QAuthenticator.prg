@@ -71,11 +71,7 @@ QAuthenticator ()
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
 {
   QAuthenticator * o = new QAuthenticator (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAuthenticator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -85,11 +81,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
 {
   QAuthenticator * par1 = (QAuthenticator *) _qt5xhb_itemGetPtr(1);
   QAuthenticator * o = new QAuthenticator ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAuthenticator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

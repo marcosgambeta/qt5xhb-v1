@@ -63,11 +63,7 @@ QDnsMailExchangeRecord()
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW1 )
 {
   QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsMailExchangeRecord *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -77,11 +73,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW2 )
 {
   QDnsMailExchangeRecord * par1 = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtr(1);
   QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsMailExchangeRecord *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

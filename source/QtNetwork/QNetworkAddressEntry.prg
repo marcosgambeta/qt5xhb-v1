@@ -69,14 +69,7 @@ QNetworkAddressEntry ()
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW1 )
 {
   QNetworkAddressEntry * o = new QNetworkAddressEntry (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkAddressEntry *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -86,14 +79,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW2 )
 {
   QNetworkAddressEntry * par1 = (QNetworkAddressEntry *) _qt5xhb_itemGetPtr(1);
   QNetworkAddressEntry * o = new QNetworkAddressEntry ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkAddressEntry *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 

@@ -62,11 +62,7 @@ QDnsDomainNameRecord()
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW1 )
 {
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsDomainNameRecord *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -76,11 +72,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW2 )
 {
   QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtr(1);
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsDomainNameRecord *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

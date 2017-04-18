@@ -81,14 +81,7 @@ QNetworkProxyQuery ()
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW1 )
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -99,14 +92,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW2 )
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QNetworkProxyQuery::UrlRequest : hb_parni(2);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1,  (QNetworkProxyQuery::QueryType) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -119,14 +105,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW3 )
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(4);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( par1, par2, par3,  (QNetworkProxyQuery::QueryType) par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -138,14 +117,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW4 )
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::TcpServer : hb_parni(3);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( par1, par2,  (QNetworkProxyQuery::QueryType) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -155,14 +127,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW5 )
 {
   QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -174,14 +139,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW6 )
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::UrlRequest : hb_parni(3);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, *par2,  (QNetworkProxyQuery::QueryType) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -195,14 +153,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW7 )
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   int par5 = ISNIL(5)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(5);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, par2, par3, par4,  (QNetworkProxyQuery::QueryType) par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -215,14 +166,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpServer : hb_parni(4);
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, par2, par3,  (QNetworkProxyQuery::QueryType) par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QNetworkProxyQuery *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 

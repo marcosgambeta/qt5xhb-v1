@@ -65,11 +65,7 @@ QDnsTextRecord()
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW1 )
 {
   QDnsTextRecord * o = new QDnsTextRecord (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsTextRecord *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -79,11 +75,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW2 )
 {
   QDnsTextRecord * par1 = (QDnsTextRecord *) _qt5xhb_itemGetPtr(1);
   QDnsTextRecord * o = new QDnsTextRecord ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDnsTextRecord *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
