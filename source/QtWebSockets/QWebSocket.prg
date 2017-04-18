@@ -115,11 +115,7 @@ HB_FUNC_STATIC( QWEBSOCKET_NEW )
   int par2 = ISNIL(2)? (int) QWebSocketProtocol::VersionLatest : hb_parni(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
   QWebSocket * o = new QWebSocket ( par1,  (QWebSocketProtocol::Version) par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebSocket *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
 
