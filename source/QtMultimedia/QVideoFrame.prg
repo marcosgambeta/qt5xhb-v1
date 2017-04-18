@@ -94,14 +94,7 @@ QVideoFrame ()
 HB_FUNC_STATIC( QVIDEOFRAME_NEW1 )
 {
   QVideoFrame * o = new QVideoFrame (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -113,14 +106,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
   QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
   QVideoFrame * o = new QVideoFrame ( par1, *par2,  (QVideoFrame::PixelFormat) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -133,14 +119,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   QVideoFrame * o = new QVideoFrame ( par1, *par2, par3,  (QVideoFrame::PixelFormat) par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -150,14 +129,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW4 )
 {
   QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
   QVideoFrame * o = new QVideoFrame ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -167,14 +139,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW5 )
 {
   QVideoFrame * par1 = (QVideoFrame *) _qt5xhb_itemGetPtr(1);
   QVideoFrame * o = new QVideoFrame ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 

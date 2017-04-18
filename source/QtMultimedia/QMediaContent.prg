@@ -75,11 +75,7 @@ QMediaContent()
 HB_FUNC_STATIC( QMEDIACONTENT_NEW1 )
 {
   QMediaContent * o = new QMediaContent (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -89,11 +85,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW2 )
 {
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -103,11 +95,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW3 )
 {
   QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -117,11 +105,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW4 )
 {
   QMediaResource * par1 = (QMediaResource *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -138,11 +122,7 @@ for (i1=0;i1<nLen1;i1++)
 par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
   QMediaContent * o = new QMediaContent ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -152,11 +132,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW6 )
 {
   QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
   QMediaContent * o = new QMediaContent ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -168,11 +144,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW7 )
   QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
   bool par3 = ISNIL(3)? false : hb_parl(3);
   QMediaContent * o = new QMediaContent ( par1, par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaContent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

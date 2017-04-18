@@ -66,11 +66,7 @@ QMediaTimeInterval()
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW1 )
 {
   QMediaTimeInterval * o = new QMediaTimeInterval (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaTimeInterval *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -81,11 +77,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW2 )
   qint64 par1 = hb_parni(1);
   qint64 par2 = hb_parni(2);
   QMediaTimeInterval * o = new QMediaTimeInterval ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaTimeInterval *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -95,11 +87,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW3 )
 {
   QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
   QMediaTimeInterval * o = new QMediaTimeInterval ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaTimeInterval *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

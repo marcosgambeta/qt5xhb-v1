@@ -75,11 +75,7 @@ QAudioDeviceInfo ()
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW1 )
 {
   QAudioDeviceInfo * o = new QAudioDeviceInfo (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioDeviceInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -89,11 +85,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW2 )
 {
   QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) _qt5xhb_itemGetPtr(1);
   QAudioDeviceInfo * o = new QAudioDeviceInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioDeviceInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

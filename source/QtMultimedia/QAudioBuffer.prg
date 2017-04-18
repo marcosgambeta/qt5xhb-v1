@@ -71,11 +71,7 @@ QAudioBuffer()
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW1 )
 {
   QAudioBuffer * o = new QAudioBuffer (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -85,11 +81,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW2 )
 {
   QAudioBuffer * par1 = (QAudioBuffer *) _qt5xhb_itemGetPtr(1);
   QAudioBuffer * o = new QAudioBuffer ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -101,11 +93,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW3 )
   QAudioFormat * par2 = (QAudioFormat *) _qt5xhb_itemGetPtr(2);
   qint64 par3 = ISNIL(3)? -1 : hb_parni(3);
   QAudioBuffer * o = new QAudioBuffer ( *par1, *par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -117,11 +105,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW4 )
   QAudioFormat * par2 = (QAudioFormat *) _qt5xhb_itemGetPtr(2);
   qint64 par3 = ISNIL(3)? -1 : hb_parni(3);
   QAudioBuffer * o = new QAudioBuffer ( par1, *par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAudioBuffer *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 

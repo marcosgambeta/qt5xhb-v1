@@ -70,11 +70,7 @@ QMediaServiceProviderHint()
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
 {
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaServiceProviderHint *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -93,11 +89,7 @@ QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
 par2 << temp;
 }
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaServiceProviderHint *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -107,11 +99,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaServiceProviderHint *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -121,11 +109,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
   int par1 = hb_parni(1);
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint (  (QMediaServiceProviderHint::Features) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaServiceProviderHint *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -135,11 +119,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
   QMediaServiceProviderHint * par1 = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtr(1);
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMediaServiceProviderHint *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt5xhb_storePointerAndFlag( o, false );
 }
 
 
