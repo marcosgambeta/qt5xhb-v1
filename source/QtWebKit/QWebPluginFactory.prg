@@ -75,24 +75,24 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-QStringList par3;
-PHB_ITEM aStrings3 = hb_param(3, HB_IT_ARRAY);
-int i3;
-int nLen3 = hb_arrayLen(aStrings3);
-for (i3=0;i3<nLen3;i3++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings3, i3+1) );
-par3 << temp;
-}
-QStringList par4;
-PHB_ITEM aStrings4 = hb_param(4, HB_IT_ARRAY);
-int i4;
-int nLen4 = hb_arrayLen(aStrings4);
-for (i4=0;i4<nLen4;i4++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings4, i4+1) );
-par4 << temp;
-}
+    QStringList par3 = _qt5xhb_convert_array_parameter_to_qstringlist(3);
+    //PHB_ITEM aStrings3 = hb_param(3, HB_IT_ARRAY);
+    //int i3;
+    //int nLen3 = hb_arrayLen(aStrings3);
+    //for (i3=0;i3<nLen3;i3++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings3, i3+1) );
+    //  par3 << temp;
+    //}
+    QStringList par4 = _qt5xhb_convert_array_parameter_to_qstringlist(4);
+    //PHB_ITEM aStrings4 = hb_param(4, HB_IT_ARRAY);
+    //int i4;
+    //int nLen4 = hb_arrayLen(aStrings4);
+    //for (i4=0;i4<nLen4;i4++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings4, i4+1) );
+    //  par4 << temp;
+    //}
     QObject * ptr = obj->create ( par1, *par2, par3, par4 );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }

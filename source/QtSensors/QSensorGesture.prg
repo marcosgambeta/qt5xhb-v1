@@ -62,15 +62,15 @@ QSensorGesture(const QStringList &ids, QObject *parent = 0)
 HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  //int i1;
+  //int nLen1 = hb_arrayLen(aStrings1);
+  //for (i1=0;i1<nLen1;i1++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+  //  par1 << temp;
+  //}
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QSensorGesture * o = new QSensorGesture ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );

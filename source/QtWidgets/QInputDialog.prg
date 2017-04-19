@@ -178,15 +178,15 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXITEMS )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+    //int i1;
+    //int nLen1 = hb_arrayLen(aStrings1);
+    //for (i1=0;i1<nLen1;i1++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    //  par1 << temp;
+    //}
     obj->setComboBoxItems ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -831,15 +831,15 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QString par2 = QLatin1String( hb_parc(2) );
   QString par3 = QLatin1String( hb_parc(3) );
-QStringList par4;
-PHB_ITEM aStrings4 = hb_param(4, HB_IT_ARRAY);
-int i4;
-int nLen4 = hb_arrayLen(aStrings4);
-for (i4=0;i4<nLen4;i4++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings4, i4+1) );
-par4 << temp;
-}
+  QStringList par4 = _qt5xhb_convert_array_parameter_to_qstringlist(4);
+  //PHB_ITEM aStrings4 = hb_param(4, HB_IT_ARRAY);
+  //int i4;
+  //int nLen4 = hb_arrayLen(aStrings4);
+  //for (i4=0;i4<nLen4;i4++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings4, i4+1) );
+  //  par4 << temp;
+  //}
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
   int par9 = ISNIL(9)? (int) Qt::ImhNone : hb_parni(9);

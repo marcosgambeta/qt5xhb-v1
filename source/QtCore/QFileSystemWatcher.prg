@@ -70,15 +70,15 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
 void QFileSystemWatcher_new2 ()
 {
-  QStringList par1;
-  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aStrings1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    par1 << temp;
-  }
+  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  //int i1;
+  //int nLen1 = hb_arrayLen(aStrings1);
+  //for (i1=0;i1<nLen1;i1++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+  //  par1 << temp;
+  //}
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
   QFileSystemWatcher * o = new QFileSystemWatcher ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -152,15 +152,15 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1;
-      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aStrings1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-        par1 << temp;
-      }
+      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      //int i1;
+      //int nLen1 = hb_arrayLen(aStrings1);
+      //for (i1=0;i1<nLen1;i1++)
+      //{
+      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+      //  par1 << temp;
+      //}
       QStringList strl = obj->addPaths ( par1 );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }
@@ -231,15 +231,15 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1;
-      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aStrings1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-        par1 << temp;
-      }
+      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      //int i1;
+      //int nLen1 = hb_arrayLen(aStrings1);
+      //for (i1=0;i1<nLen1;i1++)
+      //{
+      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+      //  par1 << temp;
+      //}
       QStringList strl = obj->removePaths ( par1 );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }

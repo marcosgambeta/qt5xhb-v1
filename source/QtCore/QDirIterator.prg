@@ -105,15 +105,15 @@ QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filt
 HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
-  QStringList par2;
-  PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  int i2;
-  int nLen2 = hb_arrayLen(aStrings2);
-  for (i2=0;i2<nLen2;i2++)
-  {
-    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-    par2 << temp;
-  }
+  QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
+  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+  //int i2;
+  //int nLen2 = hb_arrayLen(aStrings2);
+  //for (i2=0;i2<nLen2;i2++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
+  //  par2 << temp;
+  //}
   int par3 = ISNIL(3)? (int) QDir::NoFilter : hb_parni(3);
   int par4 = ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4);
   QDirIterator * o = new QDirIterator ( par1, par2,  (QDir::Filters) par3,  (QDirIterator::IteratorFlags) par4 );

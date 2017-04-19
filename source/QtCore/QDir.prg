@@ -300,15 +300,15 @@ void QDir_entryInfoList1 ()
 
   if( obj )
   {
-    QStringList par1;
-    PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aStrings1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      par1 << temp;
-    }
+    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+    //int i1;
+    //int nLen1 = hb_arrayLen(aStrings1);
+    //for (i1=0;i1<nLen1;i1++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    //  par1 << temp;
+    //}
     int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
     QFileInfoList list = obj->entryInfoList ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
@@ -420,15 +420,15 @@ void QDir_entryList1 ()
 
   if( obj )
   {
-    QStringList par1;
-    PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aStrings1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      par1 << temp;
-    }
+    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+    //int i1;
+    //int nLen1 = hb_arrayLen(aStrings1);
+    //for (i1=0;i1<nLen1;i1++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    //  par1 << temp;
+    //}
     int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
     QStringList strl = obj->entryList ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
@@ -853,15 +853,15 @@ HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1;
-      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aStrings1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-        par1 << temp;
-      }
+      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      //int i1;
+      //int nLen1 = hb_arrayLen(aStrings1);
+      //for (i1=0;i1<nLen1;i1++)
+      //{
+      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+      //  par1 << temp;
+      //}
       obj->setNameFilters ( par1 );
     }
     else
@@ -1125,15 +1125,15 @@ static bool match(const QStringList & filters, const QString & fileName)
 */
 void QDir_match2 ()
 {
-  QStringList par1;
-  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aStrings1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    par1 << temp;
-  }
+  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  //int i1;
+  //int nLen1 = hb_arrayLen(aStrings1);
+  //for (i1=0;i1<nLen1;i1++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+  //  par1 << temp;
+  //}
   QString par2 = QLatin1String( hb_parc(2) );
   hb_retl( QDir::match ( par1, par2 ) );
 }
@@ -1224,15 +1224,15 @@ HB_FUNC_STATIC( QDIR_SETSEARCHPATHS )
   if( ISCHAR(1) && ISARRAY(2) )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    QStringList par2;
-    PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aStrings2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-      par2 << temp;
-    }
+    QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
+    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+    //int i2;
+    //int nLen2 = hb_arrayLen(aStrings2);
+    //for (i2=0;i2<nLen2;i2++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
+    //  par2 << temp;
+    //}
     QDir::setSearchPaths ( par1, par2 );
     hb_itemReturn( hb_stackSelfItem() );
   }

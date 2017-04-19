@@ -176,15 +176,15 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+    //int i1;
+    //int nLen1 = hb_arrayLen(aStrings1);
+    //for (i1=0;i1<nLen1;i1++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    //  par1 << temp;
+    //}
     obj->setRestartCommand ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -213,15 +213,15 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-QStringList par1;
-PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aStrings1);
-for (i1=0;i1<nLen1;i1++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-par1 << temp;
-}
+    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+    //int i1;
+    //int nLen1 = hb_arrayLen(aStrings1);
+    //for (i1=0;i1<nLen1;i1++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+    //  par1 << temp;
+    //}
     obj->setDiscardCommand ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -267,15 +267,15 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-QStringList par2;
-PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aStrings2);
-for (i2=0;i2<nLen2;i2++)
-{
-QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-par2 << temp;
-}
+    QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
+    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+    //int i2;
+    //int nLen2 = hb_arrayLen(aStrings2);
+    //for (i2=0;i2<nLen2;i2++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
+    //  par2 << temp;
+    //}
     obj->setManagerProperty ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );

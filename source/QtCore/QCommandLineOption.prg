@@ -78,15 +78,15 @@ QCommandLineOption(const QStringList &names, const QString &description = QStrin
 */
 void QCommandLineOption_new2 ()
 {
-  QStringList par1;
-  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aStrings1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    par1 << temp;
-  }
+  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  //int i1;
+  //int nLen1 = hb_arrayLen(aStrings1);
+  //for (i1=0;i1<nLen1;i1++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+  //  par1 << temp;
+  //}
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
@@ -288,15 +288,15 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1;
-      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aStrings1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-        par1 << temp;
-      }
+      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      //int i1;
+      //int nLen1 = hb_arrayLen(aStrings1);
+      //for (i1=0;i1<nLen1;i1++)
+      //{
+      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+      //  par1 << temp;
+      //}
       obj->setDefaultValues ( par1 );
     }
     else

@@ -391,15 +391,15 @@ HB_FUNC_STATIC( QFILEDIALOG_SETHISTORY )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1;
-      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aStrings1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-        par1 << temp;
-      }
+      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      //int i1;
+      //int nLen1 = hb_arrayLen(aStrings1);
+      //for (i1=0;i1<nLen1;i1++)
+      //{
+      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+      //  par1 << temp;
+      //}
       obj->setHistory ( par1 );
     }
   }
@@ -622,15 +622,15 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1;
-      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aStrings1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-        par1 << temp;
-      }
+      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      //int i1;
+      //int nLen1 = hb_arrayLen(aStrings1);
+      //for (i1=0;i1<nLen1;i1++)
+      //{
+      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+      //  par1 << temp;
+      //}
       obj->setNameFilters ( par1 );
     }
     else
@@ -1287,15 +1287,15 @@ HB_FUNC_STATIC( QFILEDIALOG_SETMIMETYPEFILTERS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1;
-      PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aStrings1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-        par1 << temp;
-      }
+      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+      //int i1;
+      //int nLen1 = hb_arrayLen(aStrings1);
+      //for (i1=0;i1<nLen1;i1++)
+      //{
+      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+      //  par1 << temp;
+      //}
       obj->setMimeTypeFilters ( par1 );
     }
     else
@@ -1426,15 +1426,15 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    QStringList par7;
-    PHB_ITEM aStrings7 = hb_param(7, HB_IT_ARRAY);
-    int i7;
-    int nLen7 = hb_arrayLen(aStrings7);
-    for (i7=0;i7<nLen7;i7++)
-    {
-      QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
-      par7 << temp;
-    }
+    QStringList par7 = _qt5xhb_convert_array_parameter_to_qstringlist(7);
+    //PHB_ITEM aStrings7 = hb_param(7, HB_IT_ARRAY);
+    //int i7;
+    //int nLen7 = hb_arrayLen(aStrings7);
+    //for (i7=0;i7<nLen7;i7++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
+    //  par7 << temp;
+    //}
     QUrl * ptr = new QUrl( QFileDialog::getOpenFileUrl ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6, par7 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -1457,15 +1457,15 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    QStringList par7;
-    PHB_ITEM aStrings7 = hb_param(7, HB_IT_ARRAY);
-    int i7;
-    int nLen7 = hb_arrayLen(aStrings7);
-    for (i7=0;i7<nLen7;i7++)
-    {
-      QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
-      par7 << temp;
-    }
+    QStringList par7 = _qt5xhb_convert_array_parameter_to_qstringlist(7);
+    //PHB_ITEM aStrings7 = hb_param(7, HB_IT_ARRAY);
+    //int i7;
+    //int nLen7 = hb_arrayLen(aStrings7);
+    //for (i7=0;i7<nLen7;i7++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
+    //  par7 << temp;
+    //}
     QUrl * ptr = new QUrl( QFileDialog::getSaveFileUrl ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6, par7 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -1486,15 +1486,15 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
     int par4 = ISNIL(4)? (int) QFileDialog::ShowDirsOnly : hb_parni(4);
-    QStringList par5;
-    PHB_ITEM aStrings5 = hb_param(5, HB_IT_ARRAY);
-    int i5;
-    int nLen5 = hb_arrayLen(aStrings5);
-    for (i5=0;i5<nLen5;i5++)
-    {
-      QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
-      par5 << temp;
-    }
+    QStringList par5 = _qt5xhb_convert_array_parameter_to_qstringlist(5);
+    //PHB_ITEM aStrings5 = hb_param(5, HB_IT_ARRAY);
+    //int i5;
+    //int nLen5 = hb_arrayLen(aStrings5);
+    //for (i5=0;i5<nLen5;i5++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
+    //  par5 << temp;
+    //}
     QUrl * ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( par1, par2, par3,  (QFileDialog::Options) par4, par5 ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
@@ -1517,15 +1517,15 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    QStringList par7;
-    PHB_ITEM aStrings7 = hb_param(7, HB_IT_ARRAY);
-    int i7;
-    int nLen7 = hb_arrayLen(aStrings7);
-    for (i7=0;i7<nLen7;i7++)
-    {
-      QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
-      par7 << temp;
-    }
+    QStringList par7 = _qt5xhb_convert_array_parameter_to_qstringlist(7);
+    //PHB_ITEM aStrings7 = hb_param(7, HB_IT_ARRAY);
+    //int i7;
+    //int nLen7 = hb_arrayLen(aStrings7);
+    //for (i7=0;i7<nLen7;i7++)
+    //{
+    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings7, i7+1) );
+    //  par7 << temp;
+    //}
     QList<QUrl> list = QFileDialog::getOpenFileUrls ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6, par7 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__

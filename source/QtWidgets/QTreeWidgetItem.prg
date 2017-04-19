@@ -136,15 +136,15 @@ explicit QTreeWidgetItem(const QStringList & strings, int type = Type)
 */
 void QTreeWidgetItem_new2 ()
 {
-  QStringList par1;
-  PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aStrings1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    par1 << temp;
-  }
+  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
+  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
+  //int i1;
+  //int nLen1 = hb_arrayLen(aStrings1);
+  //for (i1=0;i1<nLen1;i1++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
+  //  par1 << temp;
+  //}
   int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -167,15 +167,15 @@ QTreeWidgetItem(QTreeWidget * view, const QStringList & strings, int type = Type
 void QTreeWidgetItem_new4 ()
 {
   QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
-  QStringList par2;
-  PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  int i2;
-  int nLen2 = hb_arrayLen(aStrings2);
-  for (i2=0;i2<nLen2;i2++)
-  {
-    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-    par2 << temp;
-  }
+  QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
+  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+  //int i2;
+  //int nLen2 = hb_arrayLen(aStrings2);
+  //for (i2=0;i2<nLen2;i2++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
+  //  par2 << temp;
+  //}
   int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -210,15 +210,15 @@ QTreeWidgetItem(QTreeWidgetItem * parent, const QStringList & strings, int type 
 void QTreeWidgetItem_new7 ()
 {
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-  QStringList par2;
-  PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  int i2;
-  int nLen2 = hb_arrayLen(aStrings2);
-  for (i2=0;i2<nLen2;i2++)
-  {
-    QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-    par2 << temp;
-  }
+  QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
+  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+  //int i2;
+  //int nLen2 = hb_arrayLen(aStrings2);
+  //for (i2=0;i2<nLen2;i2++)
+  //{
+  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
+  //  par2 << temp;
+  //}
   int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
   QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
