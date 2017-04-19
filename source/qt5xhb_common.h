@@ -22,3 +22,5 @@
 #define ISOBJECT HB_ISOBJECT
 #define ISARRAY HB_ISARRAY
 #endif
+
+#define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
