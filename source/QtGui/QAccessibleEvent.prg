@@ -28,11 +28,13 @@ CLASS QAccessibleEvent
    METHOD setChild
    METHOD child
    METHOD accessibleInterface
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

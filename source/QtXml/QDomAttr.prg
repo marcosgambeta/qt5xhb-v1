@@ -29,6 +29,7 @@ CLASS QDomAttr INHERIT QDomNode
    METHOD setValue
    METHOD specified
    METHOD value
+
    DESTRUCTOR destroyObject
 
 END CLASS

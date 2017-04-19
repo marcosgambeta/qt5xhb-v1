@@ -32,9 +32,11 @@ CLASS QAbstractItemDelegate INHERIT QObject
    METHOD destroyEditor
    METHOD elidedText
    METHOD paintingRoles
+
    METHOD onCloseEditor
    METHOD onCommitData
    METHOD onSizeHintChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

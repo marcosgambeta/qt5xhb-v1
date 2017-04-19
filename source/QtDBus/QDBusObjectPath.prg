@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDBusObjectPath
 
    DATA pointer
@@ -25,11 +24,13 @@ CLASS QDBusObjectPath
    METHOD delete
    METHOD path
    METHOD setPath
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QGLFramebufferObjectFormat INHERIT QWidget
 
    DATA class_id INIT Class_Id_QGLFramebufferObjectFormat
@@ -28,6 +27,7 @@ CLASS QGLFramebufferObjectFormat INHERIT QWidget
    METHOD setSamples
    METHOD setTextureTarget
    METHOD textureTarget
+
    DESTRUCTOR destroyObject
 
 END CLASS

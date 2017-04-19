@@ -67,11 +67,13 @@ CLASS QTextLayout
    METHOD maximumWidth
    METHOD engine
    METHOD setFlags
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

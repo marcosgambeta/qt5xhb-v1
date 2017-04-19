@@ -45,6 +45,7 @@ CLASS QGLFramebufferObject INHERIT QPaintDevice
    METHOD blitFramebuffer
    METHOD hasOpenGLFramebufferBlit
    METHOD hasOpenGLFramebufferObjects
+
    DESTRUCTOR destroyObject
 
 END CLASS

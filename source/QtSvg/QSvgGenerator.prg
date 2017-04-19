@@ -41,6 +41,7 @@ CLASS QSvgGenerator INHERIT QPaintDevice
    METHOD title
    METHOD viewBox
    METHOD viewBoxF
+
    DESTRUCTOR destroyObject
 
 END CLASS

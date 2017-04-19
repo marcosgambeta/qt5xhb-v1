@@ -47,7 +47,9 @@ CLASS QSplitter INHERIT QFrame
    METHOD widget
    METHOD minimumSizeHint
    METHOD sizeHint
+
    METHOD onSplitterMoved
+
    DESTRUCTOR destroyObject
 
 END CLASS

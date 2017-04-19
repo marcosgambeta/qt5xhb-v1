@@ -58,6 +58,7 @@ CLASS QDomElement INHERIT QDomNode
    METHOD setTagName
    METHOD tagName
    METHOD text
+
    DESTRUCTOR destroyObject
 
 END CLASS

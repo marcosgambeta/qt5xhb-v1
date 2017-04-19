@@ -73,11 +73,13 @@ CLASS QImageReader
    METHOD imageFormat3
    METHOD imageFormat
    METHOD supportedImageFormats
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

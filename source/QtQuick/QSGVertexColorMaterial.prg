@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSGVertexColorMaterial INHERIT QSGMaterial
 
    DATA class_id INIT Class_Id_QSGVertexColorMaterial
@@ -18,6 +17,7 @@ CLASS QSGVertexColorMaterial INHERIT QSGMaterial
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

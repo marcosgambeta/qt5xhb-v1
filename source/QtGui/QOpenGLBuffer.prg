@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QOpenGLBuffer INHERIT QObject
 
    DATA class_id INIT Class_Id_QOpenGLBuffer
@@ -40,6 +39,7 @@ CLASS QOpenGLBuffer INHERIT QObject
    METHOD unmap
    METHOD usagePattern
    METHOD write
+
    DESTRUCTOR destroyObject
 
 END CLASS

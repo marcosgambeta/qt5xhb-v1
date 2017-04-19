@@ -28,6 +28,7 @@ CLASS QSlider INHERIT QAbstractSlider
    METHOD event
    METHOD minimumSizeHint
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

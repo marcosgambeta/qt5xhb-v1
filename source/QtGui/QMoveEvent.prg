@@ -23,6 +23,7 @@ CLASS QMoveEvent INHERIT QEvent
    METHOD delete
    METHOD oldPos
    METHOD pos
+
    DESTRUCTOR destroyObject
 
 END CLASS

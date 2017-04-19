@@ -49,10 +49,12 @@ CLASS QNetworkAccessManager INHERIT QObject
    METHOD setNetworkAccessible
    METHOD setProxy
    METHOD setProxyFactory
+
    METHOD onAuthenticationRequired
    METHOD onFinished
    METHOD onNetworkAccessibleChanged
    METHOD onProxyAuthenticationRequired
+
    DESTRUCTOR destroyObject
 
 END CLASS

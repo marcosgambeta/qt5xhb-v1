@@ -36,11 +36,13 @@ CLASS QDomNamedNodeMap
    METHOD setNamedItem
    METHOD setNamedItemNS
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

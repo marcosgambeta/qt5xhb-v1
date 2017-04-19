@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAltimeterReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QAltimeterReading
@@ -19,6 +18,7 @@ CLASS QAltimeterReading INHERIT QSensorReading
    METHOD delete
    METHOD altitude
    METHOD setAltitude
+
    DESTRUCTOR destroyObject
 
 END CLASS

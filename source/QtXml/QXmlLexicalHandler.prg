@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QXmlLexicalHandler
 
    DATA pointer
@@ -26,11 +25,13 @@ CLASS QXmlLexicalHandler
    METHOD startCDATA
    METHOD startDTD
    METHOD startEntity
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

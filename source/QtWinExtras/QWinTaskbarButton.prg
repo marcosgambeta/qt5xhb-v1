@@ -32,6 +32,7 @@ CLASS QWinTaskbarButton INHERIT QObject
    METHOD setOverlayAccessibleDescription
    METHOD progress
    METHOD eventFilter
+
    DESTRUCTOR destroyObject
 
 END CLASS

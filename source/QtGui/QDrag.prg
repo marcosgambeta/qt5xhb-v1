@@ -39,8 +39,10 @@ CLASS QDrag INHERIT QObject
    METHOD source
    METHOD supportedActions
    METHOD target
+
    METHOD onActionChanged
    METHOD onTargetChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

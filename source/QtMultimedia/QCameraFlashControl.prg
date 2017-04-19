@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraFlashControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QCameraFlashControl
@@ -21,7 +20,9 @@ CLASS QCameraFlashControl INHERIT QMediaControl
    METHOD isFlashModeSupported
    METHOD isFlashReady
    METHOD setFlashMode
+
    METHOD onFlashReady
+
    DESTRUCTOR destroyObject
 
 END CLASS

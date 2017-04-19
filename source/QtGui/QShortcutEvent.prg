@@ -24,6 +24,7 @@ CLASS QShortcutEvent INHERIT QEvent
    METHOD key
    METHOD shortcutId
    METHOD isAmbiguous
+
    DESTRUCTOR destroyObject
 
 END CLASS

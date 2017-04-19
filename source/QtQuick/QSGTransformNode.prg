@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSGTransformNode INHERIT QSGNode
 
    DATA class_id INIT Class_Id_QSGTransformNode
@@ -18,6 +17,7 @@ CLASS QSGTransformNode INHERIT QSGNode
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

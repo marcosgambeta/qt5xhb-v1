@@ -33,6 +33,7 @@ CLASS QTextFrame INHERIT QTextObject
    METHOD setLayoutData
    METHOD childFrames
    METHOD parentFrame
+
    DESTRUCTOR destroyObject
 
 END CLASS

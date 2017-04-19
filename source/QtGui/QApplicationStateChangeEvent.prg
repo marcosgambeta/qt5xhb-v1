@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QApplicationStateChangeEvent INHERIT QEvent
 
    DATA class_id INIT Class_Id_QApplicationStateChangeEvent
@@ -18,6 +17,7 @@ CLASS QApplicationStateChangeEvent INHERIT QEvent
 
    METHOD new
    METHOD applicationState
+
    DESTRUCTOR destroyObject
 
 END CLASS

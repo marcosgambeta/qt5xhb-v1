@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraImageCaptureControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QCameraImageCaptureControl
@@ -22,6 +21,7 @@ CLASS QCameraImageCaptureControl INHERIT QMediaControl
    METHOD driveMode
    METHOD isReadyForCapture
    METHOD setDriveMode
+
    METHOD onError
    METHOD onImageAvailable
    METHOD onImageCaptured
@@ -29,6 +29,7 @@ CLASS QCameraImageCaptureControl INHERIT QMediaControl
    METHOD onImageMetadataAvailable
    METHOD onImageSaved
    METHOD onReadyForCaptureChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

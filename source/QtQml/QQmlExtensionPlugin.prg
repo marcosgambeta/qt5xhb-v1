@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QQmlExtensionPlugin INHERIT QObject
 
    DATA class_id INIT Class_Id_QQmlExtensionPlugin
@@ -19,6 +18,7 @@ CLASS QQmlExtensionPlugin INHERIT QObject
    METHOD delete
    METHOD initializeEngine
    METHOD registerTypes
+
    DESTRUCTOR destroyObject
 
 END CLASS

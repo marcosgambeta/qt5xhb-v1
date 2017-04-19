@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QQmlScriptString
 
    DATA pointer
@@ -27,11 +26,13 @@ CLASS QQmlScriptString
    METHOD isUndefinedLiteral
    METHOD numberLiteral
    METHOD stringLiteral
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

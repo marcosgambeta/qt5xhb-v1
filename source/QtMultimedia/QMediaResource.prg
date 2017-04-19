@@ -52,11 +52,13 @@ CLASS QMediaResource
    METHOD url
    METHOD videoBitRate
    METHOD videoCodec
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

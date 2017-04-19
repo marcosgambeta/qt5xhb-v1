@@ -47,6 +47,7 @@ CLASS QWebSocketServer INHERIT QObject
    METHOD setSslConfiguration
    METHOD sslConfiguration
    METHOD supportedVersions
+
    METHOD onAcceptError
    METHOD onServerError
    METHOD onOriginAuthenticationRequired
@@ -54,6 +55,7 @@ CLASS QWebSocketServer INHERIT QObject
    METHOD onPeerVerifyError
    METHOD onSslErrors
    METHOD onClosed
+
    DESTRUCTOR destroyObject
 
 END CLASS

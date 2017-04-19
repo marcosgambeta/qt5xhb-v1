@@ -26,11 +26,13 @@ CLASS QSensorManager
    METHOD isBackendRegistered
    METHOD createBackend
    METHOD setDefaultBackend
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

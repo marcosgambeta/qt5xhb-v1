@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraCaptureBufferFormatControl INHERIT QMediaObject
 
    DATA class_id INIT Class_Id_QCameraCaptureBufferFormatControl
@@ -20,7 +19,9 @@ CLASS QCameraCaptureBufferFormatControl INHERIT QMediaObject
    METHOD bufferFormat
    METHOD setBufferFormat
    METHOD supportedBufferFormats
+
    METHOD onBufferFormatChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

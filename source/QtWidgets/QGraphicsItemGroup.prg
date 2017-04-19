@@ -29,6 +29,7 @@ CLASS QGraphicsItemGroup INHERIT QGraphicsItem
    METHOD opaqueArea
    METHOD paint
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS

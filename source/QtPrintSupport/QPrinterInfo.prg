@@ -45,11 +45,13 @@ CLASS QPrinterInfo
    METHOD availablePrinterNames
    METHOD defaultPrinterName
    METHOD printerInfo
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

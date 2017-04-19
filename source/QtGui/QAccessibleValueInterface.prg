@@ -26,11 +26,13 @@ CLASS QAccessibleValueInterface
    METHOD maximumValue
    METHOD minimumValue
    METHOD minimumStepSize
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

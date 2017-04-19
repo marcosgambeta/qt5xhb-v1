@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QVideoDeviceSelectorControl
@@ -23,9 +22,11 @@ CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
    METHOD deviceName
    METHOD selectedDevice
    METHOD setSelectedDevice
+
    METHOD onDevicesChanged
    METHOD onSelectedDeviceChanged1
    METHOD onSelectedDeviceChanged2
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -52,11 +52,13 @@ CLASS QDBusMessage
    METHOD createError2
    METHOD createError3
    METHOD createError
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

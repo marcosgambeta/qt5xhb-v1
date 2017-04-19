@@ -38,6 +38,7 @@ CLASS QSoundEffect INHERIT QObject
    METHOD play
    METHOD stop
    METHOD supportedMimeTypes
+
    METHOD onSourceChanged
    METHOD onLoopCountChanged
    METHOD onLoopsRemainingChanged
@@ -47,6 +48,7 @@ CLASS QSoundEffect INHERIT QObject
    METHOD onPlayingChanged
    METHOD onStatusChanged
    METHOD onCategoryChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

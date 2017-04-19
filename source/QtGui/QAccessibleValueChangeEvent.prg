@@ -23,6 +23,7 @@ CLASS QAccessibleValueChangeEvent INHERIT QAccessibleEvent
    METHOD delete
    METHOD setValue
    METHOD value
+
    DESTRUCTOR destroyObject
 
 END CLASS

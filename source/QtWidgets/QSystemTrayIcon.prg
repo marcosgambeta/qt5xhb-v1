@@ -37,8 +37,10 @@ CLASS QSystemTrayIcon INHERIT QObject
    METHOD show
    METHOD isSystemTrayAvailable
    METHOD supportsMessages
+
    METHOD onActivated
    METHOD onMessageClicked
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -24,10 +24,12 @@ CLASS QMetaDataWriterControl INHERIT QMediaControl
    METHOD metaData
    METHOD setMetaData
    METHOD availableMetaData
+
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
    METHOD onWritableChanged
    METHOD onMetaDataAvailableChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

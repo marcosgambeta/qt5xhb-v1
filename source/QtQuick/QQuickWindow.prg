@@ -55,6 +55,7 @@ CLASS QQuickWindow INHERIT QWindow
    METHOD accessibleRoot
    METHOD releaseResources
    METHOD update
+
    METHOD onAfterRendering
    METHOD onBeforeRendering
    METHOD onBeforeSynchronizing
@@ -62,6 +63,7 @@ CLASS QQuickWindow INHERIT QWindow
    METHOD onFrameSwapped
    METHOD onSceneGraphInitialized
    METHOD onSceneGraphInvalidated
+
    DESTRUCTOR destroyObject
 
 END CLASS

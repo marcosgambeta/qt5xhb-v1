@@ -35,6 +35,7 @@ CLASS QTextTableFormat INHERIT QTextFrameFormat
    METHOD alignment
    METHOD setHeaderRowCount
    METHOD headerRowCount
+
    DESTRUCTOR destroyObject
 
 END CLASS

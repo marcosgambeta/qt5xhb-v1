@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraLocksControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QCameraLocksControl
@@ -21,7 +20,9 @@ CLASS QCameraLocksControl INHERIT QMediaControl
    METHOD searchAndLock
    METHOD supportedLocks
    METHOD unlock
+
    METHOD onLockStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

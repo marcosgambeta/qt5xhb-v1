@@ -32,7 +32,9 @@ CLASS QIntValidator INHERIT QValidator
    METHOD setTop
    METHOD top
    METHOD validate
+
    METHOD onChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

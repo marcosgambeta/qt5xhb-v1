@@ -38,7 +38,9 @@ CLASS QLCDNumber INHERIT QFrame
    METHOD setHexMode
    METHOD setOctMode
    METHOD setSmallDecimalPoint
+
    METHOD onOverflow
+
    DESTRUCTOR destroyObject
 
 END CLASS

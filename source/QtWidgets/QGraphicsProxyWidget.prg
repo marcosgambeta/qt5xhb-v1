@@ -29,6 +29,7 @@ CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
    METHOD paint
    METHOD setGeometry
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS

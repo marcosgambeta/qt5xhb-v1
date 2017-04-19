@@ -35,9 +35,11 @@ CLASS QGeoPositionInfoSource INHERIT QObject
    METHOD createDefaultSource
    METHOD createSource
    METHOD availableSources
+
    METHOD onPositionUpdated
    METHOD onUpdateTimeout
    METHOD onError
+
    DESTRUCTOR destroyObject
 
 END CLASS

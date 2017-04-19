@@ -41,11 +41,13 @@ CLASS QDBusArgument
    METHOD currentType
    METHOD atEnd
    METHOD asVariant
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

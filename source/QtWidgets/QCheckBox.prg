@@ -27,7 +27,9 @@ CLASS QCheckBox INHERIT QAbstractButton
    METHOD setTristate
    METHOD minimumSizeHint
    METHOD sizeHint
+
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

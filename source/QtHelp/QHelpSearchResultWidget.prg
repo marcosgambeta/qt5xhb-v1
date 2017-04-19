@@ -21,7 +21,9 @@ CLASS QHelpSearchResultWidget INHERIT QWidget
 
    METHOD delete
    METHOD linkAt
+
    METHOD onRequestShowLink
+
    DESTRUCTOR destroyObject
 
 END CLASS

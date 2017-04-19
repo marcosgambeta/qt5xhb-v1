@@ -28,6 +28,7 @@ CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
    METHOD setPen
    METHOD isObscuredBy
    METHOD opaqueArea
+
    DESTRUCTOR destroyObject
 
 END CLASS

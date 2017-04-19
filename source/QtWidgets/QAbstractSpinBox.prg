@@ -55,7 +55,9 @@ CLASS QAbstractSpinBox INHERIT QWidget
    METHOD stepUp
    METHOD isGroupSeparatorShown
    METHOD setGroupSeparatorShown
+
    METHOD onEditingFinished
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -39,6 +39,7 @@ CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
    METHOD paint
    METHOD shape
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS

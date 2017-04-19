@@ -23,6 +23,7 @@ CLASS QFocusFrame INHERIT QWidget
    METHOD delete
    METHOD setWidget
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS

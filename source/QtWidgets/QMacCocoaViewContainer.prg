@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMacCocoaViewContainer INHERIT QWidget
 
    DATA class_id INIT Class_Id_QMacCocoaViewContainer

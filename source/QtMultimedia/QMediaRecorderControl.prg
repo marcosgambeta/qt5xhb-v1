@@ -31,6 +31,7 @@ CLASS QMediaRecorderControl INHERIT QMediaControl
    METHOD setMuted
    METHOD setState
    METHOD setVolume
+
    METHOD onActualLocationChanged
    METHOD onDurationChanged
    METHOD onError
@@ -38,6 +39,7 @@ CLASS QMediaRecorderControl INHERIT QMediaControl
    METHOD onStateChanged
    METHOD onStatusChanged
    METHOD onVolumeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

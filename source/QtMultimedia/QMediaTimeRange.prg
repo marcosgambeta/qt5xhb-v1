@@ -41,11 +41,13 @@ CLASS QMediaTimeRange
    METHOD removeInterval2
    METHOD removeInterval
    METHOD removeTimeRange
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

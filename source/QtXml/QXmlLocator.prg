@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QXmlLocator
 
    DATA pointer
@@ -20,11 +19,13 @@ CLASS QXmlLocator
    METHOD delete
    METHOD columnNumber
    METHOD lineNumber
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

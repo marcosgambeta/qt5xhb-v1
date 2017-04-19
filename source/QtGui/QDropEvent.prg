@@ -31,6 +31,7 @@ CLASS QDropEvent INHERIT QEvent,QMimeSource
    METHOD proposedAction
    METHOD setDropAction
    METHOD source
+
    DESTRUCTOR destroyObject
 
 END CLASS

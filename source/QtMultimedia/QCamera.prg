@@ -57,6 +57,7 @@ CLASS QCamera INHERIT QMediaObject
    METHOD unlock
    METHOD availableDevices
    METHOD deviceDescription
+
    METHOD onCaptureModeChanged
    METHOD onError
    METHOD onLockFailed
@@ -65,6 +66,7 @@ CLASS QCamera INHERIT QMediaObject
    METHOD onLocked
    METHOD onStateChanged
    METHOD onStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

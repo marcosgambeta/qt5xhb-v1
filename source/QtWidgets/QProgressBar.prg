@@ -44,7 +44,9 @@ CLASS QProgressBar INHERIT QWidget
    METHOD setOrientation
    METHOD setRange
    METHOD setValue
+
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

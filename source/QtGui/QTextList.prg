@@ -32,6 +32,7 @@ CLASS QTextList INHERIT QTextBlockGroup
    METHOD add
    METHOD setFormat
    METHOD format
+
    DESTRUCTOR destroyObject
 
 END CLASS

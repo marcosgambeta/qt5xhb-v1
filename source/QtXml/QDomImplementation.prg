@@ -31,11 +31,13 @@ CLASS QDomImplementation
    METHOD isNull
    METHOD invalidDataPolicy
    METHOD setInvalidDataPolicy
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

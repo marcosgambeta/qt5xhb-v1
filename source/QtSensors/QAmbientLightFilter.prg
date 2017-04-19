@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAmbientLightFilter INHERIT QSensorFilter
 
    DATA class_id INIT Class_Id_QAmbientLightFilter
@@ -18,6 +17,7 @@ CLASS QAmbientLightFilter INHERIT QSensorFilter
 
    METHOD delete
    METHOD filter
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -25,8 +25,10 @@ CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
    METHOD strength
    METHOD setColor
    METHOD setStrength
+
    METHOD onColorChanged
    METHOD onStrengthChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

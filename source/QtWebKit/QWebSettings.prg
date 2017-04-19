@@ -57,11 +57,13 @@ CLASS QWebSettings
    METHOD setOfflineWebApplicationCacheQuota
    METHOD setWebGraphic
    METHOD webGraphic
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

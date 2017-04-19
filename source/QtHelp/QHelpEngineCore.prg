@@ -49,10 +49,12 @@ CLASS QHelpEngineCore INHERIT QObject
    METHOD unregisterDocumentation
    METHOD metaData
    METHOD namespaceName
+
    METHOD onCurrentFilterChanged
    METHOD onSetupFinished
    METHOD onSetupStarted
    METHOD onWarning
+
    DESTRUCTOR destroyObject
 
 END CLASS

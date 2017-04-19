@@ -34,11 +34,13 @@ CLASS QGLColormap
    METHOD setEntry2
    METHOD setEntry
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

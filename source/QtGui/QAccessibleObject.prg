@@ -26,6 +26,7 @@ CLASS QAccessibleObject INHERIT QAccessibleInterface
    METHOD rect
    METHOD setText
    METHOD childAt
+
    DESTRUCTOR destroyObject
 
 END CLASS

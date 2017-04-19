@@ -38,7 +38,9 @@ CLASS QColumnView INHERIT QAbstractItemView
    METHOD setSelectionModel
    METHOD sizeHint
    METHOD visualRect
+
    METHOD onUpdatePreviewWidget
+
    DESTRUCTOR destroyObject
 
 END CLASS

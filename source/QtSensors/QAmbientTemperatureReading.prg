@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAmbientTemperatureReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QAmbientTemperatureReading
@@ -19,6 +18,7 @@ CLASS QAmbientTemperatureReading INHERIT QSensorReading
    METHOD delete
    METHOD temperature
    METHOD setTemperature
+
    DESTRUCTOR destroyObject
 
 END CLASS

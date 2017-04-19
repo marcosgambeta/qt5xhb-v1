@@ -33,6 +33,7 @@ CLASS QGestureEvent INHERIT QEvent
    METHOD mapToGraphicsScene
    METHOD setAccepted
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS

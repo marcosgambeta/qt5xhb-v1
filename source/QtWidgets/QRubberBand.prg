@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QRubberBand INHERIT QWidget
 
    DATA class_id INIT Class_Id_QRubberBand
@@ -28,6 +27,7 @@ CLASS QRubberBand INHERIT QWidget
    METHOD setGeometry2
    METHOD setGeometry
    METHOD shape
+
    DESTRUCTOR destroyObject
 
 END CLASS

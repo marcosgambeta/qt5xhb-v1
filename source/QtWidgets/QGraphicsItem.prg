@@ -163,11 +163,13 @@ CLASS QGraphicsItem
    METHOD x
    METHOD y
    METHOD zValue
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

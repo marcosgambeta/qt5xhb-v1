@@ -64,10 +64,12 @@ CLASS QCalendarWidget INHERIT QWidget
    METHOD showPreviousYear
    METHOD showSelectedDate
    METHOD showToday
+
    METHOD onActivated
    METHOD onClicked
    METHOD onCurrentPageChanged
    METHOD onSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
 }
 
 
-//[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
+//[1]QMap<QDate, QTextCharFormat> dateTextFormat () const // TODO: implementar funcao
 //[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
 
 HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )

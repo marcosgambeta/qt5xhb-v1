@@ -32,6 +32,7 @@ CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
    METHOD itemEditorFactory
    METHOD setItemEditorFactory
    METHOD displayText
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QWindowStateChangeEvent INHERIT QEvent
 
    DATA class_id INIT Class_Id_QWindowStateChangeEvent
@@ -20,6 +19,7 @@ CLASS QWindowStateChangeEvent INHERIT QEvent
    METHOD delete
    METHOD oldState
    METHOD isOverride
+
    DESTRUCTOR destroyObject
 
 END CLASS

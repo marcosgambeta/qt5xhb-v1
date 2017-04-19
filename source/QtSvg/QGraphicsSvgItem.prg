@@ -34,6 +34,7 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
    METHOD boundingRect
    METHOD paint
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS

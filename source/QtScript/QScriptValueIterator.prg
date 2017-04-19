@@ -35,11 +35,13 @@ CLASS QScriptValueIterator
    METHOD toBack
    METHOD toFront
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

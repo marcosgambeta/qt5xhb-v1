@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QFontInfo
 
    DATA pointer
@@ -34,11 +33,13 @@ CLASS QFontInfo
    METHOD styleHint
    METHOD styleName
    METHOD weight
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -23,11 +23,13 @@ CLASS QMediaServiceSupportedDevicesInterface
    METHOD delete
    METHOD deviceDescription
    METHOD devices
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

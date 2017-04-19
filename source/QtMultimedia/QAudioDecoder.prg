@@ -39,6 +39,7 @@ CLASS QAudioDecoder INHERIT QMediaObject
    METHOD start
    METHOD stop
    METHOD hasSupport
+
    METHOD onBufferAvailableChanged
    METHOD onBufferReady
    METHOD onDurationChanged
@@ -48,6 +49,7 @@ CLASS QAudioDecoder INHERIT QMediaObject
    METHOD onPositionChanged
    METHOD onSourceChanged
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

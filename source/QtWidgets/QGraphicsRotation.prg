@@ -25,14 +25,14 @@ CLASS QGraphicsRotation INHERIT QGraphicsTransform
    METHOD axis
    METHOD origin
    METHOD setAngle
-   METHOD setAxis1
-   METHOD setAxis2
    METHOD setAxis
    METHOD setOrigin
    METHOD applyTo
+
    METHOD onAngleChanged
    METHOD onAxisChanged
    METHOD onOriginChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 /*
 void setAxis ( const QVector3D & axis )
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS1 )
+void QGraphicsRotation_setAxis1 ()
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS1 )
 /*
 void setAxis ( Qt::Axis axis )
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS2 )
+void QGraphicsRotation_setAxis2 ()
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -177,11 +177,11 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
   if( ISNUMPAR(1) && ISOBJECT(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSROTATION_SETAXIS1 );
+    QGraphicsRotation_setAxis1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSROTATION_SETAXIS2 );
+    QGraphicsRotation_setAxis2();
   }
   else
   {

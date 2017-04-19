@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QMediaTimeInterval
 
    DATA pointer
@@ -29,11 +27,13 @@ CLASS QMediaTimeInterval
    METHOD normalized
    METHOD start
    METHOD translated
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

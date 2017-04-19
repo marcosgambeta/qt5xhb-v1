@@ -23,6 +23,7 @@ CLASS QRadioButton INHERIT QAbstractButton
    METHOD delete
    METHOD sizeHint
    METHOD minimumSizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

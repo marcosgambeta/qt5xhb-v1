@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QWinCompositionChangeEvent INHERIT QWinEvent
 
    DATA class_id INIT Class_Id_QWinCompositionChangeEvent
@@ -19,6 +18,7 @@ CLASS QWinCompositionChangeEvent INHERIT QWinEvent
    METHOD new
    METHOD delete
    METHOD isCompositionEnabled
+
    DESTRUCTOR destroyObject
 
 END CLASS

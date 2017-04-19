@@ -36,11 +36,13 @@ CLASS QImageEncoderSettings
    METHOD setQuality
    METHOD encodingOption
    METHOD setEncodingOption
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

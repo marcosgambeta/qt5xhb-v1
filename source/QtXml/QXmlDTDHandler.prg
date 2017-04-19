@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QXmlDTDHandler
 
    DATA pointer
@@ -21,11 +20,13 @@ CLASS QXmlDTDHandler
    METHOD errorString
    METHOD notationDecl
    METHOD unparsedEntityDecl
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

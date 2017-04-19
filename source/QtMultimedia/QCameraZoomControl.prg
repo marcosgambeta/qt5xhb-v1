@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraZoomControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QCameraZoomControl
@@ -24,12 +23,14 @@ CLASS QCameraZoomControl INHERIT QMediaControl
    METHOD requestedDigitalZoom
    METHOD requestedOpticalZoom
    METHOD zoomTo
+
    METHOD onCurrentDigitalZoomChanged
    METHOD onCurrentOpticalZoomChanged
    METHOD onMaximumDigitalZoomChanged
    METHOD onMaximumOpticalZoomChanged
    METHOD onRequestedDigitalZoomChanged
    METHOD onRequestedOpticalZoomChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

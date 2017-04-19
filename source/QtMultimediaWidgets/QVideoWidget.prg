@@ -36,11 +36,13 @@ CLASS QVideoWidget INHERIT QWidget,QMediaBindableInterface
    METHOD setContrast
    METHOD setHue
    METHOD setSaturation
+
    METHOD onFullScreenChanged
    METHOD onBrightnessChanged
    METHOD onContrastChanged
    METHOD onHueChanged
    METHOD onSaturationChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -21,7 +21,9 @@ CLASS QHelpContentWidget INHERIT QTreeView
 
    METHOD delete
    METHOD indexOf
+
    METHOD onLinkActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS

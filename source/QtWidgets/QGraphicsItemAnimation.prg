@@ -44,6 +44,7 @@ CLASS QGraphicsItemAnimation INHERIT QObject
    METHOD xTranslationAt
    METHOD yTranslationAt
    METHOD setStep
+
    DESTRUCTOR destroyObject
 
 END CLASS

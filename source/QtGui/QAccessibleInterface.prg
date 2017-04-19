@@ -54,11 +54,13 @@ CLASS QAccessibleInterface
    METHOD tableCellInterface
    METHOD virtual_hook
    METHOD interface_cast
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

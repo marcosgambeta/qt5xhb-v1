@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAudioOutputSelectorControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QAudioOutputSelectorControl
@@ -22,8 +21,10 @@ CLASS QAudioOutputSelectorControl INHERIT QMediaControl
    METHOD defaultOutput
    METHOD outputDescription
    METHOD setActiveOutput
+
    METHOD onActiveOutputChanged
    METHOD onAvailableOutputsChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -39,6 +39,7 @@ CLASS QSGTexture INHERIT QObject
    METHOD textureSize
    METHOD updateBindOptions
    METHOD verticalWrapMode
+
    DESTRUCTOR destroyObject
 
 END CLASS

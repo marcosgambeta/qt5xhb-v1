@@ -23,6 +23,7 @@ CLASS QGraphicsSceneResizeEvent INHERIT QGraphicsSceneEvent
    METHOD delete
    METHOD newSize
    METHOD oldSize
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
 
    DATA class_id INIT Class_Id_QDBusPendingCallWatcher
@@ -20,7 +19,9 @@ CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
    METHOD delete
    METHOD isFinished
    METHOD waitForFinished
+
    METHOD onFinished
+
    DESTRUCTOR destroyObject
 
 END CLASS

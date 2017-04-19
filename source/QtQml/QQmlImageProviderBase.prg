@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QQmlImageProviderBase
 
    DATA pointer
@@ -20,11 +19,13 @@ CLASS QQmlImageProviderBase
    METHOD delete
    METHOD flags
    METHOD imageType
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

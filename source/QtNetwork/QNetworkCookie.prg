@@ -42,11 +42,13 @@ CLASS QNetworkCookie
    METHOD toRawForm
    METHOD value
    METHOD parseCookies
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

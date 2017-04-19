@@ -42,6 +42,7 @@ CLASS QRadialGradient INHERIT QGradient
    METHOD setFocalPoint
    METHOD setFocalRadius
    METHOD setRadius
+
    DESTRUCTOR destroyObject
 
 END CLASS

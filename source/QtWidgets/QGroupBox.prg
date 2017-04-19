@@ -32,8 +32,10 @@ CLASS QGroupBox INHERIT QWidget
    METHOD title
    METHOD minimumSizeHint
    METHOD setChecked
+
    METHOD onClicked
    METHOD onToggled
+
    DESTRUCTOR destroyObject
 
 END CLASS

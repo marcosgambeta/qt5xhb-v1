@@ -38,9 +38,6 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD setSortIndicatorShown
    METHOD length
    METHOD logicalIndex
-   METHOD logicalIndexAt1
-   METHOD logicalIndexAt2
-   METHOD logicalIndexAt3
    METHOD logicalIndexAt
    METHOD minimumSectionSize
    METHOD setMinimumSectionSize
@@ -81,14 +78,13 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD setSectionsClickable
    METHOD sectionsClickable
    METHOD sectionResizeMode
-   METHOD setSectionResizeMode1
-   METHOD setSectionResizeMode2
    METHOD setSectionResizeMode
    METHOD setResizeContentsPrecision
    METHOD resizeContentsPrecision
    METHOD maximumSectionSize
    METHOD setMaximumSectionSize
    METHOD doItemsLayout
+
    METHOD onGeometriesChanged
    METHOD onSectionAutoResize
    METHOD onSectionClicked
@@ -100,6 +96,7 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD onSectionPressed
    METHOD onSectionResized
    METHOD onSortIndicatorChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -423,7 +420,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
 /*
 int logicalIndexAt ( int position ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT1 )
+void QHeaderView_logicalIndexAt1 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -442,7 +439,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT1 )
 /*
 int logicalIndexAt ( int x, int y ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT2 )
+void QHeaderView_logicalIndexAt2 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -461,7 +458,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT2 )
 /*
 int logicalIndexAt ( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT3 )
+void QHeaderView_logicalIndexAt3 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -480,15 +477,15 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_LOGICALINDEXAT1 );
+    QHeaderView_logicalIndexAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_LOGICALINDEXAT2 );
+    QHeaderView_logicalIndexAt2();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_LOGICALINDEXAT3 );
+    QHeaderView_logicalIndexAt3();
   }
   else
   {
@@ -1149,7 +1146,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
 /*
 void setSectionResizeMode(ResizeMode mode)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE1 )
+void QHeaderView_setSectionResizeMode1 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -1163,7 +1160,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE1 )
 /*
 void setSectionResizeMode(int logicalIndex, ResizeMode mode)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE2 )
+void QHeaderView_setSectionResizeMode2 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -1182,11 +1179,11 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_SETSECTIONRESIZEMODE1 );
+    QHeaderView_setSectionResizeMode1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_SETSECTIONRESIZEMODE2 );
+    QHeaderView_setSectionResizeMode2();
   }
   else
   {

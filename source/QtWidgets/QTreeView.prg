@@ -80,8 +80,10 @@ CLASS QTreeView INHERIT QAbstractItemView
    METHOD hideColumn
    METHOD resizeColumnToContents
    METHOD showColumn
+
    METHOD onCollapsed
    METHOD onExpanded
+
    DESTRUCTOR destroyObject
 
 END CLASS

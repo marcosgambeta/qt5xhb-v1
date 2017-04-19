@@ -48,11 +48,13 @@ CLASS QFontMetrics
    METHOD width1
    METHOD width
    METHOD xHeight
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

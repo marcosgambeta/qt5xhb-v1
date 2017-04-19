@@ -37,6 +37,7 @@ CLASS QXmlSerializer INHERIT QAbstractXmlReceiver
    METHOD startDocument
    METHOD startElement
    METHOD startOfSequence
+
    DESTRUCTOR destroyObject
 
 END CLASS

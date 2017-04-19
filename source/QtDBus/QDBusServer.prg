@@ -26,7 +26,9 @@ CLASS QDBusServer INHERIT QObject
    METHOD isConnected
    METHOD lastError
    METHOD address
+
    METHOD onNewConnection
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -41,11 +41,13 @@ CLASS QPolygonF
    METHOD united
    METHOD intersected
    METHOD subtracted
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

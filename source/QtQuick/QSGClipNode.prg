@@ -25,6 +25,7 @@ CLASS QSGClipNode INHERIT QSGBasicGeometryNode
    METHOD isRectangular
    METHOD setClipRect
    METHOD setIsRectangular
+
    DESTRUCTOR destroyObject
 
 END CLASS

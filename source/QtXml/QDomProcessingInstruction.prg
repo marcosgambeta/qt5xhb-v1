@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDomProcessingInstruction INHERIT QDomNode
 
    DATA class_id INIT Class_Id_QDomProcessingInstruction
@@ -24,6 +23,7 @@ CLASS QDomProcessingInstruction INHERIT QDomNode
    METHOD nodeType
    METHOD setData
    METHOD target
+
    DESTRUCTOR destroyObject
 
 END CLASS

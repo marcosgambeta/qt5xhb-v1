@@ -25,8 +25,10 @@ CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
    METHOD opacityMask
    METHOD setOpacity
    METHOD setOpacityMask
+
    METHOD onOpacityChanged
    METHOD onOpacityMaskChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

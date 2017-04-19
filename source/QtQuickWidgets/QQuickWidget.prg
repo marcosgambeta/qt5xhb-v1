@@ -44,8 +44,10 @@ CLASS QQuickWidget INHERIT QWidget
    METHOD setContent
    METHOD format
    METHOD setFormat
+
    METHOD onStatusChanged
    METHOD onSceneGraphError
+
    DESTRUCTOR destroyObject
 
 END CLASS

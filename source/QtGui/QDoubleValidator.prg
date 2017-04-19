@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDoubleValidator INHERIT QValidator
 
    DATA class_id INIT Class_Id_QDoubleValidator
@@ -30,6 +29,7 @@ CLASS QDoubleValidator INHERIT QValidator
    METHOD setTop
    METHOD top
    METHOD validate
+
    DESTRUCTOR destroyObject
 
 END CLASS

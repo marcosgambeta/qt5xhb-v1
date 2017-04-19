@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QHolsterReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QHolsterReading
@@ -19,6 +18,7 @@ CLASS QHolsterReading INHERIT QSensorReading
    METHOD delete
    METHOD holstered
    METHOD setHolstered
+
    DESTRUCTOR destroyObject
 
 END CLASS

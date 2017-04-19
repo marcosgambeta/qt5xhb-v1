@@ -40,6 +40,7 @@ CLASS QDBusAbstractInterface INHERIT QDBusAbstractInterfaceBase
    METHOD callWithCallback
    METHOD asyncCall
    METHOD asyncCallWithArgumentList
+
    DESTRUCTOR destroyObject
 
 END CLASS

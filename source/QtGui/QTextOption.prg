@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTextOption
 
    DATA pointer
@@ -36,11 +35,13 @@ CLASS QTextOption
    METHOD tabArray
    METHOD setUseDesignMetrics
    METHOD useDesignMetrics
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

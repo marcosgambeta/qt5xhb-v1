@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QOpenGLVertexArrayObject INHERIT QObject
 
    DATA class_id INIT Class_Id_QOpenGLVertexArrayObject
@@ -24,6 +23,7 @@ CLASS QOpenGLVertexArrayObject INHERIT QObject
    METHOD objectId
    METHOD bind
    METHOD release
+
    DESTRUCTOR destroyObject
 
 END CLASS

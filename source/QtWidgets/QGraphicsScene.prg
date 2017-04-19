@@ -97,9 +97,11 @@ CLASS QGraphicsScene INHERIT QObject
    METHOD advance
    METHOD clear
    METHOD clearSelection
+
    METHOD onChanged
    METHOD onSceneRectChanged
    METHOD onSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

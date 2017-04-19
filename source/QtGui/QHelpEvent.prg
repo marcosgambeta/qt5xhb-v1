@@ -27,6 +27,7 @@ CLASS QHelpEvent INHERIT QEvent
    METHOD pos
    METHOD x
    METHOD y
+
    DESTRUCTOR destroyObject
 
 END CLASS

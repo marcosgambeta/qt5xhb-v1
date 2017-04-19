@@ -31,11 +31,13 @@ CLASS QDBusContext
    METHOD sendErrorReply1
    METHOD sendErrorReply2
    METHOD sendErrorReply
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

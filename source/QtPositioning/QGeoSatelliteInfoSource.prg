@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QGeoSatelliteInfoSource INHERIT QObject
 
    DATA class_id INIT Class_Id_QGeoSatelliteInfoSource
@@ -29,10 +27,12 @@ CLASS QGeoSatelliteInfoSource INHERIT QObject
    METHOD createDefaultSource
    METHOD createSource
    METHOD availableSources
+
    METHOD onSatellitesInViewUpdated
    METHOD onSatellitesInUseUpdated
    METHOD onRequestTimeout
    METHOD onError
+
    DESTRUCTOR destroyObject
 
 END CLASS

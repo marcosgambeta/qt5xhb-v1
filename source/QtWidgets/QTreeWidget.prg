@@ -63,6 +63,7 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD collapseItem
    METHOD expandItem
    METHOD scrollToItem
+
    METHOD onCurrentItemChanged
    METHOD onItemActivated
    METHOD onItemChanged
@@ -73,6 +74,7 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD onItemExpanded
    METHOD onItemPressed
    METHOD onItemSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

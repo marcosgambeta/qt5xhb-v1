@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAbstractXmlReceiver
 
    DATA pointer
@@ -30,11 +29,13 @@ CLASS QAbstractXmlReceiver
    METHOD startDocument
    METHOD startElement
    METHOD startOfSequence
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

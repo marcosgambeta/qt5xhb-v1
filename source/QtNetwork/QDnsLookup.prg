@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDnsLookup INHERIT QObject
 
    DATA class_id INIT Class_Id_QDnsLookup
@@ -29,9 +28,11 @@ CLASS QDnsLookup INHERIT QObject
    METHOD type
    METHOD abort
    METHOD lookup
+
    METHOD onFinished
    METHOD onNameChanged
    METHOD onTypeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

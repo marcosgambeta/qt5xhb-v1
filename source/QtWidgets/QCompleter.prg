@@ -55,10 +55,12 @@ CLASS QCompleter INHERIT QObject
    METHOD complete
    METHOD setCompletionPrefix
    METHOD setWrapAround
+
    METHOD onActivated1
    METHOD onActivated2
    METHOD onHighlighted1
    METHOD onHighlighted2
+
    DESTRUCTOR destroyObject
 
 END CLASS

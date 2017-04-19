@@ -45,8 +45,10 @@ CLASS QQmlComponent INHERIT QObject
    METHOD loadUrl2
    METHOD loadUrl
    METHOD setData
+
    METHOD onProgressChanged
    METHOD onStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

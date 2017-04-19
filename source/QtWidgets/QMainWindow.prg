@@ -71,8 +71,10 @@ CLASS QMainWindow INHERIT QWidget
    METHOD setAnimated
    METHOD setDockNestingEnabled
    METHOD takeCentralWidget
+
    METHOD onIconSizeChanged
    METHOD onToolButtonStyleChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

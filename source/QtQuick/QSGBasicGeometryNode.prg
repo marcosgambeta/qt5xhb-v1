@@ -22,6 +22,7 @@ CLASS QSGBasicGeometryNode INHERIT QSGNode
    METHOD delete
    METHOD geometry
    METHOD setGeometry
+
    DESTRUCTOR destroyObject
 
 END CLASS

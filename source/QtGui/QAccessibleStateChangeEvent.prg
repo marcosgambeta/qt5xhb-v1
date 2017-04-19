@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAccessibleStateChangeEvent INHERIT QAccessibleEvent
 
    DATA class_id INIT Class_Id_QAccessibleStateChangeEvent
@@ -17,6 +16,7 @@ CLASS QAccessibleStateChangeEvent INHERIT QAccessibleEvent
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

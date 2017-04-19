@@ -28,11 +28,13 @@ CLASS QItemEditorFactory
    METHOD registerEditor
    METHOD defaultFactory
    METHOD setDefaultFactory
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

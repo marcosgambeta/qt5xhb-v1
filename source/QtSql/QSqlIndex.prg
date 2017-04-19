@@ -24,6 +24,7 @@ CLASS QSqlIndex INHERIT QSqlRecord
    METHOD setDescending
    METHOD name
    METHOD setName
+
    DESTRUCTOR destroyObject
 
 END CLASS

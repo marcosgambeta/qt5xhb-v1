@@ -25,6 +25,7 @@ CLASS QWidgetItemV2 INHERIT QWidgetItem
    METHOD minimumSize
    METHOD maximumSize
    METHOD heightForWidth
+
    DESTRUCTOR destroyObject
 
 END CLASS

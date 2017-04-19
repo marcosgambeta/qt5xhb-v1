@@ -34,11 +34,13 @@ CLASS QGlyphRun
    METHOD setUnderline
    METHOD strikeOut
    METHOD underline
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

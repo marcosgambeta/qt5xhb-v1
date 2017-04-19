@@ -28,6 +28,7 @@ CLASS QAbstractVideoSurface INHERIT QObject
    METHOD start
    METHOD stop
    METHOD surfaceFormat
+
    DESTRUCTOR destroyObject
 
 END CLASS

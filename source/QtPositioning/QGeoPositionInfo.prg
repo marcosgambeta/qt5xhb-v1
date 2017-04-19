@@ -35,11 +35,13 @@ CLASS QGeoPositionInfo
    METHOD attribute
    METHOD removeAttribute
    METHOD hasAttribute
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -25,7 +25,9 @@ CLASS QSensorGestureManager INHERIT QObject
    METHOD gestureIds
    METHOD recognizerSignals
    METHOD sensorGestureRecognizer
+
    METHOD onNewSensorGestureAvailable
+
    DESTRUCTOR destroyObject
 
 END CLASS

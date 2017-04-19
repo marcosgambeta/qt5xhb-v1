@@ -42,6 +42,7 @@ CLASS QTextTable INHERIT QTextFrame
    METHOD rowEnd
    METHOD setFormat
    METHOD format
+
    DESTRUCTOR destroyObject
 
 END CLASS

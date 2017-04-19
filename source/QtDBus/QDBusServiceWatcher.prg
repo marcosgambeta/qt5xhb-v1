@@ -32,9 +32,11 @@ CLASS QDBusServiceWatcher INHERIT QObject
    METHOD setWatchMode
    METHOD connection
    METHOD setConnection
+
    METHOD onServiceRegistered
    METHOD onServiceUnregistered
    METHOD onServiceOwnerChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

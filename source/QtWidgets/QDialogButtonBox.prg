@@ -33,10 +33,12 @@ CLASS QDialogButtonBox INHERIT QWidget
    METHOD setStandardButtons
    METHOD standardButton
    METHOD standardButtons
+
    METHOD onAccepted
    METHOD onClicked
    METHOD onHelpRequested
    METHOD onRejected
+
    DESTRUCTOR destroyObject
 
 END CLASS

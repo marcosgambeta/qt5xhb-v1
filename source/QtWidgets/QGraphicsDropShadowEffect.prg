@@ -31,15 +31,14 @@ CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
    METHOD boundingRectFor
    METHOD setBlurRadius
    METHOD setColor
-   METHOD setOffset1
-   METHOD setOffset2
-   METHOD setOffset3
    METHOD setOffset
    METHOD setXOffset
    METHOD setYOffset
+
    METHOD onBlurRadiusChanged
    METHOD onColorChanged
    METHOD onOffsetChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -207,7 +206,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 /*
 void setOffset ( const QPointF & ofs )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 )
+void QGraphicsDropShadowEffect_setOffset1 ()
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -221,7 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 )
 /*
 void setOffset ( qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 )
+void QGraphicsDropShadowEffect_setOffset2 ()
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -236,7 +235,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 )
 /*
 void setOffset ( qreal d )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET3 )
+void QGraphicsDropShadowEffect_setOffset3 ()
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -256,15 +255,15 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 );
+    QGraphicsDropShadowEffect_setOffset1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 );
+    QGraphicsDropShadowEffect_setOffset2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET3 );
+    QGraphicsDropShadowEffect_setOffset3();
   }
   else
   {

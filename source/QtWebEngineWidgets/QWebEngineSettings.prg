@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QWebEngineSettings
 
    DATA pointer
@@ -30,11 +28,13 @@ CLASS QWebEngineSettings
    METHOD resetAttribute
    METHOD defaultTextEncoding
    METHOD setDefaultTextEncoding
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -40,8 +40,8 @@ CLASS QBluetoothSocket INHERIT QIODevice
    METHOD socketType
    METHOD state
    METHOD error
-
    METHOD errorString
+
    METHOD onConnected
    METHOD onDisconnected
    METHOD onError

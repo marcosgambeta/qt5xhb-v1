@@ -107,6 +107,7 @@ CLASS QTextEdit INHERIT QAbstractScrollArea
    METHOD undo
    METHOD zoomIn
    METHOD zoomOut
+
    METHOD onCopyAvailable
    METHOD onCurrentCharFormatChanged
    METHOD onCursorPositionChanged
@@ -114,6 +115,7 @@ CLASS QTextEdit INHERIT QAbstractScrollArea
    METHOD onSelectionChanged
    METHOD onTextChanged
    METHOD onUndoAvailable
+
    DESTRUCTOR destroyObject
 
 END CLASS

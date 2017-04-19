@@ -27,7 +27,9 @@ CLASS QSplashScreen INHERIT QWidget
    METHOD repaint
    METHOD clearMessage
    METHOD showMessage
+
    METHOD onMessageChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

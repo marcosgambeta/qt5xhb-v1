@@ -34,11 +34,13 @@ CLASS QIconEngine
    METHOD read
    METHOD virtual_hook
    METHOD write
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

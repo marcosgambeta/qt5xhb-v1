@@ -38,11 +38,13 @@ CLASS QMediaContent
    METHOD isNull
    METHOD playlist
    METHOD resources
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

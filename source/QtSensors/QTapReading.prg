@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTapReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QTapReading
@@ -21,6 +20,7 @@ CLASS QTapReading INHERIT QSensorReading
    METHOD setTapDirection
    METHOD isDoubleTap
    METHOD setDoubleTap
+
    DESTRUCTOR destroyObject
 
 END CLASS

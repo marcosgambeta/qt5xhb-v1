@@ -24,6 +24,7 @@ CLASS QTapAndHoldGesture INHERIT QGesture
    METHOD setPosition
    METHOD setTimeout
    METHOD timeout
+
    DESTRUCTOR destroyObject
 
 END CLASS

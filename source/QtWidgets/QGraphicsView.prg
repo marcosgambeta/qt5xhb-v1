@@ -88,6 +88,7 @@ CLASS QGraphicsView INHERIT QAbstractScrollArea
    METHOD invalidateScene
    METHOD updateScene
    METHOD updateSceneRect
+
    DESTRUCTOR destroyObject
 
 END CLASS

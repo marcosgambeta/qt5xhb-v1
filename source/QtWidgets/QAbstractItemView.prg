@@ -53,8 +53,6 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
    METHOD setIndexWidget
    METHOD closePersistentEditor
    METHOD indexAt
-   METHOD itemDelegate1
-   METHOD itemDelegate2
    METHOD itemDelegate
    METHOD setItemDelegate
    METHOD itemDelegateForColumn
@@ -95,12 +93,14 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
    METHOD selectAll
    METHOD update
    METHOD doItemsLayout
+
    METHOD onActivated
    METHOD onClicked
    METHOD onDoubleClicked
    METHOD onEntered
    METHOD onPressed
    METHOD onViewportEntered
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
 /*
 QAbstractItemDelegate * itemDelegate () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE1 )
+void QAbstractItemView_itemDelegate1 ()
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE1 )
 /*
 QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE2 )
+void QAbstractItemView_itemDelegate2 ()
 {
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -577,11 +577,11 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QABSTRACTITEMVIEW_ITEMDELEGATE1 );
+    QAbstractItemView_itemDelegate1();
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QABSTRACTITEMVIEW_ITEMDELEGATE2 );
+    QAbstractItemView_itemDelegate2();
   }
   else
   {

@@ -28,6 +28,7 @@ CLASS QQmlWebChannel INHERIT QWebChannel
    METHOD qmlAttachedProperties
    METHOD connectTo
    METHOD disconnectFrom
+
    DESTRUCTOR destroyObject
 
 END CLASS

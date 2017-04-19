@@ -35,6 +35,7 @@ CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
    METHOD paint
    METHOD shape
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS

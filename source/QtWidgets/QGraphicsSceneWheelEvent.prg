@@ -28,6 +28,7 @@ CLASS QGraphicsSceneWheelEvent INHERIT QGraphicsSceneEvent
    METHOD pos
    METHOD scenePos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS

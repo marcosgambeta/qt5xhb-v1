@@ -34,6 +34,7 @@ CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
    METHOD setTable
    METHOD revertRow
    METHOD setJoinMode
+
    DESTRUCTOR destroyObject
 
 END CLASS

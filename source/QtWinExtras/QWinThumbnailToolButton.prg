@@ -36,8 +36,10 @@ CLASS QWinThumbnailToolButton INHERIT QObject
    METHOD isFlat
    METHOD setFlat
    METHOD click
+
    METHOD onClicked
    METHOD onChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

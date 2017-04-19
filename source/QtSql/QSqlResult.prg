@@ -22,11 +22,13 @@ CLASS QSqlResult
 
    METHOD delete
    METHOD handle
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

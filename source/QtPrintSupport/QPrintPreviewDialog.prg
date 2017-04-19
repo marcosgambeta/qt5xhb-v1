@@ -27,7 +27,9 @@ CLASS QPrintPreviewDialog INHERIT QDialog
    METHOD printer
    METHOD done
    METHOD setVisible
+
    METHOD onPaintRequested
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QStatusTipEvent INHERIT QEvent
 
    DATA class_id INIT Class_Id_QStatusTipEvent
@@ -19,6 +18,7 @@ CLASS QStatusTipEvent INHERIT QEvent
    METHOD new
    METHOD delete
    METHOD tip
+
    DESTRUCTOR destroyObject
 
 END CLASS

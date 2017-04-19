@@ -44,7 +44,9 @@ CLASS QToolBox INHERIT QFrame
    METHOD widget
    METHOD setCurrentIndex
    METHOD setCurrentWidget
+
    METHOD onCurrentChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

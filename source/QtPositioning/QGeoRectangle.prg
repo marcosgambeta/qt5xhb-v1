@@ -47,6 +47,7 @@ CLASS QGeoRectangle INHERIT QGeoShape
    METHOD translate
    METHOD translated
    METHOD united
+
    DESTRUCTOR destroyObject
 
 END CLASS

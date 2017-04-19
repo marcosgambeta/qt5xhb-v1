@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QStyleHints INHERIT QObject
 
    DATA class_id INIT Class_Id_QStyleHints
@@ -27,6 +26,7 @@ CLASS QStyleHints INHERIT QObject
    METHOD passwordMaskDelay
    METHOD fontSmoothingGamma
    METHOD useRtlExtensions
+
    DESTRUCTOR destroyObject
 
 END CLASS

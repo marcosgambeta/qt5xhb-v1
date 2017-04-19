@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QVideoProbe INHERIT QObject
 
    DATA class_id INIT Class_Id_QVideoProbe
@@ -22,8 +21,10 @@ CLASS QVideoProbe INHERIT QObject
    METHOD setSource1
    METHOD setSource2
    METHOD setSource
+
    METHOD onFlush
    METHOD onVideoFrameProbed
+
    DESTRUCTOR destroyObject
 
 END CLASS

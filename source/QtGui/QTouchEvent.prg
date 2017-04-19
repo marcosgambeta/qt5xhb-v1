@@ -26,6 +26,7 @@ CLASS QTouchEvent INHERIT QInputEvent
    METHOD target
    METHOD touchPointStates
    METHOD device
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -55,7 +55,9 @@ CLASS QListView INHERIT QAbstractItemView
    METHOD indexAt
    METHOD scrollTo
    METHOD visualRect
+
    METHOD onIndexesMoved
+
    DESTRUCTOR destroyObject
 
 END CLASS

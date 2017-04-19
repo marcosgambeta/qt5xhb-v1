@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QOrientationReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QOrientationReading
@@ -19,6 +18,7 @@ CLASS QOrientationReading INHERIT QSensorReading
    METHOD delete
    METHOD orientation
    METHOD setOrientation
+
    DESTRUCTOR destroyObject
 
 END CLASS

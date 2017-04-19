@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMediaControl INHERIT QObject
 
    DATA class_id INIT Class_Id_QMediaControl
@@ -17,6 +16,7 @@ CLASS QMediaControl INHERIT QObject
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -35,6 +35,7 @@ CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
    METHOD screenPos
    METHOD setDropAction
    METHOD source
+
    DESTRUCTOR destroyObject
 
 END CLASS

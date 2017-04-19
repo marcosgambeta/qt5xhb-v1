@@ -40,11 +40,13 @@ CLASS QHostAddress
    METHOD toIPv4Address
    METHOD toIPv6Address
    METHOD toString
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

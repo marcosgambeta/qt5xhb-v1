@@ -22,8 +22,6 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
 
    METHOD new
    METHOD delete
-   METHOD addItem1
-   METHOD addItem2
    METHOD addItem
    METHOD alignment
    METHOD columnAlignment
@@ -34,8 +32,6 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
    METHOD columnSpacing
    METHOD columnStretchFactor
    METHOD horizontalSpacing
-   METHOD itemAt1
-   METHOD itemAt2
    METHOD itemAt
    METHOD removeItem
    METHOD rowAlignment
@@ -69,6 +65,7 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
    METHOD removeAt
    METHOD setGeometry
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -124,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_DELETE )
 /*
 void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM1 )
+void QGraphicsGridLayout_addItem1 ()
 {
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -139,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM1 )
 /*
 void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM2 )
+void QGraphicsGridLayout_addItem2 ()
 {
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -159,11 +156,11 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
   if( ISBETWEEN(5,6) && ISQGRAPHICSLAYOUTITEM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ADDITEM1 );
+    QGraphicsGridLayout_addItem1();
   }
   else if( ISBETWEEN(3,4) && ISQGRAPHICSLAYOUTITEM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ADDITEM2 );
+    QGraphicsGridLayout_addItem2();
   }
   else
   {
@@ -334,7 +331,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
 /*
 QGraphicsLayoutItem * itemAt ( int row, int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT1 )
+void QGraphicsGridLayout_itemAt1 ()
 {
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -354,7 +351,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT1 )
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT2 )
+void QGraphicsGridLayout_itemAt2 ()
 {
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -379,11 +376,11 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ITEMAT1 );
+    QGraphicsGridLayout_itemAt1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ITEMAT2 );
+    QGraphicsGridLayout_itemAt2();
   }
   else
   {

@@ -51,11 +51,13 @@ CLASS QOpenGLFramebufferObject
    METHOD blitFramebuffer1
    METHOD blitFramebuffer2
    METHOD blitFramebuffer
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

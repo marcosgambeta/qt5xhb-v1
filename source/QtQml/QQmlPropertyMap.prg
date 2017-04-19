@@ -29,7 +29,9 @@ CLASS QQmlPropertyMap INHERIT QObject
    METHOD keys
    METHOD size
    METHOD value
+
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

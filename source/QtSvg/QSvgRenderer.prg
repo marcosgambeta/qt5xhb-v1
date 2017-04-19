@@ -49,7 +49,9 @@ CLASS QSvgRenderer INHERIT QObject
    METHOD render2
    METHOD render3
    METHOD render
+
    METHOD onRepaintNeeded
+
    DESTRUCTOR destroyObject
 
 END CLASS

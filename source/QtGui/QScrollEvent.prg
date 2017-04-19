@@ -24,6 +24,7 @@ CLASS QScrollEvent INHERIT QEvent
    METHOD contentPos
    METHOD overshootDistance
    METHOD scrollState
+
    DESTRUCTOR destroyObject
 
 END CLASS

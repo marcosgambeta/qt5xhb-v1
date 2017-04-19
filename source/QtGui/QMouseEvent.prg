@@ -33,6 +33,7 @@ CLASS QMouseEvent INHERIT QInputEvent
    METHOD windowPos
    METHOD x
    METHOD y
+
    DESTRUCTOR destroyObject
 
 END CLASS

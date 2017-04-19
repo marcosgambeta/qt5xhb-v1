@@ -112,11 +112,13 @@ CLASS QOpenGLTexture
    METHOD boundTextureId2
    METHOD boundTextureId
    METHOD hasFeature
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

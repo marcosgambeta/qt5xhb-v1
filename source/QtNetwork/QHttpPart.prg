@@ -24,11 +24,13 @@ CLASS QHttpPart
    METHOD setBodyDevice
    METHOD setHeader
    METHOD setRawHeader
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

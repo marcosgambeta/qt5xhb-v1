@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDBusSignature
 
    DATA pointer
@@ -25,11 +24,13 @@ CLASS QDBusSignature
    METHOD delete
    METHOD signature
    METHOD setSignature
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

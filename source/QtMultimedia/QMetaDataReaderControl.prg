@@ -23,9 +23,11 @@ CLASS QMetaDataReaderControl INHERIT QMediaControl
    METHOD isMetaDataAvailable
    METHOD metaData
    METHOD availableMetaData
+
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
    METHOD onMetaDataAvailableChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

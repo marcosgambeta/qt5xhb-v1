@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDesktopServices
 
    DATA pointer
@@ -21,11 +20,13 @@ CLASS QDesktopServices
    METHOD openUrl
    METHOD setUrlHandler
    METHOD unsetUrlHandler
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

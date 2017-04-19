@@ -35,11 +35,13 @@ CLASS QX11Info
    METHOD connection
    METHOD nextStartupId
    METHOD setNextStartupId
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

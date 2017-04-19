@@ -25,11 +25,13 @@ CLASS QCameraFocusZone
    METHOD area
    METHOD isValid
    METHOD status
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

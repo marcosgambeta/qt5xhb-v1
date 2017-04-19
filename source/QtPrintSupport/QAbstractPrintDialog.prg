@@ -35,6 +35,7 @@ CLASS QAbstractPrintDialog INHERIT QDialog
    METHOD setEnabledOptions
    METHOD enabledOptions
    METHOD isOptionEnabled
+
    DESTRUCTOR destroyObject
 
 END CLASS

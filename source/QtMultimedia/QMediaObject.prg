@@ -31,12 +31,14 @@ CLASS QMediaObject INHERIT QObject
    METHOD service
    METHOD setNotifyInterval
    METHOD unbind
+
    METHOD onAvailabilityChanged1
    METHOD onAvailabilityChanged2
    METHOD onMetaDataAvailableChanged
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
    METHOD onNotifyIntervalChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

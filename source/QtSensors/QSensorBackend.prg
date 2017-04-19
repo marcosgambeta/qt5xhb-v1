@@ -34,6 +34,7 @@ CLASS QSensorBackend INHERIT QObject
    METHOD sensorStopped
    METHOD sensorBusy
    METHOD sensorError
+
    DESTRUCTOR destroyObject
 
 END CLASS

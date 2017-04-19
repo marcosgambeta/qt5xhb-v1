@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSurfaceFormat
 
    DATA pointer
@@ -51,11 +50,13 @@ CLASS QSurfaceFormat
    METHOD setStereo
    METHOD setOption
    METHOD testOption
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

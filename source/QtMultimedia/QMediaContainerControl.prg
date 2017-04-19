@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMediaContainerControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QMediaContainerControl
@@ -21,6 +20,7 @@ CLASS QMediaContainerControl INHERIT QMediaControl
    METHOD containerFormat
    METHOD setContainerFormat
    METHOD supportedContainers
+
    DESTRUCTOR destroyObject
 
 END CLASS

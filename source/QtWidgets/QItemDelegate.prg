@@ -25,6 +25,7 @@ CLASS QItemDelegate INHERIT QAbstractItemDelegate
    METHOD itemEditorFactory
    METHOD setClipping
    METHOD setItemEditorFactory
+
    DESTRUCTOR destroyObject
 
 END CLASS

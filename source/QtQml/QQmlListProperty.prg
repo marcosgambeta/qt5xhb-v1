@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QQmlListProperty
 
    DATA pointer
@@ -18,11 +17,13 @@ CLASS QQmlListProperty
    DATA self_destruction INIT .F.
 
    METHOD new
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

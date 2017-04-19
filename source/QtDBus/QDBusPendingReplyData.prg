@@ -26,6 +26,7 @@ CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
    METHOD assign
    METHOD argumentAt
    METHOD setMetaTypes
+
    DESTRUCTOR destroyObject
 
 END CLASS

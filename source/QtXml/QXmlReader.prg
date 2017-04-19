@@ -45,11 +45,13 @@ CLASS QXmlReader
    METHOD setFeature
    METHOD setLexicalHandler
    METHOD setProperty
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

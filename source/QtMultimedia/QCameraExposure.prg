@@ -49,6 +49,7 @@ CLASS QCameraExposure INHERIT QObject
    METHOD setManualIsoSensitivity
    METHOD setManualShutterSpeed
    METHOD setMeteringMode
+
    METHOD onApertureChanged
    METHOD onApertureRangeChanged
    METHOD onExposureCompensationChanged
@@ -56,6 +57,7 @@ CLASS QCameraExposure INHERIT QObject
    METHOD onIsoSensitivityChanged
    METHOD onShutterSpeedChanged
    METHOD onShutterSpeedRangeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

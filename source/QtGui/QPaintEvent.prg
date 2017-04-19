@@ -26,6 +26,7 @@ CLASS QPaintEvent INHERIT QEvent
    METHOD delete
    METHOD rect
    METHOD region
+
    DESTRUCTOR destroyObject
 
 END CLASS

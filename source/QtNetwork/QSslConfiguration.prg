@@ -46,11 +46,13 @@ CLASS QSslConfiguration
    METHOD setProtocol
    METHOD defaultConfiguration
    METHOD setDefaultConfiguration
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

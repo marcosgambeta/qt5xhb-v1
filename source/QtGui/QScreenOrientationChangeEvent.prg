@@ -23,6 +23,7 @@ CLASS QScreenOrientationChangeEvent INHERIT QEvent
    METHOD delete
    METHOD screen
    METHOD orientation
+
    DESTRUCTOR destroyObject
 
 END CLASS

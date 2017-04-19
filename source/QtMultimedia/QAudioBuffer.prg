@@ -34,11 +34,13 @@ CLASS QAudioBuffer
    METHOD isValid
    METHOD sampleCount
    METHOD startTime
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

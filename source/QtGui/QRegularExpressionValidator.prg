@@ -25,7 +25,9 @@ CLASS QRegularExpressionValidator INHERIT QValidator
    METHOD delete
    METHOD regularExpression
    METHOD setRegularExpression
+
    METHOD onRegularExpressionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

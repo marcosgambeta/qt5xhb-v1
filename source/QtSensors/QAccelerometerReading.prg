@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAccelerometerReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QAccelerometerReading
@@ -23,6 +22,7 @@ CLASS QAccelerometerReading INHERIT QSensorReading
    METHOD setY
    METHOD z
    METHOD setZ
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -31,6 +31,7 @@ CLASS QUndoView INHERIT QWidget
    METHOD stack
    METHOD setGroup
    METHOD setStack
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -28,11 +28,13 @@ CLASS QSurface
    METHOD surfaceHandle
    METHOD surfaceType
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

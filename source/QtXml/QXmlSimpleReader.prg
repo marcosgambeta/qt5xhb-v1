@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QXmlSimpleReader INHERIT QXmlReader
 
    DATA class_id INIT Class_Id_QXmlSimpleReader
@@ -20,6 +19,7 @@ CLASS QXmlSimpleReader INHERIT QXmlReader
    METHOD delete
    METHOD parse
    METHOD parseContinue
+
    DESTRUCTOR destroyObject
 
 END CLASS

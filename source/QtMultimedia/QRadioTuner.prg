@@ -48,6 +48,7 @@ CLASS QRadioTuner INHERIT QMediaObject
    METHOD setMuted
    METHOD start
    METHOD stop
+
    METHOD onStateChanged
    METHOD onBandChanged
    METHOD onFrequencyChanged
@@ -59,6 +60,7 @@ CLASS QRadioTuner INHERIT QMediaObject
    METHOD onStationFound
    METHOD onAntennaConnectedChanged
    METHOD onError
+
    DESTRUCTOR destroyObject
 
 END CLASS

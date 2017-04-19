@@ -27,6 +27,7 @@ CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
    METHOD supportedVideoCodecs
    METHOD videoCodecDescription
    METHOD videoSettings
+
    DESTRUCTOR destroyObject
 
 END CLASS

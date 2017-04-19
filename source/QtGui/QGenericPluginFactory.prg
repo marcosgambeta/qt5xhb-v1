@@ -23,11 +23,13 @@ CLASS QGenericPluginFactory
    METHOD delete
    METHOD create
    METHOD keys
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

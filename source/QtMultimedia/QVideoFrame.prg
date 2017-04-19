@@ -55,11 +55,13 @@ CLASS QVideoFrame
    METHOD width
    METHOD imageFormatFromPixelFormat
    METHOD pixelFormatFromImageFormat
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -37,7 +37,9 @@ CLASS QQuickView INHERIT QQuickWindow
    METHOD source
    METHOD status
    METHOD setSource
+
    METHOD onStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

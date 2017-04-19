@@ -40,12 +40,14 @@ CLASS QAbstractSlider INHERIT QWidget
    METHOD setValue
    METHOD hasTracking
    METHOD setTracking
+
    METHOD onActionTriggered
    METHOD onRangeChanged
    METHOD onSliderMoved
    METHOD onSliderPressed
    METHOD onSliderReleased
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

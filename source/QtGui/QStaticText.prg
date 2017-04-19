@@ -39,11 +39,13 @@ CLASS QStaticText
    METHOD prepare
    METHOD setPerformanceHint
    METHOD performanceHint
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

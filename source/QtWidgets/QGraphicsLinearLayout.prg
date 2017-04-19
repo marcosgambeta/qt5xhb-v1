@@ -43,6 +43,7 @@ CLASS QGraphicsLinearLayout INHERIT QGraphicsLayout
    METHOD removeAt
    METHOD setGeometry
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

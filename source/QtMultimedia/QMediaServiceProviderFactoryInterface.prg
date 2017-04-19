@@ -23,11 +23,13 @@ CLASS QMediaServiceProviderFactoryInterface
    METHOD delete
    METHOD create
    METHOD release
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

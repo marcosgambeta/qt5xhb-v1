@@ -25,7 +25,9 @@ CLASS QGraphicsEffect INHERIT QObject
    METHOD isEnabled
    METHOD setEnabled
    METHOD update
+
    METHOD onEnabledChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

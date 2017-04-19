@@ -33,11 +33,13 @@ CLASS QMediaServiceProviderHint
    METHOD codecs
    METHOD device
    METHOD features
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

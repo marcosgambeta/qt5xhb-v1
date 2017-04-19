@@ -30,8 +30,10 @@ CLASS QStackedLayout INHERIT QLayout
    METHOD widget
    METHOD setCurrentIndex
    METHOD setCurrentWidget
+
    METHOD onSetCurrentIndex
    METHOD onSetCurrentWidget
+
    DESTRUCTOR destroyObject
 
 END CLASS

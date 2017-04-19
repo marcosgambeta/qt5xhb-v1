@@ -40,8 +40,10 @@ CLASS QMdiSubWindow INHERIT QWidget
    METHOD sizeHint
    METHOD showShaded
    METHOD showSystemMenu
+
    METHOD onAboutToActivate
    METHOD onWindowStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

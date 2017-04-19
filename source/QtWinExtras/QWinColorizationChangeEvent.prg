@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QWinColorizationChangeEvent INHERIT QWinEvent
 
    DATA class_id INIT Class_Id_QWinColorizationChangeEvent
@@ -20,6 +19,7 @@ CLASS QWinColorizationChangeEvent INHERIT QWinEvent
    METHOD delete
    METHOD color
    METHOD opaqueBlend
+
    DESTRUCTOR destroyObject
 
 END CLASS

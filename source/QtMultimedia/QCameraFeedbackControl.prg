@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraFeedbackControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QCameraFeedbackControl
@@ -22,6 +21,7 @@ CLASS QCameraFeedbackControl INHERIT QMediaControl
    METHOD resetEventFeedback
    METHOD setEventFeedbackEnabled
    METHOD setEventFeedbackSound
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -24,11 +24,13 @@ CLASS QItemEditorCreatorBase
    METHOD delete
    METHOD createWidget
    METHOD valuePropertyName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

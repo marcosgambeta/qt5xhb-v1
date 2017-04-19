@@ -37,6 +37,7 @@ CLASS QPicture INHERIT QPaintDevice
    METHOD setData
    METHOD size
    METHOD swap
+
    DESTRUCTOR destroyObject
 
 END CLASS

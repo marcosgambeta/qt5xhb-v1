@@ -65,11 +65,13 @@ CLASS QPageSize
    METHOD rect
    METHOD rectPoints
    METHOD rectPixels
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

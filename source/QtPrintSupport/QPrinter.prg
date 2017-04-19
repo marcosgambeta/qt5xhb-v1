@@ -102,6 +102,7 @@ CLASS QPrinter INHERIT QPagedPaintDevice
    METHOD numCopies
    METHOD setNumCopies
    METHOD actualNumCopies
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -24,6 +24,7 @@ CLASS QCameraImageProcessingControl INHERIT QMediaControl
    METHOD isParameterValueSupported
    METHOD parameter
    METHOD setParameter
+
    DESTRUCTOR destroyObject
 
 END CLASS

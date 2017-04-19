@@ -34,11 +34,13 @@ CLASS QAccessibleTextInterface
    METHOD offsetAtPoint
    METHOD scrollToSubstring
    METHOD attributes
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

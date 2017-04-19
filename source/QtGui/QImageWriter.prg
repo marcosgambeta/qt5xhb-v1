@@ -45,11 +45,13 @@ CLASS QImageWriter
    METHOD supportsOption
    METHOD write
    METHOD supportedImageFormats
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

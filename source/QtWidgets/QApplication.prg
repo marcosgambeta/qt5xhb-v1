@@ -53,9 +53,6 @@ CLASS QApplication INHERIT QGuiApplication
    METHOD doubleClickInterval
    METHOD exec
    METHOD focusWidget
-   METHOD font1
-   METHOD font2
-   METHOD font3
    METHOD font
    METHOD fontMetrics
    METHOD globalStrut
@@ -67,9 +64,6 @@ CLASS QApplication INHERIT QGuiApplication
    METHOD layoutDirection
    METHOD mouseButtons
    METHOD overrideCursor
-   METHOD palette1
-   METHOD palette2
-   METHOD palette3
    METHOD palette
    METHOD queryKeyboardModifiers
    METHOD quitOnLastWindowClosed
@@ -89,23 +83,18 @@ CLASS QApplication INHERIT QGuiApplication
    METHOD setQuitOnLastWindowClosed
    METHOD setStartDragDistance
    METHOD setStartDragTime
-   METHOD setStyle1
-   METHOD setStyle2
    METHOD setStyle
    METHOD setWheelScrollLines
    METHOD setWindowIcon
    METHOD startDragDistance
    METHOD startDragTime
    METHOD style
-   METHOD topLevelAt1
-   METHOD topLevelAt2
    METHOD topLevelAt
    METHOD topLevelWidgets
    METHOD wheelScrollLines
-   METHOD widgetAt1
-   METHOD widgetAt2
    METHOD widgetAt
    METHOD windowIcon
+
    METHOD onAboutToReleaseGpuResources
    METHOD onAboutToUseGpuResources
    METHOD onCommitDataRequest
@@ -113,6 +102,7 @@ CLASS QApplication INHERIT QGuiApplication
    METHOD onFontDatabaseChanged
    METHOD onLastWindowClosed
    METHOD onSaveStateRequest
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -488,7 +478,7 @@ HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 /*
 static QFont font ()
 */
-HB_FUNC_STATIC( QAPPLICATION_FONT1 )
+void QApplication_font1 ()
 {
   QFont * ptr = new QFont( QApplication::font (  ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
@@ -497,7 +487,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT1 )
 /*
 static QFont font ( const QWidget * widget )
 */
-HB_FUNC_STATIC( QAPPLICATION_FONT2 )
+void QApplication_font2 ()
 {
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QFont * ptr = new QFont( QApplication::font ( par1 ) );
@@ -507,7 +497,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT2 )
 /*
 static QFont font ( const char * className )
 */
-HB_FUNC_STATIC( QAPPLICATION_FONT3 )
+void QApplication_font3 ()
 {
   const char * par1 = hb_parc(1);
   QFont * ptr = new QFont( QApplication::font (  (const char *) par1 ) );
@@ -523,15 +513,15 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_FONT1 );
+    QApplication_font1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_FONT2 );
+    QApplication_font2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_FONT3 );
+    QApplication_font3();
   }
   else
   {
@@ -640,7 +630,7 @@ HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
 /*
 static QPalette palette ()
 */
-HB_FUNC_STATIC( QAPPLICATION_PALETTE1 )
+void QApplication_palette1 ()
 {
   QPalette * ptr = new QPalette( QApplication::palette (  ) );
   _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
@@ -649,7 +639,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE1 )
 /*
 static QPalette palette ( const QWidget * widget )
 */
-HB_FUNC_STATIC( QAPPLICATION_PALETTE2 )
+void QApplication_palette2 ()
 {
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QPalette * ptr = new QPalette( QApplication::palette ( par1 ) );
@@ -659,7 +649,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE2 )
 /*
 static QPalette palette ( const char * className )
 */
-HB_FUNC_STATIC( QAPPLICATION_PALETTE3 )
+void QApplication_palette3 ()
 {
   const char * par1 = hb_parc(1);
   QPalette * ptr = new QPalette( QApplication::palette (  (const char *) par1 ) );
@@ -675,15 +665,15 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_PALETTE1 );
+    QApplication_palette1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_PALETTE2 );
+    QApplication_palette2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_PALETTE3 );
+    QApplication_palette3();
   }
   else
   {
@@ -950,7 +940,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 /*
 static void setStyle ( QStyle * style )
 */
-HB_FUNC_STATIC( QAPPLICATION_SETSTYLE1 )
+void QApplication_setStyle1 ()
 {
   QStyle * par1 = (QStyle *) _qt5xhb_itemGetPtr(1);
   QApplication::setStyle ( par1 );
@@ -960,7 +950,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE1 )
 /*
 static QStyle * setStyle ( const QString & style )
 */
-HB_FUNC_STATIC( QAPPLICATION_SETSTYLE2 )
+void QApplication_setStyle2 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QStyle * ptr = QApplication::setStyle ( par1 );
@@ -975,11 +965,11 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
   if( ISNUMPAR(1) && ISOBJECT(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_SETSTYLE1 );
+    QApplication_setStyle1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_SETSTYLE2 );
+    QApplication_setStyle2();
   }
   else
   {
@@ -1048,7 +1038,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLE )
 /*
 static QWidget * topLevelAt ( const QPoint & point )
 */
-HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
+void QApplication_topLevelAt1 ()
 {
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QWidget * ptr = QApplication::topLevelAt ( *par1 );
@@ -1058,7 +1048,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
 /*
 static QWidget * topLevelAt ( int x, int y )
 */
-HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT2 )
+void QApplication_topLevelAt2 ()
 {
   QWidget * ptr = QApplication::topLevelAt ( (int) hb_parni(1), (int) hb_parni(2) );
   _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
@@ -1072,11 +1062,11 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_TOPLEVELAT1 );
+    QApplication_topLevelAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_TOPLEVELAT2 );
+    QApplication_topLevelAt2();
   }
   else
   {
@@ -1137,7 +1127,7 @@ HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 /*
 static QWidget * widgetAt ( const QPoint & point )
 */
-HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
+void QApplication_widgetAt1 ()
 {
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
   QWidget * ptr = QApplication::widgetAt ( *par1 );
@@ -1147,7 +1137,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
 /*
 static QWidget * widgetAt ( int x, int y )
 */
-HB_FUNC_STATIC( QAPPLICATION_WIDGETAT2 )
+void QApplication_widgetAt2 ()
 {
   QWidget * ptr = QApplication::widgetAt ( (int) hb_parni(1), (int) hb_parni(2) );
   _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
@@ -1161,11 +1151,11 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_WIDGETAT1 );
+    QApplication_widgetAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_WIDGETAT2 );
+    QApplication_widgetAt2();
   }
   else
   {

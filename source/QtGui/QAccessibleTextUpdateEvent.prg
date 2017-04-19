@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAccessibleTextUpdateEvent INHERIT QAccessibleTextCursorEvent
 
    DATA class_id INIT Class_Id_QAccessibleTextUpdateEvent
@@ -21,6 +20,7 @@ CLASS QAccessibleTextUpdateEvent INHERIT QAccessibleTextCursorEvent
    METHOD textRemoved
    METHOD textInserted
    METHOD changePosition
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -82,6 +82,7 @@ CLASS QTextCharFormat INHERIT QTextFormat
    METHOD tableCellRowSpan
    METHOD setTableCellColumnSpan
    METHOD tableCellColumnSpan
+
    DESTRUCTOR destroyObject
 
 END CLASS

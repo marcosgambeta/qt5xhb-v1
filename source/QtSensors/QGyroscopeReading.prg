@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QGyroscopeReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QGyroscopeReading
@@ -23,6 +22,7 @@ CLASS QGyroscopeReading INHERIT QSensorReading
    METHOD setY
    METHOD z
    METHOD setZ
+
    DESTRUCTOR destroyObject
 
 END CLASS

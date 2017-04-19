@@ -27,11 +27,13 @@ CLASS QUndoCommand
    METHOD setText
    METHOD text
    METHOD undo
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

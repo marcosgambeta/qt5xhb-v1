@@ -64,11 +64,13 @@ CLASS QQmlProperty
    METHOD write3
    METHOD write4
    METHOD write
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

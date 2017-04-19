@@ -46,8 +46,10 @@ CLASS QAudioOutput INHERIT QObject
    METHOD stop
    METHOD suspend
    METHOD volume
+
    METHOD onNotify
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

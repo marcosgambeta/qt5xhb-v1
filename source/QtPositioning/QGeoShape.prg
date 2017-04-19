@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QGeoShape
 
    DATA pointer
@@ -25,11 +24,13 @@ CLASS QGeoShape
    METHOD isValid
    METHOD isEmpty
    METHOD contains
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

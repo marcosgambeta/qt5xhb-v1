@@ -86,7 +86,9 @@ CLASS QStandardItemModel INHERIT QAbstractItemModel
    METHOD mimeTypes
    METHOD mimeData
    METHOD dropMimeData
+
    METHOD onItemChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

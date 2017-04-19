@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMagnetometerFilter INHERIT QSensorFilter
 
    DATA class_id INIT Class_Id_QMagnetometerFilter
@@ -18,6 +17,7 @@ CLASS QMagnetometerFilter INHERIT QSensorFilter
 
    METHOD delete
    METHOD filter
+
    DESTRUCTOR destroyObject
 
 END CLASS

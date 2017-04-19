@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCommonStyle INHERIT QStyle
 
    DATA class_id INIT Class_Id_QCommonStyle
@@ -18,6 +17,7 @@ CLASS QCommonStyle INHERIT QStyle
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

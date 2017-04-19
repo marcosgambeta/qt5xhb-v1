@@ -33,10 +33,12 @@ CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
    METHOD servicePid
    METHOD serviceUid
    METHOD startService
+
    METHOD onServiceRegistered
    METHOD onServiceUnregistered
    METHOD onServiceOwnerChanged
    METHOD onCallWithCallbackFailed
+
    DESTRUCTOR destroyObject
 
 END CLASS

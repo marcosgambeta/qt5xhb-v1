@@ -107,6 +107,7 @@ CLASS QImage INHERIT QPaintDevice
    METHOD fromData
    METHOD trueMatrix2
    METHOD trueMatrix
+
    DESTRUCTOR destroyObject
 
 END CLASS

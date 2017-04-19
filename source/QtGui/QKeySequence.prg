@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QKeySequence
 
    DATA pointer
@@ -33,11 +31,13 @@ CLASS QKeySequence
    METHOD fromString
    METHOD keyBindings
    METHOD mnemonic
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

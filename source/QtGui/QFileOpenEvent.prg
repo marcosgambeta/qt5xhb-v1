@@ -23,6 +23,7 @@ CLASS QFileOpenEvent INHERIT QEvent
    METHOD file
    METHOD openFile
    METHOD url
+
    DESTRUCTOR destroyObject
 
 END CLASS

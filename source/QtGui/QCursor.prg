@@ -39,11 +39,13 @@ CLASS QCursor
    METHOD setPos1
    METHOD setPos2
    METHOD setPos
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

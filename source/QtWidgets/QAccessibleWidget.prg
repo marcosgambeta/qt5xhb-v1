@@ -39,6 +39,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
    METHOD actionNames
    METHOD doAction
    METHOD keyBindingsForAction
+
    DESTRUCTOR destroyObject
 
 END CLASS

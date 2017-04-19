@@ -33,6 +33,7 @@ CLASS QScrollArea INHERIT QAbstractScrollArea
    METHOD widgetResizable
    METHOD focusNextPrevChild
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

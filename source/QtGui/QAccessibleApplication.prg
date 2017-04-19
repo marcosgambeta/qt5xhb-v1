@@ -29,6 +29,7 @@ CLASS QAccessibleApplication INHERIT QAccessibleObject
    METHOD child
    METHOD text
    METHOD role
+
    DESTRUCTOR destroyObject
 
 END CLASS

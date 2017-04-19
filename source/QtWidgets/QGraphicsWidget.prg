@@ -44,16 +44,12 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
    METHOD rect
    METHOD releaseShortcut
    METHOD removeAction
-   METHOD resize1
-   METHOD resize2
    METHOD resize
    METHOD setAttribute
    METHOD setAutoFillBackground
    METHOD setContentsMargins
    METHOD setFocusPolicy
    METHOD setFont
-   METHOD setGeometry1
-   METHOD setGeometry2
    METHOD setGeometry
    METHOD setLayout
    METHOD setLayoutDirection
@@ -81,7 +77,9 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
    METHOD type
    METHOD close
    METHOD setTabOrder
+
    METHOD onGeometryChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -398,7 +396,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
 /*
 void resize ( const QSizeF & size )
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE1 )
+void QGraphicsWidget_resize1 ()
 {
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -412,7 +410,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE1 )
 /*
 void resize ( qreal w, qreal h )
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE2 )
+void QGraphicsWidget_resize2 ()
 {
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -432,11 +430,11 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_RESIZE1 );
+    QGraphicsWidget_resize1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_RESIZE2 );
+    QGraphicsWidget_resize2();
   }
   else
   {
@@ -533,7 +531,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
 /*
 void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY1 )
+void QGraphicsWidget_setGeometry1 ()
 {
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -550,7 +548,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY1 )
 /*
 virtual void setGeometry ( const QRectF & rect )
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY2 )
+void QGraphicsWidget_setGeometry2 ()
 {
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -569,11 +567,11 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_SETGEOMETRY1 );
+    QGraphicsWidget_setGeometry1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_SETGEOMETRY2 );
+    QGraphicsWidget_setGeometry2();
   }
   else
   {

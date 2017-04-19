@@ -29,11 +29,13 @@ CLASS QSqlError
    METHOD type
    METHOD setType
    METHOD nativeErrorCode
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

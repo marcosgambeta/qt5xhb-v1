@@ -34,8 +34,10 @@ CLASS QShortcut INHERIT QObject
    METHOD setKey
    METHOD setWhatsThis
    METHOD whatsThis
+
    METHOD onActivated
    METHOD onActivatedAmbiguously
+
    DESTRUCTOR destroyObject
 
 END CLASS

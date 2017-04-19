@@ -25,8 +25,10 @@ CLASS QMediaStreamsControl INHERIT QMediaControl
    METHOD setActive
    METHOD streamCount
    METHOD streamType
+
    METHOD onActiveStreamsChanged
    METHOD onStreamsChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -43,10 +43,12 @@ CLASS QQuickPaintedItem INHERIT QQuickItem
    METHOD setPerformanceHints
    METHOD setRenderTarget
    METHOD update
+
    METHOD onContentsScaleChanged
    METHOD onContentsSizeChanged
    METHOD onFillColorChanged
    METHOD onRenderTargetChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

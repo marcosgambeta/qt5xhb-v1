@@ -24,6 +24,7 @@ CLASS QSensorReading INHERIT QObject
    METHOD setTimestamp
    METHOD valueCount
    METHOD value
+
    DESTRUCTOR destroyObject
 
 END CLASS

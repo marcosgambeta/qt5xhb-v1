@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDomComment INHERIT QDomCharacterData
 
    DATA class_id INIT Class_Id_QDomComment
@@ -21,6 +20,7 @@ CLASS QDomComment INHERIT QDomCharacterData
    METHOD new
    METHOD delete
    METHOD nodeType
+
    DESTRUCTOR destroyObject
 
 END CLASS

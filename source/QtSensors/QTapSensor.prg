@@ -24,7 +24,9 @@ CLASS QTapSensor INHERIT QSensor
    METHOD reading
    METHOD returnDoubleTapEvents
    METHOD setReturnDoubleTapEvents
+
    METHOD onReturnDoubleTapEventsChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -66,11 +66,13 @@ CLASS QGuiApplication INHERIT QCoreApplication
    METHOD styleHints
    METHOD topLevelAt
    METHOD topLevelWindows
+
    METHOD onFocusObjectChanged
    METHOD onFocusWindowChanged
    METHOD onFontDatabaseChanged
    METHOD onLastWindowClosed
    METHOD onScreenAdded
+
    DESTRUCTOR destroyObject
 
 END CLASS

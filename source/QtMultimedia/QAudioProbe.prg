@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAudioProbe INHERIT QObject
 
    DATA class_id INIT Class_Id_QAudioProbe
@@ -22,8 +21,10 @@ CLASS QAudioProbe INHERIT QObject
    METHOD setSource1
    METHOD setSource2
    METHOD setSource
+
    METHOD onAudioBufferProbed
    METHOD onFlush
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -26,11 +26,13 @@ CLASS QWebEngineCertificateError
    METHOD url
    METHOD isOverridable
    METHOD errorDescription
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

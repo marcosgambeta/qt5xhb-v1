@@ -54,8 +54,10 @@ CLASS QGraphicsTextItem INHERIT QGraphicsObject
    METHOD paint
    METHOD shape
    METHOD type
+
    METHOD onLinkActivated
    METHOD onLinkHovered
+
    DESTRUCTOR destroyObject
 
 END CLASS

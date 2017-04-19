@@ -32,11 +32,13 @@ CLASS QPixmapCache
    METHOD remove1
    METHOD remove
    METHOD clear
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

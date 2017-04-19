@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QHelpIndexWidget INHERIT QListView
 
    DATA class_id INIT Class_Id_QHelpIndexWidget
@@ -19,7 +18,9 @@ CLASS QHelpIndexWidget INHERIT QListView
    METHOD delete
    METHOD activateCurrentItem
    METHOD filterIndices
+
    METHOD onLinkActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS

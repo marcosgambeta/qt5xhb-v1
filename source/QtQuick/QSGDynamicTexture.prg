@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSGDynamicTexture INHERIT QSGTexture
 
    DATA class_id INIT Class_Id_QSGDynamicTexture
@@ -17,6 +16,7 @@ CLASS QSGDynamicTexture INHERIT QSGTexture
    DATA self_destruction INIT .F.
 
    METHOD updateTexture
+
    DESTRUCTOR destroyObject
 
 END CLASS

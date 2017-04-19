@@ -25,11 +25,13 @@ CLASS QXmlResultItems
    METHOD current
    METHOD hasError
    METHOD next
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

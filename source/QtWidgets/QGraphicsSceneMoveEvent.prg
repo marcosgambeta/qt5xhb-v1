@@ -23,6 +23,7 @@ CLASS QGraphicsSceneMoveEvent INHERIT QGraphicsSceneEvent
    METHOD delete
    METHOD newPos
    METHOD oldPos
+
    DESTRUCTOR destroyObject
 
 END CLASS

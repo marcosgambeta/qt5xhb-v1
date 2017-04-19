@@ -31,11 +31,13 @@ CLASS QXmlInputSource
    METHOD setData1
    METHOD setData2
    METHOD setData
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

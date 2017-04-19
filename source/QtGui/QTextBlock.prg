@@ -61,11 +61,13 @@ CLASS QTextBlock
    METHOD previous
    METHOD docHandle
    METHOD fragmentIndex
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

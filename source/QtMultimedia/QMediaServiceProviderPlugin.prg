@@ -22,6 +22,7 @@ CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryIn
    METHOD delete
    METHOD create
    METHOD release
+
    DESTRUCTOR destroyObject
 
 END CLASS

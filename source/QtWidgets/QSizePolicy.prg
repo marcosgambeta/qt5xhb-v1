@@ -34,11 +34,13 @@ CLASS QSizePolicy
    METHOD transpose
    METHOD verticalPolicy
    METHOD verticalStretch
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

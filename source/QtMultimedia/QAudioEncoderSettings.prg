@@ -39,11 +39,13 @@ CLASS QAudioEncoderSettings
    METHOD setEncodingOption
    METHOD setQuality
    METHOD setSampleRate
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

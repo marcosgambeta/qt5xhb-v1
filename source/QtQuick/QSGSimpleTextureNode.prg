@@ -30,6 +30,7 @@ CLASS QSGSimpleTextureNode INHERIT QSGGeometryNode
    METHOD setRect
    METHOD setTexture
    METHOD texture
+
    DESTRUCTOR destroyObject
 
 END CLASS

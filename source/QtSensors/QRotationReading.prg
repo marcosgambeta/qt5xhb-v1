@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QRotationReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QRotationReading
@@ -21,6 +20,7 @@ CLASS QRotationReading INHERIT QSensorReading
    METHOD y
    METHOD z
    METHOD setFromEuler
+
    DESTRUCTOR destroyObject
 
 END CLASS

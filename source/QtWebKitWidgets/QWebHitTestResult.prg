@@ -46,11 +46,13 @@ CLASS QWebHitTestResult
    METHOD pixmap
    METHOD pos
    METHOD title
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -22,6 +22,7 @@ CLASS QExposeEvent INHERIT QEvent
    METHOD new
    METHOD delete
    METHOD region
+
    DESTRUCTOR destroyObject
 
 END CLASS

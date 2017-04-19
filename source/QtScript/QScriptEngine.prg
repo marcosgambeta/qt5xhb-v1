@@ -72,7 +72,9 @@ CLASS QScriptEngine INHERIT QObject
    METHOD uncaughtExceptionLineNumber
    METHOD undefinedValue
    METHOD checkSyntax
+
    METHOD onSignalHandlerException
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -276,10 +276,12 @@ CLASS QWidget INHERIT QObject
    METHOD mouseGrabber
    METHOD setTabOrder
    METHOD createWindowContainer
+
    METHOD onWindowTitleChanged
    METHOD onWindowIconChanged
    METHOD onWindowIconTextChanged
    METHOD onCustomContextMenuRequested
+
    DESTRUCTOR destroyObject
 
 END CLASS

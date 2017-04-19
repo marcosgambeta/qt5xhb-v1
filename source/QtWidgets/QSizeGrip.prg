@@ -23,6 +23,7 @@ CLASS QSizeGrip INHERIT QWidget
    METHOD delete
    METHOD setVisible
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

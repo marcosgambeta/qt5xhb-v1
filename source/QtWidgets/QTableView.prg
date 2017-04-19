@@ -67,6 +67,7 @@ CLASS QTableView INHERIT QAbstractItemView
    METHOD setShowGrid
    METHOD showColumn
    METHOD showRow
+
    DESTRUCTOR destroyObject
 
 END CLASS

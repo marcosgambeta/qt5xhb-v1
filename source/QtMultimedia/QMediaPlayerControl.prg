@@ -44,6 +44,7 @@ CLASS QMediaPlayerControl INHERIT QMediaControl
    METHOD state
    METHOD stop
    METHOD volume
+
    METHOD onAudioAvailableChanged
    METHOD onAvailablePlaybackRangesChanged
    METHOD onBufferStatusChanged
@@ -58,6 +59,7 @@ CLASS QMediaPlayerControl INHERIT QMediaControl
    METHOD onStateChanged
    METHOD onVideoAvailableChanged
    METHOD onVolumeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

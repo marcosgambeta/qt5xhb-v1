@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QXmlFormatter INHERIT QXmlSerializer
 
    DATA class_id INIT Class_Id_QXmlFormatter
@@ -31,6 +30,7 @@ CLASS QXmlFormatter INHERIT QXmlSerializer
    METHOD startDocument
    METHOD startElement
    METHOD startOfSequence
+
    DESTRUCTOR destroyObject
 
 END CLASS

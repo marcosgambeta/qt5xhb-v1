@@ -26,6 +26,7 @@ CLASS QRegExpValidator INHERIT QValidator
    METHOD regExp
    METHOD setRegExp
    METHOD validate
+
    DESTRUCTOR destroyObject
 
 END CLASS

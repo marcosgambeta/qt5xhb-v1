@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDragEnterEvent INHERIT QDragMoveEvent
 
    DATA class_id INIT Class_Id_QDragEnterEvent
@@ -18,6 +17,7 @@ CLASS QDragEnterEvent INHERIT QDragMoveEvent
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTouchDevice
 
    DATA pointer
@@ -26,11 +25,13 @@ CLASS QTouchDevice
    METHOD setType
    METHOD setCapabilities
    METHOD devices
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

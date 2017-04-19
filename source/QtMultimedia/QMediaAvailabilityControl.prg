@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMediaAvailabilityControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QMediaAvailabilityControl
@@ -18,7 +17,9 @@ CLASS QMediaAvailabilityControl INHERIT QMediaControl
 
    METHOD delete
    METHOD availability
+
    METHOD onAvailabilityChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

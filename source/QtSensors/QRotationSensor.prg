@@ -24,7 +24,9 @@ CLASS QRotationSensor INHERIT QSensor
    METHOD reading
    METHOD hasZ
    METHOD setHasZ
+
    METHOD onHasZChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

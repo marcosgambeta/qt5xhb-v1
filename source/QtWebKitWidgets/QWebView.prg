@@ -56,6 +56,7 @@ CLASS QWebView INHERIT QWidget
    METHOD print
    METHOD reload
    METHOD stop
+
    METHOD onIconChanged
    METHOD onLinkClicked
    METHOD onLoadFinished
@@ -65,6 +66,7 @@ CLASS QWebView INHERIT QWidget
    METHOD onStatusBarMessage
    METHOD onTitleChanged
    METHOD onUrlChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

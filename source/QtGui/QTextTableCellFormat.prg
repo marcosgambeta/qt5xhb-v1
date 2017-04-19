@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTextTableCellFormat INHERIT QTextCharFormat
 
    DATA class_id INIT Class_Id_QTextTableCellFormat
@@ -28,6 +27,7 @@ CLASS QTextTableCellFormat INHERIT QTextCharFormat
    METHOD setRightPadding
    METHOD rightPadding
    METHOD setPadding
+
    DESTRUCTOR destroyObject
 
 END CLASS

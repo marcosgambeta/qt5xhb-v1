@@ -77,9 +77,11 @@ CLASS QTabBar INHERIT QWidget
    METHOD minimumSizeHint
    METHOD sizeHint
    METHOD setCurrentIndex
+
    METHOD onCurrentChanged
    METHOD onTabCloseRequested
    METHOD onTabMoved
+
    DESTRUCTOR destroyObject
 
 END CLASS

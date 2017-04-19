@@ -42,6 +42,7 @@ CLASS QPinchGesture INHERIT QGesture
    METHOD totalChangeFlags
    METHOD totalRotationAngle
    METHOD totalScaleFactor
+
    DESTRUCTOR destroyObject
 
 END CLASS

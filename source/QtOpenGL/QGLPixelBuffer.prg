@@ -46,6 +46,7 @@ CLASS QGLPixelBuffer INHERIT QPaintDevice
    METHOD updateDynamicTexture
    METHOD paintEngine
    METHOD hasOpenGLPbuffers
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -26,8 +26,10 @@ CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
    METHOD boundingRectFor
    METHOD setBlurHints
    METHOD setBlurRadius
+
    METHOD onBlurHintsChanged
    METHOD onBlurRadiusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

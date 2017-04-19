@@ -46,11 +46,13 @@ CLASS QPaintEngineState
    METHOD renderHints
    METHOD state
    METHOD transform
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

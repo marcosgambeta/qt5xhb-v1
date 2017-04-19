@@ -59,8 +59,10 @@ CLASS QLabel INHERIT QFrame
    METHOD setPicture
    METHOD setPixmap
    METHOD setText
+
    METHOD onLinkActivated
    METHOD onLinkHovered
+
    DESTRUCTOR destroyObject
 
 END CLASS

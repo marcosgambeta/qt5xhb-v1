@@ -38,7 +38,9 @@ CLASS QToolButton INHERIT QAbstractButton
    METHOD setDefaultAction
    METHOD setToolButtonStyle
    METHOD showMenu
+
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS

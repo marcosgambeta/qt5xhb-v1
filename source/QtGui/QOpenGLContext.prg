@@ -45,7 +45,9 @@ CLASS QOpenGLContext INHERIT QObject
    METHOD swapBuffers
    METHOD areSharing
    METHOD currentContext
+
    METHOD onAboutToBeDestroyed
+
    DESTRUCTOR destroyObject
 
 END CLASS

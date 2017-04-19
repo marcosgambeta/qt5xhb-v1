@@ -32,6 +32,7 @@ CLASS QLinearGradient INHERIT QGradient
    METHOD setStart2
    METHOD setStart
    METHOD start
+
    DESTRUCTOR destroyObject
 
 END CLASS

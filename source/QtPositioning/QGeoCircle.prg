@@ -31,6 +31,7 @@ CLASS QGeoCircle INHERIT QGeoShape
    METHOD radius
    METHOD translate
    METHOD translated
+
    DESTRUCTOR destroyObject
 
 END CLASS

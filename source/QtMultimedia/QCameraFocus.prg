@@ -35,11 +35,13 @@ CLASS QCameraFocus INHERIT QObject
    METHOD setFocusMode
    METHOD setFocusPointMode
    METHOD zoomTo
+
    METHOD onDigitalZoomChanged
    METHOD onFocusZonesChanged
    METHOD onMaximumDigitalZoomChanged
    METHOD onMaximumOpticalZoomChanged
    METHOD onOpticalZoomChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -37,11 +37,13 @@ CLASS QWebHistory
    METHOD items
    METHOD maximumItemCount
    METHOD setMaximumItemCount
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -58,10 +58,12 @@ CLASS QMenu INHERIT QWidget
    METHOD setAsDockMenu
    METHOD toolTipsVisible
    METHOD setToolTipsVisible
+
    METHOD onAboutToHide
    METHOD onAboutToShow
    METHOD onHovered
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS

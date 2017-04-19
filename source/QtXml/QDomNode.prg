@@ -102,11 +102,13 @@ CLASS QDomNode
    METHOD toNotation
    METHOD toProcessingInstruction
    METHOD toText
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

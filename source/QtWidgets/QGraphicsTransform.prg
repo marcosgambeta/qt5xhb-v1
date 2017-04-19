@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QGraphicsTransform INHERIT QObject
 
    DATA class_id INIT Class_Id_QGraphicsTransform
@@ -18,6 +17,7 @@ CLASS QGraphicsTransform INHERIT QObject
 
    METHOD delete
    METHOD applyTo
+
    DESTRUCTOR destroyObject
 
 END CLASS

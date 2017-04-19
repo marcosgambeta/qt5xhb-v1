@@ -26,6 +26,7 @@ CLASS QImageEncoderControl INHERIT QMediaControl
    METHOD supportedResolutions
    METHOD imageSettings
    METHOD setImageSettings
+
    DESTRUCTOR destroyObject
 
 END CLASS

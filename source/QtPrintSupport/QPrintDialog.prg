@@ -32,7 +32,9 @@ CLASS QPrintDialog INHERIT QAbstractPrintDialog
    METHOD done
    METHOD exec
    METHOD setVisible
+
    METHOD onAccepted
+
    DESTRUCTOR destroyObject
 
 END CLASS

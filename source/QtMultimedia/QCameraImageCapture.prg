@@ -42,6 +42,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
    METHOD supportedResolutions
    METHOD cancelCapture
    METHOD capture
+
    METHOD onBufferFormatChanged
    METHOD onCaptureDestinationChanged
    METHOD onError
@@ -51,6 +52,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
    METHOD onImageMetadataAvailable
    METHOD onImageSaved
    METHOD onReadyForCaptureChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

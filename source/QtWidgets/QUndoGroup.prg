@@ -36,6 +36,7 @@ CLASS QUndoGroup INHERIT QObject
    METHOD redo
    METHOD setActiveStack
    METHOD undo
+
    METHOD onActiveStackChanged
    METHOD onCanRedoChanged
    METHOD onCanUndoChanged
@@ -43,6 +44,7 @@ CLASS QUndoGroup INHERIT QObject
    METHOD onIndexChanged
    METHOD onRedoTextChanged
    METHOD onUndoTextChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

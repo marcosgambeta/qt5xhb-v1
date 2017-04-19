@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDBusMetaType
 
    DATA pointer
@@ -21,11 +20,13 @@ CLASS QDBusMetaType
    METHOD demarshall
    METHOD signatureToType
    METHOD typeToSignature
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

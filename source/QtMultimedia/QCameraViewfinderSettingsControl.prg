@@ -23,6 +23,7 @@ CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
    METHOD isViewfinderParameterSupported
    METHOD setViewfinderParameter
    METHOD viewfinderParameter
+
    DESTRUCTOR destroyObject
 
 END CLASS

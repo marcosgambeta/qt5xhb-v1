@@ -27,6 +27,7 @@ CLASS QHttpMultiPart INHERIT QObject
    METHOD boundary
    METHOD setBoundary
    METHOD setContentType
+
    DESTRUCTOR destroyObject
 
 END CLASS

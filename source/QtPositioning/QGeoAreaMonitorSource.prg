@@ -35,10 +35,12 @@ CLASS QGeoAreaMonitorSource INHERIT QObject
    METHOD createDefaultSource
    METHOD createSource
    METHOD availableSources
+
    METHOD onAreaEntered
    METHOD onAreaExited
    METHOD onMonitorExpired
    METHOD onError
+
    DESTRUCTOR destroyObject
 
 END CLASS

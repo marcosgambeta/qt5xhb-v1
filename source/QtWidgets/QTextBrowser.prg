@@ -42,6 +42,7 @@ CLASS QTextBrowser INHERIT QTextEdit
    METHOD home
    METHOD reload
    METHOD setSource
+
    METHOD onAnchorClicked
    METHOD onBackwardAvailable
    METHOD onForwardAvailable
@@ -49,6 +50,7 @@ CLASS QTextBrowser INHERIT QTextEdit
    METHOD onHighlighted2
    METHOD onHistoryChanged
    METHOD onSourceChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

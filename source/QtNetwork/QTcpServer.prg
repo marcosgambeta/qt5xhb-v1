@@ -39,7 +39,9 @@ CLASS QTcpServer INHERIT QObject
    METHOD setSocketDescriptor
    METHOD socketDescriptor
    METHOD waitForNewConnection
+
    METHOD onNewConnection
+
    DESTRUCTOR destroyObject
 
 END CLASS

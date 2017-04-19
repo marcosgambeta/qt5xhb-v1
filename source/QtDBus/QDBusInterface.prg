@@ -24,6 +24,7 @@ CLASS QDBusInterface INHERIT QDBusAbstractInterface
    METHOD metaObject
    METHOD qt_metacast
    METHOD qt_metacall
+
    DESTRUCTOR destroyObject
 
 END CLASS

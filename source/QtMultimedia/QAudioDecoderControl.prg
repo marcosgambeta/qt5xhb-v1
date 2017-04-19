@@ -35,6 +35,7 @@ CLASS QAudioDecoderControl INHERIT QMediaControl
    METHOD start
    METHOD state
    METHOD stop
+
    METHOD onBufferAvailableChanged
    METHOD onBufferReady
    METHOD onDurationChanged
@@ -44,6 +45,7 @@ CLASS QAudioDecoderControl INHERIT QMediaControl
    METHOD onPositionChanged
    METHOD onSourceChanged
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

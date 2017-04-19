@@ -30,6 +30,7 @@ CLASS QDomDocumentType INHERIT QDomNode
    METHOD notations
    METHOD publicId
    METHOD systemId
+
    DESTRUCTOR destroyObject
 
 END CLASS

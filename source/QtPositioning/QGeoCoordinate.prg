@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QGeoCoordinate
 
    DATA pointer
@@ -36,11 +34,13 @@ CLASS QGeoCoordinate
    METHOD azimuthTo
    METHOD atDistanceAndAzimuth
    METHOD toString
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

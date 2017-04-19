@@ -32,6 +32,7 @@ CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
    METHOD updateGeometry
    METHOD instantInvalidatePropagation
    METHOD setInstantInvalidatePropagation
+
    DESTRUCTOR destroyObject
 
 END CLASS

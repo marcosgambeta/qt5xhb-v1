@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTextImageFormat INHERIT QTextCharFormat
 
    DATA class_id INIT Class_Id_QTextImageFormat
@@ -25,6 +24,7 @@ CLASS QTextImageFormat INHERIT QTextCharFormat
    METHOD width
    METHOD setHeight
    METHOD height
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QPrintPreviewWidget INHERIT QWidget
 
    DATA class_id INIT Class_Id_QPrintPreviewWidget
@@ -43,8 +42,10 @@ CLASS QPrintPreviewWidget INHERIT QWidget
    METHOD updatePreview
    METHOD zoomIn
    METHOD zoomOut
+
    METHOD onPaintRequested
    METHOD onPreviewChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

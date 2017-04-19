@@ -37,8 +37,10 @@ CLASS QDoubleSpinBox INHERIT QAbstractSpinBox
    METHOD valueFromText
    METHOD fixup
    METHOD validate
+
    METHOD onValueChanged1
    METHOD onValueChanged2
+
    DESTRUCTOR destroyObject
 
 END CLASS

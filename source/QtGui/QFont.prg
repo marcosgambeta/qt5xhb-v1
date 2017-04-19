@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QFont
 
    DATA pointer
@@ -81,11 +79,13 @@ CLASS QFont
    METHOD substitute
    METHOD substitutes
    METHOD substitutions
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

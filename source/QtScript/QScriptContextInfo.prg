@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QScriptContextInfo
 
    DATA pointer
@@ -32,11 +31,13 @@ CLASS QScriptContextInfo
    METHOD isNull
    METHOD lineNumber
    METHOD scriptId
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

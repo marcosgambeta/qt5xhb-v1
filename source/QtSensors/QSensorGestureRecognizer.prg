@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSensorGestureRecognizer INHERIT QObject
 
    DATA class_id INIT Class_Id_QSensorGestureRecognizer
@@ -23,7 +22,9 @@ CLASS QSensorGestureRecognizer INHERIT QObject
    METHOD stopBackend
    METHOD createBackend
    METHOD gestureSignals
+
    METHOD onDetected
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -32,6 +32,7 @@ CLASS QPushButton INHERIT QAbstractButton
    METHOD showMenu
    METHOD minimumSizeHint
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -185,6 +186,10 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
   if( obj )
   {
     hb_retl( obj->isFlat (  ) );
+  }
+  else
+  {
+    qWarning("QPushButton::isFlat: tentativa de usar o método com um ponteiro nulo");
   }
 }
 

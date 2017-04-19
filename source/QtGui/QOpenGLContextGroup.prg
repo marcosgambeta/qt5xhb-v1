@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QOpenGLContextGroup INHERIT QObject
 
    DATA class_id INIT Class_Id_QOpenGLContextGroup
@@ -20,6 +18,7 @@ CLASS QOpenGLContextGroup INHERIT QObject
    METHOD delete
    METHOD shares
    METHOD currentContextGroup
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -32,11 +32,13 @@ CLASS QXmlItem
    METHOD isNull
    METHOD toAtomicValue
    METHOD toNodeModelIndex
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

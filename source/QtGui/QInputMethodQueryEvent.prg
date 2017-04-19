@@ -24,6 +24,7 @@ CLASS QInputMethodQueryEvent INHERIT QEvent
    METHOD queries
    METHOD setValue
    METHOD value
+
    DESTRUCTOR destroyObject
 
 END CLASS

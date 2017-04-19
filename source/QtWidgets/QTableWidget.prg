@@ -65,6 +65,7 @@ CLASS QTableWidget INHERIT QTableView
    METHOD removeColumn
    METHOD removeRow
    METHOD scrollToItem
+
    METHOD onCellActivated
    METHOD onCellChanged
    METHOD onCellClicked
@@ -80,6 +81,7 @@ CLASS QTableWidget INHERIT QTableView
    METHOD onItemEntered
    METHOD onItemPressed
    METHOD onItemSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -30,6 +30,7 @@ CLASS QDial INHERIT QAbstractSlider
    METHOD sizeHint
    METHOD setNotchesVisible
    METHOD setWrapping
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -74,10 +74,12 @@ CLASS QTabWidget INHERIT QWidget
    METHOD tabBarAutoHide
    METHOD setTabBarAutoHide
    METHOD tabBar
+
    METHOD onCurrentChanged
    METHOD onTabCloseRequested
    METHOD onTabBarClicked
    METHOD onTabBarDoubleClicked
+
    DESTRUCTOR destroyObject
 
 END CLASS

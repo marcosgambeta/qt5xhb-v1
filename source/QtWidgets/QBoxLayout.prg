@@ -53,6 +53,7 @@ CLASS QBoxLayout INHERIT QLayout
    METHOD setGeometry
    METHOD sizeHint
    METHOD takeAt
+
    DESTRUCTOR destroyObject
 
 END CLASS

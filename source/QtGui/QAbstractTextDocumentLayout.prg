@@ -35,10 +35,12 @@ CLASS QAbstractTextDocumentLayout INHERIT QObject
    METHOD paintDevice
    METHOD registerHandler
    METHOD setPaintDevice
+
    METHOD onDocumentSizeChanged
    METHOD onPageCountChanged
    METHOD onUpdate
    METHOD onUpdateBlock
+
    DESTRUCTOR destroyObject
 
 END CLASS

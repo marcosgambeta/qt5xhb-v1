@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMagnetometerReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QMagnetometerReading
@@ -25,6 +24,7 @@ CLASS QMagnetometerReading INHERIT QSensorReading
    METHOD setZ
    METHOD calibrationLevel
    METHOD setCalibrationLevel
+
    DESTRUCTOR destroyObject
 
 END CLASS

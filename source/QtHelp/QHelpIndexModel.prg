@@ -22,8 +22,10 @@ CLASS QHelpIndexModel INHERIT QStringListModel
    METHOD createIndex
    METHOD filter
    METHOD isCreatingIndex
+
    METHOD onIndexCreated
    METHOD onIndexCreationStarted
+
    DESTRUCTOR destroyObject
 
 END CLASS

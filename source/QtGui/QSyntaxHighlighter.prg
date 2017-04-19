@@ -25,6 +25,7 @@ CLASS QSyntaxHighlighter INHERIT QObject
    METHOD document
    METHOD rehighlight
    METHOD rehighlightBlock
+
    DESTRUCTOR destroyObject
 
 END CLASS

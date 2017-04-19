@@ -30,11 +30,13 @@ CLASS QMacPasteboardMime
    METHOD convertToMime
    METHOD convertFromMime
    METHOD count
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -31,6 +31,7 @@ CLASS QOpenGLTimerQuery INHERIT QObject
    METHOD recordTimestamp
    METHOD isResultAvailable
    METHOD waitForResult
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -26,11 +26,13 @@ CLASS QQmlIncubationController
    METHOD incubateFor
    METHOD incubateWhile
    METHOD incubatingObjectCount
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

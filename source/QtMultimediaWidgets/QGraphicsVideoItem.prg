@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QMEDIAOBJECT
 REQUEST QPOINTF
@@ -35,7 +34,9 @@ CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
    METHOD nativeSize
    METHOD boundingRect
    METHOD paint
+
    METHOD onNativeSizeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

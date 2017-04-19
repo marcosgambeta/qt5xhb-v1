@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTextListFormat INHERIT QTextFormat
 
    DATA class_id INIT Class_Id_QTextListFormat
@@ -27,6 +26,7 @@ CLASS QTextListFormat INHERIT QTextFormat
    METHOD numberPrefix
    METHOD setNumberSuffix
    METHOD numberSuffix
+
    DESTRUCTOR destroyObject
 
 END CLASS

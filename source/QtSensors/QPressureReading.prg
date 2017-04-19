@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QPressureReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QPressureReading
@@ -19,6 +18,7 @@ CLASS QPressureReading INHERIT QSensorReading
    METHOD delete
    METHOD pressure
    METHOD setPressure
+
    DESTRUCTOR destroyObject
 
 END CLASS

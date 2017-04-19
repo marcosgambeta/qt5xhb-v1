@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QErrorMessage INHERIT QDialog
 
    DATA class_id INIT Class_Id_QErrorMessage
@@ -19,10 +17,9 @@ CLASS QErrorMessage INHERIT QDialog
 
    METHOD new
    METHOD delete
-   METHOD showMessage1
-   METHOD showMessage2
    METHOD showMessage
    METHOD qtHandler
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -78,7 +75,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 /*
 void showMessage ( const QString & message )
 */
-HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE1 )
+void QErrorMessage_showMessage1 ()
 {
   QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -92,7 +89,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE1 )
 /*
 void showMessage ( const QString & message, const QString & type )
 */
-HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE2 )
+void QErrorMessage_showMessage2 ()
 {
   QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -112,11 +109,11 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QERRORMESSAGE_SHOWMESSAGE1 );
+    QErrorMessage_showMessage1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QERRORMESSAGE_SHOWMESSAGE2 );
+    QErrorMessage_showMessage2();
   }
   else
   {

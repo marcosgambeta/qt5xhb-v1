@@ -28,6 +28,7 @@ CLASS QQuickImageProvider INHERIT QQmlImageProviderBase
    METHOD requestImage
    METHOD requestPixmap
    METHOD requestTexture
+
    DESTRUCTOR destroyObject
 
 END CLASS

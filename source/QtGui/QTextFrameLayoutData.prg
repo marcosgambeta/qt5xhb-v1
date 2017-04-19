@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTextFrameLayoutData
 
    DATA pointer
@@ -18,11 +17,13 @@ CLASS QTextFrameLayoutData
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

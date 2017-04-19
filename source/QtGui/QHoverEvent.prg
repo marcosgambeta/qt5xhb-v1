@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QHoverEvent INHERIT QEvent
 
    DATA class_id INIT Class_Id_QHoverEvent
@@ -18,6 +17,7 @@ CLASS QHoverEvent INHERIT QEvent
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

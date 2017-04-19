@@ -40,11 +40,13 @@ CLASS QAccessibleTableInterface
    METHOD selectColumn
    METHOD unselectRow
    METHOD unselectColumn
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

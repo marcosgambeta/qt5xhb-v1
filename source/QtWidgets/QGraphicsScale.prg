@@ -30,11 +30,13 @@ CLASS QGraphicsScale INHERIT QGraphicsTransform
    METHOD yScale
    METHOD zScale
    METHOD applyTo
+
    METHOD onOriginChanged
    METHOD onScaleChanged
    METHOD onXScaleChanged
    METHOD onYScaleChanged
    METHOD onZScaleChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

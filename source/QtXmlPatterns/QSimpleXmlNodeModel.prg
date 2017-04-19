@@ -29,6 +29,7 @@ CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
    METHOD namespaceBindings
    METHOD nodesByIdref
    METHOD stringValue
+
    DESTRUCTOR destroyObject
 
 END CLASS

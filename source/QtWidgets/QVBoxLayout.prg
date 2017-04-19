@@ -17,6 +17,7 @@ CLASS QVBoxLayout INHERIT QBoxLayout
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

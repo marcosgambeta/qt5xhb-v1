@@ -58,6 +58,7 @@ CLASS QMovie INHERIT QObject
    METHOD setSpeed
    METHOD start
    METHOD stop
+
    METHOD onError
    METHOD onFinished
    METHOD onFrameChanged
@@ -65,6 +66,7 @@ CLASS QMovie INHERIT QObject
    METHOD onStarted
    METHOD onStateChanged
    METHOD onUpdated
+
    DESTRUCTOR destroyObject
 
 END CLASS

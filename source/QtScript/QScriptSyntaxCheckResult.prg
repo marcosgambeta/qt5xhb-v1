@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QScriptSyntaxCheckResult
 
    DATA pointer
@@ -23,11 +22,13 @@ CLASS QScriptSyntaxCheckResult
    METHOD errorLineNumber
    METHOD errorMessage
    METHOD state
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

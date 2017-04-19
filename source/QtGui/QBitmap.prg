@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QBitmap INHERIT QPixmap
 
    DATA class_id INIT Class_Id_QBitmap
@@ -28,6 +26,7 @@ CLASS QBitmap INHERIT QPixmap
    METHOD transformed
    METHOD fromData
    METHOD fromImage
+
    DESTRUCTOR destroyObject
 
 END CLASS

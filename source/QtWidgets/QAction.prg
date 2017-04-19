@@ -81,10 +81,12 @@ CLASS QAction INHERIT QObject
    METHOD setVisible
    METHOD toggle
    METHOD trigger
+
    METHOD onChanged
    METHOD onHovered
    METHOD onToggled
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS

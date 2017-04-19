@@ -22,11 +22,13 @@ CLASS QSqlDriverCreatorBase
 
    METHOD delete
    METHOD createObject
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

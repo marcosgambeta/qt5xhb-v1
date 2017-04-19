@@ -18,6 +18,7 @@ CLASS QCompassFilter INHERIT QSensorFilter
 
    METHOD delete
    METHOD filter
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -67,11 +67,13 @@ CLASS QListWidgetItem
    METHOD setBackgroundColor
    METHOD textColor
    METHOD setTextColor
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

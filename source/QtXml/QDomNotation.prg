@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDomNotation INHERIT QDomNode
 
    DATA class_id INIT Class_Id_QDomNotation
@@ -23,6 +22,7 @@ CLASS QDomNotation INHERIT QDomNode
    METHOD nodeType
    METHOD publicId
    METHOD systemId
+
    DESTRUCTOR destroyObject
 
 END CLASS

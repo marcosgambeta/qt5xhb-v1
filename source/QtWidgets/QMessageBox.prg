@@ -67,7 +67,9 @@ CLASS QMessageBox INHERIT QDialog
    METHOD standardIcon
    METHOD buttonText
    METHOD setButtonText
+
    METHOD onButtonClicked
+
    DESTRUCTOR destroyObject
 
 END CLASS

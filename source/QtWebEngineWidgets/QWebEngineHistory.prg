@@ -36,11 +36,13 @@ CLASS QWebEngineHistory
    METHOD itemAt
    METHOD currentItemIndex
    METHOD count
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

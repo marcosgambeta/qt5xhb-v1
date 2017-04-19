@@ -24,8 +24,10 @@ CLASS QKeySequenceEdit INHERIT QWidget
    METHOD keySequence
    METHOD setKeySequence
    METHOD clear
+
    METHOD onEditingFinished
    METHOD onKeySequenceChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

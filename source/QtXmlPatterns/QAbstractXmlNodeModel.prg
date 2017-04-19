@@ -36,6 +36,7 @@ CLASS QAbstractXmlNodeModel INHERIT QSharedData
    METHOD sourceLocation
    METHOD stringValue
    METHOD typedValue
+
    DESTRUCTOR destroyObject
 
 END CLASS

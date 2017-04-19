@@ -51,6 +51,7 @@ CLASS QTextFrameFormat INHERIT QTextFormat
    METHOD height
    METHOD setPageBreakPolicy
    METHOD pageBreakPolicy
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -42,11 +42,13 @@ CLASS QVideoEncoderSettings
    METHOD setResolution1
    METHOD setResolution2
    METHOD setResolution
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

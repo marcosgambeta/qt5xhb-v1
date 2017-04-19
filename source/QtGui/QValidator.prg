@@ -24,6 +24,7 @@ CLASS QValidator INHERIT QObject
    METHOD locale
    METHOD setLocale
    METHOD validate
+
    DESTRUCTOR destroyObject
 
 END CLASS

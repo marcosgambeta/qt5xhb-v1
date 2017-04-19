@@ -24,6 +24,7 @@ CLASS QAccessible INHERIT QObject
    METHOD isActive
    METHOD setRootObject
    METHOD cleanup
+
    DESTRUCTOR destroyObject
 
 END CLASS

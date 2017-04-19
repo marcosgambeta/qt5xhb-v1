@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraCaptureDestinationControl INHERIT QMediaObject
 
    DATA class_id INIT Class_Id_QCameraCaptureDestinationControl
@@ -20,7 +19,9 @@ CLASS QCameraCaptureDestinationControl INHERIT QMediaObject
    METHOD captureDestination
    METHOD isCaptureDestinationSupported
    METHOD setCaptureDestination
+
    METHOD onCaptureDestinationChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

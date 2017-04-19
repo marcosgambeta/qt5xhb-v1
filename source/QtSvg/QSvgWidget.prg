@@ -29,6 +29,7 @@ CLASS QSvgWidget INHERIT QWidget
    METHOD load1
    METHOD load2
    METHOD load
+
    DESTRUCTOR destroyObject
 
 END CLASS

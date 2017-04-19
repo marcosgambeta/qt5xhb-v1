@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
    DATA class_id INIT Class_Id_QXmlDefaultHandler
@@ -45,6 +44,7 @@ CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHand
    METHOD startPrefixMapping
    METHOD unparsedEntityDecl
    METHOD warning
+
    DESTRUCTOR destroyObject
 
 END CLASS

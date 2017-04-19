@@ -57,11 +57,13 @@ CLASS QVector3D
    METHOD normal1
    METHOD normal2
    METHOD normal
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -29,6 +29,7 @@ CLASS QAbstractAudioDeviceInfo INHERIT QObject
    METHOD supportedSampleSizes
    METHOD supportedByteOrders
    METHOD supportedSampleTypes
+
    DESTRUCTOR destroyObject
 
 END CLASS

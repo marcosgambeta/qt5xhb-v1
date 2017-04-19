@@ -22,6 +22,7 @@ CLASS QProximitySensor INHERIT QSensor
    METHOD new
    METHOD delete
    METHOD reading
+
    DESTRUCTOR destroyObject
 
 END CLASS

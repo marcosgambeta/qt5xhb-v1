@@ -42,9 +42,11 @@ CLASS QAbstractAudioInput INHERIT QObject
    METHOD format
    METHOD setVolume
    METHOD volume
+
    METHOD onErrorChanged
    METHOD onStateChanged
    METHOD onNotify
+
    DESTRUCTOR destroyObject
 
 END CLASS

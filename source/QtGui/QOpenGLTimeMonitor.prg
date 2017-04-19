@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QOpenGLTimeMonitor INHERIT QObject
 
    DATA class_id INIT Class_Id_QOpenGLTimeMonitor
@@ -29,6 +28,7 @@ CLASS QOpenGLTimeMonitor INHERIT QObject
    METHOD waitForSamples
    METHOD waitForIntervals
    METHOD reset
+
    DESTRUCTOR destroyObject
 
 END CLASS

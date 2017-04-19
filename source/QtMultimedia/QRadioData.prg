@@ -32,6 +32,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
    METHOD error
    METHOD errorString
    METHOD setAlternativeFrequenciesEnabled
+
    METHOD onStationIdChanged
    METHOD onProgramTypeChanged
    METHOD onProgramTypeNameChanged
@@ -39,6 +40,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
    METHOD onRadioTextChanged
    METHOD onAlternativeFrequenciesEnabledChanged
    METHOD onError
+
    DESTRUCTOR destroyObject
 
 END CLASS

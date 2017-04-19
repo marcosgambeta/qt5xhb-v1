@@ -59,6 +59,7 @@ CLASS QListWidget INHERIT QListView
    METHOD dropEvent
    METHOD clear
    METHOD scrollToItem
+
    METHOD onCurrentItemChanged
    METHOD onCurrentRowChanged
    METHOD onCurrentTextChanged
@@ -69,6 +70,7 @@ CLASS QListWidget INHERIT QListView
    METHOD onItemEntered
    METHOD onItemPressed
    METHOD onItemSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

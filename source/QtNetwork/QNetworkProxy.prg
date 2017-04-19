@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QNetworkProxy
 
    DATA pointer
@@ -39,11 +37,13 @@ CLASS QNetworkProxy
    METHOD user
    METHOD applicationProxy
    METHOD setApplicationProxy
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

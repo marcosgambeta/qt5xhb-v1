@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QTextDocumentFragment
 
    DATA pointer
@@ -30,11 +28,13 @@ CLASS QTextDocumentFragment
    METHOD fromPlainText
    METHOD fromHtml1
    METHOD fromHtml2
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

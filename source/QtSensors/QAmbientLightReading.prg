@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAmbientLightReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QAmbientLightReading
@@ -19,6 +18,7 @@ CLASS QAmbientLightReading INHERIT QSensorReading
    METHOD delete
    METHOD lightLevel
    METHOD setLightLevel
+
    DESTRUCTOR destroyObject
 
 END CLASS

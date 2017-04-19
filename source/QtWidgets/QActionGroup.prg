@@ -31,8 +31,10 @@ CLASS QActionGroup INHERIT QObject
    METHOD setEnabled
    METHOD setExclusive
    METHOD setVisible
+
    METHOD onHovered
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS

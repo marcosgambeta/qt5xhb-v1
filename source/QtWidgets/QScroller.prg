@@ -51,8 +51,10 @@ CLASS QScroller INHERIT QObject
    METHOD scroller2
    METHOD scroller
    METHOD ungrabGesture
+
    METHOD onScrollerPropertiesChanged
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

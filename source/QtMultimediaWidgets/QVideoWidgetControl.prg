@@ -33,11 +33,13 @@ CLASS QVideoWidgetControl INHERIT QMediaControl
    METHOD setHue
    METHOD saturation
    METHOD setSaturation
+
    METHOD onFullScreenChanged
    METHOD onBrightnessChanged
    METHOD onContrastChanged
    METHOD onHueChanged
    METHOD onSaturationChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

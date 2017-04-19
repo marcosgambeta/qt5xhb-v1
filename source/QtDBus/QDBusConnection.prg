@@ -67,11 +67,13 @@ CLASS QDBusConnection
    METHOD sessionBus
    METHOD systemBus
    METHOD sender
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

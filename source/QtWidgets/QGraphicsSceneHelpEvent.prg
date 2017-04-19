@@ -23,6 +23,7 @@ CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
    METHOD delete
    METHOD scenePos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS

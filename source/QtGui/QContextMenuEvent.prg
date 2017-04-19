@@ -31,6 +31,7 @@ CLASS QContextMenuEvent INHERIT QInputEvent
    METHOD reason
    METHOD x
    METHOD y
+
    DESTRUCTOR destroyObject
 
 END CLASS

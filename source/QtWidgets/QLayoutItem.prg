@@ -42,11 +42,13 @@ CLASS QLayoutItem
    METHOD sizeHint
    METHOD spacerItem
    METHOD widget
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

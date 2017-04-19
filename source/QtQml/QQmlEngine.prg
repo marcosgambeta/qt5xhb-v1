@@ -55,7 +55,9 @@ CLASS QQmlEngine INHERIT QJSEngine
    METHOD objectOwnership
    METHOD setContextForObject
    METHOD setObjectOwnership
+
    METHOD onQuit
+
    DESTRUCTOR destroyObject
 
 END CLASS

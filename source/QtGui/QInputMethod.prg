@@ -36,12 +36,14 @@ CLASS QInputMethod INHERIT QObject
    METHOD reset
    METHOD show
    METHOD update
+
    METHOD onAnimatingChanged
    METHOD onCursorRectangleChanged
    METHOD onInputDirectionChanged
    METHOD onKeyboardRectangleChanged
    METHOD onLocaleChanged
    METHOD onVisibleChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

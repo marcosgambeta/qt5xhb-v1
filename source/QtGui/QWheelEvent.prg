@@ -38,6 +38,7 @@ CLASS QWheelEvent INHERIT QInputEvent
    METHOD posF
    METHOD globalPosF
    METHOD buttons
+
    DESTRUCTOR destroyObject
 
 END CLASS

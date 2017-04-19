@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAccessibleActionInterface
 
    DATA pointer
@@ -29,11 +28,13 @@ CLASS QAccessibleActionInterface
    METHOD showMenuAction
    METHOD setFocusAction
    METHOD toggleAction
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

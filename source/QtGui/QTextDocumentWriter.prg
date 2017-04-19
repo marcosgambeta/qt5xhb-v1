@@ -38,11 +38,13 @@ CLASS QTextDocumentWriter
    METHOD write
    METHOD setCodec
    METHOD codec
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

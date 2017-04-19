@@ -26,6 +26,7 @@ CLASS QWebInspector INHERIT QWidget
    METHOD setPage
    METHOD event
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -85,11 +85,13 @@ CLASS QTransform
    METHOD quadToQuad
    METHOD fromTranslate
    METHOD fromScale
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

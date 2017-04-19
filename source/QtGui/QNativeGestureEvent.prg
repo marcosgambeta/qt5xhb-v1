@@ -28,6 +28,7 @@ CLASS QNativeGestureEvent INHERIT QInputEvent
    METHOD localPos
    METHOD windowPos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS

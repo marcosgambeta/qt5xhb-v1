@@ -24,7 +24,9 @@ CLASS QAccelerometer INHERIT QSensor
    METHOD accelerationMode
    METHOD setAccelerationMode
    METHOD reading
+
    METHOD onAccelerationModeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

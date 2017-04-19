@@ -23,8 +23,6 @@ CLASS QColorDialog INHERIT QDialog
    METHOD delete
    METHOD currentColor
    METHOD setCurrentColor
-   METHOD open1
-   METHOD open2
    METHOD open
    METHOD options
    METHOD setOptions
@@ -38,8 +36,10 @@ CLASS QColorDialog INHERIT QDialog
    METHOD getColor
    METHOD standardColor
    METHOD setStandardColor
+
    METHOD onColorSelected
    METHOD onCurrentColorChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 /*
 void open ()
 */
-HB_FUNC_STATIC( QCOLORDIALOG_OPEN1 )
+void QColorDialog_open1 ()
 {
 #ifdef Q_NO_USING_KEYWORD
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN1 )
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QCOLORDIALOG_OPEN2 )
+void QColorDialog_open2 ()
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -200,11 +200,11 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_OPEN1 ); // TODO: verificar existencia do metodo no Qt 5
+    QColorDialog_open1(); // TODO: verificar existencia do metodo no Qt 5
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_OPEN2 );
+    QColorDialog_open2();
   }
   else
   {

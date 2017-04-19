@@ -21,11 +21,13 @@ CLASS QSensorBackendFactory
    DATA self_destruction INIT .F.
 
    METHOD createBackend
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

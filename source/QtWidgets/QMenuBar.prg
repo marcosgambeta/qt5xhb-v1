@@ -55,8 +55,10 @@ CLASS QMenuBar INHERIT QWidget
    METHOD defaultAction
    METHOD wceCommands
    METHOD wceRefresh
+
    METHOD onHovered
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS

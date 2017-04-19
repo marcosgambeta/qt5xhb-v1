@@ -17,6 +17,7 @@ CLASS QDateEdit INHERIT QDateTimeEdit
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

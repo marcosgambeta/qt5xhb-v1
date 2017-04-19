@@ -26,6 +26,7 @@ CLASS QQuickTextureFactory INHERIT QObject
    METHOD image
    METHOD textureByteCount
    METHOD textureSize
+
    DESTRUCTOR destroyObject
 
 END CLASS

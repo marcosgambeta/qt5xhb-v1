@@ -30,6 +30,7 @@ CLASS QScrollPrepareEvent INHERIT QEvent
    METHOD setViewportSize
    METHOD setContentPosRange
    METHOD setContentPos
+
    DESTRUCTOR destroyObject
 
 END CLASS

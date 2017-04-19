@@ -26,6 +26,7 @@ CLASS QTextObject INHERIT QObject
    METHOD document
    METHOD objectIndex
    METHOD docHandle
+
    DESTRUCTOR destroyObject
 
 END CLASS

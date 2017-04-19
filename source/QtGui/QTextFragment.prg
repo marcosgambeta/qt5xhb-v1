@@ -34,11 +34,13 @@ CLASS QTextFragment
    METHOD charFormatIndex
    METHOD text
    METHOD glyphRuns
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

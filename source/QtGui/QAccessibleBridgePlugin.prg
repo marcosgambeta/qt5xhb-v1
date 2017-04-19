@@ -21,6 +21,7 @@ CLASS QAccessibleBridgePlugin INHERIT QObject
 
    METHOD delete
    METHOD create
+
    DESTRUCTOR destroyObject
 
 END CLASS

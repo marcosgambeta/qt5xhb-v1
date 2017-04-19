@@ -59,11 +59,13 @@ CLASS QSqlQuery
    METHOD seek
    METHOD size
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

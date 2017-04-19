@@ -69,12 +69,14 @@ CLASS QInputDialog INHERIT QDialog
    METHOD getItem
    METHOD getText
    METHOD getMultiLineText
+
    METHOD onDoubleValueChanged
    METHOD onDoubleValueSelected
    METHOD onIntValueChanged
    METHOD onIntValueSelected
    METHOD onTextValueChanged
    METHOD onTextValueSelected
+
    DESTRUCTOR destroyObject
 
 END CLASS

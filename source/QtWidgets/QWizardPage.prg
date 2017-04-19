@@ -38,7 +38,9 @@ CLASS QWizardPage INHERIT QWidget
    METHOD title
    METHOD setTitle
    METHOD validatePage
+
    METHOD onCompleteChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

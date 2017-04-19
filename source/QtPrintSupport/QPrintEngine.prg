@@ -27,11 +27,13 @@ CLASS QPrintEngine
    METHOD printerState
    METHOD property
    METHOD setProperty
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

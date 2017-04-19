@@ -23,6 +23,7 @@ CLASS QActionEvent INHERIT QEvent
    METHOD delete
    METHOD action
    METHOD before
+
    DESTRUCTOR destroyObject
 
 END CLASS

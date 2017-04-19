@@ -21,24 +21,18 @@ CLASS QDesktopWidget INHERIT QWidget
    DATA self_destruction INIT .F.
 
    METHOD delete
-   METHOD availableGeometry1
-   METHOD availableGeometry2
-   METHOD availableGeometry3
    METHOD availableGeometry
    METHOD isVirtualDesktop
    METHOD primaryScreen
    METHOD screen
    METHOD screenCount
-   METHOD screenGeometry1
-   METHOD screenGeometry2
-   METHOD screenGeometry3
    METHOD screenGeometry
-   METHOD screenNumber1
-   METHOD screenNumber2
    METHOD screenNumber
+
    METHOD onResized
    METHOD onScreenCountChanged
    METHOD onWorkAreaResized
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -68,6 +62,7 @@ RETURN
 HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -77,35 +72,31 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 const QRect availableGeometry ( int screen = -1 ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
+void QDesktopWidget_availableGeometry1 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
-    {
-      QRect * ptr = new QRect( obj->availableGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
+    QRect * ptr = new QRect( obj->availableGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
 /*
 const QRect availableGeometry ( const QWidget * widget ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 )
+void QDesktopWidget_availableGeometry2 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
@@ -117,9 +108,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 )
 /*
 const QRect availableGeometry ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 )
+void QDesktopWidget_availableGeometry3 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
@@ -127,7 +119,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 )
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 //[1]const QRect availableGeometry ( int screen = -1 ) const
 //[2]const QRect availableGeometry ( const QWidget * widget ) const
@@ -137,15 +128,15 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 );
+    QDesktopWidget_availableGeometry1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 );
+    QDesktopWidget_availableGeometry2();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 );
+    QDesktopWidget_availableGeometry3();
   }
   else
   {
@@ -159,12 +150,12 @@ bool isVirtualDesktop () const
 HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isVirtualDesktop (  ) );
   }
 }
-
 
 /*
 int primaryScreen () const
@@ -172,12 +163,12 @@ int primaryScreen () const
 HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->primaryScreen (  ) );
   }
 }
-
 
 /*
 QWidget * screen ( int screen = -1 )
@@ -185,6 +176,7 @@ QWidget * screen ( int screen = -1 )
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     if( (ISNUM(1)||ISNIL(1)) )
@@ -199,46 +191,40 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   }
 }
 
-
 /*
 int screenCount () const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->screenCount (  ) );
   }
 }
 
-
 /*
 const QRect screenGeometry ( int screen = -1 ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
+void QDesktopWidget_screenGeometry1 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
-    {
-      QRect * ptr = new QRect( obj->screenGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
+    QRect * ptr = new QRect( obj->screenGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
 /*
 const QRect screenGeometry ( const QWidget * widget ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY2 )
+void QDesktopWidget_screenGeometry2 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
@@ -250,9 +236,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY2 )
 /*
 const QRect screenGeometry ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY3 )
+void QDesktopWidget_screenGeometry3 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
@@ -260,7 +247,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY3 )
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 //[1]const QRect screenGeometry ( int screen = -1 ) const
 //[2]const QRect screenGeometry ( const QWidget * widget ) const
@@ -270,15 +256,15 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_SCREENGEOMETRY1 );
+    QDesktopWidget_screenGeometry1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_SCREENGEOMETRY2 );
+    QDesktopWidget_screenGeometry2();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_SCREENGEOMETRY3 );
+    QDesktopWidget_screenGeometry3();
   }
   else
   {
@@ -289,9 +275,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 /*
 int screenNumber ( const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER1 )
+void QDesktopWidget_screenNumber1 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const QWidget * par1 = ISNIL(1)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(1);
@@ -302,16 +289,16 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER1 )
 /*
 int screenNumber ( const QPoint & point ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER2 )
+void QDesktopWidget_screenNumber2 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
     hb_retni( obj->screenNumber ( *par1 ) );
   }
 }
-
 
 //[1]int screenNumber ( const QWidget * widget = 0 ) const
 //[2]int screenNumber ( const QPoint & point ) const
@@ -320,11 +307,11 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_SCREENNUMBER1 );
+    QDesktopWidget_screenNumber1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QDESKTOPWIDGET_SCREENNUMBER2 );
+    QDesktopWidget_screenNumber2();
   }
   else
   {
@@ -332,7 +319,4 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
   }
 }
 
-
-
 #pragma ENDDUMP
-

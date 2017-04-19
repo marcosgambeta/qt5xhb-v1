@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTcpSocket INHERIT QAbstractSocket
 
    DATA class_id INIT Class_Id_QTcpSocket
@@ -18,6 +17,7 @@ CLASS QTcpSocket INHERIT QAbstractSocket
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

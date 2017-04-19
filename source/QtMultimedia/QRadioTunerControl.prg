@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QRadioTunerControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QRadioTunerControl
@@ -42,6 +41,7 @@ CLASS QRadioTunerControl INHERIT QMediaControl
    METHOD stop
    METHOD error
    METHOD errorString
+
    METHOD onStateChanged
    METHOD onBandChanged
    METHOD onFrequencyChanged
@@ -53,6 +53,7 @@ CLASS QRadioTunerControl INHERIT QMediaControl
    METHOD onError
    METHOD onStationFound
    METHOD onAntennaConnectedChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -40,6 +40,7 @@ CLASS QTabletEvent INHERIT QInputEvent
    METHOD y
    METHOD yTilt
    METHOD z
+
    DESTRUCTOR destroyObject
 
 END CLASS

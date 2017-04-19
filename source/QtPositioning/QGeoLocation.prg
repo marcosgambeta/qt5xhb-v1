@@ -33,11 +33,13 @@ CLASS QGeoLocation
    METHOD boundingBox
    METHOD setBoundingBox
    METHOD isEmpty
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

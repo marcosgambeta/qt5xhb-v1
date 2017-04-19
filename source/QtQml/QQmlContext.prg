@@ -39,6 +39,7 @@ CLASS QQmlContext INHERIT QObject
    METHOD setContextProperty1
    METHOD setContextProperty2
    METHOD setContextProperty
+
    DESTRUCTOR destroyObject
 
 END CLASS

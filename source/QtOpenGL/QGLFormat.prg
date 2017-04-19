@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QGLFormat
 
    DATA pointer
@@ -77,11 +75,13 @@ CLASS QGLFormat
    METHOD openGLVersionFlags
    METHOD setDefaultFormat
    METHOD setDefaultOverlayFormat
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

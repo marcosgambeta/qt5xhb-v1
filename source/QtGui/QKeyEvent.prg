@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QKeyEvent INHERIT QInputEvent
 
    DATA class_id INIT Class_Id_QKeyEvent
@@ -27,6 +26,7 @@ CLASS QKeyEvent INHERIT QInputEvent
    METHOD nativeScanCode
    METHOD nativeVirtualKey
    METHOD text
+
    DESTRUCTOR destroyObject
 
 END CLASS

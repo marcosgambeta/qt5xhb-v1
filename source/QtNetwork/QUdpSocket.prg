@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QUdpSocket INHERIT QAbstractSocket
 
    DATA class_id INIT Class_Id_QUdpSocket
@@ -29,6 +28,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
    METHOD writeDatagram1
    METHOD writeDatagram2
    METHOD writeDatagram
+
    DESTRUCTOR destroyObject
 
 END CLASS

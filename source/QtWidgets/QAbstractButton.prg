@@ -49,10 +49,12 @@ CLASS QAbstractButton INHERIT QWidget
    METHOD animateClick
    METHOD click
    METHOD toggle
+
    METHOD onClicked
    METHOD onPressed
    METHOD onReleased
    METHOD onToggled
+
    DESTRUCTOR destroyObject
 
 END CLASS

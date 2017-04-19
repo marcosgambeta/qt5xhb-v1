@@ -29,7 +29,9 @@ CLASS QFontComboBox INHERIT QComboBox
    METHOD writingSystem
    METHOD sizeHint
    METHOD setCurrentFont
+
    METHOD onCurrentFontChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

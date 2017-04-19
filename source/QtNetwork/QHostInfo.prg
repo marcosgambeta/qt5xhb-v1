@@ -39,11 +39,13 @@ CLASS QHostInfo
    METHOD localDomainName
    METHOD localHostName
    METHOD lookupHost
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

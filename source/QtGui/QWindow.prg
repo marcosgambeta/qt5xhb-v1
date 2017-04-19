@@ -97,6 +97,7 @@ CLASS QWindow INHERIT QObject,QSurface
    METHOD showMaximized
    METHOD showMinimized
    METHOD showNormal
+
    METHOD onContentOrientationChanged
    METHOD onFocusObjectChanged
    METHOD onHeightChanged
@@ -106,6 +107,7 @@ CLASS QWindow INHERIT QObject,QSurface
    METHOD onWindowModalityChanged
    METHOD onXChanged
    METHOD onYChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

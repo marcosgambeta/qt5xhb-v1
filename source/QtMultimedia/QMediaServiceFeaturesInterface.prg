@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMediaServiceFeaturesInterface
 
    DATA pointer
@@ -19,11 +18,13 @@ CLASS QMediaServiceFeaturesInterface
 
    METHOD delete
    METHOD supportedFeatures
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

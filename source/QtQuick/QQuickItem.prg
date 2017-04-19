@@ -110,6 +110,7 @@ CLASS QQuickItem INHERIT QObject,QQmlParserStatus
    METHOD y
    METHOD z
    METHOD update
+
    DESTRUCTOR destroyObject
 
 END CLASS

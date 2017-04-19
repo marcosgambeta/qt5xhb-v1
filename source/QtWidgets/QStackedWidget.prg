@@ -31,8 +31,10 @@ CLASS QStackedWidget INHERIT QFrame
    METHOD widget
    METHOD setCurrentIndex
    METHOD setCurrentWidget
+
    METHOD onCurrentChanged
    METHOD onWidgetRemoved
+
    DESTRUCTOR destroyObject
 
 END CLASS

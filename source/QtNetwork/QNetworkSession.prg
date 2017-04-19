@@ -42,12 +42,14 @@ CLASS QNetworkSession INHERIT QObject
    METHOD open
    METHOD reject
    METHOD stop
+
    METHOD onClosed
    METHOD onError
    METHOD onNewConfigurationActivated
    METHOD onOpened
    METHOD onPreferredConfigurationChanged
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

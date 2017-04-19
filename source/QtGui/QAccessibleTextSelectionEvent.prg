@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAccessibleTextSelectionEvent INHERIT QAccessibleTextCursorEvent
 
    DATA class_id INIT Class_Id_QAccessibleTextSelectionEvent
@@ -21,6 +20,7 @@ CLASS QAccessibleTextSelectionEvent INHERIT QAccessibleTextCursorEvent
    METHOD setSelection
    METHOD selectionStart
    METHOD selectionEnd
+
    DESTRUCTOR destroyObject
 
 END CLASS

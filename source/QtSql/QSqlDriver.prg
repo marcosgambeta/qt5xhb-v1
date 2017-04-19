@@ -49,8 +49,10 @@ CLASS QSqlDriver INHERIT QObject
    METHOD tables
    METHOD unsubscribeFromNotification
    METHOD cancelQuery
+
    METHOD onNotification1
    METHOD onNotification2
+
    DESTRUCTOR destroyObject
 
 END CLASS

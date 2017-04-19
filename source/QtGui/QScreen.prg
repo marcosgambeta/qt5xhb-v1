@@ -56,6 +56,7 @@ CLASS QScreen INHERIT QObject
    METHOD isLandscape
    METHOD grabWindow
    METHOD refreshRate
+
    METHOD onGeometryChanged
    METHOD onPhysicalSizeChanged
    METHOD onPhysicalDotsPerInchChanged
@@ -64,6 +65,7 @@ CLASS QScreen INHERIT QObject
    METHOD onPrimaryOrientationChanged
    METHOD onOrientationChanged
    METHOD onRefreshRateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

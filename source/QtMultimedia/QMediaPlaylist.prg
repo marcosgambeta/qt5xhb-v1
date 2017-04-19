@@ -56,6 +56,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
    METHOD previous
    METHOD setCurrentIndex
    METHOD shuffle
+
    METHOD onCurrentIndexChanged
    METHOD onCurrentMediaChanged
    METHOD onLoadFailed
@@ -66,6 +67,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
    METHOD onMediaInserted
    METHOD onMediaRemoved
    METHOD onPlaybackModeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -29,6 +29,7 @@ CLASS QGesture INHERIT QObject
    METHOD setHotSpot
    METHOD state
    METHOD unsetHotSpot
+
    DESTRUCTOR destroyObject
 
 END CLASS

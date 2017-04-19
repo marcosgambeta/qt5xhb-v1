@@ -53,6 +53,7 @@ CLASS QWebEnginePage INHERIT QObject
    METHOD runJavaScript2
    METHOD runJavaScript
    METHOD settings
+
    METHOD onLoadStarted
    METHOD onLoadProgress
    METHOD onLoadFinished
@@ -67,6 +68,7 @@ CLASS QWebEnginePage INHERIT QObject
    METHOD onTitleChanged
    METHOD onUrlChanged
    METHOD onIconUrlChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

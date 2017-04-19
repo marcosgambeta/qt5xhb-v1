@@ -40,9 +40,11 @@ CLASS QDialog INHERIT QWidget
    METHOD extension
    METHOD setExtension
    METHOD showExtension
+
    METHOD onAccepted
    METHOD onFinished
    METHOD onRejected
+
    DESTRUCTOR destroyObject
 
 END CLASS

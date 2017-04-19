@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QOpenGLShaderProgram INHERIT QObject
 
    DATA class_id INIT Class_Id_QOpenGLShaderProgram
@@ -37,6 +36,7 @@ CLASS QOpenGLShaderProgram INHERIT QObject
    METHOD setPatchVertexCount
    METHOD patchVertexCount
    METHOD hasOpenGLShaderPrograms
+
    DESTRUCTOR destroyObject
 
 END CLASS

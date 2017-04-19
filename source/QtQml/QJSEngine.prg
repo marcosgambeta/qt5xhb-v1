@@ -29,6 +29,7 @@ CLASS QJSEngine INHERIT QObject
    METHOD newArray
    METHOD newObject
    METHOD newQObject
+
    DESTRUCTOR destroyObject
 
 END CLASS

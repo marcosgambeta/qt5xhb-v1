@@ -29,11 +29,13 @@ CLASS QAccessibleTableCellInterface
    METHOD rowIndex
    METHOD isSelected
    METHOD table
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

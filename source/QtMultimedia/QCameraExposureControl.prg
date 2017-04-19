@@ -25,9 +25,11 @@ CLASS QCameraExposureControl INHERIT QMediaControl
    METHOD requestedValue
    METHOD setValue
    METHOD supportedParameterRange
+
    METHOD onActualValueChanged
    METHOD onParameterRangeChanged
    METHOD onRequestedValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -95,11 +95,13 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD supportedCiphers
    METHOD supportsSsl
    METHOD systemCaCertificates
+
    METHOD onEncrypted
    METHOD onEncryptedBytesWritten
    METHOD onModeChanged
    METHOD onPeerVerifyError
    METHOD onSslErrors
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTiltReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QTiltReading
@@ -21,6 +20,7 @@ CLASS QTiltReading INHERIT QSensorReading
    METHOD setYRotation
    METHOD xRotation
    METHOD setXRotation
+
    DESTRUCTOR destroyObject
 
 END CLASS

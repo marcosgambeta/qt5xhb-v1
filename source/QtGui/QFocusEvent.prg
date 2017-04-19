@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QFocusEvent INHERIT QEvent
 
    DATA class_id INIT Class_Id_QFocusEvent
@@ -21,6 +20,7 @@ CLASS QFocusEvent INHERIT QEvent
    METHOD gotFocus
    METHOD lostFocus
    METHOD reason
+
    DESTRUCTOR destroyObject
 
 END CLASS

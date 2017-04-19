@@ -25,8 +25,6 @@ CLASS QDataWidgetMapper INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD addMapping1
-   METHOD addMapping2
    METHOD addMapping
    METHOD clearMapping
    METHOD currentIndex
@@ -52,7 +50,9 @@ CLASS QDataWidgetMapper INHERIT QObject
    METHOD toLast
    METHOD toNext
    METHOD toPrevious
+
    METHOD onCurrentIndexChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 /*
 void addMapping ( QWidget * widget, int section )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING1 )
+void QDataWidgetMapper_addMapping1 ()
 {
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING1 )
 /*
 void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING2 )
+void QDataWidgetMapper_addMapping2 ()
 {
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -144,11 +144,11 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATAWIDGETMAPPER_ADDMAPPING1 );
+    QDataWidgetMapper_addMapping1();
   }
   else if( ISNUMPAR(3) && ISQWIDGET(1) && ISNUM(2) && ISQBYTEARRAY(3) )
   {
-    HB_FUNC_EXEC( QDATAWIDGETMAPPER_ADDMAPPING2 );
+    QDataWidgetMapper_addMapping2();
   }
   else
   {

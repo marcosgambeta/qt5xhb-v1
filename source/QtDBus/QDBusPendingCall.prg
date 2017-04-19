@@ -32,11 +32,13 @@ CLASS QDBusPendingCall
    METHOD reply
    METHOD fromError
    METHOD fromCompletedCall
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

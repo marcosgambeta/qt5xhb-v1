@@ -23,6 +23,7 @@ CLASS QResizeEvent INHERIT QEvent
    METHOD delete
    METHOD size
    METHOD oldSize
+
    DESTRUCTOR destroyObject
 
 END CLASS

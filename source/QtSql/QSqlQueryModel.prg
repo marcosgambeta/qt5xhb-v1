@@ -38,6 +38,7 @@ CLASS QSqlQueryModel INHERIT QAbstractTableModel
    METHOD insertColumns
    METHOD removeColumns
    METHOD rowCount
+
    DESTRUCTOR destroyObject
 
 END CLASS

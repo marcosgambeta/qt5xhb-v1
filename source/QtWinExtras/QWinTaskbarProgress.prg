@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QWinTaskbarProgress INHERIT QObject
 
    DATA class_id INIT Class_Id_QWinTaskbarProgress
@@ -36,12 +35,14 @@ CLASS QWinTaskbarProgress INHERIT QObject
    METHOD pause
    METHOD resume
    METHOD stop
+
    METHOD onValueChanged
    METHOD onMinimumChanged
    METHOD onMaximumChanged
    METHOD onVisibilityChanged
    METHOD onPausedChanged
    METHOD onStoppedChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

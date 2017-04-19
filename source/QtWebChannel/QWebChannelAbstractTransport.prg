@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QWebChannelAbstractTransport INHERIT QObject
 
    DATA class_id INIT Class_Id_QWebChannelAbstractTransport
@@ -19,7 +18,9 @@ CLASS QWebChannelAbstractTransport INHERIT QObject
    METHOD new
    METHOD delete
    METHOD sendMessage
+
    METHOD onMessageReceived
+
    DESTRUCTOR destroyObject
 
 END CLASS

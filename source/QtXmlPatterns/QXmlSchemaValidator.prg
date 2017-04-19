@@ -41,11 +41,13 @@ CLASS QXmlSchemaValidator
    METHOD validate2
    METHOD validate3
    METHOD validate
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

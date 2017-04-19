@@ -27,6 +27,7 @@ CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
    METHOD createInput
    METHOD createOutput
    METHOD createDeviceInfo
+
    DESTRUCTOR destroyObject
 
 END CLASS

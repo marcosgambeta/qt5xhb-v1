@@ -21,6 +21,7 @@ CLASS QGraphicsSceneEvent INHERIT QEvent
 
    METHOD delete
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS

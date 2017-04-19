@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QProximityReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QProximityReading
@@ -19,6 +18,7 @@ CLASS QProximityReading INHERIT QSensorReading
    METHOD delete
    METHOD close
    METHOD setClose
+
    DESTRUCTOR destroyObject
 
 END CLASS

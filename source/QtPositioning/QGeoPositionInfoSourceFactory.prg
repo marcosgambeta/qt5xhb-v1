@@ -25,11 +25,13 @@ CLASS QGeoPositionInfoSourceFactory
    METHOD positionInfoSource
    METHOD satelliteInfoSource
    METHOD areaMonitor
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

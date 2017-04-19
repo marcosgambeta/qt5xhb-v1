@@ -45,7 +45,9 @@ CLASS QProgressDialog INHERIT QDialog
    METHOD reset
    METHOD setCancelButtonText
    METHOD setRange
+
    METHOD onCanceled
+
    DESTRUCTOR destroyObject
 
 END CLASS

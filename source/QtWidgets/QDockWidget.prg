@@ -34,11 +34,13 @@ CLASS QDockWidget INHERIT QWidget
    METHOD titleBarWidget
    METHOD toggleViewAction
    METHOD widget
+
    METHOD onAllowedAreasChanged
    METHOD onDockLocationChanged
    METHOD onFeaturesChanged
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

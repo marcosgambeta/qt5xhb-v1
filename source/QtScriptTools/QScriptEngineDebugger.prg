@@ -35,8 +35,10 @@ CLASS QScriptEngineDebugger INHERIT QObject
    METHOD standardWindow
    METHOD state
    METHOD widget
+
    METHOD onEvaluationResumed
    METHOD onEvaluationSuspended
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -26,11 +26,13 @@ CLASS QGestureRecognizer
    METHOD reset
    METHOD registerRecognizer
    METHOD unregisterRecognizer
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

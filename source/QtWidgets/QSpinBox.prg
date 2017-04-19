@@ -33,8 +33,10 @@ CLASS QSpinBox INHERIT QAbstractSpinBox
    METHOD setValue
    METHOD displayIntegerBase
    METHOD setDisplayIntegerBase
+
    METHOD onValueChanged1
    METHOD onValueChanged2
+
    DESTRUCTOR destroyObject
 
 END CLASS

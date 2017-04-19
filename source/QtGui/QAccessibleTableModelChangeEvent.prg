@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
 
    DATA class_id INIT Class_Id_QAccessibleTableModelChangeEvent
@@ -28,6 +27,7 @@ CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
    METHOD firstColumn
    METHOD lastRow
    METHOD lastColumn
+
    DESTRUCTOR destroyObject
 
 END CLASS

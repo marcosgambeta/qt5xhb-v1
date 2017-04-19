@@ -22,6 +22,7 @@ CLASS QVideoRendererControl INHERIT QMediaControl
    METHOD delete
    METHOD setSurface
    METHOD surface
+
    DESTRUCTOR destroyObject
 
 END CLASS

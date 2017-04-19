@@ -58,6 +58,7 @@ CLASS QDomDocument INHERIT QDomNode
    METHOD setContent
    METHOD toByteArray
    METHOD toString
+
    DESTRUCTOR destroyObject
 
 END CLASS

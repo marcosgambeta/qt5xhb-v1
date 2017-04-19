@@ -30,6 +30,7 @@ CLASS QConicalGradient INHERIT QGradient
    METHOD setCenter1
    METHOD setCenter2
    METHOD setCenter
+
    DESTRUCTOR destroyObject
 
 END CLASS

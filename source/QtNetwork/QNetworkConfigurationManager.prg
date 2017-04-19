@@ -27,11 +27,13 @@ CLASS QNetworkConfigurationManager INHERIT QObject
    METHOD defaultConfiguration
    METHOD isOnline
    METHOD updateConfigurations
+
    METHOD onConfigurationAdded
    METHOD onConfigurationChanged
    METHOD onConfigurationRemoved
    METHOD onOnlineStateChanged
    METHOD onUpdateCompleted
+
    DESTRUCTOR destroyObject
 
 END CLASS

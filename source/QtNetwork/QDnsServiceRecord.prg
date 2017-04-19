@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDnsServiceRecord
 
    DATA pointer
@@ -28,11 +27,13 @@ CLASS QDnsServiceRecord
    METHOD target
    METHOD timeToLive
    METHOD weight
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

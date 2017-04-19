@@ -56,9 +56,11 @@ CLASS QStyle INHERIT QObject
    METHOD visualAlignment
    METHOD visualPos
    METHOD visualRect
+
    METHOD onCurrentChanged
    METHOD onTabCloseRequested
    METHOD onTabMoved
+
    DESTRUCTOR destroyObject
 
 END CLASS

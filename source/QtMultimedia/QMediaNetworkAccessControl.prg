@@ -22,7 +22,9 @@ CLASS QMediaNetworkAccessControl INHERIT QMediaControl
    METHOD delete
    METHOD currentConfiguration
    METHOD setConfigurations
+
    METHOD onConfigurationChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

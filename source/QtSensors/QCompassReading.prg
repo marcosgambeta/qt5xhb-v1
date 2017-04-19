@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCompassReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QCompassReading
@@ -21,6 +20,7 @@ CLASS QCompassReading INHERIT QSensorReading
    METHOD setAzimuth
    METHOD calibrationLevel
    METHOD setCalibrationLevel
+
    DESTRUCTOR destroyObject
 
 END CLASS

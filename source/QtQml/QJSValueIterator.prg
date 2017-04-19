@@ -26,11 +26,13 @@ CLASS QJSValueIterator
    METHOD name
    METHOD next
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

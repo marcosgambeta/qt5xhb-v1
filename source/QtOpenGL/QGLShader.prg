@@ -34,6 +34,7 @@ CLASS QGLShader INHERIT QObject
    METHOD shaderType
    METHOD sourceCode
    METHOD hasOpenGLShaders
+
    DESTRUCTOR destroyObject
 
 END CLASS

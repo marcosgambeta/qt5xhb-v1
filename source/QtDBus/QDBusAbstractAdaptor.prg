@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDBusAbstractAdaptor INHERIT QObject
 
    DATA class_id INIT Class_Id_QDBusAbstractAdaptor
@@ -18,6 +17,7 @@ CLASS QDBusAbstractAdaptor INHERIT QObject
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS

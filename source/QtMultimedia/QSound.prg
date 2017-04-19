@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSound INHERIT QObject
 
    DATA class_id INIT Class_Id_QSound
@@ -27,6 +26,7 @@ CLASS QSound INHERIT QObject
    METHOD play1
    METHOD play2
    METHOD play
+
    DESTRUCTOR destroyObject
 
 END CLASS

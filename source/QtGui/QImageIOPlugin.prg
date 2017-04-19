@@ -22,6 +22,7 @@ CLASS QImageIOPlugin INHERIT QObject
    METHOD delete
    METHOD capabilities
    METHOD create
+
    DESTRUCTOR destroyObject
 
 END CLASS

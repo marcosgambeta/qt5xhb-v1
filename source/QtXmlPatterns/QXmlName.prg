@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QXmlName
 
    DATA pointer
@@ -29,11 +27,13 @@ CLASS QXmlName
    METHOD toClarkName
    METHOD fromClarkName
    METHOD isNCName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

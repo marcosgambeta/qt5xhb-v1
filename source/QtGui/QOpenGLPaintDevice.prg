@@ -39,6 +39,7 @@ CLASS QOpenGLPaintDevice INHERIT QPaintDevice
    METHOD setPaintFlipped
    METHOD paintFlipped
    METHOD ensureActiveTarget
+
    DESTRUCTOR destroyObject
 
 END CLASS

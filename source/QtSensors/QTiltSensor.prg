@@ -23,6 +23,7 @@ CLASS QTiltSensor INHERIT QSensor
    METHOD delete
    METHOD reading
    METHOD calibrate
+
    DESTRUCTOR destroyObject
 
 END CLASS

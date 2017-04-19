@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSessionManager INHERIT QObject
 
    DATA class_id INIT Class_Id_QSessionManager
@@ -32,6 +31,7 @@ CLASS QSessionManager INHERIT QObject
    METHOD setManagerProperty2
    METHOD isPhase2
    METHOD requestPhase2
+
    DESTRUCTOR destroyObject
 
 END CLASS

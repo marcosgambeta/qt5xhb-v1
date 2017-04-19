@@ -111,6 +111,7 @@ CLASS QTextDocument INHERIT QObject
    METHOD appendUndoItem
    METHOD setModified
    METHOD docHandle
+
    METHOD onContentsChange
    METHOD onContentsChanged
    METHOD onUndoAvailable
@@ -120,6 +121,7 @@ CLASS QTextDocument INHERIT QObject
    METHOD onCursorPositionChanged
    METHOD obBlockCountChanged
    METHOD onDocumentLayoutChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -60,6 +60,7 @@ CLASS QDirModel INHERIT QAbstractItemModel
    METHOD fileIcon
    METHOD fileInfo
    METHOD refresh
+
    DESTRUCTOR destroyObject
 
 END CLASS

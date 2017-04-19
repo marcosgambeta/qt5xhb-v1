@@ -45,11 +45,13 @@ CLASS QRegion
    METHOD intersects2
    METHOD boundingRect
    METHOD rectCount
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

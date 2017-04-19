@@ -58,6 +58,7 @@ CLASS QGLWidget INHERIT QWidget
    METHOD updateGL
    METHOD updateOverlayGL
    METHOD convertToGLFormat
+
    DESTRUCTOR destroyObject
 
 END CLASS

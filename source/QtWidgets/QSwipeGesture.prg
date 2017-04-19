@@ -20,6 +20,7 @@ CLASS QSwipeGesture INHERIT QGesture
    METHOD setSwipeAngle
    METHOD swipeAngle
    METHOD verticalDirection
+
    DESTRUCTOR destroyObject
 
 END CLASS

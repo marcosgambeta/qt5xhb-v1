@@ -25,6 +25,7 @@ CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
    METHOD opaqueMaterial
    METHOD setMaterial
    METHOD setOpaqueMaterial
+
    DESTRUCTOR destroyObject
 
 END CLASS

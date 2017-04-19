@@ -31,6 +31,7 @@ CLASS QSpacerItem INHERIT QLayoutItem
    METHOD setGeometry
    METHOD sizeHint
    METHOD spacerItem
+
    DESTRUCTOR destroyObject
 
 END CLASS

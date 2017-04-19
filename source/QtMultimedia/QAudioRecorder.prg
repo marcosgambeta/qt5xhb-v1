@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAudioRecorder INHERIT QMediaRecorder
 
    DATA class_id INIT Class_Id_QAudioRecorder
@@ -23,8 +22,10 @@ CLASS QAudioRecorder INHERIT QMediaRecorder
    METHOD audioInputs
    METHOD defaultAudioInput
    METHOD setAudioInput
+
    METHOD onAudioInputChanged
    METHOD onAvailableAudioInputsChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

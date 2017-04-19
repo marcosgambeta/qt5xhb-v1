@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QLocalSocket INHERIT QIODevice
 
    DATA class_id INIT Class_Id_QLocalSocket
@@ -38,10 +37,12 @@ CLASS QLocalSocket INHERIT QIODevice
    METHOD isSequential
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
+
    METHOD onConnected
    METHOD onDisconnected
    METHOD onError
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

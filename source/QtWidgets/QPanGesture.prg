@@ -27,6 +27,7 @@ CLASS QPanGesture INHERIT QGesture
    METHOD setAcceleration
    METHOD setLastOffset
    METHOD setOffset
+
    DESTRUCTOR destroyObject
 
 END CLASS

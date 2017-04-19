@@ -23,6 +23,7 @@ CLASS QSGFlatColorMaterial INHERIT QSGMaterial
    METHOD delete
    METHOD color
    METHOD setColor
+
    DESTRUCTOR destroyObject
 
 END CLASS

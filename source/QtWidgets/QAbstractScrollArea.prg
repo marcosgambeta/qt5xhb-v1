@@ -42,6 +42,7 @@ CLASS QAbstractScrollArea INHERIT QFrame
    METHOD setupViewport
    METHOD sizeAdjustPolicy
    METHOD setSizeAdjustPolicy
+
    DESTRUCTOR destroyObject
 
 END CLASS

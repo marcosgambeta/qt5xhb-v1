@@ -31,6 +31,7 @@ CLASS QWinJumpList INHERIT QObject
    METHOD addCategory2
    METHOD addCategory
    METHOD clear
+
    DESTRUCTOR destroyObject
 
 END CLASS

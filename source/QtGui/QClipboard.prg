@@ -35,10 +35,12 @@ CLASS QClipboard INHERIT QObject
    METHOD supportsFindBuffer
    METHOD supportsSelection
    METHOD text
+
    METHOD onChanged
    METHOD onDataChanged
    METHOD onFindBufferChanged
    METHOD onSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

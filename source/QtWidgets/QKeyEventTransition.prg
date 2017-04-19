@@ -21,6 +21,7 @@ CLASS QKeyEventTransition INHERIT QEventTransition
    METHOD modifierMask
    METHOD setKey
    METHOD setModifierMask
+
    DESTRUCTOR destroyObject
 
 END CLASS

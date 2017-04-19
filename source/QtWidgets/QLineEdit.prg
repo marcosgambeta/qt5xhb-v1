@@ -92,12 +92,14 @@ CLASS QLineEdit INHERIT QWidget
    METHOD addAction
    METHOD setClearButtonEnabled
    METHOD isClearButtonEnabled
+
    METHOD onCursorPositionChanged
    METHOD onEditingFinished
    METHOD onReturnPressed
    METHOD onSelectionChanged
    METHOD onTextChanged
    METHOD onTextEdited
+
    DESTRUCTOR destroyObject
 
 END CLASS

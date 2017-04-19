@@ -26,6 +26,7 @@ CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
    METHOD reason
    METHOD scenePos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS

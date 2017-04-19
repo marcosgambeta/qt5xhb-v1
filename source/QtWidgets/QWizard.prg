@@ -66,11 +66,13 @@ CLASS QWizard INHERIT QDialog
    METHOD back
    METHOD next
    METHOD restart
+
    METHOD onCurrentIdChanged
    METHOD onCustomButtonClicked
    METHOD onHelpRequested
    METHOD onPageAdded
    METHOD onPageRemoved
+
    DESTRUCTOR destroyObject
 
 END CLASS

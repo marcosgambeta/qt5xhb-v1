@@ -32,6 +32,7 @@ CLASS QPagedPaintDevice INHERIT QPaintDevice
    METHOD setPageMargins1
    METHOD setPageMargins2
    METHOD setPageMargins
+
    DESTRUCTOR destroyObject
 
 END CLASS

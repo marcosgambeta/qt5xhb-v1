@@ -31,6 +31,7 @@ CLASS QEnterEvent INHERIT QEvent
    METHOD localPos
    METHOD windowPos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS

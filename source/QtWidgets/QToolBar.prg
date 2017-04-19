@@ -46,6 +46,7 @@ CLASS QToolBar INHERIT QWidget
    METHOD widgetForAction
    METHOD setIconSize
    METHOD setToolButtonStyle
+
    METHOD onActionTriggered
    METHOD onAllowedAreasChanged
    METHOD onIconSizeChanged
@@ -54,6 +55,7 @@ CLASS QToolBar INHERIT QWidget
    METHOD onToolButtonStyleChanged
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

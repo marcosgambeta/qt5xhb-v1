@@ -78,6 +78,7 @@ CLASS QWebFrame INHERIT QObject
    METHOD zoomFactor
    METHOD evaluateJavaScript
    METHOD print
+
    METHOD onContentsSizeChanged
    METHOD onIconChanged
    METHOD onInitialLayoutCompleted
@@ -87,6 +88,7 @@ CLASS QWebFrame INHERIT QObject
    METHOD onPageChanged
    METHOD onTitleChanged
    METHOD onUrlChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

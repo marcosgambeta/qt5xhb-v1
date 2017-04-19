@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QGraphicsAnchor INHERIT QObject
 
    DATA class_id INIT Class_Id_QGraphicsAnchor
@@ -22,6 +21,7 @@ CLASS QGraphicsAnchor INHERIT QObject
    METHOD sizePolicy
    METHOD spacing
    METHOD unsetSpacing
+
    DESTRUCTOR destroyObject
 
 END CLASS

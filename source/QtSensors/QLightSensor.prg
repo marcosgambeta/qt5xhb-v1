@@ -24,7 +24,9 @@ CLASS QLightSensor INHERIT QSensor
    METHOD reading
    METHOD fieldOfView
    METHOD setFieldOfView
+
    METHOD onFieldOfViewChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

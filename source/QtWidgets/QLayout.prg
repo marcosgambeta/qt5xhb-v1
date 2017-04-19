@@ -56,6 +56,7 @@ CLASS QLayout INHERIT QObject,QLayoutItem
    METHOD minimumSize
    METHOD setGeometry
    METHOD closestAcceptableSize
+
    DESTRUCTOR destroyObject
 
 END CLASS

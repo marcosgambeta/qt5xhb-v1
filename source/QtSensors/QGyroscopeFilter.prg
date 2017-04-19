@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QGyroscopeFilter INHERIT QSensorFilter
 
    DATA class_id INIT Class_Id_QGyroscopeFilter
@@ -18,6 +17,7 @@ CLASS QGyroscopeFilter INHERIT QSensorFilter
 
    METHOD delete
    METHOD filter
+
    DESTRUCTOR destroyObject
 
 END CLASS

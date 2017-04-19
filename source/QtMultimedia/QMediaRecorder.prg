@@ -65,6 +65,7 @@ CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
    METHOD setMuted
    METHOD setVolume
    METHOD stop
+
    METHOD onActualLocationChanged
    METHOD onAvailabilityChanged1
    METHOD onAvailabilityChanged2
@@ -78,6 +79,7 @@ CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
    METHOD onStateChanged
    METHOD onStatusChanged
    METHOD onVolumeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

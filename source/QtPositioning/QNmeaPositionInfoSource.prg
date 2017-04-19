@@ -33,6 +33,7 @@ CLASS QNmeaPositionInfoSource INHERIT QGeoPositionInfoSource
    METHOD startUpdates
    METHOD stopUpdates
    METHOD requestUpdate
+
    DESTRUCTOR destroyObject
 
 END CLASS

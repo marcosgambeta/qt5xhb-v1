@@ -24,7 +24,9 @@ CLASS QMagnetometer INHERIT QSensor
    METHOD reading
    METHOD returnGeoValues
    METHOD setReturnGeoValues
+
    METHOD onReturnGeoValuesChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

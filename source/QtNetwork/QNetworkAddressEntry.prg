@@ -32,11 +32,13 @@ CLASS QNetworkAddressEntry
    METHOD setIp
    METHOD setNetmask
    METHOD setPrefixLength
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

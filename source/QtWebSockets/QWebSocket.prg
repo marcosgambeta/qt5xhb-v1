@@ -61,6 +61,7 @@ CLASS QWebSocket INHERIT QObject
    METHOD close
    METHOD open
    METHOD ping
+
    METHOD onAboutToClose
    METHOD onConnected
    METHOD onDisconnected
@@ -75,6 +76,7 @@ CLASS QWebSocket INHERIT QObject
    METHOD onPong
    METHOD onBytesWritten
    METHOD onSslErrors
+
    DESTRUCTOR destroyObject
 
 END CLASS

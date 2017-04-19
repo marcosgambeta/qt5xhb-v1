@@ -50,11 +50,13 @@ CLASS QGLContext
    METHOD currentContext
    METHOD setTextureCacheLimit
    METHOD textureCacheLimit
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

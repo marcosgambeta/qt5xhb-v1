@@ -25,6 +25,7 @@ CLASS QAudioEncoderSettingsControl INHERIT QMediaControl
    METHOD setAudioSettings
    METHOD supportedAudioCodecs
    METHOD supportedSampleRates
+
    DESTRUCTOR destroyObject
 
 END CLASS

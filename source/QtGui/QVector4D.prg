@@ -53,11 +53,13 @@ CLASS QVector4D
    METHOD toPoint
    METHOD toPointF
    METHOD dotProduct
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

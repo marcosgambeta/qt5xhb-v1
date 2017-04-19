@@ -22,6 +22,7 @@ CLASS QCameraViewfinder INHERIT QVideoWidget
    METHOD new
    METHOD delete
    METHOD mediaObject
+
    DESTRUCTOR destroyObject
 
 END CLASS

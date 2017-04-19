@@ -31,8 +31,10 @@ CLASS QFontDialog INHERIT QDialog
    METHOD testOption
    METHOD setVisible
    METHOD getFont
+
    METHOD onCurrentFontChanged
    METHOD onFontSelected
+
    DESTRUCTOR destroyObject
 
 END CLASS

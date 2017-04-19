@@ -34,6 +34,7 @@ CLASS QWidgetItem INHERIT QLayoutItem
    METHOD setGeometry
    METHOD sizeHint
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS

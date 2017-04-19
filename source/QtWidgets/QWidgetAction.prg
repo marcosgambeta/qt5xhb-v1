@@ -25,6 +25,7 @@ CLASS QWidgetAction INHERIT QAction
    METHOD releaseWidget
    METHOD requestWidget
    METHOD setDefaultWidget
+
    DESTRUCTOR destroyObject
 
 END CLASS

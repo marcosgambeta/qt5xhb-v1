@@ -27,6 +27,7 @@ CLASS QMouseEventTransition INHERIT QEventTransition
    METHOD setButton
    METHOD setHitTestPath
    METHOD setModifierMask
+
    DESTRUCTOR destroyObject
 
 END CLASS

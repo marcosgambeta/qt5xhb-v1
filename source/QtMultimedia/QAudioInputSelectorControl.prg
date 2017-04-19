@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAudioInputSelectorControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QAudioInputSelectorControl
@@ -22,8 +21,10 @@ CLASS QAudioInputSelectorControl INHERIT QMediaControl
    METHOD defaultInput
    METHOD inputDescription
    METHOD setActiveInput
+
    METHOD onActiveInputChanged
    METHOD onAvailableInputsChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

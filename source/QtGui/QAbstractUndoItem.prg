@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QAbstractUndoItem
 
    DATA pointer
@@ -20,11 +19,13 @@ CLASS QAbstractUndoItem
    METHOD delete
    METHOD undo
    METHOD redo
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

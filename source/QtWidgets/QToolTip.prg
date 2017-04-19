@@ -32,11 +32,13 @@ CLASS QToolTip
    METHOD showText2
    METHOD showText
    METHOD text
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

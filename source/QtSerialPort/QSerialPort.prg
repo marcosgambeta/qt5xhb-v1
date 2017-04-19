@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSerialPort INHERIT QIODevice
 
    DATA class_id INIT Class_Id_QSerialPort
@@ -60,6 +59,7 @@ CLASS QSerialPort INHERIT QIODevice
    METHOD waitForBytesWritten
    METHOD sendBreak
    METHOD setBreakEnabled
+
    METHOD onBaudRateChanged
    METHOD onDataBitsChanged
    METHOD onParityChanged
@@ -70,6 +70,7 @@ CLASS QSerialPort INHERIT QIODevice
    METHOD onRequestToSendChanged
    METHOD onError
    METHOD onSettingsRestoredOnCloseChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

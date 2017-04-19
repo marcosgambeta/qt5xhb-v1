@@ -27,6 +27,7 @@ CLASS QSplitterHandle INHERIT QWidget
    METHOD setOrientation
    METHOD splitter
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

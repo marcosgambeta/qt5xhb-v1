@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QMediaAudioProbeControl INHERIT QMediaControl
 
    DATA class_id INIT Class_Id_QMediaAudioProbeControl
@@ -17,8 +16,10 @@ CLASS QMediaAudioProbeControl INHERIT QMediaControl
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    METHOD onAudioBufferProbed
    METHOD onFlush
+
    DESTRUCTOR destroyObject
 
 END CLASS

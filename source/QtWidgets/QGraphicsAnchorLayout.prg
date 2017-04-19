@@ -36,6 +36,7 @@ CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
    METHOD itemAt
    METHOD removeAt
    METHOD setGeometry
+
    DESTRUCTOR destroyObject
 
 END CLASS

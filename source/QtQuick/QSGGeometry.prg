@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSGGeometry
 
    DATA pointer
@@ -37,11 +36,13 @@ CLASS QSGGeometry
    METHOD vertexDataPattern
    METHOD updateRectGeometry
    METHOD updateTexturedRectGeometry
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

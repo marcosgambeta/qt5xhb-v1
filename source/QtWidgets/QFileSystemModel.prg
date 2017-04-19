@@ -36,8 +36,6 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
    METHOD setFilter
    METHOD iconProvider
    METHOD setIconProvider
-   METHOD index1
-   METHOD index2
    METHOD index
    METHOD isDir
    METHOD isReadOnly
@@ -74,9 +72,11 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
    METHOD rowCount
    METHOD sort
    METHOD supportedDropActions
+
    METHOD onDirectoryLoaded
    METHOD onFileRenamed
    METHOD onRootPathChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 /*
 QModelIndex index ( const QString & path, int column = 0 ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX1 )
+void QFileSystemModel_index1 ()
 {
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX1 )
 /*
 QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX2 )
+void QFileSystemModel_index2 ()
 {
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -280,11 +280,11 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMMODEL_INDEX1 );
+    QFileSystemModel_index1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMMODEL_INDEX2 );
+    QFileSystemModel_index2();
   }
   else
   {

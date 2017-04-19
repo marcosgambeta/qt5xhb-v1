@@ -27,11 +27,13 @@ CLASS QWhatsThis
    METHOD inWhatsThisMode
    METHOD leaveWhatsThisMode
    METHOD showText
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

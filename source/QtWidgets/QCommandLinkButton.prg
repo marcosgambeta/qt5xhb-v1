@@ -21,6 +21,7 @@ CLASS QCommandLinkButton INHERIT QPushButton
    METHOD setDescription
    METHOD isFlat
    METHOD setFlat
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -28,6 +28,7 @@ CLASS QDragMoveEvent INHERIT QDropEvent
    METHOD ignore1
    METHOD ignore2
    METHOD ignore
+
    DESTRUCTOR destroyObject
 
 END CLASS

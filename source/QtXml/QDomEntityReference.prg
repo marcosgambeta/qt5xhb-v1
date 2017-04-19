@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDomEntityReference INHERIT QDomNode
 
    DATA class_id INIT Class_Id_QDomEntityReference
@@ -21,6 +20,7 @@ CLASS QDomEntityReference INHERIT QDomNode
    METHOD new
    METHOD delete
    METHOD nodeType
+
    DESTRUCTOR destroyObject
 
 END CLASS

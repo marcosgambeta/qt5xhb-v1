@@ -73,9 +73,11 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
    METHOD setDate
    METHOD setDateTime
    METHOD setTime
+
    METHOD onDateChanged
    METHOD onDateTimeChanged
    METHOD onTimeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

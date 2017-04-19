@@ -41,11 +41,13 @@ CLASS QXmlSchema
    METHOD setNetworkAccessManager
    METHOD setUriResolver
    METHOD uriResolver
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

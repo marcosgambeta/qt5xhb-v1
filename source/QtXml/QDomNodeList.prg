@@ -30,11 +30,13 @@ CLASS QDomNodeList
    METHOD item
    METHOD length
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

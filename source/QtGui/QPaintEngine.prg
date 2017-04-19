@@ -43,11 +43,13 @@ CLASS QPaintEngine
    METHOD setActive
    METHOD type
    METHOD updateState
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

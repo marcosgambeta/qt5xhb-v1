@@ -25,9 +25,11 @@ CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
    METHOD nextMedia
    METHOD setCrossfadeTime
    METHOD setNextMedia
+
    METHOD onAdvancedToNextMedia
    METHOD onCrossfadeTimeChanged
    METHOD onNextMediaChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

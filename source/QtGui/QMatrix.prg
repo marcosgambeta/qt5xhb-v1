@@ -63,11 +63,13 @@ CLASS QMatrix
    METHOD isInvertible
    METHOD determinant
    METHOD inverted
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

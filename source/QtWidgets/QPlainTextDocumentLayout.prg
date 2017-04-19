@@ -31,6 +31,7 @@ CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
    METHOD frameBoundingRect
    METHOD hitTest
    METHOD pageCount
+
    DESTRUCTOR destroyObject
 
 END CLASS

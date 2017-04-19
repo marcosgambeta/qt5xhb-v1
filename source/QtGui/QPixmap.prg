@@ -90,6 +90,7 @@ CLASS QPixmap INHERIT QPaintDevice
    METHOD trueMatrix
    METHOD fromImage
    METHOD fromImageReader
+
    DESTRUCTOR destroyObject
 
 END CLASS

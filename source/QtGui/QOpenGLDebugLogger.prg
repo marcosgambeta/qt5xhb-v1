@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QOpenGLDebugLogger INHERIT QObject
 
    DATA class_id INIT Class_Id_QOpenGLDebugLogger
@@ -27,7 +26,9 @@ CLASS QOpenGLDebugLogger INHERIT QObject
    METHOD logMessage
    METHOD startLogging
    METHOD stopLogging
+
    METHOD onMessageLogged
+
    DESTRUCTOR destroyObject
 
 END CLASS

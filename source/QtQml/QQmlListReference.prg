@@ -36,11 +36,13 @@ CLASS QQmlListReference
    METHOD isValid
    METHOD listElementType
    METHOD object
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

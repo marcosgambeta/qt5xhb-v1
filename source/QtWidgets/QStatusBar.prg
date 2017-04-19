@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QStatusBar INHERIT QWidget
 
    DATA class_id INIT Class_Id_QStatusBar
@@ -28,7 +27,9 @@ CLASS QStatusBar INHERIT QWidget
    METHOD setSizeGripEnabled
    METHOD clearMessage
    METHOD showMessage
+
    METHOD onMessageChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

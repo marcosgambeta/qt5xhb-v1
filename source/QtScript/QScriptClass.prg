@@ -35,11 +35,13 @@ CLASS QScriptClass
    METHOD queryProperty
    METHOD setProperty
    METHOD supportsExtension
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

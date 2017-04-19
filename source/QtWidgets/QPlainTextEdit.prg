@@ -83,6 +83,7 @@ CLASS QPlainTextEdit INHERIT QAbstractScrollArea
    METHOD selectAll
    METHOD setPlainText
    METHOD undo
+
    METHOD onBlockCountChanged
    METHOD onCopyAvailable
    METHOD onCursorPositionChanged
@@ -92,6 +93,7 @@ CLASS QPlainTextEdit INHERIT QAbstractScrollArea
    METHOD onTextChanged
    METHOD onUndoAvailable
    METHOD onUpdateRequest
+
    DESTRUCTOR destroyObject
 
 END CLASS

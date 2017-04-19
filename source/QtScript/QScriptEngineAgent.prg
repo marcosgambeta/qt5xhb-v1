@@ -35,11 +35,13 @@ CLASS QScriptEngineAgent
    METHOD scriptLoad
    METHOD scriptUnload
    METHOD supportsExtension
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -29,11 +29,13 @@ CLASS QColormap
    METHOD pixel
    METHOD size
    METHOD instance
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

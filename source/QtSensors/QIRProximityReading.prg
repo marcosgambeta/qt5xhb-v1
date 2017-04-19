@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QIRProximityReading INHERIT QSensorReading
 
    DATA class_id INIT Class_Id_QIRProximityReading
@@ -19,6 +18,7 @@ CLASS QIRProximityReading INHERIT QSensorReading
    METHOD delete
    METHOD reflectance
    METHOD setReflectance
+
    DESTRUCTOR destroyObject
 
 END CLASS

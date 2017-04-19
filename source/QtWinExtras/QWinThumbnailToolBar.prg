@@ -30,6 +30,7 @@ CLASS QWinThumbnailToolBar INHERIT QObject
    METHOD buttons
    METHOD count
    METHOD clear
+
    DESTRUCTOR destroyObject
 
 END CLASS

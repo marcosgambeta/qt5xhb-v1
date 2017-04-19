@@ -48,6 +48,7 @@ CLASS QProxyStyle INHERIT QCommonStyle
    METHOD standardPalette
    METHOD polish
    METHOD unpolish
+
    DESTRUCTOR destroyObject
 
 END CLASS

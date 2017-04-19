@@ -35,7 +35,9 @@ CLASS QOffscreenSurface INHERIT QObject,QSurface
    METHOD screen
    METHOD setScreen
    METHOD handle
+
    METHOD onScreenChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

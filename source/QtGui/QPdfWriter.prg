@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
 
    DATA class_id INIT Class_Id_QPdfWriter
@@ -29,6 +28,7 @@ CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
    METHOD setPageSizeMM
    METHOD resolution
    METHOD setResolution
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -51,11 +51,13 @@ CLASS QQuaternion
    METHOD fromAxisAndAngle2
    METHOD slerp
    METHOD nlerp
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

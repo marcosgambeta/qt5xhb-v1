@@ -39,6 +39,7 @@ CLASS QUiLoader INHERIT QObject
    METHOD setLanguageChangeEnabled
    METHOD setWorkingDirectory
    METHOD workingDirectory
+
    DESTRUCTOR destroyObject
 
 END CLASS

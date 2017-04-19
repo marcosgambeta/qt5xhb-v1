@@ -23,6 +23,7 @@ CLASS QScrollBar INHERIT QAbstractSlider
    METHOD delete
    METHOD event
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

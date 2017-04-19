@@ -59,6 +59,7 @@ CLASS QMediaPlayer INHERIT QMediaObject
    METHOD stop
    METHOD hasSupport
    METHOD supportedMimeTypes
+
    METHOD onAudioAvailableChanged
    METHOD onBufferStatusChanged
    METHOD onCurrentMediaChanged
@@ -74,6 +75,7 @@ CLASS QMediaPlayer INHERIT QMediaObject
    METHOD onStateChanged
    METHOD onVideoAvailableChanged
    METHOD onVolumeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

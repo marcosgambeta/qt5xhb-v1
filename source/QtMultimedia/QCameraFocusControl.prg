@@ -30,10 +30,12 @@ CLASS QCameraFocusControl INHERIT QMediaControl
    METHOD setCustomFocusPoint
    METHOD setFocusMode
    METHOD setFocusPointMode
+
    METHOD onCustomFocusPointChanged
    METHOD onFocusModeChanged
    METHOD onFocusPointModeChanged
    METHOD onFocusZonesChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

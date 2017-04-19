@@ -36,6 +36,7 @@ CLASS QFrame INHERIT QWidget
    METHOD setLineWidth
    METHOD setMidLineWidth
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS

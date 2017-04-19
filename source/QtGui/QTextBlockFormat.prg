@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QTextBlockFormat INHERIT QTextFormat
 
    DATA class_id INIT Class_Id_QTextBlockFormat
@@ -41,6 +40,7 @@ CLASS QTextBlockFormat INHERIT QTextFormat
    METHOD nonBreakableLines
    METHOD setPageBreakPolicy
    METHOD pageBreakPolicy
+
    DESTRUCTOR destroyObject
 
 END CLASS

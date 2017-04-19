@@ -53,6 +53,7 @@ CLASS QGraphicsWebView INHERIT QGraphicsWidget
    METHOD forward
    METHOD reload
    METHOD stop
+
    METHOD onIconChanged
    METHOD onLinkClicked
    METHOD onLoadFinished
@@ -61,6 +62,7 @@ CLASS QGraphicsWebView INHERIT QGraphicsWidget
    METHOD onStatusBarMessage
    METHOD onTitleChanged
    METHOD onUrlChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

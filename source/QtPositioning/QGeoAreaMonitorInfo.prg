@@ -35,11 +35,13 @@ CLASS QGeoAreaMonitorInfo
    METHOD setExpiration
    METHOD isPersistent
    METHOD setPersistent
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

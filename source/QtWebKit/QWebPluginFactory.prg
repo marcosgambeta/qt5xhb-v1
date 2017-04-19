@@ -22,6 +22,7 @@ CLASS QWebPluginFactory INHERIT QObject
    METHOD delete
    METHOD create
    METHOD refreshPlugins
+
    DESTRUCTOR destroyObject
 
 END CLASS

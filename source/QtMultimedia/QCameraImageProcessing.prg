@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QCameraImageProcessing INHERIT QObject
 
    DATA class_id INIT Class_Id_QCameraImageProcessing
@@ -30,6 +29,7 @@ CLASS QCameraImageProcessing INHERIT QObject
    METHOD setWhiteBalanceMode
    METHOD sharpeningLevel
    METHOD whiteBalanceMode
+
    DESTRUCTOR destroyObject
 
 END CLASS

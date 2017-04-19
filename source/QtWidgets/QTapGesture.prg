@@ -22,6 +22,7 @@ CLASS QTapGesture INHERIT QGesture
    METHOD delete
    METHOD position
    METHOD setPosition
+
    DESTRUCTOR destroyObject
 
 END CLASS

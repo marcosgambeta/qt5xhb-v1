@@ -67,6 +67,7 @@ CLASS QSensor INHERIT QObject
    METHOD sensorTypes
    METHOD sensorsForType
    METHOD defaultSensorForType
+
    METHOD onBusyChanged
    METHOD onActiveChanged
    METHOD onReadingChanged
@@ -81,6 +82,7 @@ CLASS QSensor INHERIT QObject
    METHOD onMaxBufferSizeChanged
    METHOD onEfficientBufferSizeChanged
    METHOD onBufferSizeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

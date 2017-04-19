@@ -51,7 +51,9 @@ CLASS QMdiArea INHERIT QAbstractScrollArea
    METHOD closeAllSubWindows
    METHOD setActiveSubWindow
    METHOD tileSubWindows
+
    METHOD onSubWindowActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS

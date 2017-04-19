@@ -21,6 +21,7 @@ CLASS QAbstractUriResolver INHERIT QObject
 
    METHOD delete
    METHOD resolve
+
    DESTRUCTOR destroyObject
 
 END CLASS

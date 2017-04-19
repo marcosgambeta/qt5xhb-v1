@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QOpenGLPixelTransferOptions
 
    DATA pointer
@@ -38,11 +37,13 @@ CLASS QOpenGLPixelTransferOptions
    METHOD isLeastSignificantBitFirst
    METHOD setSwapBytesEnabled
    METHOD isSwapBytesEnabled
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

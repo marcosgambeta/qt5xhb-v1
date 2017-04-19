@@ -28,6 +28,7 @@ CLASS QPageSetupDialog INHERIT QDialog
    METHOD setVisible
    METHOD exec
    METHOD done
+
    DESTRUCTOR destroyObject
 
 END CLASS

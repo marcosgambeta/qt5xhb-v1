@@ -55,10 +55,12 @@ CLASS QSqlTableModel INHERIT QSqlQueryModel
    METHOD submitAll
    METHOD record
    METHOD selectRow
+
    METHOD onBeforeDelete
    METHOD onBeforeInsert
    METHOD onBeforeUpdate
    METHOD onPrimeInsert
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -29,11 +29,13 @@ CLASS QWebEngineHistoryItem
    METHOD lastVisited
    METHOD iconUrl
    METHOD isValid
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

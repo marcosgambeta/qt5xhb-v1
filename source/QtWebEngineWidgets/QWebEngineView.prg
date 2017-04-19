@@ -47,6 +47,7 @@ CLASS QWebEngineView INHERIT QWidget
    METHOD back
    METHOD forward
    METHOD reload
+
    METHOD onLoadStarted
    METHOD onLoadProgress
    METHOD onLoadFinished
@@ -54,6 +55,7 @@ CLASS QWebEngineView INHERIT QWidget
    METHOD onSelectionChanged
    METHOD onUrlChanged
    METHOD onIconUrlChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -88,6 +88,7 @@ CLASS QFileDialog INHERIT QDialog
    METHOD getSaveFileUrl
    METHOD getExistingDirectoryUrl
    METHOD getOpenFileUrls
+
    METHOD onCurrentChanged
    METHOD onDirectoryEntered
    METHOD onFileSelected
@@ -97,6 +98,7 @@ CLASS QFileDialog INHERIT QDialog
    METHOD onUrlsSelected
    METHOD onCurrentUrlChanged
    METHOD onDirectoryUrlEntered
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -72,6 +72,7 @@ CLASS QWebPage INHERIT QObject
    METHOD viewportSize
    METHOD event
    METHOD shouldInterruptJavaScript
+
    METHOD onContentsChanged
    METHOD onDatabaseQuotaExceeded
    METHOD onDownloadRequested
@@ -95,6 +96,7 @@ CLASS QWebPage INHERIT QObject
    METHOD onToolBarVisibilityChangeRequested
    METHOD onUnsupportedContent
    METHOD onWindowCloseRequested
+
    DESTRUCTOR destroyObject
 
 END CLASS

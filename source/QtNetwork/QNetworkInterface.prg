@@ -36,11 +36,13 @@ CLASS QNetworkInterface
    METHOD allInterfaces
    METHOD interfaceFromIndex
    METHOD interfaceFromName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

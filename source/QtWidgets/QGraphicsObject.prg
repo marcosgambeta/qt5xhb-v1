@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
    DATA class_id INIT Class_Id_QGraphicsObject
@@ -19,6 +18,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
    METHOD delete
    METHOD grabGesture
    METHOD ungrabGesture
+
    METHOD onEnabledChanged
    METHOD onOpacityChanged
    METHOD onParentChanged
@@ -28,6 +28,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
    METHOD onXChanged
    METHOD onYChanged
    METHOD onZChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

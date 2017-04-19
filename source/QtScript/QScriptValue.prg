@@ -84,11 +84,13 @@ CLASS QScriptValue
    METHOD toUInt16
    METHOD toUInt32
    METHOD toVariant
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

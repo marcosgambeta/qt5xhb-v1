@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QWebHistoryInterface INHERIT QObject
 
    DATA class_id INIT Class_Id_QWebHistoryInterface
@@ -22,6 +20,7 @@ CLASS QWebHistoryInterface INHERIT QObject
    METHOD historyContains
    METHOD defaultInterface
    METHOD setDefaultInterface
+
    DESTRUCTOR destroyObject
 
 END CLASS

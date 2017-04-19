@@ -43,7 +43,9 @@ CLASS QQmlExpression INHERIT QObject
    METHOD setNotifyOnValueChanged
    METHOD setSourceLocation
    METHOD sourceFile
+
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

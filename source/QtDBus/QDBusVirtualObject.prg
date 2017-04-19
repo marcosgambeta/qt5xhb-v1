@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QDBusVirtualObject INHERIT QObject
 
    DATA class_id INIT Class_Id_QDBusVirtualObject
@@ -20,6 +19,7 @@ CLASS QDBusVirtualObject INHERIT QObject
    METHOD delete
    METHOD introspect
    METHOD handleMessage
+
    DESTRUCTOR destroyObject
 
 END CLASS

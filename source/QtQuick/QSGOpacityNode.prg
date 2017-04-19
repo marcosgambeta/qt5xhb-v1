@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QSGOpacityNode INHERIT QSGNode
 
    DATA class_id INIT Class_Id_QSGOpacityNode
@@ -20,6 +19,7 @@ CLASS QSGOpacityNode INHERIT QSGNode
    METHOD delete
    METHOD opacity
    METHOD setOpacity
+
    DESTRUCTOR destroyObject
 
 END CLASS

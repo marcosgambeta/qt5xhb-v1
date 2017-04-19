@@ -9,7 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
 CLASS QToolBarChangeEvent INHERIT QEvent
 
    DATA class_id INIT Class_Id_QToolBarChangeEvent
@@ -19,6 +18,7 @@ CLASS QToolBarChangeEvent INHERIT QEvent
    METHOD new
    METHOD delete
    METHOD toggle
+
    DESTRUCTOR destroyObject
 
 END CLASS

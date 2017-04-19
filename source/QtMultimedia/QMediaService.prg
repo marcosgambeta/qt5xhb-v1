@@ -22,6 +22,7 @@ CLASS QMediaService INHERIT QObject
    METHOD delete
    METHOD releaseControl
    METHOD requestControl
+
    DESTRUCTOR destroyObject
 
 END CLASS

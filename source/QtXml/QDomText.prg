@@ -9,8 +9,6 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
-
-
 CLASS QDomText INHERIT QDomCharacterData
 
    DATA class_id INIT Class_Id_QDomText
@@ -23,6 +21,7 @@ CLASS QDomText INHERIT QDomCharacterData
    METHOD delete
    METHOD nodeType
    METHOD splitText
+
    DESTRUCTOR destroyObject
 
 END CLASS
