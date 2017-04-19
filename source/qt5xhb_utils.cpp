@@ -637,12 +637,16 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
   }
 }
 
+/*
+*/
 bool _qt5xhb_isClassDerivedFrom ( const char * className1, const char * className2 )
 {
   HB_USHORT uiClass = hb_clsFindClass( className1, NULL );
   return hb_clsIsParent( uiClass, className2 );
 }
 
+/*
+*/
 bool _qt5xhb_isObjectDerivedFrom ( int numpar, const QString className )
 {
   PHB_ITEM pItem = hb_param( numpar, HB_IT_OBJECT );
@@ -655,4 +659,27 @@ bool _qt5xhb_isObjectDerivedFrom ( int numpar, const QString className )
   {
     return false;
   }
+}
+
+/*
+  converte parametro 'n' de array (Harbour) para QStrinList (Qt)
+*/
+QStringList _qt5xhb_convert_array_parameter_to_qstringlist ( int numpar )
+{
+  QStringList list;
+
+  PHB_ITEM pArray = hb_param(numpar, HB_IT_ARRAY);
+
+  if( pArray )
+  {
+    int i;
+    int nLen = hb_arrayLen(pArray);
+    for (i=0; i<nLen; i++)
+    {
+      QString temp = QLatin1String( hb_arrayGetCPtr(pArray, i+1) );
+      list << temp;
+    }
+  }
+
+  return list;
 }

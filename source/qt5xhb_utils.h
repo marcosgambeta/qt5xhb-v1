@@ -47,3 +47,4 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
 
 bool _qt5xhb_isClassDerivedFrom ( const char * className1, const char * className2 );
 bool _qt5xhb_isObjectDerivedFrom ( int numpar, const QString className );
+QStringList _qt5xhb_convert_array_parameter_to_qstringlist ( int numpar );
