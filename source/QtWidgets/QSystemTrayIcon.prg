@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 
   if( obj )
   {
-    if( ISCHAR(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISCHAR(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = QLatin1String( hb_parc(2) );

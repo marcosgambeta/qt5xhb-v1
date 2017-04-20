@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
   {
     QMessageBox_new1();
   }
-  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISQWIDGET(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
+  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && (ISQWIDGET(5)||ISNIL(5)) && ISOPTNUM(6) )
   {
     QMessageBox_new2();
   }
@@ -912,7 +912,7 @@ static StandardButton critical ( QWidget * parent, const QString & title, const 
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
@@ -932,7 +932,7 @@ static StandardButton information ( QWidget * parent, const QString & title, con
 */
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
@@ -952,7 +952,7 @@ static StandardButton question ( QWidget * parent, const QString & title, const 
 */
 HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );
@@ -972,7 +972,7 @@ static StandardButton warning ( QWidget * parent, const QString & title, const Q
 */
 HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = QLatin1String( hb_parc(2) );

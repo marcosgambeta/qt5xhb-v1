@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISLOG(1) && ISOPTNUM(2) )
     {
       obj->cursorBackward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
     }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISLOG(1) && ISOPTNUM(2) )
     {
       obj->cursorForward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
     }

@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
       obj->sortItems ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
 
   if( obj )
   {
-    if( ISQTABLEWIDGETITEM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQTABLEWIDGETITEM(1) && ISOPTNUM(2) )
     {
       const QTableWidgetItem * par1 = (const QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);

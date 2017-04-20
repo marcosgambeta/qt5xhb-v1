@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);

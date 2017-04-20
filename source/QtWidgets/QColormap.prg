@@ -207,7 +207,7 @@ static QColormap instance ( int screen = -1 )
 */
 HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
-  if( (ISNUM(1)||ISNIL(1)) )
+  if( ISOPTNUM(1) )
   {
     QColormap * ptr = new QColormap( QColormap::instance ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLORMAP" );

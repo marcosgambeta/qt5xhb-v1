@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
 
   if( obj )
   {
-    if( ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISQPALETTE(4) && ISLOG(5) && ISCHAR(6) && (ISNUM(7)||ISNIL(7)) )
+    if( ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISQPALETTE(4) && ISLOG(5) && ISCHAR(6) && ISOPTNUM(7) )
     {
       QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);

@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       obj->addStretch ( (int) ISNIL(1)? 1 : hb_parni(1) );
     }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       obj->insertStretch ( (int) hb_parni(1), (int) ISNIL(2)? 1 : hb_parni(2) );
     }

@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
 
   if( obj )
   {
-    if( ISQVARIANT(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISQVARIANT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
       int par3 = ISNIL(3)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(3);
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(2);
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       QVariant * ptr = new QVariant( obj->itemData ( (int) hb_parni(1), (int) ISNIL(2)? Qt::UserRole : hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
 
   if( obj )
   {
-    if( ISNUM(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISNUM(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
       obj->setItemData ( (int) hb_parni(1), *par2, (int) ISNIL(3)? Qt::UserRole : hb_parni(3) );

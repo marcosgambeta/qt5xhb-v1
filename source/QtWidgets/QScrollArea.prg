@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
       obj->ensureVisible ( (int) hb_parni(1), (int) hb_parni(2), (int) ISNIL(3)? 50 : hb_parni(3), (int) ISNIL(4)? 50 : hb_parni(4) );
     }

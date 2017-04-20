@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
 
   if( obj )
   {
-    if( ISQWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQWIDGET(1) && ISOPTNUM(2) )
     {
       QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
@@ -789,11 +789,11 @@ void QGraphicsScene_invalidate2 ()
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 {
-  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
+  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
   {
     QGraphicsScene_invalidate1();
   }
-  else if( ISBETWEEN(0,2) && (ISQRECTF(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(0,2) && (ISQRECTF(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     QGraphicsScene_invalidate2();
   }
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
 
   if( obj )
   {
-    if( ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECTF(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECTF(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
       QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUS )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) Qt::OtherFocusReason : hb_parni(1);
       obj->setFocus (  (Qt::FocusReason) par1 );
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
 
   if( obj )
   {
-    if( ISQGRAPHICSITEM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQGRAPHICSITEM(1) && ISOPTNUM(2) )
     {
       QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::OtherFocusReason : hb_parni(2);

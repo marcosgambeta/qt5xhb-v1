@@ -145,15 +145,15 @@ void QTableWidgetItem_new4 ()
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QTableWidgetItem_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QTableWidgetItem_new2();
   }
-  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISOPTNUM(3) )
   {
     QTableWidgetItem_new3();
   }

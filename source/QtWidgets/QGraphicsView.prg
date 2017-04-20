@@ -357,15 +357,15 @@ void QGraphicsView_ensureVisible3 ()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
-  if( ISBETWEEN(1,3) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISQRECTF(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
     QGraphicsView_ensureVisible1();
   }
-  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
+  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) )
   {
     QGraphicsView_ensureVisible2();
   }
-  else if( ISBETWEEN(1,3) && ISOBJECT(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISOBJECT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
     QGraphicsView_ensureVisible3();
   }
@@ -435,15 +435,15 @@ void QGraphicsView_fitInView3 ()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
-  if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQRECTF(1) && ISOPTNUM(2) )
   {
     QGraphicsView_fitInView1();
   }
-  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
+  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
   {
     QGraphicsView_fitInView2();
   }
-  else if( ISBETWEEN(1,2) && ISOBJECT(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISOBJECT(1) && ISOPTNUM(2) )
   {
     QGraphicsView_fitInView3();
   }
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 
   if( obj )
   {
-    if( ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECT(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
       QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
@@ -1625,7 +1625,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 
   if( obj )
   {
-    if( (ISQRECTF(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+    if( (ISQRECTF(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
       QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QGraphicsScene::AllLayers : hb_parni(2);

@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       obj->animateClick ( (int) ISNIL(1)? 100 : hb_parni(1) );
     }

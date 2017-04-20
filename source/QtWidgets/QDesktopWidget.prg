@@ -126,7 +126,7 @@ void QDesktopWidget_availableGeometry3 ()
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QDesktopWidget_availableGeometry1();
   }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       QWidget * ptr = obj->screen ( (int) ISNIL(1)? -1 : hb_parni(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
@@ -254,7 +254,7 @@ void QDesktopWidget_screenGeometry3 ()
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QDesktopWidget_screenGeometry1();
   }

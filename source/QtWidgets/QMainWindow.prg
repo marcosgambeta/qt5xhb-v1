@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) Qt::TopToolBarArea : hb_parni(1);
       obj->addToolBarBreak (  (Qt::ToolBarArea) par1 );
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
 
   if( obj )
   {
-    if( ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
       QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
       hb_retl( obj->restoreState ( *par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       QByteArray * ptr = new QByteArray( obj->saveState ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );

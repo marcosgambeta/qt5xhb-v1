@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
 
   if( obj )
   {
-    if( ISQGRAPHICSITEM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQGRAPHICSITEM(1) && ISOPTNUM(2) )
     {
       QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
 
   if( obj )
   {
-    if( ISQPAINTERPATH(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQPAINTERPATH(1) && ISOPTNUM(2) )
     {
       QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
@@ -591,11 +591,11 @@ void QGraphicsItem_ensureVisible2 ()
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 {
-  if( ISBETWEEN(0,3) && (ISQRECTF(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(0,3) && (ISQRECTF(1)||ISNIL(1)) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
     QGraphicsItem_ensureVisible1();
   }
-  if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
+  if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) )
   {
     QGraphicsItem_ensureVisible2();
   }
@@ -2812,7 +2812,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) Qt::OtherFocusReason : hb_parni(1);
       obj->setFocus (  (Qt::FocusReason) par1 );
