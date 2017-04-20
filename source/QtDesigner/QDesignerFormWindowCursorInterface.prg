@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2);
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2);
       obj->setPosition ( (int) hb_parni(1),  (QDesignerFormWindowCursorInterface::MoveMode) par2 );
