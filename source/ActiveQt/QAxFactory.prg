@@ -430,7 +430,7 @@ static bool startServer ( ServerType type = MultipleInstances )
 */
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
-  if( (ISNUM(1)||ISNIL(1)) )
+  if( ISOPTNUM(1) )
   {
     int par1 = ISNIL(1)? (int) QAxFactory::MultipleInstances : hb_parni(1);
     hb_retl( QAxFactory::startServer (  (QAxFactory::ServerType) par1 ) );

@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1);
       QStringList strl = obj->functions (  (QAxScript::FunctionFlags) par1 );
