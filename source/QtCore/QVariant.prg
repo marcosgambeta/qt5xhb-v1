@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) ) // TODO: implementar parametro opcional
+    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retni( obj->toInt ( &par1 ) );
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QVARIANT_TOUINT )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) ) // TODO: implementar parametro opcional
+    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retni( obj->toUInt ( &par1 ) );
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) ) // TODO: implementar parametro opcional
+    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retnll( obj->toLongLong ( &par1 ) );
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) ) // TODO: implementar parametro opcional
+    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retnll( obj->toULongLong ( &par1 ) );
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) ) // TODO: implementar parametro opcional
+    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retnd( obj->toDouble ( &par1 ) );
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) ) // TODO: implementar parametro opcional
+    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retnd( obj->toFloat ( &par1 ) );
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QVARIANT_TOREAL )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) ) // TODO: implementar parametro opcional
+    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retnd( obj->toReal ( &par1 ) );

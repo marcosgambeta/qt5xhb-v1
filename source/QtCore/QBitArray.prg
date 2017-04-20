@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
   {
     QBitArray_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
   {
     QBitArray_new2();
   }

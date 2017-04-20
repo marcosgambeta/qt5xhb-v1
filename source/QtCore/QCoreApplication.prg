@@ -564,7 +564,7 @@ static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
-  if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+  if( ISNUM(1) && ISOPTLOG(2) )
   {
     int par1 = hb_parni(1);
     QCoreApplication::setAttribute (  (Qt::ApplicationAttribute) par1, (bool) ISNIL(2)? true : hb_parl(2) );
