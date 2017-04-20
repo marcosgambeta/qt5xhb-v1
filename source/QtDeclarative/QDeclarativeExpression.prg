@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) )
+    if( ISOPTLOG(1) )
     {
       bool par1;
       QVariant * ptr = new QVariant( obj->evaluate ( &par1 ) );
