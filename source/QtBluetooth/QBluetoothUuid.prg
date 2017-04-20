@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 ) // TODO: revisar e implementar paramet
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) )
+    if( ISOPTLOG(1) )
     {
       bool par1;
       hb_retni( obj->toUInt16 ( &par1 ) );
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 ) // TODO: revisar e implementar paramet
 
   if( obj )
   {
-    if( (ISLOG(1)||ISNIL(1)) )
+    if( ISOPTLOG(1) )
     {
       bool par1;
       hb_retni( obj->toUInt32 ( &par1 ) );
