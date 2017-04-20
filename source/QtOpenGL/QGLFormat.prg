@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
   {
     HB_FUNC_EXEC( QGLFORMAT_NEW1 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QGLFORMAT_NEW2 );
   }
