@@ -298,15 +298,15 @@ void QBluetoothSocket_connectToService3 ()
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 {
-  if( ISBETWEEN(1,2) && ISQBLUETOOTHSERVICEINFO(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQBLUETOOTHSERVICEINFO(1) && ISOPTNUM(2) )
   {
     QBluetoothSocket_connectToService1();
   }
-  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ISOPTNUM(3) )
   {
     QBluetoothSocket_connectToService2();
   }
-  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     QBluetoothSocket_connectToService3();
   }
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
       int par2 = hb_parni(2);
       int par3 = ISNIL(3)? (int) QBluetoothSocket::ConnectedState : hb_parni(3);
