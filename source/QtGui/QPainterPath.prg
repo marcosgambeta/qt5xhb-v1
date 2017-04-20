@@ -413,11 +413,11 @@ void QPainterPath_addRoundedRect2 ()
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
 {
-  if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
     QPainterPath_addRoundedRect1();
   }
-  else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && (ISNUM(7)||ISNIL(7)) )
+  else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISOPTNUM(7) )
   {
     QPainterPath_addRoundedRect2();
   }

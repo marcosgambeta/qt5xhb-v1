@@ -985,11 +985,11 @@ void QPainter_drawImage9 ()
 
 HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 {
-  if( ISBETWEEN(3,4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ISOPTNUM(4) )
   {
     QPainter_drawImage1();
   }
-  else if( ISBETWEEN(3,4) && ISQRECT(1) && ISQIMAGE(2) && ISQRECT(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQRECT(1) && ISQIMAGE(2) && ISQRECT(3) && ISOPTNUM(4) )
   {
     QPainter_drawImage2();
   }
@@ -1001,11 +1001,11 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
   {
     QPainter_drawImage4();
   }
-  else if( ISBETWEEN(3,4) && ISQPOINTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQPOINTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ISOPTNUM(4) )
   {
     QPainter_drawImage5();
   }
-  else if( ISBETWEEN(3,4) && ISQPOINT(1) && ISQIMAGE(2) && ISQRECT(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQPOINT(1) && ISQIMAGE(2) && ISQRECT(3) && ISOPTNUM(4) )
   {
     QPainter_drawImage6();
   }
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
   {
     QPainter_drawImage8();
   }
-  else if( ISBETWEEN(3,8) && ISNUM(1) && ISNUM(2) && ISQIMAGE(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
+  else if( ISBETWEEN(3,8) && ISNUM(1) && ISNUM(2) && ISQIMAGE(3) && ISOPTNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) && ISOPTNUM(7) && ISOPTNUM(8) )
   {
     QPainter_drawImage9();
   }
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON3 )
 
   if( obj )
   {
-    if( ISQPOLYGONF(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQPOLYGONF(1) && ISOPTNUM(2) )
     {
       QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::OddEvenFill : hb_parni(2);
@@ -1866,7 +1866,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON4 )
 
   if( obj )
   {
-    if( ISQPOLYGON(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQPOLYGON(1) && ISOPTNUM(2) )
     {
       QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::OddEvenFill : hb_parni(2);
@@ -1888,11 +1888,11 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON4 )
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 {
-  if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPOLYGON3 );
   }
-  else if( ISBETWEEN(1,2) && ISQPOLYGON(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQPOLYGON(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPOLYGON4 );
   }
@@ -2171,15 +2171,15 @@ void QPainter_drawRoundedRect3 ()
 
 HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 {
-  if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
     QPainter_drawRoundedRect1();
   }
-  else if( ISBETWEEN(3,4) && ISQRECT(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQRECT(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
     QPainter_drawRoundedRect2();
   }
-  else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && (ISNUM(7)||ISNIL(7)) )
+  else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISOPTNUM(7) )
   {
     QPainter_drawRoundedRect3();
   }
@@ -2494,7 +2494,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
   {
     QPainter_drawTiledPixmap2();
   }
-  else if( ISBETWEEN(5,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQPIXMAP(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) )
+  else if( ISBETWEEN(5,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQPIXMAP(5) && ISOPTNUM(6) && ISOPTNUM(7) )
   {
     QPainter_drawTiledPixmap3();
   }
@@ -3300,7 +3300,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
 
   if( obj )
   {
-    if( ISQPAINTERPATH(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQPAINTERPATH(1) && ISOPTNUM(2) )
     {
       QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::ReplaceClip : hb_parni(2);
@@ -3371,15 +3371,15 @@ void QPainter_setClipRect3 ()
 
 HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 {
-  if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQRECTF(1) && ISOPTNUM(2) )
   {
     QPainter_setClipRect1();
   }
-  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
+  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
   {
     QPainter_setClipRect2();
   }
-  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQRECT(1) && ISOPTNUM(2) )
   {
     QPainter_setClipRect3();
   }
@@ -3398,7 +3398,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
 
   if( obj )
   {
-    if( ISQREGION(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQREGION(1) && ISOPTNUM(2) )
     {
       QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::ReplaceClip : hb_parni(2);

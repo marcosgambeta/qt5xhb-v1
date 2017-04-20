@@ -211,11 +211,11 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     HB_FUNC_EXEC( QBRUSH_NEW2 );
   }
-  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBRUSH_NEW3 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBRUSH_NEW4 );
   }

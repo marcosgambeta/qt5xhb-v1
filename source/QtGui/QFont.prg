@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QFONT_NEW )
   {
     HB_FUNC_EXEC( QFONT_NEW1 );
   }
-  else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISLOG(4)||ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && (ISLOG(4)||ISNIL(4)) )
   {
     HB_FUNC_EXEC( QFONT_NEW2 );
   }

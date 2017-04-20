@@ -172,11 +172,11 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
   {
     HB_FUNC_EXEC( QPAGESIZE_NEW2 );
   }
-  else if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
     HB_FUNC_EXEC( QPAGESIZE_NEW3 );
   }
-  else if( ISBETWEEN(2,4) && ISQSIZEF(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQSIZEF(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) && ISOPTNUM(4) )
   {
     HB_FUNC_EXEC( QPAGESIZE_NEW4 );
   }
@@ -382,11 +382,11 @@ HB_FUNC_STATIC( QPAGESIZE_ID )
   {
     HB_FUNC_EXEC( QPAGESIZE_ID1 );
   }
-  else if( ISBETWEEN(1,2) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQSIZE(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QPAGESIZE_ID2 );
   }
-  else if( ISBETWEEN(2,3) && ISQSIZEF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQSIZEF(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     HB_FUNC_EXEC( QPAGESIZE_ID3 );
   }
