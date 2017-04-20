@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       hb_retl( obj->seek ( (int) hb_parni(1), (bool) ISNIL(2)? false : hb_parl(2) ) );
     }

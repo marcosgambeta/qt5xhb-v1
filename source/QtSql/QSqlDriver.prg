@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 
   if( obj )
   {
-    if( ISQSQLFIELD(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISQSQLFIELD(1) && ISOPTLOG(2) )
     {
       QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
       hb_retc( (const char *) obj->formatValue ( *par1, (bool) ISNIL(2)? false : hb_parl(2) ).toLatin1().data() );
