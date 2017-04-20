@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 
   if( obj )
   {
-    if( ISQMATRIX(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISQMATRIX(1) && ISOPTLOG(2) )
     {
       QMatrix * par1 = (QMatrix *) _qt5xhb_itemGetPtr(1);
       obj->setMatrix ( *par1, (bool) ISNIL(2)? false : hb_parl(2) );
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
       obj->setOptimizationFlag (  (QGraphicsView::OptimizationFlag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
       obj->setRenderHint (  (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 
   if( obj )
   {
-    if( ISQTRANSFORM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISQTRANSFORM(1) && ISOPTLOG(2) )
     {
       QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
       obj->setTransform ( *par1, (bool) ISNIL(2)? false : hb_parl(2) );

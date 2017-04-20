@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       obj->setShortcutAutoRepeat ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
     }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       obj->setShortcutEnabled ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
     }

@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
       obj->setOption (  (QColorDialog::ColorDialogOption) par1, (bool) ISNIL(2)? true : hb_parl(2) );

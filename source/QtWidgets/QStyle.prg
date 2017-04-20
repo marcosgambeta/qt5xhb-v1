@@ -544,7 +544,7 @@ static int sliderPositionFromValue ( int min, int max, int logicalValue, int spa
 */
 HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISLOG(5)||ISNIL(5)) )
+  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
     hb_retni( QStyle::sliderPositionFromValue ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
   }
@@ -560,7 +560,7 @@ static int sliderValueFromPosition ( int min, int max, int position, int span, b
 */
 HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISLOG(5)||ISNIL(5)) )
+  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
     hb_retni( QStyle::sliderValueFromPosition ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
   }

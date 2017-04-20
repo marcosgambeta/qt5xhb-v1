@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
       obj->setOption (  (QFileDialog::Option) par1, (bool) ISNIL(2)? true : hb_parl(2) );

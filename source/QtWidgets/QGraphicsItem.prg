@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
 
   if( obj )
   {
-    if( ISQGRAPHICSITEM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISQGRAPHICSITEM(1) && ISOPTLOG(2) )
     {
       QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
       bool par2;
@@ -2766,7 +2766,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
       obj->setFlag (  (QGraphicsItem::GraphicsItemFlag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
@@ -3135,7 +3135,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
 
   if( obj )
   {
-    if( ISQTRANSFORM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISQTRANSFORM(1) && ISOPTLOG(2) )
     {
       QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
       obj->setTransform ( *par1, (bool) ISNIL(2)? false : hb_parl(2) );
