@@ -23,4 +23,5 @@
 #define ISARRAY HB_ISARRAY
 #endif
 
+#define ISOPTLOG(n) (ISLOG(n)||ISNIL(n))
 #define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
