@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) && (ISCHAR(6)||ISNIL(6)) )
+    if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && ISOPTNUM(5) && (ISCHAR(6)||ISNIL(6)) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );

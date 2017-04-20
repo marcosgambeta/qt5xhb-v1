@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 
   if( obj )
   {
-    if( ISQVARIANT(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQVARIANT(1) && ISOPTNUM(2) )
     {
       QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QSql::In : hb_parni(2);
@@ -260,11 +260,11 @@ void QSqlQuery_bindValue2 ()
 
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && ISOPTNUM(3) )
   {
     QSqlQuery_bindValue1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQVARIANT(2) && ISOPTNUM(3) )
   {
     QSqlQuery_bindValue2();
   }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QSqlQuery::ValuesAsRows : hb_parni(1);
       hb_retl( obj->execBatch (  (QSqlQuery::BatchExecutionMode) par1 ) );

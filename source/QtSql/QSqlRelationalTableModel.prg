@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
 
   if( obj )
   {
-    if( ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
 
   if( obj )
   {
-    if( ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);

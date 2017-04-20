@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QSql::Tables : hb_parni(1);
       QStringList strl = obj->tables (  (QSql::TableType) par1 );

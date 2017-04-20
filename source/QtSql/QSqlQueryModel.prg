@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 
   if( obj )
   {
-    if( ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
       QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && (ISNUM(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
     {
       int par2 = hb_parni(2);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
