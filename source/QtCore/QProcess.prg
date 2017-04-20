@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
@@ -622,15 +622,15 @@ void QProcess_start3 ()
 
 HB_FUNC_STATIC( QPROCESS_START )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && ISOPTNUM(3) )
   {
     QProcess_start1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QProcess_start2();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QProcess_start3();
   }
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retl( obj->waitForFinished ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
     }
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retl( obj->waitForStarted ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
     }
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retl( obj->waitForBytesWritten ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
     }
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retl( obj->waitForReadyRead ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
     }
@@ -955,7 +955,7 @@ void QProcess_startDetached3 ()
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
-  if( ISBETWEEN(3,4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && ISOPTNUM(4) )
   {
     QProcess_startDetached1();
   }
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QPROCESS_OPEN )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QIODevice::ReadWrite : hb_parni(1);
       hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );

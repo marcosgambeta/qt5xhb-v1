@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTIME_NEW )
   {
     QTime_new1();
   }
-  else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
   {
     QTime_new2();
   }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QTIME_ISVALID )
   {
     QTime_isValid1();
   }
-  else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
     QTime_isValid2();
   }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
       hb_retl( obj->setHMS ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 0 : hb_parni(4) ) );
     }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
   {
     QTime_toString1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QTime_toString2();
   }
@@ -459,7 +459,7 @@ void QTime_fromString2 ()
 
 HB_FUNC_STATIC( QTIME_FROMSTRING )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QTime_fromString1();
   }

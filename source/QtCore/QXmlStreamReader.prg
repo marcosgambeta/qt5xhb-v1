@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QXmlStreamReader::ErrorOnUnexpectedElement : hb_parni(1);
       hb_retc( (const char *) obj->readElementText (  (QXmlStreamReader::ReadElementTextBehaviour) par1 ).toLatin1().data() );

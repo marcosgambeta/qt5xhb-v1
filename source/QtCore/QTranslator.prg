@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 
   if( obj )
   {
-    if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
       const char * par1 = hb_parc(1);
       const char * par2 = hb_parc(2);

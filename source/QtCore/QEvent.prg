@@ -188,7 +188,7 @@ static int registerEventType ( int hint = -1 )
 */
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
-  if( (ISNUM(1)||ISNIL(1)) )
+  if( ISOPTNUM(1) )
   {
     hb_retni( QEvent::registerEventType ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
   }

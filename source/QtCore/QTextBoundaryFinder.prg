@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
   {
     QTextBoundaryFinder_new3();
   }
-  else if( ISBETWEEN(3,5) && ISNUM(1) && ISQCHAR(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  else if( ISBETWEEN(3,5) && ISNUM(1) && ISQCHAR(2) && ISNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QTextBoundaryFinder_new4();
   }

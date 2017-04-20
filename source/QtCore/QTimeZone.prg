@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
   {
     QTimeZone_new3();
   }
-  else if( ISBETWEEN(4,6) && ISQBYTEARRAY(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) && (ISNUM(5)||ISNIL(5)) && (ISCHAR(6)||ISNIL(6)) )
+  else if( ISBETWEEN(4,6) && ISQBYTEARRAY(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) && ISOPTNUM(5) && (ISCHAR(6)||ISNIL(6)) )
   {
     QTimeZone_new4();
   }
@@ -325,11 +325,11 @@ void QTimeZone_displayName2 ()
 
 HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME )
 {
-  if( ISBETWEEN(1,3) && ISQDATETIME(1) && (ISNUM(2)||ISNIL(2)) && (ISQLOCALE(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISQDATETIME(1) && ISOPTNUM(2) && (ISQLOCALE(3)||ISNIL(3)) )
   {
     QTimeZone_displayName1();
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISQLOCALE(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQLOCALE(3)||ISNIL(3)) )
   {
     QTimeZone_displayName2();
   }

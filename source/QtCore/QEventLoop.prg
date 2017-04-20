@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
       hb_retni( obj->exec (  (QEventLoop::ProcessEventsFlags) par1 ) );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       obj->exit ( (int) ISNIL(1)? 0 : hb_parni(1) );
     }
@@ -175,7 +175,7 @@ void QEventLoop_processEvents2 ()
 
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QEventLoop_processEvents1();
   }

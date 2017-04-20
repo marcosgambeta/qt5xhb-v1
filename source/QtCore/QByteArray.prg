@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FILL )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
+    if( (ISNUM(1)||ISCHAR(1)) && ISOPTNUM(2) )
     {
       char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
       QByteArray * ptr = new QByteArray( obj->fill ( par1, (int) ISNIL(2)? -1 : hb_parni(2) ) );
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
 
   if( obj )
   {
-    if( ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
       QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
       hb_retni( obj->indexOf ( *par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       hb_retni( obj->indexOf ( par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       const char * par1 = hb_parc(1);
       hb_retni( obj->indexOf (  (const char *) par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
+    if( (ISNUM(1)||ISCHAR(1)) && ISOPTNUM(2) )
     {
       char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
       hb_retni( obj->indexOf ( par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
@@ -840,19 +840,19 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
 
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 {
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF1 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF2 );
   }
-  //else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  //else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   //{
   //  HB_FUNC_EXEC( QBYTEARRAY_INDEXOF3 );
   //}
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF4 );
   }
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
 
   if( obj )
   {
-    if( ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
       QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
       hb_retni( obj->lastIndexOf ( *par1, (int) ISNIL(2)? -1 : hb_parni(2) ) );
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       hb_retni( obj->lastIndexOf ( par1, (int) ISNIL(2)? -1 : hb_parni(2) ) );
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       const char * par1 = hb_parc(1);
       hb_retni( obj->lastIndexOf (  (const char *) par1, (int) ISNIL(2)? -1 : hb_parni(2) ) );
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
+    if( (ISNUM(1)||ISCHAR(1)) && ISOPTNUM(2) )
     {
       char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
       hb_retni( obj->lastIndexOf ( par1, (int) ISNIL(2)? -1 : hb_parni(2) ) );
@@ -1121,19 +1121,19 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
 
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 {
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF1 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF2 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF3 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF4 );
   }
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QBYTEARRAY_MID )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       QByteArray * ptr = new QByteArray( obj->mid ( (int) hb_parni(1), (int) ISNIL(2)? -1 : hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -1992,7 +1992,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       QByteArray * ptr = new QByteArray( obj->setNum ( (int) hb_parni(1), (int) ISNIL(2)? 10 : hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -2013,7 +2013,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       QByteArray * ptr = new QByteArray( obj->setNum ( (uint) hb_parni(1), (int) ISNIL(2)? 10 : hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -2034,7 +2034,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       QByteArray * ptr = new QByteArray( obj->setNum ( (short) hb_parni(1), (int) ISNIL(2)? 10 : hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -2055,7 +2055,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       QByteArray * ptr = new QByteArray( obj->setNum ( (ushort) hb_parni(1), (int) ISNIL(2)? 10 : hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -2076,7 +2076,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       qlonglong par1 = hb_parnl(1);
       QByteArray * ptr = new QByteArray( obj->setNum ( par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2098,7 +2098,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       qulonglong par1 = hb_parnl(1);
       QByteArray * ptr = new QByteArray( obj->setNum ( par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2120,7 +2120,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
       double par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
@@ -2143,7 +2143,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
       float par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
@@ -2169,7 +2169,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
 
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_SETNUM1 );
   }
@@ -2440,7 +2440,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) ) // TODO: implementar parametro opcional
+    if( ISLOG(1) && ISOPTNUM(2) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retni( obj->toInt ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2462,7 +2462,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) ) // TODO: implementar parametro opcional
+    if( ISLOG(1) && ISOPTNUM(2) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retnl( obj->toLong ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2484,7 +2484,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) ) // TODO: implementar parametro opcional
+    if( ISLOG(1) && ISOPTNUM(2) ) // TODO: implementar parametro opcional
     {
       bool par1;
       hb_retnl( obj->toLongLong ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2544,7 +2544,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISLOG(1) && ISOPTNUM(2) )
     {
       bool par1;
       hb_retni( obj->toShort ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2566,7 +2566,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISLOG(1) && ISOPTNUM(2) )
     {
       bool par1;
       hb_retni( obj->toUInt ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2588,7 +2588,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISLOG(1) && ISOPTNUM(2) )
     {
       bool par1;
       hb_retnl( obj->toULong ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2610,7 +2610,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISLOG(1) && ISOPTNUM(2) )
     {
       bool par1;
       hb_retnl( obj->toULongLong ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2632,7 +2632,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
 
   if( obj )
   {
-    if( ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISLOG(1) && ISOPTNUM(2) )
     {
       bool par1;
       hb_retni( obj->toUShort ( &par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2769,7 +2769,7 @@ static QByteArray number ( int n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
 {
-  if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISNUM(1) && ISOPTNUM(2) )
   {
     QByteArray * ptr = new QByteArray( QByteArray::number ( (int) hb_parni(1), (int) ISNIL(2)? 10 : hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -2785,7 +2785,7 @@ static QByteArray number ( uint n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 {
-  if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISNUM(1) && ISOPTNUM(2) )
   {
     QByteArray * ptr = new QByteArray( QByteArray::number ( (uint) hb_parni(1), (int) ISNIL(2)? 10 : hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
@@ -2801,7 +2801,7 @@ static QByteArray number ( qlonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 {
-  if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISNUM(1) && ISOPTNUM(2) )
   {
     qlonglong par1 = hb_parnl(1);
     QByteArray * ptr = new QByteArray( QByteArray::number ( par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2818,7 +2818,7 @@ static QByteArray number ( qulonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 {
-  if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISNUM(1) && ISOPTNUM(2) )
   {
     qulonglong par1 = hb_parnl(1);
     QByteArray * ptr = new QByteArray( QByteArray::number ( par1, (int) ISNIL(2)? 10 : hb_parni(2) ) );
@@ -2835,7 +2835,7 @@ static QByteArray number ( double n, char f = 'g', int prec = 6 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 {
-  if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
     double par1 = hb_parnd(1);
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
@@ -2857,23 +2857,23 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER1 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER2 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER3 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER4 );
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER5 );
   }

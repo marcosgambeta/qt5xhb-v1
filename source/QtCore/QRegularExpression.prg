@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
   {
     QRegularExpression_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QRegularExpression_new2();
   }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_GLOBALMATCH )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_MATCH )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);

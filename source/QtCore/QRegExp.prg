@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
   {
     QRegExp_new1();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
     QRegExp_new2();
   }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retc( (const char *) obj->cap ( (int) ISNIL(1)? 0 : hb_parni(1) ).toLatin1().data() );
     }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retni( obj->pos ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
     }

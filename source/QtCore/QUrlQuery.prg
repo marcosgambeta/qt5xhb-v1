@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::PrettyDecoded : hb_parni(1);
       hb_retc( (const char *) obj->query (  (QUrl::ComponentFormattingOptions) par1 ).toLatin1().data() );
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::PrettyDecoded : hb_parni(1);
       hb_retc( (const char *) obj->toString (  (QUrl::ComponentFormattingOptions) par1 ).toLatin1().data() );

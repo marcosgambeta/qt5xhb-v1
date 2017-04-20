@@ -109,11 +109,11 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
   {
     QStringMatcher_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QStringMatcher_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     QStringMatcher_new3();
   }
@@ -223,11 +223,11 @@ void QStringMatcher_indexIn2 ()
 
 HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QStringMatcher_indexIn1();
   }
-  else if( ISBETWEEN(2,3) && ISQCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     QStringMatcher_indexIn2();
   }

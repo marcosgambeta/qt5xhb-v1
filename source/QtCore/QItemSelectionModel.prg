@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       QModelIndexList list = obj->selectedRows ( (int) ISNIL(1)? 0 : hb_parni(1) );
       PHB_DYNS pDynSym;
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       QModelIndexList list = obj->selectedColumns ( (int) ISNIL(1)? 0 : hb_parni(1) );
       PHB_DYNS pDynSym;

@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SHOWHELP )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       obj->showHelp ( (int) ISNIL(1)? 0 : hb_parni(1) );
     }

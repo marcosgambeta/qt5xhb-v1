@@ -238,7 +238,7 @@ static void exit ( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
-  if( (ISNUM(1)||ISNIL(1)) )
+  if( ISOPTNUM(1) )
   {
     QCoreApplication::exit ( (int) ISNIL(1)? 0 : hb_parni(1) );
     hb_itemReturn( hb_stackSelfItem() );
@@ -383,7 +383,7 @@ void QCoreApplication_processEvents2 ()
 
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QCoreApplication_processEvents1();
   }
@@ -664,7 +664,7 @@ static QString translate(const char * context, const char * sourceText, const ch
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
-  if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && ISOPTNUM(4) )
   {
     const char * par1 = hb_parc(1);
     const char * par2 = hb_parc(2);

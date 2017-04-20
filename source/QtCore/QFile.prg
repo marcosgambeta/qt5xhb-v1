@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QFILE_MAP ) // TODO: corrigir retorno do metodo
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QFile::NoOptions : hb_parni(3);
       uchar * ptr = obj->map ( (qint64) hb_parni(1), (qint64) hb_parni(2),  (QFile::MemoryMapFlags) par3 );
@@ -418,11 +418,11 @@ HB_FUNC_STATIC( QFILE_OPEN )
   {
     QFile_open1();
   }
-  else if( ISBETWEEN(2,3) && ISPOINTER(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISPOINTER(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     QFile_open2();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     QFile_open3();
   }

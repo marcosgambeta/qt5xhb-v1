@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
 
   if( obj )
   {
-    if( ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
       QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 
   if( obj )
   {
-    if( ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+    if( ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) && ISOPTNUM(5) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
 
   if( obj )
   {
-    if( ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && (ISNUM(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
     {
       int par2 = hb_parni(2);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
       obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTHREAD_EXIT )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       obj->exit ( (int) ISNIL(1)? 0 : hb_parni(1) );
     }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTHREAD_START )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QThread::InheritPriority : hb_parni(1);
       obj->start (  (QThread::Priority) par1 );

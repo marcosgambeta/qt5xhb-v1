@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
   {
     QIODevice_readLine1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QIODevice_readLine2();
   }

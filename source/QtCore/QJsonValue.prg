@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW9 )
 
 HB_FUNC_STATIC( QJSONVALUE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     HB_FUNC_EXEC( QJSONVALUE_NEW1 );
   }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       double par1 = ISNIL(1)? 0 : hb_parnd(1);
       hb_retnd( obj->toDouble ( par1 ) );

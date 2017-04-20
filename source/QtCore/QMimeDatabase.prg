@@ -148,11 +148,11 @@ void QMimeDatabase_mimeTypeForFile2 ()
 
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QMimeDatabase_mimeTypeForFile1();
   }
-  else if( ISBETWEEN(1,2) && ISQFILEINFO(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQFILEINFO(1) && ISOPTNUM(2) )
   {
     QMimeDatabase_mimeTypeForFile2();
   }

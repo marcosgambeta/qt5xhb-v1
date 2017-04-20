@@ -177,19 +177,19 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
   {
     QTextStream_new2();
   }
-  else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISPOINTER(1) && ISOPTNUM(2) )
   {
     QTextStream_new3();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QTextStream_new4();
   }
-  //else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+  //else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   //{
   //  QTextStream_new5();
   //}
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
     QTextStream_new6();
   }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETSTRING )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = hb_parc(1);
       int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retc( (const char *) obj->readLine ( (qint64) ISNIL(1)? 0 : hb_parni(1) ).toLatin1().data() );
     }

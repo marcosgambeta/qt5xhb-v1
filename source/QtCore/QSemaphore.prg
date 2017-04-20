@@ -60,7 +60,7 @@ QSemaphore(int n = 0)
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
     QSemaphore * o = new QSemaphore ( par1 );
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       obj->acquire ( (int) ISNIL(1)? 1 : hb_parni(1) );
     }
@@ -142,7 +142,7 @@ void QSemaphore_tryAcquire2 ()
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QSemaphore_tryAcquire1();
   }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       obj->release ( (int) ISNIL(1)? 1 : hb_parni(1) );
     }

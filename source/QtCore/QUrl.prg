@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
       QByteArray * ptr = new QByteArray( obj->toEncoded (  (QUrl::FormattingOptions) par1 ) );
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QURL_TOSTRING )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
       hb_retc( (const char *) obj->toString (  (QUrl::FormattingOptions) par1 ).toLatin1().data() );

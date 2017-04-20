@@ -359,7 +359,7 @@ static QJsonDocument fromBinaryData(const QByteArray & data, DataValidation vali
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
 {
-  if( ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QJsonDocument::Validate : hb_parni(2);
@@ -395,7 +395,7 @@ static QJsonDocument fromRawData(const char * data, int size, DataValidation val
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_FROMRAWDATA )
 {
-  if( ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     const char * par1 = hb_parc(1);
     int par3 = ISNIL(3)? (int) QJsonDocument::Validate : hb_parni(3);

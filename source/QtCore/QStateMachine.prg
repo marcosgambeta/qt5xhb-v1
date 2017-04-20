@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 
   if( obj )
   {
-    if( ISQEVENT(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISQEVENT(1) && ISOPTNUM(2) )
     {
       QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QStateMachine::NormalPriority : hb_parni(2);

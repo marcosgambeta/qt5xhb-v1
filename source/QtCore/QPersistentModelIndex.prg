@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       QVariant * ptr = new QVariant( obj->data ( (int) ISNIL(1)? Qt::DisplayRole : hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );

@@ -62,7 +62,7 @@ QSystemSemaphore(const QString &key, int initialValue = 0, AccessMode mode = Ope
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? 0 : hb_parni(2);
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       hb_retl( obj->release ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
     }

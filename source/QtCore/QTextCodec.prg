@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
       QTextDecoder * ptr = obj->makeDecoder (  (QTextCodec::ConversionFlags) par1 );
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
       QTextEncoder * ptr = obj->makeEncoder (  (QTextCodec::ConversionFlags) par1 );

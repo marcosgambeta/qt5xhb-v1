@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 
   if( obj )
   {
-    if( (ISNUM(1)||ISNIL(1)) )
+    if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QAbstractAnimation::KeepWhenStopped : hb_parni(1);
       obj->start (  (QAbstractAnimation::DeletionPolicy) par1 );

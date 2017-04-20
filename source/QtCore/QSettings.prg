@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       obj->beginWriteArray ( par1, (int) ISNIL(2)? -1 : hb_parni(2) );

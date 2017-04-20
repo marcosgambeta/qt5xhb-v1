@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
   {
     QDate_toString1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QDate_toString2();
   }
@@ -504,7 +504,7 @@ void QDate_fromString2 ()
 
 HB_FUNC_STATIC( QDATE_FROMSTRING )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QDate_fromString1();
   }

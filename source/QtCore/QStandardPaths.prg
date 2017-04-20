@@ -95,7 +95,7 @@ static QString locate(StandardLocation type, const QString &fileName, LocateOpti
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
 {
-  if( ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
     int par1 = hb_parni(1);
     QString par2 = QLatin1String( hb_parc(2) );
@@ -113,7 +113,7 @@ static QStringList locateAll(StandardLocation type, const QString &fileName, Loc
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
 {
-  if( ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
     int par1 = hb_parni(1);
     QString par2 = QLatin1String( hb_parc(2) );
