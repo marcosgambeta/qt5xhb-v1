@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 
   if( obj )
   {
-    if( ISQABSTRACTEXTENSIONFACTORY(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISQABSTRACTEXTENSIONFACTORY(1) && ISOPTCHAR(2) )
     {
       QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 
   if( obj )
   {
-    if( ISQABSTRACTEXTENSIONFACTORY(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISQABSTRACTEXTENSIONFACTORY(1) && ISOPTCHAR(2) )
     {
       QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
