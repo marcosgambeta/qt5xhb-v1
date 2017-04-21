@@ -123,11 +123,11 @@ void QDirModel_new2 ()
 
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {
-  if( ISBETWEEN(3,4) && ISARRAY(1) && ISNUM(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISARRAY(1) && ISNUM(2) && ISNUM(3) && ISOPTQOBJECT(4) )
   {
     QDirModel_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QDirModel_new2();
   }

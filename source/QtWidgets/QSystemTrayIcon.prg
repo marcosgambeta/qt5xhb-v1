@@ -93,11 +93,11 @@ void QSystemTrayIcon_new2 ()
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QSystemTrayIcon_new1();
   }
-  else if( ISBETWEEN(1,2) && (ISQICON(1)||ISCHAR(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISQICON(1)||ISCHAR(1)) && ISOPTQOBJECT(2) )
   {
     QSystemTrayIcon_new2();
   }
