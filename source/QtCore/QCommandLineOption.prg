@@ -110,11 +110,11 @@ void QCommandLineOption_new3 ()
 
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 {
-  if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
+  if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
   {
     QCommandLineOption_new1();
   }
-  else if( ISBETWEEN(1,4) && ISARRAY(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && ISARRAY(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
   {
     QCommandLineOption_new2();
   }

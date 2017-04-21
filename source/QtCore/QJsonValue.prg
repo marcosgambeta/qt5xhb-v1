@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
 
   if( obj )
   {
-    if( (ISCHAR(1)||ISNIL(1)) )
+    if( ISOPTCHAR(1) )
     {
       QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
       hb_retc( (const char *) obj->toString ( par1 ).toLatin1().data() );

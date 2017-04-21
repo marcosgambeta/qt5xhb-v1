@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
 
   if( obj )
   {
-    if( (ISCHAR(1)||ISNIL(1)) )
+    if( ISOPTCHAR(1) )
     {
       QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
       obj->raiseError ( par1 );

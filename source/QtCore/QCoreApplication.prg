@@ -664,7 +664,7 @@ static QString translate(const char * context, const char * sourceText, const ch
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
-  if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && ISOPTNUM(4) )
+  if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
     const char * par1 = hb_parc(1);
     const char * par2 = hb_parc(2);

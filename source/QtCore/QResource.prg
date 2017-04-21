@@ -72,7 +72,7 @@ QResource ( const QString & file = QString(), const QLocale & locale = QLocale()
 */
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISQLOCALE(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISQLOCALE(2)||ISNIL(2)) )
   {
     QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
     QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(2);
@@ -246,7 +246,7 @@ static bool registerResource ( const QString & rccFileName, const QString & mapR
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
-  if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  if( ISCHAR(1) && ISOPTCHAR(2) )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -263,7 +263,7 @@ static bool unregisterResource ( const QString & rccFileName, const QString & ma
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
-  if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  if( ISCHAR(1) && ISOPTCHAR(2) )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );

@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       qlonglong par1 = hb_parnl(1);
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
       hb_retc( (const char *) obj->toCurrencyString ( (short) hb_parni(1), par2 ).toLatin1().data() );
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
       hb_retc( (const char *) obj->toCurrencyString ( (ushort) hb_parni(1), par2 ).toLatin1().data() );
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
       hb_retc( (const char *) obj->toCurrencyString ( (int) hb_parni(1), par2 ).toLatin1().data() );
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
       hb_retc( (const char *) obj->toCurrencyString ( (uint) hb_parni(1), par2 ).toLatin1().data() );
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       float par1 = hb_parnd(1);
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       qulonglong par1 = hb_parnl(1);
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISNUM(1) && ISOPTCHAR(2) )
     {
       double par1 = hb_parnd(1);
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );

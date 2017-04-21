@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
 
   if( obj )
   {
-    if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
+    if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = QLatin1String( hb_parc(2) );

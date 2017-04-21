@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
 
   if( obj )
   {
-    if( (ISCHAR(1)||ISNIL(1)) && ISOPTNUM(2) )
+    if( ISOPTCHAR(1) && ISOPTNUM(2) )
     {
       QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
@@ -660,7 +660,7 @@ void QObject_findChildren3 ()
 
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTNUM(2) )
   {
     QObject_findChildren1();
   }
@@ -1019,7 +1019,7 @@ static QString tr ( const char * sourceText, const char * disambiguation = 0, in
 */
 HB_FUNC_STATIC( QOBJECT_TR )
 {
-  if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
+  if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
   {
     const char * par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
