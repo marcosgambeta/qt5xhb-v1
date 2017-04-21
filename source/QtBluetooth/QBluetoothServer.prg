@@ -76,7 +76,7 @@ QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = 0
 HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
   {
     int par1 = hb_parni(1);
     QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
