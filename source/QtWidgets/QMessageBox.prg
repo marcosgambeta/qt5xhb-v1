@@ -893,7 +893,7 @@ static void aboutQt ( QWidget * parent, const QString & title = QString() )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 {
-  if( ISQWIDGET(1) && (ISCHAR(2)||ISNIL(2)) )
+  if( ISQWIDGET(1) && ISOPTCHAR(2) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );

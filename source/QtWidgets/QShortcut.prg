@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
   {
     QShortcut_new1();
   }
-  else if( ISBETWEEN(2,5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && ISOPTNUM(5) )
+  else if( ISBETWEEN(2,5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) )
   {
     QShortcut_new2();
   }

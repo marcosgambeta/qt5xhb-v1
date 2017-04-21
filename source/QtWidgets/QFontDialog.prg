@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
   {
     QFontDialog_getFont1();
   }
-  else if( ISBETWEEN(2,5) && ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && ISOPTNUM(5) )
+  else if( ISBETWEEN(2,5) && ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTNUM(5) )
   {
     QFontDialog_getFont2();
   }

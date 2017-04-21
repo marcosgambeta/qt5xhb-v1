@@ -375,7 +375,7 @@ static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, c
 */
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
-  if( (ISQCOLOR(1)||ISCHAR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && ISOPTNUM(4) )
+  if( (ISQCOLOR(1)||ISCHAR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
     QColor par1 = ISNIL(1)? Qt::white : ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
