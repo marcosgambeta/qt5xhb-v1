@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
   {
     HB_FUNC_EXEC( QBITMAP_NEW4 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
     HB_FUNC_EXEC( QBITMAP_NEW5 );
   }
