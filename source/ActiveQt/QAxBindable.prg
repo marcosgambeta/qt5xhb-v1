@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 
   if( obj )
   {
-    if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
     {
       QString par2 = QLatin1String( hb_parc(2) );
       QString par3 = QLatin1String( hb_parc(3) );

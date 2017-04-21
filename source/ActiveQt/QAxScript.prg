@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 
   if( obj )
   {
-    if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISCHAR(1) && ISOPTCHAR(2) )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
