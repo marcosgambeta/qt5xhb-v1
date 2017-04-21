@@ -1937,6 +1937,8 @@
 #define ISQXMLSTREAMREADER(n)                               _qt5xhb_isObjectDerivedFrom(n,"QXmlStreamReader")
 #define ISQXMLSTREAMWRITER(n)                               _qt5xhb_isObjectDerivedFrom(n,"QXmlStreamWriter")
 
+#define ISOPTQOBJECT(n)                                     (ISQOBJECT(n)||ISNIL(n))
+
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b
 #define ISNUMPAR(a)                                         hb_pcount() == a
 #define INHERITS(a,b)                                       _qt5xhb_isObjectDerivedFrom(a,b)
