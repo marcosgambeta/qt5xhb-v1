@@ -107,15 +107,15 @@ void QAxObject_new3 ()
 
 HB_FUNC_STATIC( QAXOBJECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QAxObject_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
   {
     QAxObject_new2();
   }
-  else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISPOINTER(1) && ISOPTQOBJECT(2) )
   {
     QAxObject_new3(); // TODO: revisar parametro 'IUnknown * iface'
   }
