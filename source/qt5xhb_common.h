@@ -26,3 +26,4 @@
 #define ISOPTLOG(n) (ISLOG(n)||ISNIL(n))
 #define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
 #define ISOPTCHAR(n) (ISCHAR(n)||ISNIL(n))
+#define ISOPTARRAY(n) (ISARRAY(n)||ISNIL(n))
