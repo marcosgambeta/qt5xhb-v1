@@ -148,7 +148,7 @@ static QString findExecutable(const QString &executableName, const QStringList &
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
 {
-  if( ISCHAR(1) && (ISARRAY(2)||ISNIL(2)) )
+  if( ISCHAR(1) && ISOPTARRAY(2) )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
