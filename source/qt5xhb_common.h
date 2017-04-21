@@ -25,3 +25,4 @@
 
 #define ISOPTLOG(n) (ISLOG(n)||ISNIL(n))
 #define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
+#define ISOPTCHAR(n) (ISCHAR(n)||ISNIL(n))
