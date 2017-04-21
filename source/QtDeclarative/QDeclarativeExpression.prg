@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
   {
     QDeclarativeExpression_new1();
   }
-  else if( ISBETWEEN(3,4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && ISOPTQOBJECT(4) )
   {
     QDeclarativeExpression_new2();
   }

@@ -88,11 +88,11 @@ void QDeclarativeContext_new2 ()
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && ISOPTQOBJECT(2) )
   {
     QDeclarativeContext_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQDECLARATIVECONTEXT(1) && ISOPTQOBJECT(2) )
   {
     QDeclarativeContext_new2();
   }
