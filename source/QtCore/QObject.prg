@@ -277,7 +277,7 @@ Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOBJECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
     QObject * o = new QObject ( par1 );

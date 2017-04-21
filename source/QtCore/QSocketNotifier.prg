@@ -53,7 +53,7 @@ QSocketNotifier(qintptr socket, Type, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
   {
     qintptr par1 = hb_parni(1);
     int par2 = hb_parni(2);

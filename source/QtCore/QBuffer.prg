@@ -87,11 +87,11 @@ void QBuffer_new2 ()
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QBuffer_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTQOBJECT(2) )
   {
     QBuffer_new2();
   }

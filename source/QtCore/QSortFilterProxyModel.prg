@@ -114,7 +114,7 @@ QSortFilterProxyModel(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QSortFilterProxyModel * o = new QSortFilterProxyModel (  );
     _qt5xhb_storePointerAndFlag( o, false );

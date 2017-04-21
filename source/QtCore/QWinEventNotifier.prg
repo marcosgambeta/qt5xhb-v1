@@ -77,11 +77,11 @@ explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0) // TODO: implemen
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {
 #ifdef Q_OS_WIN
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QWinEventNotifier_new1();
   }
-  //else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  //else if( ISBETWEEN(1,2) && ISPOINTER(1) && ISOPTQOBJECT(2) )
   //{
   //  QWinEventNotifier_new2();
   //}

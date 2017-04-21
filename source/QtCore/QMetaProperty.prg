@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 
   if( obj )
   {
-    if( (ISQOBJECT(1)||ISNIL(1)) )
+    if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
       hb_retl( obj->isDesignable ( par1 ) );
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 
   if( obj )
   {
-    if( (ISQOBJECT(1)||ISNIL(1)) )
+    if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
       hb_retl( obj->isScriptable ( par1 ) );
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 
   if( obj )
   {
-    if( (ISQOBJECT(1)||ISNIL(1)) )
+    if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
       hb_retl( obj->isStored ( par1 ) );
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 
   if( obj )
   {
-    if( (ISQOBJECT(1)||ISNIL(1)) )
+    if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
       hb_retl( obj->isEditable ( par1 ) );
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
 
   if( obj )
   {
-    if( (ISQOBJECT(1)||ISNIL(1)) )
+    if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
       hb_retl( obj->isUser ( par1 ) );
