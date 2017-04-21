@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 
   if( obj )
   {
-    if( (ISCHAR(1)||ISNIL(1)) )
+    if( ISOPTCHAR(1) )
     {
       QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
       obj->setConnectOptions ( par1 );
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 
   if( obj )
   {
-    if( (ISCHAR(1)||ISNIL(1)) )
+    if( ISOPTCHAR(1) )
     {
       QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
       QSqlQuery * ptr = new QSqlQuery( obj->exec ( par1 ) );
@@ -719,11 +719,11 @@ void QSqlDatabase_addDatabase2 ()
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
     QSqlDatabase_addDatabase1();
   }
-  else if( ISBETWEEN(1,2) && ISQSQLDRIVER(1) && (ISCHAR(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQSQLDRIVER(1) && ISOPTCHAR(2) )
   {
     QSqlDatabase_addDatabase2();
   }
@@ -765,7 +765,7 @@ static bool contains ( const QString & connectionName = QLatin1String( defaultCo
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
-  if( (ISCHAR(1)||ISNIL(1)) )
+  if( ISOPTCHAR(1) )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
     hb_retl( QSqlDatabase::contains ( par1 ) );
@@ -781,7 +781,7 @@ static QSqlDatabase database ( const QString & connectionName = QLatin1String( d
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
-  if( (ISCHAR(1)||ISNIL(1)) && ISOPTLOG(2) )
+  if( ISOPTCHAR(1) && ISOPTLOG(2) )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, (bool) ISNIL(2)? true : hb_parl(2) ) );
