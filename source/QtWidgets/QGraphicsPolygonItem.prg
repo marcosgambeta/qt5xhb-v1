@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 
   if( obj )
   {
-    if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISOPTQWIDGET(3) )
     {
       QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);

@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
   {
     QFileDialog_new1();
   }
-  else if( ISBETWEEN(0,4) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
+  else if( ISBETWEEN(0,4) && ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
   {
     QFileDialog_new2();
   }
@@ -1335,7 +1335,7 @@ static QString getExistingDirectory ( QWidget * parent = 0, const QString & capt
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -1354,7 +1354,7 @@ static QString getOpenFileName (QWidget *parent = 0, const QString &caption = QS
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -1375,7 +1375,7 @@ static QStringList getOpenFileNames ( QWidget * parent = 0, const QString & capt
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -1397,7 +1397,7 @@ static QString getSaveFileName (QWidget *parent = 0, const QString &caption = QS
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -1418,7 +1418,7 @@ static QUrl getOpenFileUrl (QWidget *parent = 0, const QString &caption = QStrin
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -1449,7 +1449,7 @@ static QUrl getSaveFileUrl (QWidget *parent = 0, const QString &caption = QStrin
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -1480,7 +1480,7 @@ static QUrl getExistingDirectoryUrl (QWidget *parent = 0, const QString &caption
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
@@ -1509,7 +1509,7 @@ static QList<QUrl> getOpenFileUrls (QWidget *parent = 0, const QString &caption 
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
 {
-  if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
+  if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );

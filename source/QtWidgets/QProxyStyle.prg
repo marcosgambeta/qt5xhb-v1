@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWPRIMITIVE )
 
   if( obj )
   {
-    if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISOPTQWIDGET(4) )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCONTROL )
 
   if( obj )
   {
-    if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISOPTQWIDGET(4) )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCOMPLEXCONTROL )
 
   if( obj )
   {
-    if( ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ISOPTQWIDGET(4) )
     {
       int par1 = hb_parni(1);
       const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
 
   if( obj )
   {
-    if( ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4)||ISNIL(4)) )
+    if( ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && ISOPTQWIDGET(4) )
     {
       int par1 = hb_parni(1);
       const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) && (ISQSTYLEHINTRETURN(4)||ISNIL(4)) )
+    if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && ISOPTQWIDGET(3) && (ISQSTYLEHINTRETURN(4)||ISNIL(4)) )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && ISOPTQWIDGET(3) )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQSTYLEOPTION(4)||ISNIL(4)) && (ISQWIDGET(5)||ISNIL(5)) )
+    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQSTYLEOPTION(4)||ISNIL(4)) && ISOPTQWIDGET(5) )
     {
       int par1 = hb_parni(1);
       int par2 = hb_parni(2);
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
 
   if( obj )
   {
-    if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && ISOPTQWIDGET(3) )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
 
   if( obj )
   {
-    if( ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISNUM(1) && ISQSTYLEOPTION(2) && ISOPTQWIDGET(3) )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);

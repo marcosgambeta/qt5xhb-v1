@@ -89,11 +89,11 @@ void QKeySequenceEdit_new2 ()
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
     QKeySequenceEdit_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQKEYSEQUENCE(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQKEYSEQUENCE(1) && ISOPTQWIDGET(2) )
   {
     QKeySequenceEdit_new2();
   }

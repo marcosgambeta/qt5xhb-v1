@@ -76,11 +76,11 @@ void QScrollBar_new2 ()
 
 HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
     QScrollBar_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQWIDGET(2) )
   {
     QScrollBar_new2();
   }

@@ -130,7 +130,7 @@ QComboBox ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMBOBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
     QComboBox * o = new QComboBox ( par1 );

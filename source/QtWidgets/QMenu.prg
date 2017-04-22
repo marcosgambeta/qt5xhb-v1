@@ -116,11 +116,11 @@ void QMenu_new2 ()
 
 HB_FUNC_STATIC( QMENU_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
     QMenu_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
   {
     QMenu_new2();
   }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
   {
     QMenu_exec2();
   }
-  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3)||ISNIL(3)) && (ISQWIDGET(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3)||ISNIL(3)) && ISOPTQWIDGET(4) )
   {
     QMenu_exec3();
   }

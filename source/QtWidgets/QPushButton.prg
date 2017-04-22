@@ -111,19 +111,19 @@ void QPushButton_new4 ()
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
     QPushButton_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
   {
     QPushButton_new2();
   }
-  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISOPTQWIDGET(3) )
   {
     QPushButton_new3();
   }
-  else if( ISBETWEEN(2,3) && ISQPIXMAP(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQPIXMAP(1) && ISCHAR(2) && ISOPTQWIDGET(3) )
   {
     QPushButton_new4();
   }

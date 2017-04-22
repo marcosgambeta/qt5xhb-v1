@@ -305,7 +305,7 @@ void QDesktopWidget_screenNumber2 ()
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
     QDesktopWidget_screenNumber1();
   }

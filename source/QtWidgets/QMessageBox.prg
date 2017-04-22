@@ -126,11 +126,11 @@ void QMessageBox_new2 ()
 
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
     QMessageBox_new1();
   }
-  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && (ISQWIDGET(5)||ISNIL(5)) && ISOPTNUM(6) )
+  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTQWIDGET(5) && ISOPTNUM(6) )
   {
     QMessageBox_new2();
   }
