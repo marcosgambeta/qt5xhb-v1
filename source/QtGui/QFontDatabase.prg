@@ -32,8 +32,6 @@ CLASS QFontDatabase
    METHOD italic
    METHOD pointSizes
    METHOD smoothSizes
-   METHOD styleString1
-   METHOD styleString2
    METHOD styleString
    METHOD styles
    METHOD weight
@@ -86,14 +84,21 @@ QFontDatabase ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_NEW )
 {
-  QFontDatabase * o = new QFontDatabase (  );
-  _qt5xhb_storePointerAndFlag( o, true );
+  if( ISNUMPAR(0) )
+  {
+    QFontDatabase * o = new QFontDatabase (  );
+    _qt5xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QFONTDATABASE_DELETE )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -103,6 +108,7 @@ HB_FUNC_STATIC( QFONTDATABASE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -112,14 +118,21 @@ bool bold ( const QString & family, const QString & style ) const
 HB_FUNC_STATIC( QFONTDATABASE_BOLD )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->bold ( par1, par2 ) );
+    if( ISCHAR(1) && ISCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = QLatin1String( hb_parc(2) );
+      hb_retl( obj->bold ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QStringList families ( WritingSystem writingSystem = Any ) const
@@ -127,14 +140,21 @@ QStringList families ( WritingSystem writingSystem = Any ) const
 HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QFontDatabase::Any : hb_parni(1);
-    QStringList strl = obj->families (  (QFontDatabase::WritingSystem) par1 );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    if( ISOPTNUM(1) )
+    {
+      int par1 = ISNIL(1)? (int) QFontDatabase::Any : hb_parni(1);
+      QStringList strl = obj->families (  (QFontDatabase::WritingSystem) par1 );
+      _qt5xhb_convert_qstringlist_to_array ( strl );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QFont font ( const QString & family, const QString & style, int pointSize ) const
@@ -142,15 +162,22 @@ QFont font ( const QString & family, const QString & style, int pointSize ) cons
 HB_FUNC_STATIC( QFONTDATABASE_FONT )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QFont * ptr = new QFont( obj->font ( par1, par2, (int) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+    if( ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = QLatin1String( hb_parc(2) );
+      QFont * ptr = new QFont( obj->font ( par1, par2, (int) hb_parni(3) ) );
+      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
@@ -158,14 +185,21 @@ bool isBitmapScalable ( const QString & family, const QString & style = QString(
 HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( obj->isBitmapScalable ( par1, par2 ) );
+    if( ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      hb_retl( obj->isBitmapScalable ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool isFixedPitch ( const QString & family, const QString & style = QString() ) const
@@ -173,14 +207,21 @@ bool isFixedPitch ( const QString & family, const QString & style = QString() ) 
 HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( obj->isFixedPitch ( par1, par2 ) );
+    if( ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      hb_retl( obj->isFixedPitch ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool isScalable ( const QString & family, const QString & style = QString() ) const
@@ -188,14 +229,21 @@ bool isScalable ( const QString & family, const QString & style = QString() ) co
 HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( obj->isScalable ( par1, par2 ) );
+    if( ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      hb_retl( obj->isScalable ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool isSmoothlyScalable ( const QString & family, const QString & style = QString() ) const
@@ -203,14 +251,21 @@ bool isSmoothlyScalable ( const QString & family, const QString & style = QStrin
 HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( obj->isSmoothlyScalable ( par1, par2 ) );
+    if( ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      hb_retl( obj->isSmoothlyScalable ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool italic ( const QString & family, const QString & style ) const
@@ -218,14 +273,21 @@ bool italic ( const QString & family, const QString & style ) const
 HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->italic ( par1, par2 ) );
+    if( ISCHAR(1) && ISCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = QLatin1String( hb_parc(2) );
+      hb_retl( obj->italic ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QList<int> pointSizes ( const QString & family, const QString & style = QString() )
@@ -233,15 +295,22 @@ QList<int> pointSizes ( const QString & family, const QString & style = QString(
 HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QList<int> list = obj->pointSizes ( par1, par2 );
-    _qt5xhb_convert_qlist_int_to_array ( list );
+    if( ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      QList<int> list = obj->pointSizes ( par1, par2 );
+      _qt5xhb_convert_qlist_int_to_array ( list );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QList<int> smoothSizes ( const QString & family, const QString & style )
@@ -249,22 +318,30 @@ QList<int> smoothSizes ( const QString & family, const QString & style )
 HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QList<int> list = obj->smoothSizes ( par1, par2 );
-    _qt5xhb_convert_qlist_int_to_array ( list );
+    if( ISCHAR(1) && ISCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = QLatin1String( hb_parc(2) );
+      QList<int> list = obj->smoothSizes ( par1, par2 );
+      _qt5xhb_convert_qlist_int_to_array ( list );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QString styleString ( const QFont & font )
 */
-HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
+void QFontDatabase_styleString1 ()
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
@@ -272,20 +349,19 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
   }
 }
 
-
 /*
 QString styleString ( const QFontInfo & fontInfo )
 */
-HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
+void QFontDatabase_styleString2 ()
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QFontInfo * par1 = (QFontInfo *) _qt5xhb_itemGetPtr(1);
     hb_retc( (const char *) obj->styleString ( *par1 ).toLatin1().data() );
   }
 }
-
 
 //[1]QString styleString ( const QFont & font )
 //[2]QString styleString ( const QFontInfo & fontInfo )
@@ -294,11 +370,11 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    HB_FUNC_EXEC( QFONTDATABASE_STYLESTRING1 );
+    QFontDatabase_styleString1();
   }
   else if( ISNUMPAR(1) && ISQFONTINFO(1) )
   {
-    HB_FUNC_EXEC( QFONTDATABASE_STYLESTRING2 );
+    QFontDatabase_styleString2();
   }
   else
   {
@@ -312,14 +388,21 @@ QStringList styles ( const QString & family ) const
 HB_FUNC_STATIC( QFONTDATABASE_STYLES )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringList strl = obj->styles ( par1 );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QStringList strl = obj->styles ( par1 );
+      _qt5xhb_convert_qstringlist_to_array ( strl );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 int weight ( const QString & family, const QString & style ) const
@@ -327,46 +410,69 @@ int weight ( const QString & family, const QString & style ) const
 HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
 {
   QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retni( obj->weight ( par1, par2 ) );
+    if( ISCHAR(1) && ISCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = QLatin1String( hb_parc(2) );
+      hb_retni( obj->weight ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
-
 
 /*
 static int addApplicationFont ( const QString & fileName )
 */
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retni( QFontDatabase::addApplicationFont ( par1 ) );
+  if( ISCHAR(1) )
+  {
+    QString par1 = QLatin1String( hb_parc(1) );
+    hb_retni( QFontDatabase::addApplicationFont ( par1 ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 static int addApplicationFontFromData ( const QByteArray & fontData )
 */
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  hb_retni( QFontDatabase::addApplicationFontFromData ( *par1 ) );
+  if( ISQBYTEARRAY(1) )
+  {
+    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+    hb_retni( QFontDatabase::addApplicationFontFromData ( *par1 ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 static QStringList applicationFontFamilies ( int id )
 */
 HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
-  QStringList strl = QFontDatabase::applicationFontFamilies ( (int) hb_parni(1) );
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  if( ISNUM(1) )
+  {
+    QStringList strl = QFontDatabase::applicationFontFamilies ( (int) hb_parni(1) );
+    _qt5xhb_convert_qstringlist_to_array ( strl );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 static bool removeAllApplicationFonts ()
@@ -376,15 +482,20 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
   hb_retl( QFontDatabase::removeAllApplicationFonts (  ) );
 }
 
-
 /*
 static bool removeApplicationFont ( int id )
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
-  hb_retl( QFontDatabase::removeApplicationFont ( (int) hb_parni(1) ) );
+  if( ISNUM(1) )
+  {
+    hb_retl( QFontDatabase::removeApplicationFont ( (int) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 static QList<int> standardSizes ()
@@ -395,7 +506,6 @@ HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
   _qt5xhb_convert_qlist_int_to_array ( list );
 }
 
-
 /*
 static bool supportsThreadedFontRendering ()
 */
@@ -404,31 +514,42 @@ HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
   hb_retl( QFontDatabase::supportsThreadedFontRendering (  ) );
 }
 
-
 /*
 static QString writingSystemName ( WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 {
-  int par1 = hb_parni(1);
-  hb_retc( (const char *) QFontDatabase::writingSystemName (  (QFontDatabase::WritingSystem) par1 ).toLatin1().data() );
+  if( ISNUM(1) )
+  {
+    int par1 = hb_parni(1);
+    hb_retc( (const char *) QFontDatabase::writingSystemName (  (QFontDatabase::WritingSystem) par1 ).toLatin1().data() );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 static QString writingSystemSample ( WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {
-  int par1 = hb_parni(1);
-  hb_retc( (const char *) QFontDatabase::writingSystemSample (  (QFontDatabase::WritingSystem) par1 ).toLatin1().data() );
+  if( ISNUM(1) )
+  {
+    int par1 = hb_parni(1);
+    hb_retc( (const char *) QFontDatabase::writingSystemSample (  (QFontDatabase::WritingSystem) par1 ).toLatin1().data() );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
-
 
 HB_FUNC_STATIC( QFONTDATABASE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -447,6 +568,7 @@ HB_FUNC_STATIC( QFONTDATABASE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -468,14 +590,15 @@ HB_FUNC_STATIC( QFONTDATABASE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QFONTDATABASE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
