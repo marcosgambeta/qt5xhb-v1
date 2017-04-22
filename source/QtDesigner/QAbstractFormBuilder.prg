@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 
   if( obj )
   {
-    if( ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
+    if( ISQIODEVICE(1) && ISOPTQWIDGET(2) )
     {
       QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
       QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);

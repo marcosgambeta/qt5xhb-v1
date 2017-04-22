@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
 
   if( obj )
   {
-    if( (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+    if( ISOPTQWIDGET(1) && ISOPTNUM(2) )
     {
       QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
