@@ -116,15 +116,15 @@ void QAxWidget_new3 ()
 
 HB_FUNC_STATIC( QAXWIDGET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && ISOPTQWIDGET(1) && ISOPTNUM(2) )
   {
     QAxWidget_new1();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTQWIDGET(2) && ISOPTNUM(3) )
   {
     QAxWidget_new2();
   }
-  else if( ISBETWEEN(1,3) && ISPOINTER(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISPOINTER(1) && ISOPTQWIDGET(2) && ISOPTNUM(3) )
   {
     QAxWidget_new3();
   }
