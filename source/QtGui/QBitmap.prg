@@ -15,11 +15,6 @@ CLASS QBitmap INHERIT QPixmap
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD clear
@@ -56,7 +51,7 @@ RETURN
 /*
 QBitmap ()
 */
-HB_FUNC_STATIC( QBITMAP_NEW1 )
+void QBitmap_new1 ()
 {
   QBitmap * o = new QBitmap (  );
   _qt5xhb_storePointerAndFlag( o, true );
@@ -65,7 +60,7 @@ HB_FUNC_STATIC( QBITMAP_NEW1 )
 /*
 QBitmap ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QBITMAP_NEW2 )
+void QBitmap_new2 ()
 {
   QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   QBitmap * o = new QBitmap ( *par1 );
@@ -75,7 +70,7 @@ HB_FUNC_STATIC( QBITMAP_NEW2 )
 /*
 QBitmap ( int width, int height )
 */
-HB_FUNC_STATIC( QBITMAP_NEW3 )
+void QBitmap_new3 ()
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -86,7 +81,7 @@ HB_FUNC_STATIC( QBITMAP_NEW3 )
 /*
 QBitmap ( const QSize & size )
 */
-HB_FUNC_STATIC( QBITMAP_NEW4 )
+void QBitmap_new4 ()
 {
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QBitmap * o = new QBitmap ( *par1 );
@@ -96,14 +91,13 @@ HB_FUNC_STATIC( QBITMAP_NEW4 )
 /*
 QBitmap ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QBITMAP_NEW5 )
+void QBitmap_new5 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   QBitmap * o = new QBitmap ( par1,  (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
-
 
 //[1]QBitmap ()
 //[2]QBitmap ( const QPixmap & pixmap )
@@ -115,23 +109,23 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW1 );
+    QBitmap_new1();
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW2 );
+    QBitmap_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW3 );
+    QBitmap_new3();
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW4 );
+    QBitmap_new4();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW5 );
+    QBitmap_new5();
   }
   else
   {
@@ -142,6 +136,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 HB_FUNC_STATIC( QBITMAP_DELETE )
 {
   QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -151,6 +146,7 @@ HB_FUNC_STATIC( QBITMAP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -160,13 +156,14 @@ void clear ()
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
   QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clear (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QBitmap transformed ( const QTransform & matrix ) const
@@ -174,40 +171,57 @@ QBitmap transformed ( const QTransform & matrix ) const
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
   QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-    QBitmap * ptr = new QBitmap( obj->transformed ( *par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
+    if( ISQTRANSFORM(1) )
+    {
+      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
+      QBitmap * ptr = new QBitmap( obj->transformed ( *par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
 HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-  const uchar * par2 = (const uchar *) _qt5xhb_itemGetPtr(2);
-  int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
-  QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2,  (QImage::Format) par3 ) );
-  _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
+  if( ISQSIZE(1) && ISOPTNUM(3) ) // TODO: revisar e implementar segundo parametro
+  {
+    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
+    const uchar * par2 = (const uchar *) _qt5xhb_itemGetPtr(2);
+    int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
+    QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2,  (QImage::Format) par3 ) );
+    _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
-  QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-  QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1,  (Qt::ImageConversionFlags) par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
+  if( ISQIMAGE(1) && ISOPTNUM(2) )
+  {
+    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
+    int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
+    QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1,  (Qt::ImageConversionFlags) par2 ) );
+    _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
-
-
 #pragma ENDDUMP
-

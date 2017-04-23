@@ -19,19 +19,13 @@ CLASS QPicture INHERIT QPaintDevice
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD boundingRect
    METHOD data
    METHOD isNull
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD play
-   METHOD save1
-   METHOD save2
    METHOD save
    METHOD setBoundingRect
    METHOD setData
@@ -67,7 +61,7 @@ RETURN
 /*
 QPicture ( int formatVersion = -1 )
 */
-HB_FUNC_STATIC( QPICTURE_NEW1 )
+void QPicture_new1 ()
 {
   int par1 = ISNIL(1)? -1 : hb_parni(1);
   QPicture * o = new QPicture ( par1 );
@@ -77,30 +71,25 @@ HB_FUNC_STATIC( QPICTURE_NEW1 )
 /*
 QPicture ( const QPicture & pic )
 */
-HB_FUNC_STATIC( QPICTURE_NEW2 )
+void QPicture_new2 ()
 {
   QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
   QPicture * o = new QPicture ( *par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-
 //[1]QPicture ( int formatVersion = -1 )
 //[2]QPicture ( const QPicture & pic )
 
 HB_FUNC_STATIC( QPICTURE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    HB_FUNC_EXEC( QPICTURE_NEW1 );
-  }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QPICTURE_NEW1 );
+    QPicture_new1();
   }
   else if( ISNUMPAR(1) && ISQPICTURE(1) )
   {
-    HB_FUNC_EXEC( QPICTURE_NEW2 );
+    QPicture_new2();
   }
   else
   {
@@ -111,6 +100,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 HB_FUNC_STATIC( QPICTURE_DELETE )
 {
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -120,6 +110,7 @@ HB_FUNC_STATIC( QPICTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -129,6 +120,7 @@ QRect boundingRect () const
 HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QRect * ptr = new QRect( obj->boundingRect (  ) );
@@ -136,13 +128,13 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
   }
 }
 
-
 /*
 const char * data () const
 */
 HB_FUNC_STATIC( QPICTURE_DATA )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     const char * str1 = obj->data (  );
@@ -150,26 +142,26 @@ HB_FUNC_STATIC( QPICTURE_DATA )
   }
 }
 
-
 /*
 bool isNull () const
 */
 HB_FUNC_STATIC( QPICTURE_ISNULL )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isNull (  ) );
   }
 }
 
-
 /*
 bool load ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_LOAD1 )
+void QPicture_load1 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -178,13 +170,13 @@ HB_FUNC_STATIC( QPICTURE_LOAD1 )
   }
 }
 
-
 /*
 bool load ( QIODevice * dev, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_LOAD2 )
+void QPicture_load2 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
@@ -193,7 +185,6 @@ HB_FUNC_STATIC( QPICTURE_LOAD2 )
   }
 }
 
-
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * dev, const char * format = 0 )
 
@@ -201,11 +192,11 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QPICTURE_LOAD1 );
+    QPicture_load1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QPICTURE_LOAD2 );
+    QPicture_load2();
   }
   else
   {
@@ -219,20 +210,28 @@ bool play ( QPainter * painter )
 HB_FUNC_STATIC( QPICTURE_PLAY )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->play ( par1 ) );
+    if( ISQPAINTER(1) )
+    {
+      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->play ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool save ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_SAVE1 )
+void QPicture_save1 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
@@ -241,13 +240,13 @@ HB_FUNC_STATIC( QPICTURE_SAVE1 )
   }
 }
 
-
 /*
 bool save ( QIODevice * dev, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_SAVE2 )
+void QPicture_save2 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
@@ -256,7 +255,6 @@ HB_FUNC_STATIC( QPICTURE_SAVE2 )
   }
 }
 
-
 //[1]bool save ( const QString & fileName, const char * format = 0 )
 //[2]bool save ( QIODevice * dev, const char * format = 0 )
 
@@ -264,11 +262,11 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QPICTURE_SAVE1 );
+    QPicture_save1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QPICTURE_SAVE2 );
+    QPicture_save2();
   }
   else
   {
@@ -282,14 +280,22 @@ void setBoundingRect ( const QRect & r )
 HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setBoundingRect ( *par1 );
+    if( ISQRECT(1) )
+    {
+      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
+      obj->setBoundingRect ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setData ( const char * data, uint size )
@@ -297,14 +303,22 @@ virtual void setData ( const char * data, uint size )
 HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setData (  (const char *) par1, (uint) hb_parni(2) );
+    if( ISCHAR(1) && ISNUM(2) )
+    {
+      const char * par1 = hb_parc(1);
+      obj->setData (  (const char *) par1, (uint) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 uint size () const
@@ -312,12 +326,12 @@ uint size () const
 HB_FUNC_STATIC( QPICTURE_SIZE )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->size (  ) );
   }
 }
-
 
 /*
 void swap ( QPicture & other )
@@ -325,15 +339,21 @@ void swap ( QPicture & other )
 HB_FUNC_STATIC( QPICTURE_SWAP )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
+    if( ISQPICTURE(1) )
+    {
+      QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
+      obj->swap ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

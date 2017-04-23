@@ -49,10 +49,10 @@ RETURN
 #include <QImageIOPlugin>
 #endif
 
-
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -62,6 +62,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -71,14 +72,21 @@ virtual Capabilities capabilities ( QIODevice * device, const QByteArray & forma
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->capabilities ( par1, *par2 ) );
+    if( ISQIODEVICE(1) && ISQBYTEARRAY(2) )
+    {
+      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+      QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
+      hb_retni( obj->capabilities ( par1, *par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
@@ -86,17 +94,21 @@ virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-    QImageIOHandler * ptr = obj->create ( par1, par2 );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
+    if( ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+    {
+      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+      QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
+      QImageIOHandler * ptr = obj->create ( par1, par2 );
+      _qt5xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

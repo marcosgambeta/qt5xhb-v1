@@ -80,8 +80,15 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-    obj->clear (  (QClipboard::Mode) par1 );
+    if( ISOPTNUM(1) )
+    {
+      int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
+      obj->clear (  (QClipboard::Mode) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -96,9 +103,16 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-    QImage * ptr = new QImage( obj->image (  (QClipboard::Mode) par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    if( ISOPTNUM(1) )
+    {
+      int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
+      QImage * ptr = new QImage( obj->image (  (QClipboard::Mode) par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -111,9 +125,16 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-    const QMimeData * ptr = obj->mimeData (  (QClipboard::Mode) par1 );
-    _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
+    if( ISOPTNUM(1) )
+    {
+      int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
+      const QMimeData * ptr = obj->mimeData (  (QClipboard::Mode) par1 );
+      _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -165,9 +186,16 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap (  (QClipboard::Mode) par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    if( ISOPTNUM(1) )
+    {
+      int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
+      QPixmap * ptr = new QPixmap( obj->pixmap (  (QClipboard::Mode) par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -180,9 +208,16 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 
   if( obj )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-    int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-    obj->setImage ( *par1,  (QClipboard::Mode) par2 );
+    if( ISQIMAGE(1) && ISOPTNUM(2) )
+    {
+      QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
+      int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
+      obj->setImage ( *par1,  (QClipboard::Mode) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -197,9 +232,16 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 
   if( obj )
   {
-    QMimeData * par1 = (QMimeData *) _qt5xhb_itemGetPtr(1);
-    int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-    obj->setMimeData ( par1,  (QClipboard::Mode) par2 );
+    if( ISQMIMEDATA(1) && ISOPTNUM(2) )
+    {
+      QMimeData * par1 = (QMimeData *) _qt5xhb_itemGetPtr(1);
+      int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
+      obj->setMimeData ( par1,  (QClipboard::Mode) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -214,9 +256,16 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-    int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-    obj->setPixmap ( *par1,  (QClipboard::Mode) par2 );
+    if( ISQPIXMAP(1) && ISOPTNUM(2) )
+    {
+      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
+      int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
+      obj->setPixmap ( *par1,  (QClipboard::Mode) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -231,9 +280,16 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-    obj->setText ( par1,  (QClipboard::Mode) par2 );
+    if( ISCHAR(1) && ISOPTNUM(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
+      obj->setText ( par1,  (QClipboard::Mode) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

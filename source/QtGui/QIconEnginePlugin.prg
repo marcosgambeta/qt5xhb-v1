@@ -48,10 +48,10 @@ RETURN
 #include <QIconEnginePlugin>
 #endif
 
-
 HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 {
   QIconEnginePlugin * obj = (QIconEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -61,6 +61,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -70,15 +71,20 @@ virtual QIconEngine * create(const QString & filename = QString()) = 0
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
   QIconEnginePlugin * obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-    QIconEngine * ptr = obj->create ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QICONENGINE" );
+    if( ISOPTCHAR(1) )
+    {
+      QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
+      QIconEngine * ptr = obj->create ( par1 );
+      _qt5xhb_createReturnClass ( ptr, "QICONENGINE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
-
-
 #pragma ENDDUMP
-

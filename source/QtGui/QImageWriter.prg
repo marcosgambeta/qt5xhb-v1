@@ -21,9 +21,6 @@ CLASS QImageWriter
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD canWrite
@@ -81,7 +78,7 @@ RETURN
 /*
 QImageWriter ()
 */
-HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
+void QImageWriter_new1 ()
 {
   QImageWriter * o = new QImageWriter (  );
   _qt5xhb_storePointerAndFlag( o, true );
@@ -90,7 +87,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
 /*
 QImageWriter ( QIODevice * device, const QByteArray & format )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_NEW2 )
+void QImageWriter_new2 ()
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
@@ -101,14 +98,13 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW2 )
 /*
 QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_NEW3 )
+void QImageWriter_new3 ()
 {
   QString par1 = QLatin1String( hb_parc(1) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageWriter * o = new QImageWriter ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
-
 
 //[1]QImageWriter ()
 //[2]QImageWriter ( QIODevice * device, const QByteArray & format )
@@ -118,15 +114,15 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QIMAGEWRITER_NEW1 );
+    QImageWriter_new1();
   }
   else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
   {
-    HB_FUNC_EXEC( QIMAGEWRITER_NEW2 );
+    QImageWriter_new2();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGEWRITER_NEW3 );
+    QImageWriter_new3();
   }
   else
   {
@@ -137,6 +133,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -146,6 +143,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -155,12 +153,12 @@ bool canWrite () const
 HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->canWrite (  ) );
   }
 }
-
 
 /*
 int compression () const
@@ -168,12 +166,12 @@ int compression () const
 HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->compression (  ) );
   }
 }
-
 
 /*
 QIODevice * device () const
@@ -181,6 +179,7 @@ QIODevice * device () const
 HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
@@ -188,19 +187,18 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
   }
 }
 
-
 /*
 ImageWriterError error () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->error (  ) );
   }
 }
-
 
 /*
 QString errorString () const
@@ -208,12 +206,12 @@ QString errorString () const
 HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
   }
 }
-
 
 /*
 QString fileName () const
@@ -221,12 +219,12 @@ QString fileName () const
 HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
   }
 }
-
 
 /*
 QByteArray format () const
@@ -234,6 +232,7 @@ QByteArray format () const
 HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->format (  ) );
@@ -241,19 +240,18 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
   }
 }
 
-
 /*
 float gamma () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->gamma (  ) );
   }
 }
-
 
 /*
 int quality () const
@@ -261,12 +259,12 @@ int quality () const
 HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->quality (  ) );
   }
 }
-
 
 /*
 void setCompression ( int compression )
@@ -274,13 +272,21 @@ void setCompression ( int compression )
 HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setCompression ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCompression ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDevice ( QIODevice * device )
@@ -288,14 +294,22 @@ void setDevice ( QIODevice * device )
 HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->setDevice ( par1 );
+    if( ISQIODEVICE(1) )
+    {
+      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+      obj->setDevice ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFileName ( const QString & fileName )
@@ -303,14 +317,22 @@ void setFileName ( const QString & fileName )
 HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFileName ( par1 );
+    if( ISCHAR(1) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      obj->setFileName ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFormat ( const QByteArray & format )
@@ -318,14 +340,22 @@ void setFormat ( const QByteArray & format )
 HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    if( ISQBYTEARRAY(1) )
+    {
+      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
+      obj->setFormat ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGamma ( float gamma )
@@ -333,14 +363,22 @@ void setGamma ( float gamma )
 HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setGamma ( par1 );
+    if( ISNUM(1) )
+    {
+      float par1 = hb_parnd(1);
+      obj->setGamma ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setQuality ( int quality )
@@ -348,13 +386,21 @@ void setQuality ( int quality )
 HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setQuality ( (int) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setQuality ( (int) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setText ( const QString & key, const QString & text )
@@ -362,15 +408,23 @@ void setText ( const QString & key, const QString & text )
 HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setText ( par1, par2 );
+    if( ISCHAR(1) && ISCHAR(2) )
+    {
+      QString par1 = QLatin1String( hb_parc(1) );
+      QString par2 = QLatin1String( hb_parc(2) );
+      obj->setText ( par1, par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool supportsOption ( QImageIOHandler::ImageOption option ) const
@@ -378,13 +432,20 @@ bool supportsOption ( QImageIOHandler::ImageOption option ) const
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool write ( const QImage & image )
@@ -392,13 +453,20 @@ bool write ( const QImage & image )
 HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 {
   QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->write ( *par1 ) );
+    if( ISQIMAGE(1) )
+    {
+      QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
+      hb_retl( obj->write ( *par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 static QList<QByteArray> supportedImageFormats ()
@@ -439,11 +507,10 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
   hb_itemReturnRelease(pArray);
 }
 
-
-
 HB_FUNC_STATIC( QIMAGEWRITER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -462,6 +529,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -483,14 +551,15 @@ HB_FUNC_STATIC( QIMAGEWRITER_SELFDESTRUCTION )
 HB_FUNC_STATIC( QIMAGEWRITER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
