@@ -65,10 +65,10 @@ RETURN
 #include <QPixmapCache>
 #endif
 
-
 HB_FUNC_STATIC( QPIXMAPCACHE_DELETE )
 {
   QPixmapCache * obj = (QPixmapCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -78,6 +78,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -89,7 +90,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
   hb_retni( QPixmapCache::cacheLimit (  ) );
 }
 
-
 /*
 static void setCacheLimit(int)
 */
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_SETCACHELIMIT )
   QPixmapCache::setCacheLimit ( (int) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static QPixmap *find(const QString &key)
@@ -110,7 +109,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
   _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
 }
 
-
 /*
 static bool find(const QString &key, QPixmap &pixmap)
 */
@@ -121,7 +119,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND2 )
   hb_retl( QPixmapCache::find ( par1, *par2 ) );
 }
 
-
 /*
 static bool find(const QString &key, QPixmap *pixmap)
 */
@@ -131,8 +128,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
   QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
   hb_retl( QPixmapCache::find ( par1, par2 ) );
 }
-
-
 
 //[1]static QPixmap *find(const QString &key)
 //[2]static bool find(const QString &key, QPixmap &pixmap)
@@ -154,8 +149,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
   hb_retl( QPixmapCache::insert ( par1, *par2 ) );
 }
 
-
-
 //[1]static bool insert(const QString &key, const QPixmap &pixmap)
 //[2]static Key insert(const QPixmap &pixmap)
 
@@ -163,7 +156,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_INSERT )
 {
   // TODO: implementar
 }
-
 
 /*
 static void remove(const QString &key)
@@ -174,8 +166,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
   QPixmapCache::remove ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 //[1]static void remove(const QString &key)
 //[2]static void remove(const Key &key)
@@ -194,11 +184,10 @@ HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 HB_FUNC_STATIC( QPIXMAPCACHE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -217,6 +206,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -238,14 +228,15 @@ HB_FUNC_STATIC( QPIXMAPCACHE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QPIXMAPCACHE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-
