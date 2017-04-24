@@ -1943,3 +1943,8 @@
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b
 #define ISNUMPAR(a)                                         hb_pcount() == a
 #define INHERITS(a,b)                                       _qt5xhb_isObjectDerivedFrom(a,b)
+
+// macros for parameters
+#define PQREAL(n)                                           (qreal) hb_parnd(n)
+//#define PQREAL(n,d)                                         (qreal) ISNIL(n)? d : hb_parnd(n)
+//#define PQSTRING(n)                                         _qt5xhb_convert_string_parameter_to_qstring(n)
