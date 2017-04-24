@@ -107,11 +107,7 @@ QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
 void QLineF_new3 ()
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  QLineF * o = new QLineF ( par1, par2, par3, par4 );
+  QLineF * o = new QLineF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -384,8 +380,7 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      QPointF * ptr = new QPointF( obj->pointAt ( par1 ) );
+      QPointF * ptr = new QPointF( obj->pointAt ( PQREAL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
     }
     else
@@ -452,8 +447,7 @@ HB_FUNC_STATIC( QLINEF_SETANGLE )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setAngle ( par1 );
+      obj->setAngle ( PQREAL(1) );
     }
     else
     {
@@ -475,8 +469,7 @@ HB_FUNC_STATIC( QLINEF_SETLENGTH )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setLength ( par1 );
+      obj->setLength ( PQREAL(1) );
     }
     else
     {
@@ -498,11 +491,7 @@ HB_FUNC_STATIC( QLINEF_SETLINE )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      qreal par4 = hb_parnd(4);
-      obj->setLine ( par1, par2, par3, par4 );
+      obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
     else
     {
@@ -576,9 +565,7 @@ void QLineF_translate2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -627,9 +614,7 @@ void QLineF_translated2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QLineF * ptr = new QLineF( obj->translated ( par1, par2 ) );
+    QLineF * ptr = new QLineF( obj->translated ( PQREAL(1), PQREAL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
@@ -674,9 +659,7 @@ HB_FUNC_STATIC( QLINEF_FROMPOLAR )
 {
   if( ISNUM(1) && ISNUM(2) )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QLineF * ptr = new QLineF( QLineF::fromPolar ( par1, par2 ) );
+    QLineF * ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
   else

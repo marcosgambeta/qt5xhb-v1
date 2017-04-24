@@ -79,11 +79,7 @@ QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 */
 void QMarginsF_new2 ()
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  QMarginsF * o = new QMarginsF ( par1, par2, par3, par4 );
+  QMarginsF * o = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -214,8 +210,7 @@ HB_FUNC_STATIC( QMARGINSF_SETLEFT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setLeft ( par1 );
+      obj->setLeft ( PQREAL(1) );
     }
     else
     {
@@ -237,8 +232,7 @@ HB_FUNC_STATIC( QMARGINSF_SETTOP )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setTop ( par1 );
+      obj->setTop ( PQREAL(1) );
     }
     else
     {
@@ -260,8 +254,7 @@ HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setRight ( par1 );
+      obj->setRight ( PQREAL(1) );
     }
     else
     {
@@ -283,8 +276,7 @@ HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setBottom ( par1 );
+      obj->setBottom ( PQREAL(1) );
     }
     else
     {

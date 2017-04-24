@@ -148,11 +148,7 @@ QRectF ( qreal x, qreal y, qreal width, qreal height )
 */
 void QRectF_new4 ()
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  QRectF * o = new QRectF ( par1, par2, par3, par4 );
+  QRectF * o = new QRectF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -228,11 +224,7 @@ HB_FUNC_STATIC( QRECTF_ADJUST )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      qreal par4 = hb_parnd(4);
-      obj->adjust ( par1, par2, par3, par4 );
+      obj->adjust ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
     else
     {
@@ -254,11 +246,7 @@ HB_FUNC_STATIC( QRECTF_ADJUSTED )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      qreal par4 = hb_parnd(4);
-      QRectF * ptr = new QRectF( obj->adjusted ( par1, par2, par3, par4 ) );
+      QRectF * ptr = new QRectF( obj->adjusted ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
     }
     else
@@ -346,9 +334,7 @@ void QRectF_contains2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    hb_retl( obj->contains ( par1, par2 ) );
+    hb_retl( obj->contains ( PQREAL(1), PQREAL(2) ) );
   }
 }
 
@@ -569,8 +555,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOM )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->moveBottom ( par1 );
+      obj->moveBottom ( PQREAL(1) );
     }
     else
     {
@@ -661,8 +646,7 @@ HB_FUNC_STATIC( QRECTF_MOVELEFT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->moveLeft ( par1 );
+      obj->moveLeft ( PQREAL(1) );
     }
     else
     {
@@ -684,8 +668,7 @@ HB_FUNC_STATIC( QRECTF_MOVERIGHT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->moveRight ( par1 );
+      obj->moveRight ( PQREAL(1) );
     }
     else
     {
@@ -705,9 +688,7 @@ void QRectF_moveTo1 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->moveTo ( par1, par2 );
+    obj->moveTo ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -759,8 +740,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOP )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->moveTop ( par1 );
+      obj->moveTop ( PQREAL(1) );
     }
     else
     {
@@ -855,8 +835,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOM )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setBottom ( par1 );
+      obj->setBottom ( PQREAL(1) );
     }
     else
     {
@@ -924,11 +903,7 @@ HB_FUNC_STATIC( QRECTF_SETCOORDS )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      qreal par4 = hb_parnd(4);
-      obj->setCoords ( par1, par2, par3, par4 );
+      obj->setCoords ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
     else
     {
@@ -950,8 +925,7 @@ HB_FUNC_STATIC( QRECTF_SETHEIGHT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setHeight ( par1 );
+      obj->setHeight ( PQREAL(1) );
     }
     else
     {
@@ -973,8 +947,7 @@ HB_FUNC_STATIC( QRECTF_SETLEFT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setLeft ( par1 );
+      obj->setLeft ( PQREAL(1) );
     }
     else
     {
@@ -996,11 +969,7 @@ HB_FUNC_STATIC( QRECTF_SETRECT )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      qreal par4 = hb_parnd(4);
-      obj->setRect ( par1, par2, par3, par4 );
+      obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
     else
     {
@@ -1022,8 +991,7 @@ HB_FUNC_STATIC( QRECTF_SETRIGHT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setRight ( par1 );
+      obj->setRight ( PQREAL(1) );
     }
     else
     {
@@ -1068,8 +1036,7 @@ HB_FUNC_STATIC( QRECTF_SETTOP )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setTop ( par1 );
+      obj->setTop ( PQREAL(1) );
     }
     else
     {
@@ -1137,8 +1104,7 @@ HB_FUNC_STATIC( QRECTF_SETWIDTH )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setWidth ( par1 );
+      obj->setWidth ( PQREAL(1) );
     }
     else
     {
@@ -1160,8 +1126,7 @@ HB_FUNC_STATIC( QRECTF_SETX )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setX ( par1 );
+      obj->setX ( PQREAL(1) );
     }
     else
     {
@@ -1183,8 +1148,7 @@ HB_FUNC_STATIC( QRECTF_SETY )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setY ( par1 );
+      obj->setY ( PQREAL(1) );
     }
     else
     {
@@ -1287,9 +1251,7 @@ void QRectF_translate1 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1339,9 +1301,7 @@ void QRectF_translated1 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QRectF * ptr = new QRectF( obj->translated ( par1, par2 ) );
+    QRectF * ptr = new QRectF( obj->translated ( PQREAL(1), PQREAL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

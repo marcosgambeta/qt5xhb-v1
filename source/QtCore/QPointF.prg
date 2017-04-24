@@ -86,9 +86,7 @@ QPointF(qreal xpos, qreal ypos)
 */
 void QPointF_new3 ()
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  QPointF * o = new QPointF ( par1, par2 );
+  QPointF * o = new QPointF ( PQREAL(1), PQREAL(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -170,8 +168,7 @@ HB_FUNC_STATIC( QPOINTF_SETX )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setX ( par1 );
+      obj->setX ( PQREAL(1) );
     }
     else
     {
@@ -193,8 +190,7 @@ HB_FUNC_STATIC( QPOINTF_SETY )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setY ( par1 );
+      obj->setY ( PQREAL(1) );
     }
     else
     {

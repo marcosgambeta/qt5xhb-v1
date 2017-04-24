@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      QVariant * ptr = new QVariant( obj->keyValueAt ( par1 ) );
+      QVariant * ptr = new QVariant( obj->keyValueAt ( PQREAL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -220,9 +219,8 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
   {
     if( ISNUM(1) && ISQVARIANT(2) )
     {
-      qreal par1 = hb_parnd(1);
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setKeyValueAt ( par1, *par2 );
+      obj->setKeyValueAt ( PQREAL(1), *par2 );
     }
     else
     {

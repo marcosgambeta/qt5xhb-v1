@@ -163,10 +163,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
     if( ISQPOINTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
       QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      qreal par4 = hb_parnd(4);
-      obj->addTCBSegment ( *par1, par2, par3, par4 );
+      obj->addTCBSegment ( *par1, PQREAL(2), PQREAL(3), PQREAL(4) );
     }
     else
     {
@@ -227,8 +224,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setAmplitude ( par1 );
+      obj->setAmplitude ( PQREAL(1) );
     }
     else
     {
@@ -250,8 +246,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setOvershoot ( par1 );
+      obj->setOvershoot ( PQREAL(1) );
     }
     else
     {
@@ -273,8 +268,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setPeriod ( par1 );
+      obj->setPeriod ( PQREAL(1) );
     }
     else
     {
@@ -399,8 +393,7 @@ HB_FUNC_STATIC( QEASINGCURVE_VALUEFORPROGRESS )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      hb_retnd( obj->valueForProgress ( par1 ) );
+      hb_retnd( obj->valueForProgress ( PQREAL(1) ) );
     }
     else
     {
