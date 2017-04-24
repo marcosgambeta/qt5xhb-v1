@@ -126,9 +126,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      QDeclarativeItem * ptr = obj->childAt ( par1, par2 );
+      QDeclarativeItem * ptr = obj->childAt ( PQREAL(1), PQREAL(2) );
       _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
     }
     else
@@ -231,9 +229,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     if( ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
     {
       QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *par1, par2, par3 ) );
+      QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *par1, PQREAL(2), PQREAL(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
     }
     else
@@ -255,9 +251,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     if( ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
     {
       QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *par1, par2, par3 ) );
+      QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *par1, PQREAL(2), PQREAL(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
     }
     else
@@ -292,8 +286,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setBaselineOffset ( par1 );
+      obj->setBaselineOffset ( PQREAL(1) );
     }
     else
     {
