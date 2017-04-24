@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTopMargin ( par1 );
+    obj->setTopMargin ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -169,8 +168,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setBottomMargin ( par1 );
+    obj->setBottomMargin ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -197,8 +195,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setLeftMargin ( par1 );
+    obj->setLeftMargin ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -225,8 +222,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setRightMargin ( par1 );
+    obj->setRightMargin ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -253,8 +249,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTextIndent ( par1 );
+    obj->setTextIndent ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -308,8 +303,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setLineHeight ( par1, (int) hb_parni(2) );
+    obj->setLineHeight ( PQREAL(1), (int) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -323,9 +317,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    hb_retnd( obj->lineHeight ( par1, par2 ) );
+    hb_retnd( obj->lineHeight ( PQREAL(1), PQREAL(2) ) );
   }
 }
 

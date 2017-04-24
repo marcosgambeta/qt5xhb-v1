@@ -314,8 +314,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETLEFTMARGIN )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    hb_retl( obj->setLeftMargin ( par1 ) );
+    hb_retl( obj->setLeftMargin ( PQREAL(1) ) );
   }
 }
 
@@ -328,8 +327,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETRIGHTMARGIN )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    hb_retl( obj->setRightMargin ( par1 ) );
+    hb_retl( obj->setRightMargin ( PQREAL(1) ) );
   }
 }
 
@@ -342,8 +340,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETTOPMARGIN )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    hb_retl( obj->setTopMargin ( par1 ) );
+    hb_retl( obj->setTopMargin ( PQREAL(1) ) );
   }
 }
 
@@ -356,8 +353,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETBOTTOMMARGIN )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    hb_retl( obj->setBottomMargin ( par1 ) );
+    hb_retl( obj->setBottomMargin ( PQREAL(1) ) );
   }
 }
 

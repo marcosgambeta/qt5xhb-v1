@@ -454,8 +454,7 @@ HB_FUNC_STATIC( QPIXMAP_SETDEVICEPIXELRATIO )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setDevicePixelRatio ( par1 );
+      obj->setDevicePixelRatio ( PQREAL(1) );
     }
     else
     {

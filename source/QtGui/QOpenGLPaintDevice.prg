@@ -199,8 +199,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDEVICEPIXELRATIO )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDevicePixelRatio ( par1 );
+    obj->setDevicePixelRatio ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -240,8 +239,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERX )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDotsPerMeterX ( par1 );
+    obj->setDotsPerMeterX ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -255,8 +253,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERY )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDotsPerMeterY ( par1 );
+    obj->setDotsPerMeterY ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

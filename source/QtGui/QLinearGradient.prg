@@ -77,11 +77,7 @@ QLinearGradient ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 void QLinearGradient_new3 ()
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  QLinearGradient * o = new QLinearGradient ( par1, par2, par3, par4 );
+  QLinearGradient * o = new QLinearGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -165,9 +161,7 @@ void QLinearGradient_setFinalStop2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->setFinalStop ( par1, par2 );
+    obj->setFinalStop ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,9 +211,7 @@ void QLinearGradient_setStart2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->setStart ( par1, par2 );
+    obj->setStart ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

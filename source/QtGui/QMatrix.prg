@@ -122,13 +122,7 @@ QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
 */
 HB_FUNC_STATIC( QMATRIX_NEW3 )
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  qreal par5 = hb_parnd(5);
-  qreal par6 = hb_parnd(6);
-  QMatrix * o = new QMatrix ( par1, par2, par3, par4, par5, par6 );
+  QMatrix * o = new QMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -185,13 +179,7 @@ HB_FUNC_STATIC( QMATRIX_SETMATRIX )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
-    obj->setMatrix ( par1, par2, par3, par4, par5, par6 );
+    obj->setMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -301,11 +289,9 @@ HB_FUNC_STATIC( QMATRIX_MAP2 )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
     qreal par3;
     qreal par4;
-    obj->map ( par1, par2, &par3, &par4 );
+    obj->map ( PQREAL(1), PQREAL(2), &par3, &par4 );
     hb_stornd( par3, 3 );
     hb_stornd( par4, 4 );
   }
@@ -513,9 +499,7 @@ HB_FUNC_STATIC( QMATRIX_TRANSLATE )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QMatrix * ptr = &obj->translate ( par1, par2 );
+    QMatrix * ptr = &obj->translate ( PQREAL(1), PQREAL(2) );
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -529,9 +513,7 @@ HB_FUNC_STATIC( QMATRIX_SCALE )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QMatrix * ptr = &obj->scale ( par1, par2 );
+    QMatrix * ptr = &obj->scale ( PQREAL(1), PQREAL(2) );
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -545,9 +527,7 @@ HB_FUNC_STATIC( QMATRIX_SHEAR )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QMatrix * ptr = &obj->shear ( par1, par2 );
+    QMatrix * ptr = &obj->shear ( PQREAL(1), PQREAL(2) );
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -561,8 +541,7 @@ HB_FUNC_STATIC( QMATRIX_ROTATE )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    QMatrix * ptr = &obj->rotate ( par1 );
+    QMatrix * ptr = &obj->rotate ( PQREAL(1) );
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }

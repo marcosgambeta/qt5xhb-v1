@@ -918,8 +918,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTextWidth ( par1 );
+    obj->setTextWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -972,8 +971,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setIndentWidth ( par1 );
+    obj->setIndentWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1000,8 +998,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDocumentMargin ( par1 );
+    obj->setDocumentMargin ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

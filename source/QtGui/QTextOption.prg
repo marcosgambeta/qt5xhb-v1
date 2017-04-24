@@ -259,8 +259,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
   QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTabStop ( par1 );
+    obj->setTabStop ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

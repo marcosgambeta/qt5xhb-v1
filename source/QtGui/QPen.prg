@@ -112,11 +112,10 @@ QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt
 void QPen_new4 ()
 {
   QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-  qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) Qt::SolidLine : hb_parni(3);
   int par4 = ISNIL(4)? (int) Qt::SquareCap : hb_parni(4);
   int par5 = ISNIL(5)? (int) Qt::BevelJoin : hb_parni(5);
-  QPen * o = new QPen ( *par1, par2,  (Qt::PenStyle) par3,  (Qt::PenCapStyle) par4,  (Qt::PenJoinStyle) par5 );
+  QPen * o = new QPen ( *par1, PQREAL(2),  (Qt::PenStyle) par3,  (Qt::PenCapStyle) par4,  (Qt::PenJoinStyle) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -389,8 +388,7 @@ HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setDashOffset ( par1 );
+      obj->setDashOffset ( PQREAL(1) );
     }
     else
     {
@@ -435,8 +433,7 @@ HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setMiterLimit ( par1 );
+      obj->setMiterLimit ( PQREAL(1) );
     }
     else
     {
@@ -503,8 +500,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTHF )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setWidthF ( par1 );
+      obj->setWidthF ( PQREAL(1) );
     }
     else
     {

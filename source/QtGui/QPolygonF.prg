@@ -218,9 +218,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE1 )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -249,9 +247,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED1 )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QPolygonF * ptr = new QPolygonF( obj->translated ( par1, par2 ) );
+    QPolygonF * ptr = new QPolygonF( obj->translated ( PQREAL(1), PQREAL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }

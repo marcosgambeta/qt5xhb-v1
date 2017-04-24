@@ -656,8 +656,7 @@ HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par1 = hb_parni(1);
-      qreal par2 = hb_parnd(2);
-      obj->setLetterSpacing (  (QFont::SpacingType) par1, par2 );
+      obj->setLetterSpacing (  (QFont::SpacingType) par1, PQREAL(2) );
     }
     else
     {
@@ -745,8 +744,7 @@ HB_FUNC_STATIC( QFONT_SETPOINTSIZEF )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setPointSizeF ( par1 );
+      obj->setPointSizeF ( PQREAL(1) );
     }
     else
     {
@@ -971,8 +969,7 @@ HB_FUNC_STATIC( QFONT_SETWORDSPACING )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setWordSpacing ( par1 );
+      obj->setWordSpacing ( PQREAL(1) );
     }
     else
     {

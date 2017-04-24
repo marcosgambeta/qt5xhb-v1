@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
     {
       QString par1 = QLatin1String( hb_parc(1) );
       int par2 = hb_parni(2);
-      qreal par3 = hb_parnd(3);
-      hb_retc( (const char *) obj->elidedText ( par1,  (Qt::TextElideMode) par2, par3, (int) ISNIL(4)? 0 : hb_parni(4) ).toLatin1().data() );
+      hb_retc( (const char *) obj->elidedText ( par1,  (Qt::TextElideMode) par2, PQREAL(3), (int) ISNIL(4)? 0 : hb_parni(4) ).toLatin1().data() );
     }
     else
     {

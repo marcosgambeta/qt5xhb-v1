@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
   QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTextWidth ( par1 );
+    obj->setTextWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

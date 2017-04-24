@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setFontPointSize ( par1 );
+    obj->setFontPointSize ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -350,8 +349,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setFontLetterSpacing ( par1 );
+    obj->setFontLetterSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -378,8 +376,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setFontWordSpacing ( par1 );
+    obj->setFontWordSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

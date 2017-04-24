@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
   QTextTableFormat * obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setCellSpacing ( par1 );
+    obj->setCellSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -256,8 +255,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
   QTextTableFormat * obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setCellPadding ( par1 );
+    obj->setCellPadding ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

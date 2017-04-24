@@ -192,11 +192,7 @@ void QPainterPath_addEllipse2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->addEllipse ( par1, par2, par3, par4 );
+    obj->addEllipse ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -212,9 +208,7 @@ void QPainterPath_addEllipse3 ()
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->addEllipse ( *par1, par2, par3 );
+    obj->addEllipse ( *par1, PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -315,11 +309,7 @@ void QPainterPath_addRect2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->addRect ( par1, par2, par3, par4 );
+    obj->addRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -377,10 +367,8 @@ void QPainterPath_addRoundedRect1 ()
   if( obj )
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->addRoundedRect ( *par1, par2, par3,  (Qt::SizeMode) par4 );
+    obj->addRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -395,14 +383,8 @@ void QPainterPath_addRoundedRect2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
     int par7 = ISNIL(7)? (int) Qt::AbsoluteSize : hb_parni(7);
-    obj->addRoundedRect ( par1, par2, par3, par4, par5, par6,  (Qt::SizeMode) par7 );
+    obj->addRoundedRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), (Qt::SizeMode) par7 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -454,11 +436,9 @@ void QPainterPath_addText2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
     QFont * par3 = (QFont *) _qt5xhb_itemGetPtr(3);
     QString par4 = QLatin1String( hb_parc(4) );
-    obj->addText ( par1, par2, *par3, par4 );
+    obj->addText ( PQREAL(1), PQREAL(2), *par3, par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -494,8 +474,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      hb_retnd( obj->angleAtPercent ( par1 ) );
+      hb_retnd( obj->angleAtPercent ( PQREAL(1) ) );
     }
     else
     {
@@ -514,8 +493,7 @@ void QPainterPath_arcMoveTo1 ()
   if( obj )
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    obj->arcMoveTo ( *par1, par2 );
+    obj->arcMoveTo ( *par1, PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -530,12 +508,7 @@ void QPainterPath_arcMoveTo2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    obj->arcMoveTo ( par1, par2, par3, par4, par5 );
+    obj->arcMoveTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -570,9 +543,7 @@ void QPainterPath_arcTo1 ()
   if( obj )
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->arcTo ( *par1, par2, par3 );
+    obj->arcTo ( *par1, PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -587,13 +558,7 @@ void QPainterPath_arcTo2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
-    obj->arcTo ( par1, par2, par3, par4, par5, par6 );
+    obj->arcTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -777,13 +742,7 @@ void QPainterPath_cubicTo2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
-    obj->cubicTo ( par1, par2, par3, par4, par5, par6 );
+    obj->cubicTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -968,9 +927,7 @@ void QPainterPath_lineTo2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->lineTo ( par1, par2 );
+    obj->lineTo ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1020,9 +977,7 @@ void QPainterPath_moveTo2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->moveTo ( par1, par2 );
+    obj->moveTo ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1058,8 +1013,7 @@ HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      hb_retnd( obj->percentAtLength ( par1 ) );
+      hb_retnd( obj->percentAtLength ( PQREAL(1) ) );
     }
     else
     {
@@ -1079,8 +1033,7 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      QPointF * ptr = new QPointF( obj->pointAtPercent ( par1 ) );
+      QPointF * ptr = new QPointF( obj->pointAtPercent ( PQREAL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
     }
     else
@@ -1116,11 +1069,7 @@ void QPainterPath_quadTo2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->quadTo ( par1, par2, par3, par4 );
+    obj->quadTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1156,9 +1105,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
-      qreal par2 = hb_parnd(2);
-      qreal par3 = hb_parnd(3);
-      obj->setElementPositionAt ( (int) hb_parni(1), par2, par3 );
+      obj->setElementPositionAt ( (int) hb_parni(1), PQREAL(2), PQREAL(3) );
     }
     else
     {
@@ -1217,8 +1164,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      hb_retnd( obj->slopeAtPercent ( par1 ) );
+      hb_retnd( obj->slopeAtPercent ( PQREAL(1) ) );
     }
     else
     {
@@ -1329,9 +1275,7 @@ void QPainterPath_translate1 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1381,9 +1325,7 @@ void QPainterPath_translated1 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QPainterPath * ptr = new QPainterPath( obj->translated ( par1, par2 ) );
+    QPainterPath * ptr = new QPainterPath( obj->translated ( PQREAL(1), PQREAL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }

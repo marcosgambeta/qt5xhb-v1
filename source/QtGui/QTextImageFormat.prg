@@ -125,8 +125,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
   QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setWidth ( par1 );
+    obj->setWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -153,8 +152,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
   QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setHeight ( par1 );
+    obj->setHeight ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

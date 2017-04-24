@@ -280,8 +280,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setCurveThreshold ( par1 );
+      obj->setCurveThreshold ( PQREAL(1) );
     }
     else
     {
@@ -303,8 +302,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setDashOffset ( par1 );
+      obj->setDashOffset ( PQREAL(1) );
     }
     else
     {
@@ -409,8 +407,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setMiterLimit ( par1 );
+      obj->setMiterLimit ( PQREAL(1) );
     }
     else
     {
@@ -432,8 +429,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setWidth ( par1 );
+      obj->setWidth ( PQREAL(1) );
     }
     else
     {

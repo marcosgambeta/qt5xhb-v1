@@ -97,9 +97,8 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
   {
     if( ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
     {
-      qreal par1 = hb_parnd(1);
       QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
-      obj->setColorAt ( par1, par2 );
+      obj->setColorAt ( PQREAL(1), par2 );
     }
     else
     {

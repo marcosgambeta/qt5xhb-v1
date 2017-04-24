@@ -112,9 +112,8 @@ QRawFont(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintin
 HB_FUNC_STATIC( QRAWFONT_NEW2 )
 {
   QString par1 = QLatin1String( hb_parc(1) );
-  qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  QRawFont * o = new QRawFont ( par1, par2,  (QFont::HintingPreference) par3 );
+  QRawFont * o = new QRawFont ( par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -124,9 +123,8 @@ QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hin
 HB_FUNC_STATIC( QRAWFONT_NEW3 )
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  QRawFont * o = new QRawFont ( *par1, par2,  (QFont::HintingPreference) par3 );
+  QRawFont * o = new QRawFont ( *par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -427,8 +425,7 @@ HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setPixelSize ( par1 );
+    obj->setPixelSize ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -586,9 +583,8 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
   if( obj )
   {
     QString par1 = QLatin1String( hb_parc(1) );
-    qreal par2 = hb_parnd(2);
     int par3 = hb_parni(3);
-    obj->loadFromFile ( par1, par2,  (QFont::HintingPreference) par3 );
+    obj->loadFromFile ( par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -603,9 +599,8 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
     int par3 = hb_parni(3);
-    obj->loadFromData ( *par1, par2,  (QFont::HintingPreference) par3 );
+    obj->loadFromData ( *par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

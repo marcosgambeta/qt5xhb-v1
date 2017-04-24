@@ -754,9 +754,7 @@ void QPainter_drawEllipse4 ()
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->drawEllipse ( *par1, par2, par3 );
+    obj->drawEllipse ( *par1, PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2119,10 +2117,8 @@ void QPainter_drawRoundedRect1 ()
   if( obj )
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->drawRoundedRect ( *par1, par2, par3,  (Qt::SizeMode) par4 );
+    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2138,10 +2134,8 @@ void QPainter_drawRoundedRect2 ()
   if( obj )
   {
     QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->drawRoundedRect ( *par1, par2, par3,  (Qt::SizeMode) par4 );
+    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2156,10 +2150,8 @@ void QPainter_drawRoundedRect3 ()
 
   if( obj )
   {
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
     int par7 = ISNIL(7)? (int) Qt::AbsoluteSize : hb_parni(7);
-    obj->drawRoundedRect ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), par5, par6,  (Qt::SizeMode) par7 );
+    obj->drawRoundedRect ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), PQREAL(5), PQREAL(6), (Qt::SizeMode) par7 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3072,8 +3064,7 @@ HB_FUNC_STATIC( QPAINTER_ROTATE )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->rotate ( par1 );
+      obj->rotate ( PQREAL(1) );
     }
     else
     {
@@ -3110,9 +3101,7 @@ HB_FUNC_STATIC( QPAINTER_SCALE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      obj->scale ( par1, par2 );
+      obj->scale ( PQREAL(1), PQREAL(2) );
     }
     else
     {
@@ -3515,8 +3504,7 @@ HB_FUNC_STATIC( QPAINTER_SETOPACITY )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setOpacity ( par1 );
+      obj->setOpacity ( PQREAL(1) );
     }
     else
     {
@@ -3847,9 +3835,7 @@ HB_FUNC_STATIC( QPAINTER_SHEAR )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      obj->shear ( par1, par2 );
+      obj->shear ( PQREAL(1), PQREAL(2) );
     }
     else
     {
@@ -3960,9 +3946,7 @@ void QPainter_translate3 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
