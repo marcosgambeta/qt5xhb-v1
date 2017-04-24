@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setVolume ( par1 );
+    obj->setVolume ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

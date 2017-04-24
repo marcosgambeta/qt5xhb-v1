@@ -412,8 +412,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setExposureCompensation ( par1 );
+    obj->setExposureCompensation ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -457,8 +456,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALAPERTURE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setManualAperture ( par1 );
+    obj->setManualAperture ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -486,8 +484,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setManualShutterSpeed ( par1 );
+    obj->setManualShutterSpeed ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

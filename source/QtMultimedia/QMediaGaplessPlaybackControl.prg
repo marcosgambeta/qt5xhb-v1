@@ -120,8 +120,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
   QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setCrossfadeTime ( par1 );
+    obj->setCrossfadeTime ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

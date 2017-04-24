@@ -158,9 +158,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
   QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->zoomTo ( par1, par2 );
+    obj->zoomTo ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
