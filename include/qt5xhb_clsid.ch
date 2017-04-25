@@ -6,6 +6,7 @@
 
 */
 
+/*
 #define Class_Id_QAbstractAnimation                                  1
 #define Class_Id_QAbstractAudioDeviceInfo                            2
 #define Class_Id_QAbstractAudioInput                                 3
@@ -970,3 +971,4 @@
 #define Class_Id_QXmlStreamWriter                                    962
 #define Class_Id_QStyleOptionGraphicsItem                            963
 #define Class_Id_QStyleOptionComplex                                 964
+*/
