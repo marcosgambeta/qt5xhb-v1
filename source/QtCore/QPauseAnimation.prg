@@ -11,7 +11,7 @@
 
 CLASS QPauseAnimation INHERIT QAbstractAnimation
 
-   DATA class_id INIT Class_Id_QPauseAnimation
+   //DATA class_id INIT Class_Id_QPauseAnimation
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -16,7 +16,7 @@ REQUEST QSTRINGREF
 CLASS QXmlStreamEntityDeclaration
 
    DATA pointer
-   DATA class_id INIT Class_Id_QXmlStreamEntityDeclaration
+   //DATA class_id INIT Class_Id_QXmlStreamEntityDeclaration
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

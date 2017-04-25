@@ -16,7 +16,7 @@ REQUEST QFILEINFO
 CLASS QDirIterator
 
    DATA pointer
-   DATA class_id INIT Class_Id_QDirIterator
+   //DATA class_id INIT Class_Id_QDirIterator
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

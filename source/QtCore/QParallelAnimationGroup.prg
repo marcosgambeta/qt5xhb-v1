@@ -11,7 +11,7 @@
 
 CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
-   DATA class_id INIT Class_Id_QParallelAnimationGroup
+   //DATA class_id INIT Class_Id_QParallelAnimationGroup
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

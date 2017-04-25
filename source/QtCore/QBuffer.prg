@@ -15,7 +15,7 @@ REQUEST QBYTEARRAY
 
 CLASS QBuffer INHERIT QIODevice
 
-   DATA class_id INIT Class_Id_QBuffer
+   //DATA class_id INIT Class_Id_QBuffer
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

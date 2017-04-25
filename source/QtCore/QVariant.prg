@@ -40,7 +40,7 @@ REQUEST QJSONDOCUMENT
 CLASS QVariant
 
    DATA pointer
-   DATA class_id INIT Class_Id_QVariant
+   //DATA class_id INIT Class_Id_QVariant
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

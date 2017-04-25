@@ -15,7 +15,7 @@ REQUEST QOBJECT
 
 CLASS QEventTransition INHERIT QAbstractTransition
 
-   DATA class_id INIT Class_Id_QEventTransition
+   //DATA class_id INIT Class_Id_QEventTransition
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

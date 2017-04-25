@@ -11,7 +11,7 @@
 
 CLASS QSaveFile INHERIT QFileDevice
 
-   DATA class_id INIT Class_Id_QSaveFile
+   //DATA class_id INIT Class_Id_QSaveFile
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

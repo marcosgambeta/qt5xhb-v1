@@ -15,7 +15,7 @@ REQUEST QOBJECT
 
 CLASS QChildEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QChildEvent
+   //DATA class_id INIT Class_Id_QChildEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

@@ -16,7 +16,7 @@ REQUEST QBYTEARRAY
 
 CLASS QSignalTransition INHERIT QAbstractTransition
 
-   DATA class_id INIT Class_Id_QSignalTransition
+   //DATA class_id INIT Class_Id_QSignalTransition
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

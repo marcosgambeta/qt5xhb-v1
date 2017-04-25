@@ -17,7 +17,7 @@ REQUEST QIODEVICE
 CLASS QXmlStreamWriter
 
    DATA pointer
-   DATA class_id INIT Class_Id_QXmlStreamWriter
+   //DATA class_id INIT Class_Id_QXmlStreamWriter
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

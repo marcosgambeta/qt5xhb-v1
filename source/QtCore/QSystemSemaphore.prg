@@ -12,7 +12,7 @@
 CLASS QSystemSemaphore
 
    DATA pointer
-   DATA class_id INIT Class_Id_QSystemSemaphore
+   //DATA class_id INIT Class_Id_QSystemSemaphore
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

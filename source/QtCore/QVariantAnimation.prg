@@ -16,7 +16,7 @@ REQUEST QEASINGCURVE
 
 CLASS QVariantAnimation INHERIT QAbstractAnimation
 
-   DATA class_id INIT Class_Id_QVariantAnimation
+   //DATA class_id INIT Class_Id_QVariantAnimation
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

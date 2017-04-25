@@ -16,7 +16,7 @@ REQUEST QBYTEARRAY
 CLASS QCryptographicHash
 
    DATA pointer
-   DATA class_id INIT Class_Id_QCryptographicHash
+   //DATA class_id INIT Class_Id_QCryptographicHash
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

@@ -16,7 +16,7 @@ REQUEST QBYTEARRAY
 CLASS QMessageAuthenticationCode
 
    DATA pointer
-   DATA class_id INIT Class_Id_QMessageAuthenticationCode
+   //DATA class_id INIT Class_Id_QMessageAuthenticationCode
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

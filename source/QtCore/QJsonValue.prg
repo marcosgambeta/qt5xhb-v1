@@ -18,7 +18,7 @@ REQUEST QVARIANT
 CLASS QJsonValue
 
    DATA pointer
-   DATA class_id INIT Class_Id_QJsonValue
+   //DATA class_id INIT Class_Id_QJsonValue
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
