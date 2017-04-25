@@ -226,9 +226,7 @@ HB_FUNC_STATIC( QQUICKITEM_CHILDAT )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QQuickItem * ptr = obj->childAt ( par1, par2 );
+    QQuickItem * ptr = obj->childAt ( PQREAL(1), PQREAL(2) );
     _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
   }
 }
@@ -789,8 +787,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETBASELINEOFFSET )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setBaselineOffset ( par1 );
+    obj->setBaselineOffset ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -905,8 +902,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETHEIGHT )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setHeight ( par1 );
+    obj->setHeight ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -920,8 +916,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITHEIGHT )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setImplicitHeight ( par1 );
+    obj->setImplicitHeight ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -935,8 +930,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITWIDTH )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setImplicitWidth ( par1 );
+    obj->setImplicitWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -978,8 +972,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETOPACITY )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setOpacity ( par1 );
+    obj->setOpacity ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1008,8 +1001,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETROTATION )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setRotation ( par1 );
+    obj->setRotation ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1023,8 +1015,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSCALE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setScale ( par1 );
+    obj->setScale ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1096,8 +1087,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETWIDTH )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setWidth ( par1 );
+    obj->setWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1111,8 +1101,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETX )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setX ( par1 );
+    obj->setX ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1126,8 +1115,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETY )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setY ( par1 );
+    obj->setY ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1141,8 +1129,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETZ )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setZ ( par1 );
+    obj->setZ ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
