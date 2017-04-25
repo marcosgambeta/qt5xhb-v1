@@ -17,7 +17,7 @@ REQUEST QMODELINDEX
 
 CLASS QHelpContentModel INHERIT QAbstractItemModel
 
-   DATA class_id INIT Class_Id_QHelpContentModel
+   //DATA class_id INIT Class_Id_QHelpContentModel
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

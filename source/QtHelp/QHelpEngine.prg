@@ -19,7 +19,7 @@ REQUEST QHELPSEARCHENGINE
 
 CLASS QHelpEngine INHERIT QHelpEngineCore
 
-   DATA class_id INIT Class_Id_QHelpEngine
+   //DATA class_id INIT Class_Id_QHelpEngine
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

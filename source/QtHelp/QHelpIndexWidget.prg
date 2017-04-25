@@ -11,7 +11,7 @@
 
 CLASS QHelpIndexWidget INHERIT QListView
 
-   DATA class_id INIT Class_Id_QHelpIndexWidget
+   //DATA class_id INIT Class_Id_QHelpIndexWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
