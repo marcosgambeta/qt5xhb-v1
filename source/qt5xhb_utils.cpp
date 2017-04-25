@@ -171,6 +171,7 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool 
   retorno: true ou false
 */
 
+/*
 bool _qt5xhb_checkclsid ( int iPar, int iClsId )
 {
   if( ISOBJECT(iPar) )
@@ -182,6 +183,7 @@ bool _qt5xhb_checkclsid ( int iPar, int iClsId )
     return false;
   }
 }
+*/
 
 /*
   verifica se o parâmetro <iPar> herda da classe <classname>
@@ -683,3 +685,14 @@ QStringList _qt5xhb_convert_array_parameter_to_qstringlist ( int numpar )
 
   return list;
 }
+
+/*
+*/
+// QString _qt5xhb_convert_string_parameter_to_qstring ( int numpar )
+// {
+//   #ifdef QT5XHB_USE_LATIN1STRING
+//   return QLatin1String( hb_parc(numpar) );
+//   #else
+//   return QString( hb_parc(numpar) );
+//   #endif
+// }

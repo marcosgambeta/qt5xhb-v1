@@ -16,7 +16,7 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname );
 void _qt5xhb_createReturnClass ( void * ptr, const char * classname, bool destroy );
 void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy );
 
-bool _qt5xhb_checkclsid ( int par, int clsid );
+//bool _qt5xhb_checkclsid ( int par, int clsid );
 bool _qt5xhb_inherits ( int par, const char * classname );
 
 void _qt5xhb_convert_qlist_int_to_array ( const QList<int> list );
@@ -48,3 +48,4 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
 bool _qt5xhb_isClassDerivedFrom ( const char * className1, const char * className2 );
 bool _qt5xhb_isObjectDerivedFrom ( int numpar, const QString className );
 QStringList _qt5xhb_convert_array_parameter_to_qstringlist ( int numpar );
+//QString _qt5xhb_convert_string_parameter_to_qstring ( int numpar );
