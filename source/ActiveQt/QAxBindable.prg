@@ -16,7 +16,7 @@ REQUEST QAXAGGREGATED
 CLASS QAxBindable
 
    DATA pointer
-   DATA class_id INIT Class_Id_QAxBindable
+   //DATA class_id INIT Class_Id_QAxBindable
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

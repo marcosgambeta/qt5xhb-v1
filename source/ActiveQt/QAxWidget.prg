@@ -18,7 +18,7 @@ REQUEST QAXOBJECT
 
 CLASS QAxWidget INHERIT QWidget,QAxBase
 
-   DATA class_id INIT Class_Id_QAxWidget
+   //DATA class_id INIT Class_Id_QAxWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
