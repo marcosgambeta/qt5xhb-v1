@@ -239,9 +239,7 @@ void QGraphicsView_centeron2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->centerOn ( par1, par2 );
+    obj->centerOn ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -325,11 +323,7 @@ void QGraphicsView_ensureVisible2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->ensureVisible ( par1, par2, par3, par4, (int) ISNIL(5)? 50 : hb_parni(5), (int) ISNIL(6)? 50 : hb_parni(6) );
+    obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (int) ISNIL(5)? 50 : hb_parni(5), (int) ISNIL(6)? 50 : hb_parni(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -401,12 +395,8 @@ void QGraphicsView_fitInView2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     int par5 = ISNIL(5)? (int) Qt::IgnoreAspectRatio : hb_parni(5);
-    obj->fitInView ( par1, par2, par3, par4,  (Qt::AspectRatioMode) par5 );
+    obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (Qt::AspectRatioMode) par5 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -617,9 +607,7 @@ void QGraphicsView_mapFromScene5 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    QPoint * ptr = new QPoint( obj->mapFromScene ( par1, par2 ) );
+    QPoint * ptr = new QPoint( obj->mapFromScene ( PQREAL(1), PQREAL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -633,11 +621,7 @@ void QGraphicsView_mapFromScene6 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    QPolygon * ptr = new QPolygon( obj->mapFromScene ( par1, par2, par3, par4 ) );
+    QPolygon * ptr = new QPolygon( obj->mapFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -957,8 +941,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->rotate ( par1 );
+      obj->rotate ( PQREAL(1) );
     }
     else
     {
@@ -993,9 +976,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      obj->scale ( par1, par2 );
+      obj->scale ( PQREAL(1), PQREAL(2) );
     }
     else
     {
@@ -1380,11 +1361,7 @@ void QGraphicsView_setSceneRect2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setSceneRect ( par1, par2, par3, par4 );
+    obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1489,9 +1466,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      obj->shear ( par1, par2 );
+      obj->shear ( PQREAL(1), PQREAL(2) );
     }
     else
     {
@@ -1540,9 +1515,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      qreal par1 = hb_parnd(1);
-      qreal par2 = hb_parnd(2);
-      obj->translate ( par1, par2 );
+      obj->translate ( PQREAL(1), PQREAL(2) );
     }
     else
     {

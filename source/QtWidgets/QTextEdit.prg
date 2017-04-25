@@ -1483,8 +1483,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTPOINTSIZE )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setFontPointSize ( par1 );
+      obj->setFontPointSize ( PQREAL(1) );
     }
     else
     {

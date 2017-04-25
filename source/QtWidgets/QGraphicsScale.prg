@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setXScale ( par1 );
+    obj->setXScale ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -141,8 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setYScale ( par1 );
+    obj->setYScale ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -156,8 +154,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setZScale ( par1 );
+    obj->setZScale ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

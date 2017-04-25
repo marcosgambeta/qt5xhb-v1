@@ -427,8 +427,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setTextWidth ( par1 );
+      obj->setTextWidth ( PQREAL(1) );
     }
     else
     {

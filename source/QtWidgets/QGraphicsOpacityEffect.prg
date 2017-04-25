@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setOpacity ( par1 );
+    obj->setOpacity ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

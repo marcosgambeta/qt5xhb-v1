@@ -170,9 +170,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX2 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->setSnapPositionsX ( par1, par2 );
+    obj->setSnapPositionsX ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -228,9 +226,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY2 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->setSnapPositionsY ( par1, par2 );
+    obj->setSnapPositionsY ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -319,9 +315,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE1 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->ensureVisible ( *par1, par2, par3 );
+    obj->ensureVisible ( *par1, PQREAL(2), PQREAL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -335,9 +329,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE2 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->ensureVisible ( *par1, par2, par3, (int) hb_parni(4) );
+    obj->ensureVisible ( *par1, PQREAL(2), PQREAL(3), (int) hb_parni(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

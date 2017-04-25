@@ -575,8 +575,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNFIXEDWIDTH )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setColumnFixedWidth ( (int) hb_parni(1), par2 );
+    obj->setColumnFixedWidth ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -590,8 +589,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMAXIMUMWIDTH )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setColumnMaximumWidth ( (int) hb_parni(1), par2 );
+    obj->setColumnMaximumWidth ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -605,8 +603,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setColumnMinimumWidth ( (int) hb_parni(1), par2 );
+    obj->setColumnMinimumWidth ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -620,8 +617,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNPREFERREDWIDTH )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setColumnPreferredWidth ( (int) hb_parni(1), par2 );
+    obj->setColumnPreferredWidth ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -635,8 +631,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setColumnSpacing ( (int) hb_parni(1), par2 );
+    obj->setColumnSpacing ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -671,8 +666,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETHORIZONTALSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setHorizontalSpacing ( par1 );
+    obj->setHorizontalSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -701,8 +695,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWFIXEDHEIGHT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setRowFixedHeight ( (int) hb_parni(1), par2 );
+    obj->setRowFixedHeight ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -716,8 +709,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMAXIMUMHEIGHT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setRowMaximumHeight ( (int) hb_parni(1), par2 );
+    obj->setRowMaximumHeight ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -731,8 +723,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMINIMUMHEIGHT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setRowMinimumHeight ( (int) hb_parni(1), par2 );
+    obj->setRowMinimumHeight ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -746,8 +737,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWPREFERREDHEIGHT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setRowPreferredHeight ( (int) hb_parni(1), par2 );
+    obj->setRowPreferredHeight ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -761,8 +751,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par2 = hb_parnd(2);
-    obj->setRowSpacing ( (int) hb_parni(1), par2 );
+    obj->setRowSpacing ( (int) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -797,8 +786,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setSpacing ( par1 );
+    obj->setSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -812,8 +800,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setVerticalSpacing ( par1 );
+    obj->setVerticalSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

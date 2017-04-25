@@ -176,9 +176,7 @@ void QGraphicsPixmapItem_setOffset2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->setOffset ( par1, par2 );
+    obj->setOffset ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

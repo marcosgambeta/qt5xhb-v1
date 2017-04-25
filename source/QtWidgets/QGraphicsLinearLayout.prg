@@ -329,8 +329,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETITEMSPACING )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      qreal par2 = hb_parnd(2);
-      obj->setItemSpacing ( (int) hb_parni(1), par2 );
+      obj->setItemSpacing ( (int) hb_parni(1), PQREAL(2) );
     }
     else
     {
@@ -375,8 +374,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSPACING )
   {
     if( ISNUM(1) )
     {
-      qreal par1 = hb_parnd(1);
-      obj->setSpacing ( par1 );
+      obj->setSpacing ( PQREAL(1) );
     }
     else
     {

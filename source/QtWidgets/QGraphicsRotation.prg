@@ -134,8 +134,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setAngle ( par1 );
+    obj->setAngle ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

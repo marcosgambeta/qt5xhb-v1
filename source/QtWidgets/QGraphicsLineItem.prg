@@ -90,12 +90,8 @@ QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * pare
 */
 void QGraphicsLineItem_new3 ()
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
   QGraphicsItem * par5 = ISNIL(5)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(5);
-  QGraphicsLineItem * o = new QGraphicsLineItem ( par1, par2, par3, par4, par5 );
+  QGraphicsLineItem * o = new QGraphicsLineItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -193,11 +189,7 @@ void QGraphicsLineItem_setLine2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setLine ( par1, par2, par3, par4 );
+    obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -135,8 +135,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setAcceleration ( par1 );
+    obj->setAcceleration ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -236,8 +236,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setLastRotationAngle ( par1 );
+    obj->setLastRotationAngle ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,8 +251,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setLastScaleFactor ( par1 );
+    obj->setLastScaleFactor ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -268,8 +266,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setRotationAngle ( par1 );
+    obj->setRotationAngle ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -284,8 +281,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setScaleFactor ( par1 );
+    obj->setScaleFactor ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -332,8 +328,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTotalRotationAngle ( par1 );
+    obj->setTotalRotationAngle ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -348,8 +343,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTotalScaleFactor ( par1 );
+    obj->setTotalScaleFactor ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

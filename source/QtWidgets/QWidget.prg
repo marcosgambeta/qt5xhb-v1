@@ -3999,8 +3999,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWOPACITY )
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setWindowOpacity ( par1 );
+    obj->setWindowOpacity ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -84,12 +84,8 @@ QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem *
 */
 void QGraphicsRectItem_new3 ()
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
   QGraphicsItem * par5 = ISNIL(5)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(5);
-  QGraphicsRectItem * o = new QGraphicsRectItem ( par1, par2, par3, par4, par5 );
+  QGraphicsRectItem * o = new QGraphicsRectItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -173,11 +169,7 @@ void QGraphicsRectItem_setRect2 ()
 
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setRect ( par1, par2, par3, par4 );
+    obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
