@@ -20,7 +20,7 @@ REQUEST QURL
 CLASS QNetworkRequest
 
    DATA pointer
-   DATA class_id INIT Class_Id_QNetworkRequest
+   //DATA class_id INIT Class_Id_QNetworkRequest
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
