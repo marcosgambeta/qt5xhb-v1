@@ -7,7 +7,7 @@
 */
 
 #include "hbclass.ch"
-#include "qt5xhb_clsid.ch"
+//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QUUID
