@@ -15,7 +15,7 @@ REQUEST QURL
 
 CLASS QAbstractUriResolver INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAbstractUriResolver
+   //DATA class_id INIT Class_Id_QAbstractUriResolver
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

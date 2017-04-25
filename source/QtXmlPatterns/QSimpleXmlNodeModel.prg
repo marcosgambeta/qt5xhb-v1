@@ -18,7 +18,7 @@ REQUEST QXMLNAME
 
 CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
 
-   DATA class_id INIT Class_Id_QSimpleXmlNodeModel
+   //DATA class_id INIT Class_Id_QSimpleXmlNodeModel
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
