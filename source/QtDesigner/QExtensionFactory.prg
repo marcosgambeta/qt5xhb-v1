@@ -16,7 +16,7 @@ REQUEST QOBJECT
 
 CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
 
-   DATA class_id INIT Class_Id_QExtensionFactory
+   //DATA class_id INIT Class_Id_QExtensionFactory
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
