@@ -12,7 +12,7 @@
 
 CLASS QCompassFilter INHERIT QSensorFilter
 
-   DATA class_id INIT Class_Id_QCompassFilter
+   //DATA class_id INIT Class_Id_QCompassFilter
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

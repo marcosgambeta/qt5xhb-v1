@@ -15,7 +15,7 @@ REQUEST QROTATIONREADING
 
 CLASS QRotationSensor INHERIT QSensor
 
-   DATA class_id INIT Class_Id_QRotationSensor
+   //DATA class_id INIT Class_Id_QRotationSensor
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

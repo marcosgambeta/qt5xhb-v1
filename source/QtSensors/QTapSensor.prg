@@ -15,7 +15,7 @@ REQUEST QTAPREADING
 
 CLASS QTapSensor INHERIT QSensor
 
-   DATA class_id INIT Class_Id_QTapSensor
+   //DATA class_id INIT Class_Id_QTapSensor
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

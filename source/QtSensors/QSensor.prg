@@ -19,7 +19,7 @@ REQUEST QSENSORREADING
 
 CLASS QSensor INHERIT QObject
 
-   DATA class_id INIT Class_Id_QSensor
+   //DATA class_id INIT Class_Id_QSensor
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

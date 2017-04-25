@@ -15,7 +15,7 @@ REQUEST QORIENTATIONREADING
 
 CLASS QOrientationSensor INHERIT QSensor
 
-   DATA class_id INIT Class_Id_QOrientationSensor
+   //DATA class_id INIT Class_Id_QOrientationSensor
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
