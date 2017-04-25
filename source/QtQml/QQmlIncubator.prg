@@ -16,7 +16,7 @@ REQUEST QOBJECT
 CLASS QQmlIncubator
 
    DATA pointer
-   DATA class_id INIT Class_Id_QQmlIncubator
+   //DATA class_id INIT Class_Id_QQmlIncubator
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

@@ -15,7 +15,7 @@ REQUEST QVARIANT
 
 CLASS QQmlPropertyMap INHERIT QObject
 
-   DATA class_id INIT Class_Id_QQmlPropertyMap
+   //DATA class_id INIT Class_Id_QQmlPropertyMap
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
