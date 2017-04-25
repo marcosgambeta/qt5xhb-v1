@@ -16,7 +16,7 @@ REQUEST QGEOPOSITIONINFO
 
 CLASS QNmeaPositionInfoSource INHERIT QGeoPositionInfoSource
 
-   DATA class_id INIT Class_Id_QNmeaPositionInfoSource
+   //DATA class_id INIT Class_Id_QNmeaPositionInfoSource
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

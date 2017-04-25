@@ -15,7 +15,7 @@ REQUEST QGEOCOORDINATE
 
 CLASS QGeoCircle INHERIT QGeoShape
 
-   DATA class_id INIT Class_Id_QGeoCircle
+   //DATA class_id INIT Class_Id_QGeoCircle
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

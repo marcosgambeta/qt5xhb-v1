@@ -15,7 +15,7 @@ REQUEST QGEOCOORDINATE
 
 CLASS QGeoRectangle INHERIT QGeoShape
 
-   DATA class_id INIT Class_Id_QGeoRectangle
+   //DATA class_id INIT Class_Id_QGeoRectangle
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
