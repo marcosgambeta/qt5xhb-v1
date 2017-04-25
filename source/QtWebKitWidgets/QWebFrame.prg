@@ -731,8 +731,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTextSizeMultiplier ( par1 );
+    obj->setTextSizeMultiplier ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -761,8 +760,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setZoomFactor ( par1 );
+    obj->setZoomFactor ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
