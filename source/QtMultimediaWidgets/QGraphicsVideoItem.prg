@@ -18,7 +18,7 @@ REQUEST QRECTF
 
 CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 
-   DATA class_id INIT Class_Id_QGraphicsVideoItem
+   //DATA class_id INIT Class_Id_QGraphicsVideoItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
