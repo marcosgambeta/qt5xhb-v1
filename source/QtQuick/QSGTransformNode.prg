@@ -11,7 +11,7 @@
 
 CLASS QSGTransformNode INHERIT QSGNode
 
-   DATA class_id INIT Class_Id_QSGTransformNode
+   //DATA class_id INIT Class_Id_QSGTransformNode
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

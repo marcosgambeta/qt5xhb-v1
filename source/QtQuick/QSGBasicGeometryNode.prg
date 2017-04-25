@@ -15,7 +15,7 @@ REQUEST QSGGEOMETRY
 
 CLASS QSGBasicGeometryNode INHERIT QSGNode
 
-   DATA class_id INIT Class_Id_QSGBasicGeometryNode
+   //DATA class_id INIT Class_Id_QSGBasicGeometryNode
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

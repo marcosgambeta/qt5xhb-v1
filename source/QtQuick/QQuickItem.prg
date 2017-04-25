@@ -20,7 +20,7 @@ REQUEST QQUICKWINDOW
 
 CLASS QQuickItem INHERIT QObject,QQmlParserStatus
 
-   DATA class_id INIT Class_Id_QQuickItem
+   //DATA class_id INIT Class_Id_QQuickItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
