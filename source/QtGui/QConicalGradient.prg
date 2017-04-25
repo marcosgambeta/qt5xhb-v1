@@ -15,7 +15,7 @@ REQUEST QPOINTF
 
 CLASS QConicalGradient INHERIT QGradient
 
-   DATA class_id INIT Class_Id_QConicalGradient
+   //DATA class_id INIT Class_Id_QConicalGradient
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

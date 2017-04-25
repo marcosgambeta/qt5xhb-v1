@@ -15,7 +15,7 @@ REQUEST QVARIANT
 
 CLASS QInputMethodQueryEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QInputMethodQueryEvent
+   //DATA class_id INIT Class_Id_QInputMethodQueryEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

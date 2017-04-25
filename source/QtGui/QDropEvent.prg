@@ -16,7 +16,7 @@ REQUEST QOBJECT
 
 CLASS QDropEvent INHERIT QEvent,QMimeSource
 
-   DATA class_id INIT Class_Id_QDropEvent
+   //DATA class_id INIT Class_Id_QDropEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

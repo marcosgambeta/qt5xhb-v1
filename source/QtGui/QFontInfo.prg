@@ -12,7 +12,7 @@
 CLASS QFontInfo
 
    DATA pointer
-   DATA class_id INIT Class_Id_QFontInfo
+   //DATA class_id INIT Class_Id_QFontInfo
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

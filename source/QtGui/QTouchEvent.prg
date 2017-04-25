@@ -17,7 +17,7 @@ REQUEST QTOUCHDEVICE
 
 CLASS QTouchEvent INHERIT QInputEvent
 
-   DATA class_id INIT Class_Id_QTouchEvent
+   //DATA class_id INIT Class_Id_QTouchEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

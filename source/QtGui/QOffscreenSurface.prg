@@ -18,7 +18,7 @@ REQUEST QPLATFORMOFFSCREENSURFACE
 
 CLASS QOffscreenSurface INHERIT QObject,QSurface
 
-   DATA class_id INIT Class_Id_QOffscreenSurface
+   //DATA class_id INIT Class_Id_QOffscreenSurface
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

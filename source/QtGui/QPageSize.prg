@@ -19,7 +19,7 @@ REQUEST QRECT
 CLASS QPageSize
 
    DATA pointer
-   DATA class_id INIT Class_Id_QPageSize
+   //DATA class_id INIT Class_Id_QPageSize
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

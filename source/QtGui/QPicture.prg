@@ -15,7 +15,7 @@ REQUEST QRECT
 
 CLASS QPicture INHERIT QPaintDevice
 
-   DATA class_id INIT Class_Id_QPicture
+   //DATA class_id INIT Class_Id_QPicture
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

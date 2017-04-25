@@ -20,7 +20,7 @@ REQUEST QWINDOW
 CLASS QBackingStore
 
    DATA pointer
-   DATA class_id INIT Class_Id_QBackingStore
+   //DATA class_id INIT Class_Id_QBackingStore
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

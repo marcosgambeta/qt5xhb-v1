@@ -20,7 +20,7 @@ REQUEST QBYTEARRAY
 CLASS QRawFont
 
    DATA pointer
-   DATA class_id INIT Class_Id_QRawFont
+   //DATA class_id INIT Class_Id_QRawFont
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

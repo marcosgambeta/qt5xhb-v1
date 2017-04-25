@@ -11,7 +11,7 @@
 
 CLASS QAccessibleTextUpdateEvent INHERIT QAccessibleTextCursorEvent
 
-   DATA class_id INIT Class_Id_QAccessibleTextUpdateEvent
+   //DATA class_id INIT Class_Id_QAccessibleTextUpdateEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

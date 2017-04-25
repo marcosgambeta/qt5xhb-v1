@@ -16,7 +16,7 @@ REQUEST QFONT
 CLASS QTextItem
 
    DATA pointer
-   DATA class_id INIT Class_Id_QTextItem
+   //DATA class_id INIT Class_Id_QTextItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

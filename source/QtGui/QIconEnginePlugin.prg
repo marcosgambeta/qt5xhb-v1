@@ -15,7 +15,7 @@ REQUEST QICONENGINE
 
 CLASS QIconEnginePlugin INHERIT QObject
 
-   DATA class_id INIT Class_Id_QIconEnginePlugin
+   //DATA class_id INIT Class_Id_QIconEnginePlugin
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -15,7 +15,7 @@ REQUEST QOBJECT
 
 CLASS QGenericPlugin INHERIT QObject
 
-   DATA class_id INIT Class_Id_QGenericPlugin
+   //DATA class_id INIT Class_Id_QGenericPlugin
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

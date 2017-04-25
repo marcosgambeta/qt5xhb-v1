@@ -15,7 +15,7 @@ REQUEST QPOINT
 
 CLASS QMoveEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QMoveEvent
+   //DATA class_id INIT Class_Id_QMoveEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

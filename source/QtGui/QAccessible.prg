@@ -15,7 +15,7 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessible INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAccessible
+   //DATA class_id INIT Class_Id_QAccessible
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

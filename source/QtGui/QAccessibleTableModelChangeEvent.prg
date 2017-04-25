@@ -11,7 +11,7 @@
 
 CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
 
-   DATA class_id INIT Class_Id_QAccessibleTableModelChangeEvent
+   //DATA class_id INIT Class_Id_QAccessibleTableModelChangeEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

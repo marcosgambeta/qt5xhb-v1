@@ -15,7 +15,7 @@ REQUEST QURL
 
 CLASS QFileOpenEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QFileOpenEvent
+   //DATA class_id INIT Class_Id_QFileOpenEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

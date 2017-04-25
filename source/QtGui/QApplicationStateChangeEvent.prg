@@ -11,7 +11,7 @@
 
 CLASS QApplicationStateChangeEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QApplicationStateChangeEvent
+   //DATA class_id INIT Class_Id_QApplicationStateChangeEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

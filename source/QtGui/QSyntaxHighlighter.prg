@@ -15,7 +15,7 @@ REQUEST QTEXTDOCUMENT
 
 CLASS QSyntaxHighlighter INHERIT QObject
 
-   DATA class_id INIT Class_Id_QSyntaxHighlighter
+   //DATA class_id INIT Class_Id_QSyntaxHighlighter
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

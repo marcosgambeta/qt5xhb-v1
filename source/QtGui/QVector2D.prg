@@ -19,7 +19,7 @@ REQUEST QPOINTF
 CLASS QVector2D
 
    DATA pointer
-   DATA class_id INIT Class_Id_QVector2D
+   //DATA class_id INIT Class_Id_QVector2D
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

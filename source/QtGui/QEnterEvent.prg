@@ -16,7 +16,7 @@ REQUEST QPOINTF
 
 CLASS QEnterEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QEnterEvent
+   //DATA class_id INIT Class_Id_QEnterEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

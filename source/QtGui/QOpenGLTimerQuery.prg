@@ -15,7 +15,7 @@ REQUEST GLUINT64
 
 CLASS QOpenGLTimerQuery INHERIT QObject
 
-   DATA class_id INIT Class_Id_QOpenGLTimerQuery
+   //DATA class_id INIT Class_Id_QOpenGLTimerQuery
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

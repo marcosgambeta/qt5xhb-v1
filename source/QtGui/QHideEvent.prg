@@ -11,7 +11,7 @@
 
 CLASS QHideEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QHideEvent
+   //DATA class_id INIT Class_Id_QHideEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

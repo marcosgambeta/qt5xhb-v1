@@ -15,7 +15,7 @@ REQUEST QIMAGEIOHANDLER
 
 CLASS QImageIOPlugin INHERIT QObject
 
-   DATA class_id INIT Class_Id_QImageIOPlugin
+   //DATA class_id INIT Class_Id_QImageIOPlugin
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
