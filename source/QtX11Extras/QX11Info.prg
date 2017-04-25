@@ -16,7 +16,7 @@ REQUEST QBYTEARRAY
 CLASS QX11Info
 
    DATA pointer
-   DATA class_id INIT Class_Id_QX11Info
+   //DATA class_id INIT Class_Id_QX11Info
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
