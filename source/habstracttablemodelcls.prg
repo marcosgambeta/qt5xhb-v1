@@ -9,11 +9,13 @@
 #include "hbclass.ch"
 #include "qt5xhb_clsid.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
 REQUEST QMODELINDEX
+#endif
 
 CLASS HAbstractTableModel INHERIT QAbstractTableModel
 
-   DATA class_id INIT Class_Id_QAbstractTableModel
+   //DATA class_id INIT Class_Id_QAbstractTableModel
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
@@ -69,30 +71,9 @@ END CLASS
 
 #pragma BEGINDUMP
 
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2013 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
-
 #include <habstracttablemodel.h>
 
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#define ISNIL HB_ISNIL
-#define ISLOG HB_ISLOG
-#define ISNUM HB_ISNUM
-#define ISCHAR HB_ISCHAR
-#define ISPOINTER HB_ISPOINTER
-#define ISOBJECT HB_ISOBJECT
-#define ISARRAY HB_ISARRAY
-#endif
+#include "qt5xhb_common.h"
 #include "qt5xhb_clsid.h"
 #include "qt5xhb_utils.h"
 
@@ -111,6 +92,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_NEW )
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_DELETE )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -120,6 +102,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -128,20 +111,24 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_DELETE )
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETROWCOUNTCB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setRowCountCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setColumnCountCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -150,110 +137,132 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB )
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETDISPLAYROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setDisplayRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETDECORATIONROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setDecorationRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETEDITROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setEditRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETTOOLTIPROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setToolTipRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setStatusTipRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETWHATSTHISROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setWhatsThisRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETSIZEHINTROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setSizeHintRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETFONTROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setFontRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setTextAlignmentRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setBackgroundRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setForegroundRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -262,60 +271,72 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB )
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setHorizontalHeaderDisplayRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setHorizontalHeaderDecorationRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setHorizontalHeaderFontRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setHorizontalHeaderTextAlignmentRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setHorizontalHeaderBackgroundRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setHorizontalHeaderForegroundRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -324,70 +345,84 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setVerticalHeaderDisplayRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setVerticalHeaderDecorationRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setVerticalHeaderFontRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setVerticalHeaderTextAlignmentRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setVerticalHeaderBackgroundRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setVerticalHeaderForegroundRoleCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_RELOADDATA )
 {
   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->reloadData();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
