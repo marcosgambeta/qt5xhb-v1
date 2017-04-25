@@ -19,7 +19,7 @@ REQUEST QWEBFRAME
 CLASS QWebElement
 
    DATA pointer
-   DATA class_id INIT Class_Id_QWebElement
+   //DATA class_id INIT Class_Id_QWebElement
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
