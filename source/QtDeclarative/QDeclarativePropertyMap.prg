@@ -15,7 +15,7 @@ REQUEST QVARIANT
 
 CLASS QDeclarativePropertyMap INHERIT QObject
 
-   DATA class_id INIT Class_Id_QDeclarativePropertyMap
+   //DATA class_id INIT Class_Id_QDeclarativePropertyMap
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

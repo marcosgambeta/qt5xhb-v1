@@ -16,7 +16,7 @@ REQUEST QSCRIPTVALUE
 
 CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
 
-   DATA class_id INIT Class_Id_QDeclarativeItem
+   //DATA class_id INIT Class_Id_QDeclarativeItem
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -20,7 +20,7 @@ REQUEST QURL
 
 CLASS QDeclarativeView INHERIT QGraphicsView
 
-   DATA class_id INIT Class_Id_QDeclarativeView
+   //DATA class_id INIT Class_Id_QDeclarativeView
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
