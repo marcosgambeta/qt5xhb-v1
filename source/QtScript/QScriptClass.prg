@@ -19,7 +19,7 @@ REQUEST QSCRIPTVALUE
 CLASS QScriptClass
 
    DATA pointer
-   DATA class_id INIT Class_Id_QScriptClass
+   //DATA class_id INIT Class_Id_QScriptClass
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
