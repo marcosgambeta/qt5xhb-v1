@@ -19,7 +19,7 @@ REQUEST QDBUSREPLY<VOID>
 
 CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
 
-   DATA class_id INIT Class_Id_QDBusConnectionInterface
+   //DATA class_id INIT Class_Id_QDBusConnectionInterface
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
