@@ -18,7 +18,7 @@ REQUEST QABSTRACTAUDIODEVICEINFO
 
 CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
 
-   DATA class_id INIT Class_Id_QAudioSystemPlugin
+   //DATA class_id INIT Class_Id_QAudioSystemPlugin
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

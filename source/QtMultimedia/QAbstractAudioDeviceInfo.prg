@@ -15,7 +15,7 @@ REQUEST QAUDIOFORMAT
 
 CLASS QAbstractAudioDeviceInfo INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAbstractAudioDeviceInfo
+   //DATA class_id INIT Class_Id_QAbstractAudioDeviceInfo
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

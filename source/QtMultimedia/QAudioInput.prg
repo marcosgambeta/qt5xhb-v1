@@ -16,7 +16,7 @@ REQUEST QIODEVICE
 
 CLASS QAudioInput INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAudioInput
+   //DATA class_id INIT Class_Id_QAudioInput
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

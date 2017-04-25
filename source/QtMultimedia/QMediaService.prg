@@ -15,7 +15,7 @@ REQUEST QMEDIACONTROL
 
 CLASS QMediaService INHERIT QObject
 
-   DATA class_id INIT Class_Id_QMediaService
+   //DATA class_id INIT Class_Id_QMediaService
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

@@ -15,7 +15,7 @@ REQUEST QVIDEOSURFACEFORMAT
 
 CLASS QAbstractVideoSurface INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAbstractVideoSurface
+   //DATA class_id INIT Class_Id_QAbstractVideoSurface
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

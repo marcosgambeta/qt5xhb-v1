@@ -11,7 +11,7 @@
 
 CLASS QAudioInputSelectorControl INHERIT QMediaControl
 
-   DATA class_id INIT Class_Id_QAudioInputSelectorControl
+   //DATA class_id INIT Class_Id_QAudioInputSelectorControl
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

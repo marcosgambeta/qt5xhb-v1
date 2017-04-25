@@ -11,7 +11,7 @@
 
 CLASS QAudioRecorder INHERIT QMediaRecorder
 
-   DATA class_id INIT Class_Id_QAudioRecorder
+   //DATA class_id INIT Class_Id_QAudioRecorder
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

@@ -17,7 +17,7 @@ REQUEST QVARIANT
 CLASS QImageEncoderSettings
 
    DATA pointer
-   DATA class_id INIT Class_Id_QImageEncoderSettings
+   //DATA class_id INIT Class_Id_QImageEncoderSettings
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
