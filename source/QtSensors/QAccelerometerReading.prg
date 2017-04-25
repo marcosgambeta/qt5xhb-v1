@@ -95,8 +95,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETX )
   QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setX ( par1 );
+    obj->setX ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -127,8 +126,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETY )
   QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setY ( par1 );
+    obj->setY ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -159,8 +157,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETZ )
   QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setZ ( par1 );
+    obj->setZ ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

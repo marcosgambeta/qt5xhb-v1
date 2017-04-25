@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QLIGHTREADING_SETLUX )
   QLightReading * obj = (QLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setLux ( par1 );
+    obj->setLux ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

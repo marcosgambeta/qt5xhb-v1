@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QPRESSUREREADING_SETPRESSURE )
   QPressureReading * obj = (QPressureReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setPressure ( par1 );
+    obj->setPressure ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QIRPROXIMITYREADING_SETREFLECTANCE )
   QIRProximityReading * obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setReflectance ( par1 );
+    obj->setReflectance ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

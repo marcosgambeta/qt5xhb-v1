@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
   QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTemperature ( par1 );
+    obj->setTemperature ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

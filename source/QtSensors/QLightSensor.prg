@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
   QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setFieldOfView ( par1 );
+    obj->setFieldOfView ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
