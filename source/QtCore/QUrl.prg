@@ -986,7 +986,7 @@ static QByteArray toPercentEncoding ( const QString & input, const QByteArray & 
 */
 HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {
-  if( ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
+  if( ISCHAR(1) && ISOPTQBYTEARRAY(2) && ISOPTQBYTEARRAY(3) )
   {
     QString par1 = QLatin1String( hb_parc(1) );
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);

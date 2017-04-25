@@ -141,11 +141,11 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
   {
     QImageReader_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) )
   {
     QImageReader_new2();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQBYTEARRAY(2) )
   {
     QImageReader_new3();
   }

@@ -65,7 +65,7 @@ QMessageAuthenticationCode(QCryptographicHash::Algorithm method,const QByteArray
 */
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQBYTEARRAY(2) )
   {
     int par1 = hb_parni(1);
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);

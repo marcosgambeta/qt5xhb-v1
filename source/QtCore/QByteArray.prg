@@ -2520,7 +2520,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
 
   if( obj )
   {
-    if( (ISQBYTEARRAY(1)||ISNIL(1)) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISNUM(3)||ISCHAR(3)||ISNIL(3)) )
+    if( ISOPTQBYTEARRAY(1) && ISOPTQBYTEARRAY(2) && (ISNUM(3)||ISCHAR(3)||ISNIL(3)) )
     {
       QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
       QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);

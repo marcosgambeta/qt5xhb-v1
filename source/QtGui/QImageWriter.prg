@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
   {
     QImageWriter_new2();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQBYTEARRAY(2) )
   {
     QImageWriter_new3();
   }

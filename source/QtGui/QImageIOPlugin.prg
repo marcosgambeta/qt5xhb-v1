@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 
   if( obj )
   {
-    if( ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+    if( ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) )
     {
       QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
       QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
