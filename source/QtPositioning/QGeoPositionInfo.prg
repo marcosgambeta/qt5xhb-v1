@@ -241,8 +241,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setAttribute (  (QGeoPositionInfo::Attribute) par1, par2 );
+    obj->setAttribute (  (QGeoPositionInfo::Attribute) par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -335,10 +335,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = ISNIL(3)? 0.0 : hb_parnd(3);
-    QGeoCoordinate * ptr = new QGeoCoordinate( obj->atDistanceAndAzimuth ( par1, par2, par3 ) );
+    QGeoCoordinate * ptr = new QGeoCoordinate( obj->atDistanceAndAzimuth ( PQREAL(1), PQREAL(2), (qreal) ISNIL(3)? 0.0 : hb_parnd(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif

@@ -80,8 +80,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
-  qreal par2 = ISNIL(2)? -1.0 : hb_parnd(2);
-  QGeoCircle * o = new QGeoCircle ( *par1, par2 );
+  QGeoCircle * o = new QGeoCircle ( *par1, (qreal) ISNIL(2)? -1.0 : hb_parnd(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -199,8 +198,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_SETRADIUS )
   QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setRadius ( par1 );
+    obj->setRadius ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
