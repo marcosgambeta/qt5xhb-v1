@@ -17,7 +17,7 @@ REQUEST QWINTASKBARPROGRESS
 
 CLASS QWinTaskbarButton INHERIT QObject
 
-   DATA class_id INIT Class_Id_QWinTaskbarButton
+   //DATA class_id INIT Class_Id_QWinTaskbarButton
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

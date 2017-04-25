@@ -11,7 +11,7 @@
 
 CLASS QWinCompositionChangeEvent INHERIT QWinEvent
 
-   DATA class_id INIT Class_Id_QWinCompositionChangeEvent
+   //DATA class_id INIT Class_Id_QWinCompositionChangeEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
