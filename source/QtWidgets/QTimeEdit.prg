@@ -7,7 +7,7 @@
 */
 
 #include "hbclass.ch"
-#include "qt5xhb_clsid.ch"
+//#include "qt5xhb_clsid.ch"
 
 CLASS QTimeEdit INHERIT QDateTimeEdit
 
