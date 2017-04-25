@@ -15,7 +15,7 @@ REQUEST QWIDGET
 
 CLASS QSqlRelationalDelegate INHERIT QItemDelegate
 
-   DATA class_id INIT Class_Id_QSqlRelationalDelegate
+   //DATA class_id INIT Class_Id_QSqlRelationalDelegate
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

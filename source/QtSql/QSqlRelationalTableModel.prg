@@ -17,7 +17,7 @@ REQUEST QVARIANT
 
 CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
 
-   DATA class_id INIT Class_Id_QSqlRelationalTableModel
+   //DATA class_id INIT Class_Id_QSqlRelationalTableModel
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
