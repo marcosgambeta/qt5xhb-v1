@@ -370,8 +370,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setZoomFactor ( par1 );
+    obj->setZoomFactor ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
