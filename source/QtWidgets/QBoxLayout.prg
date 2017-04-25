@@ -16,7 +16,7 @@ REQUEST QSIZE
 
 CLASS QBoxLayout INHERIT QLayout
 
-   DATA class_id INIT Class_Id_QBoxLayout
+   //DATA class_id INIT Class_Id_QBoxLayout
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

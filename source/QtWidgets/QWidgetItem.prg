@@ -17,7 +17,7 @@ REQUEST QWIDGET
 
 CLASS QWidgetItem INHERIT QLayoutItem
 
-   DATA class_id INIT Class_Id_QWidgetItem
+   //DATA class_id INIT Class_Id_QWidgetItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

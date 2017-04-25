@@ -17,7 +17,7 @@ REQUEST QBYTEARRAY
 CLASS QItemEditorCreatorBase
 
    DATA pointer
-   DATA class_id INIT Class_Id_QItemEditorCreatorBase
+   //DATA class_id INIT Class_Id_QItemEditorCreatorBase
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

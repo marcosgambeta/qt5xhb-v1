@@ -20,7 +20,7 @@ REQUEST QVARIANT
 
 CLASS QPlainTextEdit INHERIT QAbstractScrollArea
 
-   DATA class_id INIT Class_Id_QPlainTextEdit
+   //DATA class_id INIT Class_Id_QPlainTextEdit
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -15,7 +15,7 @@ REQUEST QWIDGET
 
 CLASS QStackedWidget INHERIT QFrame
 
-   DATA class_id INIT Class_Id_QStackedWidget
+   //DATA class_id INIT Class_Id_QStackedWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

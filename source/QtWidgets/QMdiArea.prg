@@ -17,7 +17,7 @@ REQUEST QSIZE
 
 CLASS QMdiArea INHERIT QAbstractScrollArea
 
-   DATA class_id INIT Class_Id_QMdiArea
+   //DATA class_id INIT Class_Id_QMdiArea
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

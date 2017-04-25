@@ -15,7 +15,7 @@ REQUEST QCOLOR
 
 CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
 
-   DATA class_id INIT Class_Id_QGraphicsColorizeEffect
+   //DATA class_id INIT Class_Id_QGraphicsColorizeEffect
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

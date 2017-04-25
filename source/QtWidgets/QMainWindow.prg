@@ -21,7 +21,7 @@ REQUEST QSTATUSBAR
 
 CLASS QMainWindow INHERIT QWidget
 
-   DATA class_id INIT Class_Id_QMainWindow
+   //DATA class_id INIT Class_Id_QMainWindow
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

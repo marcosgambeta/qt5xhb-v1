@@ -19,7 +19,7 @@ REQUEST QFILEINFO
 
 CLASS QDirModel INHERIT QAbstractItemModel
 
-   DATA class_id INIT Class_Id_QDirModel
+   //DATA class_id INIT Class_Id_QDirModel
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

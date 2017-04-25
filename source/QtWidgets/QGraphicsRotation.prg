@@ -15,7 +15,7 @@ REQUEST QVECTOR3D
 
 CLASS QGraphicsRotation INHERIT QGraphicsTransform
 
-   DATA class_id INIT Class_Id_QGraphicsRotation
+   //DATA class_id INIT Class_Id_QGraphicsRotation
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

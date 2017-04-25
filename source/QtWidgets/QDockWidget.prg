@@ -16,7 +16,7 @@ REQUEST QACTION
 
 CLASS QDockWidget INHERIT QWidget
 
-   DATA class_id INIT Class_Id_QDockWidget
+   //DATA class_id INIT Class_Id_QDockWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

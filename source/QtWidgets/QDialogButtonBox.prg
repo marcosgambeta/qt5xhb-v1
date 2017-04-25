@@ -15,7 +15,7 @@ REQUEST QPUSHBUTTON
 
 CLASS QDialogButtonBox INHERIT QWidget
 
-   DATA class_id INIT Class_Id_QDialogButtonBox
+   //DATA class_id INIT Class_Id_QDialogButtonBox
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

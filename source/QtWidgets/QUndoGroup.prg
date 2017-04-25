@@ -16,7 +16,7 @@ REQUEST QACTION
 
 CLASS QUndoGroup INHERIT QObject
 
-   DATA class_id INIT Class_Id_QUndoGroup
+   //DATA class_id INIT Class_Id_QUndoGroup
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

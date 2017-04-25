@@ -22,7 +22,7 @@ REQUEST QVARIANT
 
 CLASS QAbstractItemView INHERIT QAbstractScrollArea
 
-   DATA class_id INIT Class_Id_QAbstractItemView
+   //DATA class_id INIT Class_Id_QAbstractItemView
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -28,7 +28,7 @@ REQUEST QGRAPHICSSCENE
 CLASS QGraphicsItem
 
    DATA pointer
-   DATA class_id INIT Class_Id_QGraphicsItem
+   //DATA class_id INIT Class_Id_QGraphicsItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

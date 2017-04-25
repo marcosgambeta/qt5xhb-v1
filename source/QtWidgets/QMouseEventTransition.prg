@@ -15,7 +15,7 @@ REQUEST QPAINTERPATH
 
 CLASS QMouseEventTransition INHERIT QEventTransition
 
-   DATA class_id INIT Class_Id_QMouseEventTransition
+   //DATA class_id INIT Class_Id_QMouseEventTransition
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -17,7 +17,7 @@ REQUEST QSIZE
 
 CLASS QGridLayout INHERIT QLayout
 
-   DATA class_id INIT Class_Id_QGridLayout
+   //DATA class_id INIT Class_Id_QGridLayout
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

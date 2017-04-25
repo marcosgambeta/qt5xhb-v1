@@ -27,7 +27,7 @@ REQUEST QSIZE
 
 CLASS QGraphicsView INHERIT QAbstractScrollArea
 
-   DATA class_id INIT Class_Id_QGraphicsView
+   //DATA class_id INIT Class_Id_QGraphicsView
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

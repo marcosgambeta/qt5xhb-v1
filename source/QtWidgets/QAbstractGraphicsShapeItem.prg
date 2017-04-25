@@ -17,7 +17,7 @@ REQUEST QPAINTERPATH
 
 CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
 
-   DATA class_id INIT Class_Id_QAbstractGraphicsShapeItem
+   //DATA class_id INIT Class_Id_QAbstractGraphicsShapeItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

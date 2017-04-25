@@ -11,7 +11,7 @@
 
 CLASS QTimeEdit INHERIT QDateTimeEdit
 
-   DATA class_id INIT Class_Id_QTimeEdit
+   //DATA class_id INIT Class_Id_QTimeEdit
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

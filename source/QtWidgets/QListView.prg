@@ -17,7 +17,7 @@ REQUEST QRECT
 
 CLASS QListView INHERIT QAbstractItemView
 
-   DATA class_id INIT Class_Id_QListView
+   //DATA class_id INIT Class_Id_QListView
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

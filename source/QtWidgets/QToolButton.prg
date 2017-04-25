@@ -17,7 +17,7 @@ REQUEST QSIZE
 
 CLASS QToolButton INHERIT QAbstractButton
 
-   DATA class_id INIT Class_Id_QToolButton
+   //DATA class_id INIT Class_Id_QToolButton
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -15,7 +15,7 @@ REQUEST QPOINTF
 
 CLASS QPinchGesture INHERIT QGesture
 
-   DATA class_id INIT Class_Id_QPinchGesture
+   //DATA class_id INIT Class_Id_QPinchGesture
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

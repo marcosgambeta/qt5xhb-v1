@@ -18,7 +18,7 @@ REQUEST QCOLOR
 
 CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
 
-   DATA class_id INIT Class_Id_QAccessibleWidget
+   //DATA class_id INIT Class_Id_QAccessibleWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

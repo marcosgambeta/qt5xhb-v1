@@ -16,7 +16,7 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
 
-   DATA class_id INIT Class_Id_QGraphicsEllipseItem
+   //DATA class_id INIT Class_Id_QGraphicsEllipseItem
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

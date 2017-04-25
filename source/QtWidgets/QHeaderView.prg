@@ -16,7 +16,7 @@ REQUEST QSIZE
 
 CLASS QHeaderView INHERIT QAbstractItemView
 
-   DATA class_id INIT Class_Id_QHeaderView
+   //DATA class_id INIT Class_Id_QHeaderView
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

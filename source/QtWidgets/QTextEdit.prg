@@ -22,7 +22,7 @@ REQUEST QCOLOR
 
 CLASS QTextEdit INHERIT QAbstractScrollArea
 
-   DATA class_id INIT Class_Id_QTextEdit
+   //DATA class_id INIT Class_Id_QTextEdit
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

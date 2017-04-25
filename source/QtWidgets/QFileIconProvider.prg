@@ -16,7 +16,7 @@ REQUEST QICON
 CLASS QFileIconProvider
 
    DATA pointer
-   DATA class_id INIT Class_Id_QFileIconProvider
+   //DATA class_id INIT Class_Id_QFileIconProvider
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

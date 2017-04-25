@@ -15,7 +15,7 @@ REQUEST QSIZE
 
 CLASS QGroupBox INHERIT QWidget
 
-   DATA class_id INIT Class_Id_QGroupBox
+   //DATA class_id INIT Class_Id_QGroupBox
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

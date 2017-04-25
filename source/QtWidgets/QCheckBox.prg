@@ -15,7 +15,7 @@ REQUEST QSIZE
 
 CLASS QCheckBox INHERIT QAbstractButton
 
-   DATA class_id INIT Class_Id_QCheckBox
+   //DATA class_id INIT Class_Id_QCheckBox
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

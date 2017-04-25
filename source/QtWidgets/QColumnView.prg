@@ -18,7 +18,7 @@ REQUEST QRECT
 
 CLASS QColumnView INHERIT QAbstractItemView
 
-   DATA class_id INIT Class_Id_QColumnView
+   //DATA class_id INIT Class_Id_QColumnView
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

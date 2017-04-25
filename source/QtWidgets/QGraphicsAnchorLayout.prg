@@ -16,7 +16,7 @@ REQUEST QGRAPHICSLAYOUTITEM
 
 CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
 
-   DATA class_id INIT Class_Id_QGraphicsAnchorLayout
+   //DATA class_id INIT Class_Id_QGraphicsAnchorLayout
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

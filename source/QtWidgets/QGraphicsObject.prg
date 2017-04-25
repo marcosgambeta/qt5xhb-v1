@@ -11,7 +11,7 @@
 
 CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
-   DATA class_id INIT Class_Id_QGraphicsObject
+   //DATA class_id INIT Class_Id_QGraphicsObject
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

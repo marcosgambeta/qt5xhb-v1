@@ -15,7 +15,7 @@ REQUEST QFONT
 
 CLASS QFontDialog INHERIT QDialog
 
-   DATA class_id INIT Class_Id_QFontDialog
+   //DATA class_id INIT Class_Id_QFontDialog
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

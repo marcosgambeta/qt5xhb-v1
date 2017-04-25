@@ -16,7 +16,7 @@ REQUEST QSTYLE
 CLASS QStyleFactory
 
    DATA pointer
-   DATA class_id INIT Class_Id_QStyleFactory
+   //DATA class_id INIT Class_Id_QStyleFactory
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

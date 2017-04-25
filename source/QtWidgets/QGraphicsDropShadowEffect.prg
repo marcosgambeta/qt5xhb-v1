@@ -17,7 +17,7 @@ REQUEST QRECTF
 
 CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
 
-   DATA class_id INIT Class_Id_QGraphicsDropShadowEffect
+   //DATA class_id INIT Class_Id_QGraphicsDropShadowEffect
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

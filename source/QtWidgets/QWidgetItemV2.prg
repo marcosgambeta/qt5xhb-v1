@@ -15,7 +15,7 @@ REQUEST QSIZE
 
 CLASS QWidgetItemV2 INHERIT QWidgetItem
 
-   DATA class_id INIT Class_Id_QWidgetItemV2
+   //DATA class_id INIT Class_Id_QWidgetItemV2
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
