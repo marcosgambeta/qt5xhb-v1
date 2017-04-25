@@ -479,12 +479,8 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     int par5 = hb_parni(5);
-    obj->setPageMargins ( par1, par2, par3, par4,  (QPrinter::Unit) par5 );
+    obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (QPrinter::Unit) par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

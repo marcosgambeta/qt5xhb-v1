@@ -386,8 +386,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setZoomFactor ( par1 );
+    obj->setZoomFactor ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -430,8 +429,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = ISNIL(1)? 1.1 : hb_parnd(1);
-    obj->zoomIn ( par1 );
+    obj->zoomIn ( (qreal) ISNIL(1)? 1.1 : hb_parnd(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -445,8 +443,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qreal par1 = ISNIL(1)? 1.1 : hb_parnd(1);
-    obj->zoomOut ( par1 );
+    obj->zoomOut ( (qreal) ISNIL(1)? 1.1 : hb_parnd(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
