@@ -12,7 +12,7 @@
 CLASS QSerialPortInfo
 
    DATA pointer
-   DATA class_id INIT Class_Id_QSerialPortInfo
+   //DATA class_id INIT Class_Id_QSerialPortInfo
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
