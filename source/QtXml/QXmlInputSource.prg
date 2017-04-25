@@ -16,7 +16,7 @@ REQUEST QCHAR
 CLASS QXmlInputSource
 
    DATA pointer
-   DATA class_id INIT Class_Id_QXmlInputSource
+   //DATA class_id INIT Class_Id_QXmlInputSource
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

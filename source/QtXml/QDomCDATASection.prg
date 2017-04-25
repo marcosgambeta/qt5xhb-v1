@@ -11,7 +11,7 @@
 
 CLASS QDomCDATASection INHERIT QDomText
 
-   DATA class_id INIT Class_Id_QDomCDATASection
+   //DATA class_id INIT Class_Id_QDomCDATASection
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

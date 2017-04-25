@@ -12,7 +12,7 @@
 CLASS QXmlParseException
 
    DATA pointer
-   DATA class_id INIT Class_Id_QXmlParseException
+   //DATA class_id INIT Class_Id_QXmlParseException
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
