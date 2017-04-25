@@ -1939,6 +1939,7 @@
 
 #define ISOPTQOBJECT(n)                                     (ISQOBJECT(n)||ISNIL(n))
 #define ISOPTQWIDGET(n)                                     (ISQWIDGET(n)||ISNIL(n))
+#define ISOPTQBYTEARRAY(n)                                  (ISQBYTEARRAY(n)||ISNIL(n))
 
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b
 #define ISNUMPAR(a)                                         hb_pcount() == a
