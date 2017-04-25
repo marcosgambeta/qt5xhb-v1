@@ -16,7 +16,7 @@ REQUEST QBLUETOOTHADDRESS
 CLASS QBluetoothHostInfo
 
    DATA pointer
-   DATA class_id INIT Class_Id_QBluetoothHostInfo
+   //DATA class_id INIT Class_Id_QBluetoothHostInfo
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

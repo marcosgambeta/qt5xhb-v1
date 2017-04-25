@@ -17,7 +17,7 @@ REQUEST QBLUETOOTHADDRESS
 
 CLASS QBluetoothServer INHERIT QObject
 
-   DATA class_id INIT Class_Id_QBluetoothServer
+   //DATA class_id INIT Class_Id_QBluetoothServer
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
