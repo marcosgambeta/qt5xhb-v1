@@ -16,7 +16,7 @@ REQUEST QQMLWEBCHANNELATTACHED
 
 CLASS QQmlWebChannel INHERIT QWebChannel
 
-   DATA class_id INIT Class_Id_QQmlWebChannel
+   //DATA class_id INIT Class_Id_QQmlWebChannel
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
