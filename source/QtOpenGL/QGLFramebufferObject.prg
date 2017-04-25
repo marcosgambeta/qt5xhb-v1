@@ -18,7 +18,7 @@ REQUEST QPAINTENGINE
 
 CLASS QGLFramebufferObject INHERIT QPaintDevice
 
-   DATA class_id INIT Class_Id_QGLFramebufferObject
+   //DATA class_id INIT Class_Id_QGLFramebufferObject
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

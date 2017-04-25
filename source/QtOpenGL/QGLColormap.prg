@@ -16,7 +16,7 @@ REQUEST QCOLOR
 CLASS QGLColormap
 
    DATA pointer
-   DATA class_id INIT Class_Id_QGLColormap
+   //DATA class_id INIT Class_Id_QGLColormap
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
