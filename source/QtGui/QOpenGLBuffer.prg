@@ -7,11 +7,9 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 CLASS QOpenGLBuffer INHERIT QObject
 
-   //DATA class_id INIT Class_Id_QOpenGLBuffer
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

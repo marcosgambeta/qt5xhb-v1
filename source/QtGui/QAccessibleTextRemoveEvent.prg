@@ -7,11 +7,9 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 CLASS QAccessibleTextRemoveEvent INHERIT QAccessibleTextCursorEvent
 
-   //DATA class_id INIT Class_Id_QAccessibleTextRemoveEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

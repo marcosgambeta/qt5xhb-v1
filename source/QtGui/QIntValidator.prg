@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QLOCALE
@@ -15,7 +14,6 @@ REQUEST QLOCALE
 
 CLASS QIntValidator INHERIT QValidator
 
-   //DATA class_id INIT Class_Id_QIntValidator
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

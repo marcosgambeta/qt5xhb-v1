@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QVECTOR3D
@@ -17,7 +16,6 @@ REQUEST QVECTOR4D
 CLASS QQuaternion
 
    DATA pointer
-   //DATA class_id INIT Class_Id_QQuaternion
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
