@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QMEDIAOBJECT
@@ -15,7 +14,6 @@ REQUEST QMEDIAOBJECT
 
 CLASS QCameraViewfinder INHERIT QVideoWidget
 
-   //DATA class_id INIT Class_Id_QCameraViewfinder
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
