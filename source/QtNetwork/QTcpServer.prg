@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QTCPSOCKET
@@ -17,7 +16,6 @@ REQUEST QHOSTADDRESS
 
 CLASS QTcpServer INHERIT QObject
 
-   //DATA class_id INIT Class_Id_QTcpServer
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
