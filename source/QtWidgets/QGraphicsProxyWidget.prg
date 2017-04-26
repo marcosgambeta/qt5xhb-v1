@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QRECTF
@@ -16,7 +15,6 @@ REQUEST QWIDGET
 
 CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
 
-   //DATA class_id INIT Class_Id_QGraphicsProxyWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

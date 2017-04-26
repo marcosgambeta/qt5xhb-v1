@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QTOOLBAR
@@ -21,7 +20,6 @@ REQUEST QSTATUSBAR
 
 CLASS QMainWindow INHERIT QWidget
 
-   //DATA class_id INIT Class_Id_QMainWindow
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSIZE
@@ -15,7 +14,6 @@ REQUEST QSIZE
 
 CLASS QRadioButton INHERIT QAbstractButton
 
-   //DATA class_id INIT Class_Id_QRadioButton
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

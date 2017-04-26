@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSTYLE
@@ -20,7 +19,6 @@ REQUEST QPALETTE
 
 CLASS QProxyStyle INHERIT QCommonStyle
 
-   //DATA class_id INIT Class_Id_QProxyStyle
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

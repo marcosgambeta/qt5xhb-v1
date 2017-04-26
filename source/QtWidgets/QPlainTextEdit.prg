@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QMENU
@@ -20,7 +19,6 @@ REQUEST QVARIANT
 
 CLASS QPlainTextEdit INHERIT QAbstractScrollArea
 
-   //DATA class_id INIT Class_Id_QPlainTextEdit
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 

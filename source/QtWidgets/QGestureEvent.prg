@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QGESTURE
@@ -17,7 +16,6 @@ REQUEST QWIDGET
 
 CLASS QGestureEvent INHERIT QEvent
 
-   //DATA class_id INIT Class_Id_QGestureEvent
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

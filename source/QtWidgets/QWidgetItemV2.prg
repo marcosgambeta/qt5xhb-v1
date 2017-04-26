@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSIZE
@@ -15,7 +14,6 @@ REQUEST QSIZE
 
 CLASS QWidgetItemV2 INHERIT QWidgetItem
 
-   //DATA class_id INIT Class_Id_QWidgetItemV2
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

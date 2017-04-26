@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QPUSHBUTTON
@@ -18,7 +17,6 @@ REQUEST QCHECKBOX
 
 CLASS QMessageBox INHERIT QDialog
 
-   //DATA class_id INIT Class_Id_QMessageBox
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
