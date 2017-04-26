@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QWEBENGINEHISTORY
@@ -20,7 +19,6 @@ REQUEST QWEBENGINESETTINGS
 
 CLASS QWebEnginePage INHERIT QObject
 
-   //DATA class_id INIT Class_Id_QWebEnginePage
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
