@@ -167,25 +167,6 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 }
 
 /*
-  verifica se o parâmetro <iPar> é do tipo <iClsId>
-  retorno: true ou false
-*/
-
-/*
-bool _qt5xhb_checkclsid ( int iPar, int iClsId )
-{
-  if( ISOBJECT(iPar) )
-  {
-    return ( iClsId == hb_itemGetNI( hb_objSendMsg( hb_param(iPar, HB_IT_OBJECT ), "CLASS_ID", 0 ) ) );
-  }
-  else
-  {
-    return false;
-  }
-}
-*/
-
-/*
   verifica se o parâmetro <iPar> herda da classe <classname>
   retorno: true ou false
 */
