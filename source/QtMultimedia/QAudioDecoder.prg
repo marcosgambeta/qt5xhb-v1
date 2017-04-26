@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QAUDIOFORMAT
@@ -17,7 +16,6 @@ REQUEST QIODEVICE
 
 CLASS QAudioDecoder INHERIT QMediaObject
 
-   //DATA class_id INIT Class_Id_QAudioDecoder
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

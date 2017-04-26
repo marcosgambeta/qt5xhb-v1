@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QVARIANT
@@ -17,7 +16,6 @@ REQUEST UCHAR
 CLASS QAbstractVideoBuffer
 
    DATA pointer
-   //DATA class_id INIT Class_Id_QAbstractVideoBuffer
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
