@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 CLASS QCommandLineOption
 
    DATA pointer
-   //DATA class_id INIT Class_Id_QCommandLineOption
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

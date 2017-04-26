@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QABSTRACTSTATE
@@ -15,7 +14,6 @@ REQUEST QABSTRACTSTATE
 
 CLASS QHistoryState INHERIT QAbstractState
 
-   //DATA class_id INIT Class_Id_QHistoryState
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
