@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QGEOCOORDINATE
@@ -15,7 +14,6 @@ REQUEST QGEOCOORDINATE
 
 CLASS QGeoRectangle INHERIT QGeoShape
 
-   //DATA class_id INIT Class_Id_QGeoRectangle
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QGEOPOSITIONINFOSOURCE
@@ -18,7 +17,6 @@ REQUEST QGEOAREAMONITORSOURCE
 CLASS QGeoPositionInfoSourceFactory
 
    DATA pointer
-   //DATA class_id INIT Class_Id_QGeoPositionInfoSourceFactory
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
