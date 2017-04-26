@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QURL
@@ -20,7 +19,6 @@ REQUEST QQMLCONTEXT
 
 CLASS QQmlEngine INHERIT QJSEngine
 
-   //DATA class_id INIT Class_Id_QQmlEngine
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
