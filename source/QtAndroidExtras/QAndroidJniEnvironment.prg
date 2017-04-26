@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 CLASS QAndroidJniEnvironment
 
    DATA pointer
-   //DATA class_id INIT Class_Id_QAndroidJniEnvironment
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
