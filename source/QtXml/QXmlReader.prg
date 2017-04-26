@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-//#include "qt5xhb_clsid.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QXMLDTDHANDLER
@@ -21,7 +20,6 @@ REQUEST QXMLLEXICALHANDLER
 CLASS QXmlReader
 
    DATA pointer
-   //DATA class_id INIT Class_Id_QXmlReader
    DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
