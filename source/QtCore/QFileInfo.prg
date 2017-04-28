@@ -115,8 +115,7 @@ QFileInfo(const QString & file)
 */
 void QFileInfo_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QFileInfo * o = new QFileInfo ( par1 );
+  QFileInfo * o = new QFileInfo ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -136,8 +135,7 @@ QFileInfo(const QDir & dir, const QString & file)
 void QFileInfo_new4 ()
 {
   QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QFileInfo * o = new QFileInfo ( *par1, par2 );
+  QFileInfo * o = new QFileInfo ( *par1, PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -742,8 +740,7 @@ void QFileInfo_setFile1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFile ( par1 );
+    obj->setFile ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -775,8 +772,7 @@ void QFileInfo_setFile3 ()
   if( obj )
   {
     QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setFile ( *par1, par2 );
+    obj->setFile ( *par1, PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -69,8 +69,7 @@ HB_FUNC_STATIC( QLOCKFILE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QLockFile * o = new QLockFile ( par1 );
+    QLockFile * o = new QLockFile ( PQSTRING(1) );
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else

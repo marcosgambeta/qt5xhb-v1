@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {
@@ -246,9 +245,8 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( QResource::registerResource ( par1, par2 ) );
+    hb_retl( QResource::registerResource ( PQSTRING(1), par2 ) );
   }
   else
   {
@@ -263,9 +261,8 @@ HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( QResource::unregisterResource ( par1, par2 ) );
+    hb_retl( QResource::unregisterResource ( PQSTRING(1), par2 ) );
   }
   else
   {

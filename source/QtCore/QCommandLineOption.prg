@@ -63,11 +63,10 @@ QCommandLineOption(const QString &name, const QString &description = QString(),c
 */
 void QCommandLineOption_new1 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-  QCommandLineOption * o = new QCommandLineOption ( par1, par2, par3, par4 );
+  QCommandLineOption * o = new QCommandLineOption ( PQSTRING(1), par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setValueName ( par1 );
+      obj->setValueName ( PQSTRING(1) );
     }
     else
     {
@@ -227,8 +225,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDescription ( par1 );
+      obj->setDescription ( PQSTRING(1) );
     }
     else
     {
@@ -263,8 +260,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDefaultValue ( par1 );
+      obj->setDefaultValue ( PQSTRING(1) );
     }
     else
     {

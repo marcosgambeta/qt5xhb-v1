@@ -79,9 +79,8 @@ QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
-  QDirIterator * o = new QDirIterator ( par1,  (QDirIterator::IteratorFlags) par2 );
+  QDirIterator * o = new QDirIterator ( PQSTRING(1),  (QDirIterator::IteratorFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -90,10 +89,9 @@ QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags 
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QDirIterator::NoIteratorFlags : hb_parni(3);
-  QDirIterator * o = new QDirIterator ( par1,  (QDir::Filters) par2,  (QDirIterator::IteratorFlags) par3 );
+  QDirIterator * o = new QDirIterator ( PQSTRING(1),  (QDir::Filters) par2,  (QDirIterator::IteratorFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -102,7 +100,6 @@ QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filt
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
   //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
   //int i2;
@@ -114,7 +111,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
   //}
   int par3 = ISNIL(3)? (int) QDir::NoFilter : hb_parni(3);
   int par4 = ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4);
-  QDirIterator * o = new QDirIterator ( par1, par2,  (QDir::Filters) par3,  (QDirIterator::IteratorFlags) par4 );
+  QDirIterator * o = new QDirIterator ( PQSTRING(1), par2,  (QDir::Filters) par3,  (QDirIterator::IteratorFlags) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

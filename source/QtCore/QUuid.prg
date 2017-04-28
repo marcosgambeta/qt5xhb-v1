@@ -224,8 +224,7 @@ static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 void QUuid_createUuidV32 ()
 {
   QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, par2 ) );
+  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
@@ -265,8 +264,7 @@ static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 void QUuid_createUuidV52 ()
 {
   QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, par2 ) );
+  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 

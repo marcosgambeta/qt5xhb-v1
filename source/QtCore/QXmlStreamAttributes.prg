@@ -98,10 +98,7 @@ void QXmlStreamAttributes_append1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->append ( par1, par2, par3 );
+    obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -132,9 +129,7 @@ void QXmlStreamAttributes_append3 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->append ( par1, par2 );
+    obj->append ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -173,8 +168,7 @@ void QXmlStreamAttributes_hasAttribute1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->hasAttribute ( par1 ) );
+    hb_retl( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -201,9 +195,7 @@ void QXmlStreamAttributes_hasAttribute3 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->hasAttribute ( par1, par2 ) );
+    hb_retl( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -241,9 +233,7 @@ void QXmlStreamAttributes_value1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QStringRef * ptr = new QStringRef( obj->value ( par1, par2 ) );
+    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -257,9 +247,8 @@ void QXmlStreamAttributes_value2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QLatin1String * par2 = (QLatin1String *) _qt5xhb_itemGetPtr(2);
-    QStringRef * ptr = new QStringRef( obj->value ( par1, *par2 ) );
+    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -289,8 +278,7 @@ void QXmlStreamAttributes_value4 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringRef * ptr = new QStringRef( obj->value ( par1 ) );
+    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }

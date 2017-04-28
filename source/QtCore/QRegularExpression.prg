@@ -80,9 +80,8 @@ QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOp
 */
 void QRegularExpression_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QRegularExpression::NoPatternOption : hb_parni(2);
-  QRegularExpression * o = new QRegularExpression ( par1,  (QRegularExpression::PatternOptions) par2 );
+  QRegularExpression * o = new QRegularExpression ( PQSTRING(1),  (QRegularExpression::PatternOptions) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -174,10 +173,9 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_GLOBALMATCH )
   {
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);
       int par4 = ISNIL(4)? (int) QRegularExpression::NoMatchOption : hb_parni(4);
-      QRegularExpressionMatchIterator * ptr = new QRegularExpressionMatchIterator( obj->globalMatch ( par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
+      QRegularExpressionMatchIterator * ptr = new QRegularExpressionMatchIterator( obj->globalMatch ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCHITERATOR", true );
     }
     else
@@ -211,10 +209,9 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_MATCH )
   {
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);
       int par4 = ISNIL(4)? (int) QRegularExpression::NoMatchOption : hb_parni(4);
-      QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->match ( par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
+      QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->match ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
     }
     else
@@ -274,8 +271,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_SETPATTERN )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setPattern ( par1 );
+      obj->setPattern ( PQSTRING(1) );
     }
     else
     {
@@ -339,8 +335,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ESCAPE )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) QRegularExpression::escape ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) QRegularExpression::escape ( PQSTRING(1) ).toLatin1().data() );
   }
   else
   {

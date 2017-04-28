@@ -85,8 +85,7 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 void QTextBoundaryFinder_new3 ()
 {
   int par1 = hb_parni(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2 );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

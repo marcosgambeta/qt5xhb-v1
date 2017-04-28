@@ -98,8 +98,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QMimeType * ptr = new QMimeType( obj->mimeTypeForName ( par1 ) );
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForName ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
     }
     else
@@ -118,9 +117,8 @@ void QMimeDatabase_mimeTypeForFile1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QMimeDatabase::MatchDefault : hb_parni(2);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFile ( par1,  (QMimeDatabase::MatchMode) par2 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForFile ( PQSTRING(1),  (QMimeDatabase::MatchMode) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
@@ -171,8 +169,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QList<QMimeType> list = obj->mimeTypesForFileName ( par1 );
+      QList<QMimeType> list = obj->mimeTypesForFileName ( PQSTRING(1) );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMIMETYPE" );
@@ -296,9 +293,8 @@ void QMimeDatabase_mimeTypeForFileNameAndData1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( par1, par2 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
@@ -312,9 +308,8 @@ void QMimeDatabase_mimeTypeForFileNameAndData2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( par1, *par2 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
@@ -349,8 +344,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_SUFFIXFORFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retc( (const char *) obj->suffixForFileName ( par1 ).toLatin1().data() );
+      hb_retc( (const char *) obj->suffixForFileName ( PQSTRING(1) ).toLatin1().data() );
     }
     else
     {

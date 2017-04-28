@@ -290,8 +290,7 @@ void QSortFilterProxyModel_setFilterRegExp2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFilterRegExp ( par1 );
+    obj->setFilterRegExp ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -600,8 +599,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFilterWildcard ( par1 );
+      obj->setFilterWildcard ( PQSTRING(1) );
     }
     else
     {
@@ -623,8 +621,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFilterFixedString ( par1 );
+      obj->setFilterFixedString ( PQSTRING(1) );
     }
     else
     {

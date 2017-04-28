@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->addPath ( par1 ) );
+      hb_retl( obj->addPath ( PQSTRING(1) ) );
     }
     else
     {
@@ -208,8 +207,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->removePath ( par1 ) );
+      hb_retl( obj->removePath ( PQSTRING(1) ) );
     }
     else
     {

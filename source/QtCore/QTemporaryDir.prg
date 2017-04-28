@@ -68,8 +68,7 @@ QTemporaryDir(const QString & templateName)
 */
 void QTemporaryDir_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QTemporaryDir * o = new QTemporaryDir ( par1 );
+  QTemporaryDir * o = new QTemporaryDir ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

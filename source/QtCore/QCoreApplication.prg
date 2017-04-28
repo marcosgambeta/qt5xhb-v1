@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QCoreApplication::addLibraryPath ( par1 );
+    QCoreApplication::addLibraryPath ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -402,8 +401,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QCoreApplication::removeLibraryPath ( par1 );
+    QCoreApplication::removeLibraryPath ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -530,8 +528,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QCoreApplication::setApplicationName ( par1 );
+    QCoreApplication::setApplicationName ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -547,8 +544,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QCoreApplication::setApplicationVersion ( par1 );
+    QCoreApplication::setApplicationVersion ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -606,8 +602,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QCoreApplication::setOrganizationDomain ( par1 );
+    QCoreApplication::setOrganizationDomain ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -623,8 +618,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QCoreApplication::setOrganizationName ( par1 );
+    QCoreApplication::setOrganizationName ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

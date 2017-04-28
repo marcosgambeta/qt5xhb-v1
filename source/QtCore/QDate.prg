@@ -377,8 +377,7 @@ void QDate_toString1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->toString ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -480,9 +479,8 @@ static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::Te
 */
 void QDate_fromString1 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
-  QDate * ptr = new QDate( QDate::fromString ( par1,  (Qt::DateFormat) par2 ) );
+  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1),  (Qt::DateFormat) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
@@ -491,9 +489,7 @@ static QDate fromString ( const QString & string, const QString & format )
 */
 void QDate_fromString2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QDate * ptr = new QDate( QDate::fromString ( par1, par2 ) );
+  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 

@@ -91,8 +91,7 @@ explicit QStorageInfo(const QString &path)
 void QStorageInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QStorageInfo * o = new QStorageInfo ( par1 );
+  QStorageInfo * o = new QStorageInfo ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -206,8 +205,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_SETPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setPath ( par1 );
+      obj->setPath ( PQSTRING(1) );
     }
     else
     {

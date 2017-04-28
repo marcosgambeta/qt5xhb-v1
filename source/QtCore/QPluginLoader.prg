@@ -71,9 +71,8 @@ QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
 void QPluginLoader_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QPluginLoader * o = new QPluginLoader ( par1, par2 );
+  QPluginLoader * o = new QPluginLoader ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -203,8 +202,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {

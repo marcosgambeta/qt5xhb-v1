@@ -358,10 +358,7 @@ void QXmlStreamWriter_writeAttribute1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->writeAttribute ( par1, par2, par3 );
+    obj->writeAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -376,9 +373,7 @@ void QXmlStreamWriter_writeAttribute2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->writeAttribute ( par1, par2 );
+    obj->writeAttribute ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -458,8 +453,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECDATA )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->writeCDATA ( par1 );
+      obj->writeCDATA ( PQSTRING(1) );
     }
     else
     {
@@ -481,8 +475,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECHARACTERS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->writeCharacters ( par1 );
+      obj->writeCharacters ( PQSTRING(1) );
     }
     else
     {
@@ -504,8 +497,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECOMMENT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->writeComment ( par1 );
+      obj->writeComment ( PQSTRING(1) );
     }
     else
     {
@@ -550,8 +542,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDTD )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->writeDTD ( par1 );
+      obj->writeDTD ( PQSTRING(1) );
     }
     else
     {
@@ -573,8 +564,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->writeDefaultNamespace ( par1 );
+      obj->writeDefaultNamespace ( PQSTRING(1) );
     }
     else
     {
@@ -594,9 +584,7 @@ void QXmlStreamWriter_writeEmptyElement1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->writeEmptyElement ( par1, par2 );
+    obj->writeEmptyElement ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -611,8 +599,7 @@ void QXmlStreamWriter_writeEmptyElement2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->writeEmptyElement ( par1 );
+    obj->writeEmptyElement ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -678,8 +665,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENTITYREFERENCE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->writeEntityReference ( par1 );
+      obj->writeEntityReference ( PQSTRING(1) );
     }
     else
     {
@@ -701,9 +687,8 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      obj->writeNamespace ( par1, par2 );
+      obj->writeNamespace ( PQSTRING(1), par2 );
     }
     else
     {
@@ -725,9 +710,8 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      obj->writeProcessingInstruction ( par1, par2 );
+      obj->writeProcessingInstruction ( PQSTRING(1), par2 );
     }
     else
     {
@@ -747,8 +731,7 @@ void QXmlStreamWriter_writeStartDocument1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->writeStartDocument ( par1 );
+    obj->writeStartDocument ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -763,8 +746,7 @@ void QXmlStreamWriter_writeStartDocument2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->writeStartDocument ( par1, (bool) hb_parl(2) );
+    obj->writeStartDocument ( PQSTRING(1), (bool) hb_parl(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -818,9 +800,7 @@ void QXmlStreamWriter_writeStartElement1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->writeStartElement ( par1, par2 );
+    obj->writeStartElement ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -835,8 +815,7 @@ void QXmlStreamWriter_writeStartElement2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->writeStartElement ( par1 );
+    obj->writeStartElement ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -870,10 +849,7 @@ void QXmlStreamWriter_writeTextElement1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->writeTextElement ( par1, par2, par3 );
+    obj->writeTextElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -888,9 +864,7 @@ void QXmlStreamWriter_writeTextElement2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->writeTextElement ( par1, par2 );
+    obj->writeTextElement ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

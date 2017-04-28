@@ -63,8 +63,7 @@ QTemporaryFile(const QString & templateName)
 */
 void QTemporaryFile_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QTemporaryFile * o = new QTemporaryFile ( par1 );
+  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -83,9 +82,8 @@ QTemporaryFile(const QString & templateName, QObject * parent)
 */
 void QTemporaryFile_new4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QTemporaryFile * o = new QTemporaryFile ( par1, par2 );
+  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -207,8 +205,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileTemplate ( par1 );
+      obj->setFileTemplate ( PQSTRING(1) );
     }
     else
     {
@@ -247,8 +244,7 @@ static QTemporaryFile * createNativeFile(const QString & fileName)
 */
 void QTemporaryFile_createNativeFile2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( par1 );
+  QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( PQSTRING(1) );
   _qt5xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
 }
 

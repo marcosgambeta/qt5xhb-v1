@@ -84,10 +84,9 @@ QSettings ( const QString & organization, const QString & application = QString(
 */
 void QSettings_new1 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QSettings * o = new QSettings ( par1, par2, par3 );
+  QSettings * o = new QSettings ( PQSTRING(1), par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -97,10 +96,9 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 void QSettings_new2 ()
 {
   int par1 = hb_parni(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QSettings * o = new QSettings (  (QSettings::Scope) par1, par2, par3, par4 );
+  QSettings * o = new QSettings (  (QSettings::Scope) par1, PQSTRING(2), par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -111,10 +109,9 @@ void QSettings_new3 ()
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  QString par3 = QLatin1String( hb_parc(3) );
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
-  QSettings * o = new QSettings (  (QSettings::Format) par1,  (QSettings::Scope) par2, par3, par4, par5 );
+  QSettings * o = new QSettings (  (QSettings::Format) par1,  (QSettings::Scope) par2, PQSTRING(3), par4, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -123,10 +120,9 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
 void QSettings_new4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QSettings * o = new QSettings ( par1,  (QSettings::Format) par2, par3 );
+  QSettings * o = new QSettings ( PQSTRING(1),  (QSettings::Format) par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -229,8 +225,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->beginGroup ( par1 );
+      obj->beginGroup ( PQSTRING(1) );
     }
     else
     {
@@ -252,8 +247,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retni( obj->beginReadArray ( par1 ) );
+      hb_retni( obj->beginReadArray ( PQSTRING(1) ) );
     }
     else
     {
@@ -273,8 +267,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->beginWriteArray ( par1, (int) ISNIL(2)? -1 : hb_parni(2) );
+      obj->beginWriteArray ( PQSTRING(1), (int) ISNIL(2)? -1 : hb_parni(2) );
     }
     else
     {
@@ -339,8 +332,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->contains ( par1 ) );
+      hb_retl( obj->contains ( PQSTRING(1) ) );
     }
     else
     {
@@ -482,8 +474,7 @@ HB_FUNC_STATIC( QSETTINGS_REMOVE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->remove ( par1 );
+      obj->remove ( PQSTRING(1) );
     }
     else
     {
@@ -610,9 +601,8 @@ HB_FUNC_STATIC( QSETTINGS_SETVALUE )
   {
     if( ISCHAR(1) && ISQVARIANT(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setValue ( par1, *par2 );
+      obj->setValue ( PQSTRING(1), *par2 );
     }
     else
     {
@@ -662,9 +652,8 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
   {
     if( ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-      QVariant * ptr = new QVariant( obj->value ( par1, par2 ) );
+      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1), par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -708,8 +697,7 @@ HB_FUNC_STATIC( QSETTINGS_SETPATH )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    QString par3 = QLatin1String( hb_parc(3) );
-    QSettings::setPath (  (QSettings::Format) par1,  (QSettings::Scope) par2, par3 );
+    QSettings::setPath (  (QSettings::Format) par1,  (QSettings::Scope) par2, PQSTRING(3) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

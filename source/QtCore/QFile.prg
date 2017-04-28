@@ -88,8 +88,7 @@ QFile(const QString &name)
 */
 void QFile_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QFile * o = new QFile ( par1 );
+  QFile * o = new QFile ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -108,9 +107,8 @@ QFile(const QString &name, QObject *parent)
 */
 void QFile_new4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QFile * o = new QFile ( par1, par2 );
+  QFile * o = new QFile ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -169,8 +167,7 @@ void QFile_copy1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->copy ( par1 ) );
+    hb_retl( obj->copy ( PQSTRING(1) ) );
   }
 }
 
@@ -179,9 +176,7 @@ static bool copy ( const QString & fileName, const QString & newName )
 */
 void QFile_copy2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  hb_retl( QFile::copy ( par1, par2 ) );
+  hb_retl( QFile::copy ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool copy ( const QString & newName )
@@ -234,8 +229,7 @@ static bool exists ( const QString & fileName )
 */
 void QFile_exists2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retl( QFile::exists ( par1 ) );
+  hb_retl( QFile::exists ( PQSTRING(1) ) );
 }
 
 //[1]bool exists () const
@@ -305,8 +299,7 @@ void QFile_link1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->link ( par1 ) );
+    hb_retl( obj->link ( PQSTRING(1) ) );
   }
 }
 
@@ -315,9 +308,7 @@ static bool link ( const QString & fileName, const QString & linkName )
 */
 void QFile_link2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  hb_retl( QFile::link ( par1, par2 ) );
+  hb_retl( QFile::link ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool link ( const QString & linkName )
@@ -448,8 +439,7 @@ static Permissions permissions ( const QString & fileName )
 */
 void QFile_permissions2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retni( QFile::permissions ( par1 ) );
+  hb_retni( QFile::permissions ( PQSTRING(1) ) );
 }
 
 //[1]Permissions permissions () const
@@ -489,8 +479,7 @@ static bool remove ( const QString & fileName )
 */
 void QFile_remove2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retl( QFile::remove ( par1 ) );
+  hb_retl( QFile::remove ( PQSTRING(1) ) );
 }
 
 //[1]bool remove ()
@@ -521,8 +510,7 @@ void QFile_rename1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->rename ( par1 ) );
+    hb_retl( obj->rename ( PQSTRING(1) ) );
   }
 }
 
@@ -531,9 +519,7 @@ static bool rename ( const QString & oldName, const QString & newName )
 */
 void QFile_rename2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  hb_retl( QFile::rename ( par1, par2 ) );
+  hb_retl( QFile::rename ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool rename ( const QString & newName )
@@ -573,8 +559,7 @@ static bool resize ( const QString & fileName, qint64 sz )
 */
 void QFile_resize2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retl( QFile::resize ( par1, (qint64) hb_parni(2) ) );
+  hb_retl( QFile::resize ( PQSTRING(1), (qint64) hb_parni(2) ) );
 }
 
 //[1]bool resize ( qint64 sz )
@@ -607,8 +592,7 @@ HB_FUNC_STATIC( QFILE_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {
@@ -638,9 +622,8 @@ static bool setPermissions ( const QString & fileName, Permissions permissions )
 */
 void QFile_setPermissions2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
-  hb_retl( QFile::setPermissions ( par1,  (QFile::Permissions) par2 ) );
+  hb_retl( QFile::setPermissions ( PQSTRING(1),  (QFile::Permissions) par2 ) );
 }
 
 //[1]bool setPermissions ( Permissions permissions )
@@ -680,8 +663,7 @@ static QString symLinkTarget ( const QString & fileName )
 */
 void QFile_symLinkTarget2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retc( (const char *) QFile::symLinkTarget ( par1 ).toLatin1().data() );
+  hb_retc( (const char *) QFile::symLinkTarget ( PQSTRING(1) ).toLatin1().data() );
 }
 
 //[1]QString symLinkTarget () const
@@ -863,8 +845,7 @@ HB_FUNC_STATIC( QFILE_ENCODENAME )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QByteArray * ptr = new QByteArray( QFile::encodeName ( par1 ) );
+    QByteArray * ptr = new QByteArray( QFile::encodeName ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
@@ -891,8 +872,7 @@ static QString readLink(const QString &fileName)
 */
 void QFile_readLink2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retc( (const char *) QFile::readLink ( par1 ).toLatin1().data() );
+  hb_retc( (const char *) QFile::readLink ( PQSTRING(1) ).toLatin1().data() );
 }
 
 //[1]QString readLink() const

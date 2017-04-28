@@ -346,8 +346,7 @@ QVariant(const QString &string)
 */
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QVariant * o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

@@ -96,9 +96,8 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
   if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
     int par1 = hb_parni(1);
-    QString par2 = QLatin1String( hb_parc(2) );
     int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
-    hb_retc( (const char *) QStandardPaths::locate (  (QStandardPaths::StandardLocation) par1, par2,  (QStandardPaths::LocateOptions) par3 ).toLatin1().data() );
+    hb_retc( (const char *) QStandardPaths::locate (  (QStandardPaths::StandardLocation) par1, PQSTRING(2),  (QStandardPaths::LocateOptions) par3 ).toLatin1().data() );
   }
   else
   {
@@ -114,9 +113,8 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
   if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
     int par1 = hb_parni(1);
-    QString par2 = QLatin1String( hb_parc(2) );
     int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
-    QStringList strl = QStandardPaths::locateAll (  (QStandardPaths::StandardLocation) par1, par2,  (QStandardPaths::LocateOptions) par3 );
+    QStringList strl = QStandardPaths::locateAll (  (QStandardPaths::StandardLocation) par1, PQSTRING(2),  (QStandardPaths::LocateOptions) par3 );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
   else
@@ -148,7 +146,6 @@ HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
 {
   if( ISCHAR(1) && ISOPTARRAY(2) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
     //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
     //int i2;
@@ -158,7 +155,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
     //  par2 << temp;
     //}
-    hb_retc( (const char *) QStandardPaths::findExecutable ( par1, par2 ).toLatin1().data() );
+    hb_retc( (const char *) QStandardPaths::findExecutable ( PQSTRING(1), par2 ).toLatin1().data() );
   }
   else
   {

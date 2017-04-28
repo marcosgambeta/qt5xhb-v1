@@ -198,8 +198,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETAPPLICATIONDESCRIPTION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setApplicationDescription ( par1 );
+      obj->setApplicationDescription ( PQSTRING(1) );
     }
     else
     {
@@ -238,10 +237,8 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
       QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-      obj->addPositionalArgument ( par1, par2, par3 );
+      obj->addPositionalArgument ( PQSTRING(1), PQSTRING(2), par3 );
     }
     else
     {
@@ -389,8 +386,7 @@ void QCommandLineParser_isSet1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->isSet ( par1 ) );
+    hb_retl( obj->isSet ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -440,8 +436,7 @@ void QCommandLineParser_value1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->value ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->value ( PQSTRING(1) ).toLatin1().data() );
   }
 #endif
 }
@@ -491,8 +486,7 @@ void QCommandLineParser_values1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringList strl = obj->values ( par1 );
+    QStringList strl = obj->values ( PQSTRING(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif

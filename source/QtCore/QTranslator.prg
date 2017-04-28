@@ -101,11 +101,10 @@ void QTranslator_load1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-    hb_retl( obj->load ( par1, par2, par3, par4 ) );
+    hb_retl( obj->load ( PQSTRING(1), par2, par3, par4 ) );
   }
 }
 
@@ -119,11 +118,10 @@ void QTranslator_load2 ()
   if( obj )
   {
     QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
     QString par5 = ISNIL(5)? QString() : QLatin1String( hb_parc(5) );
-    hb_retl( obj->load ( *par1, par2, par3, par4, par5 ) );
+    hb_retl( obj->load ( *par1, PQSTRING(2), par3, par4, par5 ) );
   }
 }
 

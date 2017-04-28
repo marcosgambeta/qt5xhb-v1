@@ -72,9 +72,8 @@ QLibrary(const QString& fileName, QObject *parent = 0)
 */
 void QLibrary_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QLibrary * o = new QLibrary ( par1, par2 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -83,10 +82,9 @@ QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 */
 void QLibrary_new3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QLibrary * o = new QLibrary ( par1, par2, par3 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -95,10 +93,8 @@ QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
 void QLibrary_new4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QLibrary * o = new QLibrary ( par1, par2, par3 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -198,8 +194,7 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {
@@ -232,8 +227,7 @@ void QLibrary_setFileNameAndVersion1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFileNameAndVersion ( par1, (int) hb_parni(2) );
+    obj->setFileNameAndVersion ( PQSTRING(1), (int) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -248,9 +242,7 @@ void QLibrary_setFileNameAndVersion2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setFileNameAndVersion ( par1, par2 );
+    obj->setFileNameAndVersion ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -344,9 +336,8 @@ static QFunctionPointer resolve(const QString &fileName, const char *symbol) // 
 */
 void QLibrary_resolve2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = hb_parc(2);
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( par1,  (const char *) par2 ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1),  (const char *) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
@@ -355,9 +346,8 @@ static QFunctionPointer resolve(const QString &fileName, int verNum, const char 
 */
 void QLibrary_resolve3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   const char * par3 = hb_parc(3);
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( par1, (int) hb_parni(2),  (const char *) par3 ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), (int) hb_parni(2),  (const char *) par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
@@ -366,10 +356,8 @@ static QFunctionPointer resolve(const QString &fileName, const QString &version,
 */
 void QLibrary_resolve4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
   const char * par3 = hb_parc(3);
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( par1, par2,  (const char *) par3 ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PQSTRING(2),  (const char *) par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
@@ -409,8 +397,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( QLibrary::isLibrary ( par1 ) );
+    hb_retl( QLibrary::isLibrary ( PQSTRING(1) ) );
   }
   else
   {

@@ -85,10 +85,9 @@ QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, P
 */
 void QRegExp_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
   int par3 = ISNIL(3)? (int) QRegExp::RegExp : hb_parni(3);
-  QRegExp * o = new QRegExp ( par1,  (Qt::CaseSensitivity) par2,  (QRegExp::PatternSyntax) par3 );
+  QRegExp * o = new QRegExp ( PQSTRING(1),  (Qt::CaseSensitivity) par2,  (QRegExp::PatternSyntax) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -227,8 +226,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->exactMatch ( par1 ) );
+      hb_retl( obj->exactMatch ( PQSTRING(1) ) );
     }
     else
     {
@@ -248,9 +246,8 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
   {
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      hb_retni( obj->indexIn ( par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QRegExp::CaretMode) par3 ) );
+      hb_retni( obj->indexIn ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2),  (QRegExp::CaretMode) par3 ) );
     }
     else
     {
@@ -309,9 +306,8 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
   {
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      hb_retni( obj->lastIndexIn ( par1, (int) ISNIL(2)? -1 : hb_parni(2),  (QRegExp::CaretMode) par3 ) );
+      hb_retni( obj->lastIndexIn ( PQSTRING(1), (int) ISNIL(2)? -1 : hb_parni(2),  (QRegExp::CaretMode) par3 ) );
     }
     else
     {
@@ -435,8 +431,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERN )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setPattern ( par1 );
+      obj->setPattern ( PQSTRING(1) );
     }
     else
     {
@@ -477,8 +472,7 @@ HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) QRegExp::escape ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) QRegExp::escape ( PQSTRING(1) ).toLatin1().data() );
   }
   else
   {

@@ -122,11 +122,9 @@ void QTimeZone_new4 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QString par3 = QLatin1String( hb_parc(3) );
-  QString par4 = QLatin1String( hb_parc(4) );
   int par5 = ISNIL(5)? (int) QLocale::AnyCountry : hb_parni(5);
   QString par6 = ISNIL(6)? QString() : QLatin1String( hb_parc(6) );
-  QTimeZone * o = new QTimeZone ( *par1, par2, par3, par4,  (QLocale::Country) par5, par6 );
+  QTimeZone * o = new QTimeZone ( *par1, par2, PQSTRING(3), PQSTRING(4),  (QLocale::Country) par5, par6 );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

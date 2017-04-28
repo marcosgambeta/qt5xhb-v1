@@ -829,8 +829,7 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setObjectName ( par1 );
+      obj->setObjectName ( PQSTRING(1) );
     }
     else
     {

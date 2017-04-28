@@ -117,8 +117,7 @@ QJsonValue(const QString & s)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW4 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QJsonValue * o = new QJsonValue ( par1 );
+  QJsonValue * o = new QJsonValue ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

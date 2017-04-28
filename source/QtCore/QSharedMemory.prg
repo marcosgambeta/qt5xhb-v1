@@ -71,9 +71,8 @@ QSharedMemory(const QString &key, QObject *parent = 0)
 */
 void QSharedMemory_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSharedMemory * o = new QSharedMemory ( par1, par2 );
+  QSharedMemory * o = new QSharedMemory ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -124,8 +123,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setKey ( par1 );
+      obj->setKey ( PQSTRING(1) );
     }
     else
     {
@@ -160,8 +158,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setNativeKey ( par1 );
+      obj->setNativeKey ( PQSTRING(1) );
     }
     else
     {

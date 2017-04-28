@@ -121,8 +121,7 @@ void QTextEncoder_fromUnicode1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

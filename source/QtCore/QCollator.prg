@@ -326,8 +326,7 @@ HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey ( par1 ) );
+      QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLLATORSORTKEY", true );
     }
     else

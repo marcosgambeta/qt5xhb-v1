@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QJSONOBJECT_CONTAINS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->contains ( par1 ) );
+      hb_retl( obj->contains ( PQSTRING(1) ) );
     }
     else
     {
@@ -218,8 +217,7 @@ HB_FUNC_STATIC( QJSONOBJECT_REMOVE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->remove ( par1 );
+      obj->remove ( PQSTRING(1) );
     }
     else
     {
@@ -254,8 +252,7 @@ HB_FUNC_STATIC( QJSONOBJECT_TAKE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QJsonValue * ptr = new QJsonValue( obj->take ( par1 ) );
+      QJsonValue * ptr = new QJsonValue( obj->take ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
     }
     else
@@ -276,8 +273,7 @@ HB_FUNC_STATIC( QJSONOBJECT_VALUE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QJsonValue * ptr = new QJsonValue( obj->value ( par1 ) );
+      QJsonValue * ptr = new QJsonValue( obj->value ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
     }
     else

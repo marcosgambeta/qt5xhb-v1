@@ -316,8 +316,7 @@ HB_FUNC_STATIC( QMIMETYPE_INHERITS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->inherits ( par1 ) );
+      hb_retl( obj->inherits ( PQSTRING(1) ) );
     }
     else
     {

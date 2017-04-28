@@ -59,8 +59,7 @@ QSaveFile(const QString &name)
 void QSaveFile_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QSaveFile * o = new QSaveFile ( par1 );
+  QSaveFile * o = new QSaveFile ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -83,9 +82,8 @@ QSaveFile(const QString &name, QObject *parent)
 void QSaveFile_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QSaveFile * o = new QSaveFile ( par1, par2 );
+  QSaveFile * o = new QSaveFile ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -162,8 +160,7 @@ HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {

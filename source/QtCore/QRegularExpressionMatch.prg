@@ -124,8 +124,7 @@ void QRegularExpressionMatch_captured2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->captured ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->captured ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -170,8 +169,7 @@ void QRegularExpressionMatch_capturedEnd2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->capturedEnd ( par1 ) );
+    hb_retni( obj->capturedEnd ( PQSTRING(1) ) );
   }
 }
 
@@ -216,8 +214,7 @@ void QRegularExpressionMatch_capturedLength2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->capturedLength ( par1 ) );
+    hb_retni( obj->capturedLength ( PQSTRING(1) ) );
   }
 }
 
@@ -263,8 +260,7 @@ void QRegularExpressionMatch_capturedRef2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringRef * ptr = new QStringRef( obj->capturedRef ( par1 ) );
+    QStringRef * ptr = new QStringRef( obj->capturedRef ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -310,8 +306,7 @@ void QRegularExpressionMatch_capturedStart2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->capturedStart ( par1 ) );
+    hb_retni( obj->capturedStart ( PQSTRING(1) ) );
   }
 }
 

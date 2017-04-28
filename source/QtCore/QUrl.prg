@@ -111,8 +111,7 @@ QUrl ( const QString & url )
 */
 void QUrl_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QUrl * o = new QUrl ( par1 );
+  QUrl * o = new QUrl ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -131,9 +130,8 @@ QUrl ( const QString & url, ParsingMode parsingMode )
 */
 void QUrl_new4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
-  QUrl * o = new QUrl ( par1,  (QUrl::ParsingMode) par2 );
+  QUrl * o = new QUrl ( PQSTRING(1),  (QUrl::ParsingMode) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -466,8 +464,7 @@ HB_FUNC_STATIC( QURL_SETAUTHORITY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setAuthority ( par1 );
+      obj->setAuthority ( PQSTRING(1) );
     }
     else
     {
@@ -489,8 +486,7 @@ HB_FUNC_STATIC( QURL_SETFRAGMENT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFragment ( par1 );
+      obj->setFragment ( PQSTRING(1) );
     }
     else
     {
@@ -512,8 +508,7 @@ HB_FUNC_STATIC( QURL_SETHOST )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setHost ( par1 );
+      obj->setHost ( PQSTRING(1) );
     }
     else
     {
@@ -535,8 +530,7 @@ HB_FUNC_STATIC( QURL_SETPASSWORD )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setPassword ( par1 );
+      obj->setPassword ( PQSTRING(1) );
     }
     else
     {
@@ -603,8 +597,7 @@ HB_FUNC_STATIC( QURL_SETSCHEME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setScheme ( par1 );
+      obj->setScheme ( PQSTRING(1) );
     }
     else
     {
@@ -624,8 +617,7 @@ void QUrl_setUrl1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setUrl ( par1 );
+    obj->setUrl ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -640,9 +632,8 @@ void QUrl_setUrl2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = hb_parni(2);
-    obj->setUrl ( par1,  (QUrl::ParsingMode) par2 );
+    obj->setUrl ( PQSTRING(1),  (QUrl::ParsingMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -678,8 +669,7 @@ HB_FUNC_STATIC( QURL_SETUSERINFO )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setUserInfo ( par1 );
+      obj->setUserInfo ( PQSTRING(1) );
     }
     else
     {
@@ -701,8 +691,7 @@ HB_FUNC_STATIC( QURL_SETUSERNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setUserName ( par1 );
+      obj->setUserName ( PQSTRING(1) );
     }
     else
     {
@@ -894,8 +883,7 @@ HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QUrl * ptr = new QUrl( QUrl::fromLocalFile ( par1 ) );
+    QUrl * ptr = new QUrl( QUrl::fromLocalFile ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
   else
@@ -927,8 +915,7 @@ HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QUrl * ptr = new QUrl( QUrl::fromUserInput ( par1 ) );
+    QUrl * ptr = new QUrl( QUrl::fromUserInput ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
   else
@@ -969,8 +956,7 @@ HB_FUNC_STATIC( QURL_TOACE )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QByteArray * ptr = new QByteArray( QUrl::toAce ( par1 ) );
+    QByteArray * ptr = new QByteArray( QUrl::toAce ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
@@ -986,10 +972,9 @@ HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {
   if( ISCHAR(1) && ISOPTQBYTEARRAY(2) && ISOPTQBYTEARRAY(3) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
     QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
-    QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding ( par1, par2, par3 ) );
+    QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding ( PQSTRING(1), par2, par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else

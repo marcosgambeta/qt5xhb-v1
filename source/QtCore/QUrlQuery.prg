@@ -95,8 +95,7 @@ QUrlQuery(const QString & queryString)
 */
 void QUrlQuery_new3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QUrlQuery * o = new QUrlQuery ( par1 );
+  QUrlQuery * o = new QUrlQuery ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -167,9 +166,7 @@ HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->addQueryItem ( par1, par2 );
+      obj->addQueryItem ( PQSTRING(1), PQSTRING(2) );
     }
     else
     {
@@ -191,9 +188,8 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
-      QStringList strl = obj->allQueryItemValues ( par1,  (QUrl::ComponentFormattingOptions) par2 );
+      QStringList strl = obj->allQueryItemValues ( PQSTRING(1),  (QUrl::ComponentFormattingOptions) par2 );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }
     else
@@ -229,8 +225,7 @@ HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->hasQueryItem ( par1 ) );
+      hb_retl( obj->hasQueryItem ( PQSTRING(1) ) );
     }
     else
     {
@@ -284,9 +279,8 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
-      hb_retc( (const char *) obj->queryItemValue ( par1,  (QUrl::ComponentFormattingOptions) par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->queryItemValue ( PQSTRING(1),  (QUrl::ComponentFormattingOptions) par2 ).toLatin1().data() );
     }
     else
     {
@@ -334,8 +328,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->removeAllQueryItems ( par1 );
+      obj->removeAllQueryItems ( PQSTRING(1) );
     }
     else
     {
@@ -357,8 +350,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->removeQueryItem ( par1 );
+      obj->removeQueryItem ( PQSTRING(1) );
     }
     else
     {
@@ -380,8 +372,7 @@ HB_FUNC_STATIC( QURLQUERY_SETQUERY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setQuery ( par1 );
+      obj->setQuery ( PQSTRING(1) );
     }
     else
     {

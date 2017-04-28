@@ -79,9 +79,7 @@ QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespace
 */
 void QXmlStreamNamespaceDeclaration_new3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( par1, par2 );
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

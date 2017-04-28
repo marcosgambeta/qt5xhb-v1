@@ -73,9 +73,7 @@ QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
 void QXmlStreamAttribute_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( par1, par2 );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -84,10 +82,7 @@ QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QS
 */
 void QXmlStreamAttribute_new3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QString par3 = QLatin1String( hb_parc(3) );
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( par1, par2, par3 );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

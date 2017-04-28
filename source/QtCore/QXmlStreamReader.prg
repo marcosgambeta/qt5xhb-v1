@@ -144,8 +144,7 @@ QXmlStreamReader(const QString & data)
 */
 void QXmlStreamReader_new4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QXmlStreamReader * o = new QXmlStreamReader ( par1 );
+  QXmlStreamReader * o = new QXmlStreamReader ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -222,8 +221,7 @@ void QXmlStreamReader_addData2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->addData ( par1 );
+    obj->addData ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -138,8 +138,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QByteArray * ptr = new QByteArray( obj->data ( par1 ) );
+      QByteArray * ptr = new QByteArray( obj->data ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
     }
     else
@@ -187,8 +186,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->hasFormat ( par1 ) );
+      hb_retl( obj->hasFormat ( PQSTRING(1) ) );
     }
     else
     {
@@ -287,8 +285,7 @@ HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->removeFormat ( par1 );
+      obj->removeFormat ( PQSTRING(1) );
     }
     else
     {
@@ -333,9 +330,8 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
   {
     if( ISCHAR(1) && ISQBYTEARRAY(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-      obj->setData ( par1, *par2 );
+      obj->setData ( PQSTRING(1), *par2 );
     }
     else
     {
@@ -357,8 +353,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETHTML )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setHtml ( par1 );
+      obj->setHtml ( PQSTRING(1) );
     }
     else
     {
@@ -403,8 +398,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {

@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_SETFILTERRULES )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QLoggingCategory::setFilterRules ( par1 );
+    QLoggingCategory::setFilterRules ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
