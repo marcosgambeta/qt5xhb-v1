@@ -52,9 +52,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QString par3 = QLatin1String( hb_parc(3) );
-  QString par4 = QLatin1String( hb_parc(4) );
-  QAccessibleTextUpdateEvent * o = new QAccessibleTextUpdateEvent ( par1, par2, par3, par4 );
+  QAccessibleTextUpdateEvent * o = new QAccessibleTextUpdateEvent ( par1, par2, PQSTRING(3), PQSTRING(4) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

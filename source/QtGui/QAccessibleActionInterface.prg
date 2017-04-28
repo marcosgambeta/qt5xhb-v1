@@ -97,8 +97,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->localizedActionName ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->localizedActionName ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -111,8 +110,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->localizedActionDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->localizedActionDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -125,8 +123,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->doAction ( par1 );
+    obj->doAction ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -140,8 +137,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringList strl = obj->keyBindingsForAction ( par1 );
+    QStringList strl = obj->keyBindingsForAction ( PQSTRING(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

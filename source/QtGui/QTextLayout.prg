@@ -115,8 +115,7 @@ QTextLayout(const QString& text)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QTextLayout * o = new QTextLayout ( par1 );
+  QTextLayout * o = new QTextLayout ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -125,10 +124,9 @@ QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW3 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
   QPaintDevice * par3 = ISNIL(3)? 0 : (QPaintDevice *) _qt5xhb_itemGetPtr(3);
-  QTextLayout * o = new QTextLayout ( par1, *par2, par3 );
+  QTextLayout * o = new QTextLayout ( PQSTRING(1), *par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -239,8 +237,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -296,8 +293,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setPreeditArea ( (int) hb_parni(1), par2 );
+    obj->setPreeditArea ( (int) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

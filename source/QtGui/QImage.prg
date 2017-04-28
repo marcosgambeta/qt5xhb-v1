@@ -147,9 +147,8 @@ QImage ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * o = new QImage ( par1,  (const char *) par2 );
+  QImage * o = new QImage ( PQSTRING(1),  (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -734,9 +733,8 @@ void QImage_load1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( par1,  (const char *) par2 ) );
+    hb_retl( obj->load ( PQSTRING(1),  (const char *) par2 ) );
   }
 }
 
@@ -969,9 +967,8 @@ void QImage_save1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
   }
 }
 
@@ -1282,9 +1279,7 @@ HB_FUNC_STATIC( QIMAGE_SETTEXT )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setText ( par1, par2 );
+      obj->setText ( PQSTRING(1), PQSTRING(2) );
     }
     else
     {

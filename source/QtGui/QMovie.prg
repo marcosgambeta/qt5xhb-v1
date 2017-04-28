@@ -121,10 +121,9 @@ QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QOb
 */
 HB_FUNC_STATIC( QMOVIE_NEW3 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QMovie * o = new QMovie ( par1, par2, par3 );
+  QMovie * o = new QMovie ( PQSTRING(1), par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -423,8 +422,7 @@ HB_FUNC_STATIC( QMOVIE_SETFILENAME )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFileName ( par1 );
+    obj->setFileName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

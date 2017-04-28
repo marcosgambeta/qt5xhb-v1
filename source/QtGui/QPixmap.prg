@@ -128,10 +128,9 @@ QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversion
 */
 void QPixmap_new5 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
   int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-  QPixmap * o = new QPixmap ( par1,  (const char *) par2,  (Qt::ImageConversionFlags) par3 );
+  QPixmap * o = new QPixmap ( PQSTRING(1),  (const char *) par2,  (Qt::ImageConversionFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -705,10 +704,9 @@ HB_FUNC_STATIC( QPIXMAP_LOAD )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       const char * par2 = ISNIL(2)? 0 : hb_parc(2);
       int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-      hb_retl( obj->load ( par1,  (const char *) par2,  (Qt::ImageConversionFlags) par3 ) );
+      hb_retl( obj->load ( PQSTRING(1),  (const char *) par2,  (Qt::ImageConversionFlags) par3 ) );
     }
     else
     {
@@ -777,9 +775,8 @@ void QPixmap_save1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
   }
 }
 

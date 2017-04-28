@@ -70,9 +70,7 @@ HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
   QGenericPlugin * obj = (QGenericPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QObject * ptr = obj->create ( par1, par2 );
+    QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

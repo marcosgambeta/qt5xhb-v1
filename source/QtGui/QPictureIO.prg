@@ -103,9 +103,8 @@ QPictureIO(const QString &fileName, const char *format)
 */
 void QPictureIO_new3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = hb_parc(2);
-  QPictureIO * o = new QPictureIO ( par1,  (const char *) par2 );
+  QPictureIO * o = new QPictureIO ( PQSTRING(1),  (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -373,8 +372,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {
@@ -418,8 +416,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDescription ( par1 );
+      obj->setDescription ( PQSTRING(1) );
     }
     else
     {
@@ -507,8 +504,7 @@ static QByteArray pictureFormat(const QString &fileName)
 */
 void QPictureIO_pictureFormat1 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( par1 ) );
+  QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( PQSTRING(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 

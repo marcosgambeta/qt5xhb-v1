@@ -78,8 +78,7 @@ QKeySequence ( const QString & key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QKeySequence * o = new QKeySequence ( par1 );
+  QKeySequence * o = new QKeySequence ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -88,9 +87,8 @@ QKeySequence ( const QString & key, SequenceFormat format )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
-  QKeySequence * o = new QKeySequence ( par1,  (QKeySequence::SequenceFormat) par2 );
+  QKeySequence * o = new QKeySequence ( PQSTRING(1),  (QKeySequence::SequenceFormat) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -238,9 +236,8 @@ static QKeySequence fromString ( const QString & str, SequenceFormat format = Po
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QKeySequence::PortableText : hb_parni(2);
-  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( par1,  (QKeySequence::SequenceFormat) par2 ) );
+  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1),  (QKeySequence::SequenceFormat) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
 
@@ -295,8 +292,7 @@ static QKeySequence mnemonic ( const QString & text )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( par1 ) );
+  QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
 

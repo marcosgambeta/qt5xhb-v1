@@ -133,8 +133,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE3 )
   QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->compileSourceCode ( par1 ) );
+    hb_retl( obj->compileSourceCode ( PQSTRING(1) ) );
   }
 }
 
@@ -156,8 +155,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCEFILE )
   QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->compileSourceFile ( par1 ) );
+    hb_retl( obj->compileSourceFile ( PQSTRING(1) ) );
   }
 }
 

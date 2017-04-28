@@ -84,8 +84,7 @@ QStaticText(const QString &text)
 */
 HB_FUNC_STATIC( QSTATICTEXT_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QStaticText * o = new QStaticText ( par1 );
+  QStaticText * o = new QStaticText ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -162,8 +161,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
   QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

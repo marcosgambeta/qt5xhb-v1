@@ -196,8 +196,7 @@ void QFontMetricsF_boundingRect1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QRectF * ptr = new QRectF( obj->boundingRect ( par1 ) );
+    QRectF * ptr = new QRectF( obj->boundingRect ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -243,9 +242,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
   {
     if( ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = hb_parni(2);
-      hb_retc( (const char *) obj->elidedText ( par1,  (Qt::TextElideMode) par2, PQREAL(3), (int) ISNIL(4)? 0 : hb_parni(4) ).toLatin1().data() );
+      hb_retc( (const char *) obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, PQREAL(3), (int) ISNIL(4)? 0 : hb_parni(4) ).toLatin1().data() );
     }
     else
     {
@@ -389,9 +387,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
   {
     if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) ) // TODO: implementar parametro 4
     {
-      QString par2 = QLatin1String( hb_parc(2) );
       int par4;
-      QSizeF * ptr = new QSizeF( obj->size ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3), &par4 ) );
+      QSizeF * ptr = new QSizeF( obj->size ( (int) hb_parni(1), PQSTRING(2), (int) ISNIL(3)? 0 : hb_parni(3), &par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
       hb_storni( par4, 4 );
     }
@@ -426,8 +423,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QRectF * ptr = new QRectF( obj->tightBoundingRect ( par1 ) );
+      QRectF * ptr = new QRectF( obj->tightBoundingRect ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
     }
     else
@@ -461,8 +457,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retnd( obj->width ( par1 ) );
+      hb_retnd( obj->width ( PQSTRING(1) ) );
     }
     else
     {

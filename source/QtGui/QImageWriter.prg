@@ -98,9 +98,8 @@ QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 void QImageWriter_new3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QImageWriter * o = new QImageWriter ( par1, par2 );
+  QImageWriter * o = new QImageWriter ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -320,8 +319,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {
@@ -411,9 +409,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setText ( par1, par2 );
+      obj->setText ( PQSTRING(1), PQSTRING(2) );
     }
     else
     {

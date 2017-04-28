@@ -91,9 +91,8 @@ QBitmap ( const QString & fileName, const char * format = 0 )
 */
 void QBitmap_new5 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QBitmap * o = new QBitmap ( par1,  (const char *) par2 );
+  QBitmap * o = new QBitmap ( PQSTRING(1),  (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

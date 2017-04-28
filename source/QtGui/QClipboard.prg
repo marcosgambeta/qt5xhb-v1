@@ -280,9 +280,8 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-      obj->setText ( par1,  (QClipboard::Mode) par2 );
+      obj->setText ( PQSTRING(1),  (QClipboard::Mode) par2 );
     }
     else
     {

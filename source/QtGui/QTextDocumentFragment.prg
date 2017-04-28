@@ -190,8 +190,7 @@ static QTextDocumentFragment fromPlainText(const QString &plainText)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( par1 ) );
+  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( PQSTRING(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 
@@ -201,8 +200,7 @@ static QTextDocumentFragment fromHtml(const QString &html)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( par1 ) );
+  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 
@@ -212,9 +210,8 @@ static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   const QTextDocument * par2 = (const QTextDocument *) _qt5xhb_itemGetPtr(2);
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( par1, par2 ) );
+  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1), par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 

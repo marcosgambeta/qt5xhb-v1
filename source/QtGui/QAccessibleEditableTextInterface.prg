@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT )
   QAccessibleEditableTextInterface * obj = (QAccessibleEditableTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->insertText ( (int) hb_parni(1), par2 );
+    obj->insertText ( (int) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -104,8 +103,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT )
   QAccessibleEditableTextInterface * obj = (QAccessibleEditableTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->replaceText ( (int) hb_parni(1), (int) hb_parni(2), par3 );
+    obj->replaceText ( (int) hb_parni(1), (int) hb_parni(2), PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

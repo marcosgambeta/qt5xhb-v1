@@ -335,8 +335,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT1 )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->insertText ( par1 );
+    obj->insertText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -350,9 +349,8 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT2 )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QTextCharFormat * par2 = (QTextCharFormat *) _qt5xhb_itemGetPtr(2);
-    obj->insertText ( par1, *par2 );
+    obj->insertText ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1038,8 +1036,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->insertHtml ( par1 );
+    obj->insertHtml ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1084,8 +1081,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE3 )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->insertImage ( par1 );
+    obj->insertImage ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -123,9 +123,8 @@ QImageReader ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 void QImageReader_new3 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QImageReader * o = new QImageReader ( par1, par2 );
+  QImageReader * o = new QImageReader ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -615,8 +614,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {
@@ -777,8 +775,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retc( (const char *) obj->text ( par1 ).toLatin1().data() );
+      hb_retc( (const char *) obj->text ( PQSTRING(1) ).toLatin1().data() );
     }
     else
     {
@@ -819,8 +816,7 @@ static QByteArray imageFormat ( const QString & fileName )
 */
 void QImageReader_imageFormat2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( par1 ) );
+  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQSTRING(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 

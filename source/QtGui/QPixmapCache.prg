@@ -102,8 +102,7 @@ static QPixmap *find(const QString &key)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QPixmap * ptr = QPixmapCache::find ( par1 );
+  QPixmap * ptr = QPixmapCache::find ( PQSTRING(1) );
   _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
 }
 
@@ -112,9 +111,8 @@ static bool find(const QString &key, QPixmap &pixmap)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QPixmapCache::find ( par1, *par2 ) );
+  hb_retl( QPixmapCache::find ( PQSTRING(1), *par2 ) );
 }
 
 /*
@@ -122,9 +120,8 @@ static bool find(const QString &key, QPixmap *pixmap)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QPixmapCache::find ( par1, par2 ) );
+  hb_retl( QPixmapCache::find ( PQSTRING(1), par2 ) );
 }
 
 //[1]static QPixmap *find(const QString &key)
@@ -142,9 +139,8 @@ static bool insert(const QString &key, const QPixmap &pixmap)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QPixmapCache::insert ( par1, *par2 ) );
+  hb_retl( QPixmapCache::insert ( PQSTRING(1), *par2 ) );
 }
 
 //[1]static bool insert(const QString &key, const QPixmap &pixmap)
@@ -160,8 +156,7 @@ static void remove(const QString &key)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QPixmapCache::remove ( par1 );
+  QPixmapCache::remove ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

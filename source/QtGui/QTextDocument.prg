@@ -165,9 +165,8 @@ QTextDocument(const QString &text, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QTextDocument * o = new QTextDocument ( par1, par2 );
+  QTextDocument * o = new QTextDocument ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -378,8 +377,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setMetaInformation (  (QTextDocument::MetaInformation) par1, par2 );
+    obj->setMetaInformation (  (QTextDocument::MetaInformation) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -421,8 +419,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setHtml ( par1 );
+    obj->setHtml ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,8 +446,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPlainText ( par1 );
+    obj->setPlainText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -478,9 +474,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND1 )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( par1, (int) ISNIL(2)? 0 : hb_parni(2),  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2),  (QTextDocument::FindFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -494,10 +489,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND2 )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QTextCursor * par2 = (QTextCursor *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( par1, *par2,  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), *par2,  (QTextDocument::FindFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -1077,8 +1071,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDefaultStyleSheet ( par1 );
+    obj->setDefaultStyleSheet ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

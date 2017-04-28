@@ -72,10 +72,8 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
       QPicture * par3 = (QPicture *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->loadPicture ( par1, par2, par3 ) );
+      hb_retl( obj->loadPicture ( PQSTRING(1), PQSTRING(2), par3 ) );
     }
     else
     {
@@ -95,10 +93,8 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
       QPicture * par3 = (QPicture *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->savePicture ( par1, par2, *par3 ) );
+      hb_retl( obj->savePicture ( PQSTRING(1), PQSTRING(2), *par3 ) );
     }
     else
     {
@@ -118,8 +114,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->installIOHandler ( par1 ) );
+      hb_retl( obj->installIOHandler ( PQSTRING(1) ) );
     }
     else
     {

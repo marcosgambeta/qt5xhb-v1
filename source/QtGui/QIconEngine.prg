@@ -117,11 +117,10 @@ HB_FUNC_STATIC( QICONENGINE_ADDFILE )
   {
     if( ISCHAR(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
       int par3 = hb_parni(3);
       int par4 = hb_parni(4);
-      obj->addFile ( par1, *par2,  (QIcon::Mode) par3,  (QIcon::State) par4 );
+      obj->addFile ( PQSTRING(1), *par2,  (QIcon::Mode) par3,  (QIcon::State) par4 );
     }
     else
     {

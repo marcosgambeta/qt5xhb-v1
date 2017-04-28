@@ -162,9 +162,8 @@ void QPicture_load1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( par1,  (const char *) par2 ) );
+    hb_retl( obj->load ( PQSTRING(1),  (const char *) par2 ) );
   }
 }
 
@@ -232,9 +231,8 @@ void QPicture_save1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2 ) );
+    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2 ) );
   }
 }
 

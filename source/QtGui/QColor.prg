@@ -174,8 +174,7 @@ QColor ( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QColor * o = new QColor ( par1 );
+  QColor * o = new QColor ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -1262,8 +1261,7 @@ HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setNamedColor ( par1 );
+      obj->setNamedColor ( PQSTRING(1) );
     }
     else
     {
@@ -1713,8 +1711,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( QColor::isValidColor ( par1 ) );
+    hb_retl( QColor::isValidColor ( PQSTRING(1) ) );
   }
   else
   {

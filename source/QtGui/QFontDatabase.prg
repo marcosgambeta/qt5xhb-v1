@@ -121,9 +121,7 @@ HB_FUNC_STATIC( QFONTDATABASE_BOLD )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      hb_retl( obj->bold ( par1, par2 ) );
+      hb_retl( obj->bold ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -165,9 +163,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      QFont * ptr = new QFont( obj->font ( par1, par2, (int) hb_parni(3) ) );
+      QFont * ptr = new QFont( obj->font ( PQSTRING(1), PQSTRING(2), (int) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
     }
     else
@@ -188,9 +184,8 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isBitmapScalable ( par1, par2 ) );
+      hb_retl( obj->isBitmapScalable ( PQSTRING(1), par2 ) );
     }
     else
     {
@@ -210,9 +205,8 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isFixedPitch ( par1, par2 ) );
+      hb_retl( obj->isFixedPitch ( PQSTRING(1), par2 ) );
     }
     else
     {
@@ -232,9 +226,8 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isScalable ( par1, par2 ) );
+      hb_retl( obj->isScalable ( PQSTRING(1), par2 ) );
     }
     else
     {
@@ -254,9 +247,8 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isSmoothlyScalable ( par1, par2 ) );
+      hb_retl( obj->isSmoothlyScalable ( PQSTRING(1), par2 ) );
     }
     else
     {
@@ -276,9 +268,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      hb_retl( obj->italic ( par1, par2 ) );
+      hb_retl( obj->italic ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -298,9 +288,8 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      QList<int> list = obj->pointSizes ( par1, par2 );
+      QList<int> list = obj->pointSizes ( PQSTRING(1), par2 );
       _qt5xhb_convert_qlist_int_to_array ( list );
     }
     else
@@ -321,9 +310,7 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      QList<int> list = obj->smoothSizes ( par1, par2 );
+      QList<int> list = obj->smoothSizes ( PQSTRING(1), PQSTRING(2) );
       _qt5xhb_convert_qlist_int_to_array ( list );
     }
     else
@@ -391,8 +378,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QStringList strl = obj->styles ( par1 );
+      QStringList strl = obj->styles ( PQSTRING(1) );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }
     else
@@ -413,9 +399,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      hb_retni( obj->weight ( par1, par2 ) );
+      hb_retni( obj->weight ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -431,8 +415,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( QFontDatabase::addApplicationFont ( par1 ) );
+    hb_retni( QFontDatabase::addApplicationFont ( PQSTRING(1) ) );
   }
   else
   {

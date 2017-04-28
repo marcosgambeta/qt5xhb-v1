@@ -103,8 +103,7 @@ QIcon ( const QString & fileName )
 */
 void QIcon_new4 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QIcon * o = new QIcon ( par1 );
+  QIcon * o = new QIcon ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -191,11 +190,10 @@ HB_FUNC_STATIC( QICON_ADDFILE )
   {
     if( ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QSize par2 = ISNIL(2)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(2);
       int par3 = ISNIL(3)? (int) QIcon::Normal : hb_parni(3);
       int par4 = ISNIL(4)? (int) QIcon::Off : hb_parni(4);
-      obj->addFile ( par1, par2,  (QIcon::Mode) par3,  (QIcon::State) par4 );
+      obj->addFile ( PQSTRING(1), par2,  (QIcon::Mode) par3,  (QIcon::State) par4 );
     }
     else
     {
@@ -465,9 +463,8 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
 {
   if( ISCHAR(1) && (ISQICON(2)||ISCHAR(2)||ISNIL(2)) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QIcon par2 = ISNIL(2)? QIcon() : ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QIcon * ptr = new QIcon( QIcon::fromTheme ( par1, par2 ) );
+    QIcon * ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
   else
@@ -483,8 +480,7 @@ HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( QIcon::hasThemeIcon ( par1 ) );
+    hb_retl( QIcon::hasThemeIcon ( PQSTRING(1) ) );
   }
   else
   {
@@ -499,8 +495,7 @@ HB_FUNC_STATIC( QICON_SETTHEMENAME )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QIcon::setThemeName ( par1 );
+    QIcon::setThemeName ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

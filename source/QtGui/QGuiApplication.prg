@@ -417,8 +417,7 @@ static void setApplicationDisplayName(const QString & name)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QGuiApplication::setApplicationDisplayName ( par1 );
+  QGuiApplication::setApplicationDisplayName ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

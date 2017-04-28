@@ -48,8 +48,7 @@ QWhatsThisClickedEvent(const QString &href)
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QWhatsThisClickedEvent * o = new QWhatsThisClickedEvent ( par1 );
+  QWhatsThisClickedEvent * o = new QWhatsThisClickedEvent ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

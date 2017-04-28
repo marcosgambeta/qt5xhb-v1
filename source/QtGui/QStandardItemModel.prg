@@ -270,9 +270,8 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) Qt::MatchExactly : hb_parni(2);
-    QList<QStandardItem *> list = obj->findItems ( par1,  (Qt::MatchFlags) par2, (int) ISNIL(3)? 0 : hb_parni(3) );
+    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, (int) ISNIL(3)? 0 : hb_parni(3) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSTANDARDITEM" );

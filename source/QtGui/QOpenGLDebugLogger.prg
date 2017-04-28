@@ -139,9 +139,8 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::ApplicationSource : hb_parni(3);
-    obj->pushGroup ( par1, (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Source) par3 );
+    obj->pushGroup ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Source) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

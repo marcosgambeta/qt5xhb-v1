@@ -181,8 +181,7 @@ void QFontMetrics_boundingRect2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QRect * ptr = new QRect( obj->boundingRect ( par1 ) );
+    QRect * ptr = new QRect( obj->boundingRect ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -229,9 +228,8 @@ HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
   {
     if( ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = hb_parni(2);
-      hb_retc( (const char *) obj->elidedText ( par1,  (Qt::TextElideMode) par2, (int) hb_parni(3), (int) ISNIL(4)? 0 : hb_parni(4) ).toLatin1().data() );
+      hb_retc( (const char *) obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, (int) hb_parni(3), (int) ISNIL(4)? 0 : hb_parni(4) ).toLatin1().data() );
     }
     else
     {
@@ -375,9 +373,8 @@ HB_FUNC_STATIC( QFONTMETRICS_SIZE )
   {
     if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) ) // TODO: revisar e implementar parametro 4
     {
-      QString par2 = QLatin1String( hb_parc(2) );
       int* par4 = (int*) _qt5xhb_itemGetPtr(4);
-      QSize * ptr = new QSize( obj->size ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3), par4 ) );
+      QSize * ptr = new QSize( obj->size ( (int) hb_parni(1), PQSTRING(2), (int) ISNIL(3)? 0 : hb_parni(3), par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -411,8 +408,7 @@ HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QRect * ptr = new QRect( obj->tightBoundingRect ( par1 ) );
+      QRect * ptr = new QRect( obj->tightBoundingRect ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -444,8 +440,7 @@ void QFontMetrics_width1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->width ( par1, (int) ISNIL(2)? -1 : hb_parni(2) ) );
+    hb_retni( obj->width ( PQSTRING(1), (int) ISNIL(2)? -1 : hb_parni(2) ) );
   }
 }
 

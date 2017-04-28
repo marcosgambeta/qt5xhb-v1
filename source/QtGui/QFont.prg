@@ -122,11 +122,10 @@ QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic
 */
 void QFont_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? -1 : hb_parni(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
   bool par4 = ISNIL(4)? false : hb_parl(4);
-  QFont * o = new QFont ( par1, par2, par3, par4 );
+  QFont * o = new QFont ( PQSTRING(1), par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -286,8 +285,7 @@ HB_FUNC_STATIC( QFONT_FROMSTRING )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->fromString ( par1 ) );
+      hb_retl( obj->fromString ( PQSTRING(1) ) );
     }
     else
     {
@@ -564,8 +562,7 @@ HB_FUNC_STATIC( QFONT_SETFAMILY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFamily ( par1 );
+      obj->setFamily ( PQSTRING(1) );
     }
     else
     {
@@ -786,8 +783,7 @@ HB_FUNC_STATIC( QFONT_SETRAWNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setRawName ( par1 );
+      obj->setRawName ( PQSTRING(1) );
     }
     else
     {
@@ -1102,9 +1098,7 @@ HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTION )
 {
   if( ISCHAR(1) && ISCHAR(2) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QFont::insertSubstitution ( par1, par2 );
+    QFont::insertSubstitution ( PQSTRING(1), PQSTRING(2) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -1120,7 +1114,6 @@ HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTIONS )
 {
   if( ISCHAR(1) && ISARRAY(2) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
     //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
     //int i2;
@@ -1130,7 +1123,7 @@ HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTIONS )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
     //  par2 << temp;
     //}
-    QFont::insertSubstitutions ( par1, par2 );
+    QFont::insertSubstitutions ( PQSTRING(1), par2 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -1146,8 +1139,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) QFont::substitute ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) QFont::substitute ( PQSTRING(1) ).toLatin1().data() );
   }
   else
   {
@@ -1162,8 +1154,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTES )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringList strl = QFont::substitutes ( par1 );
+    QStringList strl = QFont::substitutes ( PQSTRING(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
   else

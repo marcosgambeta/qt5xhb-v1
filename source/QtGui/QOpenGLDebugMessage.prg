@@ -184,10 +184,9 @@ static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint i
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::NotificationSeverity : hb_parni(3);
   int par4 = ISNIL(4)? (int) QOpenGLDebugMessage::OtherType : hb_parni(4);
-  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage ( par1, (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Severity) par3,  (QOpenGLDebugMessage::Type) par4 ) );
+  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Severity) par3,  (QOpenGLDebugMessage::Type) par4 ) );
   _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE" );
 }
 
@@ -197,10 +196,9 @@ static QOpenGLDebugMessage createThirdPartyMessage(const QString &text,GLuint id
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::NotificationSeverity : hb_parni(3);
   int par4 = ISNIL(4)? (int) QOpenGLDebugMessage::OtherType : hb_parni(4);
-  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage ( par1, (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Severity) par3,  (QOpenGLDebugMessage::Type) par4 ) );
+  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Severity) par3,  (QOpenGLDebugMessage::Type) par4 ) );
   _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE" );
 }
 

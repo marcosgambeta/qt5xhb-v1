@@ -48,8 +48,7 @@ QStatusTipEvent(const QString &tip)
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QStatusTipEvent * o = new QStatusTipEvent ( par1 );
+  QStatusTipEvent * o = new QStatusTipEvent ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

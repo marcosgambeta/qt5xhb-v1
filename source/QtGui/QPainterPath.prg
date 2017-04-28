@@ -418,8 +418,7 @@ void QPainterPath_addText1 ()
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->addText ( *par1, *par2, par3 );
+    obj->addText ( *par1, *par2, PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -435,8 +434,7 @@ void QPainterPath_addText2 ()
   if( obj )
   {
     QFont * par3 = (QFont *) _qt5xhb_itemGetPtr(3);
-    QString par4 = QLatin1String( hb_parc(4) );
-    obj->addText ( PQREAL(1), PQREAL(2), *par3, par4 );
+    obj->addText ( PQREAL(1), PQREAL(2), *par3, PQSTRING(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
