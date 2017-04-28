@@ -93,8 +93,7 @@ QDBusError(ErrorType error, const QString &message)
 HB_FUNC_STATIC( QDBUSERROR_NEW4 )
 {
   int par1 = hb_parni(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QDBusError * o = new QDBusError (  (QDBusError::ErrorType) par1, par2 );
+  QDBusError * o = new QDBusError (  (QDBusError::ErrorType) par1, PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

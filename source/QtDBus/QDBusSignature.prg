@@ -89,8 +89,7 @@ explicit QDBusSignature(const QString &signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QDBusSignature * o = new QDBusSignature ( par1 );
+  QDBusSignature * o = new QDBusSignature ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -161,8 +160,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
   QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setSignature ( par1 );
+    obj->setSignature ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

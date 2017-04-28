@@ -78,8 +78,7 @@ HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_INTROSPECT )
   QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->introspect ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->introspect ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 

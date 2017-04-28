@@ -54,11 +54,9 @@ QDBusInterface(const QString &service, const QString &path, const QString &inter
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
-  QDBusInterface * o = new QDBusInterface ( par1, par2, par3, par5 );
+  QDBusInterface * o = new QDBusInterface ( PQSTRING(1), PQSTRING(2), par3, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

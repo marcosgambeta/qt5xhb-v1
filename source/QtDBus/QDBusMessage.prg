@@ -177,9 +177,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY1 )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply ( par1, par2 ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply ( PQSTRING(1), PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -206,8 +204,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply (  (QDBusError::ErrorType) par1, par2 ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply (  (QDBusError::ErrorType) par1, PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -468,10 +465,7 @@ static QDBusMessage createSignal(const QString &path, const QString &interface,c
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATESIGNAL )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QString par3 = QLatin1String( hb_parc(3) );
-  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createSignal ( par1, par2, par3 ) );
+  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createSignal ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
 }
 
@@ -481,11 +475,7 @@ static QDBusMessage createMethodCall(const QString &destination, const QString &
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEMETHODCALL )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QString par3 = QLatin1String( hb_parc(3) );
-  QString par4 = QLatin1String( hb_parc(4) );
-  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createMethodCall ( par1, par2, par3, par4 ) );
+  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createMethodCall ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
 }
 
@@ -495,9 +485,7 @@ static QDBusMessage createError(const QString &name, const QString &msg)
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR1 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError ( par1, par2 ) );
+  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError ( PQSTRING(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
 }
 
@@ -516,8 +504,7 @@ static inline QDBusMessage createError(QDBusError::ErrorType type, const QString
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR3 )
 {
   int par1 = hb_parni(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError (  (QDBusError::ErrorType) par1, par2 ) );
+  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError (  (QDBusError::ErrorType) par1, PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
 }
 

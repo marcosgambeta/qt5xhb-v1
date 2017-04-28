@@ -76,10 +76,9 @@ QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, W
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par3 = ISNIL(3)? (int) QDBusServiceWatcher::WatchForOwnerChange : hb_parni(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( par1,  (QDBusServiceWatcher::WatchMode) par3, par4 );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1),  (QDBusServiceWatcher::WatchMode) par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -162,8 +161,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->addWatchedService ( par1 );
+    obj->addWatchedService ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -177,8 +175,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->removeWatchedService ( par1 ) );
+    hb_retl( obj->removeWatchedService ( PQSTRING(1) ) );
   }
 }
 

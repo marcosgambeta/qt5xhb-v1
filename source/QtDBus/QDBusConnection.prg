@@ -103,8 +103,7 @@ QDBusConnection(const QString &name)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW1 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QDBusConnection * o = new QDBusConnection ( par1 );
+  QDBusConnection * o = new QDBusConnection ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -296,13 +295,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT1 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
     QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
     const char * par6 = hb_parc(6);
-    hb_retl( obj->connect ( par1, par2, par3, par4, par5,  (const char *) par6 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5,  (const char *) par6 ) );
   }
 }
 
@@ -314,14 +309,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT2 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
-    QString par5 = QLatin1String( hb_parc(5) );
     QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
     const char * par7 = hb_parc(7);
-    hb_retl( obj->connect ( par1, par2, par3, par4, par5, par6,  (const char *) par7 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6,  (const char *) par7 ) );
   }
 }
 
@@ -333,10 +323,6 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
     QStringList par5 = _qt5xhb_convert_array_parameter_to_qstringlist(5);
     //PHB_ITEM aStrings5 = hb_param(5, HB_IT_ARRAY);
     //int i5;
@@ -346,10 +332,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
     //  par5 << temp;
     //}
-    QString par6 = QLatin1String( hb_parc(6) );
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
-    hb_retl( obj->connect ( par1, par2, par3, par4, par5, par6, par7,  (const char *) par8 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, PQSTRING(6), par7,  (const char *) par8 ) );
   }
 }
 
@@ -371,13 +356,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT1 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
     QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
     const char * par6 = hb_parc(6);
-    hb_retl( obj->disconnect ( par1, par2, par3, par4, par5,  (const char *) par6 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5,  (const char *) par6 ) );
   }
 }
 
@@ -389,14 +370,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT2 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
-    QString par5 = QLatin1String( hb_parc(5) );
     QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
     const char * par7 = hb_parc(7);
-    hb_retl( obj->disconnect ( par1, par2, par3, par4, par5, par6,  (const char *) par7 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6,  (const char *) par7 ) );
   }
 }
 
@@ -408,10 +384,6 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
     QStringList par5 = _qt5xhb_convert_array_parameter_to_qstringlist(5);
     //PHB_ITEM aStrings5 = hb_param(5, HB_IT_ARRAY);
     //int i5;
@@ -421,10 +393,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
     //  par5 << temp;
     //}
-    QString par6 = QLatin1String( hb_parc(6) );
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
-    hb_retl( obj->disconnect ( par1, par2, par3, par4, par5, par6, par7,  (const char *) par8 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, PQSTRING(6), par7,  (const char *) par8 ) );
   }
 }
 
@@ -446,9 +417,8 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->registerObject ( par1, par2 ) );
+    hb_retl( obj->registerObject ( PQSTRING(1), par2 ) );
   }
 }
 
@@ -461,8 +431,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTEROBJECT )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->unregisterObject ( par1 );
+    obj->unregisterObject ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -476,8 +445,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QObject * ptr = obj->objectRegisteredAt ( par1 );
+    QObject * ptr = obj->objectRegisteredAt ( PQSTRING(1) );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -491,9 +459,8 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERVIRTUALOBJECT )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QDBusVirtualObject * par2 = (QDBusVirtualObject *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->registerVirtualObject ( par1, par2 ) );
+    hb_retl( obj->registerVirtualObject ( PQSTRING(1), par2 ) );
   }
 }
 
@@ -506,8 +473,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERSERVICE )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->registerService ( par1 ) );
+    hb_retl( obj->registerService ( PQSTRING(1) ) );
   }
 }
 
@@ -520,8 +486,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTERSERVICE )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->unregisterService ( par1 ) );
+    hb_retl( obj->unregisterService ( PQSTRING(1) ) );
   }
 }
 
@@ -556,7 +521,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
 /*
 static QDBusConnection connectToBus(BusType type, const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS1 )
+HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS1 ) // TODO: corrigir implementacao (parametro 1 ausente)
 {
   QString par2 = QLatin1String( hb_parc(2) );
   QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( par2 ) );
@@ -568,9 +533,7 @@ static QDBusConnection connectToBus(const QString &address, const QString &name)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( par1, par2 ) );
+  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( PQSTRING(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
@@ -588,9 +551,7 @@ static QDBusConnection connectToPeer(const QString &address, const QString &name
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOPEER )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToPeer ( par1, par2 ) );
+  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToPeer ( PQSTRING(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
@@ -600,8 +561,7 @@ static void disconnectFromBus(const QString &name)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECTFROMBUS )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QDBusConnection::disconnectFromBus ( par1 );
+  QDBusConnection::disconnectFromBus ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -611,8 +571,7 @@ static void disconnectFromPeer(const QString &name)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECTFROMPEER )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QDBusConnection::disconnectFromPeer ( par1 );
+  QDBusConnection::disconnectFromPeer ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

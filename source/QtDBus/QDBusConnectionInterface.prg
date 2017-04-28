@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ISSERVICEREGISTERED )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->isServiceRegistered ( par1 ) );
+    QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->isServiceRegistered ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
   }
 }
@@ -126,8 +125,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEOWNER )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QDBusReply<QString> * ptr = new QDBusReply<QString>( obj->serviceOwner ( par1 ) );
+    QDBusReply<QString> * ptr = new QDBusReply<QString>( obj->serviceOwner ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRING>" );
   }
 }
@@ -141,8 +139,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_UNREGISTERSERVICE )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->unregisterService ( par1 ) );
+    QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->unregisterService ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
   }
 }
@@ -156,8 +153,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTERSERVICE )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->registerService ( par1 ) );
+    hb_retni( obj->registerService ( PQSTRING(1) ) );
   }
 }
 
@@ -170,8 +166,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEPID )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->servicePid ( par1 ) );
+    QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->servicePid ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
   }
 }
@@ -185,8 +180,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEUID )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->serviceUid ( par1 ) );
+    QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->serviceUid ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
   }
 }
@@ -200,8 +194,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_STARTSERVICE )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QDBusReply<void> * ptr = new QDBusReply<void>( obj->startService ( par1 ) );
+    QDBusReply<void> * ptr = new QDBusReply<void>( obj->startService ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<VOID>" );
   }
 }

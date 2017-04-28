@@ -89,8 +89,7 @@ explicit QDBusObjectPath(const QString &path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QDBusObjectPath * o = new QDBusObjectPath ( par1 );
+  QDBusObjectPath * o = new QDBusObjectPath ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -161,8 +160,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
   QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPath ( par1 );
+    obj->setPath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
