@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QVariant * ptr = new QVariant( obj->contextProperty ( par1 ) );
+      QVariant * ptr = new QVariant( obj->contextProperty ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -285,9 +284,8 @@ void QDeclarativeContext_setContextProperty1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->setContextProperty ( par1, par2 );
+    obj->setContextProperty ( PQSTRING(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -302,9 +300,8 @@ void QDeclarativeContext_setContextProperty2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setContextProperty ( par1, *par2 );
+    obj->setContextProperty ( PQSTRING(1), *par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

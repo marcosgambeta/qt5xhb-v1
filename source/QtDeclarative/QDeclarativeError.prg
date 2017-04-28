@@ -185,8 +185,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDescription ( par1 );
+      obj->setDescription ( PQSTRING(1) );
     }
     else
     {

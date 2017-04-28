@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setScript ( par1 );
+      obj->setScript ( PQSTRING(1) );
     }
     else
     {

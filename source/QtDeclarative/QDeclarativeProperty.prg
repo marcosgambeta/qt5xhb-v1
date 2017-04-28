@@ -133,9 +133,8 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext 
 void QDeclarativeProperty_new6 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeContext * par3 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeProperty * o = new QDeclarativeProperty ( par1, par2, par3 );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -145,9 +144,8 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine *
 void QDeclarativeProperty_new7 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeEngine * par3 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeProperty * o = new QDeclarativeProperty ( par1, par2, par3 );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -516,8 +514,7 @@ static QVariant read ( QObject * object, const QString & name )
 void QDeclarativeProperty_read2 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, par2 ) );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -527,9 +524,8 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeConte
 void QDeclarativeProperty_read3 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeContext * par3 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, par2, par3 ) );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, PQSTRING(2), par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -539,9 +535,8 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeEngin
 void QDeclarativeProperty_read4 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QDeclarativeEngine * par3 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, par2, par3 ) );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( par1, PQSTRING(2), par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -594,9 +589,8 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write2 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-  hb_retl( QDeclarativeProperty::write ( par1, par2, *par3 ) );
+  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *par3 ) );
 }
 
 /*
@@ -605,10 +599,9 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write3 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
   QDeclarativeContext * par4 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QDeclarativeProperty::write ( par1, par2, *par3, par4 ) );
+  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *par3, par4 ) );
 }
 
 /*
@@ -617,10 +610,9 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write4 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
   QDeclarativeEngine * par4 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QDeclarativeProperty::write ( par1, par2, *par3, par4 ) );
+  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *par3, par4 ) );
 }
 
 //[1]bool write ( const QVariant & value ) const

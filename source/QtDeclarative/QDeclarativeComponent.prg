@@ -83,9 +83,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, Q
 void QDeclarativeComponent_new2 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeComponent * o = new QDeclarativeComponent ( par1, par2, par3 );
+  QDeclarativeComponent * o = new QDeclarativeComponent ( par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

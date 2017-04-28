@@ -124,9 +124,8 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
   {
     if( ISCHAR(1) && ISQDECLARATIVEIMAGEPROVIDER(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QDeclarativeImageProvider * par2 = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtr(2);
-      obj->addImageProvider ( par1, par2 );
+      obj->addImageProvider ( PQSTRING(1), par2 );
     }
     else
     {
@@ -148,8 +147,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->addImportPath ( par1 );
+      obj->addImportPath ( PQSTRING(1) );
     }
     else
     {
@@ -171,8 +169,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->addPluginPath ( par1 );
+      obj->addPluginPath ( PQSTRING(1) );
     }
     else
     {
@@ -223,8 +220,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QDeclarativeImageProvider * ptr = obj->imageProvider ( par1 );
+      QDeclarativeImageProvider * ptr = obj->imageProvider ( PQSTRING(1) );
       _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEIMAGEPROVIDER" );
     }
     else
@@ -327,8 +323,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->removeImageProvider ( par1 );
+      obj->removeImageProvider ( PQSTRING(1) );
     }
     else
     {
@@ -441,8 +436,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setOfflineStoragePath ( par1 );
+      obj->setOfflineStoragePath ( PQSTRING(1) );
     }
     else
     {

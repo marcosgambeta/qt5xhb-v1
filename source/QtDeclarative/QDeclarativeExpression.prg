@@ -82,9 +82,8 @@ void QDeclarativeExpression_new2 ()
 {
   QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QString par3 = QLatin1String( hb_parc(3) );
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QDeclarativeExpression * o = new QDeclarativeExpression ( par1, par2, par3, par4 );
+  QDeclarativeExpression * o = new QDeclarativeExpression ( par1, par2, PQSTRING(3), par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -281,8 +280,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setExpression ( par1 );
+      obj->setExpression ( PQSTRING(1) );
     }
     else
     {
@@ -326,8 +324,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setSourceLocation ( par1, (int) hb_parni(2) );
+      obj->setSourceLocation ( PQSTRING(1), (int) hb_parni(2) );
     }
     else
     {
