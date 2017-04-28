@@ -92,9 +92,8 @@ void QBluetoothDeviceInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   quint32 par3 = hb_parni(3);
-  QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo ( *par1, par2, par3 );
+  QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo ( *par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

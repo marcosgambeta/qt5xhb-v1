@@ -130,8 +130,7 @@ QBluetoothUuid(const QString &uuid)
 void QBluetoothUuid_new7 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QBluetoothUuid * o = new QBluetoothUuid ( par1 );
+  QBluetoothUuid * o = new QBluetoothUuid ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

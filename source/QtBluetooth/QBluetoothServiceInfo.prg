@@ -373,8 +373,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setServiceName ( par1 );
+      obj->setServiceName ( PQSTRING(1) );
     }
     else
     {
@@ -413,8 +412,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEDESCRIPTION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setServiceDescription ( par1 );
+      obj->setServiceDescription ( PQSTRING(1) );
     }
     else
     {
@@ -453,8 +451,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEPROVIDER )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setServiceProvider ( par1 );
+      obj->setServiceProvider ( PQSTRING(1) );
     }
     else
     {
