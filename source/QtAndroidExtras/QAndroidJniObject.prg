@@ -308,8 +308,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::fromString ( par1 ) );
+    QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::fromString ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
   }
   else
