@@ -984,3 +984,5 @@
 #define PQREAL(n)                                           (qreal) hb_parnd(n)
 //#define PQREAL(n,d)                                         (qreal) ISNIL(n)? d : hb_parnd(n)
 //#define PQSTRING(n)                                         _qt5xhb_convert_string_parameter_to_qstring(n)
+#define PQSTRING(n)                                         QString::fromLatin1( hb_parc(n) )
+//#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
