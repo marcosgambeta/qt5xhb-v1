@@ -96,8 +96,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
   QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->createContents ( par1 );
+    obj->createContents ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
