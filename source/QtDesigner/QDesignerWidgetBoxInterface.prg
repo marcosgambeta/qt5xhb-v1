@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFileName ( par1 );
+      obj->setFileName ( PQSTRING(1) );
     }
     else
     {

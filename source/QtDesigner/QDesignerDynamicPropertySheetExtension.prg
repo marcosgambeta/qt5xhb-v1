@@ -81,9 +81,8 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
   {
     if( ISCHAR(1) && ISQVARIANT(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      hb_retni( obj->addDynamicProperty ( par1, *par2 ) );
+      hb_retni( obj->addDynamicProperty ( PQSTRING(1), *par2 ) );
     }
     else
     {
@@ -103,8 +102,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->canAddDynamicProperty ( par1 ) );
+      hb_retl( obj->canAddDynamicProperty ( PQSTRING(1) ) );
     }
     else
     {

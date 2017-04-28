@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retni( obj->indexOf ( par1 ) );
+      hb_retni( obj->indexOf ( PQSTRING(1) ) );
     }
     else
     {
@@ -370,8 +369,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setMemberGroup ( (int) hb_parni(1), par2 );
+      obj->setMemberGroup ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {

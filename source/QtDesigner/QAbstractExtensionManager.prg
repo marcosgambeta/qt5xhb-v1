@@ -84,8 +84,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
       QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      QString par2 = QLatin1String( hb_parc(2) );
-      QObject * ptr = obj->extension ( par1, par2 );
+      QObject * ptr = obj->extension ( par1, PQSTRING(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
     }
     else
@@ -107,8 +106,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
     if( ISQABSTRACTEXTENSIONFACTORY(1) && ISCHAR(2) )
     {
       QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->registerExtensions ( par1, par2 );
+      obj->registerExtensions ( par1, PQSTRING(2) );
     }
     else
     {
@@ -131,8 +129,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
     if( ISQABSTRACTEXTENSIONFACTORY(1) && ISCHAR(2) )
     {
       QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->unregisterExtensions ( par1, par2 );
+      obj->unregisterExtensions ( par1, PQSTRING(2) );
     }
     else
     {

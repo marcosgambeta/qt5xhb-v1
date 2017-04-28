@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retni( obj->indexOf ( par1 ) );
+      hb_retni( obj->indexOf ( PQSTRING(1) ) );
     }
     else
     {
@@ -359,8 +358,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setPropertyGroup ( (int) hb_parni(1), par2 );
+      obj->setPropertyGroup ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {

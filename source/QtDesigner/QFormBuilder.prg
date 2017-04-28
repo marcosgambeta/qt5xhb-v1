@@ -95,8 +95,7 @@ HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->addPluginPath ( par1 );
+      obj->addPluginPath ( PQSTRING(1) );
     }
     else
     {
