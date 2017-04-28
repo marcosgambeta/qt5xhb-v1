@@ -82,9 +82,8 @@ QAxObject ( const QString & c, QObject * parent = 0 )
 */
 void QAxObject_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QAxObject * o = new QAxObject ( par1, par2 );
+  QAxObject * o = new QAxObject ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -151,8 +150,7 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->doVerb ( par1 ) );
+      hb_retl( obj->doVerb ( PQSTRING(1) ) );
     }
     else
     {
@@ -439,8 +437,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->setControl ( par1 ) );
+      hb_retl( obj->setControl ( PQSTRING(1) ) );
     }
     else
     {

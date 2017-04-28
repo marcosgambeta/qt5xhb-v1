@@ -89,10 +89,9 @@ QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QAxWidget * o = new QAxWidget ( par1, par2,  (Qt::WindowFlags) par3 );
+  QAxWidget * o = new QAxWidget ( PQSTRING(1), par2,  (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -174,8 +173,7 @@ HB_FUNC_STATIC( QAXWIDGET_DOVERB )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->doVerb ( par1 ) );
+      hb_retl( obj->doVerb ( PQSTRING(1) ) );
     }
     else
     {
@@ -490,8 +488,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->setControl ( par1 ) );
+      hb_retl( obj->setControl ( PQSTRING(1) ) );
     }
     else
     {

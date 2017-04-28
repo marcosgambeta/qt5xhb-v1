@@ -55,9 +55,8 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPT(2) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QAxScript * par2 = (QAxScript *) _qt5xhb_itemGetPtr(2);
-    QAxScriptEngine * o = new QAxScriptEngine ( par1, par2 );
+    QAxScriptEngine * o = new QAxScriptEngine ( PQSTRING(1), par2 );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -94,8 +93,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->addItem ( par1 );
+      obj->addItem ( PQSTRING(1) );
     }
     else
     {

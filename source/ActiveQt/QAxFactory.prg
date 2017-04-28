@@ -110,8 +110,7 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QUuid * ptr = new QUuid( obj->classID ( par1 ) );
+      QUuid * ptr = new QUuid( obj->classID ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
     }
     else
@@ -132,8 +131,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QObject * ptr = obj->createObject ( par1 );
+      QObject * ptr = obj->createObject ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
     }
     else
@@ -154,8 +152,7 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QUuid * ptr = new QUuid( obj->eventsID ( par1 ) );
+      QUuid * ptr = new QUuid( obj->eventsID ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
     }
     else
@@ -176,8 +173,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retc( (const char *) obj->exposeToSuperClass ( par1 ).toLatin1().data() );
+      hb_retc( (const char *) obj->exposeToSuperClass ( PQSTRING(1) ).toLatin1().data() );
     }
     else
     {
@@ -211,8 +207,7 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->hasStockEvents ( par1 ) );
+      hb_retl( obj->hasStockEvents ( PQSTRING(1) ) );
     }
     else
     {
@@ -232,8 +227,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QUuid * ptr = new QUuid( obj->interfaceID ( par1 ) );
+      QUuid * ptr = new QUuid( obj->interfaceID ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
     }
     else
@@ -267,8 +261,7 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      const QMetaObject * ptr = obj->metaObject ( par1 );
+      const QMetaObject * ptr = obj->metaObject ( PQSTRING(1) );
       _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
     }
     else
@@ -289,9 +282,8 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
   {
     if( ISCHAR(1) && ISQSETTINGS(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QSettings * par2 = (QSettings *) _qt5xhb_itemGetPtr(2);
-      obj->registerClass ( par1, par2 );
+      obj->registerClass ( PQSTRING(1), par2 );
     }
     else
     {
@@ -313,8 +305,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->stayTopLevel ( par1 ) );
+      hb_retl( obj->stayTopLevel ( PQSTRING(1) ) );
     }
     else
     {
@@ -348,9 +339,8 @@ HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
   {
     if( ISCHAR(1) && ISQSETTINGS(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QSettings * par2 = (QSettings *) _qt5xhb_itemGetPtr(2);
-      obj->unregisterClass ( par1, par2 );
+      obj->unregisterClass ( PQSTRING(1), par2 );
     }
     else
     {
@@ -372,9 +362,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QString par2 = QLatin1String( hb_parc(2) );
-      hb_retl( obj->validateLicenseKey ( par1, par2 ) );
+      hb_retl( obj->validateLicenseKey ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {

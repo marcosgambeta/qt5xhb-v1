@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
     if( ISQIODEVICE(1) && ISCHAR(2) )
     {
       QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      QString par2 = QLatin1String( hb_parc(2) );
-      hb_retl( obj->readData ( par1, par2 ) );
+      hb_retl( obj->readData ( par1, PQSTRING(2) ) );
     }
     else
     {
@@ -137,10 +136,8 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   {
     if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      QString par3 = QLatin1String( hb_parc(3) );
       QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-      obj->reportError ( (int) hb_parni(1), par2, par3, par4 );
+      obj->reportError ( (int) hb_parni(1), PQSTRING(2), PQSTRING(3), par4 );
     }
     else
     {
