@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QPrintDialog::PrintDialogOption) par1, (bool) hb_parl(2) );
+    obj->setOption (  (QPrintDialog::PrintDialogOption) par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

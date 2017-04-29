@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOLLATECOPIES )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCollateCopies ( (bool) hb_parl(1) );
+    obj->setCollateCopies ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QPRINTER_SETDOUBLESIDEDPRINTING )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDoubleSidedPrinting ( (bool) hb_parl(1) );
+    obj->setDoubleSidedPrinting ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QPRINTER_SETFONTEMBEDDINGENABLED )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontEmbeddingEnabled ( (bool) hb_parl(1) );
+    obj->setFontEmbeddingEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QPRINTER_SETFULLPAGE )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFullPage ( (bool) hb_parl(1) );
+    obj->setFullPage ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
