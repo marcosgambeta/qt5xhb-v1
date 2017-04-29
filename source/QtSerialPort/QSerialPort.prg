@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETSETTINGSRESTOREDONCLOSE )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSettingsRestoredOnClose ( (bool) hb_parl(1) );
+    obj->setSettingsRestoredOnClose ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATATERMINALREADY )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setDataTerminalReady ( (bool) hb_parl(1) ) );
+    hb_retl( obj->setDataTerminalReady ( PBOOL(1) ) );
   }
 #endif
 }
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETREQUESTTOSEND )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setRequestToSend ( (bool) hb_parl(1) ) );
+    hb_retl( obj->setRequestToSend ( PBOOL(1) ) );
   }
 #endif
 }
