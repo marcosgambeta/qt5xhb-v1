@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETCLEARBEFORERENDERING )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setClearBeforeRendering ( (bool) hb_parl(1) );
+    obj->setClearBeforeRendering ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPersistentOpenGLContext ( (bool) hb_parl(1) );
+    obj->setPersistentOpenGLContext ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPersistentSceneGraph ( (bool) hb_parl(1) );
+    obj->setPersistentSceneGraph ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

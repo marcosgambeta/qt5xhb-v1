@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_SETISRECTANGULAR )
   QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIsRectangular ( (bool) hb_parl(1) );
+    obj->setIsRectangular ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

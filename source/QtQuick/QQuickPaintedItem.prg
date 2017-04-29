@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
   QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAntialiasing ( (bool) hb_parl(1) );
+    obj->setAntialiasing ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
   QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMipmap ( (bool) hb_parl(1) );
+    obj->setMipmap ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
   QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setOpaquePainting ( (bool) hb_parl(1) );
+    obj->setOpaquePainting ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

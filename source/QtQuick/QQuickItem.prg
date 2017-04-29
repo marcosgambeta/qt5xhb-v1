@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETACCEPTHOVEREVENTS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAcceptHoverEvents ( (bool) hb_parl(1) );
+    obj->setAcceptHoverEvents ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETANTIALIASING )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAntialiasing ( (bool) hb_parl(1) );
+    obj->setAntialiasing ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETCLIP )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setClip ( (bool) hb_parl(1) );
+    obj->setClip ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETENABLED )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    obj->setEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFILTERSCHILDMOUSEEVENTS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFiltersChildMouseEvents ( (bool) hb_parl(1) );
+    obj->setFiltersChildMouseEvents ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFOCUS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFocus ( (bool) hb_parl(1) );
+    obj->setFocus ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETKEEPMOUSEGRAB )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setKeepMouseGrab ( (bool) hb_parl(1) );
+    obj->setKeepMouseGrab ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETKEEPTOUCHGRAB )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setKeepTouchGrab ( (bool) hb_parl(1) );
+    obj->setKeepTouchGrab ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSMOOTH )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSmooth ( (bool) hb_parl(1) );
+    obj->setSmooth ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETVISIBLE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
