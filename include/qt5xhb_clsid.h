@@ -986,3 +986,4 @@
 //#define PQSTRING(n)                                         _qt5xhb_convert_string_parameter_to_qstring(n)
 #define PQSTRING(n)                                         QString::fromLatin1( hb_parc(n) )
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
+#define PBOOL(n)                                            (bool) hb_parl(n)
