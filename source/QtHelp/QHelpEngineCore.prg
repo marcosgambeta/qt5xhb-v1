@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAutoSaveFilter ( (bool) hb_parl(1) );
+    obj->setAutoSaveFilter ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
