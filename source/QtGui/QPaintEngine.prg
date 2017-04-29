@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setActive ( (bool) hb_parl(1) );
+    obj->setActive ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

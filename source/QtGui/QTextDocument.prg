@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
+    obj->setUndoRedoEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUseDesignMetrics ( (bool) hb_parl(1) );
+    obj->setUseDesignMetrics ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

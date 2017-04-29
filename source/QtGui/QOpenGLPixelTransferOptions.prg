@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETLEASTSIGNIFICANTBYTEFIRST )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLeastSignificantByteFirst ( (bool) hb_parl(1) );
+    obj->setLeastSignificantByteFirst ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSWAPBYTESENABLED )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSwapBytesEnabled ( (bool) hb_parl(1) );
+    obj->setSwapBytesEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

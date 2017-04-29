@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setNonBreakableLines ( (bool) hb_parl(1) );
+    obj->setNonBreakableLines ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

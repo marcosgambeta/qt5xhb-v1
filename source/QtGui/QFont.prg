@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QFONT_SETBOLD )
   {
     if( ISLOG(1) )
     {
-      obj->setBold ( (bool) hb_parl(1) );
+      obj->setBold ( PBOOL(1) );
     }
     else
     {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QFONT_SETFIXEDPITCH )
   {
     if( ISLOG(1) )
     {
-      obj->setFixedPitch ( (bool) hb_parl(1) );
+      obj->setFixedPitch ( PBOOL(1) );
     }
     else
     {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QFONT_SETITALIC )
   {
     if( ISLOG(1) )
     {
-      obj->setItalic ( (bool) hb_parl(1) );
+      obj->setItalic ( PBOOL(1) );
     }
     else
     {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QFONT_SETKERNING )
   {
     if( ISLOG(1) )
     {
-      obj->setKerning ( (bool) hb_parl(1) );
+      obj->setKerning ( PBOOL(1) );
     }
     else
     {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QFONT_SETOVERLINE )
   {
     if( ISLOG(1) )
     {
-      obj->setOverline ( (bool) hb_parl(1) );
+      obj->setOverline ( PBOOL(1) );
     }
     else
     {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QFONT_SETRAWMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setRawMode ( (bool) hb_parl(1) );
+      obj->setRawMode ( PBOOL(1) );
     }
     else
     {
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QFONT_SETSTRIKEOUT )
   {
     if( ISLOG(1) )
     {
-      obj->setStrikeOut ( (bool) hb_parl(1) );
+      obj->setStrikeOut ( PBOOL(1) );
     }
     else
     {
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( QFONT_SETUNDERLINE )
   {
     if( ISLOG(1) )
     {
-      obj->setUnderline ( (bool) hb_parl(1) );
+      obj->setUnderline ( PBOOL(1) );
     }
     else
     {

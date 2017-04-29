@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
   {
     if( ISLOG(1) )
     {
-      obj->setCosmetic ( (bool) hb_parl(1) );
+      obj->setCosmetic ( PBOOL(1) );
     }
     else
     {

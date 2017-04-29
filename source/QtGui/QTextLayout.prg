@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCacheEnabled ( (bool) hb_parl(1) );
+    obj->setCacheEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLeadingIncluded ( (bool) hb_parl(1) );
+    obj->setLeadingIncluded ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

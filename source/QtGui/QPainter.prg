@@ -3400,7 +3400,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
   {
     if( ISLOG(1) )
     {
-      obj->setClipping ( (bool) hb_parl(1) );
+      obj->setClipping ( PBOOL(1) );
     }
     else
     {
@@ -3655,7 +3655,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setViewTransformEnabled ( (bool) hb_parl(1) );
+      obj->setViewTransformEnabled ( PBOOL(1) );
     }
     else
     {
@@ -3777,7 +3777,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setWorldMatrixEnabled ( (bool) hb_parl(1) );
+      obj->setWorldMatrixEnabled ( PBOOL(1) );
     }
     else
     {

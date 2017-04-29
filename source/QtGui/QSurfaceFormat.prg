@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSTEREO )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setStereo ( (bool) hb_parl(1) );
+    obj->setStereo ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

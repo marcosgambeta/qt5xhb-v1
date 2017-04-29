@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontItalic ( (bool) hb_parl(1) );
+    obj->setFontItalic ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontUnderline ( (bool) hb_parl(1) );
+    obj->setFontUnderline ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontOverline ( (bool) hb_parl(1) );
+    obj->setFontOverline ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontStrikeOut ( (bool) hb_parl(1) );
+    obj->setFontStrikeOut ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontFixedPitch ( (bool) hb_parl(1) );
+    obj->setFontFixedPitch ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontKerning ( (bool) hb_parl(1) );
+    obj->setFontKerning ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAnchor ( (bool) hb_parl(1) );
+    obj->setAnchor ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETPAINTFLIPPED )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPaintFlipped ( (bool) hb_parl(1) );
+    obj->setPaintFlipped ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

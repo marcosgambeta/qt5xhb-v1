@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAutoMipMapGenerationEnabled ( (bool) hb_parl(1) );
+    obj->setAutoMipMapGenerationEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

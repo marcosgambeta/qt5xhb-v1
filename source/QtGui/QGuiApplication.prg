@@ -427,7 +427,7 @@ static void setDesktopSettingsAware(bool on)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
-  QGuiApplication::setDesktopSettingsAware ( (bool) hb_parl(1) );
+  QGuiApplication::setDesktopSettingsAware ( PBOOL(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -481,7 +481,7 @@ static void setQuitOnLastWindowClosed(bool quit)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
-  QGuiApplication::setQuitOnLastWindowClosed ( (bool) hb_parl(1) );
+  QGuiApplication::setQuitOnLastWindowClosed ( PBOOL(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

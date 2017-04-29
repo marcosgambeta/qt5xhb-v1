@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QWINDOW_SETKEYBOARDGRABENABLED )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setKeyboardGrabEnabled ( (bool) hb_parl(1) ) );
+    hb_retl( obj->setKeyboardGrabEnabled ( PBOOL(1) ) );
   }
 }
 
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QWINDOW_SETMOUSEGRABENABLED )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setMouseGrabEnabled ( (bool) hb_parl(1) ) );
+    hb_retl( obj->setMouseGrabEnabled ( PBOOL(1) ) );
   }
 }
 
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QWINDOW_SETVISIBLE )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
   QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUseDesignMetrics ( (bool) hb_parl(1) );
+    obj->setUseDesignMetrics ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

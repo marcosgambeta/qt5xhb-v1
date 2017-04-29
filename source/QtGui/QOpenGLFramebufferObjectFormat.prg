@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETMIPMAP )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMipmap ( (bool) hb_parl(1) );
+    obj->setMipmap ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETAUTODETECTIMAGEFORMAT )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoDetectImageFormat ( (bool) hb_parl(1) );
+      obj->setAutoDetectImageFormat ( PBOOL(1) );
     }
     else
     {
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDECIDEFORMATFROMCONTENT )
   {
     if( ISLOG(1) )
     {
-      obj->setDecideFormatFromContent ( (bool) hb_parl(1) );
+      obj->setDecideFormatFromContent ( PBOOL(1) );
     }
     else
     {
