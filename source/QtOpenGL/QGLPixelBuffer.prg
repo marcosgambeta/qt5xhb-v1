@@ -165,8 +165,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE3 )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->bindTexture ( par1 ) );
+    hb_retni( obj->bindTexture ( PQSTRING(1) ) );
   }
 }
 
