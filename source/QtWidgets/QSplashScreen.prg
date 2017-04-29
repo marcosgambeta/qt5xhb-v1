@@ -214,9 +214,8 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   {
     if( ISCHAR(1) && ISOPTNUM(2) && (ISQCOLOR(3)||ISCHAR(3)||ISNIL(3)) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QColor par3 = ISNIL(3)? Qt::black : ISOBJECT(3)? *(QColor *) _qt5xhb_itemGetPtr(3) : QColor(hb_parc(3));
-      obj->showMessage ( par1, (int) ISNIL(2)? Qt::AlignLeft : hb_parni(2), par3 );
+      obj->showMessage ( PQSTRING(1), (int) ISNIL(2)? Qt::AlignLeft : hb_parni(2), par3 );
     }
     else
     {

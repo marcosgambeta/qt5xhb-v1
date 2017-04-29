@@ -289,8 +289,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setStyleSheet ( par1 );
+    obj->setStyleSheet ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -950,8 +949,7 @@ static QStyle * setStyle ( const QString & style )
 */
 void QApplication_setStyle2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QStyle * ptr = QApplication::setStyle ( par1 );
+  QStyle * ptr = QApplication::setStyle ( PQSTRING(1) );
   _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
 }
 

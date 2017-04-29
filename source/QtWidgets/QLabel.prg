@@ -103,10 +103,9 @@ QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QLabel * o = new QLabel ( par1, par2,  (Qt::WindowFlags) par3 );
+  QLabel * o = new QLabel ( PQSTRING(1), par2,  (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -722,8 +721,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

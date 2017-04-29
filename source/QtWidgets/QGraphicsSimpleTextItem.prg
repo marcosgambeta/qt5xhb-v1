@@ -76,9 +76,8 @@ QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
 void QGraphicsSimpleTextItem_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
-  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( par1, par2 );
+  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {

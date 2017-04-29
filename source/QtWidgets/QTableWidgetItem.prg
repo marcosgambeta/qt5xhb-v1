@@ -108,9 +108,8 @@ QTableWidgetItem ( const QString & text, int type = Type )
 */
 void QTableWidgetItem_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? QTableWidgetItem::Type : hb_parni(2);
-  QTableWidgetItem * o = new QTableWidgetItem ( par1, par2 );
+  QTableWidgetItem * o = new QTableWidgetItem ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -120,9 +119,8 @@ QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
 void QTableWidgetItem_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QString par2 = QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? QTableWidgetItem::Type : hb_parni(3);
-  QTableWidgetItem * o = new QTableWidgetItem ( par1, par2, par3 );
+  QTableWidgetItem * o = new QTableWidgetItem ( par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -578,8 +576,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSTATUSTIP )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setStatusTip ( par1 );
+      obj->setStatusTip ( PQSTRING(1) );
     }
     else
     {
@@ -601,8 +598,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {
@@ -646,8 +642,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTOOLTIP )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setToolTip ( par1 );
+      obj->setToolTip ( PQSTRING(1) );
     }
     else
     {
@@ -669,8 +664,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETWHATSTHIS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setWhatsThis ( par1 );
+      obj->setWhatsThis ( PQSTRING(1) );
     }
     else
     {

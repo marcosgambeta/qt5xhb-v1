@@ -487,9 +487,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDSIMPLETEXT )
   {
     if( ISCHAR(1) && (ISQFONT(2)||ISNIL(2)) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QFont par2 = ISNIL(2)? QFont() : *(QFont *) _qt5xhb_itemGetPtr(2);
-      QGraphicsSimpleTextItem * ptr = obj->addSimpleText ( par1, par2 );
+      QGraphicsSimpleTextItem * ptr = obj->addSimpleText ( PQSTRING(1), par2 );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSSIMPLETEXTITEM" );
     }
     else
@@ -510,9 +509,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDTEXT )
   {
     if( ISCHAR(1) && (ISQFONT(2)||ISNIL(2)) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QFont par2 = ISNIL(2)? QFont() : *(QFont *) _qt5xhb_itemGetPtr(2);
-      QGraphicsTextItem * ptr = obj->addText ( par1, par2 );
+      QGraphicsTextItem * ptr = obj->addText ( PQSTRING(1), par2 );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSTEXTITEM" );
     }
     else

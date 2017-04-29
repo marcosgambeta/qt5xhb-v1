@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->beginMacro ( par1 );
+    obj->beginMacro ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

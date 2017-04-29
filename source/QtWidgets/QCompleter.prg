@@ -610,8 +610,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QStringList strl = obj->splitPath ( par1 );
+      QStringList strl = obj->splitPath ( PQSTRING(1) );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }
     else
@@ -682,8 +681,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setCompletionPrefix ( par1 );
+      obj->setCompletionPrefix ( PQSTRING(1) );
     }
     else
     {

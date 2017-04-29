@@ -240,8 +240,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
 {
   QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
   int par3 = hb_parni(3);
-  QString par4 = QLatin1String( hb_parc(4) );
-  hb_retc( (const char *) QAbstractItemDelegate::elidedText ( *par1, (int) hb_parni(2),  (Qt::TextElideMode) par3, par4 ).toLatin1().data() );
+  hb_retc( (const char *) QAbstractItemDelegate::elidedText ( *par1, (int) hb_parni(2),  (Qt::TextElideMode) par3, PQSTRING(4) ).toLatin1().data() );
 }
 
 /*

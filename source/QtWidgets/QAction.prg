@@ -126,9 +126,8 @@ QAction ( const QString & text, QObject * parent )
 */
 void QAction_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QAction * o = new QAction ( par1, par2 );
+  QAction * o = new QAction ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -138,9 +137,8 @@ QAction ( const QIcon & icon, const QString & text, QObject * parent )
 void QAction_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QString par2 = QLatin1String( hb_parc(2) );
   QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-  QAction * o = new QAction ( par1, par2, par3 );
+  QAction * o = new QAction ( par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -620,8 +618,7 @@ HB_FUNC_STATIC( QACTION_SETICONTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setIconText ( par1 );
+    obj->setIconText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -818,8 +815,7 @@ HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setStatusTip ( par1 );
+    obj->setStatusTip ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -834,8 +830,7 @@ HB_FUNC_STATIC( QACTION_SETTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -850,8 +845,7 @@ HB_FUNC_STATIC( QACTION_SETTOOLTIP )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -866,8 +860,7 @@ HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setWhatsThis ( par1 );
+    obj->setWhatsThis ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

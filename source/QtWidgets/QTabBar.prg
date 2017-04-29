@@ -143,8 +143,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB1 )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->addTab ( par1 ) );
+    hb_retni( obj->addTab ( PQSTRING(1) ) );
   }
 }
 
@@ -157,8 +156,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB2 )
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retni( obj->addTab ( par1, par2 ) );
+    hb_retni( obj->addTab ( par1, PQSTRING(2) ) );
   }
 }
 
@@ -282,8 +280,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB1 )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retni( obj->insertTab ( (int) hb_parni(1), par2 ) );
+    hb_retni( obj->insertTab ( (int) hb_parni(1), PQSTRING(2) ) );
   }
 }
 
@@ -296,8 +293,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB2 )
   if( obj )
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QString par3 = QLatin1String( hb_parc(3) );
-    hb_retni( obj->insertTab ( (int) hb_parni(1), par2, par3 ) );
+    hb_retni( obj->insertTab ( (int) hb_parni(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -636,8 +632,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTEXT )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setTabText ( (int) hb_parni(1), par2 );
+    obj->setTabText ( (int) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -666,8 +661,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTOOLTIP )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setTabToolTip ( (int) hb_parni(1), par2 );
+    obj->setTabToolTip ( (int) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -681,8 +675,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABWHATSTHIS )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setTabWhatsThis ( (int) hb_parni(1), par2 );
+    obj->setTabWhatsThis ( (int) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

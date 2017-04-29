@@ -398,8 +398,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLEDESCRIPTION )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setAccessibleDescription ( par1 );
+    obj->setAccessibleDescription ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -431,8 +430,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLENAME )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setAccessibleName ( par1 );
+    obj->setAccessibleName ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3375,8 +3373,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWROLE )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setWindowRole ( par1 );
+    obj->setWindowRole ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3467,8 +3464,7 @@ HB_FUNC_STATIC( QWIDGET_SETSTATUSTIP )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setStatusTip ( par1 );
+    obj->setStatusTip ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3530,8 +3526,7 @@ HB_FUNC_STATIC( QWIDGET_SETSTYLESHEET )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setStyleSheet ( par1 );
+    obj->setStyleSheet ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3577,8 +3572,7 @@ HB_FUNC_STATIC( QWIDGET_SETTOOLTIP )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -3795,8 +3789,7 @@ HB_FUNC_STATIC( QWIDGET_SETWHATSTHIS )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setWhatsThis ( par1 );
+    obj->setWhatsThis ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3880,8 +3873,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWFILEPATH )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setWindowFilePath ( par1 );
+    obj->setWindowFilePath ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3968,8 +3960,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWICONTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setWindowIconText ( par1 );
+    obj->setWindowIconText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4051,8 +4042,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWTITLE )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setWindowTitle ( par1 );
+    obj->setWindowTitle ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

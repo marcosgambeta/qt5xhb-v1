@@ -135,9 +135,8 @@ QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
 */
 void QPlainTextEdit_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QPlainTextEdit * o = new QPlainTextEdit ( par1, par2 );
+  QPlainTextEdit * o = new QPlainTextEdit ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -414,9 +413,8 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      hb_retl( obj->find ( par1,  (QTextDocument::FindFlags) par2 ) );
+      hb_retl( obj->find ( PQSTRING(1),  (QTextDocument::FindFlags) par2 ) );
     }
     else
     {
@@ -705,8 +703,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENTTITLE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDocumentTitle ( par1 );
+      obj->setDocumentTitle ( PQSTRING(1) );
     }
     else
     {
@@ -1031,8 +1028,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDHTML )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->appendHtml ( par1 );
+      obj->appendHtml ( PQSTRING(1) );
     }
     else
     {
@@ -1054,8 +1050,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDPLAINTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->appendPlainText ( par1 );
+      obj->appendPlainText ( PQSTRING(1) );
     }
     else
     {
@@ -1137,8 +1132,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_INSERTPLAINTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->insertPlainText ( par1 );
+      obj->insertPlainText ( PQSTRING(1) );
     }
     else
     {
@@ -1205,8 +1199,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETPLAINTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setPlainText ( par1 );
+      obj->setPlainText ( PQSTRING(1) );
     }
     else
     {

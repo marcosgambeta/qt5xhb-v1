@@ -392,8 +392,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setSpecialValueText ( par1 );
+    obj->setSpecialValueText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

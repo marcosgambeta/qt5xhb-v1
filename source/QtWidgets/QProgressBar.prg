@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFormat ( par1 );
+    obj->setFormat ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -70,8 +70,7 @@ HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
   QStylePlugin * obj = (QStylePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStyle * ptr = obj->create ( par1 );
+    QStyle * ptr = obj->create ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
   }
 }

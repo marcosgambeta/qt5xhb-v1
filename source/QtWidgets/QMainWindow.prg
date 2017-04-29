@@ -223,8 +223,7 @@ void QMainWindow_addToolBar3 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QToolBar * ptr = obj->addToolBar ( par1 );
+    QToolBar * ptr = obj->addToolBar ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QTOOLBAR" );
   }
 }

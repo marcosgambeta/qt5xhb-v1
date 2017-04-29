@@ -638,8 +638,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDISPLAYFORMAT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDisplayFormat ( par1 );
+    obj->setDisplayFormat ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

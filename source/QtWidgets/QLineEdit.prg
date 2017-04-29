@@ -142,9 +142,8 @@ explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
 */
 void QLineEdit_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QLineEdit * o = new QLineEdit ( par1, par2 );
+  QLineEdit * o = new QLineEdit ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -630,8 +629,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETINPUTMASK )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setInputMask ( par1 );
+    obj->setInputMask ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -646,8 +644,7 @@ HB_FUNC_STATIC( QLINEEDIT_INSERT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->insert ( par1 );
+    obj->insert ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -806,8 +803,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETPLACEHOLDERTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPlaceholderText ( par1 );
+    obj->setPlaceholderText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1026,8 +1022,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

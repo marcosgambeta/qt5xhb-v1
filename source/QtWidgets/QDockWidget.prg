@@ -70,10 +70,9 @@ QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags
 */
 void QDockWidget_new1 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QDockWidget * o = new QDockWidget ( par1, par2,  (Qt::WindowFlags) par3 );
+  QDockWidget * o = new QDockWidget ( PQSTRING(1), par2,  (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

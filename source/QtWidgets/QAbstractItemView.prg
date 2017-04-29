@@ -700,8 +700,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_KEYBOARDSEARCH )
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->keyboardSearch ( par1 );
+    obj->keyboardSearch ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

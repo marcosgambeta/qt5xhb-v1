@@ -357,8 +357,7 @@ void QLCDNumber_display1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->display ( par1 );
+    obj->display ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -103,9 +103,8 @@ explicit QMenu ( const QString & title, QWidget * parent = 0 )
 */
 void QMenu_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QMenu * o = new QMenu ( par1, par2 );
+  QMenu * o = new QMenu ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -235,8 +234,7 @@ void QMenu_addAction1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QAction * ptr = obj->addAction ( par1 );
+    QAction * ptr = obj->addAction ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -251,8 +249,7 @@ void QMenu_addAction2 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
-    QAction * ptr = obj->addAction ( par1, par2 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -266,11 +263,10 @@ void QMenu_addAction3 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     const QObject * par2 = (const QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
     QKeySequence par4 = ISNIL(4)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(4);
-    QAction * ptr = obj->addAction ( par1, par2,  (const char *) par3, par4 );
+    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) par3, par4 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -285,11 +281,10 @@ void QMenu_addAction4 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
     const QObject * par3 = (const QObject *) _qt5xhb_itemGetPtr(3);
     const char * par4 = hb_parc(4);
     QKeySequence par5 = ISNIL(5)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(5);
-    QAction * ptr = obj->addAction ( par1, par2, par3,  (const char *) par4, par5 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3,  (const char *) par4, par5 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -368,8 +363,7 @@ void QMenu_addMenu2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QMenu * ptr = obj->addMenu ( par1 );
+    QMenu * ptr = obj->addMenu ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -384,8 +378,7 @@ void QMenu_addMenu3 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
-    QMenu * ptr = obj->addMenu ( par1, par2 );
+    QMenu * ptr = obj->addMenu ( par1, PQSTRING(2) );
     _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -809,8 +802,7 @@ HB_FUNC_STATIC( QMENU_SETTITLE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setTitle ( par1 );
+      obj->setTitle ( PQSTRING(1) );
     }
     else
     {
@@ -860,8 +852,7 @@ void QMenu_addSection1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QAction * ptr = obj->addSection ( par1 );
+    QAction * ptr = obj->addSection ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -878,8 +869,7 @@ void QMenu_addSection2 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
-    QAction * ptr = obj->addSection ( par1, par2 );
+    QAction * ptr = obj->addSection ( par1, PQSTRING(2) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -917,8 +907,7 @@ void QMenu_insertSection1 ()
   if( obj )
   {
     QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QAction * ptr = obj->insertSection ( par1, par2 );
+    QAction * ptr = obj->insertSection ( par1, PQSTRING(2) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -936,8 +925,7 @@ void QMenu_insertSection2 ()
   {
     QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QString par3 = QLatin1String( hb_parc(3) );
-    QAction * ptr = obj->insertSection ( par1, par2, par3 );
+    QAction * ptr = obj->insertSection ( par1, par2, PQSTRING(3) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

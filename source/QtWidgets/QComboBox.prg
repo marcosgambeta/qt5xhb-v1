@@ -166,9 +166,8 @@ void QComboBox_addItem1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->addItem ( par1, par2 );
+    obj->addItem ( PQSTRING(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -184,9 +183,8 @@ void QComboBox_addItem2 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
-    obj->addItem ( par1, par2, par3 );
+    obj->addItem ( par1, PQSTRING(2), par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -341,9 +339,8 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(2);
-      hb_retni( obj->findText ( par1,  (Qt::MatchFlags) par2 ) );
+      hb_retni( obj->findText ( PQSTRING(1),  (Qt::MatchFlags) par2 ) );
     }
     else
     {
@@ -403,9 +400,8 @@ void QComboBox_insertItem1 ()
 
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
-    obj->insertItem ( (int) hb_parni(1), par2, par3 );
+    obj->insertItem ( (int) hb_parni(1), PQSTRING(2), par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -421,9 +417,8 @@ void QComboBox_insertItem2 ()
   if( obj )
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QString par3 = QLatin1String( hb_parc(3) );
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
-    obj->insertItem ( (int) hb_parni(1), par2, par3, par4 );
+    obj->insertItem ( (int) hb_parni(1), par2, PQSTRING(3), par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -934,8 +929,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMTEXT )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setItemText ( (int) hb_parni(1), par2 );
+      obj->setItemText ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {
@@ -1340,8 +1334,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setEditText ( par1 );
+      obj->setEditText ( PQSTRING(1) );
     }
     else
     {

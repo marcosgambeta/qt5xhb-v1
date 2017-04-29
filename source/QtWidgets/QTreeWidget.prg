@@ -541,8 +541,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABEL )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setHeaderLabel ( par1 );
+    obj->setHeaderLabel ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

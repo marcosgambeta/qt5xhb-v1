@@ -88,13 +88,11 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 */
 void QProgressDialog_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   QWidget * par5 = ISNIL(5)? 0 : (QWidget *) _qt5xhb_itemGetPtr(5);
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-  QProgressDialog * o = new QProgressDialog ( par1, par2, par3, par4, par5,  (Qt::WindowFlags) par6 );
+  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), par3, par4, par5,  (Qt::WindowFlags) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -228,8 +226,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setLabelText ( par1 );
+      obj->setLabelText ( PQSTRING(1) );
     }
     else
     {
@@ -541,8 +538,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setCancelButtonText ( par1 );
+      obj->setCancelButtonText ( PQSTRING(1) );
     }
     else
     {

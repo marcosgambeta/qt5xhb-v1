@@ -224,8 +224,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->showMessage ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->showMessage ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

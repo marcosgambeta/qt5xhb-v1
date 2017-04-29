@@ -157,9 +157,8 @@ QTextEdit ( const QString & text, QWidget * parent = 0 )
 */
 void QTextEdit_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QTextEdit * o = new QTextEdit ( par1, par2 );
+  QTextEdit * o = new QTextEdit ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -484,9 +483,8 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      hb_retl( obj->find ( par1,  (QTextDocument::FindFlags) par2 ) );
+      hb_retl( obj->find ( PQSTRING(1),  (QTextDocument::FindFlags) par2 ) );
     }
     else
     {
@@ -841,8 +839,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENTTITLE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDocumentTitle ( par1 );
+      obj->setDocumentTitle ( PQSTRING(1) );
     }
     else
     {
@@ -1208,8 +1205,7 @@ HB_FUNC_STATIC( QTEXTEDIT_APPEND )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->append ( par1 );
+      obj->append ( PQSTRING(1) );
     }
     else
     {
@@ -1276,8 +1272,7 @@ HB_FUNC_STATIC( QTEXTEDIT_INSERTHTML )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->insertHtml ( par1 );
+      obj->insertHtml ( PQSTRING(1) );
     }
     else
     {
@@ -1299,8 +1294,7 @@ HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->insertPlainText ( par1 );
+      obj->insertPlainText ( PQSTRING(1) );
     }
     else
     {
@@ -1352,8 +1346,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->scrollToAnchor ( par1 );
+      obj->scrollToAnchor ( PQSTRING(1) );
     }
     else
     {
@@ -1436,8 +1429,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTFAMILY )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFontFamily ( par1 );
+      obj->setFontFamily ( PQSTRING(1) );
     }
     else
     {
@@ -1547,8 +1539,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETHTML )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setHtml ( par1 );
+      obj->setHtml ( PQSTRING(1) );
     }
     else
     {
@@ -1570,8 +1561,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETPLAINTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setPlainText ( par1 );
+      obj->setPlainText ( PQSTRING(1) );
     }
     else
     {
@@ -1593,8 +1583,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {

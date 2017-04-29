@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM1 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->addItem ( par1 );
+    obj->addItem ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -285,8 +284,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM2 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->insertItem ( (int) hb_parni(1), par2 );
+    obj->insertItem ( (int) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

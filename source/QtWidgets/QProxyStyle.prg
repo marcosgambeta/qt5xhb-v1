@@ -88,8 +88,7 @@ QProxyStyle(const QString &key)
 */
 void QProxyStyle_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QProxyStyle * o = new QProxyStyle ( par1 );
+  QProxyStyle * o = new QProxyStyle ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -258,9 +257,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
       QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
       QPalette * par4 = (QPalette *) _qt5xhb_itemGetPtr(4);
-      QString par6 = QLatin1String( hb_parc(6) );
       int par7 = ISNIL(7)? (int) QPalette::NoRole : hb_parni(7);
-      obj->drawItemText ( par1, *par2, (int) hb_parni(3), *par4, (bool) hb_parl(5), par6,  (QPalette::ColorRole) par7 );
+      obj->drawItemText ( par1, *par2, (int) hb_parni(3), *par4, (bool) hb_parl(5), PQSTRING(6),  (QPalette::ColorRole) par7 );
     }
     else
     {
@@ -383,8 +381,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
     {
       QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
       QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-      QString par5 = QLatin1String( hb_parc(5) );
-      QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, (int) hb_parni(3), (bool) hb_parl(4), par5 ) );
+      QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, (int) hb_parni(3), (bool) hb_parl(4), PQSTRING(5) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else

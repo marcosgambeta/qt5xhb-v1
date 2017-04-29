@@ -163,9 +163,8 @@ void QDialogButtonBox_addButton2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = hb_parni(2);
-    QPushButton * ptr = obj->addButton ( par1,  (QDialogButtonBox::ButtonRole) par2 );
+    QPushButton * ptr = obj->addButton ( PQSTRING(1),  (QDialogButtonBox::ButtonRole) par2 );
     _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }

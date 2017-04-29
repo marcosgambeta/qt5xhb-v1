@@ -110,12 +110,10 @@ QMessageBox ( Icon icon, const QString & title, const QString & text, StandardBu
 void QMessageBox_new2 ()
 {
   int par1 = hb_parni(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QString par3 = QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QMessageBox::NoButton : hb_parni(4);
   QWidget * par5 = ISNIL(5)? 0 : (QWidget *) _qt5xhb_itemGetPtr(5);
   int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
-  QMessageBox * o = new QMessageBox (  (QMessageBox::Icon) par1, par2, par3,  (QMessageBox::StandardButtons) par4, par5,  (Qt::WindowFlags) par6 );
+  QMessageBox * o = new QMessageBox (  (QMessageBox::Icon) par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4, par5,  (Qt::WindowFlags) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -181,9 +179,8 @@ void QMessageBox_addButton2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = hb_parni(2);
-    QPushButton * ptr = obj->addButton ( par1,  (QMessageBox::ButtonRole) par2 );
+    QPushButton * ptr = obj->addButton ( PQSTRING(1),  (QMessageBox::ButtonRole) par2 );
     _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -370,8 +367,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDetailedText ( par1 );
+      obj->setDetailedText ( PQSTRING(1) );
     }
     else
     {
@@ -493,8 +489,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setInformativeText ( par1 );
+      obj->setInformativeText ( PQSTRING(1) );
     }
     else
     {
@@ -688,8 +683,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setWindowTitle ( par1 );
+      obj->setWindowTitle ( PQSTRING(1) );
     }
     else
     {
@@ -781,8 +775,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {
@@ -874,9 +867,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
   if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QMessageBox::about ( par1, par2, par3 );
+    QMessageBox::about ( par1, PQSTRING(2), PQSTRING(3) );
   }
   else
   {
@@ -913,11 +904,9 @@ HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
   if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
     int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
     int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::critical ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+    hb_retni( QMessageBox::critical ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
   }
   else
   {
@@ -933,11 +922,9 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
   if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
     int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
     int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::information ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+    hb_retni( QMessageBox::information ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
   }
   else
   {
@@ -953,11 +940,9 @@ HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
   if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
     int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
     int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::question ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+    hb_retni( QMessageBox::question ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
   }
   else
   {
@@ -973,11 +958,9 @@ HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
   if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
     int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
     int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::warning ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+    hb_retni( QMessageBox::warning ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
   }
   else
   {
@@ -1106,8 +1089,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setButtonText ( (int) hb_parni(1), par2 );
+      obj->setButtonText ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {

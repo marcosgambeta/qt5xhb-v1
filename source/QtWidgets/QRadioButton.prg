@@ -63,9 +63,8 @@ explicit QRadioButton ( const QString & text, QWidget * parent = 0 )
 */
 void QRadioButton_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QRadioButton * o = new QRadioButton ( par1, par2 );
+  QRadioButton * o = new QRadioButton ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -482,8 +482,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {

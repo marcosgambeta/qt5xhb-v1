@@ -3034,8 +3034,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setToolTip ( par1 );
+      obj->setToolTip ( PQSTRING(1) );
     }
     else
     {

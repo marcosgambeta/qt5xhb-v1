@@ -110,8 +110,7 @@ void QActionGroup_addAction2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QAction * ptr = obj->addAction ( par1 );
+    QAction * ptr = obj->addAction ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -126,8 +125,7 @@ void QActionGroup_addAction3 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
-    QAction * ptr = obj->addAction ( par1, par2 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

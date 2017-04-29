@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setEmptyLabel ( par1 );
+      obj->setEmptyLabel ( PQSTRING(1) );
     }
     else
     {

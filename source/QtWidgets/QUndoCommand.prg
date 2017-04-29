@@ -73,9 +73,8 @@ QUndoCommand(const QString & text, QUndoCommand * parent = 0)
 */
 void QUndoCommand_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(2);
-  QUndoCommand * o = new QUndoCommand ( par1, par2 );
+  QUndoCommand * o = new QUndoCommand ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -222,8 +221,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {

@@ -1107,8 +1107,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETSTATUSTIP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setStatusTip ( (int) hb_parni(1), par2 );
+      obj->setStatusTip ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {
@@ -1130,8 +1129,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXT )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setText ( (int) hb_parni(1), par2 );
+      obj->setText ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {
@@ -1175,8 +1173,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTOOLTIP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setToolTip ( (int) hb_parni(1), par2 );
+      obj->setToolTip ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {
@@ -1198,8 +1195,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETWHATSTHIS )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      QString par2 = QLatin1String( hb_parc(2) );
-      obj->setWhatsThis ( (int) hb_parni(1), par2 );
+      obj->setWhatsThis ( (int) hb_parni(1), PQSTRING(2) );
     }
     else
     {

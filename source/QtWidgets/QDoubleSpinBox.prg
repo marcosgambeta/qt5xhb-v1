@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPrefix ( par1 );
+    obj->setPrefix ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -294,8 +293,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setSuffix ( par1 );
+    obj->setSuffix ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -353,8 +351,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retnd( obj->valueFromText ( par1 ) );
+    hb_retnd( obj->valueFromText ( PQSTRING(1) ) );
   }
 }
 

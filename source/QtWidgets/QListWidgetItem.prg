@@ -114,10 +114,9 @@ QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Typ
 */
 void QListWidgetItem_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QListWidget * par2 = ISNIL(2)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? QListWidgetItem::Type : hb_parni(3);
-  QListWidgetItem * o = new QListWidgetItem ( par1, par2, par3 );
+  QListWidgetItem * o = new QListWidgetItem ( PQSTRING(1), par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -127,10 +126,9 @@ QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent
 void QListWidgetItem_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QString par2 = QLatin1String( hb_parc(2) );
   QListWidget * par3 = ISNIL(3)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? QListWidgetItem::Type : hb_parni(4);
-  QListWidgetItem * o = new QListWidgetItem ( par1, par2, par3, par4 );
+  QListWidgetItem * o = new QListWidgetItem ( par1, PQSTRING(2), par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -636,8 +634,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setStatusTip ( par1 );
+      obj->setStatusTip ( PQSTRING(1) );
     }
     else
     {
@@ -672,8 +669,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setText ( par1 );
+      obj->setText ( PQSTRING(1) );
     }
     else
     {
@@ -743,8 +739,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTOOLTIP )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setToolTip ( par1 );
+      obj->setToolTip ( PQSTRING(1) );
     }
     else
     {
@@ -792,8 +787,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setWhatsThis ( par1 );
+      obj->setWhatsThis ( PQSTRING(1) );
     }
     else
     {

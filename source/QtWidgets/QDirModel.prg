@@ -176,8 +176,7 @@ void QDirModel_index2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QModelIndex * ptr = new QModelIndex( obj->index ( par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -715,8 +714,7 @@ HB_FUNC_STATIC( QDIRMODEL_MKDIR )
     if( ISQMODELINDEX(1) && ISCHAR(1) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QString par2 = QLatin1String( hb_parc(2) );
-      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, par2 ) );
+      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else

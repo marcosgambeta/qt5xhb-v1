@@ -75,9 +75,8 @@ QGroupBox ( const QString & title, QWidget * parent = 0 )
 */
 void QGroupBox_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QGroupBox * o = new QGroupBox ( par1, par2 );
+  QGroupBox * o = new QGroupBox ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -246,8 +245,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setTitle ( par1 );
+      obj->setTitle ( PQSTRING(1) );
     }
     else
     {
