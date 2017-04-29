@@ -69,9 +69,8 @@ QSvgWidget ( const QString & file, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGWIDGET_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QSvgWidget * o = new QSvgWidget ( par1, par2 );
+  QSvgWidget * o = new QSvgWidget ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -146,8 +145,7 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD1 )
   QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->load ( par1 );
+    obj->load ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

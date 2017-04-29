@@ -91,9 +91,8 @@ QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSvgRenderer * o = new QSvgRenderer ( par1, par2 );
+  QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -185,8 +184,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QRectF * ptr = new QRectF( obj->boundsOnElement ( par1 ) );
+    QRectF * ptr = new QRectF( obj->boundsOnElement ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -214,8 +212,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->elementExists ( par1 ) );
+    hb_retl( obj->elementExists ( PQSTRING(1) ) );
   }
 }
 
@@ -254,8 +251,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QMatrix * ptr = new QMatrix( obj->matrixForElement ( par1 ) );
+    QMatrix * ptr = new QMatrix( obj->matrixForElement ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -359,8 +355,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD1 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->load ( par1 ) );
+    hb_retl( obj->load ( PQSTRING(1) ) );
   }
 }
 
@@ -453,9 +448,8 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER3 )
   if( obj )
   {
     QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
     QRectF par3 = ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3);
-    obj->render ( par1, par2, par3 );
+    obj->render ( par1, PQSTRING(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

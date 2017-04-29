@@ -74,9 +74,8 @@ QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
-  QGraphicsSvgItem * o = new QGraphicsSvgItem ( par1, par2 );
+  QGraphicsSvgItem * o = new QGraphicsSvgItem ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -164,8 +163,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setElementId ( par1 );
+    obj->setElementId ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
