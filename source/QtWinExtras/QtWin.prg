@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWEXCLUDEDFROMPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::setWindowExcludedFromPeek ( par1, (bool) hb_parl(2) );
+  QtWin::setWindowExcludedFromPeek ( par1, PBOOL(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWDISALLOWPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::setWindowDisallowPeek ( par1, (bool) hb_parl(2) );
+  QtWin::setWindowDisallowPeek ( par1, PBOOL(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -461,7 +461,7 @@ static void setCompositionEnabled(bool enabled)
 HB_FUNC_STATIC( QTWIN_SETCOMPOSITIONENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QtWin::setCompositionEnabled ( (bool) hb_parl(1) );
+  QtWin::setCompositionEnabled ( PBOOL(1) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }

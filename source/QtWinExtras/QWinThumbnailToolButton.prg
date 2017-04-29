@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETENABLED )
   QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    obj->setEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE )
   QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setInteractive ( (bool) hb_parl(1) );
+    obj->setInteractive ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETVISIBLE )
   QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK )
   QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDismissOnClick ( (bool) hb_parl(1) );
+    obj->setDismissOnClick ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETFLAT )
   QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFlat ( (bool) hb_parl(1) );
+    obj->setFlat ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

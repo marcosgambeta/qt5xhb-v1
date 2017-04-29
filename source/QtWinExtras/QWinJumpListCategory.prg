@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETVISIBLE )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

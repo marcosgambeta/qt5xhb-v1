@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVISIBLE )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETPAUSED )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPaused ( (bool) hb_parl(1) );
+    obj->setPaused ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
