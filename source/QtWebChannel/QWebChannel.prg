@@ -94,9 +94,8 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->registerObject ( par1, par2 );
+    obj->registerObject ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
