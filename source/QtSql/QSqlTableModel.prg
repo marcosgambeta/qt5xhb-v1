@@ -176,8 +176,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retni( obj->fieldIndex ( par1 ) );
+      hb_retni( obj->fieldIndex ( PQSTRING(1) ) );
     }
     else
     {
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setFilter ( par1 );
+      obj->setFilter ( PQSTRING(1) );
     }
     else
     {
@@ -416,8 +414,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setTable ( par1 );
+      obj->setTable ( PQSTRING(1) );
     }
     else
     {

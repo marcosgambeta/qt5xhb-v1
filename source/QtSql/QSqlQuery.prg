@@ -227,10 +227,9 @@ void QSqlQuery_bindValue1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( par1, *par2,  (QSql::ParamType) par3 );
+    obj->bindValue ( PQSTRING(1), *par2,  (QSql::ParamType) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -281,8 +280,7 @@ void QSqlQuery_boundValue1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->boundValue ( par1 ) );
+    QVariant * ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -358,8 +356,7 @@ void QSqlQuery_exec1 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->exec ( par1 ) );
+    hb_retl( obj->exec ( PQSTRING(1) ) );
   }
 }
 
@@ -527,8 +524,7 @@ void QSqlQuery_isNull2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->isNull ( par1 ) );
+    hb_retl( obj->isNull ( PQSTRING(1) ) );
   }
 }
 
@@ -717,8 +713,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->prepare ( par1 ) );
+      hb_retl( obj->prepare ( PQSTRING(1) ) );
     }
     else
     {
@@ -824,8 +819,7 @@ void QSqlQuery_value2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->value ( par1 ) );
+    QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

@@ -65,11 +65,9 @@ QSqlError ( const QString & driverText, const QString & databaseText, ErrorType 
 */
 void QSqlError_new1 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
-  QSqlError * o = new QSqlError ( par1, par2,  (QSqlError::ErrorType) par3, par4 );
+  QSqlError * o = new QSqlError ( PQSTRING(1), PQSTRING(2),  (QSqlError::ErrorType) par3, par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -161,8 +159,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDatabaseText ( par1 );
+      obj->setDatabaseText ( PQSTRING(1) );
     }
     else
     {
@@ -197,8 +194,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDriverText ( par1 );
+      obj->setDriverText ( PQSTRING(1) );
     }
     else
     {

@@ -165,9 +165,8 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = hb_parni(2);
-      hb_retc( (const char *) obj->escapeIdentifier ( par1,  (QSqlDriver::IdentifierType) par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->escapeIdentifier ( PQSTRING(1),  (QSqlDriver::IdentifierType) par2 ).toLatin1().data() );
     }
     else
     {
@@ -243,9 +242,8 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = hb_parni(2);
-      hb_retl( obj->isIdentifierEscaped ( par1,  (QSqlDriver::IdentifierType) par2 ) );
+      hb_retl( obj->isIdentifierEscaped ( PQSTRING(1),  (QSqlDriver::IdentifierType) par2 ) );
     }
     else
     {
@@ -318,12 +316,11 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
       QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
       QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
       QString par6 = ISNIL(6)? QString() : QLatin1String( hb_parc(6) );
-      hb_retl( obj->open ( par1, par2, par3, par4, (int) ISNIL(5)? -1 : hb_parni(5), par6 ) );
+      hb_retl( obj->open ( PQSTRING(1), par2, par3, par4, (int) ISNIL(5)? -1 : hb_parni(5), par6 ) );
     }
     else
     {
@@ -343,8 +340,7 @@ HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( par1 ) );
+      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
     }
     else
@@ -365,8 +361,7 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( par1 ) );
+      QSqlRecord * ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
     }
     else
@@ -424,9 +419,8 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
     if( ISNUM(1) && ISCHAR(2) && ISQSQLRECORD(3) && ISLOG(4) )
     {
       int par1 = hb_parni(1);
-      QString par2 = QLatin1String( hb_parc(2) );
       QSqlRecord * par3 = (QSqlRecord *) _qt5xhb_itemGetPtr(3);
-      hb_retc( (const char *) obj->sqlStatement (  (QSqlDriver::StatementType) par1, par2, *par3, (bool) hb_parl(4) ).toLatin1().data() );
+      hb_retc( (const char *) obj->sqlStatement (  (QSqlDriver::StatementType) par1, PQSTRING(2), *par3, (bool) hb_parl(4) ).toLatin1().data() );
     }
     else
     {
@@ -446,9 +440,8 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
       int par2 = hb_parni(2);
-      hb_retc( (const char *) obj->stripDelimiters ( par1,  (QSqlDriver::IdentifierType) par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->stripDelimiters ( PQSTRING(1),  (QSqlDriver::IdentifierType) par2 ).toLatin1().data() );
     }
     else
     {
@@ -468,8 +461,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->subscribeToNotification ( par1 ) );
+      hb_retl( obj->subscribeToNotification ( PQSTRING(1) ) );
     }
     else
     {
@@ -525,8 +517,7 @@ HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      hb_retl( obj->unsubscribeFromNotification ( par1 ) );
+      hb_retl( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
     }
     else
     {

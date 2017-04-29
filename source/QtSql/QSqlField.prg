@@ -378,8 +378,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setName ( par1 );
+      obj->setName ( PQSTRING(1) );
     }
     else
     {

@@ -74,8 +74,7 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QSqlDriver * ptr = obj->create ( par1 );
+      QSqlDriver * ptr = obj->create ( PQSTRING(1) );
       _qt5xhb_createReturnClass ( ptr, "QSQLDRIVER" );
     }
     else

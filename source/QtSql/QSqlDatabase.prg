@@ -258,8 +258,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETDATABASENAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setDatabaseName ( par1 );
+      obj->setDatabaseName ( PQSTRING(1) );
     }
     else
     {
@@ -343,8 +342,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETHOSTNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setHostName ( par1 );
+      obj->setHostName ( PQSTRING(1) );
     }
     else
     {
@@ -466,9 +464,7 @@ void QSqlDatabase_open2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->open ( par1, par2 ) );
+    hb_retl( obj->open ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -515,8 +511,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPASSWORD )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setPassword ( par1 );
+      obj->setPassword ( PQSTRING(1) );
     }
     else
     {
@@ -573,8 +568,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( par1 ) );
+      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
     }
     else
@@ -595,8 +589,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( par1 ) );
+      QSqlRecord * ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
     }
     else
@@ -678,8 +671,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setUserName ( par1 );
+      obj->setUserName ( PQSTRING(1) );
     }
     else
     {
@@ -695,9 +687,8 @@ static QSqlDatabase addDatabase ( const QString & type, const QString & connecti
 */
 void QSqlDatabase_addDatabase1 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
+  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
@@ -739,8 +730,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
   if( ISQSQLDATABASE(1) && ISCHAR(2) )
   {
     QSqlDatabase * par1 = (QSqlDatabase *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *par1, par2 ) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *par1, PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
   }
   else
@@ -807,8 +797,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( QSqlDatabase::isDriverAvailable ( par1 ) );
+    hb_retl( QSqlDatabase::isDriverAvailable ( PQSTRING(1) ) );
   }
   else
   {
@@ -823,9 +812,8 @@ HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 {
   if( ISCHAR(1) && ISQSQLDRIVERCREATORBASE(2) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QSqlDriverCreatorBase * par2 = (QSqlDriverCreatorBase *) _qt5xhb_itemGetPtr(2);
-    QSqlDatabase::registerSqlDriver ( par1, par2 );
+    QSqlDatabase::registerSqlDriver ( PQSTRING(1), par2 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -841,8 +829,7 @@ HB_FUNC_STATIC( QSQLDATABASE_REMOVEDATABASE )
 {
   if( ISCHAR(1) )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QSqlDatabase::removeDatabase ( par1 );
+    QSqlDatabase::removeDatabase ( PQSTRING(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

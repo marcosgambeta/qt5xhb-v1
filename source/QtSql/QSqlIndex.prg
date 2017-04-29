@@ -181,8 +181,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setCursorName ( par1 );
+      obj->setCursorName ( PQSTRING(1) );
     }
     else
     {
@@ -259,8 +258,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETNAME )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setName ( par1 );
+      obj->setName ( PQSTRING(1) );
     }
     else
     {

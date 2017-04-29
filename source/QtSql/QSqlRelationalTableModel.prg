@@ -256,8 +256,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = QLatin1String( hb_parc(1) );
-      obj->setTable ( par1 );
+      obj->setTable ( PQSTRING(1) );
     }
     else
     {

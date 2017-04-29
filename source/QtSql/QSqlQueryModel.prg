@@ -162,9 +162,8 @@ void QSqlQueryModel_setQuery2 ()
 
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
-    obj->setQuery ( par1, par2 );
+    obj->setQuery ( PQSTRING(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

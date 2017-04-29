@@ -67,10 +67,7 @@ QSqlRelation ( const QString & tableName, const QString & indexColumn, const QSt
 */
 void QSqlRelation_new2 ()
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QString par2 = QLatin1String( hb_parc(2) );
-  QString par3 = QLatin1String( hb_parc(3) );
-  QSqlRelation * o = new QSqlRelation ( par1, par2, par3 );
+  QSqlRelation * o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
