@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setOutputWarningsToStandardError ( (bool) hb_parl(1) );
+    obj->setOutputWarningsToStandardError ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

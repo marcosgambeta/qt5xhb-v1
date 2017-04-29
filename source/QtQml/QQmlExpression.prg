@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setNotifyOnValueChanged ( (bool) hb_parl(1) );
+    obj->setNotifyOnValueChanged ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
