@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETPERSISTENT )
   QGeoAreaMonitorInfo * obj = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPersistent ( (bool) hb_parl(1) );
+    obj->setPersistent ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
