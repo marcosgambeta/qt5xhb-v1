@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttribute (  (QWebEngineSettings::WebAttribute) par1, (bool) hb_parl(2) );
+    obj->setAttribute (  (QWebEngineSettings::WebAttribute) par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
