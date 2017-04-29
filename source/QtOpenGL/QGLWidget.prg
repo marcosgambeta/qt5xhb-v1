@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * ptr = new QImage( obj->grabFrameBuffer ( (bool) hb_parl(1) ) );
+    QImage * ptr = new QImage( obj->grabFrameBuffer ( PBOOL(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMouseTracking ( (bool) hb_parl(1) );
+    obj->setMouseTracking ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
