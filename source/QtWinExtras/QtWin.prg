@@ -484,8 +484,7 @@ static void setCurrentProcessExplicitAppUserModelID(const QString &id)
 HB_FUNC_STATIC( QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QtWin::setCurrentProcessExplicitAppUserModelID ( par1 );
+  QtWin::setCurrentProcessExplicitAppUserModelID ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }

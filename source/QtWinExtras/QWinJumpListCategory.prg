@@ -172,8 +172,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETTITLE )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setTitle ( par1 );
+    obj->setTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -282,8 +281,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QWinJumpListItem * ptr = obj->addDestination ( par1 );
+    QWinJumpListItem * ptr = obj->addDestination ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif
@@ -299,8 +297,6 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK1 )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
     QStringList par3 = _qt5xhb_convert_array_parameter_to_qstringlist(3);
     //PHB_ITEM aStrings3 = hb_param(3, HB_IT_ARRAY);
     //int i3;
@@ -310,7 +306,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK1 )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings3, i3+1) );
     //  par3 << temp;
     //}
-    QWinJumpListItem * ptr = obj->addLink ( par1, par2, par3 );
+    QWinJumpListItem * ptr = obj->addLink ( PQSTRING(1), PQSTRING(2), par3 );
     _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif
@@ -326,8 +322,6 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK2 )
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
     QStringList par4 = _qt5xhb_convert_array_parameter_to_qstringlist(4);
     //PHB_ITEM aStrings4 = hb_param(4, HB_IT_ARRAY);
     //int i4;
@@ -337,7 +331,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK2 )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings4, i4+1) );
     //  par4 << temp;
     //}
-    QWinJumpListItem * ptr = obj->addLink ( par1, par2, par3, par4 );
+    QWinJumpListItem * ptr = obj->addLink ( par1, PQSTRING(2), PQSTRING(3), par4 );
     _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif

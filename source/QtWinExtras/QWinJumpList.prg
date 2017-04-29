@@ -113,8 +113,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_SETIDENTIFIER )
   QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setIdentifier ( par1 );
+    obj->setIdentifier ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -240,7 +239,6 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY2 )
   QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QList<QWinJumpListItem *> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -249,7 +247,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY2 )
     {
       par2 << (QWinJumpListItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QWinJumpListCategory * ptr = obj->addCategory ( par1, par2 );
+    QWinJumpListCategory * ptr = obj->addCategory ( PQSTRING(1), par2 );
     _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTCATEGORY" );
   }
 #endif

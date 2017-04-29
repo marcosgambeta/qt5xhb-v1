@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP )
   QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETFILEPATH )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFilePath ( par1 );
+    obj->setFilePath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -186,8 +185,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETWORKINGDIRECTORY )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setWorkingDirectory ( par1 );
+    obj->setWorkingDirectory ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -249,8 +247,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTITLE )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setTitle ( par1 );
+    obj->setTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -280,8 +277,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETDESCRIPTION )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDescription ( par1 );
+    obj->setDescription ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
