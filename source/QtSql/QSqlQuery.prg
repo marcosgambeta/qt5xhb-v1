@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setForwardOnly ( (bool) hb_parl(1) );
+      obj->setForwardOnly ( PBOOL(1) );
     }
     else
     {

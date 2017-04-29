@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
     {
       int par1 = hb_parni(1);
       QSqlRecord * par3 = (QSqlRecord *) _qt5xhb_itemGetPtr(3);
-      hb_retc( (const char *) obj->sqlStatement (  (QSqlDriver::StatementType) par1, PQSTRING(2), *par3, (bool) hb_parl(4) ).toLatin1().data() );
+      hb_retc( (const char *) obj->sqlStatement (  (QSqlDriver::StatementType) par1, PQSTRING(2), *par3, PBOOL(4) ).toLatin1().data() );
     }
     else
     {

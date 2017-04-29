@@ -132,7 +132,7 @@ void QSqlIndex_append2 ()
   if( obj )
   {
     QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
-    obj->append ( *par1, (bool) hb_parl(2) );
+    obj->append ( *par1, PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setDescending ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setDescending ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {

@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETAUTOVALUE )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoValue ( (bool) hb_parl(1) );
+      obj->setAutoValue ( PBOOL(1) );
     }
     else
     {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETGENERATED )
   {
     if( ISLOG(1) )
     {
-      obj->setGenerated ( (bool) hb_parl(1) );
+      obj->setGenerated ( PBOOL(1) );
     }
     else
     {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIRED )
   {
     if( ISLOG(1) )
     {
-      obj->setRequired ( (bool) hb_parl(1) );
+      obj->setRequired ( PBOOL(1) );
     }
     else
     {

@@ -484,7 +484,7 @@ void QSqlRecord_setGenerated1 ()
 
   if( obj )
   {
-    obj->setGenerated ( PQSTRING(1), (bool) hb_parl(2) );
+    obj->setGenerated ( PQSTRING(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -499,7 +499,7 @@ void QSqlRecord_setGenerated2 ()
 
   if( obj )
   {
-    obj->setGenerated ( (int) hb_parni(1), (bool) hb_parl(2) );
+    obj->setGenerated ( (int) hb_parni(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
