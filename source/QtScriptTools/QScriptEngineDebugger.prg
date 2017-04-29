@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAutoShowStandardWindow ( (bool) hb_parl(1) );
+    obj->setAutoShowStandardWindow ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
