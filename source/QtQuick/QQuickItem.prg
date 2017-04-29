@@ -1041,8 +1041,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSTATE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setState ( par1 );
+    obj->setState ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
