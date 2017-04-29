@@ -117,9 +117,8 @@ QSerialPort(const QString &name, QObject *parent = 0)
 HB_FUNC_STATIC( QSERIALPORT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSerialPort * o = new QSerialPort ( par1, par2 );
+  QSerialPort * o = new QSerialPort ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPORTNAME )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPortName ( par1 );
+    obj->setPortName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

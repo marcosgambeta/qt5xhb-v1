@@ -102,8 +102,7 @@ QSerialPortInfo(const QString &name)
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QSerialPortInfo * o = new QSerialPortInfo ( par1 );
+  QSerialPortInfo * o = new QSerialPortInfo ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
