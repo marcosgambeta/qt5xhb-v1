@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setEnabled ( (bool) hb_parl(1) );
+      obj->setEnabled ( PBOOL(1) );
     }
     else
     {

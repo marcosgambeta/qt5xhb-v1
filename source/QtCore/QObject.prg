@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
   {
     if( ISLOG(1) )
     {
-      hb_retl( obj->blockSignals ( (bool) hb_parl(1) ) );
+      hb_retl( obj->blockSignals ( PBOOL(1) ) );
     }
     else
     {
@@ -1096,8 +1096,8 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Events_disconnect_all_events (obj, (bool) hb_parl(1) );
-      Signals_disconnect_all_signals (obj, (bool) hb_parl(1) );
+      Events_disconnect_all_events (obj, PBOOL(1) );
+      Signals_disconnect_all_signals (obj, PBOOL(1) );
     }
   }
 
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Events_disconnect_all_events (obj, (bool) hb_parl(1) );
+      Events_disconnect_all_events (obj, PBOOL(1) );
     }
   }
 
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Signals_disconnect_all_signals (obj, (bool) hb_parl(1) );
+      Signals_disconnect_all_signals (obj, PBOOL(1) );
     }
   }
 

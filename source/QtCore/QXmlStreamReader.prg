@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETNAMESPACEPROCESSING )
   {
     if( ISLOG(1) )
     {
-      obj->setNamespaceProcessing ( (bool) hb_parl(1) );
+      obj->setNamespaceProcessing ( PBOOL(1) );
     }
     else
     {

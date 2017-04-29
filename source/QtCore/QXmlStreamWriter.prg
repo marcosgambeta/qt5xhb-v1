@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTING )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoFormatting ( (bool) hb_parl(1) );
+      obj->setAutoFormatting ( PBOOL(1) );
     }
     else
     {
@@ -746,7 +746,7 @@ void QXmlStreamWriter_writeStartDocument2 ()
 
   if( obj )
   {
-    obj->writeStartDocument ( PQSTRING(1), (bool) hb_parl(2) );
+    obj->writeStartDocument ( PQSTRING(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

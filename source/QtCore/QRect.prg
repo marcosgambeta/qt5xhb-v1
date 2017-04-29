@@ -318,7 +318,7 @@ void QRect_contains2 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( (int) hb_parni(1), (int) hb_parni(2), (bool) hb_parl(3) ) );
+    hb_retl( obj->contains ( (int) hb_parni(1), (int) hb_parni(2), PBOOL(3) ) );
   }
 }
 

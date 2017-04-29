@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
   {
     if( ISLOG(1) )
     {
-      obj->setPaused ( (bool) hb_parl(1) );
+      obj->setPaused ( PBOOL(1) );
     }
     else
     {

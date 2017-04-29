@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
     if( ISNUM(1) && ISLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setEnabled (  (QtMsgType) par1, (bool) hb_parl(2) );
+      obj->setEnabled (  (QtMsgType) par1, PBOOL(2) );
     }
     else
     {

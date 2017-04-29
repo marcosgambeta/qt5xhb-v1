@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setTextModeEnabled ( (bool) hb_parl(1) );
+      obj->setTextModeEnabled ( PBOOL(1) );
     }
     else
     {

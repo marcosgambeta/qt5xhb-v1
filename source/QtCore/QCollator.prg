@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETNUMERICMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setNumericMode ( (bool) hb_parl(1) );
+      obj->setNumericMode ( PBOOL(1) );
     }
     else
     {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
   {
     if( ISLOG(1) )
     {
-      obj->setIgnorePunctuation ( (bool) hb_parl(1) );
+      obj->setIgnorePunctuation ( PBOOL(1) );
     }
     else
     {

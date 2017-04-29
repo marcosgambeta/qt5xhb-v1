@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
   {
     if( ISLOG(1) )
     {
-      obj->setSortLocaleAware ( (bool) hb_parl(1) );
+      obj->setSortLocaleAware ( PBOOL(1) );
     }
     else
     {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
   {
     if( ISLOG(1) )
     {
-      obj->setDynamicSortFilter ( (bool) hb_parl(1) );
+      obj->setDynamicSortFilter ( PBOOL(1) );
     }
     else
     {

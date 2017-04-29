@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
   {
     if( ISLOG(1) )
     {
-      obj->setMinimal ( (bool) hb_parl(1) );
+      obj->setMinimal ( PBOOL(1) );
     }
     else
     {

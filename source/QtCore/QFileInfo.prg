@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QFILEINFO_SETCACHING )
   {
     if( ISLOG(1) )
     {
-      obj->setCaching ( (bool) hb_parl(1) );
+      obj->setCaching ( PBOOL(1) );
     }
     else
     {

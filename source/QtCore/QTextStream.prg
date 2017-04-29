@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoDetectUnicode ( (bool) hb_parl(1) );
+      obj->setAutoDetectUnicode ( PBOOL(1) );
     }
     else
     {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETGENERATEBYTEORDERMARK )
   {
     if( ISLOG(1) )
     {
-      obj->setGenerateByteOrderMark ( (bool) hb_parl(1) );
+      obj->setGenerateByteOrderMark ( PBOOL(1) );
     }
     else
     {

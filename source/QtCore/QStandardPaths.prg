@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_SETTESTMODEENABLED )
 {
   if( ISLOG(1) )
   {
-    QStandardPaths::setTestModeEnabled ( (bool) hb_parl(1) );
+    QStandardPaths::setTestModeEnabled ( PBOOL(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

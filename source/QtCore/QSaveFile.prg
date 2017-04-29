@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
   {
     if( ISLOG(1) )
     {
-      obj->setDirectWriteFallback ( (bool) hb_parl(1) );
+      obj->setDirectWriteFallback ( PBOOL(1) );
     }
     else
     {

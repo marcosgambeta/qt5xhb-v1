@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
   {
     if( ISLOG(1) )
     {
-      obj->setAnimated ( (bool) hb_parl(1) );
+      obj->setAnimated ( PBOOL(1) );
     }
     else
     {

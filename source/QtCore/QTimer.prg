@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
   {
     if( ISLOG(1) )
     {
-      obj->setSingleShot ( (bool) hb_parl(1) );
+      obj->setSingleShot ( PBOOL(1) );
     }
     else
     {

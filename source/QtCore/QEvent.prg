@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
   {
     if( ISLOG(1) )
     {
-      obj->setAccepted ( (bool) hb_parl(1) );
+      obj->setAccepted ( PBOOL(1) );
     }
     else
     {

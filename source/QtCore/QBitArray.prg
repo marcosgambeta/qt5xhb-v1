@@ -212,7 +212,7 @@ void QBitArray_count2 ()
 
   if( obj )
   {
-    hb_retni( obj->count ( (bool) hb_parl(1) ) );
+    hb_retni( obj->count ( PBOOL(1) ) );
   }
 }
 
@@ -244,7 +244,7 @@ void QBitArray_fill1 ()
 
   if( obj )
   {
-    hb_retl( obj->fill ( (bool) hb_parl(1), (int) ISNIL(2)? -1 : hb_parni(2) ) );
+    hb_retl( obj->fill ( PBOOL(1), (int) ISNIL(2)? -1 : hb_parni(2) ) );
   }
 }
 
@@ -256,7 +256,7 @@ void QBitArray_fill2 ()
   QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->fill ( (bool) hb_parl(1), (int) hb_parni(2), (int) hb_parni(3) );
+    obj->fill ( PBOOL(1), (int) hb_parni(2), (int) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -352,7 +352,7 @@ void QBitArray_setBit2 ()
 
   if( obj )
   {
-    obj->setBit ( (int) hb_parni(1), (bool) hb_parl(2) );
+    obj->setBit ( (int) hb_parni(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

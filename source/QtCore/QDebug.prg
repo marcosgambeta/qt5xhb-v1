@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoInsertSpaces ( (bool) hb_parl(1) );
+      obj->setAutoInsertSpaces ( PBOOL(1) );
     }
     else
     {

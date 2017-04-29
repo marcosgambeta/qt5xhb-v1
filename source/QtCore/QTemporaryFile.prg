@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoRemove ( (bool) hb_parl(1) );
+      obj->setAutoRemove ( PBOOL(1) );
     }
     else
     {

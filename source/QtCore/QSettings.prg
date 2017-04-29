@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setFallbacksEnabled ( (bool) hb_parl(1) );
+      obj->setFallbacksEnabled ( PBOOL(1) );
     }
     else
     {
