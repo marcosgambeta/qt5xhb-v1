@@ -233,9 +233,8 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE4 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QXmlItem * par2 = (QXmlItem *) _qt5xhb_itemGetPtr(2);
-    obj->bindVariable ( par1, *par2 );
+    obj->bindVariable ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -248,9 +247,8 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE5 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
-    obj->bindVariable ( par1, par2 );
+    obj->bindVariable ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -263,9 +261,8 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE6 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QXmlQuery * par2 = (QXmlQuery *) _qt5xhb_itemGetPtr(2);
-    obj->bindVariable ( par1, *par2 );
+    obj->bindVariable ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -528,8 +525,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS4 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->setFocus ( par1 ) );
+    hb_retl( obj->setFocus ( PQSTRING(1) ) );
   }
 }
 
@@ -585,8 +581,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME2 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setInitialTemplateName ( par1 );
+    obj->setInitialTemplateName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -679,9 +674,8 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY3 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setQuery ( par1, par2 );
+    obj->setQuery ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

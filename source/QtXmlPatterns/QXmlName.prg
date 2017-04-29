@@ -73,10 +73,9 @@ QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & n
 HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
   QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-  QXmlName * o = new QXmlName ( *par1, par2, par3, par4 );
+  QXmlName * o = new QXmlName ( *par1, PQSTRING(2), par3, par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -189,9 +188,8 @@ static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & 
 */
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QXmlNamePool * par2 = (QXmlNamePool *) _qt5xhb_itemGetPtr(2);
-  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( par1, *par2 ) );
+  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
 }
 
@@ -201,8 +199,7 @@ static bool isNCName ( const QString & candidate )
 */
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retl( QXmlName::isNCName ( par1 ) );
+  hb_retl( QXmlName::isNCName ( PQSTRING(1) ) );
 }
 
 

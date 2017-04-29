@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->comment ( par1 );
+    obj->comment ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -203,8 +202,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
   if( obj )
   {
     QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->processingInstruction ( *par1, par2 );
+    obj->processingInstruction ( *par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
