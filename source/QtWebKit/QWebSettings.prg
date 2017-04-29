@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDefaultTextEncoding ( par1 );
+    obj->setDefaultTextEncoding ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -230,8 +229,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setFontFamily (  (QWebSettings::FontFamily) par1, par2 );
+    obj->setFontFamily (  (QWebSettings::FontFamily) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -260,8 +258,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setLocalStoragePath ( par1 );
+    obj->setLocalStoragePath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -421,8 +418,7 @@ static void setIconDatabasePath ( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETICONDATABASEPATH )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QWebSettings::setIconDatabasePath ( par1 );
+  QWebSettings::setIconDatabasePath ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -462,8 +458,7 @@ static void setOfflineStoragePath ( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEPATH )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QWebSettings::setOfflineStoragePath ( par1 );
+  QWebSettings::setOfflineStoragePath ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -473,8 +468,7 @@ static void setOfflineWebApplicationCachePath ( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QWebSettings::setOfflineWebApplicationCachePath ( par1 );
+  QWebSettings::setOfflineWebApplicationCachePath ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
   QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
     QStringList par3 = _qt5xhb_convert_array_parameter_to_qstringlist(3);
     //PHB_ITEM aStrings3 = hb_param(3, HB_IT_ARRAY);
@@ -91,7 +90,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings4, i4+1) );
     //  par4 << temp;
     //}
-    QObject * ptr = obj->create ( par1, *par2, par3, par4 );
+    QObject * ptr = obj->create ( PQSTRING(1), *par2, par3, par4 );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

@@ -77,8 +77,7 @@ QWebElementCollection ( const QWebElement & contextElement, const QString & quer
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 {
   QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
-  QWebElementCollection * o = new QWebElementCollection ( *par1, par2 );
+  QWebElementCollection * o = new QWebElementCollection ( *par1, PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

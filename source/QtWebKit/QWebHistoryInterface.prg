@@ -69,8 +69,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
   QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->addHistoryEntry ( par1 );
+    obj->addHistoryEntry ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -84,8 +83,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
   QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->historyContains ( par1 ) );
+    hb_retl( obj->historyContains ( PQSTRING(1) ) );
   }
 }
 
