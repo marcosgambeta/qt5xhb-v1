@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETCACHED )
   {
     if( ISLOG(1) )
     {
-      obj->setCached ( (bool) hb_parl(1) );
+      obj->setCached ( PBOOL(1) );
     }
     else
     {

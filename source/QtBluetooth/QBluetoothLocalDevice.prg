@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGCONFIRMATION )
   {
     if( ISLOG(1) )
     {
-      obj->pairingConfirmation ( (bool) hb_parl(1) );
+      obj->pairingConfirmation ( PBOOL(1) );
     }
     else
     {
