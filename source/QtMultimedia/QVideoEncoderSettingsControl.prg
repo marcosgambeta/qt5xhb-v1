@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION )
   QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->videoCodecDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->videoCodecDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 

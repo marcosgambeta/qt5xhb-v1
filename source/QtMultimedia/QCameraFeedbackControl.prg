@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->setEventFeedbackSound (  (QCameraFeedbackControl::EventType) par1, par2 ) );
+    hb_retl( obj->setEventFeedbackSound (  (QCameraFeedbackControl::EventType) par1, PQSTRING(2) ) );
   }
 }
 

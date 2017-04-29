@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_METADATA )
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->metaData ( par1 ) );
+    QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -104,9 +103,8 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_SETMETADATA )
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setMetaData ( par1, *par2 );
+    obj->setMetaData ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

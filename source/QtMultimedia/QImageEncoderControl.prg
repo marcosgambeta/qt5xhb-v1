@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
   QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->imageCodecDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->imageCodecDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 

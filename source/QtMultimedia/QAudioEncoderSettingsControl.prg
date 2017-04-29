@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION )
   QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->codecDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->codecDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 

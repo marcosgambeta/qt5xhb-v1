@@ -231,8 +231,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEFILENAME )
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setSourceFilename ( par1 );
+    obj->setSourceFilename ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -311,7 +310,6 @@ static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const Q
 */
 HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
   //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
   //int i2;
@@ -321,7 +319,7 @@ HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
   //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
   //  par2 << temp;
   //}
-  hb_retni( QAudioDecoder::hasSupport ( par1, par2 ) );
+  hb_retni( QAudioDecoder::hasSupport ( PQSTRING(1), par2 ) );
 }
 
 

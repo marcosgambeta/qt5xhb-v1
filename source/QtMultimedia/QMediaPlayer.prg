@@ -604,7 +604,6 @@ static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const Q
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
   //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
   //int i2;
@@ -615,7 +614,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
   //  par2 << temp;
   //}
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  hb_retni( QMediaPlayer::hasSupport ( par1, par2,  (QMediaPlayer::Flags) par3 ) );
+  hb_retni( QMediaPlayer::hasSupport ( PQSTRING(1), par2,  (QMediaPlayer::Flags) par3 ) );
 }
 
 

@@ -78,7 +78,6 @@ QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
   //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
   //int i2;
@@ -88,7 +87,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
   //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
   //  par2 << temp;
   //}
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( par1, par2 );
+  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

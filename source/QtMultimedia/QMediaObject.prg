@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->metaData ( par1 ) );
+    QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

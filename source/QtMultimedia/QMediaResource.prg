@@ -325,8 +325,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOCODEC )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setAudioCodec ( par1 );
+    obj->setAudioCodec ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -368,8 +367,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setLanguage ( par1 );
+    obj->setLanguage ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -459,8 +457,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOCODEC )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setVideoCodec ( par1 );
+    obj->setVideoCodec ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -71,8 +71,7 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION )
   QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->containerDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->containerDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -98,8 +97,7 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT )
   QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setContainerFormat ( par1 );
+    obj->setContainerFormat ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

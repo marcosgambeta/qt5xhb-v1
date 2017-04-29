@@ -56,9 +56,8 @@ QSound(const QString& filename, QObject* parent = 0)
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSound * o = new QSound ( par1, par2 );
+  QSound * o = new QSound ( PQSTRING(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -176,8 +175,7 @@ static void play(const QString& filename)
 */
 HB_FUNC_STATIC( QSOUND_PLAY2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QSound::play ( par1 );
+  QSound::play ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

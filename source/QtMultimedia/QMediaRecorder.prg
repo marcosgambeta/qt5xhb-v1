@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AUDIOCODECDESCRIPTION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->audioCodecDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->audioCodecDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERDESCRIPTION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->containerDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->containerDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -328,8 +326,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_METADATA )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->metaData ( par1 ) );
+    QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -372,8 +369,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETCONTAINERFORMAT )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setContainerFormat ( par1 );
+    obj->setContainerFormat ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -404,9 +400,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETMETADATA )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setMetaData ( par1, *par2 );
+    obj->setMetaData ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -602,8 +597,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VIDEOCODECDESCRIPTION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->videoCodecDescription ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->videoCodecDescription ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 

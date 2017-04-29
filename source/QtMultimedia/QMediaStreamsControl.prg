@@ -90,8 +90,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    QVariant * ptr = new QVariant( obj->metaData ( (int) hb_parni(1), par2 ) );
+    QVariant * ptr = new QVariant( obj->metaData ( (int) hb_parni(1), PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
