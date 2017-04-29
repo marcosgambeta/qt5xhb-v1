@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED )
   QWebSocketCorsAuthenticator * obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAllowed ( (bool) hb_parl(1) );
+    obj->setAllowed ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
