@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setAttribute ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setAttribute ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setChanged ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setChanged ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setVisible ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setVisible ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {

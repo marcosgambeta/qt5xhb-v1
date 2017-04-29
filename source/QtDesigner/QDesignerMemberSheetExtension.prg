@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setVisible ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setVisible ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
