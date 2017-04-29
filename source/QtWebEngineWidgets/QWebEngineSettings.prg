@@ -102,8 +102,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTFAMILY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setFontFamily (  (QWebEngineSettings::FontFamily) par1, par2 );
+    obj->setFontFamily (  (QWebEngineSettings::FontFamily) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -245,8 +244,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING )
   QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDefaultTextEncoding ( par1 );
+    obj->setDefaultTextEncoding ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

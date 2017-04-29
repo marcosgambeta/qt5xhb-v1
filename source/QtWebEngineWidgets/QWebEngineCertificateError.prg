@@ -70,8 +70,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
   int par1 = hb_parni(1);
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   bool par3 = hb_parl(3);
-  QString par4 = QLatin1String( hb_parc(4) );
-  QWebEngineCertificateError * o = new QWebEngineCertificateError ( par1, *par2, par3, par4 );
+  QWebEngineCertificateError * o = new QWebEngineCertificateError ( par1, *par2, par3, PQSTRING(4) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

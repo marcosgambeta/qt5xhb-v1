@@ -265,9 +265,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_FINDTEXT )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    obj->findText ( par1,  (QWebEnginePage::FindFlags) par2 );
+    obj->findText ( PQSTRING(1),  (QWebEnginePage::FindFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -335,9 +334,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETHTML )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setHtml ( par1, par2 );
+    obj->setHtml ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -513,8 +511,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_RUNJAVASCRIPT1 )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->runJavaScript ( par1 );
+    obj->runJavaScript ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -529,8 +526,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_RUNJAVASCRIPT2 )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->runJavaScript ( par1 );
+    obj->runJavaScript ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
