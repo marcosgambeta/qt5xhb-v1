@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->listen ( par1 ) );
+    hb_retl( obj->listen ( PQSTRING(1) ) );
   }
 }
 
@@ -254,8 +253,7 @@ static bool removeServer ( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  hb_retl( QLocalServer::removeServer ( par1 ) );
+  hb_retl( QLocalServer::removeServer ( PQSTRING(1) ) );
 }
 
 

@@ -525,10 +525,9 @@ static QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFor
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   int par3 = ISNIL(3)? (int) QRegExp::FixedString : hb_parni(3);
-  QList<QSslCertificate> list = QSslCertificate::fromPath ( par1,  (QSsl::EncodingFormat) par2,  (QRegExp::PatternSyntax) par3 );
+  QList<QSslCertificate> list = QSslCertificate::fromPath ( PQSTRING(1),  (QSsl::EncodingFormat) par2,  (QRegExp::PatternSyntax) par3 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );

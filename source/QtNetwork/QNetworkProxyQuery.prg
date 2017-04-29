@@ -100,11 +100,10 @@ QNetworkProxyQuery ( const QString & hostname, int port, const QString & protoco
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW3 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(4);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( par1, par2, par3,  (QNetworkProxyQuery::QueryType) par4 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( PQSTRING(1), par2, par3,  (QNetworkProxyQuery::QueryType) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -148,11 +147,10 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW7 )
 {
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   int par3 = hb_parni(3);
   QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   int par5 = ISNIL(5)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(5);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, par2, par3, par4,  (QNetworkProxyQuery::QueryType) par5 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, PQSTRING(2), par3, par4,  (QNetworkProxyQuery::QueryType) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -321,8 +319,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPeerHostName ( par1 );
+    obj->setPeerHostName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -350,8 +347,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setProtocolTag ( par1 );
+    obj->setProtocolTag ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

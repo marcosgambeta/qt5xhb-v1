@@ -270,8 +270,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
   QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setErrorString ( par1 );
+    obj->setErrorString ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -285,8 +284,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
   QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setHostName ( par1 );
+    obj->setHostName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -321,8 +319,7 @@ static QHostInfo fromName ( const QString & name )
 */
 HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( par1 ) );
+  QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( PQSTRING(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QHOSTINFO", true );
 }
 
@@ -350,10 +347,9 @@ static int lookupHost ( const QString & name, QObject * receiver, const char * m
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   const char * par3 = hb_parc(3);
-  hb_retni( QHostInfo::lookupHost ( par1, par2,  (const char *) par3 ) );
+  hb_retni( QHostInfo::lookupHost ( PQSTRING(1), par2,  (const char *) par3 ) );
 }
 
 

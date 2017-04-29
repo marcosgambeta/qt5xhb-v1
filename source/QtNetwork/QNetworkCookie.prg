@@ -232,8 +232,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETDOMAIN )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDomain ( par1 );
+    obj->setDomain ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -291,8 +290,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETPATH )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPath ( par1 );
+    obj->setPath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

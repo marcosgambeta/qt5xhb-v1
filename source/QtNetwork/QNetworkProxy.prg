@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setHostName ( par1 );
+    obj->setHostName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -257,8 +256,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPassword ( par1 );
+    obj->setPassword ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -301,8 +299,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setUser ( par1 );
+    obj->setUser ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

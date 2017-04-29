@@ -95,8 +95,7 @@ QHostAddress ( const QString & address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QHostAddress * o = new QHostAddress ( par1 );
+  QHostAddress * o = new QHostAddress ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -287,8 +286,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->setAddress ( par1 ) );
+    hb_retl( obj->setAddress ( PQSTRING(1) ) );
   }
 }
 
@@ -324,8 +322,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setScopeId ( par1 );
+    obj->setScopeId ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
