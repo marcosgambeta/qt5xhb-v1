@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
   if( obj )
   {
     QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
-    obj->exceptionThrow ( (qint64) hb_parni(1), *par2, (bool) hb_parl(3) );
+    obj->exceptionThrow ( (qint64) hb_parni(1), *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
