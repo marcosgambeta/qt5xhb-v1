@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETDELAYEDREPLY )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDelayedReply ( (bool) hb_parl(1) );
+    obj->setDelayedReply ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETAUTOSTARTSERVICE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAutoStartService ( (bool) hb_parl(1) );
+    obj->setAutoStartService ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDelayedReply ( (bool) hb_parl(1) );
+    obj->setDelayedReply ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
