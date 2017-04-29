@@ -471,8 +471,7 @@ static QPrinterInfo printerInfo(const QString &printerName)
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( par1 ) );
+  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 }
 
