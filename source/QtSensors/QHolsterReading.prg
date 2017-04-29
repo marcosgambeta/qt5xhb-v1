@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
   QHolsterReading * obj = (QHolsterReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setHolstered ( (bool) hb_parl(1) );
+    obj->setHolstered ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

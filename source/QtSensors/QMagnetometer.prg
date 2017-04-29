@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
   QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setReturnGeoValues ( (bool) hb_parl(1) );
+    obj->setReturnGeoValues ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

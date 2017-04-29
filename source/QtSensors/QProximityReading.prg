@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPROXIMITYREADING_SETCLOSE )
   QProximityReading * obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setClose ( (bool) hb_parl(1) );
+    obj->setClose ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

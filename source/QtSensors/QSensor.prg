@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSENSOR_SETACTIVE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setActive ( (bool) hb_parl(1) );
+    obj->setActive ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSENSOR_SETALWAYSON )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAlwaysOn ( (bool) hb_parl(1) );
+    obj->setAlwaysOn ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QSENSOR_SETSKIPDUPLICATES )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSkipDuplicates ( (bool) hb_parl(1) );
+    obj->setSkipDuplicates ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

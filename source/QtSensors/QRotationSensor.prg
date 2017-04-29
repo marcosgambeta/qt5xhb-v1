@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
   QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setHasZ ( (bool) hb_parl(1) );
+    obj->setHasZ ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
