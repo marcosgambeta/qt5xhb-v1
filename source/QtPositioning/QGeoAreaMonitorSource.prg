@@ -352,9 +352,8 @@ static QGeoAreaMonitorSource *createSource(const QString& sourceName, QObject *p
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATESOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QString par1 = QLatin1String( hb_parc(1) );
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource ( par1, par2 );
+  QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource ( PQSTRING(1), par2 );
   _qt5xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
 #endif
 }

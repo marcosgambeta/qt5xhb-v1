@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETNAME )
   QGeoAreaMonitorInfo * obj = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setName ( par1 );
+    obj->setName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
