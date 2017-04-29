@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
   {
     if( ISLOG(1) )
     {
-      obj->setOutputWarningsToStandardError ( (bool) hb_parl(1) );
+      obj->setOutputWarningsToStandardError ( PBOOL(1) );
     }
     else
     {

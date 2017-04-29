@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
   {
     if( ISLOG(1) )
     {
-      obj->setClip ( (bool) hb_parl(1) );
+      obj->setClip ( PBOOL(1) );
     }
     else
     {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
   {
     if( ISLOG(1) )
     {
-      obj->setKeepMouseGrab ( (bool) hb_parl(1) );
+      obj->setKeepMouseGrab ( PBOOL(1) );
     }
     else
     {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
   {
     if( ISLOG(1) )
     {
-      obj->setSmooth ( (bool) hb_parl(1) );
+      obj->setSmooth ( PBOOL(1) );
     }
     else
     {

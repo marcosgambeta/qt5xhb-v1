@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
   {
     if( ISLOG(1) )
     {
-      obj->setNotifyOnValueChanged ( (bool) hb_parl(1) );
+      obj->setNotifyOnValueChanged ( PBOOL(1) );
     }
     else
     {
