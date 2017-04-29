@@ -86,9 +86,8 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW2 )
 {
   QQmlContext * par1 = (QQmlContext *) _qt5xhb_itemGetPtr(1);
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QString par3 = QLatin1String( hb_parc(3) );
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QQmlExpression * o = new QQmlExpression ( par1, par2, par3, par4 );
+  QQmlExpression * o = new QQmlExpression ( par1, par2, PQSTRING(3), par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -304,8 +303,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setExpression ( par1 );
+    obj->setExpression ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -333,8 +331,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setSourceLocation ( par1, (int) hb_parni(2), (int) ISNIL(3)? 0 : hb_parni(3) );
+    obj->setSourceLocation ( PQSTRING(1), (int) hb_parni(2), (int) ISNIL(3)? 0 : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

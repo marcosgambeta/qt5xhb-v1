@@ -90,9 +90,8 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW2 )
 {
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QQmlComponent * o = new QQmlComponent ( par1, par2, par3 );
+  QQmlComponent * o = new QQmlComponent ( par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,10 +101,9 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mod
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW3 )
 {
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QString par2 = QLatin1String( hb_parc(2) );
   int par3 = hb_parni(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QQmlComponent * o = new QQmlComponent ( par1, par2,  (QQmlComponent::CompilationMode) par3, par4 );
+  QQmlComponent * o = new QQmlComponent ( par1, PQSTRING(2),  (QQmlComponent::CompilationMode) par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -165,8 +165,7 @@ QJSValue(const QString & value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW7 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QJSValue * o = new QJSValue ( par1 );
+  QJSValue * o = new QJSValue ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -246,8 +245,7 @@ HB_FUNC_STATIC( QJSVALUE_DELETEPROPERTY )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->deleteProperty ( par1 ) );
+    hb_retl( obj->deleteProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -274,8 +272,7 @@ HB_FUNC_STATIC( QJSVALUE_HASOWNPROPERTY )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->hasOwnProperty ( par1 ) );
+    hb_retl( obj->hasOwnProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -288,8 +285,7 @@ HB_FUNC_STATIC( QJSVALUE_HASPROPERTY )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->hasProperty ( par1 ) );
+    hb_retl( obj->hasProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -471,8 +467,7 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY1 )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QJSValue * ptr = new QJSValue( obj->property ( par1 ) );
+    QJSValue * ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
@@ -532,9 +527,8 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY1 )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QJSValue * par2 = (QJSValue *) _qt5xhb_itemGetPtr(2);
-    obj->setProperty ( par1, *par2 );
+    obj->setProperty ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

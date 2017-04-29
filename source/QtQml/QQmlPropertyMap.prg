@@ -90,8 +90,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->clear ( par1 );
+    obj->clear ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -105,8 +104,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->contains ( par1 ) );
+    hb_retl( obj->contains ( PQSTRING(1) ) );
   }
 }
 
@@ -132,9 +130,8 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_INSERT )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->insert ( par1, *par2 );
+    obj->insert ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,8 +185,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->value ( par1 ) );
+    QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

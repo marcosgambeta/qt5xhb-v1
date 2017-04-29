@@ -118,9 +118,8 @@ HB_FUNC_STATIC( QQMLENGINE_ADDIMAGEPROVIDER )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QQmlImageProviderBase * par2 = (QQmlImageProviderBase *) _qt5xhb_itemGetPtr(2);
-    obj->addImageProvider ( par1, par2 );
+    obj->addImageProvider ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -134,8 +133,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDIMPORTPATH )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->addImportPath ( par1 );
+    obj->addImportPath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -149,9 +147,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDNAMEDBUNDLE )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->addNamedBundle ( par1, par2 ) );
+    hb_retl( obj->addNamedBundle ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -164,8 +160,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDPLUGINPATH )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->addPluginPath ( par1 );
+    obj->addPluginPath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -207,8 +202,7 @@ HB_FUNC_STATIC( QQMLENGINE_IMAGEPROVIDER )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QQmlImageProviderBase * ptr = obj->imageProvider ( par1 );
+    QQmlImageProviderBase * ptr = obj->imageProvider ( PQSTRING(1) );
     _qt5xhb_createReturnClass ( ptr, "QQMLIMAGEPROVIDERBASE" );
   }
 }
@@ -236,10 +230,8 @@ HB_FUNC_STATIC( QQMLENGINE_IMPORTPLUGIN )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
     QList<QQmlError> * par3 = (QList<QQmlError> *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->importPlugin ( par1, par2, par3 ) );
+    hb_retl( obj->importPlugin ( PQSTRING(1), PQSTRING(2), par3 ) );
   }
 }
 
@@ -334,8 +326,7 @@ HB_FUNC_STATIC( QQMLENGINE_REMOVEIMAGEPROVIDER )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->removeImageProvider ( par1 );
+    obj->removeImageProvider ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -431,8 +422,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETOFFLINESTORAGEPATH )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setOfflineStoragePath ( par1 );
+    obj->setOfflineStoragePath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

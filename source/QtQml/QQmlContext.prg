@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->contextProperty ( par1 ) );
+    QVariant * ptr = new QVariant( obj->contextProperty ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -272,9 +271,8 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY1 )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->setContextProperty ( par1, par2 );
+    obj->setContextProperty ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -287,9 +285,8 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY2 )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setContextProperty ( par1, *par2 );
+    obj->setContextProperty ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

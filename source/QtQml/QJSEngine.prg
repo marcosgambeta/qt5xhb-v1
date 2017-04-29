@@ -130,9 +130,8 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
   QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QJSValue * ptr = new QJSValue( obj->evaluate ( par1, par2, (int) ISNIL(3)? 1 : hb_parni(3) ) );
+    QJSValue * ptr = new QJSValue( obj->evaluate ( PQSTRING(1), par2, (int) ISNIL(3)? 1 : hb_parni(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
