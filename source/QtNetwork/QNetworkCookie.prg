@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETHTTPONLY )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setHttpOnly ( (bool) hb_parl(1) );
+    obj->setHttpOnly ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETSECURE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSecure ( (bool) hb_parl(1) );
+    obj->setSecure ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

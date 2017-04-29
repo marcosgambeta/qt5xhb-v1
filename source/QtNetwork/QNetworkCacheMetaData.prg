@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
   QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSaveToDisk ( (bool) hb_parl(1) );
+    obj->setSaveToDisk ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

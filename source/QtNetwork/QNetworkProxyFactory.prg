@@ -183,7 +183,7 @@ static void setUseSystemConfiguration ( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
 {
-  QNetworkProxyFactory::setUseSystemConfiguration ( (bool) hb_parl(1) );
+  QNetworkProxyFactory::setUseSystemConfiguration ( PBOOL(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
