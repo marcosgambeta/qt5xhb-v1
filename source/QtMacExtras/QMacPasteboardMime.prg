@@ -119,9 +119,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CANCONVERT )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->canConvert ( par1, par2 ) );
+    hb_retl( obj->canConvert ( PQSTRING(1), PQSTRING(2) ) );
   }
 #endif
 }
@@ -136,8 +134,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_MIMEFOR )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->mimeFor ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->mimeFor ( PQSTRING(1) ).toLatin1().data() );
   }
 #endif
 }
@@ -152,8 +149,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_FLAVORFOR )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->flavorFor ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->flavorFor ( PQSTRING(1) ).toLatin1().data() );
   }
 #endif
 }
@@ -168,7 +164,6 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QList<QByteArray> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -177,8 +172,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
     {
       par2 << *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QString par3 = QLatin1String( hb_parc(3) );
-    QVariant * ptr = new QVariant( obj->convertToMime ( par1, par2, par3 ) );
+    QVariant * ptr = new QVariant( obj->convertToMime ( PQSTRING(1), par2, PQSTRING(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 #endif
@@ -194,10 +188,8 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    QString par3 = QLatin1String( hb_parc(3) );
-    QList<QByteArray> list = obj->convertFromMime ( par1, *par2, par3 );
+    QList<QByteArray> list = obj->convertFromMime ( PQSTRING(1), *par2, PQSTRING(3) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
