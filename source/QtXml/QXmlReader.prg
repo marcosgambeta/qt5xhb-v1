@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFeature ( PQSTRING(1), (bool) hb_parl(2) );
+    obj->setFeature ( PQSTRING(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

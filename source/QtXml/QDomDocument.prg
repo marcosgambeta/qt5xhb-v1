@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
   if( obj )
   {
     QDomNode * par1 = (QDomNode *) _qt5xhb_itemGetPtr(1);
-    QDomNode * ptr = new QDomNode( obj->importNode ( *par1, (bool) hb_parl(2) ) );
+    QDomNode * ptr = new QDomNode( obj->importNode ( *par1, PBOOL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
