@@ -87,10 +87,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
   QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    hb_retl( obj->notationDecl ( par1, par2, par3 ) );
+    hb_retl( obj->notationDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   }
 }
 
@@ -103,11 +100,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
   QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
-    hb_retl( obj->unparsedEntityDecl ( par1, par2, par3, par4 ) );
+    hb_retl( obj->unparsedEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
   }
 }
 

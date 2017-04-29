@@ -169,9 +169,8 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     bool par2;
-    hb_retl( obj->feature ( par1, &par2 ) );
+    hb_retl( obj->feature ( PQSTRING(1), &par2 ) );
     hb_storl( par2, 2 );
   }
 }
@@ -185,8 +184,7 @@ HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->hasFeature ( par1 ) );
+    hb_retl( obj->hasFeature ( PQSTRING(1) ) );
   }
 }
 
@@ -199,8 +197,7 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retl( obj->hasProperty ( par1 ) );
+    hb_retl( obj->hasProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -241,9 +238,8 @@ HB_FUNC_STATIC( QXMLREADER_PROPERTY )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     bool par2;
-    hb_retptr( (void *) obj->property ( par1, &par2 ) );
+    hb_retptr( (void *) obj->property ( PQSTRING(1), &par2 ) );
     hb_storl( par2, 2 );
   }
 }
@@ -332,8 +328,7 @@ HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setFeature ( par1, (bool) hb_parl(2) );
+    obj->setFeature ( PQSTRING(1), (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -362,9 +357,8 @@ HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     void * par2 = (void *) hb_parptr(2);
-    obj->setProperty ( par1, par2 );
+    obj->setProperty ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

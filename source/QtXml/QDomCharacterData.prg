@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
   QDomCharacterData * obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->appendData ( par1 );
+    obj->appendData ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -161,8 +160,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
   if( obj )
   {
     unsigned long par1 = hb_parnl(1);
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->insertData ( par1, par2 );
+    obj->insertData ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -204,8 +202,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
   {
     unsigned long par1 = hb_parnl(1);
     unsigned long par2 = hb_parnl(2);
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->replaceData ( par1, par2, par3 );
+    obj->replaceData ( par1, par2, PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -219,8 +216,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
   QDomCharacterData * obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setData ( par1 );
+    obj->setData ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

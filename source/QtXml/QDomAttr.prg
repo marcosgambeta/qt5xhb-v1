@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QDOMATTR_SETVALUE )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setValue ( par1 );
+    obj->setValue ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

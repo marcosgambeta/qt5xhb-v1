@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
   QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setData ( par1 );
+    obj->setData ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

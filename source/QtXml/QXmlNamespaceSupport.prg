@@ -107,8 +107,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->prefix ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->prefix ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 
@@ -134,8 +133,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES2 )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringList strl = obj->prefixes ( par1 );
+    QStringList strl = obj->prefixes ( PQSTRING(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -168,10 +166,9 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QString par3 = QLatin1String( hb_parc(3) );
     QString par4 = QLatin1String( hb_parc(4) );
-    obj->processName ( par1, (bool) hb_parl(2), par3, par4 );
+    obj->processName ( PQSTRING(1), (bool) hb_parl(2), par3, par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -213,9 +210,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    obj->setPrefix ( par1, par2 );
+    obj->setPrefix ( PQSTRING(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -229,10 +224,9 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QString par2 = QLatin1String( hb_parc(2) );
     QString par3 = QLatin1String( hb_parc(3) );
-    obj->splitName ( par1, par2, par3 );
+    obj->splitName ( PQSTRING(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -246,8 +240,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retc( (const char *) obj->uri ( par1 ).toLatin1().data() );
+    hb_retc( (const char *) obj->uri ( PQSTRING(1) ).toLatin1().data() );
   }
 }
 

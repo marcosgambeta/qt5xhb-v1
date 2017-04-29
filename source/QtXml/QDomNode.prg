@@ -535,9 +535,7 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QString par2 = QLatin1String( hb_parc(2) );
-    hb_retl( obj->isSupported ( par1, par2 ) );
+    hb_retl( obj->isSupported ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -618,8 +616,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QDomNode * ptr = new QDomNode( obj->namedItem ( par1 ) );
+    QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -878,8 +875,7 @@ HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setNodeValue ( par1 );
+    obj->setNodeValue ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -893,8 +889,7 @@ HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setPrefix ( par1 );
+    obj->setPrefix ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
