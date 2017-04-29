@@ -547,8 +547,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDTEXTMESSAGE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    hb_retni( obj->sendTextMessage ( par1 ) );
+    hb_retni( obj->sendTextMessage ( PQSTRING(1) ) );
   }
 #endif
 }

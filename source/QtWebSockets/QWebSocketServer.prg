@@ -92,10 +92,9 @@ explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject
 HB_FUNC_STATIC( QWEBSOCKETSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QString par1 = QLatin1String( hb_parc(1) );
   int par2 = hb_parni(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QWebSocketServer * o = new QWebSocketServer ( par1,  (QWebSocketServer::SslMode) par2, par3 );
+  QWebSocketServer * o = new QWebSocketServer ( PQSTRING(1),  (QWebSocketServer::SslMode) par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -386,8 +385,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSERVERNAME )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setServerName ( par1 );
+    obj->setServerName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -68,8 +68,7 @@ explicit QWebSocketCorsAuthenticator(const QString &origin)
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( par1 );
+  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
