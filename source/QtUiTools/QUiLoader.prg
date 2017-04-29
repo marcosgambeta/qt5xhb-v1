@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->addPluginPath ( par1 );
+    obj->addPluginPath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -190,10 +189,9 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    QLayout * ptr = obj->createLayout ( par1, par2, par3 );
+    QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, par3 );
     _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
   }
 }
@@ -207,10 +205,9 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    QWidget * ptr = obj->createWidget ( par1, par2, par3 );
+    QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, par3 );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
