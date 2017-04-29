@@ -187,8 +187,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->setDescription ( par1 );
+    obj->setDescription ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

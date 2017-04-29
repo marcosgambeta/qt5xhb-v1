@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
   QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QStringList strl = obj->recognizerSignals ( par1 );
+    QStringList strl = obj->recognizerSignals ( PQSTRING(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -141,8 +140,7 @@ static QSensorGestureRecognizer *sensorGestureRecognizer(const QString &id)
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QString par1 = QLatin1String( hb_parc(1) );
-  QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer ( par1 );
+  QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer ( PQSTRING(1) );
   _qt5xhb_createReturnClass ( ptr, "QSENSORGESTURERECOGNIZER" );
 #endif
 }
