@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBlockUpdates ( (bool) hb_parl(1) );
+    obj->setBlockUpdates ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
