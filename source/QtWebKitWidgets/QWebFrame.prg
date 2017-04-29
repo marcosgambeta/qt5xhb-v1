@@ -231,8 +231,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QWebElementCollection * ptr = new QWebElementCollection( obj->findAllElements ( par1 ) );
+    QWebElementCollection * ptr = new QWebElementCollection( obj->findAllElements ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
   }
 }
@@ -246,8 +245,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QWebElement * ptr = new QWebElement( obj->findFirstElement ( par1 ) );
+    QWebElement * ptr = new QWebElement( obj->findFirstElement ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -607,8 +605,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->scrollToAnchor ( par1 );
+    obj->scrollToAnchor ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -667,9 +664,8 @@ HB_FUNC_STATIC( QWEBFRAME_SETHTML )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setHtml ( par1, par2 );
+    obj->setHtml ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -851,8 +847,7 @@ HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
-    QVariant * ptr = new QVariant( obj->evaluateJavaScript ( par1 ) );
+    QVariant * ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

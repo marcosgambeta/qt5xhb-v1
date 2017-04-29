@@ -128,9 +128,8 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->findText ( par1,  (QWebPage::FindFlags) par2 ) );
+    hb_retl( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -306,9 +305,8 @@ HB_FUNC_STATIC( QWEBVIEW_SETHTML )
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setHtml ( par1, par2 );
+    obj->setHtml ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

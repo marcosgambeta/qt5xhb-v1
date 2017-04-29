@@ -229,9 +229,8 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->findText ( par1,  (QWebPage::FindFlags) par2 ) );
+    hb_retl( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
   }
 }
 
