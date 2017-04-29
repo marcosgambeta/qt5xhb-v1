@@ -74,9 +74,8 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QScriptEngine * par2 = (QScriptEngine *) _qt5xhb_itemGetPtr(2);
-    QScriptValue * ptr = new QScriptValue( obj->setupPackage ( par1, par2 ) );
+    QScriptValue * ptr = new QScriptValue( obj->setupPackage ( PQSTRING(1), par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -90,9 +89,8 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = QLatin1String( hb_parc(1) );
     QScriptEngine * par2 = ISNIL(2)? 0 : (QScriptEngine *) _qt5xhb_itemGetPtr(2);
-    obj->initialize ( par1, par2 );
+    obj->initialize ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

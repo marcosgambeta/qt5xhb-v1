@@ -193,8 +193,7 @@ QScriptValue(const QString & value)
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
-  QScriptValue * o = new QScriptValue ( par1 );
+  QScriptValue * o = new QScriptValue ( PQSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

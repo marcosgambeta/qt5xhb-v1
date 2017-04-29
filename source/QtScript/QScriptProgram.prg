@@ -70,10 +70,9 @@ QScriptProgram(const QString & sourceCode, const QString fileName = QString(), i
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
 {
-  QString par1 = QLatin1String( hb_parc(1) );
   QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? 1 : hb_parni(3);
-  QScriptProgram * o = new QScriptProgram ( par1, par2, par3 );
+  QScriptProgram * o = new QScriptProgram ( PQSTRING(1), par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

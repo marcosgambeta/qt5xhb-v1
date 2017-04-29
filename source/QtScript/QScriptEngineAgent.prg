@@ -231,9 +231,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->scriptLoad ( (qint64) hb_parni(1), par2, par3, (int) hb_parni(4) );
+    obj->scriptLoad ( (qint64) hb_parni(1), PQSTRING(2), PQSTRING(3), (int) hb_parni(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
