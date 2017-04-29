@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETMUTED )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMuted ( (bool) hb_parl(1) );
+    obj->setMuted ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

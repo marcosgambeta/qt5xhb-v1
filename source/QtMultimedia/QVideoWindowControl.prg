@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETFULLSCREEN )
   QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFullScreen ( (bool) hb_parl(1) );
+    obj->setFullScreen ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

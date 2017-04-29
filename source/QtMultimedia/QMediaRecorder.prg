@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETMUTED )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMuted ( (bool) hb_parl(1) );
+    obj->setMuted ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

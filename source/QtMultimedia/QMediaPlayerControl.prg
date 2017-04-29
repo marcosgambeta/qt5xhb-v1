@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMUTED )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMuted ( (bool) hb_parl(1) );
+    obj->setMuted ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

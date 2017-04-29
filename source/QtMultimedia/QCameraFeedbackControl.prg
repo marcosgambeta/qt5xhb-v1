@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->setEventFeedbackEnabled (  (QCameraFeedbackControl::EventType) par1, (bool) hb_parl(2) ) );
+    hb_retl( obj->setEventFeedbackEnabled (  (QCameraFeedbackControl::EventType) par1, PBOOL(2) ) );
   }
 }
 

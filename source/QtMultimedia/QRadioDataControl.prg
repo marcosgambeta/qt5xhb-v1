@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAlternativeFrequenciesEnabled ( (bool) hb_parl(1) );
+    obj->setAlternativeFrequenciesEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
