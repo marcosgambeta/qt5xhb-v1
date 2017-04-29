@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setTearOffEnabled ( (bool) hb_parl(1) );
+      obj->setTearOffEnabled ( PBOOL(1) );
     }
     else
     {
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setSeparatorsCollapsible ( (bool) hb_parl(1) );
+      obj->setSeparatorsCollapsible ( PBOOL(1) );
     }
     else
     {
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QMENU_SETTOOLTIPSVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setToolTipsVisible ( (bool) hb_parl(1) );
+      obj->setToolTipsVisible ( PBOOL(1) );
     }
     else
     {

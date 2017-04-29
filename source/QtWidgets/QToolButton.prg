@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoRaise ( (bool) hb_parl(1) );
+      obj->setAutoRaise ( PBOOL(1) );
     }
     else
     {

@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARPOPUP )
   {
     if( ISLOG(1) )
     {
-      obj->setCalendarPopup ( (bool) hb_parl(1) );
+      obj->setCalendarPopup ( PBOOL(1) );
     }
     else
     {

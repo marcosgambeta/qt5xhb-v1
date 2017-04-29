@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setWidgetResizable ( (bool) hb_parl(1) );
+      obj->setWidgetResizable ( PBOOL(1) );
     }
     else
     {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
   {
     if( ISLOG(1) )
     {
-      hb_retl( obj->focusNextPrevChild ( (bool) hb_parl(1) ) );
+      hb_retl( obj->focusNextPrevChild ( PBOOL(1) ) );
     }
     else
     {

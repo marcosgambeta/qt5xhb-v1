@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDisabled ( (bool) hb_parl(1) );
+      obj->setDisabled ( PBOOL(1) );
     }
     else
     {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setEnabled ( (bool) hb_parl(1) );
+      obj->setEnabled ( PBOOL(1) );
     }
     else
     {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
   {
     if( ISLOG(1) )
     {
-      obj->setExclusive ( (bool) hb_parl(1) );
+      obj->setExclusive ( PBOOL(1) );
     }
     else
     {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {

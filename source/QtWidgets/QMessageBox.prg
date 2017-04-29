@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {

@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setItemEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setItemEnabled ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {

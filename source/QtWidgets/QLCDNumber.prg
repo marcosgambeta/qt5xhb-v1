@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
   {
     if( ISLOG(1) )
     {
-      obj->setSmallDecimalPoint ( (bool) hb_parl(1) );
+      obj->setSmallDecimalPoint ( PBOOL(1) );
     }
     else
     {

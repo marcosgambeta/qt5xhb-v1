@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoRepeat ( (bool) hb_parl(1) );
+      obj->setAutoRepeat ( PBOOL(1) );
     }
     else
     {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setEnabled ( (bool) hb_parl(1) );
+      obj->setEnabled ( PBOOL(1) );
     }
     else
     {

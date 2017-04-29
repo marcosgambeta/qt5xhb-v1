@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
   {
     if( ISLOG(1) )
     {
-      obj->setInvertedAppearance ( (bool) hb_parl(1) );
+      obj->setInvertedAppearance ( PBOOL(1) );
     }
     else
     {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
   {
     if( ISLOG(1) )
     {
-      obj->setInvertedControls ( (bool) hb_parl(1) );
+      obj->setInvertedControls ( PBOOL(1) );
     }
     else
     {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
   {
     if( ISLOG(1) )
     {
-      obj->setSliderDown ( (bool) hb_parl(1) );
+      obj->setSliderDown ( PBOOL(1) );
     }
     else
     {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
   {
     if( ISLOG(1) )
     {
-      obj->setTracking ( (bool) hb_parl(1) );
+      obj->setTracking ( PBOOL(1) );
     }
     else
     {

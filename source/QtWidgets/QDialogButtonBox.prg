@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
   {
     if( ISLOG(1) )
     {
-      obj->setCenterButtons ( (bool) hb_parl(1) );
+      obj->setCenterButtons ( PBOOL(1) );
     }
     else
     {

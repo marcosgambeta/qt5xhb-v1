@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
 {
   if( ISLOG(1) )
   {
-    QGraphicsLayout::setInstantInvalidatePropagation ( (bool) hb_parl(1) );
+    QGraphicsLayout::setInstantInvalidatePropagation ( PBOOL(1) );
   }
   else
   {

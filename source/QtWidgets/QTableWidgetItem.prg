@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSELECTED )
   {
     if( ISLOG(1) )
     {
-      obj->setSelected ( (bool) hb_parl(1) );
+      obj->setSelected ( PBOOL(1) );
     }
     else
     {

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
   {
     if( ISLOG(1) )
     {
-      obj->setClipping ( (bool) hb_parl(1) );
+      obj->setClipping ( PBOOL(1) );
     }
     else
     {

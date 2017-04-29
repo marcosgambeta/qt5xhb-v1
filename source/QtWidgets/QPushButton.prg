@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoDefault ( (bool) hb_parl(1) );
+      obj->setAutoDefault ( PBOOL(1) );
     }
     else
     {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
   {
     if( ISLOG(1) )
     {
-      obj->setDefault ( (bool) hb_parl(1) );
+      obj->setDefault ( PBOOL(1) );
     }
     else
     {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
   {
     if( ISLOG(1) )
     {
-      obj->setFlat ( (bool) hb_parl(1) );
+      obj->setFlat ( PBOOL(1) );
     }
     else
     {

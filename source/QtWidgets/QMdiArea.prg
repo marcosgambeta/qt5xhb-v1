@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setDocumentMode ( (bool) hb_parl(1) );
+      obj->setDocumentMode ( PBOOL(1) );
     }
     else
     {

@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
   {
     if( ISLOG(1) )
     {
-      obj->setHidden ( (bool) hb_parl(1) );
+      obj->setHidden ( PBOOL(1) );
     }
     else
     {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
   {
     if( ISLOG(1) )
     {
-      obj->setSelected ( (bool) hb_parl(1) );
+      obj->setSelected ( PBOOL(1) );
     }
     else
     {

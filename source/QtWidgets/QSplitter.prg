@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setChildrenCollapsible ( (bool) hb_parl(1) );
+      obj->setChildrenCollapsible ( PBOOL(1) );
     }
     else
     {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setCollapsible ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setCollapsible ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {

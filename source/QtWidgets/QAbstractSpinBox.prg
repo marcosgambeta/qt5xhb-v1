@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
   {
     if( ISLOG(1) )
     {
-      obj->setAccelerated ( (bool) hb_parl(1) );
+      obj->setAccelerated ( PBOOL(1) );
     }
     else
     {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
   {
     if( ISLOG(1) )
     {
-      obj->setFrame ( (bool) hb_parl(1) );
+      obj->setFrame ( PBOOL(1) );
     }
     else
     {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
   {
     if( ISLOG(1) )
     {
-      obj->setKeyboardTracking ( (bool) hb_parl(1) );
+      obj->setKeyboardTracking ( PBOOL(1) );
     }
     else
     {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
   {
     if( ISLOG(1) )
     {
-      obj->setWrapping ( (bool) hb_parl(1) );
+      obj->setWrapping ( PBOOL(1) );
     }
     else
     {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
 
   if( obj )
   {
-    obj->setGroupSeparatorShown ( (bool) hb_parl(1) );
+    obj->setGroupSeparatorShown ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

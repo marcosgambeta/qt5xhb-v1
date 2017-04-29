@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
   {
     if( ISLOG(1) )
     {
-      obj->setConfirmOverwrite ( (bool) hb_parl(1) );
+      obj->setConfirmOverwrite ( PBOOL(1) );
     }
     else
     {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setNameFilterDetailsVisible ( (bool) hb_parl(1) );
+      obj->setNameFilterDetailsVisible ( PBOOL(1) );
     }
     else
     {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
   {
     if( ISLOG(1) )
     {
-      obj->setResolveSymlinks ( (bool) hb_parl(1) );
+      obj->setResolveSymlinks ( PBOOL(1) );
     }
     else
     {
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {

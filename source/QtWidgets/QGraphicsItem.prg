@@ -2446,7 +2446,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTDROPS )
   {
     if( ISLOG(1) )
     {
-      obj->setAcceptDrops ( (bool) hb_parl(1) );
+      obj->setAcceptDrops ( PBOOL(1) );
     }
     else
     {
@@ -2468,7 +2468,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTHOVEREVENTS )
   {
     if( ISLOG(1) )
     {
-      obj->setAcceptHoverEvents ( (bool) hb_parl(1) );
+      obj->setAcceptHoverEvents ( PBOOL(1) );
     }
     else
     {
@@ -2490,7 +2490,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTTOUCHEVENTS )
   {
     if( ISLOG(1) )
     {
-      obj->setAcceptTouchEvents ( (bool) hb_parl(1) );
+      obj->setAcceptTouchEvents ( PBOOL(1) );
     }
     else
     {
@@ -2535,7 +2535,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACTIVE )
   {
     if( ISLOG(1) )
     {
-      obj->setActive ( (bool) hb_parl(1) );
+      obj->setActive ( PBOOL(1) );
     }
     else
     {
@@ -2649,7 +2649,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setEnabled ( (bool) hb_parl(1) );
+      obj->setEnabled ( PBOOL(1) );
     }
     else
     {
@@ -2671,7 +2671,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
   {
     if( ISLOG(1) )
     {
-      obj->setFiltersChildEvents ( (bool) hb_parl(1) );
+      obj->setFiltersChildEvents ( PBOOL(1) );
     }
     else
     {
@@ -3012,7 +3012,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
   {
     if( ISLOG(1) )
     {
-      obj->setSelected ( (bool) hb_parl(1) );
+      obj->setSelected ( PBOOL(1) );
     }
     else
     {
@@ -3129,7 +3129,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {

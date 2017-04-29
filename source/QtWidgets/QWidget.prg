@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCEPTDROPS )
   {
     if( ISLOG(1) )
     {
-      obj->setAcceptDrops ( (bool) hb_parl(1) );
+      obj->setAcceptDrops ( PBOOL(1) );
     }
     else
     {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QWIDGET_SETAUTOFILLBACKGROUND )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoFillBackground ( (bool) hb_parl(1) );
+      obj->setAutoFillBackground ( PBOOL(1) );
     }
     else
     {
@@ -1324,7 +1324,7 @@ HB_FUNC_STATIC( QWIDGET_SETMOUSETRACKING )
   {
     if( ISLOG(1) )
     {
-      obj->setMouseTracking ( (bool) hb_parl(1) );
+      obj->setMouseTracking ( PBOOL(1) );
     }
     else
     {
@@ -1587,7 +1587,7 @@ HB_FUNC_STATIC( QWIDGET_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {
@@ -1649,7 +1649,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODIFIED )
   {
     if( ISLOG(1) )
     {
-      obj->setWindowModified ( (bool) hb_parl(1) );
+      obj->setWindowModified ( PBOOL(1) );
     }
     else
     {
@@ -2695,7 +2695,7 @@ HB_FUNC_STATIC( QWIDGET_SETEDITFOCUS )
   {
     if( ISLOG(1) )
     {
-      obj->setEditFocus ( (bool) hb_parl(1) );
+      obj->setEditFocus ( PBOOL(1) );
     }
     else
     {
@@ -3739,7 +3739,7 @@ HB_FUNC_STATIC( QWIDGET_SETUPDATESENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setUpdatesEnabled ( (bool) hb_parl(1) );
+      obj->setUpdatesEnabled ( PBOOL(1) );
     }
     else
     {
@@ -4170,7 +4170,7 @@ HB_FUNC_STATIC( QWIDGET_SETDISABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDisabled ( (bool) hb_parl(1) );
+      obj->setDisabled ( PBOOL(1) );
     }
     else
     {
@@ -4205,7 +4205,7 @@ HB_FUNC_STATIC( QWIDGET_SETENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setEnabled ( (bool) hb_parl(1) );
+      obj->setEnabled ( PBOOL(1) );
     }
     else
     {
@@ -4227,7 +4227,7 @@ HB_FUNC_STATIC( QWIDGET_SETHIDDEN )
   {
     if( ISLOG(1) )
     {
-      obj->setHidden ( (bool) hb_parl(1) );
+      obj->setHidden ( PBOOL(1) );
     }
     else
     {

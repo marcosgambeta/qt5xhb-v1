@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
   {
     if( ISLOG(1) )
     {
-      obj->setExclusive ( (bool) hb_parl(1) );
+      obj->setExclusive ( PBOOL(1) );
     }
     else
     {

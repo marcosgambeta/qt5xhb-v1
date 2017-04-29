@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setFloatable ( (bool) hb_parl(1) );
+      obj->setFloatable ( PBOOL(1) );
     }
     else
     {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setMovable ( (bool) hb_parl(1) );
+      obj->setMovable ( PBOOL(1) );
     }
     else
     {

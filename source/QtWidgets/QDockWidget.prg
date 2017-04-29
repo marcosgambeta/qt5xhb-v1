@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
   {
     if( ISLOG(1) )
     {
-      obj->setFloating ( (bool) hb_parl(1) );
+      obj->setFloating ( PBOOL(1) );
     }
     else
     {

@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETDOCUMENTMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setDocumentMode ( (bool) hb_parl(1) );
+      obj->setDocumentMode ( PBOOL(1) );
     }
     else
     {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETMOVABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setMovable ( (bool) hb_parl(1) );
+      obj->setMovable ( PBOOL(1) );
     }
     else
     {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABENABLED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setTabEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setTabEnabled ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETUSESSCROLLBUTTONS )
   {
     if( ISLOG(1) )
     {
-      obj->setUsesScrollButtons ( (bool) hb_parl(1) );
+      obj->setUsesScrollButtons ( PBOOL(1) );
     }
     else
     {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABSCLOSABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setTabsClosable ( (bool) hb_parl(1) );
+      obj->setTabsClosable ( PBOOL(1) );
     }
     else
     {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABBARAUTOHIDE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabBarAutoHide ( (bool) hb_parl(1) );
+    obj->setTabBarAutoHide ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

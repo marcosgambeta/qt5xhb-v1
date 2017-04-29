@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
   {
     if( ISLOG(1) )
     {
-      obj->setAllColumnsShowFocus ( (bool) hb_parl(1) );
+      obj->setAllColumnsShowFocus ( PBOOL(1) );
     }
     else
     {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
   {
     if( ISLOG(1) )
     {
-      obj->setAnimated ( (bool) hb_parl(1) );
+      obj->setAnimated ( PBOOL(1) );
     }
     else
     {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setColumnHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setColumnHidden ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    obj->setExpanded ( *par1, (bool) hb_parl(2) );
+    obj->setExpanded ( *par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
   {
     if( ISLOG(1) )
     {
-      obj->setExpandsOnDoubleClick ( (bool) hb_parl(1) );
+      obj->setExpandsOnDoubleClick ( PBOOL(1) );
     }
     else
     {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
   if( obj )
   {
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    obj->setFirstColumnSpanned ( (int) hb_parni(1), *par2, (bool) hb_parl(3) );
+    obj->setFirstColumnSpanned ( (int) hb_parni(1), *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
   {
     if( ISLOG(1) )
     {
-      obj->setHeaderHidden ( (bool) hb_parl(1) );
+      obj->setHeaderHidden ( PBOOL(1) );
     }
     else
     {
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setItemsExpandable ( (bool) hb_parl(1) );
+      obj->setItemsExpandable ( PBOOL(1) );
     }
     else
     {
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
   {
     if( ISLOG(1) )
     {
-      obj->setRootIsDecorated ( (bool) hb_parl(1) );
+      obj->setRootIsDecorated ( PBOOL(1) );
     }
     else
     {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
   if( obj )
   {
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    obj->setRowHidden ( (int) hb_parni(1), *par2, (bool) hb_parl(3) );
+    obj->setRowHidden ( (int) hb_parni(1), *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setSortingEnabled ( (bool) hb_parl(1) );
+      obj->setSortingEnabled ( PBOOL(1) );
     }
     else
     {
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
   {
     if( ISLOG(1) )
     {
-      obj->setUniformRowHeights ( (bool) hb_parl(1) );
+      obj->setUniformRowHeights ( PBOOL(1) );
     }
     else
     {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
   {
     if( ISLOG(1) )
     {
-      obj->setWordWrap ( (bool) hb_parl(1) );
+      obj->setWordWrap ( PBOOL(1) );
     }
     else
     {

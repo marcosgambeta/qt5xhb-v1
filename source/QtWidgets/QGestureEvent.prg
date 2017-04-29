@@ -470,7 +470,7 @@ void QGestureEvent_setAccepted1 ()
 
   if( obj )
   {
-    obj->setAccepted ( (bool) hb_parl(1) );
+    obj->setAccepted ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -486,7 +486,7 @@ void QGestureEvent_setAccepted2 ()
   if( obj )
   {
     QGesture * par1 = (QGesture *) _qt5xhb_itemGetPtr(1);
-    obj->setAccepted ( par1, (bool) hb_parl(2) );
+    obj->setAccepted ( par1, PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -502,7 +502,7 @@ void QGestureEvent_setAccepted3 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAccepted (  (Qt::GestureType) par1, (bool) hb_parl(2) );
+    obj->setAccepted (  (Qt::GestureType) par1, PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

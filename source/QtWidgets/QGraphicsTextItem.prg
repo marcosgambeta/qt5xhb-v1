@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
   {
     if( ISLOG(1) )
     {
-      obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+      obj->setOpenExternalLinks ( PBOOL(1) );
     }
     else
     {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
   {
     if( ISLOG(1) )
     {
-      obj->setTabChangesFocus ( (bool) hb_parl(1) );
+      obj->setTabChangesFocus ( PBOOL(1) );
     }
     else
     {

@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
   {
     if( ISLOG(1) )
     {
-      obj->setInteractive ( (bool) hb_parl(1) );
+      obj->setInteractive ( PBOOL(1) );
     }
     else
     {

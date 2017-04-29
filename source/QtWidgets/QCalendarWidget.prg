@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDateEditEnabled ( (bool) hb_parl(1) );
+      obj->setDateEditEnabled ( PBOOL(1) );
     }
     else
     {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETGRIDVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setGridVisible ( (bool) hb_parl(1) );
+      obj->setGridVisible ( PBOOL(1) );
     }
     else
     {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setNavigationBarVisible ( (bool) hb_parl(1) );
+      obj->setNavigationBarVisible ( PBOOL(1) );
     }
     else
     {

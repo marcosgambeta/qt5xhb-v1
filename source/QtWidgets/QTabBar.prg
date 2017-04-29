@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setDocumentMode ( (bool) hb_parl(1) );
+      obj->setDocumentMode ( PBOOL(1) );
     }
     else
     {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
   {
     if( ISLOG(1) )
     {
-      obj->setDrawBase ( (bool) hb_parl(1) );
+      obj->setDrawBase ( PBOOL(1) );
     }
     else
     {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
   {
     if( ISLOG(1) )
     {
-      obj->setExpanding ( (bool) hb_parl(1) );
+      obj->setExpanding ( PBOOL(1) );
     }
     else
     {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setMovable ( (bool) hb_parl(1) );
+      obj->setMovable ( PBOOL(1) );
     }
     else
     {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setTabEnabled ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setTabEnabled ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setTabsClosable ( (bool) hb_parl(1) );
+      obj->setTabsClosable ( PBOOL(1) );
     }
     else
     {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
   {
     if( ISLOG(1) )
     {
-      obj->setUsesScrollButtons ( (bool) hb_parl(1) );
+      obj->setUsesScrollButtons ( PBOOL(1) );
     }
     else
     {

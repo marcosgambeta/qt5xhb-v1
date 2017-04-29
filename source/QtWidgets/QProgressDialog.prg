@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoClose ( (bool) hb_parl(1) );
+      obj->setAutoClose ( PBOOL(1) );
     }
     else
     {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoReset ( (bool) hb_parl(1) );
+      obj->setAutoReset ( PBOOL(1) );
     }
     else
     {

@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
   {
     if( ISLOG(1) )
     {
-      obj->setWrapAround ( (bool) hb_parl(1) );
+      obj->setWrapAround ( PBOOL(1) );
     }
     else
     {

@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoRepeat ( (bool) hb_parl(1) );
+      obj->setAutoRepeat ( PBOOL(1) );
     }
     else
     {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setCheckable ( (bool) hb_parl(1) );
+      obj->setCheckable ( PBOOL(1) );
     }
     else
     {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
   {
     if( ISLOG(1) )
     {
-      obj->setIconVisibleInMenu ( (bool) hb_parl(1) );
+      obj->setIconVisibleInMenu ( PBOOL(1) );
     }
     else
     {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QACTION_SETSEPARATOR )
   {
     if( ISLOG(1) )
     {
-      obj->setSeparator ( (bool) hb_parl(1) );
+      obj->setSeparator ( PBOOL(1) );
     }
     else
     {
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKED )
   {
     if( ISLOG(1) )
     {
-      obj->setChecked ( (bool) hb_parl(1) );
+      obj->setChecked ( PBOOL(1) );
     }
     else
     {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QACTION_SETDISABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDisabled ( (bool) hb_parl(1) );
+      obj->setDisabled ( PBOOL(1) );
     }
     else
     {
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QACTION_SETENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setEnabled ( (bool) hb_parl(1) );
+      obj->setEnabled ( PBOOL(1) );
     }
     else
     {
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QACTION_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {

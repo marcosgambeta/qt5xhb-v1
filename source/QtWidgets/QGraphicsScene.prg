@@ -1354,7 +1354,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setSortCacheEnabled ( (bool) hb_parl(1) );
+      obj->setSortCacheEnabled ( PBOOL(1) );
     }
     else
     {
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
   {
     if( ISLOG(1) )
     {
-      obj->setStickyFocus ( (bool) hb_parl(1) );
+      obj->setStickyFocus ( PBOOL(1) );
     }
     else
     {

@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
   if( ISLOG(1) )
   {
-    QApplication::setDesktopSettingsAware ( (bool) hb_parl(1) );
+    QApplication::setDesktopSettingsAware ( PBOOL(1) );
   }
   else
   {
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
   if( ISLOG(1) )
   {
-    QApplication::setQuitOnLastWindowClosed ( (bool) hb_parl(1) );
+    QApplication::setQuitOnLastWindowClosed ( PBOOL(1) );
   }
   else
   {

@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHEIGHTFORWIDTH )
   {
     if( ISLOG(1) )
     {
-      obj->setHeightForWidth ( (bool) hb_parl(1) );
+      obj->setHeightForWidth ( PBOOL(1) );
     }
     else
     {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETWIDTHFORHEIGHT )
   {
     if( ISLOG(1) )
     {
-      obj->setWidthForHeight ( (bool) hb_parl(1) );
+      obj->setWidthForHeight ( PBOOL(1) );
     }
     else
     {

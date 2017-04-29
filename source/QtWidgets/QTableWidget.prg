@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETRANGESELECTED )
     if( ISQTABLEWIDGETSELECTIONRANGE(1) && ISLOG(2) )
     {
       QTableWidgetSelectionRange  * par1 = (QTableWidgetSelectionRange  *) _qt5xhb_itemGetPtr(1);
-      obj->setRangeSelected ( *par1, (bool) hb_parl(2) );
+      obj->setRangeSelected ( *par1, PBOOL(2) );
     }
     else
     {

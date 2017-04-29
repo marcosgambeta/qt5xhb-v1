@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
   {
     if( ISLOG(1) )
     {
-      obj->setFlat ( (bool) hb_parl(1) );
+      obj->setFlat ( PBOOL(1) );
     }
     else
     {

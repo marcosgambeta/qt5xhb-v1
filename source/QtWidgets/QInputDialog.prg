@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setComboBoxEditable ( (bool) hb_parl(1) );
+      obj->setComboBoxEditable ( PBOOL(1) );
     }
     else
     {
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {

@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
   {
     if( ISLOG(1) )
     {
-      obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+      obj->setOpenExternalLinks ( PBOOL(1) );
     }
     else
     {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
   {
     if( ISLOG(1) )
     {
-      obj->setOpenLinks ( (bool) hb_parl(1) );
+      obj->setOpenLinks ( PBOOL(1) );
     }
     else
     {

@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETDISABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDisabled ( (bool) hb_parl(1) );
+      obj->setDisabled ( PBOOL(1) );
     }
     else
     {
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETEXPANDED )
   {
     if( ISLOG(1) )
     {
-      obj->setExpanded ( (bool) hb_parl(1) );
+      obj->setExpanded ( PBOOL(1) );
     }
     else
     {
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFIRSTCOLUMNSPANNED )
   {
     if( ISLOG(1) )
     {
-      obj->setFirstColumnSpanned ( (bool) hb_parl(1) );
+      obj->setFirstColumnSpanned ( PBOOL(1) );
     }
     else
     {
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETHIDDEN )
   {
     if( ISLOG(1) )
     {
-      obj->setHidden ( (bool) hb_parl(1) );
+      obj->setHidden ( PBOOL(1) );
     }
     else
     {
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETSELECTED )
   {
     if( ISLOG(1) )
     {
-      obj->setSelected ( (bool) hb_parl(1) );
+      obj->setSelected ( PBOOL(1) );
     }
     else
     {

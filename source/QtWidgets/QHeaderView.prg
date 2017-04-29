@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
   {
     if( ISLOG(1) )
     {
-      obj->setCascadingSectionResizes ( (bool) hb_parl(1) );
+      obj->setCascadingSectionResizes ( PBOOL(1) );
     }
     else
     {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
   {
     if( ISLOG(1) )
     {
-      obj->setHighlightSections ( (bool) hb_parl(1) );
+      obj->setHighlightSections ( PBOOL(1) );
     }
     else
     {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
   {
     if( ISLOG(1) )
     {
-      obj->setSortIndicatorShown ( (bool) hb_parl(1) );
+      obj->setSortIndicatorShown ( PBOOL(1) );
     }
     else
     {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setSectionHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setSectionHidden ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
   {
     if( ISLOG(1) )
     {
-      obj->setStretchLastSection ( (bool) hb_parl(1) );
+      obj->setStretchLastSection ( PBOOL(1) );
     }
     else
     {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETVISIBLE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSMOVABLE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSectionsMovable ( (bool) hb_parl(1) );
+    obj->setSectionsMovable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSCLICKABLE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSectionsClickable ( (bool) hb_parl(1) );
+    obj->setSectionsClickable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

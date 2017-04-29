@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETBACKGROUNDVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setBackgroundVisible ( (bool) hb_parl(1) );
+      obj->setBackgroundVisible ( PBOOL(1) );
     }
     else
     {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCENTERONSCROLL )
   {
     if( ISLOG(1) )
     {
-      obj->setCenterOnScroll ( (bool) hb_parl(1) );
+      obj->setCenterOnScroll ( PBOOL(1) );
     }
     else
     {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETOVERWRITEMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setOverwriteMode ( (bool) hb_parl(1) );
+      obj->setOverwriteMode ( PBOOL(1) );
     }
     else
     {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABCHANGESFOCUS )
   {
     if( ISLOG(1) )
     {
-      obj->setTabChangesFocus ( (bool) hb_parl(1) );
+      obj->setTabChangesFocus ( PBOOL(1) );
     }
     else
     {
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETUNDOREDOENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
+      obj->setUndoRedoEnabled ( PBOOL(1) );
     }
     else
     {

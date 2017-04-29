@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setDocumentMode ( (bool) hb_parl(1) );
+      obj->setDocumentMode ( PBOOL(1) );
     }
     else
     {
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
   {
     if( ISLOG(1) )
     {
-      obj->setAnimated ( (bool) hb_parl(1) );
+      obj->setAnimated ( PBOOL(1) );
     }
     else
     {
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDockNestingEnabled ( (bool) hb_parl(1) );
+      obj->setDockNestingEnabled ( PBOOL(1) );
     }
     else
     {

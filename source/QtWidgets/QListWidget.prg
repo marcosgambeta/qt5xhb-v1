@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setSortingEnabled ( (bool) hb_parl(1) );
+      obj->setSortingEnabled ( PBOOL(1) );
     }
     else
     {

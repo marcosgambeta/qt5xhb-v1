@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setCheckable ( (bool) hb_parl(1) );
+      obj->setCheckable ( PBOOL(1) );
     }
     else
     {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
   {
     if( ISLOG(1) )
     {
-      obj->setFlat ( (bool) hb_parl(1) );
+      obj->setFlat ( PBOOL(1) );
     }
     else
     {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   {
     if( ISLOG(1) )
     {
-      obj->setChecked ( (bool) hb_parl(1) );
+      obj->setChecked ( PBOOL(1) );
     }
     else
     {

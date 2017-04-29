@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
   {
     if( ISLOG(1) )
     {
-      obj->setCommitPage ( (bool) hb_parl(1) );
+      obj->setCommitPage ( PBOOL(1) );
     }
     else
     {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
   {
     if( ISLOG(1) )
     {
-      obj->setFinalPage ( (bool) hb_parl(1) );
+      obj->setFinalPage ( PBOOL(1) );
     }
     else
     {

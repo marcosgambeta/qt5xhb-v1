@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETRESOLVESYMLINKS )
   {
     if( ISLOG(1) )
     {
-      obj->setResolveSymlinks ( (bool) hb_parl(1) );
+      obj->setResolveSymlinks ( PBOOL(1) );
     }
     else
     {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETLAZYCHILDCOUNT )
   {
     if( ISLOG(1) )
     {
-      obj->setLazyChildCount ( (bool) hb_parl(1) );
+      obj->setLazyChildCount ( PBOOL(1) );
     }
     else
     {

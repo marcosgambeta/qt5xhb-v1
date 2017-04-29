@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setNotchesVisible ( (bool) hb_parl(1) );
+      obj->setNotchesVisible ( PBOOL(1) );
     }
     else
     {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDIAL_SETWRAPPING )
   {
     if( ISLOG(1) )
     {
-      obj->setWrapping ( (bool) hb_parl(1) );
+      obj->setWrapping ( PBOOL(1) );
     }
     else
     {

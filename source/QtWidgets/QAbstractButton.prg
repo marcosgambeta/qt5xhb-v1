@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoExclusive ( (bool) hb_parl(1) );
+      obj->setAutoExclusive ( PBOOL(1) );
     }
     else
     {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoRepeat ( (bool) hb_parl(1) );
+      obj->setAutoRepeat ( PBOOL(1) );
     }
     else
     {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setCheckable ( (bool) hb_parl(1) );
+      obj->setCheckable ( PBOOL(1) );
     }
     else
     {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
   {
     if( ISLOG(1) )
     {
-      obj->setChecked ( (bool) hb_parl(1) );
+      obj->setChecked ( PBOOL(1) );
     }
     else
     {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
   {
     if( ISLOG(1) )
     {
-      obj->setDown ( (bool) hb_parl(1) );
+      obj->setDown ( PBOOL(1) );
     }
     else
     {

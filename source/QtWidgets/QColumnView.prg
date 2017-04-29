@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setResizeGripsVisible ( (bool) hb_parl(1) );
+      obj->setResizeGripsVisible ( PBOOL(1) );
     }
     else
     {

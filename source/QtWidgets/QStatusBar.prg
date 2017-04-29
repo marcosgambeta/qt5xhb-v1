@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setSizeGripEnabled ( (bool) hb_parl(1) );
+      obj->setSizeGripEnabled ( PBOOL(1) );
     }
     else
     {

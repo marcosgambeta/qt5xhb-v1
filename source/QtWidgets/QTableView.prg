@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setColumnHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setColumnHidden ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setCornerButtonEnabled ( (bool) hb_parl(1) );
+      obj->setCornerButtonEnabled ( PBOOL(1) );
     }
     else
     {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setRowHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setRowHidden ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setSortingEnabled ( (bool) hb_parl(1) );
+      obj->setSortingEnabled ( PBOOL(1) );
     }
     else
     {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
   {
     if( ISLOG(1) )
     {
-      obj->setWordWrap ( (bool) hb_parl(1) );
+      obj->setWordWrap ( PBOOL(1) );
     }
     else
     {
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
   {
     if( ISLOG(1) )
     {
-      obj->setShowGrid ( (bool) hb_parl(1) );
+      obj->setShowGrid ( PBOOL(1) );
     }
     else
     {

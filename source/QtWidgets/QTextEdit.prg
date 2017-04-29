@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
   {
     if( ISLOG(1) )
     {
-      obj->setAcceptRichText ( (bool) hb_parl(1) );
+      obj->setAcceptRichText ( PBOOL(1) );
     }
     else
     {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setOverwriteMode ( (bool) hb_parl(1) );
+      obj->setOverwriteMode ( PBOOL(1) );
     }
     else
     {
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
   {
     if( ISLOG(1) )
     {
-      obj->setTabChangesFocus ( (bool) hb_parl(1) );
+      obj->setTabChangesFocus ( PBOOL(1) );
     }
     else
     {
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
+      obj->setUndoRedoEnabled ( PBOOL(1) );
     }
     else
     {
@@ -1451,7 +1451,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
   {
     if( ISLOG(1) )
     {
-      obj->setFontItalic ( (bool) hb_parl(1) );
+      obj->setFontItalic ( PBOOL(1) );
     }
     else
     {
@@ -1495,7 +1495,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
   {
     if( ISLOG(1) )
     {
-      obj->setFontUnderline ( (bool) hb_parl(1) );
+      obj->setFontUnderline ( PBOOL(1) );
     }
     else
     {

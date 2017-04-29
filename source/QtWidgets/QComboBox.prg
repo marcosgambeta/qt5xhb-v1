@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETDUPLICATESENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDuplicatesEnabled ( (bool) hb_parl(1) );
+      obj->setDuplicatesEnabled ( PBOOL(1) );
     }
     else
     {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITABLE )
   {
     if( ISLOG(1) )
     {
-      obj->setEditable ( (bool) hb_parl(1) );
+      obj->setEditable ( PBOOL(1) );
     }
     else
     {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETFRAME )
   {
     if( ISLOG(1) )
     {
-      obj->setFrame ( (bool) hb_parl(1) );
+      obj->setFrame ( PBOOL(1) );
     }
     else
     {

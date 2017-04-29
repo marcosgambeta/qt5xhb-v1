@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
   {
     if( ISLOG(1) )
     {
-      obj->setNameFilterDisables ( (bool) hb_parl(1) );
+      obj->setNameFilterDisables ( PBOOL(1) );
     }
     else
     {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
   {
     if( ISLOG(1) )
     {
-      obj->setResolveSymlinks ( (bool) hb_parl(1) );
+      obj->setResolveSymlinks ( PBOOL(1) );
     }
     else
     {

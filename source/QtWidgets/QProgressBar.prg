@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
   {
     if( ISLOG(1) )
     {
-      obj->setInvertedAppearance ( (bool) hb_parl(1) );
+      obj->setInvertedAppearance ( PBOOL(1) );
     }
     else
     {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setTextVisible ( (bool) hb_parl(1) );
+      obj->setTextVisible ( PBOOL(1) );
     }
     else
     {

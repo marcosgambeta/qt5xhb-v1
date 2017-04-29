@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setRowHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+      obj->setRowHidden ( (int) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setSelectionRectVisible ( (bool) hb_parl(1) );
+      obj->setSelectionRectVisible ( PBOOL(1) );
     }
     else
     {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
   {
     if( ISLOG(1) )
     {
-      obj->setUniformItemSizes ( (bool) hb_parl(1) );
+      obj->setUniformItemSizes ( PBOOL(1) );
     }
     else
     {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
   {
     if( ISLOG(1) )
     {
-      obj->setWordWrap ( (bool) hb_parl(1) );
+      obj->setWordWrap ( PBOOL(1) );
     }
     else
     {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
   {
     if( ISLOG(1) )
     {
-      obj->setWrapping ( (bool) hb_parl(1) );
+      obj->setWrapping ( PBOOL(1) );
     }
     else
     {

@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
   {
     if( ISLOG(1) )
     {
-      obj->setDefaultUp ( (bool) hb_parl(1) );
+      obj->setDefaultUp ( PBOOL(1) );
     }
     else
     {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
   {
     if( ISLOG(1) )
     {
-      obj->setNativeMenuBar ( (bool) hb_parl(1) );
+      obj->setNativeMenuBar ( PBOOL(1) );
     }
     else
     {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
   {
     if( ISLOG(1) )
     {
-      obj->setVisible ( (bool) hb_parl(1) );
+      obj->setVisible ( PBOOL(1) );
     }
     else
     {

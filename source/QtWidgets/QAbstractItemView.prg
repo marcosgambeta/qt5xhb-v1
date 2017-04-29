@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS )
   {
     if( ISLOG(1) )
     {
-      obj->setAlternatingRowColors ( (bool) hb_parl(1) );
+      obj->setAlternatingRowColors ( PBOOL(1) );
     }
     else
     {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE )
   {
     if( ISLOG(1) )
     {
-      obj->setDragDropOverwriteMode ( (bool) hb_parl(1) );
+      obj->setDragDropOverwriteMode ( PBOOL(1) );
     }
     else
     {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDragEnabled ( (bool) hb_parl(1) );
+      obj->setDragEnabled ( PBOOL(1) );
     }
     else
     {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLL )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoScroll ( (bool) hb_parl(1) );
+      obj->setAutoScroll ( PBOOL(1) );
     }
     else
     {
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN )
   {
     if( ISLOG(1) )
     {
-      obj->setDropIndicatorShown ( (bool) hb_parl(1) );
+      obj->setDropIndicatorShown ( PBOOL(1) );
     }
     else
     {
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTABKEYNAVIGATION )
   {
     if( ISLOG(1) )
     {
-      obj->setTabKeyNavigation ( (bool) hb_parl(1) );
+      obj->setTabKeyNavigation ( PBOOL(1) );
     }
     else
     {

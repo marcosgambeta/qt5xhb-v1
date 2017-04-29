@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETAUTOFILLBACKGROUND )
   {
     if( ISLOG(1) )
     {
-      obj->setAutoFillBackground ( (bool) hb_parl(1) );
+      obj->setAutoFillBackground ( PBOOL(1) );
     }
     else
     {

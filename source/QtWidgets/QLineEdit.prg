@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
   {
     if( ISLOG(1) && ISOPTNUM(2) )
     {
-      obj->cursorBackward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
+      obj->cursorBackward ( PBOOL(1), (int) ISNIL(2)? 1 : hb_parni(2) );
     }
     else
     {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
   {
     if( ISLOG(1) && ISOPTNUM(2) )
     {
-      obj->cursorForward ( (bool) hb_parl(1), (int) ISNIL(2)? 1 : hb_parni(2) );
+      obj->cursorForward ( PBOOL(1), (int) ISNIL(2)? 1 : hb_parni(2) );
     }
     else
     {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDBACKWARD )
   {
     if( ISLOG(1) )
     {
-      obj->cursorWordBackward ( (bool) hb_parl(1) );
+      obj->cursorWordBackward ( PBOOL(1) );
     }
     else
     {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDFORWARD )
   {
     if( ISLOG(1) )
     {
-      obj->cursorWordForward ( (bool) hb_parl(1) );
+      obj->cursorWordForward ( PBOOL(1) );
     }
     else
     {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETDRAGENABLED )
   {
     if( ISLOG(1) )
     {
-      obj->setDragEnabled ( (bool) hb_parl(1) );
+      obj->setDragEnabled ( PBOOL(1) );
     }
     else
     {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QLINEEDIT_END )
   {
     if( ISLOG(1) )
     {
-      obj->end ( (bool) hb_parl(1) );
+      obj->end ( PBOOL(1) );
     }
     else
     {
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QLINEEDIT_HOME )
   {
     if( ISLOG(1) )
     {
-      obj->home ( (bool) hb_parl(1) );
+      obj->home ( PBOOL(1) );
     }
     else
     {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMODIFIED )
   {
     if( ISLOG(1) )
     {
-      obj->setModified ( (bool) hb_parl(1) );
+      obj->setModified ( PBOOL(1) );
     }
     else
     {
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETREADONLY )
   {
     if( ISLOG(1) )
     {
-      obj->setReadOnly ( (bool) hb_parl(1) );
+      obj->setReadOnly ( PBOOL(1) );
     }
     else
     {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETFRAME )
   {
     if( ISLOG(1) )
     {
-      obj->setFrame ( (bool) hb_parl(1) );
+      obj->setFrame ( PBOOL(1) );
     }
     else
     {
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCLEARBUTTONENABLED )
 
   if( obj )
   {
-    obj->setClearButtonEnabled ( (bool) hb_parl(1) );
+    obj->setClearButtonEnabled ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

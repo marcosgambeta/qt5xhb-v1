@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
   {
     if( ISLOG(1) )
     {
-      obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+      obj->setOpenExternalLinks ( PBOOL(1) );
     }
     else
     {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
   {
     if( ISLOG(1) )
     {
-      obj->setScaledContents ( (bool) hb_parl(1) );
+      obj->setScaledContents ( PBOOL(1) );
     }
     else
     {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
   {
     if( ISLOG(1) )
     {
-      obj->setWordWrap ( (bool) hb_parl(1) );
+      obj->setWordWrap ( PBOOL(1) );
     }
     else
     {
