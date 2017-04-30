@@ -464,7 +464,7 @@ static void setTextureCacheLimit ( int size )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {
-  QGLContext::setTextureCacheLimit ( (int) hb_parni(1) );
+  QGLContext::setTextureCacheLimit ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

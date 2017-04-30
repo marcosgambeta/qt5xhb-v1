@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSamples ( (int) hb_parni(1) );
+    obj->setSamples ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

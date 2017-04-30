@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETACCUMBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAccumBufferSize ( (int) hb_parni(1) );
+    obj->setAccumBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETALPHABUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAlphaBufferSize ( (int) hb_parni(1) );
+    obj->setAlphaBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETBLUEBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBlueBufferSize ( (int) hb_parni(1) );
+    obj->setBlueBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEPTHBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDepthBufferSize ( (int) hb_parni(1) );
+    obj->setDepthBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETGREENBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setGreenBufferSize ( (int) hb_parni(1) );
+    obj->setGreenBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETPLANE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPlane ( (int) hb_parni(1) );
+    obj->setPlane ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETREDBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRedBufferSize ( (int) hb_parni(1) );
+    obj->setRedBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETSAMPLES )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSamples ( (int) hb_parni(1) );
+    obj->setSamples ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTENCILBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setStencilBufferSize ( (int) hb_parni(1) );
+    obj->setStencilBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETSWAPINTERVAL )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSwapInterval ( (int) hb_parni(1) );
+    obj->setSwapInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETVERSION )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVersion ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setVersion ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor * ptr = new QColor( obj->entryColor ( (int) hb_parni(1) ) );
+    QColor * ptr = new QColor( obj->entryColor ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->entryRgb ( (int) hb_parni(1) ) );
+    hb_retni( obj->entryRgb ( PINT(1) ) );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRIES )
   if( obj )
   {
     QRgb * par2 = (QRgb *) _qt5xhb_itemGetPtr(2);
-    obj->setEntries ( (int) hb_parni(1), par2, (int) hb_parni(3) );
+    obj->setEntries ( PINT(1), par2, PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY1 )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setEntry ( (int) hb_parni(1), (QRgb) hb_parni(2) );
+    obj->setEntry ( PINT(1), (QRgb) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY2 )
   if( obj )
   {
     QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
-    obj->setEntry ( (int) hb_parni(1), par2 );
+    obj->setEntry ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

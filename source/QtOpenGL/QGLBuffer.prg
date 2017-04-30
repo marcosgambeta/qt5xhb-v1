@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE1 )
   if( obj )
   {
     void * par1 = (void *) hb_parptr(1);
-    obj->allocate ( par1, (int) hb_parni(2) );
+    obj->allocate ( par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE2 )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->allocate ( (int) hb_parni(1) );
+    obj->allocate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
   if( obj )
   {
     void * par2 = (void *) hb_parptr(2);
-    hb_retl( obj->read ( (int) hb_parni(1), par2, (int) hb_parni(3) ) );
+    hb_retl( obj->read ( PINT(1), par2, PINT(3) ) );
   }
 }
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QGLBUFFER_WRITE )
   if( obj )
   {
     const void * par2 = (const void *) hb_parptr(2);
-    obj->write ( (int) hb_parni(1), par2, (int) hb_parni(3) );
+    obj->write ( PINT(1), par2, PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
