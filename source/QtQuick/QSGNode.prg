@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSGNODE_CHILDATINDEX )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGNode * ptr = obj->childAtIndex ( (int) hb_parni(1) );
+    QSGNode * ptr = obj->childAtIndex ( PINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }

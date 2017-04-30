@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_ALLOCATE )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->allocate ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->allocate ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
