@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontSize (  (QWebSettings::FontSize) par1, (int) hb_parni(2) );
+    obj->setFontSize (  (QWebSettings::FontSize) par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -428,7 +428,7 @@ static void setMaximumPagesInCache ( int pages )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETMAXIMUMPAGESINCACHE )
 {
-  QWebSettings::setMaximumPagesInCache ( (int) hb_parni(1) );
+  QWebSettings::setMaximumPagesInCache ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -438,7 +438,7 @@ static void setObjectCacheCapacities ( int cacheMinDeadCapacity, int cacheMaxDea
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOBJECTCACHECAPACITIES )
 {
-  QWebSettings::setObjectCacheCapacities ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3) );
+  QWebSettings::setObjectCacheCapacities ( PINT(1), PINT(2), PINT(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

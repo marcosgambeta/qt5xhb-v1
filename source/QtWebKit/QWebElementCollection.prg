@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
   QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->at ( (int) hb_parni(1) ) );
+    QWebElement * ptr = new QWebElement( obj->at ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
