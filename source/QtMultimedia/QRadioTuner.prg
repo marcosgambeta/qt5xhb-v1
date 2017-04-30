@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETFREQUENCY )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFrequency ( (int) hb_parni(1) );
+    obj->setFrequency ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETVOLUME )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVolume ( (int) hb_parni(1) );
+    obj->setVolume ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

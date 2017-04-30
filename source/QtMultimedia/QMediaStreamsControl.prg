@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive ( (int) hb_parni(1) ) );
+    hb_retl( obj->isActive ( PINT(1) ) );
   }
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->metaData ( (int) hb_parni(1), PQSTRING(2) ) );
+    QVariant * ptr = new QVariant( obj->metaData ( PINT(1), PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setActive ( (int) hb_parni(1), PBOOL(2) );
+    obj->setActive ( PINT(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->streamType ( (int) hb_parni(1) ) );
+    hb_retni( obj->streamType ( PINT(1) ) );
   }
 }
 

@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETVOLUME )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVolume ( (int) hb_parni(1) );
+    obj->setVolume ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

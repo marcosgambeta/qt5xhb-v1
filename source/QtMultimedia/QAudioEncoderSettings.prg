@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETBITRATE )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBitRate ( (int) hb_parni(1) );
+    obj->setBitRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCHANNELCOUNT )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setChannelCount ( (int) hb_parni(1) );
+    obj->setChannelCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETSAMPLERATE )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSampleRate ( (int) hb_parni(1) );
+    obj->setSampleRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

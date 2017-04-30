@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setChannelCount ( (int) hb_parni(1) );
+    obj->setChannelCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSampleRate ( (int) hb_parni(1) );
+    obj->setSampleRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSampleSize ( (int) hb_parni(1) );
+    obj->setSampleSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

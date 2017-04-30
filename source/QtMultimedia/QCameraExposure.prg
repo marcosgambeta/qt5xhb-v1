@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setManualIsoSensitivity ( (int) hb_parni(1) );
+    obj->setManualIsoSensitivity ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSOUND_SETLOOPS )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLoops ( (int) hb_parni(1) );
+    obj->setLoops ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

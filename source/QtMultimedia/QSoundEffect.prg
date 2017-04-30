@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLoopCount ( (int) hb_parni(1) );
+    obj->setLoopCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

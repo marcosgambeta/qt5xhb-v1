@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOBITRATE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAudioBitRate ( (int) hb_parni(1) );
+    obj->setAudioBitRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETCHANNELCOUNT )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setChannelCount ( (int) hb_parni(1) );
+    obj->setChannelCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION2 )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setResolution ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setResolution ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETSAMPLERATE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSampleRate ( (int) hb_parni(1) );
+    obj->setSampleRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOBITRATE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVideoBitRate ( (int) hb_parni(1) );
+    obj->setVideoBitRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

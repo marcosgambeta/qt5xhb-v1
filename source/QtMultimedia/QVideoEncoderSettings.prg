@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETBITRATE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBitRate ( (int) hb_parni(1) );
+    obj->setBitRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION2 )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setResolution ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setResolution ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
