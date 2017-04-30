@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->positionChange ( (qint64) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3) );
+    obj->positionChange ( (qint64) hb_parni(1), PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->scriptLoad ( (qint64) hb_parni(1), PQSTRING(2), PQSTRING(3), (int) hb_parni(4) );
+    obj->scriptLoad ( (qint64) hb_parni(1), PQSTRING(2), PQSTRING(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

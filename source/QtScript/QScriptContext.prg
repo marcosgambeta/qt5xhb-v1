@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->argument ( (int) hb_parni(1) ) );
+    QScriptValue * ptr = new QScriptValue( obj->argument ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
