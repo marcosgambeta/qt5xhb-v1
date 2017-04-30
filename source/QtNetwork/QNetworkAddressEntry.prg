@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPrefixLength ( (int) hb_parni(1) );
+    obj->setPrefixLength ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

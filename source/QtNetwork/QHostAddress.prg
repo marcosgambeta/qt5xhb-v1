@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
   if( obj )
   {
     QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isInSubnet ( *par1, (int) hb_parni(2) ) );
+    hb_retl( obj->isInSubnet ( *par1, PINT(2) ) );
   }
 }
 

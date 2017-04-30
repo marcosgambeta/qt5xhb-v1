@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLocalPort ( (int) hb_parni(1) );
+    obj->setLocalPort ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPeerPort ( (int) hb_parni(1) );
+    obj->setPeerPort ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

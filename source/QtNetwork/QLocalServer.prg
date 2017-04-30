@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaxPendingConnections ( (int) hb_parni(1) );
+    obj->setMaxPendingConnections ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
     bool par2;
-    hb_retl( obj->waitForNewConnection ( (int) hb_parni(1), &par2 ) );
+    hb_retl( obj->waitForNewConnection ( PINT(1), &par2 ) );
     hb_storl( par2, 2 );
   }
 }

@@ -340,7 +340,7 @@ static QNetworkInterface interfaceFromIndex ( int index )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
-  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( (int) hb_parni(1) ) );
+  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 }
 

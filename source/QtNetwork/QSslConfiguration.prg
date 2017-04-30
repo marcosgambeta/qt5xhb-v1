@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPeerVerifyDepth ( (int) hb_parni(1) );
+    obj->setPeerVerifyDepth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

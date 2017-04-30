@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYDEPTH )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPeerVerifyDepth ( (int) hb_parni(1) );
+    obj->setPeerVerifyDepth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
   {
     int par2 = ISNIL(2)? (int) QAbstractSocket::ConnectedState : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    hb_retl( obj->setSocketDescriptor ( (int) hb_parni(1),  (QAbstractSocket::SocketState) par2,  (QIODevice::OpenMode) par3 ) );
+    hb_retl( obj->setSocketDescriptor ( PINT(1),  (QAbstractSocket::SocketState) par2,  (QIODevice::OpenMode) par3 ) );
   }
 }
 

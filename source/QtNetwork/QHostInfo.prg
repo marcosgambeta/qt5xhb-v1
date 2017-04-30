@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
   QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLookupId ( (int) hb_parni(1) );
+    obj->setLookupId ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -309,7 +309,7 @@ static void abortHostLookup ( int id )
 */
 HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 {
-  QHostInfo::abortHostLookup ( (int) hb_parni(1) );
+  QHostInfo::abortHostLookup ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
