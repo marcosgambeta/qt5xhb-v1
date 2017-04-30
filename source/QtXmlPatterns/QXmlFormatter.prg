@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIndentationDepth ( (int) hb_parni(1) );
+    obj->setIndentationDepth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
