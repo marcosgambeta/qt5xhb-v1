@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
   {
     if( ISNUM(1) )
     {
-      QDesignerFormWindowInterface * ptr = obj->formWindow ( (int) hb_parni(1) );
+      QDesignerFormWindowInterface * ptr = obj->formWindow ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
     }
     else

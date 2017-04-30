@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
     if( ISNUM(1) && ISQWIDGET(2) )
     {
       QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-      obj->insertWidget ( (int) hb_parni(1), par2 );
+      obj->insertWidget ( PINT(1), par2 );
     }
     else
     {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
   {
     if( ISNUM(1) )
     {
-      obj->remove ( (int) hb_parni(1) );
+      obj->remove ( PINT(1) );
     }
     else
     {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentIndex ( (int) hb_parni(1) );
+      obj->setCurrentIndex ( PINT(1) );
     }
     else
     {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      QWidget * ptr = obj->widget ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else

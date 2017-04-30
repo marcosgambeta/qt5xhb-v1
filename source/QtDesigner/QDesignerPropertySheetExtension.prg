@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->hasReset ( (int) hb_parni(1) ) );
+      hb_retl( obj->hasReset ( PINT(1) ) );
     }
     else
     {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isAttribute ( (int) hb_parni(1) ) );
+      hb_retl( obj->isAttribute ( PINT(1) ) );
     }
     else
     {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isChanged ( (int) hb_parni(1) ) );
+      hb_retl( obj->isChanged ( PINT(1) ) );
     }
     else
     {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isVisible ( (int) hb_parni(1) ) );
+      hb_retl( obj->isVisible ( PINT(1) ) );
     }
     else
     {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
   {
     if( ISNUM(1) )
     {
-      QVariant * ptr = new QVariant( obj->property ( (int) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->property ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->propertyGroup ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->propertyGroup ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->propertyName ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->propertyName ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->reset ( (int) hb_parni(1) ) );
+      hb_retl( obj->reset ( PINT(1) ) );
     }
     else
     {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setAttribute ( (int) hb_parni(1), PBOOL(2) );
+      obj->setAttribute ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setChanged ( (int) hb_parni(1), PBOOL(2) );
+      obj->setChanged ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
     if( ISNUM(1) && ISQVARIANT(2) )
     {
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setProperty ( (int) hb_parni(1), *par2 );
+      obj->setProperty ( PINT(1), *par2 );
     }
     else
     {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setPropertyGroup ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setPropertyGroup ( PINT(1), PQSTRING(2) );
     }
     else
     {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setVisible ( (int) hb_parni(1), PBOOL(2) );
+      obj->setVisible ( PINT(1), PBOOL(2) );
     }
     else
     {

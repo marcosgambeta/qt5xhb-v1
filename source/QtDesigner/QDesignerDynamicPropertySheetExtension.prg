@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isDynamicProperty ( (int) hb_parni(1) ) );
+      hb_retl( obj->isDynamicProperty ( PINT(1) ) );
     }
     else
     {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->removeDynamicProperty ( (int) hb_parni(1) ) );
+      hb_retl( obj->removeDynamicProperty ( PINT(1) ) );
     }
     else
     {

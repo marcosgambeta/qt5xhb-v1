@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->selectedWidget ( (int) hb_parni(1) );
+      QWidget * ptr = obj->selectedWidget ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2);
-      obj->setPosition ( (int) hb_parni(1),  (QDesignerFormWindowCursorInterface::MoveMode) par2 );
+      obj->setPosition ( PINT(1),  (QDesignerFormWindowCursorInterface::MoveMode) par2 );
     }
     else
     {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      QWidget * ptr = obj->widget ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else

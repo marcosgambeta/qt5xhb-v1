@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->declaredInClass ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->declaredInClass ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->inheritedFromWidget ( (int) hb_parni(1) ) );
+      hb_retl( obj->inheritedFromWidget ( PINT(1) ) );
     }
     else
     {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isSignal ( (int) hb_parni(1) ) );
+      hb_retl( obj->isSignal ( PINT(1) ) );
     }
     else
     {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isSlot ( (int) hb_parni(1) ) );
+      hb_retl( obj->isSlot ( PINT(1) ) );
     }
     else
     {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isVisible ( (int) hb_parni(1) ) );
+      hb_retl( obj->isVisible ( PINT(1) ) );
     }
     else
     {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->memberGroup ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->memberGroup ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->memberName ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->memberName ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
   {
     if( ISNUM(1) )
     {
-      QList<QByteArray> list = obj->parameterNames ( (int) hb_parni(1) );
+      QList<QByteArray> list = obj->parameterNames ( PINT(1) );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
   {
     if( ISNUM(1) )
     {
-      QList<QByteArray> list = obj->parameterTypes ( (int) hb_parni(1) );
+      QList<QByteArray> list = obj->parameterTypes ( PINT(1) );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setMemberGroup ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setMemberGroup ( PINT(1), PQSTRING(2) );
     }
     else
     {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setVisible ( (int) hb_parni(1), PBOOL(2) );
+      obj->setVisible ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->signature ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->signature ( PINT(1) ).toLatin1().data() );
     }
     else
     {
