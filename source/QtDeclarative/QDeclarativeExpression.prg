@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      obj->setSourceLocation ( PQSTRING(1), (int) hb_parni(2) );
+      obj->setSourceLocation ( PQSTRING(1), PINT(2) );
     }
     else
     {

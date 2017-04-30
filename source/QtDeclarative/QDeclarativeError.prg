@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->setColumn ( (int) hb_parni(1) );
+      obj->setColumn ( PINT(1) );
     }
     else
     {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
   {
     if( ISNUM(1) )
     {
-      obj->setLine ( (int) hb_parni(1) );
+      obj->setLine ( PINT(1) );
     }
     else
     {
