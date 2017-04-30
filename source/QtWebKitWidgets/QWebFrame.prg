@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLL )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->scroll ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->scroll ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setScrollBarValue (  (Qt::Orientation) par1, (int) hb_parni(2) );
+    obj->setScrollBarValue (  (Qt::Orientation) par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
