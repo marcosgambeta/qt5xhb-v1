@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QSERIALPORT_WAITFORREADYREAD )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( (int) hb_parni(1) ) );
+    hb_retl( obj->waitForReadyRead ( PINT(1) ) );
   }
 #endif
 }
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QSERIALPORT_WAITFORBYTESWRITTEN )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( (int) hb_parni(1) ) );
+    hb_retl( obj->waitForBytesWritten ( PINT(1) ) );
   }
 #endif
 }
