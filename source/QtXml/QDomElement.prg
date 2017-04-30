@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE2 )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAttribute ( PQSTRING(1), (int) hb_parni(2) );
+    obj->setAttribute ( PQSTRING(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), (int) hb_parni(3) );
+    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

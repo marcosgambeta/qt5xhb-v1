@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
   QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomText * ptr = new QDomText( obj->splitText ( (int) hb_parni(1) ) );
+    QDomText * ptr = new QDomText( obj->splitText ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMTEXT", true );
   }
 }

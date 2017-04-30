@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->item ( (int) hb_parni(1) ) );
+    QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }

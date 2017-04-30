@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->localName ( (int) hb_parni(1) ).toLatin1().data() );
+    hb_retc( (const char *) obj->localName ( PINT(1) ).toLatin1().data() );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->qName ( (int) hb_parni(1) ).toLatin1().data() );
+    hb_retc( (const char *) obj->qName ( PINT(1) ).toLatin1().data() );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE1 )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->type ( (int) hb_parni(1) ).toLatin1().data() );
+    hb_retc( (const char *) obj->type ( PINT(1) ).toLatin1().data() );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->uri ( (int) hb_parni(1) ).toLatin1().data() );
+    hb_retc( (const char *) obj->uri ( PINT(1) ).toLatin1().data() );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE1 )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->value ( (int) hb_parni(1) ).toLatin1().data() );
+    hb_retc( (const char *) obj->value ( PINT(1) ).toLatin1().data() );
   }
 }
 

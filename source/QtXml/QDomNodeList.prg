@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->at ( (int) hb_parni(1) ) );
+    QDomNode * ptr = new QDomNode( obj->at ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->item ( (int) hb_parni(1) ) );
+    QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
