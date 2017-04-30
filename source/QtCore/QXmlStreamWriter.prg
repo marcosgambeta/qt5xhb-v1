@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
   {
     if( ISNUM(1) )
     {
-      obj->setAutoFormattingIndent ( (int) hb_parni(1) );
+      obj->setAutoFormattingIndent ( PINT(1) );
     }
     else
     {

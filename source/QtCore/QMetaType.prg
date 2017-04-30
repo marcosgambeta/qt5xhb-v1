@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
   if( ISCHAR(1) && ISNUM(1) )
   {
     const char * par1 = hb_parc(1);
-    hb_retni( QMetaType::registerTypedef (  (const char *) par1, (int) hb_parni(2) ) );
+    hb_retni( QMetaType::registerTypedef (  (const char *) par1, PINT(2) ) );
   }
   else
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMETATYPE_TYPENAME )
 {
   if( ISNUM(1) )
   {
-    const char * str1 = QMetaType::typeName ( (int) hb_parni(1) );
+    const char * str1 = QMetaType::typeName ( PINT(1) );
     hb_retc( str1 );
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 {
   if( ISNUM(1) )
   {
-    hb_retl( QMetaType::isRegistered ( (int) hb_parni(1) ) );
+    hb_retl( QMetaType::isRegistered ( PINT(1) ) );
   }
   else
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMETATYPE_CONSTRUCT )
   {
     void * par2 = (void *) hb_parptr(2);
     const void * par3 = (const void *) hb_parptr(3);
-    hb_retptr( (void *) QMetaType::construct ( (int) hb_parni(1), par2, par3 ) );
+    hb_retptr( (void *) QMetaType::construct ( PINT(1), par2, par3 ) );
   }
   else
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMETATYPE_DESTROY )
   if( ISNUM(1) && ISPOINTER(2) )
   {
     void * par2 = (void *) hb_parptr(2);
-    QMetaType::destroy ( (int) hb_parni(1), par2 );
+    QMetaType::destroy ( PINT(1), par2 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QMETATYPE_SAVE )
   {
     QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
     const void * par3 = (const void *) hb_parptr(3);
-    hb_retl( QMetaType::save ( *par1, (int) hb_parni(2), par3 ) );
+    hb_retl( QMetaType::save ( *par1, PINT(2), par3 ) );
   }
   else
   {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QMETATYPE_LOAD )
   {
     QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
     void * par3 = (void *) hb_parptr(3);
-    hb_retl( QMetaType::load ( *par1, (int) hb_parni(2), par3 ) );
+    hb_retl( QMetaType::load ( *par1, PINT(2), par3 ) );
   }
   else
   {

@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setArrayIndex ( (int) hb_parni(1) );
+      obj->setArrayIndex ( PINT(1) );
     }
     else
     {

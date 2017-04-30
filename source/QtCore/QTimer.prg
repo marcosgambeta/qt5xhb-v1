@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
   {
     if( ISNUM(1) )
     {
-      obj->setInterval ( (int) hb_parni(1) );
+      obj->setInterval ( PINT(1) );
     }
     else
     {
@@ -192,7 +192,7 @@ void QTimer_start1 ()
 
   if( obj )
   {
-    obj->start ( (int) hb_parni(1) );
+    obj->start ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTIMER_SINGLESHOT )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
-    QTimer::singleShot ( (int) hb_parni(1), par2,  (const char *) par3 );
+    QTimer::singleShot ( PINT(1), par2,  (const char *) par3 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

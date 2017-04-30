@@ -136,7 +136,7 @@ void QTextEncoder_fromUnicode2 ()
   if( obj )
   {
     const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1, (int) hb_parni(2) ) );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1, PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

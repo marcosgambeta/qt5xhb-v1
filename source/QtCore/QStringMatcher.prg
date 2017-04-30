@@ -209,7 +209,7 @@ void QStringMatcher_indexIn2 ()
   if( obj )
   {
     const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexIn ( par1, (int) hb_parni(2), (int) hb_parni(3) ) );
+    hb_retni( obj->indexIn ( par1, PINT(2), PINT(3) ) );
   }
 }
 

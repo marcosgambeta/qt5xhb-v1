@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QLOCKFILE_SETSTALELOCKTIME )
   {
     if( ISNUM(1) )
     {
-      obj->setStaleLockTime ( (int) hb_parni(1) );
+      obj->setStaleLockTime ( PINT(1) );
     }
     else
     {

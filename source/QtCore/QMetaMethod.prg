@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->parameterType ( (int) hb_parni(1) ) );
+      hb_retni( obj->parameterType ( PINT(1) ) );
     }
     else
     {

@@ -118,7 +118,7 @@ void QTextDecoder_toUnicode1 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retc( (const char *) obj->toUnicode (  (const char *) par1, (int) hb_parni(2) ).toLatin1().data() );
+    hb_retc( (const char *) obj->toUnicode (  (const char *) par1, PINT(2) ).toLatin1().data() );
   }
 }
 

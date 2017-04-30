@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QRECT_ADJUST )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      obj->adjust ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+      obj->adjust ( PINT(1), PINT(2), PINT(3), PINT(4) );
     }
     else
     {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      QRect * ptr = new QRect( obj->adjusted ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) ) );
+      QRect * ptr = new QRect( obj->adjusted ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -318,7 +318,7 @@ void QRect_contains2 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( (int) hb_parni(1), (int) hb_parni(2), PBOOL(3) ) );
+    hb_retl( obj->contains ( PINT(1), PINT(2), PBOOL(3) ) );
   }
 }
 
@@ -331,7 +331,7 @@ void QRect_contains3 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    hb_retl( obj->contains ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOM )
   {
     if( ISNUM(1) )
     {
-      obj->moveBottom ( (int) hb_parni(1) );
+      obj->moveBottom ( PINT(1) );
     }
     else
     {
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QRECT_MOVELEFT )
   {
     if( ISNUM(1) )
     {
-      obj->moveLeft ( (int) hb_parni(1) );
+      obj->moveLeft ( PINT(1) );
     }
     else
     {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QRECT_MOVERIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->moveRight ( (int) hb_parni(1) );
+      obj->moveRight ( PINT(1) );
     }
     else
     {
@@ -690,7 +690,7 @@ void QRect_moveTo1 ()
 
   if( obj )
   {
-    obj->moveTo ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->moveTo ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QRECT_MOVETOP )
   {
     if( ISNUM(1) )
     {
-      obj->moveTop ( (int) hb_parni(1) );
+      obj->moveTop ( PINT(1) );
     }
     else
     {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QRECT_SETBOTTOM )
   {
     if( ISNUM(1) )
     {
-      obj->setBottom ( (int) hb_parni(1) );
+      obj->setBottom ( PINT(1) );
     }
     else
     {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QRECT_SETCOORDS )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      obj->setCoords ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+      obj->setCoords ( PINT(1), PINT(2), PINT(3), PINT(4) );
     }
     else
     {
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QRECT_SETHEIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setHeight ( (int) hb_parni(1) );
+      obj->setHeight ( PINT(1) );
     }
     else
     {
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QRECT_SETLEFT )
   {
     if( ISNUM(1) )
     {
-      obj->setLeft ( (int) hb_parni(1) );
+      obj->setLeft ( PINT(1) );
     }
     else
     {
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QRECT_SETRECT )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      obj->setRect ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+      obj->setRect ( PINT(1), PINT(2), PINT(3), PINT(4) );
     }
     else
     {
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QRECT_SETRIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setRight ( (int) hb_parni(1) );
+      obj->setRight ( PINT(1) );
     }
     else
     {
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QRECT_SETTOP )
   {
     if( ISNUM(1) )
     {
-      obj->setTop ( (int) hb_parni(1) );
+      obj->setTop ( PINT(1) );
     }
     else
     {
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QRECT_SETWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setWidth ( (int) hb_parni(1) );
+      obj->setWidth ( PINT(1) );
     }
     else
     {
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QRECT_SETX )
   {
     if( ISNUM(1) )
     {
-      obj->setX ( (int) hb_parni(1) );
+      obj->setX ( PINT(1) );
     }
     else
     {
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QRECT_SETY )
   {
     if( ISNUM(1) )
     {
-      obj->setY ( (int) hb_parni(1) );
+      obj->setY ( PINT(1) );
     }
     else
     {
@@ -1225,7 +1225,7 @@ void QRect_translate1 ()
 
   if( obj )
   {
-    obj->translate ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1275,7 +1275,7 @@ void QRect_translated1 ()
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->translated ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    QRect * ptr = new QRect( obj->translated ( PINT(1), PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

@@ -116,7 +116,7 @@ void QCryptographicHash_addData1 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    obj->addData (  (const char *) par1, (int) hb_parni(2) );
+    obj->addData (  (const char *) par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDATETIME_ADDDAYS )
   {
     if( ISNUM(1) )
     {
-      QDateTime * ptr = new QDateTime( obj->addDays ( (int) hb_parni(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addDays ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
   {
     if( ISNUM(1) )
     {
-      QDateTime * ptr = new QDateTime( obj->addMonths ( (int) hb_parni(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addMonths ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDATETIME_ADDSECS )
   {
     if( ISNUM(1) )
     {
-      QDateTime * ptr = new QDateTime( obj->addSecs ( (int) hb_parni(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addSecs ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
   {
     if( ISNUM(1) )
     {
-      QDateTime * ptr = new QDateTime( obj->addYears ( (int) hb_parni(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addYears ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
     }
     else

@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
     if( ISQMODELINDEX(1) && ISNUM(2) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * ptr = new QVariant( obj->data ( *par1, (int) hb_parni(2) ) );
+      QVariant * ptr = new QVariant( obj->data ( *par1, PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
     if( ISNUM(1) && ISNUM(2) && ISQMODELINDEX(3) )
     {
       QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2), *par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {

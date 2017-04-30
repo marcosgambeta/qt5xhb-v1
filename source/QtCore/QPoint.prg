@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QPOINT_SETX )
   {
     if( ISNUM(1) )
     {
-      obj->setX ( (int) hb_parni(1) );
+      obj->setX ( PINT(1) );
     }
     else
     {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPOINT_SETY )
   {
     if( ISNUM(1) )
     {
-      obj->setY ( (int) hb_parni(1) );
+      obj->setY ( PINT(1) );
     }
     else
     {

@@ -315,7 +315,7 @@ void QItemSelectionRange_contains2 ()
   if( obj )
   {
     QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->contains ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
+    hb_retl( obj->contains ( PINT(1), PINT(2), *par3 ) );
   }
 }
 

@@ -131,7 +131,7 @@ void QSemaphore_tryAcquire2 ()
 
   if( obj )
   {
-    hb_retl( obj->tryAcquire ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    hb_retl( obj->tryAcquire ( PINT(1), PINT(2) ) );
   }
 }
 

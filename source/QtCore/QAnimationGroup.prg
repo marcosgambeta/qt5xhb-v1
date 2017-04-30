@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
   {
     if( ISNUM(1) )
     {
-      QAbstractAnimation * ptr = obj->animationAt ( (int) hb_parni(1) );
+      QAbstractAnimation * ptr = obj->animationAt ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
     if( ISNUM(1) && ISQABSTRACTANIMATION(2) )
     {
       QAbstractAnimation * par2 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(2);
-      obj->insertAnimation ( (int) hb_parni(1), par2 );
+      obj->insertAnimation ( PINT(1), par2 );
     }
     else
     {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
   {
     if( ISNUM(1) )
     {
-      QAbstractAnimation * ptr = obj->takeAnimation ( (int) hb_parni(1) );
+      QAbstractAnimation * ptr = obj->takeAnimation ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
     }
     else

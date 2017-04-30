@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QLOCALE_DAYNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( (const char *) obj->dayName ( (int) hb_parni(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->dayName ( PINT(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
     }
     else
     {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QLOCALE_MONTHNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( (const char *) obj->monthName ( (int) hb_parni(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->monthName ( PINT(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
     }
     else
     {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( (const char *) obj->standaloneDayName ( (int) hb_parni(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->standaloneDayName ( PINT(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
     }
     else
     {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( (const char *) obj->standaloneMonthName ( (int) hb_parni(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->standaloneMonthName ( PINT(1),  (QLocale::FormatType) par2 ).toLatin1().data() );
     }
     else
     {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
       QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retc( (const char *) obj->toCurrencyString ( (int) hb_parni(1), par2 ).toLatin1().data() );
+      hb_retc( (const char *) obj->toCurrencyString ( PINT(1), par2 ).toLatin1().data() );
     }
     else
     {
@@ -1308,7 +1308,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->toString ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->toString ( PINT(1) ).toLatin1().data() );
     }
     else
     {

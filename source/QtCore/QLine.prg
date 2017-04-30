@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QLINE_SETLINE )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      obj->setLine ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+      obj->setLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
     }
     else
     {
@@ -378,7 +378,7 @@ void QLine_translate2 ()
 
   if( obj )
   {
-    obj->translate ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -427,7 +427,7 @@ void QLine_translated2 ()
 
   if( obj )
   {
-    QLine * ptr = new QLine( obj->translated ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }

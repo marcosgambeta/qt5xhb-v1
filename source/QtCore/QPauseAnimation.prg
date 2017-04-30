@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
   {
     if( ISNUM(1) )
     {
-      obj->setDuration ( (int) hb_parni(1) );
+      obj->setDuration ( PINT(1) );
     }
     else
     {

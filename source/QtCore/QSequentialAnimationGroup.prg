@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
   {
     if( ISNUM(1) )
     {
-      QPauseAnimation * ptr = obj->addPause ( (int) hb_parni(1) );
+      QPauseAnimation * ptr = obj->addPause ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QPauseAnimation * ptr = obj->insertPause ( (int) hb_parni(1), (int) hb_parni(2) );
+      QPauseAnimation * ptr = obj->insertPause ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
     }
     else

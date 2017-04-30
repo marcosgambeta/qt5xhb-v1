@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QModelIndex * ptr = new QModelIndex( obj->child ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else

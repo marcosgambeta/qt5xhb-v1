@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QBASICTIMER_START )
   if( obj )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->start ( (int) hb_parni(1), par2 );
+    obj->start ( PINT(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

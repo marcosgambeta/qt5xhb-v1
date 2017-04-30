@@ -395,7 +395,7 @@ void QUrl_port2 ()
 
   if( obj )
   {
-    hb_retni( obj->port ( (int) hb_parni(1) ) );
+    hb_retni( obj->port ( PINT(1) ) );
   }
 }
 
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QURL_SETPORT )
   {
     if( ISNUM(1) )
     {
-      obj->setPort ( (int) hb_parni(1) );
+      obj->setPort ( PINT(1) );
     }
     else
     {

@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
   {
     if( ISNUM(1) )
     {
-      obj->setVersion ( (int) hb_parni(1) );
+      obj->setVersion ( PINT(1) );
     }
     else
     {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
     if( ISCHAR(1) && ISNUM(2) )
     {
       char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->readRawData ( par1, (int) hb_parni(2) ) );
+      hb_retni( obj->readRawData ( par1, PINT(2) ) );
     }
     else
     {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
     if( ISCHAR(1) && ISNUM(2) )
     {
       const char * par1 = hb_parc(1);
-      hb_retni( obj->writeRawData (  (const char *) par1, (int) hb_parni(2) ) );
+      hb_retni( obj->writeRawData (  (const char *) par1, PINT(2) ) );
     }
     else
     {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->skipRawData ( (int) hb_parni(1) ) );
+      hb_retni( obj->skipRawData ( PINT(1) ) );
     }
     else
     {

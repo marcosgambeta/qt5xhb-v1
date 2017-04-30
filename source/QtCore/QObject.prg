@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
   {
     if( ISNUM(1) )
     {
-      obj->killTimer ( (int) hb_parni(1) );
+      obj->killTimer ( PINT(1) );
     }
     else
     {
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::CoarseTimer : hb_parni(2);
-      hb_retni( obj->startTimer ( (int) hb_parni(1),  (Qt::TimerType) par2 ) );
+      hb_retni( obj->startTimer ( PINT(1),  (Qt::TimerType) par2 ) );
     }
     else
     {

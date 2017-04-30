@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
   {
     if( ISNUM(1) )
     {
-      QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( (int) hb_parni(1) ) );
+      QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETACLASSINFO" );
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
   {
     if( ISNUM(1) )
     {
-      QMetaMethod * ptr = new QMetaMethod( obj->constructor ( (int) hb_parni(1) ) );
+      QMetaMethod * ptr = new QMetaMethod( obj->constructor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
   {
     if( ISNUM(1) )
     {
-      QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( (int) hb_parni(1) ) );
+      QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAENUM" );
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
   {
     if( ISNUM(1) )
     {
-      QMetaMethod * ptr = new QMetaMethod( obj->method ( (int) hb_parni(1) ) );
+      QMetaMethod * ptr = new QMetaMethod( obj->method ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
   {
     if( ISNUM(1) )
     {
-      QMetaProperty * ptr = new QMetaProperty( obj->property ( (int) hb_parni(1) ) );
+      QMetaProperty * ptr = new QMetaProperty( obj->property ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
     }
     else

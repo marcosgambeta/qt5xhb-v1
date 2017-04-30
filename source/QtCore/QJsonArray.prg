@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QJSONARRAY_AT )
   {
     if( ISNUM(1) )
     {
-      QJsonValue * ptr = new QJsonValue( obj->at ( (int) hb_parni(1) ) );
+      QJsonValue * ptr = new QJsonValue( obj->at ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QJSONARRAY_INSERT )
     if( ISNUM(1) && ISQJSONVALUE(2) )
     {
       QJsonValue * par2 = (QJsonValue *) _qt5xhb_itemGetPtr(2);
-      obj->insert ( (int) hb_parni(1), *par2 );
+      obj->insert ( PINT(1), *par2 );
     }
     else
     {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QJSONARRAY_REMOVEAT )
   {
     if( ISNUM(1) )
     {
-      obj->removeAt ( (int) hb_parni(1) );
+      obj->removeAt ( PINT(1) );
     }
     else
     {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QJSONARRAY_REPLACE )
     if( ISNUM(1) && ISQJSONVALUE(2) )
     {
       QJsonValue * par2 = (QJsonValue *) _qt5xhb_itemGetPtr(2);
-      obj->replace ( (int) hb_parni(1), *par2 );
+      obj->replace ( PINT(1), *par2 );
     }
     else
     {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QJSONARRAY_TAKEAT )
   {
     if( ISNUM(1) )
     {
-      QJsonValue * ptr = new QJsonValue( obj->takeAt ( (int) hb_parni(1) ) );
+      QJsonValue * ptr = new QJsonValue( obj->takeAt ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
     }
     else

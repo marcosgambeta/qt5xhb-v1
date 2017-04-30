@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->waitForBytesWritten ( (int) hb_parni(1) ) );
+      hb_retl( obj->waitForBytesWritten ( PINT(1) ) );
     }
     else
     {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->waitForReadyRead ( (int) hb_parni(1) ) );
+      hb_retl( obj->waitForReadyRead ( PINT(1) ) );
     }
     else
     {

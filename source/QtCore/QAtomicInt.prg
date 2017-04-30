@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddAcquire ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndAddAcquire ( PINT(1) ) );
     }
     else
     {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddOrdered ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndAddOrdered ( PINT(1) ) );
     }
     else
     {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddRelaxed ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndAddRelaxed ( PINT(1) ) );
     }
     else
     {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddRelease ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndAddRelease ( PINT(1) ) );
     }
     else
     {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreAcquire ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndStoreAcquire ( PINT(1) ) );
     }
     else
     {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreOrdered ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndStoreOrdered ( PINT(1) ) );
     }
     else
     {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreRelaxed ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndStoreRelaxed ( PINT(1) ) );
     }
     else
     {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreRelease ( (int) hb_parni(1) ) );
+      hb_retni( obj->fetchAndStoreRelease ( PINT(1) ) );
     }
     else
     {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retl( obj->testAndSetAcquire ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      hb_retl( obj->testAndSetAcquire ( PINT(1), PINT(2) ) );
     }
     else
     {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retl( obj->testAndSetOrdered ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      hb_retl( obj->testAndSetOrdered ( PINT(1), PINT(2) ) );
     }
     else
     {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retl( obj->testAndSetRelaxed ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      hb_retl( obj->testAndSetRelaxed ( PINT(1), PINT(2) ) );
     }
     else
     {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retl( obj->testAndSetRelease ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      hb_retl( obj->testAndSetRelease ( PINT(1), PINT(2) ) );
     }
     else
     {

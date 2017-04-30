@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMARGINS_SETLEFT )
   {
     if( ISNUM(1) )
     {
-      obj->setLeft ( (int) hb_parni(1) );
+      obj->setLeft ( PINT(1) );
     }
     else
     {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QMARGINS_SETTOP )
   {
     if( ISNUM(1) )
     {
-      obj->setTop ( (int) hb_parni(1) );
+      obj->setTop ( PINT(1) );
     }
     else
     {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMARGINS_SETRIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setRight ( (int) hb_parni(1) );
+      obj->setRight ( PINT(1) );
     }
     else
     {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
   {
     if( ISNUM(1) )
     {
-      obj->setBottom ( (int) hb_parni(1) );
+      obj->setBottom ( PINT(1) );
     }
     else
     {

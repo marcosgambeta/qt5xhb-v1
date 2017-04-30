@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) hb_parni(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, PINT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, (int) hb_parni(3), (int) hb_parni(4), *par5 ) );
+      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
     }
     else
     {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SIBLING )
     if( ISNUM(1) && ISNUM(2) && ISQMODELINDEX(3) )
     {
       QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2), *par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
       int par5 = ISNIL(5)? (int) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : hb_parni(5);
-      QModelIndexList list = obj->match ( *par1, (int) hb_parni(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) par5 );
+      QModelIndexList list = obj->match ( *par1, PINT(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) par5 );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {

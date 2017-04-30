@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
   {
     if( ISNUM(1) )
     {
-      const char * str1 = obj->key ( (int) hb_parni(1) );
+      const char * str1 = obj->key ( PINT(1) );
       hb_retc( str1 );
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->value ( (int) hb_parni(1) ) );
+      hb_retni( obj->value ( PINT(1) ) );
     }
     else
     {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
   {
     if( ISNUM(1) )
     {
-      const char * str1 = obj->valueToKey ( (int) hb_parni(1) );
+      const char * str1 = obj->valueToKey ( PINT(1) );
       hb_retc( str1 );
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
   {
     if( ISNUM(1) )
     {
-      QByteArray * ptr = new QByteArray( obj->valueToKeys ( (int) hb_parni(1) ) );
+      QByteArray * ptr = new QByteArray( obj->valueToKeys ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
     }
     else

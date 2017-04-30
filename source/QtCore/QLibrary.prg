@@ -227,7 +227,7 @@ void QLibrary_setFileNameAndVersion1 ()
 
   if( obj )
   {
-    obj->setFileNameAndVersion ( PQSTRING(1), (int) hb_parni(2) );
+    obj->setFileNameAndVersion ( PQSTRING(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -347,7 +347,7 @@ static QFunctionPointer resolve(const QString &fileName, int verNum, const char 
 void QLibrary_resolve3 ()
 {
   const char * par3 = hb_parc(3);
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), (int) hb_parni(2),  (const char *) par3 ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PINT(2),  (const char *) par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 

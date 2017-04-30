@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentTime ( (int) hb_parni(1) );
+      obj->setCurrentTime ( PINT(1) );
     }
     else
     {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setLoopCount ( (int) hb_parni(1) );
+      obj->setLoopCount ( PINT(1) );
     }
     else
     {

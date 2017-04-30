@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUM(1) )
   {
-    QList<QByteArray> list = QTimeZone::availableTimeZoneIds ( (int) hb_parni(1) );
+    QList<QByteArray> list = QTimeZone::availableTimeZoneIds ( PINT(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );

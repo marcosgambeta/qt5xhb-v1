@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DROPMIMEDATA )
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, (int) hb_parni(3), (int) hb_parni(4), *par5 ) );
+      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
     }
     else
     {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_INDEX )
     if( ISNUM(1) && ISOPTNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2), par3 ) );
+      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2), par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else

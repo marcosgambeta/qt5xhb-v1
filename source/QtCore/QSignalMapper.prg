@@ -99,7 +99,7 @@ void QSignalMapper_setMapping1 ()
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->setMapping ( par1, (int) hb_parni(2) );
+    obj->setMapping ( par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -216,7 +216,7 @@ void QSignalMapper_mapping1 ()
 
   if( obj )
   {
-    QObject * ptr = obj->mapping ( (int) hb_parni(1) );
+    QObject * ptr = obj->mapping ( PINT(1) );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

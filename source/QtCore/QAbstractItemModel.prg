@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, (int) hb_parni(3), (int) hb_parni(4), *par5 ) );
+      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
     }
     else
     {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->hasIndex ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->hasIndex ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
     if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
       QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->insertColumn ( (int) hb_parni(1), par2 ) );
+      hb_retl( obj->insertColumn ( PINT(1), par2 ) );
     }
     else
     {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
     if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
       QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->insertRow ( (int) hb_parni(1), par2 ) );
+      hb_retl( obj->insertRow ( PINT(1), par2 ) );
     }
     else
     {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
       int par5 = ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5);
-      QModelIndexList list = obj->match ( *par1, (int) hb_parni(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) par5 );
+      QModelIndexList list = obj->match ( *par1, PINT(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) par5 );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
     if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
       QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->removeColumn ( (int) hb_parni(1), par2 ) );
+      hb_retl( obj->removeColumn ( PINT(1), par2 ) );
     }
     else
     {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
     if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
       QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->removeRow ( (int) hb_parni(1), par2 ) );
+      hb_retl( obj->removeRow ( PINT(1), par2 ) );
     }
     else
     {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
     {
       int par2 = hb_parni(2);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->setHeaderData ( (int) hb_parni(1),  (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+      hb_retl( obj->setHeaderData ( PINT(1),  (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
     }
     else
     {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
     if( ISNUM(1) && ISNUM(2) && ISQMODELINDEX(3) )
     {
       QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( (int) hb_parni(1), (int) hb_parni(2), *par3 ) );
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2), *par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {

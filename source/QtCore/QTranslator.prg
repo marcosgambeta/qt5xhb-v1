@@ -136,7 +136,7 @@ void QTranslator_load3 ()
   {
     const uchar * par1 = (const uchar *) _qt5xhb_itemGetPtr(1);
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    hb_retl( obj->load ( par1, (int) hb_parni(2), par3 ) );
+    hb_retl( obj->load ( par1, PINT(2), par3 ) );
   }
 }
 

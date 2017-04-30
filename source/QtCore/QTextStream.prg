@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setFieldWidth ( (int) hb_parni(1) );
+      obj->setFieldWidth ( PINT(1) );
     }
     else
     {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETINTEGERBASE )
   {
     if( ISNUM(1) )
     {
-      obj->setIntegerBase ( (int) hb_parni(1) );
+      obj->setIntegerBase ( PINT(1) );
     }
     else
     {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERPRECISION )
   {
     if( ISNUM(1) )
     {
-      obj->setRealNumberPrecision ( (int) hb_parni(1) );
+      obj->setRealNumberPrecision ( PINT(1) );
     }
     else
     {

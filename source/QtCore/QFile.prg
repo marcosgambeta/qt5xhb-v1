@@ -393,7 +393,7 @@ void QFile_open3 ()
   {
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
-    hb_retl( obj->open ( (int) hb_parni(1),  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open ( PINT(1),  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
   }
 }
 

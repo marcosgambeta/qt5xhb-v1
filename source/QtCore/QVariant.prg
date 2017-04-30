@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->canConvert ( (int) hb_parni(1) ) );
+      hb_retl( obj->canConvert ( PINT(1) ) );
     }
     else
     {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->convert ( (int) hb_parni(1) ) );
+      hb_retl( obj->convert ( PINT(1) ) );
     }
     else
     {
@@ -1759,7 +1759,7 @@ HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
   if( ISNUM(1) )
   {
-    const char * str1 = QVariant::typeToName ( (int) hb_parni(1) );
+    const char * str1 = QVariant::typeToName ( PINT(1) );
     hb_retc( str1 );
   }
   else

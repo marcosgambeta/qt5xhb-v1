@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
   {
     if( ISNUM(1) )
     {
-      QTime * ptr = new QTime( obj->addMSecs ( (int) hb_parni(1) ) );
+      QTime * ptr = new QTime( obj->addMSecs ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTIME_ADDSECS )
   {
     if( ISNUM(1) )
     {
-      QTime * ptr = new QTime( obj->addSecs ( (int) hb_parni(1) ) );
+      QTime * ptr = new QTime( obj->addSecs ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
     }
     else
@@ -223,7 +223,7 @@ static bool isValid(int h, int m, int s, int ms = 0)
 */
 void QTime_isValid2 ()
 {
-  hb_retl( QTime::isValid ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 0 : hb_parni(4) ) );
+  hb_retl( QTime::isValid ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 0 : hb_parni(4) ) );
 }
 
 //[1]bool isValid() const
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
-      hb_retl( obj->setHMS ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 0 : hb_parni(4) ) );
+      hb_retl( obj->setHMS ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 0 : hb_parni(4) ) );
     }
     else
     {

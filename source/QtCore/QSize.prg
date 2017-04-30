@@ -222,7 +222,7 @@ void QSize_scale1 ()
   if( obj )
   {
     int par3 = hb_parni(3);
-    obj->scale ( (int) hb_parni(1), (int) hb_parni(2),  (Qt::AspectRatioMode) par3 );
+    obj->scale ( PINT(1), PINT(2),  (Qt::AspectRatioMode) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSIZE_SETHEIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setHeight ( (int) hb_parni(1) );
+      obj->setHeight ( PINT(1) );
     }
     else
     {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSIZE_SETWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setWidth ( (int) hb_parni(1) );
+      obj->setWidth ( PINT(1) );
     }
     else
     {

@@ -162,7 +162,7 @@ void QEventLoop_processEvents2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1, (int) hb_parni(2) );
+    obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

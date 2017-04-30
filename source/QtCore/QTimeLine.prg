@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->frameForTime ( (int) hb_parni(1) ) );
+      hb_retni( obj->frameForTime ( PINT(1) ) );
     }
     else
     {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDURATION )
   {
     if( ISNUM(1) )
     {
-      obj->setDuration ( (int) hb_parni(1) );
+      obj->setDuration ( PINT(1) );
     }
     else
     {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
   {
     if( ISNUM(1) )
     {
-      obj->setEndFrame ( (int) hb_parni(1) );
+      obj->setEndFrame ( PINT(1) );
     }
     else
     {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setFrameRange ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setFrameRange ( PINT(1), PINT(2) );
     }
     else
     {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setLoopCount ( (int) hb_parni(1) );
+      obj->setLoopCount ( PINT(1) );
     }
     else
     {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
   {
     if( ISNUM(1) )
     {
-      obj->setStartFrame ( (int) hb_parni(1) );
+      obj->setStartFrame ( PINT(1) );
     }
     else
     {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
   {
     if( ISNUM(1) )
     {
-      obj->setUpdateInterval ( (int) hb_parni(1) );
+      obj->setUpdateInterval ( PINT(1) );
     }
     else
     {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
   {
     if( ISNUM(1) )
     {
-      hb_retnd( obj->valueForTime ( (int) hb_parni(1) ) );
+      hb_retnd( obj->valueForTime ( PINT(1) ) );
     }
     else
     {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentTime ( (int) hb_parni(1) );
+      obj->setCurrentTime ( PINT(1) );
     }
     else
     {

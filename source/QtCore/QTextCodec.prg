@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
 {
   if( ISNUM(1) )
   {
-    QTextCodec * ptr = QTextCodec::codecForMib ( (int) hb_parni(1) );
+    QTextCodec * ptr = QTextCodec::codecForMib ( PINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
   else

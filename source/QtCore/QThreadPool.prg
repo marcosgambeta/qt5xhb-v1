@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
   {
     if( ISNUM(1) )
     {
-      obj->setExpiryTimeout ( (int) hb_parni(1) );
+      obj->setExpiryTimeout ( PINT(1) );
     }
     else
     {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setMaxThreadCount ( (int) hb_parni(1) );
+      obj->setMaxThreadCount ( PINT(1) );
     }
     else
     {

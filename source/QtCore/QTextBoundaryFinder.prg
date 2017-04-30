@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
   {
     if( ISNUM(1) )
     {
-      obj->setPosition ( (int) hb_parni(1) );
+      obj->setPosition ( PINT(1) );
     }
     else
     {
