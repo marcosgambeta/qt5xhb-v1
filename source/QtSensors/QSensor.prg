@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QSENSOR_SETDATARATE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDataRate ( (int) hb_parni(1) );
+    obj->setDataRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QSENSOR_SETOUTPUTRANGE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setOutputRange ( (int) hb_parni(1) );
+    obj->setOutputRange ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QSENSOR_SETCURRENTORIENTATION )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentOrientation ( (int) hb_parni(1) );
+    obj->setCurrentOrientation ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QSENSOR_SETUSERORIENTATION )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUserOrientation ( (int) hb_parni(1) );
+    obj->setUserOrientation ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QSENSOR_SETMAXBUFFERSIZE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaxBufferSize ( (int) hb_parni(1) );
+    obj->setMaxBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QSENSOR_SETEFFICIENTBUFFERSIZE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setEfficientBufferSize ( (int) hb_parni(1) );
+    obj->setEfficientBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QSENSOR_SETBUFFERSIZE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBufferSize ( (int) hb_parni(1) );
+    obj->setBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

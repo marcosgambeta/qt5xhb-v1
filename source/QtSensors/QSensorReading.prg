@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSENSORREADING_VALUE )
   QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->value ( (int) hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 #endif

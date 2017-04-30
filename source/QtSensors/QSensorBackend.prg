@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORERROR )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->sensorError ( (int) hb_parni(1) );
+    obj->sensorError ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
