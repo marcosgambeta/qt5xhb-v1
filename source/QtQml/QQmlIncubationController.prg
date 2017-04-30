@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
   QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->incubateFor ( (int) hb_parni(1) );
+    obj->incubateFor ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

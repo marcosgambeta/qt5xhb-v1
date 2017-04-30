@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL2 )
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->connectNotifySignal ( par1, (int) hb_parni(2) ) );
+    hb_retl( obj->connectNotifySignal ( par1, PINT(2) ) );
   }
 }
 

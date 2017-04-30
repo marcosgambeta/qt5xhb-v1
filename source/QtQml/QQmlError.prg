@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QQMLERROR_SETCOLUMN )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setColumn ( (int) hb_parni(1) );
+    obj->setColumn ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QQMLERROR_SETLINE )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLine ( (int) hb_parni(1) );
+    obj->setLine ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

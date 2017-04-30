@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->at ( (int) hb_parni(1) );
+    QObject * ptr = obj->at ( PINT(1) );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
