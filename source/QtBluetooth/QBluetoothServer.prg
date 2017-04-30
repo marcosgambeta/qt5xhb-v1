@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS )
   {
     if( ISNUM(1) )
     {
-      obj->setMaxPendingConnections ( (int) hb_parni(1) );
+      obj->setMaxPendingConnections ( PINT(1) );
     }
     else
     {

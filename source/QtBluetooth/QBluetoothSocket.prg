@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
       int par2 = hb_parni(2);
       int par3 = ISNIL(3)? (int) QBluetoothSocket::ConnectedState : hb_parni(3);
       int par4 = ISNIL(4)? (int) QIODevice::ReadWrite : hb_parni(4);
-      hb_retl( obj->setSocketDescriptor ( (int) hb_parni(1),  (QBluetoothServiceInfo::Protocol) par2,  (QBluetoothSocket::SocketState) par3,  (QIODevice::OpenMode) par4 ) );
+      hb_retl( obj->setSocketDescriptor ( PINT(1),  (QBluetoothServiceInfo::Protocol) par2,  (QBluetoothSocket::SocketState) par3,  (QIODevice::OpenMode) par4 ) );
     }
     else
     {
