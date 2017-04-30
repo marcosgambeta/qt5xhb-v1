@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR )
   QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFileDescriptor ( (int) hb_parni(1) );
+    obj->setFileDescriptor ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR )
   QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->giveFileDescriptor ( (int) hb_parni(1) );
+    obj->giveFileDescriptor ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

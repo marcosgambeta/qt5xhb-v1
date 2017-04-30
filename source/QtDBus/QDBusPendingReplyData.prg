@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ARGUMENTAT )
   QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->argumentAt ( (int) hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->argumentAt ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_SETMETATYPES )
   if( obj )
   {
     const int * par2 = (const int *) _qt5xhb_itemGetPtr(2);
-    obj->setMetaTypes ( (int) hb_parni(1), par2 );
+    obj->setMetaTypes ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

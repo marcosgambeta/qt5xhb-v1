@@ -75,7 +75,7 @@ static bool demarshall(const QDBusArgument &, int id, void *data)
 HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
 {
   void * par3 = (void *) hb_parptr(3);
-  hb_retl( QDBusMetaType::demarshall ( (int) hb_parni(2), par3 ) );
+  hb_retl( QDBusMetaType::demarshall ( PINT(2), par3 ) ); // TODO: revisar e corrigir metodo
 }
 
 
@@ -94,7 +94,7 @@ static const char *typeToSignature(int type)
 */
 HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
 {
-  const char * str1 = QDBusMetaType::typeToSignature ( (int) hb_parni(1) );
+  const char * str1 = QDBusMetaType::typeToSignature ( PINT(1) );
   hb_retc( str1 );
 }
 

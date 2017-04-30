@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACALL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->qt_metacall (  (QMetaObject::Call) par1, (int) hb_parni(2) ) );
+    hb_retni( obj->qt_metacall (  (QMetaObject::Call) par1, PINT(2) ) );
   }
 }
 

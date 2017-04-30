@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SETTIMEOUT )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTimeout ( (int) hb_parni(1) );
+    obj->setTimeout ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

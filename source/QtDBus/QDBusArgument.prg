@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY1 )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->beginArray ( (int) hb_parni(1) );
+    obj->beginArray ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP1 )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->beginMap ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->beginMap ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
