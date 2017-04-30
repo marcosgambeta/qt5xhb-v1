@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
   {
     int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
     int par4 = ISNIL(4)? (int) QSizePolicy::Minimum : hb_parni(4);
-    obj->changeSize ( (int) hb_parni(1), (int) hb_parni(2),  (QSizePolicy::Policy) par3,  (QSizePolicy::Policy) par4 );
+    obj->changeSize ( PINT(1), PINT(2),  (QSizePolicy::Policy) par3,  (QSizePolicy::Policy) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

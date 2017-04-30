@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QWidget * ptr = obj->cellWidget ( (int) hb_parni(1), (int) hb_parni(2) );
+      QWidget * ptr = obj->cellWidget ( PINT(1), PINT(2) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_HORIZONTALHEADERITEM )
   {
     if( ISNUM(1) )
     {
-      QTableWidgetItem * ptr = obj->horizontalHeaderItem ( (int) hb_parni(1) );
+      QTableWidgetItem * ptr = obj->horizontalHeaderItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QTableWidgetItem * ptr = obj->item ( (int) hb_parni(1), (int) hb_parni(2) );
+      QTableWidgetItem * ptr = obj->item ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
     }
     else
@@ -371,7 +371,7 @@ void QTableWidget_itemAt2 ()
 
   if( obj )
   {
-    QTableWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
+    QTableWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
     _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_REMOVECELLWIDGET )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->removeCellWidget ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->removeCellWidget ( PINT(1), PINT(2) );
     }
     else
     {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCELLWIDGET )
     if( ISNUM(1) && ISNUM(2) && ISQWIDGET(3) )
     {
       QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
-      obj->setCellWidget ( (int) hb_parni(1), (int) hb_parni(2), par3 );
+      obj->setCellWidget ( PINT(1), PINT(2), par3 );
     }
     else
     {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCOLUMNCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setColumnCount ( (int) hb_parni(1) );
+      obj->setColumnCount ( PINT(1) );
     }
     else
     {
@@ -528,7 +528,7 @@ void QTableWidget_setCurrentCell1 ()
 
   if( obj )
   {
-    obj->setCurrentCell ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setCurrentCell ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -544,7 +544,7 @@ void QTableWidget_setCurrentCell2 ()
   if( obj )
   {
     int par3 = hb_parni(3);
-    obj->setCurrentCell ( (int) hb_parni(1), (int) hb_parni(2),  (QItemSelectionModel::SelectionFlags) par3 );
+    obj->setCurrentCell ( PINT(1), PINT(2),  (QItemSelectionModel::SelectionFlags) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERITEM )
     if( ISNUM(1) && ISQTABLEWIDGETITEM(2) )
     {
       QTableWidgetItem * par2 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(2);
-      obj->setHorizontalHeaderItem ( (int) hb_parni(1), par2 );
+      obj->setHorizontalHeaderItem ( PINT(1), par2 );
     }
     else
     {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETITEM )
     if( ISNUM(1) && ISNUM(2) && ISQTABLEWIDGETITEM(3) )
     {
       QTableWidgetItem * par3 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(3);
-      obj->setItem ( (int) hb_parni(1), (int) hb_parni(2), par3 );
+      obj->setItem ( PINT(1), PINT(2), par3 );
     }
     else
     {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETROWCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setRowCount ( (int) hb_parni(1) );
+      obj->setRowCount ( PINT(1) );
     }
     else
     {
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERITEM )
     if( ISNUM(1) && ISQTABLEWIDGETITEM(2) )
     {
       QTableWidgetItem * par2 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(2);
-      obj->setVerticalHeaderItem ( (int) hb_parni(1), par2 );
+      obj->setVerticalHeaderItem ( PINT(1), par2 );
     }
     else
     {
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sortItems ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sortItems ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
   {
     if( ISNUM(1) )
     {
-      QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem ( (int) hb_parni(1) );
+      QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
     }
     else
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEITEM )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QTableWidgetItem * ptr = obj->takeItem ( (int) hb_parni(1), (int) hb_parni(2) );
+      QTableWidgetItem * ptr = obj->takeItem ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
     }
     else
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
   {
     if( ISNUM(1) )
     {
-      QTableWidgetItem * ptr = obj->takeVerticalHeaderItem ( (int) hb_parni(1) );
+      QTableWidgetItem * ptr = obj->takeVerticalHeaderItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
     }
     else
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VERTICALHEADERITEM )
   {
     if( ISNUM(1) )
     {
-      QTableWidgetItem * ptr = obj->verticalHeaderItem ( (int) hb_parni(1) );
+      QTableWidgetItem * ptr = obj->verticalHeaderItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
     }
     else
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALCOLUMN )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->visualColumn ( (int) hb_parni(1) ) );
+      hb_retni( obj->visualColumn ( PINT(1) ) );
     }
     else
     {
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->visualRow ( (int) hb_parni(1) ) );
+      hb_retni( obj->visualRow ( PINT(1) ) );
     }
     else
     {
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_INSERTCOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->insertColumn ( (int) hb_parni(1) );
+      obj->insertColumn ( PINT(1) );
     }
     else
     {
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_INSERTROW )
   {
     if( ISNUM(1) )
     {
-      obj->insertRow ( (int) hb_parni(1) );
+      obj->insertRow ( PINT(1) );
     }
     else
     {
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_REMOVECOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->removeColumn ( (int) hb_parni(1) );
+      obj->removeColumn ( PINT(1) );
     }
     else
     {
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_REMOVEROW )
   {
     if( ISNUM(1) )
     {
-      obj->removeRow ( (int) hb_parni(1) );
+      obj->removeRow ( PINT(1) );
     }
     else
     {

@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETCURRENTINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentIndex ( (int) hb_parni(1) );
+      obj->setCurrentIndex ( PINT(1) );
     }
     else
     {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB1 )
   if( obj )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertTab ( (int) hb_parni(1), par2, PQSTRING(3) ) );
+    hb_retni( obj->insertTab ( PINT(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB2 )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
-    hb_retni( obj->insertTab ( (int) hb_parni(1), par2, par3, PQSTRING(4) ) );
+    hb_retni( obj->insertTab ( PINT(1), par2, par3, PQSTRING(4) ) );
   }
 }
 
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISTABENABLED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isTabEnabled ( (int) hb_parni(1) ) );
+      hb_retl( obj->isTabEnabled ( PINT(1) ) );
     }
     else
     {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABENABLED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setTabEnabled ( (int) hb_parni(1), PBOOL(2) );
+      obj->setTabEnabled ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QTABWIDGET_REMOVETAB )
   {
     if( ISNUM(1) )
     {
-      obj->removeTab ( (int) hb_parni(1) );
+      obj->removeTab ( PINT(1) );
     }
     else
     {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABICON )
   {
     if( ISNUM(1) )
     {
-      QIcon * ptr = new QIcon( obj->tabIcon ( (int) hb_parni(1) ) );
+      QIcon * ptr = new QIcon( obj->tabIcon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABICON )
   if( obj )
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    obj->setTabIcon ( (int) hb_parni(1), par2 );
+    obj->setTabIcon ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->tabText ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->tabText ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABTEXT )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabText ( (int) hb_parni(1), PQSTRING(2) );
+    obj->setTabText ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABTOOLTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->tabToolTip ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->tabToolTip ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABTOOLTIP )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabToolTip ( (int) hb_parni(1), PQSTRING(2) );
+    obj->setTabToolTip ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABWHATSTHIS )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->tabWhatsThis ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->tabWhatsThis ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABWHATSTHIS )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTabWhatsThis ( (int) hb_parni(1), PQSTRING(2) );
+    obj->setTabWhatsThis ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      QWidget * ptr = obj->widget ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QTABWIDGET_HEIGHTFORWIDTH )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    hb_retni( obj->heightForWidth ( PINT(1) ) );
   }
 }
 

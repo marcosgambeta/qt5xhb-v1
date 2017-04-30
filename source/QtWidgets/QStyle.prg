@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
     QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
     QPixmap * par4 = (QPixmap *) _qt5xhb_itemGetPtr(4);
-    obj->drawItemPixmap ( par1, *par2, (int) hb_parni(3), *par4 );
+    obj->drawItemPixmap ( par1, *par2, PINT(3), *par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
     QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
     QPalette * par4 = (QPalette *) _qt5xhb_itemGetPtr(4);
     int par7 = ISNIL(7)? (int) QPalette::NoRole : hb_parni(7);
-    obj->drawItemText ( par1, *par2, (int) hb_parni(3), *par4, PBOOL(5), PQSTRING(6),  (QPalette::ColorRole) par7 );
+    obj->drawItemText ( par1, *par2, PINT(3), *par4, PBOOL(5), PQSTRING(6),  (QPalette::ColorRole) par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
   {
     QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     QPixmap * par3 = (QPixmap *) _qt5xhb_itemGetPtr(3);
-    QRect * ptr = new QRect( obj->itemPixmapRect ( *par1, (int) hb_parni(2), *par3 ) );
+    QRect * ptr = new QRect( obj->itemPixmapRect ( *par1, PINT(2), *par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
   {
     QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
     QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-    QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, (int) hb_parni(3), PBOOL(4), PQSTRING(5) ) );
+    QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, PINT(3), PBOOL(4), PQSTRING(5) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
-    hb_retni( QStyle::sliderPositionFromValue ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+    hb_retni( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
   }
   else
   {
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
-    hb_retni( QStyle::sliderValueFromPosition ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+    hb_retni( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
   }
   else
   {

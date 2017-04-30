@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
   {
     if( ISNUM(1) )
     {
-      obj->setTickInterval ( (int) hb_parni(1) );
+      obj->setTickInterval ( PINT(1) );
     }
     else
     {

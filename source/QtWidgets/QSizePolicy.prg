@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALSTRETCH )
   {
     if( ISNUM(1) )
     {
-      obj->setHorizontalStretch ( (int) hb_parni(1) );
+      obj->setHorizontalStretch ( PINT(1) );
     }
     else
     {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALSTRETCH )
   {
     if( ISNUM(1) )
     {
-      obj->setVerticalStretch ( (int) hb_parni(1) );
+      obj->setVerticalStretch ( PINT(1) );
     }
     else
     {

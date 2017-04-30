@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
     {
       int par2;
       int par3;
-      obj->getRange ( (int) hb_parni(1), &par2, &par3 );
+      obj->getRange ( PINT(1), &par2, &par3 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
     }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
   {
     if( ISNUM(1) )
     {
-      QSplitterHandle * ptr = obj->handle ( (int) hb_parni(1) );
+      QSplitterHandle * ptr = obj->handle ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QSPLITTERHANDLE" );
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
     if( ISNUM(1) && ISQWIDGET(2) )
     {
       QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-      obj->insertWidget ( (int) hb_parni(1), par2 );
+      obj->insertWidget ( PINT(1), par2 );
     }
     else
     {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isCollapsible ( (int) hb_parni(1) ) );
+      hb_retl( obj->isCollapsible ( PINT(1) ) );
     }
     else
     {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setCollapsible ( (int) hb_parni(1), PBOOL(2) );
+      obj->setCollapsible ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setHandleWidth ( (int) hb_parni(1) );
+      obj->setHandleWidth ( PINT(1) );
     }
     else
     {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setStretchFactor ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setStretchFactor ( PINT(1), PINT(2) );
     }
     else
     {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      QWidget * ptr = obj->widget ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else

@@ -401,7 +401,7 @@ void QComboBox_insertItem1 ()
   if( obj )
   {
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
-    obj->insertItem ( (int) hb_parni(1), PQSTRING(2), par3 );
+    obj->insertItem ( PINT(1), PQSTRING(2), par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -418,7 +418,7 @@ void QComboBox_insertItem2 ()
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
-    obj->insertItem ( (int) hb_parni(1), par2, PQSTRING(3), par4 );
+    obj->insertItem ( PINT(1), par2, PQSTRING(3), par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
       //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
       //  par2 << temp;
       //}
-      obj->insertItems ( (int) hb_parni(1), par2 );
+      obj->insertItems ( PINT(1), par2 );
     }
     else
     {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
   {
     if( ISNUM(1) )
     {
-      obj->insertSeparator ( (int) hb_parni(1) );
+      obj->insertSeparator ( PINT(1) );
     }
     else
     {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      QVariant * ptr = new QVariant( obj->itemData ( (int) hb_parni(1), (int) ISNIL(2)? Qt::UserRole : hb_parni(2) ) );
+      QVariant * ptr = new QVariant( obj->itemData ( PINT(1), (int) ISNIL(2)? Qt::UserRole : hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
   {
     if( ISNUM(1) )
     {
-      QIcon * ptr = new QIcon( obj->itemIcon ( (int) hb_parni(1) ) );
+      QIcon * ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->itemText ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->itemText ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QCOMBOBOX_REMOVEITEM )
   {
     if( ISNUM(1) )
     {
-      obj->removeItem ( (int) hb_parni(1) );
+      obj->removeItem ( PINT(1) );
     }
     else
     {
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
     if( ISNUM(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setItemData ( (int) hb_parni(1), *par2, (int) ISNIL(3)? Qt::UserRole : hb_parni(3) );
+      obj->setItemData ( PINT(1), *par2, (int) ISNIL(3)? Qt::UserRole : hb_parni(3) );
     }
     else
     {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
     if( ISNUM(1) && (ISQICON(2)||ISCHAR(2)||ISNIL(2)) )
     {
       QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-      obj->setItemIcon ( (int) hb_parni(1), par2 );
+      obj->setItemIcon ( PINT(1), par2 );
     }
     else
     {
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMTEXT )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setItemText ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setItemText ( PINT(1), PQSTRING(2) );
     }
     else
     {
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setMaxCount ( (int) hb_parni(1) );
+      obj->setMaxCount ( PINT(1) );
     }
     else
     {
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXVISIBLEITEMS )
   {
     if( ISNUM(1) )
     {
-      obj->setMaxVisibleItems ( (int) hb_parni(1) );
+      obj->setMaxVisibleItems ( PINT(1) );
     }
     else
     {
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMINIMUMCONTENTSLENGTH )
   {
     if( ISNUM(1) )
     {
-      obj->setMinimumContentsLength ( (int) hb_parni(1) );
+      obj->setMinimumContentsLength ( PINT(1) );
     }
     else
     {
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMODELCOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->setModelColumn ( (int) hb_parni(1) );
+      obj->setModelColumn ( PINT(1) );
     }
     else
     {
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCURRENTINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentIndex ( (int) hb_parni(1) );
+      obj->setCurrentIndex ( PINT(1) );
     }
     else
     {

@@ -117,7 +117,7 @@ void QButtonGroup_addButton2 ()
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
-    obj->addButton ( par1, (int) hb_parni(2) );
+    obj->addButton ( par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
   {
     if( ISNUM(1) )
     {
-      QAbstractButton * ptr = obj->button ( (int) hb_parni(1) );
+      QAbstractButton * ptr = obj->button ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
-    obj->setId ( par1, (int) hb_parni(2) );
+    obj->setId ( par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

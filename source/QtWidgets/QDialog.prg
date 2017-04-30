@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
   {
     if( ISNUM(1) )
     {
-      obj->setResult ( (int) hb_parni(1) );
+      obj->setResult ( PINT(1) );
     }
     else
     {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
   {
     if( ISNUM(1) )
     {
-      obj->done ( (int) hb_parni(1) );
+      obj->done ( PINT(1) );
     }
     else
     {

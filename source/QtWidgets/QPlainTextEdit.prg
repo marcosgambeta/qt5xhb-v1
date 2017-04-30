@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
     if( ISNUM(1) && ISQURL(2) )
     {
       QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-      QVariant * ptr = new QVariant( obj->loadResource ( (int) hb_parni(1), *par2 ) );
+      QVariant * ptr = new QVariant( obj->loadResource ( PINT(1), *par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURSORWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setCursorWidth ( (int) hb_parni(1) );
+      obj->setCursorWidth ( PINT(1) );
     }
     else
     {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETMAXIMUMBLOCKCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setMaximumBlockCount ( (int) hb_parni(1) );
+      obj->setMaximumBlockCount ( PINT(1) );
     }
     else
     {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABSTOPWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setTabStopWidth ( (int) hb_parni(1) );
+      obj->setTabStopWidth ( PINT(1) );
     }
     else
     {

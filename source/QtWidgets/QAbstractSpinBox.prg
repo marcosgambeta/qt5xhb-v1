@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
   {
     if( ISNUM(1) )
     {
-      obj->stepBy ( (int) hb_parni(1) );
+      obj->stepBy ( PINT(1) );
     }
     else
     {

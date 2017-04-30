@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
   {
     if( ISNUM(1) )
     {
-      obj->setAlignment ( (int) hb_parni(1) );
+      obj->setAlignment ( PINT(1) );
     }
     else
     {

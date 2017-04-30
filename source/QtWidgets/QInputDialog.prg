@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEDECIMALS )
   {
     if( ISNUM(1) )
     {
-      obj->setDoubleDecimals ( (int) hb_parni(1) );
+      obj->setDoubleDecimals ( PINT(1) );
     }
     else
     {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTMAXIMUM )
   {
     if( ISNUM(1) )
     {
-      obj->setIntMaximum ( (int) hb_parni(1) );
+      obj->setIntMaximum ( PINT(1) );
     }
     else
     {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTMINIMUM )
   {
     if( ISNUM(1) )
     {
-      obj->setIntMinimum ( (int) hb_parni(1) );
+      obj->setIntMinimum ( PINT(1) );
     }
     else
     {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTSTEP )
   {
     if( ISNUM(1) )
     {
-      obj->setIntStep ( (int) hb_parni(1) );
+      obj->setIntStep ( PINT(1) );
     }
     else
     {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
   {
     if( ISNUM(1) )
     {
-      obj->setIntValue ( (int) hb_parni(1) );
+      obj->setIntValue ( PINT(1) );
     }
     else
     {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTRANGE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setIntRange ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setIntRange ( PINT(1), PINT(2) );
     }
     else
     {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DONE )
   {
     if( ISNUM(1) )
     {
-      obj->done ( (int) hb_parni(1) );
+      obj->done ( PINT(1) );
     }
     else
     {

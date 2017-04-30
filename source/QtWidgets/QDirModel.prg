@@ -162,7 +162,7 @@ void QDirModel_index1 ()
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDIRMODEL_SORT )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {

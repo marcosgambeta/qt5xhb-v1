@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
   if( obj )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertPermanentWidget ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( obj->insertPermanentWidget ( PINT(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
   if( obj )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertWidget ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( obj->insertWidget ( PINT(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
 

@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RELEASESHORTCUT )
   {
     if( ISNUM(1) )
     {
-      obj->releaseShortcut ( (int) hb_parni(1) );
+      obj->releaseShortcut ( PINT(1) );
     }
     else
     {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      obj->setShortcutAutoRepeat ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setShortcutAutoRepeat ( PINT(1), (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      obj->setShortcutEnabled ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setShortcutEnabled ( PINT(1), (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {

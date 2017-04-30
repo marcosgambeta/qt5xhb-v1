@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETBSPTREEDEPTH )
   {
     if( ISNUM(1) )
     {
-      obj->setBspTreeDepth ( (int) hb_parni(1) );
+      obj->setBspTreeDepth ( PINT(1) );
     }
     else
     {

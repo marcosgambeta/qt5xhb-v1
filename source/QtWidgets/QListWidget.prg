@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM1 )
   if( obj )
   {
     QListWidgetItem * par2 = (QListWidgetItem *) _qt5xhb_itemGetPtr(2);
-    obj->insertItem ( (int) hb_parni(1), par2 );
+    obj->insertItem ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM2 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->insertItem ( (int) hb_parni(1), PQSTRING(2) );
+    obj->insertItem ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
     //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
     //  par2 << temp;
     //}
-    obj->insertItems ( (int) hb_parni(1), par2 );
+    obj->insertItems ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
   {
     if( ISNUM(1) )
     {
-      QListWidgetItem * ptr = obj->item ( (int) hb_parni(1) );
+      QListWidgetItem * ptr = obj->item ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
     }
     else
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT2 )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QListWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      QListWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
     }
     else
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW1 )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentRow ( (int) hb_parni(1) );
+      obj->setCurrentRow ( PINT(1) );
     }
     else
     {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW2 )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->setCurrentRow ( (int) hb_parni(1),  (QItemSelectionModel::SelectionFlags) par2 );
+      obj->setCurrentRow ( PINT(1),  (QItemSelectionModel::SelectionFlags) par2 );
     }
     else
     {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
   {
     if( ISNUM(1) )
     {
-      QListWidgetItem * ptr = obj->takeItem ( (int) hb_parni(1) );
+      QListWidgetItem * ptr = obj->takeItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
     }
     else

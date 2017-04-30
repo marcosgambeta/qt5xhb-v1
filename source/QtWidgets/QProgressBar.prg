@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
   {
     if( ISNUM(1) )
     {
-      obj->setMaximum ( (int) hb_parni(1) );
+      obj->setMaximum ( PINT(1) );
     }
     else
     {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
   {
     if( ISNUM(1) )
     {
-      obj->setMinimum ( (int) hb_parni(1) );
+      obj->setMinimum ( PINT(1) );
     }
     else
     {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setRange ( PINT(1), PINT(2) );
     }
     else
     {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
   {
     if( ISNUM(1) )
     {
-      obj->setValue ( (int) hb_parni(1) );
+      obj->setValue ( PINT(1) );
     }
     else
     {

@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnAt ( (int) hb_parni(1) ) );
+      hb_retni( obj->columnAt ( PINT(1) ) );
     }
     else
     {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnViewportPosition ( (int) hb_parni(1) ) );
+      hb_retni( obj->columnViewportPosition ( PINT(1) ) );
     }
     else
     {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnWidth ( (int) hb_parni(1) ) );
+      hb_retni( obj->columnWidth ( PINT(1) ) );
     }
     else
     {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isColumnHidden ( (int) hb_parni(1) ) );
+      hb_retl( obj->isColumnHidden ( PINT(1) ) );
     }
     else
     {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
   if( obj )
   {
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->isFirstColumnSpanned ( (int) hb_parni(1), *par2 ) );
+    hb_retl( obj->isFirstColumnSpanned ( PINT(1), *par2 ) );
   }
 }
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
   if( obj )
   {
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->isRowHidden ( (int) hb_parni(1), *par2 ) );
+    hb_retl( obj->isRowHidden ( PINT(1), *par2 ) );
   }
 }
 
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETAUTOEXPANDDELAY )
   {
     if( ISNUM(1) )
     {
-      obj->setAutoExpandDelay ( (int) hb_parni(1) );
+      obj->setAutoExpandDelay ( PINT(1) );
     }
     else
     {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setColumnHidden ( (int) hb_parni(1), PBOOL(2) );
+      obj->setColumnHidden ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNWIDTH )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setColumnWidth ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setColumnWidth ( PINT(1), PINT(2) );
     }
     else
     {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
   if( obj )
   {
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    obj->setFirstColumnSpanned ( (int) hb_parni(1), *par2, PBOOL(3) );
+    obj->setFirstColumnSpanned ( PINT(1), *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETINDENTATION )
   {
     if( ISNUM(1) )
     {
-      obj->setIndentation ( (int) hb_parni(1) );
+      obj->setIndentation ( PINT(1) );
     }
     else
     {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
   if( obj )
   {
     QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    obj->setRowHidden ( (int) hb_parni(1), *par2, PBOOL(3) );
+    obj->setRowHidden ( PINT(1), *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sortByColumn ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sortByColumn ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPANDTODEPTH )
   {
     if( ISNUM(1) )
     {
-      obj->expandToDepth ( (int) hb_parni(1) );
+      obj->expandToDepth ( PINT(1) );
     }
     else
     {
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QTREEVIEW_HIDECOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->hideColumn ( (int) hb_parni(1) );
+      obj->hideColumn ( PINT(1) );
     }
     else
     {
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QTREEVIEW_RESIZECOLUMNTOCONTENTS )
   {
     if( ISNUM(1) )
     {
-      obj->resizeColumnToContents ( (int) hb_parni(1) );
+      obj->resizeColumnToContents ( PINT(1) );
     }
     else
     {
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->showColumn ( (int) hb_parni(1) );
+      obj->showColumn ( PINT(1) );
     }
     else
     {

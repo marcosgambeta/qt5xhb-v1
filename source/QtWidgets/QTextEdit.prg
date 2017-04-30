@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
     if( ISNUM(1) && ISQURL(2) )
     {
       QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-      QVariant * ptr = new QVariant( obj->loadResource ( (int) hb_parni(1), *par2 ) );
+      QVariant * ptr = new QVariant( obj->loadResource ( PINT(1), *par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURSORWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setCursorWidth ( (int) hb_parni(1) );
+      obj->setCursorWidth ( PINT(1) );
     }
     else
     {
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setLineWrapColumnOrWidth ( (int) hb_parni(1) );
+      obj->setLineWrapColumnOrWidth ( PINT(1) );
     }
     else
     {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABSTOPWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setTabStopWidth ( (int) hb_parni(1) );
+      obj->setTabStopWidth ( PINT(1) );
     }
     else
     {
@@ -1517,7 +1517,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setFontWeight ( (int) hb_parni(1) );
+      obj->setFontWeight ( PINT(1) );
     }
     else
     {

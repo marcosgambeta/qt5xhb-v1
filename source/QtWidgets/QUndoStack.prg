@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QUndoCommand * ptr = obj->command ( (int) hb_parni(1) );
+    const QUndoCommand * ptr = obj->command ( PINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
   }
 }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUndoLimit ( (int) hb_parni(1) );
+    obj->setUndoLimit ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ( (int) hb_parni(1) ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ( PINT(1) ).toLatin1().data() );
   }
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIndex ( (int) hb_parni(1) );
+    obj->setIndex ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

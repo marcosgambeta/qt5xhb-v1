@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
   {
     if( ISNUM(1) )
     {
-      obj->setFrameStyle ( (int) hb_parni(1) );
+      obj->setFrameStyle ( PINT(1) );
     }
     else
     {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setLineWidth ( (int) hb_parni(1) );
+      obj->setLineWidth ( PINT(1) );
     }
     else
     {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setMidLineWidth ( (int) hb_parni(1) );
+      obj->setMidLineWidth ( PINT(1) );
     }
     else
     {

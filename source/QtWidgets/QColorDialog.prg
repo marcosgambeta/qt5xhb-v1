@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
 {
   if( ISNUM(1) )
   {
-    QColor * ptr = new QColor( QColorDialog::customColor ( (int) hb_parni(1) ) );
+    QColor * ptr = new QColor( QColorDialog::customColor ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
   else
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCUSTOMCOLOR )
   if( ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
   {
     QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
-    QColorDialog::setCustomColor ( (int) hb_parni(1), par2 );
+    QColorDialog::setCustomColor ( PINT(1), par2 );
   }
   else
   {
@@ -415,7 +415,7 @@ static QColor standardColor(int index)
 */
 HB_FUNC_STATIC( QCOLORDIALOG_STANDARDCOLOR )
 {
-  QColor * ptr = new QColor( QColorDialog::standardColor ( (int) hb_parni(1) ) );
+  QColor * ptr = new QColor( QColorDialog::standardColor ( PINT(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETSTANDARDCOLOR )
   if( ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
   {
     QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
-    QColorDialog::setStandardColor ( (int) hb_parni(1), par2 );
+    QColorDialog::setStandardColor ( PINT(1), par2 );
   }
   else
   {

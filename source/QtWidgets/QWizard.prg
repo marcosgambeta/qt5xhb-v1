@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->hasVisitedPage ( (int) hb_parni(1) ) );
+      hb_retl( obj->hasVisitedPage ( PINT(1) ) );
     }
     else
     {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
   {
     if( ISNUM(1) )
     {
-      QWizardPage * ptr = obj->page ( (int) hb_parni(1) );
+      QWizardPage * ptr = obj->page ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
   {
     if( ISNUM(1) )
     {
-      obj->removePage ( (int) hb_parni(1) );
+      obj->removePage ( PINT(1) );
     }
     else
     {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QWIZARD_SETPAGE )
   if( obj )
   {
     QWizardPage * par2 = (QWizardPage *) _qt5xhb_itemGetPtr(2);
-    obj->setPage ( (int) hb_parni(1), par2 );
+    obj->setPage ( PINT(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QWIZARD_SETSTARTID )
   {
     if( ISNUM(1) )
     {
-      obj->setStartId ( (int) hb_parni(1) );
+      obj->setStartId ( PINT(1) );
     }
     else
     {

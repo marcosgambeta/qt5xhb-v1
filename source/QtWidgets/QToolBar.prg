@@ -149,7 +149,7 @@ void QToolBar_actionAt1 ()
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QAction * ptr = obj->actionAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      QAction * ptr = obj->actionAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else

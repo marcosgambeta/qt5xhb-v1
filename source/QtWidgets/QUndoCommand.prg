@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
   {
     if( ISNUM(1) )
     {
-      const QUndoCommand * ptr = obj->child ( (int) hb_parni(1) );
+      const QUndoCommand * ptr = obj->child ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
     }
     else

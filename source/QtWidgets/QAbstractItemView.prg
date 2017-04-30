@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN )
   {
     if( ISNUM(1) )
     {
-      obj->setAutoScrollMargin ( (int) hb_parni(1) );
+      obj->setAutoScrollMargin ( PINT(1) );
     }
     else
     {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
   {
     if( ISNUM(1) )
     {
-      QAbstractItemDelegate * ptr = obj->itemDelegateForColumn ( (int) hb_parni(1) );
+      QAbstractItemDelegate * ptr = obj->itemDelegateForColumn ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
     }
     else
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN )
     if( ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
     {
       QAbstractItemDelegate * par2 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(2);
-      obj->setItemDelegateForColumn ( (int) hb_parni(1), par2 );
+      obj->setItemDelegateForColumn ( PINT(1), par2 );
     }
     else
     {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
   {
     if( ISNUM(1) )
     {
-      QAbstractItemDelegate * ptr = obj->itemDelegateForRow ( (int) hb_parni(1) );
+      QAbstractItemDelegate * ptr = obj->itemDelegateForRow ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
     }
     else
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW )
     if( ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
     {
       QAbstractItemDelegate * par2 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(2);
-      obj->setItemDelegateForRow ( (int) hb_parni(1), par2 );
+      obj->setItemDelegateForRow ( PINT(1), par2 );
     }
     else
     {
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sizeHintForColumn ( (int) hb_parni(1) ) );
+      hb_retni( obj->sizeHintForColumn ( PINT(1) ) );
     }
     else
     {
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORROW )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sizeHintForRow ( (int) hb_parni(1) ) );
+      hb_retni( obj->sizeHintForRow ( PINT(1) ) );
     }
     else
     {

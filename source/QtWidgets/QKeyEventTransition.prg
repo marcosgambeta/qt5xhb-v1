@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
   {
     if( ISNUM(1) )
     {
-      obj->setKey ( (int) hb_parni(1) );
+      obj->setKey ( PINT(1) );
     }
     else
     {

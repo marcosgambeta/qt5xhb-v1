@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_BACKGROUND )
   {
     if( ISNUM(1) )
     {
-      QBrush * ptr = new QBrush( obj->background ( (int) hb_parni(1) ) );
+      QBrush * ptr = new QBrush( obj->background ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHECKSTATE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->checkState ( (int) hb_parni(1) ) );
+      hb_retni( obj->checkState ( PINT(1) ) );
     }
     else
     {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILD )
   {
     if( ISNUM(1) )
     {
-      QTreeWidgetItem * ptr = obj->child ( (int) hb_parni(1) );
+      QTreeWidgetItem * ptr = obj->child ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
     }
     else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_DATA )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QVariant * ptr = new QVariant( obj->data ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      QVariant * ptr = new QVariant( obj->data ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FONT )
   {
     if( ISNUM(1) )
     {
-      QFont * ptr = new QFont( obj->font ( (int) hb_parni(1) ) );
+      QFont * ptr = new QFont( obj->font ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
     }
     else
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FOREGROUND )
   {
     if( ISNUM(1) )
     {
-      QBrush * ptr = new QBrush( obj->foreground ( (int) hb_parni(1) ) );
+      QBrush * ptr = new QBrush( obj->foreground ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
     }
     else
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ICON )
   {
     if( ISNUM(1) )
     {
-      QIcon * ptr = new QIcon( obj->icon ( (int) hb_parni(1) ) );
+      QIcon * ptr = new QIcon( obj->icon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILD )
     if( ISNUM(1) && ISQTREEWIDGETITEM(2) )
     {
       QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
-      obj->insertChild ( (int) hb_parni(1), par2 );
+      obj->insertChild ( PINT(1), par2 );
     }
     else
     {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILDREN )
       {
         par2 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
       }
-      obj->insertChildren ( (int) hb_parni(1), par2 );
+      obj->insertChildren ( PINT(1), par2 );
     }
     else
     {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETBACKGROUND )
     if( ISNUM(1) && ISQBRUSH(2) )
     {
       QBrush * par2 = (QBrush *) _qt5xhb_itemGetPtr(2);
-      obj->setBackground ( (int) hb_parni(1), *par2 );
+      obj->setBackground ( PINT(1), *par2 );
     }
     else
     {
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHECKSTATE )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->setCheckState ( (int) hb_parni(1),  (Qt::CheckState) par2 );
+      obj->setCheckState ( PINT(1),  (Qt::CheckState) par2 );
     }
     else
     {
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETDATA )
     if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) )
     {
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      obj->setData ( (int) hb_parni(1), (int) hb_parni(2), *par3 );
+      obj->setData ( PINT(1), PINT(2), *par3 );
     }
     else
     {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFONT )
     if( ISNUM(1) && ISQFONT(2) )
     {
       QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
-      obj->setFont ( (int) hb_parni(1), *par2 );
+      obj->setFont ( PINT(1), *par2 );
     }
     else
     {
@@ -995,7 +995,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFOREGROUND )
     if( ISNUM(1) && ISQBRUSH(2) )
     {
       QBrush * par2 = (QBrush *) _qt5xhb_itemGetPtr(2);
-      obj->setForeground ( (int) hb_parni(1), *par2 );
+      obj->setForeground ( PINT(1), *par2 );
     }
     else
     {
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETICON )
     if( ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
     {
       QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-      obj->setIcon ( (int) hb_parni(1), par2 );
+      obj->setIcon ( PINT(1), par2 );
     }
     else
     {
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETSIZEHINT )
     if( ISNUM(1) && ISQSIZE(2) )
     {
       QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-      obj->setSizeHint ( (int) hb_parni(1), *par2 );
+      obj->setSizeHint ( PINT(1), *par2 );
     }
     else
     {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETSTATUSTIP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setStatusTip ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setStatusTip ( PINT(1), PQSTRING(2) );
     }
     else
     {
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXT )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setText ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setText ( PINT(1), PQSTRING(2) );
     }
     else
     {
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXTALIGNMENT )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setTextAlignment ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setTextAlignment ( PINT(1), PINT(2) );
     }
     else
     {
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTOOLTIP )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setToolTip ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setToolTip ( PINT(1), PQSTRING(2) );
     }
     else
     {
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETWHATSTHIS )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setWhatsThis ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setWhatsThis ( PINT(1), PQSTRING(2) );
     }
     else
     {
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SIZEHINT )
   {
     if( ISNUM(1) )
     {
-      QSize * ptr = new QSize( obj->sizeHint ( (int) hb_parni(1) ) );
+      QSize * ptr = new QSize( obj->sizeHint ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -1239,7 +1239,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SORTCHILDREN )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sortChildren ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sortChildren ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_STATUSTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->statusTip ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->statusTip ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILD )
   {
     if( ISNUM(1) )
     {
-      QTreeWidgetItem * ptr = obj->takeChild ( (int) hb_parni(1) );
+      QTreeWidgetItem * ptr = obj->takeChild ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
     }
     else
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->text ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->text ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTALIGNMENT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->textAlignment ( (int) hb_parni(1) ) );
+      hb_retni( obj->textAlignment ( PINT(1) ) );
     }
     else
     {
@@ -1386,7 +1386,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->toolTip ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->toolTip ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -1433,7 +1433,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_WHATSTHIS )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->whatsThis ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->whatsThis ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_BACKGROUNDCOLOR )
   {
     if( ISNUM(1) )
     {
-      QColor * ptr = new QColor( obj->backgroundColor ( (int) hb_parni(1) ) );
+      QColor * ptr = new QColor( obj->backgroundColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
     }
     else
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETBACKGROUNDCOLOR )
     if( ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
     {
       QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
-      obj->setBackgroundColor ( (int) hb_parni(1), par2 );
+      obj->setBackgroundColor ( PINT(1), par2 );
     }
     else
     {
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTCOLOR )
   {
     if( ISNUM(1) )
     {
-      QColor * ptr = new QColor( obj->textColor ( (int) hb_parni(1) ) );
+      QColor * ptr = new QColor( obj->textColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
     }
     else
@@ -1542,7 +1542,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXTCOLOR )
     if( ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
     {
       QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
-      obj->setTextColor ( (int) hb_parni(1), par2 );
+      obj->setTextColor ( PINT(1), par2 );
     }
     else
     {

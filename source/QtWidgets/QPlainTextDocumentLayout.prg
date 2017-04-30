@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setCursorWidth ( (int) hb_parni(1) );
+      obj->setCursorWidth ( PINT(1) );
     }
     else
     {

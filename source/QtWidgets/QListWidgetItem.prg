@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
   {
     if( ISNUM(1) )
     {
-      QVariant * ptr = new QVariant( obj->data ( (int) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->data ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETDATA )
     if( ISNUM(1) && ISQVARIANT(2) )
     {
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setData ( (int) hb_parni(1), *par2 );
+      obj->setData ( PINT(1), *par2 );
     }
     else
     {
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
   {
     if( ISNUM(1) )
     {
-      obj->setTextAlignment ( (int) hb_parni(1) );
+      obj->setTextAlignment ( PINT(1) );
     }
     else
     {

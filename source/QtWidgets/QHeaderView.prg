@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
   {
     if( ISNUM(1) )
     {
-      obj->setDefaultSectionSize ( (int) hb_parni(1) );
+      obj->setDefaultSectionSize ( PINT(1) );
     }
     else
     {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
   {
     if( ISNUM(1) )
     {
-      obj->hideSection ( (int) hb_parni(1) );
+      obj->hideSection ( PINT(1) );
     }
     else
     {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isSectionHidden ( (int) hb_parni(1) ) );
+      hb_retl( obj->isSectionHidden ( PINT(1) ) );
     }
     else
     {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->logicalIndex ( (int) hb_parni(1) ) );
+      hb_retni( obj->logicalIndex ( PINT(1) ) );
     }
     else
     {
@@ -425,7 +425,7 @@ void QHeaderView_logicalIndexAt1 ()
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->logicalIndexAt ( (int) hb_parni(1) ) );
+      hb_retni( obj->logicalIndexAt ( PINT(1) ) );
     }
     else
     {
@@ -444,7 +444,7 @@ void QHeaderView_logicalIndexAt2 ()
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retni( obj->logicalIndexAt ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      hb_retni( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
     }
     else
     {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
   {
     if( ISNUM(1) )
     {
-      obj->setMinimumSectionSize ( (int) hb_parni(1) );
+      obj->setMinimumSectionSize ( PINT(1) );
     }
     else
     {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->moveSection ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->moveSection ( PINT(1), PINT(2) );
     }
     else
     {
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->resizeSection ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->resizeSection ( PINT(1), PINT(2) );
     }
     else
     {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sectionPosition ( (int) hb_parni(1) ) );
+      hb_retni( obj->sectionPosition ( PINT(1) ) );
     }
     else
     {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sectionSize ( (int) hb_parni(1) ) );
+      hb_retni( obj->sectionSize ( PINT(1) ) );
     }
     else
     {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sectionSizeHint ( (int) hb_parni(1) ) );
+      hb_retni( obj->sectionSizeHint ( PINT(1) ) );
     }
     else
     {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sectionViewportPosition ( (int) hb_parni(1) ) );
+      hb_retni( obj->sectionViewportPosition ( PINT(1) ) );
     }
     else
     {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setSectionHidden ( (int) hb_parni(1), PBOOL(2) );
+      obj->setSectionHidden ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->setSortIndicator ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->setSortIndicator ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
   {
     if( ISNUM(1) )
     {
-      obj->showSection ( (int) hb_parni(1) );
+      obj->showSection ( PINT(1) );
     }
     else
     {
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->swapSections ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->swapSections ( PINT(1), PINT(2) );
     }
     else
     {
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->visualIndex ( (int) hb_parni(1) ) );
+      hb_retni( obj->visualIndex ( PINT(1) ) );
     }
     else
     {
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->visualIndexAt ( (int) hb_parni(1) ) );
+      hb_retni( obj->visualIndexAt ( PINT(1) ) );
     }
     else
     {
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->headerDataChanged (  (Qt::Orientation) par1, (int) hb_parni(2), (int) hb_parni(3) );
+    obj->headerDataChanged (  (Qt::Orientation) par1, PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
   {
     if( ISNUM(1) )
     {
-      obj->setOffset ( (int) hb_parni(1) );
+      obj->setOffset ( PINT(1) );
     }
     else
     {
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
   {
     if( ISNUM(1) )
     {
-      obj->setOffsetToSectionPosition ( (int) hb_parni(1) );
+      obj->setOffsetToSectionPosition ( PINT(1) );
     }
     else
     {
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sectionResizeMode ( (int) hb_parni(1) ) );
+    hb_retni( obj->sectionResizeMode ( PINT(1) ) );
   }
 }
 
@@ -1164,7 +1164,7 @@ void QHeaderView_setSectionResizeMode2 ()
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setSectionResizeMode ( (int) hb_parni(1),  (QHeaderView::ResizeMode) par2 );
+    obj->setSectionResizeMode ( PINT(1),  (QHeaderView::ResizeMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZECONTENTSPRECISION )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setResizeContentsPrecision ( (int) hb_parni(1) );
+    obj->setResizeContentsPrecision ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMAXIMUMSECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaximumSectionSize ( (int) hb_parni(1) );
+    obj->setMaximumSectionSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

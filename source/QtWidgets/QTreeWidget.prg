@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEM )
   if( obj )
   {
     QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
-    obj->insertTopLevelItem ( (int) hb_parni(1), par2 );
+    obj->insertTopLevelItem ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT2 )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QTreeWidgetItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      QTreeWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    QWidget * ptr = obj->itemWidget ( par1, (int) hb_parni(2) );
+    QWidget * ptr = obj->itemWidget ( par1, PINT(2) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->removeItemWidget ( par1, (int) hb_parni(2) );
+    obj->removeItemWidget ( par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setColumnCount ( (int) hb_parni(1) );
+      obj->setColumnCount ( PINT(1) );
     }
     else
     {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM2 )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentItem ( par1, (int) hb_parni(2) );
+    obj->setCurrentItem ( par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM3 )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par3 = hb_parni(3);
-    obj->setCurrentItem ( par1, (int) hb_parni(2),  (QItemSelectionModel::SelectionFlags) par3 );
+    obj->setCurrentItem ( par1, PINT(2),  (QItemSelectionModel::SelectionFlags) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
     QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->setItemWidget ( par1, (int) hb_parni(2), par3 );
+    obj->setItemWidget ( par1, PINT(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sortItems ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sortItems ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
   {
     if( ISNUM(1) )
     {
-      QTreeWidgetItem * ptr = obj->takeTopLevelItem ( (int) hb_parni(1) );
+      QTreeWidgetItem * ptr = obj->takeTopLevelItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
     }
     else
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
   {
     if( ISNUM(1) )
     {
-      QTreeWidgetItem * ptr = obj->topLevelItem ( (int) hb_parni(1) );
+      QTreeWidgetItem * ptr = obj->topLevelItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
     }
     else

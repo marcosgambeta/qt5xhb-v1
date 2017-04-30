@@ -507,7 +507,7 @@ void QGraphicsView_itemAt2 ()
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QGraphicsItem * ptr = obj->itemAt ( (int) hb_parni(1), (int) hb_parni(2) );
+      QGraphicsItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
     }
     else
@@ -734,7 +734,7 @@ void QGraphicsView_mapToScene5 ()
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      QPointF * ptr = new QPointF( obj->mapToScene ( (int) hb_parni(1), (int) hb_parni(2) ) );
+      QPointF * ptr = new QPointF( obj->mapToScene ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
     }
     else
@@ -755,7 +755,7 @@ void QGraphicsView_mapToScene6 ()
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
     }
     else

@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
   {
     if( ISNUM(1) )
     {
-      QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
   {
     if( ISNUM(1) )
     {
-      obj->removeAt ( (int) hb_parni(1) );
+      obj->removeAt ( PINT(1) );
     }
     else
     {

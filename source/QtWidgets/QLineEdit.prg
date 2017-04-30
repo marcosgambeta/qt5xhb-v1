@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORPOSITION )
   {
     if( ISNUM(1) )
     {
-      obj->setCursorPosition ( (int) hb_parni(1) );
+      obj->setCursorPosition ( PINT(1) );
     }
     else
     {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMAXLENGTH )
   {
     if( ISNUM(1) )
     {
-      obj->setMaxLength ( (int) hb_parni(1) );
+      obj->setMaxLength ( PINT(1) );
     }
     else
     {
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setSelection ( PINT(1), PINT(2) );
     }
     else
     {
@@ -915,7 +915,7 @@ void QLineEdit_setTextMargins1 ()
 
   if( obj )
   {
-    obj->setTextMargins ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->setTextMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

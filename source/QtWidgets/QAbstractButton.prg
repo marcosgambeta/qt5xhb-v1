@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
   {
     if( ISNUM(1) )
     {
-      obj->setAutoRepeatDelay ( (int) hb_parni(1) );
+      obj->setAutoRepeatDelay ( PINT(1) );
     }
     else
     {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
   {
     if( ISNUM(1) )
     {
-      obj->setAutoRepeatInterval ( (int) hb_parni(1) );
+      obj->setAutoRepeatInterval ( PINT(1) );
     }
     else
     {

@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
   if( obj )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertWidget ( (int) hb_parni(1), par2 ) );
+    hb_retni( obj->insertWidget ( PINT(1), par2 ) );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      QWidget * ptr = obj->widget ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentIndex ( (int) hb_parni(1) );
+      obj->setCurrentIndex ( PINT(1) );
     }
     else
     {

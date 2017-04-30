@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM1 )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
-    hb_retni( obj->insertItem ( (int) hb_parni(1), par2, par3, PQSTRING(4) ) );
+    hb_retni( obj->insertItem ( PINT(1), par2, par3, PQSTRING(4) ) );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM2 )
   if( obj )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertItem ( (int) hb_parni(1), par2, PQSTRING(3) ) );
+    hb_retni( obj->insertItem ( PINT(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isItemEnabled ( (int) hb_parni(1) ) );
+      hb_retl( obj->isItemEnabled ( PINT(1) ) );
     }
     else
     {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
   {
     if( ISNUM(1) )
     {
-      QIcon * ptr = new QIcon( obj->itemIcon ( (int) hb_parni(1) ) );
+      QIcon * ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->itemText ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->itemText ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->itemToolTip ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->itemToolTip ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
   {
     if( ISNUM(1) )
     {
-      obj->removeItem ( (int) hb_parni(1) );
+      obj->removeItem ( PINT(1) );
     }
     else
     {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setItemEnabled ( (int) hb_parni(1), PBOOL(2) );
+      obj->setItemEnabled ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
   if( obj )
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    obj->setItemIcon ( (int) hb_parni(1), par2 );
+    obj->setItemIcon ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setItemText ( (int) hb_parni(1), PQSTRING(2) );
+    obj->setItemText ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setItemToolTip ( (int) hb_parni(1), PQSTRING(2) );
+    obj->setItemToolTip ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->widget ( (int) hb_parni(1) );
+      QWidget * ptr = obj->widget ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentIndex ( (int) hb_parni(1) );
+      obj->setCurrentIndex ( PINT(1) );
     }
     else
     {

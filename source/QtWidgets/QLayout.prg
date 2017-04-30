@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
   {
     if( ISNUM(1) )
     {
-      QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      QLayoutItem * ptr = obj->itemAt ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
     }
     else
@@ -386,7 +386,7 @@ void QLayout_setContentsMargins1 ()
 
   if( obj )
   {
-    obj->setContentsMargins ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
   {
     if( ISNUM(1) )
     {
-      obj->setSpacing ( (int) hb_parni(1) );
+      obj->setSpacing ( PINT(1) );
     }
     else
     {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
   {
     if( ISNUM(1) )
     {
-      QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
+      QLayoutItem * ptr = obj->takeAt ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
     }
     else

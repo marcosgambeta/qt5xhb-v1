@@ -658,7 +658,7 @@ void QWidget_setBaseSize2 ()
 
   if( obj )
   {
-    obj->setBaseSize ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setBaseSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -692,7 +692,7 @@ void QWidget_childAt1 ()
 
   if( obj )
   {
-    QWidget * ptr = obj->childAt ( (int) hb_parni(1), (int) hb_parni(2) );
+    QWidget * ptr = obj->childAt ( PINT(1), PINT(2) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+      hb_retni( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -1944,7 +1944,7 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMHEIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setMaximumHeight ( (int) hb_parni(1) );
+      obj->setMaximumHeight ( PINT(1) );
     }
     else
     {
@@ -1979,7 +1979,7 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setMaximumWidth ( (int) hb_parni(1) );
+      obj->setMaximumWidth ( PINT(1) );
     }
     else
     {
@@ -2014,7 +2014,7 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMHEIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setMinimumHeight ( (int) hb_parni(1) );
+      obj->setMinimumHeight ( PINT(1) );
     }
     else
     {
@@ -2063,7 +2063,7 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setMinimumWidth ( (int) hb_parni(1) );
+      obj->setMinimumWidth ( PINT(1) );
     }
     else
     {
@@ -2114,7 +2114,7 @@ void QWidget_move2 ()
 
   if( obj )
   {
-    obj->move ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->move ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2311,7 +2311,7 @@ HB_FUNC_STATIC( QWIDGET_RELEASESHORTCUT )
   {
     if( ISNUM(1) )
     {
-      obj->releaseShortcut ( (int) hb_parni(1) );
+      obj->releaseShortcut ( PINT(1) );
     }
     else
     {
@@ -2407,7 +2407,7 @@ void QWidget_repaint1 ()
 
   if( obj )
   {
-    obj->repaint ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->repaint ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2514,7 +2514,7 @@ void QWidget_resize2 ()
 
   if( obj )
   {
-    obj->resize ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->resize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2576,7 +2576,7 @@ void QWidget_scroll1 ()
 
   if( obj )
   {
-    obj->scroll ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->scroll ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2592,7 +2592,7 @@ void QWidget_scroll2 ()
   if( obj )
   {
     QRect * par3 = (QRect *) _qt5xhb_itemGetPtr(3);
-    obj->scroll ( (int) hb_parni(1), (int) hb_parni(2), *par3 );
+    obj->scroll ( PINT(1), PINT(2), *par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2642,7 +2642,7 @@ void QWidget_setContentsMargins1 ()
 
   if( obj )
   {
-    obj->setContentsMargins ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2718,7 +2718,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDHEIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setFixedHeight ( (int) hb_parni(1) );
+      obj->setFixedHeight ( PINT(1) );
     }
     else
     {
@@ -2754,7 +2754,7 @@ void QWidget_setFixedSize2 ()
 
   if( obj )
   {
-    obj->setFixedSize ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setFixedSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2790,7 +2790,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setFixedWidth ( (int) hb_parni(1) );
+      obj->setFixedWidth ( PINT(1) );
     }
     else
     {
@@ -2906,7 +2906,7 @@ void QWidget_setGeometry2 ()
 
   if( obj )
   {
-    obj->setGeometry ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2986,7 +2986,7 @@ void QWidget_setMaximumSize2 ()
 
   if( obj )
   {
-    obj->setMaximumSize ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setMaximumSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3050,7 +3050,7 @@ void QWidget_setMinimumSize2 ()
 
   if( obj )
   {
-    obj->setMinimumSize ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setMinimumSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3139,7 +3139,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      obj->setShortcutAutoRepeat ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setShortcutAutoRepeat ( PINT(1), (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -3162,7 +3162,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      obj->setShortcutEnabled ( (int) hb_parni(1), (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setShortcutEnabled ( PINT(1), (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -3212,7 +3212,7 @@ void QWidget_setSizeIncrement2 ()
 
   if( obj )
   {
-    obj->setSizeIncrement ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setSizeIncrement ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3328,7 +3328,7 @@ HB_FUNC_STATIC( QWIDGET_SETTOOLTIPDURATION )
 
   if( obj )
   {
-    obj->setToolTipDuration ( (int) hb_parni(1) );
+    obj->setToolTipDuration ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3618,7 +3618,7 @@ void QWidget_update1 ()
 
   if( obj )
   {
-    obj->update ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->update ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

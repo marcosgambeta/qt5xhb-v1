@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
   {
     if( ISNUM(1) )
     {
-      obj->setDecimals ( (int) hb_parni(1) );
+      obj->setDecimals ( PINT(1) );
     }
     else
     {

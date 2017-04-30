@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE2 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->ensureVisible ( *par1, PQREAL(2), PQREAL(3), (int) hb_parni(4) );
+    obj->ensureVisible ( *par1, PQREAL(2), PQREAL(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO2 )
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->scrollTo ( *par1, (int) hb_parni(2) );
+    obj->scrollTo ( *par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

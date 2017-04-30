@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->buttonText ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->buttonText ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      obj->setButtonText ( (int) hb_parni(1), PQSTRING(2) );
+      obj->setButtonText ( PINT(1), PQSTRING(2) );
     }
     else
     {

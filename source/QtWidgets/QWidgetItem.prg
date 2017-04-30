@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+    hb_retni( obj->heightForWidth ( PINT(1) ) );
   }
 }
 

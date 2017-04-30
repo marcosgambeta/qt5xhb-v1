@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->setCompletionColumn ( (int) hb_parni(1) );
+      obj->setCompletionColumn ( PINT(1) );
     }
     else
     {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
   {
     if( ISNUM(1) )
     {
-      obj->setCompletionRole ( (int) hb_parni(1) );
+      obj->setCompletionRole ( PINT(1) );
     }
     else
     {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->setCurrentRow ( (int) hb_parni(1) ) );
+      hb_retl( obj->setCurrentRow ( PINT(1) ) );
     }
     else
     {
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
   {
     if( ISNUM(1) )
     {
-      obj->setMaxVisibleItems ( (int) hb_parni(1) );
+      obj->setMaxVisibleItems ( PINT(1) );
     }
     else
     {

@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sectionAt ( (int) hb_parni(1) ) );
+      hb_retni( obj->sectionAt ( PINT(1) ) );
     }
     else
     {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTIONINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentSectionIndex ( (int) hb_parni(1) );
+      obj->setCurrentSectionIndex ( PINT(1) );
     }
     else
     {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_STEPBY )
   {
     if( ISNUM(1) )
     {
-      obj->stepBy ( (int) hb_parni(1) );
+      obj->stepBy ( PINT(1) );
     }
     else
     {

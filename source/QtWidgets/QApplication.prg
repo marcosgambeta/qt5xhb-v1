@@ -331,7 +331,7 @@ static void alert ( QWidget * widget, int msec = 0 )
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
   QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QApplication::alert ( par1, (int) hb_parni(2) );
+  QApplication::alert ( par1, PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 {
   if( ISNUM(1) )
   {
-    QApplication::setColorSpec ( (int) hb_parni(1) );
+    QApplication::setColorSpec ( PINT(1) );
   }
   else
   {
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 {
   if( ISNUM(1) )
   {
-    QApplication::setCursorFlashTime ( (int) hb_parni(1) );
+    QApplication::setCursorFlashTime ( PINT(1) );
   }
   else
   {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 {
   if( ISNUM(1) )
   {
-    QApplication::setDoubleClickInterval ( (int) hb_parni(1) );
+    QApplication::setDoubleClickInterval ( PINT(1) );
   }
   else
   {
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 {
   if( ISNUM(1) )
   {
-    QApplication::setKeyboardInputInterval ( (int) hb_parni(1) );
+    QApplication::setKeyboardInputInterval ( PINT(1) );
   }
   else
   {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 {
   if( ISNUM(1) )
   {
-    QApplication::setStartDragDistance ( (int) hb_parni(1) );
+    QApplication::setStartDragDistance ( PINT(1) );
   }
   else
   {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 {
   if( ISNUM(1) )
   {
-    QApplication::setStartDragTime ( (int) hb_parni(1) );
+    QApplication::setStartDragTime ( PINT(1) );
   }
   else
   {
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 {
   if( ISNUM(1) )
   {
-    QApplication::setWheelScrollLines ( (int) hb_parni(1) );
+    QApplication::setWheelScrollLines ( PINT(1) );
   }
   else
   {
@@ -1046,7 +1046,7 @@ static QWidget * topLevelAt ( int x, int y )
 */
 void QApplication_topLevelAt2 ()
 {
-  QWidget * ptr = QApplication::topLevelAt ( (int) hb_parni(1), (int) hb_parni(2) );
+  QWidget * ptr = QApplication::topLevelAt ( PINT(1), PINT(2) );
   _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
@@ -1135,7 +1135,7 @@ static QWidget * widgetAt ( int x, int y )
 */
 void QApplication_widgetAt2 ()
 {
-  QWidget * ptr = QApplication::widgetAt ( (int) hb_parni(1), (int) hb_parni(2) );
+  QWidget * ptr = QApplication::widgetAt ( PINT(1), PINT(2) );
   _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 

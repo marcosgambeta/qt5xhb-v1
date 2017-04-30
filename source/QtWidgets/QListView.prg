@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isRowHidden ( (int) hb_parni(1) ) );
+      hb_retl( obj->isRowHidden ( PINT(1) ) );
     }
     else
     {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
   {
     if( ISNUM(1) )
     {
-      obj->setBatchSize ( (int) hb_parni(1) );
+      obj->setBatchSize ( PINT(1) );
     }
     else
     {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
   {
     if( ISNUM(1) )
     {
-      obj->setModelColumn ( (int) hb_parni(1) );
+      obj->setModelColumn ( PINT(1) );
     }
     else
     {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setRowHidden ( (int) hb_parni(1), PBOOL(2) );
+      obj->setRowHidden ( PINT(1), PBOOL(2) );
     }
     else
     {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
   {
     if( ISNUM(1) )
     {
-      obj->setSpacing ( (int) hb_parni(1) );
+      obj->setSpacing ( PINT(1) );
     }
     else
     {

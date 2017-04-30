@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
   {
     if( ISNUM(1) )
     {
-      obj->addSpacing ( (int) hb_parni(1) );
+      obj->addSpacing ( PINT(1) );
     }
     else
     {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
   {
     if( ISNUM(1) )
     {
-      obj->addStrut ( (int) hb_parni(1) );
+      obj->addStrut ( PINT(1) );
     }
     else
     {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
   if( obj )
   {
     QLayout * par2 = (QLayout *) _qt5xhb_itemGetPtr(2);
-    obj->insertLayout ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) );
+    obj->insertLayout ( PINT(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
   if( obj )
   {
     QSpacerItem * par2 = (QSpacerItem *) _qt5xhb_itemGetPtr(2);
-    obj->insertSpacerItem ( (int) hb_parni(1), par2 );
+    obj->insertSpacerItem ( PINT(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->insertSpacing ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->insertSpacing ( PINT(1), PINT(2) );
     }
     else
     {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      obj->insertStretch ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+      obj->insertStretch ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
     }
     else
     {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
   {
     QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->insertWidget ( (int) hb_parni(1), par2, (int) ISNIL(3)? 0 : hb_parni(3),  (Qt::Alignment) par4 );
+    obj->insertWidget ( PINT(1), par2, (int) ISNIL(3)? 0 : hb_parni(3),  (Qt::Alignment) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
   {
     if( ISNUM(1) )
     {
-      obj->setSpacing ( (int) hb_parni(1) );
+      obj->setSpacing ( PINT(1) );
     }
     else
     {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setStretch ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setStretch ( PINT(1), PINT(2) );
     }
     else
     {
@@ -397,7 +397,7 @@ void QBoxLayout_setStretchFactor1 ()
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->setStretchFactor ( par1, (int) hb_parni(2) ) );
+    hb_retl( obj->setStretchFactor ( par1, PINT(2) ) );
   }
 }
 
@@ -411,7 +411,7 @@ void QBoxLayout_setStretchFactor2 ()
   if( obj )
   {
     QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->setStretchFactor ( par1, (int) hb_parni(2) ) );
+    hb_retl( obj->setStretchFactor ( par1, PINT(2) ) );
   }
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->stretch ( (int) hb_parni(1) ) );
+      hb_retni( obj->stretch ( PINT(1) ) );
     }
     else
     {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+      hb_retni( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
   {
     if( ISNUM(1) )
     {
-      QLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      QLayoutItem * ptr = obj->itemAt ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
     }
     else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->minimumHeightForWidth ( (int) hb_parni(1) ) );
+      hb_retni( obj->minimumHeightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
   {
     if( ISNUM(1) )
     {
-      QLayoutItem * ptr = obj->takeAt ( (int) hb_parni(1) );
+      QLayoutItem * ptr = obj->takeAt ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
     }
     else

@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
   {
     if( ISNUM(1) )
     {
-      obj->setIndent ( (int) hb_parni(1) );
+      obj->setIndent ( PINT(1) );
     }
     else
     {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
   {
     if( ISNUM(1) )
     {
-      obj->setMargin ( (int) hb_parni(1) );
+      obj->setMargin ( PINT(1) );
     }
     else
     {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setSelection ( PINT(1), PINT(2) );
     }
     else
     {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( (int) hb_parni(1) ) );
+      hb_retni( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -628,7 +628,7 @@ void QLabel_setNum1 ()
 
   if( obj )
   {
-    obj->setNum ( (int) hb_parni(1) );
+    obj->setNum ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

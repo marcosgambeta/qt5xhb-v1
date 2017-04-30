@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
   {
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
-      obj->ensureVisible ( (int) hb_parni(1), (int) hb_parni(2), (int) ISNIL(3)? 50 : hb_parni(3), (int) ISNIL(4)? 50 : hb_parni(4) );
+      obj->ensureVisible ( PINT(1), PINT(2), (int) ISNIL(3)? 50 : hb_parni(3), (int) ISNIL(4)? 50 : hb_parni(4) );
     }
     else
     {

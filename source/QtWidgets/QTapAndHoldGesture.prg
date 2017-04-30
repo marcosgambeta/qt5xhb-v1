@@ -101,7 +101,7 @@ static void setTimeout(int msecs)
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 {
-  QTapAndHoldGesture::setTimeout ( (int) hb_parni(1) );
+  QTapAndHoldGesture::setTimeout ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

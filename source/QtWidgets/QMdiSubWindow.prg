@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
   {
     if( ISNUM(1) )
     {
-      obj->setKeyboardPageStep ( (int) hb_parni(1) );
+      obj->setKeyboardPageStep ( PINT(1) );
     }
     else
     {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
   {
     if( ISNUM(1) )
     {
-      obj->setKeyboardSingleStep ( (int) hb_parni(1) );
+      obj->setKeyboardSingleStep ( PINT(1) );
     }
     else
     {

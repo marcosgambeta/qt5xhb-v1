@@ -114,7 +114,7 @@ void QDataWidgetMapper_addMapping1 ()
   if( obj )
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->addMapping ( par1, (int) hb_parni(2) );
+    obj->addMapping ( par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -129,7 +129,7 @@ void QDataWidgetMapper_addMapping2 ()
   {
     QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QByteArray * par3 = (QByteArray *) _qt5xhb_itemGetPtr(3);
-    obj->addMapping ( par1, (int) hb_parni(2), *par3 );
+    obj->addMapping ( par1, PINT(2), *par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
   {
     if( ISNUM(1) )
     {
-      QWidget * ptr = obj->mappedWidgetAt ( (int) hb_parni(1) );
+      QWidget * ptr = obj->mappedWidgetAt ( PINT(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
   {
     if( ISNUM(1) )
     {
-      obj->setCurrentIndex ( (int) hb_parni(1) );
+      obj->setCurrentIndex ( PINT(1) );
     }
     else
     {

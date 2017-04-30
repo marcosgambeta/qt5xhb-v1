@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
   {
     if( ISNUM(1) )
     {
-      obj->setDateEditAcceptDelay ( (int) hb_parni(1) );
+      obj->setDateEditAcceptDelay ( PINT(1) );
     }
     else
     {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETCURRENTPAGE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setCurrentPage ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->setCurrentPage ( PINT(1), PINT(2) );
     }
     else
     {

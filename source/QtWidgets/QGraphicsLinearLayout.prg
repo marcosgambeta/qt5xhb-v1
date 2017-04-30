@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTITEM )
     if( ISNUM(1) && ISQGRAPHICSLAYOUTITEM(2) )
     {
       QGraphicsLayoutItem * par2 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(2);
-      obj->insertItem ( (int) hb_parni(1), par2 );
+      obj->insertItem ( PINT(1), par2 );
     }
     else
     {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      obj->insertStretch ( (int) hb_parni(1), (int) ISNIL(2)? 1 : hb_parni(2) );
+      obj->insertStretch ( PINT(1), (int) ISNIL(2)? 1 : hb_parni(2) );
     }
     else
     {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
   {
     if( ISNUM(1) )
     {
-      hb_retnd( obj->itemSpacing ( (int) hb_parni(1) ) );
+      hb_retnd( obj->itemSpacing ( PINT(1) ) );
     }
     else
     {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETITEMSPACING )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setItemSpacing ( (int) hb_parni(1), PQREAL(2) );
+      obj->setItemSpacing ( PINT(1), PQREAL(2) );
     }
     else
     {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR )
     if( ISQGRAPHICSLAYOUTITEM(1) && ISNUM(2) )
     {
       QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
-      obj->setStretchFactor ( par1, (int) hb_parni(2) );
+      obj->setStretchFactor ( par1, PINT(2) );
     }
     else
     {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
   {
     if( ISNUM(1) )
     {
-      QGraphicsLayoutItem * ptr = obj->itemAt ( (int) hb_parni(1) );
+      QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEAT )
   {
     if( ISNUM(1) )
     {
-      obj->removeAt ( (int) hb_parni(1) );
+      obj->removeAt ( PINT(1) );
     }
     else
     {

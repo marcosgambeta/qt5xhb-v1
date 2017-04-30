@@ -147,7 +147,7 @@ void QLCDNumber_checkOverflow2 ()
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->checkOverflow ( (int) hb_parni(1) ) );
+      hb_retl( obj->checkOverflow ( PINT(1) ) );
     }
     else
     {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setDigitCount ( (int) hb_parni(1) );
+      obj->setDigitCount ( PINT(1) );
     }
     else
     {
@@ -390,7 +390,7 @@ void QLCDNumber_display3 ()
   {
     if( ISNUM(1) )
     {
-      obj->display ( (int) hb_parni(1) );
+      obj->display ( PINT(1) );
     }
     else
     {

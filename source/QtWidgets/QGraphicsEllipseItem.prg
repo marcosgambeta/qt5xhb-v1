@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
   {
     if( ISNUM(1) )
     {
-      obj->setSpanAngle ( (int) hb_parni(1) );
+      obj->setSpanAngle ( PINT(1) );
     }
     else
     {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
   {
     if( ISNUM(1) )
     {
-      obj->setStartAngle ( (int) hb_parni(1) );
+      obj->setStartAngle ( PINT(1) );
     }
     else
     {

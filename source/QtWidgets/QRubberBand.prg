@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE1 )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->move ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->move ( PINT(1), PINT(2) );
     }
     else
     {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE1 )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->resize ( (int) hb_parni(1), (int) hb_parni(2) );
+      obj->resize ( PINT(1), PINT(2) );
     }
     else
     {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY2 )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      obj->setGeometry ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+      obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
     }
     else
     {
