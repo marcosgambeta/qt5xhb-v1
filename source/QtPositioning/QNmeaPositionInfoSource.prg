@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SETUPDATEINTERVAL )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUpdateInterval ( (int) hb_parni(1) );
+    obj->setUpdateInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

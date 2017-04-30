@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUpdateInterval ( (int) hb_parni(1) );
+    obj->setUpdateInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
