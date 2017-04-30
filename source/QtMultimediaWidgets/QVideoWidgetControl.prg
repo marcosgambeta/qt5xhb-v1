@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETBRIGHTNESS )
   QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBrightness ( (int) hb_parni(1) );
+    obj->setBrightness ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETCONTRAST )
   QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setContrast ( (int) hb_parni(1) );
+    obj->setContrast ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETHUE )
   QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setHue ( (int) hb_parni(1) );
+    obj->setHue ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETSATURATION )
   QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSaturation ( (int) hb_parni(1) );
+    obj->setSaturation ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
