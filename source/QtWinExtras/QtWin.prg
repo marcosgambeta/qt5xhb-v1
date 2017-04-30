@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QTWIN_IMAGEFROMHBITMAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   HDC par1 = (HDC) hb_parptr(1);
   HBITMAP par2 = (HBITMAP) hb_parptr(2);
-  QImage * ptr = new QImage( QtWin::imageFromHBITMAP ( par1, par2, (int) hb_parni(3), (int) hb_parni(4) ) );
+  QImage * ptr = new QImage( QtWin::imageFromHBITMAP ( par1, par2, PINT(3), PINT(4) ) );
   _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #endif
 }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::extendFrameIntoClientArea ( par1, (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) hb_parni(5) );
+  QtWin::extendFrameIntoClientArea ( par1, PINT(2), PINT(3), PINT(4), PINT(5) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
