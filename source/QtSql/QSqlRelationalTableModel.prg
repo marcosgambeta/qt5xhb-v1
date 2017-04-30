@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
   {
     if( ISNUM(1) )
     {
-      QSqlRelation * ptr = new QSqlRelation( obj->relation ( (int) hb_parni(1) ) );
+      QSqlRelation * ptr = new QSqlRelation( obj->relation ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRELATION", true );
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
   {
     if( ISNUM(1) )
     {
-      QSqlTableModel * ptr = obj->relationModel ( (int) hb_parni(1) );
+      QSqlTableModel * ptr = obj->relationModel ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QSQLTABLEMODEL" );
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
     if( ISNUM(1) && ISQSQLRELATION(2) )
     {
       QSqlRelation * par2 = (QSqlRelation *) _qt5xhb_itemGetPtr(2);
-      obj->setRelation ( (int) hb_parni(1), *par2 );
+      obj->setRelation ( PINT(1), *par2 );
     }
     else
     {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
   {
     if( ISNUM(1) )
     {
-      obj->revertRow ( (int) hb_parni(1) );
+      obj->revertRow ( PINT(1) );
     }
     else
     {

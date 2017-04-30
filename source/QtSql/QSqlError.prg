@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
   {
     if( ISNUM(1) )
     {
-      obj->setNumber ( (int) hb_parni(1) );
+      obj->setNumber ( PINT(1) );
     }
     else
     {

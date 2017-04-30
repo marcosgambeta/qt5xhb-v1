@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
   {
     if( ISNUM(1) )
     {
-      obj->setPort ( (int) hb_parni(1) );
+      obj->setPort ( PINT(1) );
     }
     else
     {

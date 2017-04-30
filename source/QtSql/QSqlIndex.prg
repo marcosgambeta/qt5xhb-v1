@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isDescending ( (int) hb_parni(1) ) );
+      hb_retl( obj->isDescending ( PINT(1) ) );
     }
     else
     {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      obj->setDescending ( (int) hb_parni(1), PBOOL(2) );
+      obj->setDescending ( PINT(1), PBOOL(2) );
     }
     else
     {

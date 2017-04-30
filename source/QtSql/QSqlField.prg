@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETLENGTH )
   {
     if( ISNUM(1) )
     {
-      obj->setLength ( (int) hb_parni(1) );
+      obj->setLength ( PINT(1) );
     }
     else
     {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETPRECISION )
   {
     if( ISNUM(1) )
     {
-      obj->setPrecision ( (int) hb_parni(1) );
+      obj->setPrecision ( PINT(1) );
     }
     else
     {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETSQLTYPE )
   {
     if( ISNUM(1) )
     {
-      obj->setSqlType ( (int) hb_parni(1) );
+      obj->setSqlType ( PINT(1) );
     }
     else
     {

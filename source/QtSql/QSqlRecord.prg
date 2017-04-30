@@ -226,7 +226,7 @@ void QSqlRecord_field1 ()
 
   if( obj )
   {
-    QSqlField * ptr = new QSqlField( obj->field ( (int) hb_parni(1) ) );
+    QSqlField * ptr = new QSqlField( obj->field ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->fieldName ( (int) hb_parni(1) ).toLatin1().data() );
+      hb_retc( (const char *) obj->fieldName ( PINT(1) ).toLatin1().data() );
     }
     else
     {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSQLRECORD_INSERT )
     if( ISNUM(1) && ISQSQLFIELD(2) )
     {
       QSqlField * par2 = (QSqlField *) _qt5xhb_itemGetPtr(2);
-      obj->insert ( (int) hb_parni(1), *par2 );
+      obj->insert ( PINT(1), *par2 );
     }
     else
     {
@@ -362,7 +362,7 @@ void QSqlRecord_isGenerated2 ()
 
   if( obj )
   {
-    hb_retl( obj->isGenerated ( (int) hb_parni(1) ) );
+    hb_retl( obj->isGenerated ( PINT(1) ) );
   }
 }
 
@@ -407,7 +407,7 @@ void QSqlRecord_isNull2 ()
 
   if( obj )
   {
-    hb_retl( obj->isNull ( (int) hb_parni(1) ) );
+    hb_retl( obj->isNull ( PINT(1) ) );
   }
 }
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QSQLRECORD_REMOVE )
   {
     if( ISNUM(1) )
     {
-      obj->remove ( (int) hb_parni(1) );
+      obj->remove ( PINT(1) );
     }
     else
     {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QSQLRECORD_REPLACE )
     if( ISNUM(1) && ISQSQLFIELD(2) )
     {
       QSqlField * par2 = (QSqlField *) _qt5xhb_itemGetPtr(2);
-      obj->replace ( (int) hb_parni(1), *par2 );
+      obj->replace ( PINT(1), *par2 );
     }
     else
     {
@@ -499,7 +499,7 @@ void QSqlRecord_setGenerated2 ()
 
   if( obj )
   {
-    obj->setGenerated ( (int) hb_parni(1), PBOOL(2) );
+    obj->setGenerated ( PINT(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -533,7 +533,7 @@ void QSqlRecord_setNull1 ()
 
   if( obj )
   {
-    obj->setNull ( (int) hb_parni(1) );
+    obj->setNull ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -583,7 +583,7 @@ void QSqlRecord_setValue1 ()
   if( obj )
   {
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setValue ( (int) hb_parni(1), *par2 );
+    obj->setValue ( PINT(1), *par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -633,7 +633,7 @@ void QSqlRecord_value1 ()
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->value ( (int) hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

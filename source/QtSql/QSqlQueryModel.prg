@@ -197,7 +197,7 @@ void QSqlQueryModel_record1 ()
 
   if( obj )
   {
-    QSqlRecord * ptr = new QSqlRecord( obj->record ( (int) hb_parni(1) ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
     {
       int par2 = hb_parni(2);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->setHeaderData ( (int) hb_parni(1),  (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+      hb_retl( obj->setHeaderData ( PINT(1),  (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
     }
     else
     {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {

@@ -246,7 +246,7 @@ void QSqlQuery_bindValue2 ()
   {
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( (int) hb_parni(1), *par2,  (QSql::ParamType) par3 );
+    obj->bindValue ( PINT(1), *par2,  (QSql::ParamType) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -294,7 +294,7 @@ void QSqlQuery_boundValue2 ()
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->boundValue ( (int) hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->boundValue ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -511,7 +511,7 @@ void QSqlQuery_isNull1 ()
 
   if( obj )
   {
-    hb_retl( obj->isNull ( (int) hb_parni(1) ) );
+    hb_retl( obj->isNull ( PINT(1) ) );
   }
 }
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      hb_retl( obj->seek ( (int) hb_parni(1), (bool) ISNIL(2)? false : hb_parl(2) ) );
+      hb_retl( obj->seek ( PINT(1), (bool) ISNIL(2)? false : hb_parl(2) ) );
     }
     else
     {
@@ -805,7 +805,7 @@ void QSqlQuery_value1 ()
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->value ( (int) hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

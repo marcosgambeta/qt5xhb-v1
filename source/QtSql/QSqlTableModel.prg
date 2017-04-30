@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
     if( ISNUM(1) && ISQSQLRECORD(2) )
     {
       QSqlRecord * par2 = (QSqlRecord *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->insertRecord ( (int) hb_parni(1), *par2 ) );
+      hb_retl( obj->insertRecord ( PINT(1), *par2 ) );
     }
     else
     {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
   {
     if( ISNUM(1) )
     {
-      obj->revertRow ( (int) hb_parni(1) );
+      obj->revertRow ( PINT(1) );
     }
     else
     {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
     if( ISNUM(1) && ISQSQLRECORD(2) )
     {
       QSqlRecord * par2 = (QSqlRecord *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->setRecord ( (int) hb_parni(1), *par2 ) );
+      hb_retl( obj->setRecord ( PINT(1), *par2 ) );
     }
     else
     {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->setSort ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+      obj->setSort ( PINT(1),  (Qt::SortOrder) par2 );
     }
     else
     {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( (int) hb_parni(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+      hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -703,7 +703,7 @@ void QSqlTableModel_record2 ()
 
   if( obj )
   {
-    QSqlRecord * ptr = new QSqlRecord( obj->record ( (int) hb_parni(1) ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->selectRow ( (int) hb_parni(1) ) );
+      hb_retl( obj->selectRow ( PINT(1) ) );
     }
     else
     {
