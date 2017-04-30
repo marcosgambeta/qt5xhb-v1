@@ -987,3 +987,4 @@
 #define PQSTRING(n)                                         QString::fromLatin1( hb_parc(n) )
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PBOOL(n)                                            (bool) hb_parl(n)
+#define PINT(n)                                             (int) hb_parni(n)
