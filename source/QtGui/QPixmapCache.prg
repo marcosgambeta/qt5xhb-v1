@@ -93,7 +93,7 @@ static void setCacheLimit(int)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_SETCACHELIMIT )
 {
-  QPixmapCache::setCacheLimit ( (int) hb_parni(1) );
+  QPixmapCache::setCacheLimit ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

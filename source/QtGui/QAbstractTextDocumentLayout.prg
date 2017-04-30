@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextObjectInterface * ptr = obj->handlerForObject ( (int) hb_parni(1) );
+    QTextObjectInterface * ptr = obj->handlerForObject ( PINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECTINTERFACE" );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
   if( obj )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->registerHandler ( (int) hb_parni(1), par2 );
+    obj->registerHandler ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

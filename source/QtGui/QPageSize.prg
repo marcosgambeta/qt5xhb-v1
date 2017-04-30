@@ -365,7 +365,7 @@ static PageSizeId id(int windowsId)
 */
 HB_FUNC_STATIC( QPAGESIZE_ID4 )
 {
-  hb_retni( QPageSize::id ( (int) hb_parni(1) ) );
+  hb_retni( QPageSize::id ( PINT(1) ) );
 }
 
 
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizePixels ( (int) hb_parni(1) ) );
+    QSize * ptr = new QSize( obj->sizePixels ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -630,7 +630,7 @@ static QSize sizePixels(PageSizeId pageSizeId, int resolution)
 HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS2 )
 {
   int par1 = hb_parni(1);
-  QSize * ptr = new QSize( QPageSize::sizePixels (  (QPageSize::PageSizeId) par1, (int) hb_parni(2) ) );
+  QSize * ptr = new QSize( QPageSize::sizePixels (  (QPageSize::PageSizeId) par1, PINT(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 }
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPIXELS )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->rectPixels ( (int) hb_parni(1) ) );
+    QRect * ptr = new QRect( obj->rectPixels ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

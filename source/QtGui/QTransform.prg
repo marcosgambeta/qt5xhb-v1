@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP9 )
   {
     int par3;
     int par4;
-    obj->map ( (int) hb_parni(1), (int) hb_parni(2), &par3, &par4 );
+    obj->map ( PINT(1), PINT(2), &par3, &par4 );
     hb_storni( par3, 3 );
     hb_storni( par4, 4 );
   }

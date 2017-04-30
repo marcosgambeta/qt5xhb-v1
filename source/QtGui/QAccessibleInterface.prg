@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
   QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->childAt ( (int) hb_parni(1), (int) hb_parni(2) );
+    QAccessibleInterface * ptr = obj->childAt ( PINT(1), PINT(2) );
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILD )
   QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->child ( (int) hb_parni(1) );
+    QAccessibleInterface * ptr = obj->child ( PINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VIRTUAL_HOOK )
   if( obj )
   {
     void * par2 = (void *) hb_parptr(2);
-    obj->virtual_hook ( (int) hb_parni(1), par2 );
+    obj->virtual_hook ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * ptr = new QTextBlock( obj->item ( (int) hb_parni(1) ) );
+    QTextBlock * ptr = new QTextBlock( obj->item ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeItem ( (int) hb_parni(1) );
+    obj->removeItem ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

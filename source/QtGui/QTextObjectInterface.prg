@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
   {
     QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
     QTextFormat * par3 = (QTextFormat *) _qt5xhb_itemGetPtr(3);
-    QSizeF * ptr = new QSizeF( obj->intrinsicSize ( par1, (int) hb_parni(2), *par3 ) );
+    QSizeF * ptr = new QSizeF( obj->intrinsicSize ( par1, PINT(2), *par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
     QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
     QTextDocument * par3 = (QTextDocument *) _qt5xhb_itemGetPtr(3);
     QTextFormat * par5 = (QTextFormat *) _qt5xhb_itemGetPtr(5);
-    obj->drawObject ( par1, *par2, par3, (int) hb_parni(4), *par5 );
+    obj->drawObject ( par1, *par2, par3, PINT(4), *par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

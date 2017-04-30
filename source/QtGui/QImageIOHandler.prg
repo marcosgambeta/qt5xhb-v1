@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->jumpToImage ( (int) hb_parni(1) ) );
+      hb_retl( obj->jumpToImage ( PINT(1) ) );
     }
     else
     {

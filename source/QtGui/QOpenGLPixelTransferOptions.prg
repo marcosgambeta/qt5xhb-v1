@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETALIGNMENT )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAlignment ( (int) hb_parni(1) );
+    obj->setAlignment ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPIMAGES )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSkipImages ( (int) hb_parni(1) );
+    obj->setSkipImages ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPROWS )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSkipRows ( (int) hb_parni(1) );
+    obj->setSkipRows ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPPIXELS )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSkipPixels ( (int) hb_parni(1) );
+    obj->setSkipPixels ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETIMAGEHEIGHT )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setImageHeight ( (int) hb_parni(1) );
+    obj->setImageHeight ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETROWLENGTH )
   QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRowLength ( (int) hb_parni(1) );
+    obj->setRowLength ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

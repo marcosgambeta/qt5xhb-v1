@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QCOLOR_SETALPHA )
   {
     if( ISNUM(1) )
     {
-      obj->setAlpha ( (int) hb_parni(1) );
+      obj->setAlpha ( PINT(1) );
     }
     else
     {
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QCOLOR_SETBLUE )
   {
     if( ISNUM(1) )
     {
-      obj->setBlue ( (int) hb_parni(1) );
+      obj->setBlue ( PINT(1) );
     }
     else
     {
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QCOLOR_SETCMYK )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
     {
-      obj->setCmyk ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) ISNIL(5)? 255 : hb_parni(5) );
+      obj->setCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), (int) ISNIL(5)? 255 : hb_parni(5) );
     }
     else
     {
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QCOLOR_SETGREEN )
   {
     if( ISNUM(1) )
     {
-      obj->setGreen ( (int) hb_parni(1) );
+      obj->setGreen ( PINT(1) );
     }
     else
     {
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSL )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
-      obj->setHsl ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 255 : hb_parni(4) );
+      obj->setHsl ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 255 : hb_parni(4) );
     }
     else
     {
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSV )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
-      obj->setHsv ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 255 : hb_parni(4) );
+      obj->setHsv ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 255 : hb_parni(4) );
     }
     else
     {
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QCOLOR_SETRED )
   {
     if( ISNUM(1) )
     {
-      obj->setRed ( (int) hb_parni(1) );
+      obj->setRed ( PINT(1) );
     }
     else
     {
@@ -1325,7 +1325,7 @@ void QColor_setRgb1 ()
 
   if( obj )
   {
-    obj->setRgb ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 255 : hb_parni(4) );
+    obj->setRgb ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 255 : hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
   {
-    QColor * ptr = new QColor( QColor::fromCmyk ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) ISNIL(5)? 255 : hb_parni(5) ) );
+    QColor * ptr = new QColor( QColor::fromCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), (int) ISNIL(5)? 255 : hb_parni(5) ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
   else
@@ -1578,7 +1578,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
-    QColor * ptr = new QColor( QColor::fromHsl ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 255 : hb_parni(4) ) );
+    QColor * ptr = new QColor( QColor::fromHsl ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 255 : hb_parni(4) ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
   else
@@ -1610,7 +1610,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
-    QColor * ptr = new QColor( QColor::fromHsv ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 255 : hb_parni(4) ) );
+    QColor * ptr = new QColor( QColor::fromHsv ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 255 : hb_parni(4) ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
   else
@@ -1649,7 +1649,7 @@ static QColor fromRgb ( int r, int g, int b, int a = 255 )
 */
 void QColor_fromRgb2 ()
 {
-  QColor * ptr = new QColor( QColor::fromRgb ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) ISNIL(4)? 255 : hb_parni(4) ) );
+  QColor * ptr = new QColor( QColor::fromRgb ( PINT(1), PINT(2), PINT(3), (int) ISNIL(4)? 255 : hb_parni(4) ) );
   _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 

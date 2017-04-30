@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontWeight ( (int) hb_parni(1) );
+    obj->setFontWeight ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRETCH )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFontStretch ( (int) hb_parni(1) );
+    obj->setFontStretch ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTABLECELLROWSPAN )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTableCellRowSpan ( (int) hb_parni(1) );
+    obj->setTableCellRowSpan ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTABLECELLCOLUMNSPAN )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTableCellColumnSpan ( (int) hb_parni(1) );
+    obj->setTableCellColumnSpan ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

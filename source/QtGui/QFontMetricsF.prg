@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
     if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) ) // TODO: implementar parametro 4
     {
       int par4;
-      QSizeF * ptr = new QSizeF( obj->size ( (int) hb_parni(1), PQSTRING(2), (int) ISNIL(3)? 0 : hb_parni(3), &par4 ) );
+      QSizeF * ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), (int) ISNIL(3)? 0 : hb_parni(3), &par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
       hb_storni( par4, 4 );
     }

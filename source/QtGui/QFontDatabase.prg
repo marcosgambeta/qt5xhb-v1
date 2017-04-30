@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
     {
-      QFont * ptr = new QFont( obj->font ( PQSTRING(1), PQSTRING(2), (int) hb_parni(3) ) );
+      QFont * ptr = new QFont( obj->font ( PQSTRING(1), PQSTRING(2), PINT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
     }
     else
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
   if( ISNUM(1) )
   {
-    QStringList strl = QFontDatabase::applicationFontFamilies ( (int) hb_parni(1) );
+    QStringList strl = QFontDatabase::applicationFontFamilies ( PINT(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
   else
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
   if( ISNUM(1) )
   {
-    hb_retl( QFontDatabase::removeApplicationFont ( (int) hb_parni(1) ) );
+    hb_retl( QFontDatabase::removeApplicationFont ( PINT(1) ) );
   }
   else
   {

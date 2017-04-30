@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBottom ( (int) hb_parni(1) );
+    obj->setBottom ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRange ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setRange ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTop ( (int) hb_parni(1) );
+    obj->setTop ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

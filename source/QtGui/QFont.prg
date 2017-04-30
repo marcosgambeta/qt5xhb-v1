@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QFONT_SETPIXELSIZE )
   {
     if( ISNUM(1) )
     {
-      obj->setPixelSize ( (int) hb_parni(1) );
+      obj->setPixelSize ( PINT(1) );
     }
     else
     {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QFONT_SETPOINTSIZE )
   {
     if( ISNUM(1) )
     {
-      obj->setPointSize ( (int) hb_parni(1) );
+      obj->setPointSize ( PINT(1) );
     }
     else
     {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QFONT_SETSTRETCH )
   {
     if( ISNUM(1) )
     {
-      obj->setStretch ( (int) hb_parni(1) );
+      obj->setStretch ( PINT(1) );
     }
     else
     {
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QFONT_SETWEIGHT )
   {
     if( ISNUM(1) )
     {
-      obj->setWeight ( (int) hb_parni(1) );
+      obj->setWeight ( PINT(1) );
     }
     else
     {

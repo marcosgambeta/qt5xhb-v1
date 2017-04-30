@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETDEPTHBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDepthBufferSize ( (int) hb_parni(1) );
+    obj->setDepthBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSTENCILBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setStencilBufferSize ( (int) hb_parni(1) );
+    obj->setStencilBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETREDBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRedBufferSize ( (int) hb_parni(1) );
+    obj->setRedBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETGREENBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setGreenBufferSize ( (int) hb_parni(1) );
+    obj->setGreenBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETBLUEBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setBlueBufferSize ( (int) hb_parni(1) );
+    obj->setBlueBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETALPHABUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAlphaBufferSize ( (int) hb_parni(1) );
+    obj->setAlphaBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSAMPLES )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSamples ( (int) hb_parni(1) );
+    obj->setSamples ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETMAJORVERSION )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMajorVersion ( (int) hb_parni(1) );
+    obj->setMajorVersion ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETMINORVERSION )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMinorVersion ( (int) hb_parni(1) );
+    obj->setMinorVersion ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

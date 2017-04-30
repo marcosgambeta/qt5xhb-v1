@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QIMAGE_COLOR )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->color ( (int) hb_parni(1) ) );
+      hb_retni( obj->color ( PINT(1) ) );
     }
     else
     {
@@ -437,7 +437,7 @@ void QImage_copy2 ()
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->copy ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) ) );
+    QImage * ptr = new QImage( obj->copy ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -861,7 +861,7 @@ void QImage_pixel2 ()
 
   if( obj )
   {
-    hb_retni( obj->pixel ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    hb_retni( obj->pixel ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -907,7 +907,7 @@ void QImage_pixelIndex2 ()
 
   if( obj )
   {
-    hb_retni( obj->pixelIndex ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    hb_retni( obj->pixelIndex ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -1034,7 +1034,7 @@ void QImage_scaled2 ()
   {
     int par3 = ISNIL(3)? (int) Qt::IgnoreAspectRatio : hb_parni(3);
     int par4 = ISNIL(4)? (int) Qt::FastTransformation : hb_parni(4);
-    QImage * ptr = new QImage( obj->scaled ( (int) hb_parni(1), (int) hb_parni(2),  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
+    QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2),  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QImage * ptr = new QImage( obj->scaledToHeight ( (int) hb_parni(1),  (Qt::TransformationMode) par2 ) );
+      QImage * ptr = new QImage( obj->scaledToHeight ( PINT(1),  (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QImage * ptr = new QImage( obj->scaledToWidth ( (int) hb_parni(1),  (Qt::TransformationMode) par2 ) );
+      QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1),  (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLOR )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      obj->setColor ( (int) hb_parni(1), (QRgb) hb_parni(2) );
+      obj->setColor ( PINT(1), (QRgb) hb_parni(2) );
     }
     else
     {
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
   {
     if( ISNUM(1) )
     {
-      obj->setColorCount ( (int) hb_parni(1) );
+      obj->setColorCount ( PINT(1) );
     }
     else
     {
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
   {
     if( ISNUM(1) )
     {
-      obj->setDotsPerMeterX ( (int) hb_parni(1) );
+      obj->setDotsPerMeterX ( PINT(1) );
     }
     else
     {
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
   {
     if( ISNUM(1) )
     {
-      obj->setDotsPerMeterY ( (int) hb_parni(1) );
+      obj->setDotsPerMeterY ( PINT(1) );
     }
     else
     {
@@ -1243,7 +1243,7 @@ void QImage_setPixel2 ()
 
   if( obj )
   {
-    obj->setPixel ( (int) hb_parni(1), (int) hb_parni(2), (uint) hb_parni(3) );
+    obj->setPixel ( PINT(1), PINT(2), (uint) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1413,7 +1413,7 @@ void QImage_valid2 ()
 
   if( obj )
   {
-    hb_retl( obj->valid ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    hb_retl( obj->valid ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -1482,7 +1482,7 @@ static QTransform trueMatrix ( const QTransform & matrix, int width, int height 
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX2 )
 {
   QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-  QTransform * ptr = new QTransform( QImage::trueMatrix ( *par1, (int) hb_parni(2), (int) hb_parni(3) ) );
+  QTransform * ptr = new QTransform( QImage::trueMatrix ( *par1, PINT(2), PINT(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 

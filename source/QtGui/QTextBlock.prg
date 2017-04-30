@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( (int) hb_parni(1) ) );
+    hb_retl( obj->contains ( PINT(1) ) );
   }
 }
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setUserState ( (int) hb_parni(1) );
+    obj->setUserState ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRevision ( (int) hb_parni(1) );
+    obj->setRevision ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLineCount ( (int) hb_parni(1) );
+    obj->setLineCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

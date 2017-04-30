@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setResolution ( (int) hb_parni(1) );
+    obj->setResolution ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

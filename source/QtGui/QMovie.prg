@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->jumpToFrame ( (int) hb_parni(1) ) );
+    hb_retl( obj->jumpToFrame ( PINT(1) ) );
   }
 }
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSpeed ( (int) hb_parni(1) );
+    obj->setSpeed ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

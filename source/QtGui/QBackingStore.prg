@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SCROLL )
   if( obj )
   {
     QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->scroll ( *par1, (int) hb_parni(2), (int) hb_parni(3) ) );
+    hb_retl( obj->scroll ( *par1, PINT(2), PINT(3) ) );
   }
 }
 

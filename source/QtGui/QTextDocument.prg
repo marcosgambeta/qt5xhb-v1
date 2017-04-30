@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QChar * ptr = new QChar( obj->characterAt ( (int) hb_parni(1) ) );
+    QChar * ptr = new QChar( obj->characterAt ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrame * ptr = obj->frameAt ( (int) hb_parni(1) );
+    QTextFrame * ptr = obj->frameAt ( PINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextObject * ptr = obj->object ( (int) hb_parni(1) );
+    QTextObject * ptr = obj->object ( PINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
   }
 }
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * ptr = new QTextBlock( obj->findBlock ( (int) hb_parni(1) ) );
+    QTextBlock * ptr = new QTextBlock( obj->findBlock ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * ptr = new QTextBlock( obj->findBlockByNumber ( (int) hb_parni(1) ) );
+    QTextBlock * ptr = new QTextBlock( obj->findBlockByNumber ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * ptr = new QTextBlock( obj->findBlockByLineNumber ( (int) hb_parni(1) ) );
+    QTextBlock * ptr = new QTextBlock( obj->findBlockByLineNumber ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
   if( obj )
   {
     QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->resource ( (int) hb_parni(1), *par2 ) );
+    QVariant * ptr = new QVariant( obj->resource ( PINT(1), *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
   {
     QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
     QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-    obj->addResource ( (int) hb_parni(1), *par2, *par3 );
+    obj->addResource ( PINT(1), *par2, *par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->markContentsDirty ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->markContentsDirty ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1156,7 +1156,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaximumBlockCount ( (int) hb_parni(1) );
+    obj->setMaximumBlockCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

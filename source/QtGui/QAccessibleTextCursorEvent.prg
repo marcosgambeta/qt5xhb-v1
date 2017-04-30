@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
   QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCursorPosition ( (int) hb_parni(1) );
+    obj->setCursorPosition ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->resize ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->resize ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->insertRows ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->insertColumns ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->insertColumns ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->appendRows ( (int) hb_parni(1) );
+    obj->appendRows ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->appendColumns ( (int) hb_parni(1) );
+    obj->appendColumns ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->removeRows ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->removeColumns ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS1 )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->mergeCells ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->mergeCells ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->splitCell ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->splitCell ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT1 )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1), PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
   }
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT2 )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( (int) hb_parni(1) ) );
+    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
   }
 }

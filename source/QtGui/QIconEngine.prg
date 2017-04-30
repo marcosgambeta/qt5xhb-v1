@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
     if( ISNUM(1) && ISPOINTER(2) )
     {
       void * par2 = (void *) hb_parptr(2);
-      obj->virtual_hook ( (int) hb_parni(1), par2 );
+      obj->virtual_hook ( PINT(1), par2 );
     }
     else
     {

@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    obj->setPosition ( (int) hb_parni(1),  (QTextCursor::MoveMode) par2 );
+    obj->setPosition ( PINT(1),  (QTextCursor::MoveMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setVerticalMovementX ( (int) hb_parni(1) );
+    obj->setVerticalMovementX ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE1 )
   if( obj )
   {
     QTextTableFormat * par3 = (QTextTableFormat *) _qt5xhb_itemGetPtr(3);
-    QTextTable * ptr = obj->insertTable ( (int) hb_parni(1), (int) hb_parni(2), *par3 );
+    QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2), *par3 );
     _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
   }
 }
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE2 )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextTable * ptr = obj->insertTable ( (int) hb_parni(1), (int) hb_parni(2) );
+    QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
   }
 }

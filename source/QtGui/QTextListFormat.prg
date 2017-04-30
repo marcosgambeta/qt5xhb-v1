@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setIndent ( (int) hb_parni(1) );
+    obj->setIndent ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

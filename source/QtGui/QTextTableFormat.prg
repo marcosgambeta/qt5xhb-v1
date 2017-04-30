@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNS )
   QTextTableFormat * obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setColumns ( (int) hb_parni(1) );
+    obj->setColumns ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
   QTextTableFormat * obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setHeaderRowCount ( (int) hb_parni(1) );
+    obj->setHeaderRowCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

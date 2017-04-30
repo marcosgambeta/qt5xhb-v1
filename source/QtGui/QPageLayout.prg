@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMargins * ptr = new QMargins( obj->marginsPixels ( (int) hb_parni(1) ) );
+    QMargins * ptr = new QMargins( obj->marginsPixels ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPIXELS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->fullRectPixels ( (int) hb_parni(1) ) );
+    QRect * ptr = new QRect( obj->fullRectPixels ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPIXELS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->paintRectPixels ( (int) hb_parni(1) ) );
+    QRect * ptr = new QRect( obj->paintRectPixels ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

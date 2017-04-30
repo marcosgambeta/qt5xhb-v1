@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
   {
     if( ISNUM(1) )
     {
-      obj->setStatus ( (int) hb_parni(1) );
+      obj->setStatus ( PINT(1) );
     }
     else
     {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETQUALITY )
   {
     if( ISNUM(1) )
     {
-      obj->setQuality ( (int) hb_parni(1) );
+      obj->setQuality ( PINT(1) );
     }
     else
     {

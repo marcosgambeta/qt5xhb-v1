@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SETSAMPLECOUNT )
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSampleCount ( (int) hb_parni(1) );
+    obj->setSampleCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

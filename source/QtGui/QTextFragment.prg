@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( (int) hb_parni(1) ) );
+    hb_retl( obj->contains ( PINT(1) ) );
   }
 }
 

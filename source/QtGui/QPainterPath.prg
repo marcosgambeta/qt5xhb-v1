@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
-      obj->setElementPositionAt ( (int) hb_parni(1), PQREAL(2), PQREAL(3) );
+      obj->setElementPositionAt ( PINT(1), PQREAL(2), PQREAL(3) );
     }
     else
     {

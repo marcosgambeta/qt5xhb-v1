@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT )
   QAccessibleEditableTextInterface * obj = (QAccessibleEditableTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->deleteText ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->deleteText ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT )
   QAccessibleEditableTextInterface * obj = (QAccessibleEditableTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->insertText ( (int) hb_parni(1), PQSTRING(2) );
+    obj->insertText ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT )
   QAccessibleEditableTextInterface * obj = (QAccessibleEditableTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->replaceText ( (int) hb_parni(1), (int) hb_parni(2), PQSTRING(3) );
+    obj->replaceText ( PINT(1), PINT(2), PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

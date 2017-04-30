@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFirstRow ( (int) hb_parni(1) );
+    obj->setFirstRow ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFirstColumn ( (int) hb_parni(1) );
+    obj->setFirstColumn ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLastRow ( (int) hb_parni(1) );
+    obj->setLastRow ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLastColumn ( (int) hb_parni(1) );
+    obj->setLastColumn ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

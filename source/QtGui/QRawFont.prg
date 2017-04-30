@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORCHARS )
     const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
     quint32 * par3 = (quint32 *) _qt5xhb_itemGetPtr(3);
     int par4;
-    hb_retl( obj->glyphIndexesForChars ( par1, (int) hb_parni(2), par3, &par4 ) );
+    hb_retl( obj->glyphIndexesForChars ( par1, PINT(2), par3, &par4 ) );
     hb_storni( par4, 4 );
   }
 }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES2 )
   {
     const quint32 * par1 = (const quint32 *) _qt5xhb_itemGetPtr(1);
     QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->advancesForGlyphIndexes ( par1, par2, (int) hb_parni(3) ) );
+    hb_retl( obj->advancesForGlyphIndexes ( par1, par2, PINT(3) ) );
   }
 }
 

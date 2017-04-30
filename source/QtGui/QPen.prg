@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTH )
   {
     if( ISNUM(1) )
     {
-      obj->setWidth ( (int) hb_parni(1) );
+      obj->setWidth ( PINT(1) );
     }
     else
     {

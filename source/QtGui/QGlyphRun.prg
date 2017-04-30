@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWDATA )
   {
     const quint32 * par1 = (const quint32 *) _qt5xhb_itemGetPtr(1);
     const QPointF * par2 = (const QPointF *) _qt5xhb_itemGetPtr(2);
-    obj->setRawData ( par1, par2, (int) hb_parni(3) );
+    obj->setRawData ( par1, par2, PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

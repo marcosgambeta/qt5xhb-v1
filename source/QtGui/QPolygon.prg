@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE1 )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->translate ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED1 )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * ptr = new QPolygon( obj->translated ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    QPolygon * ptr = new QPolygon( obj->translated ( PINT(1), PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT1 )
   {
     int par2;
     int par3;
-    obj->point ( (int) hb_parni(1), &par2, &par3 );
+    obj->point ( PINT(1), &par2, &par3 );
     hb_storni( par2, 2 );
     hb_storni( par3, 3 );
   }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT2 )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->point ( (int) hb_parni(1) ) );
+    QPoint * ptr = new QPoint( obj->point ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPoint ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3) );
+    obj->setPoint ( PINT(1), PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT2 )
   if( obj )
   {
     QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-    obj->setPoint ( (int) hb_parni(1), *par2 );
+    obj->setPoint ( PINT(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
   if( obj )
   {
     QPolygon * par3 = (QPolygon *) _qt5xhb_itemGetPtr(3);
-    obj->putPoints ( (int) hb_parni(1), (int) hb_parni(2), *par3, (int) ISNIL(4)? 0 : hb_parni(4) );
+    obj->putPoints ( PINT(1), PINT(2), *par3, (int) ISNIL(4)? 0 : hb_parni(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

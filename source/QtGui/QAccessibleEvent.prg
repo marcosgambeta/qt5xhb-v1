@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
   QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setChild ( (int) hb_parni(1) );
+    obj->setChild ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
   {
     if( ISNUM(1) )
     {
-      obj->setCompression ( (int) hb_parni(1) );
+      obj->setCompression ( PINT(1) );
     }
     else
     {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
   {
     if( ISNUM(1) )
     {
-      obj->setQuality ( (int) hb_parni(1) );
+      obj->setQuality ( PINT(1) );
     }
     else
     {

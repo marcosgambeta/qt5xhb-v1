@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION )
   QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setSelection ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

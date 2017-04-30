@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATE1 )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->translate ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATED1 )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->translated ( (int) hb_parni(1), (int) hb_parni(2) ) );
+    QRegion * ptr = new QRegion( obj->translated ( PINT(1), PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }

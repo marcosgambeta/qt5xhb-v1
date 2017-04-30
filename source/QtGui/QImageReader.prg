@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTOIMAGE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->jumpToImage ( (int) hb_parni(1) ) );
+      hb_retl( obj->jumpToImage ( PINT(1) ) );
     }
     else
     {
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETQUALITY )
   {
     if( ISNUM(1) )
     {
-      obj->setQuality ( (int) hb_parni(1) );
+      obj->setQuality ( PINT(1) );
     }
     else
     {

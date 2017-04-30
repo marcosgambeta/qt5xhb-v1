@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLine::Leading : hb_parni(2);
-    hb_retnd( obj->cursorToX ( (int) hb_parni(1),  (QTextLine::Edge) par2 ) );
+    hb_retnd( obj->cursorToX ( PINT(1),  (QTextLine::Edge) par2 ) );
   }
 }
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS1 )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setNumColumns ( (int) hb_parni(1) );
+    obj->setNumColumns ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS2 )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setNumColumns ( (int) hb_parni(1), PQREAL(2) );
+    obj->setNumColumns ( PINT(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setRowCount ( (int) hb_parni(1) );
+    obj->setRowCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setColumnCount ( (int) hb_parni(1) );
+    obj->setColumnCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStandardItem * ptr = obj->child ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    QStandardItem * ptr = obj->child ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD1 )
   if( obj )
   {
     QStandardItem * par3 = (QStandardItem *) _qt5xhb_itemGetPtr(3);
-    obj->setChild ( (int) hb_parni(1), (int) hb_parni(2), par3 );
+    obj->setChild ( PINT(1), PINT(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD2 )
   if( obj )
   {
     QStandardItem * par2 = (QStandardItem *) _qt5xhb_itemGetPtr(2);
-    obj->setChild ( (int) hb_parni(1), par2 );
+    obj->setChild ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW1 )
     {
       par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    obj->insertRow ( (int) hb_parni(1), par2 );
+    obj->insertRow ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW2 )
   if( obj )
   {
     QStandardItem * par2 = (QStandardItem *) _qt5xhb_itemGetPtr(2);
-    obj->insertRow ( (int) hb_parni(1), par2 );
+    obj->insertRow ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
     {
       par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    obj->insertColumn ( (int) hb_parni(1), par2 );
+    obj->insertColumn ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS1 )
     {
       par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    obj->insertRows ( (int) hb_parni(1), par2 );
+    obj->insertRows ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS2 )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->insertRows ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->insertRows ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->insertColumns ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->insertColumns ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeRow ( (int) hb_parni(1) );
+    obj->removeRow ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1206,7 +1206,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeColumn ( (int) hb_parni(1) );
+    obj->removeColumn ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeRows ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->removeRows ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeColumns ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->removeColumns ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1348,7 +1348,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStandardItem * ptr = obj->takeChild ( (int) hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    QStandardItem * ptr = obj->takeChild ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -1362,7 +1362,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QStandardItem *> list = obj->takeRow ( (int) hb_parni(1) );
+    QList<QStandardItem *> list = obj->takeRow ( PINT(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSTANDARDITEM" );
@@ -1406,7 +1406,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QStandardItem *> list = obj->takeColumn ( (int) hb_parni(1) );
+    QList<QStandardItem *> list = obj->takeColumn ( PINT(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSTANDARDITEM" );
@@ -1451,7 +1451,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sortChildren ( (int) hb_parni(1),  (Qt::SortOrder) par2 );
+    obj->sortChildren ( PINT(1),  (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

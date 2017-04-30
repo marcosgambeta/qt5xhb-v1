@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTION )
   {
     int par2;
     int par3;
-    obj->selection ( (int) hb_parni(1), &par2, &par3 );
+    obj->selection ( PINT(1), &par2, &par3 );
     hb_storni( par2, 2 );
     hb_storni( par3, 3 );
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ADDSELECTION )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->addSelection ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->addSelection ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_REMOVESELECTION )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeSelection ( (int) hb_parni(1) );
+    obj->removeSelection ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETSELECTION )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSelection ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3) );
+    obj->setSelection ( PINT(1), PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETCURSORPOSITION )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCursorPosition ( (int) hb_parni(1) );
+    obj->setCursorPosition ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_TEXT )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ( (int) hb_parni(1), (int) hb_parni(2) ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ( PINT(1), PINT(2) ).toLatin1().data() );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERRECT )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->characterRect ( (int) hb_parni(1) ) );
+    QRect * ptr = new QRect( obj->characterRect ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SCROLLTOSUBSTRING )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->scrollToSubstring ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->scrollToSubstring ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ATTRIBUTES )
   {
     int par2;
     int par3;
-    hb_retc( (const char *) obj->attributes ( (int) hb_parni(1), &par2, &par3 ).toLatin1().data() );
+    hb_retc( (const char *) obj->attributes ( PINT(1), &par2, &par3 ).toLatin1().data() );
     hb_storni( par2, 2 );
     hb_storni( par3, 3 );
   }

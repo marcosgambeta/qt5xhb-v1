@@ -360,7 +360,7 @@ void QPixmap_fill3 ()
   if( obj )
   {
     const QPaintDevice * par1 = (const QPaintDevice *) _qt5xhb_itemGetPtr(1);
-    obj->fill ( par1, (int) hb_parni(2), (int) hb_parni(3) );
+    obj->fill ( par1, PINT(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -543,7 +543,7 @@ void QPixmap_scaled1 ()
   {
     int par3 = ISNIL(3)? (int) Qt::IgnoreAspectRatio : hb_parni(3);
     int par4 = ISNIL(4)? (int) Qt::FastTransformation : hb_parni(4);
-    QPixmap * ptr = new QPixmap( obj->scaled ( (int) hb_parni(1), (int) hb_parni(2),  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
+    QPixmap * ptr = new QPixmap( obj->scaled ( PINT(1), PINT(2),  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QPIXMAP_SCALEDTOWIDTH )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QPixmap * ptr = new QPixmap( obj->scaledToWidth ( (int) hb_parni(1),  (Qt::TransformationMode) par2 ) );
+      QPixmap * ptr = new QPixmap( obj->scaledToWidth ( PINT(1),  (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QPIXMAP_SCALEDTOHEIGHT )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QPixmap * ptr = new QPixmap( obj->scaledToHeight ( (int) hb_parni(1),  (Qt::TransformationMode) par2 ) );
+      QPixmap * ptr = new QPixmap( obj->scaledToHeight ( PINT(1),  (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else
@@ -845,7 +845,7 @@ void QPixmap_copy1 ()
 
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->copy ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) ) );
+    QPixmap * ptr = new QPixmap( obj->copy ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -894,7 +894,7 @@ void QPixmap_scroll1 ()
   if( obj )
   {
     QRegion * par7 = ISNIL(7)? 0 : (QRegion *) _qt5xhb_itemGetPtr(7);
-    obj->scroll ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4), (int) hb_parni(5), (int) hb_parni(6), par7 );
+    obj->scroll ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6), par7 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -911,7 +911,7 @@ void QPixmap_scroll2 ()
   {
     QRect * par3 = (QRect *) _qt5xhb_itemGetPtr(3);
     QRegion * par4 = ISNIL(4)? 0 : (QRegion *) _qt5xhb_itemGetPtr(4);
-    obj->scroll ( (int) hb_parni(1), (int) hb_parni(2), *par3, par4 );
+    obj->scroll ( PINT(1), PINT(2), *par3, par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1075,7 +1075,7 @@ static QMatrix trueMatrix(const QMatrix &m, int w, int h)
 void QPixmap_trueMatrix1 ()
 {
   QMatrix * par1 = (QMatrix *) _qt5xhb_itemGetPtr(1);
-  QMatrix * ptr = new QMatrix( QPixmap::trueMatrix ( *par1, (int) hb_parni(2), (int) hb_parni(3) ) );
+  QMatrix * ptr = new QMatrix( QPixmap::trueMatrix ( *par1, PINT(2), PINT(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
 }
 
@@ -1085,7 +1085,7 @@ static QTransform trueMatrix(const QTransform &m, int w, int h)
 void QPixmap_trueMatrix2 ()
 {
   QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-  QTransform * ptr = new QTransform( QPixmap::trueMatrix ( *par1, (int) hb_parni(2), (int) hb_parni(3) ) );
+  QTransform * ptr = new QTransform( QPixmap::trueMatrix ( *par1, PINT(2), PINT(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 

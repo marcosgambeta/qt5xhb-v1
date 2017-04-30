@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QWINDOW_RESIZE2 )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->resize ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->resize ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QWINDOW_SETGEOMETRY1 )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setGeometry ( (int) hb_parni(1), (int) hb_parni(2), (int) hb_parni(3), (int) hb_parni(4) );
+    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QWINDOW_SETHEIGHT )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setHeight ( (int) hb_parni(1) );
+    obj->setHeight ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC( QWINDOW_SETWIDTH )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setWidth ( (int) hb_parni(1) );
+    obj->setWidth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QWINDOW_SETX )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setX ( (int) hb_parni(1) );
+    obj->setX ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QWINDOW_SETY )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setY ( (int) hb_parni(1) );
+    obj->setY ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDecimals ( (int) hb_parni(1) );
+    obj->setDecimals ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

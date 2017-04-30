@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
   QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->childAt ( (int) hb_parni(1), (int) hb_parni(2) );
+    QAccessibleInterface * ptr = obj->childAt ( PINT(1), PINT(2) );
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
