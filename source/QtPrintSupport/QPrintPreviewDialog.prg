@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->done ( (int) hb_parni(1) );
+    obj->done ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

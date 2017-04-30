@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOPYCOUNT )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCopyCount ( (int) hb_parni(1) );
+    obj->setCopyCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QPRINTER_SETRESOLUTION )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setResolution ( (int) hb_parni(1) );
+    obj->setResolution ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QPRINTER_SETFROMTO )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFromTo ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setFromTo ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setWinPageSize ( (int) hb_parni(1) );
+    obj->setWinPageSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1211,7 +1211,7 @@ HB_FUNC_STATIC( QPRINTER_SETNUMCOPIES )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setNumCopies ( (int) hb_parni(1) );
+    obj->setNumCopies ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCurrentPage ( (int) hb_parni(1) );
+    obj->setCurrentPage ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

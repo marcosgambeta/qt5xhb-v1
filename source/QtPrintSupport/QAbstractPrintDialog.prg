@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFromTo ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setFromTo ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMinMax ( (int) hb_parni(1), (int) hb_parni(2) );
+    obj->setMinMax ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
