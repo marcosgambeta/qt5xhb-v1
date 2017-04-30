@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * ptr = new QVariant( obj->data ( *par1, (int) hb_parni(2) ) );
+    QVariant * ptr = new QVariant( obj->data ( *par1, PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * ptr = new QModelIndex( obj->index ( (int) hb_parni(1), (int) hb_parni(2), par3 ) );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
