@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTSIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontSize (  (QWebEngineSettings::FontSize) par1, (int) hb_parni(2) );
+    obj->setFontSize (  (QWebEngineSettings::FontSize) par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

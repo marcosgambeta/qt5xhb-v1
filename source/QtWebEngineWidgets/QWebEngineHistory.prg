@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->backItems ( (int) hb_parni(1) ) );
+    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->backItems ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
   }
 #endif
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->forwardItems ( (int) hb_parni(1) ) );
+    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->forwardItems ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
   }
 #endif
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->itemAt ( (int) hb_parni(1) ) );
+    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->itemAt ( PINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
