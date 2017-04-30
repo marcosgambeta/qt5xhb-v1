@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setResolution ( (int) hb_parni(1) );
+    obj->setResolution ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
