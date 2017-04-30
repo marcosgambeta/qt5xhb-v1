@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QTANDROID_STARTINTENTSENDER )
   {
     QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
     QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
-    QtAndroid::startIntentSender ( *par1, (int) hb_parni(2), par3 );
+    QtAndroid::startIntentSender ( *par1, PINT(2), par3 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTANDROID_STARTACTIVITY )
   {
     QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
     QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
-    QtAndroid::startActivity ( *par1, (int) hb_parni(2), par3 );
+    QtAndroid::startActivity ( *par1, PINT(2), par3 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

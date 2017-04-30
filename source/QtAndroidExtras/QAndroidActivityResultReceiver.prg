@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT )
     if( ISNUM(1) && ISNUM(2) && ISQANDROIDJNIOBJECT(3) )
     {
       QAndroidJniObject * par3 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(3);
-      obj->handleActivityResult ( (int) hb_parni(1), (int) hb_parni(2), *par3 );
+      obj->handleActivityResult ( PINT(1), PINT(2), *par3 );
     }
     else
     {
