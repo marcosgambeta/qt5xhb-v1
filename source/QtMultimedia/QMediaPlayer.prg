@@ -93,7 +93,7 @@ RETURN
 #endif
 
 #include "qt5xhb_common.h"
-#include "qt5xhb_clsid.h"
+#include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__

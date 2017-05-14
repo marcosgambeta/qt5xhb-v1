@@ -67,7 +67,7 @@ END CLASS
 #include <habstractlistmodel.h>
 
 #include "qt5xhb_common.h"
-#include "qt5xhb_clsid.h"
+#include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_NEW )
