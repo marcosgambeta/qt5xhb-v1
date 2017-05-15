@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 #endif
 }

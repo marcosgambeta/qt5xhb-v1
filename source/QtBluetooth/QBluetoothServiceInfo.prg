@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->serviceName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->serviceName () ) );
   }
 #endif
 }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEDESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->serviceDescription ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->serviceDescription () ) );
   }
 #endif
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEPROVIDER )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->serviceProvider ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->serviceProvider () ) );
   }
 #endif
 }

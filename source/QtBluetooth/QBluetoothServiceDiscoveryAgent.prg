@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 #endif
 }
