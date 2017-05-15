@@ -1027,3 +1027,13 @@
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PBOOL(n)                                            (bool) hb_parl(n)
 #define PINT(n)                                             (int) hb_parni(n)
+
+// macros for optional parameters
+#define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
+#define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
+#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromLatin1( hb_parc(n) )
+//#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromUtf8( hb_parc(n) )
+
+// macros for return's
+#define RQSTRING(x)                                         (const char *) x.toLatin1().data()
+//#define RQSTRING(x)                                         (const char *) x.toUtf8().data()
