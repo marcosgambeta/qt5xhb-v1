@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retc( (const char *) obj->readLine ( (qint64) ISNIL(1)? 0 : hb_parni(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->readLine ( (qint64) ISNIL(1)? 0 : hb_parni(1) ) ) );
     }
     else
     {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READALL )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->readAll ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->readAll () ) );
   }
 }
 
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->read ( (qint64) hb_parni(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->read ( (qint64) hb_parni(1) ) ) );
     }
     else
     {

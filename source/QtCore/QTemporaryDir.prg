@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->path () ) );
   }
 }
 

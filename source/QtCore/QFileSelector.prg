@@ -95,7 +95,7 @@ void QFileSelector_select1 ()
 
   if( obj )
   {
-    hb_retc( (const char *) obj->select ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->select ( PQSTRING(1) ) ) );
   }
 }
 

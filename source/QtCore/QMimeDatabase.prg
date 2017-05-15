@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_SUFFIXFORFILENAME )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( (const char *) obj->suffixForFileName ( PQSTRING(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->suffixForFileName ( PQSTRING(1) ) ) );
     }
     else
     {

@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->rootPath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->rootPath () ) );
   }
 #endif
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 #endif
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->displayName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->displayName () ) );
   }
 #endif
 }

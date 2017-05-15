@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QXmlStreamReader::ErrorOnUnexpectedElement : hb_parni(1);
-      hb_retc( (const char *) obj->readElementText (  (QXmlStreamReader::ReadElementTextBehaviour) par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->readElementText (  (QXmlStreamReader::ReadElementTextBehaviour) par1 ) ) );
     }
     else
     {
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->tokenString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->tokenString () ) );
   }
 }
 

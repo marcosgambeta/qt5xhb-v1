@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
       const char * par1 = hb_parc(1);
       const char * par2 = hb_parc(2);
       const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-      hb_retc( (const char *) obj->translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) ) );
     }
     else
     {

@@ -170,7 +170,7 @@ static QString applicationDirPath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
-  hb_retc( (const char *) QCoreApplication::applicationDirPath ().toLatin1().data() );
+  hb_retc( RQSTRING( QCoreApplication::applicationDirPath () ) );
 }
 
 /*
@@ -178,7 +178,7 @@ static QString applicationFilePath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
-  hb_retc( (const char *) QCoreApplication::applicationFilePath ().toLatin1().data() );
+  hb_retc( RQSTRING( QCoreApplication::applicationFilePath () ) );
 }
 
 /*
@@ -186,7 +186,7 @@ static QString applicationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
-  hb_retc( (const char *) QCoreApplication::applicationName ().toLatin1().data() );
+  hb_retc( RQSTRING( QCoreApplication::applicationName () ) );
 }
 
 /*
@@ -202,7 +202,7 @@ static QString applicationVersion ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
-  hb_retc( (const char *) QCoreApplication::applicationVersion ().toLatin1().data() );
+  hb_retc( RQSTRING( QCoreApplication::applicationVersion () ) );
 }
 
 /*
@@ -303,7 +303,7 @@ static QString organizationDomain ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
-  hb_retc( (const char *) QCoreApplication::organizationDomain ().toLatin1().data() );
+  hb_retc( RQSTRING( QCoreApplication::organizationDomain () ) );
 }
 
 /*
@@ -311,7 +311,7 @@ static QString organizationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {
-  hb_retc( (const char *) QCoreApplication::organizationName ().toLatin1().data() );
+  hb_retc( RQSTRING( QCoreApplication::organizationName () ) );
 }
 
 /*
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     const char * par1 = hb_parc(1);
     const char * par2 = hb_parc(2);
     const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    hb_retc( (const char *) QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ).toLatin1().data() );
+    hb_retc( RQSTRING( QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) ) );
   }
   else
   {

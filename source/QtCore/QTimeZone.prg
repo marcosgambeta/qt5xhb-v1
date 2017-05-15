@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->comment ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->comment () ) );
   }
 #endif
 }
@@ -293,7 +293,7 @@ void QTimeZone_displayName1 ()
     QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
     QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
-    hb_retc( (const char *) obj->displayName ( *par1,  (QTimeZone::NameType) par2, par3 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->displayName ( *par1,  (QTimeZone::NameType) par2, par3 ) ) );
   }
 #endif
 }
@@ -311,7 +311,7 @@ void QTimeZone_displayName2 ()
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
     QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
-    hb_retc( (const char *) obj->displayName (  (QTimeZone::TimeType) par1,  (QTimeZone::NameType) par2, par3 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->displayName (  (QTimeZone::TimeType) par1,  (QTimeZone::NameType) par2, par3 ) ) );
   }
 #endif
 }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTIMEZONE_ABBREVIATION )
     if( ISQDATETIME(1) )
     {
       QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-      hb_retc( (const char *) obj->abbreviation ( *par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->abbreviation ( *par1 ) ) );
     }
     else
     {

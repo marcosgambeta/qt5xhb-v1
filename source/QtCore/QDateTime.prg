@@ -555,7 +555,7 @@ void QDateTime_toString1 ()
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString ( PQSTRING(1) ) ) );
   }
 }
 
@@ -569,7 +569,7 @@ void QDateTime_toString2 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);
-    hb_retc( (const char *) obj->toString (  (Qt::DateFormat) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString (  (Qt::DateFormat) par1 ) ) );
   }
 }
 

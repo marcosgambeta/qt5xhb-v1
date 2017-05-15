@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->pattern ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->pattern () ) );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ESCAPE )
 {
   if( ISCHAR(1) )
   {
-    hb_retc( (const char *) QRegularExpression::escape ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( QRegularExpression::escape ( PQSTRING(1) ) ) );
   }
   else
   {

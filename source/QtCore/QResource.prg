@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->absoluteFilePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->absoluteFilePath () ) );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 

@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDIR_ABSOLUTEFILEPATH )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( (const char *) obj->absoluteFilePath ( PQSTRING(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->absoluteFilePath ( PQSTRING(1) ) ) );
     }
     else
     {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDIR_ABSOLUTEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->absolutePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->absolutePath () ) );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDIR_CANONICALPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->canonicalPath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->canonicalPath () ) );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDIR_DIRNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->dirName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->dirName () ) );
   }
 }
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QDIR_FILEPATH )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( (const char *) obj->filePath ( PQSTRING(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->filePath ( PQSTRING(1) ) ) );
     }
     else
     {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QDIR_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->path () ) );
   }
 }
 
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( (const char *) obj->relativeFilePath ( PQSTRING(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->relativeFilePath ( PQSTRING(1) ) ) );
     }
     else
     {
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QDIR_CLEANPATH )
 {
   if( ISCHAR(1) )
   {
-    hb_retc( (const char *) QDir::cleanPath ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( QDir::cleanPath ( PQSTRING(1) ) ) );
   }
   else
   {
@@ -983,7 +983,7 @@ static QString currentPath()
 */
 HB_FUNC_STATIC( QDIR_CURRENTPATH )
 {
-  hb_retc( (const char *) QDir::currentPath ().toLatin1().data() );
+  hb_retc( RQSTRING( QDir::currentPath () ) );
 }
 
 /*
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QDIR_FROMNATIVESEPARATORS )
 {
   if( ISCHAR(1) )
   {
-    hb_retc( (const char *) QDir::fromNativeSeparators ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( QDir::fromNativeSeparators ( PQSTRING(1) ) ) );
   }
   else
   {
@@ -1054,7 +1054,7 @@ static QString homePath()
 */
 HB_FUNC_STATIC( QDIR_HOMEPATH )
 {
-  hb_retc( (const char *) QDir::homePath ().toLatin1().data() );
+  hb_retc( RQSTRING( QDir::homePath () ) );
 }
 
 /*
@@ -1145,7 +1145,7 @@ static QString rootPath()
 */
 HB_FUNC_STATIC( QDIR_ROOTPATH )
 {
-  hb_retc( (const char *) QDir::rootPath ().toLatin1().data() );
+  hb_retc( RQSTRING( QDir::rootPath () ) );
 }
 
 /*
@@ -1227,7 +1227,7 @@ static QString tempPath()
 */
 HB_FUNC_STATIC( QDIR_TEMPPATH )
 {
-  hb_retc( (const char *) QDir::tempPath ().toLatin1().data() );
+  hb_retc( RQSTRING( QDir::tempPath () ) );
 }
 
 /*
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QDIR_TONATIVESEPARATORS )
 {
   if( ISCHAR(1) )
   {
-    hb_retc( (const char *) QDir::toNativeSeparators ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( QDir::toNativeSeparators ( PQSTRING(1) ) ) );
   }
   else
   {

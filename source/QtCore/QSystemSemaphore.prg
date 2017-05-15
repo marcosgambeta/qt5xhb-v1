@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->key ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->key () ) );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 

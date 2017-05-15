@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->pattern ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->pattern () ) );
   }
 }
 

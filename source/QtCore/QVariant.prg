@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QVARIANT_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString () ) );
   }
 }
 

@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->objectName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->objectName () ) );
   }
 }
 
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QOBJECT_TR )
   {
     const char * par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retc( (const char *) QObject::tr (  (const char *) par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ).toLatin1().data() );
+    hb_retc( RQSTRING( QObject::tr (  (const char *) par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) ) );
   }
   else
   {

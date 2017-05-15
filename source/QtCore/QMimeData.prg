@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->html ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->html () ) );
   }
 }
 
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 

@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->absoluteFilePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->absoluteFilePath () ) );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->absolutePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->absolutePath () ) );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QFILEINFO_BASENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->baseName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->baseName () ) );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->bundleName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->bundleName () ) );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->canonicalFilePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->canonicalFilePath () ) );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->canonicalPath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->canonicalPath () ) );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->completeBaseName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->completeBaseName () ) );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->completeSuffix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->completeSuffix () ) );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QFILEINFO_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QFILEINFO_FILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->filePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->filePath () ) );
   }
 }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->group ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->group () ) );
   }
 }
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNER )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->owner ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->owner () ) );
   }
 }
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->path () ) );
   }
 }
 
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QFILEINFO_SUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->suffix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->suffix () ) );
   }
 }
 
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->symLinkTarget ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->symLinkTarget () ) );
   }
 }
 

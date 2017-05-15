@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->filePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->filePath () ) );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->next ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->next () ) );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDIRITERATOR_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->path () ) );
   }
 }
 

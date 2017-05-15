@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileTemplate ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileTemplate () ) );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 

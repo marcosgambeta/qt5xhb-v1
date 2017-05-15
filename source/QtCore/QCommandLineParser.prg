@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_APPLICATIONDESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->applicationDescription ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->applicationDescription () ) );
   }
 #endif
 }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ERRORTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorText () ) );
   }
 #endif
 }
@@ -436,7 +436,7 @@ void QCommandLineParser_value1 ()
 
   if( obj )
   {
-    hb_retc( (const char *) obj->value ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->value ( PQSTRING(1) ) ) );
   }
 #endif
 }
@@ -452,7 +452,7 @@ void QCommandLineParser_value2 ()
   if( obj )
   {
     QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->value ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->value ( *par1 ) ) );
   }
 #endif
 }
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_HELPTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->helpText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->helpText () ) );
   }
 #endif
 }

@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 #endif
 }

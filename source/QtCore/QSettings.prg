@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->applicationName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->applicationName () ) );
   }
 }
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QSETTINGS_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSETTINGS_GROUP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->group ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->group () ) );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->organizationName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->organizationName () ) );
   }
 }
 

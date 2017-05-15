@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMIMETYPE_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMIMETYPE_COMMENT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->comment ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->comment () ) );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->genericIconName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->genericIconName () ) );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->iconName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->iconName () ) );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->preferredSuffix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->preferredSuffix () ) );
   }
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->filterString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->filterString () ) );
   }
 }
 

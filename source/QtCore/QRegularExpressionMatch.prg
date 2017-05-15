@@ -111,7 +111,7 @@ void QRegularExpressionMatch_captured1 ()
 
   if( obj )
   {
-    hb_retc( (const char *) obj->captured ( (int) ISNIL(1)? 0 : hb_parni(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->captured ( (int) ISNIL(1)? 0 : hb_parni(1) ) ) );
   }
 }
 
@@ -124,7 +124,7 @@ void QRegularExpressionMatch_captured2 ()
 
   if( obj )
   {
-    hb_retc( (const char *) obj->captured ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->captured ( PQSTRING(1) ) ) );
   }
 }
 
