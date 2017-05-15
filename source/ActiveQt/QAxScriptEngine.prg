@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->scriptLanguage ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->scriptLanguage () ) );
   }
 }
 

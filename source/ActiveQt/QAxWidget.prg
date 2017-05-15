@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->control ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->control () ) );
   }
 }
 
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->generateDocumentation ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->generateDocumentation () ) );
   }
 }
 

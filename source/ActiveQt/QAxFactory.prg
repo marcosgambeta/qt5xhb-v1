@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( (const char *) obj->exposeToSuperClass ( PQSTRING(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->exposeToSuperClass ( PQSTRING(1) ) ) );
     }
     else
     {
@@ -400,7 +400,7 @@ static QString serverDirPath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
-  hb_retc( (const char *) QAxFactory::serverDirPath ().toLatin1().data() );
+  hb_retc( RQSTRING( QAxFactory::serverDirPath () ) );
 }
 
 /*
@@ -408,7 +408,7 @@ static QString serverFilePath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
-  hb_retc( (const char *) QAxFactory::serverFilePath ().toLatin1().data() );
+  hb_retc( RQSTRING( QAxFactory::serverFilePath () ) );
 }
 
 /*

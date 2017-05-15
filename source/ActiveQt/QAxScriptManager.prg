@@ -330,7 +330,7 @@ static QString scriptFileFilter ()
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {
-  hb_retc( (const char *) QAxScriptManager::scriptFileFilter ().toLatin1().data() );
+  hb_retc( RQSTRING( QAxScriptManager::scriptFileFilter () ) );
 }
 
 #pragma ENDDUMP
