@@ -14,6 +14,7 @@ MODULE_QTDECLARATIVE = no
 MODULE_QTDESIGNER = no
 MODULE_QTGUI = no
 MODULE_QTHELP = no
+MODULE_QTLOCATION = no
 MODULE_QTMULTIMEDIA = no
 MODULE_QTMULTIMEDIAWIDGETS = no
 MODULE_QTNETWORK = no
@@ -59,6 +60,9 @@ ifneq ($(wildcard $(QTDIR)/include/QtGui/.*),)
 endif
 ifneq ($(wildcard $(QTDIR)/include/QtHelp/.*),)
    MODULE_QTHELP = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtLocation/.*),)
+   MODULE_QTLOCATION = yes
 endif
 ifneq ($(wildcard $(QTDIR)/include/QtMultimedia/.*),)
    MODULE_QTMULTIMEDIA = yes
@@ -194,6 +198,9 @@ endif
 ifeq ($(MODULE_QTHELP),yes)
    CFLAGS += -DQT_HELP_LIB
 endif
+ifeq ($(MODULE_QTLOCATION),yes)
+   CFLAGS += -DQT_LOCATION_LIB
+endif
 ifeq ($(MODULE_QTMULTIMEDIA),yes)
    CFLAGS += -DQT_MULTIMEDIA_LIB
 endif
@@ -290,6 +297,9 @@ ifeq ($(MODULE_QTGUI),yes)
 endif
 ifeq ($(MODULE_QTHELP),yes)
    CINCLUDES += -I$(QTDIR)/include/QtHelp
+endif
+ifeq ($(MODULE_QTLOCATION),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtLocation
 endif
 ifeq ($(MODULE_QTMULTIMEDIA),yes)
    CINCLUDES += -I$(QTDIR)/include/QtMultimedia
@@ -390,6 +400,9 @@ ifeq ($(MODULE_QTGUI),yes)
 endif   
 ifeq ($(MODULE_QTHELP),yes)
    include mak/QtHelp.mak
+endif   
+ifeq ($(MODULE_QTLOCATION),yes)
+   include mak/QtLocation.mak
 endif   
 ifeq ($(MODULE_QTMULTIMEDIA),yes)
    include mak/QtMultimedia.mak
@@ -504,6 +517,9 @@ endif
 ifeq ($(MODULE_QTHELP),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqthelp5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTLOCATION),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtlocation5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTMULTIMEDIA),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtmultimedia5$(LIBEXT)
 endif
@@ -591,6 +607,8 @@ $(QT5XHB_LIB_DIR)/libhbqtdesigner5$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
 $(QT5XHB_LIB_DIR)/libhbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
 	ar rc $@ $^
 $(QT5XHB_LIB_DIR)/libhbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)
+	ar rc $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtlocation5$(LIBEXT)          : $(OBJECTS_QTLOCATION)
 	ar rc $@ $^
 $(QT5XHB_LIB_DIR)/libhbqtmultimedia5$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
 	ar rc $@ $^
@@ -682,6 +700,11 @@ $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtGui/%.cpp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtHelp/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtHelp/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
+# QtLocation
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtLocation/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtLocation/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtMultimedia
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtMultimedia/%.prg
@@ -851,6 +874,9 @@ ifeq ($(MODULE_QTGUI),yes)
 endif
 ifeq ($(MODULE_QTHELP),yes)
    include mak/QtHelpMocs.mak
+endif
+ifeq ($(MODULE_QTLOCATION),yes)
+   include mak/QtLocationMocs.mak
 endif
 ifeq ($(MODULE_QTMULTIMEDIA),yes)
    include mak/QtMultimediaMocs.mak
