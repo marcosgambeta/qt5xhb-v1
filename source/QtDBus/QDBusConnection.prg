@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_BASESERVICE )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->baseService ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->baseService () ) );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NAME )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 

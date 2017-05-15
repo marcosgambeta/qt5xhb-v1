@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->currentSignature ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->currentSignature () ) );
   }
 }
 

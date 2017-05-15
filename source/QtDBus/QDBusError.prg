@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDBUSERROR_NAME )
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->message ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->message () ) );
   }
 }
 
@@ -190,7 +190,7 @@ static QString errorString(ErrorType error)
 HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {
   int par1 = hb_parni(1);
-  hb_retc( (const char *) QDBusError::errorString (  (QDBusError::ErrorType) par1 ).toLatin1().data() );
+  hb_retc( RQSTRING( QDBusError::errorString (  (QDBusError::ErrorType) par1 ) ) );
 }
 
 
