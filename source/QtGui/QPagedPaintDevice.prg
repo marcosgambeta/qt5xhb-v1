@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_NEWPAGE )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->newPage (  ) );
+    hb_retl( obj->newPage () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pageSize (  ) );
+    hb_retni( obj->pageSize () );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->pageSizeMM (  ) );
+    QSizeF * ptr = new QSizeF( obj->pageSizeMM () );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageLayout * ptr = new QPageLayout( obj->pageLayout (  ) );
+    QPageLayout * ptr = new QPageLayout( obj->pageLayout () );
     _qt5xhb_createReturnClass ( ptr, "QPAGELAYOUT", true );
   }
 }

@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
 
   if( obj )
   {
-    QKeySequence * ptr = new QKeySequence( obj->keySequence (  ) );
+    QKeySequence * ptr = new QKeySequence( obj->keySequence () );
     _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
   }
 #endif
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

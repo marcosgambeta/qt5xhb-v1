@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 
   if( obj )
   {
-    obj->wakeUp (  );
+    obj->wakeUp ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 
   if( obj )
   {
-    obj->quit (  );
+    obj->quit ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

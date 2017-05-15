@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVEALLSHADERS )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeAllShaders (  );
+    obj->removeAllShaders ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LINK )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->link (  ) );
+    hb_retl( obj->link () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ISLINKED )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLinked (  ) );
+    hb_retl( obj->isLinked () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LOG )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->log (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->log ().toLatin1().data() );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_BIND )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind (  ) );
+    hb_retl( obj->bind () );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_RELEASE )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->release (  );
+    obj->release ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PROGRAMID )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->programId (  ) );
+    hb_retni( obj->programId () );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxGeometryOutputVertices (  ) );
+    hb_retni( obj->maxGeometryOutputVertices () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PATCHVERTEXCOUNT )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->patchVertexCount (  ) );
+    hb_retni( obj->patchVertexCount () );
   }
 }
 

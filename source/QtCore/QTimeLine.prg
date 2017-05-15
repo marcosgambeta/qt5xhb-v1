@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 
   if( obj )
   {
-    hb_retni( obj->currentFrame (  ) );
+    hb_retni( obj->currentFrame () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 
   if( obj )
   {
-    hb_retni( obj->currentTime (  ) );
+    hb_retni( obj->currentTime () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 
   if( obj )
   {
-    hb_retnd( obj->currentValue (  ) );
+    hb_retnd( obj->currentValue () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 
   if( obj )
   {
-    hb_retni( obj->curveShape (  ) );
+    hb_retni( obj->curveShape () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 
   if( obj )
   {
-    hb_retni( obj->direction (  ) );
+    hb_retni( obj->direction () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
 
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 
   if( obj )
   {
-    hb_retni( obj->endFrame (  ) );
+    hb_retni( obj->endFrame () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->loopCount (  ) );
+    hb_retni( obj->loopCount () );
   }
 }
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 
   if( obj )
   {
-    hb_retni( obj->startFrame (  ) );
+    hb_retni( obj->startFrame () );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
 
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->updateInterval (  ) );
+    hb_retni( obj->updateInterval () );
   }
 }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QTIMELINE_RESUME )
 
   if( obj )
   {
-    obj->resume (  );
+    obj->resume ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QTIMELINE_START )
 
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QTIMELINE_STOP )
 
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
 
   if( obj )
   {
-    obj->toggleDirection (  );
+    obj->toggleDirection ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

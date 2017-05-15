@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
   QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->area (  ) );
+    QRectF * ptr = new QRectF( obj->area () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_ISVALID )
   QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
   QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 

@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->position (  ) );
+    QPointF * ptr = new QPointF( obj->position () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

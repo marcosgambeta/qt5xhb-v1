@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QCAMERA_CAPTUREMODE )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->captureMode (  ) );
+    hb_retni( obj->captureMode () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QCAMERA_ERROR )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QCAMERA_ERRORSTRING )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QCAMERA_EXPOSURE )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCameraExposure * ptr = obj->exposure (  );
+    QCameraExposure * ptr = obj->exposure ();
     _qt5xhb_createReturnClass ( ptr, "QCAMERAEXPOSURE" );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QCAMERA_FOCUS )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCameraFocus * ptr = obj->focus (  );
+    QCameraFocus * ptr = obj->focus ();
     _qt5xhb_createReturnClass ( ptr, "QCAMERAFOCUS" );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCameraImageProcessing * ptr = obj->imageProcessing (  );
+    QCameraImageProcessing * ptr = obj->imageProcessing ();
     _qt5xhb_createReturnClass ( ptr, "QCAMERAIMAGEPROCESSING" );
   }
 }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS1 )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lockStatus (  ) );
+    hb_retni( obj->lockStatus () );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QCAMERA_REQUESTEDLOCKS )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->requestedLocks (  ) );
+    hb_retni( obj->requestedLocks () );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QCAMERA_STATE )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QCAMERA_STATUS )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDLOCKS )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedLocks (  ) );
+    hb_retni( obj->supportedLocks () );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QCAMERA_LOAD )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->load (  );
+    obj->load ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK1 )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->searchAndLock (  );
+    obj->searchAndLock ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QCAMERA_START )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QCAMERA_STOP )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOAD )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->unload (  );
+    obj->unload ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK1 )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->unlock (  );
+    obj->unlock ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -581,7 +581,7 @@ static QList<QByteArray> availableDevices()
 */
 HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
 {
-  QList<QByteArray> list = QCamera::availableDevices (  );
+  QList<QByteArray> list = QCamera::availableDevices ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

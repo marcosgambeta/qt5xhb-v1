@@ -89,7 +89,7 @@ QDateTime ()
 */
 void QDateTime_new1 ()
 {
-  QDateTime * o = new QDateTime (  );
+  QDateTime * o = new QDateTime ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDATETIME_DATE )
 
   if( obj )
   {
-    QDate * ptr = new QDate( obj->date (  ) );
+    QDate * ptr = new QDate( obj->date () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDATETIME_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QDATETIME_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDATETIME_TIME )
 
   if( obj )
   {
-    QTime * ptr = new QTime( obj->time (  ) );
+    QTime * ptr = new QTime( obj->time () );
     _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QDATETIME_TIMESPEC )
 
   if( obj )
   {
-    hb_retni( obj->timeSpec (  ) );
+    hb_retni( obj->timeSpec () );
   }
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->toLocalTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->toLocalTime () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
 
   if( obj )
   {
-    hb_retni( obj->toMSecsSinceEpoch (  ) );
+    hb_retni( obj->toMSecsSinceEpoch () );
   }
 }
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIME_T )
 
   if( obj )
   {
-    hb_retni( obj->toTime_t (  ) );
+    hb_retni( obj->toTime_t () );
   }
 }
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QDATETIME_TOUTC )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->toUTC (  ) );
+    QDateTime * ptr = new QDateTime( obj->toUTC () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -646,7 +646,7 @@ static QDateTime currentDateTime ()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
 {
-  QDateTime * ptr = new QDateTime( QDateTime::currentDateTime (  ) );
+  QDateTime * ptr = new QDateTime( QDateTime::currentDateTime () );
   _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 
@@ -655,7 +655,7 @@ static QDateTime currentDateTimeUtc ()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
 {
-  QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc (  ) );
+  QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc () );
   _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 
@@ -664,7 +664,7 @@ static qint64 currentMSecsSinceEpoch ()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 {
-  hb_retni( QDateTime::currentMSecsSinceEpoch (  ) );
+  hb_retni( QDateTime::currentMSecsSinceEpoch () );
 }
 
 /*

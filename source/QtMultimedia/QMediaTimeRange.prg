@@ -79,7 +79,7 @@ QMediaTimeRange()
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW1 )
 {
-  QMediaTimeRange * o = new QMediaTimeRange (  );
+  QMediaTimeRange * o = new QMediaTimeRange ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_CLEAR )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_EARLIESTTIME )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->earliestTime (  ) );
+    hb_retni( obj->earliestTime () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QMediaTimeInterval> list = obj->intervals (  );
+    QList<QMediaTimeInterval> list = obj->intervals ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMEDIATIMEINTERVAL" );
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ISCONTINUOUS )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isContinuous (  ) );
+    hb_retl( obj->isContinuous () );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ISEMPTY )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->latestTime (  ) );
+    hb_retni( obj->latestTime () );
   }
 }
 

@@ -102,7 +102,7 @@ QUrl ()
 */
 void QUrl_new1 ()
 {
-  QUrl * o = new QUrl (  );
+  QUrl * o = new QUrl ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QURL_AUTHORITY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->authority (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->authority ().toLatin1().data() );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QURL_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QURL_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QURL_FRAGMENT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fragment (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fragment ().toLatin1().data() );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QURL_HASFRAGMENT )
 
   if( obj )
   {
-    hb_retl( obj->hasFragment (  ) );
+    hb_retl( obj->hasFragment () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QURL_HASQUERY )
 
   if( obj )
   {
-    hb_retl( obj->hasQuery (  ) );
+    hb_retl( obj->hasQuery () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QURL_HOST )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->host (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->host ().toLatin1().data() );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QURL_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QURL_ISLOCALFILE )
 
   if( obj )
   {
-    hb_retl( obj->isLocalFile (  ) );
+    hb_retl( obj->isLocalFile () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QURL_ISRELATIVE )
 
   if( obj )
   {
-    hb_retl( obj->isRelative (  ) );
+    hb_retl( obj->isRelative () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QURL_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QURL_PASSWORD )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->password (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->password ().toLatin1().data() );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QURL_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->path ().toLatin1().data() );
   }
 }
 
@@ -382,7 +382,7 @@ void QUrl_port1 ()
 
   if( obj )
   {
-    hb_retni( obj->port (  ) );
+    hb_retni( obj->port () );
   }
 }
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QURL_SCHEME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->scheme (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->scheme ().toLatin1().data() );
   }
 }
 
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QURL_TOLOCALFILE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toLocalFile (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toLocalFile ().toLatin1().data() );
   }
 }
 
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->topLevelDomain (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->topLevelDomain ().toLatin1().data() );
   }
 }
 
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QURL_USERINFO )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->userInfo (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->userInfo ().toLatin1().data() );
   }
 }
 
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QURL_USERNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->userName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->userName ().toLatin1().data() );
   }
 }
 

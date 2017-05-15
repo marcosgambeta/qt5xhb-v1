@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_FORMAT )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLFramebufferObjectFormat * ptr = new QOpenGLFramebufferObjectFormat( obj->format (  ) );
+    QOpenGLFramebufferObjectFormat * ptr = new QOpenGLFramebufferObjectFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QOPENGLFRAMEBUFFEROBJECTFORMAT" );
   }
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ISVALID )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ISBOUND )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBound (  ) );
+    hb_retl( obj->isBound () );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BIND )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind (  ) );
+    hb_retl( obj->bind () );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_RELEASE )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->release (  ) );
+    hb_retl( obj->release () );
   }
 }
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_WIDTH )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HEIGHT )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->height (  ) );
+    hb_retni( obj->height () );
   }
 }
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_TEXTURE )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->texture (  ) );
+    hb_retni( obj->texture () );
   }
 }
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SIZE )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_TOIMAGE )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * ptr = new QImage( obj->toImage (  ) );
+    QImage * ptr = new QImage( obj->toImage () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->attachment (  ) );
+    hb_retni( obj->attachment () );
   }
 }
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HANDLE )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->handle (  ) );
+    hb_retni( obj->handle () );
   }
 }
 
@@ -450,7 +450,7 @@ static bool bindDefault()
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BINDDEFAULT )
 {
-  hb_retl( QOpenGLFramebufferObject::bindDefault (  ) );
+  hb_retl( QOpenGLFramebufferObject::bindDefault () );
 }
 
 
@@ -459,7 +459,7 @@ static bool hasOpenGLFramebufferObjects()
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
 {
-  hb_retl( QOpenGLFramebufferObject::hasOpenGLFramebufferObjects (  ) );
+  hb_retl( QOpenGLFramebufferObject::hasOpenGLFramebufferObjects () );
 }
 
 
@@ -468,7 +468,7 @@ static bool hasOpenGLFramebufferBlit()
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
 {
-  hb_retl( QOpenGLFramebufferObject::hasOpenGLFramebufferBlit (  ) );
+  hb_retl( QOpenGLFramebufferObject::hasOpenGLFramebufferBlit () );
 }
 
 

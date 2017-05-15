@@ -56,7 +56,7 @@ QDBusPendingReplyData()
 */
 HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_NEW )
 {
-  QDBusPendingReplyData * o = new QDBusPendingReplyData (  );
+  QDBusPendingReplyData * o = new QDBusPendingReplyData ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ASSIGN1 )
   QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->assign (  );
+    obj->assign ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ASSIGN2 )
   QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->assign (  );
+    obj->assign ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

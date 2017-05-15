@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferSize (  ) );
+    hb_retni( obj->bufferSize () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bytesFree (  ) );
+    hb_retni( obj->bytesFree () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_CATEGORY )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->category (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->category ().toLatin1().data() );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->elapsedUSecs (  ) );
+    hb_retni( obj->elapsedUSecs () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioFormat * ptr = new QAudioFormat( obj->format (  ) );
+    QAudioFormat * ptr = new QAudioFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->notifyInterval (  ) );
+    hb_retni( obj->notifyInterval () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->periodSize (  ) );
+    hb_retni( obj->periodSize () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->processedUSecs (  ) );
+    hb_retni( obj->processedUSecs () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->resume (  );
+    obj->resume ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START2 )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * ptr = obj->start (  );
+    QIODevice * ptr = obj->start ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->suspend (  );
+    obj->suspend ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->volume (  ) );
+    hb_retnd( obj->volume () );
   }
 }
 

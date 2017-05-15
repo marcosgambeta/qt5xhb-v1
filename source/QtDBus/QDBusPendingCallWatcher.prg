@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ISFINISHED )
   QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_WAITFORFINISHED )
   QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->waitForFinished (  );
+    obj->waitForFinished ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
   QSurface * obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->surfaceClass (  ) );
+    hb_retni( obj->surfaceClass () );
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSURFACE_FORMAT )
   QSurface * obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
+    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACEHANDLE )
   QSurface * obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlatformSurface * ptr = obj->surfaceHandle (  );
+    QPlatformSurface * ptr = obj->surfaceHandle ();
     _qt5xhb_createReturnClass ( ptr, "QPLATFORMSURFACE" );
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
   QSurface * obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->surfaceType (  ) );
+    hb_retni( obj->surfaceType () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSURFACE_SIZE )
   QSurface * obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

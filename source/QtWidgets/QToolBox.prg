@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->currentWidget (  );
+    QWidget * ptr = obj->currentWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

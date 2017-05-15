@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->childCount (  ) );
+    hb_retni( obj->childCount () );
   }
 }
 
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDINDICATORPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->childIndicatorPolicy (  ) );
+    hb_retni( obj->childIndicatorPolicy () );
   }
 }
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CLONE )
 
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->clone (  );
+    QTreeWidgetItem * ptr = obj->clone ();
     _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_COLUMNCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FLAGS )
 
   if( obj )
   {
-    hb_retni( obj->flags (  ) );
+    hb_retni( obj->flags () );
   }
 }
 
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISDISABLED )
 
   if( obj )
   {
-    hb_retl( obj->isDisabled (  ) );
+    hb_retl( obj->isDisabled () );
   }
 }
 
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISEXPANDED )
 
   if( obj )
   {
-    hb_retl( obj->isExpanded (  ) );
+    hb_retl( obj->isExpanded () );
   }
 }
 
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED )
 
   if( obj )
   {
-    hb_retl( obj->isFirstColumnSpanned (  ) );
+    hb_retl( obj->isFirstColumnSpanned () );
   }
 }
 
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISHIDDEN )
 
   if( obj )
   {
-    hb_retl( obj->isHidden (  ) );
+    hb_retl( obj->isHidden () );
   }
 }
 
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISSELECTED )
 
   if( obj )
   {
-    hb_retl( obj->isSelected (  ) );
+    hb_retl( obj->isSelected () );
   }
 }
 
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_PARENT )
 
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->parent (  );
+    QTreeWidgetItem * ptr = obj->parent ();
     _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -1300,7 +1300,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
 
   if( obj )
   {
-    QList<QTreeWidgetItem *> list = obj->takeChildren (  );
+    QList<QTreeWidgetItem *> list = obj->takeChildren ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
@@ -1404,7 +1404,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
 
   if( obj )
   {
-    QTreeWidget * ptr = obj->treeWidget (  );
+    QTreeWidget * ptr = obj->treeWidget ();
     _qt5xhb_createReturnClass ( ptr, "QTREEWIDGET" );
   }
 }
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

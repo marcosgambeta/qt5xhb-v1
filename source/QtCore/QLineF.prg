@@ -85,7 +85,7 @@ QLineF()
 */
 void QLineF_new1 ()
 {
-  QLineF * o = new QLineF (  );
+  QLineF * o = new QLineF ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QLINEF_P1 )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->p1 (  ) );
+    QPointF * ptr = new QPointF( obj->p1 () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QLINEF_P2 )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->p2 (  ) );
+    QPointF * ptr = new QPointF( obj->p2 () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QLINEF_X1 )
 
   if( obj )
   {
-    hb_retnd( obj->x1 (  ) );
+    hb_retnd( obj->x1 () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QLINEF_X2 )
 
   if( obj )
   {
-    hb_retnd( obj->x2 (  ) );
+    hb_retnd( obj->x2 () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QLINEF_Y1 )
 
   if( obj )
   {
-    hb_retnd( obj->y1 (  ) );
+    hb_retnd( obj->y1 () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QLINEF_Y2 )
 
   if( obj )
   {
-    hb_retnd( obj->y2 (  ) );
+    hb_retnd( obj->y2 () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QLINEF_ANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->angle (  ) );
+    hb_retnd( obj->angle () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QLINEF_DX )
 
   if( obj )
   {
-    hb_retnd( obj->dx (  ) );
+    hb_retnd( obj->dx () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QLINEF_DY )
 
   if( obj )
   {
-    hb_retnd( obj->dy (  ) );
+    hb_retnd( obj->dy () );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QLINEF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QLINEF_LENGTH )
 
   if( obj )
   {
-    hb_retnd( obj->length (  ) );
+    hb_retnd( obj->length () );
   }
 }
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
 
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->normalVector (  ) );
+    QLineF * ptr = new QLineF( obj->normalVector () );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
 
   if( obj )
   {
-    QLine * ptr = new QLine( obj->toLine (  ) );
+    QLine * ptr = new QLine( obj->toLine () );
     _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QLINEF_UNITVECTOR )
 
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->unitVector (  ) );
+    QLineF * ptr = new QLineF( obj->unitVector () );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }

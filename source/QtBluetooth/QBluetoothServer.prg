@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_CLOSE )
 
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ISLISTENING )
 
   if( obj )
   {
-    hb_retl( obj->isListening (  ) );
+    hb_retl( obj->isListening () );
   }
 #endif
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_MAXPENDINGCONNECTIONS )
 
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections (  ) );
+    hb_retni( obj->maxPendingConnections () );
   }
 #endif
 }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_HASPENDINGCONNECTIONS )
 
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections (  ) );
+    hb_retl( obj->hasPendingConnections () );
   }
 #endif
 }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
 
   if( obj )
   {
-    QBluetoothSocket * ptr = obj->nextPendingConnection (  );
+    QBluetoothSocket * ptr = obj->nextPendingConnection ();
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSOCKET" );
   }
 #endif
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERADDRESS )
 
   if( obj )
   {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->serverAddress (  ) );
+    QBluetoothAddress * ptr = new QBluetoothAddress( obj->serverAddress () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERPORT )
 
   if( obj )
   {
-    hb_retni( obj->serverPort (  ) );
+    hb_retni( obj->serverPort () );
   }
 #endif
 }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SECURITYFLAGS )
 
   if( obj )
   {
-    hb_retni( obj->securityFlags (  ) );
+    hb_retni( obj->securityFlags () );
   }
 #endif
 }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERTYPE )
 
   if( obj )
   {
-    hb_retni( obj->serverType (  ) );
+    hb_retni( obj->serverType () );
   }
 #endif
 }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }

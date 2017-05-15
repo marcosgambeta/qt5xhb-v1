@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->scriptCode (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->scriptCode ().toLatin1().data() );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 
   if( obj )
   {
-    QAxScriptEngine * ptr = obj->scriptEngine (  );
+    QAxScriptEngine * ptr = obj->scriptEngine ();
     _qt5xhb_createReturnClass ( ptr, "QAXSCRIPTENGINE" );
   }
 }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->scriptName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->scriptName ().toLatin1().data() );
   }
 }
 

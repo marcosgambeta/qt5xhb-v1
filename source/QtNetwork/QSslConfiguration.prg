@@ -85,7 +85,7 @@ QSslConfiguration ()
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW1 )
 {
-  QSslConfiguration * o = new QSslConfiguration (  );
+  QSslConfiguration * o = new QSslConfiguration ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QSslCertificate> list = obj->caCertificates (  );
+    QList<QSslCertificate> list = obj->caCertificates ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QSslCipher> list = obj->ciphers (  );
+    QList<QSslCipher> list = obj->ciphers ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSSLCIPHER" );
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslCertificate * ptr = new QSslCertificate( obj->localCertificate (  ) );
+    QSslCertificate * ptr = new QSslCertificate( obj->localCertificate () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate (  ) );
+    QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QSslCertificate> list = obj->peerCertificateChain (  );
+    QList<QSslCertificate> list = obj->peerCertificateChain ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerVerifyDepth (  ) );
+    hb_retni( obj->peerVerifyDepth () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerVerifyMode (  ) );
+    hb_retni( obj->peerVerifyMode () );
   }
 }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslKey * ptr = new QSslKey( obj->privateKey (  ) );
+    QSslKey * ptr = new QSslKey( obj->privateKey () );
     _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
   }
 }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->protocol (  ) );
+    hb_retni( obj->protocol () );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslCipher * ptr = new QSslCipher( obj->sessionCipher (  ) );
+    QSslCipher * ptr = new QSslCipher( obj->sessionCipher () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
   }
 }
@@ -509,7 +509,7 @@ static QSslConfiguration defaultConfiguration ()
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 {
-  QSslConfiguration * ptr = new QSslConfiguration( QSslConfiguration::defaultConfiguration (  ) );
+  QSslConfiguration * ptr = new QSslConfiguration( QSslConfiguration::defaultConfiguration () );
   _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
 }
 

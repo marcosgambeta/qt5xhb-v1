@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->cursorRectangle (  ) );
+    QRectF * ptr = new QRectF( obj->cursorRectangle () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->inputDirection (  ) );
+    hb_retni( obj->inputDirection () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->inputItemTransform (  ) );
+    QTransform * ptr = new QTransform( obj->inputItemTransform () );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAnimating (  ) );
+    hb_retl( obj->isAnimating () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->keyboardRectangle (  ) );
+    QRectF * ptr = new QRectF( obj->keyboardRectangle () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_COMMIT )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->commit (  );
+    obj->commit ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->hide (  );
+    obj->hide ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_RESET )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->show (  );
+    obj->show ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

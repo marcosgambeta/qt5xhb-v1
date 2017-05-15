@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_UPDATEINTERVAL )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->updateInterval (  ) );
+    hb_retni( obj->updateInterval () );
   }
 #endif
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_PREFERREDPOSITIONINGMETHODS )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->preferredPositioningMethods (  ) );
+    hb_retni( obj->preferredPositioningMethods () );
   }
 #endif
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedPositioningMethods (  ) );
+    hb_retni( obj->supportedPositioningMethods () );
   }
 #endif
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minimumUpdateInterval (  ) );
+    hb_retni( obj->minimumUpdateInterval () );
   }
 #endif
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SOURCENAME )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->sourceName ().toLatin1().data() );
   }
 #endif
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ERROR )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_STARTUPDATES )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startUpdates (  );
+    obj->startUpdates ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_STOPUPDATES )
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stopUpdates (  );
+    obj->stopUpdates ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -307,7 +307,7 @@ static QStringList availableSources()
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_AVAILABLESOURCES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QStringList strl = QGeoPositionInfoSource::availableSources (  );
+  QStringList strl = QGeoPositionInfoSource::availableSources ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 #endif
 }

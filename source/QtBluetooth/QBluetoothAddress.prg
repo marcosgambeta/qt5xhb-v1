@@ -63,7 +63,7 @@ QBluetoothAddress()
 void QBluetoothAddress_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress (  );
+  QBluetoothAddress * o = new QBluetoothAddress ();
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 #endif
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_TOUINT64 )
 
   if( obj )
   {
-    hb_retni( obj->toUInt64 (  ) );
+    hb_retni( obj->toUInt64 () );
   }
 #endif
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 #endif
 }

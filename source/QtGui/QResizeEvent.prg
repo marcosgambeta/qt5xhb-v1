@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
   QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QSize * ptr = &obj->size (  );
+    const QSize * ptr = &obj->size ();
     _qt5xhb_createReturnClass ( ptr, "QSIZE" );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
   QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QSize * ptr = &obj->oldSize (  );
+    const QSize * ptr = &obj->oldSize ();
     _qt5xhb_createReturnClass ( ptr, "QSIZE" );
   }
 }

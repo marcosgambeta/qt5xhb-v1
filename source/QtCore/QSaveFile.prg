@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 #endif
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSAVEFILE_COMMIT )
 
   if( obj )
   {
-    hb_retl( obj->commit (  ) );
+    hb_retl( obj->commit () );
   }
 #endif
 }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
 
   if( obj )
   {
-    obj->cancelWriting (  );
+    obj->cancelWriting ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
 
   if( obj )
   {
-    hb_retl( obj->directWriteFallback (  ) );
+    hb_retl( obj->directWriteFallback () );
   }
 #endif
 }

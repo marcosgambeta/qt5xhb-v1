@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
   QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector<QColor> list = obj->colormap (  );
+    QVector<QColor> list = obj->colormap ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QCOLOR" );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCOLORMAP_DEPTH )
   QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depth (  ) );
+    hb_retni( obj->depth () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
   QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mode (  ) );
+    hb_retni( obj->mode () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QCOLORMAP_SIZE )
   QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

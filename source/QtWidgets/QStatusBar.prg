@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->currentMessage (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->currentMessage ().toLatin1().data() );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSizeGripEnabled (  ) );
+    hb_retl( obj->isSizeGripEnabled () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clearMessage (  );
+    obj->clearMessage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

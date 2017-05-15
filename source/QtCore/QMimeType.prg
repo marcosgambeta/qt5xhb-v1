@@ -71,7 +71,7 @@ QMimeType()
 */
 void QMimeType_new1 ()
 {
-  QMimeType * o = new QMimeType (  );
+  QMimeType * o = new QMimeType ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISDEFAULT )
 
   if( obj )
   {
-    hb_retl( obj->isDefault (  ) );
+    hb_retl( obj->isDefault () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMIMETYPE_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMIMETYPE_COMMENT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->comment (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->comment ().toLatin1().data() );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->genericIconName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->genericIconName ().toLatin1().data() );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->iconName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->iconName ().toLatin1().data() );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QMIMETYPE_GLOBPATTERNS )
 
   if( obj )
   {
-    QStringList strl = obj->globPatterns (  );
+    QStringList strl = obj->globPatterns ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QMIMETYPE_PARENTMIMETYPES )
 
   if( obj )
   {
-    QStringList strl = obj->parentMimeTypes (  );
+    QStringList strl = obj->parentMimeTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALLANCESTORS )
 
   if( obj )
   {
-    QStringList strl = obj->allAncestors (  );
+    QStringList strl = obj->allAncestors ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALIASES )
 
   if( obj )
   {
-    QStringList strl = obj->aliases (  );
+    QStringList strl = obj->aliases ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QMIMETYPE_SUFFIXES )
 
   if( obj )
   {
-    QStringList strl = obj->suffixes (  );
+    QStringList strl = obj->suffixes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->preferredSuffix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->preferredSuffix ().toLatin1().data() );
   }
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->filterString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->filterString ().toLatin1().data() );
   }
 }
 

@@ -75,7 +75,7 @@ QQmlExpression()
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW1 )
 {
-  QQmlExpression * o = new QQmlExpression (  );
+  QQmlExpression * o = new QQmlExpression ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CLEARERROR )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clearError (  );
+    obj->clearError ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_COLUMNNUMBER )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnNumber (  ) );
+    hb_retni( obj->columnNumber () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlContext * ptr = obj->context (  );
+    QQmlContext * ptr = obj->context ();
     _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlEngine * ptr = obj->engine (  );
+    QQmlEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlError * ptr = new QQmlError( obj->error (  ) );
+    QQmlError * ptr = new QQmlError( obj->error () );
     _qt5xhb_createReturnClass ( ptr, "QQMLERROR" );
   }
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EXPRESSION )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->expression (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->expression ().toLatin1().data() );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_HASERROR )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasError (  ) );
+    hb_retl( obj->hasError () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_LINENUMBER )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineNumber (  ) );
+    hb_retni( obj->lineNumber () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NOTIFYONVALUECHANGED )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->notifyOnValueChanged (  ) );
+    hb_retl( obj->notifyOnValueChanged () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->scopeObject (  );
+    QObject * ptr = obj->scopeObject ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceFile (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->sourceFile ().toLatin1().data() );
   }
 }
 

@@ -55,7 +55,7 @@ QConicalGradient ()
 */
 void QConicalGradient_new1 ()
 {
-  QConicalGradient * o = new QConicalGradient (  );
+  QConicalGradient * o = new QConicalGradient ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->angle (  ) );
+    hb_retnd( obj->angle () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->center (  ) );
+    QPointF * ptr = new QPointF( obj->center () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

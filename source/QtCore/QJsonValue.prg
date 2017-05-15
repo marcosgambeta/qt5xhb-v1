@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISARRAY )
 
   if( obj )
   {
-    hb_retl( obj->isArray (  ) );
+    hb_retl( obj->isArray () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISBOOL )
 
   if( obj )
   {
-    hb_retl( obj->isBool (  ) );
+    hb_retl( obj->isBool () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISDOUBLE )
 
   if( obj )
   {
-    hb_retl( obj->isDouble (  ) );
+    hb_retl( obj->isDouble () );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISOBJECT )
 
   if( obj )
   {
-    hb_retl( obj->isObject (  ) );
+    hb_retl( obj->isObject () );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISSTRING )
 
   if( obj )
   {
-    hb_retl( obj->isString (  ) );
+    hb_retl( obj->isString () );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
 
   if( obj )
   {
-    hb_retl( obj->isUndefined (  ) );
+    hb_retl( obj->isUndefined () );
   }
 }
 
@@ -340,7 +340,7 @@ void QJsonValue_toArray2 ()
 
   if( obj )
   {
-    QJsonArray * ptr = new QJsonArray( obj->toArray (  ) );
+    QJsonArray * ptr = new QJsonArray( obj->toArray () );
     _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
@@ -429,7 +429,7 @@ void QJsonValue_toObject2 ()
 
   if( obj )
   {
-    QJsonObject * ptr = new QJsonObject( obj->toObject (  ) );
+    QJsonObject * ptr = new QJsonObject( obj->toObject () );
     _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOVARIANT )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->toVariant (  ) );
+    QVariant * ptr = new QVariant( obj->toVariant () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QJSONVALUE_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

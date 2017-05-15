@@ -55,7 +55,7 @@ QLinearGradient ()
 */
 void QLinearGradient_new1 ()
 {
-  QLinearGradient * o = new QLinearGradient (  );
+  QLinearGradient * o = new QLinearGradient ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->finalStop (  ) );
+    QPointF * ptr = new QPointF( obj->finalStop () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->start (  ) );
+    QPointF * ptr = new QPointF( obj->start () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

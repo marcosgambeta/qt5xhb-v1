@@ -68,7 +68,7 @@ QMarginsF()
 */
 void QMarginsF_new1 ()
 {
-  QMarginsF * o = new QMarginsF (  );
+  QMarginsF * o = new QMarginsF ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMARGINSF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QMARGINSF_LEFT )
 
   if( obj )
   {
-    hb_retnd( obj->left (  ) );
+    hb_retnd( obj->left () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMARGINSF_TOP )
 
   if( obj )
   {
-    hb_retnd( obj->top (  ) );
+    hb_retnd( obj->top () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QMARGINSF_RIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->right (  ) );
+    hb_retnd( obj->right () );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 
   if( obj )
   {
-    hb_retnd( obj->bottom (  ) );
+    hb_retnd( obj->bottom () );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
 
   if( obj )
   {
-    QMargins * ptr = new QMargins( obj->toMargins (  ) );
+    QMargins * ptr = new QMargins( obj->toMargins () );
     _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }

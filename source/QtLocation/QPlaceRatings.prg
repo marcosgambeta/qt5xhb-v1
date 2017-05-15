@@ -66,7 +66,7 @@ QPlaceRatings()
 void QPlaceRatings_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * o = new QPlaceRatings (  );
+  QPlaceRatings * o = new QPlaceRatings ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QPLACERATINGS_AVERAGE )
   QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->average (  ) );
+    hb_retnd( obj->average () );
   }
 #endif
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPLACERATINGS_COUNT )
   QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 #endif
 }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QPLACERATINGS_MAXIMUM )
   QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maximum (  ) );
+    hb_retnd( obj->maximum () );
   }
 #endif
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QPLACERATINGS_ISEMPTY )
   QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 #endif
 }

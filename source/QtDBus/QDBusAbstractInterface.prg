@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ISVALID )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CONNECTION )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
+    QDBusConnection * ptr = new QDBusConnection( obj->connection () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
   }
 }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SERVICE )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->service (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->service ().toLatin1().data() );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_PATH )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->path (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->path ().toLatin1().data() );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_INTERFACE )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->interface (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->interface ().toLatin1().data() );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusError * ptr = new QDBusError( obj->lastError (  ) );
+    QDBusError * ptr = new QDBusError( obj->lastError () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
   }
 }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_TIMEOUT )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeout (  ) );
+    hb_retni( obj->timeout () );
   }
 }
 

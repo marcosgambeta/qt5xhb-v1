@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->adjustSize (  );
+    obj->adjustSize ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 
   if( obj )
   {
-    QColor * ptr = new QColor( obj->defaultTextColor (  ) );
+    QColor * ptr = new QColor( obj->defaultTextColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 
   if( obj )
   {
-    QTextDocument * ptr = obj->document (  );
+    QTextDocument * ptr = obj->document ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
 
   if( obj )
   {
-    hb_retl( obj->openExternalLinks (  ) );
+    hb_retl( obj->openExternalLinks () );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 
   if( obj )
   {
-    hb_retl( obj->tabChangesFocus (  ) );
+    hb_retl( obj->tabChangesFocus () );
   }
 }
 
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 
   if( obj )
   {
-    QTextCursor * ptr = new QTextCursor( obj->textCursor (  ) );
+    QTextCursor * ptr = new QTextCursor( obj->textCursor () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
 
   if( obj )
   {
-    hb_retni( obj->textInteractionFlags (  ) );
+    hb_retni( obj->textInteractionFlags () );
   }
 }
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->textWidth (  ) );
+    hb_retnd( obj->textWidth () );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toHtml (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toHtml ().toLatin1().data() );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toPlainText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toPlainText ().toLatin1().data() );
   }
 }
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

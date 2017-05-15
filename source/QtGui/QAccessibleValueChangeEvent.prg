@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
   QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->value (  ) );
+    QVariant * ptr = new QVariant( obj->value () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

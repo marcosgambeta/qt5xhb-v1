@@ -62,7 +62,7 @@ QQmlIncubationController()
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
 {
-  QQmlIncubationController * o = new QQmlIncubationController (  );
+  QQmlIncubationController * o = new QQmlIncubationController ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
   QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlEngine * ptr = obj->engine (  );
+    QQmlEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
   QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->incubatingObjectCount (  ) );
+    hb_retni( obj->incubatingObjectCount () );
   }
 }
 

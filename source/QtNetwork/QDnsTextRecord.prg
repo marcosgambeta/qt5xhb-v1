@@ -64,7 +64,7 @@ QDnsTextRecord()
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW1 )
 {
-  QDnsTextRecord * o = new QDnsTextRecord (  );
+  QDnsTextRecord * o = new QDnsTextRecord ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NAME )
   QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_TIMETOLIVE )
   QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive (  ) );
+    hb_retni( obj->timeToLive () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_VALUES )
   QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QByteArray> list = obj->values (  );
+    QList<QByteArray> list = obj->values ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );

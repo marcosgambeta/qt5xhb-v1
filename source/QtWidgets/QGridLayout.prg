@@ -99,7 +99,7 @@ QGridLayout ()
 */
 void QGridLayout_new2 ()
 {
-  QGridLayout * o = new QGridLayout (  );
+  QGridLayout * o = new QGridLayout ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->horizontalSpacing (  ) );
+    hb_retni( obj->horizontalSpacing () );
   }
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 
   if( obj )
   {
-    hb_retni( obj->originCorner (  ) );
+    hb_retni( obj->originCorner () );
   }
 }
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 
   if( obj )
   {
-    hb_retni( obj->spacing (  ) );
+    hb_retni( obj->spacing () );
   }
 }
 
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->verticalSpacing (  ) );
+    hb_retni( obj->verticalSpacing () );
   }
 }
 
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 
   if( obj )
   {
-    hb_retni( obj->expandingDirections (  ) );
+    hb_retni( obj->expandingDirections () );
   }
 }
 
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

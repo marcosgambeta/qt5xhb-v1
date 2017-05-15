@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
   QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGMaterialShader * ptr = obj->createShader (  );
+    QSGMaterialShader * ptr = obj->createShader ();
     _qt5xhb_createReturnClass ( ptr, "QSGMATERIALSHADER" );
   }
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
   QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->flags (  ) );
+    hb_retni( obj->flags () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSGMATERIAL_TYPE )
   QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGMaterialType * ptr = obj->type (  );
+    QSGMaterialType * ptr = obj->type ();
     _qt5xhb_createReturnClass ( ptr, "QSGMATERIALTYPE" );
   }
 }

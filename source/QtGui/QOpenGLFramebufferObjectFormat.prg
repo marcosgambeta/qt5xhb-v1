@@ -66,7 +66,7 @@ QOpenGLFramebufferObjectFormat()
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 {
-  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat (  );
+  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->samples (  ) );
+    hb_retni( obj->samples () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_MIPMAP )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->mipmap (  ) );
+    hb_retl( obj->mipmap () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->attachment (  ) );
+    hb_retni( obj->attachment () );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureTarget (  ) );
+    hb_retni( obj->textureTarget () );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->internalTextureFormat (  ) );
+    hb_retni( obj->internalTextureFormat () );
   }
 }
 

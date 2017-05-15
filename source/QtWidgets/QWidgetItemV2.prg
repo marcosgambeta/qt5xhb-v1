@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QWIDGETITEMV2_SIZEHINT )
   QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWIDGETITEMV2_MINIMUMSIZE )
   QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QWIDGETITEMV2_MAXIMUMSIZE )
   QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

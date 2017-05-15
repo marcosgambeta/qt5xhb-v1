@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QGLColormap * ptr = &obj->colormap (  );
+    const QGLColormap * ptr = &obj->colormap ();
     _qt5xhb_createReturnClass ( ptr, "QGLCOLORMAP" );
   }
 }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QGLContext * ptr = obj->context (  );
+    const QGLContext * ptr = obj->context ();
     _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT" );
   }
 }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QGLWIDGET_DONECURRENT )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->doneCurrent (  );
+    obj->doneCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->doubleBuffer (  ) );
+    hb_retl( obj->doubleBuffer () );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QGLWIDGET_FORMAT )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGLFormat * ptr = new QGLFormat( obj->format (  ) );
+    QGLFormat * ptr = new QGLFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QGLFORMAT" );
   }
 }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSharing (  ) );
+    hb_retl( obj->isSharing () );
   }
 }
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISVALID )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QGLWIDGET_MAKECURRENT )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->makeCurrent (  );
+    obj->makeCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QGLWIDGET_MAKEOVERLAYCURRENT )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->makeOverlayCurrent (  );
+    obj->makeOverlayCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QGLContext * ptr = obj->overlayContext (  );
+    const QGLContext * ptr = obj->overlayContext ();
     _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT" );
   }
 }
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QGLWIDGET_SWAPBUFFERS )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->swapBuffers (  );
+    obj->swapBuffers ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QGLWIDGET_UPDATEGL )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->updateGL (  );
+    obj->updateGL ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QGLWIDGET_UPDATEOVERLAYGL )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->updateOverlayGL (  );
+    obj->updateOverlayGL ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

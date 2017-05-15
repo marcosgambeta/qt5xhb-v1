@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoPositionInfoSource * ptr = obj->positionInfoSource (  );
+    QGeoPositionInfoSource * ptr = obj->positionInfoSource ();
     _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
   }
 #endif
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SOURCENAME )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->sourceName ().toLatin1().data() );
   }
 #endif
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ERROR )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedAreaMonitorFeatures (  ) );
+    hb_retni( obj->supportedAreaMonitorFeatures () );
   }
 #endif
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS1 )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors (  );
+    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEOAREAMONITORINFO" );
@@ -365,7 +365,7 @@ static QStringList availableSources()
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_AVAILABLESOURCES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QStringList strl = QGeoAreaMonitorSource::availableSources (  );
+  QStringList strl = QGeoAreaMonitorSource::availableSources ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 #endif
 }

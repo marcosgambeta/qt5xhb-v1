@@ -66,7 +66,7 @@ QGeoCircle()
 HB_FUNC_STATIC( QGEOCIRCLE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle (  );
+  QGeoCircle * o = new QGeoCircle ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_CENTER )
   QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * ptr = new QGeoCoordinate( obj->center (  ) );
+    QGeoCoordinate * ptr = new QGeoCoordinate( obj->center () );
     _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_RADIUS )
   QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->radius (  ) );
+    hb_retnd( obj->radius () );
   }
 #endif
 }

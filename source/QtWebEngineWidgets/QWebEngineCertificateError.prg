@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERROR )
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_URL )
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE )
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isOverridable (  ) );
+    hb_retl( obj->isOverridable () );
   }
 #endif
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION )
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorDescription (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorDescription ().toLatin1().data() );
   }
 #endif
 }

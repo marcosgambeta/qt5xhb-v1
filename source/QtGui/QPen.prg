@@ -80,7 +80,7 @@ QPen ()
 */
 void QPen_new1 ()
 {
-  QPen * o = new QPen (  );
+  QPen * o = new QPen ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPEN_BRUSH )
 
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->brush (  ) );
+    QBrush * ptr = new QBrush( obj->brush () );
     _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->capStyle (  ) );
+    hb_retni( obj->capStyle () );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QPEN_COLOR )
 
   if( obj )
   {
-    QColor * ptr = new QColor( obj->color (  ) );
+    QColor * ptr = new QColor( obj->color () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
 
   if( obj )
   {
-    hb_retnd( obj->dashOffset (  ) );
+    hb_retnd( obj->dashOffset () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 
   if( obj )
   {
-    hb_retl( obj->isCosmetic (  ) );
+    hb_retl( obj->isCosmetic () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
 
   if( obj )
   {
-    hb_retl( obj->isSolid (  ) );
+    hb_retl( obj->isSolid () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->joinStyle (  ) );
+    hb_retni( obj->joinStyle () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
 
   if( obj )
   {
-    hb_retnd( obj->miterLimit (  ) );
+    hb_retnd( obj->miterLimit () );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QPEN_STYLE )
 
   if( obj )
   {
-    hb_retni( obj->style (  ) );
+    hb_retni( obj->style () );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QPEN_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 }
 
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QPEN_WIDTHF )
 
   if( obj )
   {
-    hb_retnd( obj->widthF (  ) );
+    hb_retnd( obj->widthF () );
   }
 }
 

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->errorColumnNumber (  ) );
+    hb_retni( obj->errorColumnNumber () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->errorLineNumber (  ) );
+    hb_retni( obj->errorLineNumber () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorMessage (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorMessage ().toLatin1().data() );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 

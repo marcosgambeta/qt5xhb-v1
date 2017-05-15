@@ -67,7 +67,7 @@ QPlaceMatchRequest()
 void QPlaceMatchRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * o = new QPlaceMatchRequest (  );
+  QPlaceMatchRequest * o = new QPlaceMatchRequest ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
   QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QPlace> list = obj->places (  );
+    QList<QPlace> list = obj->places ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPLACE" );
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_CLEAR )
   QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

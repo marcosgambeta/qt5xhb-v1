@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->elementId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->elementId ().toLatin1().data() );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumCacheSize (  ) );
+    QSize * ptr = new QSize( obj->maximumCacheSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSvgRenderer * ptr = obj->renderer (  );
+    QSvgRenderer * ptr = obj->renderer ();
     _qt5xhb_createReturnClass ( ptr, "QSVGRENDERER" );
   }
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

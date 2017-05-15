@@ -83,7 +83,7 @@ QPictureIO()
 */
 void QPictureIO_new1 ()
 {
-  QPictureIO * o = new QPictureIO (  );
+  QPictureIO * o = new QPictureIO ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPICTUREIO_PICTURE )
 
   if( obj )
   {
-    const QPicture * ptr = &obj->picture (  );
+    const QPicture * ptr = &obj->picture ();
     _qt5xhb_createReturnClass ( ptr, "QPICTURE" );
   }
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QPICTUREIO_STATUS )
 
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPICTUREIO_FORMAT )
 
   if( obj )
   {
-    const char * str1 = obj->format (  );
+    const char * str1 = obj->format ();
     hb_retc( str1 );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
 
   if( obj )
   {
-    QIODevice * ptr = obj->ioDevice (  );
+    QIODevice * ptr = obj->ioDevice ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QPICTUREIO_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPICTUREIO_QUALITY )
 
   if( obj )
   {
-    hb_retni( obj->quality (  ) );
+    hb_retni( obj->quality () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QPICTUREIO_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QPICTUREIO_PARAMETERS )
 
   if( obj )
   {
-    const char * str1 = obj->parameters (  );
+    const char * str1 = obj->parameters ();
     hb_retc( str1 );
   }
 }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QPICTUREIO_GAMMA )
 
   if( obj )
   {
-    hb_retnd( obj->gamma (  ) );
+    hb_retnd( obj->gamma () );
   }
 }
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QPICTUREIO_READ )
 
   if( obj )
   {
-    hb_retl( obj->read (  ) );
+    hb_retl( obj->read () );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QPICTUREIO_WRITE )
 
   if( obj )
   {
-    hb_retl( obj->write (  ) );
+    hb_retl( obj->write () );
   }
 }
 
@@ -542,7 +542,7 @@ static QList<QByteArray> inputFormats()
 */
 HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
 {
-  QList<QByteArray> list = QPictureIO::inputFormats (  );
+  QList<QByteArray> list = QPictureIO::inputFormats ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -581,7 +581,7 @@ static QList<QByteArray> outputFormats()
 */
 HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
 {
-  QList<QByteArray> list = QPictureIO::outputFormats (  );
+  QList<QByteArray> list = QPictureIO::outputFormats ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

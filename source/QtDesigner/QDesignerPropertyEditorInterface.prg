@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 
   if( obj )
   {
-    QDesignerFormEditorInterface * ptr = obj->core (  );
+    QDesignerFormEditorInterface * ptr = obj->core ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
   }
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->currentPropertyName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->currentPropertyName ().toLatin1().data() );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->cleanIcon (  ) );
+    QIcon * ptr = new QIcon( obj->cleanIcon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->emptyLabel (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->emptyLabel ().toLatin1().data() );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 
   if( obj )
   {
-    QUndoGroup * ptr = obj->group (  );
+    QUndoGroup * ptr = obj->group ();
     _qt5xhb_createReturnClass ( ptr, "QUNDOGROUP" );
   }
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
 
   if( obj )
   {
-    QUndoStack * ptr = obj->stack (  );
+    QUndoStack * ptr = obj->stack ();
     _qt5xhb_createReturnClass ( ptr, "QUNDOSTACK" );
   }
 }

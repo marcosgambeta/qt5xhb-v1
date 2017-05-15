@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
 
   if( obj )
   {
-    hb_retnd( obj->acceleration (  ) );
+    hb_retnd( obj->acceleration () );
   }
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPANGESTURE_DELTA )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->delta (  ) );
+    QPointF * ptr = new QPointF( obj->delta () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->lastOffset (  ) );
+    QPointF * ptr = new QPointF( obj->lastOffset () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPANGESTURE_OFFSET )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->offset (  ) );
+    QPointF * ptr = new QPointF( obj->offset () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

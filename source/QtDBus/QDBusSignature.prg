@@ -60,7 +60,7 @@ QDBusSignature()
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
 {
-  QDBusSignature * o = new QDBusSignature (  );
+  QDBusSignature * o = new QDBusSignature ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
   QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->signature (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->signature ().toLatin1().data() );
   }
 }
 

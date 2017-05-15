@@ -64,7 +64,7 @@ QPlaceContactDetail()
 void QPlaceContactDetail_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * o = new QPlaceContactDetail (  );
+  QPlaceContactDetail * o = new QPlaceContactDetail ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
   QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->label (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->label ().toLatin1().data() );
   }
 #endif
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
   QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->value (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->value ().toLatin1().data() );
   }
 #endif
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_CLEAR )
   QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

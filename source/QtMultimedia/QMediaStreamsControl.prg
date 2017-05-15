@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->streamCount (  ) );
+    hb_retni( obj->streamCount () );
   }
 }
 

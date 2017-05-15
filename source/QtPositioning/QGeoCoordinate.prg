@@ -75,7 +75,7 @@ QGeoCoordinate()
 HB_FUNC_STATIC( QGEOCOORDINATE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * o = new QGeoCoordinate (  );
+  QGeoCoordinate * o = new QGeoCoordinate ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ISVALID )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TYPE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 #endif
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LATITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->latitude (  ) );
+    hb_retnd( obj->latitude () );
   }
 #endif
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LONGITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->longitude (  ) );
+    hb_retnd( obj->longitude () );
   }
 #endif
 }
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ALTITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->altitude (  ) );
+    hb_retnd( obj->altitude () );
   }
 #endif
 }

@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDTEXTS )
 
   if( obj )
   {
-    QStringList strl = obj->capturedTexts (  );
+    QStringList strl = obj->capturedTexts ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_HASMATCH )
 
   if( obj )
   {
-    hb_retl( obj->hasMatch (  ) );
+    hb_retl( obj->hasMatch () );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_HASPARTIALMATCH )
 
   if( obj )
   {
-    hb_retl( obj->hasPartialMatch (  ) );
+    hb_retl( obj->hasPartialMatch () );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_LASTCAPTUREDINDEX )
 
   if( obj )
   {
-    hb_retni( obj->lastCapturedIndex (  ) );
+    hb_retni( obj->lastCapturedIndex () );
   }
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_MATCHOPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->matchOptions (  ) );
+    hb_retni( obj->matchOptions () );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_MATCHTYPE )
 
   if( obj )
   {
-    hb_retni( obj->matchType (  ) );
+    hb_retni( obj->matchType () );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_REGULAREXPRESSION )
 
   if( obj )
   {
-    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
+    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression () );
     _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
   }
 }

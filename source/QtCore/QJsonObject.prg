@@ -70,7 +70,7 @@ QJsonObject()
 */
 void QJsonObject_new1 ()
 {
-  QJsonObject * o = new QJsonObject (  );
+  QJsonObject * o = new QJsonObject ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QJSONOBJECT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QJSONOBJECT_EMPTY )
 
   if( obj )
   {
-    hb_retl( obj->empty (  ) );
+    hb_retl( obj->empty () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QJSONOBJECT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QJSONOBJECT_KEYS )
 
   if( obj )
   {
-    QStringList strl = obj->keys (  );
+    QStringList strl = obj->keys ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QJSONOBJECT_LENGTH )
 
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QJSONOBJECT_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

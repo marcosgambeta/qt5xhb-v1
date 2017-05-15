@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->abort (  ) );
+    hb_retl( obj->abort () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->newPage (  ) );
+    hb_retl( obj->newPage () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->printerState (  ) );
+    hb_retni( obj->printerState () );
   }
 }
 

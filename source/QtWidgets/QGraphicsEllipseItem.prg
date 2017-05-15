@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->rect (  ) );
+    QRectF * ptr = new QRectF( obj->rect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
 
   if( obj )
   {
-    hb_retni( obj->spanAngle (  ) );
+    hb_retni( obj->spanAngle () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
 
   if( obj )
   {
-    hb_retni( obj->startAngle (  ) );
+    hb_retni( obj->startAngle () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

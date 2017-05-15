@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endDocument (  );
+    obj->endDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endElement (  );
+    obj->endElement ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endOfSequence (  );
+    obj->endOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startDocument (  );
+    obj->startDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startOfSequence (  );
+    obj->startOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

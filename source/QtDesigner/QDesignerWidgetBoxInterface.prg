@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 
   if( obj )
   {
-    hb_retl( obj->load (  ) );
+    hb_retl( obj->load () );
   }
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 
   if( obj )
   {
-    hb_retl( obj->save (  ) );
+    hb_retl( obj->save () );
   }
 }
 

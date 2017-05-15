@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ISFINISHED )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 #endif
 }
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERROR )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
+    int i = obj->error ();
     hb_retni( i );
   }
 #endif
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERRORSTRING )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRouteRequest * ptr = new QGeoRouteRequest( obj->request (  ) );
+    QGeoRouteRequest * ptr = new QGeoRouteRequest( obj->request () );
     _qt5xhb_createReturnClass ( ptr, "QGEOROUTEREQUEST", true );
   }
 #endif
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoRoute> list = obj->routes (  );
+    QList<QGeoRoute> list = obj->routes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEOROUTE" );
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

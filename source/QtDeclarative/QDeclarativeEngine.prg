@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->baseUrl (  ) );
+    QUrl * ptr = new QUrl( obj->baseUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 
   if( obj )
   {
-    obj->clearComponentCache (  );
+    obj->clearComponentCache ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 
   if( obj )
   {
-    QStringList strl = obj->importPathList (  );
+    QStringList strl = obj->importPathList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->networkAccessManager (  );
+    QNetworkAccessManager * ptr = obj->networkAccessManager ();
     _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 
   if( obj )
   {
-    QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory (  );
+    QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY" );
   }
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->offlineStoragePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->offlineStoragePath ().toLatin1().data() );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 
   if( obj )
   {
-    hb_retl( obj->outputWarningsToStandardError (  ) );
+    hb_retl( obj->outputWarningsToStandardError () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 
   if( obj )
   {
-    QStringList strl = obj->pluginPathList (  );
+    QStringList strl = obj->pluginPathList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->rootContext (  );
+    QDeclarativeContext * ptr = obj->rootContext ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }

@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->absoluteFilePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->absoluteFilePath ().toLatin1().data() );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
 
   if( obj )
   {
-    const uchar * ptr = obj->data (  );
+    const uchar * ptr = obj->data ();
     _qt5xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 
   if( obj )
   {
-    hb_retl( obj->isCompressed (  ) );
+    hb_retl( obj->isCompressed () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
 
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

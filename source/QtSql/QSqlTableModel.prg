@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 
   if( obj )
   {
-    QSqlDatabase * ptr = new QSqlDatabase( obj->database (  ) );
+    QSqlDatabase * ptr = new QSqlDatabase( obj->database () );
     _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
   }
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
 
   if( obj )
   {
-    hb_retni( obj->editStrategy (  ) );
+    hb_retni( obj->editStrategy () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->filter (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->filter ().toLatin1().data() );
   }
 }
 
@@ -250,7 +250,7 @@ void QSqlTableModel_isDirty1 ()
 
   if( obj )
   {
-    hb_retl( obj->isDirty (  ) );
+    hb_retl( obj->isDirty () );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
 
   if( obj )
   {
-    QSqlIndex * ptr = new QSqlIndex( obj->primaryKey (  ) );
+    QSqlIndex * ptr = new QSqlIndex( obj->primaryKey () );
     _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
   }
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 
   if( obj )
   {
-    hb_retl( obj->select (  ) );
+    hb_retl( obj->select () );
   }
 }
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->tableName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->tableName ().toLatin1().data() );
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 
   if( obj )
   {
-    obj->revert (  );
+    obj->revert ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 
   if( obj )
   {
-    obj->revertAll (  );
+    obj->revertAll ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 
   if( obj )
   {
-    hb_retl( obj->submit (  ) );
+    hb_retl( obj->submit () );
   }
 }
 
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
 
   if( obj )
   {
-    hb_retl( obj->submitAll (  ) );
+    hb_retl( obj->submitAll () );
   }
 }
 
@@ -689,7 +689,7 @@ void QSqlTableModel_record1 ()
 
   if( obj )
   {
-    QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record () );
     _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }

@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBasicTimer * o = new QBasicTimer (  );
+    QBasicTimer * o = new QBasicTimer ();
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QBASICTIMER_STOP )
 
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 
   if( obj )
   {
-    hb_retni( obj->timerId (  ) );
+    hb_retni( obj->timerId () );
   }
 }
 

@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSENSORPLUGININTERFACE_REGISTERSENSORS )
   QSensorPluginInterface * obj = (QSensorPluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->registerSensors (  );
+    obj->registerSensors ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

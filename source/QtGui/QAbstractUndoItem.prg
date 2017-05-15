@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
   QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->undo (  );
+    obj->undo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
   QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->redo (  );
+    obj->redo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -169,7 +169,7 @@ QPainter ()
 */
 void QPainter_new1 ()
 {
-  QPainter * o = new QPainter (  );
+  QPainter * o = new QPainter ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUND )
 
   if( obj )
   {
-    const QBrush * ptr = &obj->background (  );
+    const QBrush * ptr = &obj->background ();
     _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
 
   if( obj )
   {
-    hb_retni( obj->backgroundMode (  ) );
+    hb_retni( obj->backgroundMode () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QPAINTER_BEGINNATIVEPAINTING )
 
   if( obj )
   {
-    obj->beginNativePainting (  );
+    obj->beginNativePainting ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSH )
 
   if( obj )
   {
-    const QBrush * ptr = &obj->brush (  );
+    const QBrush * ptr = &obj->brush ();
     _qt5xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSHORIGIN )
 
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->brushOrigin (  ) );
+    QPoint * ptr = new QPoint( obj->brushOrigin () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPPATH )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->clipPath (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->clipPath () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPREGION )
 
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->clipRegion (  ) );
+    QRegion * ptr = new QRegion( obj->clipRegion () );
     _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QPAINTER_COMBINEDTRANSFORM )
 
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->combinedTransform (  ) );
+    QTransform * ptr = new QTransform( obj->combinedTransform () );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
 
   if( obj )
   {
-    hb_retni( obj->compositionMode (  ) );
+    hb_retni( obj->compositionMode () );
   }
 }
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QPAINTER_DEVICE )
 
   if( obj )
   {
-    QPaintDevice * ptr = obj->device (  );
+    QPaintDevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
   }
 }
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QPAINTER_DEVICETRANSFORM )
 
   if( obj )
   {
-    const QTransform * ptr = &obj->deviceTransform (  );
+    const QTransform * ptr = &obj->deviceTransform ();
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
@@ -2492,7 +2492,7 @@ HB_FUNC_STATIC( QPAINTER_END )
 
   if( obj )
   {
-    hb_retl( obj->end (  ) );
+    hb_retl( obj->end () );
   }
 }
 
@@ -2505,7 +2505,7 @@ HB_FUNC_STATIC( QPAINTER_ENDNATIVEPAINTING )
 
   if( obj )
   {
-    obj->endNativePainting (  );
+    obj->endNativePainting ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2884,7 +2884,7 @@ HB_FUNC_STATIC( QPAINTER_FONT )
 
   if( obj )
   {
-    const QFont * ptr = &obj->font (  );
+    const QFont * ptr = &obj->font ();
     _qt5xhb_createReturnClass ( ptr, "QFONT" );
   }
 }
@@ -2898,7 +2898,7 @@ HB_FUNC_STATIC( QPAINTER_FONTINFO )
 
   if( obj )
   {
-    QFontInfo * ptr = new QFontInfo( obj->fontInfo (  ) );
+    QFontInfo * ptr = new QFontInfo( obj->fontInfo () );
     _qt5xhb_createReturnClass ( ptr, "QFONTINFO", true );
   }
 }
@@ -2912,7 +2912,7 @@ HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
 
   if( obj )
   {
-    QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics (  ) );
+    QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics () );
     _qt5xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
   }
 }
@@ -2926,7 +2926,7 @@ HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
 
   if( obj )
   {
-    hb_retl( obj->hasClipping (  ) );
+    hb_retl( obj->hasClipping () );
   }
 }
 
@@ -2939,7 +2939,7 @@ HB_FUNC_STATIC( QPAINTER_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -2952,7 +2952,7 @@ HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
 
   if( obj )
   {
-    hb_retni( obj->layoutDirection (  ) );
+    hb_retni( obj->layoutDirection () );
   }
 }
 
@@ -2965,7 +2965,7 @@ HB_FUNC_STATIC( QPAINTER_OPACITY )
 
   if( obj )
   {
-    hb_retnd( obj->opacity (  ) );
+    hb_retnd( obj->opacity () );
   }
 }
 
@@ -2978,7 +2978,7 @@ HB_FUNC_STATIC( QPAINTER_PAINTENGINE )
 
   if( obj )
   {
-    QPaintEngine * ptr = obj->paintEngine (  );
+    QPaintEngine * ptr = obj->paintEngine ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE" );
   }
 }
@@ -2992,7 +2992,7 @@ HB_FUNC_STATIC( QPAINTER_PEN )
 
   if( obj )
   {
-    const QPen * ptr = &obj->pen (  );
+    const QPen * ptr = &obj->pen ();
     _qt5xhb_createReturnClass ( ptr, "QPEN" );
   }
 }
@@ -3006,7 +3006,7 @@ HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
 
   if( obj )
   {
-    hb_retni( obj->renderHints (  ) );
+    hb_retni( obj->renderHints () );
   }
 }
 
@@ -3019,7 +3019,7 @@ HB_FUNC_STATIC( QPAINTER_RESETTRANSFORM )
 
   if( obj )
   {
-    obj->resetTransform (  );
+    obj->resetTransform ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3034,7 +3034,7 @@ HB_FUNC_STATIC( QPAINTER_RESTORE )
 
   if( obj )
   {
-    obj->restore (  );
+    obj->restore ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3071,7 +3071,7 @@ HB_FUNC_STATIC( QPAINTER_SAVE )
 
   if( obj )
   {
-    obj->save (  );
+    obj->save ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3887,7 +3887,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSFORM )
 
   if( obj )
   {
-    const QTransform * ptr = &obj->transform (  );
+    const QTransform * ptr = &obj->transform ();
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
@@ -3972,7 +3972,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
 
   if( obj )
   {
-    hb_retl( obj->viewTransformEnabled (  ) );
+    hb_retl( obj->viewTransformEnabled () );
   }
 }
 
@@ -3985,7 +3985,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWPORT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->viewport (  ) );
+    QRect * ptr = new QRect( obj->viewport () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -3999,7 +3999,7 @@ HB_FUNC_STATIC( QPAINTER_WINDOW )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->window (  ) );
+    QRect * ptr = new QRect( obj->window () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -4013,7 +4013,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
 
   if( obj )
   {
-    hb_retl( obj->worldMatrixEnabled (  ) );
+    hb_retl( obj->worldMatrixEnabled () );
   }
 }
 
@@ -4026,7 +4026,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDTRANSFORM )
 
   if( obj )
   {
-    const QTransform * ptr = &obj->worldTransform (  );
+    const QTransform * ptr = &obj->worldTransform ();
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }

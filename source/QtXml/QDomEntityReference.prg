@@ -50,7 +50,7 @@ QDomEntityReference ()
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW1 )
 {
-  QDomEntityReference * o = new QDomEntityReference (  );
+  QDomEntityReference * o = new QDomEntityReference ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
   QDomEntityReference * obj = (QDomEntityReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 

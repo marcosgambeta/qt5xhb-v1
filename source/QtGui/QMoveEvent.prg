@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
   QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPoint * ptr = &obj->oldPos (  );
+    const QPoint * ptr = &obj->oldPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMOVEEVENT_POS )
   QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPoint * ptr = &obj->pos (  );
+    const QPoint * ptr = &obj->pos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }

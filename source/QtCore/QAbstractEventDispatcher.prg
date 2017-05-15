@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 
   if( obj )
   {
-    obj->flush (  );
+    obj->flush ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 
   if( obj )
   {
-    hb_retl( obj->hasPendingEvents (  ) );
+    hb_retl( obj->hasPendingEvents () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 
   if( obj )
   {
-    obj->interrupt (  );
+    obj->interrupt ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 
   if( obj )
   {
-    obj->wakeUp (  );
+    obj->wakeUp ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_STARTINGUP )
 
   if( obj )
   {
-    obj->startingUp (  );
+    obj->startingUp ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_CLOSINGDOWN )
 
   if( obj )
   {
-    obj->closingDown (  );
+    obj->closingDown ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

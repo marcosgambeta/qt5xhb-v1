@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_CREATE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create (  ) );
+    hb_retl( obj->create () );
   }
 #endif
 }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DESTROY )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->destroy (  );
+    obj->destroy ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISCREATED )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated (  ) );
+    hb_retl( obj->isCreated () );
   }
 #endif
 }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_TEXTUREID )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureId (  ) );
+    hb_retni( obj->textureId () );
   }
 #endif
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->bind (  );
+    obj->bind ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->release (  );
+    obj->release ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBound (  ) );
+    hb_retl( obj->isBound () );
   }
 #endif
 }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_FORMAT )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->format (  ) );
+    hb_retni( obj->format () );
   }
 #endif
 }
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_WIDTH )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 #endif
 }
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_HEIGHT )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->height (  ) );
+    hb_retni( obj->height () );
   }
 #endif
 }
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTH )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depth (  ) );
+    hb_retni( obj->depth () );
   }
 #endif
 }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPLEVELS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mipLevels (  ) );
+    hb_retni( obj->mipLevels () );
   }
 #endif
 }
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMMIPLEVELS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumMipLevels (  ) );
+    hb_retni( obj->maximumMipLevels () );
   }
 #endif
 }
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_LAYERS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->layers (  ) );
+    hb_retni( obj->layers () );
   }
 #endif
 }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_FACES )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->faces (  ) );
+    hb_retni( obj->faces () );
   }
 #endif
 }
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ALLOCATESTORAGE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->allocateStorage (  );
+    obj->allocateStorage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISSTORAGEALLOCATED )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isStorageAllocated (  ) );
+    hb_retl( obj->isStorageAllocated () );
   }
 #endif
 }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISTEXTUREVIEW )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTextureView (  ) );
+    hb_retl( obj->isTextureView () );
   }
 #endif
 }
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPBASELEVEL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mipBaseLevel (  ) );
+    hb_retni( obj->mipBaseLevel () );
   }
 #endif
 }
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPMAXLEVEL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mipMaxLevel (  ) );
+    hb_retni( obj->mipMaxLevel () );
   }
 #endif
 }
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAutoMipMapGenerationEnabled (  ) );
+    hb_retl( obj->isAutoMipMapGenerationEnabled () );
   }
 #endif
 }
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->generateMipMaps (  );
+    obj->generateMipMaps ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTHSTENCILMODE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depthStencilMode (  ) );
+    hb_retni( obj->depthStencilMode () );
   }
 #endif
 }
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MINIFICATIONFILTER )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minificationFilter (  ) );
+    hb_retni( obj->minificationFilter () );
   }
 #endif
 }
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAGNIFICATIONFILTER )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->magnificationFilter (  ) );
+    hb_retni( obj->magnificationFilter () );
   }
 #endif
 }
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMANISOTROPY )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maximumAnisotropy (  ) );
+    hb_retnd( obj->maximumAnisotropy () );
   }
 #endif
 }
@@ -1431,7 +1431,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor * ptr = new QColor( obj->borderColor (  ) );
+    QColor * ptr = new QColor( obj->borderColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 #endif
@@ -1542,7 +1542,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->minimumLevelOfDetail (  ) );
+    hb_retnd( obj->minimumLevelOfDetail () );
   }
 #endif
 }
@@ -1574,7 +1574,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maximumLevelOfDetail (  ) );
+    hb_retnd( obj->maximumLevelOfDetail () );
   }
 #endif
 }
@@ -1625,7 +1625,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_LEVELOFDETAILBIAS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->levelofDetailBias (  ) );
+    hb_retnd( obj->levelofDetailBias () );
   }
 #endif
 }

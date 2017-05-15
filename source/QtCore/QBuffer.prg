@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 
   if( obj )
   {
-    QByteArray * ptr = &obj->buffer (  );
+    QByteArray * ptr = &obj->buffer ();
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 
   if( obj )
   {
-    const QByteArray * ptr = &obj->buffer (  );
+    const QByteArray * ptr = &obj->buffer ();
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
 
   if( obj )
   {
-    const QByteArray * ptr = &obj->data (  );
+    const QByteArray * ptr = &obj->data ();
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 
   if( obj )
   {
-    hb_retl( obj->canReadLine (  ) );
+    hb_retl( obj->canReadLine () );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QBUFFER_CLOSE )
 
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QBUFFER_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos (  ) );
+    hb_retni( obj->pos () );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QBUFFER_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

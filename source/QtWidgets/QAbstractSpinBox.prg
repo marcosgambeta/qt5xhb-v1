@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 
   if( obj )
   {
-    hb_retl( obj->hasAcceptableInput (  ) );
+    hb_retl( obj->hasAcceptableInput () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 
   if( obj )
   {
-    obj->interpretText (  );
+    obj->interpretText ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 
   if( obj )
   {
-    hb_retl( obj->isAccelerated (  ) );
+    hb_retl( obj->isAccelerated () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->alignment (  ) );
+    hb_retni( obj->alignment () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 
   if( obj )
   {
-    hb_retni( obj->buttonSymbols (  ) );
+    hb_retni( obj->buttonSymbols () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 
   if( obj )
   {
-    hb_retni( obj->correctionMode (  ) );
+    hb_retni( obj->correctionMode () );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 
   if( obj )
   {
-    hb_retl( obj->hasFrame (  ) );
+    hb_retl( obj->hasFrame () );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 
   if( obj )
   {
-    hb_retl( obj->keyboardTracking (  ) );
+    hb_retl( obj->keyboardTracking () );
   }
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->specialValueText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->specialValueText ().toLatin1().data() );
   }
 }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 
   if( obj )
   {
-    hb_retl( obj->wrapping (  ) );
+    hb_retl( obj->wrapping () );
   }
 }
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 
   if( obj )
   {
-    obj->selectAll (  );
+    obj->selectAll ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 
   if( obj )
   {
-    obj->stepDown (  );
+    obj->stepDown ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
 
   if( obj )
   {
-    obj->stepUp (  );
+    obj->stepUp ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISGROUPSEPARATORSHOWN )
 
   if( obj )
   {
-    hb_retl( obj->isGroupSeparatorShown (  ) );
+    hb_retl( obj->isGroupSeparatorShown () );
   }
 }
 

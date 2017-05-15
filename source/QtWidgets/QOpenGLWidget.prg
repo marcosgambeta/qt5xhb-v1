@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
+    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 #endif
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 #endif
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_MAKECURRENT )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->makeCurrent (  );
+    obj->makeCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DONECURRENT )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->doneCurrent (  );
+    obj->doneCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLContext * ptr = obj->context (  );
+    QOpenGLContext * ptr = obj->context ();
     _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
   }
 #endif
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->defaultFramebufferObject (  ) );
+    hb_retni( obj->defaultFramebufferObject () );
   }
 #endif
 #endif
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * ptr = new QImage( obj->grabFramebuffer (  ) );
+    QImage * ptr = new QImage( obj->grabFramebuffer () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 #endif

@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->cancelButtonText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->cancelButtonText ().toLatin1().data() );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->comboBoxItems (  );
+    QStringList strl = obj->comboBoxItems ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->doubleDecimals (  ) );
+    hb_retni( obj->doubleDecimals () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->doubleMaximum (  ) );
+    hb_retnd( obj->doubleMaximum () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->doubleMinimum (  ) );
+    hb_retnd( obj->doubleMinimum () );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->doubleValue (  ) );
+    hb_retnd( obj->doubleValue () );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->inputMode (  ) );
+    hb_retni( obj->inputMode () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->intMaximum (  ) );
+    hb_retni( obj->intMaximum () );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->intMinimum (  ) );
+    hb_retni( obj->intMinimum () );
   }
 }
 
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->intStep (  ) );
+    hb_retni( obj->intStep () );
   }
 }
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->intValue (  ) );
+    hb_retni( obj->intValue () );
   }
 }
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isComboBoxEditable (  ) );
+    hb_retl( obj->isComboBoxEditable () );
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->labelText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->labelText ().toLatin1().data() );
   }
 }
 
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->okButtonText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->okButtonText ().toLatin1().data() );
   }
 }
 
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->options (  ) );
+    hb_retni( obj->options () );
   }
 }
 
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textEchoMode (  ) );
+    hb_retni( obj->textEchoMode () );
   }
 }
 
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->textValue (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->textValue ().toLatin1().data() );
   }
 }
 
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

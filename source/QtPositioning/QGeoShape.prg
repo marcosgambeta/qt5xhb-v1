@@ -65,7 +65,7 @@ QGeoShape()
 HB_FUNC_STATIC( QGEOSHAPE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * o = new QGeoShape (  );
+  QGeoShape * o = new QGeoShape ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGEOSHAPE_TYPE )
   QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 #endif
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
   QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
   QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 #endif
 }

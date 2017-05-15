@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fullServerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fullServerName ().toLatin1().data() );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections (  ) );
+    hb_retl( obj->hasPendingConnections () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isListening (  ) );
+    hb_retl( obj->isListening () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections (  ) );
+    hb_retni( obj->maxPendingConnections () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocalSocket * ptr = obj->nextPendingConnection (  );
+    QLocalSocket * ptr = obj->nextPendingConnection ();
     _qt5xhb_createReturnClass ( ptr, "QLOCALSOCKET" );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->serverError (  ) );
+    hb_retni( obj->serverError () );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->serverName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->serverName ().toLatin1().data() );
   }
 }
 

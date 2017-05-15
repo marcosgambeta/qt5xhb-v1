@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultTextEncoding (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->defaultTextEncoding ().toLatin1().data() );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->localStoragePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->localStoragePath ().toLatin1().data() );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->userStyleSheetUrl (  ) );
+    QUrl * ptr = new QUrl( obj->userStyleSheetUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -312,7 +312,7 @@ static void clearIconDatabase ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
 {
-  QWebSettings::clearIconDatabase (  );
+  QWebSettings::clearIconDatabase ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -322,7 +322,7 @@ static void clearMemoryCaches ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
 {
-  QWebSettings::clearMemoryCaches (  );
+  QWebSettings::clearMemoryCaches ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -343,7 +343,7 @@ static QWebSettings * globalSettings ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
 {
-  QWebSettings * ptr = QWebSettings::globalSettings (  );
+  QWebSettings * ptr = QWebSettings::globalSettings ();
   _qt5xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
 }
 
@@ -353,7 +353,7 @@ static QString iconDatabasePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 {
-  hb_retc( (const char *) QWebSettings::iconDatabasePath (  ).toLatin1().data() );
+  hb_retc( (const char *) QWebSettings::iconDatabasePath ().toLatin1().data() );
 }
 
 
@@ -373,7 +373,7 @@ static int maximumPagesInCache ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 {
-  hb_retni( QWebSettings::maximumPagesInCache (  ) );
+  hb_retni( QWebSettings::maximumPagesInCache () );
 }
 
 
@@ -382,7 +382,7 @@ static qint64 offlineStorageDefaultQuota ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 {
-  hb_retni( QWebSettings::offlineStorageDefaultQuota (  ) );
+  hb_retni( QWebSettings::offlineStorageDefaultQuota () );
 }
 
 
@@ -391,7 +391,7 @@ static QString offlineStoragePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 {
-  hb_retc( (const char *) QWebSettings::offlineStoragePath (  ).toLatin1().data() );
+  hb_retc( (const char *) QWebSettings::offlineStoragePath ().toLatin1().data() );
 }
 
 
@@ -400,7 +400,7 @@ static QString offlineWebApplicationCachePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 {
-  hb_retc( (const char *) QWebSettings::offlineWebApplicationCachePath (  ).toLatin1().data() );
+  hb_retc( (const char *) QWebSettings::offlineWebApplicationCachePath ().toLatin1().data() );
 }
 
 
@@ -409,7 +409,7 @@ static qint64 offlineWebApplicationCacheQuota ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
-  hb_retni( QWebSettings::offlineWebApplicationCacheQuota (  ) );
+  hb_retni( QWebSettings::offlineWebApplicationCacheQuota () );
 }
 
 

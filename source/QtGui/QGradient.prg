@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 
   if( obj )
   {
-    hb_retni( obj->coordinateMode (  ) );
+    hb_retni( obj->coordinateMode () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGRADIENT_SPREAD )
 
   if( obj )
   {
-    hb_retni( obj->spread (  ) );
+    hb_retni( obj->spread () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGRADIENT_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

@@ -79,7 +79,7 @@ static QString licensee()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
-  hb_retc( (const char *) QLibraryInfo::licensee (  ).toLatin1().data() );
+  hb_retc( (const char *) QLibraryInfo::licensee ().toLatin1().data() );
 }
 
 /*
@@ -87,7 +87,7 @@ static QString licensedProducts()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
-  hb_retc( (const char *) QLibraryInfo::licensedProducts (  ).toLatin1().data() );
+  hb_retc( (const char *) QLibraryInfo::licensedProducts ().toLatin1().data() );
 }
 
 /*
@@ -95,7 +95,7 @@ static QDate buildDate()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
-  QDate * ptr = new QDate( QLibraryInfo::buildDate (  ) );
+  QDate * ptr = new QDate( QLibraryInfo::buildDate () );
   _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
@@ -104,7 +104,7 @@ static bool isDebugBuild()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
 {
-  hb_retl( QLibraryInfo::isDebugBuild (  ) );
+  hb_retl( QLibraryInfo::isDebugBuild () );
 }
 
 /*

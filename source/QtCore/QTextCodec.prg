@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTEXTCODEC_NAME )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->name (  ) );
+    QByteArray * ptr = new QByteArray( obj->name () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
 
   if( obj )
   {
-    QList<QByteArray> list = obj->aliases (  );
+    QList<QByteArray> list = obj->aliases ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
 
   if( obj )
   {
-    hb_retni( obj->mibEnum (  ) );
+    hb_retni( obj->mibEnum () );
   }
 }
 
@@ -367,7 +367,7 @@ static QList<QByteArray> availableCodecs()
 */
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
 {
-  QList<QByteArray> list = QTextCodec::availableCodecs (  );
+  QList<QByteArray> list = QTextCodec::availableCodecs ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -406,7 +406,7 @@ static QList<int> availableMibs()
 */
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 {
-  QList<int> list = QTextCodec::availableMibs (  );
+  QList<int> list = QTextCodec::availableMibs ();
   _qt5xhb_convert_qlist_int_to_array ( list );
 }
 
@@ -415,7 +415,7 @@ static QTextCodec* codecForLocale()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 {
-  QTextCodec * ptr = QTextCodec::codecForLocale (  );
+  QTextCodec * ptr = QTextCodec::codecForLocale ();
   _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 

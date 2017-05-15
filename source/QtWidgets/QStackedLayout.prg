@@ -63,7 +63,7 @@ QStackedLayout ()
 */
 void QStackedLayout_new1 ()
 {
-  QStackedLayout * o = new QStackedLayout (  );
+  QStackedLayout * o = new QStackedLayout ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->currentWidget (  );
+    QWidget * ptr = obj->currentWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 
   if( obj )
   {
-    hb_retni( obj->stackingMode (  ) );
+    hb_retni( obj->stackingMode () );
   }
 }
 

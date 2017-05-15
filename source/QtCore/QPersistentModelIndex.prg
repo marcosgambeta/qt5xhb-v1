@@ -73,7 +73,7 @@ QPersistentModelIndex()
 */
 void QPersistentModelIndex_new1 ()
 {
-  QPersistentModelIndex * o = new QPersistentModelIndex (  );
+  QPersistentModelIndex * o = new QPersistentModelIndex ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ROW )
 
   if( obj )
   {
-    hb_retni( obj->row (  ) );
+    hb_retni( obj->row () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_COLUMN )
 
   if( obj )
   {
-    hb_retni( obj->column (  ) );
+    hb_retni( obj->column () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALPOINTER )
 
   if( obj )
   {
-    hb_retptr( (void *) obj->internalPointer (  ) );
+    hb_retptr( (void *) obj->internalPointer () );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALID )
 
   if( obj )
   {
-    quintptr * ptr = new quintptr( obj->internalId (  ) );
+    quintptr * ptr = new quintptr( obj->internalId () );
     _qt5xhb_createReturnClass ( ptr, "QUINTPTR" );
   }
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->parent (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->parent () );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_FLAGS )
 
   if( obj )
   {
-    hb_retni( obj->flags (  ) );
+    hb_retni( obj->flags () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
 
   if( obj )
   {
-    const QAbstractItemModel * ptr = obj->model (  );
+    const QAbstractItemModel * ptr = obj->model ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERRORSTRING )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ISFINISHED )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAME )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->lookup (  );
+    obj->lookup ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

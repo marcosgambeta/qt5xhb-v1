@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 
   if( obj )
   {
-    QAction * ptr = obj->addSeparator (  );
+    QAction * ptr = obj->addSeparator ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 
   if( obj )
   {
-    hb_retni( obj->allowedAreas (  ) );
+    hb_retni( obj->allowedAreas () );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->iconSize (  ) );
+    QSize * ptr = new QSize( obj->iconSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 
   if( obj )
   {
-    hb_retl( obj->isFloatable (  ) );
+    hb_retl( obj->isFloatable () );
   }
 }
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 
   if( obj )
   {
-    hb_retl( obj->isFloating (  ) );
+    hb_retl( obj->isFloating () );
   }
 }
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 
   if( obj )
   {
-    hb_retl( obj->isMovable (  ) );
+    hb_retl( obj->isMovable () );
   }
 }
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 
   if( obj )
   {
-    QAction * ptr = obj->toggleViewAction (  );
+    QAction * ptr = obj->toggleViewAction ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->toolButtonStyle (  ) );
+    hb_retni( obj->toolButtonStyle () );
   }
 }
 

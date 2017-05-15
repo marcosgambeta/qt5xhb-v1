@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->globalPos (  ) );
+    QPoint * ptr = new QPoint( obj->globalPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->pos (  ) );
+    QPoint * ptr = new QPoint( obj->pos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->reason (  ) );
+    hb_retni( obj->reason () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 

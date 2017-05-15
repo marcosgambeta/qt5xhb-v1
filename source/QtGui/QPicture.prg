@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->boundingRect (  ) );
+    QRect * ptr = new QRect( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QPICTURE_DATA )
 
   if( obj )
   {
-    const char * str1 = obj->data (  );
+    const char * str1 = obj->data ();
     hb_retc( str1 );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

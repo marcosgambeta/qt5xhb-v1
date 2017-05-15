@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->alignment (  ) );
+    hb_retni( obj->alignment () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->backgroundBrush (  ) );
+    QBrush * ptr = new QBrush( obj->backgroundBrush () );
     _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
 
   if( obj )
   {
-    hb_retni( obj->cacheMode (  ) );
+    hb_retni( obj->cacheMode () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
 
   if( obj )
   {
-    hb_retni( obj->dragMode (  ) );
+    hb_retni( obj->dragMode () );
   }
 }
 
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->foregroundBrush (  ) );
+    QBrush * ptr = new QBrush( obj->foregroundBrush () );
     _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ISINTERACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isInteractive (  ) );
+    hb_retl( obj->isInteractive () );
   }
 }
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ISTRANSFORMED )
 
   if( obj )
   {
-    hb_retl( obj->isTransformed (  ) );
+    hb_retl( obj->isTransformed () );
   }
 }
 
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 
   if( obj )
   {
-    QMatrix * ptr = new QMatrix( obj->matrix (  ) );
+    QMatrix * ptr = new QMatrix( obj->matrix () );
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 
   if( obj )
   {
-    hb_retni( obj->optimizationFlags (  ) );
+    hb_retni( obj->optimizationFlags () );
   }
 }
 
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 
   if( obj )
   {
-    hb_retni( obj->renderHints (  ) );
+    hb_retni( obj->renderHints () );
   }
 }
 
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 
   if( obj )
   {
-    obj->resetCachedContent (  );
+    obj->resetCachedContent ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 
   if( obj )
   {
-    obj->resetMatrix (  );
+    obj->resetMatrix ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 
   if( obj )
   {
-    obj->resetTransform (  );
+    obj->resetTransform ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 
   if( obj )
   {
-    hb_retni( obj->resizeAnchor (  ) );
+    hb_retni( obj->resizeAnchor () );
   }
 }
 
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 
   if( obj )
   {
-    hb_retni( obj->rubberBandSelectionMode (  ) );
+    hb_retni( obj->rubberBandSelectionMode () );
   }
 }
 
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 
   if( obj )
   {
-    QGraphicsScene * ptr = obj->scene (  );
+    QGraphicsScene * ptr = obj->scene ();
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSSCENE" );
   }
 }
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->sceneRect (  ) );
+    QRectF * ptr = new QRectF( obj->sceneRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->transform (  ) );
+    QTransform * ptr = new QTransform( obj->transform () );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 
   if( obj )
   {
-    hb_retni( obj->transformationAnchor (  ) );
+    hb_retni( obj->transformationAnchor () );
   }
 }
 
@@ -1533,7 +1533,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->viewportTransform (  ) );
+    QTransform * ptr = new QTransform( obj->viewportTransform () );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -1547,7 +1547,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 
   if( obj )
   {
-    hb_retni( obj->viewportUpdateMode (  ) );
+    hb_retni( obj->viewportUpdateMode () );
   }
 }
 
@@ -1582,7 +1582,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

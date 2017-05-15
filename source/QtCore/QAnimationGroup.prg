@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->animationCount (  ) );
+    hb_retni( obj->animationCount () );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

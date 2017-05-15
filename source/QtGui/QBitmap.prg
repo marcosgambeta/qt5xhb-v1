@@ -51,7 +51,7 @@ QBitmap ()
 */
 void QBitmap_new1 ()
 {
-  QBitmap * o = new QBitmap (  );
+  QBitmap * o = new QBitmap ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBITMAP_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

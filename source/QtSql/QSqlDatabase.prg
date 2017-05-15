@@ -107,7 +107,7 @@ QSqlDatabase ()
 */
 void QSqlDatabase_new1 ()
 {
-  QSqlDatabase * o = new QSqlDatabase (  );
+  QSqlDatabase * o = new QSqlDatabase ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
 
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 
   if( obj )
   {
-    hb_retl( obj->commit (  ) );
+    hb_retl( obj->commit () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->connectOptions (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->connectOptions ().toLatin1().data() );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->connectionName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->connectionName ().toLatin1().data() );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->databaseName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->databaseName ().toLatin1().data() );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
 
   if( obj )
   {
-    QSqlDriver * ptr = obj->driver (  );
+    QSqlDriver * ptr = obj->driver ();
     _qt5xhb_createReturnClass ( ptr, "QSQLDRIVER" );
   }
 }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->driverName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->driverName ().toLatin1().data() );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->hostName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->hostName ().toLatin1().data() );
   }
 }
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 
   if( obj )
   {
-    hb_retl( obj->isOpen (  ) );
+    hb_retl( obj->isOpen () );
   }
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 
   if( obj )
   {
-    hb_retl( obj->isOpenError (  ) );
+    hb_retl( obj->isOpenError () );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
 
   if( obj )
   {
-    QSqlError * ptr = new QSqlError( obj->lastError (  ) );
+    QSqlError * ptr = new QSqlError( obj->lastError () );
     _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->numericalPrecisionPolicy (  ) );
+    hb_retni( obj->numericalPrecisionPolicy () );
   }
 }
 
@@ -451,7 +451,7 @@ void QSqlDatabase_open1 ()
 
   if( obj )
   {
-    hb_retl( obj->open (  ) );
+    hb_retl( obj->open () );
   }
 }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->password (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->password ().toLatin1().data() );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PORT )
 
   if( obj )
   {
-    hb_retni( obj->port (  ) );
+    hb_retni( obj->port () );
   }
 }
 
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 
   if( obj )
   {
-    hb_retl( obj->rollback (  ) );
+    hb_retl( obj->rollback () );
   }
 }
 
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->transaction (  ) );
+    hb_retl( obj->transaction () );
   }
 }
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->userName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->userName ().toLatin1().data() );
   }
 }
 
@@ -744,7 +744,7 @@ static QStringList connectionNames ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 {
-  QStringList strl = QSqlDatabase::connectionNames (  );
+  QStringList strl = QSqlDatabase::connectionNames ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
@@ -786,7 +786,7 @@ static QStringList drivers ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 {
-  QStringList strl = QSqlDatabase::drivers (  );
+  QStringList strl = QSqlDatabase::drivers ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 

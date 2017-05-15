@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_WAYPOINTS )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoCoordinate> list = obj->waypoints (  );
+    QList<QGeoCoordinate> list = obj->waypoints ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEOCOORDINATE" );
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_EXCLUDEAREAS )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoRectangle> list = obj->excludeAreas (  );
+    QList<QGeoRectangle> list = obj->excludeAreas ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEORECTANGLE" );
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NUMBERALTERNATIVEROUTES )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->numberAlternativeRoutes (  ) );
+    hb_retni( obj->numberAlternativeRoutes () );
   }
 #endif
 }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_TRAVELMODES )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->travelModes (  );
+    int i = obj->travelModes ();
     hb_retni( i );
   }
 #endif
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATURETYPES )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoRouteRequest::FeatureType> list = obj->featureTypes (  );
+    QList<QGeoRouteRequest::FeatureType> list = obj->featureTypes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_ROUTEOPTIMIZATION )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->routeOptimization (  );
+    int i = obj->routeOptimization ();
     hb_retni( i );
   }
 #endif
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SEGMENTDETAIL )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->segmentDetail (  );
+    int i = obj->segmentDetail ();
     hb_retni( i );
   }
 #endif
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_MANEUVERDETAIL )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->maneuverDetail (  );
+    int i = obj->maneuverDetail ();
     hb_retni( i );
   }
 #endif

@@ -59,7 +59,7 @@ QTextLength()
 */
 HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
 {
-  QTextLength * o = new QTextLength (  );
+  QTextLength * o = new QTextLength ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
   QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
   QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rawValue (  ) );
+    hb_retnd( obj->rawValue () );
   }
 }
 

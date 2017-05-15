@@ -50,7 +50,7 @@ QDomComment ()
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
 {
-  QDomComment * o = new QDomComment (  );
+  QDomComment * o = new QDomComment ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
   QDomComment * obj = (QDomComment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STATE )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_BAND )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->band (  ) );
+    hb_retni( obj->band () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCY )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frequency (  ) );
+    hb_retni( obj->frequency () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSTEREO )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isStereo (  ) );
+    hb_retl( obj->isStereo () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STEREOMODE )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->stereoMode (  ) );
+    hb_retni( obj->stereoMode () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SIGNALSTRENGTH )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->signalStrength (  ) );
+    hb_retni( obj->signalStrength () );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_VOLUME )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->volume (  ) );
+    hb_retni( obj->volume () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISMUTED )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted (  ) );
+    hb_retl( obj->isMuted () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSEARCHING )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSearching (  ) );
+    hb_retl( obj->isSearching () );
   }
 }
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISANTENNACONNECTED )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAntennaConnected (  ) );
+    hb_retl( obj->isAntennaConnected () );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHFORWARD )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->searchForward (  );
+    obj->searchForward ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHBACKWARD )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->searchBackward (  );
+    obj->searchBackward ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_CANCELSEARCH )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->cancelSearch (  );
+    obj->cancelSearch ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_START )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STOP )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERROR )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 

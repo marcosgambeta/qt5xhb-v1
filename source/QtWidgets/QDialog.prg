@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSizeGripEnabled (  ) );
+    hb_retl( obj->isSizeGripEnabled () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->result (  ) );
+    hb_retni( obj->result () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDIALOG_ACCEPT )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->accept (  );
+    obj->accept ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->exec (  ) );
+    hb_retni( obj->exec () );
   }
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QDIALOG_OPEN )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->open (  );
+    obj->open ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QDIALOG_REJECT )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reject (  );
+    obj->reject ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDIALOG_ORIENTATION )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->extension (  );
+    QWidget * ptr = obj->extension ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

@@ -75,7 +75,7 @@ QAudioEncoderSettings()
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW1 )
 {
-  QAudioEncoderSettings * o = new QAudioEncoderSettings (  );
+  QAudioEncoderSettings * o = new QAudioEncoderSettings ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_BITRATE )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bitRate (  ) );
+    hb_retni( obj->bitRate () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CHANNELCOUNT )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->channelCount (  ) );
+    hb_retni( obj->channelCount () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CODEC )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->codec (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->codec ().toLatin1().data() );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGMODE )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->encodingMode (  ) );
+    hb_retni( obj->encodingMode () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ISNULL )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_QUALITY )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->quality (  ) );
+    hb_retni( obj->quality () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SAMPLERATE )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleRate (  ) );
+    hb_retni( obj->sampleRate () );
   }
 }
 

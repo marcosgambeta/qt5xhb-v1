@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 
   if( obj )
   {
-    QFont * ptr = new QFont( obj->currentFont (  ) );
+    QFont * ptr = new QFont( obj->currentFont () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->options (  ) );
+    hb_retni( obj->options () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 
   if( obj )
   {
-    QFont * ptr = new QFont( obj->selectedFont (  ) );
+    QFont * ptr = new QFont( obj->selectedFont () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }

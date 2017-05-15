@@ -71,7 +71,7 @@ QMetaEnum()
 */
 HB_FUNC_STATIC( QMETAENUM_NEW )
 {
-  QMetaEnum * o = new QMetaEnum (  );
+  QMetaEnum * o = new QMetaEnum ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QMETAENUM_NAME )
 
   if( obj )
   {
-    const char * str1 = obj->name (  );
+    const char * str1 = obj->name ();
     hb_retc( str1 );
   }
 }
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 
   if( obj )
   {
-    hb_retl( obj->isFlag (  ) );
+    hb_retl( obj->isFlag () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->keyCount (  ) );
+    hb_retni( obj->keyCount () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
 
   if( obj )
   {
-    const char * str1 = obj->scope (  );
+    const char * str1 = obj->scope ();
     hb_retc( str1 );
   }
 }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 
   if( obj )
   {
-    const QMetaObject * ptr = obj->enclosingMetaObject (  );
+    const QMetaObject * ptr = obj->enclosingMetaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 

@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_X )
   QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->x (  ) );
+    hb_retnd( obj->x () );
   }
 #endif
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_Y )
   QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->y (  ) );
+    hb_retnd( obj->y () );
   }
 #endif
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_Z )
   QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->z (  ) );
+    hb_retnd( obj->z () );
   }
 #endif
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_CALIBRATIONLEVEL )
   QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->calibrationLevel (  ) );
+    hb_retnd( obj->calibrationLevel () );
   }
 #endif
 }

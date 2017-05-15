@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
   QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->refreshPlugins (  );
+    obj->refreshPlugins ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

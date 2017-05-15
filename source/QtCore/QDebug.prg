@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
 
   if( obj )
   {
-    QDebug * ptr = &obj->space (  );
+    QDebug * ptr = &obj->space ();
     _qt5xhb_createReturnClass ( ptr, "QDEBUG" );
   }
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
 
   if( obj )
   {
-    QDebug * ptr = &obj->nospace (  );
+    QDebug * ptr = &obj->nospace ();
     _qt5xhb_createReturnClass ( ptr, "QDEBUG" );
   }
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 
   if( obj )
   {
-    QDebug * ptr = &obj->maybeSpace (  );
+    QDebug * ptr = &obj->maybeSpace ();
     _qt5xhb_createReturnClass ( ptr, "QDEBUG" );
   }
 }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
 
   if( obj )
   {
-    hb_retl( obj->autoInsertSpaces (  ) );
+    hb_retl( obj->autoInsertSpaces () );
   }
 }
 

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ISFINISHED )
 
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 #endif
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 #endif
 }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
 
   if( obj )
   {
-    QBluetoothTransferManager * ptr = obj->manager (  );
+    QBluetoothTransferManager * ptr = obj->manager ();
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERMANAGER" );
   }
 #endif
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_REQUEST )
 
   if( obj )
   {
-    QBluetoothTransferRequest * ptr = new QBluetoothTransferRequest( obj->request (  ) );
+    QBluetoothTransferRequest * ptr = new QBluetoothTransferRequest( obj->request () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREQUEST" );
   }
 #endif
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ABORT )
 
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

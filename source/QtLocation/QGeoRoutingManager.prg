@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_MANAGERNAME )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->managerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->managerName ().toLatin1().data() );
   }
 #endif
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_MANAGERVERSION )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->managerVersion (  ) );
+    hb_retni( obj->managerVersion () );
   }
 #endif
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SUPPORTEDTRAVELMODES )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedTravelModes (  );
+    int i = obj->supportedTravelModes ();
     hb_retni( i );
   }
 #endif
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SUPPORTEDFEATURETYPES )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedFeatureTypes (  );
+    int i = obj->supportedFeatureTypes ();
     hb_retni( i );
   }
 #endif
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SUPPORTEDFEATUREWEIGHTS )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedFeatureWeights (  );
+    int i = obj->supportedFeatureWeights ();
     hb_retni( i );
   }
 #endif
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SUPPORTEDROUTEOPTIMIZATIONS )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedRouteOptimizations (  );
+    int i = obj->supportedRouteOptimizations ();
     hb_retni( i );
   }
 #endif
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SUPPORTEDSEGMENTDETAILS )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedSegmentDetails (  );
+    int i = obj->supportedSegmentDetails ();
     hb_retni( i );
   }
 #endif
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SUPPORTEDMANEUVERDETAILS )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedManeuverDetails (  );
+    int i = obj->supportedManeuverDetails ();
     hb_retni( i );
   }
 #endif
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_LOCALE )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 #endif
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_MEASUREMENTSYSTEM )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->measurementSystem (  );
+    int i = obj->measurementSystem ();
     hb_retni( i );
   }
 #endif

@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->capabilities (  ) );
+    hb_retni( obj->capabilities () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration (  ) );
+    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isOnline (  ) );
+    hb_retl( obj->isOnline () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->updateConfigurations (  );
+    obj->updateConfigurations ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

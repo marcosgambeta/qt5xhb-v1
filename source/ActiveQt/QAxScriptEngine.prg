@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 
   if( obj )
   {
-    hb_retl( obj->hasIntrospection (  ) );
+    hb_retl( obj->hasIntrospection () );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->scriptLanguage (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->scriptLanguage ().toLatin1().data() );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 

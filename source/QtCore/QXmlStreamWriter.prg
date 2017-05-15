@@ -85,7 +85,7 @@ QXmlStreamWriter()
 */
 void QXmlStreamWriter_new1 ()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter (  );
+  QXmlStreamWriter * o = new QXmlStreamWriter ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -114,7 +114,7 @@ QXmlStreamWriter(QString * string)
 */
 void QXmlStreamWriter_new4 ()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter (  );
+  QXmlStreamWriter * o = new QXmlStreamWriter ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTING )
 
   if( obj )
   {
-    hb_retl( obj->autoFormatting (  ) );
+    hb_retl( obj->autoFormatting () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTINGINDENT )
 
   if( obj )
   {
-    hb_retni( obj->autoFormattingIndent (  ) );
+    hb_retni( obj->autoFormattingIndent () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_CODEC )
 
   if( obj )
   {
-    QTextCodec * ptr = obj->codec (  );
+    QTextCodec * ptr = obj->codec ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
 
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
 
   if( obj )
   {
-    hb_retl( obj->hasError (  ) );
+    hb_retl( obj->hasError () );
   }
 }
 
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDDOCUMENT )
 
   if( obj )
   {
-    obj->writeEndDocument (  );
+    obj->writeEndDocument ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDELEMENT )
 
   if( obj )
   {
-    obj->writeEndElement (  );
+    obj->writeEndElement ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -761,7 +761,7 @@ void QXmlStreamWriter_writeStartDocument3 ()
 
   if( obj )
   {
-    obj->writeStartDocument (  );
+    obj->writeStartDocument ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

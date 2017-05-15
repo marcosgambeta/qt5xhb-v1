@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QLISTWIDGET_COUNT )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * ptr = obj->currentItem (  );
+    QListWidgetItem * ptr = obj->currentItem ();
     _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentRow (  ) );
+    hb_retni( obj->currentRow () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSortingEnabled (  ) );
+    hb_retl( obj->isSortingEnabled () );
   }
 }
 
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

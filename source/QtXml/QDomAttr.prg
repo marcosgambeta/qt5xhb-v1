@@ -59,7 +59,7 @@ QDomAttr ()
 */
 HB_FUNC_STATIC( QDOMATTR_NEW1 )
 {
-  QDomAttr * o = new QDomAttr (  );
+  QDomAttr * o = new QDomAttr ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QDOMATTR_NAME )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDOMATTR_NODETYPE )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomElement * ptr = new QDomElement( obj->ownerElement (  ) );
+    QDomElement * ptr = new QDomElement( obj->ownerElement () );
     _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->specified (  ) );
+    hb_retl( obj->specified () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDOMATTR_VALUE )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->value (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->value ().toLatin1().data() );
   }
 }
 

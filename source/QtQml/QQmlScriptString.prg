@@ -62,7 +62,7 @@ QQmlScriptString()
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW1 )
 {
-  QQmlScriptString * o = new QQmlScriptString (  );
+  QQmlScriptString * o = new QQmlScriptString ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISEMPTY )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISNULLLITERAL )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNullLiteral (  ) );
+    hb_retl( obj->isNullLiteral () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isUndefinedLiteral (  ) );
+    hb_retl( obj->isUndefinedLiteral () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_STRINGLITERAL )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->stringLiteral (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->stringLiteral ().toLatin1().data() );
   }
 }
 

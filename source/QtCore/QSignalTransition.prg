@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 
   if( obj )
   {
-    QObject * ptr = obj->senderObject (  );
+    QObject * ptr = obj->senderObject ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->signal (  ) );
+    QByteArray * ptr = new QByteArray( obj->signal () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

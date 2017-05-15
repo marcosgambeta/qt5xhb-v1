@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWHEELEVENT_PIXELDELTA )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->pixelDelta (  ) );
+    QPoint * ptr = new QPoint( obj->pixelDelta () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QWHEELEVENT_ANGLEDELTA )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->angleDelta (  ) );
+    QPoint * ptr = new QPoint( obj->angleDelta () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWHEELEVENT_DELTA )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->delta (  ) );
+    hb_retni( obj->delta () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POS )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->pos (  ) );
+    QPoint * ptr = new QPoint( obj->pos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->globalPos (  ) );
+    QPoint * ptr = new QPoint( obj->globalPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QWHEELEVENT_X )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QWHEELEVENT_Y )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POSF )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->posF (  );
+    const QPointF * ptr = &obj->posF ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOSF )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->globalPosF (  );
+    const QPointF * ptr = &obj->globalPosF ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
   QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->buttons (  ) );
+    hb_retni( obj->buttons () );
   }
 }
 

@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QQMLENGINE_BASEURL )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->baseUrl (  ) );
+    QUrl * ptr = new QUrl( obj->baseUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QQMLENGINE_CLEARCOMPONENTCACHE )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clearComponentCache (  );
+    obj->clearComponentCache ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QQMLENGINE_IMPORTPATHLIST )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->importPathList (  );
+    QStringList strl = obj->importPathList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QQMLENGINE_INCUBATIONCONTROLLER )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlIncubationController * ptr = obj->incubationController (  );
+    QQmlIncubationController * ptr = obj->incubationController ();
     _qt5xhb_createReturnClass ( ptr, "QQMLINCUBATIONCONTROLLER" );
   }
 }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGER )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->networkAccessManager (  );
+    QNetworkAccessManager * ptr = obj->networkAccessManager ();
     _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGERFACTORY )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory (  );
+    QQmlNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory ();
     _qt5xhb_createReturnClass ( ptr, "QQMLNETWORKACCESSMANAGERFACTORY" );
   }
 }
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QQMLENGINE_OFFLINESTORAGEPATH )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->offlineStoragePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->offlineStoragePath ().toLatin1().data() );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->outputWarningsToStandardError (  ) );
+    hb_retl( obj->outputWarningsToStandardError () );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QQMLENGINE_PLUGINPATHLIST )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->pluginPathList (  );
+    QStringList strl = obj->pluginPathList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QQMLENGINE_ROOTCONTEXT )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlContext * ptr = obj->rootContext (  );
+    QQmlContext * ptr = obj->rootContext ();
     _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QQMLENGINE_TRIMCOMPONENTCACHE )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->trimComponentCache (  );
+    obj->trimComponentCache ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

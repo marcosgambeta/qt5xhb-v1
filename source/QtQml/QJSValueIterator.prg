@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
   QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasNext (  ) );
+    hb_retl( obj->hasNext () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NAME )
   QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
   QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->next (  ) );
+    hb_retl( obj->next () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
   QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * ptr = new QJSValue( obj->value (  ) );
+    QJSValue * ptr = new QJSValue( obj->value () );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }

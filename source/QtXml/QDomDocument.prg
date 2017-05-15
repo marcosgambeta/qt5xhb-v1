@@ -88,7 +88,7 @@ QDomDocument ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
 {
-  QDomDocument * o = new QDomDocument (  );
+  QDomDocument * o = new QDomDocument ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
   QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment (  ) );
+    QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment () );
     _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
   }
 }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
   QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomDocumentType * ptr = new QDomDocumentType( obj->doctype (  ) );
+    QDomDocumentType * ptr = new QDomDocumentType( obj->doctype () );
     _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
   }
 }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
   QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomElement * ptr = new QDomElement( obj->documentElement (  ) );
+    QDomElement * ptr = new QDomElement( obj->documentElement () );
     _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
   QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomImplementation * ptr = new QDomImplementation( obj->implementation (  ) );
+    QDomImplementation * ptr = new QDomImplementation( obj->implementation () );
     _qt5xhb_createReturnClass ( ptr, "QDOMIMPLEMENTATION", true );
   }
 }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
   QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 

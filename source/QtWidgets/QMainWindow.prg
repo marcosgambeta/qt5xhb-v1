@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->centralWidget (  );
+    QWidget * ptr = obj->centralWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
 
   if( obj )
   {
-    QMenu * ptr = obj->createPopupMenu (  );
+    QMenu * ptr = obj->createPopupMenu ();
     _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->dockOptions (  ) );
+    hb_retni( obj->dockOptions () );
   }
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
 
   if( obj )
   {
-    hb_retl( obj->documentMode (  ) );
+    hb_retl( obj->documentMode () );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->iconSize (  ) );
+    QSize * ptr = new QSize( obj->iconSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
 
   if( obj )
   {
-    hb_retl( obj->isAnimated (  ) );
+    hb_retl( obj->isAnimated () );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isDockNestingEnabled (  ) );
+    hb_retl( obj->isDockNestingEnabled () );
   }
 }
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
 
   if( obj )
   {
-    QMenuBar * ptr = obj->menuBar (  );
+    QMenuBar * ptr = obj->menuBar ();
     _qt5xhb_createReturnClass ( ptr, "QMENUBAR" );
   }
 }
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->menuWidget (  );
+    QWidget * ptr = obj->menuWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
 
   if( obj )
   {
-    QStatusBar * ptr = obj->statusBar (  );
+    QStatusBar * ptr = obj->statusBar ();
     _qt5xhb_createReturnClass ( ptr, "QSTATUSBAR" );
   }
 }
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
 
   if( obj )
   {
-    hb_retni( obj->tabShape (  ) );
+    hb_retni( obj->tabShape () );
   }
 }
 
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->toolButtonStyle (  ) );
+    hb_retni( obj->toolButtonStyle () );
   }
 }
 
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->takeCentralWidget (  );
+    QWidget * ptr = obj->takeCentralWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 #endif

@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 
   if( obj )
   {
-    hb_retni( obj->maximum (  ) );
+    hb_retni( obj->maximum () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 
   if( obj )
   {
-    hb_retni( obj->minimum (  ) );
+    hb_retni( obj->minimum () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 
   if( obj )
   {
-    hb_retni( obj->pageStep (  ) );
+    hb_retni( obj->pageStep () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 
   if( obj )
   {
-    hb_retl( obj->invertedAppearance (  ) );
+    hb_retl( obj->invertedAppearance () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 
   if( obj )
   {
-    hb_retl( obj->invertedControls (  ) );
+    hb_retl( obj->invertedControls () );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 
   if( obj )
   {
-    hb_retl( obj->isSliderDown (  ) );
+    hb_retl( obj->isSliderDown () );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 
   if( obj )
   {
-    hb_retni( obj->singleStep (  ) );
+    hb_retni( obj->singleStep () );
   }
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 
   if( obj )
   {
-    hb_retni( obj->sliderPosition (  ) );
+    hb_retni( obj->sliderPosition () );
   }
 }
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 
   if( obj )
   {
-    hb_retni( obj->value (  ) );
+    hb_retni( obj->value () );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 
   if( obj )
   {
-    hb_retl( obj->hasTracking (  ) );
+    hb_retl( obj->hasTracking () );
   }
 }
 

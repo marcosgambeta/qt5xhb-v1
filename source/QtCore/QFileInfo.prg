@@ -106,7 +106,7 @@ QFileInfo()
 */
 void QFileInfo_new1 ()
 {
-  QFileInfo * o = new QFileInfo (  );
+  QFileInfo * o = new QFileInfo ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
 
   if( obj )
   {
-    QDir * ptr = new QDir( obj->absoluteDir (  ) );
+    QDir * ptr = new QDir( obj->absoluteDir () );
     _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->absoluteFilePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->absoluteFilePath ().toLatin1().data() );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->absolutePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->absolutePath ().toLatin1().data() );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QFILEINFO_BASENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->baseName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->baseName ().toLatin1().data() );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->bundleName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->bundleName ().toLatin1().data() );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QFILEINFO_CACHING )
 
   if( obj )
   {
-    hb_retl( obj->caching (  ) );
+    hb_retl( obj->caching () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->canonicalFilePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->canonicalFilePath ().toLatin1().data() );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->canonicalPath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->canonicalPath ().toLatin1().data() );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->completeBaseName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->completeBaseName ().toLatin1().data() );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->completeSuffix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->completeSuffix ().toLatin1().data() );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QFILEINFO_CREATED )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->created (  ) );
+    QDateTime * ptr = new QDateTime( obj->created () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QFILEINFO_DIR )
 
   if( obj )
   {
-    QDir * ptr = new QDir( obj->dir (  ) );
+    QDir * ptr = new QDir( obj->dir () );
     _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QFILEINFO_EXISTS )
 
   if( obj )
   {
-    hb_retl( obj->exists (  ) );
+    hb_retl( obj->exists () );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QFILEINFO_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QFILEINFO_FILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->filePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->filePath ().toLatin1().data() );
   }
 }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->group (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->group ().toLatin1().data() );
   }
 }
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUPID )
 
   if( obj )
   {
-    hb_retni( obj->groupId (  ) );
+    hb_retni( obj->groupId () );
   }
 }
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QFILEINFO_ISABSOLUTE )
 
   if( obj )
   {
-    hb_retl( obj->isAbsolute (  ) );
+    hb_retl( obj->isAbsolute () );
   }
 }
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QFILEINFO_ISBUNDLE )
 
   if( obj )
   {
-    hb_retl( obj->isBundle (  ) );
+    hb_retl( obj->isBundle () );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QFILEINFO_ISDIR )
 
   if( obj )
   {
-    hb_retl( obj->isDir (  ) );
+    hb_retl( obj->isDir () );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QFILEINFO_ISEXECUTABLE )
 
   if( obj )
   {
-    hb_retl( obj->isExecutable (  ) );
+    hb_retl( obj->isExecutable () );
   }
 }
 
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QFILEINFO_ISFILE )
 
   if( obj )
   {
-    hb_retl( obj->isFile (  ) );
+    hb_retl( obj->isFile () );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QFILEINFO_ISHIDDEN )
 
   if( obj )
   {
-    hb_retl( obj->isHidden (  ) );
+    hb_retl( obj->isHidden () );
   }
 }
 
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QFILEINFO_ISNATIVEPATH )
 
   if( obj )
   {
-    hb_retl( obj->isNativePath (  ) );
+    hb_retl( obj->isNativePath () );
   }
 }
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QFILEINFO_ISREADABLE )
 
   if( obj )
   {
-    hb_retl( obj->isReadable (  ) );
+    hb_retl( obj->isReadable () );
   }
 }
 
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QFILEINFO_ISRELATIVE )
 
   if( obj )
   {
-    hb_retl( obj->isRelative (  ) );
+    hb_retl( obj->isRelative () );
   }
 }
 
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QFILEINFO_ISROOT )
 
   if( obj )
   {
-    hb_retl( obj->isRoot (  ) );
+    hb_retl( obj->isRoot () );
   }
 }
 
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QFILEINFO_ISSYMLINK )
 
   if( obj )
   {
-    hb_retl( obj->isSymLink (  ) );
+    hb_retl( obj->isSymLink () );
   }
 }
 
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QFILEINFO_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable (  ) );
+    hb_retl( obj->isWritable () );
   }
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastModified (  ) );
+    QDateTime * ptr = new QDateTime( obj->lastModified () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTREAD )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastRead (  ) );
+    QDateTime * ptr = new QDateTime( obj->lastRead () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QFILEINFO_MAKEABSOLUTE )
 
   if( obj )
   {
-    hb_retl( obj->makeAbsolute (  ) );
+    hb_retl( obj->makeAbsolute () );
   }
 }
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNER )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->owner (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->owner ().toLatin1().data() );
   }
 }
 
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNERID )
 
   if( obj )
   {
-    hb_retni( obj->ownerId (  ) );
+    hb_retni( obj->ownerId () );
   }
 }
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->path ().toLatin1().data() );
   }
 }
 
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSIONS )
 
   if( obj )
   {
-    hb_retni( obj->permissions (  ) );
+    hb_retni( obj->permissions () );
   }
 }
 
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QFILEINFO_REFRESH )
 
   if( obj )
   {
-    obj->refresh (  );
+    obj->refresh ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QFILEINFO_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QFILEINFO_SUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->suffix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->suffix ().toLatin1().data() );
   }
 }
 
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->symLinkTarget (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->symLinkTarget ().toLatin1().data() );
   }
 }
 

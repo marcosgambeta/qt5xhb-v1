@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
   QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->activate (  );
+    obj->activate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
   QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
   QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
   QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActivated (  ) );
+    hb_retl( obj->isActivated () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
   QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->updateGeometry (  );
+    obj->updateGeometry ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -239,7 +239,7 @@ static bool instantInvalidatePropagation ()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
-  hb_retl( QGraphicsLayout::instantInvalidatePropagation (  ) );
+  hb_retl( QGraphicsLayout::instantInvalidatePropagation () );
 }
 
 

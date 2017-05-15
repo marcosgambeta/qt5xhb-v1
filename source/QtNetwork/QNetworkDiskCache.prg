@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->cacheDirectory (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->cacheDirectory ().toLatin1().data() );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumCacheSize (  ) );
+    hb_retni( obj->maximumCacheSize () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cacheSize (  ) );
+    hb_retni( obj->cacheSize () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

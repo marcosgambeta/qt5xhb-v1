@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->acceptProposedAction (  );
+    obj->acceptProposedAction ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->dropAction (  ) );
+    hb_retni( obj->dropAction () );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->keyboardModifiers (  ) );
+    hb_retni( obj->keyboardModifiers () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMimeData * ptr = obj->mimeData (  );
+    const QMimeData * ptr = obj->mimeData ();
     _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mouseButtons (  ) );
+    hb_retni( obj->mouseButtons () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->possibleActions (  ) );
+    hb_retni( obj->possibleActions () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->proposedAction (  ) );
+    hb_retni( obj->proposedAction () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->source (  );
+    QObject * ptr = obj->source ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

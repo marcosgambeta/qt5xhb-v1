@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasPendingDatagrams (  ) );
+    hb_retl( obj->hasPendingDatagrams () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pendingDatagramSize (  ) );
+    hb_retni( obj->pendingDatagramSize () );
   }
 }
 

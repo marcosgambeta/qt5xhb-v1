@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->disconnectFromHost (  );
+    obj->disconnectFromHost ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->flush (  ) );
+    hb_retl( obj->flush () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->localAddress (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->localAddress () );
     _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->localPort (  ) );
+    hb_retni( obj->localPort () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->peerAddress (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
     _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->peerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->peerName ().toLatin1().data() );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerPort (  ) );
+    hb_retni( obj->peerPort () );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
+    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->readBufferSize (  ) );
+    hb_retni( obj->readBufferSize () );
   }
 }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->socketDescriptor (  ) );
+    hb_retni( obj->socketDescriptor () );
   }
 }
 
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->socketType (  ) );
+    hb_retni( obj->socketType () );
   }
 }
 
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bytesAvailable (  ) );
+    hb_retni( obj->bytesAvailable () );
   }
 }
 
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bytesToWrite (  ) );
+    hb_retni( obj->bytesToWrite () );
   }
 }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canReadLine (  ) );
+    hb_retl( obj->canReadLine () );
   }
 }
 
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 }
 

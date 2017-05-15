@@ -84,7 +84,7 @@ QWebHitTestResult ()
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW1 )
 {
-  QWebHitTestResult * o = new QWebHitTestResult (  );
+  QWebHitTestResult * o = new QWebHitTestResult ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->alternateText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->alternateText ().toLatin1().data() );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->boundingRect (  ) );
+    QRect * ptr = new QRect( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->element (  ) );
+    QWebElement * ptr = new QWebElement( obj->element () );
     _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->enclosingBlockElement (  ) );
+    QWebElement * ptr = new QWebElement( obj->enclosingBlockElement () );
     _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebFrame * ptr = obj->frame (  );
+    QWebFrame * ptr = obj->frame ();
     _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->imageUrl (  ) );
+    QUrl * ptr = new QUrl( obj->imageUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isContentEditable (  ) );
+    hb_retl( obj->isContentEditable () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isContentSelected (  ) );
+    hb_retl( obj->isContentSelected () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->linkElement (  ) );
+    QWebElement * ptr = new QWebElement( obj->linkElement () );
     _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebFrame * ptr = obj->linkTargetFrame (  );
+    QWebFrame * ptr = obj->linkTargetFrame ();
     _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->linkText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->linkText ().toLatin1().data() );
   }
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->linkTitle (  ) );
+    QUrl * ptr = new QUrl( obj->linkTitle () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->linkUrl (  ) );
+    QUrl * ptr = new QUrl( obj->linkUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap () );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->pos (  ) );
+    QPoint * ptr = new QPoint( obj->pos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 }
 

@@ -70,7 +70,7 @@ QAudioBuffer()
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW1 )
 {
-  QAudioBuffer * o = new QAudioBuffer (  );
+  QAudioBuffer * o = new QAudioBuffer ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->byteCount (  ) );
+    hb_retni( obj->byteCount () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_DATA )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retptr( (void *) obj->data (  ) );
+    hb_retptr( (void *) obj->data () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_DURATION )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_FORMAT )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioFormat * ptr = new QAudioFormat( obj->format (  ) );
+    QAudioFormat * ptr = new QAudioFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_FRAMECOUNT )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frameCount (  ) );
+    hb_retni( obj->frameCount () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_ISVALID )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_SAMPLECOUNT )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleCount (  ) );
+    hb_retni( obj->sampleCount () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_STARTTIME )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startTime (  ) );
+    hb_retni( obj->startTime () );
   }
 }
 

@@ -63,7 +63,7 @@ QXmlResultItems ()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
-  QXmlResultItems * o = new QXmlResultItems (  );
+  QXmlResultItems * o = new QXmlResultItems ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
   QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlItem * ptr = new QXmlItem( obj->current (  ) );
+    QXmlItem * ptr = new QXmlItem( obj->current () );
     _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
   }
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
   QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasError (  ) );
+    hb_retl( obj->hasError () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
   QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlItem * ptr = new QXmlItem( obj->next (  ) );
+    QXmlItem * ptr = new QXmlItem( obj->next () );
     _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
   }
 }

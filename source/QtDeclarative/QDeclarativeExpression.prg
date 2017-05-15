@@ -71,7 +71,7 @@ QDeclarativeExpression ()
 */
 void QDeclarativeExpression_new1 ()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression (  );
+  QDeclarativeExpression * o = new QDeclarativeExpression ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
 
   if( obj )
   {
-    obj->clearError (  );
+    obj->clearError ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
 
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->context (  );
+    QDeclarativeContext * ptr = obj->context ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
 
   if( obj )
   {
-    QDeclarativeEngine * ptr = obj->engine (  );
+    QDeclarativeEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
   }
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
 
   if( obj )
   {
-    QDeclarativeError * ptr = new QDeclarativeError( obj->error (  ) );
+    QDeclarativeError * ptr = new QDeclarativeError( obj->error () );
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEERROR" );
   }
 }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->expression (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->expression ().toLatin1().data() );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
 
   if( obj )
   {
-    hb_retl( obj->hasError (  ) );
+    hb_retl( obj->hasError () );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
 
   if( obj )
   {
-    hb_retni( obj->lineNumber (  ) );
+    hb_retni( obj->lineNumber () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
 
   if( obj )
   {
-    hb_retl( obj->notifyOnValueChanged (  ) );
+    hb_retl( obj->notifyOnValueChanged () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
 
   if( obj )
   {
-    QObject * ptr = obj->scopeObject (  );
+    QObject * ptr = obj->scopeObject ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceFile (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->sourceFile ().toLatin1().data() );
   }
 }
 

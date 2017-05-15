@@ -93,7 +93,7 @@ QBluetoothServiceInfo()
 void QBluetoothServiceInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * o = new QBluetoothServiceInfo (  );
+  QBluetoothServiceInfo * o = new QBluetoothServiceInfo ();
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISCOMPLETE )
 
   if( obj )
   {
-    hb_retl( obj->isComplete (  ) );
+    hb_retl( obj->isComplete () );
   }
 #endif
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_DEVICE )
 
   if( obj )
   {
-    QBluetoothDeviceInfo * ptr = new QBluetoothDeviceInfo( obj->device (  ) );
+    QBluetoothDeviceInfo * ptr = new QBluetoothDeviceInfo( obj->device () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHDEVICEINFO" );
   }
 #endif
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ATTRIBUTES )
 
   if( obj )
   {
-    QList<quint16> list = obj->attributes (  );
+    QList<quint16> list = obj->attributes ();
     _qt5xhb_convert_qlist_quint16_to_array ( list );
   }
 #endif
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->serviceName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->serviceName ().toLatin1().data() );
   }
 #endif
 }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEDESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->serviceDescription (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->serviceDescription ().toLatin1().data() );
   }
 #endif
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEPROVIDER )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->serviceProvider (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->serviceProvider ().toLatin1().data() );
   }
 #endif
 }
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SOCKETPROTOCOL )
 
   if( obj )
   {
-    hb_retni( obj->socketProtocol (  ) );
+    hb_retni( obj->socketProtocol () );
   }
 #endif
 }
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_PROTOCOLSERVICEMULTIPLEXER )
 
   if( obj )
   {
-    hb_retni( obj->protocolServiceMultiplexer (  ) );
+    hb_retni( obj->protocolServiceMultiplexer () );
   }
 #endif
 }
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVERCHANNEL )
 
   if( obj )
   {
-    hb_retni( obj->serverChannel (  ) );
+    hb_retni( obj->serverChannel () );
   }
 #endif
 }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEAVAILABILITY )
 
   if( obj )
   {
-    hb_retni( obj->serviceAvailability (  ) );
+    hb_retni( obj->serviceAvailability () );
   }
 #endif
 }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEUUID )
 
   if( obj )
   {
-    QBluetoothUuid * ptr = new QBluetoothUuid( obj->serviceUuid (  ) );
+    QBluetoothUuid * ptr = new QBluetoothUuid( obj->serviceUuid () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHUUID" );
   }
 #endif
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS )
 
   if( obj )
   {
-    QList<QBluetoothUuid> list = obj->serviceClassUuids (  );
+    QList<QBluetoothUuid> list = obj->serviceClassUuids ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBLUETOOTHUUID" );
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISREGISTERED )
 
   if( obj )
   {
-    hb_retl( obj->isRegistered (  ) );
+    hb_retl( obj->isRegistered () );
   }
 #endif
 }
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_UNREGISTERSERVICE )
 
   if( obj )
   {
-    hb_retl( obj->unregisterService (  ) );
+    hb_retl( obj->unregisterService () );
   }
 #endif
 }

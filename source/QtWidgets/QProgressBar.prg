@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->alignment (  ) );
+    hb_retni( obj->alignment () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->format (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->format ().toLatin1().data() );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->invertedAppearance (  ) );
+    hb_retl( obj->invertedAppearance () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTextVisible (  ) );
+    hb_retl( obj->isTextVisible () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximum (  ) );
+    hb_retni( obj->maximum () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minimum (  ) );
+    hb_retni( obj->minimum () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textDirection (  ) );
+    hb_retni( obj->textDirection () );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->value (  ) );
+    hb_retni( obj->value () );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_RESET )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

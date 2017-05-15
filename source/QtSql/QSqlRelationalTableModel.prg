@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
 
   if( obj )
   {
-    hb_retl( obj->select (  ) );
+    hb_retl( obj->select () );
   }
 }
 

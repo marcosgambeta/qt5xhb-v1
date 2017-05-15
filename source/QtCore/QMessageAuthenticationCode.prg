@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESET )
 
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->result (  ) );
+    QByteArray * ptr = new QByteArray( obj->result () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

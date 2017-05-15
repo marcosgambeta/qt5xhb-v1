@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->digitCount (  ) );
+    hb_retni( obj->digitCount () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 
   if( obj )
   {
-    hb_retni( obj->intValue (  ) );
+    hb_retni( obj->intValue () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
 
   if( obj )
   {
-    hb_retni( obj->mode (  ) );
+    hb_retni( obj->mode () );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->segmentStyle (  ) );
+    hb_retni( obj->segmentStyle () );
   }
 }
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 
   if( obj )
   {
-    hb_retl( obj->smallDecimalPoint (  ) );
+    hb_retl( obj->smallDecimalPoint () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 
   if( obj )
   {
-    hb_retnd( obj->value (  ) );
+    hb_retnd( obj->value () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 
   if( obj )
   {
-    obj->setBinMode (  );
+    obj->setBinMode ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 
   if( obj )
   {
-    obj->setDecMode (  );
+    obj->setDecMode ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 
   if( obj )
   {
-    obj->setHexMode (  );
+    obj->setHexMode ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 
   if( obj )
   {
-    obj->setOctMode (  );
+    obj->setOctMode ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

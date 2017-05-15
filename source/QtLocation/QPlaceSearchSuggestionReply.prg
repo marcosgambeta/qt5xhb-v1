@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS )
   QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->suggestions (  );
+    QStringList strl = obj->suggestions ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_TYPE )
   QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif

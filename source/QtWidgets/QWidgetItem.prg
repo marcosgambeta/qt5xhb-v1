@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QWIDGETITEM_CONTROLTYPES )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->controlTypes (  ) );
+    hb_retni( obj->controlTypes () );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->expandingDirections (  ) );
+    hb_retni( obj->expandingDirections () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
   QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

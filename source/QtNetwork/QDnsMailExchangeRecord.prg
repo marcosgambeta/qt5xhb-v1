@@ -61,7 +61,7 @@ QDnsMailExchangeRecord()
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW1 )
 {
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord (  );
+  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_EXCHANGE )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->exchange (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->exchange ().toLatin1().data() );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NAME )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->preference (  ) );
+    hb_retni( obj->preference () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_TIMETOLIVE )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive (  ) );
+    hb_retni( obj->timeToLive () );
   }
 }
 

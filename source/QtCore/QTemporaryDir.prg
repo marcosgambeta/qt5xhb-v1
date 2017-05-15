@@ -59,7 +59,7 @@ QTemporaryDir()
 */
 void QTemporaryDir_new1 ()
 {
-  QTemporaryDir * o = new QTemporaryDir (  );
+  QTemporaryDir * o = new QTemporaryDir ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
 
   if( obj )
   {
-    hb_retl( obj->autoRemove (  ) );
+    hb_retl( obj->autoRemove () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->path ().toLatin1().data() );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 
   if( obj )
   {
-    hb_retl( obj->remove (  ) );
+    hb_retl( obj->remove () );
   }
 }
 

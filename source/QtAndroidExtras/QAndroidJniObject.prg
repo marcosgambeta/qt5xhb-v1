@@ -73,7 +73,7 @@ QAndroidJniObject()
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * o = new QAndroidJniObject (  );
+  QAndroidJniObject * o = new QAndroidJniObject ();
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 #endif
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }

@@ -76,7 +76,7 @@ QHostAddress ()
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
 {
-  QHostAddress * o = new QHostAddress (  );
+  QHostAddress * o = new QHostAddress ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->protocol (  ) );
+    hb_retni( obj->protocol () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->scopeId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->scopeId ().toLatin1().data() );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toIPv4Address (  ) );
+    hb_retni( obj->toIPv4Address () );
   }
 }
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    Q_IPV6ADDR * ptr = new Q_IPV6ADDR( obj->toIPv6Address (  ) );
+    Q_IPV6ADDR * ptr = new Q_IPV6ADDR( obj->toIPv6Address () );
     _qt5xhb_createReturnClass ( ptr, "Q_IPV6ADDR" );
   }
 }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 

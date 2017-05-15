@@ -76,7 +76,7 @@ QGLBuffer ()
 */
 HB_FUNC_STATIC( QGLBUFFER_NEW1 )
 {
-  QGLBuffer * o = new QGLBuffer (  );
+  QGLBuffer * o = new QGLBuffer ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind (  ) );
+    hb_retl( obj->bind () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferId (  ) );
+    hb_retni( obj->bufferId () );
   }
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create (  ) );
+    hb_retl( obj->create () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->destroy (  );
+    obj->destroy ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated (  ) );
+    hb_retl( obj->isCreated () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE1 )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->release (  );
+    obj->release ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->unmap (  ) );
+    hb_retl( obj->unmap () );
   }
 }
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->usagePattern (  ) );
+    hb_retni( obj->usagePattern () );
   }
 }
 

@@ -76,7 +76,7 @@ QUrlQuery()
 */
 void QUrlQuery_new1 ()
 {
-  QUrlQuery * o = new QUrlQuery (  );
+  QUrlQuery * o = new QUrlQuery ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QURLQUERY_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->queryPairDelimiter (  ) );
+    QChar * ptr = new QChar( obj->queryPairDelimiter () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->queryValueDelimiter (  ) );
+    QChar * ptr = new QChar( obj->queryValueDelimiter () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -432,7 +432,7 @@ static QChar defaultQueryPairDelimiter()
 */
 HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
 {
-  QChar * ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter (  ) );
+  QChar * ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter () );
   _qt5xhb_createReturnClass ( ptr, "QCHAR" );
 }
 
@@ -441,7 +441,7 @@ static QChar defaultQueryValueDelimiter()
 */
 HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
 {
-  QChar * ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter (  ) );
+  QChar * ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter () );
   _qt5xhb_createReturnClass ( ptr, "QCHAR" );
 }
 

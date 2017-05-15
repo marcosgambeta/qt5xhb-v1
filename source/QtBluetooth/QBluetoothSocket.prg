@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ABORT )
 
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CLOSE )
 
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 #endif
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESAVAILABLE )
 
   if( obj )
   {
-    hb_retni( obj->bytesAvailable (  ) );
+    hb_retni( obj->bytesAvailable () );
   }
 #endif
 }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESTOWRITE )
 
   if( obj )
   {
-    hb_retni( obj->bytesToWrite (  ) );
+    hb_retni( obj->bytesToWrite () );
   }
 #endif
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CANREADLINE )
 
   if( obj )
   {
-    hb_retl( obj->canReadLine (  ) );
+    hb_retl( obj->canReadLine () );
   }
 #endif
 }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_DISCONNECTFROMSERVICE )
 
   if( obj )
   {
-    obj->disconnectFromService (  );
+    obj->disconnectFromService ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->localName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->localName ().toLatin1().data() );
   }
 #endif
 }
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALADDRESS )
 
   if( obj )
   {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->localAddress (  ) );
+    QBluetoothAddress * ptr = new QBluetoothAddress( obj->localAddress () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALPORT )
 
   if( obj )
   {
-    hb_retni( obj->localPort (  ) );
+    hb_retni( obj->localPort () );
   }
 #endif
 }
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->peerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->peerName ().toLatin1().data() );
   }
 #endif
 }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERADDRESS )
 
   if( obj )
   {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->peerAddress (  ) );
+    QBluetoothAddress * ptr = new QBluetoothAddress( obj->peerAddress () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERPORT )
 
   if( obj )
   {
-    hb_retni( obj->peerPort (  ) );
+    hb_retni( obj->peerPort () );
   }
 #endif
 }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETDESCRIPTOR )
 
   if( obj )
   {
-    hb_retni( obj->socketDescriptor (  ) );
+    hb_retni( obj->socketDescriptor () );
   }
 #endif
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETTYPE )
 
   if( obj )
   {
-    hb_retni( obj->socketType (  ) );
+    hb_retni( obj->socketType () );
   }
 #endif
 }
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
 
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 #endif
 }
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }

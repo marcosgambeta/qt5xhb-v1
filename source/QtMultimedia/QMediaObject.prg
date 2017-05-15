@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABILITY )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->availability (  ) );
+    hb_retni( obj->availability () );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->availableMetaData (  );
+    QStringList strl = obj->availableMetaData ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISAVAILABLE )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable (  ) );
+    hb_retl( obj->isAvailable () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMetaDataAvailable (  ) );
+    hb_retl( obj->isMetaDataAvailable () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->notifyInterval (  ) );
+    hb_retni( obj->notifyInterval () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaService * ptr = obj->service (  );
+    QMediaService * ptr = obj->service ();
     _qt5xhb_createReturnClass ( ptr, "QMEDIASERVICE" );
   }
 }

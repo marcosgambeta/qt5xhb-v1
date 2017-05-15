@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 
   if( obj )
   {
-    obj->completeCreate (  );
+    obj->completeCreate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->creationContext (  );
+    QDeclarativeContext * ptr = obj->creationContext ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 
   if( obj )
   {
-    QList<QDeclarativeError> list = obj->errors (  );
+    QList<QDeclarativeError> list = obj->errors ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 
   if( obj )
   {
-    hb_retl( obj->isError (  ) );
+    hb_retl( obj->isError () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 
   if( obj )
   {
-    hb_retl( obj->isLoading (  ) );
+    hb_retl( obj->isLoading () );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 
   if( obj )
   {
-    hb_retl( obj->isReady (  ) );
+    hb_retl( obj->isReady () );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 
   if( obj )
   {
-    hb_retnd( obj->progress (  ) );
+    hb_retnd( obj->progress () );
   }
 }
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

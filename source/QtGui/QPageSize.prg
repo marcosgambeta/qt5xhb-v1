@@ -104,7 +104,7 @@ QPageSize()
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW1 )
 {
-  QPageSize * o = new QPageSize (  );
+  QPageSize * o = new QPageSize ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QPAGESIZE_ISVALID )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPAGESIZE_KEY1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->key (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->key ().toLatin1().data() );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QPAGESIZE_NAME1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QPAGESIZE_ID1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->id (  ) );
+    hb_retni( obj->id () );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QPAGESIZE_WINDOWSID1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->windowsId (  ) );
+    hb_retni( obj->windowsId () );
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->definitionSize (  ) );
+    QSizeF * ptr = new QSizeF( obj->definitionSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->definitionUnits (  ) );
+    hb_retni( obj->definitionUnits () );
   }
 }
 
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizePoints (  ) );
+    QSize * ptr = new QSize( obj->sizePoints () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPOINTS )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->rectPoints (  ) );
+    QRect * ptr = new QRect( obj->rectPoints () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
   QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->cancelCapture (  );
+    obj->cancelCapture ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
   QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->driveMode (  ) );
+    hb_retni( obj->driveMode () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
   QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReadyForCapture (  ) );
+    hb_retl( obj->isReadyForCapture () );
   }
 }
 

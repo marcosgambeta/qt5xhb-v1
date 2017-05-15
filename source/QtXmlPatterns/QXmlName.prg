@@ -63,7 +63,7 @@ QXmlName ()
 */
 HB_FUNC_STATIC( QXMLNAME_NEW1 )
 {
-  QXmlName * o = new QXmlName (  );
+  QXmlName * o = new QXmlName ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
   QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 

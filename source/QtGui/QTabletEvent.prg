@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->device (  ) );
+    hb_retni( obj->device () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOSF )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->globalPosF (  );
+    const QPointF * ptr = &obj->globalPosF ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->hiResGlobalX (  ) );
+    hb_retnd( obj->hiResGlobalX () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->hiResGlobalY (  ) );
+    hb_retnd( obj->hiResGlobalY () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pointerType (  ) );
+    hb_retni( obj->pointerType () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POSF )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->posF (  );
+    const QPointF * ptr = &obj->posF ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->pressure (  ) );
+    hb_retnd( obj->pressure () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rotation (  ) );
+    hb_retnd( obj->rotation () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->tangentialPressure (  ) );
+    hb_retnd( obj->tangentialPressure () );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->uniqueId (  ) );
+    hb_retni( obj->uniqueId () );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTABLETEVENT_X )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QTABLETEVENT_XTILT )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->xTilt (  ) );
+    hb_retni( obj->xTilt () );
   }
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Y )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTABLETEVENT_YTILT )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->yTilt (  ) );
+    hb_retni( obj->yTilt () );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Z )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->z (  ) );
+    hb_retni( obj->z () );
   }
 }
 

@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->disconnectFromServer (  );
+    obj->disconnectFromServer ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->flush (  ) );
+    hb_retl( obj->flush () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fullServerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fullServerName ().toLatin1().data() );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->readBufferSize (  ) );
+    hb_retni( obj->readBufferSize () );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->serverName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->serverName ().toLatin1().data() );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_STATE )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bytesAvailable (  ) );
+    hb_retni( obj->bytesAvailable () );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bytesToWrite (  ) );
+    hb_retni( obj->bytesToWrite () );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canReadLine (  ) );
+    hb_retl( obj->canReadLine () );
   }
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 }
 

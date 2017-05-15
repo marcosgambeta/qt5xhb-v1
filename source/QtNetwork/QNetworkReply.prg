@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS2 )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->ignoreSslErrors (  );
+    obj->ignoreSslErrors ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->manager (  );
+    QNetworkAccessManager * ptr = obj->manager ();
     _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->operation (  ) );
+    hb_retni( obj->operation () );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QByteArray> list = obj->rawHeaderList (  );
+    QList<QByteArray> list = obj->rawHeaderList ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->readBufferSize (  ) );
+    hb_retni( obj->readBufferSize () );
   }
 }
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkRequest * ptr = new QNetworkRequest( obj->request (  ) );
+    QNetworkRequest * ptr = new QNetworkRequest( obj->request () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
   }
 }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
+    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

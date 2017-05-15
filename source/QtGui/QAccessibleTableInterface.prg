@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->caption (  );
+    QAccessibleInterface * ptr = obj->caption ();
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectedCellCount (  ) );
+    hb_retni( obj->selectedCellCount () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectedColumnCount (  ) );
+    hb_retni( obj->selectedColumnCount () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectedRowCount (  ) );
+    hb_retni( obj->selectedRowCount () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<int> list = obj->selectedColumns (  );
+    QList<int> list = obj->selectedColumns ();
     _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<int> list = obj->selectedRows (  );
+    QList<int> list = obj->selectedRows ();
     _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->summary (  );
+    QAccessibleInterface * ptr = obj->summary ();
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }

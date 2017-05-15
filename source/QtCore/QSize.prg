@@ -65,7 +65,7 @@ QSize ()
 */
 void QSize_new1 ()
 {
-  QSize * o = new QSize (  );
+  QSize * o = new QSize ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->height (  ) );
+    hb_retni( obj->height () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 
   if( obj )
   {
-    obj->transpose (  );
+    obj->transpose ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSIZE_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 }
 

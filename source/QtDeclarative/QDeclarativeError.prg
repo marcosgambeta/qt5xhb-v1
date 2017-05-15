@@ -67,7 +67,7 @@ QDeclarativeError ()
 */
 void QDeclarativeError_new1 ()
 {
-  QDeclarativeError * o = new QDeclarativeError (  );
+  QDeclarativeError * o = new QDeclarativeError ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 
   if( obj )
   {
-    hb_retni( obj->column (  ) );
+    hb_retni( obj->column () );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 
   if( obj )
   {
-    hb_retni( obj->line (  ) );
+    hb_retni( obj->line () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

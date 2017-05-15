@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
   QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * ptr = new QFont( obj->currentFont (  ) );
+    QFont * ptr = new QFont( obj->currentFont () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
   QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontFilters (  ) );
+    hb_retni( obj->fontFilters () );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
   QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->writingSystem (  ) );
+    hb_retni( obj->writingSystem () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
   QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

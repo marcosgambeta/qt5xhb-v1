@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QLABEL_ALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->alignment (  ) );
+    hb_retni( obj->alignment () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
 
   if( obj )
   {
-    QWidget * ptr = obj->buddy (  );
+    QWidget * ptr = obj->buddy ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 
   if( obj )
   {
-    hb_retl( obj->hasScaledContents (  ) );
+    hb_retl( obj->hasScaledContents () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 
   if( obj )
   {
-    hb_retl( obj->hasSelectedText (  ) );
+    hb_retl( obj->hasSelectedText () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QLABEL_INDENT )
 
   if( obj )
   {
-    hb_retni( obj->indent (  ) );
+    hb_retni( obj->indent () );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
 
   if( obj )
   {
-    hb_retni( obj->margin (  ) );
+    hb_retni( obj->margin () );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
 
   if( obj )
   {
-    QMovie * ptr = obj->movie (  );
+    QMovie * ptr = obj->movie ();
     _qt5xhb_createReturnClass ( ptr, "QMOVIE" );
   }
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
 
   if( obj )
   {
-    hb_retl( obj->openExternalLinks (  ) );
+    hb_retl( obj->openExternalLinks () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
 
   if( obj )
   {
-    const QPicture * ptr = obj->picture (  );
+    const QPicture * ptr = obj->picture ();
     _qt5xhb_createReturnClass ( ptr, "QPICTURE" );
   }
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
 
   if( obj )
   {
-    const QPixmap * ptr = obj->pixmap (  );
+    const QPixmap * ptr = obj->pixmap ();
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->selectedText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->selectedText ().toLatin1().data() );
   }
 }
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QLABEL_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
 
   if( obj )
   {
-    hb_retni( obj->textFormat (  ) );
+    hb_retni( obj->textFormat () );
   }
 }
 
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
 
   if( obj )
   {
-    hb_retni( obj->textInteractionFlags (  ) );
+    hb_retni( obj->textInteractionFlags () );
   }
 }
 
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QLABEL_WORDWRAP )
 
   if( obj )
   {
-    hb_retl( obj->wordWrap (  ) );
+    hb_retl( obj->wordWrap () );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QLABEL_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

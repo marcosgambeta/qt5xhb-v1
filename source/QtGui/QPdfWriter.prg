@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPDFWRITER_TITLE )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPDFWRITER_CREATOR )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->creator (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->creator ().toLatin1().data() );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPDFWRITER_NEWPAGE )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->newPage (  ) );
+    hb_retl( obj->newPage () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPDFWRITER_RESOLUTION )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->resolution (  ) );
+    hb_retni( obj->resolution () );
   }
 }
 

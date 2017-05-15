@@ -76,7 +76,7 @@ static QOpenGLContextGroup *currentContextGroup()
 */
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
 {
-  QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup (  );
+  QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup ();
   _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXTGROUP" );
 }
 

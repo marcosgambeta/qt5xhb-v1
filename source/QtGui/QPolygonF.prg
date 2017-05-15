@@ -77,7 +77,7 @@ QPolygonF()
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW1 )
 {
-  QPolygonF * o = new QPolygonF (  );
+  QPolygonF * o = new QPolygonF ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * ptr = new QPolygon( obj->toPolygon (  ) );
+    QPolygon * ptr = new QPolygon( obj->toPolygon () );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isClosed (  ) );
+    hb_retl( obj->isClosed () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

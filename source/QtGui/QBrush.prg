@@ -77,7 +77,7 @@ QBrush ()
 */
 void QBrush_new1 ()
 {
-  QBrush * o = new QBrush (  );
+  QBrush * o = new QBrush ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR ) // TODO: revisar e corrigir(?)
 
   if( obj )
   {
-    QColor * ptr = new QColor( obj->color (  ) );
+    QColor * ptr = new QColor( obj->color () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
 
   if( obj )
   {
-    const QGradient * ptr = obj->gradient (  );
+    const QGradient * ptr = obj->gradient ();
     _qt5xhb_createReturnClass ( ptr, "QGRADIENT" );
   }
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 
   if( obj )
   {
-    hb_retl( obj->isOpaque (  ) );
+    hb_retl( obj->isOpaque () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
 
   if( obj )
   {
-    QMatrix * ptr = new QMatrix( obj->matrix (  ) );
+    QMatrix * ptr = new QMatrix( obj->matrix () );
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QBRUSH_STYLE )
 
   if( obj )
   {
-    hb_retni( obj->style (  ) );
+    hb_retni( obj->style () );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
 
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->texture (  ) );
+    QPixmap * ptr = new QPixmap( obj->texture () );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->textureImage (  ) );
+    QImage * ptr = new QImage( obj->textureImage () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QBRUSH_TRANSFORM )
 
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->transform (  ) );
+    QTransform * ptr = new QTransform( obj->transform () );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }

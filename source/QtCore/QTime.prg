@@ -71,7 +71,7 @@ QTime()
 */
 void QTime_new1 ()
 {
-  QTime * o = new QTime (  );
+  QTime * o = new QTime ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTIME_ELAPSED )
 
   if( obj )
   {
-    hb_retni( obj->elapsed (  ) );
+    hb_retni( obj->elapsed () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QTIME_HOUR )
 
   if( obj )
   {
-    hb_retni( obj->hour (  ) );
+    hb_retni( obj->hour () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTIME_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -214,7 +214,7 @@ void QTime_isValid1 ()
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QTIME_MINUTE )
 
   if( obj )
   {
-    hb_retni( obj->minute (  ) );
+    hb_retni( obj->minute () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QTIME_MSEC )
 
   if( obj )
   {
-    hb_retni( obj->msec (  ) );
+    hb_retni( obj->msec () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QTIME_RESTART )
 
   if( obj )
   {
-    hb_retni( obj->restart (  ) );
+    hb_retni( obj->restart () );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTIME_SECOND )
 
   if( obj )
   {
-    hb_retni( obj->second (  ) );
+    hb_retni( obj->second () );
   }
 }
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QTIME_START )
 
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -425,7 +425,7 @@ static QTime currentTime()
 */
 HB_FUNC_STATIC( QTIME_CURRENTTIME )
 {
-  QTime * ptr = new QTime( QTime::currentTime (  ) );
+  QTime * ptr = new QTime( QTime::currentTime () );
   _qt5xhb_createReturnClass ( ptr, "QTIME", true );
 }
 

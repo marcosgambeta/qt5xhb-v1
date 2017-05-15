@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FLUSH )
 
   if( obj )
   {
-    hb_retl( obj->flush (  ) );
+    hb_retl( obj->flush () );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
 
   if( obj )
   {
-    hb_retni( obj->handle (  ) );
+    hb_retni( obj->handle () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
 
   if( obj )
   {
-    hb_retni( obj->permissions (  ) );
+    hb_retni( obj->permissions () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QFILEDEVICE_UNSETERROR )
 
   if( obj )
   {
-    obj->unsetError (  );
+    obj->unsetError ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QFILEDEVICE_CLOSE )
 
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QFILEDEVICE_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos (  ) );
+    hb_retni( obj->pos () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

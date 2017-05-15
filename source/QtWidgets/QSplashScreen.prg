@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap () );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 
   if( obj )
   {
-    obj->repaint (  );
+    obj->repaint ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 
   if( obj )
   {
-    obj->clearMessage (  );
+    obj->clearMessage ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

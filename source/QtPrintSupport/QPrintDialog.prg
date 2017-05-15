@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->options (  ) );
+    hb_retni( obj->options () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPrinter * ptr = obj->printer (  );
+    QPrinter * ptr = obj->printer ();
     _qt5xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->exec (  ) );
+    hb_retni( obj->exec () );
   }
 }
 

@@ -73,7 +73,7 @@ QPlaceSupplier()
 void QPlaceSupplier_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * o = new QPlaceSupplier (  );
+  QPlaceSupplier * o = new QPlaceSupplier ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->supplierId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->supplierId ().toLatin1().data() );
   }
 #endif
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_URL )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * ptr = new QPlaceIcon( obj->icon (  ) );
+    QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
   }
 #endif
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ISEMPTY )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 #endif
 }

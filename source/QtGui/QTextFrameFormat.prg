@@ -81,7 +81,7 @@ QTextFrameFormat()
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
 {
-  QTextFrameFormat * o = new QTextFrameFormat (  );
+  QTextFrameFormat * o = new QTextFrameFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->position (  ) );
+    hb_retni( obj->position () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->border (  ) );
+    hb_retnd( obj->border () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->borderBrush (  ) );
+    QBrush * ptr = new QBrush( obj->borderBrush () );
     _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->borderStyle (  ) );
+    hb_retni( obj->borderStyle () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->margin (  ) );
+    hb_retnd( obj->margin () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->topMargin (  ) );
+    hb_retnd( obj->topMargin () );
   }
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->bottomMargin (  ) );
+    hb_retnd( obj->bottomMargin () );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->leftMargin (  ) );
+    hb_retnd( obj->leftMargin () );
   }
 }
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rightMargin (  ) );
+    hb_retnd( obj->rightMargin () );
   }
 }
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->padding (  ) );
+    hb_retnd( obj->padding () );
   }
 }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextLength * ptr = new QTextLength( obj->width (  ) );
+    QTextLength * ptr = new QTextLength( obj->width () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
   }
 }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextLength * ptr = new QTextLength( obj->height (  ) );
+    QTextLength * ptr = new QTextLength( obj->height () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
   }
 }
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pageBreakPolicy (  ) );
+    hb_retni( obj->pageBreakPolicy () );
   }
 }
 

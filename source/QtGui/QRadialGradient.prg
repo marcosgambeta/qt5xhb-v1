@@ -61,7 +61,7 @@ QRadialGradient()
 */
 void QRadialGradient_new1 ()
 {
-  QRadialGradient * o = new QRadialGradient (  );
+  QRadialGradient * o = new QRadialGradient ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTER )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->center (  ) );
+    QPointF * ptr = new QPointF( obj->center () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTERRADIUS )
 
   if( obj )
   {
-    hb_retnd( obj->centerRadius (  ) );
+    hb_retnd( obj->centerRadius () );
   }
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALPOINT )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->focalPoint (  ) );
+    QPointF * ptr = new QPointF( obj->focalPoint () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALRADIUS )
 
   if( obj )
   {
-    hb_retnd( obj->focalRadius (  ) );
+    hb_retnd( obj->focalRadius () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_RADIUS )
 
   if( obj )
   {
-    hb_retnd( obj->radius (  ) );
+    hb_retnd( obj->radius () );
   }
 }
 

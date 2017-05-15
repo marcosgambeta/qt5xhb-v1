@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
   QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->opaqueResize (  ) );
+    hb_retl( obj->opaqueResize () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
   QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
   QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSplitter * ptr = obj->splitter (  );
+    QSplitter * ptr = obj->splitter ();
     _qt5xhb_createReturnClass ( ptr, "QSPLITTER" );
   }
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
   QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

@@ -70,7 +70,7 @@ QGLColormap ()
 */
 HB_FUNC_STATIC( QGLCOLORMAP_NEW1 )
 {
-  QGLColormap * o = new QGLColormap (  );
+  QGLColormap * o = new QGLColormap ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

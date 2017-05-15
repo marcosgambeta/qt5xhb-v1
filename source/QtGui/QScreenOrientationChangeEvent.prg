@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
   QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScreen * ptr = obj->screen (  );
+    QScreen * ptr = obj->screen ();
     _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
   QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 

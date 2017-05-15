@@ -65,7 +65,7 @@ QTextBoundaryFinder()
 */
 void QTextBoundaryFinder_new1 ()
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder (  );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->string (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->string ().toLatin1().data() );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
 
   if( obj )
   {
-    obj->toStart (  );
+    obj->toStart ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
 
   if( obj )
   {
-    obj->toEnd (  );
+    obj->toEnd ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
 
   if( obj )
   {
-    hb_retni( obj->position (  ) );
+    hb_retni( obj->position () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
 
   if( obj )
   {
-    hb_retni( obj->toNextBoundary (  ) );
+    hb_retni( obj->toNextBoundary () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
 
   if( obj )
   {
-    hb_retni( obj->toPreviousBoundary (  ) );
+    hb_retni( obj->toPreviousBoundary () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
 
   if( obj )
   {
-    hb_retl( obj->isAtBoundary (  ) );
+    hb_retl( obj->isAtBoundary () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
 
   if( obj )
   {
-    hb_retni( obj->boundaryReasons (  ) );
+    hb_retni( obj->boundaryReasons () );
   }
 }
 

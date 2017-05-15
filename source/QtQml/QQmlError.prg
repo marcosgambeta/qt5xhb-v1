@@ -70,7 +70,7 @@ QQmlError()
 */
 HB_FUNC_STATIC( QQMLERROR_NEW1 )
 {
-  QQmlError * o = new QQmlError (  );
+  QQmlError * o = new QQmlError ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QQMLERROR_COLUMN )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->column (  ) );
+    hb_retni( obj->column () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QQMLERROR_ISVALID )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QQMLERROR_LINE )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->line (  ) );
+    hb_retni( obj->line () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QQMLERROR_TOSTRING )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QQMLERROR_URL )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

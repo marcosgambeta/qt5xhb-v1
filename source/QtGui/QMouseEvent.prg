@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->button (  ) );
+    hb_retni( obj->button () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->buttons (  ) );
+    hb_retni( obj->buttons () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->localPos (  );
+    const QPointF * ptr = &obj->localPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->screenPos (  );
+    const QPointF * ptr = &obj->screenPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->windowPos (  );
+    const QPointF * ptr = &obj->windowPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_Y )
   QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 

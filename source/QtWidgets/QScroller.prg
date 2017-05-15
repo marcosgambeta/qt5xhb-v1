@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSCROLLER_FINALPOSITION )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->finalPosition (  ) );
+    QPointF * ptr = new QPointF( obj->finalPosition () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSCROLLER_PIXELPERMETER )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->pixelPerMeter (  ) );
+    QPointF * ptr = new QPointF( obj->pixelPerMeter () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLERPROPERTIES )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScrollerProperties * ptr = new QScrollerProperties( obj->scrollerProperties (  ) );
+    QScrollerProperties * ptr = new QScrollerProperties( obj->scrollerProperties () );
     _qt5xhb_createReturnClass ( ptr, "QSCROLLERPROPERTIES" );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QSCROLLER_STATE )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSCROLLER_STOP )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSCROLLER_TARGET )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->target (  );
+    QObject * ptr = obj->target ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QSCROLLER_VELOCITY )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->velocity (  ) );
+    QPointF * ptr = new QPointF( obj->velocity () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSCROLLER_RESENDPREPAREEVENT )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->resendPrepareEvent (  );
+    obj->resendPrepareEvent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

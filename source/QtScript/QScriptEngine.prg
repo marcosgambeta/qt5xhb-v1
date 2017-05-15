@@ -106,7 +106,7 @@ QScriptEngine()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW1 )
 {
-  QScriptEngine * o = new QScriptEngine (  );
+  QScriptEngine * o = new QScriptEngine ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptEngineAgent * ptr = obj->agent (  );
+    QScriptEngineAgent * ptr = obj->agent ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINEAGENT" );
   }
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->availableExtensions (  );
+    QStringList strl = obj->availableExtensions ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clearExceptions (  );
+    obj->clearExceptions ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->collectGarbage (  );
+    obj->collectGarbage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptContext * ptr = obj->currentContext (  );
+    QScriptContext * ptr = obj->currentContext ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->globalObject (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->globalObject () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasUncaughtException (  ) );
+    hb_retl( obj->hasUncaughtException () );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->importedExtensions (  );
+    QStringList strl = obj->importedExtensions ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEvaluating (  ) );
+    hb_retl( obj->isEvaluating () );
   }
 }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT1 )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->newObject (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->newObject () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->nullValue (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->nullValue () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->popContext (  );
+    obj->popContext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->processEventsInterval (  ) );
+    hb_retni( obj->processEventsInterval () );
   }
 }
 
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptContext * ptr = obj->pushContext (  );
+    QScriptContext * ptr = obj->pushContext ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->uncaughtException (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->uncaughtException () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->uncaughtExceptionBacktrace (  );
+    QStringList strl = obj->uncaughtExceptionBacktrace ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->uncaughtExceptionLineNumber (  ) );
+    hb_retni( obj->uncaughtExceptionLineNumber () );
   }
 }
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->undefinedValue (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->undefinedValue () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

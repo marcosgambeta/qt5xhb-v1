@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->activationObject (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->activationObject () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->argumentCount (  ) );
+    hb_retni( obj->argumentCount () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->argumentsObject (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->argumentsObject () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->backtrace (  );
+    QStringList strl = obj->backtrace ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->callee (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->callee () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptEngine * ptr = obj->engine (  );
+    QScriptEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCalledAsConstructor (  ) );
+    hb_retl( obj->isCalledAsConstructor () );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptContext * ptr = obj->parentContext (  );
+    QScriptContext * ptr = obj->parentContext ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->thisObject (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->thisObject () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 

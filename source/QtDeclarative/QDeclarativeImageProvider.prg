@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
 
   if( obj )
   {
-    hb_retni( obj->imageType (  ) );
+    hb_retni( obj->imageType () );
   }
 }
 

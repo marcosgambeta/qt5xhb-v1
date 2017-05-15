@@ -115,7 +115,7 @@ QImage ()
 */
 void QImage_new1 ()
 {
-  QImage * o = new QImage (  );
+  QImage * o = new QImage ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QIMAGE_ALLGRAY )
 
   if( obj )
   {
-    hb_retl( obj->allGray (  ) );
+    hb_retl( obj->allGray () );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->bitPlaneCount (  ) );
+    hb_retni( obj->bitPlaneCount () );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->byteCount (  ) );
+    hb_retni( obj->byteCount () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
 
   if( obj )
   {
-    hb_retni( obj->bytesPerLine (  ) );
+    hb_retni( obj->bytesPerLine () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QIMAGE_CACHEKEY )
 
   if( obj )
   {
-    hb_retni( obj->cacheKey (  ) );
+    hb_retni( obj->cacheKey () );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->colorCount (  ) );
+    hb_retni( obj->colorCount () );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 
   if( obj )
   {
-    QVector<QRgb> list = obj->colorTable (  );
+    QVector<QRgb> list = obj->colorTable ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QIMAGE_DEPTH )
 
   if( obj )
   {
-    hb_retni( obj->depth (  ) );
+    hb_retni( obj->depth () );
   }
 }
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
 
   if( obj )
   {
-    hb_retni( obj->dotsPerMeterX (  ) );
+    hb_retni( obj->dotsPerMeterX () );
   }
 }
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
 
   if( obj )
   {
-    hb_retni( obj->dotsPerMeterY (  ) );
+    hb_retni( obj->dotsPerMeterY () );
   }
 }
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QIMAGE_FORMAT )
 
   if( obj )
   {
-    hb_retni( obj->format (  ) );
+    hb_retni( obj->format () );
   }
 }
 
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
 
   if( obj )
   {
-    hb_retl( obj->hasAlphaChannel (  ) );
+    hb_retl( obj->hasAlphaChannel () );
   }
 }
 
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QIMAGE_HEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->height (  ) );
+    hb_retni( obj->height () );
   }
 }
 
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
 
   if( obj )
   {
-    hb_retl( obj->isGrayscale (  ) );
+    hb_retl( obj->isGrayscale () );
   }
 }
 
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QIMAGE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QIMAGE_OFFSET )
 
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->offset (  ) );
+    QPoint * ptr = new QPoint( obj->offset () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QIMAGE_RECT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->rect (  ) );
+    QRect * ptr = new QRect( obj->rect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->rgbSwapped (  ) );
+    QImage * ptr = new QImage( obj->rgbSwapped () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -1299,7 +1299,7 @@ HB_FUNC_STATIC( QIMAGE_SIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
 
   if( obj )
   {
-    QStringList strl = obj->textKeys (  );
+    QStringList strl = obj->textKeys ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QIMAGE_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 }
 

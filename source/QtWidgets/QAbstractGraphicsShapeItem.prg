@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
   QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->brush (  ) );
+    QBrush * ptr = new QBrush( obj->brush () );
     _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
   QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPen * ptr = new QPen( obj->pen (  ) );
+    QPen * ptr = new QPen( obj->pen () );
     _qt5xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
   QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }

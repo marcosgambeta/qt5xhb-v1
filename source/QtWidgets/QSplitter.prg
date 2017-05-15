@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 
   if( obj )
   {
-    hb_retl( obj->childrenCollapsible (  ) );
+    hb_retl( obj->childrenCollapsible () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->handleWidth (  ) );
+    hb_retni( obj->handleWidth () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 
   if( obj )
   {
-    hb_retl( obj->opaqueResize (  ) );
+    hb_retl( obj->opaqueResize () );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSPLITTER_REFRESH )
 
   if( obj )
   {
-    obj->refresh (  );
+    obj->refresh ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->saveState (  ) );
+    QByteArray * ptr = new QByteArray( obj->saveState () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

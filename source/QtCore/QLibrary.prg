@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QLIBRARY_LOAD )
 
   if( obj )
   {
-    hb_retl( obj->load (  ) );
+    hb_retl( obj->load () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QLIBRARY_UNLOAD )
 
   if( obj )
   {
-    hb_retl( obj->unload (  ) );
+    hb_retl( obj->unload () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 
   if( obj )
   {
-    hb_retl( obj->isLoaded (  ) );
+    hb_retl( obj->isLoaded () );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 
   if( obj )
   {
-    hb_retni( obj->loadHints (  ) );
+    hb_retni( obj->loadHints () );
   }
 }
 

@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
   QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebPage * ptr = obj->page (  );
+    QWebPage * ptr = obj->page ();
     _qt5xhb_createReturnClass ( ptr, "QWEBPAGE" );
   }
 }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
   QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

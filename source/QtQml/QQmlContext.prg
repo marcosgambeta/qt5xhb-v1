@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_BASEURL )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->baseUrl (  ) );
+    QUrl * ptr = new QUrl( obj->baseUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->contextObject (  );
+    QObject * ptr = obj->contextObject ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_ENGINE )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlEngine * ptr = obj->engine (  );
+    QQmlEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_ISVALID )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlContext * ptr = obj->parentContext (  );
+    QQmlContext * ptr = obj->parentContext ();
     _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 }

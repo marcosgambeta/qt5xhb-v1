@@ -58,7 +58,7 @@ QSqlRelation ()
 */
 void QSqlRelation_new1 ()
 {
-  QSqlRelation * o = new QSqlRelation (  );
+  QSqlRelation * o = new QSqlRelation ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->displayColumn (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->displayColumn ().toLatin1().data() );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->indexColumn (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->indexColumn ().toLatin1().data() );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->tableName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->tableName ().toLatin1().data() );
   }
 }
 

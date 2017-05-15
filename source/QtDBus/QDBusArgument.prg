@@ -77,7 +77,7 @@ QDBusArgument()
 */
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW1 )
 {
-  QDBusArgument * o = new QDBusArgument (  );
+  QDBusArgument * o = new QDBusArgument ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -86,7 +86,7 @@ QDBusArgument(const QDBusArgument &other)
 */
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW2 )
 {
-  QDBusArgument * o = new QDBusArgument (  );
+  QDBusArgument * o = new QDBusArgument ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINSTRUCTURE )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->beginStructure (  );
+    obj->beginStructure ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endStructure (  );
+    obj->endStructure ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY2 )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->beginArray (  );
+    obj->beginArray ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endArray (  );
+    obj->endArray ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP2 )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->beginMap (  );
+    obj->beginMap ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAP )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endMap (  );
+    obj->endMap ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAPENTRY )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->beginMapEntry (  );
+    obj->beginMapEntry ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endMapEntry (  );
+    obj->endMapEntry ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->currentSignature (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->currentSignature ().toLatin1().data() );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentType (  ) );
+    hb_retni( obj->currentType () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ATEND )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->asVariant (  ) );
+    QVariant * ptr = new QVariant( obj->asVariant () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 
   if( obj )
   {
-    hb_retni( obj->allowedAreas (  ) );
+    hb_retni( obj->allowedAreas () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 
   if( obj )
   {
-    hb_retni( obj->features (  ) );
+    hb_retni( obj->features () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 
   if( obj )
   {
-    hb_retl( obj->isFloating (  ) );
+    hb_retl( obj->isFloating () );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->titleBarWidget (  );
+    QWidget * ptr = obj->titleBarWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 
   if( obj )
   {
-    QAction * ptr = obj->toggleViewAction (  );
+    QAction * ptr = obj->toggleViewAction ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

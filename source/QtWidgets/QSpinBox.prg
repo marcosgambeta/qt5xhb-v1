@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->cleanText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->cleanText ().toLatin1().data() );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 
   if( obj )
   {
-    hb_retni( obj->maximum (  ) );
+    hb_retni( obj->maximum () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 
   if( obj )
   {
-    hb_retni( obj->minimum (  ) );
+    hb_retni( obj->minimum () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->prefix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->prefix ().toLatin1().data() );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 
   if( obj )
   {
-    hb_retni( obj->singleStep (  ) );
+    hb_retni( obj->singleStep () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->suffix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->suffix ().toLatin1().data() );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSPINBOX_VALUE )
 
   if( obj )
   {
-    hb_retni( obj->value (  ) );
+    hb_retni( obj->value () );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
 
   if( obj )
   {
-    hb_retni( obj->displayIntegerBase (  ) );
+    hb_retni( obj->displayIntegerBase () );
   }
 }
 

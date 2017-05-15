@@ -54,7 +54,7 @@ QMessageLogger()
 */
 void QMessageLogger_new1 ()
 {
-  QMessageLogger * o = new QMessageLogger (  );
+  QMessageLogger * o = new QMessageLogger ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

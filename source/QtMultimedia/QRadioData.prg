@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->availability (  ) );
+    hb_retni( obj->availability () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaObject * ptr = obj->mediaObject (  );
+    QMediaObject * ptr = obj->mediaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QRADIODATA_STATIONID )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->stationId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->stationId ().toLatin1().data() );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->programType (  ) );
+    hb_retni( obj->programType () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPENAME )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->programTypeName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->programTypeName ().toLatin1().data() );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QRADIODATA_STATIONNAME )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->stationName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->stationName ().toLatin1().data() );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QRADIODATA_RADIOTEXT )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->radioText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->radioText ().toLatin1().data() );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAlternativeFrequenciesEnabled (  ) );
+    hb_retl( obj->isAlternativeFrequenciesEnabled () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QRADIODATA_ERROR )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 

@@ -72,7 +72,7 @@ QNetworkCacheMetaData ()
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW1 )
 {
-  QNetworkCacheMetaData * o = new QNetworkCacheMetaData (  );
+  QNetworkCacheMetaData * o = new QNetworkCacheMetaData ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
   QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->expirationDate (  ) );
+    QDateTime * ptr = new QDateTime( obj->expirationDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_ISVALID )
   QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
   QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastModified (  ) );
+    QDateTime * ptr = new QDateTime( obj->lastModified () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
   QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->saveToDisk (  ) );
+    hb_retl( obj->saveToDisk () );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
   QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

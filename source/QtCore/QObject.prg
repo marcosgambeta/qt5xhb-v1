@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
 
   if( obj )
   {
-    QObjectList list = obj->children (  );
+    QObjectList list = obj->children ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 
   if( obj )
   {
-    obj->dumpObjectInfo (  );
+    obj->dumpObjectInfo ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 
   if( obj )
   {
-    obj->dumpObjectTree (  );
+    obj->dumpObjectTree ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 
   if( obj )
   {
-    QList<QByteArray> list = obj->dynamicPropertyNames (  );
+    QList<QByteArray> list = obj->dynamicPropertyNames ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isWidgetType (  ) );
+    hb_retl( obj->isWidgetType () );
   }
 }
 
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QOBJECT_ISWINDOWTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isWindowType (  ) );
+    hb_retl( obj->isWindowType () );
   }
 }
 
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 
   if( obj )
   {
-    const QMetaObject * ptr = obj->metaObject (  );
+    const QMetaObject * ptr = obj->metaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->objectName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->objectName ().toLatin1().data() );
   }
 }
 
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
 
   if( obj )
   {
-    QObject * ptr = obj->parent (  );
+    QObject * ptr = obj->parent ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 
   if( obj )
   {
-    hb_retl( obj->signalsBlocked (  ) );
+    hb_retl( obj->signalsBlocked () );
   }
 }
 
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
 
   if( obj )
   {
-    QThread * ptr = obj->thread (  );
+    QThread * ptr = obj->thread ();
     _qt5xhb_createReturnClass ( ptr, "QTHREAD" );
   }
 }
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QOBJECT_DELETELATER )
 
   if( obj )
   {
-    obj->deleteLater (  );
+    obj->deleteLater ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

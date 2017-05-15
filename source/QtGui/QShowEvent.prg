@@ -47,7 +47,7 @@ QShowEvent()
 */
 HB_FUNC_STATIC( QSHOWEVENT_NEW )
 {
-  QShowEvent * o = new QShowEvent (  );
+  QShowEvent * o = new QShowEvent ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

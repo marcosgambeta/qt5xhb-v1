@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ACTUALLOCATION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->actualLocation (  ) );
+    QUrl * ptr = new QUrl( obj->actualLocation () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AUDIOSETTINGS )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings (  ) );
+    QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings () );
     _qt5xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS" );
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AVAILABILITY )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->availability (  ) );
+    hb_retni( obj->availability () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AVAILABLEMETADATA )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->availableMetaData (  );
+    QStringList strl = obj->availableMetaData ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERFORMAT )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->containerFormat (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->containerFormat ().toLatin1().data() );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_DURATION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ERROR )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ERRORSTRING )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISAVAILABLE )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable (  ) );
+    hb_retl( obj->isAvailable () );
   }
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISMETADATAAVAILABLE )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMetaDataAvailable (  ) );
+    hb_retl( obj->isMetaDataAvailable () );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISMETADATAWRITABLE )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMetaDataWritable (  ) );
+    hb_retl( obj->isMetaDataWritable () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISMUTED )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted (  ) );
+    hb_retl( obj->isMuted () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_OUTPUTLOCATION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->outputLocation (  ) );
+    QUrl * ptr = new QUrl( obj->outputLocation () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STATE )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STATUS )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOCODECS )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedAudioCodecs (  );
+    QStringList strl = obj->supportedAudioCodecs ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDCONTAINERS )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedContainers (  );
+    QStringList strl = obj->supportedContainers ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDVIDEOCODECS )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedVideoCodecs (  );
+    QStringList strl = obj->supportedVideoCodecs ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VIDEOSETTINGS )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings (  ) );
+    QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings () );
     _qt5xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS" );
   }
 }
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VOLUME )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->volume (  ) );
+    hb_retnd( obj->volume () );
   }
 }
 
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_MEDIAOBJECT )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaObject * ptr = obj->mediaObject (  );
+    QMediaObject * ptr = obj->mediaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_PAUSE )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->pause (  );
+    obj->pause ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_RECORD )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->record (  );
+    obj->record ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STOP )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

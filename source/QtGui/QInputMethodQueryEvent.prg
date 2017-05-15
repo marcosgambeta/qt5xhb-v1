@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_QUERIES )
   QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->queries (  ) );
+    hb_retni( obj->queries () );
   }
 }
 

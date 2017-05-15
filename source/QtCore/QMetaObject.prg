@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->classInfoCount (  ) );
+    hb_retni( obj->classInfoCount () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
 
   if( obj )
   {
-    hb_retni( obj->classInfoOffset (  ) );
+    hb_retni( obj->classInfoOffset () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
 
   if( obj )
   {
-    const char * str1 = obj->className (  );
+    const char * str1 = obj->className ();
     hb_retc( str1 );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->constructorCount (  ) );
+    hb_retni( obj->constructorCount () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->enumeratorCount (  ) );
+    hb_retni( obj->enumeratorCount () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
 
   if( obj )
   {
-    hb_retni( obj->enumeratorOffset (  ) );
+    hb_retni( obj->enumeratorOffset () );
   }
 }
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->methodCount (  ) );
+    hb_retni( obj->methodCount () );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
 
   if( obj )
   {
-    hb_retni( obj->methodOffset (  ) );
+    hb_retni( obj->methodOffset () );
   }
 }
 
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWINSTANCE ) // TODO: implementar parametros
 
   if( obj )
   {
-    QObject * ptr = obj->newInstance (  );
+    QObject * ptr = obj->newInstance ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->propertyCount (  ) );
+    hb_retni( obj->propertyCount () );
   }
 }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
 
   if( obj )
   {
-    hb_retni( obj->propertyOffset (  ) );
+    hb_retni( obj->propertyOffset () );
   }
 }
 
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
 
   if( obj )
   {
-    const QMetaObject * ptr = obj->superClass (  );
+    const QMetaObject * ptr = obj->superClass ();
     _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
 
   if( obj )
   {
-    QMetaProperty * ptr = new QMetaProperty( obj->userProperty (  ) );
+    QMetaProperty * ptr = new QMetaProperty( obj->userProperty () );
     _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
   }
 }

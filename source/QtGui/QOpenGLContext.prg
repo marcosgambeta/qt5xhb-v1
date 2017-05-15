@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CREATE )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create (  ) );
+    hb_retl( obj->create () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DEFAULTFRAMEBUFFEROBJECT )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->defaultFramebufferObject (  ) );
+    hb_retni( obj->defaultFramebufferObject () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DONECURRENT )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->doneCurrent (  );
+    obj->doneCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FORMAT )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
+    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLFunctions * ptr = obj->functions (  );
+    QOpenGLFunctions * ptr = obj->functions ();
     _qt5xhb_createReturnClass ( ptr, "QOPENGLFUNCTIONS" );
   }
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ISVALID )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScreen * ptr = obj->screen (  );
+    QScreen * ptr = obj->screen ();
     _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
   }
 }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLContext * ptr = obj->shareContext (  );
+    QOpenGLContext * ptr = obj->shareContext ();
     _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
   }
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLContextGroup * ptr = obj->shareGroup (  );
+    QOpenGLContextGroup * ptr = obj->shareGroup ();
     _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXTGROUP" );
   }
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurface * ptr = obj->surface (  );
+    QSurface * ptr = obj->surface ();
     _qt5xhb_createReturnClass ( ptr, "QSURFACE" );
   }
 }
@@ -355,7 +355,7 @@ static QOpenGLContext * currentContext()
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
 {
-  QOpenGLContext * ptr = QOpenGLContext::currentContext (  );
+  QOpenGLContext * ptr = QOpenGLContext::currentContext ();
   _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
 }
 

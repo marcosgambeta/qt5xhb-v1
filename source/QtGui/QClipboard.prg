@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 
   if( obj )
   {
-    hb_retl( obj->ownsClipboard (  ) );
+    hb_retl( obj->ownsClipboard () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 
   if( obj )
   {
-    hb_retl( obj->ownsFindBuffer (  ) );
+    hb_retl( obj->ownsFindBuffer () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 
   if( obj )
   {
-    hb_retl( obj->ownsSelection (  ) );
+    hb_retl( obj->ownsSelection () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 
   if( obj )
   {
-    hb_retl( obj->supportsFindBuffer (  ) );
+    hb_retl( obj->supportsFindBuffer () );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 
   if( obj )
   {
-    hb_retl( obj->supportsSelection (  ) );
+    hb_retl( obj->supportsSelection () );
   }
 }
 

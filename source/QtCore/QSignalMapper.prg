@@ -303,7 +303,7 @@ void QSignalMapper_map1 ()
 
   if( obj )
   {
-    obj->map (  );
+    obj->map ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

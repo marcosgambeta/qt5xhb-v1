@@ -78,7 +78,7 @@ QGeoRouteSegment()
 void QGeoRouteSegment_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteSegment * o = new QGeoRouteSegment (  );
+  QGeoRouteSegment * o = new QGeoRouteSegment ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_ISVALID )
   QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEXTROUTESEGMENT )
   QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRouteSegment * ptr = new QGeoRouteSegment( obj->nextRouteSegment (  ) );
+    QGeoRouteSegment * ptr = new QGeoRouteSegment( obj->nextRouteSegment () );
     _qt5xhb_createReturnClass ( ptr, "QGEOROUTESEGMENT", true );
   }
 #endif
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_TRAVELTIME )
   QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->travelTime (  ) );
+    hb_retni( obj->travelTime () );
   }
 #endif
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_DISTANCE )
   QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->distance (  ) );
+    hb_retnd( obj->distance () );
   }
 #endif
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_PATH )
   QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoCoordinate> list = obj->path (  );
+    QList<QGeoCoordinate> list = obj->path ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEOCOORDINATE" );
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_MANEUVER )
   QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoManeuver * ptr = new QGeoManeuver( obj->maneuver (  ) );
+    QGeoManeuver * ptr = new QGeoManeuver( obj->maneuver () );
     _qt5xhb_createReturnClass ( ptr, "QGEOMANEUVER", true );
   }
 #endif

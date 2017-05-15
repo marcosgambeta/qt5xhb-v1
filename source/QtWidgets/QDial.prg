@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 
   if( obj )
   {
-    hb_retni( obj->notchSize (  ) );
+    hb_retni( obj->notchSize () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 
   if( obj )
   {
-    hb_retnd( obj->notchTarget (  ) );
+    hb_retnd( obj->notchTarget () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->notchesVisible (  ) );
+    hb_retl( obj->notchesVisible () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
 
   if( obj )
   {
-    hb_retl( obj->wrapping (  ) );
+    hb_retl( obj->wrapping () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QDIAL_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

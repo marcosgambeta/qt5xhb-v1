@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 
   if( obj )
   {
-    hb_retnd( obj->amplitude (  ) );
+    hb_retnd( obj->amplitude () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 
   if( obj )
   {
-    hb_retnd( obj->overshoot (  ) );
+    hb_retnd( obj->overshoot () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 
   if( obj )
   {
-    hb_retnd( obj->period (  ) );
+    hb_retnd( obj->period () );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
 
   if( obj )
   {
-    QVector<QPointF> list = obj->toCubicSpline (  );
+    QVector<QPointF> list = obj->toCubicSpline ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPOINTF" );
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

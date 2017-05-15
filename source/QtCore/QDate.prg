@@ -80,7 +80,7 @@ QDate ()
 */
 void QDate_new1 ()
 {
-  QDate * o = new QDate (  );
+  QDate * o = new QDate ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDATE_DAY )
 
   if( obj )
   {
-    hb_retni( obj->day (  ) );
+    hb_retni( obj->day () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDATE_DAYOFWEEK )
 
   if( obj )
   {
-    hb_retni( obj->dayOfWeek (  ) );
+    hb_retni( obj->dayOfWeek () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDATE_DAYOFYEAR )
 
   if( obj )
   {
-    hb_retni( obj->dayOfYear (  ) );
+    hb_retni( obj->dayOfYear () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDATE_DAYSINMONTH )
 
   if( obj )
   {
-    hb_retni( obj->daysInMonth (  ) );
+    hb_retni( obj->daysInMonth () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QDATE_DAYSINYEAR )
 
   if( obj )
   {
-    hb_retni( obj->daysInYear (  ) );
+    hb_retni( obj->daysInYear () );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QDATE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDATE_MONTH )
 
   if( obj )
   {
-    hb_retni( obj->month (  ) );
+    hb_retni( obj->month () );
   }
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QDATE_TOJULIANDAY )
 
   if( obj )
   {
-    hb_retni( obj->toJulianDay (  ) );
+    hb_retni( obj->toJulianDay () );
   }
 }
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QDATE_YEAR )
 
   if( obj )
   {
-    hb_retni( obj->year (  ) );
+    hb_retni( obj->year () );
   }
 }
 
@@ -454,7 +454,7 @@ static QDate currentDate ()
 */
 HB_FUNC_STATIC( QDATE_CURRENTDATE )
 {
-  QDate * ptr = new QDate( QDate::currentDate (  ) );
+  QDate * ptr = new QDate( QDate::currentDate () );
   _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
@@ -536,7 +536,7 @@ void QDate_isValid1 ()
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 

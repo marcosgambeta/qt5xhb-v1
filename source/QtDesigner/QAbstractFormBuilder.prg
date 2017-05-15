@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAbstractFormBuilder * o = new QAbstractFormBuilder (  );
+    QAbstractFormBuilder * o = new QAbstractFormBuilder ();
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 
   if( obj )
   {
-    QDir * ptr = new QDir( obj->workingDirectory (  ) );
+    QDir * ptr = new QDir( obj->workingDirectory () );
     _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }

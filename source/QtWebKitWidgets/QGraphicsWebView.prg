@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebHistory * ptr = obj->history (  );
+    QWebHistory * ptr = obj->history ();
     _qt5xhb_createReturnClass ( ptr, "QWEBHISTORY" );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isModified (  ) );
+    hb_retl( obj->isModified () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTiledBackingStoreFrozen (  ) );
+    hb_retl( obj->isTiledBackingStoreFrozen () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebPage * ptr = obj->page (  );
+    QWebPage * ptr = obj->page ();
     _qt5xhb_createReturnClass ( ptr, "QWEBPAGE" );
   }
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->resizesToContents (  ) );
+    hb_retl( obj->resizesToContents () );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebSettings * ptr = obj->settings (  );
+    QWebSettings * ptr = obj->settings ();
     _qt5xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
   }
 }
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->zoomFactor (  ) );
+    hb_retnd( obj->zoomFactor () );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->back (  );
+    obj->back ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->forward (  );
+    obj->forward ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reload (  );
+    obj->reload ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_APERTURE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->aperture (  ) );
+    hb_retnd( obj->aperture () );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSURECOMPENSATION )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->exposureCompensation (  ) );
+    hb_retnd( obj->exposureCompensation () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->exposureMode (  ) );
+    hb_retni( obj->exposureMode () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->flashMode (  ) );
+    hb_retni( obj->flashMode () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISAVAILABLE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable (  ) );
+    hb_retl( obj->isAvailable () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHREADY )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFlashReady (  ) );
+    hb_retl( obj->isFlashReady () );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISOSENSITIVITY )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->isoSensitivity (  ) );
+    hb_retni( obj->isoSensitivity () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->meteringMode (  ) );
+    hb_retni( obj->meteringMode () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDAPERTURE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->requestedAperture (  ) );
+    hb_retnd( obj->requestedAperture () );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->requestedIsoSensitivity (  ) );
+    hb_retni( obj->requestedIsoSensitivity () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->requestedShutterSpeed (  ) );
+    hb_retnd( obj->requestedShutterSpeed () );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SHUTTERSPEED )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->shutterSpeed (  ) );
+    hb_retnd( obj->shutterSpeed () );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SPOTMETERINGPOINT )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->spotMeteringPoint (  ) );
+    QPointF * ptr = new QPointF( obj->spotMeteringPoint () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOAPERTURE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAutoAperture (  );
+    obj->setAutoAperture ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAutoIsoSensitivity (  );
+    obj->setAutoIsoSensitivity ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAutoShutterSpeed (  );
+    obj->setAutoShutterSpeed ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

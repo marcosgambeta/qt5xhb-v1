@@ -81,7 +81,7 @@ QRegion()
 */
 HB_FUNC_STATIC( QREGION_NEW1 )
 {
-  QRegion * o = new QRegion (  );
+  QRegion * o = new QRegion ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QREGION_ISEMPTY )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QREGION_ISNULL )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->boundingRect (  ) );
+    QRect * ptr = new QRect( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QREGION_RECTCOUNT )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rectCount (  ) );
+    hb_retni( obj->rectCount () );
   }
 }
 

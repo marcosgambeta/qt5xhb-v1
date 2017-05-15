@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 
   if( obj )
   {
-    hb_retni( obj->button (  ) );
+    hb_retni( obj->button () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->hitTestPath (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->hitTestPath () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 
   if( obj )
   {
-    hb_retni( obj->modifierMask (  ) );
+    hb_retni( obj->modifierMask () );
   }
 }
 

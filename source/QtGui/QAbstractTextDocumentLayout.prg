@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextDocument * ptr = obj->document (  );
+    QTextDocument * ptr = obj->document ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->documentSize (  ) );
+    QSizeF * ptr = new QSizeF( obj->documentSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pageCount (  ) );
+    hb_retni( obj->pageCount () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPaintDevice * ptr = obj->paintDevice (  );
+    QPaintDevice * ptr = obj->paintDevice ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
   }
 }

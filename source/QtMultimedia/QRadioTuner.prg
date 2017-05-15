@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QRADIOTUNER_AVAILABILITY )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->availability (  ) );
+    hb_retni( obj->availability () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STATE )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QRADIOTUNER_BAND )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->band (  ) );
+    hb_retni( obj->band () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QRADIOTUNER_FREQUENCY )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frequency (  ) );
+    hb_retni( obj->frequency () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISSTEREO )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isStereo (  ) );
+    hb_retl( obj->isStereo () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STEREOMODE )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->stereoMode (  ) );
+    hb_retni( obj->stereoMode () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SIGNALSTRENGTH )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->signalStrength (  ) );
+    hb_retni( obj->signalStrength () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QRADIOTUNER_VOLUME )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->volume (  ) );
+    hb_retni( obj->volume () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISMUTED )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted (  ) );
+    hb_retl( obj->isMuted () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISSEARCHING )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSearching (  ) );
+    hb_retl( obj->isSearching () );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISANTENNACONNECTED )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAntennaConnected (  ) );
+    hb_retl( obj->isAntennaConnected () );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERROR )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERRORSTRING )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QRADIOTUNER_RADIODATA )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRadioData * ptr = obj->radioData (  );
+    QRadioData * ptr = obj->radioData ();
     _qt5xhb_createReturnClass ( ptr, "QRADIODATA" );
   }
 }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHFORWARD )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->searchForward (  );
+    obj->searchForward ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHBACKWARD )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->searchBackward (  );
+    obj->searchBackward ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QRADIOTUNER_CANCELSEARCH )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->cancelSearch (  );
+    obj->cancelSearch ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QRADIOTUNER_START )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STOP )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

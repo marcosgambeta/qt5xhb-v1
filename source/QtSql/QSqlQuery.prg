@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
 
   if( obj )
   {
-    hb_retni( obj->at (  ) );
+    hb_retni( obj->at () );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 
   if( obj )
   {
-    const QSqlDriver * ptr = obj->driver (  );
+    const QSqlDriver * ptr = obj->driver ();
     _qt5xhb_createReturnClass ( ptr, "QSQLDRIVER" );
   }
 }
@@ -369,7 +369,7 @@ void QSqlQuery_exec2 ()
 
   if( obj )
   {
-    hb_retl( obj->exec (  ) );
+    hb_retl( obj->exec () );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->executedQuery (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->executedQuery ().toLatin1().data() );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QSQLQUERY_FINISH )
 
   if( obj )
   {
-    obj->finish (  );
+    obj->finish ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
 
   if( obj )
   {
-    hb_retl( obj->first (  ) );
+    hb_retl( obj->first () );
   }
 }
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 
   if( obj )
   {
-    hb_retl( obj->isForwardOnly (  ) );
+    hb_retl( obj->isForwardOnly () );
   }
 }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 
   if( obj )
   {
-    hb_retl( obj->isSelect (  ) );
+    hb_retl( obj->isSelect () );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
 
   if( obj )
   {
-    hb_retl( obj->last (  ) );
+    hb_retl( obj->last () );
   }
 }
 
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 
   if( obj )
   {
-    QSqlError * ptr = new QSqlError( obj->lastError (  ) );
+    QSqlError * ptr = new QSqlError( obj->lastError () );
     _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->lastInsertId (  ) );
+    QVariant * ptr = new QVariant( obj->lastInsertId () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->lastQuery (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->lastQuery ().toLatin1().data() );
   }
 }
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
 
   if( obj )
   {
-    hb_retl( obj->next (  ) );
+    hb_retl( obj->next () );
   }
 }
 
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 
   if( obj )
   {
-    hb_retl( obj->nextResult (  ) );
+    hb_retl( obj->nextResult () );
   }
 }
 
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 
   if( obj )
   {
-    hb_retni( obj->numRowsAffected (  ) );
+    hb_retni( obj->numRowsAffected () );
   }
 }
 
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->numericalPrecisionPolicy (  ) );
+    hb_retni( obj->numericalPrecisionPolicy () );
   }
 }
 
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 
   if( obj )
   {
-    hb_retl( obj->previous (  ) );
+    hb_retl( obj->previous () );
   }
 }
 
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
 
   if( obj )
   {
-    QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record () );
     _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
 
   if( obj )
   {
-    const QSqlResult * ptr = obj->result (  );
+    const QSqlResult * ptr = obj->result ();
     _qt5xhb_createReturnClass ( ptr, "QSQLRESULT" );
   }
 }
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

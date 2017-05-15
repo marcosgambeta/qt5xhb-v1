@@ -74,7 +74,7 @@ QIcon ()
 */
 void QIcon_new1 ()
 {
-  QIcon * o = new QIcon (  );
+  QIcon * o = new QIcon ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QICON_CACHEKEY )
 
   if( obj )
   {
-    hb_retni( obj->cacheKey (  ) );
+    hb_retni( obj->cacheKey () );
   }
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QICON_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -534,7 +534,7 @@ static QString themeName ()
 */
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
-  hb_retc( (const char *) QIcon::themeName (  ).toLatin1().data() );
+  hb_retc( (const char *) QIcon::themeName ().toLatin1().data() );
 }
 
 /*
@@ -542,7 +542,7 @@ static QStringList themeSearchPaths ()
 */
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
-  QStringList strl = QIcon::themeSearchPaths (  );
+  QStringList strl = QIcon::themeSearchPaths ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 

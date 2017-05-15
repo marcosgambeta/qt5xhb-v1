@@ -69,7 +69,7 @@ QOpenGLBuffer()
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW1 )
 {
-  QOpenGLBuffer * o = new QOpenGLBuffer (  );
+  QOpenGLBuffer * o = new QOpenGLBuffer ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_BIND )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind (  ) );
+    hb_retl( obj->bind () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_BUFFERID )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferId (  ) );
+    hb_retni( obj->bufferId () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_CREATE )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create (  ) );
+    hb_retl( obj->create () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DESTROY )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->destroy (  );
+    obj->destroy ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ISCREATED )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated (  ) );
+    hb_retl( obj->isCreated () );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE1 )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->release (  );
+    obj->release ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SIZE )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_TYPE )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_UNMAP )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->unmap (  ) );
+    hb_retl( obj->unmap () );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_USAGEPATTERN )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->usagePattern (  ) );
+    hb_retni( obj->usagePattern () );
   }
 }
 

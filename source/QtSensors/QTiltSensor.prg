@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTILTSENSOR_READING )
   QTiltSensor * obj = (QTiltSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTiltReading * ptr = obj->reading (  );
+    QTiltReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QTILTREADING" );
   }
 #endif
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTILTSENSOR_CALIBRATE )
   QTiltSensor * obj = (QTiltSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->calibrate (  );
+    obj->calibrate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

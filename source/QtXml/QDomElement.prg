@@ -88,7 +88,7 @@ QDomElement ()
 */
 HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
 {
-  QDomElement * o = new QDomElement (  );
+  QDomElement * o = new QDomElement ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes (  ) );
+    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes () );
     _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
   }
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tagName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->tagName ().toLatin1().data() );
   }
 }
 
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TEXT )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 

@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    QSortFilterProxyModel * o = new QSortFilterProxyModel (  );
+    QSortFilterProxyModel * o = new QSortFilterProxyModel ();
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
 
   if( obj )
   {
-    QRegExp * ptr = new QRegExp( obj->filterRegExp (  ) );
+    QRegExp * ptr = new QRegExp( obj->filterRegExp () );
     _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->filterKeyColumn (  ) );
+    hb_retni( obj->filterKeyColumn () );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
 
   if( obj )
   {
-    hb_retni( obj->filterCaseSensitivity (  ) );
+    hb_retni( obj->filterCaseSensitivity () );
   }
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
 
   if( obj )
   {
-    hb_retni( obj->sortCaseSensitivity (  ) );
+    hb_retni( obj->sortCaseSensitivity () );
   }
 }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
 
   if( obj )
   {
-    hb_retl( obj->isSortLocaleAware (  ) );
+    hb_retl( obj->isSortLocaleAware () );
   }
 }
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->sortColumn (  ) );
+    hb_retni( obj->sortColumn () );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
 
   if( obj )
   {
-    hb_retni( obj->sortOrder (  ) );
+    hb_retni( obj->sortOrder () );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
 
   if( obj )
   {
-    hb_retl( obj->dynamicSortFilter (  ) );
+    hb_retl( obj->dynamicSortFilter () );
   }
 }
 
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
 
   if( obj )
   {
-    hb_retni( obj->sortRole (  ) );
+    hb_retni( obj->sortRole () );
   }
 }
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERROLE )
 
   if( obj )
   {
-    hb_retni( obj->filterRole (  ) );
+    hb_retni( obj->filterRole () );
   }
 }
 
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
 
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -671,7 +671,7 @@ void QSortFilterProxyModel_parent1 ()
 
   if( obj )
   {
-    QObject * ptr = obj->parent (  );
+    QObject * ptr = obj->parent ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMETYPES )
 
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
 
   if( obj )
   {
-    hb_retni( obj->supportedDropActions (  ) );
+    hb_retni( obj->supportedDropActions () );
   }
 }
 

@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISDEBUGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isDebugEnabled (  ) );
+    hb_retl( obj->isDebugEnabled () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISWARNINGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isWarningEnabled (  ) );
+    hb_retl( obj->isWarningEnabled () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISCRITICALENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isCriticalEnabled (  ) );
+    hb_retl( obj->isCriticalEnabled () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
 
   if( obj )
   {
-    const char * str1 = obj->categoryName (  );
+    const char * str1 = obj->categoryName ();
     hb_retc( str1 );
   }
 }
@@ -193,7 +193,7 @@ static QLoggingCategory *defaultCategory()
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
 {
-  QLoggingCategory * ptr = QLoggingCategory::defaultCategory (  );
+  QLoggingCategory * ptr = QLoggingCategory::defaultCategory ();
   _qt5xhb_createReturnClass ( ptr, "QLOGGINGCATEGORY" );
 }
 

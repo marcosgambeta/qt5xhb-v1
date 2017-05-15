@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
   QSizeGrip * obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

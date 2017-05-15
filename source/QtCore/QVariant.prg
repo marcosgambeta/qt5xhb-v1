@@ -180,7 +180,7 @@ QVariant()
 */
 void QVariant_new1 ()
 {
-  QVariant * o = new QVariant (  );
+  QVariant * o = new QVariant ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -440,7 +440,7 @@ QVariant(const QMap<QString,QVariant> &map)
 */
 HB_FUNC_STATIC( QVARIANT_NEW25 )
 {
-  QVariant * o = new QVariant (  );
+  QVariant * o = new QVariant ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -449,7 +449,7 @@ QVariant(const QHash<QString,QVariant> &hash)
 */
 HB_FUNC_STATIC( QVARIANT_NEW26 )
 {
-  QVariant * o = new QVariant (  );
+  QVariant * o = new QVariant ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QVARIANT_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
 
   if( obj )
   {
-    hb_retni( obj->userType (  ) );
+    hb_retni( obj->userType () );
   }
 }
 
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QVARIANT_TYPENAME )
 
   if( obj )
   {
-    const char * str1 = obj->typeName (  );
+    const char * str1 = obj->typeName ();
     hb_retc( str1 );
   }
 }
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QVARIANT_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QVARIANT_DETACH )
 
   if( obj )
   {
-    obj->detach (  );
+    obj->detach ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QVARIANT_ISDETACHED )
 
   if( obj )
   {
-    hb_retl( obj->isDetached (  ) );
+    hb_retl( obj->isDetached () );
   }
 }
 
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
 
   if( obj )
   {
-    hb_retl( obj->toBool (  ) );
+    hb_retl( obj->toBool () );
   }
 }
 
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toByteArray (  ) );
+    QByteArray * ptr = new QByteArray( obj->toByteArray () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
 
   if( obj )
   {
-    QBitArray * ptr = new QBitArray( obj->toBitArray (  ) );
+    QBitArray * ptr = new QBitArray( obj->toBitArray () );
     _qt5xhb_createReturnClass ( ptr, "QBITARRAY" );
   }
 }
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QVARIANT_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
 
   if( obj )
   {
-    QStringList strl = obj->toStringList (  );
+    QStringList strl = obj->toStringList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -1308,7 +1308,7 @@ HB_FUNC_STATIC( QVARIANT_TOCHAR )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->toChar (  ) );
+    QChar * ptr = new QChar( obj->toChar () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -1322,7 +1322,7 @@ HB_FUNC_STATIC( QVARIANT_TODATE )
 
   if( obj )
   {
-    QDate * ptr = new QDate( obj->toDate (  ) );
+    QDate * ptr = new QDate( obj->toDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC( QVARIANT_TOTIME )
 
   if( obj )
   {
-    QTime * ptr = new QTime( obj->toTime (  ) );
+    QTime * ptr = new QTime( obj->toTime () );
     _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QVARIANT_TODATETIME )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->toDateTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->toDateTime () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -1364,7 +1364,7 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
 
   if( obj )
   {
-    QList<QVariant> list = obj->toList (  );
+    QList<QVariant> list = obj->toList ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QVARIANT" );
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC( QVARIANT_TOPOINT )
 
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->toPoint (  ) );
+    QPoint * ptr = new QPoint( obj->toPoint () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 #endif
@@ -1429,7 +1429,7 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->toPointF (  ) );
+    QPointF * ptr = new QPointF( obj->toPointF () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 #endif
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QVARIANT_TORECT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->toRect (  ) );
+    QRect * ptr = new QRect( obj->toRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 #endif
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QVARIANT_TORECTF )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->toRectF (  ) );
+    QRectF * ptr = new QRectF( obj->toRectF () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 #endif
@@ -1477,7 +1477,7 @@ HB_FUNC_STATIC( QVARIANT_TOSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->toSize (  ) );
+    QSize * ptr = new QSize( obj->toSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
@@ -1493,7 +1493,7 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
 
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->toSizeF (  ) );
+    QSizeF * ptr = new QSizeF( obj->toSizeF () );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 #endif
@@ -1509,7 +1509,7 @@ HB_FUNC_STATIC( QVARIANT_TOLINE )
 
   if( obj )
   {
-    QLine * ptr = new QLine( obj->toLine (  ) );
+    QLine * ptr = new QLine( obj->toLine () );
     _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 #endif
@@ -1525,7 +1525,7 @@ HB_FUNC_STATIC( QVARIANT_TOLINEF )
 
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->toLineF (  ) );
+    QLineF * ptr = new QLineF( obj->toLineF () );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 #endif
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QVARIANT_TOLOCALE )
 
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->toLocale (  ) );
+    QLocale * ptr = new QLocale( obj->toLocale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -1555,7 +1555,7 @@ HB_FUNC_STATIC( QVARIANT_TOREGEXP )
 
   if( obj )
   {
-    QRegExp * ptr = new QRegExp( obj->toRegExp (  ) );
+    QRegExp * ptr = new QRegExp( obj->toRegExp () );
     _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 #endif
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC( QVARIANT_TOREGULAREXPRESSION )
 
   if( obj )
   {
-    QRegularExpression * ptr = new QRegularExpression( obj->toRegularExpression (  ) );
+    QRegularExpression * ptr = new QRegularExpression( obj->toRegularExpression () );
     _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
   }
 #endif
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QVARIANT_TOURL )
 
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->toUrl (  ) );
+    QUrl * ptr = new QUrl( obj->toUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -1600,7 +1600,7 @@ HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
 
   if( obj )
   {
-    QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve (  ) );
+    QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve () );
     _qt5xhb_createReturnClass ( ptr, "QEASINGCURVE" );
   }
 }
@@ -1614,7 +1614,7 @@ HB_FUNC_STATIC( QVARIANT_TOUUID )
 
   if( obj )
   {
-    QUuid * ptr = new QUuid( obj->toUuid (  ) );
+    QUuid * ptr = new QUuid( obj->toUuid () );
     _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
@@ -1628,7 +1628,7 @@ HB_FUNC_STATIC( QVARIANT_TOMODELINDEX )
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->toModelIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->toModelIndex () );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QVARIANT_TOJSONVALUE )
 
   if( obj )
   {
-    QJsonValue * ptr = new QJsonValue( obj->toJsonValue (  ) );
+    QJsonValue * ptr = new QJsonValue( obj->toJsonValue () );
     _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
   }
 }
@@ -1656,7 +1656,7 @@ HB_FUNC_STATIC( QVARIANT_TOJSONOBJECT )
 
   if( obj )
   {
-    QJsonObject * ptr = new QJsonObject( obj->toJsonObject (  ) );
+    QJsonObject * ptr = new QJsonObject( obj->toJsonObject () );
     _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }
@@ -1670,7 +1670,7 @@ HB_FUNC_STATIC( QVARIANT_TOJSONARRAY )
 
   if( obj )
   {
-    QJsonArray * ptr = new QJsonArray( obj->toJsonArray (  ) );
+    QJsonArray * ptr = new QJsonArray( obj->toJsonArray () );
     _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
@@ -1684,7 +1684,7 @@ HB_FUNC_STATIC( QVARIANT_TOJSONDOCUMENT )
 
   if( obj )
   {
-    QJsonDocument * ptr = new QJsonDocument( obj->toJsonDocument (  ) );
+    QJsonDocument * ptr = new QJsonDocument( obj->toJsonDocument () );
     _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
   }
 }
@@ -1748,7 +1748,7 @@ HB_FUNC_STATIC( QVARIANT_DATA )
 
   if( obj )
   {
-    hb_retptr( (void *) obj->data (  ) );
+    hb_retptr( (void *) obj->data () );
   }
 }
 

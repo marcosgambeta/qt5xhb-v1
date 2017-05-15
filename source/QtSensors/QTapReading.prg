@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
   QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tapDirection (  ) );
+    hb_retni( obj->tapDirection () );
   }
 #endif
 }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
   QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDoubleTap (  ) );
+    hb_retl( obj->isDoubleTap () );
   }
 #endif
 }

@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 
   if( obj )
   {
-    QStringList strl = obj->scriptNames (  );
+    QStringList strl = obj->scriptNames ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -330,7 +330,7 @@ static QString scriptFileFilter ()
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {
-  hb_retc( (const char *) QAxScriptManager::scriptFileFilter (  ).toLatin1().data() );
+  hb_retc( (const char *) QAxScriptManager::scriptFileFilter ().toLatin1().data() );
 }
 
 #pragma ENDDUMP

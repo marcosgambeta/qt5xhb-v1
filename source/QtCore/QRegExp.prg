@@ -76,7 +76,7 @@ QRegExp ()
 */
 void QRegExp_new1 ()
 {
-  QRegExp * o = new QRegExp (  );
+  QRegExp * o = new QRegExp ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->captureCount (  ) );
+    hb_retni( obj->captureCount () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 
   if( obj )
   {
-    QStringList strl = obj->capturedTexts (  );
+    QStringList strl = obj->capturedTexts ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
 
   if( obj )
   {
-    hb_retni( obj->caseSensitivity (  ) );
+    hb_retni( obj->caseSensitivity () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 
   if( obj )
   {
-    hb_retl( obj->isMinimal (  ) );
+    hb_retl( obj->isMinimal () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 
   if( obj )
   {
-    hb_retni( obj->matchedLength (  ) );
+    hb_retni( obj->matchedLength () );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->pattern (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->pattern ().toLatin1().data() );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
 
   if( obj )
   {
-    hb_retni( obj->patternSyntax (  ) );
+    hb_retni( obj->patternSyntax () );
   }
 }
 

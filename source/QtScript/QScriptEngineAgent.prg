@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->contextPop (  );
+    obj->contextPop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->contextPush (  );
+    obj->contextPush ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptEngine * ptr = obj->engine (  );
+    QScriptEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }

@@ -61,7 +61,7 @@ QXmlStreamNotationDeclaration()
 */
 void QXmlStreamNotationDeclaration_new1 ()
 {
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration (  );
+  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->name (  ) );
+    QStringRef * ptr = new QStringRef( obj->name () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->publicId (  ) );
+    QStringRef * ptr = new QStringRef( obj->publicId () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->systemId (  ) );
+    QStringRef * ptr = new QStringRef( obj->systemId () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }

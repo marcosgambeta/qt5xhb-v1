@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
   QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->boundary (  ) );
+    QByteArray * ptr = new QByteArray( obj->boundary () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

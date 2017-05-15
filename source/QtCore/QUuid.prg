@@ -67,7 +67,7 @@ QUuid()
 */
 void QUuid_new1 ()
 {
-  QUuid * o = new QUuid (  );
+  QUuid * o = new QUuid ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -86,7 +86,7 @@ QUuid(const GUID & guid)
 */
 void QUuid_new3 ()
 {
-  QUuid * o = new QUuid (  );
+  QUuid * o = new QUuid ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QUUID_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toByteArray (  ) );
+    QByteArray * ptr = new QByteArray( obj->toByteArray () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toRfc4122 (  ) );
+    QByteArray * ptr = new QByteArray( obj->toRfc4122 () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QUUID_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QUUID_VARIANT )
 
   if( obj )
   {
-    hb_retni( obj->variant (  ) );
+    hb_retni( obj->variant () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
 
   if( obj )
   {
-    hb_retni( obj->version (  ) );
+    hb_retni( obj->version () );
   }
 }
 

@@ -74,7 +74,7 @@ QMediaContent()
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW1 )
 {
-  QMediaContent * o = new QMediaContent (  );
+  QMediaContent * o = new QMediaContent ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkRequest * ptr = new QNetworkRequest( obj->canonicalRequest (  ) );
+    QNetworkRequest * ptr = new QNetworkRequest( obj->canonicalRequest () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
   }
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaResource * ptr = new QMediaResource( obj->canonicalResource (  ) );
+    QMediaResource * ptr = new QMediaResource( obj->canonicalResource () );
     _qt5xhb_createReturnClass ( ptr, "QMEDIARESOURCE" );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->canonicalUrl (  ) );
+    QUrl * ptr = new QUrl( obj->canonicalUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaPlaylist * ptr = obj->playlist (  );
+    QMediaPlaylist * ptr = obj->playlist ();
     _qt5xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
   }
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaResourceList list = obj->resources (  );
+    QMediaResourceList list = obj->resources ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMEDIARESOURCE" );

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM )
   QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->currentDigitalZoom (  ) );
+    hb_retnd( obj->currentDigitalZoom () );
   }
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM )
   QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->currentOpticalZoom (  ) );
+    hb_retnd( obj->currentOpticalZoom () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM )
   QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maximumDigitalZoom (  ) );
+    hb_retnd( obj->maximumDigitalZoom () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM )
   QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maximumOpticalZoom (  ) );
+    hb_retnd( obj->maximumOpticalZoom () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM )
   QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->requestedDigitalZoom (  ) );
+    hb_retnd( obj->requestedDigitalZoom () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM )
   QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->requestedOpticalZoom (  ) );
+    hb_retnd( obj->requestedOpticalZoom () );
   }
 }
 

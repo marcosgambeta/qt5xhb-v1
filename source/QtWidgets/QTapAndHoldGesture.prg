@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->position (  ) );
+    QPointF * ptr = new QPointF( obj->position () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -110,7 +110,7 @@ static int timeout()
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
-  hb_retni( QTapAndHoldGesture::timeout (  ) );
+  hb_retni( QTapAndHoldGesture::timeout () );
 }
 
 #pragma ENDDUMP

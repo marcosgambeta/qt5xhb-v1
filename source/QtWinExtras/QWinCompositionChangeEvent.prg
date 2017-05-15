@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED )
   QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCompositionEnabled (  ) );
+    hb_retl( obj->isCompositionEnabled () );
   }
 #endif
 }

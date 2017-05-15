@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
   QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWindow * ptr = obj->window (  );
+    QWindow * ptr = obj->window ();
     _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
   QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->target (  );
+    QObject * ptr = obj->target ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
   QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->touchPointStates (  ) );
+    hb_retni( obj->touchPointStates () );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
   QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTouchDevice * ptr = obj->device (  );
+    QTouchDevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QTOUCHDEVICE" );
   }
 }

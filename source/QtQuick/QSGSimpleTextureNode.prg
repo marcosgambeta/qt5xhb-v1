@@ -60,7 +60,7 @@ QSGSimpleTextureNode()
 */
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_NEW )
 {
-  QSGSimpleTextureNode * o = new QSGSimpleTextureNode (  );
+  QSGSimpleTextureNode * o = new QSGSimpleTextureNode ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_FILTERING )
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->filtering (  ) );
+    hb_retni( obj->filtering () );
   }
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_RECT )
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->rect (  ) );
+    QRectF * ptr = new QRectF( obj->rect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_TEXTURE )
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGTexture * ptr = obj->texture (  );
+    QSGTexture * ptr = obj->texture ();
     _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }

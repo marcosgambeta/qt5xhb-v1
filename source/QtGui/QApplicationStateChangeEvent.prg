@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE )
   QApplicationStateChangeEvent * obj = (QApplicationStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->applicationState (  ) );
+    hb_retni( obj->applicationState () );
   }
 }
 

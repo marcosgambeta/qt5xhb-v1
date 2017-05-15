@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->databaseQuota (  ) );
+    hb_retni( obj->databaseQuota () );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->databaseUsage (  ) );
+    hb_retni( obj->databaseUsage () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWebDatabase> list = obj->databases (  );
+    QList<QWebDatabase> list = obj->databases ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWEBDATABASE" );
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->host (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->host ().toLatin1().data() );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->port (  ) );
+    hb_retni( obj->port () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->scheme (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->scheme ().toLatin1().data() );
   }
 }
 
@@ -235,7 +235,7 @@ static QList<QWebSecurityOrigin> allOrigins ()
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 {
-  QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins (  );
+  QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QWEBSECURITYORIGIN" );
@@ -279,7 +279,7 @@ static QStringList localSchemes ()
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {
-  QStringList strl = QWebSecurityOrigin::localSchemes (  );
+  QStringList strl = QWebSecurityOrigin::localSchemes ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 

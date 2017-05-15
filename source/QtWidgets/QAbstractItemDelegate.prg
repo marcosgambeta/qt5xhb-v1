@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 
   if( obj )
   {
-    QVector<int> list = obj->paintingRoles (  );
+    QVector<int> list = obj->paintingRoles ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

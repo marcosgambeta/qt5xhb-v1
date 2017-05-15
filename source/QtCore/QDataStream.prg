@@ -76,7 +76,7 @@ QDataStream()
 */
 void QDataStream_new1 ()
 {
-  QDataStream * o = new QDataStream (  );
+  QDataStream * o = new QDataStream ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
 
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDATASTREAM_UNSETDEVICE )
 
   if( obj )
   {
-    obj->unsetDevice (  );
+    obj->unsetDevice ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
 
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
 
   if( obj )
   {
-    obj->resetStatus (  );
+    obj->resetStatus ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
 
   if( obj )
   {
-    hb_retni( obj->floatingPointPrecision (  ) );
+    hb_retni( obj->floatingPointPrecision () );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
 
   if( obj )
   {
-    hb_retni( obj->byteOrder (  ) );
+    hb_retni( obj->byteOrder () );
   }
 }
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
 
   if( obj )
   {
-    hb_retni( obj->version (  ) );
+    hb_retni( obj->version () );
   }
 }
 

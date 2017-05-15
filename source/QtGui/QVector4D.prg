@@ -92,7 +92,7 @@ QVector4D()
 */
 HB_FUNC_STATIC( QVECTOR4D_NEW1 )
 {
-  QVector4D * o = new QVector4D (  );
+  QVector4D * o = new QVector4D ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QVECTOR4D_ISNULL )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QVECTOR4D_X )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->x (  ) );
+    hb_retnd( obj->x () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QVECTOR4D_Y )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->y (  ) );
+    hb_retnd( obj->y () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QVECTOR4D_Z )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->z (  ) );
+    hb_retnd( obj->z () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QVECTOR4D_W )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->w (  ) );
+    hb_retnd( obj->w () );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QVECTOR4D_LENGTH )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->length (  ) );
+    hb_retnd( obj->length () );
   }
 }
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QVECTOR4D_LENGTHSQUARED )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->lengthSquared (  ) );
+    hb_retnd( obj->lengthSquared () );
   }
 }
 
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector4D * ptr = new QVector4D( obj->normalized (  ) );
+    QVector4D * ptr = new QVector4D( obj->normalized () );
     _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
   }
 }
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QVECTOR4D_NORMALIZE )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->normalize (  );
+    obj->normalize ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2D )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector2D * ptr = new QVector2D( obj->toVector2D (  ) );
+    QVector2D * ptr = new QVector2D( obj->toVector2D () );
     _qt5xhb_createReturnClass ( ptr, "QVECTOR2D" );
   }
 }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2DAFFINE )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector2D * ptr = new QVector2D( obj->toVector2DAffine (  ) );
+    QVector2D * ptr = new QVector2D( obj->toVector2DAffine () );
     _qt5xhb_createReturnClass ( ptr, "QVECTOR2D" );
   }
 }
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3D )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector3D * ptr = new QVector3D( obj->toVector3D (  ) );
+    QVector3D * ptr = new QVector3D( obj->toVector3D () );
     _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3DAFFINE )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector3D * ptr = new QVector3D( obj->toVector3DAffine (  ) );
+    QVector3D * ptr = new QVector3D( obj->toVector3DAffine () );
     _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOPOINT )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->toPoint (  ) );
+    QPoint * ptr = new QPoint( obj->toPoint () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOPOINTF )
   QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->toPointF (  ) );
+    QPointF * ptr = new QPointF( obj->toPointF () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

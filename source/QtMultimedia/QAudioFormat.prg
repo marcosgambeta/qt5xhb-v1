@@ -69,7 +69,7 @@ QAudioFormat ()
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
 {
-  QAudioFormat * o = new QAudioFormat (  );
+  QAudioFormat * o = new QAudioFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->byteOrder (  ) );
+    hb_retni( obj->byteOrder () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->channelCount (  ) );
+    hb_retni( obj->channelCount () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->codec (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->codec ().toLatin1().data() );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleRate (  ) );
+    hb_retni( obj->sampleRate () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleSize (  ) );
+    hb_retni( obj->sampleSize () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleType (  ) );
+    hb_retni( obj->sampleType () );
   }
 }
 

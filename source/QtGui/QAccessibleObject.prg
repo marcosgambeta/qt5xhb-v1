@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
   QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
   QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
   QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->rect (  ) );
+    QRect * ptr = new QRect( obj->rect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

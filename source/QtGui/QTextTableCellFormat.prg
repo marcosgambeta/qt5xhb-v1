@@ -57,7 +57,7 @@ QTextTableCellFormat()
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
-  QTextTableCellFormat * o = new QTextTableCellFormat (  );
+  QTextTableCellFormat * o = new QTextTableCellFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->topPadding (  ) );
+    hb_retnd( obj->topPadding () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->bottomPadding (  ) );
+    hb_retnd( obj->bottomPadding () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->leftPadding (  ) );
+    hb_retnd( obj->leftPadding () );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rightPadding (  ) );
+    hb_retnd( obj->rightPadding () );
   }
 }
 

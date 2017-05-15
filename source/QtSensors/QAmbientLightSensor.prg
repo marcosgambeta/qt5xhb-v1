@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_READING )
   QAmbientLightSensor * obj = (QAmbientLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAmbientLightReading * ptr = obj->reading (  );
+    QAmbientLightReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QAMBIENTLIGHTREADING" );
   }
 #endif

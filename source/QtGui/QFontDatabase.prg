@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QFONTDATABASE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QFontDatabase * o = new QFontDatabase (  );
+    QFontDatabase * o = new QFontDatabase ();
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else
@@ -460,7 +460,7 @@ static bool removeAllApplicationFonts ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 {
-  hb_retl( QFontDatabase::removeAllApplicationFonts (  ) );
+  hb_retl( QFontDatabase::removeAllApplicationFonts () );
 }
 
 /*
@@ -483,7 +483,7 @@ static QList<int> standardSizes ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 {
-  QList<int> list = QFontDatabase::standardSizes (  );
+  QList<int> list = QFontDatabase::standardSizes ();
   _qt5xhb_convert_qlist_int_to_array ( list );
 }
 
@@ -492,7 +492,7 @@ static bool supportsThreadedFontRendering ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {
-  hb_retl( QFontDatabase::supportsThreadedFontRendering (  ) );
+  hb_retl( QFontDatabase::supportsThreadedFontRendering () );
 }
 
 /*

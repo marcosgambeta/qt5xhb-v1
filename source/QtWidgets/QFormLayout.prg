@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->fieldGrowthPolicy (  ) );
+    hb_retni( obj->fieldGrowthPolicy () );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->formAlignment (  ) );
+    hb_retni( obj->formAlignment () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->horizontalSpacing (  ) );
+    hb_retni( obj->horizontalSpacing () );
   }
 }
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->labelAlignment (  ) );
+    hb_retni( obj->labelAlignment () );
   }
 }
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->rowWrapPolicy (  ) );
+    hb_retni( obj->rowWrapPolicy () );
   }
 }
 
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 
   if( obj )
   {
-    hb_retni( obj->spacing (  ) );
+    hb_retni( obj->spacing () );
   }
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->verticalSpacing (  ) );
+    hb_retni( obj->verticalSpacing () );
   }
 }
 
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 
   if( obj )
   {
-    hb_retni( obj->expandingDirections (  ) );
+    hb_retni( obj->expandingDirections () );
   }
 }
 
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
 
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

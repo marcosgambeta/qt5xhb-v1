@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->alignment (  ) );
+    hb_retni( obj->alignment () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 
   if( obj )
   {
-    hb_retl( obj->isCheckable (  ) );
+    hb_retl( obj->isCheckable () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 
   if( obj )
   {
-    hb_retl( obj->isChecked (  ) );
+    hb_retl( obj->isChecked () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 
   if( obj )
   {
-    hb_retl( obj->isFlat (  ) );
+    hb_retl( obj->isFlat () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

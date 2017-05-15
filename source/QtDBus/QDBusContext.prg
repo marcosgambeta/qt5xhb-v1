@@ -67,7 +67,7 @@ QDBusContext()
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
-  QDBusContext * o = new QDBusContext (  );
+  QDBusContext * o = new QDBusContext ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->calledFromDBus (  ) );
+    hb_retl( obj->calledFromDBus () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
+    QDBusConnection * ptr = new QDBusConnection( obj->connection () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
   }
 }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QDBusMessage * ptr = &obj->message (  );
+    const QDBusMessage * ptr = &obj->message ();
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDelayedReply (  ) );
+    hb_retl( obj->isDelayedReply () );
   }
 }
 

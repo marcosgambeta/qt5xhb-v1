@@ -72,7 +72,7 @@ QNetworkInterface ()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW1 )
 {
-  QNetworkInterface * o = new QNetworkInterface (  );
+  QNetworkInterface * o = new QNetworkInterface ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QNetworkAddressEntry> list = obj->addressEntries (  );
+    QList<QNetworkAddressEntry> list = obj->addressEntries ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QNETWORKADDRESSENTRY" );
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->flags (  ) );
+    hb_retni( obj->flags () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->hardwareAddress (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->hardwareAddress ().toLatin1().data() );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->humanReadableName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->humanReadableName ().toLatin1().data() );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->index (  ) );
+    hb_retni( obj->index () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -252,7 +252,7 @@ static QList<QHostAddress> allAddresses ()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
-  QList<QHostAddress> list = QNetworkInterface::allAddresses (  );
+  QList<QHostAddress> list = QNetworkInterface::allAddresses ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QHOSTADDRESS" );
@@ -296,7 +296,7 @@ static QList<QNetworkInterface> allInterfaces ()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
-  QList<QNetworkInterface> list = QNetworkInterface::allInterfaces (  );
+  QList<QNetworkInterface> list = QNetworkInterface::allInterfaces ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QNETWORKINTERFACE" );

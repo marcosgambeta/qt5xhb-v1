@@ -49,7 +49,7 @@ QSGOpacityNode()
 */
 HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
 {
-  QSGOpacityNode * o = new QSGOpacityNode (  );
+  QSGOpacityNode * o = new QSGOpacityNode ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
   QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->opacity (  ) );
+    hb_retnd( obj->opacity () );
   }
 }
 

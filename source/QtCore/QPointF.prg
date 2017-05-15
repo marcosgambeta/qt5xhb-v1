@@ -65,7 +65,7 @@ QPointF()
 */
 void QPointF_new1 ()
 {
-  QPointF * o = new QPointF (  );
+  QPointF * o = new QPointF ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QPOINTF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 
   if( obj )
   {
-    hb_retnd( obj->manhattanLength (  ) );
+    hb_retnd( obj->manhattanLength () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPOINTF_TOPOINT )
 
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->toPoint (  ) );
+    QPoint * ptr = new QPoint( obj->toPoint () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPOINTF_X )
 
   if( obj )
   {
-    hb_retnd( obj->x (  ) );
+    hb_retnd( obj->x () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPOINTF_Y )
 
   if( obj )
   {
-    hb_retnd( obj->y (  ) );
+    hb_retnd( obj->y () );
   }
 }
 

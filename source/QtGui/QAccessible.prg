@@ -83,7 +83,7 @@ static bool isActive()
 */
 HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 {
-  hb_retl( QAccessible::isActive (  ) );
+  hb_retl( QAccessible::isActive () );
 }
 
 
@@ -103,7 +103,7 @@ static void cleanup()
 */
 HB_FUNC_STATIC( QACCESSIBLE_CLEANUP )
 {
-  QAccessible::cleanup (  );
+  QAccessible::cleanup ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 

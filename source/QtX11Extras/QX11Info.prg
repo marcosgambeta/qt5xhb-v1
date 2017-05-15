@@ -94,7 +94,7 @@ static bool isPlatformX11()
 HB_FUNC_STATIC( QX11INFO_ISPLATFORMX11 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retl( QX11Info::isPlatformX11 (  ) );
+  hb_retl( QX11Info::isPlatformX11 () );
 #endif
 }
 
@@ -138,7 +138,7 @@ static int appScreen()
 HB_FUNC_STATIC( QX11INFO_APPSCREEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retni( QX11Info::appScreen (  ) );
+  hb_retni( QX11Info::appScreen () );
 #endif
 }
 
@@ -149,7 +149,7 @@ static unsigned long appTime()
 HB_FUNC_STATIC( QX11INFO_APPTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retnl( QX11Info::appTime (  ) );
+  hb_retnl( QX11Info::appTime () );
 #endif
 }
 
@@ -160,7 +160,7 @@ static unsigned long appUserTime()
 HB_FUNC_STATIC( QX11INFO_APPUSERTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retnl( QX11Info::appUserTime (  ) );
+  hb_retnl( QX11Info::appUserTime () );
 #endif
 }
 
@@ -197,7 +197,7 @@ static unsigned long getTimestamp()
 HB_FUNC_STATIC( QX11INFO_GETTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retnl( QX11Info::getTimestamp (  ) );
+  hb_retnl( QX11Info::getTimestamp () );
 #endif
 }
 
@@ -208,7 +208,7 @@ static Display *display()
 HB_FUNC_STATIC( QX11INFO_DISPLAY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retptr( (Display *) QX11Info::display (  ) );
+  hb_retptr( (Display *) QX11Info::display () );
 #endif
 }
 
@@ -219,7 +219,7 @@ static xcb_connection_t *connection()
 HB_FUNC_STATIC( QX11INFO_CONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retptr( (xcb_connection_t *) QX11Info::connection (  ) );
+  hb_retptr( (xcb_connection_t *) QX11Info::connection () );
 #endif
 }
 
@@ -230,7 +230,7 @@ static QByteArray nextStartupId()
 HB_FUNC_STATIC( QX11INFO_NEXTSTARTUPID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * ptr = new QByteArray( QX11Info::nextStartupId (  ) );
+  QByteArray * ptr = new QByteArray( QX11Info::nextStartupId () );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }

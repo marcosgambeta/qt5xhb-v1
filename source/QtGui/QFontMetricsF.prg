@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
 
   if( obj )
   {
-    hb_retnd( obj->ascent (  ) );
+    hb_retnd( obj->ascent () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->averageCharWidth (  ) );
+    hb_retnd( obj->averageCharWidth () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 
   if( obj )
   {
-    hb_retnd( obj->descent (  ) );
+    hb_retnd( obj->descent () );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->height (  ) );
+    hb_retnd( obj->height () );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
 
   if( obj )
   {
-    hb_retnd( obj->leading (  ) );
+    hb_retnd( obj->leading () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
 
   if( obj )
   {
-    hb_retnd( obj->lineSpacing (  ) );
+    hb_retnd( obj->lineSpacing () );
   }
 }
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->lineWidth (  ) );
+    hb_retnd( obj->lineWidth () );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->maxWidth (  ) );
+    hb_retnd( obj->maxWidth () );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
 
   if( obj )
   {
-    hb_retnd( obj->minLeftBearing (  ) );
+    hb_retnd( obj->minLeftBearing () );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
 
   if( obj )
   {
-    hb_retnd( obj->minRightBearing (  ) );
+    hb_retnd( obj->minRightBearing () );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
 
   if( obj )
   {
-    hb_retnd( obj->overlinePos (  ) );
+    hb_retnd( obj->overlinePos () );
   }
 }
 
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
 
   if( obj )
   {
-    hb_retnd( obj->strikeOutPos (  ) );
+    hb_retnd( obj->strikeOutPos () );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 
   if( obj )
   {
-    hb_retnd( obj->underlinePos (  ) );
+    hb_retnd( obj->underlinePos () );
   }
 }
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->xHeight (  ) );
+    hb_retnd( obj->xHeight () );
   }
 }
 

@@ -162,7 +162,7 @@ QByteArray ()
 */
 void QByteArray_new1 ()
 {
-  QByteArray * o = new QByteArray (  );
+  QByteArray * o = new QByteArray ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
 
   if( obj )
   {
-    hb_retni( obj->capacity (  ) );
+    hb_retni( obj->capacity () );
   }
 }
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
 
   if( obj )
   {
-    const char * str1 = obj->constData (  );
+    const char * str1 = obj->constData ();
     hb_retc( str1 );
   }
 }
@@ -601,7 +601,7 @@ void QByteArray_count4 ()
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QBYTEARRAY_DATA2 )
 
   if( obj )
   {
-    const char * str1 = obj->data (  );
+    const char * str1 = obj->data ();
     hb_retc( str1 );
   }
 }
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
 
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -2201,7 +2201,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIMPLIFIED )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->simplified (  ) );
+    QByteArray * ptr = new QByteArray( obj->simplified () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -2215,7 +2215,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -2276,7 +2276,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
 
   if( obj )
   {
-    obj->squeeze (  );
+    obj->squeeze ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2359,7 +2359,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toBase64 (  ) );
+    QByteArray * ptr = new QByteArray( obj->toBase64 () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -2417,7 +2417,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toHex (  ) );
+    QByteArray * ptr = new QByteArray( obj->toHex () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -2497,7 +2497,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLOWER )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toLower (  ) );
+    QByteArray * ptr = new QByteArray( obj->toLower () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -2645,7 +2645,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUPPER )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toUpper (  ) );
+    QByteArray * ptr = new QByteArray( obj->toUpper () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -2659,7 +2659,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TRIMMED )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->trimmed (  ) );
+    QByteArray * ptr = new QByteArray( obj->trimmed () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

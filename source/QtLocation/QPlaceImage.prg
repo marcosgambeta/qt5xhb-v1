@@ -62,7 +62,7 @@ QPlaceImage()
 void QPlaceImage_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * o = new QPlaceImage (  );
+  QPlaceImage * o = new QPlaceImage ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_URL )
   QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
   QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->imageId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->imageId ().toLatin1().data() );
   }
 #endif
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
   QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->mimeType (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->mimeType ().toLatin1().data() );
   }
 #endif
 }

@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ID )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->id (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->id ().toLatin1().data() );
   }
 #endif
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ISACTIVE )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 #endif
 }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STARTBACKEND )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startBackend (  );
+    obj->startBackend ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STOPBACKEND )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stopBackend (  );
+    obj->stopBackend ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_CREATEBACKEND )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->createBackend (  );
+    obj->createBackend ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_GESTURESIGNALS )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->gestureSignals (  );
+    QStringList strl = obj->gestureSignals ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif

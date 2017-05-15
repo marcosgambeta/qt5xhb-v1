@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_START )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_STOP )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_READING )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSensorReading * ptr = obj->reading (  );
+    QSensorReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QSENSORREADING" );
   }
 #endif
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSensor * ptr = obj->sensor (  );
+    QSensor * ptr = obj->sensor ();
     _qt5xhb_createReturnClass ( ptr, "QSENSOR" );
   }
 #endif
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_NEWREADINGAVAILABLE )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->newReadingAvailable (  );
+    obj->newReadingAvailable ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORSTOPPED )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->sensorStopped (  );
+    obj->sensorStopped ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORBUSY )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->sensorBusy (  );
+    obj->sensorBusy ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

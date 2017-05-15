@@ -73,7 +73,7 @@ QPainterPathStroker ()
 */
 void QPainterPathStroker_new1 ()
 {
-  QPainterPathStroker * o = new QPainterPathStroker (  );
+  QPainterPathStroker * o = new QPainterPathStroker ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->capStyle (  ) );
+    hb_retni( obj->capStyle () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 
   if( obj )
   {
-    hb_retnd( obj->curveThreshold (  ) );
+    hb_retnd( obj->curveThreshold () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
 
   if( obj )
   {
-    hb_retnd( obj->dashOffset (  ) );
+    hb_retnd( obj->dashOffset () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 
   if( obj )
   {
-    QVector<qreal> list = obj->dashPattern (  );
+    QVector<qreal> list = obj->dashPattern ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->joinStyle (  ) );
+    hb_retni( obj->joinStyle () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
 
   if( obj )
   {
-    hb_retnd( obj->miterLimit (  ) );
+    hb_retnd( obj->miterLimit () );
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->width (  ) );
+    hb_retnd( obj->width () );
   }
 }
 

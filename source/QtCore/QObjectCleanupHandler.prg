@@ -55,7 +55,7 @@ QObjectCleanupHandler()
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 {
-  QObjectCleanupHandler * o = new QObjectCleanupHandler (  );
+  QObjectCleanupHandler * o = new QObjectCleanupHandler ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

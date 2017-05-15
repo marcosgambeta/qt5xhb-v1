@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create (  ) );
+    hb_retl( obj->create () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->destroy (  );
+    obj->destroy ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated (  ) );
+    hb_retl( obj->isCreated () );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->objectId (  ) );
+    hb_retni( obj->objectId () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->bind (  );
+    obj->bind ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_RELEASE )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->release (  );
+    obj->release ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

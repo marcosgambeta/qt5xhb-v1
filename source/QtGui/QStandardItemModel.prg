@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_CLEAR )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStandardItem * ptr = obj->invisibleRootItem (  );
+    QStandardItem * ptr = obj->invisibleRootItem ();
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QStandardItem * ptr = obj->itemPrototype (  );
+    const QStandardItem * ptr = obj->itemPrototype ();
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT2 )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->parent (  );
+    QObject * ptr = obj->parent ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SUPPORTEDDROPACTIONS )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedDropActions (  ) );
+    hb_retni( obj->supportedDropActions () );
   }
 }
 
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORTROLE )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sortRole (  ) );
+    hb_retni( obj->sortRole () );
   }
 }
 
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMETYPES )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ABORT )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ERROR )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ERRORSTRING )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWEBSOCKET_FLUSH )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->flush (  ) );
+    hb_retl( obj->flush () );
   }
 #endif
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ISVALID )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QWEBSOCKET_LOCALADDRESS )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->localAddress (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->localAddress () );
     _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 #endif
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QWEBSOCKET_LOCALPORT )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->localPort (  ) );
+    hb_retni( obj->localPort () );
   }
 #endif
 }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PAUSEMODE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pauseMode (  ) );
+    hb_retni( obj->pauseMode () );
   }
 #endif
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERADDRESS )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->peerAddress (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
     _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 #endif
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERNAME )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->peerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->peerName ().toLatin1().data() );
   }
 #endif
 }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERPORT )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerPort (  ) );
+    hb_retni( obj->peerPort () );
   }
 #endif
 }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PROXY )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
+    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 #endif
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QWEBSOCKET_MASKGENERATOR )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMaskGenerator * ptr = obj->maskGenerator (  );
+    const QMaskGenerator * ptr = obj->maskGenerator ();
     _qt5xhb_createReturnClass ( ptr, "QMASKGENERATOR" );
   }
 #endif
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QWEBSOCKET_READBUFFERSIZE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->readBufferSize (  ) );
+    hb_retni( obj->readBufferSize () );
   }
 #endif
 }
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QWEBSOCKET_RESUME )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->resume (  );
+    obj->resume ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QWEBSOCKET_STATE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 #endif
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QWEBSOCKET_VERSION )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->version (  ) );
+    hb_retni( obj->version () );
   }
 #endif
 }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QWEBSOCKET_RESOURCENAME )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->resourceName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->resourceName ().toLatin1().data() );
   }
 #endif
 }
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QWEBSOCKET_REQUESTURL )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->requestUrl (  ) );
+    QUrl * ptr = new QUrl( obj->requestUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ORIGIN )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->origin (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->origin ().toLatin1().data() );
   }
 #endif
 }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSECODE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->closeCode (  ) );
+    hb_retni( obj->closeCode () );
   }
 #endif
 }
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSEREASON )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->closeReason (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->closeReason ().toLatin1().data() );
   }
 #endif
 }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS2 )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->ignoreSslErrors (  );
+    obj->ignoreSslErrors ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SSLCONFIGURATION )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
+    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 #endif

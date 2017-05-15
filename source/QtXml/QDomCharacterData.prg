@@ -58,7 +58,7 @@ QDomCharacterData ()
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
 {
-  QDomCharacterData * o = new QDomCharacterData (  );
+  QDomCharacterData * o = new QDomCharacterData ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
   QDomCharacterData * obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->data (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->data ().toLatin1().data() );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
   QDomCharacterData * obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
   QDomCharacterData * obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 

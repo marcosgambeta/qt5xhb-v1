@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_APPLYSETTINGS )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->applySettings (  );
+    obj->applySettings ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DURATION )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ISMUTED )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted (  ) );
+    hb_retl( obj->isMuted () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_OUTPUTLOCATION )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->outputLocation (  ) );
+    QUrl * ptr = new QUrl( obj->outputLocation () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATE )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATUS )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_VOLUME )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->volume (  ) );
+    hb_retnd( obj->volume () );
   }
 }
 

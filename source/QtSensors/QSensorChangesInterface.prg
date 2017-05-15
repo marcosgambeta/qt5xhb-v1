@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSENSORCHANGESINTERFACE_SENSORSCHANGED )
   QSensorChangesInterface * obj = (QSensorChangesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->sensorsChanged (  );
+    obj->sensorsChanged ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

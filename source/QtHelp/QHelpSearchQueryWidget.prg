@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
   QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QHelpSearchQuery> list = obj->query (  );
+    QList<QHelpSearchQuery> list = obj->query ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QHELPSEARCHQUERY" );

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 
   if( obj )
   {
-    hb_retni( obj->horizontalDirection (  ) );
+    hb_retni( obj->horizontalDirection () );
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->swipeAngle (  ) );
+    hb_retnd( obj->swipeAngle () );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
 
   if( obj )
   {
-    hb_retni( obj->verticalDirection (  ) );
+    hb_retni( obj->verticalDirection () );
   }
 }
 

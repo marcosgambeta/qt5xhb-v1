@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_READING )
   QAmbientTemperatureSensor * obj = (QAmbientTemperatureSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAmbientTemperatureReading * ptr = obj->reading (  );
+    QAmbientTemperatureReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QAMBIENTTEMPERATUREREADING" );
   }
 #endif

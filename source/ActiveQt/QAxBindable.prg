@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAxBindable * o = new QAxBindable (  );
+    QAxBindable * o = new QAxBindable ();
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 
   if( obj )
   {
-    QAxAggregated * ptr = obj->createAggregate (  );
+    QAxAggregated * ptr = obj->createAggregate ();
     _qt5xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
   }
 }

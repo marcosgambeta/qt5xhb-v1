@@ -100,7 +100,7 @@ QTextStream()
 */
 void QTextStream_new1 ()
 {
-  QTextStream * o = new QTextStream (  );
+  QTextStream * o = new QTextStream ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
 
   if( obj )
   {
-    QTextCodec * ptr = obj->codec (  );
+    QTextCodec * ptr = obj->codec ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
 
   if( obj )
   {
-    hb_retl( obj->autoDetectUnicode (  ) );
+    hb_retl( obj->autoDetectUnicode () );
   }
 }
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
 
   if( obj )
   {
-    hb_retl( obj->generateByteOrderMark (  ) );
+    hb_retl( obj->generateByteOrderMark () );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
 
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
 
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_STRING )
 
   if( obj )
   {
-    QString * ptr = obj->string (  );
+    QString * ptr = obj->string ();
     _qt5xhb_createReturnClass ( ptr, "QSTRING" );
   }
 }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
 
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_RESETSTATUS )
 
   if( obj )
   {
-    obj->resetStatus (  );
+    obj->resetStatus ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_RESET )
 
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FLUSH )
 
   if( obj )
   {
-    obj->flush (  );
+    obj->flush ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos (  ) );
+    hb_retni( obj->pos () );
   }
 }
 
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
 
   if( obj )
   {
-    obj->skipWhiteSpace (  );
+    obj->skipWhiteSpace ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READALL )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->readAll (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->readAll ().toLatin1().data() );
   }
 }
 
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->fieldAlignment (  ) );
+    hb_retni( obj->fieldAlignment () );
   }
 }
 
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->padChar (  ) );
+    QChar * ptr = new QChar( obj->padChar () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->fieldWidth (  ) );
+    hb_retni( obj->fieldWidth () );
   }
 }
 
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
 
   if( obj )
   {
-    hb_retni( obj->numberFlags (  ) );
+    hb_retni( obj->numberFlags () );
   }
 }
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
 
   if( obj )
   {
-    hb_retni( obj->integerBase (  ) );
+    hb_retni( obj->integerBase () );
   }
 }
 
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
 
   if( obj )
   {
-    hb_retni( obj->realNumberNotation (  ) );
+    hb_retni( obj->realNumberNotation () );
   }
 }
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
 
   if( obj )
   {
-    hb_retni( obj->realNumberPrecision (  ) );
+    hb_retni( obj->realNumberPrecision () );
   }
 }
 

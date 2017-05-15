@@ -61,7 +61,7 @@ QByteArrayMatcher ()
 */
 void QByteArrayMatcher_new1 ()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher (  );
+  QByteArrayMatcher * o = new QByteArrayMatcher ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->pattern (  ) );
+    QByteArray * ptr = new QByteArray( obj->pattern () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

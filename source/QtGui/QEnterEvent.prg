@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QENTEREVENT_POS )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->pos (  ) );
+    QPoint * ptr = new QPoint( obj->pos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALPOS )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->globalPos (  ) );
+    QPoint * ptr = new QPoint( obj->globalPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QENTEREVENT_X )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QENTEREVENT_Y )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALX )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALY )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QENTEREVENT_LOCALPOS )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->localPos (  );
+    const QPointF * ptr = &obj->localPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QENTEREVENT_WINDOWPOS )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->windowPos (  );
+    const QPointF * ptr = &obj->windowPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QENTEREVENT_SCREENPOS )
   QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->screenPos (  );
+    const QPointF * ptr = &obj->screenPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }

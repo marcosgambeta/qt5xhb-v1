@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 
   if( obj )
   {
-    QStringList strl = obj->stringList (  );
+    QStringList strl = obj->stringList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
 
   if( obj )
   {
-    hb_retni( obj->supportedDropActions (  ) );
+    hb_retni( obj->supportedDropActions () );
   }
 }
 

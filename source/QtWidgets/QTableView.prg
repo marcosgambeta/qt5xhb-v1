@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
 
   if( obj )
   {
-    obj->clearSpans (  );
+    obj->clearSpans ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
 
   if( obj )
   {
-    hb_retni( obj->gridStyle (  ) );
+    hb_retni( obj->gridStyle () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
 
   if( obj )
   {
-    QHeaderView * ptr = obj->horizontalHeader (  );
+    QHeaderView * ptr = obj->horizontalHeader ();
     _qt5xhb_createReturnClass ( ptr, "QHEADERVIEW" );
   }
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isCornerButtonEnabled (  ) );
+    hb_retl( obj->isCornerButtonEnabled () );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isSortingEnabled (  ) );
+    hb_retl( obj->isSortingEnabled () );
   }
 }
 
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
 
   if( obj )
   {
-    hb_retl( obj->showGrid (  ) );
+    hb_retl( obj->showGrid () );
   }
 }
 
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
 
   if( obj )
   {
-    QHeaderView * ptr = obj->verticalHeader (  );
+    QHeaderView * ptr = obj->verticalHeader ();
     _qt5xhb_createReturnClass ( ptr, "QHEADERVIEW" );
   }
 }
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
 
   if( obj )
   {
-    hb_retl( obj->wordWrap (  ) );
+    hb_retl( obj->wordWrap () );
   }
 }
 
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 
   if( obj )
   {
-    obj->resizeColumnsToContents (  );
+    obj->resizeColumnsToContents ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 
   if( obj )
   {
-    obj->resizeRowsToContents (  );
+    obj->resizeRowsToContents ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

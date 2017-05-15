@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat (  ) );
+    QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );
   }
 }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition (  ) );
+    QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition (  ) );
+    QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstPosition (  ) );
+    hb_retni( obj->firstPosition () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lastPosition (  ) );
+    hb_retni( obj->lastPosition () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LAYOUTDATA )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrameLayoutData * ptr = obj->layoutData (  );
+    QTextFrameLayoutData * ptr = obj->layoutData ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTFRAMELAYOUTDATA" );
   }
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QTextFrame *> list = obj->childFrames (  );
+    QList<QTextFrame *> list = obj->childFrames ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTEXTFRAME" );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrame * ptr = obj->parentFrame (  );
+    QTextFrame * ptr = obj->parentFrame ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }

@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->exec (  ) );
+    hb_retni( obj->exec () );
   }
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fromPage (  ) );
+    hb_retni( obj->fromPage () );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxPage (  ) );
+    hb_retni( obj->maxPage () );
   }
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minPage (  ) );
+    hb_retni( obj->minPage () );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->printRange (  ) );
+    hb_retni( obj->printRange () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPrinter * ptr = obj->printer (  );
+    QPrinter * ptr = obj->printer ();
     _qt5xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toPage (  ) );
+    hb_retni( obj->toPage () );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ENABLEDOPTIONS )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->enabledOptions (  ) );
+    hb_retni( obj->enabledOptions () );
   }
 }
 

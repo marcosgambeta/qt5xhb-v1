@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 
   if( obj )
   {
-    QList<QAbstractButton *> list = obj->buttons (  );
+    QList<QAbstractButton *> list = obj->buttons ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTBUTTON" );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 
   if( obj )
   {
-    QAbstractButton * ptr = obj->clickedButton (  );
+    QAbstractButton * ptr = obj->clickedButton ();
     _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 
   if( obj )
   {
-    QPushButton * ptr = obj->defaultButton (  );
+    QPushButton * ptr = obj->defaultButton ();
     _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->detailedText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->detailedText ().toLatin1().data() );
   }
 #endif
 }
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 
   if( obj )
   {
-    QAbstractButton * ptr = obj->escapeButton (  );
+    QAbstractButton * ptr = obj->escapeButton ();
     _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 
   if( obj )
   {
-    hb_retni( obj->icon (  ) );
+    hb_retni( obj->icon () );
   }
 }
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->iconPixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->iconPixmap () );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->informativeText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->informativeText ().toLatin1().data() );
   }
 }
 
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 
   if( obj )
   {
-    hb_retni( obj->standardButtons (  ) );
+    hb_retni( obj->standardButtons () );
   }
 }
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 
   if( obj )
   {
-    hb_retni( obj->textFormat (  ) );
+    hb_retni( obj->textFormat () );
   }
 }
 
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 
   if( obj )
   {
-    hb_retni( obj->exec (  ) );
+    hb_retni( obj->exec () );
   }
 }
 
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTINTERACTIONFLAGS )
 
   if( obj )
   {
-    hb_retni( obj->textInteractionFlags (  ) );
+    hb_retni( obj->textInteractionFlags () );
   }
 }
 
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
 
   if( obj )
   {
-    QCheckBox * ptr = obj->checkBox (  );
+    QCheckBox * ptr = obj->checkBox ();
     _qt5xhb_createReturnClass ( ptr, "QCHECKBOX" );
   }
 }

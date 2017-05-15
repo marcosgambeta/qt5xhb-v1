@@ -86,7 +86,7 @@ QPlaceSearchRequest()
 void QPlaceSearchRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * o = new QPlaceSearchRequest (  );
+  QPlaceSearchRequest * o = new QPlaceSearchRequest ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHTERM )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->searchTerm (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->searchTerm ().toLatin1().data() );
   }
 #endif
 }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QPlaceCategory> list = obj->categories (  );
+    QList<QPlaceCategory> list = obj->categories ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPLACECATEGORY" );
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHAREA )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoShape * ptr = new QGeoShape( obj->searchArea (  ) );
+    QGeoShape * ptr = new QGeoShape( obj->searchArea () );
     _qt5xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
   }
 #endif
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RECOMMENDATIONID )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->recommendationId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->recommendationId ().toLatin1().data() );
   }
 #endif
 }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHCONTEXT )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->searchContext (  ) );
+    QVariant * ptr = new QVariant( obj->searchContext () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 #endif
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_VISIBILITYSCOPE )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->visibilityScope (  );
+    int i = obj->visibilityScope ();
     hb_retni( i );
   }
 #endif
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RELEVANCEHINT )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->relevanceHint (  );
+    int i = obj->relevanceHint ();
     hb_retni( i );
   }
 #endif
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_LIMIT )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->limit (  ) );
+    hb_retni( obj->limit () );
   }
 #endif
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CLEAR )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

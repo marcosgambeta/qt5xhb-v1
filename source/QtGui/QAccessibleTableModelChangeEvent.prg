@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->modelChangeType (  ) );
+    hb_retni( obj->modelChangeType () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstRow (  ) );
+    hb_retni( obj->firstRow () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstColumn (  ) );
+    hb_retni( obj->firstColumn () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lastRow (  ) );
+    hb_retni( obj->lastRow () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN )
   QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lastColumn (  ) );
+    hb_retni( obj->lastColumn () );
   }
 }
 

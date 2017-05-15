@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * ptr = obj->activeAction (  );
+    QAction * ptr = obj->activeAction ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * ptr = obj->addSeparator (  );
+    QAction * ptr = obj->addSeparator ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QMENUBAR_CLEAR )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDefaultUp (  ) );
+    hb_retl( obj->isDefaultUp () );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNativeMenuBar (  ) );
+    hb_retl( obj->isNativeMenuBar () );
   }
 }
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QMENUBAR_DEFAULTACTION )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * ptr = obj->defaultAction (  );
+    QAction * ptr = obj->defaultAction ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 #endif
@@ -585,7 +585,7 @@ static void wceRefresh()
 HB_FUNC_STATIC( QMENUBAR_WCEREFRESH )
 {
 #ifdef Q_OS_WINCE
-  QMenuBar::wceRefresh (  );
+  QMenuBar::wceRefresh ();
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }

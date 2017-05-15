@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
 
   if( obj )
   {
-    obj->lockForRead (  );
+    obj->lockForRead ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -112,7 +112,7 @@ void QReadWriteLock_tryLockForRead1 ()
 
   if( obj )
   {
-    hb_retl( obj->tryLockForRead (  ) );
+    hb_retl( obj->tryLockForRead () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 
   if( obj )
   {
-    obj->lockForWrite (  );
+    obj->lockForWrite ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -172,7 +172,7 @@ void QReadWriteLock_tryLockForWrite1 ()
 
   if( obj )
   {
-    hb_retl( obj->tryLockForWrite (  ) );
+    hb_retl( obj->tryLockForWrite () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
 
   if( obj )
   {
-    obj->unlock (  );
+    obj->unlock ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

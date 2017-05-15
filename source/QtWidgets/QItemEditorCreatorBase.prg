@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->valuePropertyName (  ) );
+    QByteArray * ptr = new QByteArray( obj->valuePropertyName () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

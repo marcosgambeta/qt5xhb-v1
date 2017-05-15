@@ -64,7 +64,7 @@ QProcessEnvironment()
 */
 void QProcessEnvironment_new1 ()
 {
-  QProcessEnvironment * o = new QProcessEnvironment (  );
+  QProcessEnvironment * o = new QProcessEnvironment ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 
   if( obj )
   {
-    QStringList strl = obj->toStringList (  );
+    QStringList strl = obj->toStringList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 
   if( obj )
   {
-    QStringList strl = obj->keys (  );
+    QStringList strl = obj->keys ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -311,7 +311,7 @@ static QProcessEnvironment systemEnvironment()
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
-  QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment (  ) );
+  QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
   _qt5xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
 }
 

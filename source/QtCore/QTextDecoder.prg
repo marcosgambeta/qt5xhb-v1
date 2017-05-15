@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
 
   if( obj )
   {
-    hb_retl( obj->hasFailure (  ) );
+    hb_retl( obj->hasFailure () );
   }
 }
 

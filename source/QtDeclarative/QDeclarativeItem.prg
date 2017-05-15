@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 
   if( obj )
   {
-    hb_retnd( obj->baselineOffset (  ) );
+    hb_retnd( obj->baselineOffset () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->childrenRect (  ) );
+    QRectF * ptr = new QRectF( obj->childrenRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 
   if( obj )
   {
-    hb_retl( obj->clip (  ) );
+    hb_retl( obj->clip () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 
   if( obj )
   {
-    obj->forceActiveFocus (  );
+    obj->forceActiveFocus ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->implicitHeight (  ) );
+    hb_retnd( obj->implicitHeight () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->implicitWidth (  ) );
+    hb_retnd( obj->implicitWidth () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 
   if( obj )
   {
-    hb_retl( obj->keepMouseGrab (  ) );
+    hb_retl( obj->keepMouseGrab () );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 
   if( obj )
   {
-    QDeclarativeItem * ptr = obj->parentItem (  );
+    QDeclarativeItem * ptr = obj->parentItem ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
   }
 }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 
   if( obj )
   {
-    hb_retl( obj->smooth (  ) );
+    hb_retl( obj->smooth () );
   }
 }
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
 
   if( obj )
   {
-    hb_retni( obj->transformOrigin (  ) );
+    hb_retni( obj->transformOrigin () );
   }
 }
 

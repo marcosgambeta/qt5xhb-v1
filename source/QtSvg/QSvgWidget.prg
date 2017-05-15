@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
   QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSvgRenderer * ptr = obj->renderer (  );
+    QSvgRenderer * ptr = obj->renderer ();
     _qt5xhb_createReturnClass ( ptr, "QSVGRENDERER" );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
   QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

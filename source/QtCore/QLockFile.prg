@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QLOCKFILE_LOCK )
 
   if( obj )
   {
-    hb_retl( obj->lock (  ) );
+    hb_retl( obj->lock () );
   }
 #endif
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QLOCKFILE_UNLOCK )
 
   if( obj )
   {
-    obj->unlock (  );
+    obj->unlock ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QLOCKFILE_STALELOCKTIME )
 
   if( obj )
   {
-    hb_retni( obj->staleLockTime (  ) );
+    hb_retni( obj->staleLockTime () );
   }
 #endif
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
 
   if( obj )
   {
-    hb_retl( obj->isLocked (  ) );
+    hb_retl( obj->isLocked () );
   }
 #endif
 }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QLOCKFILE_REMOVESTALELOCKFILE )
 
   if( obj )
   {
-    hb_retl( obj->removeStaleLockFile (  ) );
+    hb_retl( obj->removeStaleLockFile () );
   }
 #endif
 }

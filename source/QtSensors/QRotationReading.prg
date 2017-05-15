@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QROTATIONREADING_X )
   QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->x (  ) );
+    hb_retnd( obj->x () );
   }
 #endif
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QROTATIONREADING_Y )
   QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->y (  ) );
+    hb_retnd( obj->y () );
   }
 #endif
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QROTATIONREADING_Z )
   QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->z (  ) );
+    hb_retnd( obj->z () );
   }
 #endif
 }

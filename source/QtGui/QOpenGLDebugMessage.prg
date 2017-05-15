@@ -64,7 +64,7 @@ QOpenGLDebugMessage()
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW1 )
 {
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage (  );
+  QOpenGLDebugMessage * o = new QOpenGLDebugMessage ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->source (  ) );
+    hb_retni( obj->source () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->severity (  ) );
+    hb_retni( obj->severity () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_ID )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->id (  ) );
+    hb_retni( obj->id () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->message (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->message ().toLatin1().data() );
   }
 }
 

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
   QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isConnected (  ) );
+    hb_retl( obj->isConnected () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
   QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusError * ptr = new QDBusError( obj->lastError (  ) );
+    QDBusError * ptr = new QDBusError( obj->lastError () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
   }
 }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
   QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->address (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->address ().toLatin1().data() );
   }
 }
 

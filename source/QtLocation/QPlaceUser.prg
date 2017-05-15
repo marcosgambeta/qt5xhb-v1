@@ -63,7 +63,7 @@ QPlaceUser()
 void QPlaceUser_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * o = new QPlaceUser (  );
+  QPlaceUser * o = new QPlaceUser ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPLACEUSER_USERID )
   QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->userId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->userId ().toLatin1().data() );
   }
 #endif
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPLACEUSER_NAME )
   QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }

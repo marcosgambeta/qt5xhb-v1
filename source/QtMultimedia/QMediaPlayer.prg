@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_BUFFERSTATUS )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferStatus (  ) );
+    hb_retni( obj->bufferStatus () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTMEDIA )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaContent * ptr = new QMediaContent( obj->currentMedia (  ) );
+    QMediaContent * ptr = new QMediaContent( obj->currentMedia () );
     _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentNetworkConfiguration (  ) );
+    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentNetworkConfiguration () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_DURATION )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ERROR )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ERRORSTRING )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISAUDIOAVAILABLE )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAudioAvailable (  ) );
+    hb_retl( obj->isAudioAvailable () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISMUTED )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted (  ) );
+    hb_retl( obj->isMuted () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISSEEKABLE )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSeekable (  ) );
+    hb_retl( obj->isSeekable () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISVIDEOAVAILABLE )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVideoAvailable (  ) );
+    hb_retl( obj->isVideoAvailable () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaContent * ptr = new QMediaContent( obj->media (  ) );
+    QMediaContent * ptr = new QMediaContent( obj->media () );
     _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
   }
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTATUS )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mediaStatus (  ) );
+    hb_retni( obj->mediaStatus () );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QIODevice * ptr = obj->mediaStream (  );
+    const QIODevice * ptr = obj->mediaStream ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYBACKRATE )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->playbackRate (  ) );
+    hb_retnd( obj->playbackRate () );
   }
 }
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaPlaylist * ptr = obj->playlist (  );
+    QMediaPlaylist * ptr = obj->playlist ();
     _qt5xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
   }
 }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_POSITION )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->position (  ) );
+    hb_retni( obj->position () );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_STATE )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_VOLUME )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->volume (  ) );
+    hb_retni( obj->volume () );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_AVAILABILITY )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->availability (  ) );
+    hb_retni( obj->availability () );
   }
 }
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PAUSE )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->pause (  );
+    obj->pause ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAY )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->play (  );
+    obj->play ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_STOP )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

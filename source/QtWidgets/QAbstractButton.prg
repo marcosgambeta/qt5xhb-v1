@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 
   if( obj )
   {
-    hb_retl( obj->autoExclusive (  ) );
+    hb_retl( obj->autoExclusive () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 
   if( obj )
   {
-    hb_retl( obj->autoRepeat (  ) );
+    hb_retl( obj->autoRepeat () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 
   if( obj )
   {
-    hb_retni( obj->autoRepeatDelay (  ) );
+    hb_retni( obj->autoRepeatDelay () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->autoRepeatInterval (  ) );
+    hb_retni( obj->autoRepeatInterval () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->iconSize (  ) );
+    QSize * ptr = new QSize( obj->iconSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 
   if( obj )
   {
-    hb_retl( obj->isCheckable (  ) );
+    hb_retl( obj->isCheckable () );
   }
 }
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 
   if( obj )
   {
-    hb_retl( obj->isChecked (  ) );
+    hb_retl( obj->isChecked () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 
   if( obj )
   {
-    hb_retl( obj->isDown (  ) );
+    hb_retl( obj->isDown () );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 
   if( obj )
   {
-    QKeySequence * ptr = new QKeySequence( obj->shortcut (  ) );
+    QKeySequence * ptr = new QKeySequence( obj->shortcut () );
     _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
   }
 #endif
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 
   if( obj )
   {
-    QButtonGroup * ptr = obj->group (  );
+    QButtonGroup * ptr = obj->group ();
     _qt5xhb_createReturnClass ( ptr, "QBUTTONGROUP" );
   }
 #endif
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 
   if( obj )
   {
-    obj->click (  );
+    obj->click ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 
   if( obj )
   {
-    obj->toggle (  );
+    obj->toggle ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

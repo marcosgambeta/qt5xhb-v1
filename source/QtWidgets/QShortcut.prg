@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
 
   if( obj )
   {
-    hb_retl( obj->autoRepeat (  ) );
+    hb_retl( obj->autoRepeat () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
 
   if( obj )
   {
-    hb_retni( obj->context (  ) );
+    hb_retni( obj->context () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSHORTCUT_ID )
 
   if( obj )
   {
-    hb_retni( obj->id (  ) );
+    hb_retni( obj->id () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSHORTCUT_KEY )
 
   if( obj )
   {
-    QKeySequence * ptr = new QKeySequence( obj->key (  ) );
+    QKeySequence * ptr = new QKeySequence( obj->key () );
     _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
   }
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->parentWidget (  );
+    QWidget * ptr = obj->parentWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
   }
 }
 

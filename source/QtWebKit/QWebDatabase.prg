@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->displayName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->displayName ().toLatin1().data() );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->expectedSize (  ) );
+    hb_retni( obj->expectedSize () );
   }
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin (  ) );
+    QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
     _qt5xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
   }
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -173,7 +173,7 @@ static void removeAllDatabases ()
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {
-  QWebDatabase::removeAllDatabases (  );
+  QWebDatabase::removeAllDatabases ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 

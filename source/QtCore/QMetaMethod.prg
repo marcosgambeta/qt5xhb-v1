@@ -77,7 +77,7 @@ QMetaMethod()
 */
 HB_FUNC_STATIC( QMETAMETHOD_NEW )
 {
-  QMetaMethod * o = new QMetaMethod (  );
+  QMetaMethod * o = new QMetaMethod ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
 
   if( obj )
   {
-    const char * str1 = obj->typeName (  );
+    const char * str1 = obj->typeName ();
     hb_retc( str1 );
   }
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
 
   if( obj )
   {
-    QList<QByteArray> list = obj->parameterTypes (  );
+    QList<QByteArray> list = obj->parameterTypes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 
   if( obj )
   {
-    QList<QByteArray> list = obj->parameterNames (  );
+    QList<QByteArray> list = obj->parameterNames ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
 
   if( obj )
   {
-    const char * str1 = obj->tag (  );
+    const char * str1 = obj->tag ();
     hb_retc( str1 );
   }
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 
   if( obj )
   {
-    hb_retni( obj->access (  ) );
+    hb_retni( obj->access () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
 
   if( obj )
   {
-    hb_retni( obj->methodType (  ) );
+    hb_retni( obj->methodType () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
 
   if( obj )
   {
-    hb_retni( obj->attributes (  ) );
+    hb_retni( obj->attributes () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
 
   if( obj )
   {
-    hb_retni( obj->methodIndex (  ) );
+    hb_retni( obj->methodIndex () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 
   if( obj )
   {
-    hb_retni( obj->revision (  ) );
+    hb_retni( obj->revision () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 
   if( obj )
   {
-    const QMetaObject * ptr = obj->enclosingMetaObject (  );
+    const QMetaObject * ptr = obj->enclosingMetaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODSIGNATURE )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->methodSignature (  ) );
+    QByteArray * ptr = new QByteArray( obj->methodSignature () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NAME )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->name (  ) );
+    QByteArray * ptr = new QByteArray( obj->name () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QMETAMETHOD_RETURNTYPE )
 
   if( obj )
   {
-    hb_retni( obj->returnType (  ) );
+    hb_retni( obj->returnType () );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->parameterCount (  ) );
+    hb_retni( obj->parameterCount () );
   }
 }
 
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 

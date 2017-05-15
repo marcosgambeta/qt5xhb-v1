@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_REGISTEROBJECTS )
   QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->registerObjects (  );
+    obj->registerObjects ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_REGISTEREDOBJECTS )
   QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->registeredObjects (  ) );
+    QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->registeredObjects () );
     _qt5xhb_createReturnClass ( ptr, "QQMLLISTPROPERTY<QOBJECT>" );
   }
 #endif
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_TRANSPORTS )
   QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->transports (  ) );
+    QQmlListProperty<QObject> * ptr = new QQmlListProperty<QObject>( obj->transports () );
     _qt5xhb_createReturnClass ( ptr, "QQMLLISTPROPERTY<QOBJECT>" );
   }
 #endif

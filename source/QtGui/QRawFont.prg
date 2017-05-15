@@ -100,7 +100,7 @@ QRawFont()
 */
 HB_FUNC_STATIC( QRAWFONT_NEW1 )
 {
-  QRawFont * o = new QRawFont (  );
+  QRawFont * o = new QRawFont ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->familyName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->familyName ().toLatin1().data() );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLENAME )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->styleName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->styleName ().toLatin1().data() );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->style (  ) );
+    hb_retni( obj->style () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->weight (  ) );
+    hb_retni( obj->weight () );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->pixelSize (  ) );
+    hb_retnd( obj->pixelSize () );
   }
 }
 
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->hintingPreference (  ) );
+    hb_retni( obj->hintingPreference () );
   }
 }
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QRAWFONT_ASCENT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->ascent (  ) );
+    hb_retnd( obj->ascent () );
   }
 }
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->descent (  ) );
+    hb_retnd( obj->descent () );
   }
 }
 
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QRAWFONT_LEADING )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->leading (  ) );
+    hb_retnd( obj->leading () );
   }
 }
 
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->xHeight (  ) );
+    hb_retnd( obj->xHeight () );
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->averageCharWidth (  ) );
+    hb_retnd( obj->averageCharWidth () );
   }
 }
 
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maxCharWidth (  ) );
+    hb_retnd( obj->maxCharWidth () );
   }
 }
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QRAWFONT_LINETHICKNESS )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->lineThickness (  ) );
+    hb_retnd( obj->lineThickness () );
   }
 }
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QRAWFONT_UNDERLINEPOSITION )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->underlinePosition (  ) );
+    hb_retnd( obj->underlinePosition () );
   }
 }
 
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->unitsPerEm (  ) );
+    hb_retnd( obj->unitsPerEm () );
   }
 }
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems (  );
+    QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

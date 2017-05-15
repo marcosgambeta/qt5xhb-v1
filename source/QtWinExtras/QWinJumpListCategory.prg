@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 #endif
 }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISVISIBLE )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 #endif
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 #endif
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_COUNT )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 #endif
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISEMPTY )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 #endif
 }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWinJumpListItem *> list = obj->items (  );
+    QList<QWinJumpListItem *> list = obj->items ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWINJUMPLISTITEM" );
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWinJumpListItem * ptr = obj->addSeparator (  );
+    QWinJumpListItem * ptr = obj->addSeparator ();
     _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
   }
 #endif
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_CLEAR )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 
   if( obj )
   {
-    hb_retni( obj->expiryTimeout (  ) );
+    hb_retni( obj->expiryTimeout () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->maxThreadCount (  ) );
+    hb_retni( obj->maxThreadCount () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->activeThreadCount (  ) );
+    hb_retni( obj->activeThreadCount () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 
   if( obj )
   {
-    obj->reserveThread (  );
+    obj->reserveThread ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 
   if( obj )
   {
-    obj->releaseThread (  );
+    obj->releaseThread ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QTHREADPOOL_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -285,7 +285,7 @@ static QThreadPool *globalInstance()
 */
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
-  QThreadPool * ptr = QThreadPool::globalInstance (  );
+  QThreadPool * ptr = QThreadPool::globalInstance ();
   _qt5xhb_createReturnClass ( ptr, "QTHREADPOOL" );
 }
 

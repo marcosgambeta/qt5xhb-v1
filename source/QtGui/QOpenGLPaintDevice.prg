@@ -69,7 +69,7 @@ QOpenGLPaintDevice()
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW1 )
 {
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice (  );
+  QOpenGLPaintDevice * o = new QOpenGLPaintDevice ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DEVTYPE )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->devType (  ) );
+    hb_retni( obj->devType () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPaintEngine * ptr = obj->paintEngine (  );
+    QPaintEngine * ptr = obj->paintEngine ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE" );
   }
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLContext * ptr = obj->context (  );
+    QOpenGLContext * ptr = obj->context ();
     _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
   }
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERX )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dotsPerMeterX (  ) );
+    hb_retnd( obj->dotsPerMeterX () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERY )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dotsPerMeterY (  ) );
+    hb_retnd( obj->dotsPerMeterY () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTFLIPPED )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->paintFlipped (  ) );
+    hb_retl( obj->paintFlipped () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_ENSUREACTIVETARGET )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->ensureActiveTarget (  );
+    obj->ensureActiveTarget ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

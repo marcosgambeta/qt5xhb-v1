@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 

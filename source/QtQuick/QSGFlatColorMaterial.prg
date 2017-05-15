@@ -53,7 +53,7 @@ QSGFlatColorMaterial()
 */
 HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_NEW )
 {
-  QSGFlatColorMaterial * o = new QSGFlatColorMaterial (  );
+  QSGFlatColorMaterial * o = new QSGFlatColorMaterial ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_COLOR )
   QSGFlatColorMaterial * obj = (QSGFlatColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QColor * ptr = &obj->color (  );
+    const QColor * ptr = &obj->color ();
     _qt5xhb_createReturnClass ( ptr, "QCOLOR" );
   }
 }

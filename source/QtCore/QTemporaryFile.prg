@@ -54,7 +54,7 @@ QTemporaryFile()
 */
 void QTemporaryFile_new1 ()
 {
-  QTemporaryFile * o = new QTemporaryFile (  );
+  QTemporaryFile * o = new QTemporaryFile ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 
   if( obj )
   {
-    hb_retl( obj->autoRemove (  ) );
+    hb_retl( obj->autoRemove () );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileTemplate (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileTemplate ().toLatin1().data() );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 
   if( obj )
   {
-    hb_retl( obj->open (  ) );
+    hb_retl( obj->open () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 

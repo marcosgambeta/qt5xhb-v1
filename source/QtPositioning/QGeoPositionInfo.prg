@@ -76,7 +76,7 @@ QGeoPositionInfo()
 HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * o = new QGeoPositionInfo (  );
+  QGeoPositionInfo * o = new QGeoPositionInfo ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ISVALID )
   QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_TIMESTAMP )
   QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->timestamp (  ) );
+    QDateTime * ptr = new QDateTime( obj->timestamp () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 #endif
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_COORDINATE )
   QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * ptr = new QGeoCoordinate( obj->coordinate (  ) );
+    QGeoCoordinate * ptr = new QGeoCoordinate( obj->coordinate () );
     _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif

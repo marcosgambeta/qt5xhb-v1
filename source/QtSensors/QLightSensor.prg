@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
   QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLightReading * ptr = obj->reading (  );
+    QLightReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QLIGHTREADING" );
   }
 #endif
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
   QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->fieldOfView (  ) );
+    hb_retnd( obj->fieldOfView () );
   }
 #endif
 }

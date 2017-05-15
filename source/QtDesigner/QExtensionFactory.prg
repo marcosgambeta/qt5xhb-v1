@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 
   if( obj )
   {
-    QExtensionManager * ptr = obj->extensionManager (  );
+    QExtensionManager * ptr = obj->extensionManager ();
     _qt5xhb_createReturnClass ( ptr, "QEXTENSIONMANAGER" );
   }
 }

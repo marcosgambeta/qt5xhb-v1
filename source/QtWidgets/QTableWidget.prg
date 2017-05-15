@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->currentColumn (  ) );
+    hb_retni( obj->currentColumn () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
 
   if( obj )
   {
-    QTableWidgetItem * ptr = obj->currentItem (  );
+    QTableWidgetItem * ptr = obj->currentItem ();
     _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
 
   if( obj )
   {
-    hb_retni( obj->currentRow (  ) );
+    hb_retni( obj->currentRow () );
   }
 }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CLEARCONTENTS )
 
   if( obj )
   {
-    obj->clearContents (  );
+    obj->clearContents ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

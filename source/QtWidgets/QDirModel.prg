@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QDIRMODEL_MIMETYPES )
 
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QDIRMODEL_SUPPORTEDDROPACTIONS )
 
   if( obj )
   {
-    hb_retni( obj->supportedDropActions (  ) );
+    hb_retni( obj->supportedDropActions () );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
 
   if( obj )
   {
-    QFileIconProvider * ptr = obj->iconProvider (  );
+    QFileIconProvider * ptr = obj->iconProvider ();
     _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
   }
 }
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QDIRMODEL_NAMEFILTERS )
 
   if( obj )
   {
-    QStringList strl = obj->nameFilters (  );
+    QStringList strl = obj->nameFilters ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILTER )
 
   if( obj )
   {
-    hb_retni( obj->filter (  ) );
+    hb_retni( obj->filter () );
   }
 }
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QDIRMODEL_SORTING )
 
   if( obj )
   {
-    hb_retni( obj->sorting (  ) );
+    hb_retni( obj->sorting () );
   }
 }
 
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QDIRMODEL_RESOLVESYMLINKS )
 
   if( obj )
   {
-    hb_retl( obj->resolveSymlinks (  ) );
+    hb_retl( obj->resolveSymlinks () );
   }
 }
 
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QDIRMODEL_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QDIRMODEL_LAZYCHILDCOUNT )
 
   if( obj )
   {
-    hb_retl( obj->lazyChildCount (  ) );
+    hb_retl( obj->lazyChildCount () );
   }
 }
 

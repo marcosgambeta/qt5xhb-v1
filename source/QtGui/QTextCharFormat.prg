@@ -112,7 +112,7 @@ QTextCharFormat()
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 {
-  QTextCharFormat * o = new QTextCharFormat (  );
+  QTextCharFormat * o = new QTextCharFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fontFamily (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fontFamily ().toLatin1().data() );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->fontPointSize (  ) );
+    hb_retnd( obj->fontPointSize () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontWeight (  ) );
+    hb_retni( obj->fontWeight () );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->fontItalic (  ) );
+    hb_retl( obj->fontItalic () );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontCapitalization (  ) );
+    hb_retni( obj->fontCapitalization () );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACINGTYPE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontLetterSpacingType (  ) );
+    hb_retni( obj->fontLetterSpacingType () );
   }
 }
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->fontLetterSpacing (  ) );
+    hb_retnd( obj->fontLetterSpacing () );
   }
 }
 
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->fontWordSpacing (  ) );
+    hb_retnd( obj->fontWordSpacing () );
   }
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->fontUnderline (  ) );
+    hb_retl( obj->fontUnderline () );
   }
 }
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->fontOverline (  ) );
+    hb_retl( obj->fontOverline () );
   }
 }
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->fontStrikeOut (  ) );
+    hb_retl( obj->fontStrikeOut () );
   }
 }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor * ptr = new QColor( obj->underlineColor (  ) );
+    QColor * ptr = new QColor( obj->underlineColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->fontFixedPitch (  ) );
+    hb_retl( obj->fontFixedPitch () );
   }
 }
 
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRETCH )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontStretch (  ) );
+    hb_retni( obj->fontStretch () );
   }
 }
 
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontStyleHint (  ) );
+    hb_retni( obj->fontStyleHint () );
   }
 }
 
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontStyleStrategy (  ) );
+    hb_retni( obj->fontStyleStrategy () );
   }
 }
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontHintingPreference (  ) );
+    hb_retni( obj->fontHintingPreference () );
   }
 }
 
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->fontKerning (  ) );
+    hb_retl( obj->fontKerning () );
   }
 }
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->underlineStyle (  ) );
+    hb_retni( obj->underlineStyle () );
   }
 }
 
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->verticalAlignment (  ) );
+    hb_retni( obj->verticalAlignment () );
   }
 }
 
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPen * ptr = new QPen( obj->textOutline (  ) );
+    QPen * ptr = new QPen( obj->textOutline () );
     _qt5xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
   }
 }
 
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAnchor (  ) );
+    hb_retl( obj->isAnchor () );
   }
 }
 
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->anchorHref (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->anchorHref ().toLatin1().data() );
   }
 }
 
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAME )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->anchorName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->anchorName ().toLatin1().data() );
   }
 }
 
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->anchorNames (  );
+    QStringList strl = obj->anchorNames ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TABLECELLROWSPAN )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tableCellRowSpan (  ) );
+    hb_retni( obj->tableCellRowSpan () );
   }
 }
 
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TABLECELLCOLUMNSPAN )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tableCellColumnSpan (  ) );
+    hb_retni( obj->tableCellColumnSpan () );
   }
 }
 

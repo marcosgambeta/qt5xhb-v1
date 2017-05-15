@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
 
   if( obj )
   {
-    QDesignerActionEditorInterface * ptr = obj->actionEditor (  );
+    QDesignerActionEditorInterface * ptr = obj->actionEditor ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
   }
 }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
 
   if( obj )
   {
-    QExtensionManager * ptr = obj->extensionManager (  );
+    QExtensionManager * ptr = obj->extensionManager ();
     _qt5xhb_createReturnClass ( ptr, "QEXTENSIONMANAGER" );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
 
   if( obj )
   {
-    QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager (  );
+    QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
   }
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
 
   if( obj )
   {
-    QDesignerObjectInspectorInterface * ptr = obj->objectInspector (  );
+    QDesignerObjectInspectorInterface * ptr = obj->objectInspector ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
   }
 }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
 
   if( obj )
   {
-    QDesignerPropertyEditorInterface * ptr = obj->propertyEditor (  );
+    QDesignerPropertyEditorInterface * ptr = obj->propertyEditor ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
   }
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
 
   if( obj )
   {
-    QWidget * ptr = obj->topLevel (  );
+    QWidget * ptr = obj->topLevel ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
 
   if( obj )
   {
-    QDesignerWidgetBoxInterface * ptr = obj->widgetBox (  );
+    QDesignerWidgetBoxInterface * ptr = obj->widgetBox ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
   }
 }

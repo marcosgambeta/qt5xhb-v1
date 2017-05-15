@@ -96,7 +96,7 @@ QChar ()
 */
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
-  QChar * o = new QChar (  );
+  QChar * o = new QChar ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -125,7 +125,7 @@ QChar ( QLatin1Char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
-  QChar * o = new QChar (  );
+  QChar * o = new QChar ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
 
   if( obj )
   {
-    hb_retni( obj->category (  ) );
+    hb_retni( obj->category () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QCHAR_CELL )
 
   if( obj )
   {
-    hb_retni( obj->cell (  ) );
+    hb_retni( obj->cell () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QCHAR_COMBININGCLASS )
 
   if( obj )
   {
-    hb_retni( obj->combiningClass (  ) );
+    hb_retni( obj->combiningClass () );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 
   if( obj )
   {
-    hb_retni( obj->decompositionTag (  ) );
+    hb_retni( obj->decompositionTag () );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 
   if( obj )
   {
-    hb_retni( obj->digitValue (  ) );
+    hb_retni( obj->digitValue () );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
 
   if( obj )
   {
-    hb_retni( obj->direction (  ) );
+    hb_retni( obj->direction () );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 
   if( obj )
   {
-    hb_retl( obj->hasMirrored (  ) );
+    hb_retl( obj->hasMirrored () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QCHAR_ISDIGIT )
 
   if( obj )
   {
-    hb_retl( obj->isDigit (  ) );
+    hb_retl( obj->isDigit () );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 
   if( obj )
   {
-    hb_retl( obj->isHighSurrogate (  ) );
+    hb_retl( obj->isHighSurrogate () );
   }
 }
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QCHAR_ISLETTER )
 
   if( obj )
   {
-    hb_retl( obj->isLetter (  ) );
+    hb_retl( obj->isLetter () );
   }
 }
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 
   if( obj )
   {
-    hb_retl( obj->isLetterOrNumber (  ) );
+    hb_retl( obj->isLetterOrNumber () );
   }
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 
   if( obj )
   {
-    hb_retl( obj->isLowSurrogate (  ) );
+    hb_retl( obj->isLowSurrogate () );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QCHAR_ISLOWER )
 
   if( obj )
   {
-    hb_retl( obj->isLower (  ) );
+    hb_retl( obj->isLower () );
   }
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QCHAR_ISMARK )
 
   if( obj )
   {
-    hb_retl( obj->isMark (  ) );
+    hb_retl( obj->isMark () );
   }
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QCHAR_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QCHAR_ISNUMBER )
 
   if( obj )
   {
-    hb_retl( obj->isNumber (  ) );
+    hb_retl( obj->isNumber () );
   }
 }
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QCHAR_ISPRINT )
 
   if( obj )
   {
-    hb_retl( obj->isPrint (  ) );
+    hb_retl( obj->isPrint () );
   }
 }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QCHAR_ISPUNCT )
 
   if( obj )
   {
-    hb_retl( obj->isPunct (  ) );
+    hb_retl( obj->isPunct () );
   }
 }
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QCHAR_ISSPACE )
 
   if( obj )
   {
-    hb_retl( obj->isSpace (  ) );
+    hb_retl( obj->isSpace () );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 
   if( obj )
   {
-    hb_retl( obj->isSymbol (  ) );
+    hb_retl( obj->isSymbol () );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 
   if( obj )
   {
-    hb_retl( obj->isTitleCase (  ) );
+    hb_retl( obj->isTitleCase () );
   }
 }
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCHAR_ISUPPER )
 
   if( obj )
   {
-    hb_retl( obj->isUpper (  ) );
+    hb_retl( obj->isUpper () );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QCHAR_JOINING )
 
   if( obj )
   {
-    hb_retni( obj->joining (  ) );
+    hb_retni( obj->joining () );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->mirroredChar (  ) );
+    QChar * ptr = new QChar( obj->mirroredChar () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QCHAR_ROW )
 
   if( obj )
   {
-    hb_retni( obj->row (  ) );
+    hb_retni( obj->row () );
   }
 }
 
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->toCaseFolded (  ) );
+    QChar * ptr = new QChar( obj->toCaseFolded () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QCHAR_TOLATIN1 )
 
   if( obj )
   {
-    hb_retni( obj->toLatin1 (  ) );
+    hb_retni( obj->toLatin1 () );
   }
 }
 
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->toLower (  ) );
+    QChar * ptr = new QChar( obj->toLower () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->toTitleCase (  ) );
+    QChar * ptr = new QChar( obj->toTitleCase () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->toUpper (  ) );
+    QChar * ptr = new QChar( obj->toUpper () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QCHAR_UNICODE )
 
   if( obj )
   {
-    hb_retni( obj->unicode (  ) );
+    hb_retni( obj->unicode () );
   }
 }
 
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
 
   if( obj )
   {
-    hb_retni( obj->unicodeVersion (  ) );
+    hb_retni( obj->unicodeVersion () );
   }
 }
 

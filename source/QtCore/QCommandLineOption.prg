@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 
   if( obj )
   {
-    QStringList strl = obj->names (  );
+    QStringList strl = obj->names ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->valueName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->valueName ().toLatin1().data() );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
 
   if( obj )
   {
-    QStringList strl = obj->defaultValues (  );
+    QStringList strl = obj->defaultValues ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

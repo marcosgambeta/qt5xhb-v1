@@ -79,7 +79,7 @@ QSerialPortInfo()
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo (  );
+  QSerialPortInfo * o = new QSerialPortInfo ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_PORTNAME )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->portName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->portName ().toLatin1().data() );
   }
 #endif
 }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_SYSTEMLOCATION )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->systemLocation (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->systemLocation ().toLatin1().data() );
   }
 #endif
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_DESCRIPTION )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 #endif
 }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_MANUFACTURER )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->manufacturer (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->manufacturer ().toLatin1().data() );
   }
 #endif
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_VENDORIDENTIFIER )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->vendorIdentifier (  ) );
+    hb_retni( obj->vendorIdentifier () );
   }
 #endif
 }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_PRODUCTIDENTIFIER )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->productIdentifier (  ) );
+    hb_retni( obj->productIdentifier () );
   }
 #endif
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_HASVENDORIDENTIFIER )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasVendorIdentifier (  ) );
+    hb_retl( obj->hasVendorIdentifier () );
   }
 #endif
 }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_HASPRODUCTIDENTIFIER )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasProductIdentifier (  ) );
+    hb_retl( obj->hasProductIdentifier () );
   }
 #endif
 }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_ISNULL )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 #endif
 }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_ISBUSY )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBusy (  ) );
+    hb_retl( obj->isBusy () );
   }
 #endif
 }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_ISVALID )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -356,7 +356,7 @@ static QList<qint32> standardBaudRates()
 HB_FUNC_STATIC( QSERIALPORTINFO_STANDARDBAUDRATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QList<qint32> list = QSerialPortInfo::standardBaudRates (  );
+  QList<qint32> list = QSerialPortInfo::standardBaudRates ();
   _qt5xhb_convert_qlist_qint32_to_array ( list );
 #endif
 }
@@ -368,7 +368,7 @@ static QList<QSerialPortInfo> availablePorts()
 HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QList<QSerialPortInfo> list = QSerialPortInfo::availablePorts (  );
+  QList<QSerialPortInfo> list = QSerialPortInfo::availablePorts ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSERIALPORTINFO" );

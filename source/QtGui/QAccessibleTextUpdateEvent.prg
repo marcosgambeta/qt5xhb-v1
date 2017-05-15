@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED )
   QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->textRemoved (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->textRemoved ().toLatin1().data() );
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED )
   QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->textInserted (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->textInserted ().toLatin1().data() );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_CHANGEPOSITION )
   QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->changePosition (  ) );
+    hb_retni( obj->changePosition () );
   }
 }
 

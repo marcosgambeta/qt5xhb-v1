@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 #endif
 }

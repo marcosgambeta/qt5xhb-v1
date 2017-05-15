@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_CREATE )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create (  ) );
+    hb_retl( obj->create () );
   }
 #endif
 #endif
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_DESTROY )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->destroy (  );
+    obj->destroy ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISCREATED )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated (  ) );
+    hb_retl( obj->isCreated () );
   }
 #endif
 #endif
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->objectId (  ) );
+    hb_retni( obj->objectId () );
   }
 #endif
 #endif
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_BEGIN )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->begin (  );
+    obj->begin ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_END )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->end (  );
+    obj->end ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    GLuint64 * ptr = new GLuint64( obj->waitForTimestamp (  ) );
+    GLuint64 * ptr = new GLuint64( obj->waitForTimestamp () );
     _qt5xhb_createReturnClass ( ptr, "GLUINT64" );
   }
 #endif
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_RECORDTIMESTAMP )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->recordTimestamp (  );
+    obj->recordTimestamp ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISRESULTAVAILABLE )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isResultAvailable (  ) );
+    hb_retl( obj->isResultAvailable () );
   }
 #endif
 #endif
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    GLuint64 * ptr = new GLuint64( obj->waitForResult (  ) );
+    GLuint64 * ptr = new GLuint64( obj->waitForResult () );
     _qt5xhb_createReturnClass ( ptr, "GLUINT64" );
   }
 #endif

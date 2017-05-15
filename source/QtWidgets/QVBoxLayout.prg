@@ -47,7 +47,7 @@ QVBoxLayout ()
 */
 void QVBoxLayout_new1 ()
 {
-  QVBoxLayout * o = new QVBoxLayout (  );
+  QVBoxLayout * o = new QVBoxLayout ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentColumn (  ) );
+    hb_retni( obj->currentColumn () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->currentItem (  );
+    QTreeWidgetItem * ptr = obj->currentItem ();
     _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->headerItem (  );
+    QTreeWidgetItem * ptr = obj->headerItem ();
     _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->invisibleRootItem (  );
+    QTreeWidgetItem * ptr = obj->invisibleRootItem ();
     _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTCOLUMN )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sortColumn (  ) );
+    hb_retni( obj->sortColumn () );
   }
 }
 
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->topLevelItemCount (  ) );
+    hb_retni( obj->topLevelItemCount () );
   }
 }
 
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLEAR )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 
   if( obj )
   {
-    QActionGroup * ptr = obj->actionGroup (  );
+    QActionGroup * ptr = obj->actionGroup ();
     _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 
   if( obj )
   {
-    QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets (  );
+    QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSWIDGET" );
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 
   if( obj )
   {
-    QList<QWidget *> list = obj->associatedWidgets (  );
+    QList<QWidget *> list = obj->associatedWidgets ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWIDGET" );
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 
   if( obj )
   {
-    hb_retl( obj->autoRepeat (  ) );
+    hb_retl( obj->autoRepeat () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QACTION_DATA )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->data (  ) );
+    QVariant * ptr = new QVariant( obj->data () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QACTION_FONT )
 
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QACTION_ICON )
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->iconText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->iconText ().toLatin1().data() );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 
   if( obj )
   {
-    hb_retl( obj->isCheckable (  ) );
+    hb_retl( obj->isCheckable () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
 
   if( obj )
   {
-    hb_retl( obj->isChecked (  ) );
+    hb_retl( obj->isChecked () );
   }
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 
   if( obj )
   {
-    hb_retl( obj->isIconVisibleInMenu (  ) );
+    hb_retl( obj->isIconVisibleInMenu () );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 
   if( obj )
   {
-    hb_retl( obj->isSeparator (  ) );
+    hb_retl( obj->isSeparator () );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 }
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QACTION_MENU )
 
   if( obj )
   {
-    QMenu * ptr = obj->menu (  );
+    QMenu * ptr = obj->menu ();
     _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
 
   if( obj )
   {
-    hb_retni( obj->menuRole (  ) );
+    hb_retni( obj->menuRole () );
   }
 }
 
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->parentWidget (  );
+    QWidget * ptr = obj->parentWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QACTION_PRIORITY )
 
   if( obj )
   {
-    hb_retni( obj->priority (  ) );
+    hb_retni( obj->priority () );
   }
 }
 
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
 
   if( obj )
   {
-    QKeySequence * ptr = new QKeySequence( obj->shortcut (  ) );
+    QKeySequence * ptr = new QKeySequence( obj->shortcut () );
     _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
   }
 }
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 
   if( obj )
   {
-    hb_retni( obj->shortcutContext (  ) );
+    hb_retni( obj->shortcutContext () );
   }
 }
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
 
   if( obj )
   {
-    QList<QKeySequence> list = obj->shortcuts (  );
+    QList<QKeySequence> list = obj->shortcuts ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QKEYSEQUENCE" );
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->statusTip (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->statusTip ().toLatin1().data() );
   }
 }
 
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
   }
 }
 
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
   }
 }
 
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QACTION_HOVER )
 
   if( obj )
   {
-    obj->hover (  );
+    obj->hover ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QACTION_TOGGLE )
 
   if( obj )
   {
-    obj->toggle (  );
+    obj->toggle ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QACTION_TRIGGER )
 
   if( obj )
   {
-    obj->trigger (  );
+    obj->trigger ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

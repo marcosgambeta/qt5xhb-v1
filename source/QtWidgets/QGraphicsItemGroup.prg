@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
   QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
   QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
   QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

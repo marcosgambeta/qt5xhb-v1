@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_X )
   QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->x (  ) );
+    hb_retnd( obj->x () );
   }
 #endif
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_Y )
   QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->y (  ) );
+    hb_retnd( obj->y () );
   }
 #endif
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_Z )
   QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->z (  ) );
+    hb_retnd( obj->z () );
   }
 #endif
 }

@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->currentValue (  ) );
+    QVariant * ptr = new QVariant( obj->currentValue () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 
   if( obj )
   {
-    QEasingCurve * ptr = new QEasingCurve( obj->easingCurve (  ) );
+    QEasingCurve * ptr = new QEasingCurve( obj->easingCurve () );
     _qt5xhb_createReturnClass ( ptr, "QEASINGCURVE" );
   }
 }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->endValue (  ) );
+    QVariant * ptr = new QVariant( obj->endValue () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->startValue (  ) );
+    QVariant * ptr = new QVariant( obj->startValue () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_INITIALIZE )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->initialize (  ) );
+    hb_retl( obj->initialize () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ISLOGGING )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLogging (  ) );
+    hb_retl( obj->isLogging () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGGINGMODE )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loggingMode (  ) );
+    hb_retni( obj->loggingMode () );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumMessageLength (  ) );
+    hb_retni( obj->maximumMessageLength () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_POPGROUP )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->popGroup (  );
+    obj->popGroup ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STOPLOGGING )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stopLogging (  );
+    obj->stopLogging ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

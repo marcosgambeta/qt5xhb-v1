@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ISFINISHED )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 #endif
 }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ERROR )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
+    int i = obj->error ();
     hb_retni( i );
   }
 #endif
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ERRORSTRING )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_VIEWPORT )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoShape * ptr = new QGeoShape( obj->viewport (  ) );
+    QGeoShape * ptr = new QGeoShape( obj->viewport () );
     _qt5xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
   }
 #endif
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoLocation> list = obj->locations (  );
+    QList<QGeoLocation> list = obj->locations ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEOLOCATION" );
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LIMIT )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->limit (  ) );
+    hb_retni( obj->limit () );
   }
 #endif
 }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_OFFSET )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->offset (  ) );
+    hb_retni( obj->offset () );
   }
 #endif
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ABORT )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
   QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->endDocument (  ) );
+    hb_retl( obj->endDocument () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
   QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
   QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->startDocument (  ) );
+    hb_retl( obj->startDocument () );
   }
 }
 

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cacheSize (  ) );
+    hb_retni( obj->cacheSize () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

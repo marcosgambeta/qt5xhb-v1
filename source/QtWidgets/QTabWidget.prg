@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTABWIDGET_CLEAR )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTABWIDGET_COUNT )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->currentWidget (  );
+    QWidget * ptr = obj->currentWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QTABWIDGET_DOCUMENTMODE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->documentMode (  ) );
+    hb_retl( obj->documentMode () );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->elideMode (  ) );
+    hb_retni( obj->elideMode () );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTABWIDGET_ICONSIZE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->iconSize (  ) );
+    QSize * ptr = new QSize( obj->iconSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISMOVABLE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMovable (  ) );
+    hb_retl( obj->isMovable () );
   }
 }
 
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tabPosition (  ) );
+    hb_retni( obj->tabPosition () );
   }
 }
 
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tabShape (  ) );
+    hb_retni( obj->tabShape () );
   }
 }
 
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QTABWIDGET_USESSCROLLBUTTONS )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->usesScrollButtons (  ) );
+    hb_retl( obj->usesScrollButtons () );
   }
 }
 
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSCLOSABLE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->tabsClosable (  ) );
+    hb_retl( obj->tabsClosable () );
   }
 }
 
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QTABWIDGET_MINIMUMSIZEHINT )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QTABWIDGET_SIZEHINT )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QTABWIDGET_HASHEIGHTFORWIDTH )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBARAUTOHIDE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->tabBarAutoHide (  ) );
+    hb_retl( obj->tabBarAutoHide () );
   }
 #endif
 }
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTabBar * ptr = obj->tabBar (  );
+    QTabBar * ptr = obj->tabBar ();
     _qt5xhb_createReturnClass ( ptr, "QTABBAR" );
   }
 }

@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
   QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->contentPos (  ) );
+    QPointF * ptr = new QPointF( obj->contentPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
   QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->overshootDistance (  ) );
+    QPointF * ptr = new QPointF( obj->overshootDistance () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
   QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->scrollState (  ) );
+    hb_retni( obj->scrollState () );
   }
 }
 

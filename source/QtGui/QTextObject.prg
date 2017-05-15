@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
   QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFormat * ptr = new QTextFormat( obj->format (  ) );
+    QTextFormat * ptr = new QTextFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
   }
 }
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
   QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->formatIndex (  ) );
+    hb_retni( obj->formatIndex () );
   }
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
   QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextDocument * ptr = obj->document (  );
+    QTextDocument * ptr = obj->document ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
   QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->objectIndex (  ) );
+    hb_retni( obj->objectIndex () );
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCHANDLE )
   QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextDocumentPrivate * ptr = obj->docHandle (  );
+    QTextDocumentPrivate * ptr = obj->docHandle ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTPRIVATE" );
   }
 }

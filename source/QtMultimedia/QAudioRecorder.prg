@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
   QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->audioInput (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->audioInput ().toLatin1().data() );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTS )
   QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->audioInputs (  );
+    QStringList strl = obj->audioInputs ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
   QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultAudioInput (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->defaultAudioInput ().toLatin1().data() );
   }
 }
 

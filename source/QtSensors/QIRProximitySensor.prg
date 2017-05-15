@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QIRPROXIMITYSENSOR_READING )
   QIRProximitySensor * obj = (QIRProximitySensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIRProximityReading * ptr = obj->reading (  );
+    QIRProximityReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QIRPROXIMITYREADING" );
   }
 #endif

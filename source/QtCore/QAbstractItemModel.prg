@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
 
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 
   if( obj )
   {
-    hb_retni( obj->supportedDragActions (  ) );
+    hb_retni( obj->supportedDragActions () );
   }
 }
 
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 
   if( obj )
   {
-    hb_retni( obj->supportedDropActions (  ) );
+    hb_retni( obj->supportedDropActions () );
   }
 }
 
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
 
   if( obj )
   {
-    obj->revert (  );
+    obj->revert ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
 
   if( obj )
   {
-    hb_retl( obj->submit (  ) );
+    hb_retl( obj->submit () );
   }
 }
 

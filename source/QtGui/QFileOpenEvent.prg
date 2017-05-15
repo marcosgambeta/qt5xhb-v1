@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
   QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->file (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->file ().toLatin1().data() );
   }
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
   QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

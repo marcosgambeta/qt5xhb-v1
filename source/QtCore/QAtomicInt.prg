@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QATOMICINT_DEREF )
 
   if( obj )
   {
-    hb_retl( obj->deref (  ) );
+    hb_retl( obj->deref () );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QATOMICINT_REF )
 
   if( obj )
   {
-    hb_retl( obj->ref (  ) );
+    hb_retl( obj->ref () );
   }
 }
 
@@ -398,7 +398,7 @@ static bool isFetchAndAddNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
-  hb_retl( QAtomicInt::isFetchAndAddNative (  ) );
+  hb_retl( QAtomicInt::isFetchAndAddNative () );
 }
 
 /*
@@ -406,7 +406,7 @@ static bool isFetchAndAddWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 {
-  hb_retl( QAtomicInt::isFetchAndAddWaitFree (  ) );
+  hb_retl( QAtomicInt::isFetchAndAddWaitFree () );
 }
 
 /*
@@ -414,7 +414,7 @@ static bool isFetchAndStoreNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
-  hb_retl( QAtomicInt::isFetchAndStoreNative (  ) );
+  hb_retl( QAtomicInt::isFetchAndStoreNative () );
 }
 
 /*
@@ -422,7 +422,7 @@ static bool isFetchAndStoreWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
-  hb_retl( QAtomicInt::isFetchAndStoreWaitFree (  ) );
+  hb_retl( QAtomicInt::isFetchAndStoreWaitFree () );
 }
 
 /*
@@ -430,7 +430,7 @@ static bool isReferenceCountingNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
-  hb_retl( QAtomicInt::isReferenceCountingNative (  ) );
+  hb_retl( QAtomicInt::isReferenceCountingNative () );
 }
 
 /*
@@ -438,7 +438,7 @@ static bool isReferenceCountingWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
-  hb_retl( QAtomicInt::isReferenceCountingWaitFree (  ) );
+  hb_retl( QAtomicInt::isReferenceCountingWaitFree () );
 }
 
 /*
@@ -446,7 +446,7 @@ static bool isTestAndSetNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 {
-  hb_retl( QAtomicInt::isTestAndSetNative (  ) );
+  hb_retl( QAtomicInt::isTestAndSetNative () );
 }
 
 /*
@@ -454,7 +454,7 @@ static bool isTestAndSetWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {
-  hb_retl( QAtomicInt::isTestAndSetWaitFree (  ) );
+  hb_retl( QAtomicInt::isTestAndSetWaitFree () );
 }
 
 HB_FUNC_STATIC( QATOMICINT_NEWFROM )

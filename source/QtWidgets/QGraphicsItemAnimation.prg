@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_CLEAR )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsItem * ptr = obj->item (  );
+    QGraphicsItem * ptr = obj->item ();
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTimeLine * ptr = obj->timeLine (  );
+    QTimeLine * ptr = obj->timeLine ();
     _qt5xhb_createReturnClass ( ptr, "QTIMELINE" );
   }
 }

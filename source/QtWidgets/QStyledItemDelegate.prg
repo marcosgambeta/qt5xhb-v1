@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
 
   if( obj )
   {
-    QItemEditorFactory * ptr = obj->itemEditorFactory (  );
+    QItemEditorFactory * ptr = obj->itemEditorFactory ();
     _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
   }
 }

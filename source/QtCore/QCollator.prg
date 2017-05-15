@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QCOLLATOR_LOCALE )
 
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 #endif
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QCOLLATOR_CASESENSITIVITY )
 
   if( obj )
   {
-    hb_retni( obj->caseSensitivity (  ) );
+    hb_retni( obj->caseSensitivity () );
   }
 #endif
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QCOLLATOR_NUMERICMODE )
 
   if( obj )
   {
-    hb_retl( obj->numericMode (  ) );
+    hb_retl( obj->numericMode () );
   }
 #endif
 }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
 
   if( obj )
   {
-    hb_retl( obj->ignorePunctuation (  ) );
+    hb_retl( obj->ignorePunctuation () );
   }
 #endif
 }

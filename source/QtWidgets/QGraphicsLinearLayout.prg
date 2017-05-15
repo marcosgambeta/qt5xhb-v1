@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
 
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SPACING )
 
   if( obj )
   {
-    hb_retnd( obj->spacing (  ) );
+    hb_retnd( obj->spacing () );
   }
 }
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INVALIDATE )
 
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

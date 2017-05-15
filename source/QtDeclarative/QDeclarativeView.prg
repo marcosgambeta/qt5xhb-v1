@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 
   if( obj )
   {
-    QDeclarativeEngine * ptr = obj->engine (  );
+    QDeclarativeEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
   }
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 
   if( obj )
   {
-    QList<QDeclarativeError> list = obj->errors (  );
+    QList<QDeclarativeError> list = obj->errors ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->initialSize (  ) );
+    QSize * ptr = new QSize( obj->initialSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 
   if( obj )
   {
-    hb_retni( obj->resizeMode (  ) );
+    hb_retni( obj->resizeMode () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->rootContext (  );
+    QDeclarativeContext * ptr = obj->rootContext ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 
   if( obj )
   {
-    QGraphicsObject * ptr = obj->rootObject (  );
+    QGraphicsObject * ptr = obj->rootObject ();
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
   }
 }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->source (  ) );
+    QUrl * ptr = new QUrl( obj->source () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 

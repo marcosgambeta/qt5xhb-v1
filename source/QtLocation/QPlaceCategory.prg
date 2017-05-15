@@ -74,7 +74,7 @@ QPlaceCategory()
 void QPlaceCategory_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * o = new QPlaceCategory (  );
+  QPlaceCategory * o = new QPlaceCategory ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->categoryId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->categoryId ().toLatin1().data() );
   }
 #endif
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NAME )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->visibility (  );
+    int i = obj->visibility ();
     hb_retni( i );
   }
 #endif
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ICON )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * ptr = new QPlaceIcon( obj->icon (  ) );
+    QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
   }
 #endif
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 #endif
 }

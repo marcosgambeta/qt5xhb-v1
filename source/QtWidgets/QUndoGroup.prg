@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoStack * ptr = obj->activeStack (  );
+    QUndoStack * ptr = obj->activeStack ();
     _qt5xhb_createReturnClass ( ptr, "QUNDOSTACK" );
   }
 }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canRedo (  ) );
+    hb_retl( obj->canRedo () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canUndo (  ) );
+    hb_retl( obj->canUndo () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isClean (  ) );
+    hb_retl( obj->isClean () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->redoText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->redoText ().toLatin1().data() );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QUndoStack *> list = obj->stacks (  );
+    QList<QUndoStack *> list = obj->stacks ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QUNDOSTACK" );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->undoText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->undoText ().toLatin1().data() );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REDO )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->redo (  );
+    obj->redo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDO )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->undo (  );
+    obj->undo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

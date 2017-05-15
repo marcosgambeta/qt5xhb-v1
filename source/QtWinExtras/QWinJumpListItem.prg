@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TYPE )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 #endif
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_FILEPATH )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->filePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->filePath ().toLatin1().data() );
   }
 #endif
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_WORKINGDIRECTORY )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->workingDirectory (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->workingDirectory ().toLatin1().data() );
   }
 #endif
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ICON )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 #endif
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TITLE )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 #endif
 }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_DESCRIPTION )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 #endif
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ARGUMENTS )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->arguments (  );
+    QStringList strl = obj->arguments ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif

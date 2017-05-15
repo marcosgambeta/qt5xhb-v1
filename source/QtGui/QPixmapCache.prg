@@ -85,7 +85,7 @@ static int cacheLimit()
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
 {
-  hb_retni( QPixmapCache::cacheLimit (  ) );
+  hb_retni( QPixmapCache::cacheLimit () );
 }
 
 /*
@@ -173,7 +173,7 @@ static void clear()
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
 {
-  QPixmapCache::clear (  );
+  QPixmapCache::clear ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
   QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPrinter * ptr = obj->printer (  );
+    QPrinter * ptr = obj->printer ();
     _qt5xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
   QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->exec (  ) );
+    hb_retni( obj->exec () );
   }
 }
 

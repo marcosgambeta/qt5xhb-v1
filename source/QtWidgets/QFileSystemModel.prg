@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->filter (  ) );
+    hb_retni( obj->filter () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFileIconProvider * ptr = obj->iconProvider (  );
+    QFileIconProvider * ptr = obj->iconProvider ();
     _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
   }
 }
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->nameFilterDisables (  ) );
+    hb_retl( obj->nameFilterDisables () );
   }
 }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->nameFilters (  );
+    QStringList strl = obj->nameFilters ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->resolveSymlinks (  ) );
+    hb_retl( obj->resolveSymlinks () );
   }
 }
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDir * ptr = new QDir( obj->rootDirectory (  ) );
+    QDir * ptr = new QDir( obj->rootDirectory () );
     _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->rootPath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->rootPath ().toLatin1().data() );
   }
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedDropActions (  ) );
+    hb_retni( obj->supportedDropActions () );
   }
 }
 

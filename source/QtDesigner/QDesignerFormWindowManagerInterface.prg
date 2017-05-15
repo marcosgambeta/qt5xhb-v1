@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
 
   if( obj )
   {
-    QAction * ptr = obj->actionAdjustSize (  );
+    QAction * ptr = obj->actionAdjustSize ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
 
   if( obj )
   {
-    QAction * ptr = obj->actionBreakLayout (  );
+    QAction * ptr = obj->actionBreakLayout ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
 
   if( obj )
   {
-    QAction * ptr = obj->actionCopy (  );
+    QAction * ptr = obj->actionCopy ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
 
   if( obj )
   {
-    QAction * ptr = obj->actionCut (  );
+    QAction * ptr = obj->actionCut ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
 
   if( obj )
   {
-    QAction * ptr = obj->actionDelete (  );
+    QAction * ptr = obj->actionDelete ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
 
   if( obj )
   {
-    QAction * ptr = obj->actionFormLayout (  );
+    QAction * ptr = obj->actionFormLayout ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
 
   if( obj )
   {
-    QAction * ptr = obj->actionGridLayout (  );
+    QAction * ptr = obj->actionGridLayout ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
 
   if( obj )
   {
-    QAction * ptr = obj->actionHorizontalLayout (  );
+    QAction * ptr = obj->actionHorizontalLayout ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
 
   if( obj )
   {
-    QAction * ptr = obj->actionLower (  );
+    QAction * ptr = obj->actionLower ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
 
   if( obj )
   {
-    QAction * ptr = obj->actionPaste (  );
+    QAction * ptr = obj->actionPaste ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
 
   if( obj )
   {
-    QAction * ptr = obj->actionRaise (  );
+    QAction * ptr = obj->actionRaise ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
 
   if( obj )
   {
-    QAction * ptr = obj->actionRedo (  );
+    QAction * ptr = obj->actionRedo ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
 
   if( obj )
   {
-    QAction * ptr = obj->actionSelectAll (  );
+    QAction * ptr = obj->actionSelectAll ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
 
   if( obj )
   {
-    QAction * ptr = obj->actionSimplifyLayout (  );
+    QAction * ptr = obj->actionSimplifyLayout ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
 
   if( obj )
   {
-    QAction * ptr = obj->actionSplitHorizontal (  );
+    QAction * ptr = obj->actionSplitHorizontal ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
 
   if( obj )
   {
-    QAction * ptr = obj->actionSplitVertical (  );
+    QAction * ptr = obj->actionSplitVertical ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
 
   if( obj )
   {
-    QAction * ptr = obj->actionUndo (  );
+    QAction * ptr = obj->actionUndo ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
 
   if( obj )
   {
-    QAction * ptr = obj->actionVerticalLayout (  );
+    QAction * ptr = obj->actionVerticalLayout ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
 
   if( obj )
   {
-    QDesignerFormWindowInterface * ptr = obj->activeFormWindow (  );
+    QDesignerFormWindowInterface * ptr = obj->activeFormWindow ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
   }
 }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
 
   if( obj )
   {
-    QDesignerFormEditorInterface * ptr = obj->core (  );
+    QDesignerFormEditorInterface * ptr = obj->core ();
     _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
   }
 }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->formWindowCount (  ) );
+    hb_retni( obj->formWindowCount () );
   }
 }
 

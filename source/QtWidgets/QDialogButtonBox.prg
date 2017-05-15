@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 
   if( obj )
   {
-    hb_retl( obj->centerButtons (  ) );
+    hb_retl( obj->centerButtons () );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 
   if( obj )
   {
-    hb_retni( obj->standardButtons (  ) );
+    hb_retni( obj->standardButtons () );
   }
 }
 

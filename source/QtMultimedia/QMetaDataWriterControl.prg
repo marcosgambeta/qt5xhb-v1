@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISWRITABLE )
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isWritable (  ) );
+    hb_retl( obj->isWritable () );
   }
 }
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE )
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMetaDataAvailable (  ) );
+    hb_retl( obj->isMetaDataAvailable () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->availableMetaData (  );
+    QStringList strl = obj->availableMetaData ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

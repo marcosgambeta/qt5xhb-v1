@@ -63,7 +63,7 @@ QMargins()
 */
 void QMargins_new1 ()
 {
-  QMargins * o = new QMargins (  );
+  QMargins * o = new QMargins ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMARGINS_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QMARGINS_LEFT )
 
   if( obj )
   {
-    hb_retni( obj->left (  ) );
+    hb_retni( obj->left () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QMARGINS_TOP )
 
   if( obj )
   {
-    hb_retni( obj->top (  ) );
+    hb_retni( obj->top () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMARGINS_RIGHT )
 
   if( obj )
   {
-    hb_retni( obj->right (  ) );
+    hb_retni( obj->right () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMARGINS_BOTTOM )
 
   if( obj )
   {
-    hb_retni( obj->bottom (  ) );
+    hb_retni( obj->bottom () );
   }
 }
 

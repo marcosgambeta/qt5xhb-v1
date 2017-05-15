@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_ENDPAINT )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endPaint (  );
+    obj->endPaint ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_HANDLE )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlatformBackingStore * ptr = obj->handle (  );
+    QPlatformBackingStore * ptr = obj->handle ();
     _qt5xhb_createReturnClass ( ptr, "QPLATFORMBACKINGSTORE" );
   }
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_HASSTATICCONTENTS )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasStaticContents (  ) );
+    hb_retl( obj->hasStaticContents () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_PAINTDEVICE )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPaintDevice * ptr = obj->paintDevice (  );
+    QPaintDevice * ptr = obj->paintDevice ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
   }
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SIZE )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_STATICCONTENTS )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->staticContents (  ) );
+    QRegion * ptr = new QRegion( obj->staticContents () );
     _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_WINDOW )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWindow * ptr = obj->window (  );
+    QWindow * ptr = obj->window ();
     _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }

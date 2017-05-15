@@ -115,7 +115,7 @@ QRectF ()
 */
 void QRectF_new1 ()
 {
-  QRectF * o = new QRectF (  );
+  QRectF * o = new QRectF ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOM )
 
   if( obj )
   {
-    hb_retnd( obj->bottom (  ) );
+    hb_retnd( obj->bottom () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->bottomLeft (  ) );
+    QPointF * ptr = new QPointF( obj->bottomLeft () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->bottomRight (  ) );
+    QPointF * ptr = new QPointF( obj->bottomRight () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QRECTF_CENTER )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->center (  ) );
+    QPointF * ptr = new QPointF( obj->center () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QRECTF_HEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->height (  ) );
+    hb_retnd( obj->height () );
   }
 }
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QRECTF_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QRECTF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QRECTF_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QRECTF_LEFT )
 
   if( obj )
   {
-    hb_retnd( obj->left (  ) );
+    hb_retnd( obj->left () );
   }
 }
 
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QRECTF_NORMALIZED )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->normalized (  ) );
+    QRectF * ptr = new QRectF( obj->normalized () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QRECTF_RIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->right (  ) );
+    hb_retnd( obj->right () );
   }
 }
 
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QRECTF_SIZE )
 
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->size (  ) );
+    QSizeF * ptr = new QSizeF( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->toAlignedRect (  ) );
+    QRect * ptr = new QRect( obj->toAlignedRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QRECTF_TORECT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->toRect (  ) );
+    QRect * ptr = new QRect( obj->toRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QRECTF_TOP )
 
   if( obj )
   {
-    hb_retnd( obj->top (  ) );
+    hb_retnd( obj->top () );
   }
 }
 
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QRECTF_TOPLEFT )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->topLeft (  ) );
+    QPointF * ptr = new QPointF( obj->topLeft () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1235,7 +1235,7 @@ HB_FUNC_STATIC( QRECTF_TOPRIGHT )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->topRight (  ) );
+    QPointF * ptr = new QPointF( obj->topRight () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QRECTF_WIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->width (  ) );
+    hb_retnd( obj->width () );
   }
 }
 
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC( QRECTF_X )
 
   if( obj )
   {
-    hb_retnd( obj->x (  ) );
+    hb_retnd( obj->x () );
   }
 }
 
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QRECTF_Y )
 
   if( obj )
   {
-    hb_retnd( obj->y (  ) );
+    hb_retnd( obj->y () );
   }
 }
 

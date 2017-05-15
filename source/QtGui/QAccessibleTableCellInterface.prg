@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNEXTENT )
   QAccessibleTableCellInterface * obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnExtent (  ) );
+    hb_retni( obj->columnExtent () );
   }
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNINDEX )
   QAccessibleTableCellInterface * obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnIndex (  ) );
+    hb_retni( obj->columnIndex () );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWEXTENT )
   QAccessibleTableCellInterface * obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowExtent (  ) );
+    hb_retni( obj->rowExtent () );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWINDEX )
   QAccessibleTableCellInterface * obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowIndex (  ) );
+    hb_retni( obj->rowIndex () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ISSELECTED )
   QAccessibleTableCellInterface * obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSelected (  ) );
+    hb_retl( obj->isSelected () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_TABLE )
   QAccessibleTableCellInterface * obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->table (  );
+    QAccessibleInterface * ptr = obj->table ();
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }

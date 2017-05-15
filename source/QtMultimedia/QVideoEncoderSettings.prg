@@ -78,7 +78,7 @@ QVideoEncoderSettings()
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW1 )
 {
-  QVideoEncoderSettings * o = new QVideoEncoderSettings (  );
+  QVideoEncoderSettings * o = new QVideoEncoderSettings ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_BITRATE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bitRate (  ) );
+    hb_retni( obj->bitRate () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_CODEC )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->codec (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->codec ().toLatin1().data() );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ENCODINGMODE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->encodingMode (  ) );
+    hb_retni( obj->encodingMode () );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_FRAMERATE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->frameRate (  ) );
+    hb_retnd( obj->frameRate () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ISNULL )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_QUALITY )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->quality (  ) );
+    hb_retni( obj->quality () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_RESOLUTION )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->resolution (  ) );
+    QSize * ptr = new QSize( obj->resolution () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

@@ -101,7 +101,7 @@ void QGestureEvent_accept1 ()
 
   if( obj )
   {
-    obj->accept (  );
+    obj->accept ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 
   if( obj )
   {
-    QList<QGesture *> list = obj->activeGestures (  );
+    QList<QGesture *> list = obj->activeGestures ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGESTURE" );
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 
   if( obj )
   {
-    QList<QGesture *> list = obj->canceledGestures (  );
+    QList<QGesture *> list = obj->canceledGestures ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGESTURE" );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 
   if( obj )
   {
-    QList<QGesture *> list = obj->gestures (  );
+    QList<QGesture *> list = obj->gestures ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGESTURE" );
@@ -319,7 +319,7 @@ void QGestureEvent_ignore1 ()
 
   if( obj )
   {
-    obj->ignore (  );
+    obj->ignore ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -390,7 +390,7 @@ void QGestureEvent_isAccepted1 ()
 
   if( obj )
   {
-    hb_retl( obj->isAccepted (  ) );
+    hb_retl( obj->isAccepted () );
   }
 }
 
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

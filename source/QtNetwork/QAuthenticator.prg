@@ -70,7 +70,7 @@ QAuthenticator ()
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
 {
-  QAuthenticator * o = new QAuthenticator (  );
+  QAuthenticator * o = new QAuthenticator ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
   QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTIONS )
   QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariantHash * ptr = new QVariantHash( obj->options (  ) );
+    QVariantHash * ptr = new QVariantHash( obj->options () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANTHASH" );
   }
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
   QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->password (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->password ().toLatin1().data() );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
   QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->realm (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->realm ().toLatin1().data() );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_USER )
   QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->user (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->user ().toLatin1().data() );
   }
 }
 

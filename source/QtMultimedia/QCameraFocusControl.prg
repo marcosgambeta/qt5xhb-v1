@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_CUSTOMFOCUSPOINT )
   QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->customFocusPoint (  ) );
+    QPointF * ptr = new QPointF( obj->customFocusPoint () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_FOCUSMODE )
   QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->focusMode (  ) );
+    hb_retni( obj->focusMode () );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_FOCUSPOINTMODE )
   QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->focusPointMode (  ) );
+    hb_retni( obj->focusPointMode () );
   }
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_FOCUSZONES )
   QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCameraFocusZoneList * ptr = new QCameraFocusZoneList( obj->focusZones (  ) );
+    QCameraFocusZoneList * ptr = new QCameraFocusZoneList( obj->focusZones () );
     _qt5xhb_createReturnClass ( ptr, "QCAMERAFOCUSZONELIST" );
   }
 }

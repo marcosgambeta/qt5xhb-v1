@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 
   if( obj )
   {
-    hb_retni( obj->currentLoop (  ) );
+    hb_retni( obj->currentLoop () );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 
   if( obj )
   {
-    hb_retni( obj->currentLoopTime (  ) );
+    hb_retni( obj->currentLoopTime () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 
   if( obj )
   {
-    hb_retni( obj->currentTime (  ) );
+    hb_retni( obj->currentTime () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 
   if( obj )
   {
-    hb_retni( obj->direction (  ) );
+    hb_retni( obj->direction () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 
   if( obj )
   {
-    QAnimationGroup * ptr = obj->group (  );
+    QAnimationGroup * ptr = obj->group ();
     _qt5xhb_createReturnClass ( ptr, "QANIMATIONGROUP" );
   }
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->loopCount (  ) );
+    hb_retni( obj->loopCount () );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 
   if( obj )
   {
-    hb_retni( obj->totalDuration (  ) );
+    hb_retni( obj->totalDuration () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 
   if( obj )
   {
-    obj->pause (  );
+    obj->pause ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 
   if( obj )
   {
-    obj->resume (  );
+    obj->resume ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
 
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
   QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
   QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
   QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->child (  ) );
+    hb_retni( obj->child () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
   QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->accessibleInterface (  );
+    QAccessibleInterface * ptr = obj->accessibleInterface ();
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }

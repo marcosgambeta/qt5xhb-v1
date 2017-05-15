@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHEDSERVICES )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->watchedServices (  );
+    QStringList strl = obj->watchedServices ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHMODE )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    WatchMode * ptr = new WatchMode( obj->watchMode (  ) );
+    WatchMode * ptr = new WatchMode( obj->watchMode () );
     _qt5xhb_createReturnClass ( ptr, "WATCHMODE" );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHMODE )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setWatchMode (  );
+    obj->setWatchMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_CONNECTION )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusConnection * ptr = new QDBusConnection( obj->connection (  ) );
+    QDBusConnection * ptr = new QDBusConnection( obj->connection () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
   }
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETCONNECTION )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setConnection (  );
+    obj->setConnection ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

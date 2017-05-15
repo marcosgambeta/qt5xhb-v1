@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
 
   if( obj )
   {
-    obj->unlock (  );
+    obj->unlock ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QREADLOCKER_RELOCK )
 
   if( obj )
   {
-    obj->relock (  );
+    obj->relock ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
 
   if( obj )
   {
-    QReadWriteLock * ptr = obj->readWriteLock (  );
+    QReadWriteLock * ptr = obj->readWriteLock ();
     _qt5xhb_createReturnClass ( ptr, "QREADWRITELOCK" );
   }
 }

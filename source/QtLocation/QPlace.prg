@@ -110,7 +110,7 @@ QPlace()
 void QPlace_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * o = new QPlace (  );
+  QPlace * o = new QPlace ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QPLACE_CATEGORIES )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QPlaceCategory> list = obj->categories (  );
+    QList<QPlaceCategory> list = obj->categories ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPLACECATEGORY" );
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QPLACE_LOCATION )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoLocation * ptr = new QGeoLocation( obj->location (  ) );
+    QGeoLocation * ptr = new QGeoLocation( obj->location () );
     _qt5xhb_createReturnClass ( ptr, "QGEOLOCATION", true );
   }
 #endif
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QPLACE_RATINGS )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceRatings * ptr = new QPlaceRatings( obj->ratings (  ) );
+    QPlaceRatings * ptr = new QPlaceRatings( obj->ratings () );
     _qt5xhb_createReturnClass ( ptr, "QPLACERATINGS", true );
   }
 #endif
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QPLACE_SUPPLIER )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSupplier * ptr = new QPlaceSupplier( obj->supplier (  ) );
+    QPlaceSupplier * ptr = new QPlaceSupplier( obj->supplier () );
     _qt5xhb_createReturnClass ( ptr, "QPLACESUPPLIER", true );
   }
 #endif
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QPLACE_ATTRIBUTION )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->attribution (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->attribution ().toLatin1().data() );
   }
 #endif
 }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QPLACE_ICON )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * ptr = new QPlaceIcon( obj->icon (  ) );
+    QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
   }
 #endif
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QPLACE_NAME )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QPLACE_PLACEID )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->placeId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->placeId ().toLatin1().data() );
   }
 #endif
 }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYPHONE )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->primaryPhone (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->primaryPhone ().toLatin1().data() );
   }
 #endif
 }
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYFAX )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->primaryFax (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->primaryFax ().toLatin1().data() );
   }
 #endif
 }
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYEMAIL )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->primaryEmail (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->primaryEmail ().toLatin1().data() );
   }
 #endif
 }
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYWEBSITE )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->primaryWebsite (  ) );
+    QUrl * ptr = new QUrl( obj->primaryWebsite () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QPLACE_DETAILSFETCHED )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->detailsFetched (  ) );
+    hb_retl( obj->detailsFetched () );
   }
 #endif
 }
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTETYPES )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->extendedAttributeTypes (  );
+    QStringList strl = obj->extendedAttributeTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTTYPES )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->contactTypes (  );
+    QStringList strl = obj->contactTypes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QPLACE_VISIBILITY )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->visibility (  );
+    int i = obj->visibility ();
     hb_retni( i );
   }
 #endif
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QPLACE_ISEMPTY )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 #endif
 }

@@ -85,7 +85,7 @@ QJsonArray()
 */
 void QJsonArray_new1 ()
 {
-  QJsonArray * o = new QJsonArray (  );
+  QJsonArray * o = new QJsonArray ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QJSONARRAY_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QJSONARRAY_EMPTY )
 
   if( obj )
   {
-    hb_retl( obj->empty (  ) );
+    hb_retl( obj->empty () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QJSONARRAY_FIRST )
 
   if( obj )
   {
-    QJsonValue * ptr = new QJsonValue( obj->first (  ) );
+    QJsonValue * ptr = new QJsonValue( obj->first () );
     _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
   }
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QJSONARRAY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QJSONARRAY_LAST )
 
   if( obj )
   {
-    QJsonValue * ptr = new QJsonValue( obj->last (  ) );
+    QJsonValue * ptr = new QJsonValue( obj->last () );
     _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
   }
 }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QJSONARRAY_POP_BACK )
 
   if( obj )
   {
-    obj->pop_back (  );
+    obj->pop_back ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QJSONARRAY_POP_FRONT )
 
   if( obj )
   {
-    obj->pop_front (  );
+    obj->pop_front ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QJSONARRAY_REMOVEFIRST )
 
   if( obj )
   {
-    obj->removeFirst (  );
+    obj->removeFirst ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QJSONARRAY_REMOVELAST )
 
   if( obj )
   {
-    obj->removeLast (  );
+    obj->removeLast ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QJSONARRAY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QJSONARRAY_TOVARIANTLIST )
 
   if( obj )
   {
-    QVariantList list = obj->toVariantList (  );
+    QVariantList list = obj->toVariantList ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QVARIANT" );

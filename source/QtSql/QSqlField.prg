@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSQLFIELD_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->defaultValue (  ) );
+    QVariant * ptr = new QVariant( obj->defaultValue () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 
   if( obj )
   {
-    hb_retl( obj->isAutoValue (  ) );
+    hb_retl( obj->isAutoValue () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 
   if( obj )
   {
-    hb_retl( obj->isGenerated (  ) );
+    hb_retl( obj->isGenerated () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSQLFIELD_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 
   if( obj )
   {
-    hb_retni( obj->precision (  ) );
+    hb_retni( obj->precision () );
   }
 }
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
 
   if( obj )
   {
-    hb_retni( obj->requiredStatus (  ) );
+    hb_retni( obj->requiredStatus () );
   }
 }
 
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSQLFIELD_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QSQLFIELD_VALUE )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->value (  ) );
+    QVariant * ptr = new QVariant( obj->value () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QSQLFIELD_TYPEID )
 
   if( obj )
   {
-    hb_retni( obj->typeID (  ) );
+    hb_retni( obj->typeID () );
   }
 }
 

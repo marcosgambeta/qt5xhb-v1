@@ -67,7 +67,7 @@ QDomImplementation ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
 {
-  QDomImplementation * o = new QDomImplementation (  );
+  QDomImplementation * o = new QDomImplementation ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
   QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -176,7 +176,7 @@ static InvalidDataPolicy invalidDataPolicy ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
-  hb_retni( QDomImplementation::invalidDataPolicy (  ) );
+  hb_retni( QDomImplementation::invalidDataPolicy () );
 }
 
 

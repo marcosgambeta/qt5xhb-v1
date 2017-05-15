@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_AZIMUTH )
   QCompassReading * obj = (QCompassReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->azimuth (  ) );
+    hb_retnd( obj->azimuth () );
   }
 #endif
 }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_CALIBRATIONLEVEL )
   QCompassReading * obj = (QCompassReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->calibrationLevel (  ) );
+    hb_retnd( obj->calibrationLevel () );
   }
 #endif
 }

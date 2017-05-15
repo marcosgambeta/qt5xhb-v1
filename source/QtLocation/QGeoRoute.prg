@@ -85,7 +85,7 @@ QGeoRoute()
 void QGeoRoute_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoute * o = new QGeoRoute (  );
+  QGeoRoute * o = new QGeoRoute ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGEOROUTE_ROUTEID )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->routeId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->routeId ().toLatin1().data() );
   }
 #endif
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGEOROUTE_REQUEST )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRouteRequest * ptr = new QGeoRouteRequest( obj->request (  ) );
+    QGeoRouteRequest * ptr = new QGeoRouteRequest( obj->request () );
     _qt5xhb_createReturnClass ( ptr, "QGEOROUTEREQUEST", true );
   }
 #endif
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGEOROUTE_BOUNDS )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRectangle * ptr = new QGeoRectangle( obj->bounds (  ) );
+    QGeoRectangle * ptr = new QGeoRectangle( obj->bounds () );
     _qt5xhb_createReturnClass ( ptr, "QGEORECTANGLE", true );
   }
 #endif
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGEOROUTE_FIRSTROUTESEGMENT )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRouteSegment * ptr = new QGeoRouteSegment( obj->firstRouteSegment (  ) );
+    QGeoRouteSegment * ptr = new QGeoRouteSegment( obj->firstRouteSegment () );
     _qt5xhb_createReturnClass ( ptr, "QGEOROUTESEGMENT", true );
   }
 #endif
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGEOROUTE_TRAVELTIME )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->travelTime (  ) );
+    hb_retni( obj->travelTime () );
   }
 #endif
 }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGEOROUTE_DISTANCE )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->distance (  ) );
+    hb_retnd( obj->distance () );
   }
 #endif
 }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QGEOROUTE_TRAVELMODE )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->travelMode (  );
+    int i = obj->travelMode ();
     hb_retni( i );
   }
 #endif
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QGEOROUTE_PATH )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGeoCoordinate> list = obj->path (  );
+    QList<QGeoCoordinate> list = obj->path ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEOCOORDINATE" );

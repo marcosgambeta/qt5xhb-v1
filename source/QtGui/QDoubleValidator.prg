@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->bottom (  ) );
+    hb_retnd( obj->bottom () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->decimals (  ) );
+    hb_retni( obj->decimals () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->notation (  ) );
+    hb_retni( obj->notation () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->top (  ) );
+    hb_retnd( obj->top () );
   }
 }
 

@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSCREEN_HANDLE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlatformScreen * ptr = obj->handle (  );
+    QPlatformScreen * ptr = obj->handle ();
     _qt5xhb_createReturnClass ( ptr, "QPLATFORMSCREEN" );
   }
 }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSCREEN_NAME )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSCREEN_DEPTH )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depth (  ) );
+    hb_retni( obj->depth () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSCREEN_SIZE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSCREEN_GEOMETRY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALSIZE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->physicalSize (  ) );
+    QSizeF * ptr = new QSizeF( obj->physicalSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCHX )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->physicalDotsPerInchX (  ) );
+    hb_retnd( obj->physicalDotsPerInchX () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCHY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->physicalDotsPerInchY (  ) );
+    hb_retnd( obj->physicalDotsPerInchY () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCH )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->physicalDotsPerInch (  ) );
+    hb_retnd( obj->physicalDotsPerInch () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCHX )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->logicalDotsPerInchX (  ) );
+    hb_retnd( obj->logicalDotsPerInchX () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCHY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->logicalDotsPerInchY (  ) );
+    hb_retnd( obj->logicalDotsPerInchY () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCH )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->logicalDotsPerInch (  ) );
+    hb_retnd( obj->logicalDotsPerInch () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSCREEN_DEVICEPIXELRATIO )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->devicePixelRatio (  ) );
+    hb_retnd( obj->devicePixelRatio () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLESIZE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->availableSize (  ) );
+    QSize * ptr = new QSize( obj->availableSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEGEOMETRY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->availableGeometry (  ) );
+    QRect * ptr = new QRect( obj->availableGeometry () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIZE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->virtualSize (  ) );
+    QSize * ptr = new QSize( obj->virtualSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALGEOMETRY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->virtualGeometry (  ) );
+    QRect * ptr = new QRect( obj->virtualGeometry () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALSIZE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->availableVirtualSize (  ) );
+    QSize * ptr = new QSize( obj->availableVirtualSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALGEOMETRY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->availableVirtualGeometry (  ) );
+    QRect * ptr = new QRect( obj->availableVirtualGeometry () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QSCREEN_PRIMARYORIENTATION )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->primaryOrientation (  ) );
+    hb_retni( obj->primaryOrientation () );
   }
 }
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSCREEN_ORIENTATION )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QSCREEN_ORIENTATIONUPDATEMASK )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientationUpdateMask (  ) );
+    hb_retni( obj->orientationUpdateMask () );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSCREEN_REFRESHRATE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->refreshRate (  ) );
+    hb_retnd( obj->refreshRate () );
   }
 }
 

@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_BASESTYLE )
 
   if( obj )
   {
-    QStyle * ptr = obj->baseStyle (  );
+    QStyle * ptr = obj->baseStyle ();
     _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
   }
 }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPALETTE )
 
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->standardPalette (  ) );
+    QPalette * ptr = new QPalette( obj->standardPalette () );
     _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }

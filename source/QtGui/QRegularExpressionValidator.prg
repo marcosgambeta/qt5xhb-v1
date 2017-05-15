@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
   QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
+    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression () );
     _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
   }
 }

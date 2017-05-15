@@ -113,7 +113,7 @@ QFont ()
 */
 void QFont_new1 ()
 {
-  QFont * o = new QFont (  );
+  QFont * o = new QFont ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QFONT_BOLD )
 
   if( obj )
   {
-    hb_retl( obj->bold (  ) );
+    hb_retl( obj->bold () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QFONT_CAPITALIZATION )
 
   if( obj )
   {
-    hb_retni( obj->capitalization (  ) );
+    hb_retni( obj->capitalization () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultFamily (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->defaultFamily ().toLatin1().data() );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QFONT_EXACTMATCH )
 
   if( obj )
   {
-    hb_retl( obj->exactMatch (  ) );
+    hb_retl( obj->exactMatch () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFONT_FAMILY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->family (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->family ().toLatin1().data() );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QFONT_FIXEDPITCH )
 
   if( obj )
   {
-    hb_retl( obj->fixedPitch (  ) );
+    hb_retl( obj->fixedPitch () );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QFONT_ITALIC )
 
   if( obj )
   {
-    hb_retl( obj->italic (  ) );
+    hb_retl( obj->italic () );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QFONT_KERNING )
 
   if( obj )
   {
-    hb_retl( obj->kerning (  ) );
+    hb_retl( obj->kerning () );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QFONT_KEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->key (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->key ().toLatin1().data() );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->lastResortFamily (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->lastResortFamily ().toLatin1().data() );
   }
 }
 
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->lastResortFont (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->lastResortFont ().toLatin1().data() );
   }
 }
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACING )
 
   if( obj )
   {
-    hb_retnd( obj->letterSpacing (  ) );
+    hb_retnd( obj->letterSpacing () );
   }
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
 
   if( obj )
   {
-    hb_retni( obj->letterSpacingType (  ) );
+    hb_retni( obj->letterSpacingType () );
   }
 }
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QFONT_OVERLINE )
 
   if( obj )
   {
-    hb_retl( obj->overline (  ) );
+    hb_retl( obj->overline () );
   }
 }
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QFONT_PIXELSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pixelSize (  ) );
+    hb_retni( obj->pixelSize () );
   }
 }
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pointSize (  ) );
+    hb_retni( obj->pointSize () );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZEF )
 
   if( obj )
   {
-    hb_retnd( obj->pointSizeF (  ) );
+    hb_retnd( obj->pointSizeF () );
   }
 }
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QFONT_RAWMODE )
 
   if( obj )
   {
-    hb_retl( obj->rawMode (  ) );
+    hb_retl( obj->rawMode () );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QFONT_RAWNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->rawName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->rawName ().toLatin1().data() );
   }
 }
 
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QFONT_STRETCH )
 
   if( obj )
   {
-    hb_retni( obj->stretch (  ) );
+    hb_retni( obj->stretch () );
   }
 }
 
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QFONT_STRIKEOUT )
 
   if( obj )
   {
-    hb_retl( obj->strikeOut (  ) );
+    hb_retl( obj->strikeOut () );
   }
 }
 
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QFONT_STYLE )
 
   if( obj )
   {
-    hb_retni( obj->style (  ) );
+    hb_retni( obj->style () );
   }
 }
 
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QFONT_STYLEHINT )
 
   if( obj )
   {
-    hb_retni( obj->styleHint (  ) );
+    hb_retni( obj->styleHint () );
   }
 }
 
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
 
   if( obj )
   {
-    hb_retni( obj->styleStrategy (  ) );
+    hb_retni( obj->styleStrategy () );
   }
 }
 
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QFONT_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QFONT_UNDERLINE )
 
   if( obj )
   {
-    hb_retl( obj->underline (  ) );
+    hb_retl( obj->underline () );
   }
 }
 
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QFONT_WEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->weight (  ) );
+    hb_retni( obj->weight () );
   }
 }
 
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QFONT_WORDSPACING )
 
   if( obj )
   {
-    hb_retnd( obj->wordSpacing (  ) );
+    hb_retnd( obj->wordSpacing () );
   }
 }
 
@@ -1168,7 +1168,7 @@ static QStringList substitutions ()
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
 {
-  QStringList strl = QFont::substitutions (  );
+  QStringList strl = QFont::substitutions ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 

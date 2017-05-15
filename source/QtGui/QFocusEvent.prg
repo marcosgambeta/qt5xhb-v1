@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
   QFocusEvent * obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->gotFocus (  ) );
+    hb_retl( obj->gotFocus () );
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
   QFocusEvent * obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->lostFocus (  ) );
+    hb_retl( obj->lostFocus () );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_REASON )
   QFocusEvent * obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->reason (  ) );
+    hb_retni( obj->reason () );
   }
 }
 

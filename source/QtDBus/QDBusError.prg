@@ -64,7 +64,7 @@ QDBusError()
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW1 )
 {
-  QDBusError * o = new QDBusError (  );
+  QDBusError * o = new QDBusError ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -83,7 +83,7 @@ QDBusError(const QDBusMessage& msg)
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW3 )
 {
-  QDBusError * o = new QDBusError (  );
+  QDBusError * o = new QDBusError ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,7 +102,7 @@ QDBusError(const QDBusError &other)
 */
 HB_FUNC_STATIC( QDBUSERROR_NEW5 )
 {
-  QDBusError * o = new QDBusError (  );
+  QDBusError * o = new QDBusError ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDBUSERROR_TYPE )
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDBUSERROR_NAME )
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->message (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->message ().toLatin1().data() );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDBUSERROR_ISVALID )
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 

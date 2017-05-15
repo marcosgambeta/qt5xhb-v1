@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_TYPE )
   QPlaceMatchReply * obj = (QPlaceMatchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
   QPlaceMatchReply * obj = (QPlaceMatchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QPlace> list = obj->places (  );
+    QList<QPlace> list = obj->places ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPLACE" );
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_REQUEST )
   QPlaceMatchReply * obj = (QPlaceMatchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceMatchRequest * ptr = new QPlaceMatchRequest( obj->request (  ) );
+    QPlaceMatchRequest * ptr = new QPlaceMatchRequest( obj->request () );
     _qt5xhb_createReturnClass ( ptr, "QPLACEMATCHREQUEST", true );
   }
 #endif

@@ -61,7 +61,7 @@ QScriptProgram()
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
 {
-  QScriptProgram * o = new QScriptProgram (  );
+  QScriptProgram * o = new QScriptProgram ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstLineNumber (  ) );
+    hb_retni( obj->firstLineNumber () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceCode (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->sourceCode ().toLatin1().data() );
   }
 }
 

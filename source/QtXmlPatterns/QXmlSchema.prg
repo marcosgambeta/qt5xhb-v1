@@ -77,7 +77,7 @@ QXmlSchema ()
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
 {
-  QXmlSchema * o = new QXmlSchema (  );
+  QXmlSchema * o = new QXmlSchema ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->documentUri (  ) );
+    QUrl * ptr = new QUrl( obj->documentUri () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractMessageHandler * ptr = obj->messageHandler (  );
+    QAbstractMessageHandler * ptr = obj->messageHandler ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
   }
 }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool (  ) );
+    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
     _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
   }
 }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->networkAccessManager (  );
+    QNetworkAccessManager * ptr = obj->networkAccessManager ();
     _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QAbstractUriResolver * ptr = obj->uriResolver (  );
+    const QAbstractUriResolver * ptr = obj->uriResolver ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
   }
 }

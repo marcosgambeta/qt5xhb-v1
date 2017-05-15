@@ -78,7 +78,7 @@ QGeoManeuver()
 void QGeoManeuver_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoManeuver * o = new QGeoManeuver (  );
+  QGeoManeuver * o = new QGeoManeuver ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_ISVALID )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_POSITION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * ptr = new QGeoCoordinate( obj->position (  ) );
+    QGeoCoordinate * ptr = new QGeoCoordinate( obj->position () );
     _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_INSTRUCTIONTEXT )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->instructionText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->instructionText ().toLatin1().data() );
   }
 #endif
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DIRECTION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->direction (  );
+    int i = obj->direction ();
     hb_retni( i );
   }
 #endif
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_TIMETONEXTINSTRUCTION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToNextInstruction (  ) );
+    hb_retni( obj->timeToNextInstruction () );
   }
 #endif
 }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DISTANCETONEXTINSTRUCTION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->distanceToNextInstruction (  ) );
+    hb_retnd( obj->distanceToNextInstruction () );
   }
 #endif
 }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_WAYPOINT )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * ptr = new QGeoCoordinate( obj->waypoint (  ) );
+    QGeoCoordinate * ptr = new QGeoCoordinate( obj->waypoint () );
     _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
   }
 #endif

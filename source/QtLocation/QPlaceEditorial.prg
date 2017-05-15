@@ -58,7 +58,7 @@ QPlaceEditorial()
 void QPlaceEditorial_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * o = new QPlaceEditorial (  );
+  QPlaceEditorial * o = new QPlaceEditorial ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
   QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 #endif
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
   QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 #endif
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
   QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->language (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->language ().toLatin1().data() );
   }
 #endif
 }

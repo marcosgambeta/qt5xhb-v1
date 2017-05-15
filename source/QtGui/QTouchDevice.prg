@@ -61,7 +61,7 @@ QTouchDevice()
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
 {
-  QTouchDevice * o = new QTouchDevice (  );
+  QTouchDevice * o = new QTouchDevice ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
   QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
   QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
   QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->capabilities (  ) );
+    hb_retni( obj->capabilities () );
   }
 }
 

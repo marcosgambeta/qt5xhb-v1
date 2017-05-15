@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_CONTRAST )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->contrast (  ) );
+    hb_retnd( obj->contrast () );
   }
 }
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_DENOISINGLEVEL )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->denoisingLevel (  ) );
+    hb_retnd( obj->denoisingLevel () );
   }
 }
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISAVAILABLE )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable (  ) );
+    hb_retl( obj->isAvailable () );
   }
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_MANUALWHITEBALANCE )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->manualWhiteBalance (  ) );
+    hb_retnd( obj->manualWhiteBalance () );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SATURATION )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->saturation (  ) );
+    hb_retnd( obj->saturation () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SHARPENINGLEVEL )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->sharpeningLevel (  ) );
+    hb_retnd( obj->sharpeningLevel () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_WHITEBALANCEMODE )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->whiteBalanceMode (  ) );
+    hb_retni( obj->whiteBalanceMode () );
   }
 }
 

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
   QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWindow * ptr = obj->window (  );
+    QWindow * ptr = obj->window ();
     _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 #endif
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYICON )
   QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->overlayIcon (  ) );
+    QIcon * ptr = new QIcon( obj->overlayIcon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 #endif
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_CLEAROVERLAYICON )
   QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clearOverlayIcon (  );
+    obj->clearOverlayIcon ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION )
   QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->overlayAccessibleDescription (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->overlayAccessibleDescription ().toLatin1().data() );
   }
 #endif
 }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
   QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWinTaskbarProgress * ptr = obj->progress (  );
+    QWinTaskbarProgress * ptr = obj->progress ();
     _qt5xhb_createReturnClass ( ptr, "QWINTASKBARPROGRESS" );
   }
 #endif

@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
 
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->background (  ) );
+    QBrush * ptr = new QBrush( obj->background () );
     _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
 
   if( obj )
   {
-    hb_retni( obj->checkState (  ) );
+    hb_retni( obj->checkState () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
 
   if( obj )
   {
-    QListWidgetItem * ptr = obj->clone (  );
+    QListWidgetItem * ptr = obj->clone ();
     _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
 
   if( obj )
   {
-    hb_retni( obj->flags (  ) );
+    hb_retni( obj->flags () );
   }
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
 
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
 
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->foreground (  ) );
+    QBrush * ptr = new QBrush( obj->foreground () );
     _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
 
   if( obj )
   {
-    hb_retl( obj->isHidden (  ) );
+    hb_retl( obj->isHidden () );
   }
 }
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
 
   if( obj )
   {
-    hb_retl( obj->isSelected (  ) );
+    hb_retl( obj->isSelected () );
   }
 }
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
 
   if( obj )
   {
-    QListWidget * ptr = obj->listWidget (  );
+    QListWidget * ptr = obj->listWidget ();
     _qt5xhb_createReturnClass ( ptr, "QLISTWIDGET" );
   }
 }
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->statusTip (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->statusTip ().toLatin1().data() );
   }
 }
 
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->textAlignment (  ) );
+    hb_retni( obj->textAlignment () );
   }
 }
 
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
   }
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
   }
 }
 
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUNDCOLOR )
 
   if( obj )
   {
-    QColor * ptr = new QColor( obj->backgroundColor (  ) );
+    QColor * ptr = new QColor( obj->backgroundColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTCOLOR )
 
   if( obj )
   {
-    QColor * ptr = new QColor( obj->textColor (  ) );
+    QColor * ptr = new QColor( obj->textColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }

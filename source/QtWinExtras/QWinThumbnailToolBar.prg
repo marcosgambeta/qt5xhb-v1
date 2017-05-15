@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWindow * ptr = obj->window (  );
+    QWindow * ptr = obj->window ();
     _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 #endif
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWinThumbnailToolButton *> list = obj->buttons (  );
+    QList<QWinThumbnailToolButton *> list = obj->buttons ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWINTHUMBNAILTOOLBUTTON" );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 #endif
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_CLEAR )
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

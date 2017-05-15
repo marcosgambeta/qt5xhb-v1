@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QICONENGINE_CLONE )
 
   if( obj )
   {
-    QIconEngine * ptr = obj->clone (  );
+    QIconEngine * ptr = obj->clone ();
     _qt5xhb_createReturnClass ( ptr, "QICONENGINE" );
   }
 }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QICONENGINE_ICONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->iconName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->iconName ().toLatin1().data() );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QICONENGINE_KEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->key (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->key ().toLatin1().data() );
   }
 }
 

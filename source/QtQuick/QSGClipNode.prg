@@ -55,7 +55,7 @@ QSGClipNode()
 */
 HB_FUNC_STATIC( QSGCLIPNODE_NEW )
 {
-  QSGClipNode * o = new QSGClipNode (  );
+  QSGClipNode * o = new QSGClipNode ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_CLIPRECT )
   QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->clipRect (  ) );
+    QRectF * ptr = new QRectF( obj->clipRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_ISRECTANGULAR )
   QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRectangular (  ) );
+    hb_retl( obj->isRectangular () );
   }
 }
 

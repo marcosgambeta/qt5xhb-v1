@@ -60,7 +60,7 @@ QBluetoothUuid()
 void QBluetoothUuid_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid (  );
+  QBluetoothUuid * o = new QBluetoothUuid ();
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -119,7 +119,7 @@ QBluetoothUuid(quint128 uuid)
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW6 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid (  );
+  QBluetoothUuid * o = new QBluetoothUuid ();
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 
   if( obj )
   {
-    hb_retni( obj->minimumSize (  ) );
+    hb_retni( obj->minimumSize () );
   }
 #endif
 }

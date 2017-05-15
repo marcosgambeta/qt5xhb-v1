@@ -82,7 +82,7 @@ QCommandLineParser()
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * o = new QCommandLineParser (  );
+  QCommandLineParser * o = new QCommandLineParser ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDVERSIONOPTION )
 
   if( obj )
   {
-    QCommandLineOption * ptr = new QCommandLineOption( obj->addVersionOption (  ) );
+    QCommandLineOption * ptr = new QCommandLineOption( obj->addVersionOption () );
     _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
   }
 #endif
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDHELPOPTION )
 
   if( obj )
   {
-    QCommandLineOption * ptr = new QCommandLineOption( obj->addHelpOption (  ) );
+    QCommandLineOption * ptr = new QCommandLineOption( obj->addHelpOption () );
     _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
   }
 #endif
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_APPLICATIONDESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->applicationDescription (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->applicationDescription ().toLatin1().data() );
   }
 #endif
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_CLEARPOSITIONALARGUMENTS )
 
   if( obj )
   {
-    obj->clearPositionalArguments (  );
+    obj->clearPositionalArguments ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ERRORTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorText ().toLatin1().data() );
   }
 #endif
 }
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_POSITIONALARGUMENTS )
 
   if( obj )
   {
-    QStringList strl = obj->positionalArguments (  );
+    QStringList strl = obj->positionalArguments ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_OPTIONNAMES )
 
   if( obj )
   {
-    QStringList strl = obj->optionNames (  );
+    QStringList strl = obj->optionNames ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_UNKNOWNOPTIONNAMES )
 
   if( obj )
   {
-    QStringList strl = obj->unknownOptionNames (  );
+    QStringList strl = obj->unknownOptionNames ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_HELPTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->helpText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->helpText ().toLatin1().data() );
   }
 #endif
 }

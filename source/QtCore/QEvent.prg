@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
 
   if( obj )
   {
-    obj->accept (  );
+    obj->accept ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
 
   if( obj )
   {
-    obj->ignore (  );
+    obj->ignore ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 
   if( obj )
   {
-    hb_retl( obj->isAccepted (  ) );
+    hb_retl( obj->isAccepted () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 
   if( obj )
   {
-    hb_retl( obj->spontaneous (  ) );
+    hb_retl( obj->spontaneous () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QEVENT_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

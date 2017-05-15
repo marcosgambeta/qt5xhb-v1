@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
 
   if( obj )
   {
-    obj->clearError (  );
+    obj->clearError ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 
   if( obj )
   {
-    hb_retl( obj->isAnimated (  ) );
+    hb_retl( obj->isAnimated () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 
   if( obj )
   {
-    QList<QAbstractAnimation *> list = obj->defaultAnimations (  );
+    QList<QAbstractAnimation *> list = obj->defaultAnimations ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTANIMATION" );
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->globalRestorePolicy (  ) );
+    hb_retni( obj->globalRestorePolicy () );
   }
 }
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_START )
 
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_STOP )
 
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

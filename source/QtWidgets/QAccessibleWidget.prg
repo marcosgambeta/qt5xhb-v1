@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWindow * ptr = obj->window (  );
+    QWindow * ptr = obj->window ();
     _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
   }
 }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->childCount (  ) );
+    hb_retni( obj->childCount () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->focusChild (  );
+    QAccessibleInterface * ptr = obj->focusChild ();
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->rect (  ) );
+    QRect * ptr = new QRect( obj->rect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccessibleInterface * ptr = obj->parent (  );
+    QAccessibleInterface * ptr = obj->parent ();
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->role (  ) );
+    hb_retni( obj->role () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor * ptr = new QColor( obj->foregroundColor (  ) );
+    QColor * ptr = new QColor( obj->foregroundColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QColor * ptr = new QColor( obj->backgroundColor (  ) );
+    QColor * ptr = new QColor( obj->backgroundColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONNAMES )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->actionNames (  );
+    QStringList strl = obj->actionNames ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

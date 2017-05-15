@@ -121,7 +121,7 @@ static QErrorMessage * qtHandler ()
 */
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
-  QErrorMessage * ptr = QErrorMessage::qtHandler (  );
+  QErrorMessage * ptr = QErrorMessage::qtHandler ();
   _qt5xhb_createReturnClass ( ptr, "QERRORMESSAGE" );
 }
 

@@ -65,7 +65,7 @@ QSslError ()
 */
 HB_FUNC_STATIC( QSSLERROR_NEW1 )
 {
-  QSslError * o = new QSslError (  );
+  QSslError * o = new QSslError ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
   QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslCertificate * ptr = new QSslCertificate( obj->certificate (  ) );
+    QSslCertificate * ptr = new QSslCertificate( obj->certificate () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
   QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
   QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 

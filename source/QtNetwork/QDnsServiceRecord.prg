@@ -63,7 +63,7 @@ QDnsServiceRecord()
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_NEW1 )
 {
-  QDnsServiceRecord * o = new QDnsServiceRecord (  );
+  QDnsServiceRecord * o = new QDnsServiceRecord ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NAME )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PORT )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->port (  ) );
+    hb_retni( obj->port () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->priority (  ) );
+    hb_retni( obj->priority () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TARGET )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->target (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->target ().toLatin1().data() );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TIMETOLIVE )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive (  ) );
+    hb_retni( obj->timeToLive () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_WEIGHT )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->weight (  ) );
+    hb_retni( obj->weight () );
   }
 }
 

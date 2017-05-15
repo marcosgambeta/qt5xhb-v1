@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 
   if( obj )
   {
-    QStringList strl = obj->directories (  );
+    QStringList strl = obj->directories ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 
   if( obj )
   {
-    QStringList strl = obj->files (  );
+    QStringList strl = obj->files ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

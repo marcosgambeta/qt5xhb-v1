@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 
   if( obj )
   {
-    hb_retni( obj->socket (  ) );
+    hb_retni( obj->socket () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 }
 

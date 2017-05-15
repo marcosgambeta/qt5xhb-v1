@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastVisited (  ) );
+    QDateTime * ptr = new QDateTime( obj->lastVisited () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->originalUrl (  ) );
+    QUrl * ptr = new QUrl( obj->originalUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->userData (  ) );
+    QVariant * ptr = new QVariant( obj->userData () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

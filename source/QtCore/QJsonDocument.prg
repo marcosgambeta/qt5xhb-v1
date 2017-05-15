@@ -81,7 +81,7 @@ QJsonDocument()
 */
 void QJsonDocument_new1 ()
 {
-  QJsonDocument * o = new QJsonDocument (  );
+  QJsonDocument * o = new QJsonDocument ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ARRAY )
 
   if( obj )
   {
-    QJsonArray * ptr = new QJsonArray( obj->array (  ) );
+    QJsonArray * ptr = new QJsonArray( obj->array () );
     _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISARRAY )
 
   if( obj )
   {
-    hb_retl( obj->isArray (  ) );
+    hb_retl( obj->isArray () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISOBJECT )
 
   if( obj )
   {
-    hb_retl( obj->isObject (  ) );
+    hb_retl( obj->isObject () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_OBJECT )
 
   if( obj )
   {
-    QJsonObject * ptr = new QJsonObject( obj->object (  ) );
+    QJsonObject * ptr = new QJsonObject( obj->object () );
     _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOBINARYDATA )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toBinaryData (  ) );
+    QByteArray * ptr = new QByteArray( obj->toBinaryData () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOJSON )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toJson (  ) );
+    QByteArray * ptr = new QByteArray( obj->toJson () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOVARIANT )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->toVariant (  ) );
+    QVariant * ptr = new QVariant( obj->toVariant () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentPage (  ) );
+    hb_retni( obj->currentPage () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pageCount (  ) );
+    hb_retni( obj->pageCount () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->viewMode (  ) );
+    hb_retni( obj->viewMode () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->zoomFactor (  ) );
+    hb_retnd( obj->zoomFactor () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->zoomMode (  ) );
+    hb_retni( obj->zoomMode () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->fitInView (  );
+    obj->fitInView ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->fitToWidth (  );
+    obj->fitToWidth ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->print (  );
+    obj->print ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAllPagesViewMode (  );
+    obj->setAllPagesViewMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setFacingPagesViewMode (  );
+    obj->setFacingPagesViewMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLandscapeOrientation (  );
+    obj->setLandscapeOrientation ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPortraitOrientation (  );
+    obj->setPortraitOrientation ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSinglePageViewMode (  );
+    obj->setSinglePageViewMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->updatePreview (  );
+    obj->updatePreview ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

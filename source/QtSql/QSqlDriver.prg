@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->beginTransaction (  ) );
+    hb_retl( obj->beginTransaction () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->commitTransaction (  ) );
+    hb_retl( obj->commitTransaction () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 
   if( obj )
   {
-    QSqlResult * ptr = obj->createResult (  );
+    QSqlResult * ptr = obj->createResult ();
     _qt5xhb_createReturnClass ( ptr, "QSQLRESULT" );
   }
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->handle (  ) );
+    QVariant * ptr = new QVariant( obj->handle () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 
   if( obj )
   {
-    hb_retl( obj->isOpen (  ) );
+    hb_retl( obj->isOpen () );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 
   if( obj )
   {
-    hb_retl( obj->isOpenError (  ) );
+    hb_retl( obj->isOpenError () );
   }
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 
   if( obj )
   {
-    QSqlError * ptr = new QSqlError( obj->lastError (  ) );
+    QSqlError * ptr = new QSqlError( obj->lastError () );
     _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->numericalPrecisionPolicy (  ) );
+    hb_retni( obj->numericalPrecisionPolicy () );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->rollbackTransaction (  ) );
+    hb_retl( obj->rollbackTransaction () );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 
   if( obj )
   {
-    QStringList strl = obj->subscribedToNotifications (  );
+    QStringList strl = obj->subscribedToNotifications ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
 
   if( obj )
   {
-    hb_retl( obj->cancelQuery (  ) );
+    hb_retl( obj->cancelQuery () );
   }
 }
 

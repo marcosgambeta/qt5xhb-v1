@@ -86,7 +86,7 @@ QSurfaceFormat()
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW1 )
 {
-  QSurfaceFormat * o = new QSurfaceFormat (  );
+  QSurfaceFormat * o = new QSurfaceFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_DEPTHBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depthBufferSize (  ) );
+    hb_retni( obj->depthBufferSize () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STENCILBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->stencilBufferSize (  ) );
+    hb_retni( obj->stencilBufferSize () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_REDBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->redBufferSize (  ) );
+    hb_retni( obj->redBufferSize () );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_GREENBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->greenBufferSize (  ) );
+    hb_retni( obj->greenBufferSize () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_BLUEBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->blueBufferSize (  ) );
+    hb_retni( obj->blueBufferSize () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_ALPHABUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->alphaBufferSize (  ) );
+    hb_retni( obj->alphaBufferSize () );
   }
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SAMPLES )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->samples (  ) );
+    hb_retni( obj->samples () );
   }
 }
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SWAPBEHAVIOR )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->swapBehavior (  ) );
+    hb_retni( obj->swapBehavior () );
   }
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_HASALPHA )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAlpha (  ) );
+    hb_retl( obj->hasAlpha () );
   }
 }
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->profile (  ) );
+    hb_retni( obj->profile () );
   }
 }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->renderableType (  ) );
+    hb_retni( obj->renderableType () );
   }
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_MAJORVERSION )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->majorVersion (  ) );
+    hb_retni( obj->majorVersion () );
   }
 }
 
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_MINORVERSION )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minorVersion (  ) );
+    hb_retni( obj->minorVersion () );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STEREO )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->stereo (  ) );
+    hb_retl( obj->stereo () );
   }
 }
 

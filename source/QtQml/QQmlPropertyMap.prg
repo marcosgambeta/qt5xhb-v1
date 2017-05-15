@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ISEMPTY )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_KEYS )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->keys (  );
+    QStringList strl = obj->keys ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

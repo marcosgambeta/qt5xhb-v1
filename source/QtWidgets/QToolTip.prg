@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTOOLTIP_FONT )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTOOLTIP_HIDETEXT )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->hideText (  );
+    obj->hideText ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTOOLTIP_ISVISIBLE )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTOOLTIP_PALETTE )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->palette (  ) );
+    QPalette * ptr = new QPalette( obj->palette () );
     _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTOOLTIP_TEXT )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 

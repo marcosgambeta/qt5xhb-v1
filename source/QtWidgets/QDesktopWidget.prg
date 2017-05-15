@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 
   if( obj )
   {
-    hb_retl( obj->isVirtualDesktop (  ) );
+    hb_retl( obj->isVirtualDesktop () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 
   if( obj )
   {
-    hb_retni( obj->primaryScreen (  ) );
+    hb_retni( obj->primaryScreen () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->screenCount (  ) );
+    hb_retni( obj->screenCount () );
   }
 }
 

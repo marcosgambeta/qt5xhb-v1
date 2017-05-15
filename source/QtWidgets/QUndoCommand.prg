@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->actionText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->actionText ().toLatin1().data() );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->childCount (  ) );
+    hb_retni( obj->childCount () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 
   if( obj )
   {
-    hb_retni( obj->id (  ) );
+    hb_retni( obj->id () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 
   if( obj )
   {
-    obj->redo (  );
+    obj->redo ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
 
   if( obj )
   {
-    obj->undo (  );
+    obj->undo ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

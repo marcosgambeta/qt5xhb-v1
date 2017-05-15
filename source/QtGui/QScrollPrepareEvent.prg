@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_STARTPOS )
   QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->startPos (  ) );
+    QPointF * ptr = new QPointF( obj->startPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_VIEWPORTSIZE )
   QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->viewportSize (  ) );
+    QSizeF * ptr = new QSizeF( obj->viewportSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_CONTENTPOSRANGE )
   QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->contentPosRange (  ) );
+    QRectF * ptr = new QRectF( obj->contentPosRange () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_CONTENTPOS )
   QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->contentPos (  ) );
+    QPointF * ptr = new QPointF( obj->contentPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

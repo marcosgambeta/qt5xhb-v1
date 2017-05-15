@@ -59,7 +59,7 @@ QJSEngine()
 */
 HB_FUNC_STATIC( QJSENGINE_NEW1 )
 {
-  QJSEngine * o = new QJSEngine (  );
+  QJSEngine * o = new QJSEngine ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
   QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->collectGarbage (  );
+    obj->collectGarbage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
   QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * ptr = new QJSValue( obj->globalObject (  ) );
+    QJSValue * ptr = new QJSValue( obj->globalObject () );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
   QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * ptr = new QJSValue( obj->newObject (  ) );
+    QJSValue * ptr = new QJSValue( obj->newObject () );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }

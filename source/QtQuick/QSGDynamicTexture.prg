@@ -50,7 +50,7 @@ HB_FUNC_STATIC( QSGDYNAMICTEXTURE_UPDATETEXTURE )
   QSGDynamicTexture * obj = (QSGDynamicTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->updateTexture (  ) );
+    hb_retl( obj->updateTexture () );
   }
 }
 

@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->cleanText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->cleanText ().toLatin1().data() );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 
   if( obj )
   {
-    hb_retni( obj->decimals (  ) );
+    hb_retni( obj->decimals () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 
   if( obj )
   {
-    hb_retnd( obj->maximum (  ) );
+    hb_retnd( obj->maximum () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 
   if( obj )
   {
-    hb_retnd( obj->minimum (  ) );
+    hb_retnd( obj->minimum () );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->prefix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->prefix ().toLatin1().data() );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 
   if( obj )
   {
-    hb_retnd( obj->singleStep (  ) );
+    hb_retnd( obj->singleStep () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->suffix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->suffix ().toLatin1().data() );
   }
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 
   if( obj )
   {
-    hb_retnd( obj->value (  ) );
+    hb_retnd( obj->value () );
   }
 }
 

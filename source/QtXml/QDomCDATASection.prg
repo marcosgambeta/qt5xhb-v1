@@ -50,7 +50,7 @@ QDomCDATASection ()
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
 {
-  QDomCDATASection * o = new QDomCDATASection (  );
+  QDomCDATASection * o = new QDomCDATASection ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
   QDomCDATASection * obj = (QDomCDATASection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 

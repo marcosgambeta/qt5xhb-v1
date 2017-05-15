@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 
   if( obj )
   {
-    QFileInfo * ptr = new QFileInfo( obj->fileInfo (  ) );
+    QFileInfo * ptr = new QFileInfo( obj->fileInfo () );
     _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
   }
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->filePath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->filePath ().toLatin1().data() );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 
   if( obj )
   {
-    hb_retl( obj->hasNext (  ) );
+    hb_retl( obj->hasNext () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->next (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->next ().toLatin1().data() );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDIRITERATOR_PATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->path (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->path ().toLatin1().data() );
   }
 }
 

@@ -62,7 +62,7 @@ QScrollerProperties()
 */
 void QScrollerProperties_new1 ()
 {
-  QScrollerProperties * o = new QScrollerProperties (  );
+  QScrollerProperties * o = new QScrollerProperties ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES )
 
   if( obj )
   {
-    obj->unsetDefaultScrollerProperties (  );
+    obj->unsetDefaultScrollerProperties ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

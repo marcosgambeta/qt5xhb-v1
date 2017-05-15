@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERNAME )
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->managerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->managerName ().toLatin1().data() );
   }
 #endif
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->managerVersion (  ) );
+    hb_retni( obj->managerVersion () );
   }
 #endif
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_LOCALE )
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 #endif

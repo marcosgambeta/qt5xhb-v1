@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_TYPE )
   QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_RESULTS )
   QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QPlaceSearchResult> list = obj->results (  );
+    QList<QPlaceSearchResult> list = obj->results ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPLACESEARCHRESULT" );
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_REQUEST )
   QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->request (  ) );
+    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->request () );
     _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
   }
 #endif
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST )
   QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->previousPageRequest (  ) );
+    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->previousPageRequest () );
     _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
   }
 #endif
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_NEXTPAGEREQUEST )
   QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->nextPageRequest (  ) );
+    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->nextPageRequest () );
     _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
   }
 #endif

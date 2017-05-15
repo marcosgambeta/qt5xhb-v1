@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
   QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->defaultWidget (  );
+    QWidget * ptr = obj->defaultWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

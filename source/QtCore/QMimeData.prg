@@ -77,7 +77,7 @@ QMimeData ()
 */
 HB_FUNC_STATIC( QMIMEDATA_NEW )
 {
-  QMimeData * o = new QMimeData (  );
+  QMimeData * o = new QMimeData ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QMIMEDATA_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->colorData (  ) );
+    QVariant * ptr = new QVariant( obj->colorData () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMIMEDATA_FORMATS )
 
   if( obj )
   {
-    QStringList strl = obj->formats (  );
+    QStringList strl = obj->formats ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
 
   if( obj )
   {
-    hb_retl( obj->hasColor (  ) );
+    hb_retl( obj->hasColor () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASHTML )
 
   if( obj )
   {
-    hb_retl( obj->hasHtml (  ) );
+    hb_retl( obj->hasHtml () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
 
   if( obj )
   {
-    hb_retl( obj->hasImage (  ) );
+    hb_retl( obj->hasImage () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
 
   if( obj )
   {
-    hb_retl( obj->hasText (  ) );
+    hb_retl( obj->hasText () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
 
   if( obj )
   {
-    hb_retl( obj->hasUrls (  ) );
+    hb_retl( obj->hasUrls () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->html (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->html ().toLatin1().data() );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->imageData (  ) );
+    QVariant * ptr = new QVariant( obj->imageData () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
 
   if( obj )
   {
-    QList<QUrl> list = obj->urls (  );
+    QList<QUrl> list = obj->urls ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QURL" );

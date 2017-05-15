@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->source (  ) );
+    QUrl * ptr = new QUrl( obj->source () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loopCount (  ) );
+    hb_retni( obj->loopCount () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loopsRemaining (  ) );
+    hb_retni( obj->loopsRemaining () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->volume (  ) );
+    hb_retnd( obj->volume () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted (  ) );
+    hb_retl( obj->isMuted () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLoaded (  ) );
+    hb_retl( obj->isLoaded () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isPlaying (  ) );
+    hb_retl( obj->isPlaying () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->category (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->category ().toLatin1().data() );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->play (  );
+    obj->play ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -321,7 +321,7 @@ static QStringList supportedMimeTypes()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
 {
-  QStringList strl = QSoundEffect::supportedMimeTypes (  );
+  QStringList strl = QSoundEffect::supportedMimeTypes ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 

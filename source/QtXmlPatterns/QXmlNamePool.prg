@@ -56,7 +56,7 @@ QXmlNamePool ()
 */
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
 {
-  QXmlNamePool * o = new QXmlNamePool (  );
+  QXmlNamePool * o = new QXmlNamePool ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

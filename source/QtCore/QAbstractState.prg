@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 
   if( obj )
   {
-    QStateMachine * ptr = obj->machine (  );
+    QStateMachine * ptr = obj->machine ();
     _qt5xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
   }
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 
   if( obj )
   {
-    QState * ptr = obj->parentState (  );
+    QState * ptr = obj->parentState ();
     _qt5xhb_createReturnClass ( ptr, "QSTATE" );
   }
 }

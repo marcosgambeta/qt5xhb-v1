@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bottom (  ) );
+    hb_retni( obj->bottom () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->top (  ) );
+    hb_retni( obj->top () );
   }
 }
 

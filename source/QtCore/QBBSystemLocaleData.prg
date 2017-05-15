@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBBSystemLocaleData * o = new QBBSystemLocaleData (  );
+    QBBSystemLocaleData * o = new QBBSystemLocaleData ();
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM )
 
   if( obj )
   {
-    hb_retni( obj->measurementSystem (  ) );
+    hb_retni( obj->measurementSystem () );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
 
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->languageLocale (  ) );
+    QLocale * ptr = new QLocale( obj->languageLocale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
 
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->regionLocale (  ) );
+    QLocale * ptr = new QLocale( obj->regionLocale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS )
 
   if( obj )
   {
-    obj->installSocketNotifiers (  );
+    obj->installSocketNotifiers ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE )
 
   if( obj )
   {
-    obj->readLanguageLocale (  );
+    obj->readLanguageLocale ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READREGIONLOCALE )
 
   if( obj )
   {
-    obj->readRegionLocale (  );
+    obj->readRegionLocale ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM )
 
   if( obj )
   {
-    obj->readMeasurementSystem (  );
+    obj->readMeasurementSystem ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READHOURFORMAT )
 
   if( obj )
   {
-    obj->readHourFormat (  );
+    obj->readHourFormat ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

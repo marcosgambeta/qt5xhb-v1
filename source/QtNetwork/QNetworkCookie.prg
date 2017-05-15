@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->domain (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->domain ().toLatin1().data() );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->expirationDate (  ) );
+    QDateTime * ptr = new QDateTime( obj->expirationDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isHttpOnly (  ) );
+    hb_retl( obj->isHttpOnly () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSecure (  ) );
+    hb_retl( obj->isSecure () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSessionCookie (  ) );
+    hb_retl( obj->isSessionCookie () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->name (  ) );
+    QByteArray * ptr = new QByteArray( obj->name () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->path (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->path ().toLatin1().data() );
   }
 }
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->value (  ) );
+    QByteArray * ptr = new QByteArray( obj->value () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

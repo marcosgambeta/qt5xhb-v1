@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QMASKGENERATOR_SEED )
   QMaskGenerator * obj = (QMaskGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->seed (  ) );
+    hb_retl( obj->seed () );
   }
 #endif
 }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMASKGENERATOR_NEXTMASK )
   QMaskGenerator * obj = (QMaskGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nextMask (  ) );
+    hb_retni( obj->nextMask () );
   }
 #endif
 }

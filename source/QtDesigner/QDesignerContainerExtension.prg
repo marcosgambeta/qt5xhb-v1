@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
 
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 

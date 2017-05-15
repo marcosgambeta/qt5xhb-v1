@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED 
 
   if( obj )
   {
-    hb_retl( obj->dynamicPropertiesAllowed (  ) );
+    hb_retl( obj->dynamicPropertiesAllowed () );
   }
 }
 

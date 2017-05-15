@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 
   if( obj )
   {
-    QStringList strl = obj->allKeys (  );
+    QStringList strl = obj->allKeys ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->applicationName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->applicationName ().toLatin1().data() );
   }
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 
   if( obj )
   {
-    QStringList strl = obj->childGroups (  );
+    QStringList strl = obj->childGroups ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 
   if( obj )
   {
-    QStringList strl = obj->childKeys (  );
+    QStringList strl = obj->childKeys ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSETTINGS_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 
   if( obj )
   {
-    obj->endArray (  );
+    obj->endArray ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 
   if( obj )
   {
-    obj->endGroup (  );
+    obj->endGroup ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 
   if( obj )
   {
-    hb_retl( obj->fallbacksEnabled (  ) );
+    hb_retl( obj->fallbacksEnabled () );
   }
 }
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QSETTINGS_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSETTINGS_FORMAT )
 
   if( obj )
   {
-    hb_retni( obj->format (  ) );
+    hb_retni( obj->format () );
   }
 }
 
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSETTINGS_GROUP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->group (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->group ().toLatin1().data() );
   }
 }
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
 
   if( obj )
   {
-    QTextCodec * ptr = obj->iniCodec (  );
+    QTextCodec * ptr = obj->iniCodec ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable (  ) );
+    hb_retl( obj->isWritable () );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->organizationName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->organizationName ().toLatin1().data() );
   }
 }
 
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QSETTINGS_SCOPE )
 
   if( obj )
   {
-    hb_retni( obj->scope (  ) );
+    hb_retni( obj->scope () );
   }
 }
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QSETTINGS_STATUS )
 
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QSETTINGS_SYNC )
 
   if( obj )
   {
-    obj->sync (  );
+    obj->sync ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -668,7 +668,7 @@ static Format defaultFormat ()
 */
 HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 {
-  hb_retni( QSettings::defaultFormat (  ) );
+  hb_retni( QSettings::defaultFormat () );
 }
 
 /*

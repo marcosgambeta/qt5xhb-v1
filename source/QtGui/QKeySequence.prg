@@ -69,7 +69,7 @@ QKeySequence ()
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
 {
-  QKeySequence * o = new QKeySequence (  );
+  QKeySequence * o = new QKeySequence ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
   QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
   QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 

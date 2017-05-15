@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 
   if( obj )
   {
-    hb_retl( obj->added (  ) );
+    hb_retl( obj->added () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 
   if( obj )
   {
-    QObject * ptr = obj->child (  );
+    QObject * ptr = obj->child ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 
   if( obj )
   {
-    hb_retl( obj->polished (  ) );
+    hb_retl( obj->polished () );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
 
   if( obj )
   {
-    hb_retl( obj->removed (  ) );
+    hb_retl( obj->removed () );
   }
 }
 

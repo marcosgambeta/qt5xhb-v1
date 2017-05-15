@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
   QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->accelerationMode (  ) );
+    hb_retni( obj->accelerationMode () );
   }
 #endif
 }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
   QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAccelerometerReading * ptr = obj->reading (  );
+    QAccelerometerReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QACCELEROMETERREADING" );
   }
 #endif

@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
 
   if( obj )
   {
-    QUuid * ptr = new QUuid( obj->appID (  ) );
+    QUuid * ptr = new QUuid( obj->appID () );
     _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 
   if( obj )
   {
-    QStringList strl = obj->featureList (  );
+    QStringList strl = obj->featureList ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 
   if( obj )
   {
-    hb_retl( obj->isService (  ) );
+    hb_retl( obj->isService () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 
   if( obj )
   {
-    QUuid * ptr = new QUuid( obj->typeLibID (  ) );
+    QUuid * ptr = new QUuid( obj->typeLibID () );
     _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
@@ -376,7 +376,7 @@ static bool isServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
-  hb_retl( QAxFactory::isServer (  ) );
+  hb_retl( QAxFactory::isServer () );
 }
 
 /*
@@ -400,7 +400,7 @@ static QString serverDirPath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
-  hb_retc( (const char *) QAxFactory::serverDirPath (  ).toLatin1().data() );
+  hb_retc( (const char *) QAxFactory::serverDirPath ().toLatin1().data() );
 }
 
 /*
@@ -408,7 +408,7 @@ static QString serverFilePath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
-  hb_retc( (const char *) QAxFactory::serverFilePath (  ).toLatin1().data() );
+  hb_retc( (const char *) QAxFactory::serverFilePath ().toLatin1().data() );
 }
 
 /*
@@ -432,7 +432,7 @@ static bool stopServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
-  hb_retl( QAxFactory::stopServer (  ) );
+  hb_retl( QAxFactory::stopServer () );
 }
 
 #pragma ENDDUMP

@@ -60,7 +60,7 @@ QDomDocumentType ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
 {
-  QDomDocumentType * o = new QDomDocumentType (  );
+  QDomDocumentType * o = new QDomDocumentType ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities (  ) );
+    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities () );
     _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
   }
 }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->internalSubset (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->internalSubset ().toLatin1().data() );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations (  ) );
+    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations () );
     _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
   }
 }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->publicId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->publicId ().toLatin1().data() );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->systemId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->systemId ().toLatin1().data() );
   }
 }
 

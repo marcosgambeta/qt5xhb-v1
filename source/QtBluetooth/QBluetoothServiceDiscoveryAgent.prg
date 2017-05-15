@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 #endif
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES )
 
   if( obj )
   {
-    QList<QBluetoothServiceInfo> list = obj->discoveredServices (  );
+    QList<QBluetoothServiceInfo> list = obj->discoveredServices ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBLUETOOTHSERVICEINFO" );
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER )
 
   if( obj )
   {
-    QList<QBluetoothUuid> list = obj->uuidFilter (  );
+    QList<QBluetoothUuid> list = obj->uuidFilter ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBLUETOOTHUUID" );
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_REMOTEADDRESS )
 
   if( obj )
   {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->remoteAddress (  ) );
+    QBluetoothAddress * ptr = new QBluetoothAddress( obj->remoteAddress () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_STOP )
 
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

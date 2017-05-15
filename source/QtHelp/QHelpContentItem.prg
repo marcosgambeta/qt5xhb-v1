@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
   QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->childCount (  ) );
+    hb_retni( obj->childCount () );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
   QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHelpContentItem * ptr = obj->parent (  );
+    QHelpContentItem * ptr = obj->parent ();
     _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
   QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->row (  ) );
+    hb_retni( obj->row () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
   QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
   QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

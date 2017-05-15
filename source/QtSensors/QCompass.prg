@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCOMPASS_READING )
   QCompass * obj = (QCompass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCompassReading * ptr = obj->reading (  );
+    QCompassReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QCOMPASSREADING" );
   }
 #endif

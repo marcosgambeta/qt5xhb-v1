@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QORIENTATIONSENSOR_READING )
   QOrientationSensor * obj = (QOrientationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOrientationReading * ptr = obj->reading (  );
+    QOrientationReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QORIENTATIONREADING" );
   }
 #endif

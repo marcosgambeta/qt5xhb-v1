@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
 
   if( obj )
   {
-    QSqlDriver * ptr = obj->createObject (  );
+    QSqlDriver * ptr = obj->createObject ();
     _qt5xhb_createReturnClass ( ptr, "QSQLDRIVER" );
   }
 }

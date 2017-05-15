@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 
   if( obj )
   {
-    QMenu * ptr = obj->contextMenu (  );
+    QMenu * ptr = obj->contextMenu ();
     _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 
   if( obj )
   {
-    obj->hide (  );
+    obj->hide ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 
   if( obj )
   {
-    obj->show (  );
+    obj->show ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -338,7 +338,7 @@ static bool isSystemTrayAvailable()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
-  hb_retl( QSystemTrayIcon::isSystemTrayAvailable (  ) );
+  hb_retl( QSystemTrayIcon::isSystemTrayAvailable () );
 }
 
 /*
@@ -346,7 +346,7 @@ static bool supportsMessages()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
-  hb_retl( QSystemTrayIcon::supportsMessages (  ) );
+  hb_retl( QSystemTrayIcon::supportsMessages () );
 }
 
 #pragma ENDDUMP

@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
   QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedLocks (  ) );
+    hb_retni( obj->supportedLocks () );
   }
 }
 

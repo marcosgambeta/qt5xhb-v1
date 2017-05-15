@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_HISTORY )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebEngineHistory * ptr = obj->history (  );
+    QWebEngineHistory * ptr = obj->history ();
     _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORY" );
   }
 #endif
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->view (  );
+    QWidget * ptr = obj->view ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 #endif
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_HASSELECTION )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasSelection (  ) );
+    hb_retl( obj->hasSelection () );
   }
 #endif
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SELECTEDTEXT )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->selectedText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->selectedText ().toLatin1().data() );
   }
 #endif
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * ptr = obj->action (  );
+    QAction * ptr = obj->action ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 #endif
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMenu * ptr = obj->createStandardContextMenu (  );
+    QMenu * ptr = obj->createStandardContextMenu ();
     _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 #endif
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TOHTML )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->toHtml (  );
+    obj->toHtml ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TOPLAINTEXT )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->toPlainText (  );
+    obj->toPlainText ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TITLE )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 #endif
 }
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_URL )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_REQUESTEDURL )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->requestedUrl (  ) );
+    QUrl * ptr = new QUrl( obj->requestedUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ICONURL )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->iconUrl (  ) );
+    QUrl * ptr = new QUrl( obj->iconUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ZOOMFACTOR )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->zoomFactor (  ) );
+    hb_retnd( obj->zoomFactor () );
   }
 #endif
 }
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebEngineSettings * ptr = obj->settings (  );
+    QWebEngineSettings * ptr = obj->settings ();
     _qt5xhb_createReturnClass ( ptr, "QWEBENGINESETTINGS" );
   }
 #endif

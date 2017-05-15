@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->originatingObject (  );
+    QObject * ptr = obj->originatingObject ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->priority (  ) );
+    hb_retni( obj->priority () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QByteArray> list = obj->rawHeaderList (  );
+    QList<QByteArray> list = obj->rawHeaderList ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
+    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_URL )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

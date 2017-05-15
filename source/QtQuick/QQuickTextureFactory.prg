@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
   QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * ptr = new QImage( obj->image (  ) );
+    QImage * ptr = new QImage( obj->image () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
   QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureByteCount (  ) );
+    hb_retni( obj->textureByteCount () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
   QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->textureSize (  ) );
+    QSize * ptr = new QSize( obj->textureSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

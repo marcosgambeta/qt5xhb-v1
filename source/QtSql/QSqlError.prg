@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->databaseText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->databaseText ().toLatin1().data() );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->driverText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->driverText ().toLatin1().data() );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
 
   if( obj )
   {
-    hb_retni( obj->number (  ) );
+    hb_retni( obj->number () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->nativeErrorCode (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->nativeErrorCode ().toLatin1().data() );
   }
 }
 

@@ -73,7 +73,7 @@ QNetworkProxy ()
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW1 )
 {
-  QNetworkProxy * o = new QNetworkProxy (  );
+  QNetworkProxy * o = new QNetworkProxy ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->capabilities (  ) );
+    hb_retni( obj->capabilities () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->hostName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->hostName ().toLatin1().data() );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCachingProxy (  ) );
+    hb_retl( obj->isCachingProxy () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTransparentProxy (  ) );
+    hb_retl( obj->isTransparentProxy () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->password (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->password ().toLatin1().data() );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PORT )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->port (  ) );
+    hb_retni( obj->port () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_USER )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->user (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->user ().toLatin1().data() );
   }
 }
 
@@ -336,7 +336,7 @@ static QNetworkProxy applicationProxy ()
 */
 HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 {
-  QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy (  ) );
+  QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy () );
   _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 }
 

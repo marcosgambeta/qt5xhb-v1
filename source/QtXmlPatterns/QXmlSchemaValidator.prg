@@ -79,7 +79,7 @@ QXmlSchemaValidator ()
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW1 )
 {
-  QXmlSchemaValidator * o = new QXmlSchemaValidator (  );
+  QXmlSchemaValidator * o = new QXmlSchemaValidator ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractMessageHandler * ptr = obj->messageHandler (  );
+    QAbstractMessageHandler * ptr = obj->messageHandler ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
   }
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool (  ) );
+    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
     _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
   }
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->networkAccessManager (  );
+    QNetworkAccessManager * ptr = obj->networkAccessManager ();
     _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlSchema * ptr = new QXmlSchema( obj->schema (  ) );
+    QXmlSchema * ptr = new QXmlSchema( obj->schema () );
     _qt5xhb_createReturnClass ( ptr, "QXMLSCHEMA", true );
   }
 }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QAbstractUriResolver * ptr = obj->uriResolver (  );
+    const QAbstractUriResolver * ptr = obj->uriResolver ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
   }
 }

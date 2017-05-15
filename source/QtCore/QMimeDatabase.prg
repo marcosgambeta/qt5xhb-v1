@@ -66,7 +66,7 @@ QMimeDatabase()
 */
 HB_FUNC_STATIC( QMIMEDATABASE_NEW )
 {
-  QMimeDatabase * o = new QMimeDatabase (  );
+  QMimeDatabase * o = new QMimeDatabase ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
 
   if( obj )
   {
-    QList<QMimeType> list = obj->allMimeTypes (  );
+    QList<QMimeType> list = obj->allMimeTypes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMIMETYPE" );

@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNamePool * ptr = &obj->namePool (  );
+    QXmlNamePool * ptr = &obj->namePool ();
     _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL" );
   }
 }

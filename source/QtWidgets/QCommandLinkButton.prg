@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 
   if( obj )
   {
-    hb_retl( obj->isFlat (  ) );
+    hb_retl( obj->isFlat () );
   }
 }
 

@@ -66,7 +66,7 @@ QDomNodeList ()
 */
 HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
 {
-  QDomNodeList * o = new QDomNodeList (  );
+  QDomNodeList * o = new QDomNodeList ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

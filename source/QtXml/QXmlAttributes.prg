@@ -72,7 +72,7 @@ QXmlAttributes ()
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 {
-  QXmlAttributes * o = new QXmlAttributes (  );
+  QXmlAttributes * o = new QXmlAttributes ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 

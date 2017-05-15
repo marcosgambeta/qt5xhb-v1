@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlDTDHandler * ptr = obj->DTDHandler (  );
+    QXmlDTDHandler * ptr = obj->DTDHandler ();
     _qt5xhb_createReturnClass ( ptr, "QXMLDTDHANDLER" );
   }
 }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlContentHandler * ptr = obj->contentHandler (  );
+    QXmlContentHandler * ptr = obj->contentHandler ();
     _qt5xhb_createReturnClass ( ptr, "QXMLCONTENTHANDLER" );
   }
 }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlDeclHandler * ptr = obj->declHandler (  );
+    QXmlDeclHandler * ptr = obj->declHandler ();
     _qt5xhb_createReturnClass ( ptr, "QXMLDECLHANDLER" );
   }
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlEntityResolver * ptr = obj->entityResolver (  );
+    QXmlEntityResolver * ptr = obj->entityResolver ();
     _qt5xhb_createReturnClass ( ptr, "QXMLENTITYRESOLVER" );
   }
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlErrorHandler * ptr = obj->errorHandler (  );
+    QXmlErrorHandler * ptr = obj->errorHandler ();
     _qt5xhb_createReturnClass ( ptr, "QXMLERRORHANDLER" );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
   QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlLexicalHandler * ptr = obj->lexicalHandler (  );
+    QXmlLexicalHandler * ptr = obj->lexicalHandler ();
     _qt5xhb_createReturnClass ( ptr, "QXMLLEXICALHANDLER" );
   }
 }

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
   QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QTextCodec * ptr = obj->codec (  );
+    const QTextCodec * ptr = obj->codec ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
   QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * ptr = obj->outputDevice (  );
+    QIODevice * ptr = obj->outputDevice ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDDOCUMENT )
   QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endDocument (  );
+    obj->endDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDELEMENT )
   QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endElement (  );
+    obj->endElement ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDOFSEQUENCE )
   QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endOfSequence (  );
+    obj->endOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTDOCUMENT )
   QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startDocument (  );
+    obj->startDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTOFSEQUENCE )
   QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startOfSequence (  );
+    obj->startOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

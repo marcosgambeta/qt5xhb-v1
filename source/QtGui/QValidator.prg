@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
   QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }

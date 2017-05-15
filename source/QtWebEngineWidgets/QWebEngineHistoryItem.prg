@@ -70,7 +70,7 @@ QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * o = new QWebEngineHistoryItem (  );
+  QWebEngineHistoryItem * o = new QWebEngineHistoryItem ();
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
   QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->originalUrl (  ) );
+    QUrl * ptr = new QUrl( obj->originalUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
   QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_TITLE )
   QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 #endif
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
   QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastVisited (  ) );
+    QDateTime * ptr = new QDateTime( obj->lastVisited () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 #endif
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
   QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->iconUrl (  ) );
+    QUrl * ptr = new QUrl( obj->iconUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ISVALID )
   QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }

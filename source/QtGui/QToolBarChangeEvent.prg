@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
   QToolBarChangeEvent * obj = (QToolBarChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->toggle (  ) );
+    hb_retl( obj->toggle () );
   }
 }
 

@@ -66,7 +66,7 @@ QDnsHostAddressRecord()
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW1 )
 {
-  QDnsHostAddressRecord * o = new QDnsHostAddressRecord (  );
+  QDnsHostAddressRecord * o = new QDnsHostAddressRecord ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
   QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
   QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive (  ) );
+    hb_retni( obj->timeToLive () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
   QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->value (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->value () );
     _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }

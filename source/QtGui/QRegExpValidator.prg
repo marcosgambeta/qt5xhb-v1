@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
   QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegExp * ptr = new QRegExp( obj->regExp (  ) );
+    QRegExp * ptr = new QRegExp( obj->regExp () );
     _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 }

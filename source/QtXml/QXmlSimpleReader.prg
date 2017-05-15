@@ -49,7 +49,7 @@ QXmlSimpleReader ()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
-  QXmlSimpleReader * o = new QXmlSimpleReader (  );
+  QXmlSimpleReader * o = new QXmlSimpleReader ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
   QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->parseContinue (  ) );
+    hb_retl( obj->parseContinue () );
   }
 }
 

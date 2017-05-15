@@ -64,7 +64,7 @@ QDeclarativeScriptString ()
 */
 void QDeclarativeScriptString_new1 ()
 {
-  QDeclarativeScriptString * o = new QDeclarativeScriptString (  );
+  QDeclarativeScriptString * o = new QDeclarativeScriptString ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->context (  );
+    QDeclarativeContext * ptr = obj->context ();
     _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 
   if( obj )
   {
-    QObject * ptr = obj->scopeObject (  );
+    QObject * ptr = obj->scopeObject ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->script (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->script ().toLatin1().data() );
   }
 }
 

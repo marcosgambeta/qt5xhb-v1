@@ -78,7 +78,7 @@ QImageWriter ()
 */
 void QImageWriter_new1 ()
 {
-  QImageWriter * o = new QImageWriter (  );
+  QImageWriter * o = new QImageWriter ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 
   if( obj )
   {
-    hb_retl( obj->canWrite (  ) );
+    hb_retl( obj->canWrite () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 
   if( obj )
   {
-    hb_retni( obj->compression (  ) );
+    hb_retni( obj->compression () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->format (  ) );
+    QByteArray * ptr = new QByteArray( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 
   if( obj )
   {
-    hb_retnd( obj->gamma (  ) );
+    hb_retnd( obj->gamma () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 
   if( obj )
   {
-    hb_retni( obj->quality (  ) );
+    hb_retni( obj->quality () );
   }
 }
 
@@ -467,7 +467,7 @@ static QList<QByteArray> supportedImageFormats ()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
-  QList<QByteArray> list = QImageWriter::supportedImageFormats (  );
+  QList<QByteArray> list = QImageWriter::supportedImageFormats ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

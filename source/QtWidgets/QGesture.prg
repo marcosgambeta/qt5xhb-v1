@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 
   if( obj )
   {
-    hb_retni( obj->gestureCancelPolicy (  ) );
+    hb_retni( obj->gestureCancelPolicy () );
   }
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 
   if( obj )
   {
-    hb_retni( obj->gestureType (  ) );
+    hb_retni( obj->gestureType () );
   }
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 
   if( obj )
   {
-    hb_retl( obj->hasHotSpot (  ) );
+    hb_retl( obj->hasHotSpot () );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->hotSpot (  ) );
+    QPointF * ptr = new QPointF( obj->hotSpot () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGESTURE_STATE )
 
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
 
   if( obj )
   {
-    obj->unsetHotSpot (  );
+    obj->unsetHotSpot ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

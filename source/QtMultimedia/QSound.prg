@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loops (  ) );
+    hb_retni( obj->loops () );
   }
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loopsRemaining (  ) );
+    hb_retni( obj->loopsRemaining () );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSOUND_STOP )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSOUND_PLAY1 )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->play (  );
+    obj->play ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

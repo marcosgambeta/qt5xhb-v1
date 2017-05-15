@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->currentIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
 
   if( obj )
   {
-    hb_retl( obj->hasSelection (  ) );
+    hb_retl( obj->hasSelection () );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 
   if( obj )
   {
-    QModelIndexList list = obj->selectedIndexes (  );
+    QModelIndexList list = obj->selectedIndexes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 
   if( obj )
   {
-    const QAbstractItemModel * ptr = obj->model (  );
+    const QAbstractItemModel * ptr = obj->model ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
 
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
 
   if( obj )
   {
-    obj->clearSelection (  );
+    obj->clearSelection ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARCURRENTINDEX )
 
   if( obj )
   {
-    obj->clearCurrentIndex (  );
+    obj->clearCurrentIndex ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

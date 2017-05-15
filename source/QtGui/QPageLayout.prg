@@ -99,7 +99,7 @@ QPageLayout()
 */
 HB_FUNC_STATIC( QPAGELAYOUT_NEW1 )
 {
-  QPageLayout * o = new QPageLayout (  );
+  QPageLayout * o = new QPageLayout ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ISVALID )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MODE )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mode (  ) );
+    hb_retni( obj->mode () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAGESIZE )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageSize * ptr = new QPageSize( obj->pageSize (  ) );
+    QPageSize * ptr = new QPageSize( obj->pageSize () );
     _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->units (  ) );
+    hb_retni( obj->units () );
   }
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS1 )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * ptr = new QMarginsF( obj->margins (  ) );
+    QMarginsF * ptr = new QMarginsF( obj->margins () );
     _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPOINTS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMargins * ptr = new QMargins( obj->marginsPoints (  ) );
+    QMargins * ptr = new QMargins( obj->marginsPoints () );
     _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MINIMUMMARGINS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * ptr = new QMarginsF( obj->minimumMargins (  ) );
+    QMarginsF * ptr = new QMarginsF( obj->minimumMargins () );
     _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MAXIMUMMARGINS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * ptr = new QMarginsF( obj->maximumMargins (  ) );
+    QMarginsF * ptr = new QMarginsF( obj->maximumMargins () );
     _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT1 )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->fullRect (  ) );
+    QRectF * ptr = new QRectF( obj->fullRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPOINTS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->fullRectPoints (  ) );
+    QRect * ptr = new QRect( obj->fullRectPoints () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT1 )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->paintRect (  ) );
+    QRectF * ptr = new QRectF( obj->paintRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPOINTS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->paintRectPoints (  ) );
+    QRect * ptr = new QRect( obj->paintRectPoints () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

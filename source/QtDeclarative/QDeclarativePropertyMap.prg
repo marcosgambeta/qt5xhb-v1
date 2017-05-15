@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 
   if( obj )
   {
-    QStringList strl = obj->keys (  );
+    QStringList strl = obj->keys ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

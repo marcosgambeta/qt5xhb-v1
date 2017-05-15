@@ -82,7 +82,7 @@ QTextFragment()
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW2 )
 {
-  QTextFragment * o = new QTextFragment (  );
+  QTextFragment * o = new QTextFragment ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->position (  ) );
+    hb_retni( obj->position () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat (  ) );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->charFormatIndex (  ) );
+    hb_retni( obj->charFormatIndex () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 

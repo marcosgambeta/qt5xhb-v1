@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION )
   QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cursorPosition (  ) );
+    hb_retni( obj->cursorPosition () );
   }
 }
 

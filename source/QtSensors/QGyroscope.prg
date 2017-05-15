@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGYROSCOPE_READING )
   QGyroscope * obj = (QGyroscope *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGyroscopeReading * ptr = obj->reading (  );
+    QGyroscopeReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QGYROSCOPEREADING" );
   }
 #endif

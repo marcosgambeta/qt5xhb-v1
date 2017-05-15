@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mouseDoubleClickInterval (  ) );
+    hb_retni( obj->mouseDoubleClickInterval () );
   }
 }
 
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGDISTANCE )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startDragDistance (  ) );
+    hb_retni( obj->startDragDistance () );
   }
 }
 
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGTIME )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startDragTime (  ) );
+    hb_retni( obj->startDragTime () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGVELOCITY )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startDragVelocity (  ) );
+    hb_retni( obj->startDragVelocity () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDINPUTINTERVAL )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->keyboardInputInterval (  ) );
+    hb_retni( obj->keyboardInputInterval () );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDAUTOREPEATRATE )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->keyboardAutoRepeatRate (  ) );
+    hb_retni( obj->keyboardAutoRepeatRate () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_CURSORFLASHTIME )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cursorFlashTime (  ) );
+    hb_retni( obj->cursorFlashTime () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_SHOWISFULLSCREEN )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->showIsFullScreen (  ) );
+    hb_retl( obj->showIsFullScreen () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_PASSWORDMASKDELAY )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->passwordMaskDelay (  ) );
+    hb_retni( obj->passwordMaskDelay () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_FONTSMOOTHINGGAMMA )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->fontSmoothingGamma (  ) );
+    hb_retnd( obj->fontSmoothingGamma () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_USERTLEXTENSIONS )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->useRtlExtensions (  ) );
+    hb_retl( obj->useRtlExtensions () );
   }
 }
 

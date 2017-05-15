@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_MEDIAOBJECT )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaObject * ptr = obj->mediaObject (  );
+    QMediaObject * ptr = obj->mediaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ISFULLSCREEN )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFullScreen (  ) );
+    hb_retl( obj->isFullScreen () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ASPECTRATIOMODE )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->aspectRatioMode (  ) );
+    hb_retni( obj->aspectRatioMode () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_BRIGHTNESS )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->brightness (  ) );
+    hb_retni( obj->brightness () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_CONTRAST )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->contrast (  ) );
+    hb_retni( obj->contrast () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_HUE )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->hue (  ) );
+    hb_retni( obj->hue () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SATURATION )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->saturation (  ) );
+    hb_retni( obj->saturation () );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SIZEHINT )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

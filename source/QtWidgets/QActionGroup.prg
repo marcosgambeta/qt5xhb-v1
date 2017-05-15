@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 
   if( obj )
   {
-    QAction * ptr = obj->checkedAction (  );
+    QAction * ptr = obj->checkedAction ();
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 
   if( obj )
   {
-    hb_retl( obj->isExclusive (  ) );
+    hb_retl( obj->isExclusive () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 }
 

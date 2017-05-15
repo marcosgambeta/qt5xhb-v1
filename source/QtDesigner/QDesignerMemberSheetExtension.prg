@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 

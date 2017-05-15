@@ -60,7 +60,7 @@ QXmlStreamNamespaceDeclaration()
 */
 void QXmlStreamNamespaceDeclaration_new1 ()
 {
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration (  );
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri (  ) );
+    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->prefix (  ) );
+    QStringRef * ptr = new QStringRef( obj->prefix () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }

@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 
   if( obj )
   {
-    obj->quit (  );
+    obj->quit ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -170,7 +170,7 @@ static QString applicationDirPath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
-  hb_retc( (const char *) QCoreApplication::applicationDirPath (  ).toLatin1().data() );
+  hb_retc( (const char *) QCoreApplication::applicationDirPath ().toLatin1().data() );
 }
 
 /*
@@ -178,7 +178,7 @@ static QString applicationFilePath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
-  hb_retc( (const char *) QCoreApplication::applicationFilePath (  ).toLatin1().data() );
+  hb_retc( (const char *) QCoreApplication::applicationFilePath ().toLatin1().data() );
 }
 
 /*
@@ -186,7 +186,7 @@ static QString applicationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
-  hb_retc( (const char *) QCoreApplication::applicationName (  ).toLatin1().data() );
+  hb_retc( (const char *) QCoreApplication::applicationName ().toLatin1().data() );
 }
 
 /*
@@ -194,7 +194,7 @@ static qint64 applicationPid ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 {
-  hb_retni( QCoreApplication::applicationPid (  ) );
+  hb_retni( QCoreApplication::applicationPid () );
 }
 
 /*
@@ -202,7 +202,7 @@ static QString applicationVersion ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
-  hb_retc( (const char *) QCoreApplication::applicationVersion (  ).toLatin1().data() );
+  hb_retc( (const char *) QCoreApplication::applicationVersion ().toLatin1().data() );
 }
 
 /*
@@ -210,7 +210,7 @@ static QStringList arguments ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
 {
-  QStringList strl = QCoreApplication::arguments (  );
+  QStringList strl = QCoreApplication::arguments ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
@@ -219,7 +219,7 @@ static bool closingDown ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 {
-  hb_retl( QCoreApplication::closingDown (  ) );
+  hb_retl( QCoreApplication::closingDown () );
 }
 
 /*
@@ -227,7 +227,7 @@ static int exec ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
 {
-  hb_retni( QCoreApplication::exec (  ) );
+  hb_retni( QCoreApplication::exec () );
 }
 
 /*
@@ -251,7 +251,7 @@ static void flush ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
 {
-  QCoreApplication::flush (  );
+  QCoreApplication::flush ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -260,7 +260,7 @@ static bool hasPendingEvents ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 {
-  hb_retl( QCoreApplication::hasPendingEvents (  ) );
+  hb_retl( QCoreApplication::hasPendingEvents () );
 }
 
 /*
@@ -285,7 +285,7 @@ static QCoreApplication * instance ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
 {
-  QCoreApplication * ptr = QCoreApplication::instance (  );
+  QCoreApplication * ptr = QCoreApplication::instance ();
   _qt5xhb_createReturnClass ( ptr, "QCOREAPPLICATION" );
 }
 
@@ -294,7 +294,7 @@ static QStringList libraryPaths ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 {
-  QStringList strl = QCoreApplication::libraryPaths (  );
+  QStringList strl = QCoreApplication::libraryPaths ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
@@ -303,7 +303,7 @@ static QString organizationDomain ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
-  hb_retc( (const char *) QCoreApplication::organizationDomain (  ).toLatin1().data() );
+  hb_retc( (const char *) QCoreApplication::organizationDomain ().toLatin1().data() );
 }
 
 /*
@@ -311,7 +311,7 @@ static QString organizationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {
-  hb_retc( (const char *) QCoreApplication::organizationName (  ).toLatin1().data() );
+  hb_retc( (const char *) QCoreApplication::organizationName ().toLatin1().data() );
 }
 
 /*
@@ -498,7 +498,7 @@ static void sendPostedEvents ()
 */
 void QCoreApplication_sendPostedEvents2 ()
 {
-  QCoreApplication::sendPostedEvents (  );
+  QCoreApplication::sendPostedEvents ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -632,7 +632,7 @@ static bool startingUp ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 {
-  hb_retl( QCoreApplication::startingUp (  ) );
+  hb_retl( QCoreApplication::startingUp () );
 }
 
 /*

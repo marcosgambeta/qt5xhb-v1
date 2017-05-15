@@ -55,7 +55,7 @@ QSGGeometryNode()
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 {
-  QSGGeometryNode * o = new QSGGeometryNode (  );
+  QSGGeometryNode * o = new QSGGeometryNode ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
   QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGMaterial * ptr = obj->material (  );
+    QSGMaterial * ptr = obj->material ();
     _qt5xhb_createReturnClass ( ptr, "QSGMATERIAL" );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
   QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGMaterial * ptr = obj->opaqueMaterial (  );
+    QSGMaterial * ptr = obj->opaqueMaterial ();
     _qt5xhb_createReturnClass ( ptr, "QSGMATERIAL" );
   }
 }

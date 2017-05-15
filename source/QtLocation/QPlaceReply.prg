@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 #endif
 }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACEREPLY_TYPE )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ERRORSTRING )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ERROR )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error (  );
+    int i = obj->error ();
     hb_retni( i );
   }
 #endif
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ABORT )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

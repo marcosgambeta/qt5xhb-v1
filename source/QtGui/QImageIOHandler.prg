@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 
   if( obj )
   {
-    hb_retl( obj->canRead (  ) );
+    hb_retl( obj->canRead () );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 
   if( obj )
   {
-    hb_retni( obj->currentImageNumber (  ) );
+    hb_retni( obj->currentImageNumber () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->currentImageRect (  ) );
+    QRect * ptr = new QRect( obj->currentImageRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->format (  ) );
+    QByteArray * ptr = new QByteArray( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->imageCount (  ) );
+    hb_retni( obj->imageCount () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 
   if( obj )
   {
-    hb_retl( obj->jumpToNextImage (  ) );
+    hb_retl( obj->jumpToNextImage () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->loopCount (  ) );
+    hb_retni( obj->loopCount () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 
   if( obj )
   {
-    hb_retni( obj->nextImageDelay (  ) );
+    hb_retni( obj->nextImageDelay () );
   }
 }
 

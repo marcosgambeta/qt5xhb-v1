@@ -83,7 +83,7 @@ QPrinterInfo ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
 {
-  QPrinterInfo * o = new QPrinterInfo (  );
+  QPrinterInfo * o = new QPrinterInfo ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDefault (  ) );
+    hb_retl( obj->isDefault () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->printerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->printerName ().toLatin1().data() );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QPrinter::PaperSize> list = obj->supportedPaperSizes (  );
+    QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -215,7 +215,7 @@ static QList<QPrinterInfo> availablePrinters ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
-  QList<QPrinterInfo> list = QPrinterInfo::availablePrinters (  );
+  QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QPRINTERINFO" );
@@ -259,7 +259,7 @@ static QPrinterInfo defaultPrinter ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
-  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter (  ) );
+  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
   _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->location (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->location ().toLatin1().data() );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->makeAndModel (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->makeAndModel ().toLatin1().data() );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRemote (  ) );
+    hb_retl( obj->isRemote () );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QPRINTERINFO_STATE )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QPageSize> list = obj->supportedPageSizes (  );
+    QList<QPageSize> list = obj->supportedPageSizes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPAGESIZE" );
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageSize * ptr = new QPageSize( obj->defaultPageSize (  ) );
+    QPageSize * ptr = new QPageSize( obj->defaultPageSize () );
     _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->supportsCustomPageSizes (  ) );
+    hb_retl( obj->supportsCustomPageSizes () );
   }
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize (  ) );
+    QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize () );
     _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize (  ) );
+    QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize () );
     _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
   }
 }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<int> list = obj->supportedResolutions (  );
+    QList<int> list = obj->supportedResolutions ();
     _qt5xhb_convert_qlist_int_to_array ( list );
   }
 }
@@ -452,7 +452,7 @@ static QStringList availablePrinterNames()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
 {
-  QStringList strl = QPrinterInfo::availablePrinterNames (  );
+  QStringList strl = QPrinterInfo::availablePrinterNames ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 
@@ -462,7 +462,7 @@ static QString defaultPrinterName()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
 {
-  hb_retc( (const char *) QPrinterInfo::defaultPrinterName (  ).toLatin1().data() );
+  hb_retc( (const char *) QPrinterInfo::defaultPrinterName ().toLatin1().data() );
 }
 
 

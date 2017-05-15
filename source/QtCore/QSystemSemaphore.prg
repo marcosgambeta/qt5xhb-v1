@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->key (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->key ().toLatin1().data() );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 
   if( obj )
   {
-    hb_retl( obj->acquire (  ) );
+    hb_retl( obj->acquire () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 

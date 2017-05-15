@@ -65,7 +65,7 @@ QXmlNamespaceSupport ()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
-  QXmlNamespaceSupport * o = new QXmlNamespaceSupport (  );
+  QXmlNamespaceSupport * o = new QXmlNamespaceSupport ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->popContext (  );
+    obj->popContext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->prefixes (  );
+    QStringList strl = obj->prefixes ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->pushContext (  );
+    obj->pushContext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

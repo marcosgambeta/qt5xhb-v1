@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_INQUIRYTYPE )
 
   if( obj )
   {
-    hb_retni( obj->inquiryType (  ) );
+    hb_retni( obj->inquiryType () );
   }
 #endif
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 #endif
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES )
 
   if( obj )
   {
-    QList<QBluetoothDeviceInfo> list = obj->discoveredDevices (  );
+    QList<QBluetoothDeviceInfo> list = obj->discoveredDevices ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBLUETOOTHDEVICEINFO" );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_START )
 
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_STOP )
 
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_UPDATEMODE )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->updateMode (  ) );
+    hb_retni( obj->updateMode () );
   }
 #endif
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_DEVICE )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 #endif
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedPositioningMethods (  ) );
+    hb_retni( obj->supportedPositioningMethods () );
   }
 #endif
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minimumUpdateInterval (  ) );
+    hb_retni( obj->minimumUpdateInterval () );
   }
 #endif
 }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_ERROR )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_STARTUPDATES )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startUpdates (  );
+    obj->startUpdates ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_STOPUPDATES )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stopUpdates (  );
+    obj->stopUpdates ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

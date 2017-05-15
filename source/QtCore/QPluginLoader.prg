@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 
   if( obj )
   {
-    QObject * ptr = obj->instance (  );
+    QObject * ptr = obj->instance ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 
   if( obj )
   {
-    hb_retl( obj->isLoaded (  ) );
+    hb_retl( obj->isLoaded () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 
   if( obj )
   {
-    hb_retl( obj->load (  ) );
+    hb_retl( obj->load () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 
   if( obj )
   {
-    hb_retni( obj->loadHints (  ) );
+    hb_retni( obj->loadHints () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 
   if( obj )
   {
-    hb_retl( obj->unload (  ) );
+    hb_retl( obj->unload () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
 
   if( obj )
   {
-    QObjectList list = obj->staticInstances (  );
+    QObjectList list = obj->staticInstances ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );

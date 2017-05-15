@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
   QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferFormat (  ) );
+    hb_retni( obj->bufferFormat () );
   }
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
   QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats (  );
+    QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

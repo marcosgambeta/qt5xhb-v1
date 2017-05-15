@@ -131,7 +131,7 @@ QTransform()
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW2 )
 {
-  QTransform * o = new QTransform (  );
+  QTransform * o = new QTransform ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAffine (  ) );
+    hb_retl( obj->isAffine () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isIdentity (  ) );
+    hb_retl( obj->isIdentity () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isInvertible (  ) );
+    hb_retl( obj->isInvertible () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isScaling (  ) );
+    hb_retl( obj->isScaling () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRotating (  ) );
+    hb_retl( obj->isRotating () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTranslating (  ) );
+    hb_retl( obj->isTranslating () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTRANSFORM_TYPE )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->determinant (  ) );
+    hb_retnd( obj->determinant () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QTRANSFORM_DET )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->det (  ) );
+    hb_retnd( obj->det () );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QTRANSFORM_M11 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m11 (  ) );
+    hb_retnd( obj->m11 () );
   }
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QTRANSFORM_M12 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m12 (  ) );
+    hb_retnd( obj->m12 () );
   }
 }
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QTRANSFORM_M13 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m13 (  ) );
+    hb_retnd( obj->m13 () );
   }
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QTRANSFORM_M21 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m21 (  ) );
+    hb_retnd( obj->m21 () );
   }
 }
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QTRANSFORM_M22 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m22 (  ) );
+    hb_retnd( obj->m22 () );
   }
 }
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTRANSFORM_M23 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m23 (  ) );
+    hb_retnd( obj->m23 () );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QTRANSFORM_M31 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m31 (  ) );
+    hb_retnd( obj->m31 () );
   }
 }
 
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTRANSFORM_M32 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m32 (  ) );
+    hb_retnd( obj->m32 () );
   }
 }
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QTRANSFORM_M33 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m33 (  ) );
+    hb_retnd( obj->m33 () );
   }
 }
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTRANSFORM_DX )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dx (  ) );
+    hb_retnd( obj->dx () );
   }
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dy (  ) );
+    hb_retnd( obj->dy () );
   }
 }
 
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->adjoint (  ) );
+    QTransform * ptr = new QTransform( obj->adjoint () );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->transposed (  ) );
+    QTransform * ptr = new QTransform( obj->transposed () );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QTRANSFORM_RESET )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMatrix * ptr = &obj->toAffine (  );
+    const QMatrix * ptr = &obj->toAffine ();
     _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SOURCENAME )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->sourceName ().toLatin1().data() );
   }
 #endif
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_UPDATEINTERVAL )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->updateInterval (  ) );
+    hb_retni( obj->updateInterval () );
   }
 #endif
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minimumUpdateInterval (  ) );
+    hb_retni( obj->minimumUpdateInterval () );
   }
 #endif
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ERROR )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STARTUPDATES )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startUpdates (  );
+    obj->startUpdates ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STOPUPDATES )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stopUpdates (  );
+    obj->stopUpdates ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -237,7 +237,7 @@ static QStringList availableSources()
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QStringList strl = QGeoSatelliteInfoSource::availableSources (  );
+  QStringList strl = QGeoSatelliteInfoSource::availableSources ();
   _qt5xhb_convert_qstringlist_to_array ( strl );
 #endif
 }

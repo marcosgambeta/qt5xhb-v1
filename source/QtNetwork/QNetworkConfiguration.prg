@@ -66,7 +66,7 @@ QNetworkConfiguration ()
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW1 )
 {
-  QNetworkConfiguration * o = new QNetworkConfiguration (  );
+  QNetworkConfiguration * o = new QNetworkConfiguration ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bearerType (  ) );
+    hb_retni( obj->bearerType () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->bearerTypeName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->bearerTypeName ().toLatin1().data() );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QNetworkConfiguration> list = obj->children (  );
+    QList<QNetworkConfiguration> list = obj->children ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QNETWORKCONFIGURATION" );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->identifier (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->identifier ().toLatin1().data() );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRoamingAvailable (  ) );
+    hb_retl( obj->isRoamingAvailable () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->purpose (  ) );
+    hb_retni( obj->purpose () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->state (  ) );
+    hb_retni( obj->state () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

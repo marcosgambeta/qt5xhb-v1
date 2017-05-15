@@ -81,7 +81,7 @@ QDeclarativeProperty ()
 */
 void QDeclarativeProperty_new1 ()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty (  );
+  QDeclarativeProperty * o = new QDeclarativeProperty ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL )
 
   if( obj )
   {
-    hb_retl( obj->hasNotifySignal (  ) );
+    hb_retl( obj->hasNotifySignal () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_INDEX )
 
   if( obj )
   {
-    hb_retni( obj->index (  ) );
+    hb_retni( obj->index () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISDESIGNABLE )
 
   if( obj )
   {
-    hb_retl( obj->isDesignable (  ) );
+    hb_retl( obj->isDesignable () );
   }
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISPROPERTY )
 
   if( obj )
   {
-    hb_retl( obj->isProperty (  ) );
+    hb_retl( obj->isProperty () );
   }
 }
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISRESETTABLE )
 
   if( obj )
   {
-    hb_retl( obj->isResettable (  ) );
+    hb_retl( obj->isResettable () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISSIGNALPROPERTY )
 
   if( obj )
   {
-    hb_retl( obj->isSignalProperty (  ) );
+    hb_retl( obj->isSignalProperty () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable (  ) );
+    hb_retl( obj->isWritable () );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
 
   if( obj )
   {
-    QMetaMethod * ptr = new QMetaMethod( obj->method (  ) );
+    QMetaMethod * ptr = new QMetaMethod( obj->method () );
     _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
   }
 }
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
 
   if( obj )
   {
-    hb_retl( obj->needsNotifySignal (  ) );
+    hb_retl( obj->needsNotifySignal () );
   }
 }
 
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
 
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
 
   if( obj )
   {
-    QMetaProperty * ptr = new QMetaProperty( obj->property (  ) );
+    QMetaProperty * ptr = new QMetaProperty( obj->property () );
     _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
   }
 }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
 
   if( obj )
   {
-    hb_retni( obj->propertyType (  ) );
+    hb_retni( obj->propertyType () );
   }
 }
 
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
 
   if( obj )
   {
-    hb_retni( obj->propertyTypeCategory (  ) );
+    hb_retni( obj->propertyTypeCategory () );
   }
 }
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
 
   if( obj )
   {
-    const char * str1 = obj->propertyTypeName (  );
+    const char * str1 = obj->propertyTypeName ();
     hb_retc( str1 );
   }
 }
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
 
   if( obj )
   {
-    hb_retl( obj->reset (  ) );
+    hb_retl( obj->reset () );
   }
 }
 
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -503,7 +503,7 @@ void QDeclarativeProperty_read1 ()
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->read (  ) );
+    QVariant * ptr = new QVariant( obj->read () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

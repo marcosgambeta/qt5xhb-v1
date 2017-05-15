@@ -54,7 +54,7 @@ QEventLoopLocker()
 */
 void QEventLoopLocker_new1 ()
 {
-  QEventLoopLocker * o = new QEventLoopLocker (  );
+  QEventLoopLocker * o = new QEventLoopLocker ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

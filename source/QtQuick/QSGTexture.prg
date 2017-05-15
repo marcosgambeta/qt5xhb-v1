@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSGTEXTURE_BIND )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->bind (  );
+    obj->bind ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSGTEXTURE_FILTERING )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->filtering (  ) );
+    hb_retni( obj->filtering () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSGTEXTURE_HASALPHACHANNEL )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAlphaChannel (  ) );
+    hb_retl( obj->hasAlphaChannel () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSGTEXTURE_HASMIPMAPS )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasMipmaps (  ) );
+    hb_retl( obj->hasMipmaps () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSGTEXTURE_HORIZONTALWRAPMODE )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->horizontalWrapMode (  ) );
+    hb_retni( obj->horizontalWrapMode () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSGTEXTURE_ISATLASTEXTURE )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAtlasTexture (  ) );
+    hb_retl( obj->isAtlasTexture () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSGTEXTURE_MIPMAPFILTERING )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mipmapFiltering (  ) );
+    hb_retni( obj->mipmapFiltering () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSGTEXTURE_NORMALIZEDTEXTURESUBRECT )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->normalizedTextureSubRect (  ) );
+    QRectF * ptr = new QRectF( obj->normalizedTextureSubRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSGTEXTURE_REMOVEDFROMATLAS )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGTexture * ptr = obj->removedFromAtlas (  );
+    QSGTexture * ptr = obj->removedFromAtlas ();
     _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSGTEXTURE_TEXTUREID )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureId (  ) );
+    hb_retni( obj->textureId () );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSGTEXTURE_TEXTURESIZE )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->textureSize (  ) );
+    QSize * ptr = new QSize( obj->textureSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSGTEXTURE_VERTICALWRAPMODE )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->verticalWrapMode (  ) );
+    hb_retni( obj->verticalWrapMode () );
   }
 }
 

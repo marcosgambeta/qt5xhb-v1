@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->hitCount (  ) );
+    hb_retni( obj->hitCount () );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QHelpSearchQuery> list = obj->query (  );
+    QList<QHelpSearchQuery> list = obj->query ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QHELPSEARCHQUERY" );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHelpSearchQueryWidget * ptr = obj->queryWidget (  );
+    QHelpSearchQueryWidget * ptr = obj->queryWidget ();
     _qt5xhb_createReturnClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
   }
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHelpSearchResultWidget * ptr = obj->resultWidget (  );
+    QHelpSearchResultWidget * ptr = obj->resultWidget ();
     _qt5xhb_createReturnClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->cancelIndexing (  );
+    obj->cancelIndexing ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->cancelSearching (  );
+    obj->cancelSearching ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->reindexDocumentation (  );
+    obj->reindexDocumentation ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

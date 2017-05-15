@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTATE_CHILDMODE )
 
   if( obj )
   {
-    hb_retni( obj->childMode (  ) );
+    hb_retni( obj->childMode () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 
   if( obj )
   {
-    QAbstractState * ptr = obj->errorState (  );
+    QAbstractState * ptr = obj->errorState ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 
   if( obj )
   {
-    QAbstractState * ptr = obj->initialState (  );
+    QAbstractState * ptr = obj->initialState ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 
   if( obj )
   {
-    QList<QAbstractTransition *> list = obj->transitions (  );
+    QList<QAbstractTransition *> list = obj->transitions ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTTRANSITION" );

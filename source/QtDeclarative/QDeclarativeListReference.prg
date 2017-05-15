@@ -67,7 +67,7 @@ QDeclarativeListReference ()
 */
 void QDeclarativeListReference_new1 ()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference (  );
+  QDeclarativeListReference * o = new QDeclarativeListReference ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 
   if( obj )
   {
-    hb_retl( obj->canAppend (  ) );
+    hb_retl( obj->canAppend () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 
   if( obj )
   {
-    hb_retl( obj->canAt (  ) );
+    hb_retl( obj->canAt () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 
   if( obj )
   {
-    hb_retl( obj->canClear (  ) );
+    hb_retl( obj->canClear () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 
   if( obj )
   {
-    hb_retl( obj->canCount (  ) );
+    hb_retl( obj->canCount () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 
   if( obj )
   {
-    hb_retl( obj->clear (  ) );
+    hb_retl( obj->clear () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->indentationDepth (  ) );
+    hb_retni( obj->indentationDepth () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endDocument (  );
+    obj->endDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endElement (  );
+    obj->endElement ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->endOfSequence (  );
+    obj->endOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startDocument (  );
+    obj->startDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->startOfSequence (  );
+    obj->startOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -62,7 +62,7 @@ QPlaceResult()
 HB_FUNC_STATIC( QPLACERESULT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * o = new QPlaceResult (  );
+  QPlaceResult * o = new QPlaceResult ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
   QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->distance (  ) );
+    hb_retnd( obj->distance () );
   }
 #endif
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPLACERESULT_PLACE )
   QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlace * ptr = new QPlace( obj->place (  ) );
+    QPlace * ptr = new QPlace( obj->place () );
     _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
   }
 #endif
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
   QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSponsored (  ) );
+    hb_retl( obj->isSponsored () );
   }
 #endif
 }

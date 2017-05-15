@@ -52,7 +52,7 @@ QDomNotation ()
 */
 HB_FUNC_STATIC( QDOMNOTATION_NEW1 )
 {
-  QDomNotation * o = new QDomNotation (  );
+  QDomNotation * o = new QDomNotation ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
   QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nodeType (  ) );
+    hb_retni( obj->nodeType () );
   }
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
   QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->publicId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->publicId ().toLatin1().data() );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
   QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->systemId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->systemId ().toLatin1().data() );
   }
 }
 

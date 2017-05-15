@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 
   if( obj )
   {
-    QAbstractState * ptr = obj->defaultState (  );
+    QAbstractState * ptr = obj->defaultState ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 
   if( obj )
   {
-    hb_retni( obj->historyType (  ) );
+    hb_retni( obj->historyType () );
   }
 }
 

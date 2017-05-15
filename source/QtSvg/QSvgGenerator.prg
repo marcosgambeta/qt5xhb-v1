@@ -71,7 +71,7 @@ QSvgGenerator ()
 */
 HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 {
-  QSvgGenerator * o = new QSvgGenerator (  );
+  QSvgGenerator * o = new QSvgGenerator ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * ptr = obj->outputDevice (  );
+    QIODevice * ptr = obj->outputDevice ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->resolution (  ) );
+    hb_retni( obj->resolution () );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->viewBox (  ) );
+    QRect * ptr = new QRect( obj->viewBox () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->viewBoxF (  ) );
+    QRectF * ptr = new QRectF( obj->viewBoxF () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

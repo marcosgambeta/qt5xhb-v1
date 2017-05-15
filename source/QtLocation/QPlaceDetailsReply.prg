@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPLACEDETAILSREPLY_TYPE )
   QPlaceDetailsReply * obj = (QPlaceDetailsReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPLACEDETAILSREPLY_PLACE )
   QPlaceDetailsReply * obj = (QPlaceDetailsReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlace * ptr = new QPlace( obj->place (  ) );
+    QPlace * ptr = new QPlace( obj->place () );
     _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
   }
 #endif

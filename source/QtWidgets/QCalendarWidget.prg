@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->dateEditAcceptDelay (  ) );
+    hb_retni( obj->dateEditAcceptDelay () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstDayOfWeek (  ) );
+    hb_retni( obj->firstDayOfWeek () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->headerTextFormat (  ) );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->headerTextFormat () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->horizontalHeaderFormat (  ) );
+    hb_retni( obj->horizontalHeaderFormat () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISDATEEDITENABLED )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDateEditEnabled (  ) );
+    hb_retl( obj->isDateEditEnabled () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISGRIDVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isGridVisible (  ) );
+    hb_retl( obj->isGridVisible () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNavigationBarVisible (  ) );
+    hb_retl( obj->isNavigationBarVisible () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * ptr = new QDate( obj->maximumDate (  ) );
+    QDate * ptr = new QDate( obj->maximumDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * ptr = new QDate( obj->minimumDate (  ) );
+    QDate * ptr = new QDate( obj->minimumDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->monthShown (  ) );
+    hb_retni( obj->monthShown () );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * ptr = new QDate( obj->selectedDate (  ) );
+    QDate * ptr = new QDate( obj->selectedDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTIONMODE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectionMode (  ) );
+    hb_retni( obj->selectionMode () );
   }
 }
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->verticalHeaderFormat (  ) );
+    hb_retni( obj->verticalHeaderFormat () );
   }
 }
 
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->yearShown (  ) );
+    hb_retni( obj->yearShown () );
   }
 }
 
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTMONTH )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->showNextMonth (  );
+    obj->showNextMonth ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTYEAR )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->showNextYear (  );
+    obj->showNextYear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->showPreviousMonth (  );
+    obj->showPreviousMonth ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->showPreviousYear (  );
+    obj->showPreviousYear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWSELECTEDDATE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->showSelectedDate (  );
+    obj->showSelectedDate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->showToday (  );
+    obj->showToday ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

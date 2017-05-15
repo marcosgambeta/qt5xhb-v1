@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TYPE )
   QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
   QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->totalCount (  ) );
+    hb_retni( obj->totalCount () );
   }
 #endif
 }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_REQUEST )
   QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->request (  ) );
+    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->request () );
     _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
   }
 #endif
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST )
   QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->previousPageRequest (  ) );
+    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->previousPageRequest () );
     _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
   }
 #endif
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_NEXTPAGEREQUEST )
   QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->nextPageRequest (  ) );
+    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->nextPageRequest () );
     _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
   }
 #endif

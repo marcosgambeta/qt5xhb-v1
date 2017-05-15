@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
 
   if( obj )
   {
-    hb_retl( obj->isBool (  ) );
+    hb_retl( obj->isBool () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
 
   if( obj )
   {
-    hb_retl( obj->isDouble (  ) );
+    hb_retl( obj->isDouble () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
 
   if( obj )
   {
-    hb_retl( obj->isString (  ) );
+    hb_retl( obj->isString () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
 
   if( obj )
   {
-    hb_retl( obj->isArray (  ) );
+    hb_retl( obj->isArray () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
 
   if( obj )
   {
-    hb_retl( obj->isObject (  ) );
+    hb_retl( obj->isObject () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
 
   if( obj )
   {
-    hb_retl( obj->isUndefined (  ) );
+    hb_retl( obj->isUndefined () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
 
   if( obj )
   {
-    hb_retl( obj->toBool (  ) );
+    hb_retl( obj->toBool () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
 
   if( obj )
   {
-    hb_retni( obj->toInt (  ) );
+    hb_retni( obj->toInt () );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
 
   if( obj )
   {
-    hb_retnd( obj->toDouble (  ) );
+    hb_retnd( obj->toDouble () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
 
   if( obj )
   {
-    QJsonArray * ptr = new QJsonArray( obj->toArray (  ) );
+    QJsonArray * ptr = new QJsonArray( obj->toArray () );
     _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
 
   if( obj )
   {
-    QJsonObject * ptr = new QJsonObject( obj->toObject (  ) );
+    QJsonObject * ptr = new QJsonObject( obj->toObject () );
     _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }

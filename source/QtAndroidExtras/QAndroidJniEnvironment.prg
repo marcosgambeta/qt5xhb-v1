@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(0) )
   {
-    QAndroidJniEnvironment * o = new QAndroidJniEnvironment (  );
+    QAndroidJniEnvironment * o = new QAndroidJniEnvironment ();
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -97,7 +97,7 @@ static JavaVM *javaVM()
 HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retptr( (JavaVM *) QAndroidJniEnvironment::javaVM (  ) );
+  hb_retptr( (JavaVM *) QAndroidJniEnvironment::javaVM () );
 #endif
 }
 

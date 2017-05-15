@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
   QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 #endif
 }

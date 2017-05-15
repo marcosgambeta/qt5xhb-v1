@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 
   if( obj )
   {
-    QColor * ptr = new QColor( obj->currentColor (  ) );
+    QColor * ptr = new QColor( obj->currentColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -168,7 +168,7 @@ void QColorDialog_open1 ()
 
   if( obj )
   {
-    obj->open (  );
+    obj->open ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->options (  ) );
+    hb_retni( obj->options () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 
   if( obj )
   {
-    QColor * ptr = new QColor( obj->selectedColor (  ) );
+    QColor * ptr = new QColor( obj->selectedColor () );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -365,7 +365,7 @@ static int customCount ()
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 {
-  hb_retni( QColorDialog::customCount (  ) );
+  hb_retni( QColorDialog::customCount () );
 }
 
 /*

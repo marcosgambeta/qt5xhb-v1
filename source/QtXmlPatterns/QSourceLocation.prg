@@ -68,7 +68,7 @@ QSourceLocation ()
 */
 HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
 {
-  QSourceLocation * o = new QSourceLocation (  );
+  QSourceLocation * o = new QSourceLocation ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->column (  ) );
+    hb_retni( obj->column () );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->line (  ) );
+    hb_retni( obj->line () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->uri (  ) );
+    QUrl * ptr = new QUrl( obj->uri () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

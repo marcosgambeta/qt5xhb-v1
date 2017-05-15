@@ -88,7 +88,7 @@ QDBusMessage()
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW1 )
 {
-  QDBusMessage * o = new QDBusMessage (  );
+  QDBusMessage * o = new QDBusMessage ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -97,7 +97,7 @@ QDBusMessage(const QDBusMessage &other)
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW2 )
 {
-  QDBusMessage * o = new QDBusMessage (  );
+  QDBusMessage * o = new QDBusMessage ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY2 )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply (  ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SERVICE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->service (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->service ().toLatin1().data() );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_PATH )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->path (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->path ().toLatin1().data() );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_INTERFACE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->interface (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->interface ().toLatin1().data() );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_MEMBER )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->member (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->member ().toLatin1().data() );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ERRORNAME )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorName ().toLatin1().data() );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ERRORMESSAGE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorMessage (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorMessage ().toLatin1().data() );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_TYPE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SIGNATURE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->signature (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->signature ().toLatin1().data() );
   }
 }
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISREPLYREQUIRED )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReplyRequired (  ) );
+    hb_retl( obj->isReplyRequired () );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISDELAYEDREPLY )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDelayedReply (  ) );
+    hb_retl( obj->isDelayedReply () );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_AUTOSTARTSERVICE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->autoStartService (  ) );
+    hb_retl( obj->autoStartService () );
   }
 }
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ARGUMENTS )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QVariant> list = obj->arguments (  );
+    QList<QVariant> list = obj->arguments ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QVARIANT" );
@@ -494,7 +494,7 @@ static inline QDBusMessage createError(const QDBusError &err)
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR2 )
 {
-  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError (  ) );
+  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError () );
   _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
 }
 

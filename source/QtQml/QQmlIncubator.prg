@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->forceCompletion (  );
+    obj->forceCompletion ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->incubationMode (  ) );
+    hb_retni( obj->incubationMode () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isError (  ) );
+    hb_retl( obj->isError () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLoading (  ) );
+    hb_retl( obj->isLoading () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReady (  ) );
+    hb_retl( obj->isReady () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 }
 

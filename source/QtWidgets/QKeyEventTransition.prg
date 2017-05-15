@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 
   if( obj )
   {
-    hb_retni( obj->key (  ) );
+    hb_retni( obj->key () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 
   if( obj )
   {
-    hb_retni( obj->modifierMask (  ) );
+    hb_retni( obj->modifierMask () );
   }
 }
 

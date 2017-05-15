@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
   QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->flags (  ) );
+    hb_retni( obj->flags () );
   }
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
   QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->imageType (  ) );
+    hb_retni( obj->imageType () );
   }
 }
 

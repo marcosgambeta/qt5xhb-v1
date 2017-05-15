@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rows (  ) );
+    hb_retni( obj->rows () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columns (  ) );
+    hb_retni( obj->columns () );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextTableFormat * ptr = new QTextTableFormat( obj->format (  ) );
+    QTextTableFormat * ptr = new QTextTableFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );
   }
 }

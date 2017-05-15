@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QTEXTLIST_ISEMPTY )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextListFormat * ptr = new QTextListFormat( obj->format (  ) );
+    QTextListFormat * ptr = new QTextListFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
   }
 }

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACK )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->back (  );
+    obj->back ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebHistoryItem * ptr = new QWebHistoryItem( obj->backItem (  ) );
+    QWebHistoryItem * ptr = new QWebHistoryItem( obj->backItem () );
     _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoBack (  ) );
+    hb_retl( obj->canGoBack () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoForward (  ) );
+    hb_retl( obj->canGoForward () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QWEBHISTORY_COUNT )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebHistoryItem * ptr = new QWebHistoryItem( obj->currentItem (  ) );
+    QWebHistoryItem * ptr = new QWebHistoryItem( obj->currentItem () );
     _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentItemIndex (  ) );
+    hb_retni( obj->currentItemIndex () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->forward (  );
+    obj->forward ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebHistoryItem * ptr = new QWebHistoryItem( obj->forwardItem (  ) );
+    QWebHistoryItem * ptr = new QWebHistoryItem( obj->forwardItem () );
     _qt5xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWebHistoryItem> list = obj->items (  );
+    QList<QWebHistoryItem> list = obj->items ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWEBHISTORYITEM" );
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumItemCount (  ) );
+    hb_retni( obj->maximumItemCount () );
   }
 }
 

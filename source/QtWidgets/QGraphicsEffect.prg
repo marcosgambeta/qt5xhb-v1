@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
   QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
   QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
   QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->update (  );
+    obj->update ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

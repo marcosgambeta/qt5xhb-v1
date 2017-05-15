@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
   QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMetaObject * ptr = obj->metaObject (  );
+    const QMetaObject * ptr = obj->metaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }

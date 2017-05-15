@@ -74,7 +74,7 @@ QPlaceContent()
 void QPlaceContent_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * o = new QPlaceContent (  );
+  QPlaceContent * o = new QPlaceContent ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPLACECONTENT_TYPE )
   QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QPLACECONTENT_SUPPLIER )
   QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSupplier * ptr = new QPlaceSupplier( obj->supplier (  ) );
+    QPlaceSupplier * ptr = new QPlaceSupplier( obj->supplier () );
     _qt5xhb_createReturnClass ( ptr, "QPLACESUPPLIER", true );
   }
 #endif
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPLACECONTENT_USER )
   QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceUser * ptr = new QPlaceUser( obj->user (  ) );
+    QPlaceUser * ptr = new QPlaceUser( obj->user () );
     _qt5xhb_createReturnClass ( ptr, "QPLACEUSER", true );
   }
 #endif
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QPLACECONTENT_ATTRIBUTION )
   QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->attribution (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->attribution ().toLatin1().data() );
   }
 #endif
 }

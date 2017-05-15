@@ -54,7 +54,7 @@ QInputMethodEvent ()
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
 {
-  QInputMethodEvent * o = new QInputMethodEvent (  );
+  QInputMethodEvent * o = new QInputMethodEvent ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->commitString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->commitString ().toLatin1().data() );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->preeditString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->preeditString ().toLatin1().data() );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->replacementLength (  ) );
+    hb_retni( obj->replacementLength () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->replacementStart (  ) );
+    hb_retni( obj->replacementStart () );
   }
 }
 

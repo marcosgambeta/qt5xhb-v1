@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
 
   if( obj )
   {
-    hb_retl( obj->calendarPopup (  ) );
+    hb_retl( obj->calendarPopup () );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
 
   if( obj )
   {
-    QCalendarWidget * ptr = obj->calendarWidget (  );
+    QCalendarWidget * ptr = obj->calendarWidget ();
     _qt5xhb_createReturnClass ( ptr, "QCALENDARWIDGET" );
   }
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATE )
 
   if( obj )
   {
-    obj->clearMaximumDate (  );
+    obj->clearMaximumDate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATETIME )
 
   if( obj )
   {
-    obj->clearMaximumDateTime (  );
+    obj->clearMaximumDateTime ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMTIME )
 
   if( obj )
   {
-    obj->clearMaximumTime (  );
+    obj->clearMaximumTime ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATE )
 
   if( obj )
   {
-    obj->clearMinimumDate (  );
+    obj->clearMinimumDate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATETIME )
 
   if( obj )
   {
-    obj->clearMinimumDateTime (  );
+    obj->clearMinimumDateTime ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMTIME )
 
   if( obj )
   {
-    obj->clearMinimumTime (  );
+    obj->clearMinimumTime ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
 
   if( obj )
   {
-    hb_retni( obj->currentSection (  ) );
+    hb_retni( obj->currentSection () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
 
   if( obj )
   {
-    hb_retni( obj->currentSectionIndex (  ) );
+    hb_retni( obj->currentSectionIndex () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATE )
 
   if( obj )
   {
-    QDate * ptr = new QDate( obj->date (  ) );
+    QDate * ptr = new QDate( obj->date () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->dateTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->dateTime () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->displayFormat (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->displayFormat ().toLatin1().data() );
   }
 }
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
 
   if( obj )
   {
-    hb_retni( obj->displayedSections (  ) );
+    hb_retni( obj->displayedSections () );
   }
 }
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATE )
 
   if( obj )
   {
-    QDate * ptr = new QDate( obj->maximumDate (  ) );
+    QDate * ptr = new QDate( obj->maximumDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATETIME )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->maximumDateTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->maximumDateTime () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMTIME )
 
   if( obj )
   {
-    QTime * ptr = new QTime( obj->maximumTime (  ) );
+    QTime * ptr = new QTime( obj->maximumTime () );
     _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATE )
 
   if( obj )
   {
-    QDate * ptr = new QDate( obj->minimumDate (  ) );
+    QDate * ptr = new QDate( obj->minimumDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATETIME )
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->minimumDateTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->minimumDateTime () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMTIME )
 
   if( obj )
   {
-    QTime * ptr = new QTime( obj->minimumTime (  ) );
+    QTime * ptr = new QTime( obj->minimumTime () );
     _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->sectionCount (  ) );
+    hb_retni( obj->sectionCount () );
   }
 }
 
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIME )
 
   if( obj )
   {
-    QTime * ptr = new QTime( obj->time (  ) );
+    QTime * ptr = new QTime( obj->time () );
     _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
 
   if( obj )
   {
-    hb_retni( obj->timeSpec (  ) );
+    hb_retni( obj->timeSpec () );
   }
 }
 
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

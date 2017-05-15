@@ -58,7 +58,7 @@ QScriptString()
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW1 )
 {
-  QScriptString * o = new QScriptString (  );
+  QScriptString * o = new QScriptString ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
   QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
   QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 

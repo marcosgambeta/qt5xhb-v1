@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS )
   QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedImageCodecs (  );
+    QStringList strl = obj->supportedImageCodecs ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
   QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->imageSettings (  ) );
+    QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->imageSettings () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS" );
   }
 }

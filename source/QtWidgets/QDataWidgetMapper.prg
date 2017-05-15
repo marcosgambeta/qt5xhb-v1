@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clearMapping (  );
+    obj->clearMapping ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractItemDelegate * ptr = obj->itemDelegate (  );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractItemModel * ptr = obj->model (  );
+    QAbstractItemModel * ptr = obj->model ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->orientation (  ) );
+    hb_retni( obj->orientation () );
   }
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->rootIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->submitPolicy (  ) );
+    hb_retni( obj->submitPolicy () );
   }
 }
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->revert (  );
+    obj->revert ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->submit (  ) );
+    hb_retl( obj->submit () );
   }
 }
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->toFirst (  );
+    obj->toFirst ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->toLast (  );
+    obj->toLast ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->toNext (  );
+    obj->toNext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->toPrevious (  );
+    obj->toPrevious ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

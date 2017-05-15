@@ -63,7 +63,7 @@ QMediaTimeInterval()
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW1 )
 {
-  QMediaTimeInterval * o = new QMediaTimeInterval (  );
+  QMediaTimeInterval * o = new QMediaTimeInterval ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_END )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->end (  ) );
+    hb_retni( obj->end () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_ISNORMAL )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNormal (  ) );
+    hb_retl( obj->isNormal () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NORMALIZED )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->normalized (  ) );
+    QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->normalized () );
     _qt5xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
   }
 }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_START )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->start (  ) );
+    hb_retni( obj->start () );
   }
 }
 

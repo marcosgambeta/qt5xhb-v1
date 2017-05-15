@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->path (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->path () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

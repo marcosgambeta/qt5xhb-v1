@@ -81,7 +81,7 @@ QSqlRecord ()
 */
 void QSqlRecord_new1 ()
 {
-  QSqlRecord * o = new QSqlRecord (  );
+  QSqlRecord * o = new QSqlRecord ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
 
   if( obj )
   {
-    obj->clearValues (  );
+    obj->clearValues ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSQLRECORD_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
   QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type (  );
+    int i = obj->type ();
     hb_retni( i );
   }
 #endif
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
   QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->operationType (  );
+    int i = obj->operationType ();
     hb_retni( i );
   }
 #endif
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_ID )
   QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->id (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->id ().toLatin1().data() );
   }
 #endif
 }

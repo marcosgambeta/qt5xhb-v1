@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->animated (  ) );
+    hb_retl( obj->animated () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->defaultSize (  ) );
+    QSize * ptr = new QSize( obj->defaultSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->framesPerSecond (  ) );
+    hb_retni( obj->framesPerSecond () );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->viewBox (  ) );
+    QRect * ptr = new QRect( obj->viewBox () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->viewBoxF (  ) );
+    QRectF * ptr = new QRectF( obj->viewBoxF () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

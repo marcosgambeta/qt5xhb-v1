@@ -124,7 +124,7 @@ QScriptValue()
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
-  QScriptValue * o = new QScriptValue (  );
+  QScriptValue * o = new QScriptValue ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->data (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->data () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ENGINE )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptEngine * ptr = obj->engine (  );
+    QScriptEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isArray (  ) );
+    hb_retl( obj->isArray () );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBool (  ) );
+    hb_retl( obj->isBool () );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDate (  ) );
+    hb_retl( obj->isDate () );
   }
 }
 
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isError (  ) );
+    hb_retl( obj->isError () );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFunction (  ) );
+    hb_retl( obj->isFunction () );
   }
 }
 
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNumber (  ) );
+    hb_retl( obj->isNumber () );
   }
 }
 
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isObject (  ) );
+    hb_retl( obj->isObject () );
   }
 }
 
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isQMetaObject (  ) );
+    hb_retl( obj->isQMetaObject () );
   }
 }
 
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isQObject (  ) );
+    hb_retl( obj->isQObject () );
   }
 }
 
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRegExp (  ) );
+    hb_retl( obj->isRegExp () );
   }
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isString (  ) );
+    hb_retl( obj->isString () );
   }
 }
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isUndefined (  ) );
+    hb_retl( obj->isUndefined () );
   }
 }
 
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVariant (  ) );
+    hb_retl( obj->isVariant () );
   }
 }
 
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->prototype (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->prototype () );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptClass * ptr = obj->scriptClass (  );
+    QScriptClass * ptr = obj->scriptClass ();
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTCLASS" );
   }
 }
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->toBool (  ) );
+    hb_retl( obj->toBool () );
   }
 }
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->toDateTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->toDateTime () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toInt32 (  ) );
+    hb_retni( obj->toInt32 () );
   }
 }
 
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINTEGER )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->toInteger (  ) );
+    hb_retnd( obj->toInteger () );
   }
 }
 
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TONUMBER )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->toNumber (  ) );
+    hb_retnd( obj->toNumber () );
   }
 }
 
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQMETAOBJECT )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QMetaObject * ptr = obj->toQMetaObject (  );
+    const QMetaObject * ptr = obj->toQMetaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->toQObject (  );
+    QObject * ptr = obj->toQObject ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegExp * ptr = new QRegExp( obj->toRegExp (  ) );
+    QRegExp * ptr = new QRegExp( obj->toRegExp () );
     _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 }
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toString ().toLatin1().data() );
   }
 }
 
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toUInt16 (  ) );
+    hb_retni( obj->toUInt16 () );
   }
 }
 
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toUInt32 (  ) );
+    hb_retni( obj->toUInt32 () );
   }
 }
 
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->toVariant (  ) );
+    QVariant * ptr = new QVariant( obj->toVariant () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

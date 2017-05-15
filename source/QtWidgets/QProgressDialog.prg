@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
 
   if( obj )
   {
-    hb_retl( obj->autoClose (  ) );
+    hb_retl( obj->autoClose () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 
   if( obj )
   {
-    hb_retl( obj->autoReset (  ) );
+    hb_retl( obj->autoReset () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->labelText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->labelText ().toLatin1().data() );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
 
   if( obj )
   {
-    hb_retni( obj->maximum (  ) );
+    hb_retni( obj->maximum () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
 
   if( obj )
   {
-    hb_retni( obj->minimum (  ) );
+    hb_retni( obj->minimum () );
   }
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
 
   if( obj )
   {
-    hb_retni( obj->minimumDuration (  ) );
+    hb_retni( obj->minimumDuration () );
   }
 }
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
 
   if( obj )
   {
-    hb_retni( obj->value (  ) );
+    hb_retni( obj->value () );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
 
   if( obj )
   {
-    hb_retl( obj->wasCanceled (  ) );
+    hb_retl( obj->wasCanceled () );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
 
   if( obj )
   {
-    obj->cancel (  );
+    obj->cancel ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
 
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

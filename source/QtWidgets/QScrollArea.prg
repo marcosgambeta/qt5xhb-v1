@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->alignment (  ) );
+    hb_retni( obj->alignment () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->takeWidget (  );
+    QWidget * ptr = obj->takeWidget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->widgetResizable (  ) );
+    hb_retl( obj->widgetResizable () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

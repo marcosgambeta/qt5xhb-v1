@@ -70,7 +70,7 @@ QPlaceReview()
 HB_FUNC_STATIC( QPLACEREVIEW_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * o = new QPlaceReview (  );
+  QPlaceReview * o = new QPlaceReview ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_DATETIME )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->dateTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->dateTime () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 #endif
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_TEXT )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_LANGUAGE )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->language (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->language ().toLatin1().data() );
   }
 #endif
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_RATING )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rating (  ) );
+    hb_retnd( obj->rating () );
   }
 #endif
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_REVIEWID )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->reviewId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->reviewId ().toLatin1().data() );
   }
 #endif
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_TITLE )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->title ().toLatin1().data() );
   }
 #endif
 }

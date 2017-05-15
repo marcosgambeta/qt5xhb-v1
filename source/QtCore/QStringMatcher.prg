@@ -59,7 +59,7 @@ QStringMatcher()
 */
 void QStringMatcher_new1 ()
 {
-  QStringMatcher * o = new QStringMatcher (  );
+  QStringMatcher * o = new QStringMatcher ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->pattern (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->pattern ().toLatin1().data() );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
 
   if( obj )
   {
-    hb_retni( obj->caseSensitivity (  ) );
+    hb_retni( obj->caseSensitivity () );
   }
 }
 

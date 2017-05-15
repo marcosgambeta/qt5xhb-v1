@@ -89,7 +89,7 @@ QMetaProperty()
 */
 HB_FUNC_STATIC( QMETAPROPERTY_NEW )
 {
-  QMetaProperty * o = new QMetaProperty (  );
+  QMetaProperty * o = new QMetaProperty ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NAME )
 
   if( obj )
   {
-    const char * str1 = obj->name (  );
+    const char * str1 = obj->name ();
     hb_retc( str1 );
   }
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
 
   if( obj )
   {
-    const char * str1 = obj->typeName (  );
+    const char * str1 = obj->typeName ();
     hb_retc( str1 );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
 
   if( obj )
   {
-    hb_retni( obj->userType (  ) );
+    hb_retni( obj->userType () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
 
   if( obj )
   {
-    hb_retni( obj->propertyIndex (  ) );
+    hb_retni( obj->propertyIndex () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISREADABLE )
 
   if( obj )
   {
-    hb_retl( obj->isReadable (  ) );
+    hb_retl( obj->isReadable () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable (  ) );
+    hb_retl( obj->isWritable () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
 
   if( obj )
   {
-    hb_retl( obj->isResettable (  ) );
+    hb_retl( obj->isResettable () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISCONSTANT )
 
   if( obj )
   {
-    hb_retl( obj->isConstant (  ) );
+    hb_retl( obj->isConstant () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFINAL )
 
   if( obj )
   {
-    hb_retl( obj->isFinal (  ) );
+    hb_retl( obj->isFinal () );
   }
 }
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFLAGTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isFlagType (  ) );
+    hb_retl( obj->isFlagType () );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISENUMTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isEnumType (  ) );
+    hb_retl( obj->isEnumType () );
   }
 }
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
 
   if( obj )
   {
-    QMetaEnum * ptr = new QMetaEnum( obj->enumerator (  ) );
+    QMetaEnum * ptr = new QMetaEnum( obj->enumerator () );
     _qt5xhb_createReturnClass ( ptr, "QMETAENUM" );
   }
 }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASNOTIFYSIGNAL )
 
   if( obj )
   {
-    hb_retl( obj->hasNotifySignal (  ) );
+    hb_retl( obj->hasNotifySignal () );
   }
 }
 
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
 
   if( obj )
   {
-    QMetaMethod * ptr = new QMetaMethod( obj->notifySignal (  ) );
+    QMetaMethod * ptr = new QMetaMethod( obj->notifySignal () );
     _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
   }
 }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
 
   if( obj )
   {
-    hb_retni( obj->notifySignalIndex (  ) );
+    hb_retni( obj->notifySignalIndex () );
   }
 }
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
 
   if( obj )
   {
-    hb_retni( obj->revision (  ) );
+    hb_retni( obj->revision () );
   }
 }
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASSTDCPPSET )
 
   if( obj )
   {
-    hb_retl( obj->hasStdCppSet (  ) );
+    hb_retl( obj->hasStdCppSet () );
   }
 }
 
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
 
   if( obj )
   {
-    const QMetaObject * ptr = obj->enclosingMetaObject (  );
+    const QMetaObject * ptr = obj->enclosingMetaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }

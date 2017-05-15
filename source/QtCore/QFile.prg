@@ -79,7 +79,7 @@ QFile()
 */
 void QFile_new1 ()
 {
-  QFile * o = new QFile (  );
+  QFile * o = new QFile ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QFILE_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -220,7 +220,7 @@ void QFile_exists1 ()
 
   if( obj )
   {
-    hb_retl( obj->exists (  ) );
+    hb_retl( obj->exists () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QFILE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QFILE_FLUSH )
 
   if( obj )
   {
-    hb_retl( obj->flush (  ) );
+    hb_retl( obj->flush () );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QFILE_HANDLE )
 
   if( obj )
   {
-    hb_retni( obj->handle (  ) );
+    hb_retni( obj->handle () );
   }
 }
 
@@ -430,7 +430,7 @@ void QFile_permissions1 ()
 
   if( obj )
   {
-    hb_retni( obj->permissions (  ) );
+    hb_retni( obj->permissions () );
   }
 }
 
@@ -470,7 +470,7 @@ void QFile_remove1 ()
 
   if( obj )
   {
-    hb_retl( obj->remove (  ) );
+    hb_retl( obj->remove () );
   }
 }
 
@@ -654,7 +654,7 @@ void QFile_symLinkTarget1 ()
 
   if( obj )
   {
-    hb_retc( (const char *) obj->symLinkTarget (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->symLinkTarget ().toLatin1().data() );
   }
 }
 
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QFILE_UNSETERROR )
 
   if( obj )
   {
-    obj->unsetError (  );
+    obj->unsetError ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QFILE_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QFILE_CLOSE )
 
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 }
 
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QFILE_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos (  ) );
+    hb_retni( obj->pos () );
   }
 }
 
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QFILE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -863,7 +863,7 @@ void QFile_readLink1 ()
 
   if( obj )
   {
-    hb_retc( (const char *) obj->readLink (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->readLink ().toLatin1().data() );
   }
 }
 

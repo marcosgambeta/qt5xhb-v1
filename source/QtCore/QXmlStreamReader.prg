@@ -115,7 +115,7 @@ QXmlStreamReader()
 */
 void QXmlStreamReader_new1 ()
 {
-  QXmlStreamReader * o = new QXmlStreamReader (  );
+  QXmlStreamReader * o = new QXmlStreamReader ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ATTRIBUTES )
 
   if( obj )
   {
-    QXmlStreamAttributes * ptr = new QXmlStreamAttributes( obj->attributes (  ) );
+    QXmlStreamAttributes * ptr = new QXmlStreamAttributes( obj->attributes () );
     _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMATTRIBUTES", true );
   }
 }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_CHARACTEROFFSET )
 
   if( obj )
   {
-    hb_retni( obj->characterOffset (  ) );
+    hb_retni( obj->characterOffset () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_COLUMNNUMBER )
 
   if( obj )
   {
-    hb_retni( obj->columnNumber (  ) );
+    hb_retni( obj->columnNumber () );
   }
 }
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DEVICE )
 
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTENCODING )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->documentEncoding (  ) );
+    QStringRef * ptr = new QStringRef( obj->documentEncoding () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTVERSION )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->documentVersion (  ) );
+    QStringRef * ptr = new QStringRef( obj->documentVersion () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDNAME )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->dtdName (  ) );
+    QStringRef * ptr = new QStringRef( obj->dtdName () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDPUBLICID )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->dtdPublicId (  ) );
+    QStringRef * ptr = new QStringRef( obj->dtdPublicId () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDSYSTEMID )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->dtdSystemId (  ) );
+    QStringRef * ptr = new QStringRef( obj->dtdSystemId () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYDECLARATIONS )
 
   if( obj )
   {
-    QXmlStreamEntityDeclarations * ptr = new QXmlStreamEntityDeclarations( obj->entityDeclarations (  ) );
+    QXmlStreamEntityDeclarations * ptr = new QXmlStreamEntityDeclarations( obj->entityDeclarations () );
     _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYDECLARATIONS" );
   }
 }
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYRESOLVER )
 
   if( obj )
   {
-    QXmlStreamEntityResolver * ptr = obj->entityResolver (  );
+    QXmlStreamEntityResolver * ptr = obj->entityResolver ();
     _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYRESOLVER" );
   }
 }
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_HASERROR )
 
   if( obj )
   {
-    hb_retl( obj->hasError (  ) );
+    hb_retl( obj->hasError () );
   }
 }
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCDATA )
 
   if( obj )
   {
-    hb_retl( obj->isCDATA (  ) );
+    hb_retl( obj->isCDATA () );
   }
 }
 
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCHARACTERS )
 
   if( obj )
   {
-    hb_retl( obj->isCharacters (  ) );
+    hb_retl( obj->isCharacters () );
   }
 }
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCOMMENT )
 
   if( obj )
   {
-    hb_retl( obj->isComment (  ) );
+    hb_retl( obj->isComment () );
   }
 }
 
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISDTD )
 
   if( obj )
   {
-    hb_retl( obj->isDTD (  ) );
+    hb_retl( obj->isDTD () );
   }
 }
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDDOCUMENT )
 
   if( obj )
   {
-    hb_retl( obj->isEndDocument (  ) );
+    hb_retl( obj->isEndDocument () );
   }
 }
 
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDELEMENT )
 
   if( obj )
   {
-    hb_retl( obj->isEndElement (  ) );
+    hb_retl( obj->isEndElement () );
   }
 }
 
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENTITYREFERENCE )
 
   if( obj )
   {
-    hb_retl( obj->isEntityReference (  ) );
+    hb_retl( obj->isEntityReference () );
   }
 }
 
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION )
 
   if( obj )
   {
-    hb_retl( obj->isProcessingInstruction (  ) );
+    hb_retl( obj->isProcessingInstruction () );
   }
 }
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTANDALONEDOCUMENT )
 
   if( obj )
   {
-    hb_retl( obj->isStandaloneDocument (  ) );
+    hb_retl( obj->isStandaloneDocument () );
   }
 }
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTDOCUMENT )
 
   if( obj )
   {
-    hb_retl( obj->isStartDocument (  ) );
+    hb_retl( obj->isStartDocument () );
   }
 }
 
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTELEMENT )
 
   if( obj )
   {
-    hb_retl( obj->isStartElement (  ) );
+    hb_retl( obj->isStartElement () );
   }
 }
 
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISWHITESPACE )
 
   if( obj )
   {
-    hb_retl( obj->isWhitespace (  ) );
+    hb_retl( obj->isWhitespace () );
   }
 }
 
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_LINENUMBER )
 
   if( obj )
   {
-    hb_retni( obj->lineNumber (  ) );
+    hb_retni( obj->lineNumber () );
   }
 }
 
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAME )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->name (  ) );
+    QStringRef * ptr = new QStringRef( obj->name () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEDECLARATIONS )
 
   if( obj )
   {
-    QXmlStreamNamespaceDeclarations * ptr = new QXmlStreamNamespaceDeclarations( obj->namespaceDeclarations (  ) );
+    QXmlStreamNamespaceDeclarations * ptr = new QXmlStreamNamespaceDeclarations( obj->namespaceDeclarations () );
     _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMNAMESPACEDECLARATIONS" );
   }
 }
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEPROCESSING )
 
   if( obj )
   {
-    hb_retl( obj->namespaceProcessing (  ) );
+    hb_retl( obj->namespaceProcessing () );
   }
 }
 
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEURI )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri (  ) );
+    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NOTATIONDECLARATIONS )
 
   if( obj )
   {
-    QXmlStreamNotationDeclarations * ptr = new QXmlStreamNotationDeclarations( obj->notationDeclarations (  ) );
+    QXmlStreamNotationDeclarations * ptr = new QXmlStreamNotationDeclarations( obj->notationDeclarations () );
     _qt5xhb_createReturnClass ( ptr, "QXMLSTREAMNOTATIONDECLARATIONS" );
   }
 }
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PREFIX )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->prefix (  ) );
+    QStringRef * ptr = new QStringRef( obj->prefix () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->processingInstructionData (  ) );
+    QStringRef * ptr = new QStringRef( obj->processingInstructionData () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->processingInstructionTarget (  ) );
+    QStringRef * ptr = new QStringRef( obj->processingInstructionTarget () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_QUALIFIEDNAME )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->qualifiedName (  ) );
+    QStringRef * ptr = new QStringRef( obj->qualifiedName () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXT )
 
   if( obj )
   {
-    hb_retni( obj->readNext (  ) );
+    hb_retni( obj->readNext () );
   }
 }
 
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXTSTARTELEMENT )
 
   if( obj )
   {
-    hb_retl( obj->readNextStartElement (  ) );
+    hb_retl( obj->readNextStartElement () );
   }
 }
 
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SKIPCURRENTELEMENT )
 
   if( obj )
   {
-    obj->skipCurrentElement (  );
+    obj->skipCurrentElement ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TEXT )
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->text (  ) );
+    QStringRef * ptr = new QStringRef( obj->text () );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->tokenString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->tokenString ().toLatin1().data() );
   }
 }
 
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENTYPE )
 
   if( obj )
   {
-    hb_retni( obj->tokenType (  ) );
+    hb_retni( obj->tokenType () );
   }
 }
 

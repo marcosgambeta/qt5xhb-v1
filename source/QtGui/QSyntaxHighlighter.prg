@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextDocument * ptr = obj->document (  );
+    QTextDocument * ptr = obj->document ();
     _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->rehighlight (  );
+    obj->rehighlight ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

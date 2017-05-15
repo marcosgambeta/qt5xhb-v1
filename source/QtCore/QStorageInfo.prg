@@ -80,7 +80,7 @@ QStorageInfo()
 void QStorageInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo (  );
+  QStorageInfo * o = new QStorageInfo ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->rootPath (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->rootPath ().toLatin1().data() );
   }
 #endif
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DEVICE )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->device (  ) );
+    QByteArray * ptr = new QByteArray( obj->device () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->fileSystemType (  ) );
+    QByteArray * ptr = new QByteArray( obj->fileSystemType () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->displayName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->displayName ().toLatin1().data() );
   }
 #endif
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESTOTAL )
 
   if( obj )
   {
-    hb_retni( obj->bytesTotal (  ) );
+    hb_retni( obj->bytesTotal () );
   }
 #endif
 }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESFREE )
 
   if( obj )
   {
-    hb_retni( obj->bytesFree (  ) );
+    hb_retni( obj->bytesFree () );
   }
 #endif
 }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESAVAILABLE )
 
   if( obj )
   {
-    hb_retni( obj->bytesAvailable (  ) );
+    hb_retni( obj->bytesAvailable () );
   }
 #endif
 }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISROOT )
 
   if( obj )
   {
-    hb_retl( obj->isRoot (  ) );
+    hb_retl( obj->isRoot () );
   }
 #endif
 }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 #endif
 }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADY )
 
   if( obj )
   {
-    hb_retl( obj->isReady (  ) );
+    hb_retl( obj->isReady () );
   }
 #endif
 }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_REFRESH )
 
   if( obj )
   {
-    obj->refresh (  );
+    obj->refresh ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -422,7 +422,7 @@ static QList<QStorageInfo> mountedVolumes()
 HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QList<QStorageInfo> list = QStorageInfo::mountedVolumes (  );
+  QList<QStorageInfo> list = QStorageInfo::mountedVolumes ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSTORAGEINFO" );
@@ -467,7 +467,7 @@ static QStorageInfo root()
 HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root (  ) );
+  QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root () );
   _qt5xhb_createReturnClass ( ptr, "QSTORAGEINFO", true );
 #endif
 }

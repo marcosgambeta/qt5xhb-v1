@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->modifiers (  ) );
+    hb_retni( obj->modifiers () );
   }
 }
 
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->pos (  ) );
+    QPointF * ptr = new QPointF( obj->pos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->reason (  ) );
+    hb_retni( obj->reason () );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->scenePos (  ) );
+    QPointF * ptr = new QPointF( obj->scenePos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->screenPos (  ) );
+    QPoint * ptr = new QPoint( obj->screenPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }

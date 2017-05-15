@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->doneCurrent (  ) );
+    hb_retl( obj->doneCurrent () );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGLFormat * ptr = new QGLFormat( obj->format (  ) );
+    QGLFormat * ptr = new QGLFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QGLFORMAT" );
   }
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->generateDynamicTexture (  ) );
+    hb_retni( obj->generateDynamicTexture () );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->makeCurrent (  ) );
+    hb_retl( obj->makeCurrent () );
   }
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->releaseFromDynamicTexture (  );
+    obj->releaseFromDynamicTexture ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * ptr = new QImage( obj->toImage (  ) );
+    QImage * ptr = new QImage( obj->toImage () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPaintEngine * ptr = obj->paintEngine (  );
+    QPaintEngine * ptr = obj->paintEngine ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE" );
   }
 }
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasOpenGLPbuffers (  ) );
+    hb_retl( obj->hasOpenGLPbuffers () );
   }
 }
 

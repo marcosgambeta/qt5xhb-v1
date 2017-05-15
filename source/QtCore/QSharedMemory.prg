@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->key (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->key ().toLatin1().data() );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->nativeKey (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->nativeKey ().toLatin1().data() );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 
   if( obj )
   {
-    hb_retl( obj->isAttached (  ) );
+    hb_retl( obj->isAttached () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 
   if( obj )
   {
-    hb_retl( obj->detach (  ) );
+    hb_retl( obj->detach () );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 
   if( obj )
   {
-    hb_retptr( (void *) obj->data (  ) );
+    hb_retptr( (void *) obj->data () );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 
   if( obj )
   {
-    hb_retl( obj->lock (  ) );
+    hb_retl( obj->lock () );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 
   if( obj )
   {
-    hb_retl( obj->unlock (  ) );
+    hb_retl( obj->unlock () );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 

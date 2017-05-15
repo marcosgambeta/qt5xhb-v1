@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->alignment (  ) );
+    hb_retni( obj->alignment () );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
 
   if( obj )
   {
-    hb_retni( obj->controlTypes (  ) );
+    hb_retni( obj->controlTypes () );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
 
   if( obj )
   {
-    hb_retni( obj->expandingDirections (  ) );
+    hb_retni( obj->expandingDirections () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
 
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
 
   if( obj )
   {
-    QLayout * ptr = obj->layout (  );
+    QLayout * ptr = obj->layout ();
     _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
   }
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
 
   if( obj )
   {
-    QSpacerItem * ptr = obj->spacerItem (  );
+    QSpacerItem * ptr = obj->spacerItem ();
     _qt5xhb_createReturnClass ( ptr, "QSPACERITEM" );
   }
 }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->defaultDevice (  ) );
+    hb_retni( obj->defaultDevice () );
   }
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->deviceCount (  ) );
+    hb_retni( obj->deviceCount () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectedDevice (  ) );
+    hb_retni( obj->selectedDevice () );
   }
 }
 

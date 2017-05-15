@@ -64,7 +64,7 @@ QPlaceAttribute()
 void QPlaceAttribute_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * o = new QPlaceAttribute (  );
+  QPlaceAttribute * o = new QPlaceAttribute ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_LABEL )
   QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->label (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->label ().toLatin1().data() );
   }
 #endif
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_TEXT )
   QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 #endif
 }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_ISEMPTY )
   QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 #endif
 }

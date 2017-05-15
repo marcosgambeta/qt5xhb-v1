@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
   QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->gestureType (  ) );
+    hb_retni( obj->gestureType () );
   }
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_VALUE )
   QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->value (  ) );
+    hb_retnd( obj->value () );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_LOCALPOS )
   QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->localPos (  );
+    const QPointF * ptr = &obj->localPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_WINDOWPOS )
   QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->windowPos (  );
+    const QPointF * ptr = &obj->windowPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_SCREENPOS )
   QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QPointF * ptr = &obj->screenPos (  );
+    const QPointF * ptr = &obj->screenPos ();
     _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }

@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->effectiveDate (  ) );
+    QDateTime * ptr = new QDateTime( obj->effectiveDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->expiryDate (  ) );
+    QDateTime * ptr = new QDateTime( obj->expiryDate () );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslKey * ptr = new QSslKey( obj->publicKey (  ) );
+    QSslKey * ptr = new QSslKey( obj->publicKey () );
     _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
   }
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->serialNumber (  ) );
+    QByteArray * ptr = new QByteArray( obj->serialNumber () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toDer (  ) );
+    QByteArray * ptr = new QByteArray( obj->toDer () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toPem (  ) );
+    QByteArray * ptr = new QByteArray( obj->toPem () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOTEXT )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toText ().toLatin1().data() );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->version (  ) );
+    QByteArray * ptr = new QByteArray( obj->version () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

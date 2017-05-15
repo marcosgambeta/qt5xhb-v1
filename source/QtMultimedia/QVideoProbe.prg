@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 

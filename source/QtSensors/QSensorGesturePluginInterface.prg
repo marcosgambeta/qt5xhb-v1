@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
   QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QSensorGestureRecognizer *> list = obj->createRecognizers (  );
+    QList<QSensorGestureRecognizer *> list = obj->createRecognizers ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSENSORGESTURERECOGNIZER" );
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS )
   QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedIds (  );
+    QStringList strl = obj->supportedIds ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NAME )
   QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }

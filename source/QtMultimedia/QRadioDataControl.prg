@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONID )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->stationId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->stationId ().toLatin1().data() );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPE )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->programType (  ) );
+    hb_retni( obj->programType () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPENAME )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->programTypeName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->programTypeName ().toLatin1().data() );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONNAME )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->stationName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->stationName ().toLatin1().data() );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->radioText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->radioText ().toLatin1().data() );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAlternativeFrequenciesEnabled (  ) );
+    hb_retl( obj->isAlternativeFrequenciesEnabled () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERROR )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 

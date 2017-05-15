@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->codeTemplate (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->codeTemplate ().toLatin1().data() );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->domXml (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->domXml ().toLatin1().data() );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->group (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->group ().toLatin1().data() );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->includeFile (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->includeFile ().toLatin1().data() );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 
   if( obj )
   {
-    hb_retl( obj->isContainer (  ) );
+    hb_retl( obj->isContainer () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 
   if( obj )
   {
-    hb_retl( obj->isInitialized (  ) );
+    hb_retl( obj->isInitialized () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
   }
 }
 

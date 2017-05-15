@@ -85,7 +85,7 @@ QTimeZone()
 void QTimeZone_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone (  );
+  QTimeZone * o = new QTimeZone ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTIMEZONE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTIMEZONE_ID )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->id (  ) );
+    QByteArray * ptr = new QByteArray( obj->id () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
 
   if( obj )
   {
-    hb_retni( obj->country (  ) );
+    hb_retni( obj->country () );
   }
 #endif
 }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->comment (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->comment ().toLatin1().data() );
   }
 #endif
 }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASDAYLIGHTTIME )
 
   if( obj )
   {
-    hb_retl( obj->hasDaylightTime (  ) );
+    hb_retl( obj->hasDaylightTime () );
   }
 #endif
 }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASTRANSITIONS )
 
   if( obj )
   {
-    hb_retl( obj->hasTransitions (  ) );
+    hb_retl( obj->hasTransitions () );
   }
 #endif
 }
@@ -486,7 +486,7 @@ static QByteArray systemTimeZoneId()
 HB_FUNC_STATIC( QTIMEZONE_SYSTEMTIMEZONEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * ptr = new QByteArray( QTimeZone::systemTimeZoneId (  ) );
+  QByteArray * ptr = new QByteArray( QTimeZone::systemTimeZoneId () );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
@@ -515,7 +515,7 @@ static QList<QByteArray> availableTimeZoneIds()
 HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QList<QByteArray> list = QTimeZone::availableTimeZoneIds (  );
+  QList<QByteArray> list = QTimeZone::availableTimeZoneIds ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

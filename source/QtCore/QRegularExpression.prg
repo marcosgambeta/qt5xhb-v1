@@ -71,7 +71,7 @@ QRegularExpression()
 */
 void QRegularExpression_new1 ()
 {
-  QRegularExpression * o = new QRegularExpression (  );
+  QRegularExpression * o = new QRegularExpression ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_CAPTURECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->captureCount (  ) );
+    hb_retni( obj->captureCount () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->pattern (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->pattern ().toLatin1().data() );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERNERROROFFSET )
 
   if( obj )
   {
-    hb_retni( obj->patternErrorOffset (  ) );
+    hb_retni( obj->patternErrorOffset () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERNOPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->patternOptions (  ) );
+    hb_retni( obj->patternOptions () );
   }
 }
 

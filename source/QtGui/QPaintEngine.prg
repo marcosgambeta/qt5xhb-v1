@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QPAINTENGINE_END )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->end (  ) );
+    hb_retl( obj->end () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPaintDevice * ptr = obj->paintDevice (  );
+    QPaintDevice * ptr = obj->paintDevice ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
   }
 }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * ptr = obj->painter (  );
+    QPainter * ptr = obj->painter ();
     _qt5xhb_createReturnClass ( ptr, "QPAINTER" );
   }
 }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QPAINTENGINE_TYPE )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

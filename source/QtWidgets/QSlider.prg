@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->tickInterval (  ) );
+    hb_retni( obj->tickInterval () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 
   if( obj )
   {
-    hb_retni( obj->tickPosition (  ) );
+    hb_retni( obj->tickPosition () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

@@ -80,7 +80,7 @@ QBluetoothDeviceInfo()
 void QBluetoothDeviceInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo (  );
+  QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo ();
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ISCACHED )
 
   if( obj )
   {
-    hb_retl( obj->isCached (  ) );
+    hb_retl( obj->isCached () );
   }
 #endif
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ADDRESS )
 
   if( obj )
   {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address (  ) );
+    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SERVICECLASSES )
 
   if( obj )
   {
-    hb_retni( obj->serviceClasses (  ) );
+    hb_retni( obj->serviceClasses () );
   }
 #endif
 }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MAJORDEVICECLASS )
 
   if( obj )
   {
-    hb_retni( obj->majorDeviceClass (  ) );
+    hb_retni( obj->majorDeviceClass () );
   }
 #endif
 }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MINORDEVICECLASS )
 
   if( obj )
   {
-    hb_retni( obj->minorDeviceClass (  ) );
+    hb_retni( obj->minorDeviceClass () );
   }
 #endif
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_RSSI )
 
   if( obj )
   {
-    hb_retni( obj->rssi (  ) );
+    hb_retni( obj->rssi () );
   }
 #endif
 }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SERVICEUUIDSCOMPLETENESS )
 
   if( obj )
   {
-    hb_retni( obj->serviceUuidsCompleteness (  ) );
+    hb_retni( obj->serviceUuidsCompleteness () );
   }
 #endif
 }

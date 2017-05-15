@@ -60,7 +60,7 @@ QPlaceProposedSearchResult()
 HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * o = new QPlaceProposedSearchResult (  );
+  QPlaceProposedSearchResult * o = new QPlaceProposedSearchResult ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST )
   QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->searchRequest (  ) );
+    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->searchRequest () );
     _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
   }
 #endif

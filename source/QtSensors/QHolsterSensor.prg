@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_READING )
   QHolsterSensor * obj = (QHolsterSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHolsterReading * ptr = obj->reading (  );
+    QHolsterReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QHOLSTERREADING" );
   }
 #endif

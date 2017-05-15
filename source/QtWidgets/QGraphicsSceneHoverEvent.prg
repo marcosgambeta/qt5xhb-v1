@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTPOS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->lastPos (  ) );
+    QPointF * ptr = new QPointF( obj->lastPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->lastScenePos (  ) );
+    QPointF * ptr = new QPointF( obj->lastScenePos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->lastScreenPos (  ) );
+    QPoint * ptr = new QPoint( obj->lastScreenPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_MODIFIERS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->modifiers (  ) );
+    hb_retni( obj->modifiers () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_POS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->pos (  ) );
+    QPointF * ptr = new QPointF( obj->pos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCENEPOS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->scenePos (  ) );
+    QPointF * ptr = new QPointF( obj->scenePos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCREENPOS )
   QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->screenPos (  ) );
+    QPoint * ptr = new QPoint( obj->screenPos () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }

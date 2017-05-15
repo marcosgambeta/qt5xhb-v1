@@ -137,7 +137,7 @@ QLocale ()
 */
 void QLocale_new1 ()
 {
-  QLocale * o = new QLocale (  );
+  QLocale * o = new QLocale ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QLOCALE_AMTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->amText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->amText ().toLatin1().data() );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->bcp47Name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->bcp47Name ().toLatin1().data() );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRY )
 
   if( obj )
   {
-    hb_retni( obj->country (  ) );
+    hb_retni( obj->country () );
   }
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->decimalPoint (  ) );
+    QChar * ptr = new QChar( obj->decimalPoint () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->exponential (  ) );
+    QChar * ptr = new QChar( obj->exponential () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
 
   if( obj )
   {
-    hb_retni( obj->firstDayOfWeek (  ) );
+    hb_retni( obj->firstDayOfWeek () );
   }
 }
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->groupSeparator (  ) );
+    QChar * ptr = new QChar( obj->groupSeparator () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGE )
 
   if( obj )
   {
-    hb_retni( obj->language (  ) );
+    hb_retni( obj->language () );
   }
 }
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
 
   if( obj )
   {
-    hb_retni( obj->measurementSystem (  ) );
+    hb_retni( obj->measurementSystem () );
   }
 }
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QLOCALE_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->nativeCountryName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->nativeCountryName ().toLatin1().data() );
   }
 }
 
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->nativeLanguageName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->nativeLanguageName ().toLatin1().data() );
   }
 }
 
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->negativeSign (  ) );
+    QChar * ptr = new QChar( obj->negativeSign () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->numberOptions (  ) );
+    hb_retni( obj->numberOptions () );
   }
 }
 
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QLOCALE_PERCENT )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->percent (  ) );
+    QChar * ptr = new QChar( obj->percent () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QLOCALE_PMTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->pmText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->pmText ().toLatin1().data() );
   }
 }
 
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->positiveSign (  ) );
+    QChar * ptr = new QChar( obj->positiveSign () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPT )
 
   if( obj )
   {
-    hb_retni( obj->script (  ) );
+    hb_retni( obj->script () );
   }
 }
 
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
 
   if( obj )
   {
-    hb_retni( obj->textDirection (  ) );
+    hb_retni( obj->textDirection () );
   }
 }
 
@@ -1532,7 +1532,7 @@ HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
 
   if( obj )
   {
-    QStringList strl = obj->uiLanguages (  );
+    QStringList strl = obj->uiLanguages ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 
   if( obj )
   {
-    QList<Qt::DayOfWeek> list = obj->weekdays (  );
+    QList<Qt::DayOfWeek> list = obj->weekdays ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC( QLOCALE_ZERODIGIT )
 
   if( obj )
   {
-    QChar * ptr = new QChar( obj->zeroDigit (  ) );
+    QChar * ptr = new QChar( obj->zeroDigit () );
     _qt5xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -1579,7 +1579,7 @@ static QLocale c ()
 */
 HB_FUNC_STATIC( QLOCALE_C )
 {
-  QLocale * ptr = new QLocale( QLocale::c (  ) );
+  QLocale * ptr = new QLocale( QLocale::c () );
   _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
 }
 
@@ -1702,7 +1702,7 @@ static QLocale system ()
 */
 HB_FUNC_STATIC( QLOCALE_SYSTEM )
 {
-  QLocale * ptr = new QLocale( QLocale::system (  ) );
+  QLocale * ptr = new QLocale( QLocale::system () );
   _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
 }
 

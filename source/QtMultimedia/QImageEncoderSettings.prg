@@ -72,7 +72,7 @@ QImageEncoderSettings()
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW1 )
 {
-  QImageEncoderSettings * o = new QImageEncoderSettings (  );
+  QImageEncoderSettings * o = new QImageEncoderSettings ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ISNULL )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_CODEC )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->codec (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->codec ().toLatin1().data() );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->resolution (  ) );
+    QSize * ptr = new QSize( obj->resolution () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_QUALITY )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->quality (  ) );
+    hb_retni( obj->quality () );
   }
 }
 

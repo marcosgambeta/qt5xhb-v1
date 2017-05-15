@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS )
   QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedVideoCodecs (  );
+    QStringList strl = obj->supportedVideoCodecs ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS )
   QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings (  ) );
+    QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings () );
     _qt5xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS" );
   }
 }

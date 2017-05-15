@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERNAME )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->managerName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->managerName ().toLatin1().data() );
   }
 #endif
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERVERSION )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->managerVersion (  ) );
+    hb_retni( obj->managerVersion () );
   }
 #endif
 }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_INITIALIZECATEGORIES )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceReply * ptr = obj->initializeCategories (  );
+    QPlaceReply * ptr = obj->initializeCategories ();
     _qt5xhb_createReturnClass ( ptr, "QPLACEREPLY" );
   }
 #endif
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_LOCALES )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QLocale> list = obj->locales (  );
+    QList<QLocale> list = obj->locales ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QLOCALE" );

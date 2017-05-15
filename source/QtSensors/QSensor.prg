@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSENSOR_IDENTIFIER )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->identifier (  ) );
+    QByteArray * ptr = new QByteArray( obj->identifier () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSENSOR_TYPE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->type (  ) );
+    QByteArray * ptr = new QByteArray( obj->type () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 #endif
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSENSOR_CONNECTTOBACKEND )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->connectToBackend (  ) );
+    hb_retl( obj->connectToBackend () );
   }
 #endif
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSENSOR_ISCONNECTEDTOBACKEND )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isConnectedToBackend (  ) );
+    hb_retl( obj->isConnectedToBackend () );
   }
 #endif
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSENSOR_ISBUSY )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBusy (  ) );
+    hb_retl( obj->isBusy () );
   }
 #endif
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSENSOR_ISACTIVE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 #endif
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSENSOR_ISALWAYSON )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAlwaysOn (  ) );
+    hb_retl( obj->isAlwaysOn () );
   }
 #endif
 }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSENSOR_SKIPDUPLICATES )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->skipDuplicates (  ) );
+    hb_retl( obj->skipDuplicates () );
   }
 #endif
 }
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QSENSOR_AVAILABLEDATARATES )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qrangelist * ptr = new qrangelist( obj->availableDataRates (  ) );
+    qrangelist * ptr = new qrangelist( obj->availableDataRates () );
     _qt5xhb_createReturnClass ( ptr, "QRANGELIST" );
   }
 #endif
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSENSOR_DATARATE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->dataRate (  ) );
+    hb_retni( obj->dataRate () );
   }
 #endif
 }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QSENSOR_OUTPUTRANGES )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    qoutputrangelist * ptr = new qoutputrangelist( obj->outputRanges (  ) );
+    qoutputrangelist * ptr = new qoutputrangelist( obj->outputRanges () );
     _qt5xhb_createReturnClass ( ptr, "QOUTPUTRANGELIST" );
   }
 #endif
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSENSOR_OUTPUTRANGE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->outputRange (  ) );
+    hb_retni( obj->outputRange () );
   }
 #endif
 }
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QSENSOR_DESCRIPTION )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->description ().toLatin1().data() );
   }
 #endif
 }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSENSOR_ERROR )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSENSOR_FILTERS )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QSensorFilter *> list = obj->filters (  );
+    QList<QSensorFilter *> list = obj->filters ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSENSORFILTER" );
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QSENSOR_READING )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSensorReading * ptr = obj->reading (  );
+    QSensorReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QSENSORREADING" );
   }
 #endif
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QSENSOR_AXESORIENTATIONMODE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->axesOrientationMode (  ) );
+    hb_retni( obj->axesOrientationMode () );
   }
 #endif
 }
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QSENSOR_CURRENTORIENTATION )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentOrientation (  ) );
+    hb_retni( obj->currentOrientation () );
   }
 #endif
 }
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QSENSOR_USERORIENTATION )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->userOrientation (  ) );
+    hb_retni( obj->userOrientation () );
   }
 #endif
 }
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QSENSOR_MAXBUFFERSIZE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxBufferSize (  ) );
+    hb_retni( obj->maxBufferSize () );
   }
 #endif
 }
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QSENSOR_EFFICIENTBUFFERSIZE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->efficientBufferSize (  ) );
+    hb_retni( obj->efficientBufferSize () );
   }
 #endif
 }
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QSENSOR_BUFFERSIZE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferSize (  ) );
+    hb_retni( obj->bufferSize () );
   }
 #endif
 }
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QSENSOR_START )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->start (  ) );
+    hb_retl( obj->start () );
   }
 #endif
 }
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QSENSOR_STOP )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -789,7 +789,7 @@ static QList<QByteArray> sensorTypes()
 HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QList<QByteArray> list = QSensor::sensorTypes (  );
+  QList<QByteArray> list = QSensor::sensorTypes ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

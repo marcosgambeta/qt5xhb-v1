@@ -112,7 +112,7 @@ QDBusConnection(const QDBusConnection &other)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW2 )
 {
-  QDBusConnection * o = new QDBusConnection (  );
+  QDBusConnection * o = new QDBusConnection ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ISCONNECTED )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isConnected (  ) );
+    hb_retl( obj->isConnected () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_BASESERVICE )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->baseService (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->baseService ().toLatin1().data() );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusError * ptr = new QDBusError( obj->lastError (  ) );
+    QDBusError * ptr = new QDBusError( obj->lastError () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
   }
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NAME )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTIONCAPABILITIES )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    ConnectionCapabilities * ptr = new ConnectionCapabilities( obj->connectionCapabilities (  ) );
+    ConnectionCapabilities * ptr = new ConnectionCapabilities( obj->connectionCapabilities () );
     _qt5xhb_createReturnClass ( ptr, "CONNECTIONCAPABILITIES" );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->send (  ) );
+    hb_retl( obj->send () );
   }
 }
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusConnectionInterface * ptr = obj->interface (  );
+    QDBusConnectionInterface * ptr = obj->interface ();
     _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTIONINTERFACE" );
   }
 }
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retptr( (void *) obj->internalPointer (  ) );
+    hb_retptr( (void *) obj->internalPointer () );
   }
 }
 
@@ -581,7 +581,7 @@ static QByteArray localMachineId()
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_LOCALMACHINEID )
 {
-  QByteArray * ptr = new QByteArray( QDBusConnection::localMachineId (  ) );
+  QByteArray * ptr = new QByteArray( QDBusConnection::localMachineId () );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
@@ -591,7 +591,7 @@ static QDBusConnection sessionBus()
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_SESSIONBUS )
 {
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sessionBus (  ) );
+  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sessionBus () );
   _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
@@ -601,7 +601,7 @@ static QDBusConnection systemBus()
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_SYSTEMBUS )
 {
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::systemBus (  ) );
+  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::systemBus () );
   _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 
@@ -611,7 +611,7 @@ static QDBusConnection sender()
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_SENDER )
 {
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sender (  ) );
+  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sender () );
   _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 

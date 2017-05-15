@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->source (  ) );
+    QUrl * ptr = new QUrl( obj->source () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlEngine * ptr = obj->engine (  );
+    QQmlEngine * ptr = obj->engine ();
     _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
   }
 #endif
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlContext * ptr = obj->rootContext (  );
+    QQmlContext * ptr = obj->rootContext ();
     _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
   }
 #endif
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQuickItem * ptr = obj->rootObject (  );
+    QQuickItem * ptr = obj->rootObject ();
     _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
   }
 #endif
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->resizeMode (  ) );
+    hb_retni( obj->resizeMode () );
   }
 #endif
 }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->status (  ) );
+    hb_retni( obj->status () );
   }
 #endif
 }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QQmlError> list = obj->errors (  );
+    QList<QQmlError> list = obj->errors ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QQMLERROR" );
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->initialSize (  ) );
+    QSize * ptr = new QSize( obj->initialSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format (  ) );
+    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
     _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
   }
 #endif

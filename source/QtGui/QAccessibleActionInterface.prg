@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->actionNames (  );
+    QStringList strl = obj->actionNames ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -148,7 +148,7 @@ static const QString &pressAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
 {
-  QString str1 = QAccessibleActionInterface::pressAction (  );
+  QString str1 = QAccessibleActionInterface::pressAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -158,7 +158,7 @@ static const QString &increaseAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
 {
-  QString str1 = QAccessibleActionInterface::increaseAction (  );
+  QString str1 = QAccessibleActionInterface::increaseAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -168,7 +168,7 @@ static const QString &decreaseAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
 {
-  QString str1 = QAccessibleActionInterface::decreaseAction (  );
+  QString str1 = QAccessibleActionInterface::decreaseAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -178,7 +178,7 @@ static const QString &showMenuAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
 {
-  QString str1 = QAccessibleActionInterface::showMenuAction (  );
+  QString str1 = QAccessibleActionInterface::showMenuAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -188,7 +188,7 @@ static const QString &setFocusAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
 {
-  QString str1 = QAccessibleActionInterface::setFocusAction (  );
+  QString str1 = QAccessibleActionInterface::setFocusAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -198,7 +198,7 @@ static const QString &toggleAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_TOGGLEACTION )
 {
-  QString str1 = QAccessibleActionInterface::toggleAction (  );
+  QString str1 = QAccessibleActionInterface::toggleAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 

@@ -74,7 +74,7 @@ QSGNode()
 */
 HB_FUNC_STATIC( QSGNODE_NEW )
 {
-  QSGNode * o = new QSGNode (  );
+  QSGNode * o = new QSGNode ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSGNODE_CHILDCOUNT )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->childCount (  ) );
+    hb_retni( obj->childCount () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSGNODE_FIRSTCHILD )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGNode * ptr = obj->firstChild (  );
+    QSGNode * ptr = obj->firstChild ();
     _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSGNODE_FLAGS )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->flags (  ) );
+    hb_retni( obj->flags () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSGNODE_ISSUBTREEBLOCKED )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSubtreeBlocked (  ) );
+    hb_retl( obj->isSubtreeBlocked () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSGNODE_LASTCHILD )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGNode * ptr = obj->lastChild (  );
+    QSGNode * ptr = obj->lastChild ();
     _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSGNODE_NEXTSIBLING )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGNode * ptr = obj->nextSibling (  );
+    QSGNode * ptr = obj->nextSibling ();
     _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSGNODE_PARENT )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGNode * ptr = obj->parent (  );
+    QSGNode * ptr = obj->parent ();
     _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSGNODE_PREPROCESS )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->preprocess (  );
+    obj->preprocess ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSGNODE_PREVIOUSSIBLING )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSGNode * ptr = obj->previousSibling (  );
+    QSGNode * ptr = obj->previousSibling ();
     _qt5xhb_createReturnClass ( ptr, "QSGNODE" );
   }
 }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSGNODE_REMOVEALLCHILDNODES )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeAllChildNodes (  );
+    obj->removeAllChildNodes ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSGNODE_TYPE )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

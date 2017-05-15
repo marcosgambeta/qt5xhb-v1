@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTEREDSERVICENAMES )
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusReply<QStringList> * ptr = new QDBusReply<QStringList>( obj->registeredServiceNames (  ) );
+    QDBusReply<QStringList> * ptr = new QDBusReply<QStringList>( obj->registeredServiceNames () );
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRINGLIST>" );
   }
 }

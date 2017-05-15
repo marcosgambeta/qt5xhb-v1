@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_HASNEXT )
 
   if( obj )
   {
-    hb_retl( obj->hasNext (  ) );
+    hb_retl( obj->hasNext () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_MATCHOPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->matchOptions (  ) );
+    hb_retni( obj->matchOptions () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_MATCHTYPE )
 
   if( obj )
   {
-    hb_retni( obj->matchType (  ) );
+    hb_retni( obj->matchType () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEXT )
 
   if( obj )
   {
-    QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->next (  ) );
+    QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->next () );
     _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
   }
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_PEEKNEXT )
 
   if( obj )
   {
-    QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->peekNext (  ) );
+    QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->peekNext () );
     _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
   }
 }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION )
 
   if( obj )
   {
-    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression (  ) );
+    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression () );
     _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
   }
 }

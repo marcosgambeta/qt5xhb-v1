@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->availableLayouts (  );
+    QStringList strl = obj->availableLayouts ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->availableWidgets (  );
+    QStringList strl = obj->availableWidgets ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clearPluginPaths (  );
+    obj->clearPluginPaths ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLanguageChangeEnabled (  ) );
+    hb_retl( obj->isLanguageChangeEnabled () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->pluginPaths (  );
+    QStringList strl = obj->pluginPaths ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDir * ptr = new QDir( obj->workingDirectory (  ) );
+    QDir * ptr = new QDir( obj->workingDirectory () );
     _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }

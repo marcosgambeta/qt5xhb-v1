@@ -100,7 +100,7 @@ QPainterPath ()
 */
 void QPainterPath_new1 ()
 {
-  QPainterPath * o = new QPainterPath (  );
+  QPainterPath * o = new QPainterPath ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CLOSESUBPATH )
 
   if( obj )
   {
-    obj->closeSubpath (  );
+    obj->closeSubpath ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->controlPointRect (  ) );
+    QRectF * ptr = new QRectF( obj->controlPointRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
 
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->currentPosition (  ) );
+    QPointF * ptr = new QPointF( obj->currentPosition () );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->elementCount (  ) );
+    hb_retni( obj->elementCount () );
   }
 }
 
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
 
   if( obj )
   {
-    hb_retni( obj->fillRule (  ) );
+    hb_retni( obj->fillRule () );
   }
 }
 
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
 
   if( obj )
   {
-    hb_retnd( obj->length (  ) );
+    hb_retnd( obj->length () );
   }
 }
 
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->simplified (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->simplified () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
 
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->toReversed (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->toReversed () );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }

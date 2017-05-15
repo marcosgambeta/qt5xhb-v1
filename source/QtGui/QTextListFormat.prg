@@ -56,7 +56,7 @@ QTextListFormat()
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
-  QTextListFormat * o = new QTextListFormat (  );
+  QTextListFormat * o = new QTextListFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->style (  ) );
+    hb_retni( obj->style () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->indent (  ) );
+    hb_retni( obj->indent () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->numberPrefix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->numberPrefix ().toLatin1().data() );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->numberSuffix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->numberSuffix ().toLatin1().data() );
   }
 }
 

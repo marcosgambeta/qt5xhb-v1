@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
   QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings (  ) );
+    QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings () );
     _qt5xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS" );
   }
 }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS )
   QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedAudioCodecs (  );
+    QStringList strl = obj->supportedAudioCodecs ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

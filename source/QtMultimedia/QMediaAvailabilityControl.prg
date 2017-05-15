@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
   QMediaAvailabilityControl * obj = (QMediaAvailabilityControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->availability (  ) );
+    hb_retni( obj->availability () );
   }
 }
 

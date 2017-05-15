@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->activeConfiguration (  ) );
+    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->activeConfiguration () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractNetworkCache * ptr = obj->cache (  );
+    QAbstractNetworkCache * ptr = obj->cache ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTNETWORKCACHE" );
   }
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration (  ) );
+    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkCookieJar * ptr = obj->cookieJar (  );
+    QNetworkCookieJar * ptr = obj->cookieJar ();
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCOOKIEJAR" );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->networkAccessible (  ) );
+    hb_retni( obj->networkAccessible () );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
+    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxyFactory * ptr = obj->proxyFactory (  );
+    QNetworkProxyFactory * ptr = obj->proxyFactory ();
     _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXYFACTORY" );
   }
 }

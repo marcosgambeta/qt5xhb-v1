@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTORNAME )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->convertorName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->convertorName ().toLatin1().data() );
   }
 #endif
 }

@@ -64,7 +64,7 @@ QTextDocumentFragment()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW1 )
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment (  );
+  QTextDocumentFragment * o = new QTextDocumentFragment ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toPlainText (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->toPlainText ().toLatin1().data() );
   }
 }
 

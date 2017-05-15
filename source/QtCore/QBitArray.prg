@@ -67,7 +67,7 @@ QBitArray ()
 */
 void QBitArray_new1 ()
 {
-  QBitArray * o = new QBitArray (  );
+  QBitArray * o = new QBitArray ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -199,7 +199,7 @@ void QBitArray_count1 ()
 
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QBITARRAY_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QBITARRAY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

@@ -80,7 +80,7 @@ QNetworkProxyQuery ()
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW1 )
 {
-  QNetworkProxyQuery * o = new QNetworkProxyQuery (  );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->localPort (  ) );
+    hb_retni( obj->localPort () );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->peerHostName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->peerHostName ().toLatin1().data() );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerPort (  ) );
+    hb_retni( obj->peerPort () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->protocolTag (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->protocolTag ().toLatin1().data() );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->queryType (  ) );
+    hb_retni( obj->queryType () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_URL )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

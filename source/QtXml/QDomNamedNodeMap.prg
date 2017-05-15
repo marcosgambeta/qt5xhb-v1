@@ -72,7 +72,7 @@ QDomNamedNodeMap ()
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW1 )
 {
-  QDomNamedNodeMap * o = new QDomNamedNodeMap (  );
+  QDomNamedNodeMap * o = new QDomNamedNodeMap ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

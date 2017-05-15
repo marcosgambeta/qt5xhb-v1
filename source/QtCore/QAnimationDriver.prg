@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ADVANCE )
 
   if( obj )
   {
-    obj->advance (  );
+    obj->advance ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_INSTALL )
 
   if( obj )
   {
-    obj->install (  );
+    obj->install ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_UNINSTALL )
 
   if( obj )
   {
-    obj->uninstall (  );
+    obj->uninstall ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ELAPSED )
 
   if( obj )
   {
-    hb_retni( obj->elapsed (  ) );
+    hb_retni( obj->elapsed () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_STARTTIME )
 
   if( obj )
   {
-    hb_retni( obj->startTime (  ) );
+    hb_retni( obj->startTime () );
   }
 }
 

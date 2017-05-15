@@ -57,7 +57,7 @@ QGLFramebufferObjectFormat ()
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 {
-  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat (  );
+  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->attachment (  ) );
+    hb_retni( obj->attachment () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->internalTextureFormat (  ) );
+    hb_retni( obj->internalTextureFormat () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->samples (  ) );
+    hb_retni( obj->samples () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureTarget (  ) );
+    hb_retni( obj->textureTarget () );
   }
 }
 

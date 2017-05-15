@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
   QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMagnetometerReading * ptr = obj->reading (  );
+    QMagnetometerReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QMAGNETOMETERREADING" );
   }
 #endif
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
   QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->returnGeoValues (  ) );
+    hb_retl( obj->returnGeoValues () );
   }
 #endif
 }

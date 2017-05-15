@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 #endif
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_HOSTMODE )
 
   if( obj )
   {
-    hb_retni( obj->hostMode (  ) );
+    hb_retni( obj->hostMode () );
   }
 #endif
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_POWERON )
 
   if( obj )
   {
-    obj->powerOn (  );
+    obj->powerOn ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->name ().toLatin1().data() );
   }
 #endif
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ADDRESS )
 
   if( obj )
   {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address (  ) );
+    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif
@@ -312,7 +312,7 @@ static QList<QBluetoothHostInfo> allDevices()
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ALLDEVICES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QList<QBluetoothHostInfo> list = QBluetoothLocalDevice::allDevices (  );
+  QList<QBluetoothHostInfo> list = QBluetoothLocalDevice::allDevices ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBLUETOOTHHOSTINFO" );

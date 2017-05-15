@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
 
   if( obj )
   {
-    hb_retni( obj->acceptMode (  ) );
+    hb_retni( obj->acceptMode () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
 
   if( obj )
   {
-    hb_retl( obj->confirmOverwrite (  ) );
+    hb_retl( obj->confirmOverwrite () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultSuffix (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->defaultSuffix ().toLatin1().data() );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
 
   if( obj )
   {
-    hb_retni( obj->fileMode (  ) );
+    hb_retni( obj->fileMode () );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILTER )
 
   if( obj )
   {
-    hb_retni( obj->filter (  ) );
+    hb_retni( obj->filter () );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
 
   if( obj )
   {
-    QStringList strl = obj->history (  );
+    QStringList strl = obj->history ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
 
   if( obj )
   {
-    QFileIconProvider * ptr = obj->iconProvider (  );
+    QFileIconProvider * ptr = obj->iconProvider ();
     _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
   }
 }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isNameFilterDetailsVisible (  ) );
+    hb_retl( obj->isNameFilterDetailsVisible () );
   }
 }
 
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
 
   if( obj )
   {
-    QAbstractItemDelegate * ptr = obj->itemDelegate (  );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
 
   if( obj )
   {
-    QStringList strl = obj->nameFilters (  );
+    QStringList strl = obj->nameFilters ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
 
   if( obj )
   {
-    hb_retni( obj->options (  ) );
+    hb_retni( obj->options () );
   }
 }
 
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
 
   if( obj )
   {
-    QAbstractProxyModel * ptr = obj->proxyModel (  );
+    QAbstractProxyModel * ptr = obj->proxyModel ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTPROXYMODEL" );
   }
 #endif
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
 
   if( obj )
   {
-    hb_retl( obj->resolveSymlinks (  ) );
+    hb_retl( obj->resolveSymlinks () );
   }
 }
 
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->saveState (  ) );
+    QByteArray * ptr = new QByteArray( obj->saveState () );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
 
   if( obj )
   {
-    QStringList strl = obj->selectedFiles (  );
+    QStringList strl = obj->selectedFiles ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->selectedNameFilter (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->selectedNameFilter ().toLatin1().data() );
   }
 }
 
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
 
   if( obj )
   {
-    QDir * ptr = new QDir( obj->directory (  ) );
+    QDir * ptr = new QDir( obj->directory () );
     _qt5xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
 
   if( obj )
   {
-    QList<QUrl> list = obj->sidebarUrls (  );
+    QList<QUrl> list = obj->sidebarUrls ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QURL" );
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
 
   if( obj )
   {
-    hb_retni( obj->viewMode (  ) );
+    hb_retni( obj->viewMode () );
   }
 }
 
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORYURL )
 
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->directoryUrl (  ) );
+    QUrl * ptr = new QUrl( obj->directoryUrl () );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
 
   if( obj )
   {
-    QList<QUrl> list = obj->selectedUrls (  );
+    QList<QUrl> list = obj->selectedUrls ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QURL" );
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QFILEDIALOG_MIMETYPEFILTERS )
 
   if( obj )
   {
-    QStringList strl = obj->mimeTypeFilters (  );
+    QStringList strl = obj->mimeTypeFilters ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

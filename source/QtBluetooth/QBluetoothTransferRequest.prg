@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ADDRESS )
 
   if( obj )
   {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address (  ) );
+    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
   }
 #endif

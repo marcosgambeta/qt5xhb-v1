@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QFONTINFO_BOLD )
 
   if( obj )
   {
-    hb_retl( obj->bold (  ) );
+    hb_retl( obj->bold () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 
   if( obj )
   {
-    hb_retl( obj->exactMatch (  ) );
+    hb_retl( obj->exactMatch () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QFONTINFO_FAMILY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->family (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->family ().toLatin1().data() );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 
   if( obj )
   {
-    hb_retl( obj->fixedPitch (  ) );
+    hb_retl( obj->fixedPitch () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QFONTINFO_ITALIC )
 
   if( obj )
   {
-    hb_retl( obj->italic (  ) );
+    hb_retl( obj->italic () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pixelSize (  ) );
+    hb_retni( obj->pixelSize () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pointSize (  ) );
+    hb_retni( obj->pointSize () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 
   if( obj )
   {
-    hb_retnd( obj->pointSizeF (  ) );
+    hb_retnd( obj->pointSizeF () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 
   if( obj )
   {
-    hb_retl( obj->rawMode (  ) );
+    hb_retl( obj->rawMode () );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLE )
 
   if( obj )
   {
-    hb_retni( obj->style (  ) );
+    hb_retni( obj->style () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 
   if( obj )
   {
-    hb_retni( obj->styleHint (  ) );
+    hb_retni( obj->styleHint () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->styleName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->styleName ().toLatin1().data() );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QFONTINFO_WEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->weight (  ) );
+    hb_retni( obj->weight () );
   }
 }
 

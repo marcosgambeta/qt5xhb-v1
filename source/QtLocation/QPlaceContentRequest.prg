@@ -74,7 +74,7 @@ QPlaceContentRequest()
 void QPlaceContentRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * o = new QPlaceContentRequest (  );
+  QPlaceContentRequest * o = new QPlaceContentRequest ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTTYPE )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->contentType (  );
+    int i = obj->contentType ();
     hb_retni( i );
   }
 #endif
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_PLACEID )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->placeId (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->placeId ().toLatin1().data() );
   }
 #endif
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTCONTEXT )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->contentContext (  ) );
+    QVariant * ptr = new QVariant( obj->contentContext () );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 #endif
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_LIMIT )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->limit (  ) );
+    hb_retni( obj->limit () );
   }
 #endif
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CLEAR )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

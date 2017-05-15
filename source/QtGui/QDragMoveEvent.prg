@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT2 )
   QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->accept (  );
+    obj->accept ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
   QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * ptr = new QRect( obj->answerRect (  ) );
+    QRect * ptr = new QRect( obj->answerRect () );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE2 )
   QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->ignore (  );
+    obj->ignore ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

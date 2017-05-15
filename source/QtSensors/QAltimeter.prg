@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QALTIMETER_READING )
   QAltimeter * obj = (QAltimeter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAltimeterReading * ptr = obj->reading (  );
+    QAltimeterReading * ptr = obj->reading ();
     _qt5xhb_createReturnClass ( ptr, "QALTIMETERREADING" );
   }
 #endif

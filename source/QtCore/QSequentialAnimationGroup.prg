@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 
   if( obj )
   {
-    QAbstractAnimation * ptr = obj->currentAnimation (  );
+    QAbstractAnimation * ptr = obj->currentAnimation ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 

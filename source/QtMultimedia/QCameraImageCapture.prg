@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_AVAILABILITY )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->availability (  ) );
+    hb_retni( obj->availability () );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_BUFFERFORMAT )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferFormat (  ) );
+    hb_retni( obj->bufferFormat () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTUREDESTINATION )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->captureDestination (  ) );
+    hb_retni( obj->captureDestination () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->encodingSettings (  ) );
+    QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->encodingSettings () );
     _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS" );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERROR )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERRORSTRING )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISAVAILABLE )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable (  ) );
+    hb_retl( obj->isAvailable () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReadyForCapture (  ) );
+    hb_retl( obj->isReadyForCapture () );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaObject * ptr = obj->mediaObject (  );
+    QMediaObject * ptr = obj->mediaObject ();
     _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
   }
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats (  );
+    QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->supportedImageCodecs (  );
+    QStringList strl = obj->supportedImageCodecs ();
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CANCELCAPTURE )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->cancelCapture (  );
+    obj->cancelCapture ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

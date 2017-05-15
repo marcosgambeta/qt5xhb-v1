@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 

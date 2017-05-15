@@ -71,7 +71,7 @@ QGeoSatelliteInfo()
 HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfo * o = new QGeoSatelliteInfo (  );
+  QGeoSatelliteInfo * o = new QGeoSatelliteInfo ();
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->satelliteSystem (  ) );
+    hb_retni( obj->satelliteSystem () );
   }
 #endif
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITEIDENTIFIER )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->satelliteIdentifier (  ) );
+    hb_retni( obj->satelliteIdentifier () );
   }
 #endif
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SIGNALSTRENGTH )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->signalStrength (  ) );
+    hb_retni( obj->signalStrength () );
   }
 #endif
 }

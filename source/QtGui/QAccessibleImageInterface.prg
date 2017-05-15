@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION )
   QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->imageDescription (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->imageDescription ().toLatin1().data() );
   }
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
   QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * ptr = new QSize( obj->imageSize (  ) );
+    QSize * ptr = new QSize( obj->imageSize () );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

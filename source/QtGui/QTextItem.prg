@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QTEXTITEM_DESCENT )
   QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->descent (  ) );
+    hb_retnd( obj->descent () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTEXTITEM_ASCENT )
   QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->ascent (  ) );
+    hb_retnd( obj->ascent () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTEXTITEM_WIDTH )
   QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->width (  ) );
+    hb_retnd( obj->width () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
   QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->renderFlags (  ) );
+    hb_retni( obj->renderFlags () );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QTEXTITEM_TEXT )
   QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->text ().toLatin1().data() );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
   QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }

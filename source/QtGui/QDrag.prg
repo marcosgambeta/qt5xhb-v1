@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDRAG_DEFAULTACTION )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->defaultAction (  ) );
+    hb_retni( obj->defaultAction () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->hotSpot (  ) );
+    QPoint * ptr = new QPoint( obj->hotSpot () );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMimeData * ptr = obj->mimeData (  );
+    QMimeData * ptr = obj->mimeData ();
     _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap () );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->source (  );
+    QObject * ptr = obj->source ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QDRAG_SUPPORTEDACTIONS )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedActions (  ) );
+    hb_retni( obj->supportedActions () );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * ptr = obj->target (  );
+    QObject * ptr = obj->target ();
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

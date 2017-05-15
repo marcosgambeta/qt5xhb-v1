@@ -246,7 +246,7 @@ static QColor realColorizationColor()
 HB_FUNC_STATIC( QTWIN_REALCOLORIZATIONCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QColor * ptr = new QColor( QtWin::realColorizationColor (  ) );
+  QColor * ptr = new QColor( QtWin::realColorizationColor () );
   _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #endif
 }
@@ -450,7 +450,7 @@ static bool isCompositionEnabled()
 HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retl( QtWin::isCompositionEnabled (  ) );
+  hb_retl( QtWin::isCompositionEnabled () );
 #endif
 }
 
@@ -473,7 +473,7 @@ static bool isCompositionOpaque()
 HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONOPAQUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retl( QtWin::isCompositionOpaque (  ) );
+  hb_retl( QtWin::isCompositionOpaque () );
 #endif
 }
 

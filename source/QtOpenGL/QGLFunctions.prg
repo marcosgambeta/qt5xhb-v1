@@ -133,7 +133,7 @@ QGLFunctions()
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW1 )
 {
-  QGLFunctions * o = new QGLFunctions (  );
+  QGLFunctions * o = new QGLFunctions ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATEPROGRAM )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->glCreateProgram (  ) );
+    hb_retni( obj->glCreateProgram () );
   }
 }
 
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->glReleaseShaderCompiler (  );
+    obj->glReleaseShaderCompiler ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->openGLFeatures (  ) );
+    hb_retni( obj->openGLFeatures () );
   }
 }
 

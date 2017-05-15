@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CLEAR )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->items (  ) );
+    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->items () );
     _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
   }
 #endif
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoBack (  ) );
+    hb_retl( obj->canGoBack () );
   }
 #endif
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoForward (  ) );
+    hb_retl( obj->canGoForward () );
   }
 #endif
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACK )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->back (  );
+    obj->back ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->forward (  );
+    obj->forward ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->goToItem (  );
+    obj->goToItem ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->backItem (  ) );
+    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->backItem () );
     _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->currentItem (  ) );
+    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->currentItem () );
     _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->forwardItem (  ) );
+    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->forwardItem () );
     _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
   }
 #endif
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentItemIndex (  ) );
+    hb_retni( obj->currentItemIndex () );
   }
 #endif
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 #endif
 }

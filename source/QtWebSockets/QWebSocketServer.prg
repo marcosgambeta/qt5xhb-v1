@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_CLOSE )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ISLISTENING )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isListening (  ) );
+    hb_retl( obj->isListening () );
   }
 #endif
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_MAXPENDINGCONNECTIONS )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections (  ) );
+    hb_retni( obj->maxPendingConnections () );
   }
 #endif
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERPORT )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->serverPort (  ) );
+    hb_retni( obj->serverPort () );
   }
 #endif
 }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERADDRESS )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->serverAddress (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->serverAddress () );
     _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 #endif
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SECUREMODE )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->secureMode (  ) );
+    hb_retni( obj->secureMode () );
   }
 #endif
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SOCKETDESCRIPTOR )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->socketDescriptor (  ) );
+    hb_retni( obj->socketDescriptor () );
   }
 #endif
 }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_HASPENDINGCONNECTIONS )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections (  ) );
+    hb_retl( obj->hasPendingConnections () );
   }
 #endif
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEXTPENDINGCONNECTION )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebSocket * ptr = obj->nextPendingConnection (  );
+    QWebSocket * ptr = obj->nextPendingConnection ();
     _qt5xhb_createReturnClass ( ptr, "QWEBSOCKET" );
   }
 #endif
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERROR )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->error (  ) );
+    hb_retni( obj->error () );
   }
 #endif
 }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERRORSTRING )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
   }
 #endif
 }
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PAUSEACCEPTING )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->pauseAccepting (  );
+    obj->pauseAccepting ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_RESUMEACCEPTING )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->resumeAccepting (  );
+    obj->resumeAccepting ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERNAME )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->serverName (  ).toLatin1().data() );
+    hb_retc( (const char *) obj->serverName ().toLatin1().data() );
   }
 #endif
 }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PROXY )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
+    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 #endif
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SSLCONFIGURATION )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
+    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
     _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 #endif
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QWebSocketProtocol::Version> list = obj->supportedVersions (  );
+    QList<QWebSocketProtocol::Version> list = obj->supportedVersions ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

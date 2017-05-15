@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
 
   if( obj )
   {
-    QAbstractEventDispatcher * ptr = obj->eventDispatcher (  );
+    QAbstractEventDispatcher * ptr = obj->eventDispatcher ();
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTHREAD_ISFINISHED )
 
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
 
   if( obj )
   {
-    hb_retni( obj->priority (  ) );
+    hb_retni( obj->priority () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 
   if( obj )
   {
-    hb_retni( obj->stackSize (  ) );
+    hb_retni( obj->stackSize () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTHREAD_QUIT )
 
   if( obj )
   {
-    obj->quit (  );
+    obj->quit ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTHREAD_TERMINATE )
 
   if( obj )
   {
-    obj->terminate (  );
+    obj->terminate ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -337,7 +337,7 @@ static QThread * currentThread()
 */
 HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
-  QThread * ptr = QThread::currentThread (  );
+  QThread * ptr = QThread::currentThread ();
   _qt5xhb_createReturnClass ( ptr, "QTHREAD" );
 }
 
@@ -346,7 +346,7 @@ static int idealThreadCount()
 */
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
-  hb_retni( QThread::idealThreadCount (  ) );
+  hb_retni( QThread::idealThreadCount () );
 }
 
 /*
@@ -405,7 +405,7 @@ static void yieldCurrentThread()
 */
 HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
 {
-  QThread::yieldCurrentThread (  );
+  QThread::yieldCurrentThread ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
