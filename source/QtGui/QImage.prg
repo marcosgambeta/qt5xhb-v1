@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
     if( ISOPTCHAR(1) )
     {
       QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-      hb_retc( (const char *) obj->text ( par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->text ( par1 ) ) );
     }
     else
     {

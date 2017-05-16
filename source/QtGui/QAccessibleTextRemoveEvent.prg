@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED )
   QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->textRemoved ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->textRemoved () ) );
   }
 }
 

@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 

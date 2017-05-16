@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->columnDescription ( PINT(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->columnDescription ( PINT(1) ) ) );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->rowDescription ( PINT(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->rowDescription ( PINT(1) ) ) );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
 /*
 virtual QList<QAccessibleInterface*> selectedCells() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
+HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS ) // TODO: implementar
 {
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )

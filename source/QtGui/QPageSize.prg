@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPAGESIZE_KEY1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->key ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->key () ) );
   }
 }
 
@@ -263,7 +263,7 @@ static QString key(PageSizeId pageSizeId)
 HB_FUNC_STATIC( QPAGESIZE_KEY2 )
 {
   int par1 = hb_parni(1);
-  hb_retc( (const char *) QPageSize::key (  (QPageSize::PageSizeId) par1 ).toLatin1().data() );
+  hb_retc( RQSTRING( QPageSize::key (  (QPageSize::PageSizeId) par1 ) ) );
 }
 
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QPAGESIZE_NAME1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 
@@ -304,7 +304,7 @@ static QString name(PageSizeId pageSizeId)
 HB_FUNC_STATIC( QPAGESIZE_NAME2 )
 {
   int par1 = hb_parni(1);
-  hb_retc( (const char *) QPageSize::name (  (QPageSize::PageSizeId) par1 ).toLatin1().data() );
+  hb_retc( RQSTRING( QPageSize::name (  (QPageSize::PageSizeId) par1 ) ) );
 }
 
 

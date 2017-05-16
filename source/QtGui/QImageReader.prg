@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QIMAGEREADER_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXT )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( (const char *) obj->text ( PQSTRING(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->text ( PQSTRING(1) ) ) );
     }
     else
     {

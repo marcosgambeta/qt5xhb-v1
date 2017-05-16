@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fontFamily ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fontFamily () ) );
   }
 }
 
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toolTip () ) );
   }
 }
 
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->anchorHref ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->anchorHref () ) );
   }
 }
 
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAME )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->anchorName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->anchorName () ) );
   }
 }
 

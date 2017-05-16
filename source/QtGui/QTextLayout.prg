@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->preeditAreaText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->preeditAreaText () ) );
   }
 }
 

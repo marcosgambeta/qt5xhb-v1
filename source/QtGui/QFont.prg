@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultFamily ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->defaultFamily () ) );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFONT_FAMILY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->family ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->family () ) );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QFONT_KEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->key ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->key () ) );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->lastResortFamily ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->lastResortFamily () ) );
   }
 }
 
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->lastResortFont ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->lastResortFont () ) );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QFONT_RAWNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->rawName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->rawName () ) );
   }
 }
 
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QFONT_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString () ) );
   }
 }
 
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 {
   if( ISCHAR(1) )
   {
-    hb_retc( (const char *) QFont::substitute ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( QFont::substitute ( PQSTRING(1) ) ) );
   }
   else
   {

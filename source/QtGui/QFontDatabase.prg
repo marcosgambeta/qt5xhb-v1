@@ -330,7 +330,7 @@ void QFontDatabase_styleString1 ()
   if( obj )
   {
     QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->styleString ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->styleString ( *par1 ) ) );
   }
 }
 
@@ -344,7 +344,7 @@ void QFontDatabase_styleString2 ()
   if( obj )
   {
     QFontInfo * par1 = (QFontInfo *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->styleString ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->styleString ( *par1 ) ) );
   }
 }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
   if( ISNUM(1) )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) QFontDatabase::writingSystemName (  (QFontDatabase::WritingSystem) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( QFontDatabase::writingSystemName (  (QFontDatabase::WritingSystem) par1 ) ) );
   }
   else
   {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
   if( ISNUM(1) )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) QFontDatabase::writingSystemSample (  (QFontDatabase::WritingSystem) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( QFontDatabase::writingSystemSample (  (QFontDatabase::WritingSystem) par1 ) ) );
   }
   else
   {

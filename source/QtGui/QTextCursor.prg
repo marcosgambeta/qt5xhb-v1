@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->selectedText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->selectedText () ) );
   }
 }
 

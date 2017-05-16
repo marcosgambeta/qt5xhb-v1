@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) obj->text (  (QAccessible::Text) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->text (  (QAccessible::Text) par1 ) ) );
   }
 }
 

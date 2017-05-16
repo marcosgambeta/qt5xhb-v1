@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
   QStatusTipEvent * obj = (QStatusTipEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->tip () ) );
   }
 }
 

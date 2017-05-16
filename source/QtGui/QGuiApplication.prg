@@ -189,7 +189,7 @@ static QString applicationDisplayName()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONDISPLAYNAME )
 {
-  hb_retc( (const char *) QGuiApplication::applicationDisplayName ().toLatin1().data() );
+  hb_retc( RQSTRING( QGuiApplication::applicationDisplayName () ) );
 }
 
 
@@ -352,7 +352,7 @@ static QString platformName()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNAME )
 {
-  hb_retc( (const char *) QGuiApplication::platformName ().toLatin1().data() );
+  hb_retc( RQSTRING( QGuiApplication::platformName () ) );
 }
 
 

@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->stringProperty ( PINT(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->stringProperty ( PINT(1) ) ) );
   }
 }
 

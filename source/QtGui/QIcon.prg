@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QICON_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 
@@ -534,7 +534,7 @@ static QString themeName ()
 */
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
-  hb_retc( (const char *) QIcon::themeName ().toLatin1().data() );
+  hb_retc( RQSTRING( QIcon::themeName () ) );
 }
 
 /*

@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
   QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->message ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->message () ) );
   }
 }
 

@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->numberPrefix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->numberPrefix () ) );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->numberSuffix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->numberSuffix () ) );
   }
 }
 

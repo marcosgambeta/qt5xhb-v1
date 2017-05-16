@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) obj->metaInformation (  (QTextDocument::MetaInformation) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->metaInformation (  (QTextDocument::MetaInformation) par1 ) ) );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
   if( obj )
   {
     QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->toHtml ( par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->toHtml ( par1 ) ) );
   }
 }
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toPlainText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toPlainText () ) );
   }
 }
 
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultStyleSheet ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->defaultStyleSheet () ) );
   }
 }
 

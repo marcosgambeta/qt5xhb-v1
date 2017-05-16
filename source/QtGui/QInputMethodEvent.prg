@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->commitString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->commitString () ) );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->preeditString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->preeditString () ) );
   }
 }
 

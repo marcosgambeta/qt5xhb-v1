@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
   if( obj )
   {
     QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->itemText ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->itemText ( *par1 ) ) );
   }
 }
 

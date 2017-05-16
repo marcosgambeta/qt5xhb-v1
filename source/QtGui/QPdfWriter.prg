@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPDFWRITER_TITLE )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->title () ) );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPDFWRITER_CREATOR )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->creator ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->creator () ) );
   }
 }
 

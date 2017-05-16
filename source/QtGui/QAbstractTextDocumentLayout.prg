@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
   if( obj )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->anchorAt ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->anchorAt ( *par1 ) ) );
   }
 }
 

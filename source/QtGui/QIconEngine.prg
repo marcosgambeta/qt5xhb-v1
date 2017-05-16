@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QICONENGINE_ICONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->iconName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->iconName () ) );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QICONENGINE_KEY )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->key ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->key () ) );
   }
 }
 
