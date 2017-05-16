@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QQUICKITEM_STATE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->state ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->state () ) );
   }
 }
 
