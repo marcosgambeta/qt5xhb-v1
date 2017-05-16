@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->description () ) );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QQMLERROR_TOSTRING )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString () ) );
   }
 }
 

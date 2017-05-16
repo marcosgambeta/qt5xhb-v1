@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_STRINGLITERAL )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->stringLiteral ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->stringLiteral () ) );
   }
 }
 
