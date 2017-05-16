@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->declaredInClass ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->declaredInClass ( PINT(1) ) ) );
     }
     else
     {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->memberGroup ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->memberGroup ( PINT(1) ) ) );
     }
     else
     {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->memberName ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->memberName ( PINT(1) ) ) );
     }
     else
     {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->signature ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->signature ( PINT(1) ) ) );
     }
     else
     {

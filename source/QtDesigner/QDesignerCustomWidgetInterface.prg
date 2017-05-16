@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->codeTemplate ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->codeTemplate () ) );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->domXml ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->domXml () ) );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->group ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->group () ) );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->includeFile ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->includeFile () ) );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toolTip () ) );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->whatsThis () ) );
   }
 }
 

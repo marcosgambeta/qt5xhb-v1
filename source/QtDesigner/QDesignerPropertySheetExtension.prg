@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->propertyGroup ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->propertyGroup ( PINT(1) ) ) );
     }
     else
     {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->propertyName ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->propertyName ( PINT(1) ) ) );
     }
     else
     {

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->fileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName () ) );
   }
 }
 
