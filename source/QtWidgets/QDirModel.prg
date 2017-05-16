@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
     if( ISQMODELINDEX(1) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retc( (const char *) obj->filePath ( *par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->filePath ( *par1 ) ) );
     }
     else
     {
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILENAME )
     if( ISQMODELINDEX(1) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retc( (const char *) obj->fileName ( *par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->fileName ( *par1 ) ) );
     }
     else
     {

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->cleanText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->cleanText () ) );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->prefix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->prefix () ) );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->suffix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->suffix () ) );
   }
 }
 

@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->cancelButtonText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->cancelButtonText () ) );
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->labelText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->labelText () ) );
   }
 }
 
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->okButtonText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->okButtonText () ) );
   }
 }
 
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
   QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->textValue ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->textValue () ) );
   }
 }
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
   int par9 = ISNIL(9)? (int) Qt::ImhNone : hb_parni(9);
-  hb_retc( (const char *) QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), par4, (int) ISNIL(5)? 0 : hb_parni(5), (bool) ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8,  (Qt::InputMethodHints) par9 ).toLatin1().data() );
+  hb_retc( RQSTRING( QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), par4, (int) ISNIL(5)? 0 : hb_parni(5), (bool) ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8,  (Qt::InputMethodHints) par9 ) ) );
   hb_storl( par7, 7 );
 }
 
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
   bool par6;
   int par7 = ISNIL(7)? (int) 0 : hb_parni(7);
   int par8 = ISNIL(8)? (int) Qt::ImhNone : hb_parni(8);
-  hb_retc( (const char *) QInputDialog::getText ( par1, PQSTRING(2), PQSTRING(3),  (QLineEdit::EchoMode) par4, par5, &par6,  (Qt::WindowFlags) par7,  (Qt::InputMethodHints) par8 ).toLatin1().data() );
+  hb_retc( RQSTRING( QInputDialog::getText ( par1, PQSTRING(2), PQSTRING(3),  (QLineEdit::EchoMode) par4, par5, &par6,  (Qt::WindowFlags) par7,  (Qt::InputMethodHints) par8 ) ) );
   hb_storl( par6, 6 );
 }
 
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
   bool par5;
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
   int par7 = ISNIL(7)? (int) Qt::ImhNone : hb_parni(7);
-  hb_retc( (const char *) QInputDialog::getMultiLineText ( par1, PQSTRING(2), PQSTRING(3), par4, &par5,  (Qt::WindowFlags) par6,  (Qt::InputMethodHints) par7 ).toLatin1().data() );
+  hb_retc( RQSTRING( QInputDialog::getMultiLineText ( par1, PQSTRING(2), PQSTRING(3), par4, &par5,  (Qt::WindowFlags) par6,  (Qt::InputMethodHints) par7 ) ) );
   hb_storl( par5, 5 );
 }
 

@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toolTip () ) );
   }
 }
 

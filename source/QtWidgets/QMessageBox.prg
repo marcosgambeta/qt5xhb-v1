@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->detailedText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->detailedText () ) );
   }
 #endif
 }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->informativeText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->informativeText () ) );
   }
 }
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->buttonText ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->buttonText ( PINT(1) ) ) );
     }
     else
     {

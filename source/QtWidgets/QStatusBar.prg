@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->currentMessage ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->currentMessage () ) );
   }
 }
 

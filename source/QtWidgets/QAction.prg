@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->iconText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->iconText () ) );
   }
 }
 
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->statusTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->statusTip () ) );
   }
 }
 
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toolTip () ) );
   }
 }
 
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->whatsThis () ) );
   }
 }
 

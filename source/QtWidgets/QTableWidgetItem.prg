@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->statusTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->statusTip () ) );
   }
 }
 
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toolTip () ) );
   }
 }
 
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->whatsThis () ) );
   }
 }
 

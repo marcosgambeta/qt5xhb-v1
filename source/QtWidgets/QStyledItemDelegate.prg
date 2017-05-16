@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
   {
     QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
     QLocale * par2 = (QLocale *) _qt5xhb_itemGetPtr(2);
-    hb_retc( (const char *) obj->displayText ( *par1, *par2 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->displayText ( *par1, *par2 ) ) );
   }
 }
 

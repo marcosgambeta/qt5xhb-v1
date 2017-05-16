@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
   if( obj )
   {
     QFileInfo * par1 = (QFileInfo *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->type ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->type ( *par1 ) ) );
   }
 }
 

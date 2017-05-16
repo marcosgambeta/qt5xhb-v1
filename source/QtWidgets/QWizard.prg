@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) obj->buttonText (  (QWizard::WizardButton) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->buttonText (  (QWizard::WizardButton) par1 ) ) );
   }
 }
 

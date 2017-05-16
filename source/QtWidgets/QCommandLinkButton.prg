@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->description ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->description () ) );
   }
 }
 

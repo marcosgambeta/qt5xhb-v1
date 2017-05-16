@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->format ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->format () ) );
   }
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 

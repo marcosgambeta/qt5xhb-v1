@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->currentText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->currentText () ) );
   }
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->itemText ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->itemText ( PINT(1) ) ) );
     }
     else
     {

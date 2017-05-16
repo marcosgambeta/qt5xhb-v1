@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_STATUSTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->statusTip ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->statusTip ( PINT(1) ) ) );
     }
     else
     {
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->text ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->text ( PINT(1) ) ) );
     }
     else
     {
@@ -1386,7 +1386,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->toolTip ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->toolTip ( PINT(1) ) ) );
     }
     else
     {
@@ -1433,7 +1433,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_WHATSTHIS )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->whatsThis ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->whatsThis ( PINT(1) ) ) );
     }
     else
     {

@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLEDESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->accessibleDescription ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->accessibleDescription () ) );
   }
 #endif
 }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->accessibleName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->accessibleName () ) );
   }
 #endif
 }
@@ -3449,7 +3449,7 @@ HB_FUNC_STATIC( QWIDGET_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->statusTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->statusTip () ) );
   }
 #endif
 }
@@ -3511,7 +3511,7 @@ HB_FUNC_STATIC( QWIDGET_STYLESHEET )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->styleSheet ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->styleSheet () ) );
   }
 #endif
 }
@@ -3557,7 +3557,7 @@ HB_FUNC_STATIC( QWIDGET_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toolTip () ) );
   }
 #endif
 }
@@ -3774,7 +3774,7 @@ HB_FUNC_STATIC( QWIDGET_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->whatsThis () ) );
   }
 #endif
 }
@@ -3860,7 +3860,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->windowFilePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->windowFilePath () ) );
   }
 }
 
@@ -3947,7 +3947,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->windowIconText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->windowIconText () ) );
   }
 }
 
@@ -4003,7 +4003,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->windowRole ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->windowRole () ) );
   }
 }
 
@@ -4029,7 +4029,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->windowTitle ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->windowTitle () ) );
   }
 }
 

@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toHtml ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toHtml () ) );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toPlainText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toPlainText () ) );
   }
 }
 

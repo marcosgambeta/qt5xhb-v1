@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->itemText ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->itemText ( PINT(1) ) ) );
     }
     else
     {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->itemToolTip ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->itemToolTip ( PINT(1) ) ) );
     }
     else
     {

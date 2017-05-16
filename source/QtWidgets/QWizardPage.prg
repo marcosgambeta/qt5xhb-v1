@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) obj->buttonText (  (QWizard::WizardButton) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->buttonText (  (QWizard::WizardButton) par1 ) ) );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->subTitle ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->subTitle () ) );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->title () ) );
   }
 }
 

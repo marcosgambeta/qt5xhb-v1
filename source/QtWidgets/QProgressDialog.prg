@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->labelText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->labelText () ) );
   }
 }
 

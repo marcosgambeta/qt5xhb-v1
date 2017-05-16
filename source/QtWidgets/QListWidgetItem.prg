@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->statusTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->statusTip () ) );
   }
 }
 
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toolTip ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toolTip () ) );
   }
 }
 
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->whatsThis ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->whatsThis () ) );
   }
 }
 

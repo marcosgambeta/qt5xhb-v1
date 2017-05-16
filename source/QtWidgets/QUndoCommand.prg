@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->actionText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->actionText () ) );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 

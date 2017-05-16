@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->completionPrefix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->completionPrefix () ) );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->currentCompletion ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->currentCompletion () ) );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
     if( ISQMODELINDEX(1) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retc( (const char *) obj->pathFromIndex ( *par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->pathFromIndex ( *par1 ) ) );
     }
     else
     {

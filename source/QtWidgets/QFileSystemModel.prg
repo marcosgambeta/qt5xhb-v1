@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->fileName ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->fileName ( *par1 ) ) );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->filePath ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->filePath ( *par1 ) ) );
   }
 }
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->rootPath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->rootPath () ) );
   }
 }
 
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->type ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->type ( *par1 ) ) );
   }
 }
 

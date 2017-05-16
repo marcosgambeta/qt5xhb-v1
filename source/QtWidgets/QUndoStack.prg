@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->redoText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->redoText () ) );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ( PINT(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->text ( PINT(1) ) ) );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->undoText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->undoText () ) );
   }
 }
 

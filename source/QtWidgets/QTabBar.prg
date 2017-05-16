@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->tabText ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->tabText ( PINT(1) ) ) );
     }
     else
     {
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->tabToolTip ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->tabToolTip ( PINT(1) ) ) );
     }
     else
     {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
   {
     if( ISNUM(1) )
     {
-      hb_retc( (const char *) obj->tabWhatsThis ( PINT(1) ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->tabWhatsThis ( PINT(1) ) ) );
     }
     else
     {

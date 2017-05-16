@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->emptyLabel ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->emptyLabel () ) );
   }
 }
 

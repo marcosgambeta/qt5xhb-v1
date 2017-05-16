@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
     if( ISQPOINT(1) )
     {
       QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      hb_retc( (const char *) obj->anchorAt ( *par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->anchorAt ( *par1 ) ) );
     }
     else
     {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->documentTitle ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->documentTitle () ) );
   }
 }
 
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toPlainText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toPlainText () ) );
   }
 }
 

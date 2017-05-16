@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultSuffix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->defaultSuffix () ) );
   }
 }
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retc( (const char *) obj->labelText (  (QFileDialog::DialogLabel) par1 ).toLatin1().data() );
+      hb_retc( RQSTRING( obj->labelText (  (QFileDialog::DialogLabel) par1 ) ) );
     }
     else
     {
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->selectedNameFilter ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->selectedNameFilter () ) );
   }
 }
 
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     int par4 = ISNIL(4)? (int) QFileDialog::ShowDirsOnly : hb_parni(4);
-    hb_retc( (const char *) QFileDialog::getExistingDirectory ( par1, par2, par3,  (QFileDialog::Options) par4 ).toLatin1().data() );
+    hb_retc( RQSTRING( QFileDialog::getExistingDirectory ( par1, par2, par3,  (QFileDialog::Options) par4 ) ) );
   }
   else
   {
@@ -1353,7 +1353,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    hb_retc( (const char *) QFileDialog::getOpenFileName ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6 ).toLatin1().data() );
+    hb_retc( RQSTRING( QFileDialog::getOpenFileName ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6 ) ) );
   }
   else
   {
@@ -1396,7 +1396,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
     QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    hb_retc( (const char *) QFileDialog::getSaveFileName ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6 ).toLatin1().data() );
+    hb_retc( RQSTRING( QFileDialog::getSaveFileName ( par1, par2, par3, par4, &par5,  (QFileDialog::Options) par6 ) ) );
   }
   else
   {
