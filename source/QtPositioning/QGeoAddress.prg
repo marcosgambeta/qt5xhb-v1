@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QGEOADDRESS_TEXT )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 #endif
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->country ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->country () ) );
   }
 #endif
 }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->countryCode ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->countryCode () ) );
   }
 #endif
 }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STATE )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->state ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->state () ) );
   }
 #endif
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->county ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->county () ) );
   }
 #endif
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGEOADDRESS_CITY )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->city ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->city () ) );
   }
 #endif
 }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->district ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->district () ) );
   }
 #endif
 }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->postalCode ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->postalCode () ) );
   }
 #endif
 }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STREET )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->street ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->street () ) );
   }
 #endif
 }

@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SOURCENAME )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->sourceName () ) );
   }
 #endif
 }

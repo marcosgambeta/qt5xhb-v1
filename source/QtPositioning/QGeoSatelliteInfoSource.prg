@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SOURCENAME )
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->sourceName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->sourceName () ) );
   }
 #endif
 }
