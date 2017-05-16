@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->printerName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->printerName () ) );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->description () ) );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->location ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->location () ) );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->makeAndModel ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->makeAndModel () ) );
   }
 }
 
@@ -462,7 +462,7 @@ static QString defaultPrinterName()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
 {
-  hb_retc( (const char *) QPrinterInfo::defaultPrinterName ().toLatin1().data() );
+  hb_retc( RQSTRING( QPrinterInfo::defaultPrinterName () ) );
 }
 
 

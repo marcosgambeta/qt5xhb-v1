@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QPRINTER_CREATOR )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->creator ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->creator () ) );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QPRINTER_DOCNAME )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->docName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->docName () ) );
   }
 }
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->outputFileName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->outputFileName () ) );
   }
 }
 
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->printProgram ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->printProgram () ) );
   }
 }
 
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->printerName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->printerName () ) );
   }
 }
 
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSELECTIONOPTION )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->printerSelectionOption ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->printerSelectionOption () ) );
   }
 }
 
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERNAME )
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->paperName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->paperName () ) );
   }
 }
 
