@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_MANAGERNAME )
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->managerName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->managerName () ) );
   }
 #endif
 }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_PARENTCATEGORYID )
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->parentCategoryId ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->parentCategoryId ( PQSTRING(1) ) ) );
   }
 #endif
 }

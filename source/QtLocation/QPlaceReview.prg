@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_TEXT )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_LANGUAGE )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->language ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->language () ) );
   }
 #endif
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_REVIEWID )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->reviewId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->reviewId () ) );
   }
 #endif
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_TITLE )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->title () ) );
   }
 #endif
 }

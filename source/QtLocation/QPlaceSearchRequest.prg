@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHTERM )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->searchTerm ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->searchTerm () ) );
   }
 #endif
 }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RECOMMENDATIONID )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->recommendationId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->recommendationId () ) );
   }
 #endif
 }

@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
   QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->label ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->label () ) );
   }
 #endif
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
   QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->value ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->value () ) );
   }
 #endif
 }

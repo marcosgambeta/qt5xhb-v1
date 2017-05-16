@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERNAME )
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->managerName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->managerName () ) );
   }
 #endif
 }

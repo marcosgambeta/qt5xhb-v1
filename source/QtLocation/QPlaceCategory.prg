@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->categoryId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->categoryId () ) );
   }
 #endif
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NAME )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 #endif
 }

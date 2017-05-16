@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
   QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 #endif
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
   QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->title () ) );
   }
 #endif
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
   QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->language ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->language () ) );
   }
 #endif
 }
