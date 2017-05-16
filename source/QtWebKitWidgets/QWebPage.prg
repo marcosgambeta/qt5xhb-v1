@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->selectedText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->selectedText () ) );
   }
 }
 

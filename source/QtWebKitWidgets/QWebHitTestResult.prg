@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->alternateText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->alternateText () ) );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->linkText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->linkText () ) );
   }
 }
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->title () ) );
   }
 }
 
