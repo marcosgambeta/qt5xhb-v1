@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultTextEncoding ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->defaultTextEncoding () ) );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) obj->fontFamily (  (QWebSettings::FontFamily) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->fontFamily (  (QWebSettings::FontFamily) par1 ) ) );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->localStoragePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->localStoragePath () ) );
   }
 }
 
@@ -353,7 +353,7 @@ static QString iconDatabasePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 {
-  hb_retc( (const char *) QWebSettings::iconDatabasePath ().toLatin1().data() );
+  hb_retc( RQSTRING( QWebSettings::iconDatabasePath () ) );
 }
 
 
@@ -391,7 +391,7 @@ static QString offlineStoragePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 {
-  hb_retc( (const char *) QWebSettings::offlineStoragePath ().toLatin1().data() );
+  hb_retc( RQSTRING( QWebSettings::offlineStoragePath () ) );
 }
 
 
@@ -400,7 +400,7 @@ static QString offlineWebApplicationCachePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 {
-  hb_retc( (const char *) QWebSettings::offlineWebApplicationCachePath ().toLatin1().data() );
+  hb_retc( RQSTRING( QWebSettings::offlineWebApplicationCachePath () ) );
 }
 
 

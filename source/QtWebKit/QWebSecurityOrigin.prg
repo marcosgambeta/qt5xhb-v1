@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->host ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->host () ) );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->scheme ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->scheme () ) );
   }
 }
 

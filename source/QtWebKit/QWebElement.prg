@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retc( (const char *) obj->attribute ( PQSTRING(1), par2 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->attribute ( PQSTRING(1), par2 ) ) );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
   if( obj )
   {
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    hb_retc( (const char *) obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 ) ) );
   }
 }
 
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->localName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->localName () ) );
   }
 }
 
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->namespaceUri ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->namespaceUri () ) );
   }
 }
 
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->prefix ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->prefix () ) );
   }
 }
 
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
   if( obj )
   {
     int par2 = hb_parni(2);
-    hb_retc( (const char *) obj->styleProperty ( PQSTRING(1),  (QWebElement::StyleResolveStrategy) par2 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->styleProperty ( PQSTRING(1),  (QWebElement::StyleResolveStrategy) par2 ) ) );
   }
 }
 
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tagName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->tagName () ) );
   }
 }
 
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toInnerXml ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toInnerXml () ) );
   }
 }
 
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toOuterXml ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toOuterXml () ) );
   }
 }
 
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toPlainText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toPlainText () ) );
   }
 }
 
