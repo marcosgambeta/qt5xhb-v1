@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ID )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->id ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->id () ) );
   }
 #endif
 }

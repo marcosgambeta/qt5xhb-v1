@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NAME )
   QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 #endif
 }
