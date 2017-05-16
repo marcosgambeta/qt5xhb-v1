@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->localName ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->localName ( *par1 ) ) );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->namespaceUri ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->namespaceUri ( *par1 ) ) );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->prefix ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->prefix ( *par1 ) ) );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( (const char *) obj->toClarkName ( *par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->toClarkName ( *par1 ) ) );
   }
 }
 
