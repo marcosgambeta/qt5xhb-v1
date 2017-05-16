@@ -17,15 +17,8 @@
 #include <QGeoRouteReply>
 #endif
 
-
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+#include "qt5xhb_common.h"
+#include "qt5xhb_macros.h"
 
 bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblock );
 bool Signals_disconnect_signal ( QObject * object, QString signal );
