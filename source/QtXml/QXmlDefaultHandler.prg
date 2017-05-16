@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERRORSTRING )
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 

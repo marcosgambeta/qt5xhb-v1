@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
   QDomCharacterData * obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->data ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->data () ) );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
   {
     unsigned long par1 = hb_parnl(1);
     unsigned long par2 = hb_parnl(2);
-    hb_retc( (const char *) obj->substringData ( par1, par2 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->substringData ( par1, par2 ) ) );
   }
 }
 

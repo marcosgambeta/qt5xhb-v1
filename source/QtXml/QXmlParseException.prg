@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
   QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->message ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->message () ) );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
   QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->publicId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->publicId () ) );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
   QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->systemId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->systemId () ) );
   }
 }
 

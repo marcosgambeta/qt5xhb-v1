@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
   QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->notationName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->notationName () ) );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
   QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->publicId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->publicId () ) );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
   QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->systemId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->systemId () ) );
   }
 }
 

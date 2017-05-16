@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retc( (const char *) obj->attribute ( PQSTRING(1), par2 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->attribute ( PQSTRING(1), par2 ) ) );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
   if( obj )
   {
     QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    hb_retc( (const char *) obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 ) ) );
   }
 }
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->tagName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->tagName () ) );
   }
 }
 
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TEXT )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->text ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 

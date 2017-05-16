@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->data ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->data () ) );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->target ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->target () ) );
   }
 }
 

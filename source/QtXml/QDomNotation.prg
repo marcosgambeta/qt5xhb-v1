@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
   QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->publicId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->publicId () ) );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
   QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->systemId ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->systemId () ) );
   }
 }
 

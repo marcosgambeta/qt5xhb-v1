@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
   QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString ( (int) ISNIL(1)? 1 : hb_parni(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString ( (int) ISNIL(1)? 1 : hb_parni(1) ) ) );
   }
 }
 
