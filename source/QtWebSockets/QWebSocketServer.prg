@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERRORSTRING )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 #endif
 }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERNAME )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->serverName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->serverName () ) );
   }
 #endif
 }

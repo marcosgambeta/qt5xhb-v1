@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ERRORSTRING )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 #endif
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERNAME )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->peerName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->peerName () ) );
   }
 #endif
 }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QWEBSOCKET_RESOURCENAME )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->resourceName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->resourceName () ) );
   }
 #endif
 }
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ORIGIN )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->origin ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->origin () ) );
   }
 #endif
 }
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSEREASON )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->closeReason ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->closeReason () ) );
   }
 #endif
 }
