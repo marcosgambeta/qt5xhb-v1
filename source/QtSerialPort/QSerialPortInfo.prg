@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_PORTNAME )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->portName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->portName () ) );
   }
 #endif
 }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_SYSTEMLOCATION )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->systemLocation ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->systemLocation () ) );
   }
 #endif
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_DESCRIPTION )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->description () ) );
   }
 #endif
 }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_MANUFACTURER )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->manufacturer ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->manufacturer () ) );
   }
 #endif
 }
