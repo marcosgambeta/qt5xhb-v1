@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_FILEPATH )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->filePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->filePath () ) );
   }
 #endif
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_WORKINGDIRECTORY )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->workingDirectory ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->workingDirectory () ) );
   }
 #endif
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TITLE )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->title () ) );
   }
 #endif
 }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_DESCRIPTION )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->description ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->description () ) );
   }
 #endif
 }

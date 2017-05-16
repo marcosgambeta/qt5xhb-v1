@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTWIN_STRINGFROMHRESULT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef Q_OS_WIN64
   HRESULT par1 = (HRESULT) hb_parptr(1);
-  hb_retc( (const char *) QtWin::stringFromHresult ( par1 ).toLatin1().data() );
+  hb_retc( RQSTRING( QtWin::stringFromHresult ( par1 ) ) );
 #endif
 #endif
 }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTWIN_ERRORSTRINGFROMHRESULT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef Q_OS_WIN64
   HRESULT par1 = (HRESULT) hb_parptr(1);
-  hb_retc( (const char *) QtWin::errorStringFromHresult ( par1 ).toLatin1().data() );
+  hb_retc( RQSTRING( QtWin::errorStringFromHresult ( par1 ) ) );
 #endif
 #endif
 }
