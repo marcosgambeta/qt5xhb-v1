@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->displayColumn ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->displayColumn () ) );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->indexColumn ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->indexColumn () ) );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->tableName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->tableName () ) );
   }
 }
 

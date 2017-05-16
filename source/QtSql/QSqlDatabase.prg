@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->connectOptions ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->connectOptions () ) );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->connectionName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->connectionName () ) );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->databaseName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->databaseName () ) );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->driverName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->driverName () ) );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->hostName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->hostName () ) );
   }
 }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->password ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->password () ) );
   }
 }
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->userName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->userName () ) );
   }
 }
 

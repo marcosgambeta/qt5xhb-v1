@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSQLFIELD_NAME )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 
