@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTORNAME )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->convertorName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->convertorName () ) );
   }
 #endif
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_MIMEFOR )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->mimeFor ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->mimeFor ( PQSTRING(1) ) ) );
   }
 #endif
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_FLAVORFOR )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->flavorFor ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->flavorFor ( PQSTRING(1) ) ) );
   }
 #endif
 }
