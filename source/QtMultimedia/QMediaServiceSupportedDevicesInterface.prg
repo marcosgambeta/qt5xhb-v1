@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-    hb_retc( (const char *) obj->deviceDescription ( *par1, *par2 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->deviceDescription ( *par1, *par2 ) ) );
   }
 }
 

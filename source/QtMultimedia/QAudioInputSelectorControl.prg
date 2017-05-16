@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
   QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->activeInput ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->activeInput () ) );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
   QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultInput ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->defaultInput () ) );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
   QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->inputDescription ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->inputDescription ( PQSTRING(1) ) ) );
   }
 }
 

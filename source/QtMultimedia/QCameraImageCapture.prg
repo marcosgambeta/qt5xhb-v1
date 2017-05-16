@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERRORSTRING )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->imageCodecDescription ( PQSTRING(1) ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->imageCodecDescription ( PQSTRING(1) ) ) );
   }
 }
 

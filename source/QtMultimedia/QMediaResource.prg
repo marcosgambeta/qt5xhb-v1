@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOCODEC )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->audioCodec ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->audioCodec () ) );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_LANGUAGE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->language ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->language () ) );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_MIMETYPE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->mimeType ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->mimeType () ) );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOCODEC )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->videoCodec ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->videoCodec () ) );
   }
 }
 

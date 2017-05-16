@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_CODEC )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->codec ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->codec () ) );
   }
 }
 
