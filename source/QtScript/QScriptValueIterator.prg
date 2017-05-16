@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NAME )
   QScriptValueIterator * obj = (QScriptValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 

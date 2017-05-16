@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
   QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->toString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString () ) );
   }
 }
 
