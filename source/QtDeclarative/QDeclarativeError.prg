@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->description ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->description () ) );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->toString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->toString () ) );
   }
 }
 

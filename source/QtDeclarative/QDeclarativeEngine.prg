@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 
   if( obj )
   {
-    hb_retc( (const char *) obj->offlineStoragePath ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->offlineStoragePath () ) );
   }
 }
 
