@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION )
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorDescription ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorDescription () ) );
   }
 #endif
 }

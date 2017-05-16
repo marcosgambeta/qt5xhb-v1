@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTFAMILY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( (const char *) obj->fontFamily (  (QWebEngineSettings::FontFamily) par1 ).toLatin1().data() );
+    hb_retc( RQSTRING( obj->fontFamily (  (QWebEngineSettings::FontFamily) par1 ) ) );
   }
 #endif
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_DEFAULTTEXTENCODING )
   QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->defaultTextEncoding ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->defaultTextEncoding () ) );
   }
 #endif
 }

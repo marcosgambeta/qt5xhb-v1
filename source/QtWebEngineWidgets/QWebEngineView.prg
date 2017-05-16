@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TITLE )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->title ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->title () ) );
   }
 #endif
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SELECTEDTEXT )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->selectedText ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->selectedText () ) );
   }
 #endif
 }
