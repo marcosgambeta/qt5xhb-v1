@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fullServerName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fullServerName () ) );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->serverName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->serverName () ) );
   }
 }
 

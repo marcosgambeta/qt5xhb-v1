@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
   QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
   QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->hostName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->hostName () ) );
   }
 }
 
@@ -329,7 +329,7 @@ static QString localDomainName ()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 {
-  hb_retc( (const char *) QHostInfo::localDomainName ().toLatin1().data() );
+  hb_retc( RQSTRING( QHostInfo::localDomainName () ) );
 }
 
 
@@ -338,7 +338,7 @@ static QString localHostName ()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
 {
-  hb_retc( (const char *) QHostInfo::localHostName ().toLatin1().data() );
+  hb_retc( RQSTRING( QHostInfo::localHostName () ) );
 }
 
 

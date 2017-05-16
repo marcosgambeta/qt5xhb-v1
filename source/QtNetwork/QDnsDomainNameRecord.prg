@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
   QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_VALUE )
   QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->value ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->value () ) );
   }
 }
 

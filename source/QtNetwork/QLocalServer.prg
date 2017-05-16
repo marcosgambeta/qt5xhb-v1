@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->fullServerName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->fullServerName () ) );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->serverName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->serverName () ) );
   }
 }
 

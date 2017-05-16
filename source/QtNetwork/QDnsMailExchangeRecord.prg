@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_EXCHANGE )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->exchange ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->exchange () ) );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NAME )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 

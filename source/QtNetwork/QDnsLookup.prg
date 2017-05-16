@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERRORSTRING )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->errorString ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->errorString () ) );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAME )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->name ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->name () ) );
   }
 }
 

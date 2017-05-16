@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->peerHostName ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->peerHostName () ) );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( (const char *) obj->protocolTag ().toLatin1().data() );
+    hb_retc( RQSTRING( obj->protocolTag () ) );
   }
 }
 
