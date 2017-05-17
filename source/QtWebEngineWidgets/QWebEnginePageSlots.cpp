@@ -73,7 +73,7 @@ void SlotsQWebEnginePage::linkHovered(const QString &url)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM purl = hb_itemPutC( NULL, (const char *) url.toLatin1().data() );
+    PHB_ITEM purl = hb_itemPutC( NULL, RQSTRING(url) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
@@ -189,7 +189,7 @@ void SlotsQWebEnginePage::proxyAuthenticationRequired(const QUrl &requestUrl, QA
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM prequestUrl = hb_itemPutPtr( NULL, (QUrl *) &requestUrl );
     PHB_ITEM pauthenticator = hb_itemPutPtr( NULL, (QAuthenticator *) authenticator );
-    PHB_ITEM pproxyHost = hb_itemPutC( NULL, (const char *) proxyHost.toLatin1().data() );
+    PHB_ITEM pproxyHost = hb_itemPutC( NULL, RQSTRING(proxyHost) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, prequestUrl, pauthenticator, pproxyHost );
     hb_itemRelease( psender );
     hb_itemRelease( prequestUrl );
@@ -207,7 +207,7 @@ void SlotsQWebEnginePage::titleChanged(const QString &title)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptitle = hb_itemPutC( NULL, (const char *) title.toLatin1().data() );
+    PHB_ITEM ptitle = hb_itemPutC( NULL, RQSTRING(title) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );

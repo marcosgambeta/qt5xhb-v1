@@ -26,7 +26,7 @@ void SlotsQFileDialog::currentChanged ( const QString & path )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppath = hb_itemPutC( NULL, (const char *) path.toLatin1().data() );
+    PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
@@ -40,7 +40,7 @@ void SlotsQFileDialog::directoryEntered ( const QString & directory )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdirectory = hb_itemPutC( NULL, (const char *) directory.toLatin1().data() );
+    PHB_ITEM pdirectory = hb_itemPutC( NULL, RQSTRING(directory) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdirectory );
     hb_itemRelease( psender );
     hb_itemRelease( pdirectory );
@@ -54,7 +54,7 @@ void SlotsQFileDialog::fileSelected ( const QString & file )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfile = hb_itemPutC( NULL, (const char *) file.toLatin1().data() );
+    PHB_ITEM pfile = hb_itemPutC( NULL, RQSTRING(file) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfile );
     hb_itemRelease( psender );
     hb_itemRelease( pfile );
@@ -72,7 +72,7 @@ void SlotsQFileDialog::filesSelected ( const QStringList & selected )
     int i;
     for(i=0;i<selected.count();i++)
     {
-      PHB_ITEM pTempItem = hb_itemPutC( NULL, (const char *) selected [i].toLatin1().data() );
+      PHB_ITEM pTempItem = hb_itemPutC( NULL, RQSTRING(selected [i]) );
       hb_arrayAddForward( pselected, pTempItem );
       hb_itemRelease(pTempItem);
     }
@@ -89,7 +89,7 @@ void SlotsQFileDialog::filterSelected ( const QString & filter )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfilter = hb_itemPutC( NULL, (const char *) filter.toLatin1().data() );
+    PHB_ITEM pfilter = hb_itemPutC( NULL, RQSTRING(filter) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfilter );
     hb_itemRelease( psender );
     hb_itemRelease( pfilter );

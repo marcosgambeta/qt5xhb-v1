@@ -28,7 +28,7 @@ void SlotsQCameraImageCaptureControl::error(int id, int error, const QString & e
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
+    PHB_ITEM perrorString = hb_itemPutC( NULL, RQSTRING(errorString) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pid, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
@@ -91,7 +91,7 @@ void SlotsQCameraImageCaptureControl::imageMetadataAvailable(int id, const QStri
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    PHB_ITEM pkey = hb_itemPutC( NULL, (const char *) key.toLatin1().data() );
+    PHB_ITEM pkey = hb_itemPutC( NULL, RQSTRING(key) );
     PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pid, pkey, pvalue );
     hb_itemRelease( psender );
@@ -109,7 +109,7 @@ void SlotsQCameraImageCaptureControl::imageSaved(int requestId, const QString & 
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM prequestId = hb_itemPutNI( NULL, requestId );
-    PHB_ITEM pfileName = hb_itemPutC( NULL, (const char *) fileName.toLatin1().data() );
+    PHB_ITEM pfileName = hb_itemPutC( NULL, RQSTRING(fileName) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prequestId, pfileName );
     hb_itemRelease( psender );
     hb_itemRelease( prequestId );

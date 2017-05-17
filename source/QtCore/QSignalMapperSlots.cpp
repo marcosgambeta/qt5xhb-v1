@@ -40,7 +40,7 @@ void SlotsQSignalMapper::mapped(const QString &arg)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM parg = hb_itemPutC( NULL, (const char *) arg.toLatin1().data() );
+    PHB_ITEM parg = hb_itemPutC( NULL, RQSTRING(arg) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
     hb_itemRelease( psender );
     hb_itemRelease( parg );

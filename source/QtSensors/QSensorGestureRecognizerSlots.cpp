@@ -27,7 +27,7 @@ void SlotsQSensorGestureRecognizer::detected(const QString & s)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ps = hb_itemPutC( NULL, (const char *) s.toLatin1().data() );
+    PHB_ITEM ps = hb_itemPutC( NULL, RQSTRING(s) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ps );
     hb_itemRelease( psender );
     hb_itemRelease( ps );

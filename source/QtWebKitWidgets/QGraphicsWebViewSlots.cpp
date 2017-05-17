@@ -92,7 +92,7 @@ void SlotsQGraphicsWebView::statusBarMessage ( const QString & text )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, (const char *) text.toLatin1().data() );
+    PHB_ITEM ptext = hb_itemPutC( NULL, RQSTRING(text) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
@@ -106,7 +106,7 @@ void SlotsQGraphicsWebView::titleChanged ( const QString & title )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptitle = hb_itemPutC( NULL, (const char *) title.toLatin1().data() );
+    PHB_ITEM ptitle = hb_itemPutC( NULL, RQSTRING(title) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );

@@ -26,7 +26,7 @@ void SlotsQSplashScreen::messageChanged ( const QString & message )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmessage = hb_itemPutC( NULL, (const char *) message.toLatin1().data() );
+    PHB_ITEM pmessage = hb_itemPutC( NULL, RQSTRING(message) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );

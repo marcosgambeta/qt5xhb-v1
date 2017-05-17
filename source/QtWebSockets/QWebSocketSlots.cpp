@@ -117,7 +117,7 @@ void SlotsQWebSocket::textFrameReceived(const QString &frame, bool isLastFrame)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pframe = hb_itemPutC( NULL, (const char *) frame.toLatin1().data() );
+    PHB_ITEM pframe = hb_itemPutC( NULL, RQSTRING(frame) );
     PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pisLastFrame );
     hb_itemRelease( psender );
@@ -153,7 +153,7 @@ void SlotsQWebSocket::textMessageReceived(const QString &message)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmessage = hb_itemPutC( NULL, (const char *) message.toLatin1().data() );
+    PHB_ITEM pmessage = hb_itemPutC( NULL, RQSTRING(message) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );

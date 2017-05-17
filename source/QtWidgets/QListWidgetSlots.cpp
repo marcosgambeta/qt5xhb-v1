@@ -56,7 +56,7 @@ void SlotsQListWidget::currentTextChanged ( const QString & currentText )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrentText = hb_itemPutC( NULL, (const char *) currentText.toLatin1().data() );
+    PHB_ITEM pcurrentText = hb_itemPutC( NULL, RQSTRING(currentText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentText );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrentText );

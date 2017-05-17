@@ -67,7 +67,7 @@ void SlotsQAudioDecoderControl::error(int error, const QString & errorString)
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
+    PHB_ITEM perrorString = hb_itemPutC( NULL, RQSTRING(errorString) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( perror );

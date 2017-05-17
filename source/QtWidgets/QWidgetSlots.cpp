@@ -26,7 +26,7 @@ void SlotsQWidget::windowTitleChanged(const QString &title)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptitle = hb_itemPutC( NULL, (const char *) title.toLatin1().data() );
+    PHB_ITEM ptitle = hb_itemPutC( NULL, RQSTRING(title) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
@@ -54,7 +54,7 @@ void SlotsQWidget::windowIconTextChanged(const QString &iconText)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM piconText = hb_itemPutC( NULL, (const char *) iconText.toLatin1().data() );
+    PHB_ITEM piconText = hb_itemPutC( NULL, RQSTRING(iconText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, piconText );
     hb_itemRelease( psender );
     hb_itemRelease( piconText );

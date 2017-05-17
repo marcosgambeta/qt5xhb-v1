@@ -26,7 +26,7 @@ void SlotsQGraphicsTextItem::linkActivated ( const QString & link )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutC( NULL, (const char *) link.toLatin1().data() );
+    PHB_ITEM plink = hb_itemPutC( NULL, RQSTRING(link) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
@@ -40,7 +40,7 @@ void SlotsQGraphicsTextItem::linkHovered ( const QString & link )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutC( NULL, (const char *) link.toLatin1().data() );
+    PHB_ITEM plink = hb_itemPutC( NULL, RQSTRING(link) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );

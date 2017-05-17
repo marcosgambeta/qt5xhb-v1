@@ -41,7 +41,7 @@ void SlotsQObject::objectNameChanged(const QString & objectName)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pobjectName = hb_itemPutC( NULL, (const char *) objectName.toLatin1().data() );
+    PHB_ITEM pobjectName = hb_itemPutC( NULL, RQSTRING(objectName) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobjectName );
     hb_itemRelease( psender );
     hb_itemRelease( pobjectName );

@@ -27,7 +27,7 @@ void SlotsQHelpIndexWidget::linkActivated ( const QUrl & link, const QString & k
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM plink = hb_itemPutPtr( NULL, (QUrl *) &link );
-    PHB_ITEM pkeyword = hb_itemPutC( NULL, (const char *) keyword.toLatin1().data() );
+    PHB_ITEM pkeyword = hb_itemPutC( NULL, RQSTRING(keyword) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, plink, pkeyword );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
