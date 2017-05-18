@@ -17,8 +17,6 @@ CLASS QPrintDialog INHERIT QAbstractPrintDialog
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD open
@@ -62,7 +60,7 @@ RETURN
 /*
 QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_NEW1 )
+void QPrintDialog_new1 ()
 {
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -73,13 +71,12 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW1 )
 /*
 QPrintDialog ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_NEW2 )
+void QPrintDialog_new2 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   QPrintDialog * o = new QPrintDialog ( par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 //[2]QPrintDialog ( QWidget * parent = 0 )
@@ -88,11 +85,11 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
   if( ISBETWEEN(1,2) && ISQPRINTER(1) && ISOPTQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QPRINTDIALOG_NEW1 );
+    QPrintDialog_new1();
   }
   else if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QPRINTDIALOG_NEW2 );
+    QPrintDialog_new2();
   }
   else
   {
@@ -103,6 +100,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -112,6 +110,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -121,15 +120,23 @@ void open ( QObject * receiver, const char * member )
 HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = hb_parc(2);
-    obj->open ( par1,  (const char *) par2 );
+    if( ISQOBJECT(1) && ISCHAR(2) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      const char * par2 = hb_parc(2);
+      obj->open ( par1,  (const char *) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 PrintDialogOptions options () const
@@ -137,12 +144,12 @@ PrintDialogOptions options () const
 HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->options () );
   }
 }
-
 
 /*
 QPrinter * printer ()
@@ -150,6 +157,7 @@ QPrinter * printer ()
 HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPrinter * ptr = obj->printer ();
@@ -157,21 +165,28 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
   }
 }
 
-
 /*
 void setOption ( PrintDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOption (  (QPrintDialog::PrintDialogOption) par1, PBOOL(2) );
+    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    {
+      int par1 = hb_parni(1);
+      obj->setOption (  (QPrintDialog::PrintDialogOption) par1, PBOOL(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOptions ( PrintDialogOptions options )
@@ -179,14 +194,22 @@ void setOptions ( PrintDialogOptions options )
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOptions (  (QPrintDialog::PrintDialogOptions) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setOptions (  (QPrintDialog::PrintDialogOptions) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool testOption ( PrintDialogOption option ) const
@@ -194,13 +217,20 @@ bool testOption ( PrintDialogOption option ) const
 HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QPrintDialog::PrintDialogOption) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retl( obj->testOption (  (QPrintDialog::PrintDialogOption) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 void done ( int result )
@@ -208,13 +238,21 @@ void done ( int result )
 HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->done ( PINT(1) );
+    if( ISNUM(1) )
+    {
+      obj->done ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int exec ()
@@ -222,12 +260,12 @@ int exec ()
 HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->exec () );
   }
 }
-
 
 /*
 void setVisible ( bool visible )
@@ -235,16 +273,20 @@ void setVisible ( bool visible )
 HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
 {
   QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
-
 #pragma ENDDUMP
-

@@ -17,8 +17,6 @@ CLASS QPageSetupDialog INHERIT QDialog
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD open
@@ -56,7 +54,7 @@ RETURN
 /*
 QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW1 )
+void QPageSetupDialog_new1 ()
 {
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -67,14 +65,13 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW1 )
 /*
 QPageSetupDialog ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW2 )
+void QPageSetupDialog_new2 ()
 {
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   QPageSetupDialog * o = new QPageSetupDialog ( par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
 //[2]QPageSetupDialog(QWidget *parent = 0)
@@ -83,11 +80,11 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
   if( ISBETWEEN(1,2) && ISQPRINTER(1) && ISOPTQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QPAGESETUPDIALOG_NEW1 );
+    QPageSetupDialog_new1();
   }
   else if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QPAGESETUPDIALOG_NEW2 );
+    QPageSetupDialog_new2();
   }
   else
   {
@@ -98,6 +95,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -107,6 +105,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -116,16 +115,23 @@ void open ( QObject * receiver, const char * member )
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-     const char * par2 = ( const char *) _qt5xhb_itemGetPtr(2);
-    obj->open ( par1, par2 );
+    if( ISQOBJECT(1) && ISCHAR(2) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      const char * par2 = ( const char *) hb_parc(2);
+      obj->open ( par1, par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 QPrinter * printer ()
@@ -133,6 +139,7 @@ QPrinter * printer ()
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPrinter * ptr = obj->printer ();
@@ -140,23 +147,27 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
   }
 }
 
-
-
-
-
 /*
 virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual int exec()
@@ -164,12 +175,12 @@ virtual int exec()
 HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->exec () );
   }
 }
-
 
 /*
 void done(int result)
@@ -177,14 +188,20 @@ void done(int result)
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->done ( PINT(1) );
+    if( ISNUM(1) )
+    {
+      obj->done ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

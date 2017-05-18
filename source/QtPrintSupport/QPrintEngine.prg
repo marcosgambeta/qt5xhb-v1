@@ -61,6 +61,7 @@ RETURN
 HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -70,6 +71,7 @@ HB_FUNC_STATIC( QPRINTENGINE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -79,12 +81,12 @@ virtual bool abort () = 0
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->abort () );
   }
 }
-
 
 /*
 virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
@@ -92,13 +94,20 @@ virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
 HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 ) );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      hb_retni( obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool newPage () = 0
@@ -106,12 +115,12 @@ virtual bool newPage () = 0
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->newPage () );
   }
 }
-
 
 /*
 virtual QPrinter::PrinterState printerState () const = 0
@@ -119,12 +128,12 @@ virtual QPrinter::PrinterState printerState () const = 0
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->printerState () );
   }
 }
-
 
 /*
 virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
@@ -132,14 +141,21 @@ virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->property (  (QPrintEngine::PrintEnginePropertyKey) par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      QVariant * ptr = new QVariant( obj->property (  (QPrintEngine::PrintEnginePropertyKey) par1 ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) = 0
@@ -147,20 +163,28 @@ virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) 
 HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
   QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setProperty (  (QPrintEngine::PrintEnginePropertyKey) par1, *par2 );
+    if( ISNUM(1) && ISQVARIANT(2) )
+    {
+      int par1 = hb_parni(1);
+      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
+      obj->setProperty (  (QPrintEngine::PrintEnginePropertyKey) par1, *par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 HB_FUNC_STATIC( QPRINTENGINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -179,6 +203,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -200,14 +225,15 @@ HB_FUNC_STATIC( QPRINTENGINE_SELFDESTRUCTION )
 HB_FUNC_STATIC( QPRINTENGINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

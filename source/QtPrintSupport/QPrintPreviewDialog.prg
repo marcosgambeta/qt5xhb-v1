@@ -17,8 +17,6 @@ CLASS QPrintPreviewDialog INHERIT QDialog
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD open
@@ -57,7 +55,7 @@ RETURN
 /*
 explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW1 )
+void QPrintPreviewDialog_new1 ()
 {
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -69,14 +67,13 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW1 )
 /*
 explicit QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW2 )
+void QPrintPreviewDialog_new2 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QPrintPreviewDialog * o = new QPrintPreviewDialog ( par1,  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]explicit QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -85,11 +82,11 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 {
   if( ISBETWEEN(1,3) && ISQPRINTER(1) && ISOPTQWIDGET(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QPRINTPREVIEWDIALOG_NEW1 );
+    QPrintPreviewDialog_new1();
   }
   else if( ISBETWEEN(0,2) && ISOPTQWIDGET(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QPRINTPREVIEWDIALOG_NEW2 );
+    QPrintPreviewDialog_new2();
   }
   else
   {
@@ -100,6 +97,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -109,6 +107,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -118,15 +117,23 @@ void open ( QObject * receiver, const char * member )
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = hb_parc(2);
-    obj->open ( par1,  (const char *) par2 );
+    if( ISQOBJECT(1) && ISCHAR(2) )
+    {
+      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
+      const char * par2 = hb_parc(2);
+      obj->open ( par1,  (const char *) par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPrinter * printer ()
@@ -134,6 +141,7 @@ QPrinter * printer ()
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QPrinter * ptr = obj->printer ();
@@ -141,20 +149,27 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
   }
 }
 
-
 /*
 virtual void done ( int result )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->done ( PINT(1) );
+    if( ISNUM(1) )
+    {
+      obj->done ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -162,15 +177,20 @@ virtual void setVisible ( bool visible )
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-

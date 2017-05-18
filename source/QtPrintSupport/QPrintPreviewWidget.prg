@@ -13,8 +13,6 @@ CLASS QPrintPreviewWidget INHERIT QWidget
    DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD currentPage
@@ -73,7 +71,7 @@ RETURN
 /*
 explicit QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW1 )
+void QPrintPreviewWidget_new1 ()
 {
   QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
@@ -85,14 +83,13 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW1 )
 /*
 explicit QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW2 )
+void QPrintPreviewWidget_new2 ()
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QPrintPreviewWidget * o = new QPrintPreviewWidget ( par1,  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
-
 
 //[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -101,11 +98,11 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {
   if( ISBETWEEN(1,3) && ISQPRINTER(1) && ISOPTQWIDGET(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QPRINTPREVIEWWIDGET_NEW1 );
+    QPrintPreviewWidget_new1();
   }
   else if( ISBETWEEN(0,2) && ISOPTQWIDGET(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QPRINTPREVIEWWIDGET_NEW2 );
+    QPrintPreviewWidget_new2();
   }
   else
   {
@@ -116,6 +113,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -125,6 +123,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -134,12 +133,12 @@ int currentPage () const
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->currentPage () );
   }
 }
-
 
 /*
 QPrinter::Orientation orientation () const
@@ -147,12 +146,12 @@ QPrinter::Orientation orientation () const
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->orientation () );
   }
 }
-
 
 /*
 int pageCount () const
@@ -160,12 +159,12 @@ int pageCount () const
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->pageCount () );
   }
 }
-
 
 /*
 ViewMode viewMode () const
@@ -173,12 +172,12 @@ ViewMode viewMode () const
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->viewMode () );
   }
 }
-
 
 /*
 qreal zoomFactor () const
@@ -186,12 +185,12 @@ qreal zoomFactor () const
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retnd( obj->zoomFactor () );
   }
 }
-
 
 /*
 ZoomMode zoomMode () const
@@ -199,12 +198,12 @@ ZoomMode zoomMode () const
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->zoomMode () );
   }
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -212,13 +211,21 @@ virtual void setVisible ( bool visible )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVISIBLE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setVisible ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setVisible ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fitInView ()
@@ -226,13 +233,14 @@ void fitInView ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->fitInView ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fitToWidth ()
@@ -240,13 +248,14 @@ void fitToWidth ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->fitToWidth ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void print ()
@@ -254,13 +263,14 @@ void print ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->print ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAllPagesViewMode ()
@@ -268,13 +278,14 @@ void setAllPagesViewMode ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setAllPagesViewMode ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCurrentPage ( int page )
@@ -282,13 +293,21 @@ void setCurrentPage ( int page )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setCurrentPage ( PINT(1) );
+    if( ISNUM(1) )
+    {
+      obj->setCurrentPage ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFacingPagesViewMode ()
@@ -296,13 +315,14 @@ void setFacingPagesViewMode ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setFacingPagesViewMode ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLandscapeOrientation ()
@@ -310,13 +330,14 @@ void setLandscapeOrientation ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setLandscapeOrientation ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOrientation ( QPrinter::Orientation orientation )
@@ -324,14 +345,22 @@ void setOrientation ( QPrinter::Orientation orientation )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation (  (QPrinter::Orientation) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setOrientation (  (QPrinter::Orientation) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPortraitOrientation ()
@@ -339,13 +368,14 @@ void setPortraitOrientation ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setPortraitOrientation ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSinglePageViewMode ()
@@ -353,13 +383,14 @@ void setSinglePageViewMode ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->setSinglePageViewMode ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setViewMode ( ViewMode mode )
@@ -367,14 +398,22 @@ void setViewMode ( ViewMode mode )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setViewMode (  (QPrintPreviewWidget::ViewMode) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setViewMode (  (QPrintPreviewWidget::ViewMode) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setZoomFactor ( qreal factor )
@@ -382,13 +421,21 @@ void setZoomFactor ( qreal factor )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setZoomFactor ( PQREAL(1) );
+    if( ISNUM(1) )
+    {
+      obj->setZoomFactor ( PQREAL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setZoomMode ( ZoomMode zoomMode )
@@ -396,14 +443,22 @@ void setZoomMode ( ZoomMode zoomMode )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setZoomMode (  (QPrintPreviewWidget::ZoomMode) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setZoomMode (  (QPrintPreviewWidget::ZoomMode) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void updatePreview ()
@@ -411,13 +466,14 @@ void updatePreview ()
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->updatePreview ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void zoomIn ( qreal factor = 1.1 )
@@ -425,13 +481,21 @@ void zoomIn ( qreal factor = 1.1 )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->zoomIn ( (qreal) ISNIL(1)? 1.1 : hb_parnd(1) );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      obj->zoomIn ( (qreal) ISNIL(1)? 1.1 : hb_parnd(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void zoomOut ( qreal factor = 1.1 )
@@ -439,15 +503,20 @@ void zoomOut ( qreal factor = 1.1 )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->zoomOut ( (qreal) ISNIL(1)? 1.1 : hb_parnd(1) );
+    if( (ISNUM(1)||ISNIL(1)) )
+    {
+      obj->zoomOut ( (qreal) ISNIL(1)? 1.1 : hb_parnd(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-
