@@ -350,8 +350,7 @@ HB_FUNC_STATIC( QGEOROUTE_TRAVELMODE )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->travelMode ();
-    hb_retni( i );
+    hb_retni( obj->travelMode () );
   }
 #endif
 }

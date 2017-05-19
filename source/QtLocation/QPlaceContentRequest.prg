@@ -137,8 +137,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTTYPE )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->contentType ();
-    hb_retni( i );
+    hb_retni( obj->contentType () );
   }
 #endif
 }

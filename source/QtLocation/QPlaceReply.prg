@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QPLACEREPLY_TYPE )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type ();
-    hb_retni( i );
+    hb_retni( obj->type () );
   }
 #endif
 }
@@ -139,8 +138,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ERROR )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error ();
-    hb_retni( i );
+    hb_retni( obj->error () );
   }
 #endif
 }

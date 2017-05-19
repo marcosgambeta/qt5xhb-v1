@@ -364,8 +364,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_TRAVELMODES )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->travelModes ();
-    hb_retni( i );
+    hb_retni( obj->travelModes () );
   }
 #endif
 }
@@ -398,8 +397,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATUREWEIGHT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->featureWeight (  (QGeoRouteRequest::FeatureType) par1 );
-    hb_retni( i );
+    hb_retni( obj->featureWeight (  (QGeoRouteRequest::FeatureType) par1 ) );
   }
 #endif
 }
@@ -455,8 +453,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_ROUTEOPTIMIZATION )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->routeOptimization ();
-    hb_retni( i );
+    hb_retni( obj->routeOptimization () );
   }
 #endif
 }
@@ -487,8 +484,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SEGMENTDETAIL )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->segmentDetail ();
-    hb_retni( i );
+    hb_retni( obj->segmentDetail () );
   }
 #endif
 }
@@ -519,8 +515,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_MANEUVERDETAIL )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->maneuverDetail ();
-    hb_retni( i );
+    hb_retni( obj->maneuverDetail () );
   }
 #endif
 }

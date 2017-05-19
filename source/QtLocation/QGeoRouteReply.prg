@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERROR )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error ();
-    hb_retni( i );
+    hb_retni( obj->error () );
   }
 #endif
 }

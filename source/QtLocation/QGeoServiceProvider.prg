@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGFEATURES )
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->routingFeatures ();
-    hb_retni( i );
+    hb_retni( obj->routingFeatures () );
   }
 #endif
 }
@@ -120,8 +119,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGFEATURES )
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->geocodingFeatures ();
-    hb_retni( i );
+    hb_retni( obj->geocodingFeatures () );
   }
 #endif
 }
@@ -136,8 +134,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_MAPPINGFEATURES )
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->mappingFeatures ();
-    hb_retni( i );
+    hb_retni( obj->mappingFeatures () );
   }
 #endif
 }
@@ -152,8 +149,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACESFEATURES )
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->placesFeatures ();
-    hb_retni( i );
+    hb_retni( obj->placesFeatures () );
   }
 #endif
 }
@@ -232,8 +228,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ERROR )
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->error ();
-    hb_retni( i );
+    hb_retni( obj->error () );
   }
 #endif
 }

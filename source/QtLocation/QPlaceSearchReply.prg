@@ -97,8 +97,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_TYPE )
   QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type ();
-    hb_retni( i );
+    hb_retni( obj->type () );
   }
 #endif
 }

@@ -133,8 +133,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_TYPE )
   QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type ();
-    hb_retni( i );
+    hb_retni( obj->type () );
   }
 #endif
 }

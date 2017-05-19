@@ -159,8 +159,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDTRAVELMODES )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedTravelModes ();
-    hb_retni( i );
+    hb_retni( obj->supportedTravelModes () );
   }
 #endif
 }
@@ -175,8 +174,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATURETYPES )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedFeatureTypes ();
-    hb_retni( i );
+    hb_retni( obj->supportedFeatureTypes () );
   }
 #endif
 }
@@ -191,8 +189,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATUREWEIGHTS )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedFeatureWeights ();
-    hb_retni( i );
+    hb_retni( obj->supportedFeatureWeights () );
   }
 #endif
 }
@@ -207,8 +204,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDROUTEOPTIMIZATIONS )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedRouteOptimizations ();
-    hb_retni( i );
+    hb_retni( obj->supportedRouteOptimizations () );
   }
 #endif
 }
@@ -223,8 +219,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDSEGMENTDETAILS )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedSegmentDetails ();
-    hb_retni( i );
+    hb_retni( obj->supportedSegmentDetails () );
   }
 #endif
 }
@@ -239,8 +234,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDMANEUVERDETAILS )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->supportedManeuverDetails ();
-    hb_retni( i );
+    hb_retni( obj->supportedManeuverDetails () );
   }
 #endif
 }
@@ -303,8 +297,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->measurementSystem ();
-    hb_retni( i );
+    hb_retni( obj->measurementSystem () );
   }
 #endif
 }

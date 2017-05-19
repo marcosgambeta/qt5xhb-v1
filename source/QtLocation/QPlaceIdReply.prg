@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
   QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->type ();
-    hb_retni( i );
+    hb_retni( obj->type () );
   }
 #endif
 }
@@ -104,8 +103,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
   QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int i = obj->operationType ();
-    hb_retni( i );
+    hb_retni( obj->operationType () );
   }
 #endif
 }
