@@ -14,7 +14,6 @@ REQUEST QABSTRACTANIMATION
 
 CLASS QAnimationGroup INHERIT QAbstractAnimation
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD delete

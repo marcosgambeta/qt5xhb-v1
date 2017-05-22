@@ -14,7 +14,6 @@ REQUEST QGRAPHICSLAYOUTITEM
 
 CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD delete

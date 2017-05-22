@@ -17,7 +17,6 @@ REQUEST QSQLRECORD
 
 CLASS QSqlTableModel INHERIT QSqlQueryModel
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD new

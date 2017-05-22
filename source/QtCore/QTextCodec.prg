@@ -17,7 +17,6 @@ REQUEST QTEXTENCODER
 CLASS QTextCodec
 
    DATA pointer
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD canEncode

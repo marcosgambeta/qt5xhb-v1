@@ -167,44 +167,6 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 }
 
 /*
-  verifica se o parâmetro <iPar> herda da classe <classname>
-  retorno: true ou false
-*/
-
-bool _qt5xhb_inherits ( int iPar, const char * classname )
-{
-  if( ISOBJECT(iPar) )
-  {
-    // verifica se é um objeto descendente da classe QObject (CLASS_FLAGS != 0)
-    if( hb_itemGetNI( hb_objSendMsg( hb_param(iPar, HB_IT_OBJECT ), "CLASS_FLAGS", 0 ) ) != 0 )
-    {
-      // obtém o ponteiro do objeto Qt guardado na propriedade 'pointer' do objeto [x]Harbour
-      QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(iPar, HB_IT_OBJECT ), "POINTER", 0 ) );
-      if( obj )
-      {
-        // sendo um pointeiro válido, checa se descende da classe 'classname'
-        return obj->inherits(classname);
-      }
-      else
-      {
-        // sendo um ponteiro nulo, retorna false
-        return false;
-      }
-    }
-    else
-    {
-      // não sendo um QObject, retorna false
-      return false;
-    }
-  }
-  else
-  {
-    // não sendo um objeto [x]Harbour, retorna false
-    return false;
-  }
-}
-
-/*
   converte um objeto QList<int> em uma array do [x]Harbour
 */
 void _qt5xhb_convert_qlist_int_to_array ( const QList<int> list )

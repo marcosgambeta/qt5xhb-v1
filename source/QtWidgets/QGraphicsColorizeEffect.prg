@@ -14,7 +14,6 @@ REQUEST QCOLOR
 
 CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD new

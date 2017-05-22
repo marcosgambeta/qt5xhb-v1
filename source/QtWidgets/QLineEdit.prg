@@ -20,7 +20,6 @@ REQUEST QACTION
 
 CLASS QLineEdit INHERIT QWidget
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD new

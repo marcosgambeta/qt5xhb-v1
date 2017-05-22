@@ -19,7 +19,6 @@ REQUEST QMEDIAOBJECT
 
 CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

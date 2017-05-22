@@ -17,7 +17,6 @@ REQUEST QSCRIPTENGINE
 CLASS QScriptable
 
    DATA pointer
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD delete

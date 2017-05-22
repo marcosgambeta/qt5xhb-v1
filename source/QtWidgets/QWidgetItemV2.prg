@@ -14,7 +14,6 @@ REQUEST QSIZE
 
 CLASS QWidgetItemV2 INHERIT QWidgetItem
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

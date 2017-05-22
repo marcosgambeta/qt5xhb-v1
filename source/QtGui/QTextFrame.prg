@@ -16,7 +16,6 @@ REQUEST QTEXTFRAMELAYOUTDATA
 
 CLASS QTextFrame INHERIT QTextObject
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

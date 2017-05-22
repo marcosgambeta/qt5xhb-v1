@@ -15,7 +15,6 @@ REQUEST QSCRIPTVALUE
 
 CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD new

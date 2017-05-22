@@ -10,7 +10,6 @@
 
 CLASS QSGVertexColorMaterial INHERIT QSGMaterial
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

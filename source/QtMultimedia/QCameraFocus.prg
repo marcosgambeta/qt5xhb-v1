@@ -15,7 +15,6 @@ REQUEST QCAMERAFOCUSZONELIST
 
 CLASS QCameraFocus INHERIT QObject
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD customFocusPoint

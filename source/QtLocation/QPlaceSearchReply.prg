@@ -15,7 +15,6 @@ REQUEST QPLACESEARCHREQUEST
 
 CLASS QPlaceSearchReply INHERIT QPlaceReply
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD new

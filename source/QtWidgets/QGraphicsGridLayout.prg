@@ -15,7 +15,6 @@ REQUEST QSIZEF
 
 CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

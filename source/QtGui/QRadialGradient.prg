@@ -14,7 +14,6 @@ REQUEST QPOINTF
 
 CLASS QRadialGradient INHERIT QGradient
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

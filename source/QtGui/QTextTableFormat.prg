@@ -14,7 +14,6 @@ REQUEST QTEXTLENGTH
 
 CLASS QTextTableFormat INHERIT QTextFrameFormat
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

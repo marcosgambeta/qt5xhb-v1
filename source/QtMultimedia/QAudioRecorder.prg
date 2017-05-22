@@ -10,7 +10,6 @@
 
 CLASS QAudioRecorder INHERIT QMediaRecorder
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

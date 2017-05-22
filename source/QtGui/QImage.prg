@@ -17,7 +17,6 @@ REQUEST QTRANSFORM
 
 CLASS QImage INHERIT QPaintDevice // TODO: revisar e completar implementacao da classe
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new9

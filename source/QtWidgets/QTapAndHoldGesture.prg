@@ -14,7 +14,6 @@ REQUEST QPOINTF
 
 CLASS QTapAndHoldGesture INHERIT QGesture
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD delete

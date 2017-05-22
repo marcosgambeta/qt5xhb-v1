@@ -16,7 +16,6 @@ REQUEST QRECT
 
 CLASS QListWidget INHERIT QListView
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD new

@@ -10,7 +10,6 @@
 
 CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

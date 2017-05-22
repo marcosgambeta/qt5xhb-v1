@@ -16,7 +16,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessibleObject INHERIT QAccessibleInterface
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD isValid

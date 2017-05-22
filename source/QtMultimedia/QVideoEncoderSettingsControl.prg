@@ -15,7 +15,6 @@ REQUEST QVIDEOENCODERSETTINGS
 
 CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD delete

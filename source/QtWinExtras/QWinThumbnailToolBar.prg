@@ -15,7 +15,6 @@ REQUEST QWINTHUMBNAILTOOLBUTTON
 
 CLASS QWinThumbnailToolBar INHERIT QObject
 
-   DATA class_flags INIT 1
    DATA self_destruction INIT .F.
 
    METHOD new

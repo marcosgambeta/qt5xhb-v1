@@ -16,7 +16,6 @@ REQUEST QSIZE
 
 CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

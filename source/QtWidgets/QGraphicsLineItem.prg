@@ -17,7 +17,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsLineItem INHERIT QGraphicsItem
 
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new
