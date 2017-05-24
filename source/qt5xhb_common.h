@@ -11,6 +11,7 @@
 #include "hbapierr.h"
 #include "hbvm.h"
 #include "hbstack.h"
+#include "hbdate.h"
 
 #ifndef __XHARBOUR__
 #include "hbapicls.h"

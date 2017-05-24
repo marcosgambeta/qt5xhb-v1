@@ -881,6 +881,14 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   {
     QVariant_new4();
   }
+  else if( ISNUMPAR(1) && hb_param( 1, HB_IT_DATE ) != NULL )
+  {
+    int y, m, d;
+    hb_dateDecode( hb_itemGetDL( hb_param( 1, HB_IT_DATE ) ), &y, &m, &d );
+    QDate date(y, m, d);
+    QVariant * o = new QVariant ( date );
+    _qt5xhb_storePointerAndFlag( o, true );
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
