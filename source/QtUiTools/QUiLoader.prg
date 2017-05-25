@@ -71,15 +71,22 @@ QUiLoader ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QUiLoader * o = new QUiLoader ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  {
+    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+    QUiLoader * o = new QUiLoader ( par1 );
+    _qt5xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 HB_FUNC_STATIC( QUILOADER_DELETE )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -89,6 +96,7 @@ HB_FUNC_STATIC( QUILOADER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -98,13 +106,21 @@ void addPluginPath ( const QString & path )
 HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->addPluginPath ( PQSTRING(1) );
+    if( ISCHAR(1) )
+    {
+      obj->addPluginPath ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QStringList availableLayouts () const
@@ -112,6 +128,7 @@ QStringList availableLayouts () const
 HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->availableLayouts ();
@@ -119,13 +136,13 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
   }
 }
 
-
 /*
 QStringList availableWidgets () const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->availableWidgets ();
@@ -133,20 +150,20 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
   }
 }
 
-
 /*
 void clearPluginPaths ()
 */
 HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->clearPluginPaths ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
@@ -154,15 +171,22 @@ virtual QAction * createAction ( QObject * parent = 0, const QString & name = QS
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QAction * ptr = obj->createAction ( par1, par2 );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
+    if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
+    {
+      QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      QAction * ptr = obj->createAction ( par1, par2 );
+      _qt5xhb_createReturnClass ( ptr, "QACTION" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
@@ -170,15 +194,22 @@ virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString &
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QActionGroup * ptr = obj->createActionGroup ( par1, par2 );
-    _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
+    if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
+    {
+      QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
+      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
+      QActionGroup * ptr = obj->createActionGroup ( par1, par2 );
+      _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
@@ -186,15 +217,22 @@ virtual QLayout * createLayout ( const QString & className, QObject * parent = 0
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-    QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, par3 );
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
+    if( ISCHAR(1) && ISOPTQOBJECT(2) && ISOPTCHAR(3) )
+    {
+      QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
+      QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
+      QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, par3 );
+      _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
@@ -202,15 +240,22 @@ virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-    QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, par3 );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISCHAR(1) && ISOPTQWIDGET(2) && ISOPTCHAR(3) )
+    {
+      QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
+      QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
+      QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, par3 );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 bool isLanguageChangeEnabled () const
@@ -218,12 +263,12 @@ bool isLanguageChangeEnabled () const
 HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isLanguageChangeEnabled () );
   }
 }
-
 
 /*
 QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
@@ -231,15 +276,22 @@ QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-    QWidget * ptr = obj->load ( par1, par2 );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISQIODEVICE(1) && ISOPTQWIDGET(2) )
+    {
+      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
+      QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
+      QWidget * ptr = obj->load ( par1, par2 );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 QStringList pluginPaths () const
@@ -247,6 +299,7 @@ QStringList pluginPaths () const
 HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QStringList strl = obj->pluginPaths ();
@@ -254,20 +307,27 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
   }
 }
 
-
 /*
 void setLanguageChangeEnabled ( bool enabled )
 */
 HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setLanguageChangeEnabled ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setLanguageChangeEnabled ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWorkingDirectory ( const QDir & dir )
@@ -275,14 +335,22 @@ void setWorkingDirectory ( const QDir & dir )
 HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-    obj->setWorkingDirectory ( *par1 );
+    if( ISQDIR(1) )
+    {
+      QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
+      obj->setWorkingDirectory ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QDir workingDirectory () const
@@ -290,6 +358,7 @@ QDir workingDirectory () const
 HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QDir * ptr = new QDir( obj->workingDirectory () );
@@ -297,7 +366,4 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
   }
 }
 
-
-
 #pragma ENDDUMP
-
