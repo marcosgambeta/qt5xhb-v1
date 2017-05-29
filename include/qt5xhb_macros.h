@@ -1037,3 +1037,11 @@
 // macros for return's
 #define RQSTRING(x)                                         (const char *) x.toLatin1().data()
 //#define RQSTRING(x)                                         (const char *) x.toUtf8().data()
+
+// macros for parameters (Qt objects)
+#define PQOBJECT(n)                                         (QObject *) _qt5xhb_itemGetPtr(n)
+#define PQWIDGET(n)                                         (QWidget *) _qt5xhb_itemGetPtr(n)
+
+// macros for optional parameters (Qt objects)
+#define OPQOBJECT(n,v)                                      ISNIL(n)? v : (QObject *) _qt5xhb_itemGetPtr(n)
+#define OPQWIDGET(n,v)                                      ISNIL(n)? v : (QWidget *) _qt5xhb_itemGetPtr(n)
