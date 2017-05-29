@@ -91,9 +91,8 @@ QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QLabel * o = new QLabel ( par1,  (Qt::WindowFlags) par2 );
+  QLabel * o = new QLabel ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,9 +101,8 @@ QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new2 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QLabel * o = new QLabel ( PQSTRING(1), par2,  (Qt::WindowFlags) par3 );
+  QLabel * o = new QLabel ( PQSTRING(1), OPQWIDGET(2,0),  (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -300,8 +298,15 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setAlignment (  (Qt::Alignment) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -316,8 +321,14 @@ HB_FUNC_STATIC( QLABEL_SETBUDDY )
 
   if( obj )
   {
-    QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setBuddy ( par1 );
+    if( ISOPTQWIDGET(1) )
+    {
+      obj->setBuddy ( OPQWIDGET(1,0) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -442,8 +453,15 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTextFormat (  (Qt::TextFormat) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setTextFormat (  (Qt::TextFormat) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -458,8 +476,15 @@ HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -611,8 +636,15 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
 
   if( obj )
   {
-    QMovie * par1 = (QMovie *) _qt5xhb_itemGetPtr(1);
-    obj->setMovie ( par1 );
+    if( ISQMOVIE(1) )
+    {
+      QMovie * par1 = (QMovie *) _qt5xhb_itemGetPtr(1);
+      obj->setMovie ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -657,6 +689,7 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
+
     if( pNum )
     {
       if( HB_IS_DOUBLE(pNum) )
@@ -688,8 +721,15 @@ HB_FUNC_STATIC( QLABEL_SETPICTURE )
 
   if( obj )
   {
-    QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
-    obj->setPicture ( *par1 );
+    if( ISQPICTURE(1) )
+    {
+      QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
+      obj->setPicture ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -704,8 +744,15 @@ HB_FUNC_STATIC( QLABEL_SETPIXMAP )
 
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-    obj->setPixmap ( *par1 );
+    if( ISQPIXMAP(1) )
+    {
+      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
+      obj->setPixmap ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -720,7 +767,14 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
 
   if( obj )
   {
-    obj->setText ( PQSTRING(1) );
+    if( ISCHAR(1) )
+    {
+      obj->setText ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
