@@ -1027,12 +1027,14 @@
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PBOOL(n)                                            (bool) hb_parl(n)
 #define PINT(n)                                             (int) hb_parni(n)
+#define PQSTRINGLIST(n)                                     _qt5xhb_convert_array_parameter_to_qstringlist(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
 #define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
 #define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromLatin1( hb_parc(n) )
 //#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromUtf8( hb_parc(n) )
+#define OPQSTRINGLIST(n,v)                                  ISNIL(n)? v : _qt5xhb_convert_array_parameter_to_qstringlist(n)
 
 // macros for return's
 #define RQSTRING(x)                                         (const char *) x.toLatin1().data()
@@ -1041,6 +1043,8 @@
 // macros for parameters (Qt objects)
 #define PQOBJECT(n)                                         (QObject *) _qt5xhb_itemGetPtr(n)
 #define PQWIDGET(n)                                         (QWidget *) _qt5xhb_itemGetPtr(n)
+#define PQVARIANT(n)                                        (QVariant *) _qt5xhb_itemGetPtr(n)
+#define PQMODELINDEX(n)                                     (QModelIndex *) _qt5xhb_itemGetPtr(n)
 
 // macros for optional parameters (Qt objects)
 #define OPQOBJECT(n,v)                                      ISNIL(n)? v : (QObject *) _qt5xhb_itemGetPtr(n)
