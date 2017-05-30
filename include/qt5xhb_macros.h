@@ -1027,11 +1027,15 @@
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PBOOL(n)                                            (bool) hb_parl(n)
 #define PINT(n)                                             (int) hb_parni(n)
+#define PFLOAT(n)                                           (float) hb_parnd(n)
+#define PDOUBLE(n)                                          (double) hb_parnd(n)
 #define PQSTRINGLIST(n)                                     _qt5xhb_convert_array_parameter_to_qstringlist(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
 #define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
+#define OPFLOAT(n,v)                                        (float) ISNIL(n)? v : hb_parnd(n)
+#define OPDOUBLE(n,v)                                       (double) ISNIL(n)? v : hb_parnd(n)
 #define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromLatin1( hb_parc(n) )
 //#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromUtf8( hb_parc(n) )
 #define OPQSTRINGLIST(n,v)                                  ISNIL(n)? v : _qt5xhb_convert_array_parameter_to_qstringlist(n)
