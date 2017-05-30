@@ -603,17 +603,8 @@ static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const Q
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
-  QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-  //  par2 << temp;
-  //}
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  hb_retni( QMediaPlayer::hasSupport ( PQSTRING(1), par2,  (QMediaPlayer::Flags) par3 ) );
+  hb_retni( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()),  (QMediaPlayer::Flags) par3 ) );
 }
 
 

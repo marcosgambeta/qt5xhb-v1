@@ -293,18 +293,9 @@ void QDir_entryInfoList1 ()
 
   if( obj )
   {
-    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    //  par1 << temp;
-    //}
     int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    QFileInfoList list = obj->entryInfoList ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
+    QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1),  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QFILEINFO" );
@@ -413,18 +404,9 @@ void QDir_entryList1 ()
 
   if( obj )
   {
-    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    //  par1 << temp;
-    //}
     int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    QStringList strl = obj->entryList ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
+    QStringList strl = obj->entryList ( PQSTRINGLIST(1),  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -836,16 +818,7 @@ HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      //int i1;
-      //int nLen1 = hb_arrayLen(aStrings1);
-      //for (i1=0;i1<nLen1;i1++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      //  par1 << temp;
-      //}
-      obj->setNameFilters ( par1 );
+      obj->setNameFilters ( PQSTRINGLIST(1) );
     }
     else
     {
@@ -1099,16 +1072,7 @@ static bool match(const QStringList & filters, const QString & fileName)
 */
 void QDir_match2 ()
 {
-  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  //int i1;
-  //int nLen1 = hb_arrayLen(aStrings1);
-  //for (i1=0;i1<nLen1;i1++)
-  //{
-  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-  //  par1 << temp;
-  //}
-  hb_retl( QDir::match ( par1, PQSTRING(2) ) );
+  hb_retl( QDir::match ( PQSTRINGLIST(1), PQSTRING(2) ) );
 }
 
 //[1]bool match(const QString & filter, const QString & fileName)
@@ -1194,16 +1158,7 @@ HB_FUNC_STATIC( QDIR_SETSEARCHPATHS )
 {
   if( ISCHAR(1) && ISARRAY(2) )
   {
-    QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-    //int i2;
-    //int nLen2 = hb_arrayLen(aStrings2);
-    //for (i2=0;i2<nLen2;i2++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-    //  par2 << temp;
-    //}
-    QDir::setSearchPaths ( PQSTRING(1), par2 );
+    QDir::setSearchPaths ( PQSTRING(1), PQSTRINGLIST(2) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

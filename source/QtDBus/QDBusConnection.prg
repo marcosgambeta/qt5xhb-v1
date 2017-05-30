@@ -322,18 +322,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList par5 = _qt5xhb_convert_array_parameter_to_qstringlist(5);
-    //PHB_ITEM aStrings5 = hb_param(5, HB_IT_ARRAY);
-    //int i5;
-    //int nLen5 = hb_arrayLen(aStrings5);
-    //for (i5=0;i5<nLen5;i5++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
-    //  par5 << temp;
-    //}
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, PQSTRING(6), par7,  (const char *) par8 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7,  (const char *) par8 ) );
   }
 }
 
@@ -383,18 +374,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList par5 = _qt5xhb_convert_array_parameter_to_qstringlist(5);
-    //PHB_ITEM aStrings5 = hb_param(5, HB_IT_ARRAY);
-    //int i5;
-    //int nLen5 = hb_arrayLen(aStrings5);
-    //for (i5=0;i5<nLen5;i5++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings5, i5+1) );
-    //  par5 << temp;
-    //}
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, PQSTRING(6), par7,  (const char *) par8 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7,  (const char *) par8 ) );
   }
 }
 

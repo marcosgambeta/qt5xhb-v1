@@ -510,16 +510,7 @@ HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 {
   if( ISARRAY(1) )
   {
-    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    //  par1 << temp;
-    //}
-    QIcon::setThemeSearchPaths ( par1 );
+    QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

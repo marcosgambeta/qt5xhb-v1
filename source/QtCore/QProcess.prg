@@ -323,16 +323,7 @@ HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      //int i1;
-      //int nLen1 = hb_arrayLen(aStrings1);
-      //for (i1=0;i1<nLen1;i1++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      //  par1 << temp;
-      //}
-      obj->setEnvironment ( par1 );
+      obj->setEnvironment ( PQSTRINGLIST(1) );
     }
     else
     {
@@ -558,17 +549,8 @@ void QProcess_start1 ()
 
   if( obj )
   {
-    QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-    //int i2;
-    //int nLen2 = hb_arrayLen(aStrings2);
-    //for (i2=0;i2<nLen2;i2++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-    //  par2 << temp;
-    //}
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->start ( PQSTRING(1), par2,  (QIODevice::OpenMode) par3 );
+    obj->start ( PQSTRING(1), PQSTRINGLIST(2),  (QIODevice::OpenMode) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -851,16 +833,7 @@ static int execute ( const QString & program, const QStringList & arguments )
 */
 void QProcess_execute1 ()
 {
-  QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-  //  par2 << temp;
-  //}
-  hb_retni( QProcess::execute ( PQSTRING(1), par2 ) );
+  hb_retni( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 /*
@@ -895,17 +868,8 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 */
 void QProcess_startDetached1 ()
 {
-  QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-  //  par2 << temp;
-  //}
   qint64 * par4 = (qint64 *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QProcess::startDetached ( PQSTRING(1), par2, PQSTRING(3), par4 ) );
+  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), par4 ) );
 }
 
 /*
@@ -913,16 +877,7 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 */
 void QProcess_startDetached2 ()
 {
-  QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-  //  par2 << temp;
-  //}
-  hb_retl( QProcess::startDetached ( PQSTRING(1), par2 ) );
+  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 /*
@@ -1047,16 +1002,7 @@ HB_FUNC_STATIC( QPROCESS_SETARGUMENTS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      //int i1;
-      //int nLen1 = hb_arrayLen(aStrings1);
-      //for (i1=0;i1<nLen1;i1++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      //  par1 << temp;
-      //}
-      obj->setArguments ( par1 );
+      obj->setArguments ( PQSTRINGLIST(1) );
     }
     else
     {
