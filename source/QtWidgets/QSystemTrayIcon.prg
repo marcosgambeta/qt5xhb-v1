@@ -69,8 +69,7 @@ QSystemTrayIcon(QObject * parent = 0)
 */
 void QSystemTrayIcon_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSystemTrayIcon * o = new QSystemTrayIcon ( par1 );
+  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -80,8 +79,7 @@ QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
 void QSystemTrayIcon_new2 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSystemTrayIcon * o = new QSystemTrayIcon ( par1, par2 );
+  QSystemTrayIcon * o = new QSystemTrayIcon ( par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

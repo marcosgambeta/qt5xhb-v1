@@ -73,8 +73,7 @@ QUndoGroup(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QUNDOGROUP_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QUndoGroup * o = new QUndoGroup ( par1 );
+  QUndoGroup * o = new QUndoGroup ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -157,9 +156,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QAction * ptr = obj->createRedoAction ( par1, par2 );
+    QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -173,9 +170,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QAction * ptr = obj->createUndoAction ( par1, par2 );
+    QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

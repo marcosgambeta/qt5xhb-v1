@@ -298,8 +298,7 @@ HB_FUNC_STATIC( QSTYLE_POLISH1 )
   QStyle * obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->polish ( par1 );
+    obj->polish ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -480,8 +479,7 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH1 )
   QStyle * obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->unpolish ( par1 );
+    obj->unpolish ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

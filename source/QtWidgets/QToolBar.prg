@@ -86,8 +86,7 @@ QToolBar ( const QString & title, QWidget * parent = 0 )
 */
 void QToolBar_new1 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QToolBar * o = new QToolBar ( PQSTRING(1), par2 );
+  QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -96,8 +95,7 @@ QToolBar ( QWidget * parent = 0 )
 */
 void QToolBar_new2 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QToolBar * o = new QToolBar ( par1 );
+  QToolBar * o = new QToolBar ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -246,9 +244,7 @@ void QToolBar_addAction4 ()
 
   if( obj )
   {
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    const char * par3 = hb_parc(3);
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) par3 );
+    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2),  (const char *) hb_parc(3) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -263,9 +259,7 @@ void QToolBar_addAction5 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-    const char * par4 = hb_parc(4);
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3,  (const char *) par4 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), PQOBJECT(3),  (const char *) hb_parc(4) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -329,8 +323,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      QAction * ptr = obj->addWidget ( par1 );
+      QAction * ptr = obj->addWidget ( PQWIDGET(1) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -416,8 +409,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
     if( ISQACTION(1) && ISQWIDGET(2) )
     {
       QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-      QAction * ptr = obj->insertWidget ( par1, par2 );
+      QAction * ptr = obj->insertWidget ( par1, PQWIDGET(2) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else

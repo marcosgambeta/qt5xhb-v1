@@ -77,8 +77,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QWidget * ptr = obj->createWidget ( par1 );
+    QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

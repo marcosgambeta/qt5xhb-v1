@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
   {
     QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->paint ( par1, par2, par3 );
+    obj->paint ( par1, par2, OPQWIDGET(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -67,8 +67,7 @@ QGraphicsDropShadowEffect ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QGraphicsDropShadowEffect * o = new QGraphicsDropShadowEffect ( par1 );
+  QGraphicsDropShadowEffect * o = new QGraphicsDropShadowEffect ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

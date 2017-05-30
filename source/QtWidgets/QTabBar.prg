@@ -113,8 +113,7 @@ QTabBar ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABBAR_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QTabBar * o = new QTabBar ( par1 );
+  QTabBar * o = new QTabBar ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -565,8 +564,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->setTabButton ( PINT(1),  (QTabBar::ButtonPosition) par2, par3 );
+    obj->setTabButton ( PINT(1),  (QTabBar::ButtonPosition) par2, PQWIDGET(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -580,8 +578,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABDATA )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setTabData ( PINT(1), *par2 );
+    obj->setTabData ( PINT(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

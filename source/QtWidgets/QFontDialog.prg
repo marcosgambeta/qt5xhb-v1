@@ -63,8 +63,7 @@ explicit QFontDialog ( QWidget * parent = 0 )
 */
 void QFontDialog_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QFontDialog * o = new QFontDialog ( par1 );
+  QFontDialog * o = new QFontDialog ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -74,8 +73,7 @@ explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
 void QFontDialog_new2 ()
 {
   QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QFontDialog * o = new QFontDialog ( *par1, par2 );
+  QFontDialog * o = new QFontDialog ( *par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -163,9 +161,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      const char * par2 = hb_parc(2);
-      obj->open ( par1,  (const char *) par2 );
+      obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
     }
     else
     {
@@ -298,8 +294,7 @@ static QFont getFont(bool *ok, QWidget *parent = 0)
 void QFontDialog_getFont1 ()
 {
   bool par1;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, par2 ) );
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, OPQWIDGET(2,0) ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
@@ -311,10 +306,8 @@ void QFontDialog_getFont2 ()
 {
   bool par1;
   QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-  QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   int par5 = ISNIL(5)? (int) 0 : hb_parni(5);
-  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *par2, par3, par4,  (QFontDialog::FontDialogOptions) par5 ) );
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *par2, OPQWIDGET(3,0), OPQSTRING(4,QString()),  (QFontDialog::FontDialogOptions) par5 ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }

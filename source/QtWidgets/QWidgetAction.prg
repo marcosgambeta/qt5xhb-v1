@@ -54,8 +54,7 @@ QWidgetAction(QObject * parent)
 */
 HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QWidgetAction * o = new QWidgetAction ( par1 );
+  QWidgetAction * o = new QWidgetAction ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -97,8 +96,7 @@ HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
   QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->releaseWidget ( par1 );
+    obj->releaseWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -112,8 +110,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
   QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QWidget * ptr = obj->requestWidget ( par1 );
+    QWidget * ptr = obj->requestWidget ( PQWIDGET(1) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -127,8 +124,7 @@ HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
   QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setDefaultWidget ( par1 );
+    obj->setDefaultWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

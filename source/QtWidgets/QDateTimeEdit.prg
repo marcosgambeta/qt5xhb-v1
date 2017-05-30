@@ -106,8 +106,7 @@ QDateTimeEdit ( QWidget * parent = 0 )
 */
 void QDateTimeEdit_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QDateTimeEdit * o = new QDateTimeEdit ( par1 );
+  QDateTimeEdit * o = new QDateTimeEdit ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -117,8 +116,7 @@ QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 void QDateTimeEdit_new2 ()
 {
   QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QDateTimeEdit * o = new QDateTimeEdit ( *par1, par2 );
+  QDateTimeEdit * o = new QDateTimeEdit ( *par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -128,8 +126,7 @@ QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 void QDateTimeEdit_new3 ()
 {
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QDateTimeEdit * o = new QDateTimeEdit ( *par1, par2 );
+  QDateTimeEdit * o = new QDateTimeEdit ( *par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -139,8 +136,7 @@ QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 void QDateTimeEdit_new4 ()
 {
   QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QDateTimeEdit * o = new QDateTimeEdit ( *par1, par2 );
+  QDateTimeEdit * o = new QDateTimeEdit ( *par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

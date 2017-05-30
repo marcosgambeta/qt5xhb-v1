@@ -115,8 +115,7 @@ QAction ( QObject * parent )
 */
 void QAction_new1 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QAction * o = new QAction ( par1 );
+  QAction * o = new QAction ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -125,8 +124,7 @@ QAction ( const QString & text, QObject * parent )
 */
 void QAction_new2 ()
 {
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QAction * o = new QAction ( PQSTRING(1), par2 );
+  QAction * o = new QAction ( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -136,8 +134,7 @@ QAction ( const QIcon & icon, const QString & text, QObject * parent )
 void QAction_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-  QAction * o = new QAction ( par1, PQSTRING(2), par3 );
+  QAction * o = new QAction ( par1, PQSTRING(2), PQOBJECT(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -569,8 +566,7 @@ HB_FUNC_STATIC( QACTION_SETDATA )
 
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->setData ( *par1 );
+    obj->setData ( *PQVARIANT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -949,8 +945,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->showStatusText ( par1 ) );
+    hb_retl( obj->showStatusText ( OPQWIDGET(1,0) ) );
   }
 }
 

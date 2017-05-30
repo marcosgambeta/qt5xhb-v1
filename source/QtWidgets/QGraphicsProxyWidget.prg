@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget ( par1 );
+    QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget ( PQWIDGET(1) );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
   }
 }
@@ -103,8 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setWidget ( par1 );
+    obj->setWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -149,8 +147,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
   {
     QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-    QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->paint ( par1, par2, par3 );
+    obj->paint ( par1, par2, PQWIDGET(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

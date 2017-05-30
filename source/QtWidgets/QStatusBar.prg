@@ -58,8 +58,7 @@ QStatusBar ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QStatusBar * o = new QStatusBar ( par1 );
+  QStatusBar * o = new QStatusBar ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -87,8 +86,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->addPermanentWidget ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->addPermanentWidget ( PQWIDGET(1), OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -102,8 +100,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->addWidget ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->addWidget ( PQWIDGET(1), OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -130,8 +127,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertPermanentWidget ( PINT(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( obj->insertPermanentWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
   }
 }
 
@@ -144,8 +140,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertWidget ( PINT(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
   }
 }
 
@@ -171,8 +166,7 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->removeWidget ( par1 );
+    obj->removeWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

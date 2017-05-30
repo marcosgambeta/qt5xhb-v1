@@ -604,8 +604,7 @@ void QProxyStyle_polish1 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->polish ( par1 );
+    obj->polish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -676,8 +675,7 @@ void QProxyStyle_unpolish1 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->unpolish ( par1 );
+    obj->unpolish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

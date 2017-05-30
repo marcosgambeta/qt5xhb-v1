@@ -314,9 +314,8 @@ explicit QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QWIDGET_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QWidget * o = new QWidget ( par1,  (Qt::WindowFlags) par2 );
+  QWidget * o = new QWidget ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -1771,9 +1770,8 @@ HB_FUNC_STATIC( QWIDGET_MAPFROM )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-    QPoint * ptr = new QPoint( obj->mapFrom ( par1, *par2 ) );
+    QPoint * ptr = new QPoint( obj->mapFrom ( PQWIDGET(1), *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -1817,9 +1815,8 @@ HB_FUNC_STATIC( QWIDGET_MAPTO )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-    QPoint * ptr = new QPoint( obj->mapTo ( par1, *par2 ) );
+    QPoint * ptr = new QPoint( obj->mapTo ( PQWIDGET(1), *par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -2859,8 +2856,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOCUSPROXY )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setFocusProxy ( par1 );
+    obj->setFocusProxy ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3083,8 +3079,7 @@ void QWidget_setParent1 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setParent ( par1 );
+    obj->setParent ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3099,9 +3094,8 @@ void QWidget_setParent2 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->setParent ( par1,  (Qt::WindowFlags) par2 );
+    obj->setParent ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3431,8 +3425,7 @@ HB_FUNC_STATIC( QWIDGET_STACKUNDER )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->stackUnder ( par1 );
+    obj->stackUnder ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4621,9 +4614,7 @@ static void setTabOrder ( QWidget * first, QWidget * second )
 */
 HB_FUNC_STATIC( QWIDGET_SETTABORDER )
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-  QWidget::setTabOrder ( par1, par2 );
+  QWidget::setTabOrder ( PQWIDGET(1), PQWIDGET(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -4633,9 +4624,8 @@ static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::
 HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
 {
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QWidget * ptr = QWidget::createWindowContainer ( par1, par2,  (Qt::WindowFlags) par3 );
+  QWidget * ptr = QWidget::createWindowContainer ( par1, OPQWIDGET(2,0),  (Qt::WindowFlags) par3 );
   _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 

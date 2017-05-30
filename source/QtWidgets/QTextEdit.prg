@@ -146,8 +146,7 @@ QTextEdit ( QWidget * parent = 0 )
 */
 void QTextEdit_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QTextEdit * o = new QTextEdit ( par1 );
+  QTextEdit * o = new QTextEdit ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -156,8 +155,7 @@ QTextEdit ( const QString & text, QWidget * parent = 0 )
 */
 void QTextEdit_new2 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QTextEdit * o = new QTextEdit ( PQSTRING(1), par2 );
+  QTextEdit * o = new QTextEdit ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

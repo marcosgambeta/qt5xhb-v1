@@ -77,8 +77,7 @@ static QAction * createAction(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QAction * ptr = QWhatsThis::createAction ( par1 );
+  QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,0) );
   _qt5xhb_createReturnClass ( ptr, "QACTION" );
 }
 
@@ -128,8 +127,7 @@ static void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
 HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {
   QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-  QWhatsThis::showText ( *par1, PQSTRING(2), par3 );
+  QWhatsThis::showText ( *par1, PQSTRING(2), OPQWIDGET(3,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

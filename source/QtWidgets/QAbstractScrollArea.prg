@@ -90,9 +90,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->addScrollBarWidget ( par1,  (Qt::Alignment) par2 );
+    obj->addScrollBarWidget ( PQWIDGET(1),  (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -205,8 +204,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setCornerWidget ( par1 );
+    obj->setCornerWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -248,8 +246,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setViewport ( par1 );
+    obj->setViewport ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -360,8 +357,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETUPVIEWPORT )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setupViewport ( par1 );
+    obj->setupViewport ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

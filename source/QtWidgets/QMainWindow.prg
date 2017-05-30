@@ -103,9 +103,8 @@ QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QMAINWINDOW_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QMainWindow * o = new QMainWindow ( par1,  (Qt::WindowFlags) par2 );
+  QMainWindow * o = new QMainWindow ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -628,8 +627,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->setCentralWidget ( par1 );
+      obj->setCentralWidget ( PQWIDGET(1) );
     }
     else
     {
@@ -766,8 +764,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->setMenuWidget ( par1 );
+      obj->setMenuWidget ( PQWIDGET(1) );
     }
     else
     {

@@ -62,8 +62,7 @@ QScrollArea ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QScrollArea * o = new QScrollArea ( par1 );
+  QScrollArea * o = new QScrollArea ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -125,8 +124,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->ensureWidgetVisible ( par1, (int) ISNIL(2)? 50 : hb_parni(2), (int) ISNIL(3)? 50 : hb_parni(3) );
+    obj->ensureWidgetVisible ( PQWIDGET(1), OPINT(2,50), OPINT(3,50) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -155,8 +153,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setWidget ( par1 );
+    obj->setWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

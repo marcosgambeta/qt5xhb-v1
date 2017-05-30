@@ -108,8 +108,7 @@ explicit QTabWidget ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABWIDGET_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QTabWidget * o = new QTabWidget ( par1 );
+  QTabWidget * o = new QTabWidget ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -137,8 +136,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB1 )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->addTab ( par1, PQSTRING(2) ) );
+    hb_retni( obj->addTab ( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
 
@@ -150,9 +148,8 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB2 )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    hb_retni( obj->addTab ( par1, par2, PQSTRING(3) ) );
+    hb_retni( obj->addTab ( PQWIDGET(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -212,9 +209,8 @@ HB_FUNC_STATIC( QTABWIDGET_SETCORNERWIDGET )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::TopRightCorner : hb_parni(2);
-    obj->setCornerWidget ( par1,  (Qt::Corner) par2 );
+    obj->setCornerWidget ( PQWIDGET(1),  (Qt::Corner) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -287,8 +283,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETCURRENTWIDGET )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentWidget ( par1 );
+    obj->setCurrentWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -392,8 +387,7 @@ HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexOf ( par1 ) );
+    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -406,8 +400,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB1 )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertTab ( PINT(1), par2, PQSTRING(3) ) );
+    hb_retni( obj->insertTab ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
 
@@ -419,9 +412,8 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB2 )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
-    hb_retni( obj->insertTab ( PINT(1), par2, par3, PQSTRING(4) ) );
+    hb_retni( obj->insertTab ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
   }
 }
 

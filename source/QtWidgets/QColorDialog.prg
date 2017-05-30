@@ -68,8 +68,7 @@ explicit QColorDialog ( QWidget * parent = 0 )
 */
 void QColorDialog_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QColorDialog * o = new QColorDialog ( par1 );
+  QColorDialog * o = new QColorDialog ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -79,8 +78,7 @@ explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 void QColorDialog_new2 ()
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QColorDialog * o = new QColorDialog ( par1, par2 );
+  QColorDialog * o = new QColorDialog ( par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -182,9 +180,7 @@ void QColorDialog_open2 ()
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = hb_parc(2);
-    obj->open ( par1,  (const char *) par2 );
+    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -375,10 +371,8 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
   if( (ISQCOLOR(1)||ISCHAR(1)||ISNIL(1)) && ISOPTQWIDGET(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
     QColor par1 = ISNIL(1)? Qt::white : ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-    QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    QColor * ptr = new QColor( QColorDialog::getColor ( par1, par2, par3,  (QColorDialog::ColorDialogOptions) par4 ) );
+    QColor * ptr = new QColor( QColorDialog::getColor ( par1, OPQWIDGET(2,0), OPQSTRING(3,QString()),  (QColorDialog::ColorDialogOptions) par4 ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
   else

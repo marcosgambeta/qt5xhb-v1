@@ -78,8 +78,7 @@ QSplitter ( QWidget * parent = 0 )
 */
 void QSplitter_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QSplitter * o = new QSplitter ( par1 );
+  QSplitter * o = new QSplitter ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -89,8 +88,7 @@ QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QSplitter_new2 ()
 {
   int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QSplitter * o = new QSplitter (  (Qt::Orientation) par1, par2 );
+  QSplitter * o = new QSplitter (  (Qt::Orientation) par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -141,8 +139,7 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->addWidget ( par1 );
+      obj->addWidget ( PQWIDGET(1) );
     }
     else
     {
@@ -250,8 +247,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->indexOf ( par1 ) );
+      hb_retni( obj->indexOf ( PQWIDGET(1) ) );
     }
     else
     {
@@ -271,8 +267,7 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
   {
     if( ISNUM(1) && ISQWIDGET(2) )
     {
-      QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-      obj->insertWidget ( PINT(1), par2 );
+      obj->insertWidget ( PINT(1), PQWIDGET(2) );
     }
     else
     {

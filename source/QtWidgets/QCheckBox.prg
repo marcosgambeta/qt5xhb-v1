@@ -58,8 +58,7 @@ explicit QCheckBox ( QWidget * parent = 0 )
 */
 void QCheckBox_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QCheckBox * o = new QCheckBox ( par1 );
+  QCheckBox * o = new QCheckBox ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -68,8 +67,7 @@ explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
 */
 void QCheckBox_new2 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QCheckBox * o = new QCheckBox ( PQSTRING(1), par2 );
+  QCheckBox * o = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -86,10 +86,8 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QWidget * ptr = obj->createEditor ( par1, *par2, *par3 );
+    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *par2, *PQMODELINDEX(3) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -106,8 +104,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
     QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
     QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
     QStyleOptionViewItem * par3 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * par4 = (QModelIndex *) _qt5xhb_itemGetPtr(4);
-    hb_retl( obj->editorEvent ( par1, par2, *par3, *par4 ) );
+    hb_retl( obj->editorEvent ( par1, par2, *par3, *PQMODELINDEX(4) ) );
   }
 }
 
@@ -122,8 +119,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
   {
     QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    obj->paint ( par1, *par2, *par3 );
+    obj->paint ( par1, *par2, *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -138,9 +134,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    obj->setEditorData ( par1, *par2 );
+    obj->setEditorData ( PQWIDGET(1), *PQMODELINDEX(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -155,10 +149,8 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    obj->setModelData ( par1, par2, *par3 );
+    obj->setModelData ( PQWIDGET(1), par2, *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -174,8 +166,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
   if( obj )
   {
     QStyleOptionViewItem * par1 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    QSize * ptr = new QSize( obj->sizeHint ( *par1, *par2 ) );
+    QSize * ptr = new QSize( obj->sizeHint ( *par1, *PQMODELINDEX(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -189,10 +180,8 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    obj->updateEditorGeometry ( par1, *par2, *par3 );
+    obj->updateEditorGeometry ( PQWIDGET(1), *par2, *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -210,8 +199,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
     QHelpEvent * par1 = (QHelpEvent *) _qt5xhb_itemGetPtr(1);
     QAbstractItemView * par2 = (QAbstractItemView *) _qt5xhb_itemGetPtr(2);
     QStyleOptionViewItem * par3 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * par4 = (QModelIndex *) _qt5xhb_itemGetPtr(4);
-    hb_retl( obj->helpEvent ( par1, par2, *par3, *par4 ) );
+    hb_retl( obj->helpEvent ( par1, par2, *par3, *PQMODELINDEX(4) ) );
   }
 }
 
@@ -224,9 +212,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-    obj->destroyEditor ( par1, *par2 );
+    obj->destroyEditor ( PQWIDGET(1), *PQMODELINDEX(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

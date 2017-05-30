@@ -66,8 +66,7 @@ QShortcut(QWidget * parent)
 */
 void QShortcut_new1 ()
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QShortcut * o = new QShortcut ( par1 );
+  QShortcut * o = new QShortcut ( PQWIDGET(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -77,11 +76,10 @@ QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, c
 void QShortcut_new2 ()
 {
   QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
   const char * par3 = ISNIL(3)? 0 : hb_parc(3);
   const char * par4 = ISNIL(4)? 0 : hb_parc(4);
   int par5 = ISNIL(5)? (int) Qt::WindowShortcut : hb_parni(5);
-  QShortcut * o = new QShortcut ( *par1, par2,  (const char *) par3,  (const char *) par4,  (Qt::ShortcutContext) par5 );
+  QShortcut * o = new QShortcut ( *par1, PQWIDGET(2),  (const char *) par3,  (const char *) par4,  (Qt::ShortcutContext) par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

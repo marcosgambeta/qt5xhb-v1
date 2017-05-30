@@ -241,9 +241,8 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->notify ( par1, par2 ) );
+    hb_retl( obj->notify ( PQOBJECT(1), par2 ) );
   }
 }
 
@@ -329,8 +328,7 @@ static void alert ( QWidget * widget, int msec = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QApplication::alert ( par1, PINT(2) );
+  QApplication::alert ( PQWIDGET(1), OPINT(2,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -485,8 +483,7 @@ static QFont font ( const QWidget * widget )
 */
 void QApplication_font2 ()
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QFont * ptr = new QFont( QApplication::font ( par1 ) );
+  QFont * ptr = new QFont( QApplication::font ( PQWIDGET(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -495,8 +492,7 @@ static QFont font ( const char * className )
 */
 void QApplication_font3 ()
 {
-  const char * par1 = hb_parc(1);
-  QFont * ptr = new QFont( QApplication::font (  (const char *) par1 ) );
+  QFont * ptr = new QFont( QApplication::font (  (const char *) hb_parc(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -637,8 +633,7 @@ static QPalette palette ( const QWidget * widget )
 */
 void QApplication_palette2 ()
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QPalette * ptr = new QPalette( QApplication::palette ( par1 ) );
+  QPalette * ptr = new QPalette( QApplication::palette ( PQWIDGET(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -647,8 +642,7 @@ static QPalette palette ( const char * className )
 */
 void QApplication_palette3 ()
 {
-  const char * par1 = hb_parc(1);
-  QPalette * ptr = new QPalette( QApplication::palette (  (const char *) par1 ) );
+  QPalette * ptr = new QPalette( QApplication::palette (  (const char *) hb_parc(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -713,8 +707,7 @@ static void setActiveWindow ( QWidget * active )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QApplication::setActiveWindow ( par1 );
+  QApplication::setActiveWindow ( PQWIDGET(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

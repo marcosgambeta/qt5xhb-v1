@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->addWidget ( par1 );
+    obj->addWidget ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -207,8 +206,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexOf ( par1 ) );
+    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -299,8 +297,7 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->removeWidget ( par1 );
+    obj->removeWidget ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -315,9 +312,8 @@ void QLayout_setAlignment1 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->setAlignment ( par1,  (Qt::Alignment) par2 ) );
+    hb_retl( obj->setAlignment ( PQWIDGET(1),  (Qt::Alignment) par2 ) );
   }
 }
 
@@ -457,8 +453,7 @@ HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setMenuBar ( par1 );
+    obj->setMenuBar ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

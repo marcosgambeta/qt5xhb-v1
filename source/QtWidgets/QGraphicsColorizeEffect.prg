@@ -57,8 +57,7 @@ QGraphicsColorizeEffect ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QGraphicsColorizeEffect * o = new QGraphicsColorizeEffect ( par1 );
+  QGraphicsColorizeEffect * o = new QGraphicsColorizeEffect ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

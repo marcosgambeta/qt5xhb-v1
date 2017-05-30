@@ -124,8 +124,7 @@ QPlainTextEdit ( QWidget * parent = 0 )
 */
 void QPlainTextEdit_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QPlainTextEdit * o = new QPlainTextEdit ( par1 );
+  QPlainTextEdit * o = new QPlainTextEdit ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -134,8 +133,7 @@ QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
 */
 void QPlainTextEdit_new2 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QPlainTextEdit * o = new QPlainTextEdit ( PQSTRING(1), par2 );
+  QPlainTextEdit * o = new QPlainTextEdit ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

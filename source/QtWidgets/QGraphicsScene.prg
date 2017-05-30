@@ -133,8 +133,7 @@ QGraphicsScene ( QObject * parent = 0 )
 */
 void QGraphicsScene_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QGraphicsScene * o = new QGraphicsScene ( par1 );
+  QGraphicsScene * o = new QGraphicsScene ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -144,8 +143,7 @@ QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
 void QGraphicsScene_new2 ()
 {
   QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QGraphicsScene * o = new QGraphicsScene ( *par1, par2 );
+  QGraphicsScene * o = new QGraphicsScene ( *par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -154,8 +152,7 @@ QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent =
 */
 void QGraphicsScene_new3 ()
 {
-  QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
-  QGraphicsScene * o = new QGraphicsScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5 );
+  QGraphicsScene * o = new QGraphicsScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -530,9 +527,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
   {
     if( ISQWIDGET(1) && ISOPTNUM(2) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      QGraphicsProxyWidget * ptr = obj->addWidget ( par1,  (Qt::WindowFlags) par2 );
+      QGraphicsProxyWidget * ptr = obj->addWidget ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
     }
     else

@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
   QItemEditorFactory * obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    QWidget * ptr = obj->createEditor ( PINT(1), par2 );
+    QWidget * ptr = obj->createEditor ( PINT(1), PQWIDGET(2) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

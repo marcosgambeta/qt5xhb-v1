@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QCOMBOBOX_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
-    QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-    QComboBox * o = new QComboBox ( par1 );
+    QComboBox * o = new QComboBox ( OPQWIDGET(1,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -219,16 +218,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEMS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      //int i1;
-      //int nLen1 = hb_arrayLen(aStrings1);
-      //for (i1=0;i1<nLen1;i1++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      //  par1 << temp;
-      //}
-      obj->addItems ( par1 );
+      obj->addItems ( PQSTRINGLIST(1) );
     }
     else
     {
@@ -316,9 +306,8 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
   {
     if( ISQVARIANT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
       int par3 = ISNIL(3)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(3);
-      hb_retni( obj->findData ( *par1, (int) ISNIL(2)? Qt::UserRole : hb_parni(2),  (Qt::MatchFlags) par3 ) );
+      hb_retni( obj->findData ( *PQVARIANT(1), OPINT(2,Qt::UserRole),  (Qt::MatchFlags) par3 ) );
     }
     else
     {
@@ -453,16 +442,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
   {
     if( ISNUM(1) && ISARRAY(2) )
     {
-      QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-      //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-      //int i2;
-      //int nLen2 = hb_arrayLen(aStrings2);
-      //for (i2=0;i2<nLen2;i2++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-      //  par2 << temp;
-      //}
-      obj->insertItems ( PINT(1), par2 );
+      obj->insertItems ( PINT(1), PQSTRINGLIST(2) );
     }
     else
     {
@@ -859,8 +839,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
   {
     if( ISNUM(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setItemData ( PINT(1), *par2, (int) ISNIL(3)? Qt::UserRole : hb_parni(3) );
+      obj->setItemData ( PINT(1), *PQVARIANT(2), OPINT(3,Qt::UserRole) );
     }
     else
     {
@@ -1084,8 +1063,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETROOTMODELINDEX )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      obj->setRootModelIndex ( *par1 );
+      obj->setRootModelIndex ( *PQMODELINDEX(1) );
     }
     else
     {

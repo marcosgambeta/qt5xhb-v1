@@ -110,8 +110,7 @@ QTableWidget ( QWidget * parent = 0 )
 */
 void QTableWidget_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QTableWidget * o = new QTableWidget ( par1 );
+  QTableWidget * o = new QTableWidget ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -120,10 +119,7 @@ QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 */
 void QTableWidget_new2 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-  QTableWidget * o = new QTableWidget ( par1, par2, par3 );
+  QTableWidget * o = new QTableWidget ( PINT(1), PINT(2), OPQWIDGET(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -484,8 +480,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCELLWIDGET )
   {
     if( ISNUM(1) && ISNUM(2) && ISQWIDGET(3) )
     {
-      QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
-      obj->setCellWidget ( PINT(1), PINT(2), par3 );
+      obj->setCellWidget ( PINT(1), PINT(2), PQWIDGET(3) );
     }
     else
     {
@@ -654,16 +649,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERLABELS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      //int i1;
-      //int nLen1 = hb_arrayLen(aStrings1);
-      //for (i1=0;i1<nLen1;i1++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      //  par1 << temp;
-      //}
-      obj->setHorizontalHeaderLabels ( par1 );
+      obj->setHorizontalHeaderLabels ( PQSTRINGLIST(1) );
     }
     else
     {
@@ -799,16 +785,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERLABELS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      //int i1;
-      //int nLen1 = hb_arrayLen(aStrings1);
-      //for (i1=0;i1<nLen1;i1++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      //  par1 << temp;
-      //}
-      obj->setVerticalHeaderLabels ( par1 );
+      obj->setVerticalHeaderLabels ( PQSTRINGLIST(1) );
     }
     else
     {

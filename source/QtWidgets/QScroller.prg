@@ -441,9 +441,8 @@ static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollG
 */
 HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QScroller::TouchGesture : hb_parni(2);
-  hb_retni( QScroller::grabGesture ( par1,  (QScroller::ScrollerGestureType) par2 ) );
+  hb_retni( QScroller::grabGesture ( PQOBJECT(1),  (QScroller::ScrollerGestureType) par2 ) );
 }
 
 
@@ -452,8 +451,7 @@ static Qt::GestureType grabbedGesture(QObject * target)
 */
 HB_FUNC_STATIC( QSCROLLER_GRABBEDGESTURE )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  hb_retni( QScroller::grabbedGesture ( par1 ) );
+  hb_retni( QScroller::grabbedGesture ( PQOBJECT(1) ) );
 }
 
 
@@ -462,8 +460,7 @@ static bool hasScroller(QObject * target)
 */
 HB_FUNC_STATIC( QSCROLLER_HASSCROLLER )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  hb_retl( QScroller::hasScroller ( par1 ) );
+  hb_retl( QScroller::hasScroller ( PQOBJECT(1) ) );
 }
 
 
@@ -472,8 +469,7 @@ static QScroller * scroller(QObject * target)
 */
 HB_FUNC_STATIC( QSCROLLER_SCROLLER1 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QScroller * ptr = QScroller::scroller ( par1 );
+  QScroller * ptr = QScroller::scroller ( PQOBJECT(1) );
   _qt5xhb_createReturnClass ( ptr, "QSCROLLER" );
 }
 
@@ -501,8 +497,7 @@ HB_FUNC_STATIC( QSCROLLER_UNGRABGESTURE )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->ungrabGesture ( par1 );
+    obj->ungrabGesture ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

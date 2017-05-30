@@ -52,8 +52,7 @@ explicit QRadioButton ( QWidget * parent = 0 )
 */
 void QRadioButton_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QRadioButton * o = new QRadioButton ( par1 );
+  QRadioButton * o = new QRadioButton ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -62,8 +61,7 @@ explicit QRadioButton ( const QString & text, QWidget * parent = 0 )
 */
 void QRadioButton_new2 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QRadioButton * o = new QRadioButton ( PQSTRING(1), par2 );
+  QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

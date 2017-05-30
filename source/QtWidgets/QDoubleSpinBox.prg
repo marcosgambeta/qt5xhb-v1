@@ -69,8 +69,7 @@ explicit QDoubleSpinBox ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QDoubleSpinBox * o = new QDoubleSpinBox ( par1 );
+  QDoubleSpinBox * o = new QDoubleSpinBox ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

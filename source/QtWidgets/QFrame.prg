@@ -65,9 +65,8 @@ QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QFRAME_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QFrame * o = new QFrame ( par1,  (Qt::WindowFlags) par2 );
+  QFrame * o = new QFrame ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

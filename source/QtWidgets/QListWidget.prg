@@ -99,8 +99,7 @@ QListWidget ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLISTWIDGET_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QListWidget * o = new QListWidget ( par1 );
+  QListWidget * o = new QListWidget ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -175,16 +174,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    //  par1 << temp;
-    //}
-    obj->addItems ( par1 );
+    obj->addItems ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -316,16 +306,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList par2 = _qt5xhb_convert_array_parameter_to_qstringlist(2);
-    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-    //int i2;
-    //int nLen2 = hb_arrayLen(aStrings2);
-    //for (i2=0;i2<nLen2;i2++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings2, i2+1) );
-    //  par2 << temp;
-    //}
-    obj->insertItems ( PINT(1), par2 );
+    obj->insertItems ( PINT(1), PQSTRINGLIST(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -598,8 +579,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETITEMWIDGET )
   if( obj )
   {
     QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    obj->setItemWidget ( par1, par2 );
+    obj->setItemWidget ( par1, PQWIDGET(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

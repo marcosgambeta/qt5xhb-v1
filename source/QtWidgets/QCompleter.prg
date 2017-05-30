@@ -91,8 +91,7 @@ QCompleter ( QObject * parent = 0 )
 */
 void QCompleter_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QCompleter * o = new QCompleter ( par1 );
+  QCompleter * o = new QCompleter ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,8 +101,7 @@ QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
 void QCompleter_new2 ()
 {
   QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QCompleter * o = new QCompleter ( par1, par2 );
+  QCompleter * o = new QCompleter ( par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -112,17 +110,7 @@ QCompleter ( const QStringList & list, QObject * parent = 0 )
 */
 void QCompleter_new3 ()
 {
-  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  //int i1;
-  //int nLen1 = hb_arrayLen(aStrings1);
-  //for (i1=0;i1<nLen1;i1++)
-  //{
-  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-  //  par1 << temp;
-  //}
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QCompleter * o = new QCompleter ( par1, par2 );
+  QCompleter * o = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -350,8 +338,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->pathFromIndex ( *par1 ) ) );
+      hb_retc( RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) ) );
     }
     else
     {
@@ -586,8 +573,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->setWidget ( par1 );
+      obj->setWidget ( PQWIDGET(1) );
     }
     else
     {

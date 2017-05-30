@@ -126,8 +126,7 @@ explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
 HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
   int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QHeaderView * o = new QHeaderView (  (Qt::Orientation) par1, par2 );
+  QHeaderView * o = new QHeaderView (  (Qt::Orientation) par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

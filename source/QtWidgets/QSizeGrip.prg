@@ -52,8 +52,7 @@ QSizeGrip ( QWidget * parent )
 */
 HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QSizeGrip * o = new QSizeGrip ( par1 );
+  QSizeGrip * o = new QSizeGrip ( PQWIDGET(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -89,19 +89,9 @@ QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags 
 */
 void QDirModel_new1 ()
 {
-  QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  //int i1;
-  //int nLen1 = hb_arrayLen(aStrings1);
-  //for (i1=0;i1<nLen1;i1++)
-  //{
-  //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-  //  par1 << temp;
-  //}
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QDirModel * o = new QDirModel ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3, par4 );
+  QDirModel * o = new QDirModel ( PQSTRINGLIST(1),  (QDir::Filters) par2,  (QDir::SortFlags) par3, OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -110,8 +100,7 @@ QDirModel(QObject *parent = 0)
 */
 void QDirModel_new2 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QDirModel * o = new QDirModel ( par1 );
+  QDirModel * o = new QDirModel ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -210,8 +199,7 @@ HB_FUNC_STATIC( QDIRMODEL_PARENT )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
+      QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -274,8 +262,7 @@ HB_FUNC_STATIC( QDIRMODEL_DATA )
   {
     if( ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
+      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -296,9 +283,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETDATA )
   {
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+      hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {
@@ -361,8 +346,7 @@ HB_FUNC_STATIC( QDIRMODEL_FLAGS )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->flags ( *par1 ) );
+      hb_retni( obj->flags ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -469,16 +453,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETNAMEFILTERS )
   {
     if( ISARRAY(1) )
     {
-      QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-      //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-      //int i1;
-      //int nLen1 = hb_arrayLen(aStrings1);
-      //for (i1=0;i1<nLen1;i1++)
-      //{
-      //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-      //  par1 << temp;
-      //}
-      obj->setNameFilters ( par1 );
+      obj->setNameFilters ( PQSTRINGLIST(1) );
     }
     else
     {
@@ -691,8 +666,7 @@ HB_FUNC_STATIC( QDIRMODEL_ISDIR )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isDir ( *par1 ) );
+      hb_retl( obj->isDir ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -712,8 +686,7 @@ HB_FUNC_STATIC( QDIRMODEL_MKDIR )
   {
     if( ISQMODELINDEX(1) && ISCHAR(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, PQSTRING(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -734,8 +707,7 @@ HB_FUNC_STATIC( QDIRMODEL_RMDIR )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->rmdir ( *par1 ) );
+      hb_retl( obj->rmdir ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -755,8 +727,7 @@ HB_FUNC_STATIC( QDIRMODEL_REMOVE )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->remove ( *par1 ) );
+      hb_retl( obj->remove ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -776,8 +747,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->filePath ( *par1 ) ) );
+      hb_retc( RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) ) );
     }
     else
     {
@@ -797,8 +767,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILENAME )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->fileName ( *par1 ) ) );
+      hb_retc( RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) ) );
     }
     else
     {
@@ -818,8 +787,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEICON )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QIcon * ptr = new QIcon( obj->fileIcon ( *par1 ) );
+      QIcon * ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -840,8 +808,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *par1 ) );
+      QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
     }
     else

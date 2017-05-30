@@ -92,8 +92,7 @@ explicit QMenu ( QWidget * parent = 0 )
 */
 void QMenu_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QMenu * o = new QMenu ( par1 );
+  QMenu * o = new QMenu ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,8 +101,7 @@ explicit QMenu ( const QString & title, QWidget * parent = 0 )
 */
 void QMenu_new2 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QMenu * o = new QMenu ( PQSTRING(1), par2 );
+  QMenu * o = new QMenu ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -263,9 +261,8 @@ void QMenu_addAction3 ()
   if( obj )
   {
     const QObject * par2 = (const QObject *) _qt5xhb_itemGetPtr(2);
-    const char * par3 = hb_parc(3);
     QKeySequence par4 = ISNIL(4)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(4);
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) par3, par4 );
+    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) hb_parc(3), par4 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -281,9 +278,8 @@ void QMenu_addAction4 ()
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     const QObject * par3 = (const QObject *) _qt5xhb_itemGetPtr(3);
-    const char * par4 = hb_parc(4);
     QKeySequence par5 = ISNIL(5)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(5);
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3,  (const char *) par4, par5 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3,  (const char *) hb_parc(4), par5 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -517,8 +513,7 @@ void QMenu_exec3 ()
   }
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QAction * par3 = ISNIL(3)? 0 : (QAction *) _qt5xhb_itemGetPtr(3);
-  QWidget * par4 = ISNIL(4)? 0 : (QWidget *) _qt5xhb_itemGetPtr(4);
-  QAction * ptr = QMenu::exec ( par1, *par2, par3, par4 );
+  QAction * ptr = QMenu::exec ( par1, *par2, par3, OPQWIDGET(4,0) );
   _qt5xhb_createReturnClass ( ptr, "QACTION" );
 }
 
@@ -962,8 +957,7 @@ HB_FUNC_STATIC( QMENU_SETNOREPLAYFOR )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->setNoReplayFor ( par1 );
+      obj->setNoReplayFor ( PQWIDGET(1) );
     }
     else
     {

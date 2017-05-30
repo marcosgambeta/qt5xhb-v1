@@ -103,9 +103,8 @@ explicit QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWIZARD_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QWizard * o = new QWizard ( par1,  (Qt::WindowFlags) par2 );
+  QWizard * o = new QWizard ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -423,10 +422,7 @@ HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    const char * par2 = hb_parc(2);
-    const char * par3 = hb_parc(3);
-    obj->setDefaultProperty (  (const char *) par1,  (const char *) par2,  (const char *) par3 );
+    obj->setDefaultProperty (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -442,8 +438,7 @@ HB_FUNC_STATIC( QWIZARD_SETFIELD )
 
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setField ( PQSTRING(1), *par2 );
+    obj->setField ( PQSTRING(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -511,8 +506,7 @@ HB_FUNC_STATIC( QWIZARD_SETSIDEWIDGET )
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setSideWidget ( par1 );
+    obj->setSideWidget ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

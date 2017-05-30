@@ -69,8 +69,7 @@ QColumnView ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QColumnView * o = new QColumnView ( par1 );
+  QColumnView * o = new QColumnView ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -163,8 +162,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETPREVIEWWIDGET )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setPreviewWidget ( par1 );
+    obj->setPreviewWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,9 +214,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QColumnView::EnsureVisible : hb_parni(2);
-    obj->scrollTo ( *par1,  (QColumnView::ScrollHint) par2 );
+    obj->scrollTo ( *PQMODELINDEX(1),  (QColumnView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -261,8 +258,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETROOTINDEX )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    obj->setRootIndex ( *par1 );
+    obj->setRootIndex ( *PQMODELINDEX(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -305,8 +301,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QRect * ptr = new QRect( obj->visualRect ( *par1 ) );
+    QRect * ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

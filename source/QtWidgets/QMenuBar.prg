@@ -87,8 +87,7 @@ explicit QMenuBar ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMENUBAR_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QMenuBar * o = new QMenuBar ( par1 );
+  QMenuBar * o = new QMenuBar ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -143,9 +142,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION2 )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    char * par3 = (char *) _qt5xhb_itemGetPtr(3);
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2, par3 );
+    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -523,9 +520,8 @@ HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
   QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::TopRightCorner : hb_parni(2);
-    obj->setCornerWidget ( par1,  (Qt::Corner) par2 );
+    obj->setCornerWidget ( PQWIDGET(1),  (Qt::Corner) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

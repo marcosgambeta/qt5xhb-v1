@@ -171,9 +171,8 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT1 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QWidget * par3 = (QWidget *) _qt5xhb_itemGetPtr(3);
     QRect * par4 = (QRect *) _qt5xhb_itemGetPtr(4);
-    obj->showText ( *par1, PQSTRING(2), par3, *par4 );
+    obj->showText ( *par1, PQSTRING(2), PQWIDGET(3), *par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -187,8 +186,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT2 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->showText ( *par1, PQSTRING(2), par3 );
+    obj->showText ( *par1, PQSTRING(2), OPQWIDGET(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

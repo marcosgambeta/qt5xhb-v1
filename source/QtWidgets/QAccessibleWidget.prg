@@ -68,10 +68,8 @@ QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const Q
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-  QAccessibleWidget * o = new QAccessibleWidget ( par1,  (QAccessible::Role) par2, par3 );
+  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1),  (QAccessible::Role) par2, OPQSTRING(3,QString()) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

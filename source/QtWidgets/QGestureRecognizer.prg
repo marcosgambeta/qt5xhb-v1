@@ -80,8 +80,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
   QGestureRecognizer * obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QGesture * ptr = obj->create ( par1 );
+    QGesture * ptr = obj->create ( PQOBJECT(1) );
     _qt5xhb_createReturnClass ( ptr, "QGESTURE" );
   }
 }
@@ -96,9 +95,8 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
   if( obj )
   {
     QGesture * par1 = (QGesture *) _qt5xhb_itemGetPtr(1);
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     QEvent * par3 = (QEvent *) _qt5xhb_itemGetPtr(3);
-    hb_retni( obj->recognize ( par1, par2, par3 ) );
+    hb_retni( obj->recognize ( par1, PQOBJECT(2), par3 ) );
   }
 }
 

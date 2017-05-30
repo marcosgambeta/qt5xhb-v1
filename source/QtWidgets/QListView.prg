@@ -86,8 +86,7 @@ QListView ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLISTVIEW_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QListView * o = new QListView ( par1 );
+  QListView * o = new QListView ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -600,9 +599,8 @@ HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QListView::EnsureVisible : hb_parni(2);
-    obj->scrollTo ( *par1,  (QListView::ScrollHint) par2 );
+    obj->scrollTo ( *PQMODELINDEX(1),  (QListView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -616,8 +614,7 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QRect * ptr = new QRect( obj->visualRect ( *par1 ) );
+    QRect * ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

@@ -60,8 +60,7 @@ QUndoView ( QWidget * parent = 0 )
 */
 void QUndoView_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QUndoView * o = new QUndoView ( par1 );
+  QUndoView * o = new QUndoView ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -71,8 +70,7 @@ QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 void QUndoView_new2 ()
 {
   QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QUndoView * o = new QUndoView ( par1, par2 );
+  QUndoView * o = new QUndoView ( par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -82,8 +80,7 @@ QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 void QUndoView_new3 ()
 {
   QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QUndoView * o = new QUndoView ( par1, par2 );
+  QUndoView * o = new QUndoView ( par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

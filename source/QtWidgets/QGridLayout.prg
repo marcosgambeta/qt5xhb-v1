@@ -88,8 +88,7 @@ QGridLayout ( QWidget * parent )
 */
 void QGridLayout_new1 ()
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QGridLayout * o = new QGridLayout ( par1 );
+  QGridLayout * o = new QGridLayout ( PQWIDGET(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -217,9 +216,8 @@ void QGridLayout_addWidget1 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addWidget ( par1, PINT(2), PINT(3),  (Qt::Alignment) par4 );
+    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3),  (Qt::Alignment) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -234,9 +232,8 @@ void QGridLayout_addWidget2 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addWidget ( par1, PINT(2), PINT(3), PINT(4), PINT(5),  (Qt::Alignment) par6 );
+    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5),  (Qt::Alignment) par6 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

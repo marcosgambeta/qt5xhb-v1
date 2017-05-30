@@ -63,8 +63,7 @@ QStackedWidget ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QStackedWidget * o = new QStackedWidget ( par1 );
+  QStackedWidget * o = new QStackedWidget ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -92,8 +91,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->addWidget ( par1 ) );
+    hb_retni( obj->addWidget ( PQWIDGET(1) ) );
   }
 }
 
@@ -146,8 +144,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexOf ( par1 ) );
+    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -160,8 +157,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertWidget ( PINT(1), par2 ) );
+    hb_retni( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
   }
 }
 
@@ -174,8 +170,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->removeWidget ( par1 );
+    obj->removeWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -231,8 +226,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentWidget ( par1 );
+    obj->setCurrentWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

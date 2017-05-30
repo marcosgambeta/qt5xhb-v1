@@ -69,8 +69,7 @@ QLCDNumber ( QWidget * parent = 0 )
 */
 void QLCDNumber_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QLCDNumber * o = new QLCDNumber ( par1 );
+  QLCDNumber * o = new QLCDNumber ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -80,8 +79,7 @@ QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 void QLCDNumber_new2 ()
 {
   uint par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QLCDNumber * o = new QLCDNumber ( par1, par2 );
+  QLCDNumber * o = new QLCDNumber ( par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

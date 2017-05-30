@@ -75,9 +75,8 @@ QToolBox ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QToolBox * o = new QToolBox ( par1,  (Qt::WindowFlags) par2 );
+  QToolBox * o = new QToolBox ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -105,9 +104,8 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM1 )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    hb_retni( obj->addItem ( par1, par2, PQSTRING(3) ) );
+    hb_retni( obj->addItem ( PQWIDGET(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -119,8 +117,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM2 )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->addItem ( par1, PQSTRING(2) ) );
+    hb_retni( obj->addItem ( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
 
@@ -192,8 +189,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexOf ( par1 ) );
+    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -206,9 +202,8 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM1 )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
     QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
-    hb_retni( obj->insertItem ( PINT(1), par2, par3, PQSTRING(4) ) );
+    hb_retni( obj->insertItem ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
   }
 }
 
@@ -220,8 +215,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM2 )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->insertItem ( PINT(1), par2, PQSTRING(3) ) );
+    hb_retni( obj->insertItem ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
 
@@ -461,8 +455,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentWidget ( par1 );
+    obj->setCurrentWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -50,8 +50,7 @@ QCommandLinkButton ( QWidget * parent = 0 )
 */
 void QCommandLinkButton_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QCommandLinkButton * o = new QCommandLinkButton ( par1 );
+  QCommandLinkButton * o = new QCommandLinkButton ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -60,8 +59,7 @@ QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 */
 void QCommandLinkButton_new2 ()
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), par2 );
+  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -70,8 +68,7 @@ QCommandLinkButton ( const QString & text, const QString & description, QWidget 
 */
 void QCommandLinkButton_new3 ()
 {
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), par3 );
+  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

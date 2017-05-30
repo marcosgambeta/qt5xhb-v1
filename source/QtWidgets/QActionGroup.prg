@@ -63,8 +63,7 @@ QActionGroup ( QObject * parent )
 */
 HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QActionGroup * o = new QActionGroup ( par1 );
+  QActionGroup * o = new QActionGroup ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

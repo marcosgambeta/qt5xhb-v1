@@ -46,8 +46,7 @@ QTimeEdit ( QWidget * parent = 0 )
 */
 void QTimeEdit_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QTimeEdit * o = new QTimeEdit ( par1 );
+  QTimeEdit * o = new QTimeEdit ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -57,8 +56,7 @@ QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 void QTimeEdit_new2 ()
 {
   QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QTimeEdit * o = new QTimeEdit ( *par1, par2 );
+  QTimeEdit * o = new QTimeEdit ( *par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

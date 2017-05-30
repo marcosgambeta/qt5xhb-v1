@@ -48,8 +48,7 @@ explicit QErrorMessage ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QErrorMessage * o = new QErrorMessage ( par1 );
+  QErrorMessage * o = new QErrorMessage ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

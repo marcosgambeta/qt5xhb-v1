@@ -107,8 +107,7 @@ explicit QFileSystemModel(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QFileSystemModel * o = new QFileSystemModel ( par1 );
+  QFileSystemModel * o = new QFileSystemModel ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -136,8 +135,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QIcon * ptr = new QIcon( obj->fileIcon ( *par1 ) );
+    QIcon * ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -151,8 +149,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *par1 ) );
+    QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
   }
 }
@@ -166,8 +163,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->fileName ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) ) );
   }
 }
 
@@ -180,8 +176,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->filePath ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) ) );
   }
 }
 
@@ -296,8 +291,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isDir ( *par1 ) );
+    hb_retl( obj->isDir ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -345,8 +339,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QDateTime * ptr = new QDateTime( obj->lastModified ( *par1 ) );
+    QDateTime * ptr = new QDateTime( obj->lastModified ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -360,8 +353,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, PQSTRING(2) ) );
+    QModelIndex * ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -437,16 +429,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList par1 = _qt5xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = QLatin1String( hb_arrayGetCPtr(aStrings1, i1+1) );
-    //  par1 << temp;
-    //}
-    obj->setNameFilters ( par1 );
+    obj->setNameFilters ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -460,8 +443,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->permissions ( *par1 ) );
+    hb_retni( obj->permissions ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -474,8 +456,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->remove ( *par1 ) );
+    hb_retl( obj->remove ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -523,8 +504,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->rmdir ( *par1 ) );
+    hb_retl( obj->rmdir ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -577,8 +557,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->size ( *par1 ) );
+    hb_retni( obj->size ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -591,8 +570,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->type ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->type ( *PQMODELINDEX(1) ) ) );
   }
 }
 
@@ -605,8 +583,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->canFetchMore ( *par1 ) );
+    hb_retl( obj->canFetchMore ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -633,8 +610,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
+    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -647,9 +623,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+    hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
 
@@ -664,8 +638,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
   {
     const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
+    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
 
@@ -678,8 +651,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    obj->fetchMore ( *par1 );
+    obj->fetchMore ( *PQMODELINDEX(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -693,8 +665,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->flags ( *par1 ) );
+    hb_retni( obj->flags ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -772,8 +743,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }

@@ -73,9 +73,8 @@ explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QDIALOG_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QDialog * o = new QDialog ( par1,  (Qt::WindowFlags) par2 );
+  QDialog * o = new QDialog ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -362,8 +361,7 @@ HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setExtension ( par1 );
+    obj->setExtension ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

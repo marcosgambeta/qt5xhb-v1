@@ -55,8 +55,7 @@ QVBoxLayout ( QWidget * parent )
 */
 void QVBoxLayout_new2 ()
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-  QVBoxLayout * o = new QVBoxLayout ( par1 );
+  QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

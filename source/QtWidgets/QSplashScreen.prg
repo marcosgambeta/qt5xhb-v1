@@ -69,10 +69,9 @@ QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::Window
 */
 void QSplashScreen_new2 ()
 {
-  QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
   QPixmap par2 = ISNIL(2)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QSplashScreen * o = new QSplashScreen ( par1, par2,  (Qt::WindowFlags) par3 );
+  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2,  (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -123,8 +122,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->finish ( par1 );
+      obj->finish ( PQWIDGET(1) );
     }
     else
     {

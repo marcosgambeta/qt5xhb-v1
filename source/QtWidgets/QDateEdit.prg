@@ -46,8 +46,7 @@ QDateEdit ( QWidget * parent = 0 )
 */
 void QDateEdit_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QDateEdit * o = new QDateEdit ( par1 );
+  QDateEdit * o = new QDateEdit ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -57,8 +56,7 @@ QDateEdit ( const QDate & date, QWidget * parent = 0 )
 void QDateEdit_new2 ()
 {
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QDateEdit * o = new QDateEdit ( *par1, par2 );
+  QDateEdit * o = new QDateEdit ( *par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

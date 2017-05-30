@@ -96,8 +96,7 @@ QTableView ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABLEVIEW_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QTableView * o = new QTableView ( par1 );
+  QTableView * o = new QTableView ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -750,8 +749,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      obj->setRootIndex ( *par1 );
+      obj->setRootIndex ( *PQMODELINDEX(1) );
     }
     else
     {
