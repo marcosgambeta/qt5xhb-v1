@@ -177,8 +177,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
     {
       QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      QAction * ptr = obj->createAction ( par1, par2 );
+      QAction * ptr = obj->createAction ( par1, OPQSTRING(2,QString()) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -200,8 +199,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
     {
       QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      QActionGroup * ptr = obj->createActionGroup ( par1, par2 );
+      QActionGroup * ptr = obj->createActionGroup ( par1, OPQSTRING(2,QString()) );
       _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
     }
     else
@@ -223,8 +221,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     if( ISCHAR(1) && ISOPTQOBJECT(2) && ISOPTCHAR(3) )
     {
       QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-      QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-      QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, par3 );
+      QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, OPQSTRING(3,QString()) );
       _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
     }
     else
@@ -246,8 +243,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
     if( ISCHAR(1) && ISOPTQWIDGET(2) && ISOPTCHAR(3) )
     {
       QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-      QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-      QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, par3 );
+      QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, OPQSTRING(3,QString()) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else

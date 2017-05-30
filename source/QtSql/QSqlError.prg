@@ -75,11 +75,8 @@ QSqlError(const QString &driverText = QString(), const QString &databaseText = Q
 */
 void QSqlError_new2 ()
 {
-  QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QSqlError::NoError : hb_parni(3);
-  QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-  QSqlError * o = new QSqlError ( par1, par2,  (QSqlError::ErrorType) par3, par4 );
+  QSqlError * o = new QSqlError ( OPQSTRING(1,QString()), OPQSTRING(2,QString()),  (QSqlError::ErrorType) par3, OPQSTRING(4,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

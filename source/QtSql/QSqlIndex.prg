@@ -53,9 +53,7 @@ explicit QSqlIndex ( const QString & cursorname = QString(), const QString & nam
 */
 void QSqlIndex_new1 ()
 {
-  QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-  QSqlIndex * o = new QSqlIndex ( par1, par2 );
+  QSqlIndex * o = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

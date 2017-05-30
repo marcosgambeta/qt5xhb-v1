@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isBitmapScalable ( PQSTRING(1), par2 ) );
+      hb_retl( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -204,8 +203,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isFixedPitch ( PQSTRING(1), par2 ) );
+      hb_retl( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -225,8 +223,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isScalable ( PQSTRING(1), par2 ) );
+      hb_retl( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -246,8 +243,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retl( obj->isSmoothlyScalable ( PQSTRING(1), par2 ) );
+      hb_retl( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -287,8 +283,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      QList<int> list = obj->pointSizes ( PQSTRING(1), par2 );
+      QList<int> list = obj->pointSizes ( PQSTRING(1), OPQSTRING(2,QString()) );
       _qt5xhb_convert_qlist_int_to_array ( list );
     }
     else

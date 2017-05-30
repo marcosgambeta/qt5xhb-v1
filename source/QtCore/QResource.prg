@@ -71,9 +71,8 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISQLOCALE(2)||ISNIL(2)) )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
     QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(2);
-    QResource * o = new QResource ( par1, par2 );
+    QResource * o = new QResource ( OPQSTRING(1,QString()), par2 );
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else
@@ -244,8 +243,7 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) )
   {
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( QResource::registerResource ( PQSTRING(1), par2 ) );
+    hb_retl( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
   else
   {
@@ -260,8 +258,7 @@ HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) )
   {
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retl( QResource::unregisterResource ( PQSTRING(1), par2 ) );
+    hb_retl( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
   else
   {

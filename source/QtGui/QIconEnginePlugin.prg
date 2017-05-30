@@ -73,8 +73,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
   {
     if( ISOPTCHAR(1) )
     {
-      QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-      QIconEngine * ptr = obj->create ( par1 );
+      QIconEngine * ptr = obj->create ( OPQSTRING(1,QString()) );
       _qt5xhb_createReturnClass ( ptr, "QICONENGINE" );
     }
     else

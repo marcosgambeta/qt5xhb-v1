@@ -281,9 +281,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
-    obj->setContent ( *par1, par2, par3 );
+    obj->setContent ( *par1, OPQSTRING(2,QString()), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

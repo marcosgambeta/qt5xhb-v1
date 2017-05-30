@@ -504,8 +504,7 @@ static QDBusConnection connectToBus(BusType type, const QString &name)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS1 ) // TODO: corrigir implementacao (parametro 1 ausente)
 {
-  QString par2 = QLatin1String( hb_parc(2) );
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( par2 ) );
+  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( par1, PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
 }
 

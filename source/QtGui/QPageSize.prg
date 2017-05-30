@@ -123,9 +123,8 @@ explicit QPageSize(const QSize &pointSize, const QString &name = QString(), Size
 HB_FUNC_STATIC( QPAGESIZE_NEW3 )
 {
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QPageSize::FuzzyMatch : hb_parni(3);
-  QPageSize * o = new QPageSize ( *par1, par2,  (QPageSize::SizeMatchPolicy) par3 );
+  QPageSize * o = new QPageSize ( *par1, OPQSTRING(2,QString()),  (QPageSize::SizeMatchPolicy) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -136,9 +135,8 @@ HB_FUNC_STATIC( QPAGESIZE_NEW4 )
 {
   QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QPageSize::FuzzyMatch : hb_parni(4);
-  QPageSize * o = new QPageSize ( *par1,  (QPageSize::Unit) par2, par3,  (QPageSize::SizeMatchPolicy) par4 );
+  QPageSize * o = new QPageSize ( *par1,  (QPageSize::Unit) par2, OPQSTRING(3,QString()),  (QPageSize::SizeMatchPolicy) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

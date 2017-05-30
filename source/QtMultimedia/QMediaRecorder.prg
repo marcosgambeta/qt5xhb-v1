@@ -384,8 +384,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETENCODINGSETTINGS )
   {
     QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
     QVideoEncoderSettings par2 = ISNIL(2)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(2);
-    QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    obj->setEncodingSettings ( *par1, par2, par3 );
+    obj->setEncodingSettings ( *par1, par2, OPQSTRING(3,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

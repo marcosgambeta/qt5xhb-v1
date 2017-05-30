@@ -267,8 +267,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      hb_retc( RQSTRING( obj->value ( PQSTRING(1), par2 ) ) );
+      hb_retc( RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) ) );
     }
     else
     {

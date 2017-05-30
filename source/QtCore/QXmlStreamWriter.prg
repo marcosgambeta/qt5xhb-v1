@@ -686,8 +686,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      obj->writeNamespace ( PQSTRING(1), par2 );
+      obj->writeNamespace ( PQSTRING(1), OPQSTRING(2,QString()) );
     }
     else
     {
@@ -709,8 +708,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      obj->writeProcessingInstruction ( PQSTRING(1), par2 );
+      obj->writeProcessingInstruction ( PQSTRING(1), OPQSTRING(2,QString()) );
     }
     else
     {

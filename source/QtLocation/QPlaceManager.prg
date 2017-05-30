@@ -245,8 +245,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
   if( obj )
   {
     QPlaceCategory * par1 = (QPlaceCategory *) _qt5xhb_itemGetPtr(1);
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QPlaceIdReply * ptr = obj->saveCategory ( *par1, par2 );
+    QPlaceIdReply * ptr = obj->saveCategory ( *par1, OPQSTRING(2,QString()) );
     _qt5xhb_createReturnClass ( ptr, "QPLACEIDREPLY" );
   }
 #endif
@@ -309,8 +308,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-    QStringList strl = obj->childCategoryIds ( par1 );
+    QStringList strl = obj->childCategoryIds ( OPQSTRING(1,QString()) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif
@@ -342,8 +340,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-    QList<QPlaceCategory> list = obj->childCategories ( par1 );
+    QList<QPlaceCategory> list = obj->childCategories ( OPQSTRING(1,QString()) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPLACECATEGORY" );

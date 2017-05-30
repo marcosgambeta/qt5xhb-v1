@@ -100,9 +100,8 @@ QNetworkProxyQuery ( const QString & hostname, int port, const QString & protoco
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW3 )
 {
   int par2 = hb_parni(2);
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(4);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( PQSTRING(1), par2, par3,  (QNetworkProxyQuery::QueryType) par4 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( PQSTRING(1), par2, OPQSTRING(3,QString()),  (QNetworkProxyQuery::QueryType) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -112,9 +111,8 @@ QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), 
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW4 )
 {
   quint16 par1 = hb_parni(1);
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::TcpServer : hb_parni(3);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( par1, par2,  (QNetworkProxyQuery::QueryType) par3 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( par1, OPQSTRING(2,QString()),  (QNetworkProxyQuery::QueryType) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -147,9 +145,8 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW7 )
 {
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   int par3 = hb_parni(3);
-  QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   int par5 = ISNIL(5)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(5);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, PQSTRING(2), par3, par4,  (QNetworkProxyQuery::QueryType) par5 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, PQSTRING(2), par3, OPQSTRING(4,QString()),  (QNetworkProxyQuery::QueryType) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -160,9 +157,8 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
 {
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   quint16 par2 = hb_parni(2);
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpServer : hb_parni(4);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, par2, par3,  (QNetworkProxyQuery::QueryType) par4 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, par2, OPQSTRING(3,QString()),  (QNetworkProxyQuery::QueryType) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

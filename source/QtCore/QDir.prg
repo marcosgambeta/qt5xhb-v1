@@ -122,8 +122,7 @@ QDir(const QString & path = QString())
 */
 void QDir_new2 ()
 {
-  QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-  QDir * o = new QDir ( par1 );
+  QDir * o = new QDir ( OPQSTRING(1,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

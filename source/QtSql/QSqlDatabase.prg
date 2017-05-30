@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
   {
     if( ISOPTCHAR(1) )
     {
-      QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-      obj->setConnectOptions ( par1 );
+      obj->setConnectOptions ( OPQSTRING(1,QString()) );
     }
     else
     {
@@ -306,8 +305,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
   {
     if( ISOPTCHAR(1) )
     {
-      QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-      QSqlQuery * ptr = new QSqlQuery( obj->exec ( par1 ) );
+      QSqlQuery * ptr = new QSqlQuery( obj->exec ( OPQSTRING(1,QString()) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
     }
     else

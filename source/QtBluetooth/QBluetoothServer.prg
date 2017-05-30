@@ -150,8 +150,7 @@ void QBluetoothServer_listen2 ()
   if( obj )
   {
     QBluetoothUuid * par1 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(1);
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *par1, par2 ) );
+    QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *par1, OPQSTRING(2,QString()) ) );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO" );
   }
 #endif

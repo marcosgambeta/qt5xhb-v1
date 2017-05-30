@@ -72,9 +72,7 @@ QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & n
 HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
   QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-  QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-  QXmlName * o = new QXmlName ( *par1, PQSTRING(2), par3, par4 );
+  QXmlName * o = new QXmlName ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

@@ -108,9 +108,8 @@ explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDa
 */
 void QSqlQuery_new2 ()
 {
-  QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
   QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
-  QSqlQuery * o = new QSqlQuery ( par1, par2 );
+  QSqlQuery * o = new QSqlQuery ( OPQSTRING(1,QString()), par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

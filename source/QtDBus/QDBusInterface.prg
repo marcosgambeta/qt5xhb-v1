@@ -51,11 +51,10 @@ RETURN
 /*
 QDBusInterface(const QString &service, const QString &path, const QString &interface = QString(),const QDBusConnection &connection = QDBusConnection::sessionBus(),QObject *parent = 0)
 */
-HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
+HB_FUNC_STATIC( QDBUSINTERFACE_NEW ) // TODO: corrigir parametro 4
 {
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
   QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
-  QDBusInterface * o = new QDBusInterface ( PQSTRING(1), PQSTRING(2), par3, par5 );
+  QDBusInterface * o = new QDBusInterface ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), par4, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

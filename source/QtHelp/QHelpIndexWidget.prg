@@ -81,8 +81,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
   QHelpIndexWidget * obj = (QHelpIndexWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    obj->filterIndices ( PQSTRING(1), par2 );
+    obj->filterIndices ( PQSTRING(1), OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

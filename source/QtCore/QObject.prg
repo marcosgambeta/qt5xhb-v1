@@ -497,9 +497,8 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
   {
     if( ISOPTCHAR(1) && ISOPTNUM(2) )
     {
-      QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
       int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-      QObject * ptr = obj->findChild<QObject *> ( par1,  (Qt::FindChildOptions) par2 );
+      QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()),  (Qt::FindChildOptions) par2 );
       _qt5xhb_createReturnQObjectClass ( (QObject *) ptr, "QOBJECT" );
     }
     else
@@ -518,9 +517,8 @@ void QObject_findChildren1 ()
 
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-    QList<QObject *> list = obj->findChildren<QObject *> ( par1,  (Qt::FindChildOptions) par2 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()),  (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );

@@ -236,8 +236,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
     {
-      QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-      obj->addPositionalArgument ( PQSTRING(1), PQSTRING(2), par3 );
+      obj->addPositionalArgument ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) );
     }
     else
     {

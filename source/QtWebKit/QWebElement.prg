@@ -296,8 +296,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-    hb_retc( RQSTRING( obj->attribute ( PQSTRING(1), par2 ) ) );
+    hb_retc( RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) ) );
   }
 }
 
@@ -310,8 +309,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-    hb_retc( RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 ) ) );
+    hb_retc( RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) ) );
   }
 }
 
@@ -324,8 +322,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-    QStringList strl = obj->attributeNames ( par1 );
+    QStringList strl = obj->attributeNames ( OPQSTRING(1,QString()) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }

@@ -405,8 +405,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-    hb_retni( obj->capture ( par1 ) );
+    hb_retni( obj->capture ( OPQSTRING(1,QString()) ) );
   }
 }
 

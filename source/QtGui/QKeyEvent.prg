@@ -58,10 +58,9 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
   bool par5 = ISNIL(5)? false : hb_parl(5);
   ushort par6 = ISNIL(6)? 1 : hb_parni(6);
-  QKeyEvent * o = new QKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, par4, par5, par6 );
+  QKeyEvent * o = new QKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, OPQSTRING(4,QString()), par5, par6 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -99,8 +99,7 @@ QMediaResource(const QUrl & url, const QString & mimeType = QString())
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW2 )
 {
   QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-  QMediaResource * o = new QMediaResource ( *par1, par2 );
+  QMediaResource * o = new QMediaResource ( *par1, OPQSTRING(2,QString()) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -110,8 +109,7 @@ QMediaResource(const QNetworkRequest & request, const QString & mimeType = QStri
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW3 )
 {
   QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-  QMediaResource * o = new QMediaResource ( *par1, par2 );
+  QMediaResource * o = new QMediaResource ( *par1, OPQSTRING(2,QString()) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

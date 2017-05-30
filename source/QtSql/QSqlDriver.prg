@@ -315,11 +315,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
     {
-      QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-      QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-      QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-      QString par6 = ISNIL(6)? QString() : QLatin1String( hb_parc(6) );
-      hb_retl( obj->open ( PQSTRING(1), par2, par3, par4, (int) ISNIL(5)? -1 : hb_parni(5), par6 ) );
+      hb_retl( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), (int) ISNIL(5)? -1 : hb_parni(5), OPQSTRING(6,QString()) ) );
     }
     else
     {

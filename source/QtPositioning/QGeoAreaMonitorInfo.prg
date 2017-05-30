@@ -77,8 +77,7 @@ QGeoAreaMonitorInfo(const QString &name = QString())
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QString par1 = ISNIL(1)? QString() : QLatin1String( hb_parc(1) );
-  QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo ( par1 );
+  QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo ( OPQSTRING(1,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

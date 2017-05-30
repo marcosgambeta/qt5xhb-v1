@@ -62,10 +62,7 @@ QCommandLineOption(const QString &name, const QString &description = QString(),c
 */
 void QCommandLineOption_new1 ()
 {
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-  QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRING(1), par2, par3, par4 );
+  QCommandLineOption * o = new QCommandLineOption ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -74,10 +71,7 @@ QCommandLineOption(const QStringList &names, const QString &description = QStrin
 */
 void QCommandLineOption_new2 ()
 {
-  QString par2 = ISNIL(2)? QString() : QLatin1String( hb_parc(2) );
-  QString par3 = ISNIL(3)? QString() : QLatin1String( hb_parc(3) );
-  QString par4 = ISNIL(4)? QString() : QLatin1String( hb_parc(4) );
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRINGLIST(1), par2, par3, par4 );
+  QCommandLineOption * o = new QCommandLineOption ( PQSTRINGLIST(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
