@@ -836,8 +836,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
   if( obj )
   {
     QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-    obj->addResource ( PINT(1), *par2, *par3 );
+    obj->addResource ( PINT(1), *par2, *PQVARIANT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

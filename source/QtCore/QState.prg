@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
     {
       QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
       const char * par2 = hb_parc(2);
-      QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      obj->assignProperty ( par1, (const char *) par2, *par3 );
+      obj->assignProperty ( par1, (const char *) par2, *PQVARIANT(3) );
     }
     else
     {

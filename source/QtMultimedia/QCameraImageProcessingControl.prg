@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->isParameterValueSupported ( (QCameraImageProcessingControl::ProcessingParameter) par1, *par2 ) );
+    hb_retl( obj->isParameterValueSupported ( (QCameraImageProcessingControl::ProcessingParameter) par1, *PQVARIANT(2) ) );
   }
 }
 
@@ -116,8 +115,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setParameter ( (QCameraImageProcessingControl::ProcessingParameter) par1, *par2 );
+    obj->setParameter ( (QCameraImageProcessingControl::ProcessingParameter) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

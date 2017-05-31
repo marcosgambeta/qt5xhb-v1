@@ -190,9 +190,8 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
   {
     if( ISQVARIANT(1) && ISOPTNUM(2) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QSql::In : hb_parni(2);
-      obj->addBindValue ( *par1, (QSql::ParamType) par2 );
+      obj->addBindValue ( *PQVARIANT(1), (QSql::ParamType) par2 );
     }
     else
     {
@@ -225,9 +224,8 @@ void QSqlQuery_bindValue1 ()
 
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( PQSTRING(1), *par2, (QSql::ParamType) par3 );
+    obj->bindValue ( PQSTRING(1), *PQVARIANT(2), (QSql::ParamType) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -242,9 +240,8 @@ void QSqlQuery_bindValue2 ()
 
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( PINT(1), *par2, (QSql::ParamType) par3 );
+    obj->bindValue ( PINT(1), *PQVARIANT(2), (QSql::ParamType) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -901,8 +901,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setSocketOption ( (QAbstractSocket::SocketOption) par1, *par2 );
+    obj->setSocketOption ( (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setValue ( (QCameraExposureControl::ExposureParameter) par1, *par2 ) );
+    hb_retl( obj->setValue ( (QCameraExposureControl::ExposureParameter) par1, *PQVARIANT(2) ) );
   }
 }
 

@@ -285,8 +285,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY1 )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setProperty ( PINT(1), *par2 );
+    obj->setProperty ( PINT(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

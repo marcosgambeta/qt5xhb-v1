@@ -228,8 +228,7 @@ void QBluetoothServiceInfo_setAttribute1 ()
 
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setAttribute ( (quint16) hb_parni(1), *par2 );
+    obj->setAttribute ( (quint16) hb_parni(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

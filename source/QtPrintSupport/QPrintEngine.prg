@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
     if( ISNUM(1) && ISQVARIANT(2) )
     {
       int par1 = hb_parni(1);
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setProperty ( (QPrintEngine::PrintEnginePropertyKey) par1, *par2 );
+      obj->setProperty ( (QPrintEngine::PrintEnginePropertyKey) par1, *PQVARIANT(2) );
     }
     else
     {

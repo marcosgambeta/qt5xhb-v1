@@ -667,8 +667,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETDATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+    hb_retl( obj->setData ( *par1, *PQVARIANT(2), (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
   }
 }
 
@@ -697,8 +696,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+    hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *PQVARIANT(3), (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
   }
 }
 

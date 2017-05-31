@@ -453,8 +453,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPROPERTY )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setProperty ( (const char *) par1, *par2 );
+    obj->setProperty ( (const char *) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

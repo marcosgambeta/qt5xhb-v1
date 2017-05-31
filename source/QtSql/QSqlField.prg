@@ -174,8 +174,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
   {
     if( ISQVARIANT(1) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-      obj->setDefaultValue ( *par1 );
+      obj->setDefaultValue ( *PQVARIANT(1) );
     }
     else
     {
@@ -542,8 +541,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
   {
     if( ISQVARIANT(1) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-      obj->setValue ( *par1 );
+      obj->setValue ( *PQVARIANT(1) );
     }
     else
     {

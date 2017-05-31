@@ -281,8 +281,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->appendVariant ( *par1 );
+    obj->appendVariant ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

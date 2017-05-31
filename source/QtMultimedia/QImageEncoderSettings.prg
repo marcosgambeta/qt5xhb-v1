@@ -273,8 +273,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETENCODINGOPTION )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setEncodingOption ( PQSTRING(1), *par2 );
+    obj->setEncodingOption ( PQSTRING(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

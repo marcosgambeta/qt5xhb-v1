@@ -334,8 +334,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
   {
     if( ISNUM(1) && ISQVARIANT(2) )
     {
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setProperty ( PINT(1), *par2 );
+      obj->setProperty ( PINT(1), *PQVARIANT(2) );
     }
     else
     {

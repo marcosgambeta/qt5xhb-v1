@@ -544,8 +544,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT1 )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *PQVARIANT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -559,8 +558,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT2 )
   if( obj )
   {
     QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1, *par2 ) );
+    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1, *PQVARIANT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

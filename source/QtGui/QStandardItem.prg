@@ -251,8 +251,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->setData ( *par1, (int) ISNIL(2)? Qt::UserRole+1 : hb_parni(2) );
+    obj->setData ( *PQVARIANT(1), (int) ISNIL(2)? Qt::UserRole+1 : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

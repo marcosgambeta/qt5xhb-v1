@@ -299,8 +299,7 @@ void QDeclarativeContext_setContextProperty2 ()
 
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setContextProperty ( PQSTRING(1), *par2 );
+    obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

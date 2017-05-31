@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTCONTEXT )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->setContentContext ( *par1 );
+    obj->setContentContext ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

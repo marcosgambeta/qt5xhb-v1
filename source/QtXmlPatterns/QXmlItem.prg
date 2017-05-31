@@ -98,8 +98,7 @@ QXmlItem ( const QVariant & atomicValue )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW4 )
 {
-  QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-  QXmlItem * o = new QXmlItem ( *par1 );
+  QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

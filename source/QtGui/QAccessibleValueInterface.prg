@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE )
   QAccessibleValueInterface * obj = (QAccessibleValueInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentValue ( *par1 );
+    obj->setCurrentValue ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

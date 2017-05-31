@@ -409,8 +409,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setCustomValue ( PQSTRING(1), *par2 ) );
+    hb_retl( obj->setCustomValue ( PQSTRING(1), *PQVARIANT(2) ) );
   }
 }
 

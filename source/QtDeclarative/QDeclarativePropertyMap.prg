@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
   {
     if( ISCHAR(1) && ISQVARIANT(2) )
     {
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->insert ( PQSTRING(1), *par2 );
+      obj->insert ( PQSTRING(1), *PQVARIANT(2) );
     }
     else
     {

@@ -221,8 +221,7 @@ QVariant(const QVariant &other)
 */
 void QVariant_new5 ()
 {
-  QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQVARIANT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -914,8 +913,7 @@ HB_FUNC_STATIC( QVARIANT_SWAP )
   {
     if( ISQVARIANT(1) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
+      obj->swap ( *PQVARIANT(1) );
     }
     else
     {

@@ -154,8 +154,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    obj->setUserData ( *par1 );
+    obj->setUserData ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

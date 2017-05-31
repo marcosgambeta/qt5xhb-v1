@@ -577,8 +577,7 @@ void QDeclarativeProperty_write1 ()
 
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->write ( *par1 ) );
+    hb_retl( obj->write ( *PQVARIANT(1) ) );
   }
 }
 
@@ -588,8 +587,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write2 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *par3 ) );
+  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *PQVARIANT(3) ) );
 }
 
 /*
@@ -598,9 +596,8 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write3 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
   QDeclarativeContext * par4 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *par3, par4 ) );
+  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *PQVARIANT(3), par4 ) );
 }
 
 /*
@@ -609,9 +606,8 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write4 ()
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
   QDeclarativeEngine * par4 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *par3, par4 ) );
+  hb_retl( QDeclarativeProperty::write ( par1, PQSTRING(2), *PQVARIANT(3), par4 ) );
 }
 
 //[1]bool write ( const QVariant & value ) const

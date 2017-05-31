@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_SETATTRIBUTE )
     if( ISNUM(1) && ISQVARIANT(2) )
     {
       int par1 = hb_parni(1);
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setAttribute ( (QBluetoothTransferRequest::Attribute) par1, *par2 );
+      obj->setAttribute ( (QBluetoothTransferRequest::Attribute) par1, *PQVARIANT(2) );
     }
     else
     {

@@ -355,8 +355,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
     {
       int par2 = hb_parni(2);
-      QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *PQVARIANT(3), (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
     }
     else
     {

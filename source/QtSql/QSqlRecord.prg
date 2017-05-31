@@ -581,8 +581,7 @@ void QSqlRecord_setValue1 ()
 
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setValue ( PINT(1), *par2 );
+    obj->setValue ( PINT(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -597,8 +596,7 @@ void QSqlRecord_setValue2 ()
 
   if( obj )
   {
-    QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setValue ( PQSTRING(1), *par2 );
+    obj->setValue ( PQSTRING(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

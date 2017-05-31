@@ -249,8 +249,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+      hb_retl( obj->setData ( *par1, *PQVARIANT(2), (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
     }
     else
     {

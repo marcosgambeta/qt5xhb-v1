@@ -193,8 +193,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
   {
     if( ISQVARIANT(1) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-      obj->setEndValue ( *par1 );
+      obj->setEndValue ( *PQVARIANT(1) );
     }
     else
     {
@@ -216,8 +215,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
   {
     if( ISNUM(1) && ISQVARIANT(2) )
     {
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setKeyValueAt ( PQREAL(1), *par2 );
+      obj->setKeyValueAt ( PQREAL(1), *PQVARIANT(2) );
     }
     else
     {
@@ -239,8 +237,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
   {
     if( ISQVARIANT(1) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-      obj->setStartValue ( *par1 );
+      obj->setStartValue ( *PQVARIANT(1) );
     }
     else
     {

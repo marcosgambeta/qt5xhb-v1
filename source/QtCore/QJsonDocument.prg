@@ -412,8 +412,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMVARIANT )
 {
   if( ISQVARIANT(1) )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromVariant ( *par1 ) );
+    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromVariant ( *PQVARIANT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
   }
   else

@@ -306,8 +306,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
   {
     if( ISQVARIANT(1) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-      obj->setColorData ( *par1 );
+      obj->setColorData ( *PQVARIANT(1) );
     }
     else
     {
@@ -374,8 +373,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
   {
     if( ISQVARIANT(1) )
     {
-      QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-      obj->setImageData ( *par1 );
+      obj->setImageData ( *PQVARIANT(1) );
     }
     else
     {

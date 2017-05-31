@@ -452,9 +452,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
     if( ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) && ISOPTNUM(5) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
       int par5 = ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5);
-      QModelIndexList list = obj->match ( *par1, PINT(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4), (Qt::MatchFlags) par5 );
+      QModelIndexList list = obj->match ( *par1, PINT(2), *PQVARIANT(3), (int) ISNIL(4)? 1 : hb_parni(4), (Qt::MatchFlags) par5 );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -647,8 +646,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->setData ( *par1, *par2, (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+      hb_retl( obj->setData ( *par1, *PQVARIANT(2), (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
     }
     else
     {
@@ -669,8 +667,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
     {
       int par2 = hb_parni(2);
-      QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *PQVARIANT(3), (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
     }
     else
     {

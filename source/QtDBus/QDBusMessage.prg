@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY2 )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
-    QDBusMessage * ptr = new QDBusMessage( obj->createReply ( *par1 ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->createReply ( *PQVARIANT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }

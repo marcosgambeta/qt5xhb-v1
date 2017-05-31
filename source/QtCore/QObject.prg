@@ -911,8 +911,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
     if( ISCHAR(1) && ISQVARIANT(2) )
     {
       const char * par1 = hb_parc(1);
-      QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->setProperty ( (const char *) par1, *par2 ) );
+      hb_retl( obj->setProperty ( (const char *) par1, *PQVARIANT(2) ) );
     }
     else
     {
