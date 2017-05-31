@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
     if( ISNUMPAR(1) )
     {
       int par1 = hb_parni(1);
-      obj->setState (  (QAxScriptEngine::State) par1 );
+      obj->setState ( (QAxScriptEngine::State) par1 );
     }
     else
     {

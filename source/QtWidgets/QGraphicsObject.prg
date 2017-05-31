@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::GestureFlags() : hb_parni(2);
-    obj->grabGesture (  (Qt::GestureType) par1,  (Qt::GestureFlags) par2 );
+    obj->grabGesture ( (Qt::GestureType) par1, (Qt::GestureFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->ungrabGesture (  (Qt::GestureType) par1 );
+    obj->ungrabGesture ( (Qt::GestureType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

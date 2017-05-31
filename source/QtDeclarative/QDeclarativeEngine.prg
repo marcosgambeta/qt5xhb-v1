@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QDeclarativeEngine::setObjectOwnership ( par1,  (QDeclarativeEngine::ObjectOwnership) par2 );
+    QDeclarativeEngine::setObjectOwnership ( par1, (QDeclarativeEngine::ObjectOwnership) par2 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETINDEXDATAPATTERN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setIndexDataPattern (  (QSGGeometry::DataPattern) par1 );
+    obj->setIndexDataPattern ( (QSGGeometry::DataPattern) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETVERTEXDATAPATTERN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setVertexDataPattern (  (QSGGeometry::DataPattern) par1 );
+    obj->setVertexDataPattern ( (QSGGeometry::DataPattern) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

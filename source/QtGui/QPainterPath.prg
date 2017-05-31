@@ -365,7 +365,7 @@ void QPainterPath_addRoundedRect1 ()
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->addRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
+    obj->addRoundedRect ( *par1, PQREAL(2), PQREAL(3), (Qt::SizeMode) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1123,7 +1123,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setFillRule (  (Qt::FillRule) par1 );
+      obj->setFillRule ( (Qt::FillRule) par1 );
     }
     else
     {

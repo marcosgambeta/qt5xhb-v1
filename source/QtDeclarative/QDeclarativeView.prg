@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setResizeMode (  (QDeclarativeView::ResizeMode) par1 );
+      obj->setResizeMode ( (QDeclarativeView::ResizeMode) par1 );
     }
     else
     {

@@ -87,7 +87,7 @@ QJsonValue(Type type = Null)
 HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 {
   int par1 = ISNIL(1)? (int) QJsonValue::Null : hb_parni(1);
-  QJsonValue * o = new QJsonValue (  (QJsonValue::Type) par1 );
+  QJsonValue * o = new QJsonValue ( (QJsonValue::Type) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

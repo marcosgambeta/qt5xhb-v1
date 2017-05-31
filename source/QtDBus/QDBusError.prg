@@ -92,7 +92,7 @@ QDBusError(ErrorType error, const QString &message)
 HB_FUNC_STATIC( QDBUSERROR_NEW4 )
 {
   int par1 = hb_parni(1);
-  QDBusError * o = new QDBusError (  (QDBusError::ErrorType) par1, PQSTRING(2) );
+  QDBusError * o = new QDBusError ( (QDBusError::ErrorType) par1, PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -189,7 +189,7 @@ static QString errorString(ErrorType error)
 HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {
   int par1 = hb_parni(1);
-  hb_retc( RQSTRING( QDBusError::errorString (  (QDBusError::ErrorType) par1 ) ) );
+  hb_retc( RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) par1 ) ) );
 }
 
 

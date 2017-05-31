@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::MatchExactly : hb_parni(2);
-    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, (int) ISNIL(3)? 0 : hb_parni(3) );
+    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, (int) ISNIL(3)? 0 : hb_parni(3) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSTANDARDITEM" );
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
   {
     int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->setHeaderData ( PINT(1),  (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+    hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
   }
 }
 
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->sort ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
     const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
+    hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
   }
 }
 

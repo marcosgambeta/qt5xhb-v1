@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-      hb_retni( obj->exec (  (QEventLoop::ProcessEventsFlags) par1 ) );
+      hb_retni( obj->exec ( (QEventLoop::ProcessEventsFlags) par1 ) );
     }
     else
     {
@@ -147,7 +147,7 @@ void QEventLoop_processEvents1 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-    hb_retl( obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1 ) );
+    hb_retl( obj->processEvents ( (QEventLoop::ProcessEventsFlags) par1 ) );
   }
 }
 
@@ -161,7 +161,7 @@ void QEventLoop_processEvents2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1, PINT(2) );
+    obj->processEvents ( (QEventLoop::ProcessEventsFlags) par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETLAYOUTDIRECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setLayoutDirection (  (Qt::LayoutDirection) par1 );
+    obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

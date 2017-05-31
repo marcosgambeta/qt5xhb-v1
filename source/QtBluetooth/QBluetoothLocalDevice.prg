@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_REQUESTPAIRING )
     {
       QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
-      obj->requestPairing ( *par1,  (QBluetoothLocalDevice::Pairing) par2 );
+      obj->requestPairing ( *par1, (QBluetoothLocalDevice::Pairing) par2 );
     }
     else
     {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_SETHOSTMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setHostMode (  (QBluetoothLocalDevice::HostMode) par1 );
+      obj->setHostMode ( (QBluetoothLocalDevice::HostMode) par1 );
     }
     else
     {

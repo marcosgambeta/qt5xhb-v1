@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setContentType (  (QPlaceContent::Type) par1 );
+    obj->setContentType ( (QPlaceContent::Type) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

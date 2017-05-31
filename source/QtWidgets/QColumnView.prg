@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QColumnView::EnsureVisible : hb_parni(2);
-    obj->scrollTo ( *PQMODELINDEX(1),  (QColumnView::ScrollHint) par2 );
+    obj->scrollTo ( *PQMODELINDEX(1), (QColumnView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

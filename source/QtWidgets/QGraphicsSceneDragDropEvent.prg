@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDropAction (  (Qt::DropAction) par1 );
+    obj->setDropAction ( (Qt::DropAction) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

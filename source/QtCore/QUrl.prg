@@ -130,7 +130,7 @@ QUrl ( const QString & url, ParsingMode parsingMode )
 void QUrl_new4 ()
 {
   int par2 = hb_parni(2);
-  QUrl * o = new QUrl ( PQSTRING(1),  (QUrl::ParsingMode) par2 );
+  QUrl * o = new QUrl ( PQSTRING(1), (QUrl::ParsingMode) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -632,7 +632,7 @@ void QUrl_setUrl2 ()
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setUrl ( PQSTRING(1),  (QUrl::ParsingMode) par2 );
+    obj->setUrl ( PQSTRING(1), (QUrl::ParsingMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
-      QByteArray * ptr = new QByteArray( obj->toEncoded (  (QUrl::FormattingOptions) par1 ) );
+      QByteArray * ptr = new QByteArray( obj->toEncoded ( (QUrl::FormattingOptions) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
     }
     else
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QURL_TOSTRING )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
-      hb_retc( RQSTRING( obj->toString (  (QUrl::FormattingOptions) par1 ) ) );
+      hb_retc( RQSTRING( obj->toString ( (QUrl::FormattingOptions) par1 ) ) );
     }
     else
     {
@@ -852,7 +852,7 @@ void QUrl_fromEncoded2 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *par1,  (QUrl::ParsingMode) par2 ) );
+  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *par1, (QUrl::ParsingMode) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QURL", true );
 }
 

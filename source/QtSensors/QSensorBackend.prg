@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isFeatureSupported (  (QSensor::Feature) par1 ) );
+    hb_retl( obj->isFeatureSupported ( (QSensor::Feature) par1 ) );
   }
 #endif
 }

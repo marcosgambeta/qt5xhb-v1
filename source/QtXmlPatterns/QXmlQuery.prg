@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW4 )
 {
   int par1 = hb_parni(1);
   QXmlNamePool par2 = ISNIL(2)? QXmlNamePool() : *(QXmlNamePool *) _qt5xhb_itemGetPtr(2);
-  QXmlQuery * o = new QXmlQuery (  (QXmlQuery::QueryLanguage) par1, par2 );
+  QXmlQuery * o = new QXmlQuery ( (QXmlQuery::QueryLanguage) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

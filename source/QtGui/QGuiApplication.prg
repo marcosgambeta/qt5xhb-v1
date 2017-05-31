@@ -448,7 +448,7 @@ static void setLayoutDirection(Qt::LayoutDirection direction)
 HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 {
   int par1 = hb_parni(1);
-  QGuiApplication::setLayoutDirection (  (Qt::LayoutDirection) par1 );
+  QGuiApplication::setLayoutDirection ( (Qt::LayoutDirection) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

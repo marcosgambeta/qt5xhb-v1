@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHECKSTATE )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->setCheckState ( PINT(1),  (Qt::CheckState) par2 );
+      obj->setCheckState ( PINT(1), (Qt::CheckState) par2 );
     }
     else
     {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHILDINDICATORPOLICY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setChildIndicatorPolicy (  (QTreeWidgetItem::ChildIndicatorPolicy) par1 );
+      obj->setChildIndicatorPolicy ( (QTreeWidgetItem::ChildIndicatorPolicy) par1 );
     }
     else
     {
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFLAGS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setFlags (  (Qt::ItemFlags) par1 );
+      obj->setFlags ( (Qt::ItemFlags) par1 );
     }
     else
     {
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SORTCHILDREN )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sortChildren ( PINT(1),  (Qt::SortOrder) par2 );
+      obj->sortChildren ( PINT(1), (Qt::SortOrder) par2 );
     }
     else
     {

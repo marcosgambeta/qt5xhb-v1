@@ -81,7 +81,7 @@ void QByteArrayMatcher_new3 ()
 {
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
-  QByteArrayMatcher * o = new QByteArrayMatcher (  (const char *) par1, par2 );
+  QByteArrayMatcher * o = new QByteArrayMatcher ( (const char *) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -165,7 +165,7 @@ void QByteArrayMatcher_indexIn2 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retni( obj->indexIn (  (const char *) par1, PINT(2), (int) ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( obj->indexIn ( (const char *) par1, PINT(2), (int) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
 

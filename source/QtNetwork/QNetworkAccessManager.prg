@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setNetworkAccessible (  (QNetworkAccessManager::NetworkAccessibility) par1 );
+    obj->setNetworkAccessible ( (QNetworkAccessManager::NetworkAccessibility) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

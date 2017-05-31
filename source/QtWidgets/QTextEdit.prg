@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      hb_retl( obj->find ( PQSTRING(1),  (QTextDocument::FindFlags) par2 ) );
+      hb_retl( obj->find ( PQSTRING(1), (QTextDocument::FindFlags) par2 ) );
     }
     else
     {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
     {
       int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-      obj->moveCursor (  (QTextCursor::MoveOperation) par1,  (QTextCursor::MoveMode) par2 );
+      obj->moveCursor ( (QTextCursor::MoveOperation) par1, (QTextCursor::MoveMode) par2 );
     }
     else
     {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETAUTOFORMATTING )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setAutoFormatting (  (QTextEdit::AutoFormatting) par1 );
+      obj->setAutoFormatting ( (QTextEdit::AutoFormatting) par1 );
     }
     else
     {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setLineWrapMode (  (QTextEdit::LineWrapMode) par1 );
+      obj->setLineWrapMode ( (QTextEdit::LineWrapMode) par1 );
     }
     else
     {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
+      obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) par1 );
     }
     else
     {
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setWordWrapMode (  (QTextOption::WrapMode) par1 );
+      obj->setWordWrapMode ( (QTextOption::WrapMode) par1 );
     }
     else
     {
@@ -1381,7 +1381,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETALIGNMENT )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setAlignment (  (Qt::Alignment) par1 );
+      obj->setAlignment ( (Qt::Alignment) par1 );
     }
     else
     {

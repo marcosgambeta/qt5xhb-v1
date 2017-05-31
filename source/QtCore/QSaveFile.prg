@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSAVEFILE_OPEN )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+      hb_retl( obj->open ( (QIODevice::OpenMode) par1 ) );
     }
     else
     {

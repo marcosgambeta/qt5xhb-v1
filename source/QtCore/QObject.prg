@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
     if( ISOPTCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-      QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()),  (Qt::FindChildOptions) par2 );
+      QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()), (Qt::FindChildOptions) par2 );
       _qt5xhb_createReturnQObjectClass ( (QObject *) ptr, "QOBJECT" );
     }
     else
@@ -518,7 +518,7 @@ void QObject_findChildren1 ()
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-    QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()),  (Qt::FindChildOptions) par2 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()), (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );
@@ -565,7 +565,7 @@ void QObject_findChildren2 ()
   {
     QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-    QList<QObject *> list = obj->findChildren<QObject *> ( *par1,  (Qt::FindChildOptions) par2 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( *par1, (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );
@@ -613,7 +613,7 @@ void QObject_findChildren3 ()
   {
     QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-    QList<QObject *> list = obj->findChildren<QObject *> ( *par1,  (Qt::FindChildOptions) par2 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( *par1, (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
     if( ISCHAR(1) )
     {
       const char * par1 = hb_parc(1);
-      hb_retl( obj->inherits (  (const char *) par1 ) );
+      hb_retl( obj->inherits ( (const char *) par1 ) );
     }
     else
     {
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
     if( ISCHAR(1) )
     {
       const char * par1 = hb_parc(1);
-      QVariant * ptr = new QVariant( obj->property (  (const char *) par1 ) );
+      QVariant * ptr = new QVariant( obj->property ( (const char *) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
     {
       const char * par1 = hb_parc(1);
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->setProperty (  (const char *) par1, *par2 ) );
+      hb_retl( obj->setProperty ( (const char *) par1, *par2 ) );
     }
     else
     {
@@ -970,7 +970,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::CoarseTimer : hb_parni(2);
-      hb_retni( obj->startTimer ( PINT(1),  (Qt::TimerType) par2 ) );
+      hb_retni( obj->startTimer ( PINT(1), (Qt::TimerType) par2 ) );
     }
     else
     {
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QOBJECT_TR )
   {
     const char * par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retc( RQSTRING( QObject::tr (  (const char *) par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) ) );
+    hb_retc( RQSTRING( QObject::tr ( (const char *) par1, (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) ) );
   }
   else
   {

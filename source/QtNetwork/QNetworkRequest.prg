@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
   {
     int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->attribute (  (QNetworkRequest::Attribute) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->header (  (QNetworkRequest::KnownHeaders) par1 ) );
+    QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
   {
     int par1 = hb_parni(1);
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setAttribute (  (QNetworkRequest::Attribute) par1, *par2 );
+    obj->setAttribute ( (QNetworkRequest::Attribute) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
   {
     int par1 = hb_parni(1);
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setHeader (  (QNetworkRequest::KnownHeaders) par1, *par2 );
+    obj->setHeader ( (QNetworkRequest::KnownHeaders) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPriority (  (QNetworkRequest::Priority) par1 );
+    obj->setPriority ( (QNetworkRequest::Priority) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

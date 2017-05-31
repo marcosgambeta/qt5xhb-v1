@@ -180,7 +180,7 @@ void QColorDialog_open2 ()
 
   if( obj )
   {
-    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOptions (  (QColorDialog::ColorDialogOptions) par1 );
+      obj->setOptions ( (QColorDialog::ColorDialogOptions) par1 );
     }
     else
     {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setOption (  (QColorDialog::ColorDialogOption) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setOption ( (QColorDialog::ColorDialogOption) par1, (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->testOption (  (QColorDialog::ColorDialogOption) par1 ) );
+      hb_retl( obj->testOption ( (QColorDialog::ColorDialogOption) par1 ) );
     }
     else
     {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
   {
     QColor par1 = ISNIL(1)? Qt::white : ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    QColor * ptr = new QColor( QColorDialog::getColor ( par1, OPQWIDGET(2,0), OPQSTRING(3,QString()),  (QColorDialog::ColorDialogOptions) par4 ) );
+    QColor * ptr = new QColor( QColorDialog::getColor ( par1, OPQWIDGET(2,0), OPQSTRING(3,QString()), (QColorDialog::ColorDialogOptions) par4 ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
   else

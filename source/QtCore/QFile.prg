@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QFILE_MAP ) // TODO: corrigir retorno do metodo
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QFile::NoOptions : hb_parni(3);
-      uchar * ptr = obj->map ( (qint64) hb_parni(1), (qint64) hb_parni(2),  (QFile::MemoryMapFlags) par3 );
+      uchar * ptr = obj->map ( (qint64) hb_parni(1), (qint64) hb_parni(2), (QFile::MemoryMapFlags) par3 );
       _qt5xhb_createReturnClass ( ptr, "UCHAR" );
     }
     else
@@ -361,7 +361,7 @@ void QFile_open1 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QFile::OpenMode) par1 ) );
+    hb_retl( obj->open ( (QFile::OpenMode) par1 ) );
   }
 }
 
@@ -377,7 +377,7 @@ void QFile_open2 ()
     FILE * par1 = (FILE *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
-    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open ( par1, (QFile::OpenMode) par2, (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -392,7 +392,7 @@ void QFile_open3 ()
   {
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
-    hb_retl( obj->open ( PINT(1),  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open ( PINT(1), (QFile::OpenMode) par2, (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -612,7 +612,7 @@ void QFile_setPermissions1 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->setPermissions (  (QFile::Permissions) par1 ) );
+    hb_retl( obj->setPermissions ( (QFile::Permissions) par1 ) );
   }
 }
 
@@ -622,7 +622,7 @@ static bool setPermissions ( const QString & fileName, Permissions permissions )
 void QFile_setPermissions2 ()
 {
   int par2 = hb_parni(2);
-  hb_retl( QFile::setPermissions ( PQSTRING(1),  (QFile::Permissions) par2 ) );
+  hb_retl( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) par2 ) );
 }
 
 //[1]bool setPermissions ( Permissions permissions )
@@ -815,7 +815,7 @@ static QString decodeName ( const char * localFileName )
 void QFile_decodeName2 ()
 {
   const char * par1 = hb_parc(1);
-  hb_retc( RQSTRING( QFile::decodeName (  (const char *) par1 ) ) );
+  hb_retc( RQSTRING( QFile::decodeName ( (const char *) par1 ) ) );
 }
 
 //[1]QString decodeName ( const QByteArray & localFileName )

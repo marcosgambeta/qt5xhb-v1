@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOrientation (  (QOrientationReading::Orientation) par1 );
+    obj->setOrientation ( (QOrientationReading::Orientation) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

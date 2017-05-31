@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->buttonText (  (QWizard::WizardButton) par1 ) ) );
+    hb_retc( RQSTRING( obj->buttonText ( (QWizard::WizardButton) par1 ) ) );
   }
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setButtonText (  (QWizard::WizardButton) par1, PQSTRING(2) );
+    obj->setButtonText ( (QWizard::WizardButton) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap (  (QWizard::WizardPixmap) par1 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
   {
     int par1 = hb_parni(1);
     QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-    obj->setPixmap (  (QWizard::WizardPixmap) par1, *par2 );
+    obj->setPixmap ( (QWizard::WizardPixmap) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

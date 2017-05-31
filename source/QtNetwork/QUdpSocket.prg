@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
   {
     const char * par1 = hb_parc(1);
     QHostAddress * par3 = (QHostAddress *) _qt5xhb_itemGetPtr(3);
-    hb_retni( obj->writeDatagram (  (const char *) par1, (qint64) hb_parni(2), *par3, (quint16) hb_parni(4) ) );
+    hb_retni( obj->writeDatagram ( (const char *) par1, (qint64) hb_parni(2), *par3, (quint16) hb_parni(4) ) );
   }
 }
 

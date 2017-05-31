@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setLoadHints (  (QLibrary::LoadHints) par1 );
+      obj->setLoadHints ( (QLibrary::LoadHints) par1 );
     }
     else
     {
@@ -325,7 +325,7 @@ void QLibrary_resolve1 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    QFunctionPointer * ptr = new QFunctionPointer( obj->resolve (  (const char *) par1 ) );
+    QFunctionPointer * ptr = new QFunctionPointer( obj->resolve ( (const char *) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
   }
 }
@@ -336,7 +336,7 @@ static QFunctionPointer resolve(const QString &fileName, const char *symbol) // 
 void QLibrary_resolve2 ()
 {
   const char * par2 = hb_parc(2);
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1),  (const char *) par2 ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), (const char *) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
@@ -346,7 +346,7 @@ static QFunctionPointer resolve(const QString &fileName, int verNum, const char 
 void QLibrary_resolve3 ()
 {
   const char * par3 = hb_parc(3);
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PINT(2),  (const char *) par3 ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PINT(2), (const char *) par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
@@ -356,7 +356,7 @@ static QFunctionPointer resolve(const QString &fileName, const QString &version,
 void QLibrary_resolve4 ()
 {
   const char * par3 = hb_parc(3);
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PQSTRING(2),  (const char *) par3 ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PQSTRING(2), (const char *) par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 

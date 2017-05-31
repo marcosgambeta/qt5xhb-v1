@@ -68,7 +68,7 @@ QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive
 void QStringMatcher_new2 ()
 {
   int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
-  QStringMatcher * o = new QStringMatcher ( PQSTRING(1),  (Qt::CaseSensitivity) par2 );
+  QStringMatcher * o = new QStringMatcher ( PQSTRING(1), (Qt::CaseSensitivity) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -80,7 +80,7 @@ void QStringMatcher_new3 ()
   const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) Qt::CaseSensitive : hb_parni(3);
-  QStringMatcher * o = new QStringMatcher ( par1, par2,  (Qt::CaseSensitivity) par3 );
+  QStringMatcher * o = new QStringMatcher ( par1, par2, (Qt::CaseSensitivity) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setCaseSensitivity (  (Qt::CaseSensitivity) par1 );
+      obj->setCaseSensitivity ( (Qt::CaseSensitivity) par1 );
     }
     else
     {

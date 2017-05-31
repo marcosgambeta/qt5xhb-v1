@@ -816,7 +816,7 @@ void QPainter_drawImage1 ()
     QImage * par2 = (QImage *) _qt5xhb_itemGetPtr(2);
     QRectF * par3 = (QRectF *) _qt5xhb_itemGetPtr(3);
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *par1, *par2, *par3,  (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *par1, *par2, *par3, (Qt::ImageConversionFlags) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -835,7 +835,7 @@ void QPainter_drawImage2 ()
     QImage * par2 = (QImage *) _qt5xhb_itemGetPtr(2);
     QRect * par3 = (QRect *) _qt5xhb_itemGetPtr(3);
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *par1, *par2, *par3,  (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *par1, *par2, *par3, (Qt::ImageConversionFlags) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -888,7 +888,7 @@ void QPainter_drawImage5 ()
     QImage * par2 = (QImage *) _qt5xhb_itemGetPtr(2);
     QRectF * par3 = (QRectF *) _qt5xhb_itemGetPtr(3);
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *par1, *par2, *par3,  (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *par1, *par2, *par3, (Qt::ImageConversionFlags) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -907,7 +907,7 @@ void QPainter_drawImage6 ()
     QImage * par2 = (QImage *) _qt5xhb_itemGetPtr(2);
     QRect * par3 = (QRect *) _qt5xhb_itemGetPtr(3);
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *par1, *par2, *par3,  (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *par1, *par2, *par3, (Qt::ImageConversionFlags) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -958,7 +958,7 @@ void QPainter_drawImage9 ()
   {
     QImage * par3 = (QImage *) _qt5xhb_itemGetPtr(3);
     int par8 = ISNIL(8)? (int) Qt::AutoColor : hb_parni(8);
-    obj->drawImage ( PINT(1), PINT(2), *par3, (int) ISNIL(4)? 0 : hb_parni(4), (int) ISNIL(5)? 0 : hb_parni(5), (int) ISNIL(6)? -1 : hb_parni(6), (int) ISNIL(7)? -1 : hb_parni(7),  (Qt::ImageConversionFlags) par8 );
+    obj->drawImage ( PINT(1), PINT(2), *par3, (int) ISNIL(4)? 0 : hb_parni(4), (int) ISNIL(5)? 0 : hb_parni(5), (int) ISNIL(6)? -1 : hb_parni(6), (int) ISNIL(7)? -1 : hb_parni(7), (Qt::ImageConversionFlags) par8 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON3 )
     {
       QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::OddEvenFill : hb_parni(2);
-      obj->drawPolygon ( *par1,  (Qt::FillRule) par2 );
+      obj->drawPolygon ( *par1, (Qt::FillRule) par2 );
     }
     else
     {
@@ -1861,7 +1861,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON4 )
     {
       QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::OddEvenFill : hb_parni(2);
-      obj->drawPolygon ( *par1,  (Qt::FillRule) par2 );
+      obj->drawPolygon ( *par1, (Qt::FillRule) par2 );
     }
     else
     {
@@ -2111,7 +2111,7 @@ void QPainter_drawRoundedRect1 ()
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
+    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3), (Qt::SizeMode) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2128,7 +2128,7 @@ void QPainter_drawRoundedRect2 ()
   {
     QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
+    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3), (Qt::SizeMode) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2632,7 +2632,7 @@ void QPainter_fillRect2 ()
   if( obj )
   {
     int par5 = hb_parni(5);
-    obj->fillRect ( PINT(1), PINT(2), PINT(3), PINT(4),  (Qt::BrushStyle) par5 );
+    obj->fillRect ( PINT(1), PINT(2), PINT(3), PINT(4), (Qt::BrushStyle) par5 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2649,7 +2649,7 @@ void QPainter_fillRect3 ()
   {
     QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->fillRect ( *par1,  (Qt::BrushStyle) par2 );
+    obj->fillRect ( *par1, (Qt::BrushStyle) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2666,7 +2666,7 @@ void QPainter_fillRect4 ()
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->fillRect ( *par1,  (Qt::BrushStyle) par2 );
+    obj->fillRect ( *par1, (Qt::BrushStyle) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2765,7 +2765,7 @@ void QPainter_fillRect10 ()
   if( obj )
   {
     int par5 = hb_parni(5);
-    obj->fillRect ( PINT(1), PINT(2), PINT(3), PINT(4),  (Qt::GlobalColor) par5 );
+    obj->fillRect ( PINT(1), PINT(2), PINT(3), PINT(4), (Qt::GlobalColor) par5 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2782,7 +2782,7 @@ void QPainter_fillRect11 ()
   {
     QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->fillRect ( *par1,  (Qt::GlobalColor) par2 );
+    obj->fillRect ( *par1, (Qt::GlobalColor) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2799,7 +2799,7 @@ void QPainter_fillRect12 ()
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->fillRect ( *par1,  (Qt::GlobalColor) par2 );
+    obj->fillRect ( *par1, (Qt::GlobalColor) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3133,7 +3133,7 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setBackgroundMode (  (Qt::BGMode) par1 );
+      obj->setBackgroundMode ( (Qt::BGMode) par1 );
     }
     else
     {
@@ -3170,7 +3170,7 @@ void QPainter_setBrush2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setBrush (  (Qt::BrushStyle) par1 );
+    obj->setBrush ( (Qt::BrushStyle) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3279,7 +3279,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
     {
       QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::ReplaceClip : hb_parni(2);
-      obj->setClipPath ( *par1,  (Qt::ClipOperation) par2 );
+      obj->setClipPath ( *par1, (Qt::ClipOperation) par2 );
     }
     else
     {
@@ -3301,7 +3301,7 @@ void QPainter_setClipRect1 ()
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::ReplaceClip : hb_parni(2);
-    obj->setClipRect ( *par1,  (Qt::ClipOperation) par2 );
+    obj->setClipRect ( *par1, (Qt::ClipOperation) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3317,7 +3317,7 @@ void QPainter_setClipRect2 ()
   if( obj )
   {
     int par5 = ISNIL(5)? (int) Qt::ReplaceClip : hb_parni(5);
-    obj->setClipRect ( PINT(1), PINT(2), PINT(3), PINT(4),  (Qt::ClipOperation) par5 );
+    obj->setClipRect ( PINT(1), PINT(2), PINT(3), PINT(4), (Qt::ClipOperation) par5 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3334,7 +3334,7 @@ void QPainter_setClipRect3 ()
   {
     QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::ReplaceClip : hb_parni(2);
-    obj->setClipRect ( *par1,  (Qt::ClipOperation) par2 );
+    obj->setClipRect ( *par1, (Qt::ClipOperation) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3377,7 +3377,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
     {
       QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::ReplaceClip : hb_parni(2);
-      obj->setClipRegion ( *par1,  (Qt::ClipOperation) par2 );
+      obj->setClipRegion ( *par1, (Qt::ClipOperation) par2 );
     }
     else
     {
@@ -3422,7 +3422,7 @@ HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setCompositionMode (  (QPainter::CompositionMode) par1 );
+      obj->setCompositionMode ( (QPainter::CompositionMode) par1 );
     }
     else
     {
@@ -3468,7 +3468,7 @@ HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setLayoutDirection (  (Qt::LayoutDirection) par1 );
+      obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
     }
     else
     {
@@ -3543,7 +3543,7 @@ void QPainter_setPen3 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPen (  (Qt::PenStyle) par1 );
+    obj->setPen ( (Qt::PenStyle) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3585,7 +3585,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setRenderHint (  (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setRenderHint ( (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -3608,7 +3608,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setRenderHints (  (QPainter::RenderHints) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setRenderHints ( (QPainter::RenderHints) par1, (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -3868,7 +3868,7 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->testRenderHint (  (QPainter::RenderHint) par1 ) );
+      hb_retl( obj->testRenderHint ( (QPainter::RenderHint) par1 ) );
     }
     else
     {

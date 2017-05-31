@@ -97,7 +97,7 @@ QMediaServiceProviderHint(Features features)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
   int par1 = hb_parni(1);
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint (  (QMediaServiceProviderHint::Features) par1 );
+  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( (QMediaServiceProviderHint::Features) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

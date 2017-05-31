@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
 {
   QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
   int par3 = hb_parni(3);
-  hb_retc( RQSTRING( QAbstractItemDelegate::elidedText ( *par1, PINT(2),  (Qt::TextElideMode) par3, PQSTRING(4) ) ) );
+  hb_retc( RQSTRING( QAbstractItemDelegate::elidedText ( *par1, PINT(2), (Qt::TextElideMode) par3, PQSTRING(4) ) ) );
 }
 
 /*

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retptr( (void *) obj->qt_metacast (  (const char *) par1 ) );
+    hb_retptr( (void *) obj->qt_metacast ( (const char *) par1 ) );
   }
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACALL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->qt_metacall (  (QMetaObject::Call) par1, PINT(2) ) );
+    hb_retni( obj->qt_metacall ( (QMetaObject::Call) par1, PINT(2) ) );
   }
 }
 

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isFlashModeSupported (  (QCameraExposure::FlashModes) par1 ) );
+    hb_retl( obj->isFlashModeSupported ( (QCameraExposure::FlashModes) par1 ) );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlashMode (  (QCameraExposure::FlashModes) par1 );
+    obj->setFlashMode ( (QCameraExposure::FlashModes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par1 = hb_parni(1);
-  QWinJumpListItem * o = new QWinJumpListItem (  (QWinJumpListItem::Type) par1 );
+  QWinJumpListItem * o = new QWinJumpListItem ( (QWinJumpListItem::Type) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setType (  (QWinJumpListItem::Type) par1 );
+    obj->setType ( (QWinJumpListItem::Type) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

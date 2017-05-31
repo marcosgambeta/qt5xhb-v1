@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DROPMIMEDATA )
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
+      hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
     }
     else
     {

@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setVisibility (  (QLocation::Visibility) par1 );
+    obj->setVisibility ( (QLocation::Visibility) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

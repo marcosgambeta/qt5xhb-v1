@@ -62,7 +62,7 @@ QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QScrollBar_new2 ()
 {
   int par1 = hb_parni(1);
-  QScrollBar * o = new QScrollBar (  (Qt::Orientation) par1, OPQWIDGET(2,0) );
+  QScrollBar * o = new QScrollBar ( (Qt::Orientation) par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

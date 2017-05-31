@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isFeatureSupported (  (QSensor::Feature) par1 ) );
+    hb_retl( obj->isFeatureSupported ( (QSensor::Feature) par1 ) );
   }
 #endif
 }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QSENSOR_SETAXESORIENTATIONMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAxesOrientationMode (  (QSensor::AxesOrientationMode) par1 );
+    obj->setAxesOrientationMode ( (QSensor::AxesOrientationMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

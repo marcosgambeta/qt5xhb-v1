@@ -84,7 +84,7 @@ void QStateMachine_new2 ()
 {
   int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QStateMachine * o = new QStateMachine (  (QState::ChildMode) par1, par2 );
+  QStateMachine * o = new QStateMachine ( (QState::ChildMode) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setGlobalRestorePolicy (  (QState::RestorePolicy) par1 );
+      obj->setGlobalRestorePolicy ( (QState::RestorePolicy) par1 );
     }
     else
     {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
     {
       QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QStateMachine::NormalPriority : hb_parni(2);
-      obj->postEvent ( par1,  (QStateMachine::EventPriority) par2 );
+      obj->postEvent ( par1, (QStateMachine::EventPriority) par2 );
     }
     else
     {

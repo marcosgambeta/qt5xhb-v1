@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
 {
   int par1 = hb_parni(1);
   quint16 par3 = ISNIL(3)? 0 : hb_parni(3);
-  QNetworkProxy * o = new QNetworkProxy (  (QNetworkProxy::ProxyType) par1, OPQSTRING(2,QString()), par3, OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  QNetworkProxy * o = new QNetworkProxy ( (QNetworkProxy::ProxyType) par1, OPQSTRING(2,QString()), par3, OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCapabilities (  (QNetworkProxy::Capabilities) par1 );
+    obj->setCapabilities ( (QNetworkProxy::Capabilities) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setType (  (QNetworkProxy::ProxyType) par1 );
+    obj->setType ( (QNetworkProxy::ProxyType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

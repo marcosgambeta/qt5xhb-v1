@@ -132,7 +132,7 @@ static void unregisterRecognizer(Qt::GestureType type)
 HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
 {
   int par1 = hb_parni(1);
-  QGestureRecognizer::unregisterRecognizer (  (Qt::GestureType) par1 );
+  QGestureRecognizer::unregisterRecognizer ( (Qt::GestureType) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

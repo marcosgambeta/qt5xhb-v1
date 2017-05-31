@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QPlaceIdReply * o = new QPlaceIdReply (  (QPlaceIdReply::OperationType) par1, par2 );
+  QPlaceIdReply * o = new QPlaceIdReply ( (QPlaceIdReply::OperationType) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

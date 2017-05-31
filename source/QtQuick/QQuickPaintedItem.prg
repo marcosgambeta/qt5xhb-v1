@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPerformanceHint (  (QQuickPaintedItem::PerformanceHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setPerformanceHint ( (QQuickPaintedItem::PerformanceHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPerformanceHints (  (QQuickPaintedItem::PerformanceHints) par1 );
+    obj->setPerformanceHints ( (QQuickPaintedItem::PerformanceHints) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderTarget (  (QQuickPaintedItem::RenderTarget) par1 );
+    obj->setRenderTarget ( (QQuickPaintedItem::RenderTarget) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

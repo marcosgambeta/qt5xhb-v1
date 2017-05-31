@@ -303,7 +303,7 @@ void QMetaMethod_invoke1 ()
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->invoke ( par1,  (Qt::ConnectionType) par2 ) );
+    hb_retl( obj->invoke ( par1, (Qt::ConnectionType) par2 ) );
   }
 }
 
@@ -332,7 +332,7 @@ void QMetaMethod_invoke3 ()
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->invoke ( par1,  (Qt::ConnectionType) par2 ) );
+    hb_retl( obj->invoke ( par1, (Qt::ConnectionType) par2 ) );
   }
 }
 

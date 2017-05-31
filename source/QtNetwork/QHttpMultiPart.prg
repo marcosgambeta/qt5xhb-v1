@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
 {
   int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QHttpMultiPart * o = new QHttpMultiPart (  (QHttpMultiPart::ContentType) par1, par2 );
+  QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setContentType (  (QHttpMultiPart::ContentType) par1 );
+    obj->setContentType ( (QHttpMultiPart::ContentType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

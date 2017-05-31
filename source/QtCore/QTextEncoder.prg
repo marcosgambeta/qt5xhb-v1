@@ -71,7 +71,7 @@ void QTextEncoder_new2 ()
 {
   const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QTextEncoder * o = new QTextEncoder ( par1,  (QTextCodec::ConversionFlags) par2 );
+  QTextEncoder * o = new QTextEncoder ( par1, (QTextCodec::ConversionFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

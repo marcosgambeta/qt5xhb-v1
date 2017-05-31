@@ -283,7 +283,7 @@ void QSizeF_scale1 ()
   if( obj )
   {
     int par3 = hb_parni(3);
-    obj->scale ( PQREAL(1), PQREAL(2),  (Qt::AspectRatioMode) par3 );
+    obj->scale ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -300,7 +300,7 @@ void QSizeF_scale2 ()
   {
     QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->scale ( *par1,  (Qt::AspectRatioMode) par2 );
+    obj->scale ( *par1, (Qt::AspectRatioMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -335,7 +335,7 @@ void QSizeF_scaled1 ()
   if( obj )
   {
     int par3 = hb_parni(3);
-    QSizeF * ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2),  (Qt::AspectRatioMode) par3 ) );
+    QSizeF * ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -351,7 +351,7 @@ void QSizeF_scaled2 ()
   {
     QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QSizeF * ptr = new QSizeF( obj->scaled ( *par1,  (Qt::AspectRatioMode) par2 ) );
+    QSizeF * ptr = new QSizeF( obj->scaled ( *par1, (Qt::AspectRatioMode) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }

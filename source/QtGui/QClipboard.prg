@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-      obj->clear (  (QClipboard::Mode) par1 );
+      obj->clear ( (QClipboard::Mode) par1 );
     }
     else
     {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-      QImage * ptr = new QImage( obj->image (  (QClipboard::Mode) par1 ) );
+      QImage * ptr = new QImage( obj->image ( (QClipboard::Mode) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-      const QMimeData * ptr = obj->mimeData (  (QClipboard::Mode) par1 );
+      const QMimeData * ptr = obj->mimeData ( (QClipboard::Mode) par1 );
       _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-      QPixmap * ptr = new QPixmap( obj->pixmap (  (QClipboard::Mode) par1 ) );
+      QPixmap * ptr = new QPixmap( obj->pixmap ( (QClipboard::Mode) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
     {
       QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-      obj->setImage ( *par1,  (QClipboard::Mode) par2 );
+      obj->setImage ( *par1, (QClipboard::Mode) par2 );
     }
     else
     {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
     {
       QMimeData * par1 = (QMimeData *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-      obj->setMimeData ( par1,  (QClipboard::Mode) par2 );
+      obj->setMimeData ( par1, (QClipboard::Mode) par2 );
     }
     else
     {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
     {
       QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-      obj->setPixmap ( *par1,  (QClipboard::Mode) par2 );
+      obj->setPixmap ( *par1, (QClipboard::Mode) par2 );
     }
     else
     {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-      obj->setText ( PQSTRING(1),  (QClipboard::Mode) par2 );
+      obj->setText ( PQSTRING(1), (QClipboard::Mode) par2 );
     }
     else
     {
@@ -327,7 +327,7 @@ void QClipboard_text1 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-    hb_retc( RQSTRING( obj->text (  (QClipboard::Mode) par1 ) ) );
+    hb_retc( RQSTRING( obj->text ( (QClipboard::Mode) par1 ) ) );
   }
 }
 
@@ -342,7 +342,7 @@ void QClipboard_text2 ()
   {
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-    hb_retc( RQSTRING( obj->text ( par1,  (QClipboard::Mode) par2 ) ) );
+    hb_retc( RQSTRING( obj->text ( par1, (QClipboard::Mode) par2 ) ) );
   }
 }
 

@@ -69,7 +69,7 @@ QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const Q
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
-  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1),  (QAccessible::Role) par2, OPQSTRING(3,QString()) );
+  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1), (QAccessible::Role) par2, OPQSTRING(3,QString()) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->text (  (QAccessible::Text) par1 ) ) );
+    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) par1 ) ) );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retptr( (void *) obj->interface_cast (  (QAccessible::InterfaceType) par1 ) );
+    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) par1 ) );
   }
 }
 

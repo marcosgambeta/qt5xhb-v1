@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETFILTERING )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFiltering (  (QSGTexture::Filtering) par1 );
+    obj->setFiltering ( (QSGTexture::Filtering) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

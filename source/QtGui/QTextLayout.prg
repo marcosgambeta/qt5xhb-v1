@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCursorMoveStyle (  (Qt::CursorMoveStyle) par1 );
+    obj->setCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    hb_retni( obj->nextCursorPosition ( PINT(1),  (QTextLayout::CursorMode) par2 ) );
+    hb_retni( obj->nextCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
   }
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    hb_retni( obj->previousCursorPosition ( PINT(1),  (QTextLayout::CursorMode) par2 ) );
+    hb_retni( obj->previousCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
   }
 }
 

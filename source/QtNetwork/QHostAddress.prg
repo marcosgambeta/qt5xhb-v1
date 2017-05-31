@@ -114,7 +114,7 @@ QHostAddress ( SpecialAddress address )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
   int par1 = hb_parni(1);
-  QHostAddress * o = new QHostAddress (  (QHostAddress::SpecialAddress) par1 );
+  QHostAddress * o = new QHostAddress ( (QHostAddress::SpecialAddress) par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

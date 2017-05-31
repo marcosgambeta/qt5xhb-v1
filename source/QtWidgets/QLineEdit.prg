@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setEchoMode (  (QLineEdit::EchoMode) par1 );
+    obj->setEchoMode ( (QLineEdit::EchoMode) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORMOVESTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCursorMoveStyle (  (Qt::CursorMoveStyle) par1 );
+    obj->setCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1213,7 +1213,7 @@ void QLineEdit_addAction1 ()
   {
     QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->addAction ( par1,  (QLineEdit::ActionPosition) par2 );
+    obj->addAction ( par1, (QLineEdit::ActionPosition) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1230,7 +1230,7 @@ void QLineEdit_addAction2 ()
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     int par2 = hb_parni(2);
-    QAction * ptr = obj->addAction ( par1,  (QLineEdit::ActionPosition) par2 );
+    QAction * ptr = obj->addAction ( par1, (QLineEdit::ActionPosition) par2 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

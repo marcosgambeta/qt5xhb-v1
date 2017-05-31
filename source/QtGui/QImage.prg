@@ -125,7 +125,7 @@ void QImage_new2 ()
 {
   QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QImage * o = new QImage ( *par1,  (QImage::Format) par2 );
+  QImage * o = new QImage ( *par1, (QImage::Format) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -137,7 +137,7 @@ void QImage_new3 ()
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QImage * o = new QImage ( par1, par2,  (QImage::Format) par3 );
+  QImage * o = new QImage ( par1, par2, (QImage::Format) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -147,7 +147,7 @@ QImage ( const QString & fileName, const char * format = 0 )
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * o = new QImage ( PQSTRING(1),  (const char *) par2 );
+  QImage * o = new QImage ( PQSTRING(1), (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
   const char * par1 = hb_parc(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * o = new QImage (  (const char *) par1,  (const char *) par2 );
+  QImage * o = new QImage ( (const char *) par1, (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -362,7 +362,7 @@ void QImage_convertToFormat1 ()
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    QImage * ptr = new QImage( obj->convertToFormat (  (QImage::Format) par1,  (Qt::ImageConversionFlags) par2 ) );
+    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, (Qt::ImageConversionFlags) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -388,7 +388,7 @@ void QImage_convertToFormat2 ()
       par2 << temp2;
     }
     int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    QImage * ptr = new QImage( obj->convertToFormat (  (QImage::Format) par1, par2,  (Qt::ImageConversionFlags) par3 ) );
+    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, par2, (Qt::ImageConversionFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) Qt::AutoColor : hb_parni(1);
-      QImage * ptr = new QImage( obj->createAlphaMask (  (Qt::ImageConversionFlags) par1 ) );
+      QImage * ptr = new QImage( obj->createAlphaMask ( (Qt::ImageConversionFlags) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::MaskInColor : hb_parni(2);
-      QImage * ptr = new QImage( obj->createMaskFromColor ( (QRgb) hb_parni(1),  (Qt::MaskMode) par2 ) );
+      QImage * ptr = new QImage( obj->createMaskFromColor ( (QRgb) hb_parni(1), (Qt::MaskMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -589,7 +589,7 @@ void QImage_fill2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->fill (  (Qt::GlobalColor) par1 );
+    obj->fill ( (Qt::GlobalColor) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QImage::InvertRgb : hb_parni(1);
-      obj->invertPixels (  (QImage::InvertMode) par1 );
+      obj->invertPixels ( (QImage::InvertMode) par1 );
     }
     else
     {
@@ -733,7 +733,7 @@ void QImage_load1 ()
   if( obj )
   {
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( PQSTRING(1),  (const char *) par2 ) );
+    hb_retl( obj->load ( PQSTRING(1), (const char *) par2 ) );
   }
 }
 
@@ -748,7 +748,7 @@ void QImage_load2 ()
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
-    hb_retl( obj->load ( par1,  (const char *) par2 ) );
+    hb_retl( obj->load ( par1, (const char *) par2 ) );
   }
 }
 
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->loadFromData ( *par1,  (const char *) par2 ) );
+    hb_retl( obj->loadFromData ( *par1, (const char *) par2 ) );
   }
 }
 
@@ -967,7 +967,7 @@ void QImage_save1 ()
   if( obj )
   {
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    hb_retl( obj->save ( PQSTRING(1), (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
   }
 }
 
@@ -982,7 +982,7 @@ void QImage_save2 ()
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    hb_retl( obj->save ( par1, (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
   }
 }
 
@@ -1017,7 +1017,7 @@ void QImage_scaled1 ()
     QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
     int par3 = ISNIL(3)? (int) Qt::FastTransformation : hb_parni(3);
-    QImage * ptr = new QImage( obj->scaled ( *par1,  (Qt::AspectRatioMode) par2,  (Qt::TransformationMode) par3 ) );
+    QImage * ptr = new QImage( obj->scaled ( *par1, (Qt::AspectRatioMode) par2, (Qt::TransformationMode) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -1033,7 +1033,7 @@ void QImage_scaled2 ()
   {
     int par3 = ISNIL(3)? (int) Qt::IgnoreAspectRatio : hb_parni(3);
     int par4 = ISNIL(4)? (int) Qt::FastTransformation : hb_parni(4);
-    QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2),  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
+    QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2), (Qt::AspectRatioMode) par3, (Qt::TransformationMode) par4 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QImage * ptr = new QImage( obj->scaledToHeight ( PINT(1),  (Qt::TransformationMode) par2 ) );
+      QImage * ptr = new QImage( obj->scaledToHeight ( PINT(1), (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1),  (Qt::TransformationMode) par2 ) );
+      QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1), (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED2 )
     {
       QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QImage * ptr = new QImage( obj->transformed ( *par1,  (Qt::TransformationMode) par2 ) );
+      QImage * ptr = new QImage( obj->transformed ( *par1, (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -1454,7 +1454,7 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA2 )
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * ptr = new QImage( QImage::fromData ( *par1,  (const char *) par2 ) );
+  QImage * ptr = new QImage( QImage::fromData ( *par1, (const char *) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 }
 

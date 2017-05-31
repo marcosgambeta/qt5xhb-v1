@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTextAlignment (  (Qt::Alignment) par1 );
+    obj->setTextAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCheckState (  (Qt::CheckState) par1 );
+    obj->setCheckState ( (Qt::CheckState) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlags (  (Qt::ItemFlags) par1 );
+    obj->setFlags ( (Qt::ItemFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sortChildren ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->sortChildren ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -95,7 +95,7 @@ QSurfaceFormat(FormatOptions options)
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
-  QSurfaceFormat * o = new QSurfaceFormat (  (QSurfaceFormat::FormatOptions) par1 );
+  QSurfaceFormat * o = new QSurfaceFormat ( (QSurfaceFormat::FormatOptions) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSwapBehavior (  (QSurfaceFormat::SwapBehavior) par1 );
+    obj->setSwapBehavior ( (QSurfaceFormat::SwapBehavior) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setProfile (  (QSurfaceFormat::OpenGLContextProfile) par1 );
+    obj->setProfile ( (QSurfaceFormat::OpenGLContextProfile) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderableType (  (QSurfaceFormat::RenderableType) par1 );
+    obj->setRenderableType ( (QSurfaceFormat::RenderableType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QSurfaceFormat::FormatOptions) par1 );
+    obj->setOption ( (QSurfaceFormat::FormatOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QSurfaceFormat::FormatOptions) par1 ) );
+    hb_retl( obj->testOption ( (QSurfaceFormat::FormatOptions) par1 ) );
   }
 }
 

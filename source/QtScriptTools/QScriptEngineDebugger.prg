@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAction * ptr = obj->action (  (QScriptEngineDebugger::DebuggerAction) par1 );
+    QAction * ptr = obj->action ( (QScriptEngineDebugger::DebuggerAction) par1 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QWidget * ptr = obj->widget (  (QScriptEngineDebugger::DebuggerWidget) par1 );
+    QWidget * ptr = obj->widget ( (QScriptEngineDebugger::DebuggerWidget) par1 );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }

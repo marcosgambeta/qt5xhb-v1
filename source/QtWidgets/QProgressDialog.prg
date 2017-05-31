@@ -77,7 +77,7 @@ explicit QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 void QProgressDialog_new1 ()
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QProgressDialog * o = new QProgressDialog ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QProgressDialog * o = new QProgressDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -89,7 +89,7 @@ void QProgressDialog_new2 ()
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), par3, par4, OPQWIDGET(5,0),  (Qt::WindowFlags) par6 );
+  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), par3, par4, OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+      obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
     }
     else
     {

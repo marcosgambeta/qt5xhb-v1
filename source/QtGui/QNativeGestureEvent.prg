@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
   QPointF * par4 = (QPointF *) _qt5xhb_itemGetPtr(4);
   ulong par6 = hb_parnl(6);
   quint64 par7 = hb_parni(7);
-  QNativeGestureEvent * o = new QNativeGestureEvent (  (Qt::NativeGestureType) par1, *par2, *par3, *par4, PQREAL(5), par6, par7 );
+  QNativeGestureEvent * o = new QNativeGestureEvent ( (Qt::NativeGestureType) par1, *par2, *par3, *par4, PQREAL(5), par6, par7 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

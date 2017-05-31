@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QCAMERA_ISCAPTUREMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isCaptureModeSupported (  (QCamera::CaptureModes) par1 ) );
+    hb_retl( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->lockStatus (  (QCamera::LockType) par1 ) );
+    hb_retni( obj->lockStatus ( (QCamera::LockType) par1 ) );
   }
 }
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->searchAndLock (  (QCamera::LockTypes) par1 );
+    obj->searchAndLock ( (QCamera::LockTypes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QCAMERA_SETCAPTUREMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCaptureMode (  (QCamera::CaptureModes) par1 );
+    obj->setCaptureMode ( (QCamera::CaptureModes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->unlock (  (QCamera::LockTypes) par1 );
+    obj->unlock ( (QCamera::LockTypes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

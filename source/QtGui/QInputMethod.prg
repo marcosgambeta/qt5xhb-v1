@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->invokeAction (  (QInputMethod::Action) par1, PINT(2) );
+    obj->invokeAction ( (QInputMethod::Action) par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->update (  (Qt::InputMethodQueries) par1 );
+    obj->update ( (Qt::InputMethodQueries) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

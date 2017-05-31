@@ -159,7 +159,7 @@ void QGraphicsRotation_setAxis2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAxis (  (Qt::Axis) par1 );
+    obj->setAxis ( (Qt::Axis) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

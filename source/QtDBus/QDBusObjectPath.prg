@@ -69,7 +69,7 @@ explicit QDBusObjectPath(const char *path)
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 {
   const char * par1 = hb_parc(1);
-  QDBusObjectPath * o = new QDBusObjectPath (  (const char *) par1 );
+  QDBusObjectPath * o = new QDBusObjectPath ( (const char *) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

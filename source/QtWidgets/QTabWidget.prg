@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TopRightCorner : hb_parni(1);
-    QWidget * ptr = obj->cornerWidget (  (Qt::Corner) par1 );
+    QWidget * ptr = obj->cornerWidget ( (Qt::Corner) par1 );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETCORNERWIDGET )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::TopRightCorner : hb_parni(2);
-    obj->setCornerWidget ( PQWIDGET(1),  (Qt::Corner) par2 );
+    obj->setCornerWidget ( PQWIDGET(1), (Qt::Corner) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETELIDEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setElideMode (  (Qt::TextElideMode) par1 );
+    obj->setElideMode ( (Qt::TextElideMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTabPosition (  (QTabWidget::TabPosition) par1 );
+    obj->setTabPosition ( (QTabWidget::TabPosition) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABSHAPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTabShape (  (QTabWidget::TabShape) par1 );
+    obj->setTabShape ( (QTabWidget::TabShape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

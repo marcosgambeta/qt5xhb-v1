@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QVariant * ptr = new QVariant( obj->option (  (QImageIOHandler::ImageOption) par1 ) );
+      QVariant * ptr = new QVariant( obj->option ( (QImageIOHandler::ImageOption) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
     {
       int par1 = hb_parni(1);
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setOption (  (QImageIOHandler::ImageOption) par1, *par2 );
+      obj->setOption ( (QImageIOHandler::ImageOption) par1, *par2 );
     }
     else
     {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) par1 ) );
     }
     else
     {

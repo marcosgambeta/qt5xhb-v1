@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QSslCertificate * o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
+  QSslCertificate * o = new QSslCertificate ( par1, (QSsl::EncodingFormat) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
 {
   QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QSslCertificate * o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
+  QSslCertificate * o = new QSslCertificate ( par1, (QSsl::EncodingFormat) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QCryptographicHash::Md5 : hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->digest (  (QCryptographicHash::Algorithm) par1 ) );
+    QByteArray * ptr = new QByteArray( obj->digest ( (QCryptographicHash::Algorithm) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QStringList strl = obj->issuerInfo (  (QSslCertificate::SubjectInfo) par1 );
+    QStringList strl = obj->issuerInfo ( (QSslCertificate::SubjectInfo) par1 );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QStringList strl = obj->subjectInfo (  (QSslCertificate::SubjectInfo) par1 );
+    QStringList strl = obj->subjectInfo ( (QSslCertificate::SubjectInfo) par1 );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QList<QSslCertificate> list = QSslCertificate::fromData ( *par1,  (QSsl::EncodingFormat) par2 );
+  QList<QSslCertificate> list = QSslCertificate::fromData ( *par1, (QSsl::EncodingFormat) par2 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QList<QSslCertificate> list = QSslCertificate::fromDevice ( par1,  (QSsl::EncodingFormat) par2 );
+  QList<QSslCertificate> list = QSslCertificate::fromDevice ( par1, (QSsl::EncodingFormat) par2 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 {
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   int par3 = ISNIL(3)? (int) QRegExp::FixedString : hb_parni(3);
-  QList<QSslCertificate> list = QSslCertificate::fromPath ( PQSTRING(1),  (QSsl::EncodingFormat) par2,  (QRegExp::PatternSyntax) par3 );
+  QList<QSslCertificate> list = QSslCertificate::fromPath ( PQSTRING(1), (QSsl::EncodingFormat) par2, (QRegExp::PatternSyntax) par3 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );

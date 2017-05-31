@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->actualValue (  (QCameraExposureControl::ExposureParameter) par1 ) );
+    QVariant * ptr = new QVariant( obj->actualValue ( (QCameraExposureControl::ExposureParameter) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isParameterSupported (  (QCameraExposureControl::ExposureParameter) par1 ) );
+    hb_retl( obj->isParameterSupported ( (QCameraExposureControl::ExposureParameter) par1 ) );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->requestedValue (  (QCameraExposureControl::ExposureParameter) par1 ) );
+    QVariant * ptr = new QVariant( obj->requestedValue ( (QCameraExposureControl::ExposureParameter) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
   {
     int par1 = hb_parni(1);
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setValue (  (QCameraExposureControl::ExposureParameter) par1, *par2 ) );
+    hb_retl( obj->setValue ( (QCameraExposureControl::ExposureParameter) par1, *par2 ) );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
   {
     int par1 = hb_parni(1);
     bool par2;
-    QVariantList list = obj->supportedParameterRange (  (QCameraExposureControl::ExposureParameter) par1, &par2 );
+    QVariantList list = obj->supportedParameterRange ( (QCameraExposureControl::ExposureParameter) par1, &par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QVARIANT" );

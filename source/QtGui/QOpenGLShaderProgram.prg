@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
   {
     int par1 = hb_parni(1);
     const char * par2 = hb_parc(2);
-    hb_retl( obj->addShaderFromSourceCode (  (QOpenGLShader::ShaderType) par1,  (const char *) par2 ) );
+    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) par1, (const char *) par2 ) );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
   {
     int par1 = hb_parni(1);
     QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->addShaderFromSourceCode (  (QOpenGLShader::ShaderType) par1, *par2 ) );
+    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) par1, *par2 ) );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->addShaderFromSourceCode (  (QOpenGLShader::ShaderType) par1, PQSTRING(2) ) );
+    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) par1, PQSTRING(2) ) );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->addShaderFromSourceFile (  (QOpenGLShader::ShaderType) par1, PQSTRING(2) ) );
+    hb_retl( obj->addShaderFromSourceFile ( (QOpenGLShader::ShaderType) par1, PQSTRING(2) ) );
   }
 }
 

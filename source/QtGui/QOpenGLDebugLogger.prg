@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::ApplicationSource : hb_parni(3);
-    obj->pushGroup ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Source) par3 );
+    obj->pushGroup ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2), (QOpenGLDebugMessage::Source) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STARTLOGGING )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QOpenGLDebugLogger::AsynchronousLogging : hb_parni(1);
-    obj->startLogging (  (QOpenGLDebugLogger::LoggingMode) par1 );
+    obj->startLogging ( (QOpenGLDebugLogger::LoggingMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

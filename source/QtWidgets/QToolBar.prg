@@ -244,7 +244,7 @@ void QToolBar_addAction4 ()
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2),  (const char *) hb_parc(3) );
+    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -259,7 +259,7 @@ void QToolBar_addAction5 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), PQOBJECT(3),  (const char *) hb_parc(4) );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), PQOBJECT(3), (const char *) hb_parc(4) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->isAreaAllowed (  (Qt::ToolBarArea) par1 ) );
+      hb_retl( obj->isAreaAllowed ( (Qt::ToolBarArea) par1 ) );
     }
     else
     {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setAllowedAreas (  (Qt::ToolBarAreas) par1 );
+      obj->setAllowedAreas ( (Qt::ToolBarAreas) par1 );
     }
     else
     {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOrientation (  (Qt::Orientation) par1 );
+      obj->setOrientation ( (Qt::Orientation) par1 );
     }
     else
     {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setToolButtonStyle (  (Qt::ToolButtonStyle) par1 );
+      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) par1 );
     }
     else
     {

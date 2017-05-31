@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->setPermissions (  (QFileDevice::Permissions) par1 ) );
+      hb_retl( obj->setPermissions ( (QFileDevice::Permissions) par1 ) );
     }
     else
     {

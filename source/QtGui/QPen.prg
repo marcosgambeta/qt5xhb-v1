@@ -89,7 +89,7 @@ QPen ( Qt::PenStyle style )
 void QPen_new2 ()
 {
   int par1 = hb_parni(1);
-  QPen * o = new QPen (  (Qt::PenStyle) par1 );
+  QPen * o = new QPen ( (Qt::PenStyle) par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -112,7 +112,7 @@ void QPen_new4 ()
   int par3 = ISNIL(3)? (int) Qt::SolidLine : hb_parni(3);
   int par4 = ISNIL(4)? (int) Qt::SquareCap : hb_parni(4);
   int par5 = ISNIL(5)? (int) Qt::BevelJoin : hb_parni(5);
-  QPen * o = new QPen ( *par1, PQREAL(2),  (Qt::PenStyle) par3,  (Qt::PenCapStyle) par4,  (Qt::PenJoinStyle) par5 );
+  QPen * o = new QPen ( *par1, PQREAL(2), (Qt::PenStyle) par3, (Qt::PenCapStyle) par4, (Qt::PenJoinStyle) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setCapStyle (  (Qt::PenCapStyle) par1 );
+      obj->setCapStyle ( (Qt::PenCapStyle) par1 );
     }
     else
     {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setJoinStyle (  (Qt::PenJoinStyle) par1 );
+      obj->setJoinStyle ( (Qt::PenJoinStyle) par1 );
     }
     else
     {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setStyle (  (Qt::PenStyle) par1 );
+      obj->setStyle ( (Qt::PenStyle) par1 );
     }
     else
     {

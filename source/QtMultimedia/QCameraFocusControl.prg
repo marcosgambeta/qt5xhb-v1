@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ISFOCUSMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isFocusModeSupported (  (QCameraFocus::FocusModes) par1 ) );
+    hb_retl( obj->isFocusModeSupported ( (QCameraFocus::FocusModes) par1 ) );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ISFOCUSPOINTMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isFocusPointModeSupported (  (QCameraFocus::FocusPointMode) par1 ) );
+    hb_retl( obj->isFocusPointModeSupported ( (QCameraFocus::FocusPointMode) par1 ) );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFocusMode (  (QCameraFocus::FocusModes) par1 );
+    obj->setFocusMode ( (QCameraFocus::FocusModes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSPOINTMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFocusPointMode (  (QCameraFocus::FocusPointMode) par1 );
+    obj->setFocusPointMode ( (QCameraFocus::FocusPointMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

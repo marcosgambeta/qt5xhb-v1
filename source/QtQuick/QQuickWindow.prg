@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
   {
     QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
     int par3 = hb_parni(3);
-    QSGTexture * ptr = obj->createTextureFromId ( (uint) hb_parni(1), *par2,  (QQuickWindow::CreateTextureOptions) par3 );
+    QSGTexture * ptr = obj->createTextureFromId ( (uint) hb_parni(1), *par2, (QQuickWindow::CreateTextureOptions) par3 );
     _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }

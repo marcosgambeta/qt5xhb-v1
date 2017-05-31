@@ -92,7 +92,7 @@ QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 void QLabel_new1 ()
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QLabel * o = new QLabel ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QLabel * o = new QLabel ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,7 +102,7 @@ QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 void QLabel_new2 ()
 {
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QLabel * o = new QLabel ( PQSTRING(1), OPQWIDGET(2,0),  (Qt::WindowFlags) par3 );
+  QLabel * o = new QLabel ( PQSTRING(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setAlignment (  (Qt::Alignment) par1 );
+      obj->setAlignment ( (Qt::Alignment) par1 );
     }
     else
     {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setTextFormat (  (Qt::TextFormat) par1 );
+      obj->setTextFormat ( (Qt::TextFormat) par1 );
     }
     else
     {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
+      obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) par1 );
     }
     else
     {

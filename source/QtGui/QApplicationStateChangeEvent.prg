@@ -47,7 +47,7 @@ QApplicationStateChangeEvent(Qt::ApplicationState state)
 HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
 {
   int par1 = hb_parni(1);
-  QApplicationStateChangeEvent * o = new QApplicationStateChangeEvent (  (Qt::ApplicationState) par1 );
+  QApplicationStateChangeEvent * o = new QApplicationStateChangeEvent ( (Qt::ApplicationState) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

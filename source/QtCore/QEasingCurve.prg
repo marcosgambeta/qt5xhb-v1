@@ -73,7 +73,7 @@ QEasingCurve ( Type type = Linear )
 void QEasingCurve_new1 ()
 {
   int par1 = ISNIL(1)? (int) QEasingCurve::Linear : hb_parni(1);
-  QEasingCurve * o = new QEasingCurve (  (QEasingCurve::Type) par1 );
+  QEasingCurve * o = new QEasingCurve ( (QEasingCurve::Type) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setType (  (QEasingCurve::Type) par1 );
+      obj->setType ( (QEasingCurve::Type) par1 );
     }
     else
     {

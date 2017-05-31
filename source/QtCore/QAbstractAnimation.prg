@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setDirection (  (QAbstractAnimation::Direction) par1 );
+      obj->setDirection ( (QAbstractAnimation::Direction) par1 );
     }
     else
     {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QAbstractAnimation::KeepWhenStopped : hb_parni(1);
-      obj->start (  (QAbstractAnimation::DeletionPolicy) par1 );
+      obj->start ( (QAbstractAnimation::DeletionPolicy) par1 );
     }
     else
     {

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW2 )
 {
   int par3 = ISNIL(3)? (int) QDBusServiceWatcher::WatchForOwnerChange : hb_parni(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1),  (QDBusServiceWatcher::WatchMode) par3, par4 );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1), (QDBusServiceWatcher::WatchMode) par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

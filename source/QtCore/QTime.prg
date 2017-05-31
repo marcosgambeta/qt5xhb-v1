@@ -396,7 +396,7 @@ void QTime_toString2 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);
-    hb_retc( RQSTRING( obj->toString (  (Qt::DateFormat) par1 ) ) );
+    hb_retc( RQSTRING( obj->toString ( (Qt::DateFormat) par1 ) ) );
   }
 }
 
@@ -434,7 +434,7 @@ static QTime fromString(const QString & string, Qt::DateFormat format = Qt::Text
 void QTime_fromString1 ()
 {
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
-  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1),  (Qt::DateFormat) par2 ) );
+  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), (Qt::DateFormat) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QTIME", true );
 }
 

@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
-      QStringList strl = obj->allQueryItemValues ( PQSTRING(1),  (QUrl::ComponentFormattingOptions) par2 );
+      QStringList strl = obj->allQueryItemValues ( PQSTRING(1), (QUrl::ComponentFormattingOptions) par2 );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::PrettyDecoded : hb_parni(1);
-      hb_retc( RQSTRING( obj->query (  (QUrl::ComponentFormattingOptions) par1 ) ) );
+      hb_retc( RQSTRING( obj->query ( (QUrl::ComponentFormattingOptions) par1 ) ) );
     }
     else
     {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
-      hb_retc( RQSTRING( obj->queryItemValue ( PQSTRING(1),  (QUrl::ComponentFormattingOptions) par2 ) ) );
+      hb_retc( RQSTRING( obj->queryItemValue ( PQSTRING(1), (QUrl::ComponentFormattingOptions) par2 ) ) );
     }
     else
     {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::PrettyDecoded : hb_parni(1);
-      hb_retc( RQSTRING( obj->toString (  (QUrl::ComponentFormattingOptions) par1 ) ) );
+      hb_retc( RQSTRING( obj->toString ( (QUrl::ComponentFormattingOptions) par1 ) ) );
     }
     else
     {

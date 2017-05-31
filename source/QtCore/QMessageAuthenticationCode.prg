@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
   {
     int par1 = hb_parni(1);
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-    QMessageAuthenticationCode * o = new QMessageAuthenticationCode (  (QCryptographicHash::Algorithm) par1, par2 );
+    QMessageAuthenticationCode * o = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) par1, par2 );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -140,7 +140,7 @@ void QMessageAuthenticationCode_addData1 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    obj->addData (  (const char *) par1, PINT(2) );
+    obj->addData ( (const char *) par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
     int par3 = hb_parni(3);
-    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *par1, *par2,  (QCryptographicHash::Algorithm) par3 ) );
+    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *par1, *par2, (QCryptographicHash::Algorithm) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else

@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
+      obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) par1 );
     }
     else
     {

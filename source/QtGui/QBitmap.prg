@@ -91,7 +91,7 @@ QBitmap ( const QString & fileName, const char * format = 0 )
 void QBitmap_new5 ()
 {
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QBitmap * o = new QBitmap ( PQSTRING(1),  (const char *) par2 );
+  QBitmap * o = new QBitmap ( PQSTRING(1), (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
     QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     const uchar * par2 = (const uchar *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
-    QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2,  (QImage::Format) par3 ) );
+    QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2, (QImage::Format) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
   }
   else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
   {
     QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1,  (Qt::ImageConversionFlags) par2 ) );
+    QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1, (Qt::ImageConversionFlags) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
   }
   else

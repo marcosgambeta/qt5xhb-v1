@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
   int par1 = hb_parni(1);
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
   QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
-  QHelpEvent * o = new QHelpEvent (  (QEvent::Type) par1, *par2, *par3 );
+  QHelpEvent * o = new QHelpEvent ( (QEvent::Type) par1, *par2, *par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

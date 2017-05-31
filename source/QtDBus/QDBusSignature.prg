@@ -69,7 +69,7 @@ explicit QDBusSignature(const char *signature)
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 {
   const char * par1 = hb_parc(1);
-  QDBusSignature * o = new QDBusSignature (  (const char *) par1 );
+  QDBusSignature * o = new QDBusSignature ( (const char *) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setMode (  (QPageLayout::Mode) par1 );
+    obj->setMode ( (QPageLayout::Mode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOrientation (  (QPageLayout::Orientation) par1 );
+    obj->setOrientation ( (QPageLayout::Orientation) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setUnits (  (QPageLayout::Unit) par1 );
+    obj->setUnits ( (QPageLayout::Unit) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QMarginsF * ptr = new QMarginsF( obj->margins (  (QPageLayout::Unit) par1 ) );
+    QMarginsF * ptr = new QMarginsF( obj->margins ( (QPageLayout::Unit) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->fullRect (  (QPageLayout::Unit) par1 ) );
+    QRectF * ptr = new QRectF( obj->fullRect ( (QPageLayout::Unit) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->paintRect (  (QPageLayout::Unit) par1 ) );
+    QRectF * ptr = new QRectF( obj->paintRect ( (QPageLayout::Unit) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

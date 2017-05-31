@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SETPREFERREDPOSITIONINGMETHODS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPreferredPositioningMethods (  (QGeoPositionInfoSource::PositioningMethods) par1 );
+    obj->setPreferredPositioningMethods ( (QGeoPositionInfoSource::PositioningMethods) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

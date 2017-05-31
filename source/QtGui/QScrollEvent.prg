@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_NEW )
   QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
   QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
-  QScrollEvent * o = new QScrollEvent ( *par1, *par2,  (QScrollEvent::ScrollState) par3 );
+  QScrollEvent * o = new QScrollEvent ( *par1, *par2, (QScrollEvent::ScrollState) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -122,7 +122,7 @@ void QTimeZone_new4 ()
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par5 = ISNIL(5)? (int) QLocale::AnyCountry : hb_parni(5);
-  QTimeZone * o = new QTimeZone ( *par1, par2, PQSTRING(3), PQSTRING(4),  (QLocale::Country) par5, OPQSTRING(6,QString()) );
+  QTimeZone * o = new QTimeZone ( *par1, par2, PQSTRING(3), PQSTRING(4), (QLocale::Country) par5, OPQSTRING(6,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -291,7 +291,7 @@ void QTimeZone_displayName1 ()
     QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
     QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
-    hb_retc( RQSTRING( obj->displayName ( *par1,  (QTimeZone::NameType) par2, par3 ) ) );
+    hb_retc( RQSTRING( obj->displayName ( *par1, (QTimeZone::NameType) par2, par3 ) ) );
   }
 #endif
 }
@@ -309,7 +309,7 @@ void QTimeZone_displayName2 ()
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
     QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
-    hb_retc( RQSTRING( obj->displayName (  (QTimeZone::TimeType) par1,  (QTimeZone::NameType) par2, par3 ) ) );
+    hb_retc( RQSTRING( obj->displayName ( (QTimeZone::TimeType) par1, (QTimeZone::NameType) par2, par3 ) ) );
   }
 #endif
 }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
   if( ISNUM(1) )
   {
     int par1 = hb_parni(1);
-    QList<QByteArray> list = QTimeZone::availableTimeZoneIds (  (QLocale::Country) par1 );
+    QList<QByteArray> list = QTimeZone::availableTimeZoneIds ( (QLocale::Country) par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -708,7 +708,7 @@ void QTimeZone_windowsIdToDefaultIanaId2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *par1,  (QLocale::Country) par2 ) );
+  QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *par1, (QLocale::Country) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }
@@ -782,7 +782,7 @@ void QTimeZone_windowsIdToIanaIds2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *par1,  (QLocale::Country) par2 );
+  QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *par1, (QLocale::Country) par2 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

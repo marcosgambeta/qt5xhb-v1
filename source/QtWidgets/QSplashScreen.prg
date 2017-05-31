@@ -60,7 +60,7 @@ void QSplashScreen_new1 ()
 {
   QPixmap par1 = ISNIL(1)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QSplashScreen * o = new QSplashScreen ( par1,  (Qt::WindowFlags) par2 );
+  QSplashScreen * o = new QSplashScreen ( par1, (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -71,7 +71,7 @@ void QSplashScreen_new2 ()
 {
   QPixmap par2 = ISNIL(2)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2,  (Qt::WindowFlags) par3 );
+  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2, (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

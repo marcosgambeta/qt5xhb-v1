@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setCaseSensitivity (  (Qt::CaseSensitivity) par1 );
+      obj->setCaseSensitivity ( (Qt::CaseSensitivity) par1 );
     }
     else
     {

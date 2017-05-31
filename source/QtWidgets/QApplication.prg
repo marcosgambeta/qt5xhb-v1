@@ -492,7 +492,7 @@ static QFont font ( const char * className )
 */
 void QApplication_font3 ()
 {
-  QFont * ptr = new QFont( QApplication::font (  (const char *) hb_parc(1) ) );
+  QFont * ptr = new QFont( QApplication::font ( (const char *) hb_parc(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -547,7 +547,7 @@ static bool isEffectEnabled ( Qt::UIEffect effect )
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  hb_retl( QApplication::isEffectEnabled (  (Qt::UIEffect) par1 ) );
+  hb_retl( QApplication::isEffectEnabled ( (Qt::UIEffect) par1 ) );
 }
 
 
@@ -642,7 +642,7 @@ static QPalette palette ( const char * className )
 */
 void QApplication_palette3 ()
 {
-  QPalette * ptr = new QPalette( QApplication::palette (  (const char *) hb_parc(1) ) );
+  QPalette * ptr = new QPalette( QApplication::palette ( (const char *) hb_parc(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -790,7 +790,7 @@ static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  QApplication::setEffectEnabled (  (Qt::UIEffect) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+  QApplication::setEffectEnabled ( (Qt::UIEffect) par1, (bool) ISNIL(2)? true : hb_parl(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
   QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setFont ( *par1,  (const char *) par2 );
+  QApplication::setFont ( *par1, (const char *) par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -843,7 +843,7 @@ static void setLayoutDirection ( Qt::LayoutDirection direction )
 HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 {
   int par1 = hb_parni(1);
-  QApplication::setLayoutDirection (  (Qt::LayoutDirection) par1 );
+  QApplication::setLayoutDirection ( (Qt::LayoutDirection) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
   QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setPalette ( *par1,  (const char *) par2 );
+  QApplication::setPalette ( *par1, (const char *) par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

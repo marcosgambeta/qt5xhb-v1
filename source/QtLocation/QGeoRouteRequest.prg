@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETTRAVELMODES )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTravelModes (  (QGeoRouteRequest::TravelModes) par1 );
+    obj->setTravelModes ( (QGeoRouteRequest::TravelModes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETFEATUREWEIGHT )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    obj->setFeatureWeight (  (QGeoRouteRequest::FeatureType) par1,  (QGeoRouteRequest::FeatureWeight) par2 );
+    obj->setFeatureWeight ( (QGeoRouteRequest::FeatureType) par1, (QGeoRouteRequest::FeatureWeight) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATUREWEIGHT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->featureWeight (  (QGeoRouteRequest::FeatureType) par1 ) );
+    hb_retni( obj->featureWeight ( (QGeoRouteRequest::FeatureType) par1 ) );
   }
 #endif
 }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETROUTEOPTIMIZATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRouteOptimization (  (QGeoRouteRequest::RouteOptimizations) par1 );
+    obj->setRouteOptimization ( (QGeoRouteRequest::RouteOptimizations) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETSEGMENTDETAIL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSegmentDetail (  (QGeoRouteRequest::SegmentDetail) par1 );
+    obj->setSegmentDetail ( (QGeoRouteRequest::SegmentDetail) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETMANEUVERDETAIL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setManeuverDetail (  (QGeoRouteRequest::ManeuverDetail) par1 );
+    obj->setManeuverDetail ( (QGeoRouteRequest::ManeuverDetail) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

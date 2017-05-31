@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     int par1 = ISNIL(1)? (int) QReadWriteLock::NonRecursive : hb_parni(1);
-    QReadWriteLock * o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) par1 );
+    QReadWriteLock * o = new QReadWriteLock ( (QReadWriteLock::RecursionMode) par1 );
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else

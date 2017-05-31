@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK1 )
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
     const char * par4 = hb_parc(4);
-    hb_retl( obj->callWithCallback ( par2,  (const char *) par3,  (const char *) par4, (int) ISNIL(5)? -1 : hb_parni(5) ) );
+    hb_retl( obj->callWithCallback ( par2, (const char *) par3, (const char *) par4, (int) ISNIL(5)? -1 : hb_parni(5) ) );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK2 )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
-    hb_retl( obj->callWithCallback ( par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) );
+    hb_retl( obj->callWithCallback ( par2, (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QDBus::Block : hb_parni(2);
-    QDBusMessage * ptr = new QDBusMessage( obj->call (  (QDBus::CallMode) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->call ( (QDBus::CallMode) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT1 )
   {
     QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
     const char * par6 = hb_parc(6);
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5,  (const char *) par6 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, (const char *) par6 ) );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT2 )
   {
     QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
     const char * par7 = hb_parc(7);
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6,  (const char *) par7 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6, (const char *) par7 ) );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
   {
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7,  (const char *) par8 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7, (const char *) par8 ) );
   }
 }
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT1 )
   {
     QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
     const char * par6 = hb_parc(6);
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5,  (const char *) par6 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, (const char *) par6 ) );
   }
 }
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT2 )
   {
     QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
     const char * par7 = hb_parc(7);
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6,  (const char *) par7 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6, (const char *) par7 ) );
   }
 }
 
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
   {
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
     const char * par8 = hb_parc(8);
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7,  (const char *) par8 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7, (const char *) par8 ) );
   }
 }
 

@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QSharedMemory::ReadWrite : hb_parni(2);
-      hb_retl( obj->create ( PINT(1),  (QSharedMemory::AccessMode) par2 ) );
+      hb_retl( obj->create ( PINT(1), (QSharedMemory::AccessMode) par2 ) );
     }
     else
     {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QSharedMemory::ReadWrite : hb_parni(1);
-      hb_retl( obj->attach (  (QSharedMemory::AccessMode) par1 ) );
+      hb_retl( obj->attach ( (QSharedMemory::AccessMode) par1 ) );
     }
     else
     {

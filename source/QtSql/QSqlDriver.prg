@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
     if( ISCHAR(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      hb_retc( RQSTRING( obj->escapeIdentifier ( PQSTRING(1),  (QSqlDriver::IdentifierType) par2 ) ) );
+      hb_retc( RQSTRING( obj->escapeIdentifier ( PQSTRING(1), (QSqlDriver::IdentifierType) par2 ) ) );
     }
     else
     {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->hasFeature (  (QSqlDriver::DriverFeature) par1 ) );
+      hb_retl( obj->hasFeature ( (QSqlDriver::DriverFeature) par1 ) );
     }
     else
     {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
     if( ISCHAR(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      hb_retl( obj->isIdentifierEscaped ( PQSTRING(1),  (QSqlDriver::IdentifierType) par2 ) );
+      hb_retl( obj->isIdentifierEscaped ( PQSTRING(1), (QSqlDriver::IdentifierType) par2 ) );
     }
     else
     {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) par1 );
+      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) par1 );
     }
     else
     {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
     {
       int par1 = hb_parni(1);
       QSqlRecord * par3 = (QSqlRecord *) _qt5xhb_itemGetPtr(3);
-      hb_retc( RQSTRING( obj->sqlStatement (  (QSqlDriver::StatementType) par1, PQSTRING(2), *par3, PBOOL(4) ) ) );
+      hb_retc( RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) par1, PQSTRING(2), *par3, PBOOL(4) ) ) );
     }
     else
     {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
     if( ISCHAR(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      hb_retc( RQSTRING( obj->stripDelimiters ( PQSTRING(1),  (QSqlDriver::IdentifierType) par2 ) ) );
+      hb_retc( RQSTRING( obj->stripDelimiters ( PQSTRING(1), (QSqlDriver::IdentifierType) par2 ) ) );
     }
     else
     {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QStringList strl = obj->tables (  (QSql::TableType) par1 );
+      QStringList strl = obj->tables ( (QSql::TableType) par1 );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }
     else

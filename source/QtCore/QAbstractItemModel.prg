@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
+      hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
     }
     else
     {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
       int par5 = ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5);
-      QModelIndexList list = obj->match ( *par1, PINT(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) par5 );
+      QModelIndexList list = obj->match ( *par1, PINT(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4), (Qt::MatchFlags) par5 );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
     {
       int par2 = hb_parni(2);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->setHeaderData ( PINT(1),  (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *par3, (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
     }
     else
     {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
+      obj->sort ( PINT(1), (Qt::SortOrder) par2 );
     }
     else
     {

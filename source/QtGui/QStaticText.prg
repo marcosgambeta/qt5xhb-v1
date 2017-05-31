@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTextFormat (  (Qt::TextFormat) par1 );
+    obj->setTextFormat ( (Qt::TextFormat) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPerformanceHint (  (QStaticText::PerformanceHint) par1 );
+    obj->setPerformanceHint ( (QStaticText::PerformanceHint) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

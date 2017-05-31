@@ -138,7 +138,7 @@ void QTextCodec_toUnicode2 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retc( RQSTRING( obj->toUnicode (  (const char *) par1 ) ) );
+    hb_retc( RQSTRING( obj->toUnicode ( (const char *) par1 ) ) );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
-      QTextDecoder * ptr = obj->makeDecoder (  (QTextCodec::ConversionFlags) par1 );
+      QTextDecoder * ptr = obj->makeDecoder ( (QTextCodec::ConversionFlags) par1 );
       _qt5xhb_createReturnClass ( ptr, "QTEXTDECODER" );
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
-      QTextEncoder * ptr = obj->makeEncoder (  (QTextCodec::ConversionFlags) par1 );
+      QTextEncoder * ptr = obj->makeEncoder ( (QTextCodec::ConversionFlags) par1 );
       _qt5xhb_createReturnClass ( ptr, "QTEXTENCODER" );
     }
     else
@@ -322,7 +322,7 @@ static QTextCodec* codecForName(const char *name)
 void QTextCodec_codecForName2 ()
 {
   const char * par1 = hb_parc(1);
-  QTextCodec * ptr = QTextCodec::codecForName (  (const char *) par1 );
+  QTextCodec * ptr = QTextCodec::codecForName ( (const char *) par1 );
   _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 

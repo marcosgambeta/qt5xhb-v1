@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->addScrollBarWidget ( PQWIDGET(1),  (Qt::Alignment) par2 );
+    obj->addScrollBarWidget ( PQWIDGET(1), (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setHorizontalScrollBarPolicy (  (Qt::ScrollBarPolicy) par1 );
+    obj->setHorizontalScrollBarPolicy ( (Qt::ScrollBarPolicy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QWidgetList list = obj->scrollBarWidgets (  (Qt::Alignment) par1 );
+    QWidgetList list = obj->scrollBarWidgets ( (Qt::Alignment) par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWIDGET" );
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setVerticalScrollBarPolicy (  (Qt::ScrollBarPolicy) par1 );
+    obj->setVerticalScrollBarPolicy ( (Qt::ScrollBarPolicy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETSIZEADJUSTPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSizeAdjustPolicy (  (QAbstractScrollArea::SizeAdjustPolicy) par1 );
+    obj->setSizeAdjustPolicy ( (QAbstractScrollArea::SizeAdjustPolicy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

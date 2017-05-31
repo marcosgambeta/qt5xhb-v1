@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW3 )
   int par2 = hb_parni(2);
   GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
   GLenum par4 = ISNIL(4)? GL_RGBA8 : hb_parni(4);
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *par1,  (QOpenGLFramebufferObject::Attachment) par2, par3, par4 );
+  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *par1, (QOpenGLFramebufferObject::Attachment) par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW4 )
   int par3 = hb_parni(3);
   GLenum par4 = ISNIL(4)? GL_TEXTURE_2D : hb_parni(4);
   GLenum par5 = ISNIL(5)? GL_RGBA8 : hb_parni(5);
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( par1, par2,  (QOpenGLFramebufferObject::Attachment) par3, par4, par5 );
+  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( par1, par2, (QOpenGLFramebufferObject::Attachment) par3, par4, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
   int par2 = hb_parni(2);
   GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
   GLenum par4 = ISNIL(4)? GL_RGBA : hb_parni(4);
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *par1,  (QOpenGLFramebufferObject::Attachment) par2, par3, par4 );
+  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *par1, (QOpenGLFramebufferObject::Attachment) par2, par3, par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW6 )
   int par3 = hb_parni(3);
   GLenum par4 = ISNIL(4)? GL_TEXTURE_2D : hb_parni(4);
   GLenum par5 = ISNIL(5)? GL_RGBA : hb_parni(5);
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( par1, par2,  (QOpenGLFramebufferObject::Attachment) par3, par4, par5 );
+  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( par1, par2, (QOpenGLFramebufferObject::Attachment) par3, par4, par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttachment (  (QOpenGLFramebufferObject::Attachment) par1 );
+    obj->setAttachment ( (QOpenGLFramebufferObject::Attachment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

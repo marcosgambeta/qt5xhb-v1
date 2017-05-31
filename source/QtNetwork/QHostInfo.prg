@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERROR )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setError (  (QHostInfo::HostInfoError) par1 );
+    obj->setError ( (QHostInfo::HostInfoError) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   const char * par3 = hb_parc(3);
-  hb_retni( QHostInfo::lookupHost ( PQSTRING(1), par2,  (const char *) par3 ) );
+  hb_retni( QHostInfo::lookupHost ( PQSTRING(1), par2, (const char *) par3 ) );
 }
 
 

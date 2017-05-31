@@ -183,7 +183,7 @@ QColor ( const char * name )
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
   const char * par1 = hb_parc(1);
-  QColor * o = new QColor (  (const char *) par1 );
+  QColor * o = new QColor ( (const char *) par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -203,7 +203,7 @@ QColor ( Qt::GlobalColor color )
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
   int par1 = hb_parni(1);
-  QColor * o = new QColor (  (Qt::GlobalColor) par1 );
+  QColor * o = new QColor ( (Qt::GlobalColor) par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QColor * ptr = new QColor( obj->convertTo (  (QColor::Spec) par1 ) );
+      QColor * ptr = new QColor( obj->convertTo ( (QColor::Spec) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
     }
     else

@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
         par1 << *(QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       int par2 = hb_parni(2);
-      obj->setServiceUuids ( par1,  (QBluetoothDeviceInfo::DataCompleteness) par2 );
+      obj->setServiceUuids ( par1, (QBluetoothDeviceInfo::DataCompleteness) par2 );
     }
     else
     {

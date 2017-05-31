@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QDOMNODE_SAVE2 )
   {
     QTextStream * par1 = (QTextStream *) _qt5xhb_itemGetPtr(1);
     int par3 = hb_parni(3);
-    obj->save ( *par1, PINT(2),  (QDomNode::EncodingPolicy) par3 );
+    obj->save ( *par1, PINT(2), (QDomNode::EncodingPolicy) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

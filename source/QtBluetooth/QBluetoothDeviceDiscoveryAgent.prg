@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setInquiryType (  (QBluetoothDeviceDiscoveryAgent::InquiryType) par1 );
+      obj->setInquiryType ( (QBluetoothDeviceDiscoveryAgent::InquiryType) par1 );
     }
     else
     {

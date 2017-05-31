@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
   if( obj )
   {
     const char * par3 = hb_parc(3);
-    obj->glBindAttribLocation ( (GLuint) hb_parni(1), (GLuint) hb_parni(2),  (const char *) par3 );
+    obj->glBindAttribLocation ( (GLuint) hb_parni(1), (GLuint) hb_parni(2), (const char *) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
   if( obj )
   {
     const char * par2 = hb_parc(2);
-    hb_retni( obj->glGetAttribLocation ( (GLuint) hb_parni(1),  (const char *) par2 ) );
+    hb_retni( obj->glGetAttribLocation ( (GLuint) hb_parni(1), (const char *) par2 ) );
   }
 }
 
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
   if( obj )
   {
     const char * par2 = hb_parc(2);
-    hb_retni( obj->glGetUniformLocation ( (GLuint) hb_parni(1),  (const char *) par2 ) );
+    hb_retni( obj->glGetUniformLocation ( (GLuint) hb_parni(1), (const char *) par2 ) );
   }
 }
 
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->hasOpenGLFeature (  (QGLFunctions::OpenGLFeature) par1 ) );
+    hb_retl( obj->hasOpenGLFeature ( (QGLFunctions::OpenGLFeature) par1 ) );
   }
 }
 

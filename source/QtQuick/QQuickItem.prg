@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QQUICKITEM_INPUTMETHODQUERY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETACCEPTEDMOUSEBUTTONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAcceptedMouseButtons (  (Qt::MouseButtons) par1 );
+    obj->setAcceptedMouseButtons ( (Qt::MouseButtons) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlag (  (QQuickItem::Flag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setFlag ( (QQuickItem::Flag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlags (  (QQuickItem::Flags) par1 );
+    obj->setFlags ( (QQuickItem::Flags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETTRANSFORMORIGIN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTransformOrigin (  (QQuickItem::TransformOrigin) par1 );
+    obj->setTransformOrigin ( (QQuickItem::TransformOrigin) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

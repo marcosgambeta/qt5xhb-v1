@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setLoadHints (  (QLibrary::LoadHints) par1 );
+      obj->setLoadHints ( (QLibrary::LoadHints) par1 );
     }
     else
     {

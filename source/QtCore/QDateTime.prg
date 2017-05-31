@@ -110,7 +110,7 @@ void QDateTime_new3 ()
   QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
   QTime * par2 = (QTime *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) Qt::LocalTime : hb_parni(3);
-  QDateTime * o = new QDateTime ( *par1, *par2,  (Qt::TimeSpec) par3 );
+  QDateTime * o = new QDateTime ( *par1, *par2, (Qt::TimeSpec) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setTimeSpec (  (Qt::TimeSpec) par1 );
+      obj->setTimeSpec ( (Qt::TimeSpec) par1 );
     }
     else
     {
@@ -568,7 +568,7 @@ void QDateTime_toString2 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);
-    hb_retc( RQSTRING( obj->toString (  (Qt::DateFormat) par1 ) ) );
+    hb_retc( RQSTRING( obj->toString ( (Qt::DateFormat) par1 ) ) );
   }
 }
 
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QDateTime * ptr = new QDateTime( obj->toTimeSpec (  (Qt::TimeSpec) par1 ) );
+      QDateTime * ptr = new QDateTime( obj->toTimeSpec ( (Qt::TimeSpec) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
     }
     else
@@ -688,7 +688,7 @@ static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt
 void QDateTime_fromString1 ()
 {
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
-  QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1),  (Qt::DateFormat) par2 ) );
+  QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), (Qt::DateFormat) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 

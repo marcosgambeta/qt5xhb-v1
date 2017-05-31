@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setFillRule (  (Qt::FillRule) par1 );
+      obj->setFillRule ( (Qt::FillRule) par1 );
     }
     else
     {

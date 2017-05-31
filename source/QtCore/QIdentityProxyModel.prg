@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) par2, PINT(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, PINT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-      hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
+      hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
     }
     else
     {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
       int par5 = ISNIL(5)? (int) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : hb_parni(5);
-      QModelIndexList list = obj->match ( *par1, PINT(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) par5 );
+      QModelIndexList list = obj->match ( *par1, PINT(2), *par3, (int) ISNIL(4)? 1 : hb_parni(4), (Qt::MatchFlags) par5 );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );

@@ -66,7 +66,7 @@ void QSqlError_new1 ()
 {
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
-  QSqlError * o = new QSqlError ( PQSTRING(1), PQSTRING(2),  (QSqlError::ErrorType) par3, par4 );
+  QSqlError * o = new QSqlError ( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) par3, par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -76,7 +76,7 @@ QSqlError(const QString &driverText = QString(), const QString &databaseText = Q
 void QSqlError_new2 ()
 {
   int par3 = ISNIL(3)? (int) QSqlError::NoError : hb_parni(3);
-  QSqlError * o = new QSqlError ( OPQSTRING(1,QString()), OPQSTRING(2,QString()),  (QSqlError::ErrorType) par3, OPQSTRING(4,QString()) );
+  QSqlError * o = new QSqlError ( OPQSTRING(1,QString()), OPQSTRING(2,QString()), (QSqlError::ErrorType) par3, OPQSTRING(4,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSQLERROR_SETTYPE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setType (  (QSqlError::ErrorType) par1 );
+      obj->setType ( (QSqlError::ErrorType) par1 );
     }
     else
     {

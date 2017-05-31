@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QScriptValue * ptr = new QScriptValue( obj->throwError (  (QScriptContext::Error) par1, PQSTRING(2) ) );
+    QScriptValue * ptr = new QScriptValue( obj->throwError ( (QScriptContext::Error) par1, PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

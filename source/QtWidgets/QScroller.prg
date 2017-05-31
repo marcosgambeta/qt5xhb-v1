@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
   {
     int par1 = hb_parni(1);
     QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->handleInput (  (QScroller::Input) par1, *par2, (qint64) ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retl( obj->handleInput ( (QScroller::Input) par1, *par2, (qint64) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
 
@@ -442,7 +442,7 @@ static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollG
 HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
 {
   int par2 = ISNIL(2)? (int) QScroller::TouchGesture : hb_parni(2);
-  hb_retni( QScroller::grabGesture ( PQOBJECT(1),  (QScroller::ScrollerGestureType) par2 ) );
+  hb_retni( QScroller::grabGesture ( PQOBJECT(1), (QScroller::ScrollerGestureType) par2 ) );
 }
 
 

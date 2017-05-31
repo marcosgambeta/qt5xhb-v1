@@ -67,7 +67,7 @@ QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QSlider_new2 ()
 {
   int par1 = hb_parni(1);
-  QSlider * o = new QSlider (  (Qt::Orientation) par1, OPQWIDGET(2,0) );
+  QSlider * o = new QSlider ( (Qt::Orientation) par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTickPosition (  (QSlider::TickPosition) par1 );
+    obj->setTickPosition ( (QSlider::TickPosition) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

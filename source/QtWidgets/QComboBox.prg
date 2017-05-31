@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
     if( ISQVARIANT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(3);
-      hb_retni( obj->findData ( *PQVARIANT(1), OPINT(2,Qt::UserRole),  (Qt::MatchFlags) par3 ) );
+      hb_retni( obj->findData ( *PQVARIANT(1), OPINT(2,Qt::UserRole), (Qt::MatchFlags) par3 ) );
     }
     else
     {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(2);
-      hb_retni( obj->findText ( PQSTRING(1),  (Qt::MatchFlags) par2 ) );
+      hb_retni( obj->findText ( PQSTRING(1), (Qt::MatchFlags) par2 ) );
     }
     else
     {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setInsertPolicy (  (QComboBox::InsertPolicy) par1 );
+      obj->setInsertPolicy ( (QComboBox::InsertPolicy) par1 );
     }
     else
     {
@@ -1086,7 +1086,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETSIZEADJUSTPOLICY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setSizeAdjustPolicy (  (QComboBox::SizeAdjustPolicy) par1 );
+      obj->setSizeAdjustPolicy ( (QComboBox::SizeAdjustPolicy) par1 );
     }
     else
     {

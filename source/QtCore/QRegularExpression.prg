@@ -80,7 +80,7 @@ QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOp
 void QRegularExpression_new2 ()
 {
   int par2 = ISNIL(2)? (int) QRegularExpression::NoPatternOption : hb_parni(2);
-  QRegularExpression * o = new QRegularExpression ( PQSTRING(1),  (QRegularExpression::PatternOptions) par2 );
+  QRegularExpression * o = new QRegularExpression ( PQSTRING(1), (QRegularExpression::PatternOptions) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_GLOBALMATCH )
     {
       int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);
       int par4 = ISNIL(4)? (int) QRegularExpression::NoMatchOption : hb_parni(4);
-      QRegularExpressionMatchIterator * ptr = new QRegularExpressionMatchIterator( obj->globalMatch ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
+      QRegularExpressionMatchIterator * ptr = new QRegularExpressionMatchIterator( obj->globalMatch ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2), (QRegularExpression::MatchType) par3, (QRegularExpression::MatchOptions) par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCHITERATOR", true );
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_MATCH )
     {
       int par3 = ISNIL(3)? (int) QRegularExpression::NormalMatch : hb_parni(3);
       int par4 = ISNIL(4)? (int) QRegularExpression::NoMatchOption : hb_parni(4);
-      QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->match ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2),  (QRegularExpression::MatchType) par3,  (QRegularExpression::MatchOptions) par4 ) );
+      QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->match ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2), (QRegularExpression::MatchType) par3, (QRegularExpression::MatchOptions) par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_SETPATTERNOPTIONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPatternOptions (  (QRegularExpression::PatternOptions) par1 );
+      obj->setPatternOptions ( (QRegularExpression::PatternOptions) par1 );
     }
     else
     {

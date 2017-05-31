@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerAction (  (QWebEnginePage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
+    obj->triggerAction ( (QWebEnginePage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_FINDTEXT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    obj->findText ( PQSTRING(1),  (QWebEnginePage::FindFlags) par2 );
+    obj->findText ( PQSTRING(1), (QWebEnginePage::FindFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETFEATUREPERMISSION )
     QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    obj->setFeaturePermission ( *par1,  (QWebEnginePage::Feature) par2,  (QWebEnginePage::PermissionPolicy) par3 );
+    obj->setFeaturePermission ( *par1, (QWebEnginePage::Feature) par2, (QWebEnginePage::PermissionPolicy) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

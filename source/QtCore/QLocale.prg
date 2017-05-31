@@ -156,7 +156,7 @@ void QLocale_new3 ()
 {
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) QLocale::AnyCountry : hb_parni(2);
-  QLocale * o = new QLocale (  (QLocale::Language) par1,  (QLocale::Country) par2 );
+  QLocale * o = new QLocale ( (QLocale::Language) par1, (QLocale::Country) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -168,7 +168,7 @@ void QLocale_new4 ()
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QLocale * o = new QLocale (  (QLocale::Language) par1,  (QLocale::Script) par2,  (QLocale::Country) par3 );
+  QLocale * o = new QLocale ( (QLocale::Language) par1, (QLocale::Script) par2, (QLocale::Country) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
     if( ISNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::CurrencySymbol : hb_parni(1);
-      hb_retc( RQSTRING( obj->currencySymbol (  (QLocale::CurrencySymbolFormat) par1 ) ) );
+      hb_retc( RQSTRING( obj->currencySymbol ( (QLocale::CurrencySymbolFormat) par1 ) ) );
     }
     else
     {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
     if( ISNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
-      hb_retc( RQSTRING( obj->dateFormat (  (QLocale::FormatType) par1 ) ) );
+      hb_retc( RQSTRING( obj->dateFormat ( (QLocale::FormatType) par1 ) ) );
     }
     else
     {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
     if( ISNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
-      hb_retc( RQSTRING( obj->dateTimeFormat (  (QLocale::FormatType) par1 ) ) );
+      hb_retc( RQSTRING( obj->dateTimeFormat ( (QLocale::FormatType) par1 ) ) );
     }
     else
     {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QLOCALE_DAYNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->dayName ( PINT(1),  (QLocale::FormatType) par2 ) ) );
+      hb_retc( RQSTRING( obj->dayName ( PINT(1), (QLocale::FormatType) par2 ) ) );
     }
     else
     {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QLOCALE_MONTHNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->monthName ( PINT(1),  (QLocale::FormatType) par2 ) ) );
+      hb_retc( RQSTRING( obj->monthName ( PINT(1), (QLocale::FormatType) par2 ) ) );
     }
     else
     {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING1 )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::StandardQuotation : hb_parni(2);
-      hb_retc( RQSTRING( obj->quoteString ( PQSTRING(1),  (QLocale::QuotationStyle) par2 ) ) );
+      hb_retc( RQSTRING( obj->quoteString ( PQSTRING(1), (QLocale::QuotationStyle) par2 ) ) );
     }
     else
     {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING2 )
     {
       QStringRef * par1 = (QStringRef *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QLocale::StandardQuotation : hb_parni(2);
-      hb_retc( RQSTRING( obj->quoteString ( *par1,  (QLocale::QuotationStyle) par2 ) ) );
+      hb_retc( RQSTRING( obj->quoteString ( *par1, (QLocale::QuotationStyle) par2 ) ) );
     }
     else
     {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setNumberOptions (  (QLocale::NumberOptions) par1 );
+      obj->setNumberOptions ( (QLocale::NumberOptions) par1 );
     }
     else
     {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->standaloneDayName ( PINT(1),  (QLocale::FormatType) par2 ) ) );
+      hb_retc( RQSTRING( obj->standaloneDayName ( PINT(1), (QLocale::FormatType) par2 ) ) );
     }
     else
     {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->standaloneMonthName ( PINT(1),  (QLocale::FormatType) par2 ) ) );
+      hb_retc( RQSTRING( obj->standaloneMonthName ( PINT(1), (QLocale::FormatType) par2 ) ) );
     }
     else
     {
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
-      hb_retc( RQSTRING( obj->timeFormat (  (QLocale::FormatType) par1 ) ) );
+      hb_retc( RQSTRING( obj->timeFormat ( (QLocale::FormatType) par1 ) ) );
     }
     else
     {
@@ -939,7 +939,7 @@ void QLocale_toDate1 ()
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-    QDate * ptr = new QDate( obj->toDate ( PQSTRING(1),  (QLocale::FormatType) par2 ) );
+    QDate * ptr = new QDate( obj->toDate ( PQSTRING(1), (QLocale::FormatType) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -987,7 +987,7 @@ void QLocale_toDateTime1 ()
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-    QDateTime * ptr = new QDateTime( obj->toDateTime ( PQSTRING(1),  (QLocale::FormatType) par2 ) );
+    QDateTime * ptr = new QDateTime( obj->toDateTime ( PQSTRING(1), (QLocale::FormatType) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
     {
       QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->toString ( *par1,  (QLocale::FormatType) par2 ) ) );
+      hb_retc( RQSTRING( obj->toString ( *par1, (QLocale::FormatType) par2 ) ) );
     }
     else
     {
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
     {
       QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->toString ( *par1,  (QLocale::FormatType) par2 ) ) );
+      hb_retc( RQSTRING( obj->toString ( *par1, (QLocale::FormatType) par2 ) ) );
     }
     else
     {
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
     {
       QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->toString ( *par1,  (QLocale::FormatType) par2 ) ) );
+      hb_retc( RQSTRING( obj->toString ( *par1, (QLocale::FormatType) par2 ) ) );
     }
     else
     {
@@ -1447,7 +1447,7 @@ void QLocale_toTime1 ()
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-    QTime * ptr = new QTime( obj->toTime ( PQSTRING(1),  (QLocale::FormatType) par2 ) );
+    QTime * ptr = new QTime( obj->toTime ( PQSTRING(1), (QLocale::FormatType) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -1573,7 +1573,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
   if( ISNUM(1) )
   {
     int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QLocale::countryToString (  (QLocale::Country) par1 ) ) );
+    hb_retc( RQSTRING( QLocale::countryToString ( (QLocale::Country) par1 ) ) );
   }
   else
   {
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
   if( ISNUM(1) )
   {
     int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QLocale::languageToString (  (QLocale::Language) par1 ) ) );
+    hb_retc( RQSTRING( QLocale::languageToString ( (QLocale::Language) par1 ) ) );
   }
   else
   {
@@ -1607,7 +1607,7 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    QList<QLocale> list = QLocale::matchingLocales (  (QLocale::Language) par1,  (QLocale::Script) par2,  (QLocale::Country) par3 );
+    QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) par1, (QLocale::Script) par2, (QLocale::Country) par3 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QLOCALE" );
@@ -1654,7 +1654,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
   if( ISNUM(1) )
   {
     int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QLocale::scriptToString (  (QLocale::Script) par1 ) ) );
+    hb_retc( RQSTRING( QLocale::scriptToString ( (QLocale::Script) par1 ) ) );
   }
   else
   {

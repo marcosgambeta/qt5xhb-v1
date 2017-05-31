@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPageSize (  (QPagedPaintDevice::PageSize) par1 );
+    obj->setPageSize ( (QPagedPaintDevice::PageSize) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

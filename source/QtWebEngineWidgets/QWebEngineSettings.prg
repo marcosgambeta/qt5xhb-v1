@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTFAMILY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->fontFamily (  (QWebEngineSettings::FontFamily) par1 ) ) );
+    hb_retc( RQSTRING( obj->fontFamily ( (QWebEngineSettings::FontFamily) par1 ) ) );
   }
 #endif
 }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTFAMILY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontFamily (  (QWebEngineSettings::FontFamily) par1, PQSTRING(2) );
+    obj->setFontFamily ( (QWebEngineSettings::FontFamily) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTFAMILY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->resetFontFamily (  (QWebEngineSettings::FontFamily) par1 );
+    obj->resetFontFamily ( (QWebEngineSettings::FontFamily) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTSIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->fontSize (  (QWebEngineSettings::FontSize) par1 ) );
+    hb_retni( obj->fontSize ( (QWebEngineSettings::FontSize) par1 ) );
   }
 #endif
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTSIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontSize (  (QWebEngineSettings::FontSize) par1, PINT(2) );
+    obj->setFontSize ( (QWebEngineSettings::FontSize) par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTSIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->resetFontSize (  (QWebEngineSettings::FontSize) par1 );
+    obj->resetFontSize ( (QWebEngineSettings::FontSize) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttribute (  (QWebEngineSettings::WebAttribute) par1, PBOOL(2) );
+    obj->setAttribute ( (QWebEngineSettings::WebAttribute) par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_TESTATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testAttribute (  (QWebEngineSettings::WebAttribute) par1 ) );
+    hb_retl( obj->testAttribute ( (QWebEngineSettings::WebAttribute) par1 ) );
   }
 #endif
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->resetAttribute (  (QWebEngineSettings::WebAttribute) par1 );
+    obj->resetAttribute ( (QWebEngineSettings::WebAttribute) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

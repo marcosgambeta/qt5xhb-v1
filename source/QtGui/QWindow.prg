@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QWINDOW_ISANCESTOROF )
   {
     const QWindow * par1 = (const QWindow *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QWindow::IncludeTransients : hb_parni(2);
-    hb_retl( obj->isAncestorOf ( par1,  (QWindow::AncestorMode) par2 ) );
+    hb_retl( obj->isAncestorOf ( par1, (QWindow::AncestorMode) par2 ) );
   }
 }
 
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QWINDOW_REPORTCONTENTORIENTATIONCHANGE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->reportContentOrientationChange (  (Qt::ScreenOrientation) par1 );
+    obj->reportContentOrientationChange ( (Qt::ScreenOrientation) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QWINDOW_SETSURFACETYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSurfaceType (  (QSurface::SurfaceType) par1 );
+    obj->setSurfaceType ( (QSurface::SurfaceType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

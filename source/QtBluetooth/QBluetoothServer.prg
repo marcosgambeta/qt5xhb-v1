@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
   {
     int par1 = hb_parni(1);
     QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-    QBluetoothServer * o = new QBluetoothServer (  (QBluetoothServiceInfo::Protocol) par1, par2 );
+    QBluetoothServer * o = new QBluetoothServer ( (QBluetoothServiceInfo::Protocol) par1, par2 );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETSECURITYFLAGS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setSecurityFlags (  (QBluetooth::SecurityFlags) par1 );
+      obj->setSecurityFlags ( (QBluetooth::SecurityFlags) par1 );
     }
     else
     {

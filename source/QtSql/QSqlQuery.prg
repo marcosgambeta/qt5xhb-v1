@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
     {
       QVariant * par1 = (QVariant *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QSql::In : hb_parni(2);
-      obj->addBindValue ( *par1,  (QSql::ParamType) par2 );
+      obj->addBindValue ( *par1, (QSql::ParamType) par2 );
     }
     else
     {
@@ -227,7 +227,7 @@ void QSqlQuery_bindValue1 ()
   {
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( PQSTRING(1), *par2,  (QSql::ParamType) par3 );
+    obj->bindValue ( PQSTRING(1), *par2, (QSql::ParamType) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -244,7 +244,7 @@ void QSqlQuery_bindValue2 ()
   {
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( PINT(1), *par2,  (QSql::ParamType) par3 );
+    obj->bindValue ( PINT(1), *par2, (QSql::ParamType) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QSqlQuery::ValuesAsRows : hb_parni(1);
-      hb_retl( obj->execBatch (  (QSqlQuery::BatchExecutionMode) par1 ) );
+      hb_retl( obj->execBatch ( (QSqlQuery::BatchExecutionMode) par1 ) );
     }
     else
     {
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) par1 );
+      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) par1 );
     }
     else
     {

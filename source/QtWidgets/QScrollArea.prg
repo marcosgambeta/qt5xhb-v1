@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

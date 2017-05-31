@@ -125,7 +125,7 @@ void QGraphicsGridLayout_addItem1 ()
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addItem ( par1, PINT(2), PINT(3), PINT(4), PINT(5),  (Qt::Alignment) par6 );
+    obj->addItem ( par1, PINT(2), PINT(3), PINT(4), PINT(5), (Qt::Alignment) par6 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -140,7 +140,7 @@ void QGraphicsGridLayout_addItem2 ()
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addItem ( par1, PINT(2), PINT(3),  (Qt::Alignment) par4 );
+    obj->addItem ( par1, PINT(2), PINT(3), (Qt::Alignment) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETALIGNMENT )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->setAlignment ( par1,  (Qt::Alignment) par2 );
+    obj->setAlignment ( par1, (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setColumnAlignment ( PINT(1),  (Qt::Alignment) par2 );
+    obj->setColumnAlignment ( PINT(1), (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setRowAlignment ( PINT(1),  (Qt::Alignment) par2 );
+    obj->setRowAlignment ( PINT(1), (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
   {
     int par1 = hb_parni(1);
     QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2);
-    QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
+    QSizeF * ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }

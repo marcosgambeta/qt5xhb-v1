@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retni( obj->hitTest ( *par1,  (Qt::HitTestAccuracy) par2 ) );
+    hb_retni( obj->hitTest ( *par1, (Qt::HitTestAccuracy) par2 ) );
   }
 }
 

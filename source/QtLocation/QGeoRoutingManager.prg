@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SETMEASUREMENTSYSTEM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setMeasurementSystem (  (QLocale::MeasurementSystem) par1 );
+    obj->setMeasurementSystem ( (QLocale::MeasurementSystem) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

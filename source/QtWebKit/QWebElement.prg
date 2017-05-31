@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
   if( obj )
   {
     int par2 = hb_parni(2);
-    hb_retc( RQSTRING( obj->styleProperty ( PQSTRING(1),  (QWebElement::StyleResolveStrategy) par2 ) ) );
+    hb_retc( RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) par2 ) ) );
   }
 }
 

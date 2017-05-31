@@ -93,7 +93,7 @@ void QPictureIO_new2 ()
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
-  QPictureIO * o = new QPictureIO ( par1,  (const char *) par2 );
+  QPictureIO * o = new QPictureIO ( par1, (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -103,7 +103,7 @@ QPictureIO(const QString &fileName, const char *format)
 void QPictureIO_new3 ()
 {
   const char * par2 = hb_parc(2);
-  QPictureIO * o = new QPictureIO ( PQSTRING(1),  (const char *) par2 );
+  QPictureIO * o = new QPictureIO ( PQSTRING(1), (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
     if( ISCHAR(1) )
     {
       const char * par1 = hb_parc(1);
-      obj->setFormat (  (const char *) par1 );
+      obj->setFormat ( (const char *) par1 );
     }
     else
     {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
     if( ISCHAR(1) )
     {
       const char * par1 = hb_parc(1);
-      obj->setParameters (  (const char *) par1 );
+      obj->setParameters ( (const char *) par1 );
     }
     else
     {

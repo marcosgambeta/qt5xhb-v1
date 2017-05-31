@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDROPEVENT_NEW )
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = ISNIL(6)? (int) QEvent::Drop : hb_parni(6);
-  QDropEvent * o = new QDropEvent ( *par1,  (Qt::DropActions) par2, par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5,  (QEvent::Type) par6 );
+  QDropEvent * o = new QDropEvent ( *par1, (Qt::DropActions) par2, par3, (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (QEvent::Type) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDropAction (  (Qt::DropAction) par1 );
+    obj->setDropAction ( (Qt::DropAction) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

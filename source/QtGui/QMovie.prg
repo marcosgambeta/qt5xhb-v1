@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCacheMode (  (QMovie::CacheMode) par1 );
+    obj->setCacheMode ( (QMovie::CacheMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->text (  (QAccessible::Text) par1 ) ) );
+    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) par1 ) ) );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setText (  (QAccessible::Text) par1, PQSTRING(2) );
+    obj->setText ( (QAccessible::Text) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INTERFACE_CAST )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retptr( (void *) obj->interface_cast (  (QAccessible::InterfaceType) par1 ) );
+    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) par1 ) );
   }
 }
 

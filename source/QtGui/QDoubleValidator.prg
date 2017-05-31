@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setNotation (  (QDoubleValidator::Notation) par1 );
+    obj->setNotation ( (QDoubleValidator::Notation) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

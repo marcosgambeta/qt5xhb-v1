@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? 0 : hb_parni(2);
-  QGLFormat * o = new QGLFormat (  (QGL::FormatOptions) par1, par2 );
+  QGLFormat * o = new QGLFormat ( (QGL::FormatOptions) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QGL::FormatOptions) par1 );
+    obj->setOption ( (QGL::FormatOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setProfile (  (QGLFormat::OpenGLContextProfile) par1 );
+    obj->setProfile ( (QGLFormat::OpenGLContextProfile) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QGL::FormatOptions) par1 ) );
+    hb_retl( obj->testOption ( (QGL::FormatOptions) par1 ) );
   }
 }
 

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
   {
     QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
-    obj->initializeEngine ( par1,  (const char *) par2 );
+    obj->initializeEngine ( par1, (const char *) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_REGISTERTYPES )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    obj->registerTypes (  (const char *) par1 );
+    obj->registerTypes ( (const char *) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

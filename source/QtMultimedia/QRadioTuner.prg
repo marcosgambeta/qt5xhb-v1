@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISBANDSUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isBandSupported (  (QRadioTuner::Band) par1 ) );
+    hb_retl( obj->isBandSupported ( (QRadioTuner::Band) par1 ) );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QRADIOTUNER_FREQUENCYSTEP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->frequencyStep (  (QRadioTuner::Band) par1 ) );
+    hb_retni( obj->frequencyStep ( (QRadioTuner::Band) par1 ) );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETSTEREOMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStereoMode (  (QRadioTuner::StereoMode) par1 );
+    obj->setStereoMode ( (QRadioTuner::StereoMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHALLSTATIONS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QRadioTuner::SearchFast : hb_parni(1);
-    obj->searchAllStations (  (QRadioTuner::SearchMode) par1 );
+    obj->searchAllStations ( (QRadioTuner::SearchMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETBAND )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setBand (  (QRadioTuner::Band) par1 );
+    obj->setBand ( (QRadioTuner::Band) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSizePolicy (  (QSizePolicy::Policy) par1 );
+    obj->setSizePolicy ( (QSizePolicy::Policy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

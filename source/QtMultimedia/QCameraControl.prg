@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->canChangeProperty (  (QCameraControl::PropertyChangeType) par1,  (QCamera::Status) par2 ) );
+    hb_retl( obj->canChangeProperty ( (QCameraControl::PropertyChangeType) par1, (QCamera::Status) par2 ) );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isCaptureModeSupported (  (QCamera::CaptureModes) par1 ) );
+    hb_retl( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCaptureMode (  (QCamera::CaptureModes) par1 );
+    obj->setCaptureMode ( (QCamera::CaptureModes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setState (  (QCamera::State) par1 );
+    obj->setState ( (QCamera::State) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

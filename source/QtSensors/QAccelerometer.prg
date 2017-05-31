@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAccelerationMode (  (QAccelerometer::AccelerationMode) par1 );
+    obj->setAccelerationMode ( (QAccelerometer::AccelerationMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

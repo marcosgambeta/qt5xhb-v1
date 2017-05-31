@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSatelliteSystem (  (QGeoSatelliteInfo::SatelliteSystem) par1 );
+    obj->setSatelliteSystem ( (QGeoSatelliteInfo::SatelliteSystem) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttribute (  (QGeoSatelliteInfo::Attribute) par1, PQREAL(2) );
+    obj->setAttribute ( (QGeoSatelliteInfo::Attribute) par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retnd( obj->attribute (  (QGeoSatelliteInfo::Attribute) par1 ) );
+    hb_retnd( obj->attribute ( (QGeoSatelliteInfo::Attribute) par1 ) );
   }
 #endif
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->removeAttribute (  (QGeoSatelliteInfo::Attribute) par1 );
+    obj->removeAttribute ( (QGeoSatelliteInfo::Attribute) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->hasAttribute (  (QGeoSatelliteInfo::Attribute) par1 ) );
+    hb_retl( obj->hasAttribute ( (QGeoSatelliteInfo::Attribute) par1 ) );
   }
 #endif
 }

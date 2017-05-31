@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
 {
   int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::NotificationSeverity : hb_parni(3);
   int par4 = ISNIL(4)? (int) QOpenGLDebugMessage::OtherType : hb_parni(4);
-  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Severity) par3,  (QOpenGLDebugMessage::Type) par4 ) );
+  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2), (QOpenGLDebugMessage::Severity) par3, (QOpenGLDebugMessage::Type) par4 ) );
   _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE" );
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
 {
   int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::NotificationSeverity : hb_parni(3);
   int par4 = ISNIL(4)? (int) QOpenGLDebugMessage::OtherType : hb_parni(4);
-  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2),  (QOpenGLDebugMessage::Severity) par3,  (QOpenGLDebugMessage::Type) par4 ) );
+  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2), (QOpenGLDebugMessage::Severity) par3, (QOpenGLDebugMessage::Type) par4 ) );
   _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE" );
 }
 

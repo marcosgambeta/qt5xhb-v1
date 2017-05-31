@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPeerVerifyMode (  (QSslSocket::PeerVerifyMode) par1 );
+    obj->setPeerVerifyMode ( (QSslSocket::PeerVerifyMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setProtocol (  (QSsl::SslProtocol) par1 );
+    obj->setProtocol ( (QSsl::SslProtocol) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -88,7 +88,7 @@ QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QSplitter_new2 ()
 {
   int par1 = hb_parni(1);
-  QSplitter * o = new QSplitter (  (Qt::Orientation) par1, OPQWIDGET(2,0) );
+  QSplitter * o = new QSplitter ( (Qt::Orientation) par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOrientation (  (Qt::Orientation) par1 );
+      obj->setOrientation ( (Qt::Orientation) par1 );
     }
     else
     {

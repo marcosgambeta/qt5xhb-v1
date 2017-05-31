@@ -122,7 +122,7 @@ QPrinter ( PrinterMode mode = ScreenResolution )
 void QPrinter_new1 ()
 {
   int par1 = ISNIL(1)? (int) QPrinter::ScreenResolution : hb_parni(1);
-  QPrinter * o = new QPrinter (  (QPrinter::PrinterMode) par1 );
+  QPrinter * o = new QPrinter ( (QPrinter::PrinterMode) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -133,7 +133,7 @@ void QPrinter_new2 ()
 {
   QPrinterInfo * par1 = (QPrinterInfo *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QPrinter::ScreenResolution : hb_parni(2);
-  QPrinter * o = new QPrinter ( *par1,  (QPrinter::PrinterMode) par2 );
+  QPrinter * o = new QPrinter ( *par1, (QPrinter::PrinterMode) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOLORMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setColorMode (  (QPrinter::ColorMode) par1 );
+      obj->setColorMode ( (QPrinter::ColorMode) par1 );
     }
     else
     {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QPRINTER_SETDUPLEX )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setDuplex (  (QPrinter::DuplexMode) par1 );
+      obj->setDuplex ( (QPrinter::DuplexMode) par1 );
     }
     else
     {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QPRINTER_GETPAGEMARGINS )
       qreal par3;
       qreal par4;
       int par5 = hb_parni(5);
-      obj->getPageMargins ( &par1, &par2, &par3, &par4,  (QPrinter::Unit) par5 );
+      obj->getPageMargins ( &par1, &par2, &par3, &par4, (QPrinter::Unit) par5 );
       hb_stornd( par1, 1 );
       hb_stornd( par2, 2 );
       hb_stornd( par3, 3 );
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
     {
       int par5 = hb_parni(5);
-      obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (QPrinter::Unit) par5 );
+      obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (QPrinter::Unit) par5 );
     }
     else
     {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QPRINTER_SETORIENTATION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOrientation (  (QPrinter::Orientation) par1 );
+      obj->setOrientation ( (QPrinter::Orientation) par1 );
     }
     else
     {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QPRINTER_SETOUTPUTFORMAT )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOutputFormat (  (QPrinter::OutputFormat) par1 );
+      obj->setOutputFormat ( (QPrinter::OutputFormat) par1 );
     }
     else
     {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEORDER )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPageOrder (  (QPrinter::PageOrder) par1 );
+      obj->setPageOrder ( (QPrinter::PageOrder) par1 );
     }
     else
     {
@@ -763,7 +763,7 @@ void QPrinter_pageRect2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->pageRect (  (QPrinter::Unit) par1 ) );
+    QRectF * ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -811,7 +811,7 @@ void QPrinter_paperRect2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->paperRect (  (QPrinter::Unit) par1 ) );
+    QRectF * ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -858,7 +858,7 @@ void QPrinter_paperSize2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    QSizeF * ptr = new QSizeF( obj->paperSize (  (QPrinter::Unit) par1 ) );
+    QSizeF * ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSOURCE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPaperSource (  (QPrinter::PaperSource) par1 );
+      obj->setPaperSource ( (QPrinter::PaperSource) par1 );
     }
     else
     {
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTRANGE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPrintRange (  (QPrinter::PrintRange) par1 );
+      obj->setPrintRange ( (QPrinter::PrintRange) par1 );
     }
     else
     {
@@ -1131,7 +1131,7 @@ void QPrinter_setPaperSize1 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPaperSize (  (QPrinter::PaperSize) par1 );
+    obj->setPaperSize ( (QPrinter::PaperSize) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1148,7 +1148,7 @@ void QPrinter_setPaperSize2 ()
   {
     QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->setPaperSize ( *par1,  (QPrinter::Unit) par2 );
+    obj->setPaperSize ( *par1, (QPrinter::Unit) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPageSize (  (QPrinter::PageSize) par1 );
+      obj->setPageSize ( (QPrinter::PageSize) par1 );
     }
     else
     {

@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
   int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QOpenGLShader * o = new QOpenGLShader (  (QOpenGLShader::ShaderType) par1, par2 );
+  QOpenGLShader * o = new QOpenGLShader ( (QOpenGLShader::ShaderType) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE1 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retl( obj->compileSourceCode (  (const char *) par1 ) );
+    hb_retl( obj->compileSourceCode ( (const char *) par1 ) );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_HASOPENGLSHADERS )
 {
   int par1 = hb_parni(1);
   QOpenGLContext * par2 = ISNIL(2)? 0 : (QOpenGLContext *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QOpenGLShader::hasOpenGLShaders (  (QOpenGLShader::ShaderType) par1, par2 ) );
+  hb_retl( QOpenGLShader::hasOpenGLShaders ( (QOpenGLShader::ShaderType) par1, par2 ) );
 }
 
 

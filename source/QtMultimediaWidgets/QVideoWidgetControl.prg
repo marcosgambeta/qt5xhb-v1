@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETASPECTRATIOMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAspectRatioMode (  (Qt::AspectRatioMode) par1 );
+    obj->setAspectRatioMode ( (Qt::AspectRatioMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

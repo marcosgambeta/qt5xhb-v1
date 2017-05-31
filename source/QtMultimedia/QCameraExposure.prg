@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isExposureModeSupported (  (QCameraExposure::ExposureMode) par1 ) );
+    hb_retl( obj->isExposureModeSupported ( (QCameraExposure::ExposureMode) par1 ) );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isFlashModeSupported (  (QCameraExposure::FlashModes) par1 ) );
+    hb_retl( obj->isFlashModeSupported ( (QCameraExposure::FlashModes) par1 ) );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isMeteringModeSupported (  (QCameraExposure::MeteringMode) par1 ) );
+    hb_retl( obj->isMeteringModeSupported ( (QCameraExposure::MeteringMode) par1 ) );
   }
 }
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setExposureMode (  (QCameraExposure::ExposureMode) par1 );
+    obj->setExposureMode ( (QCameraExposure::ExposureMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlashMode (  (QCameraExposure::FlashModes) par1 );
+    obj->setFlashMode ( (QCameraExposure::FlashModes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setMeteringMode (  (QCameraExposure::MeteringMode) par1 );
+    obj->setMeteringMode ( (QCameraExposure::MeteringMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

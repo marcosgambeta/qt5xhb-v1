@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
   {
     int par1;
     int par2 = ISNIL(2)? (int) QTextLine::Leading : hb_parni(2);
-    hb_retnd( obj->cursorToX ( &par1,  (QTextLine::Edge) par2 ) );
+    hb_retnd( obj->cursorToX ( &par1, (QTextLine::Edge) par2 ) );
     hb_storni( par1, 1 );
   }
 }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLine::Leading : hb_parni(2);
-    hb_retnd( obj->cursorToX ( PINT(1),  (QTextLine::Edge) par2 ) );
+    hb_retnd( obj->cursorToX ( PINT(1), (QTextLine::Edge) par2 ) );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLine::CursorBetweenCharacters : hb_parni(2);
-    hb_retni( obj->xToCursor ( PQREAL(1),  (QTextLine::CursorPosition) par2 ) );
+    hb_retni( obj->xToCursor ( PQREAL(1), (QTextLine::CursorPosition) par2 ) );
   }
 }
 

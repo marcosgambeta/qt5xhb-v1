@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlow (  (QListView::Flow) par1 );
+    obj->setFlow ( (QListView::Flow) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setLayoutMode (  (QListView::LayoutMode) par1 );
+    obj->setLayoutMode ( (QListView::LayoutMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setMovement (  (QListView::Movement) par1 );
+    obj->setMovement ( (QListView::Movement) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setResizeMode (  (QListView::ResizeMode) par1 );
+    obj->setResizeMode ( (QListView::ResizeMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setViewMode (  (QListView::ViewMode) par1 );
+    obj->setViewMode ( (QListView::ViewMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QListView::EnsureVisible : hb_parni(2);
-    obj->scrollTo ( *PQMODELINDEX(1),  (QListView::ScrollHint) par2 );
+    obj->scrollTo ( *PQMODELINDEX(1), (QListView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

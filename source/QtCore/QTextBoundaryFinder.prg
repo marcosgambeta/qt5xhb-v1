@@ -84,7 +84,7 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 void QTextBoundaryFinder_new3 ()
 {
   int par1 = hb_parni(1);
-  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, PQSTRING(2) );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) par1, PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -98,7 +98,7 @@ void QTextBoundaryFinder_new4 ()
   int par3 = hb_parni(3);
   unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) _qt5xhb_itemGetPtr(4);
   int par5 = ISNIL(5)? 0 : hb_parni(5);
-  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2, par3, par4, par5 );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) par1, par2, par3, par4, par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

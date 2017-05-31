@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QMdiSubWindow * ptr = obj->addSubWindow ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
+    QMdiSubWindow * ptr = obj->addSubWindow ( PQWIDGET(1), (Qt::WindowFlags) par2 );
     _qt5xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setActivationOrder (  (QMdiArea::WindowOrder) par1 );
+    obj->setActivationOrder ( (QMdiArea::WindowOrder) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QMdiArea::AreaOption) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setOption ( (QMdiArea::AreaOption) par1, (bool) ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTabPosition (  (QTabWidget::TabPosition) par1 );
+    obj->setTabPosition ( (QTabWidget::TabPosition) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTabShape (  (QTabWidget::TabShape) par1 );
+    obj->setTabShape ( (QTabWidget::TabShape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setViewMode (  (QMdiArea::ViewMode) par1 );
+    obj->setViewMode ( (QMdiArea::ViewMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QMdiArea::CreationOrder : hb_parni(1);
-    QList<QMdiSubWindow *> list = obj->subWindowList (  (QMdiArea::WindowOrder) par1 );
+    QList<QMdiSubWindow *> list = obj->subWindowList ( (QMdiArea::WindowOrder) par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMDISUBWINDOW" );
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QMdiArea::AreaOption) par1 ) );
+    hb_retl( obj->testOption ( (QMdiArea::AreaOption) par1 ) );
   }
 }
 

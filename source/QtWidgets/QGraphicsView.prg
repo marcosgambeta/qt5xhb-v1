@@ -375,7 +375,7 @@ void QGraphicsView_fitInView1 ()
   {
     QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
-    obj->fitInView ( *par1,  (Qt::AspectRatioMode) par2 );
+    obj->fitInView ( *par1, (Qt::AspectRatioMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -391,7 +391,7 @@ void QGraphicsView_fitInView2 ()
   if( obj )
   {
     int par5 = ISNIL(5)? (int) Qt::IgnoreAspectRatio : hb_parni(5);
-    obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (Qt::AspectRatioMode) par5 );
+    obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (Qt::AspectRatioMode) par5 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -408,7 +408,7 @@ void QGraphicsView_fitInView3 ()
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
-    obj->fitInView ( par1,  (Qt::AspectRatioMode) par2 );
+    obj->fitInView ( par1, (Qt::AspectRatioMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
       QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
       QRect par3 = ISNIL(3)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(3);
       int par4 = ISNIL(4)? (int) Qt::KeepAspectRatio : hb_parni(4);
-      obj->render ( par1, par2, par3,  (Qt::AspectRatioMode) par4 );
+      obj->render ( par1, par2, par3, (Qt::AspectRatioMode) par4 );
     }
     else
     {
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setAlignment (  (Qt::Alignment) par1 );
+      obj->setAlignment ( (Qt::Alignment) par1 );
     }
     else
     {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setCacheMode (  (QGraphicsView::CacheMode) par1 );
+      obj->setCacheMode ( (QGraphicsView::CacheMode) par1 );
     }
     else
     {
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setDragMode (  (QGraphicsView::DragMode) par1 );
+      obj->setDragMode ( (QGraphicsView::DragMode) par1 );
     }
     else
     {
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setOptimizationFlag (  (QGraphicsView::OptimizationFlag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setOptimizationFlag ( (QGraphicsView::OptimizationFlag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOptimizationFlags (  (QGraphicsView::OptimizationFlags) par1 );
+      obj->setOptimizationFlags ( (QGraphicsView::OptimizationFlags) par1 );
     }
     else
     {
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setRenderHint (  (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setRenderHint ( (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setRenderHints (  (QPainter::RenderHints) par1 );
+      obj->setRenderHints ( (QPainter::RenderHints) par1 );
     }
     else
     {
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setResizeAnchor (  (QGraphicsView::ViewportAnchor) par1 );
+      obj->setResizeAnchor ( (QGraphicsView::ViewportAnchor) par1 );
     }
     else
     {
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setRubberBandSelectionMode (  (Qt::ItemSelectionMode) par1 );
+      obj->setRubberBandSelectionMode ( (Qt::ItemSelectionMode) par1 );
     }
     else
     {
@@ -1416,7 +1416,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setTransformationAnchor (  (QGraphicsView::ViewportAnchor) par1 );
+      obj->setTransformationAnchor ( (QGraphicsView::ViewportAnchor) par1 );
     }
     else
     {
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setViewportUpdateMode (  (QGraphicsView::ViewportUpdateMode) par1 );
+      obj->setViewportUpdateMode ( (QGraphicsView::ViewportUpdateMode) par1 );
     }
     else
     {
@@ -1560,7 +1560,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
     {
       QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QGraphicsScene::AllLayers : hb_parni(2);
-      obj->invalidateScene ( par1,  (QGraphicsScene::SceneLayers) par2 );
+      obj->invalidateScene ( par1, (QGraphicsScene::SceneLayers) par2 );
     }
     else
     {

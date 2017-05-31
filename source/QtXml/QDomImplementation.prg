@@ -185,7 +185,7 @@ static void setInvalidDataPolicy ( InvalidDataPolicy policy )
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
 {
   int par1 = hb_parni(1);
-  QDomImplementation::setInvalidDataPolicy (  (QDomImplementation::InvalidDataPolicy) par1 );
+  QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

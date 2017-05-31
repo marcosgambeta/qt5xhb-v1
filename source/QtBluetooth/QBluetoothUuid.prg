@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par1 = hb_parni(1);
-  QBluetoothUuid * o = new QBluetoothUuid (  (QBluetoothUuid::ProtocolUuid) par1 );
+  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ProtocolUuid) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par1 = hb_parni(1);
-  QBluetoothUuid * o = new QBluetoothUuid (  (QBluetoothUuid::ServiceClassUuid) par1 );
+  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ServiceClassUuid) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

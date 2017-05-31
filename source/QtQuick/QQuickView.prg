@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setResizeMode (  (QQuickView::ResizeMode) par1 );
+    obj->setResizeMode ( (QQuickView::ResizeMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

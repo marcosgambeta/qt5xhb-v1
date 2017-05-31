@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStackingMode (  (QStackedLayout::StackingMode) par1 );
+    obj->setStackingMode ( (QStackedLayout::StackingMode) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

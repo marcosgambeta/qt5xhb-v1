@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL2 )
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
     QVariant par10 = ISNIL(10)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(10);
-    QDBusMessage * ptr = new QDBusMessage( obj->call (  (QDBus::CallMode) par1, PQSTRING(2), par3, par4, par5, par6, par7, par8, par9, par10 ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->call ( (QDBus::CallMode) par1, PQSTRING(2), par3, par4, par5, par6, par7, par8, par9, par10 ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
     {
       par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
     }
-    QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList (  (QDBus::CallMode) par1, PQSTRING(2), par3 ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList ( (QDBus::CallMode) par1, PQSTRING(2), par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK1 )
     QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
     const char * par4 = hb_parc(4);
     const char * par5 = hb_parc(5);
-    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3,  (const char *) par4,  (const char *) par5 ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3, (const char *) par4, (const char *) par5 ) );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK2 )
     }
     QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
     const char * par4 = hb_parc(4);
-    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3,  (const char *) par4 ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3, (const char *) par4 ) );
   }
 }
 

@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
   {
     QLayoutItem * par1 = (QLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addItem ( par1, PINT(2), PINT(3), (int) ISNIL(4)? 1 : hb_parni(4), (int) ISNIL(5)? 1 : hb_parni(5),  (Qt::Alignment) par6 );
+    obj->addItem ( par1, PINT(2), PINT(3), (int) ISNIL(4)? 1 : hb_parni(4), (int) ISNIL(5)? 1 : hb_parni(5), (Qt::Alignment) par6 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -165,7 +165,7 @@ void QGridLayout_addLayout1 ()
   {
     QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addLayout ( par1, PINT(2), PINT(3),  (Qt::Alignment) par4 );
+    obj->addLayout ( par1, PINT(2), PINT(3), (Qt::Alignment) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,7 +182,7 @@ void QGridLayout_addLayout2 ()
   {
     QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addLayout ( par1, PINT(2), PINT(3), PINT(4), PINT(5),  (Qt::Alignment) par6 );
+    obj->addLayout ( par1, PINT(2), PINT(3), PINT(4), PINT(5), (Qt::Alignment) par6 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,7 +217,7 @@ void QGridLayout_addWidget1 ()
   if( obj )
   {
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3),  (Qt::Alignment) par4 );
+    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), (Qt::Alignment) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -233,7 +233,7 @@ void QGridLayout_addWidget2 ()
   if( obj )
   {
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5),  (Qt::Alignment) par6 );
+    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), (Qt::Alignment) par6 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOriginCorner (  (Qt::Corner) par1 );
+    obj->setOriginCorner ( (Qt::Corner) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

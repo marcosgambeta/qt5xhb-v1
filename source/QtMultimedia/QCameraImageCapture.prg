@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isCaptureDestinationSupported (  (QCameraImageCapture::CaptureDestinations) par1 ) );
+    hb_retl( obj->isCaptureDestinationSupported ( (QCameraImageCapture::CaptureDestinations) par1 ) );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setBufferFormat (  (QVideoFrame::PixelFormat) par1 );
+    obj->setBufferFormat ( (QVideoFrame::PixelFormat) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCaptureDestination (  (QCameraImageCapture::CaptureDestinations) par1 );
+    obj->setCaptureDestination ( (QCameraImageCapture::CaptureDestinations) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAction * ptr = obj->action (  (QWebPage::WebAction) par1 );
+    QAction * ptr = obj->action ( (QWebPage::WebAction) par1 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QWEBPAGE_EXTENSION )
     int par1 = hb_parni(1);
     QWebPage::ExtensionOption * par2 = (QWebPage::ExtensionOption *) _qt5xhb_itemGetPtr(2);
     QWebPage::ExtensionReturn * par3 = ISNIL(3)? 0 : (QWebPage::ExtensionReturn *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->extension (  (QWebPage::Extension) par1, par2, par3 ) );
+    hb_retl( obj->extension ( (QWebPage::Extension) par1, par2, par3 ) );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
+    hb_retl( obj->findText ( PQSTRING(1), (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setLinkDelegationPolicy (  (QWebPage::LinkDelegationPolicy) par1 );
+    obj->setLinkDelegationPolicy ( (QWebPage::LinkDelegationPolicy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QWebPage::Extension) par1 ) );
+    hb_retl( obj->supportsExtension ( (QWebPage::Extension) par1 ) );
   }
 }
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerAction (  (QWebPage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
+    obj->triggerAction ( (QWebPage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

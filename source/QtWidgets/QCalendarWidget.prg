@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFirstDayOfWeek (  (Qt::DayOfWeek) par1 );
+    obj->setFirstDayOfWeek ( (Qt::DayOfWeek) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setHorizontalHeaderFormat (  (QCalendarWidget::HorizontalHeaderFormat) par1 );
+    obj->setHorizontalHeaderFormat ( (QCalendarWidget::HorizontalHeaderFormat) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTIONMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSelectionMode (  (QCalendarWidget::SelectionMode) par1 );
+    obj->setSelectionMode ( (QCalendarWidget::SelectionMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setVerticalHeaderFormat (  (QCalendarWidget::VerticalHeaderFormat) par1 );
+    obj->setVerticalHeaderFormat ( (QCalendarWidget::VerticalHeaderFormat) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
   {
     int par1 = hb_parni(1);
     QTextCharFormat * par2 = (QTextCharFormat *) _qt5xhb_itemGetPtr(2);
-    obj->setWeekdayTextFormat (  (Qt::DayOfWeek) par1, *par2 );
+    obj->setWeekdayTextFormat ( (Qt::DayOfWeek) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat (  (Qt::DayOfWeek) par1 ) );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat ( (Qt::DayOfWeek) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }

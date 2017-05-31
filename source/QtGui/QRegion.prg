@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QREGION_NEW2 )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = ISNIL(5)? (int) QRegion::Rectangle : hb_parni(5);
-  QRegion * o = new QRegion ( par1, par2, par3, par4,  (QRegion::RegionType) par5 );
+  QRegion * o = new QRegion ( par1, par2, par3, par4, (QRegion::RegionType) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QREGION_NEW3 )
 {
   QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QRegion::Rectangle : hb_parni(2);
-  QRegion * o = new QRegion ( *par1,  (QRegion::RegionType) par2 );
+  QRegion * o = new QRegion ( *par1, (QRegion::RegionType) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QREGION_NEW4 )
 {
   QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) Qt::OddEvenFill : hb_parni(2);
-  QRegion * o = new QRegion ( *par1,  (Qt::FillRule) par2 );
+  QRegion * o = new QRegion ( *par1, (Qt::FillRule) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

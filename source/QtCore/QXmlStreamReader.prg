@@ -236,7 +236,7 @@ void QXmlStreamReader_addData3 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    obj->addData (  (const char *) par1 );
+    obj->addData ( (const char *) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QXmlStreamReader::ErrorOnUnexpectedElement : hb_parni(1);
-      hb_retc( RQSTRING( obj->readElementText (  (QXmlStreamReader::ReadElementTextBehaviour) par1 ) ) );
+      hb_retc( RQSTRING( obj->readElementText ( (QXmlStreamReader::ReadElementTextBehaviour) par1 ) ) );
     }
     else
     {

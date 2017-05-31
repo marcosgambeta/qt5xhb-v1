@@ -78,7 +78,7 @@ QOpenGLBuffer(QOpenGLBuffer::Type type)
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW2 )
 {
   int par1 = hb_parni(1);
-  QOpenGLBuffer * o = new QOpenGLBuffer (  (QOpenGLBuffer::Type) par1 );
+  QOpenGLBuffer * o = new QOpenGLBuffer ( (QOpenGLBuffer::Type) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retptr( (void *) obj->map (  (QOpenGLBuffer::Access) par1 ) );
+    hb_retptr( (void *) obj->map ( (QOpenGLBuffer::Access) par1 ) );
   }
 }
 
@@ -293,7 +293,7 @@ static void release(QOpenGLBuffer::Type type)
 HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE2 )
 {
   int par1 = hb_parni(1);
-  QOpenGLBuffer::release (  (QOpenGLBuffer::Type) par1 );
+  QOpenGLBuffer::release ( (QOpenGLBuffer::Type) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setUsagePattern (  (QOpenGLBuffer::UsagePattern) par1 );
+    obj->setUsagePattern ( (QOpenGLBuffer::UsagePattern) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

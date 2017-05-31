@@ -88,7 +88,7 @@ void QFileIconProvider_icon1 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    QIcon * ptr = new QIcon( obj->icon (  (QFileIconProvider::IconType) par1 ) );
+    QIcon * ptr = new QIcon( obj->icon ( (QFileIconProvider::IconType) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }

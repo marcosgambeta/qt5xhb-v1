@@ -390,7 +390,7 @@ void QDate_toString2 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);
-    hb_retc( RQSTRING( obj->toString (  (Qt::DateFormat) par1 ) ) );
+    hb_retc( RQSTRING( obj->toString ( (Qt::DateFormat) par1 ) ) );
   }
 }
 
@@ -479,7 +479,7 @@ static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::Te
 void QDate_fromString1 ()
 {
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
-  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1),  (Qt::DateFormat) par2 ) );
+  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), (Qt::DateFormat) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
@@ -580,7 +580,7 @@ static QString longDayName ( int weekday, MonthNameType type )
 void QDate_longDayName2 ()
 {
   int par2 = hb_parni(2);
-  hb_retc( RQSTRING( QDate::longDayName ( PINT(1),  (QDate::MonthNameType) par2 ) ) );
+  hb_retc( RQSTRING( QDate::longDayName ( PINT(1), (QDate::MonthNameType) par2 ) ) );
 }
 
 //[1]QString longDayName ( int weekday )
@@ -616,7 +616,7 @@ static QString longMonthName ( int month, MonthNameType type )
 void QDate_longMonthName2 ()
 {
   int par2 = hb_parni(2);
-  hb_retc( RQSTRING( QDate::longMonthName ( PINT(1),  (QDate::MonthNameType) par2 ) ) );
+  hb_retc( RQSTRING( QDate::longMonthName ( PINT(1), (QDate::MonthNameType) par2 ) ) );
 }
 
 //[1]QString longMonthName ( int month )
@@ -652,7 +652,7 @@ static QString shortDayName ( int weekday, MonthNameType type )
 void QDate_shortDayName2 ()
 {
   int par2 = hb_parni(2);
-  hb_retc( RQSTRING( QDate::shortDayName ( PINT(1),  (QDate::MonthNameType) par2 ) ) );
+  hb_retc( RQSTRING( QDate::shortDayName ( PINT(1), (QDate::MonthNameType) par2 ) ) );
 }
 
 //[1]QString shortDayName ( int weekday )
@@ -688,7 +688,7 @@ static QString shortMonthName ( int month, MonthNameType type )
 void QDate_shortMonthName2 ()
 {
   int par2 = hb_parni(2);
-  hb_retc( RQSTRING( QDate::shortMonthName ( PINT(1),  (QDate::MonthNameType) par2 ) ) );
+  hb_retc( RQSTRING( QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) par2 ) ) );
 }
 
 //[1]QString shortMonthName ( int month )

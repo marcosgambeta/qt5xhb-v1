@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTWIN_TOHBITMAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QtWin::HBitmapNoAlpha : hb_parni(2);
-  hb_retptr( (HBITMAP) QtWin::toHBITMAP ( *par1,  (QtWin::HBitmapFormat) par2 ) );
+  hb_retptr( (HBITMAP) QtWin::toHBITMAP ( *par1, (QtWin::HBitmapFormat) par2 ) );
 #endif
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   HBITMAP par1 = (HBITMAP) hb_parptr(1);
   int par2 = ISNIL(2)? (int) QtWin::HBitmapNoAlpha : hb_parni(2);
-  QPixmap * ptr = new QPixmap( QtWin::fromHBITMAP ( par1,  (QtWin::HBitmapFormat) par2 ) );
+  QPixmap * ptr = new QPixmap( QtWin::fromHBITMAP ( par1, (QtWin::HBitmapFormat) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #endif
 }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QtWin::setWindowFlip3DPolicy ( par1,  (QtWin::WindowFlip3DPolicy) par2 );
+  QtWin::setWindowFlip3DPolicy ( par1, (QtWin::WindowFlip3DPolicy) par2 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }

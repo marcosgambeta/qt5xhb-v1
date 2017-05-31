@@ -78,7 +78,7 @@ void QDeclarativeListReference_new2 ()
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   const char * par2 = hb_parc(2);
   QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeListReference * o = new QDeclarativeListReference ( par1,  (const char *) par2, par3 );
+  QDeclarativeListReference * o = new QDeclarativeListReference ( par1, (const char *) par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

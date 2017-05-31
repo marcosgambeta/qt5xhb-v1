@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retni( obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 ) );
+      hb_retni( obj->metric ( (QPaintDevice::PaintDeviceMetric) par1 ) );
     }
     else
     {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QVariant * ptr = new QVariant( obj->property (  (QPrintEngine::PrintEnginePropertyKey) par1 ) );
+      QVariant * ptr = new QVariant( obj->property ( (QPrintEngine::PrintEnginePropertyKey) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
     {
       int par1 = hb_parni(1);
       QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-      obj->setProperty (  (QPrintEngine::PrintEnginePropertyKey) par1, *par2 );
+      obj->setProperty ( (QPrintEngine::PrintEnginePropertyKey) par1, *par2 );
     }
     else
     {

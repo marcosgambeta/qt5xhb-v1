@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QLocalSocket::ReadWrite : hb_parni(2);
-    obj->connectToServer ( PQSTRING(1),  (QLocalSocket::OpenMode) par2 );
+    obj->connectToServer ( PQSTRING(1), (QLocalSocket::OpenMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

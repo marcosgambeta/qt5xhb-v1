@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
     {
       QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-      hb_retl( obj->collidesWithItem ( par1,  (Qt::ItemSelectionMode) par2 ) );
+      hb_retl( obj->collidesWithItem ( par1, (Qt::ItemSelectionMode) par2 ) );
     }
     else
     {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
     {
       QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-      hb_retl( obj->collidesWithPath ( *par1,  (Qt::ItemSelectionMode) par2 ) );
+      hb_retl( obj->collidesWithPath ( *par1, (Qt::ItemSelectionMode) par2 ) );
     }
     else
     {
@@ -2511,7 +2511,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setAcceptedMouseButtons (  (Qt::MouseButtons) par1 );
+      obj->setAcceptedMouseButtons ( (Qt::MouseButtons) par1 );
     }
     else
     {
@@ -2579,7 +2579,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
     {
       int par1 = hb_parni(1);
       QSize par2 = ISNIL(2)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(2);
-      obj->setCacheMode (  (QGraphicsItem::CacheMode) par1, par2 );
+      obj->setCacheMode ( (QGraphicsItem::CacheMode) par1, par2 );
     }
     else
     {
@@ -2691,7 +2691,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setFlag (  (QGraphicsItem::GraphicsItemFlag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setFlag ( (QGraphicsItem::GraphicsItemFlag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
     }
     else
     {
@@ -2714,7 +2714,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setFlags (  (QGraphicsItem::GraphicsItemFlags) par1 );
+      obj->setFlags ( (QGraphicsItem::GraphicsItemFlags) par1 );
     }
     else
     {
@@ -2737,7 +2737,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) Qt::OtherFocusReason : hb_parni(1);
-      obj->setFocus (  (Qt::FocusReason) par1 );
+      obj->setFocus ( (Qt::FocusReason) par1 );
     }  
   }
 
@@ -2825,7 +2825,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETINPUTMETHODHINTS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setInputMethodHints (  (Qt::InputMethodHints) par1 );
+      obj->setInputMethodHints ( (Qt::InputMethodHints) par1 );
     }
     else
     {
@@ -2870,7 +2870,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPANELMODALITY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPanelModality (  (QGraphicsItem::PanelModality) par1 );
+      obj->setPanelModality ( (QGraphicsItem::PanelModality) par1 );
     }
     else
     {

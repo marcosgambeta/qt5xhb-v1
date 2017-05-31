@@ -57,7 +57,7 @@ QRubberBand ( Shape s, QWidget * p = 0 )
 HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
   int par1 = hb_parni(1);
-  QRubberBand * o = new QRubberBand (  (QRubberBand::Shape) par1, OPQWIDGET(2,0) );
+  QRubberBand * o = new QRubberBand ( (QRubberBand::Shape) par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

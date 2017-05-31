@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->closeReadChannel (  (QProcess::ProcessChannel) par1 );
+      obj->closeReadChannel ( (QProcess::ProcessChannel) par1 );
     }
     else
     {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setProcessChannelMode (  (QProcess::ProcessChannelMode) par1 );
+      obj->setProcessChannelMode ( (QProcess::ProcessChannelMode) par1 );
     }
     else
     {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setReadChannel (  (QProcess::ProcessChannel) par1 );
+      obj->setReadChannel ( (QProcess::ProcessChannel) par1 );
     }
     else
     {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
-      obj->setStandardErrorFile ( PQSTRING(1),  (QIODevice::OpenMode) par2 );
+      obj->setStandardErrorFile ( PQSTRING(1), (QIODevice::OpenMode) par2 );
     }
     else
     {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
-      obj->setStandardOutputFile ( PQSTRING(1),  (QIODevice::OpenMode) par2 );
+      obj->setStandardOutputFile ( PQSTRING(1), (QIODevice::OpenMode) par2 );
     }
     else
     {
@@ -550,7 +550,7 @@ void QProcess_start1 ()
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->start ( PQSTRING(1), PQSTRINGLIST(2),  (QIODevice::OpenMode) par3 );
+    obj->start ( PQSTRING(1), PQSTRINGLIST(2), (QIODevice::OpenMode) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -566,7 +566,7 @@ void QProcess_start2 ()
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-    obj->start ( PQSTRING(1),  (QIODevice::OpenMode) par2 );
+    obj->start ( PQSTRING(1), (QIODevice::OpenMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -582,7 +582,7 @@ void QProcess_start3 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QIODevice::ReadWrite : hb_parni(1);
-    obj->start (  (QIODevice::OpenMode) par1 );
+    obj->start ( (QIODevice::OpenMode) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QPROCESS_OPEN )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QIODevice::ReadWrite : hb_parni(1);
-      hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+      hb_retl( obj->open ( (QIODevice::OpenMode) par1 ) );
     }
     else
     {
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNELMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setReadChannelMode (  (QProcess::ProcessChannelMode) par1 );
+      obj->setReadChannelMode ( (QProcess::ProcessChannelMode) par1 );
     }
     else
     {
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QPROCESS_SETINPUTCHANNELMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setInputChannelMode (  (QProcess::InputChannelMode) par1 );
+      obj->setInputChannelMode ( (QProcess::InputChannelMode) par1 );
     }
     else
     {

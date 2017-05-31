@@ -121,7 +121,7 @@ QTransform(Qt::Initialization)
 HB_FUNC_STATIC( QTRANSFORM_NEW1 )
 {
   int par1 = hb_parni(1);
-  QTransform * o = new QTransform (  (Qt::Initialization) par1 );
+  QTransform * o = new QTransform ( (Qt::Initialization) par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATE )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::ZAxis : hb_parni(2);
-    QTransform * ptr = &obj->rotate ( PQREAL(1),  (Qt::Axis) par2 );
+    QTransform * ptr = &obj->rotate ( PQREAL(1), (Qt::Axis) par2 );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::ZAxis : hb_parni(2);
-    QTransform * ptr = &obj->rotateRadians ( PQREAL(1),  (Qt::Axis) par2 );
+    QTransform * ptr = &obj->rotateRadians ( PQREAL(1), (Qt::Axis) par2 );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }

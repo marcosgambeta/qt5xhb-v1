@@ -216,7 +216,7 @@ void QBuffer_setData2 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    obj->setData (  (const char *) par1, PINT(2) );
+    obj->setData ( (const char *) par1, PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->open (  (QBuffer::OpenMode) par1 ) );
+      hb_retl( obj->open ( (QBuffer::OpenMode) par1 ) );
     }
     else
     {

@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
-      obj->setCurrentIndex ( *par1,  (QItemSelectionModel::SelectionFlags) par2 );
+      obj->setCurrentIndex ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
     }
     else
     {
@@ -465,7 +465,7 @@ void QItemSelectionModel_select1 ()
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->select ( *par1,  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->select ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -482,7 +482,7 @@ void QItemSelectionModel_select2 ()
   {
     QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->select ( *par1,  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->select ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

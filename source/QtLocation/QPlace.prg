@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QPLACE_TOTALCONTENTCOUNT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->totalContentCount (  (QPlaceContent::Type) par1 ) );
+    hb_retni( obj->totalContentCount ( (QPlaceContent::Type) par1 ) );
   }
 #endif
 }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QPLACE_SETTOTALCONTENTCOUNT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTotalContentCount (  (QPlaceContent::Type) par1, PINT(2) );
+    obj->setTotalContentCount ( (QPlaceContent::Type) par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QPLACE_SETVISIBILITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setVisibility (  (QLocation::Visibility) par1 );
+    obj->setVisibility ( (QLocation::Visibility) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

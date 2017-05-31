@@ -66,7 +66,7 @@ QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QFRAME_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QFrame * o = new QFrame ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QFrame * o = new QFrame ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFrameShadow (  (QFrame::Shadow) par1 );
+    obj->setFrameShadow ( (QFrame::Shadow) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFrameShape (  (QFrame::Shape) par1 );
+    obj->setFrameShape ( (QFrame::Shape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

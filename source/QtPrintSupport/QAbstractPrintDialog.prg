@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ADDENABLEDOPTION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->addEnabledOption (  (QAbstractPrintDialog::PrintDialogOption) par1 );
+      obj->addEnabledOption ( (QAbstractPrintDialog::PrintDialogOption) par1 );
     }
     else
     {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setEnabledOptions (  (QAbstractPrintDialog::PrintDialogOptions) par1 );
+      obj->setEnabledOptions ( (QAbstractPrintDialog::PrintDialogOptions) par1 );
     }
     else
     {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ISOPTIONENABLED )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->isOptionEnabled (  (QAbstractPrintDialog::PrintDialogOption) par1 ) );
+      hb_retl( obj->isOptionEnabled ( (QAbstractPrintDialog::PrintDialogOption) par1 ) );
     }
     else
     {

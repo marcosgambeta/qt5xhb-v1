@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED 
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isViewfinderParameterSupported (  (QCameraViewfinderSettingsControl::ViewfinderParameter) par1 ) );
+    hb_retl( obj->isViewfinderParameterSupported ( (QCameraViewfinderSettingsControl::ViewfinderParameter) par1 ) );
   }
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
   {
     int par1 = hb_parni(1);
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setViewfinderParameter (  (QCameraViewfinderSettingsControl::ViewfinderParameter) par1, *par2 );
+    obj->setViewfinderParameter ( (QCameraViewfinderSettingsControl::ViewfinderParameter) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->viewfinderParameter (  (QCameraViewfinderSettingsControl::ViewfinderParameter) par1 ) );
+    QVariant * ptr = new QVariant( obj->viewfinderParameter ( (QCameraViewfinderSettingsControl::ViewfinderParameter) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

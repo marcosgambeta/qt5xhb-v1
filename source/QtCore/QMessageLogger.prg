@@ -65,7 +65,7 @@ void QMessageLogger_new2 ()
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
   const char * par3 = hb_parc(3);
-  QMessageLogger * o = new QMessageLogger (  (const char *) par1, par2,  (const char *) par3 );
+  QMessageLogger * o = new QMessageLogger ( (const char *) par1, par2, (const char *) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -78,7 +78,7 @@ void QMessageLogger_new3 ()
   int par2 = hb_parni(2);
   const char * par3 = hb_parc(3);
   const char * par4 = hb_parc(4);
-  QMessageLogger * o = new QMessageLogger (  (const char *) par1, par2,  (const char *) par3,  (const char *) par4 );
+  QMessageLogger * o = new QMessageLogger ( (const char *) par1, par2, (const char *) par3, (const char *) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

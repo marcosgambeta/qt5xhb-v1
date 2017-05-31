@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) par1 );
+      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) par1 );
     }
     else
     {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QSql::Tables : hb_parni(1);
-      QStringList strl = obj->tables (  (QSql::TableType) par1 );
+      QStringList strl = obj->tables ( (QSql::TableType) par1 );
       _qt5xhb_convert_qstringlist_to_array ( strl );
     }
     else

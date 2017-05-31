@@ -84,7 +84,7 @@ explicit QSqlField ( const QString & fieldName = QString(), QVariant::Type type 
 void QSqlField_new1 ()
 {
   int par2 = ISNIL(2)? (int) QVariant::Invalid : hb_parni(2);
-  QSqlField * o = new QSqlField ( OPQSTRING(1,QString()),  (QVariant::Type) par2 );
+  QSqlField * o = new QSqlField ( OPQSTRING(1,QString()), (QVariant::Type) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setRequiredStatus (  (QSqlField::RequiredStatus) par1 );
+      obj->setRequiredStatus ( (QSqlField::RequiredStatus) par1 );
     }
     else
     {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setType (  (QVariant::Type) par1 );
+      obj->setType ( (QVariant::Type) par1 );
     }
     else
     {

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isWhiteBalanceModeSupported (  (QCameraImageProcessing::WhiteBalanceMode) par1 ) );
+    hb_retl( obj->isWhiteBalanceModeSupported ( (QCameraImageProcessing::WhiteBalanceMode) par1 ) );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setWhiteBalanceMode (  (QCameraImageProcessing::WhiteBalanceMode) par1 );
+    obj->setWhiteBalanceMode ( (QCameraImageProcessing::WhiteBalanceMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

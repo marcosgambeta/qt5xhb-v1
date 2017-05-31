@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
   {
     int par1 = hb_parni(1);
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    QChildEvent * o = new QChildEvent (  (QEvent::Type) par1, par2 );
+    QChildEvent * o = new QChildEvent ( (QEvent::Type) par1, par2 );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

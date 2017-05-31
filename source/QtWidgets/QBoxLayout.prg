@@ -83,7 +83,7 @@ QBoxLayout ( Direction dir, QWidget * parent = 0 )
 HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 {
   int par1 = hb_parni(1);
-  QBoxLayout * o = new QBoxLayout (  (QBoxLayout::Direction) par1, OPQWIDGET(2,0) );
+  QBoxLayout * o = new QBoxLayout ( (QBoxLayout::Direction) par1, OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    obj->addWidget ( PQWIDGET(1), OPINT(2,0),  (Qt::Alignment) par3 );
+    obj->addWidget ( PQWIDGET(1), OPINT(2,0), (Qt::Alignment) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
   if( obj )
   {
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0),  (Qt::Alignment) par4 );
+    obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0), (Qt::Alignment) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDirection (  (QBoxLayout::Direction) par1 );
+    obj->setDirection ( (QBoxLayout::Direction) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

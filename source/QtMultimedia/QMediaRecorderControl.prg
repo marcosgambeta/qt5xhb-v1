@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setState (  (QMediaRecorder::State) par1 );
+    obj->setState ( (QMediaRecorder::State) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

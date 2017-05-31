@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sortByColumn ( PINT(1),  (Qt::SortOrder) par2 );
+      obj->sortByColumn ( PINT(1), (Qt::SortOrder) par2 );
     }
     else
     {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTreeView::EnsureVisible : hb_parni(2);
-    obj->scrollTo ( *PQMODELINDEX(1),  (QTreeView::ScrollHint) par2 );
+    obj->scrollTo ( *PQMODELINDEX(1), (QTreeView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
     if( ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
       int par2 = hb_parni(2);
-      hb_retc( RQSTRING( obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, PINT(3), (int) ISNIL(4)? 0 : hb_parni(4) ) ) );
+      hb_retc( RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) par2, PINT(3), (int) ISNIL(4)? 0 : hb_parni(4) ) ) );
     }
     else
     {

@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD1 )
   {
     QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    obj->load ( *par1,  (const char *) par2 );
+    obj->load ( *par1, (const char *) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD2 )
   {
     QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    obj->load ( *par1,  (const char *) par2 );
+    obj->load ( *par1, (const char *) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD3 )
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    obj->load ( par1,  (const char *) par2 );
+    obj->load ( par1, (const char *) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE1 )
   {
     QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( *par1,  (const char *) par2 ) );
+    hb_retl( obj->save ( *par1, (const char *) par2 ) );
   }
 }
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE2 )
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2 ) );
+    hb_retl( obj->save ( par1, (const char *) par2 ) );
   }
 }
 
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETPLAYBACKMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPlaybackMode (  (QMediaPlaylist::PlaybackMode) par1 );
+    obj->setPlaybackMode ( (QMediaPlaylist::PlaybackMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

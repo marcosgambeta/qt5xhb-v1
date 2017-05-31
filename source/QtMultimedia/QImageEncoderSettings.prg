@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setQuality (  (QMultimedia::EncodingQuality) par1 );
+    obj->setQuality ( (QMultimedia::EncodingQuality) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

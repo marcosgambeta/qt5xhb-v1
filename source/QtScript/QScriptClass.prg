@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
   {
     int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->extension (  (QScriptClass::Extension) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->extension ( (QScriptClass::Extension) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY )
     QScriptString * par2 = (QScriptString *) _qt5xhb_itemGetPtr(2);
     int par3 = hb_parni(3);
     uint * par4 = (uint *) _qt5xhb_itemGetPtr(4);
-    hb_retni( obj->queryProperty ( *par1, *par2,  (QScriptClass::QueryFlags) par3, par4 ) );
+    hb_retni( obj->queryProperty ( *par1, *par2, (QScriptClass::QueryFlags) par3, par4 ) );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QScriptClass::Extension) par1 ) );
+    hb_retl( obj->supportsExtension ( (QScriptClass::Extension) par1 ) );
   }
 }
 

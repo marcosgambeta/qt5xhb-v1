@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QWEBSOCKET_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   int par2 = ISNIL(2)? (int) QWebSocketProtocol::VersionLatest : hb_parni(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QWebSocket * o = new QWebSocket ( OPQSTRING(1,QString()),  (QWebSocketProtocol::Version) par2, par3 );
+  QWebSocket * o = new QWebSocket ( OPQSTRING(1,QString()), (QWebSocketProtocol::Version) par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPAUSEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPauseMode (  (QAbstractSocket::PauseModes) par1 );
+    obj->setPauseMode ( (QAbstractSocket::PauseModes) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QWebSocketProtocol::CloseCodeNormal : hb_parni(1);
-    obj->close (  (QWebSocketProtocol::CloseCode) par1, OPQSTRING(2,QString()) );
+    obj->close ( (QWebSocketProtocol::CloseCode) par1, OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

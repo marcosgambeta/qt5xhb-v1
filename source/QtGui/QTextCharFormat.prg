@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontCapitalization (  (QFont::Capitalization) par1 );
+    obj->setFontCapitalization ( (QFont::Capitalization) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACINGTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontLetterSpacingType (  (QFont::SpacingType) par1 );
+    obj->setFontLetterSpacingType ( (QFont::SpacingType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QFont::PreferDefault : hb_parni(2);
-    obj->setFontStyleHint (  (QFont::StyleHint) par1,  (QFont::StyleStrategy) par2 );
+    obj->setFontStyleHint ( (QFont::StyleHint) par1, (QFont::StyleStrategy) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontStyleStrategy (  (QFont::StyleStrategy) par1 );
+    obj->setFontStyleStrategy ( (QFont::StyleStrategy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFontHintingPreference (  (QFont::HintingPreference) par1 );
+    obj->setFontHintingPreference ( (QFont::HintingPreference) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setUnderlineStyle (  (QTextCharFormat::UnderlineStyle) par1 );
+    obj->setUnderlineStyle ( (QTextCharFormat::UnderlineStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setVerticalAlignment (  (QTextCharFormat::VerticalAlignment) par1 );
+    obj->setVerticalAlignment ( (QTextCharFormat::VerticalAlignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

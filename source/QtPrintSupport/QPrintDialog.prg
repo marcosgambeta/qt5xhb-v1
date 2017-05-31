@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
     {
       QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
       const char * par2 = hb_parc(2);
-      obj->open ( par1,  (const char *) par2 );
+      obj->open ( par1, (const char *) par2 );
     }
     else
     {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
     if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
       int par1 = hb_parni(1);
-      obj->setOption (  (QPrintDialog::PrintDialogOption) par1, PBOOL(2) );
+      obj->setOption ( (QPrintDialog::PrintDialogOption) par1, PBOOL(2) );
     }
     else
     {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOptions (  (QPrintDialog::PrintDialogOptions) par1 );
+      obj->setOptions ( (QPrintDialog::PrintDialogOptions) par1 );
     }
     else
     {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->testOption (  (QPrintDialog::PrintDialogOption) par1 ) );
+      hb_retl( obj->testOption ( (QPrintDialog::PrintDialogOption) par1 ) );
     }
     else
     {

@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setBlurHints (  (QGraphicsBlurEffect::BlurHints) par1 );
+    obj->setBlurHints ( (QGraphicsBlurEffect::BlurHints) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

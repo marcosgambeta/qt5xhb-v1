@@ -87,7 +87,7 @@ QKeySequence ( const QString & key, SequenceFormat format )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
 {
   int par2 = hb_parni(2);
-  QKeySequence * o = new QKeySequence ( PQSTRING(1),  (QKeySequence::SequenceFormat) par2 );
+  QKeySequence * o = new QKeySequence ( PQSTRING(1), (QKeySequence::SequenceFormat) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -120,7 +120,7 @@ QKeySequence ( StandardKey key )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
 {
   int par1 = hb_parni(1);
-  QKeySequence * o = new QKeySequence (  (QKeySequence::StandardKey) par1 );
+  QKeySequence * o = new QKeySequence ( (QKeySequence::StandardKey) par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -236,7 +236,7 @@ static QKeySequence fromString ( const QString & str, SequenceFormat format = Po
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
   int par2 = ISNIL(2)? (int) QKeySequence::PortableText : hb_parni(2);
-  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1),  (QKeySequence::SequenceFormat) par2 ) );
+  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), (QKeySequence::SequenceFormat) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
 
@@ -247,7 +247,7 @@ static QList<QKeySequence> keyBindings ( StandardKey key )
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
   int par1 = hb_parni(1);
-  QList<QKeySequence> list = QKeySequence::keyBindings (  (QKeySequence::StandardKey) par1 );
+  QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) par1 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QKEYSEQUENCE" );

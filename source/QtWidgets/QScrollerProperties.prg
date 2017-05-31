@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QVariant * ptr = new QVariant( obj->scrollMetric (  (QScrollerProperties::ScrollMetric) par1 ) );
+      QVariant * ptr = new QVariant( obj->scrollMetric ( (QScrollerProperties::ScrollMetric) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
     if( ISNUM(1) && ISQVARIANT(2) )
     {
       int par1 = hb_parni(1);
-      obj->setScrollMetric (  (QScrollerProperties::ScrollMetric) par1, *PQVARIANT(2) );
+      obj->setScrollMetric ( (QScrollerProperties::ScrollMetric) par1, *PQVARIANT(2) );
     }
     else
     {

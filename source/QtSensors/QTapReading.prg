@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTapDirection (  (QTapReading::TapDirection) par1 );
+    obj->setTapDirection ( (QTapReading::TapDirection) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPriority (  (QThread::Priority) par1 );
+      obj->setPriority ( (QThread::Priority) par1 );
     }
     else
     {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTHREAD_START )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QThread::InheritPriority : hb_parni(1);
-      obj->start (  (QThread::Priority) par1 );
+      obj->start ( (QThread::Priority) par1 );
     }
     else
     {

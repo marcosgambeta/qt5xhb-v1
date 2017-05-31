@@ -300,7 +300,7 @@ void QXmlStreamWriter_setCodec2 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    obj->setCodec (  (const char *) par1 );
+    obj->setCodec ( (const char *) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

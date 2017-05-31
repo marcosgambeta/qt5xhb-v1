@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSERIALPORT_OPEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+    hb_retl( obj->open ( (QIODevice::OpenMode) par1 ) );
   }
 #endif
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QSerialPort::AllDirections : hb_parni(2);
-    hb_retl( obj->setBaudRate ( (qint32) hb_parni(1),  (QSerialPort::Directions) par2 ) );
+    hb_retl( obj->setBaudRate ( (qint32) hb_parni(1), (QSerialPort::Directions) par2 ) );
   }
 #endif
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QSerialPort::AllDirections : hb_parni(1);
-    hb_retni( obj->baudRate (  (QSerialPort::Directions) par1 ) );
+    hb_retni( obj->baudRate ( (QSerialPort::Directions) par1 ) );
   }
 #endif
 }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATABITS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->setDataBits (  (QSerialPort::DataBits) par1 ) );
+    hb_retl( obj->setDataBits ( (QSerialPort::DataBits) par1 ) );
   }
 #endif
 }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPARITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->setParity (  (QSerialPort::Parity) par1 ) );
+    hb_retl( obj->setParity ( (QSerialPort::Parity) par1 ) );
   }
 #endif
 }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETSTOPBITS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->setStopBits (  (QSerialPort::StopBits) par1 ) );
+    hb_retl( obj->setStopBits ( (QSerialPort::StopBits) par1 ) );
   }
 #endif
 }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETFLOWCONTROL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->setFlowControl (  (QSerialPort::FlowControl) par1 ) );
+    hb_retl( obj->setFlowControl ( (QSerialPort::FlowControl) par1 ) );
   }
 #endif
 }
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLEAR )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QSerialPort::AllDirections : hb_parni(1);
-    hb_retl( obj->clear (  (QSerialPort::Directions) par1 ) );
+    hb_retl( obj->clear ( (QSerialPort::Directions) par1 ) );
   }
 #endif
 }
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QSerialPort::IgnorePolicy : hb_parni(1);
-    hb_retl( obj->setDataErrorPolicy (  (QSerialPort::DataErrorPolicy) par1 ) );
+    hb_retl( obj->setDataErrorPolicy ( (QSerialPort::DataErrorPolicy) par1 ) );
   }
 #endif
 }

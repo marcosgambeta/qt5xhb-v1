@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
 {
   QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QQmlEngine::setObjectOwnership ( par1,  (QQmlEngine::ObjectOwnership) par2 );
+  QQmlEngine::setObjectOwnership ( par1, (QQmlEngine::ObjectOwnership) par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

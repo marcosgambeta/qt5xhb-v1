@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
   QAbstractVideoBuffer * par1 = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtr(1);
   QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
-  QVideoFrame * o = new QVideoFrame ( par1, *par2,  (QVideoFrame::PixelFormat) par3 );
+  QVideoFrame * o = new QVideoFrame ( par1, *par2, (QVideoFrame::PixelFormat) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
   QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
-  QVideoFrame * o = new QVideoFrame ( par1, *par2, par3,  (QVideoFrame::PixelFormat) par4 );
+  QVideoFrame * o = new QVideoFrame ( par1, *par2, par3, (QVideoFrame::PixelFormat) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->map (  (QAbstractVideoBuffer::MapMode) par1 ) );
+    hb_retl( obj->map ( (QAbstractVideoBuffer::MapMode) par1 ) );
   }
 }
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFieldType (  (QVideoFrame::FieldType) par1 );
+    obj->setFieldType ( (QVideoFrame::FieldType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -514,7 +514,7 @@ static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
   int par1 = hb_parni(1);
-  hb_retni( QVideoFrame::imageFormatFromPixelFormat (  (QVideoFrame::PixelFormat) par1 ) );
+  hb_retni( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) par1 ) );
 }
 
 
@@ -524,7 +524,7 @@ static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
   int par1 = hb_parni(1);
-  hb_retni( QVideoFrame::pixelFormatFromImageFormat (  (QImage::Format) par1 ) );
+  hb_retni( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) par1 ) );
 }
 
 

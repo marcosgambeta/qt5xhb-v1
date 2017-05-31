@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setMode (  (QLCDNumber::Mode) par1 );
+      obj->setMode ( (QLCDNumber::Mode) par1 );
     }
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setSegmentStyle (  (QLCDNumber::SegmentStyle) par1 );
+      obj->setSegmentStyle ( (QLCDNumber::SegmentStyle) par1 );
     }
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

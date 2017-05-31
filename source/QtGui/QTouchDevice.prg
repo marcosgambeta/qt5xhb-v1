@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setType (  (QTouchDevice::DeviceType) par1 );
+    obj->setType ( (QTouchDevice::DeviceType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCapabilities (  (QTouchDevice::Capabilities) par1 );
+    obj->setCapabilities ( (QTouchDevice::Capabilities) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

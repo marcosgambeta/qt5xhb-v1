@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setShapeMode (  (QGraphicsPixmapItem::ShapeMode) par1 );
+      obj->setShapeMode ( (QGraphicsPixmapItem::ShapeMode) par1 );
     }
     else
     {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setTransformationMode (  (Qt::TransformationMode) par1 );
+      obj->setTransformationMode ( (Qt::TransformationMode) par1 );
     }
     else
     {

@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setCoordinateMode (  (QGradient::CoordinateMode) par1 );
+      obj->setCoordinateMode ( (QGradient::CoordinateMode) par1 );
     }
     else
     {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setSpread (  (QGradient::Spread) par1 );
+      obj->setSpread ( (QGradient::Spread) par1 );
     }
     else
     {

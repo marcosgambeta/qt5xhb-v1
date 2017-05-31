@@ -67,7 +67,7 @@ void QTextDecoder_new2 ()
 {
   const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QTextDecoder * o = new QTextDecoder ( par1,  (QTextCodec::ConversionFlags) par2 );
+  QTextDecoder * o = new QTextDecoder ( par1, (QTextCodec::ConversionFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -117,7 +117,7 @@ void QTextDecoder_toUnicode1 ()
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retc( RQSTRING( obj->toUnicode (  (const char *) par1, PINT(2) ) ) );
+    hb_retc( RQSTRING( obj->toUnicode ( (const char *) par1, PINT(2) ) ) );
   }
 }
 

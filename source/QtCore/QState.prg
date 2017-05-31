@@ -77,7 +77,7 @@ void QState_new2 ()
 {
   int par1 = hb_parni(1);
   QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
-  QState * o = new QState (  (QState::ChildMode) par1, par2 );
+  QState * o = new QState ( (QState::ChildMode) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -145,7 +145,7 @@ void QState_addTransition2 ()
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     const char * par2 = hb_parc(2);
     QAbstractState * par3 = (QAbstractState *) _qt5xhb_itemGetPtr(3);
-    QSignalTransition * ptr = obj->addTransition ( par1,  (const char *) par2, par3 );
+    QSignalTransition * ptr = obj->addTransition ( par1, (const char *) par2, par3 );
     _qt5xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
   }
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
       QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
       const char * par2 = hb_parc(2);
       QVariant * par3 = (QVariant *) _qt5xhb_itemGetPtr(3);
-      obj->assignProperty ( par1,  (const char *) par2, *par3 );
+      obj->assignProperty ( par1, (const char *) par2, *par3 );
     }
     else
     {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setChildMode (  (QState::ChildMode) par1 );
+      obj->setChildMode ( (QState::ChildMode) par1 );
     }
     else
     {

@@ -86,7 +86,7 @@ QBrush ( Qt::BrushStyle style )
 void QBrush_new2 ()
 {
   int par1 = hb_parni(1);
-  QBrush * o = new QBrush (  (Qt::BrushStyle) par1 );
+  QBrush * o = new QBrush ( (Qt::BrushStyle) par1 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -97,7 +97,7 @@ void QBrush_new3 ()
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
-  QBrush * o = new QBrush ( par1,  (Qt::BrushStyle) par2 );
+  QBrush * o = new QBrush ( par1, (Qt::BrushStyle) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -108,7 +108,7 @@ void QBrush_new4 ()
 {
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
-  QBrush * o = new QBrush (  (Qt::GlobalColor) par1,  (Qt::BrushStyle) par2 );
+  QBrush * o = new QBrush ( (Qt::GlobalColor) par1, (Qt::BrushStyle) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -130,7 +130,7 @@ void QBrush_new6 ()
 {
   int par1 = hb_parni(1);
   QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  QBrush * o = new QBrush (  (Qt::GlobalColor) par1, *par2 );
+  QBrush * o = new QBrush ( (Qt::GlobalColor) par1, *par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -345,7 +345,7 @@ void QBrush_setColor2 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setColor (  (Qt::GlobalColor) par1 );
+    obj->setColor ( (Qt::GlobalColor) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QBRUSH_SETSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setStyle (  (Qt::BrushStyle) par1 );
+      obj->setStyle ( (Qt::BrushStyle) par1 );
     }
     else
     {

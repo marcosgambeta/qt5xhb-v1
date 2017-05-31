@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOrientation (  (Qt::Orientation) par1 );
+    obj->setOrientation ( (Qt::Orientation) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerAction (  (QAbstractSlider::SliderAction) par1 );
+    obj->triggerAction ( (QAbstractSlider::SliderAction) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

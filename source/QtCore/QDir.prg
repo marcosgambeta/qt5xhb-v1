@@ -133,7 +133,7 @@ void QDir_new3 ()
 {
   int par3 = ISNIL(3)? (int) QDir::Name | QDir::IgnoreCase : hb_parni(3);
   int par4 = ISNIL(4)? (int) QDir::AllEntries : hb_parni(4);
-  QDir * o = new QDir ( PQSTRING(1), PQSTRING(2),  (QDir::SortFlags) par3,  (QDir::Filters) par4 );
+  QDir * o = new QDir ( PQSTRING(1), PQSTRING(2), (QDir::SortFlags) par3, (QDir::Filters) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -294,7 +294,7 @@ void QDir_entryInfoList1 ()
   {
     int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1),  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
+    QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QFILEINFO" );
@@ -340,7 +340,7 @@ void QDir_entryInfoList2 ()
   {
     int par1 = ISNIL(1)? (int) QDir::NoFilter : hb_parni(1);
     int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
-    QFileInfoList list = obj->entryInfoList (  (QDir::Filters) par1,  (QDir::SortFlags) par2 );
+    QFileInfoList list = obj->entryInfoList ( (QDir::Filters) par1, (QDir::SortFlags) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QFILEINFO" );
@@ -405,7 +405,7 @@ void QDir_entryList1 ()
   {
     int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    QStringList strl = obj->entryList ( PQSTRINGLIST(1),  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
+    QStringList strl = obj->entryList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -421,7 +421,7 @@ void QDir_entryList2 ()
   {
     int par1 = ISNIL(1)? (int) QDir::NoFilter : hb_parni(1);
     int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
-    QStringList strl = obj->entryList (  (QDir::Filters) par1,  (QDir::SortFlags) par2 );
+    QStringList strl = obj->entryList ( (QDir::Filters) par1, (QDir::SortFlags) par2 );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 }
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QDIR_SETFILTER )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setFilter (  (QDir::Filters) par1 );
+      obj->setFilter ( (QDir::Filters) par1 );
     }
     else
     {
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QDIR_SETSORTING )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setSorting (  (QDir::SortFlags) par1 );
+      obj->setSorting ( (QDir::SortFlags) par1 );
     }
     else
     {

@@ -55,7 +55,7 @@ void QTileRules_new1 ()
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  QTileRules * o = new QTileRules (  (Qt::TileRule) par1,  (Qt::TileRule) par2 );
+  QTileRules * o = new QTileRules ( (Qt::TileRule) par1, (Qt::TileRule) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -65,7 +65,7 @@ QTileRules(Qt::TileRule rule = Qt::StretchTile)
 void QTileRules_new2 ()
 {
   int par1 = ISNIL(1)? (int) Qt::StretchTile : hb_parni(1);
-  QTileRules * o = new QTileRules (  (Qt::TileRule) par1 );
+  QTileRules * o = new QTileRules ( (Qt::TileRule) par1 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

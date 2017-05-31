@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW1 )
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   const QGLWidget * par2 = ISNIL(2)? 0 : (const QGLWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QGLWidget * o = new QGLWidget ( par1, par2,  (Qt::WindowFlags) par3 );
+  QGLWidget * o = new QGLWidget ( par1, par2, (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW2 )
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QGLWidget * o = new QGLWidget ( par1, par2, par3,  (Qt::WindowFlags) par4 );
+  QGLWidget * o = new QGLWidget ( par1, par2, par3, (Qt::WindowFlags) par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW3 )
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QGLWidget * o = new QGLWidget ( *par1, par2, par3,  (Qt::WindowFlags) par4 );
+  QGLWidget * o = new QGLWidget ( *par1, par2, par3, (Qt::WindowFlags) par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE3 )
   {
     QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     int par4 = hb_parni(4);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (GLint) hb_parni(3),  (QGLContext::BindOptions) par4 ) );
+    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE4 )
   {
     QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
     int par4 = hb_parni(4);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (GLint) hb_parni(3),  (QGLContext::BindOptions) par4 ) );
+    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
   }
 }
 

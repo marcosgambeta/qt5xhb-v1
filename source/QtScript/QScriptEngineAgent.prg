@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
   {
     int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->extension (  (QScriptEngineAgent::Extension) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->extension ( (QScriptEngineAgent::Extension) par1, par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QScriptEngineAgent::Extension) par1 ) );
+    hb_retl( obj->supportsExtension ( (QScriptEngineAgent::Extension) par1 ) );
   }
 }
 

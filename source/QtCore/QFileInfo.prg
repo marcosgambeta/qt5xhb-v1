@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->permission (  (QFile::Permissions) par1 ) );
+      hb_retl( obj->permission ( (QFile::Permissions) par1 ) );
     }
     else
     {

@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
     if( ISQWIDGET(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      QGraphicsProxyWidget * ptr = obj->addWidget ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
+      QGraphicsProxyWidget * ptr = obj->addWidget ( PQWIDGET(1), (Qt::WindowFlags) par2 );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -732,7 +732,7 @@ void QGraphicsScene_invalidate1 ()
   if( obj )
   {
     int par5 = ISNIL(5)? (int) QGraphicsScene::AllLayers : hb_parni(5);
-    obj->invalidate ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (QGraphicsScene::SceneLayers) par5 );
+    obj->invalidate ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (QGraphicsScene::SceneLayers) par5 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -749,7 +749,7 @@ void QGraphicsScene_invalidate2 ()
   {
     QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QGraphicsScene::AllLayers : hb_parni(2);
-    obj->invalidate ( par1,  (QGraphicsScene::SceneLayers) par2 );
+    obj->invalidate ( par1, (QGraphicsScene::SceneLayers) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
       QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
       QRectF par3 = ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3);
       int par4 = ISNIL(4)? (int) Qt::KeepAspectRatio : hb_parni(4);
-      obj->render ( par1, par2, par3,  (Qt::AspectRatioMode) par4 );
+      obj->render ( par1, par2, par3, (Qt::AspectRatioMode) par4 );
     }
     else
     {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUS )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) Qt::OtherFocusReason : hb_parni(1);
-      obj->setFocus (  (Qt::FocusReason) par1 );
+      obj->setFocus ( (Qt::FocusReason) par1 );
     }
     else
     {
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
     {
       QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::OtherFocusReason : hb_parni(2);
-      obj->setFocusItem ( par1,  (Qt::FocusReason) par2 );
+      obj->setFocusItem ( par1, (Qt::FocusReason) par2 );
     }
     else
     {
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETITEMINDEXMETHOD )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setItemIndexMethod (  (QGraphicsScene::ItemIndexMethod) par1 );
+      obj->setItemIndexMethod ( (QGraphicsScene::ItemIndexMethod) par1 );
     }
     else
     {
@@ -1313,7 +1313,7 @@ void QGraphicsScene_setSelectionArea2 ()
     QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     QTransform * par3 = (QTransform *) _qt5xhb_itemGetPtr(3);
-    obj->setSelectionArea ( *par1,  (Qt::ItemSelectionMode) par2, *par3 );
+    obj->setSelectionArea ( *par1, (Qt::ItemSelectionMode) par2, *par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

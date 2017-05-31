@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD2 )
     QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
     QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
-    obj->load ( *par1,  (QNetworkAccessManager::Operation) par2, par3 );
+    obj->load ( *par1, (QNetworkAccessManager::Operation) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER3 )
     QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     QRegion par3 = ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3);
-    obj->render ( par1,  (QWebFrame::RenderLayer) par2, par3 );
+    obj->render ( par1, (QWebFrame::RenderLayer) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QRect * ptr = new QRect( obj->scrollBarGeometry (  (Qt::Orientation) par1 ) );
+    QRect * ptr = new QRect( obj->scrollBarGeometry ( (Qt::Orientation) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarMaximum (  (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarMaximum ( (Qt::Orientation) par1 ) );
   }
 }
 
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarMinimum (  (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarMinimum ( (Qt::Orientation) par1 ) );
   }
 }
 
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarPolicy (  (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarPolicy ( (Qt::Orientation) par1 ) );
   }
 }
 
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarValue (  (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarValue ( (Qt::Orientation) par1 ) );
   }
 }
 
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    obj->setScrollBarPolicy (  (Qt::Orientation) par1,  (Qt::ScrollBarPolicy) par2 );
+    obj->setScrollBarPolicy ( (Qt::Orientation) par1, (Qt::ScrollBarPolicy) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setScrollBarValue (  (Qt::Orientation) par1, PINT(2) );
+    obj->setScrollBarValue ( (Qt::Orientation) par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

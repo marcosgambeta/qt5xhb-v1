@@ -84,7 +84,7 @@ void QGraphicsLinearLayout_new2 ()
 {
   int par1 = hb_parni(1);
   QGraphicsLayoutItem * par2 = ISNIL(2)? 0 : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(2);
-  QGraphicsLinearLayout * o = new QGraphicsLinearLayout (  (Qt::Orientation) par1, par2 );
+  QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( (Qt::Orientation) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETALIGNMENT )
     {
       QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
-      obj->setAlignment ( par1,  (Qt::Alignment) par2 );
+      obj->setAlignment ( par1, (Qt::Alignment) par2 );
     }
     else
     {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setOrientation (  (Qt::Orientation) par1 );
+      obj->setOrientation ( (Qt::Orientation) par1 );
     }
     else
     {
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
     {
       int par1 = hb_parni(1);
       QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2);
-      QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
+      QSizeF * ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) par1, par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
     }
     else

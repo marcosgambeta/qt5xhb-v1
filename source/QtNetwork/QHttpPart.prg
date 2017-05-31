@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QHTTPPART_SETHEADER )
   {
     int par1 = hb_parni(1);
     QVariant * par2 = (QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->setHeader (  (QNetworkRequest::KnownHeaders) par1, *par2 );
+    obj->setHeader ( (QNetworkRequest::KnownHeaders) par1, *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setByteOrder (  (QAudioFormat::Endian) par1 );
+    obj->setByteOrder ( (QAudioFormat::Endian) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSampleType (  (QAudioFormat::SampleType) par1 );
+    obj->setSampleType ( (QAudioFormat::SampleType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

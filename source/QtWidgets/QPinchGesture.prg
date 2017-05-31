@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setChangeFlags (  (QPinchGesture::ChangeFlags) par1 );
+    obj->setChangeFlags ( (QPinchGesture::ChangeFlags) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTotalChangeFlags (  (QPinchGesture::ChangeFlags) par1 );
+    obj->setTotalChangeFlags ( (QPinchGesture::ChangeFlags) par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

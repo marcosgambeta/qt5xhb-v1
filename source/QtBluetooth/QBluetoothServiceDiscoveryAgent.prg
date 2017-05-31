@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_START )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QBluetoothServiceDiscoveryAgent::MinimalDiscovery : hb_parni(1);
-      obj->start (  (QBluetoothServiceDiscoveryAgent::DiscoveryMode) par1 );
+      obj->start ( (QBluetoothServiceDiscoveryAgent::DiscoveryMode) par1 );
     }
     else
     {

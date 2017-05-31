@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAction * ptr = obj->pageAction (  (QWebEnginePage::WebAction) par1 );
+    QAction * ptr = obj->pageAction ( (QWebEnginePage::WebAction) par1 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 #endif
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerPageAction (  (QWebEnginePage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
+    obj->triggerPageAction ( (QWebEnginePage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_FINDTEXT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    obj->findText ( PQSTRING(1),  (QWebEnginePage::FindFlags) par2 );
+    obj->findText ( PQSTRING(1), (QWebEnginePage::FindFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

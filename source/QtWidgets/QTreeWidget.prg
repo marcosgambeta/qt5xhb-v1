@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM3 )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par3 = hb_parni(3);
-    obj->setCurrentItem ( par1, PINT(2),  (QItemSelectionModel::SelectionFlags) par3 );
+    obj->setCurrentItem ( par1, PINT(2), (QItemSelectionModel::SelectionFlags) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sortItems ( PINT(1),  (Qt::SortOrder) par2 );
+      obj->sortItems ( PINT(1), (Qt::SortOrder) par2 );
     }
     else
     {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);
-    obj->scrollToItem ( par1,  (QAbstractItemView::ScrollHint) par2 );
+    obj->scrollToItem ( par1, (QAbstractItemView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QList<QByteArray> list = obj->availableDevices (  (QAudio::Mode) par1 );
+    QList<QByteArray> list = obj->availableDevices ( (QAudio::Mode) par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO )
   {
     QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QAbstractAudioDeviceInfo * ptr = obj->createDeviceInfo ( *par1,  (QAudio::Mode) par2 );
+    QAbstractAudioDeviceInfo * ptr = obj->createDeviceInfo ( *par1, (QAudio::Mode) par2 );
     _qt5xhb_createReturnClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );
   }
 }

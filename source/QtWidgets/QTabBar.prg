@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setElideMode (  (Qt::TextElideMode) par1 );
+    obj->setElideMode ( (Qt::TextElideMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSelectionBehaviorOnRemove (  (QTabBar::SelectionBehavior) par1 );
+    obj->setSelectionBehaviorOnRemove ( (QTabBar::SelectionBehavior) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QTABBAR_SETSHAPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setShape (  (QTabBar::Shape) par1 );
+    obj->setShape ( (QTabBar::Shape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setTabButton ( PINT(1),  (QTabBar::ButtonPosition) par2, PQWIDGET(3) );
+    obj->setTabButton ( PINT(1), (QTabBar::ButtonPosition) par2, PQWIDGET(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      QWidget * ptr = obj->tabButton ( PINT(1),  (QTabBar::ButtonPosition) par2 );
+      QWidget * ptr = obj->tabButton ( PINT(1), (QTabBar::ButtonPosition) par2 );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else

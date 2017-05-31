@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QNetworkCookie::Full : hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->toRawForm (  (QNetworkCookie::RawForm) par1 ) );
+    QByteArray * ptr = new QByteArray( obj->toRawForm ( (QNetworkCookie::RawForm) par1 ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

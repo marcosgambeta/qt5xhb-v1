@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
-    QList<QNetworkConfiguration> list = obj->allConfigurations (  (QNetworkConfiguration::StateFlags) par1 );
+    QList<QNetworkConfiguration> list = obj->allConfigurations ( (QNetworkConfiguration::StateFlags) par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QNETWORKCONFIGURATION" );

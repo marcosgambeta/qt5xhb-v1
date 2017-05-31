@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QMediaPlayer * o = new QMediaPlayer ( par1,  (QMediaPlayer::Flags) par2 );
+  QMediaPlayer * o = new QMediaPlayer ( par1, (QMediaPlayer::Flags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -604,7 +604,7 @@ static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const Q
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  hb_retni( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()),  (QMediaPlayer::Flags) par3 ) );
+  hb_retni( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), (QMediaPlayer::Flags) par3 ) );
 }
 
 
@@ -614,7 +614,7 @@ static QStringList supportedMimeTypes(Flags flags = 0) (deprecated)
 HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
 {
   int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
-  QStringList strl = QMediaPlayer::supportedMimeTypes (  (QMediaPlayer::Flags) par1 );
+  QStringList strl = QMediaPlayer::supportedMimeTypes ( (QMediaPlayer::Flags) par1 );
   _qt5xhb_convert_qstringlist_to_array ( strl );
 }
 

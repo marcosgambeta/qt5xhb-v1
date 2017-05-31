@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_OPENGL
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QOpenGLWidget * o = new QOpenGLWidget ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QOpenGLWidget * o = new QOpenGLWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 #endif

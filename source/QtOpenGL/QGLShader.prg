@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGLSHADER_NEW1 )
 {
   int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QGLShader * o = new QGLShader (  (QGLShader::ShaderType) par1, par2 );
+  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) par1, par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGLSHADER_NEW2 )
   int par1 = hb_parni(1);
   QGLContext * par2 = (QGLContext *) _qt5xhb_itemGetPtr(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QGLShader * o = new QGLShader (  (QGLShader::ShaderType) par1, par2, par3 );
+  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) par1, par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retl( obj->compileSourceCode (  (const char *) par1 ) );
+    hb_retl( obj->compileSourceCode ( (const char *) par1 ) );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
 {
   int par1 = hb_parni(1);
   const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QGLShader::hasOpenGLShaders (  (QGLShader::ShaderType) par1, par2 ) );
+  hb_retl( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) par1, par2 ) );
 }
 
 

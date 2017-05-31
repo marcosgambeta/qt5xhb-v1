@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    obj->setPosition ( PINT(1),  (QTextCursor::MoveMode) par2 );
+    obj->setPosition ( PINT(1), (QTextCursor::MoveMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    hb_retl( obj->movePosition (  (QTextCursor::MoveOperation) par1,  (QTextCursor::MoveMode) par2, (int) ISNIL(3)? 1 : hb_parni(3) ) );
+    hb_retl( obj->movePosition ( (QTextCursor::MoveOperation) par1, (QTextCursor::MoveMode) par2, (int) ISNIL(3)? 1 : hb_parni(3) ) );
   }
 }
 
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->select (  (QTextCursor::SelectionType) par1 );
+    obj->select ( (QTextCursor::SelectionType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QTextList * ptr = obj->insertList (  (QTextListFormat::Style) par1 );
+    QTextList * ptr = obj->insertList ( (QTextListFormat::Style) par1 );
     _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QTextList * ptr = obj->createList (  (QTextListFormat::Style) par1 );
+    QTextList * ptr = obj->createList ( (QTextListFormat::Style) par1 );
     _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE1 )
   {
     QTextImageFormat * par1 = (QTextImageFormat *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->insertImage ( *par1,  (QTextFrameFormat::Position) par2 );
+    obj->insertImage ( *par1, (QTextFrameFormat::Position) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

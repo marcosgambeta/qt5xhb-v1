@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setGridStyle (  (Qt::PenStyle) par1 );
+      obj->setGridStyle ( (Qt::PenStyle) par1 );
     }
     else
     {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par2 = hb_parni(2);
-      obj->sortByColumn ( PINT(1),  (Qt::SortOrder) par2 );
+      obj->sortByColumn ( PINT(1), (Qt::SortOrder) par2 );
     }
     else
     {

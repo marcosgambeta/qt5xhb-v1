@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
     if( ISCHAR(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
       int par3 = ISNIL(3)? (int) QSystemTrayIcon::Information : hb_parni(3);
-      obj->showMessage ( PQSTRING(1), PQSTRING(2),  (QSystemTrayIcon::MessageIcon) par3, (int) ISNIL(4)? 10000 : hb_parni(4) );
+      obj->showMessage ( PQSTRING(1), PQSTRING(2), (QSystemTrayIcon::MessageIcon) par3, (int) ISNIL(4)? 10000 : hb_parni(4) );
     }
     else
     {

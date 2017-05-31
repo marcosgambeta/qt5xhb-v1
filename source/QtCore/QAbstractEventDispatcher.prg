@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1 ) );
+      hb_retl( obj->processEvents ( (QEventLoop::ProcessEventsFlags) par1 ) );
     }
     else
     {
@@ -247,7 +247,7 @@ void QAbstractEventDispatcher_registerTimer1 ()
   {
     int par2 = hb_parni(2);
     QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-    hb_retni( obj->registerTimer ( PINT(1),  (Qt::TimerType) par2, par3 ) );
+    hb_retni( obj->registerTimer ( PINT(1), (Qt::TimerType) par2, par3 ) );
   }
 }
 
@@ -262,7 +262,7 @@ void QAbstractEventDispatcher_registerTimer2 ()
   {
     int par3 = hb_parni(3);
     QObject * par4 = (QObject *) _qt5xhb_itemGetPtr(4);
-    obj->registerTimer ( PINT(1), PINT(2),  (Qt::TimerType) par3, par4 );
+    obj->registerTimer ( PINT(1), PINT(2), (Qt::TimerType) par3, par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

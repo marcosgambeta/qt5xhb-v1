@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   int par1 = hb_parni(1);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QGeoRouteReply * o = new QGeoRouteReply (  (QGeoRouteReply::Error) par1, PQSTRING(2), par3 );
+  QGeoRouteReply * o = new QGeoRouteReply ( (QGeoRouteReply::Error) par1, PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETJOINMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setJoinMode (  (QSqlRelationalTableModel::JoinMode) par1 );
+      obj->setJoinMode ( (QSqlRelationalTableModel::JoinMode) par1 );
     }
     else
     {

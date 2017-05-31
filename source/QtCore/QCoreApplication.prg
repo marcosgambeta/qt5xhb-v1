@@ -360,7 +360,7 @@ static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::A
 void QCoreApplication_processEvents1 ()
 {
   int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-  QCoreApplication::processEvents (  (QEventLoop::ProcessEventsFlags) par1 );
+  QCoreApplication::processEvents ( (QEventLoop::ProcessEventsFlags) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -370,7 +370,7 @@ static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 void QCoreApplication_processEvents2 ()
 {
   int par1 = hb_parni(1);
-  QCoreApplication::processEvents (  (QEventLoop::ProcessEventsFlags) par1, PINT(2) );
+  QCoreApplication::processEvents ( (QEventLoop::ProcessEventsFlags) par1, PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
   if( ISNUM(1) && ISOPTLOG(2) )
   {
     int par1 = hb_parni(1);
-    QCoreApplication::setAttribute (  (Qt::ApplicationAttribute) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    QCoreApplication::setAttribute ( (Qt::ApplicationAttribute) par1, (bool) ISNIL(2)? true : hb_parl(2) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
   if( ISNUM(1) )
   {
     int par1 = hb_parni(1);
-    hb_retl( QCoreApplication::testAttribute (  (Qt::ApplicationAttribute) par1 ) );
+    hb_retl( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) par1 ) );
   }
   else
   {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     const char * par1 = hb_parc(1);
     const char * par2 = hb_parc(2);
     const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    hb_retc( RQSTRING( QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) ) );
+    hb_retc( RQSTRING( QCoreApplication::translate ( (const char *) par1, (const char *) par2, (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) ) );
   }
   else
   {

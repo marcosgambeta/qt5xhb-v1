@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setCapitalization (  (QFont::Capitalization) par1 );
+      obj->setCapitalization ( (QFont::Capitalization) par1 );
     }
     else
     {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par1 = hb_parni(1);
-      obj->setLetterSpacing (  (QFont::SpacingType) par1, PQREAL(2) );
+      obj->setLetterSpacing ( (QFont::SpacingType) par1, PQREAL(2) );
     }
     else
     {
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setStyle (  (QFont::Style) par1 );
+      obj->setStyle ( (QFont::Style) par1 );
     }
     else
     {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
     {
       int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) QFont::PreferDefault : hb_parni(2);
-      obj->setStyleHint (  (QFont::StyleHint) par1,  (QFont::StyleStrategy) par2 );
+      obj->setStyleHint ( (QFont::StyleHint) par1, (QFont::StyleStrategy) par2 );
     }
     else
     {
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLESTRATEGY )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setStyleStrategy (  (QFont::StyleStrategy) par1 );
+      obj->setStyleStrategy ( (QFont::StyleStrategy) par1 );
     }
     else
     {

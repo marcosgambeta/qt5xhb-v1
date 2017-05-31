@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
   {
     QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->containsPoint ( *par1,  (Qt::FillRule) par2 ) );
+    hb_retl( obj->containsPoint ( *par1, (Qt::FillRule) par2 ) );
   }
 }
 

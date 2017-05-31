@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
+    hb_retl( obj->findText ( PQSTRING(1), (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD2 )
     QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
     QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
-    obj->load ( *par1,  (QNetworkAccessManager::Operation) par2, par3 );
+    obj->load ( *par1, (QNetworkAccessManager::Operation) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAction * ptr = obj->pageAction (  (QWebPage::WebAction) par1 );
+    QAction * ptr = obj->pageAction ( (QWebPage::WebAction) par1 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setRenderHint ( (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHints (  (QPainter::RenderHints) par1 );
+    obj->setRenderHints ( (QPainter::RenderHints) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerPageAction (  (QWebPage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
+    obj->triggerPageAction ( (QWebPage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

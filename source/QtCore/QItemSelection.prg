@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
     {
       QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
-      obj->merge ( *par1,  (QItemSelectionModel::SelectionFlags) par2 );
+      obj->merge ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
     }
     else
     {
