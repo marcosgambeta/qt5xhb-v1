@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->data ( (int) ISNIL(1)? Qt::UserRole+1 : hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::UserRole+1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setData ( *PQVARIANT(1), (int) ISNIL(2)? Qt::UserRole+1 : hb_parni(2) );
+    obj->setData ( *PQVARIANT(1), OPINT(2,Qt::UserRole+1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStandardItem * ptr = obj->child ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    QStandardItem * ptr = obj->child ( PINT(1), OPINT(2,0) );
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStandardItem * ptr = obj->takeChild ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    QStandardItem * ptr = obj->takeChild ( PINT(1), OPINT(2,0) );
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }

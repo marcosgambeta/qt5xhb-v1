@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
     if( ISQRUNNABLE(1) && ISOPTNUM(2) )
     {
       QRunnable * par1 = (QRunnable *) _qt5xhb_itemGetPtr(1);
-      obj->start ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+      obj->start ( par1, OPINT(2,0) );
     }
     else
     {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForDone ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+      hb_retl( obj->waitForDone ( OPINT(1,-1) ) );
     }
     else
     {

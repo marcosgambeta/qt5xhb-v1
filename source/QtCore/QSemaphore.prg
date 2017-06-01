@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
   {
     if( ISOPTNUM(1) )
     {
-      obj->acquire ( (int) ISNIL(1)? 1 : hb_parni(1) );
+      obj->acquire ( OPINT(1,1) );
     }
     else
     {
@@ -117,7 +117,7 @@ void QSemaphore_tryAcquire1 ()
 
   if( obj )
   {
-    hb_retl( obj->tryAcquire ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
+    hb_retl( obj->tryAcquire ( OPINT(1,1) ) );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
   {
     if( ISOPTNUM(1) )
     {
-      obj->release ( (int) ISNIL(1)? 1 : hb_parni(1) );
+      obj->release ( OPINT(1,1) );
     }
     else
     {

@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
   {
     QLayoutItem * par1 = (QLayoutItem *) _qt5xhb_itemGetPtr(1);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addItem ( par1, PINT(2), PINT(3), (int) ISNIL(4)? 1 : hb_parni(4), (int) ISNIL(5)? 1 : hb_parni(5), (Qt::Alignment) par6 );
+    obj->addItem ( par1, PINT(2), PINT(3), OPINT(4,1), OPINT(5,1), (Qt::Alignment) par6 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

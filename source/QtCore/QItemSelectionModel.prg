@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
   {
     if( ISOPTNUM(1) )
     {
-      QModelIndexList list = obj->selectedRows ( (int) ISNIL(1)? 0 : hb_parni(1) );
+      QModelIndexList list = obj->selectedRows ( OPINT(1,0) );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
   {
     if( ISOPTNUM(1) )
     {
-      QModelIndexList list = obj->selectedColumns ( (int) ISNIL(1)? 0 : hb_parni(1) );
+      QModelIndexList list = obj->selectedColumns ( OPINT(1,0) );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );

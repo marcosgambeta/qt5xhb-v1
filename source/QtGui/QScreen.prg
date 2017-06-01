@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QSCREEN_GRABWINDOW )
   if( obj )
   {
     WId par1 = (WId) hb_parptr(1);
-    QPixmap * ptr = new QPixmap( obj->grabWindow ( par1, (int) ISNIL(2)? 0 : hb_parni(2), (int) ISNIL(3)? 0 : hb_parni(3), (int) ISNIL(4)? -1 : hb_parni(4), (int) ISNIL(5)? -1 : hb_parni(5) ) );
+    QPixmap * ptr = new QPixmap( obj->grabWindow ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }

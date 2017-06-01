@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SHOWHELP )
   {
     if( ISOPTNUM(1) )
     {
-      obj->showHelp ( (int) ISNIL(1)? 0 : hb_parni(1) );
+      obj->showHelp ( OPINT(1,0) );
     }
     else
     {

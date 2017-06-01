@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForFinished ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+      hb_retl( obj->waitForFinished ( OPINT(1,30000) ) );
     }
     else
     {
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForStarted ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+      hb_retl( obj->waitForStarted ( OPINT(1,30000) ) );
     }
     else
     {
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForBytesWritten ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+      hb_retl( obj->waitForBytesWritten ( OPINT(1,30000) ) );
     }
     else
     {
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForReadyRead ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+      hb_retl( obj->waitForReadyRead ( OPINT(1,30000) ) );
     }
     else
     {

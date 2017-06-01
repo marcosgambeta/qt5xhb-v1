@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
   if( obj )
   {
     QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
-    obj->addLayout ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->addLayout ( par1, OPINT(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
   {
     if( ISOPTNUM(1) )
     {
-      obj->addStretch ( (int) ISNIL(1)? 0 : hb_parni(1) );
+      obj->addStretch ( OPINT(1,0) );
     }
     else
     {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
   if( obj )
   {
     QLayout * par2 = (QLayout *) _qt5xhb_itemGetPtr(2);
-    obj->insertLayout ( PINT(1), par2, (int) ISNIL(3)? 0 : hb_parni(3) );
+    obj->insertLayout ( PINT(1), par2, OPINT(3,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      obj->insertStretch ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+      obj->insertStretch ( PINT(1), OPINT(2,0) );
     }
     else
     {

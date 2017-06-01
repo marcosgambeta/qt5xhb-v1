@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QSERIALPORT_SENDBREAK )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->sendBreak ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+    hb_retl( obj->sendBreak ( OPINT(1,0) ) );
   }
 #endif
 }

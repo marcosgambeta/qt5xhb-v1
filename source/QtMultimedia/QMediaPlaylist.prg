@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nextIndex ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
+    hb_retni( obj->nextIndex ( OPINT(1,1) ) );
   }
 }
 
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->previousIndex ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
+    hb_retni( obj->previousIndex ( OPINT(1,1) ) );
   }
 }
 

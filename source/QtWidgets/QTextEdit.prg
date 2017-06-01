@@ -1663,7 +1663,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
   {
     if( ISOPTNUM(1) )
     {
-      obj->zoomIn ( (int) ISNIL(1)? 1 : hb_parni(1) );
+      obj->zoomIn ( OPINT(1,1) );
     }
     else
     {
@@ -1685,7 +1685,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   {
     if( ISOPTNUM(1) )
     {
-      obj->zoomOut ( (int) ISNIL(1)? 1 : hb_parni(1) );
+      obj->zoomOut ( OPINT(1,1) );
     }
     else
     {

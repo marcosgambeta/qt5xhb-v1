@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::MatchExactly : hb_parni(2);
-    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, (int) ISNIL(3)? 0 : hb_parni(3) );
+    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, OPINT(3,0) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSTANDARDITEM" );
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEM )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStandardItem * ptr = obj->item ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    QStandardItem * ptr = obj->item ( PINT(1), OPINT(2,0) );
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
+    QVariant * ptr = new QVariant( obj->data ( *par1, OPINT(2,Qt::DisplayRole) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETDATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->setData ( *par1, *PQVARIANT(2), (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+    hb_retl( obj->setData ( *par1, *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
 
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
   if( obj )
   {
     int par2 = hb_parni(2);
-    hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *PQVARIANT(3), (int) ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+    hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
 
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEITEM )
   QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStandardItem * ptr = obj->takeItem ( PINT(1), (int) ISNIL(2)? 0 : hb_parni(2) );
+    QStandardItem * ptr = obj->takeItem ( PINT(1), OPINT(2,0) );
     _qt5xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }

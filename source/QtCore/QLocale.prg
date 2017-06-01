@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
     {
       float par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      hb_retc( RQSTRING( obj->toString ( par1, par2, (int) ISNIL(3)? 6 : hb_parni(3) ) ) );
+      hb_retc( RQSTRING( obj->toString ( par1, par2, OPINT(3,6) ) ) );
     }
     else
     {
@@ -1375,7 +1375,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
     {
       double par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      hb_retc( RQSTRING( obj->toString ( par1, par2, (int) ISNIL(3)? 6 : hb_parni(3) ) ) );
+      hb_retc( RQSTRING( obj->toString ( par1, par2, OPINT(3,6) ) ) );
     }
     else
     {

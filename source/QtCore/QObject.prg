@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QOBJECT_TR )
   {
     const char * par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retc( RQSTRING( QObject::tr ( (const char *) par1, (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) ) );
+    hb_retc( RQSTRING( QObject::tr ( (const char *) par1, (const char *) par2, OPINT(3,-1) ) ) );
   }
   else
   {

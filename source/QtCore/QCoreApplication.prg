@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
   if( ISOPTNUM(1) )
   {
-    QCoreApplication::exit ( (int) ISNIL(1)? 0 : hb_parni(1) );
+    QCoreApplication::exit ( OPINT(1,0) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     const char * par1 = hb_parc(1);
     const char * par2 = hb_parc(2);
     const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    hb_retc( RQSTRING( QCoreApplication::translate ( (const char *) par1, (const char *) par2, (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) ) );
+    hb_retc( RQSTRING( QCoreApplication::translate ( (const char *) par1, (const char *) par2, (const char *) par3, OPINT(4,-1) ) ) );
   }
   else
   {

@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
   QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForOpened ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForOpened ( OPINT(1,30000) ) );
   }
 }
 

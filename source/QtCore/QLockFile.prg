@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->tryLock ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+      hb_retl( obj->tryLock ( OPINT(1,0) ) );
     }
     else
     {

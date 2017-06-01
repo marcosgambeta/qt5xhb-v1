@@ -110,7 +110,7 @@ void QRegularExpressionMatch_captured1 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->captured ( (int) ISNIL(1)? 0 : hb_parni(1) ) ) );
+    hb_retc( RQSTRING( obj->captured ( OPINT(1,0) ) ) );
   }
 }
 
@@ -155,7 +155,7 @@ void QRegularExpressionMatch_capturedEnd1 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedEnd ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+    hb_retni( obj->capturedEnd ( OPINT(1,0) ) );
   }
 }
 
@@ -200,7 +200,7 @@ void QRegularExpressionMatch_capturedLength1 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedLength ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+    hb_retni( obj->capturedLength ( OPINT(1,0) ) );
   }
 }
 
@@ -245,7 +245,7 @@ void QRegularExpressionMatch_capturedRef1 ()
 
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->capturedRef ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+    QStringRef * ptr = new QStringRef( obj->capturedRef ( OPINT(1,0) ) );
     _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -292,7 +292,7 @@ void QRegularExpressionMatch_capturedStart1 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedStart ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+    hb_retni( obj->capturedStart ( OPINT(1,0) ) );
   }
 }
 

@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->renderPixmap ( (int) ISNIL(1)? 0 : hb_parni(1), (int) ISNIL(2)? 0 : hb_parni(2), OPBOOL(3,false) ) );
+    QPixmap * ptr = new QPixmap( obj->renderPixmap ( OPINT(1,0), OPINT(2,0), OPBOOL(3,false) ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }

@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       int par5 = ISNIL(5)? (int) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : hb_parni(5);
-      QModelIndexList list = obj->match ( *par1, PINT(2), *PQVARIANT(3), (int) ISNIL(4)? 1 : hb_parni(4), (Qt::MatchFlags) par5 );
+      QModelIndexList list = obj->match ( *par1, PINT(2), *PQVARIANT(3), OPINT(4,1), (Qt::MatchFlags) par5 );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );

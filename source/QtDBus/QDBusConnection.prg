@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK1 )
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
     const char * par4 = hb_parc(4);
-    hb_retl( obj->callWithCallback ( par2, (const char *) par3, (const char *) par4, (int) ISNIL(5)? -1 : hb_parni(5) ) );
+    hb_retl( obj->callWithCallback ( par2, (const char *) par3, (const char *) par4, OPINT(5,-1) ) );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK2 )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
     const char * par3 = hb_parc(3);
-    hb_retl( obj->callWithCallback ( par2, (const char *) par3, (int) ISNIL(4)? -1 : hb_parni(4) ) );
+    hb_retl( obj->callWithCallback ( par2, (const char *) par3, OPINT(4,-1) ) );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QDBus::Block : hb_parni(2);
-    QDBusMessage * ptr = new QDBusMessage( obj->call ( (QDBus::CallMode) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->call ( (QDBus::CallMode) par2, OPINT(3,-1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -275,12 +275,12 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
 /*
 QDBusPendingCall asyncCall(const QDBusMessage &message, int timeout = -1) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
+HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL ) // TODO: implementar parametro 1
 {
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( (int) ISNIL(2)? -1 : hb_parni(2) ) );
+    QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( par1, OPINT(2,-1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
   }
 }

@@ -243,7 +243,7 @@ void QBitArray_fill1 ()
 
   if( obj )
   {
-    hb_retl( obj->fill ( PBOOL(1), (int) ISNIL(2)? -1 : hb_parni(2) ) );
+    hb_retl( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
   }
 }
 

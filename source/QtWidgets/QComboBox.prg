@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      QVariant * ptr = new QVariant( obj->itemData ( PINT(1), (int) ISNIL(2)? Qt::UserRole : hb_parni(2) ) );
+      QVariant * ptr = new QVariant( obj->itemData ( PINT(1), OPINT(2,Qt::UserRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else

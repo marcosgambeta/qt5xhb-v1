@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
   if( ISOPTNUM(1) )
   {
-    QColormap * ptr = new QColormap( QColormap::instance ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+    QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
     _qt5xhb_createReturnClass ( ptr, "QCOLORMAP" );
   }
   else

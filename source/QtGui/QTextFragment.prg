@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QGlyphRun> list = obj->glyphRuns ( (int) ISNIL(1)? -1 : hb_parni(1), (int) ISNIL(2)? -1 : hb_parni(2) );
+    QList<QGlyphRun> list = obj->glyphRuns ( OPINT(1,-1), OPINT(2,-1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGLYPHRUN" );

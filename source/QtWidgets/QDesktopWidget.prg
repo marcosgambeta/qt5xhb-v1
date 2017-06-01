@@ -82,7 +82,7 @@ void QDesktopWidget_availableGeometry1 ()
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->availableGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+    QRect * ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   {
     if( ISOPTNUM(1) )
     {
-      QWidget * ptr = obj->screen ( (int) ISNIL(1)? -1 : hb_parni(1) );
+      QWidget * ptr = obj->screen ( OPINT(1,-1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -210,7 +210,7 @@ void QDesktopWidget_screenGeometry1 ()
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->screenGeometry ( (int) ISNIL(1)? -1 : hb_parni(1) ) );
+    QRect * ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

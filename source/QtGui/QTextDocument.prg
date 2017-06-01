@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND1 )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2), (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
   {
     QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, (int) ISNIL(2)? 0 : hb_parni(2), (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }

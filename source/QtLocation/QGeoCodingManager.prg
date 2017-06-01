@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE2 )
   if( obj )
   {
     QGeoShape par4 = ISNIL(4)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(4);
-    QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), (int) ISNIL(2)? -1 : hb_parni(2), (int) ISNIL(3)? 0 : hb_parni(3), par4 );
+    QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), OPINT(2,-1), OPINT(3,0), par4 );
     _qt5xhb_createReturnClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif

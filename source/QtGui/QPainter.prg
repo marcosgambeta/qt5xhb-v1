@@ -958,7 +958,7 @@ void QPainter_drawImage9 ()
   {
     QImage * par3 = (QImage *) _qt5xhb_itemGetPtr(3);
     int par8 = ISNIL(8)? (int) Qt::AutoColor : hb_parni(8);
-    obj->drawImage ( PINT(1), PINT(2), *par3, (int) ISNIL(4)? 0 : hb_parni(4), (int) ISNIL(5)? 0 : hb_parni(5), (int) ISNIL(6)? -1 : hb_parni(6), (int) ISNIL(7)? -1 : hb_parni(7), (Qt::ImageConversionFlags) par8 );
+    obj->drawImage ( PINT(1), PINT(2), *par3, OPINT(4,0), OPINT(5,0), OPINT(6,-1), OPINT(7,-1), (Qt::ImageConversionFlags) par8 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2452,7 +2452,7 @@ void QPainter_drawTiledPixmap3 ()
   if( obj )
   {
     QPixmap * par5 = (QPixmap *) _qt5xhb_itemGetPtr(5);
-    obj->drawTiledPixmap ( PINT(1), PINT(2), PINT(3), PINT(4), *par5, (int) ISNIL(6)? 0 : hb_parni(6), (int) ISNIL(7)? 0 : hb_parni(7) );
+    obj->drawTiledPixmap ( PINT(1), PINT(2), PINT(3), PINT(4), *par5, OPINT(6,0), OPINT(7,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

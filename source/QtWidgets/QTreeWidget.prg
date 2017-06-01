@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->closePersistentEditor ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->closePersistentEditor ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->editItem ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->editItem ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->openPersistentEditor ( par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->openPersistentEditor ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

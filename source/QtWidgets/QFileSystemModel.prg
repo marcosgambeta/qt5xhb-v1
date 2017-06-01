@@ -244,7 +244,7 @@ void QFileSystemModel_index1 ()
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2) ) );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->myComputer ( (int) ISNIL(1)? Qt::DisplayRole : hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->myComputer ( OPINT(1,Qt::DisplayRole) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

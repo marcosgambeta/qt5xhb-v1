@@ -967,7 +967,7 @@ void QImage_save1 ()
   if( obj )
   {
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( PQSTRING(1), (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    hb_retl( obj->save ( PQSTRING(1), (const char *) par2, OPINT(3,-1) ) );
   }
 }
 
@@ -982,7 +982,7 @@ void QImage_save2 ()
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1, (const char *) par2, (int) ISNIL(3)? -1 : hb_parni(3) ) );
+    hb_retl( obj->save ( par1, (const char *) par2, OPINT(3,-1) ) );
   }
 }
 

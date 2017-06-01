@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
   {
     double par1 = hb_parnd(1);
     double par2 = hb_parnd(2);
-    obj->setRange ( par1, par2, (int) ISNIL(3)? 0 : hb_parni(3) );
+    obj->setRange ( par1, par2, OPINT(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -194,7 +194,7 @@ void QStringMatcher_indexIn1 ()
 
   if( obj )
   {
-    hb_retni( obj->indexIn ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2) ) );
+    hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
   }
 }
 

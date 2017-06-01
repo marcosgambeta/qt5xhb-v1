@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForConnected ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForConnected ( OPINT(1,30000) ) );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForDisconnected ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForDisconnected ( OPINT(1,30000) ) );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForBytesWritten ( OPINT(1,30000) ) );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForReadyRead ( OPINT(1,30000) ) );
   }
 }
 

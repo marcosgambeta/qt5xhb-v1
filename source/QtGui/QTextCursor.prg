@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    hb_retl( obj->movePosition ( (QTextCursor::MoveOperation) par1, (QTextCursor::MoveMode) par2, (int) ISNIL(3)? 1 : hb_parni(3) ) );
+    hb_retl( obj->movePosition ( (QTextCursor::MoveOperation) par1, (QTextCursor::MoveMode) par2, OPINT(3,1) ) );
   }
 }
 

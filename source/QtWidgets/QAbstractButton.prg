@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
   {
     if( ISOPTNUM(1) )
     {
-      obj->animateClick ( (int) ISNIL(1)? 100 : hb_parni(1) );
+      obj->animateClick ( OPINT(1,100) );
     }
     else
     {

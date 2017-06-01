@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
   if( obj )
   {
     bool par1;
-    obj->incubateWhile ( &par1, (int) ISNIL(2)? 0 : hb_parni(2) );
+    obj->incubateWhile ( &par1, OPINT(2,0) );
     hb_storl( par1, 1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

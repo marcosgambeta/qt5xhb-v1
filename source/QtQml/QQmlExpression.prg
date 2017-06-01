@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
   QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSourceLocation ( PQSTRING(1), PINT(2), (int) ISNIL(3)? 0 : hb_parni(3) );
+    obj->setSourceLocation ( PQSTRING(1), PINT(2), OPINT(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

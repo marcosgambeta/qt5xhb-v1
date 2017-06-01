@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->evaluate ( PQSTRING(1), PQSTRING(2), (int) ISNIL(3)? 1 : hb_parni(3) ) );
+    QScriptValue * ptr = new QScriptValue( obj->evaluate ( PQSTRING(1), PQSTRING(2), OPINT(3,1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

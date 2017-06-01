@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
   if( obj )
   {
     QPolygon * par3 = (QPolygon *) _qt5xhb_itemGetPtr(3);
-    obj->putPoints ( PINT(1), PINT(2), *par3, (int) ISNIL(4)? 0 : hb_parni(4) );
+    obj->putPoints ( PINT(1), PINT(2), *par3, OPINT(4,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

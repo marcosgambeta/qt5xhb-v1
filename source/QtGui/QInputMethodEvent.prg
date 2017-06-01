@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setCommitString ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2), (int) ISNIL(3)? 0 : hb_parni(3) );
+    obj->setCommitString ( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

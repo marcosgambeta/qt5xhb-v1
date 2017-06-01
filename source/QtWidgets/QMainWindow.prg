@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
     if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
       QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->restoreState ( *par1, (int) ISNIL(2)? 0 : hb_parni(2) ) );
+      hb_retl( obj->restoreState ( *par1, OPINT(2,0) ) );
     }
     else
     {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
   {
     if( ISOPTNUM(1) )
     {
-      QByteArray * ptr = new QByteArray( obj->saveState ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+      QByteArray * ptr = new QByteArray( obj->saveState ( OPINT(1,0) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
     }
     else

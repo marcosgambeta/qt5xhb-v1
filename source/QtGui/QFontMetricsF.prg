@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
     if( ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
       int par2 = hb_parni(2);
-      hb_retc( RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) par2, PQREAL(3), (int) ISNIL(4)? 0 : hb_parni(4) ) ) );
+      hb_retc( RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) par2, PQREAL(3), OPINT(4,0) ) ) );
     }
     else
     {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
     if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) ) // TODO: implementar parametro 4
     {
       int par4;
-      QSizeF * ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), (int) ISNIL(3)? 0 : hb_parni(3), &par4 ) );
+      QSizeF * ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), OPINT(3,0), &par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
       hb_storni( par4, 4 );
     }

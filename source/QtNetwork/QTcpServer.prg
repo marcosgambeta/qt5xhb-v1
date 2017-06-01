@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
     bool par2;
-    hb_retl( obj->waitForNewConnection ( (int) ISNIL(1)? 0 : hb_parni(1), &par2 ) );
+    hb_retl( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
     hb_storl( par2, 2 );
   }
 }

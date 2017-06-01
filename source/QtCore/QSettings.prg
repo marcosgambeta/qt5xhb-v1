@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      obj->beginWriteArray ( PQSTRING(1), (int) ISNIL(2)? -1 : hb_parni(2) );
+      obj->beginWriteArray ( PQSTRING(1), OPINT(2,-1) );
     }
     else
     {

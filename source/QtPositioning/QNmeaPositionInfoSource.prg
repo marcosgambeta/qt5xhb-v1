@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_REQUESTUPDATE )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->requestUpdate ( (int) ISNIL(1)? 0 : hb_parni(1) );
+    obj->requestUpdate ( OPINT(1,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

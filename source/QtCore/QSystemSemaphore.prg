@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
-      obj->setKey ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2), (QSystemSemaphore::AccessMode) par3 );
+      obj->setKey ( PQSTRING(1), OPINT(2,0), (QSystemSemaphore::AccessMode) par3 );
     }
     else
     {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->release ( (int) ISNIL(1)? 1 : hb_parni(1) ) );
+      hb_retl( obj->release ( OPINT(1,1) ) );
     }
     else
     {

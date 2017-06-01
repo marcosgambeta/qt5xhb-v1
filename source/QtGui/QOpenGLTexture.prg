@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSIZE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setSize ( PINT(1), (int) ISNIL(2)? 1 : hb_parni(2), (int) ISNIL(3)? 1 : hb_parni(3) );
+    obj->setSize ( PINT(1), OPINT(2,1), OPINT(3,1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

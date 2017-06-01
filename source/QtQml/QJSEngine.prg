@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
   QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * ptr = new QJSValue( obj->evaluate ( PQSTRING(1), OPQSTRING(2,QString()), (int) ISNIL(3)? 1 : hb_parni(3) ) );
+    QJSValue * ptr = new QJSValue( obj->evaluate ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }

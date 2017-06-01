@@ -558,7 +558,7 @@ void QGraphicsItem_ensureVisible1 ()
   if( obj )
   {
     QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->ensureVisible ( par1, (int) ISNIL(2)? 50 : hb_parni(2), (int) ISNIL(3)? 50 : hb_parni(3) );
+    obj->ensureVisible ( par1, OPINT(2,50), OPINT(3,50) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -573,7 +573,7 @@ void QGraphicsItem_ensureVisible2 ()
 
   if( obj )
   {
-    obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (int) ISNIL(5)? 50 : hb_parni(5), (int) ISNIL(6)? 50 : hb_parni(6) );
+    obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5,50), OPINT(6,50) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

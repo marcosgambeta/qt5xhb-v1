@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTHREAD_EXIT )
   {
     if( ISOPTNUM(1) )
     {
-      obj->exit ( (int) ISNIL(1)? 0 : hb_parni(1) );
+      obj->exit ( OPINT(1,0) );
     }
     else
     {

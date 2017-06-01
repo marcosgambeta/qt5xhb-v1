@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForConnected ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForConnected ( OPINT(1,30000) ) );
   }
 }
 
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForDisconnected ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForDisconnected ( OPINT(1,30000) ) );
   }
 }
 
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForEncrypted ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForEncrypted ( OPINT(1,30000) ) );
   }
 }
 
@@ -1112,7 +1112,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForBytesWritten ( OPINT(1,30000) ) );
   }
 }
 
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( (int) ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForReadyRead ( OPINT(1,30000) ) );
   }
 }
 

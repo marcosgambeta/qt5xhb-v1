@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retc( RQSTRING( obj->cap ( (int) ISNIL(1)? 0 : hb_parni(1) ) ) );
+      hb_retc( RQSTRING( obj->cap ( OPINT(1,0) ) ) );
     }
     else
     {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      hb_retni( obj->indexIn ( PQSTRING(1), (int) ISNIL(2)? 0 : hb_parni(2), (QRegExp::CaretMode) par3 ) );
+      hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0), (QRegExp::CaretMode) par3 ) );
     }
     else
     {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      hb_retni( obj->lastIndexIn ( PQSTRING(1), (int) ISNIL(2)? -1 : hb_parni(2), (QRegExp::CaretMode) par3 ) );
+      hb_retni( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), (QRegExp::CaretMode) par3 ) );
     }
     else
     {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retni( obj->pos ( (int) ISNIL(1)? 0 : hb_parni(1) ) );
+      hb_retni( obj->pos ( OPINT(1,0) ) );
     }
     else
     {

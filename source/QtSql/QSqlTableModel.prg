@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
     if( ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * ptr = new QVariant( obj->data ( *par1, (int) ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
+      QVariant * ptr = new QVariant( obj->data ( *par1, OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
       QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->setData ( *par1, *PQVARIANT(2), (int) ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
+      hb_retl( obj->setData ( *par1, *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, (int) ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
