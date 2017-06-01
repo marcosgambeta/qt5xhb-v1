@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEHEURISTICMASK )
   {
     if( ISOPTLOG(1) )
     {
-      QBitmap * ptr = new QBitmap( obj->createHeuristicMask ( (bool) ISNIL(1)? true : hb_parl(1) ) );
+      QBitmap * ptr = new QBitmap( obj->createHeuristicMask ( OPBOOL(1,true) ) );
       _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
     }
     else

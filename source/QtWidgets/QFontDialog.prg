@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setOption ( (QFontDialog::FontDialogOption) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setOption ( (QFontDialog::FontDialogOption) par1, OPBOOL(2,true) );
     }
     else
     {

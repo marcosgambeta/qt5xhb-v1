@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QSGTEXTURE_UPDATEBINDOPTIONS )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->updateBindOptions ( (bool) ISNIL(1)? false : hb_parl(1) );
+    obj->updateBindOptions ( OPBOOL(1,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

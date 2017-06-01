@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption ( (QWizard::WizardOption) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setOption ( (QWizard::WizardOption) par1, OPBOOL(2,true) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -790,7 +790,7 @@ static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  QApplication::setEffectEnabled ( (Qt::UIEffect) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+  QApplication::setEffectEnabled ( (Qt::UIEffect) par1, OPBOOL(2,true) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

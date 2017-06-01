@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
   {
     if( ISOPTLOG(1) )
     {
-      QImage * ptr = new QImage( obj->createHeuristicMask ( (bool) ISNIL(1)? true : hb_parl(1) ) );
+      QImage * ptr = new QImage( obj->createHeuristicMask ( OPBOOL(1,true) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QIMAGE_MIRRORED )
   {
     if( ISOPTLOG(1) && ISOPTLOG(2) )
     {
-      QImage * ptr = new QImage( obj->mirrored ( (bool) ISNIL(1)? false : hb_parl(1), (bool) ISNIL(2)? true : hb_parl(2) ) );
+      QImage * ptr = new QImage( obj->mirrored ( OPBOOL(1,false), OPBOOL(2,true) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else

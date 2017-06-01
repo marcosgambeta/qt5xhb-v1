@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
   {
     if( ISOPTLOG(1) )
     {
-      obj->setTristate ( (bool) ISNIL(1)? true : hb_parl(1) );
+      obj->setTristate ( OPBOOL(1,true) );
     }
     else
     {

@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBREAKENABLED )
   QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setBreakEnabled ( (bool) ISNIL(1)? true : hb_parl(1) ) );
+    hb_retl( obj->setBreakEnabled ( OPBOOL(1,true) ) );
   }
 #endif
 }

@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlag ( (QSGNode::Flag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setFlag ( (QSGNode::Flag) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlags ( (QSGNode::Flags) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setFlags ( (QSGNode::Flags) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

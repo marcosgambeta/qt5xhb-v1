@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS2 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->generateMipMaps ( PINT(1), (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->generateMipMaps ( PINT(1), OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

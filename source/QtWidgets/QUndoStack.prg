@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setActive ( (bool) ISNIL(1)? true : hb_parl(1) );
+    obj->setActive ( OPBOOL(1,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

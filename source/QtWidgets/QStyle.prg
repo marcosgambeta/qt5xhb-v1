@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
-    hb_retni( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+    hb_retni( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
   }
   else
   {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
-    hb_retni( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), (bool) ISNIL(5)? false : hb_parl(5) ) );
+    hb_retni( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
   }
   else
   {

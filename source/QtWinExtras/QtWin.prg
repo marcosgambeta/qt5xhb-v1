@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QTWIN_MARKFULLSCREENWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::markFullscreenWindow ( par1, (bool) ISNIL(2)? true : hb_parl(2) );
+  QtWin::markFullscreenWindow ( par1, OPBOOL(2,true) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }

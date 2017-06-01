@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
     if( ISQSQLFIELD(1) && ISOPTLOG(2) )
     {
       QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->formatValue ( *par1, (bool) ISNIL(2)? false : hb_parl(2) ) ) );
+      hb_retc( RQSTRING( obj->formatValue ( *par1, OPBOOL(2,false) ) ) );
     }
     else
     {

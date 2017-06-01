@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   if( ISOPTCHAR(1) && ISOPTLOG(2) )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, (bool) ISNIL(2)? true : hb_parl(2) ) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
     _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
   }
   else

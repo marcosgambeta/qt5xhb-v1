@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOBOOL )
   {
     if( ISOPTLOG(1) )
     {
-      hb_retl( obj->toBool ( (bool) ISNIL(1)? false : hb_parl(1) ) );
+      hb_retl( obj->toBool ( OPBOOL(1,false) ) );
     }
     else
     {

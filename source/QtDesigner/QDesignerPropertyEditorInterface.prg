@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
   {
     if( ISCHAR(1) && ISQVARIANT(2) && ISOPTLOG(3) )
     {
-      obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), (bool) ISNIL(3)? true : hb_parl(3) );
+      obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
     }
     else
     {

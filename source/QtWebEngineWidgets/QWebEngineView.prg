@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerPageAction ( (QWebEnginePage::WebAction) par1, (bool) ISNIL(2)? false : hb_parl(2) );
+    obj->triggerPageAction ( (QWebEnginePage::WebAction) par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

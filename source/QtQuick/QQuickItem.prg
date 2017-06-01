@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlag ( (QQuickItem::Flag) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setFlag ( (QQuickItem::Flag) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

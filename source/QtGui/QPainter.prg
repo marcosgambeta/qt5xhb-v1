@@ -3585,7 +3585,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setRenderHint ( (QPainter::RenderHint) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setRenderHint ( (QPainter::RenderHint) par1, OPBOOL(2,true) );
     }
     else
     {
@@ -3608,7 +3608,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
     if( ISNUM(1) && ISOPTLOG(2) )
     {
       int par1 = hb_parni(1);
-      obj->setRenderHints ( (QPainter::RenderHints) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setRenderHints ( (QPainter::RenderHints) par1, OPBOOL(2,true) );
     }
     else
     {
@@ -3632,7 +3632,7 @@ HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
     if( ISQTRANSFORM(1) && ISOPTLOG(2) )
     {
       QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      obj->setTransform ( *par1, (bool) ISNIL(2)? false : hb_parl(2) );
+      obj->setTransform ( *par1, OPBOOL(2,false) );
     }
     else
     {
@@ -3799,7 +3799,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
     if( ISQTRANSFORM(1) && ISOPTLOG(2) )
     {
       QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      obj->setWorldTransform ( *par1, (bool) ISNIL(2)? false : hb_parl(2) );
+      obj->setWorldTransform ( *par1, OPBOOL(2,false) );
     }
     else
     {

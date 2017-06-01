@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttribute ( (Qt::WidgetAttribute) par1, (bool) ISNIL(2)? true : hb_parl(2) );
+    obj->setAttribute ( (Qt::WidgetAttribute) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      obj->setShortcutAutoRepeat ( PINT(1), (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setShortcutAutoRepeat ( PINT(1), OPBOOL(2,true) );
     }
     else
     {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      obj->setShortcutEnabled ( PINT(1), (bool) ISNIL(2)? true : hb_parl(2) );
+      obj->setShortcutEnabled ( PINT(1), OPBOOL(2,true) );
     }
     else
     {

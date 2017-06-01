@@ -304,7 +304,7 @@ void QRect_contains1 ()
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1, (bool) ISNIL(2)? false : hb_parl(2) ) );
+    hb_retl( obj->contains ( *par1, OPBOOL(2,false) ) );
   }
 }
 
@@ -344,7 +344,7 @@ void QRect_contains4 ()
   if( obj )
   {
     QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1, (bool) ISNIL(2)? false : hb_parl(2) ) );
+    hb_retl( obj->contains ( *par1, OPBOOL(2,false) ) );
   }
 }
 

@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
   {
     if( ISOPTLOG(1) )
     {
-      obj->setOpaqueResize ( (bool) ISNIL(1)? true : hb_parl(1) );
+      obj->setOpaqueResize ( OPBOOL(1,true) );
     }
     else
     {
