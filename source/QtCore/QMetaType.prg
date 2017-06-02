@@ -61,8 +61,7 @@ HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
   if( ISCHAR(1) && ISNUM(1) )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( QMetaType::registerTypedef ( (const char *) par1, PINT(2) ) );
+    hb_retni( QMetaType::registerTypedef ( (const char *) hb_parc(1), PINT(2) ) );
   }
   else
   {
@@ -77,8 +76,7 @@ HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
   if( ISCHAR(1) )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( QMetaType::type ( (const char *) par1 ) );
+    hb_retni( QMetaType::type ( (const char *) hb_parc(1) ) );
   }
   else
   {

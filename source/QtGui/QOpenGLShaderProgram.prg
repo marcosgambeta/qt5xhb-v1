@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    const char * par2 = hb_parc(2);
-    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) par1, (const char *) par2 ) );
+    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) par1, (const char *) hb_parc(2) ) );
   }
 }
 

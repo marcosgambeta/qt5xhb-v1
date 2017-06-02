@@ -347,8 +347,7 @@ static int lookupHost ( const QString & name, QObject * receiver, const char * m
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
   QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  const char * par3 = hb_parc(3);
-  hb_retni( QHostInfo::lookupHost ( PQSTRING(1), par2, (const char *) par3 ) );
+  hb_retni( QHostInfo::lookupHost ( PQSTRING(1), par2, (const char *) hb_parc(3) ) );
 }
 
 

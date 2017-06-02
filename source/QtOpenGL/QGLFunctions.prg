@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par3 = hb_parc(3);
-    obj->glBindAttribLocation ( (GLuint) hb_parni(1), (GLuint) hb_parni(2), (const char *) par3 );
+    obj->glBindAttribLocation ( (GLuint) hb_parni(1), (GLuint) hb_parni(2), (const char *) hb_parc(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -676,8 +675,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par2 = hb_parc(2);
-    hb_retni( obj->glGetAttribLocation ( (GLuint) hb_parni(1), (const char *) par2 ) );
+    hb_retni( obj->glGetAttribLocation ( (GLuint) hb_parni(1), (const char *) hb_parc(2) ) );
   }
 }
 
@@ -829,8 +827,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par2 = hb_parc(2);
-    hb_retni( obj->glGetUniformLocation ( (GLuint) hb_parni(1), (const char *) par2 ) );
+    hb_retni( obj->glGetUniformLocation ( (GLuint) hb_parni(1), (const char *) hb_parc(2) ) );
   }
 }
 

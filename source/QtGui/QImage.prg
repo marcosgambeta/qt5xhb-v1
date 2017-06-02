@@ -156,9 +156,8 @@ QImage ( const char * fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
-  const char * par1 = hb_parc(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * o = new QImage ( (const char *) par1, (const char *) par2 );
+  QImage * o = new QImage ( (const char *) hb_parc(1), (const char *) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -747,8 +746,7 @@ void QImage_load2 ()
   if( obj )
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = hb_parc(2);
-    hb_retl( obj->load ( par1, (const char *) par2 ) );
+    hb_retl( obj->load ( par1, (const char *) hb_parc(2) ) );
   }
 }
 

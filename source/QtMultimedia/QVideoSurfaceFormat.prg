@@ -270,8 +270,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTY )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QVariant * ptr = new QVariant( obj->property ( (const char *) par1 ) );
+    QVariant * ptr = new QVariant( obj->property ( (const char *) hb_parc(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -452,8 +451,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPROPERTY )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setProperty ( (const char *) par1, *PQVARIANT(2) );
+    obj->setProperty ( (const char *) hb_parc(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

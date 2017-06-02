@@ -143,9 +143,8 @@ void QState_addTransition2 ()
   if( obj )
   {
     QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = hb_parc(2);
     QAbstractState * par3 = (QAbstractState *) _qt5xhb_itemGetPtr(3);
-    QSignalTransition * ptr = obj->addTransition ( par1, (const char *) par2, par3 );
+    QSignalTransition * ptr = obj->addTransition ( par1, (const char *) hb_parc(2), par3 );
     _qt5xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
   }
 }
@@ -201,8 +200,7 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
     if( ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
     {
       QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      const char * par2 = hb_parc(2);
-      obj->assignProperty ( par1, (const char *) par2, *PQVARIANT(3) );
+      obj->assignProperty ( par1, (const char *) hb_parc(2), *PQVARIANT(3) );
     }
     else
     {

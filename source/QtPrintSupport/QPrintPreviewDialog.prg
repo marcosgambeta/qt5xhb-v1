@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
       QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      const char * par2 = hb_parc(2);
-      obj->open ( par1, (const char *) par2 );
+      obj->open ( par1, (const char *) hb_parc(2) );
     }
     else
     {

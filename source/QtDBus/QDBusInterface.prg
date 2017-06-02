@@ -96,8 +96,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
   QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retptr( (void *) obj->qt_metacast ( (const char *) par1 ) );
+    hb_retptr( (void *) obj->qt_metacast ( (const char *) hb_parc(1) ) );
   }
 }
 

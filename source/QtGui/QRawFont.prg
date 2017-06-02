@@ -658,8 +658,7 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QByteArray * ptr = new QByteArray( obj->fontTable ( (const char *) par1 ) );
+    QByteArray * ptr = new QByteArray( obj->fontTable ( (const char *) hb_parc(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

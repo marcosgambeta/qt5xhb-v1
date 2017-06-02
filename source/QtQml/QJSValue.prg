@@ -173,8 +173,7 @@ QJSValue(const char * value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
 {
-  const char * par1 = hb_parc(1);
-  QJSValue * o = new QJSValue ( (const char *) par1 );
+  QJSValue * o = new QJSValue ( (const char *) hb_parc(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

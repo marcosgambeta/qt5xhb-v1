@@ -303,8 +303,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      const char * par1 = hb_parc(1);
-      obj->setData ( (const char *) par1, (uint) hb_parni(2) );
+      obj->setData ( (const char *) hb_parc(1), (uint) hb_parni(2) );
     }
     else
     {

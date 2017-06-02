@@ -228,9 +228,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK1 )
   if( obj )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    const char * par3 = hb_parc(3);
-    const char * par4 = hb_parc(4);
-    hb_retl( obj->callWithCallback ( par2, (const char *) par3, (const char *) par4, OPINT(5,-1) ) );
+    hb_retl( obj->callWithCallback ( par2, (const char *) hb_parc(3), (const char *) hb_parc(4), OPINT(5,-1) ) );
   }
 }
 
@@ -243,8 +241,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK2 )
   if( obj )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    const char * par3 = hb_parc(3);
-    hb_retl( obj->callWithCallback ( par2, (const char *) par3, OPINT(4,-1) ) );
+    hb_retl( obj->callWithCallback ( par2, (const char *) hb_parc(3), OPINT(4,-1) ) );
   }
 }
 
@@ -295,8 +292,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT1 )
   if( obj )
   {
     QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
-    const char * par6 = hb_parc(6);
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, (const char *) par6 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, (const char *) hb_parc(6) ) );
   }
 }
 
@@ -309,8 +305,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT2 )
   if( obj )
   {
     QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
-    const char * par7 = hb_parc(7);
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6, (const char *) par7 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6, (const char *) hb_parc(7) ) );
   }
 }
 
@@ -323,8 +318,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
   if( obj )
   {
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
-    const char * par8 = hb_parc(8);
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7, (const char *) par8 ) );
+    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7, (const char *) hb_parc(8) ) );
   }
 }
 
@@ -347,8 +341,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT1 )
   if( obj )
   {
     QObject * par5 = (QObject *) _qt5xhb_itemGetPtr(5);
-    const char * par6 = hb_parc(6);
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, (const char *) par6 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), par5, (const char *) hb_parc(6) ) );
   }
 }
 
@@ -361,8 +354,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT2 )
   if( obj )
   {
     QObject * par6 = (QObject *) _qt5xhb_itemGetPtr(6);
-    const char * par7 = hb_parc(7);
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6, (const char *) par7 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), par6, (const char *) hb_parc(7) ) );
   }
 }
 
@@ -375,8 +367,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
   if( obj )
   {
     QObject * par7 = (QObject *) _qt5xhb_itemGetPtr(7);
-    const char * par8 = hb_parc(8);
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7, (const char *) par8 ) );
+    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), par7, (const char *) hb_parc(8) ) );
   }
 }
 

@@ -524,8 +524,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE2 )
   if( obj )
   {
     QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = hb_parc(2);
-    hb_retl( obj->save ( par1, (const char *) par2 ) );
+    hb_retl( obj->save ( par1, (const char *) hb_parc(2) ) );
   }
 }
 

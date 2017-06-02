@@ -563,8 +563,7 @@ void QSettings_setIniCodec2 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setIniCodec ( (const char *) par1 );
+    obj->setIniCodec ( (const char *) hb_parc(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

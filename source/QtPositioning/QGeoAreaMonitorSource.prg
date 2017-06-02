@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
   if( obj )
   {
     QGeoAreaMonitorInfo * par1 = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = hb_parc(2);
-    hb_retl( obj->requestUpdate ( *par1, (const char *) par2 ) );
+    hb_retl( obj->requestUpdate ( *par1, (const char *) hb_parc(2) ) );
   }
 #endif
 }

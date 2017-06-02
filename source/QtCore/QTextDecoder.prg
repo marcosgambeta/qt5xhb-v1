@@ -116,8 +116,7 @@ void QTextDecoder_toUnicode1 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retc( RQSTRING( obj->toUnicode ( (const char *) par1, PINT(2) ) ) );
+    hb_retc( RQSTRING( obj->toUnicode ( (const char *) hb_parc(1), PINT(2) ) ) );
   }
 }
 

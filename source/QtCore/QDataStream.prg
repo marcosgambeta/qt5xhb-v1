@@ -434,8 +434,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      const char * par1 = hb_parc(1);
-      QDataStream * ptr = &obj->writeBytes ( (const char *) par1, (uint) hb_parni(2) );
+      QDataStream * ptr = &obj->writeBytes ( (const char *) hb_parc(1), (uint) hb_parni(2) );
       _qt5xhb_createReturnClass ( ptr, "QDATASTREAM" );
     }
     else
@@ -456,8 +455,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      const char * par1 = hb_parc(1);
-      hb_retni( obj->writeRawData ( (const char *) par1, PINT(2) ) );
+      hb_retni( obj->writeRawData ( (const char *) hb_parc(1), PINT(2) ) );
     }
     else
     {

@@ -124,8 +124,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
   QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retl( obj->compileSourceCode ( (const char *) par1 ) );
+    hb_retl( obj->compileSourceCode ( (const char *) hb_parc(1) ) );
   }
 }
 

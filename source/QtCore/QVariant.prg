@@ -313,8 +313,7 @@ QVariant(const char *str)
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
 #ifndef QT_NO_CAST_FROM_ASCII
-  const char * par1 = hb_parc(1);
-  QVariant * o = new QVariant ( (const char *) par1 );
+  QVariant * o = new QVariant ( (const char *) hb_parc(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -1771,8 +1770,7 @@ HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
   if( ISCHAR(1) )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( QVariant::nameToType ( (const char *) par1 ) );
+    hb_retni( QVariant::nameToType ( (const char *) hb_parc(1) ) );
   }
   else
   {

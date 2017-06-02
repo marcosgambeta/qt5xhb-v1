@@ -648,10 +648,8 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
   if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
-    const char * par1 = hb_parc(1);
-    const char * par2 = hb_parc(2);
     const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    hb_retc( RQSTRING( QCoreApplication::translate ( (const char *) par1, (const char *) par2, (const char *) par3, OPINT(4,-1) ) ) );
+    hb_retc( RQSTRING( QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) par3, OPINT(4,-1) ) ) );
   }
   else
   {

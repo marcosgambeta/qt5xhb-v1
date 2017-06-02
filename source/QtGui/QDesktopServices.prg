@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
   if( ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
     QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    const char * par3 = hb_parc(3);
-    QDesktopServices::setUrlHandler ( PQSTRING(1), par2, (const char *) par3 );
+    QDesktopServices::setUrlHandler ( PQSTRING(1), par2, (const char *) hb_parc(3) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

@@ -633,8 +633,7 @@ void QIODevice_write1 ()
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      const char * par1 = hb_parc(1);
-      hb_retni( obj->write ( (const char *) par1, (qint64) hb_parni(2) ) );
+      hb_retni( obj->write ( (const char *) hb_parc(1), (qint64) hb_parni(2) ) );
     }
     else
     {
@@ -652,8 +651,7 @@ void QIODevice_write2 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( obj->write ( (const char *) par1 ) );
+    hb_retni( obj->write ( (const char *) hb_parc(1) ) );
   }
 }
 

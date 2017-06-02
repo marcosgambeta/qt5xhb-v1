@@ -279,9 +279,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK1 )
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-    const char * par4 = hb_parc(4);
-    const char * par5 = hb_parc(5);
-    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3, (const char *) par4, (const char *) par5 ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3, (const char *) hb_parc(4), (const char *) hb_parc(5) ) );
   }
 }
 
@@ -302,8 +300,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK2 )
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-    const char * par4 = hb_parc(4);
-    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3, (const char *) par4 ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, par3, (const char *) hb_parc(4) ) );
   }
 }
 
