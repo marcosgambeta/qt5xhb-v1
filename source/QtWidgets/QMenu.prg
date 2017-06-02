@@ -55,6 +55,7 @@ CLASS QMenu INHERIT QWidget
    METHOD setAsDockMenu
    METHOD toolTipsVisible
    METHOD setToolTipsVisible
+   METHOD toNSMenu
 
    METHOD onAboutToHide
    METHOD onAboutToShow
@@ -981,6 +982,7 @@ HB_FUNC_STATIC( QMENU_SETASDOCKMENU )
   {
     obj->setAsDockMenu ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 #endif
@@ -1022,6 +1024,25 @@ HB_FUNC_STATIC( QMENU_SETTOOLTIPSVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+NSMenu * QMenu::toNSMenu()
+*/
+HB_FUNC_STATIC( QMENU_TONSMENU )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#ifdef Q_OS_OSX
+  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    hb_retptr( (NSMenu *) obj->toNSMenu () );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
 #endif
 }
 
