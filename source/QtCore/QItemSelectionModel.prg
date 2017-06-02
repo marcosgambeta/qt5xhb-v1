@@ -85,8 +85,7 @@ QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
 void QItemSelectionModel_new2 ()
 {
   QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QItemSelectionModel * o = new QItemSelectionModel ( par1, par2 );
+  QItemSelectionModel * o = new QItemSelectionModel ( par1, PQOBJECT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

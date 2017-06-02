@@ -300,8 +300,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETORIGINATINGOBJECT )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->setOriginatingObject ( par1 );
+    obj->setOriginatingObject ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

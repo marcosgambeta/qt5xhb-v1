@@ -337,8 +337,7 @@ static QGeoAreaMonitorSource *createDefaultSource(QObject *parent)
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createDefaultSource ( par1 );
+  QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createDefaultSource ( PQOBJECT(1) );
   _qt5xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
 #endif
 }
@@ -350,8 +349,7 @@ static QGeoAreaMonitorSource *createSource(const QString& sourceName, QObject *p
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATESOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource ( PQSTRING(1), par2 );
+  QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource ( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
 #endif
 }

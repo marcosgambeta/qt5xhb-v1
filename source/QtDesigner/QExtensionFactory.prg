@@ -107,8 +107,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      QObject * ptr = obj->extension ( par1, PQSTRING(2) );
+      QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
     }
     else

@@ -374,8 +374,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
   {
     QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QQmlComponent * par2 = (QQmlComponent *) _qt5xhb_itemGetPtr(2);
-    QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-    obj->setContent ( *par1, par2, par3 );
+    obj->setContent ( *par1, par2, PQOBJECT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

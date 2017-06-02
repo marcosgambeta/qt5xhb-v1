@@ -67,8 +67,7 @@ QJSEngine(QObject * parent)
 */
 HB_FUNC_STATIC( QJSENGINE_NEW2 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QJSEngine * o = new QJSEngine ( par1 );
+  QJSEngine * o = new QJSEngine ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -186,8 +185,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
   QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QJSValue * ptr = new QJSValue( obj->newQObject ( par1 ) );
+    QJSValue * ptr = new QJSValue( obj->newQObject ( PQOBJECT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }

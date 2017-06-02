@@ -80,9 +80,8 @@ QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QStr
 void QDeclarativeExpression_new2 ()
 {
   QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QDeclarativeExpression * o = new QDeclarativeExpression ( par1, par2, PQSTRING(3), par4 );
+  QDeclarativeExpression * o = new QDeclarativeExpression ( par1, PQOBJECT(2), PQSTRING(3), par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

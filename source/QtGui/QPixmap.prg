@@ -1033,9 +1033,8 @@ static QPixmap grabWidget(QObject *widget, const QRect &rect)
 */
 void QPixmap_grabWidget1 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-  QPixmap * ptr = new QPixmap( QPixmap::grabWidget ( par1, *par2 ) );
+  QPixmap * ptr = new QPixmap( QPixmap::grabWidget ( PQOBJECT(1), *par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
 
@@ -1044,8 +1043,7 @@ static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
 */
 void QPixmap_grabWidget2 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QPixmap * ptr = new QPixmap( QPixmap::grabWidget ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
+  QPixmap * ptr = new QPixmap( QPixmap::grabWidget ( PQOBJECT(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
   _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
 

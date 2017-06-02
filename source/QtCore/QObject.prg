@@ -475,9 +475,8 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
   {
     if( ISQOBJECT(1) && ISQEVENT(2) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
       QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->eventFilter ( par1, par2 ) );
+      hb_retl( obj->eventFilter ( PQOBJECT(1), par2 ) );
     }
     else
     {
@@ -704,8 +703,7 @@ HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      obj->installEventFilter ( par1 );
+      obj->installEventFilter ( PQOBJECT(1) );
     }
     else
     {
@@ -861,8 +859,7 @@ HB_FUNC_STATIC( QOBJECT_SETPARENT )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      obj->setParent ( par1 );
+      obj->setParent ( PQOBJECT(1) );
     }
     else
     {
@@ -929,8 +926,7 @@ HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      obj->removeEventFilter ( par1 );
+      obj->removeEventFilter ( PQOBJECT(1) );
     }
     else
     {

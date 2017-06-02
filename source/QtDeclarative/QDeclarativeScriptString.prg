@@ -171,8 +171,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      obj->setScopeObject ( par1 );
+      obj->setScopeObject ( PQOBJECT(1) );
     }
     else
     {

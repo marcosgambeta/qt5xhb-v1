@@ -108,8 +108,7 @@ QQmlProperty(QObject * obj)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QQmlProperty * o = new QQmlProperty ( par1 );
+  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -118,9 +117,8 @@ QQmlProperty(QObject * obj, QQmlContext * ctxt)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
-  QQmlProperty * o = new QQmlProperty ( par1, par2 );
+  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -129,9 +127,8 @@ QQmlProperty(QObject * obj, QQmlEngine * engine)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlEngine * par2 = (QQmlEngine *) _qt5xhb_itemGetPtr(2);
-  QQmlProperty * o = new QQmlProperty ( par1, par2 );
+  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -140,8 +137,7 @@ QQmlProperty(QObject * obj, const QString & name)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QQmlProperty * o = new QQmlProperty ( par1, PQSTRING(2) );
+  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -150,9 +146,8 @@ QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
-  QQmlProperty * o = new QQmlProperty ( par1, PQSTRING(2), par3 );
+  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -161,9 +156,8 @@ QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
-  QQmlProperty * o = new QQmlProperty ( par1, PQSTRING(2), par3 );
+  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -250,8 +244,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL1 )
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->connectNotifySignal ( par1, (const char *) hb_parc(2) ) );
+    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), (const char *) hb_parc(2) ) );
   }
 }
 
@@ -263,8 +256,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL2 )
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->connectNotifySignal ( par1, PINT(2) ) );
+    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
   }
 }
 
@@ -518,8 +510,7 @@ static QVariant read(QObject * object, const QString & name)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_READ2 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QVariant * ptr = new QVariant( QQmlProperty::read ( par1, PQSTRING(2) ) );
+  QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -528,9 +519,8 @@ static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
 */
 HB_FUNC_STATIC( QQMLPROPERTY_READ3 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QQmlProperty::read ( par1, PQSTRING(2), par3 ) );
+  QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -539,9 +529,8 @@ static QVariant read(QObject * object, const QString & name, QQmlEngine * engine
 */
 HB_FUNC_STATIC( QQMLPROPERTY_READ4 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QQmlProperty::read ( par1, PQSTRING(2), par3 ) );
+  QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -618,8 +607,7 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 */
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE2 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  hb_retl( QQmlProperty::write ( par1, PQSTRING(2), *PQVARIANT(3) ) );
+  hb_retl( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
 }
 
 /*
@@ -627,9 +615,8 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 */
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE3 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par4 = (QQmlContext *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QQmlProperty::write ( par1, PQSTRING(2), *PQVARIANT(3), par4 ) );
+  hb_retl( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
 }
 
 /*
@@ -637,9 +624,8 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 */
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE4 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlEngine * par4 = (QQmlEngine *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QQmlProperty::write ( par1, PQSTRING(2), *PQVARIANT(3), par4 ) );
+  hb_retl( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
 }
 
 

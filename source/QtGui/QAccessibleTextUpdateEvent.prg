@@ -49,9 +49,8 @@ QAccessibleTextUpdateEvent(QObject *obj, int position, const QString &oldText, c
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QAccessibleTextUpdateEvent * o = new QAccessibleTextUpdateEvent ( par1, par2, PQSTRING(3), PQSTRING(4) );
+  QAccessibleTextUpdateEvent * o = new QAccessibleTextUpdateEvent ( PQOBJECT(1), par2, PQSTRING(3), PQSTRING(4) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

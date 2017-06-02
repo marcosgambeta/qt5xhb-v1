@@ -210,8 +210,7 @@ static QGeoSatelliteInfoSource *createDefaultSource(QObject *parent)
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createDefaultSource ( par1 );
+  QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createDefaultSource ( PQOBJECT(1) );
   _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE" );
 #endif
 }
@@ -223,8 +222,7 @@ static QGeoSatelliteInfoSource *createSource(const QString &sourceName, QObject 
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATESOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createSource ( PQSTRING(1), par2 );
+  QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createSource ( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE" );
 #endif
 }

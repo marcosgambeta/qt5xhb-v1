@@ -280,8 +280,7 @@ static QGeoPositionInfoSource *createDefaultSource(QObject *parent)
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource ( par1 );
+  QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource ( PQOBJECT(1) );
   _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
 #endif
 }
@@ -293,8 +292,7 @@ static QGeoPositionInfoSource *createSource(const QString &sourceName, QObject *
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATESOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource ( PQSTRING(1), par2 );
+  QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource ( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
 #endif
 }

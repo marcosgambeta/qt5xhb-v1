@@ -549,8 +549,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONNECTSLOTSBYNAME )
 {
   if( ISQOBJECT(1) )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QMetaObject::connectSlotsByName ( par1 );
+    QMetaObject::connectSlotsByName ( PQOBJECT(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -564,9 +563,8 @@ static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionTyp
 */
 void QMetaObject_invokeMethod1 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par3 = hb_parni(3);
-  hb_retl( QMetaObject::invokeMethod ( par1, (const char *) hb_parc(2), (Qt::ConnectionType) par3 ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2), (Qt::ConnectionType) par3 ) );
 }
 
 /*
@@ -574,8 +572,7 @@ static bool invokeMethod ( QObject * obj, const char * member, QGenericReturnArg
 */
 void QMetaObject_invokeMethod2 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  hb_retl( QMetaObject::invokeMethod ( par1, (const char *) hb_parc(2) ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2) ) );
 }
 
 /*
@@ -583,9 +580,8 @@ static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionTyp
 */
 void QMetaObject_invokeMethod3 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par3 = hb_parni(3);
-  hb_retl( QMetaObject::invokeMethod ( par1, (const char *) hb_parc(2), (Qt::ConnectionType) par3 ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2), (Qt::ConnectionType) par3 ) );
 }
 
 /*
@@ -593,8 +589,7 @@ static bool invokeMethod ( QObject * obj, const char * member, QGenericArgument 
 */
 void QMetaObject_invokeMethod4 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  hb_retl( QMetaObject::invokeMethod ( par1, (const char *) hb_parc(2) ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2) ) );
 }
 
 //[1]bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )

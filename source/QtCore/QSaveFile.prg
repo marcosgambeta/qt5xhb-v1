@@ -81,8 +81,7 @@ QSaveFile(const QString &name, QObject *parent)
 void QSaveFile_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QSaveFile * o = new QSaveFile ( PQSTRING(1), par2 );
+  QSaveFile * o = new QSaveFile ( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

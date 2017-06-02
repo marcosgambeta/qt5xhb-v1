@@ -385,8 +385,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
   if( ISQOBJECT(1) )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( QAxFactory::registerActiveObject ( par1 ) );
+    hb_retl( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
   }
   else
   {

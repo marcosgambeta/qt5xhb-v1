@@ -476,8 +476,7 @@ static ObjectOwnership objectOwnership(QObject * object)
 */
 HB_FUNC_STATIC( QQMLENGINE_OBJECTOWNERSHIP )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  hb_retni( QQmlEngine::objectOwnership ( par1 ) );
+  hb_retni( QQmlEngine::objectOwnership ( PQOBJECT(1) ) );
 }
 
 
@@ -486,9 +485,8 @@ static void setContextForObject(QObject * object, QQmlContext * context)
 */
 HB_FUNC_STATIC( QQMLENGINE_SETCONTEXTFOROBJECT )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
-  QQmlEngine::setContextForObject ( par1, par2 );
+  QQmlEngine::setContextForObject ( PQOBJECT(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -498,9 +496,8 @@ static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 */
 HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QQmlEngine::setObjectOwnership ( par1, (QQmlEngine::ObjectOwnership) par2 );
+  QQmlEngine::setObjectOwnership ( PQOBJECT(1), (QQmlEngine::ObjectOwnership) par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

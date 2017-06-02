@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      obj->setObject ( par1 );
+      obj->setObject ( PQOBJECT(1) );
     }
     else
     {

@@ -301,9 +301,8 @@ void QMetaMethod_invoke1 ()
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->invoke ( par1, (Qt::ConnectionType) par2 ) );
+    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) par2 ) );
   }
 }
 
@@ -316,8 +315,7 @@ void QMetaMethod_invoke2 ()
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->invoke ( par1 ) );
+    hb_retl( obj->invoke ( PQOBJECT(1) ) );
   }
 }
 
@@ -330,9 +328,8 @@ void QMetaMethod_invoke3 ()
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->invoke ( par1, (Qt::ConnectionType) par2 ) );
+    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) par2 ) );
   }
 }
 
@@ -345,8 +342,7 @@ void QMetaMethod_invoke4 ()
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->invoke ( par1 ) );
+    hb_retl( obj->invoke ( PQOBJECT(1) ) );
   }
 }
 

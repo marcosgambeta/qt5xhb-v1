@@ -114,8 +114,7 @@ QScriptEngine(QObject * parent)
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW2 )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QScriptEngine * o = new QScriptEngine ( par1 );
+  QScriptEngine * o = new QScriptEngine ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

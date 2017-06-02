@@ -84,9 +84,8 @@ QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, 
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW2 )
 {
   QQmlContext * par1 = (QQmlContext *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QQmlExpression * o = new QQmlExpression ( par1, par2, PQSTRING(3), par4 );
+  QQmlExpression * o = new QQmlExpression ( par1, PQOBJECT(2), PQSTRING(3), par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

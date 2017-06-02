@@ -96,8 +96,7 @@ explicit QFile(QObject *parent)
 */
 void QFile_new3 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QFile * o = new QFile ( par1 );
+  QFile * o = new QFile ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -106,8 +105,7 @@ QFile(const QString &name, QObject *parent)
 */
 void QFile_new4 ()
 {
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QFile * o = new QFile ( PQSTRING(1), par2 );
+  QFile * o = new QFile ( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -136,9 +136,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
   QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->notify ( par1, par2 ) );
+    hb_retl( obj->notify ( PQOBJECT(1), par2 ) );
   }
 }
 

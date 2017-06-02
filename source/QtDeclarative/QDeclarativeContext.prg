@@ -262,8 +262,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      obj->setContextObject ( par1 );
+      obj->setContextObject ( PQOBJECT(1) );
     }
     else
     {
@@ -283,8 +282,7 @@ void QDeclarativeContext_setContextProperty1 ()
 
   if( obj )
   {
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->setContextProperty ( PQSTRING(1), par2 );
+    obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

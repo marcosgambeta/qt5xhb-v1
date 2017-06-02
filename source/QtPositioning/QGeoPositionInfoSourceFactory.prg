@@ -70,8 +70,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
   QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QGeoPositionInfoSource * ptr = obj->positionInfoSource ( par1 );
+    QGeoPositionInfoSource * ptr = obj->positionInfoSource ( PQOBJECT(1) );
     _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE" );
   }
 #endif
@@ -87,8 +86,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
   QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QGeoSatelliteInfoSource * ptr = obj->satelliteInfoSource ( par1 );
+    QGeoSatelliteInfoSource * ptr = obj->satelliteInfoSource ( PQOBJECT(1) );
     _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE" );
   }
 #endif
@@ -104,8 +102,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
   QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QGeoAreaMonitorSource * ptr = obj->areaMonitor ( par1 );
+    QGeoAreaMonitorSource * ptr = obj->areaMonitor ( PQOBJECT(1) );
     _qt5xhb_createReturnClass ( ptr, "QGEOAREAMONITORSOURCE" );
   }
 #endif

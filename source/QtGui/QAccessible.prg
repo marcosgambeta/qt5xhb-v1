@@ -59,8 +59,7 @@ static QAccessibleInterface *queryAccessibleInterface(QObject *)
 */
 HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( par1 );
+  QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( PQOBJECT(1) );
   _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
 }
 
@@ -91,8 +90,7 @@ static void setRootObject(QObject *object)
 */
 HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QAccessible::setRootObject ( par1 );
+  QAccessible::setRootObject ( PQOBJECT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -197,8 +197,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_NAMEFOROBJECT )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->nameForObject ( par1 ) ) );
+    hb_retc( RQSTRING( obj->nameForObject ( PQOBJECT(1) ) ) );
   }
 }
 
@@ -255,8 +254,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->setContextObject ( par1 );
+    obj->setContextObject ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -270,8 +268,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY1 )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->setContextProperty ( PQSTRING(1), par2 );
+    obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

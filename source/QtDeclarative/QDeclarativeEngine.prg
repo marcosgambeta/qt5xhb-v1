@@ -505,8 +505,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
   if( ISQOBJECT(1) )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retni( QDeclarativeEngine::objectOwnership ( par1 ) );
+    hb_retni( QDeclarativeEngine::objectOwnership ( PQOBJECT(1) ) );
   }
   else
   {
@@ -521,9 +520,8 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 {
   if( ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2) )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     QDeclarativeContext * par2 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(2);
-    QDeclarativeEngine::setContextForObject ( par1, par2 );
+    QDeclarativeEngine::setContextForObject ( PQOBJECT(1), par2 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -539,9 +537,8 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
   if( ISQOBJECT(1) && ISNUM(2) )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QDeclarativeEngine::setObjectOwnership ( par1, (QDeclarativeEngine::ObjectOwnership) par2 );
+    QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1), (QDeclarativeEngine::ObjectOwnership) par2 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

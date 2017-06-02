@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->registerHandler ( PINT(1), par2 );
+    obj->registerHandler ( PINT(1), PQOBJECT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

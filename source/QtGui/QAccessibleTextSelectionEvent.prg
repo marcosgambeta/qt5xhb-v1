@@ -49,10 +49,9 @@ QAccessibleTextSelectionEvent(QObject *obj, int start, int end)
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QAccessibleTextSelectionEvent * o = new QAccessibleTextSelectionEvent ( par1, par2, par3 );
+  QAccessibleTextSelectionEvent * o = new QAccessibleTextSelectionEvent ( PQOBJECT(1), par2, par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

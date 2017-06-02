@@ -115,8 +115,7 @@ void QAxScriptManager_addObject2 ()
 
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->addObject ( par1 );
+    obj->addObject ( PQOBJECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

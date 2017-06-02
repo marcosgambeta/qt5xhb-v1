@@ -75,9 +75,8 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 */
 void QDeclarativeListReference_new2 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeListReference * o = new QDeclarativeListReference ( par1, (const char *) hb_parc(2), par3 );
+  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), (const char *) hb_parc(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -111,8 +110,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->append ( par1 ) );
+      hb_retl( obj->append ( PQOBJECT(1) ) );
     }
     else
     {

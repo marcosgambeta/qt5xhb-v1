@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    QObject * ptr = obj->add ( par1 );
+    QObject * ptr = obj->add ( PQOBJECT(1) );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -97,8 +96,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->remove ( par1 );
+    obj->remove ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

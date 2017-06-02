@@ -246,8 +246,7 @@ void QAbstractEventDispatcher_registerTimer1 ()
   if( obj )
   {
     int par2 = hb_parni(2);
-    QObject * par3 = (QObject *) _qt5xhb_itemGetPtr(3);
-    hb_retni( obj->registerTimer ( PINT(1), (Qt::TimerType) par2, par3 ) );
+    hb_retni( obj->registerTimer ( PINT(1), (Qt::TimerType) par2, PQOBJECT(3) ) );
   }
 }
 
@@ -261,8 +260,7 @@ void QAbstractEventDispatcher_registerTimer2 ()
   if( obj )
   {
     int par3 = hb_parni(3);
-    QObject * par4 = (QObject *) _qt5xhb_itemGetPtr(4);
-    obj->registerTimer ( PINT(1), PINT(2), (Qt::TimerType) par3, par4 );
+    obj->registerTimer ( PINT(1), PINT(2), (Qt::TimerType) par3, PQOBJECT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -409,8 +407,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->unregisterTimers ( par1 ) );
+      hb_retl( obj->unregisterTimers ( PQOBJECT(1) ) );
     }
     else
     {

@@ -74,8 +74,7 @@ QDrag(QObject * dragSource)
 */
 HB_FUNC_STATIC( QDRAG_NEW )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QDrag * o = new QDrag ( par1 );
+  QDrag * o = new QDrag ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

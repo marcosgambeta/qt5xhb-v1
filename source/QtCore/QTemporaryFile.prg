@@ -71,8 +71,7 @@ QTemporaryFile(QObject * parent)
 */
 void QTemporaryFile_new3 ()
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-  QTemporaryFile * o = new QTemporaryFile ( par1 );
+  QTemporaryFile * o = new QTemporaryFile ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -81,8 +80,7 @@ QTemporaryFile(const QString & templateName, QObject * parent)
 */
 void QTemporaryFile_new4 ()
 {
-  QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), par2 );
+  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

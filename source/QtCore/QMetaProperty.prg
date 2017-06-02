@@ -472,8 +472,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
   {
     if( ISQOBJECT(1) && ISQVARIANT(2) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->write ( par1, *PQVARIANT(2) ) );
+      hb_retl( obj->write ( PQOBJECT(1), *PQVARIANT(2) ) );
     }
     else
     {
@@ -493,8 +492,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_RESET )
   {
     if( ISQOBJECT(1) )
     {
-      QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->reset ( par1 ) );
+      hb_retl( obj->reset ( PQOBJECT(1) ) );
     }
     else
     {

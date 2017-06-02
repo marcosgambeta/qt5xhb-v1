@@ -48,9 +48,8 @@ QAccessibleTextInsertEvent(QObject *obj, int position, const QString &text)
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_NEW )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QAccessibleTextInsertEvent * o = new QAccessibleTextInsertEvent ( par1, par2, PQSTRING(3) );
+  QAccessibleTextInsertEvent * o = new QAccessibleTextInsertEvent ( PQOBJECT(1), par2, PQSTRING(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

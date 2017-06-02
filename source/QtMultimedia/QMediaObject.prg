@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->bind ( par1 ) );
+    hb_retl( obj->bind ( PQOBJECT(1) ) );
   }
 }
 
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->unbind ( par1 );
+    obj->unbind ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

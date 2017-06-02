@@ -93,8 +93,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    obj->registerObject ( PQSTRING(1), par2 );
+    obj->registerObject ( PQSTRING(1), PQOBJECT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -110,8 +109,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
-    obj->deregisterObject ( par1 );
+    obj->deregisterObject ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

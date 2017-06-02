@@ -56,9 +56,8 @@ QAccessibleTableModelChangeEvent(QObject *obj, ModelChangeType changeType)
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_NEW )
 {
-  QObject * par1 = (QObject *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QAccessibleTableModelChangeEvent * o = new QAccessibleTableModelChangeEvent ( par1, (QAccessibleTableModelChangeEvent::ModelChangeType) par2 );
+  QAccessibleTableModelChangeEvent * o = new QAccessibleTableModelChangeEvent ( PQOBJECT(1), (QAccessibleTableModelChangeEvent::ModelChangeType) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

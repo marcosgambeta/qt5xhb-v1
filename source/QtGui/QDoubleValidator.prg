@@ -71,8 +71,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
   double par1 = hb_parnd(1);
   double par2 = hb_parnd(2);
   int par3 = hb_parni(3);
-  QObject * par4 = (QObject *) _qt5xhb_itemGetPtr(4);
-  QDoubleValidator * o = new QDoubleValidator ( par1, par2, par3, par4 );
+  QDoubleValidator * o = new QDoubleValidator ( par1, par2, par3, PQOBJECT(4) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

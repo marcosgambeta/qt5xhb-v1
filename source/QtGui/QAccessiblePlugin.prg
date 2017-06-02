@@ -69,8 +69,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
   QAccessiblePlugin * obj = (QAccessiblePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par2 = (QObject *) _qt5xhb_itemGetPtr(2);
-    QAccessibleInterface * ptr = obj->create ( PQSTRING(1), par2 );
+    QAccessibleInterface * ptr = obj->create ( PQSTRING(1), PQOBJECT(2) );
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
