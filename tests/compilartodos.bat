@@ -49,6 +49,7 @@ hbmk2 QFontDialog          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFormLayout1         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFormLayout2         %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFormLayout3         %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QGraphicsEffect      %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QGridLayout          %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QGroupBox            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QHBoxLayout          %1 %2 %3 ..\qt5xhb.hbc
