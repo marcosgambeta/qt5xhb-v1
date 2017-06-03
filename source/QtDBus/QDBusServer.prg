@@ -57,8 +57,7 @@ QDBusServer(const QString &address, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QDBUSSERVER_NEW1 )
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QDBusServer * o = new QDBusServer ( PQSTRING(1), par2 );
+  QDBusServer * o = new QDBusServer ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -67,8 +66,7 @@ QDBusServer(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QDBUSSERVER_NEW2 )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QDBusServer * o = new QDBusServer ( par1 );
+  QDBusServer * o = new QDBusServer ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

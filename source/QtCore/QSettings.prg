@@ -83,8 +83,7 @@ QSettings ( const QString & organization, const QString & application = QString(
 */
 void QSettings_new1 ()
 {
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), par3 );
+  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -94,8 +93,7 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 void QSettings_new2 ()
 {
   int par1 = hb_parni(1);
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QSettings * o = new QSettings ( (QSettings::Scope) par1, PQSTRING(2), OPQSTRING(3,QString()), par4 );
+  QSettings * o = new QSettings ( (QSettings::Scope) par1, PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -106,8 +104,7 @@ void QSettings_new3 ()
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  QObject * par5 = ISNIL(5)? 0 : (QObject *) _qt5xhb_itemGetPtr(5);
-  QSettings * o = new QSettings ( (QSettings::Format) par1, (QSettings::Scope) par2, PQSTRING(3), OPQSTRING(4,QString()), par5 );
+  QSettings * o = new QSettings ( (QSettings::Format) par1, (QSettings::Scope) par2, PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -117,8 +114,7 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 void QSettings_new4 ()
 {
   int par2 = hb_parni(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) par2, par3 );
+  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -127,8 +123,7 @@ QSettings ( QObject * parent = 0 )
 */
 void QSettings_new5 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSettings * o = new QSettings ( par1 );
+  QSettings * o = new QSettings ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -61,8 +61,7 @@ QLibrary(QObject *parent = 0)
 */
 void QLibrary_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QLibrary * o = new QLibrary ( par1 );
+  QLibrary * o = new QLibrary ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -71,8 +70,7 @@ QLibrary(const QString& fileName, QObject *parent = 0)
 */
 void QLibrary_new2 ()
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QLibrary * o = new QLibrary ( PQSTRING(1), par2 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -82,8 +80,7 @@ QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 void QLibrary_new3 ()
 {
   int par2 = hb_parni(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QLibrary * o = new QLibrary ( PQSTRING(1), par2, par3 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -92,8 +89,7 @@ QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
 void QLibrary_new4 ()
 {
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), par3 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

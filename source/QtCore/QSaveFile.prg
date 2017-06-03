@@ -69,8 +69,7 @@ QSaveFile(QObject *parent = 0)
 void QSaveFile_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSaveFile * o = new QSaveFile ( par1 );
+  QSaveFile * o = new QSaveFile ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

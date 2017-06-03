@@ -102,8 +102,7 @@ explicit QWebEnginePage(QObject *parent = 0)
 HB_FUNC_STATIC( QWEBENGINEPAGE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QWebEnginePage * o = new QWebEnginePage ( par1 );
+  QWebEnginePage * o = new QWebEnginePage ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

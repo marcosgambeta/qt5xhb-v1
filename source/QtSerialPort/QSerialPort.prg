@@ -104,8 +104,7 @@ QSerialPort(QObject *parent = 0)
 HB_FUNC_STATIC( QSERIALPORT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSerialPort * o = new QSerialPort ( par1 );
+  QSerialPort * o = new QSerialPort ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -116,8 +115,7 @@ QSerialPort(const QString &name, QObject *parent = 0)
 HB_FUNC_STATIC( QSERIALPORT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSerialPort * o = new QSerialPort ( PQSTRING(1), par2 );
+  QSerialPort * o = new QSerialPort ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -129,8 +127,7 @@ HB_FUNC_STATIC( QSERIALPORT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPortInfo * par1 = (QSerialPortInfo *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSerialPort * o = new QSerialPort ( *par1, par2 );
+  QSerialPort * o = new QSerialPort ( *par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

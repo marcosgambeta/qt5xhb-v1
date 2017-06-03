@@ -91,9 +91,8 @@ explicit QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
-  QSqlTableModel * o = new QSqlTableModel ( par1, par2 );
+  QSqlTableModel * o = new QSqlTableModel ( OPQOBJECT(1,0), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

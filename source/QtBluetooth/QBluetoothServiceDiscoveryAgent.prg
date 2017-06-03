@@ -73,8 +73,7 @@ QBluetoothServiceDiscoveryAgent(QObject *parent = 0)
 void QBluetoothServiceDiscoveryAgent_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( par1 );
+  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -86,8 +85,7 @@ void QBluetoothServiceDiscoveryAgent_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( *par1, par2 );
+  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( *par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

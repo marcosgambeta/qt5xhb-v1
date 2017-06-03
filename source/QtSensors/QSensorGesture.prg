@@ -59,8 +59,7 @@ QSensorGesture(const QStringList &ids, QObject *parent = 0)
 HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSensorGesture * o = new QSensorGesture ( PQSTRINGLIST(1), par2 );
+  QSensorGesture * o = new QSensorGesture ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

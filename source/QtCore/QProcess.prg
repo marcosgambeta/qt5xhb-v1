@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QPROCESS_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-    QProcess * o = new QProcess ( par1 );
+    QProcess * o = new QProcess ( OPQOBJECT(1,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

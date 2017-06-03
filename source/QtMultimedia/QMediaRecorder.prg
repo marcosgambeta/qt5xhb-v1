@@ -111,8 +111,7 @@ QMediaRecorder(QMediaObject * mediaObject, QObject * parent = 0)
 HB_FUNC_STATIC( QMEDIARECORDER_NEW )
 {
   QMediaObject * par1 = (QMediaObject *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QMediaRecorder * o = new QMediaRecorder ( par1, par2 );
+  QMediaRecorder * o = new QMediaRecorder ( par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

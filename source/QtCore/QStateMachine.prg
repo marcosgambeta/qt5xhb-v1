@@ -72,8 +72,7 @@ QStateMachine(QObject *parent = 0)
 */
 void QStateMachine_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QStateMachine * o = new QStateMachine ( par1 );
+  QStateMachine * o = new QStateMachine ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -83,8 +82,7 @@ QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
 void QStateMachine_new2 ()
 {
   int par1 = hb_parni(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QStateMachine * o = new QStateMachine ( (QState::ChildMode) par1, par2 );
+  QStateMachine * o = new QStateMachine ( (QState::ChildMode) par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

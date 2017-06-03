@@ -84,8 +84,7 @@ QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, 
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW2 )
 {
   QQmlContext * par1 = (QQmlContext *) _qt5xhb_itemGetPtr(1);
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QQmlExpression * o = new QQmlExpression ( par1, PQOBJECT(2), PQSTRING(3), par4 );
+  QQmlExpression * o = new QQmlExpression ( par1, PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -96,9 +95,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW3 )
 {
   QQmlScriptString * par1 = (QQmlScriptString *) _qt5xhb_itemGetPtr(1);
   QQmlContext * par2 = ISNIL(2)? 0 : (QQmlContext *) _qt5xhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QQmlExpression * o = new QQmlExpression ( *par1, par2, par3, par4 );
+  QQmlExpression * o = new QQmlExpression ( *par1, par2, OPQOBJECT(3,0), OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

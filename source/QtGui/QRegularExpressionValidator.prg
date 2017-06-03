@@ -56,8 +56,7 @@ QRegularExpressionValidator(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW1 )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( par1 );
+  QRegularExpressionValidator * o = new QRegularExpressionValidator ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -67,8 +66,7 @@ QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW2 )
 {
   QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *par1, par2 );
+  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

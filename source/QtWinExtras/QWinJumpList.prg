@@ -65,8 +65,7 @@ explicit QWinJumpList(QObject *parent = 0)
 HB_FUNC_STATIC( QWINJUMPLIST_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QWinJumpList * o = new QWinJumpList ( par1 );
+  QWinJumpList * o = new QWinJumpList ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

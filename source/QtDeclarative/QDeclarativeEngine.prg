@@ -85,8 +85,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-    QDeclarativeEngine * o = new QDeclarativeEngine ( par1 );
+    QDeclarativeEngine * o = new QDeclarativeEngine ( OPQOBJECT(1,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

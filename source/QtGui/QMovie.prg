@@ -98,8 +98,7 @@ QMovie ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QMOVIE_NEW1 )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QMovie * o = new QMovie ( par1 );
+  QMovie * o = new QMovie ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -110,8 +109,7 @@ HB_FUNC_STATIC( QMOVIE_NEW2 )
 {
   QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QMovie * o = new QMovie ( par1, par2, par3 );
+  QMovie * o = new QMovie ( par1, par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -121,8 +119,7 @@ QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QOb
 HB_FUNC_STATIC( QMOVIE_NEW3 )
 {
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QMovie * o = new QMovie ( PQSTRING(1), par2, par3 );
+  QMovie * o = new QMovie ( PQSTRING(1), par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

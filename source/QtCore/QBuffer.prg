@@ -63,8 +63,7 @@ QBuffer ( QObject * parent = 0 )
 */
 void QBuffer_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QBuffer * o = new QBuffer ( par1 );
+  QBuffer * o = new QBuffer ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -74,8 +73,7 @@ QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 void QBuffer_new2 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QBuffer * o = new QBuffer ( par1, par2 );
+  QBuffer * o = new QBuffer ( par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -59,8 +59,7 @@ QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QHelpEngine * o = new QHelpEngine ( PQSTRING(1), par2 );
+  QHelpEngine * o = new QHelpEngine ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

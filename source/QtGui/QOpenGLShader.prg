@@ -62,8 +62,7 @@ QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
 HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
   int par1 = hb_parni(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QOpenGLShader * o = new QOpenGLShader ( (QOpenGLShader::ShaderType) par1, par2 );
+  QOpenGLShader * o = new QOpenGLShader ( (QOpenGLShader::ShaderType) par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

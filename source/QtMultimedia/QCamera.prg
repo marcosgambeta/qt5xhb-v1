@@ -95,8 +95,7 @@ QCamera(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QCAMERA_NEW1 )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QCamera * o = new QCamera ( par1 );
+  QCamera * o = new QCamera ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -106,8 +105,7 @@ QCamera(const QByteArray & device, QObject * parent = 0)
 HB_FUNC_STATIC( QCAMERA_NEW2 )
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QCamera * o = new QCamera ( *par1, par2 );
+  QCamera * o = new QCamera ( *par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

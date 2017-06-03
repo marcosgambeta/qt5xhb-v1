@@ -61,8 +61,7 @@ QSensorGestureManager(QObject *parent = 0)
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSensorGestureManager * o = new QSensorGestureManager ( par1 );
+  QSensorGestureManager * o = new QSensorGestureManager ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

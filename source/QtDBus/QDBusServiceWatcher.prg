@@ -65,8 +65,7 @@ explicit QDBusServiceWatcher(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW1 )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( par1 );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -76,8 +75,7 @@ QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, W
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_NEW2 )
 {
   int par3 = ISNIL(3)? (int) QDBusServiceWatcher::WatchForOwnerChange : hb_parni(3);
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) _qt5xhb_itemGetPtr(4);
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1), (QDBusServiceWatcher::WatchMode) par3, par4 );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1), (QDBusServiceWatcher::WatchMode) par3, OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

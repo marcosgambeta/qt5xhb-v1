@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTQOBJECT(2) )
   {
     int par1 = ISNIL(1)? 1000 : hb_parni(1);
-    QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-    QTimeLine * o = new QTimeLine ( par1, par2 );
+    QTimeLine * o = new QTimeLine ( par1, OPQOBJECT(2,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

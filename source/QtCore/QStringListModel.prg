@@ -61,8 +61,7 @@ QStringListModel(QObject * parent = 0)
 */
 void QStringListModel_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QStringListModel * o = new QStringListModel ( par1 );
+  QStringListModel * o = new QStringListModel ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -71,8 +70,7 @@ QStringListModel(const QStringList & strings, QObject * parent = 0)
 */
 void QStringListModel_new2 ()
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QStringListModel * o = new QStringListModel ( PQSTRINGLIST(1), par2 );
+  QStringListModel * o = new QStringListModel ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

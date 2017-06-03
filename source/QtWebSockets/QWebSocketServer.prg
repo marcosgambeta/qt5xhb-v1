@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   int par2 = hb_parni(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QWebSocketServer * o = new QWebSocketServer ( PQSTRING(1), (QWebSocketServer::SslMode) par2, par3 );
+  QWebSocketServer * o = new QWebSocketServer ( PQSTRING(1), (QWebSocketServer::SslMode) par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

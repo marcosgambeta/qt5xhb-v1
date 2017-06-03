@@ -154,8 +154,7 @@ QTextDocument(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW1 )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QTextDocument * o = new QTextDocument ( par1 );
+  QTextDocument * o = new QTextDocument ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -164,8 +163,7 @@ QTextDocument(const QString &text, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW2 )
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QTextDocument * o = new QTextDocument ( PQSTRING(1), par2 );
+  QTextDocument * o = new QTextDocument ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -212,8 +210,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-    QTextDocument * ptr = obj->clone ( par1 );
+    QTextDocument * ptr = obj->clone ( OPQOBJECT(1,0) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }

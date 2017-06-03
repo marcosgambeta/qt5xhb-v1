@@ -63,9 +63,8 @@ explicit QSqlRelationalTableModel ( QObject * parent = 0, QSqlDatabase db = QSql
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
   QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
-  QSqlRelationalTableModel * o = new QSqlRelationalTableModel ( par1, par2 );
+  QSqlRelationalTableModel * o = new QSqlRelationalTableModel ( OPQOBJECT(1,0), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

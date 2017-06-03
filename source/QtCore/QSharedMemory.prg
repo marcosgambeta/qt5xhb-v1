@@ -60,8 +60,7 @@ QSharedMemory(QObject *parent = 0)
 */
 void QSharedMemory_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSharedMemory * o = new QSharedMemory ( par1 );
+  QSharedMemory * o = new QSharedMemory ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -70,8 +69,7 @@ QSharedMemory(const QString &key, QObject *parent = 0)
 */
 void QSharedMemory_new2 ()
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSharedMemory * o = new QSharedMemory ( PQSTRING(1), par2 );
+  QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -96,8 +96,7 @@ QMediaPlaylist(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QMediaPlaylist * o = new QMediaPlaylist ( par1 );
+  QMediaPlaylist * o = new QMediaPlaylist ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

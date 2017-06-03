@@ -38,8 +38,7 @@ RETURN
 void HCodeBlockValidator_new1 ()
 {
   HCodeBlockValidator * o = NULL;
-  QObject * parent = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new HCodeBlockValidator ( parent );
+  o = new HCodeBlockValidator ( OPQOBJECT(1,0) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(HCodeBlockValidator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -51,8 +50,7 @@ void HCodeBlockValidator_new2 ()
 {
   HCodeBlockValidator * o = NULL;
   PHB_ITEM block = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
-  QObject * parent = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new HCodeBlockValidator ( block, parent );
+  o = new HCodeBlockValidator ( block, OPQOBJECT(2,0) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(HCodeBlockValidator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

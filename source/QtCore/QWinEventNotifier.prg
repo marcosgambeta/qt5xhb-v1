@@ -49,8 +49,7 @@ explicit QWinEventNotifier(QObject *parent = 0)
 void QWinEventNotifier_new1 ()
 {
 #ifdef Q_OS_WIN
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QWinEventNotifier * o = new QWinEventNotifier ( par1 );
+  QWinEventNotifier * o = new QWinEventNotifier ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -62,8 +61,7 @@ explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0) // TODO: implemen
 // {
 // #ifdef Q_OS_WIN
 //   HANDLE par1 = (HANDLE) hb_parptr(1);
-//   QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-//   QWinEventNotifier * o = new QWinEventNotifier ( par1, par2 );
+//   QWinEventNotifier * o = new QWinEventNotifier ( par1, OPQOBJECT(2,0) );
 //   _qt5xhb_storePointerAndFlag( o, false );
 // #endif
 // }

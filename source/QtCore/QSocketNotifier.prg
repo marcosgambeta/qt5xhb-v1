@@ -54,8 +54,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
   {
     qintptr par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-    QSocketNotifier * o = new QSocketNotifier ( par1, (QSocketNotifier::Type) par2, par3 );
+    QSocketNotifier * o = new QSocketNotifier ( par1, (QSocketNotifier::Type) par2, OPQOBJECT(3,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

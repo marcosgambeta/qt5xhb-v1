@@ -80,8 +80,7 @@ QSvgRenderer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW1 )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QSvgRenderer * o = new QSvgRenderer ( par1 );
+  QSvgRenderer * o = new QSvgRenderer ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -90,8 +89,7 @@ QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), par2 );
+  QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -101,8 +99,7 @@ QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
 HB_FUNC_STATIC( QSVGRENDERER_NEW3 )
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSvgRenderer * o = new QSvgRenderer ( *par1, par2 );
+  QSvgRenderer * o = new QSvgRenderer ( *par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -112,8 +109,7 @@ QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 HB_FUNC_STATIC( QSVGRENDERER_NEW4 )
 {
   QXmlStreamReader * par1 = (QXmlStreamReader *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QSvgRenderer * o = new QSvgRenderer ( par1, par2 );
+  QSvgRenderer * o = new QSvgRenderer ( par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

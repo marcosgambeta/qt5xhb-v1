@@ -58,8 +58,7 @@ explicit QWebChannel(QObject *parent = 0)
 HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QWebChannel * o = new QWebChannel ( par1 );
+  QWebChannel * o = new QWebChannel ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

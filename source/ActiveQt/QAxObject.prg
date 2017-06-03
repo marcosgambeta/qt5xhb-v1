@@ -71,8 +71,7 @@ QAxObject ( QObject * parent = 0 )
 */
 void QAxObject_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QAxObject * o = new QAxObject ( par1 );
+  QAxObject * o = new QAxObject ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -81,8 +80,7 @@ QAxObject ( const QString & c, QObject * parent = 0 )
 */
 void QAxObject_new2 ()
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QAxObject * o = new QAxObject ( PQSTRING(1), par2 );
+  QAxObject * o = new QAxObject ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -92,8 +90,7 @@ QAxObject ( IUnknown * iface, QObject * parent = 0 )
 void QAxObject_new3 ()
 {
   IUnknown * par1 = (IUnknown *) _qt5xhb_itemGetPtr(1);
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QAxObject * o = new QAxObject ( par1, par2 );
+  QAxObject * o = new QAxObject ( par1, OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

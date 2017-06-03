@@ -77,8 +77,7 @@ END CLASS
 HB_FUNC_STATIC( HABSTRACTTABLEMODEL_NEW )
 {
   HAbstractTableModel * o = NULL;
-  QObject * parent = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new HAbstractTableModel ( parent );
+  o = new HAbstractTableModel ( OPQOBJECT(1,0) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(HAbstractTableModel *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

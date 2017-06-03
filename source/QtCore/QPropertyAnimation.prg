@@ -55,8 +55,7 @@ QPropertyAnimation ( QObject * parent = 0 )
 */
 void QPropertyAnimation_new1 ()
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QPropertyAnimation * o = new QPropertyAnimation ( par1 );
+  QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -66,8 +65,7 @@ QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject 
 void QPropertyAnimation_new2 ()
 {
   QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) _qt5xhb_itemGetPtr(3);
-  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *par2, par3 );
+  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -65,8 +65,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QOpenGLTimeMonitor * o = new QOpenGLTimeMonitor ( par1 );
+  QOpenGLTimeMonitor * o = new QOpenGLTimeMonitor ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 #endif

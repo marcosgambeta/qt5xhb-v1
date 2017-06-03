@@ -53,8 +53,7 @@ QAudioProbe(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-  QAudioProbe * o = new QAudioProbe ( par1 );
+  QAudioProbe * o = new QAudioProbe ( OPQOBJECT(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

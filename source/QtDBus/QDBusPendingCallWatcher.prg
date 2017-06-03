@@ -50,8 +50,7 @@ explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent =
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 {
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-  QDBusPendingCallWatcher * o = new QDBusPendingCallWatcher ( par2 );
+  QDBusPendingCallWatcher * o = new QDBusPendingCallWatcher ( OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

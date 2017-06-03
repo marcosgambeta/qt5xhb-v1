@@ -73,8 +73,7 @@ HB_FUNC_STATIC( QUILOADER_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-    QUiLoader * o = new QUiLoader ( par1 );
+    QUiLoader * o = new QUiLoader ( OPQOBJECT(1,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -176,8 +175,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
   {
     if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
     {
-      QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-      QAction * ptr = obj->createAction ( par1, OPQSTRING(2,QString()) );
+      QAction * ptr = obj->createAction ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -198,8 +196,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
   {
     if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
     {
-      QObject * par1 = ISNIL(1)? 0 : (QObject *) _qt5xhb_itemGetPtr(1);
-      QActionGroup * ptr = obj->createActionGroup ( par1, OPQSTRING(2,QString()) );
+      QActionGroup * ptr = obj->createActionGroup ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
     }
     else
@@ -220,8 +217,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
   {
     if( ISCHAR(1) && ISOPTQOBJECT(2) && ISOPTCHAR(3) )
     {
-      QObject * par2 = ISNIL(2)? 0 : (QObject *) _qt5xhb_itemGetPtr(2);
-      QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, OPQSTRING(3,QString()) );
+      QLayout * ptr = obj->createLayout ( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
       _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
     }
     else
