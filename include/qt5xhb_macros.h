@@ -1014,6 +1014,7 @@
 #define ISOPTQOBJECT(n)                                     (ISQOBJECT(n)||ISNIL(n))
 #define ISOPTQWIDGET(n)                                     (ISQWIDGET(n)||ISNIL(n))
 #define ISOPTQBYTEARRAY(n)                                  (ISQBYTEARRAY(n)||ISNIL(n))
+#define ISOPTQACTION(n)                                     (ISQACTION(n)||ISNIL(n))
 
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b
 #define ISNUMPAR(a)                                         hb_pcount() == a
@@ -1049,7 +1050,9 @@
 #define PQWIDGET(n)                                         (QWidget *) _qt5xhb_itemGetPtr(n)
 #define PQVARIANT(n)                                        (QVariant *) _qt5xhb_itemGetPtr(n)
 #define PQMODELINDEX(n)                                     (QModelIndex *) _qt5xhb_itemGetPtr(n)
+#define PQACTION(n)                                         (QAction *) _qt5xhb_itemGetPtr(n)
 
 // macros for optional parameters (Qt objects)
 #define OPQOBJECT(n,v)                                      ISNIL(n)? v : (QObject *) _qt5xhb_itemGetPtr(n)
 #define OPQWIDGET(n,v)                                      ISNIL(n)? v : (QWidget *) _qt5xhb_itemGetPtr(n)
+#define OPQACTION(n,v)                                      ISNIL(n)? v : (QAction *) _qt5xhb_itemGetPtr(n)
