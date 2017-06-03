@@ -199,8 +199,7 @@ void QToolBar_addAction1 ()
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->addAction ( par1 );
+    obj->addAction ( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -386,8 +385,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      QAction * ptr = obj->insertSeparator ( par1 );
+      QAction * ptr = obj->insertSeparator ( PQACTION(1) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -408,8 +406,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
   {
     if( ISQACTION(1) && ISQWIDGET(2) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      QAction * ptr = obj->insertWidget ( par1, PQWIDGET(2) );
+      QAction * ptr = obj->insertWidget ( PQACTION(1), PQWIDGET(2) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -620,8 +617,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      QWidget * ptr = obj->widgetForAction ( par1 );
+      QWidget * ptr = obj->widgetForAction ( PQACTION(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else

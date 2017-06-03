@@ -506,8 +506,7 @@ HB_FUNC_STATIC( QWIDGET_ADDACTION )
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->addAction ( par1 );
+    obj->addAction ( PQACTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1420,9 +1419,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTION )
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    QAction * par2 = (QAction *) _qt5xhb_itemGetPtr(2);
-    obj->insertAction ( par1, par2 );
+    obj->insertAction ( PQACTION(1), PQACTION(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1439,7 +1436,6 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     QList<QAction *> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -1448,7 +1444,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
     {
       par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    obj->insertActions ( par1, par2 );
+    obj->insertActions ( PQACTION(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2329,8 +2325,7 @@ HB_FUNC_STATIC( QWIDGET_REMOVEACTION )
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->removeAction ( par1 );
+    obj->removeAction ( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -1211,9 +1211,8 @@ void QLineEdit_addAction1 ()
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->addAction ( par1, (QLineEdit::ActionPosition) par2 );
+    obj->addAction ( PQACTION(1), (QLineEdit::ActionPosition) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

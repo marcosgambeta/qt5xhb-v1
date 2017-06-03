@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      obj->manageAction ( par1 );
+      obj->manageAction ( PQACTION(1) );
     }
     else
     {

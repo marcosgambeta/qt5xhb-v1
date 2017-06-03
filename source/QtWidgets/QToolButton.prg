@@ -308,8 +308,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      obj->setDefaultAction ( par1 );
+      obj->setDefaultAction ( PQACTION(1) );
     }
     else
     {

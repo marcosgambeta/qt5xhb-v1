@@ -175,8 +175,7 @@ HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      QRect * ptr = new QRect( obj->actionGeometry ( par1 ) );
+      QRect * ptr = new QRect( obj->actionGeometry ( PQACTION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      obj->setActiveAction ( par1 );
+      obj->setActiveAction ( PQACTION(1) );
     }
     else
     {
@@ -294,8 +292,7 @@ void QMenu_addAction5 ()
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->addAction ( par1 );
+    obj->addAction ( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -457,8 +454,7 @@ HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      obj->setDefaultAction ( par1 );
+      obj->setDefaultAction ( PQACTION(1) );
     }
     else
     {
@@ -493,8 +489,7 @@ void QMenu_exec2 ()
   if( obj )
   {
     QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QAction * par2 = ISNIL(2)? 0 : (QAction *) _qt5xhb_itemGetPtr(2);
-    QAction * ptr = obj->exec ( *par1, par2 );
+    QAction * ptr = obj->exec ( *par1, OPQACTION(2,0) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -513,8 +508,7 @@ void QMenu_exec3 ()
     par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
   QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-  QAction * par3 = ISNIL(3)? 0 : (QAction *) _qt5xhb_itemGetPtr(3);
-  QAction * ptr = QMenu::exec ( par1, *par2, par3, OPQWIDGET(4,0) );
+  QAction * ptr = QMenu::exec ( par1, *par2, OPQACTION(3,0), OPQWIDGET(4,0) );
   _qt5xhb_createReturnClass ( ptr, "QACTION" );
 }
 
@@ -528,11 +522,11 @@ HB_FUNC_STATIC( QMENU_EXEC )
   {
     QMenu_exec1();
   }
-  else if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQPOINT(1) && ISOPTQACTION(2) )
   {
     QMenu_exec2();
   }
-  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3)||ISNIL(3)) && ISOPTQWIDGET(4) )
+  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && ISOPTQACTION(3) && ISOPTQWIDGET(4) )
   {
     QMenu_exec3();
   }
@@ -605,9 +599,8 @@ HB_FUNC_STATIC( QMENU_INSERTMENU )
   {
     if( ISQACTION(1) && ISQMENU(2) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
       QMenu * par2 = (QMenu *) _qt5xhb_itemGetPtr(2);
-      QAction * ptr = obj->insertMenu ( par1, par2 );
+      QAction * ptr = obj->insertMenu ( PQACTION(1), par2 );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -628,8 +621,7 @@ HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
   {
     if( ISQACTION(1) )
     {
-      QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-      QAction * ptr = obj->insertSeparator ( par1 );
+      QAction * ptr = obj->insertSeparator ( PQACTION(1) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -723,11 +715,10 @@ HB_FUNC_STATIC( QMENU_POPUP )
 
   if( obj )
   {
-    if( ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
+    if( ISQPOINT(1) && ISOPTQACTION(2) )
     {
       QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      QAction * par2 = ISNIL(2)? 0 : (QAction *) _qt5xhb_itemGetPtr(2);
-      obj->popup ( *par1, par2 );
+      obj->popup ( *par1, OPQACTION(2,0) );
     }
     else
     {
@@ -901,8 +892,7 @@ void QMenu_insertSection1 ()
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    QAction * ptr = obj->insertSection ( par1, PQSTRING(2) );
+    QAction * ptr = obj->insertSection ( PQACTION(1), PQSTRING(2) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -918,9 +908,8 @@ void QMenu_insertSection2 ()
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QAction * ptr = obj->insertSection ( par1, par2, PQSTRING(3) );
+    QAction * ptr = obj->insertSection ( PQACTION(1), par2, PQSTRING(3) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

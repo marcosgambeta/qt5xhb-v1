@@ -93,8 +93,7 @@ void QActionGroup_addAction1 ()
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    QAction * ptr = obj->addAction ( par1 );
+    QAction * ptr = obj->addAction ( PQACTION(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -214,8 +213,7 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->removeAction ( par1 );
+    obj->removeAction ( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

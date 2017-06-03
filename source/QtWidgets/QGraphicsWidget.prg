@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTION )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->addAction ( par1 );
+    obj->addAction ( PQACTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -260,9 +259,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTION )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    QAction * par2 = (QAction *) _qt5xhb_itemGetPtr(2);
-    obj->insertAction ( par1, par2 );
+    obj->insertAction ( PQACTION(1), PQACTION(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -382,8 +379,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAction * par1 = (QAction *) _qt5xhb_itemGetPtr(1);
-    obj->removeAction ( par1 );
+    obj->removeAction ( PQACTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
