@@ -276,15 +276,7 @@ void QAxObject_dynamicCall2 ()
 
   if( obj )
   {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    QVariant * ptr = new QVariant( obj->dynamicCall ( (const char *) hb_parc(1), par2 ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall ( (const char *) hb_parc(1), PQVARIANTLIST(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -385,15 +377,7 @@ void QAxObject_querySubObject2 ()
 
   if( obj )
   {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    QAxObject * ptr = obj->querySubObject ( (const char *) hb_parc(1), par2 );
+    QAxObject * ptr = obj->querySubObject ( (const char *) hb_parc(1), PQVARIANTLIST(2) );
     _qt5xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
