@@ -11,23 +11,23 @@ compile com a biblioteca gtgui.
 
 Estando no prompt de comando, utilize os scripts abaixo:
 
-compileall.bat : compila todos os testes.
+compilartodos.bat : compila todos os testes.
 
-compile.bat : compila um teste específico (exemplo: compile QWidget).
+compilar.bat : compila um teste específico (exemplo: compilar mainwindow).
 
 Use da forma abaixo caso esteja usando o xHarbour:
 
-compileall -xhb
+compilartodos -xhb
 
-compile QWidget -xhb
+compilar mainwindow -xhb
 
-copydlls.bat : copia as dlls da pasta bin do Qt para a pasta de testes,
+copiardlls.bat : copia as dlls da pasta bin do Qt para a pasta de testes,
 permitindo executar os testes através do Windows Explorer, com um duplo
 clique.
 
-deltests.bat : apaga todos os executáveis da pasta de testes (*.exe).
+apagartestes.bat : apaga todos os executáveis da pasta de testes (*.exe).
 
-deldlls.bat : apaga todas as dlls da pasta de testes (*.dll).
+apagardlls.bat : apaga todas as dlls da pasta de testes (*.dll).
 
 A compilação dos testes é efetuada através da ferramenta hbmk2, independente
 de se estar usando o Harbour ou o xHarbour.
