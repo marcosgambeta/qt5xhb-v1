@@ -248,15 +248,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QList<QVariant> par3;
-    PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-    int i3;
-    int nLen3 = hb_arrayLen(aList3);
-    for (i3=0;i3<nLen3;i3++)
-    {
-      par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-    }
-    QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList ( (QDBus::CallMode) par1, PQSTRING(2), par3 ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList ( (QDBus::CallMode) par1, PQSTRING(2), PQVARIANTLIST(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -270,15 +262,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK1 )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, PQOBJECT(3), (const char *) hb_parc(4), (const char *) hb_parc(5) ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), PQVARIANTLIST(2), PQOBJECT(3), (const char *) hb_parc(4), (const char *) hb_parc(5) ) );
   }
 }
 
@@ -290,15 +274,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK2 )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    hb_retl( obj->callWithCallback ( PQSTRING(1), par2, PQOBJECT(3), (const char *) hb_parc(4) ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), PQVARIANTLIST(2), PQOBJECT(3), (const char *) hb_parc(4) ) );
   }
 }
 
@@ -341,15 +317,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCallWithArgumentList ( PQSTRING(1), par2 ) );
+    QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCallWithArgumentList ( PQSTRING(1), PQVARIANTLIST(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
   }
 }
