@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
     if( ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
       QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-      QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
-      QImage * ptr = new QImage( obj->requestImage ( PQSTRING(1), par2, *par3 ) );
+      QImage * ptr = new QImage( obj->requestImage ( PQSTRING(1), par2, *PQSIZE(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -138,8 +137,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
     if( ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
       QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-      QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
-      QPixmap * ptr = new QPixmap( obj->requestPixmap ( PQSTRING(1), par2, *par3 ) );
+      QPixmap * ptr = new QPixmap( obj->requestPixmap ( PQSTRING(1), par2, *PQSIZE(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else
