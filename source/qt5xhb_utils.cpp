@@ -6,27 +6,13 @@
 
 */
 
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#define ISNIL HB_ISNIL
-#define ISLOG HB_ISLOG
-#define ISNUM HB_ISNUM
-#define ISCHAR HB_ISCHAR
-#define ISPOINTER HB_ISPOINTER
-#define ISOBJECT HB_ISOBJECT
-#define ISARRAY HB_ISARRAY
-#endif
-
+#include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 
 #include <QObject>
 #include <QStringList>
 #include <QWidget>
+#include <QVariant>
 
 /*
   cria um objeto da classe 'classname', com o ponteiro 'ptr'
@@ -639,3 +625,69 @@ QStringList _qt5xhb_convert_array_parameter_to_qstringlist ( int numpar )
 //   return QString( hb_parc(numpar) );
 //   #endif
 // }
+
+/*
+  converte parametro 'n' de array (Harbour) para QVariantList/QList<QVariant> (Qt)
+*/
+QVariantList _qt5xhb_convert_array_parameter_to_qvariantlist ( int numpar )
+{
+  QVariantList list;
+
+  PHB_ITEM pArray = hb_param(numpar, HB_IT_ARRAY);
+
+  if( pArray )
+  {
+    int i;
+    int nLen = hb_arrayLen(pArray);
+    for (i=0; i<nLen; i++)
+    {
+      list << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( pArray, i+1 ), "POINTER", 0 ) );
+    }
+  }
+
+  return list;
+}
+
+/*
+  converte um objeto QVariantList/QList<QVariant> em uma array do [x]Harbour
+*/
+void _qt5xhb_convert_qvariantlist_to_array ( const QVariantList list )
+{
+  #ifdef __XHARBOUR__
+  PHB_DYNS pDynSym = hb_dynsymFind( "QVARIANT" );
+  #else
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
+  #endif
+
+  PHB_ITEM pArray = hb_itemArrayNew(0);
+
+  int i;
+
+  for(i=0; i<list.count(); i++)
+  {
+    if( pDynSym )
+    {
+      #ifdef __XHARBOUR__
+      hb_vmPushSymbol( pDynSym->pSymbol );
+      #else
+      hb_vmPushDynSym( pDynSym );
+      #endif
+      hb_vmPushNil();
+      hb_vmDo( 0 );
+      PHB_ITEM pObject = hb_itemNew( NULL );
+      hb_itemCopy( pObject, hb_stackReturnItem() );
+      PHB_ITEM pItem = hb_itemNew( NULL );
+      hb_itemPutPtr( pItem, (QVariant *) new QVariant ( list[i] ) );
+      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+      hb_itemRelease( pItem );
+      PHB_ITEM pDestroy = hb_itemNew( NULL );
+      hb_itemPutL( pDestroy, true );
+      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+      hb_itemRelease( pDestroy );
+      hb_arrayAddForward( pArray, pObject );
+      hb_itemRelease( pObject );
+    }
+  }
+
+  hb_itemReturnRelease(pArray);
+}
