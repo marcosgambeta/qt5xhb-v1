@@ -80,8 +80,7 @@ QSizeF(const QSize &sz)
 */
 void QSizeF_new2 ()
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-  QSizeF * o = new QSizeF ( *par1 );
+  QSizeF * o = new QSizeF ( *PQSIZE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -298,9 +297,8 @@ void QSizeF_scale2 ()
 
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->scale ( *par1, (Qt::AspectRatioMode) par2 );
+    obj->scale ( *PQSIZEF(1), (Qt::AspectRatioMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -349,9 +347,8 @@ void QSizeF_scaled2 ()
 
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QSizeF * ptr = new QSizeF( obj->scaled ( *par1, (Qt::AspectRatioMode) par2 ) );
+    QSizeF * ptr = new QSizeF( obj->scaled ( *PQSIZEF(1), (Qt::AspectRatioMode) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -386,8 +383,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
   {
     if( ISQSIZEF(1) )
     {
-      QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-      QSizeF * ptr = new QSizeF( obj->expandedTo ( *par1 ) );
+      QSizeF * ptr = new QSizeF( obj->expandedTo ( *PQSIZEF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
     }
     else
@@ -408,8 +404,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
   {
     if( ISQSIZEF(1) )
     {
-      QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-      QSizeF * ptr = new QSizeF( obj->boundedTo ( *par1 ) );
+      QSizeF * ptr = new QSizeF( obj->boundedTo ( *PQSIZEF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
     }
     else

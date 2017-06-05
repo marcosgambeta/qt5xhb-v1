@@ -120,9 +120,7 @@ QRect ( const QPoint & topLeft, const QPoint & bottomRight )
 */
 void QRect_new2 ()
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-  QRect * o = new QRect ( *par1, *par2 );
+  QRect * o = new QRect ( *PQPOINT(1), *PQPOINT(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -131,9 +129,7 @@ QRect ( const QPoint & topLeft, const QSize & size )
 */
 void QRect_new3 ()
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-  QRect * o = new QRect ( *par1, *par2 );
+  QRect * o = new QRect ( *PQPOINT(1), *PQSIZE(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -303,8 +299,7 @@ void QRect_contains1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1, OPBOOL(2,false) ) );
+    hb_retl( obj->contains ( *PQPOINT(1), OPBOOL(2,false) ) );
   }
 }
 
@@ -343,8 +338,7 @@ void QRect_contains4 ()
 
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1, OPBOOL(2,false) ) );
+    hb_retl( obj->contains ( *PQRECT(1), OPBOOL(2,false) ) );
   }
 }
 
@@ -461,8 +455,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTED )
   {
     if( ISQRECT(1) )
     {
-      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-      QRect * ptr = new QRect( obj->intersected ( *par1 ) );
+      QRect * ptr = new QRect( obj->intersected ( *PQRECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -483,8 +476,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTS )
   {
     if( ISQRECT(1) )
     {
-      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->intersects ( *par1 ) );
+      hb_retl( obj->intersects ( *PQRECT(1) ) );
     }
     else
     {
@@ -578,8 +570,7 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOMLEFT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->moveBottomLeft ( *par1 );
+      obj->moveBottomLeft ( *PQPOINT(1) );
     }
     else
     {
@@ -601,8 +592,7 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOMRIGHT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->moveBottomRight ( *par1 );
+      obj->moveBottomRight ( *PQPOINT(1) );
     }
     else
     {
@@ -624,8 +614,7 @@ HB_FUNC_STATIC( QRECT_MOVECENTER )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->moveCenter ( *par1 );
+      obj->moveCenter ( *PQPOINT(1) );
     }
     else
     {
@@ -704,8 +693,7 @@ void QRect_moveTo2 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->moveTo ( *par1 );
+    obj->moveTo ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -763,8 +751,7 @@ HB_FUNC_STATIC( QRECT_MOVETOPLEFT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->moveTopLeft ( *par1 );
+      obj->moveTopLeft ( *PQPOINT(1) );
     }
     else
     {
@@ -786,8 +773,7 @@ HB_FUNC_STATIC( QRECT_MOVETOPRIGHT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->moveTopRight ( *par1 );
+      obj->moveTopRight ( *PQPOINT(1) );
     }
     else
     {
@@ -858,8 +844,7 @@ HB_FUNC_STATIC( QRECT_SETBOTTOMLEFT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->setBottomLeft ( *par1 );
+      obj->setBottomLeft ( *PQPOINT(1) );
     }
     else
     {
@@ -881,8 +866,7 @@ HB_FUNC_STATIC( QRECT_SETBOTTOMRIGHT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->setBottomRight ( *par1 );
+      obj->setBottomRight ( *PQPOINT(1) );
     }
     else
     {
@@ -1014,8 +998,7 @@ HB_FUNC_STATIC( QRECT_SETSIZE )
   {
     if( ISQSIZE(1) )
     {
-      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-      obj->setSize ( *par1 );
+      obj->setSize ( *PQSIZE(1) );
     }
     else
     {
@@ -1059,8 +1042,7 @@ HB_FUNC_STATIC( QRECT_SETTOPLEFT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->setTopLeft ( *par1 );
+      obj->setTopLeft ( *PQPOINT(1) );
     }
     else
     {
@@ -1082,8 +1064,7 @@ HB_FUNC_STATIC( QRECT_SETTOPRIGHT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->setTopRight ( *par1 );
+      obj->setTopRight ( *PQPOINT(1) );
     }
     else
     {
@@ -1239,8 +1220,7 @@ void QRect_translate2 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->translate ( *par1 );
+    obj->translate ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1288,8 +1268,7 @@ void QRect_translated2 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QRect * ptr = new QRect( obj->translated ( *par1 ) );
+    QRect * ptr = new QRect( obj->translated ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -1324,8 +1303,7 @@ HB_FUNC_STATIC( QRECT_UNITED )
   {
     if( ISQRECT(1) )
     {
-      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-      QRect * ptr = new QRect( obj->united ( *par1 ) );
+      QRect * ptr = new QRect( obj->united ( *PQRECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else

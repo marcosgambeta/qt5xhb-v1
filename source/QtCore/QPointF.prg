@@ -73,8 +73,7 @@ QPointF(const QPoint & point)
 */
 void QPointF_new2 ()
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QPointF * o = new QPointF ( *par1 );
+  QPointF * o = new QPointF ( *PQPOINT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

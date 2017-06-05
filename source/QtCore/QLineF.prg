@@ -93,9 +93,7 @@ QLineF(const QPointF & p1, const QPointF & p2)
 */
 void QLineF_new2 ()
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-  QLineF * o = new QLineF ( *par1, *par2 );
+  QLineF * o = new QLineF ( *PQPOINTF(1), *PQPOINTF(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -113,8 +111,7 @@ QLineF(const QLine & line)
 */
 void QLineF_new4 ()
 {
-  QLine * par1 = (QLine *) _qt5xhb_itemGetPtr(1);
-  QLineF * o = new QLineF ( *par1 );
+  QLineF * o = new QLineF ( *PQLINE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -268,8 +265,7 @@ HB_FUNC_STATIC( QLINEF_ANGLETO )
   {
     if( ISQLINEF(1) )
     {
-      QLineF * par1 = (QLineF *) _qt5xhb_itemGetPtr(1);
-      hb_retnd( obj->angleTo ( *par1 ) );
+      hb_retnd( obj->angleTo ( *PQLINEF(1) ) );
     }
     else
     {
@@ -315,9 +311,8 @@ HB_FUNC_STATIC( QLINEF_INTERSECT )
   {
     if( ISQLINEF(1) && ISQPOINTF(2) )
     {
-      QLineF * par1 = (QLineF *) _qt5xhb_itemGetPtr(1);
       QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-      hb_retni( obj->intersect ( *par1, par2 ) );
+      hb_retni( obj->intersect ( *PQLINEF(1), par2 ) );
     }
     else
     {
@@ -398,8 +393,7 @@ HB_FUNC_STATIC( QLINEF_SETP1 )
   {
     if( ISQPOINTF(1) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      obj->setP1 ( *par1 );
+      obj->setP1 ( *PQPOINTF(1) );
     }
     else
     {
@@ -421,8 +415,7 @@ HB_FUNC_STATIC( QLINEF_SETP2 )
   {
     if( ISQPOINTF(1) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      obj->setP2 ( *par1 );
+      obj->setP2 ( *PQPOINTF(1) );
     }
     else
     {
@@ -510,9 +503,7 @@ HB_FUNC_STATIC( QLINEF_SETPOINTS )
   {
     if( ISQPOINTF(1) && ISQPOINTF(2) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-      obj->setPoints ( *par1, *par2 );
+      obj->setPoints ( *PQPOINTF(1), *PQPOINTF(2) );
     }
     else
     {
@@ -546,8 +537,7 @@ void QLineF_translate1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->translate ( *par1 );
+    obj->translate ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -596,8 +586,7 @@ void QLineF_translated1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QLineF * ptr = new QLineF( obj->translated ( *par1 ) );
+    QLineF * ptr = new QLineF( obj->translated ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }

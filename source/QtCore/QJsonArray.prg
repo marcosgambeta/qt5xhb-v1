@@ -506,38 +506,7 @@ HB_FUNC_STATIC( QJSONARRAY_TOVARIANTLIST )
 
   if( obj )
   {
-    QVariantList list = obj->toVariantList ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QVARIANT" );
-    #else
-    pDynSym = hb_dynsymFindName( "QVARIANT" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QVariant *) new QVariant( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
+    _qt5xhb_convert_qvariantlist_to_array( obj->toVariantList () );
   }
 }
 
@@ -564,15 +533,7 @@ HB_FUNC_STATIC( QJSONARRAY_FROMVARIANTLIST )
 {
   if( ISARRAY(1) )
   {
-    QVariantList par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    QJsonArray * ptr = new QJsonArray( QJsonArray::fromVariantList ( par1 ) );
+    QJsonArray * ptr = new QJsonArray( QJsonArray::fromVariantList ( PQVARIANTLIST(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
   else

@@ -81,9 +81,7 @@ QLine(const QPoint & p1, const QPoint & p2)
 */
 void Qline_new2 ()
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-  QLine * o = new QLine ( *par1, *par2 );
+  QLine * o = new QLine ( *PQPOINT(1), *PQPOINT(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -271,8 +269,7 @@ HB_FUNC_STATIC( QLINE_SETP1 )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->setP1 ( *par1 );
+      obj->setP1 ( *PQPOINT(1) );
     }
     else
     {
@@ -294,8 +291,7 @@ HB_FUNC_STATIC( QLINE_SETP2 )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->setP2 ( *par1 );
+      obj->setP2 ( *PQPOINT(1) );
     }
     else
     {
@@ -339,9 +335,7 @@ HB_FUNC_STATIC( QLINE_SETPOINTS )
   {
     if( ISQPOINT(1) && ISQPOINT(2) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-      obj->setPoints ( *par1, *par2 );
+      obj->setPoints ( *PQPOINT(1), *PQPOINT(2) );
     }
     else
     {
@@ -361,8 +355,7 @@ void QLine_translate1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->translate ( *par1 );
+    obj->translate ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -411,8 +404,7 @@ void QLine_translated1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QLine * ptr = new QLine( obj->translated ( *par1 ) );
+    QLine * ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }

@@ -134,10 +134,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
   {
     if( ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-      QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
-      obj->addCubicBezierSegment ( *par1, *par2, *par3 );
+      obj->addCubicBezierSegment ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
     }
     else
     {
@@ -159,8 +156,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
   {
     if( ISQPOINTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      obj->addTCBSegment ( *par1, PQREAL(2), PQREAL(3), PQREAL(4) );
+      obj->addTCBSegment ( *PQPOINTF(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
     else
     {
