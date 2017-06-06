@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETOFFSET )
   QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setOffset ( *par1 );
+    obj->setOffset ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -179,8 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETSIZE )
   QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->setSize ( *par1 );
+    obj->setSize ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -222,10 +220,9 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
   QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
     QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->paint ( par1, par2, par3 );
+    obj->paint ( PQPAINTER(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
