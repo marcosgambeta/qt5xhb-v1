@@ -462,8 +462,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CONSTRUCTICONURL )
   if( obj )
   {
     QPlaceIcon * par1 = (QPlaceIcon *) _qt5xhb_itemGetPtr(1);
-    QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-    QUrl * ptr = new QUrl( obj->constructIconUrl ( *par1, *par2 ) );
+    QUrl * ptr = new QUrl( obj->constructIconUrl ( *par1, *PQSIZE(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
