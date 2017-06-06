@@ -122,9 +122,8 @@ explicit QPageSize(const QSize &pointSize, const QString &name = QString(), Size
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW3 )
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   int par3 = ISNIL(3)? (int) QPageSize::FuzzyMatch : hb_parni(3);
-  QPageSize * o = new QPageSize ( *par1, OPQSTRING(2,QString()), (QPageSize::SizeMatchPolicy) par3 );
+  QPageSize * o = new QPageSize ( *PQSIZE(1), OPQSTRING(2,QString()), (QPageSize::SizeMatchPolicy) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -133,10 +132,9 @@ explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW4 )
 {
-  QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par4 = ISNIL(4)? (int) QPageSize::FuzzyMatch : hb_parni(4);
-  QPageSize * o = new QPageSize ( *par1, (QPageSize::Unit) par2, OPQSTRING(3,QString()), (QPageSize::SizeMatchPolicy) par4 );
+  QPageSize * o = new QPageSize ( *PQSIZEF(1), (QPageSize::Unit) par2, OPQSTRING(3,QString()), (QPageSize::SizeMatchPolicy) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -341,9 +339,8 @@ static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = Fuzzy
 */
 HB_FUNC_STATIC( QPAGESIZE_ID2 )
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QPageSize::FuzzyMatch : hb_parni(2);
-  hb_retni( QPageSize::id ( *par1, (QPageSize::SizeMatchPolicy) par2 ) );
+  hb_retni( QPageSize::id ( *PQSIZE(1), (QPageSize::SizeMatchPolicy) par2 ) );
 }
 
 /*
@@ -351,10 +348,9 @@ static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy
 */
 HB_FUNC_STATIC( QPAGESIZE_ID3 )
 {
-  QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QPageSize::FuzzyMatch : hb_parni(3);
-  hb_retni( QPageSize::id ( *par1, (QPageSize::Unit) par2, (QPageSize::SizeMatchPolicy) par3 ) );
+  hb_retni( QPageSize::id ( *PQSIZEF(1), (QPageSize::Unit) par2, (QPageSize::SizeMatchPolicy) par3 ) );
 }
 
 /*

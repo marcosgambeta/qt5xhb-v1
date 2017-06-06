@@ -78,8 +78,7 @@ QFontMetrics ( const QFont & font )
 */
 void QFontMetrics_new1 ()
 {
-  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-  QFontMetrics * o = new QFontMetrics ( *par1 );
+  QFontMetrics * o = new QFontMetrics ( *PQFONT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -88,9 +87,8 @@ QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
 */
 void QFontMetrics_new2 ()
 {
-  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QPaintDevice * par2 = (QPaintDevice *) _qt5xhb_itemGetPtr(2);
-  QFontMetrics * o = new QFontMetrics ( *par1, par2 );
+  QFontMetrics * o = new QFontMetrics ( *PQFONT(1), par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -99,8 +97,7 @@ QFontMetrics ( const QFontMetrics & fm )
 */
 void QFontMetrics_new3 ()
 {
-  QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
-  QFontMetrics * o = new QFontMetrics ( *par1 );
+  QFontMetrics * o = new QFontMetrics ( *PQFONTMETRICS(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

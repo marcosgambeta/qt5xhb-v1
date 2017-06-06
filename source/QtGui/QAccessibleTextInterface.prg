@@ -231,8 +231,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_OFFSETATPOINT )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->offsetAtPoint ( *par1 ) );
+    hb_retni( obj->offsetAtPoint ( *PQPOINT(1) ) );
   }
 }
 

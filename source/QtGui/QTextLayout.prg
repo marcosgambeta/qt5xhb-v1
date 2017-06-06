@@ -123,9 +123,8 @@ QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW3 )
 {
-  QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
   QPaintDevice * par3 = ISNIL(3)? 0 : (QPaintDevice *) _qt5xhb_itemGetPtr(3);
-  QTextLayout * o = new QTextLayout ( PQSTRING(1), *par2, par3 );
+  QTextLayout * o = new QTextLayout ( PQSTRING(1), *PQFONT(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    obj->setFont ( *par1 );
+    obj->setFont ( *PQFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -568,9 +566,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR1 )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    obj->drawCursor ( par1, *par2, PINT(3) );
+    obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -584,9 +580,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR2 )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    obj->drawCursor ( par1, *par2, PINT(3), PINT(4) );
+    obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -614,8 +608,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setPosition ( *par1 );
+    obj->setPosition ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

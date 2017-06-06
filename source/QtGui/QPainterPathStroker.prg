@@ -82,16 +82,8 @@ QPainterPathStroker( const QPen & pen )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QPainterPathStroker_new2 ()
 {
-  QPen * par1 = (QPen *) _qt5xhb_itemGetPtr(1);
-  QPainterPathStroker * o = new QPainterPathStroker ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPainterPath *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  QPainterPathStroker * o = new QPainterPathStroker ( *PQPEN(1) );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 #endif
 
@@ -157,8 +149,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
   {
     if( ISQPAINTERPATH(1) )
     {
-      QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-      QPainterPath * ptr = new QPainterPath( obj->createStroke ( *par1 ) );
+      QPainterPath * ptr = new QPainterPath( obj->createStroke ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
     }
     else

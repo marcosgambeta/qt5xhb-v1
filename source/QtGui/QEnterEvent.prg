@@ -60,10 +60,7 @@ QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &sc
 */
 HB_FUNC_STATIC( QENTEREVENT_NEW )
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-  QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
-  QEnterEvent * o = new QEnterEvent ( *par1, *par2, *par3 );
+  QEnterEvent * o = new QEnterEvent ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

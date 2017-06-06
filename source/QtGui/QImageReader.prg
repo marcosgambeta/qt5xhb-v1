@@ -545,8 +545,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETCLIPRECT )
   {
     if( ISQRECT(1) )
     {
-      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-      obj->setClipRect ( *par1 );
+      obj->setClipRect ( *PQRECT(1) );
     }
     else
     {
@@ -680,8 +679,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDCLIPRECT )
   {
     if( ISQRECT(1) )
     {
-      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-      obj->setScaledClipRect ( *par1 );
+      obj->setScaledClipRect ( *PQRECT(1) );
     }
     else
     {
@@ -703,8 +701,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDSIZE )
   {
     if( ISQSIZE(1) )
     {
-      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-      obj->setScaledSize ( *par1 );
+      obj->setScaledSize ( *PQSIZE(1) );
     }
     else
     {

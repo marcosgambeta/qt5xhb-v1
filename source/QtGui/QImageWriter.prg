@@ -451,8 +451,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
   {
     if( ISQIMAGE(1) )
     {
-      QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->write ( *par1 ) );
+      hb_retl( obj->write ( *PQIMAGE(1) ) );
     }
     else
     {

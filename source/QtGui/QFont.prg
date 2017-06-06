@@ -133,9 +133,8 @@ QFont ( const QFont & font, QPaintDevice * pd )
 */
 void QFont_new3 ()
 {
-  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   QPaintDevice * par2 = (QPaintDevice *) _qt5xhb_itemGetPtr(2);
-  QFont * o = new QFont ( *par1, par2 );
+  QFont * o = new QFont ( *PQFONT(1), par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -144,8 +143,7 @@ QFont ( const QFont & font )
 */
 void QFont_new4 ()
 {
-  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-  QFont * o = new QFont ( *par1 );
+  QFont * o = new QFont ( *PQFONT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -304,8 +302,7 @@ HB_FUNC_STATIC( QFONT_ISCOPYOF )
   {
     if( ISQFONT(1) )
     {
-      QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isCopyOf ( *par1 ) );
+      hb_retl( obj->isCopyOf ( *PQFONT(1) ) );
     }
     else
     {
@@ -494,8 +491,7 @@ HB_FUNC_STATIC( QFONT_RESOLVE )
   {
     if( ISQFONT(1) )
     {
-      QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-      QFont * ptr = new QFont( obj->resolve ( *par1 ) );
+      QFont * ptr = new QFont( obj->resolve ( *PQFONT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
     }
     else

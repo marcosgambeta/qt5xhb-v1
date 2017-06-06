@@ -207,9 +207,8 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
   {
     if( ISQIMAGE(1) && ISOPTNUM(2) )
     {
-      QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-      obj->setImage ( *par1, (QClipboard::Mode) par2 );
+      obj->setImage ( *PQIMAGE(1), (QClipboard::Mode) par2 );
     }
     else
     {
@@ -255,9 +254,8 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
   {
     if( ISQPIXMAP(1) && ISOPTNUM(2) )
     {
-      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-      obj->setPixmap ( *par1, (QClipboard::Mode) par2 );
+      obj->setPixmap ( *PQPIXMAP(1), (QClipboard::Mode) par2 );
     }
     else
     {

@@ -669,9 +669,8 @@ static QRawFont fromFont(const QFont &font,QFontDatabase::WritingSystem writingS
 */
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {
-  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QFontDatabase::Any : hb_parni(2);
-  QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *par1, (QFontDatabase::WritingSystem) par2 ) );
+  QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), (QFontDatabase::WritingSystem) par2 ) );
   _qt5xhb_createReturnClass ( ptr, "QRAWFONT", true );
 }
 

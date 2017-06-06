@@ -116,8 +116,7 @@ QVector3D(const QPoint& point)
 */
 HB_FUNC_STATIC( QVECTOR3D_NEW3 )
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QVector3D * o = new QVector3D ( *par1 );
+  QVector3D * o = new QVector3D ( *PQPOINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -126,8 +125,7 @@ QVector3D(const QPointF& point)
 */
 HB_FUNC_STATIC( QVECTOR3D_NEW4 )
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  QVector3D * o = new QVector3D ( *par1 );
+  QVector3D * o = new QVector3D ( *PQPOINTF(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

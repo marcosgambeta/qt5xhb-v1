@@ -93,11 +93,9 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
   QTextObjectInterface * obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
     QTextDocument * par3 = (QTextDocument *) _qt5xhb_itemGetPtr(3);
     QTextFormat * par5 = (QTextFormat *) _qt5xhb_itemGetPtr(5);
-    obj->drawObject ( par1, *par2, par3, PINT(4), *par5 );
+    obj->drawObject ( PQPAINTER(1), *PQRECTF(2), par3, PINT(4), *par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

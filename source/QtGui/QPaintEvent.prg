@@ -55,8 +55,7 @@ QPaintEvent ( const QRegion & paintRegion )
 */
 HB_FUNC_STATIC( QPAINTEVENT_NEW1 )
 {
-  QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
-  QPaintEvent * o = new QPaintEvent ( *par1 );
+  QPaintEvent * o = new QPaintEvent ( *PQREGION(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -65,8 +64,7 @@ QPaintEvent ( const QRect & paintRect )
 */
 HB_FUNC_STATIC( QPAINTEVENT_NEW2 )
 {
-  QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-  QPaintEvent * o = new QPaintEvent ( *par1 );
+  QPaintEvent * o = new QPaintEvent ( *PQRECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

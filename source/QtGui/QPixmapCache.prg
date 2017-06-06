@@ -138,8 +138,7 @@ static bool insert(const QString &key, const QPixmap &pixmap)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
 {
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QPixmapCache::insert ( PQSTRING(1), *par2 ) );
+  hb_retl( QPixmapCache::insert ( PQSTRING(1), *PQPIXMAP(2) ) );
 }
 
 //[1]static bool insert(const QString &key, const QPixmap &pixmap)

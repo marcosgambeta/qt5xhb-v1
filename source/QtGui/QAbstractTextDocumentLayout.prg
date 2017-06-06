@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->anchorAt ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->anchorAt ( *PQPOINTF(1) ) ) );
   }
 }
 
@@ -175,9 +174,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retni( obj->hitTest ( *par1, (Qt::HitTestAccuracy) par2 ) );
+    hb_retni( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) par2 ) );
   }
 }
 

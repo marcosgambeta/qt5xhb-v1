@@ -70,8 +70,7 @@ QPicture ( const QPicture & pic )
 */
 void QPicture_new2 ()
 {
-  QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
-  QPicture * o = new QPicture ( *par1 );
+  QPicture * o = new QPicture ( *PQPICTURE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
   {
     if( ISQPAINTER(1) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->play ( par1 ) );
+      hb_retl( obj->play ( PQPAINTER(1) ) );
     }
     else
     {
@@ -280,8 +278,7 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
   {
     if( ISQRECT(1) )
     {
-      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-      obj->setBoundingRect ( *par1 );
+      obj->setBoundingRect ( *PQRECT(1) );
     }
     else
     {

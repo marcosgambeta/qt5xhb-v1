@@ -323,8 +323,7 @@ void QFontDatabase_styleString1 ()
 
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->styleString ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->styleString ( *PQFONT(1) ) ) );
   }
 }
 

@@ -134,8 +134,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZEMM )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->setPageSizeMM ( *par1 );
+    obj->setPageSizeMM ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

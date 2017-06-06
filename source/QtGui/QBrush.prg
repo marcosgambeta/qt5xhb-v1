@@ -118,8 +118,7 @@ QBrush ( const QColor & color, const QPixmap & pixmap )
 void QBrush_new5 ()
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  QBrush * o = new QBrush ( par1, *par2 );
+  QBrush * o = new QBrush ( par1, *PQPIXMAP(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -129,8 +128,7 @@ QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 void QBrush_new6 ()
 {
   int par1 = hb_parni(1);
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  QBrush * o = new QBrush ( (Qt::GlobalColor) par1, *par2 );
+  QBrush * o = new QBrush ( (Qt::GlobalColor) par1, *PQPIXMAP(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -139,8 +137,7 @@ QBrush ( const QPixmap & pixmap )
 */
 void QBrush_new7 ()
 {
-  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-  QBrush * o = new QBrush ( *par1 );
+  QBrush * o = new QBrush ( *PQPIXMAP(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -149,8 +146,7 @@ QBrush ( const QImage & image )
 */
 void QBrush_new8 ()
 {
-  QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-  QBrush * o = new QBrush ( *par1 );
+  QBrush * o = new QBrush ( *PQIMAGE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -159,8 +155,7 @@ QBrush ( const QBrush & other )
 */
 void QBrush_new9 ()
 {
-  QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-  QBrush * o = new QBrush ( *par1 );
+  QBrush * o = new QBrush ( *PQBRUSH(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -427,8 +422,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
   {
     if( ISQPIXMAP(1) )
     {
-      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-      obj->setTexture ( *par1 );
+      obj->setTexture ( *PQPIXMAP(1) );
     }
     else
     {
@@ -450,8 +444,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
   {
     if( ISQIMAGE(1) )
     {
-      QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-      obj->setTextureImage ( *par1 );
+      obj->setTextureImage ( *PQIMAGE(1) );
     }
     else
     {
@@ -473,8 +466,7 @@ HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
   {
     if( ISQTRANSFORM(1) )
     {
-      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      obj->setTransform ( *par1 );
+      obj->setTransform ( *PQTRANSFORM(1) );
     }
     else
     {

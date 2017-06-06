@@ -614,8 +614,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP1 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QPoint * ptr = new QPoint( obj->map ( *par1 ) );
+    QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -629,8 +628,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP2 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->map ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -644,8 +642,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP3 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLine * par1 = (QLine *) _qt5xhb_itemGetPtr(1);
-    QLine * ptr = new QLine( obj->map ( *par1 ) );
+    QLine * ptr = new QLine( obj->map ( *PQLINE(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
@@ -659,8 +656,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP4 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLineF * par1 = (QLineF *) _qt5xhb_itemGetPtr(1);
-    QLineF * ptr = new QLineF( obj->map ( *par1 ) );
+    QLineF * ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
@@ -674,8 +670,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP5 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->map ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -689,8 +684,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP6 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->map ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -704,8 +698,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP7 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
-    QRegion * ptr = new QRegion( obj->map ( *par1 ) );
+    QRegion * ptr = new QRegion( obj->map ( *PQREGION(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -719,8 +712,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP8 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->map ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -734,8 +726,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *PQRECT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -749,8 +740,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    QRect * ptr = new QRect( obj->mapRect ( *par1 ) );
+    QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -764,8 +754,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRect ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -826,9 +815,8 @@ static bool squareToQuad(const QPolygonF &square, QTransform &result)
 */
 HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {
-  QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
   QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QTransform::squareToQuad ( *par1, *par2 ) );
+  hb_retl( QTransform::squareToQuad ( *PQPOLYGONF(1), *par2 ) );
 }
 
 
@@ -837,9 +825,8 @@ static bool quadToSquare(const QPolygonF &quad, QTransform &result)
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 {
-  QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
   QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QTransform::quadToSquare ( *par1, *par2 ) );
+  hb_retl( QTransform::quadToSquare ( *PQPOLYGONF(1), *par2 ) );
 }
 
 
@@ -848,10 +835,8 @@ static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &res
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
-  QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-  QPolygonF * par2 = (QPolygonF *) _qt5xhb_itemGetPtr(2);
   QTransform * par3 = (QTransform *) _qt5xhb_itemGetPtr(3);
-  hb_retl( QTransform::quadToQuad ( *par1, *par2, *par3 ) );
+  hb_retl( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *par3 ) );
 }
 
 

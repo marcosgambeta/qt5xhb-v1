@@ -166,9 +166,8 @@ QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMap
 HB_FUNC_STATIC( QOPENGLTEXTURE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QOpenGLTexture::GenerateMipMaps : hb_parni(2);
-  QOpenGLTexture * o = new QOpenGLTexture ( *par1, (QOpenGLTexture::MipMapGeneration) par2 );
+  QOpenGLTexture * o = new QOpenGLTexture ( *PQIMAGE(1), (QOpenGLTexture::MipMapGeneration) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -756,9 +755,8 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA5 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QOpenGLTexture::GenerateMipMaps : hb_parni(2);
-    obj->setData ( *par1, (QOpenGLTexture::MipMapGeneration) par2 );
+    obj->setData ( *PQIMAGE(1), (QOpenGLTexture::MipMapGeneration) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

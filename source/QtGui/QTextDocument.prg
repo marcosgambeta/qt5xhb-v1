@@ -718,8 +718,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->setPageSize ( *par1 );
+    obj->setPageSize ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -747,8 +746,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    obj->setDefaultFont ( *par1 );
+    obj->setDefaultFont ( *PQFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -889,9 +887,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
-    obj->drawContents ( par1, par2 );
+    obj->drawContents ( PQPAINTER(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

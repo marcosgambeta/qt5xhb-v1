@@ -758,8 +758,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETBACKGROUND )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-    obj->setBackground ( *par1 );
+    obj->setBackground ( *PQBRUSH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -801,8 +800,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETFOREGROUND )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-    obj->setForeground ( *par1 );
+    obj->setForeground ( *PQBRUSH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

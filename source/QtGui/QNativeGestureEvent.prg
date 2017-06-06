@@ -58,12 +58,9 @@ QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const Q
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 {
   int par1 = hb_parni(1);
-  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-  QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
-  QPointF * par4 = (QPointF *) _qt5xhb_itemGetPtr(4);
   ulong par6 = hb_parnl(6);
   quint64 par7 = hb_parni(7);
-  QNativeGestureEvent * o = new QNativeGestureEvent ( (Qt::NativeGestureType) par1, *par2, *par3, *par4, PQREAL(5), par6, par7 );
+  QNativeGestureEvent * o = new QNativeGestureEvent ( (Qt::NativeGestureType) par1, *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), PQREAL(5), par6, par7 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

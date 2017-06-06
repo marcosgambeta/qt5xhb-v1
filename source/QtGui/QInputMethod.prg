@@ -175,8 +175,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-    obj->setInputItemTransform ( *par1 );
+    obj->setInputItemTransform ( *PQTRANSFORM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

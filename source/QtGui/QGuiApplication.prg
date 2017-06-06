@@ -196,8 +196,7 @@ static void changeOverrideCursor(const QCursor & cursor)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-  QGuiApplication::changeOverrideCursor ( *par1 );
+  QGuiApplication::changeOverrideCursor ( *PQCURSOR(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -435,8 +434,7 @@ static void setFont(const QFont & font)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
 {
-  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-  QGuiApplication::setFont ( *par1 );
+  QGuiApplication::setFont ( *PQFONT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -457,8 +455,7 @@ static void setOverrideCursor(const QCursor & cursor)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-  QGuiApplication::setOverrideCursor ( *par1 );
+  QGuiApplication::setOverrideCursor ( *PQCURSOR(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -468,8 +465,7 @@ static void setPalette(const QPalette & pal)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
 {
-  QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
-  QGuiApplication::setPalette ( *par1 );
+  QGuiApplication::setPalette ( *PQPALETTE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -499,8 +495,7 @@ static QWindow * topLevelAt(const QPoint & pos)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QWindow * ptr = QGuiApplication::topLevelAt ( *par1 );
+  QWindow * ptr = QGuiApplication::topLevelAt ( *PQPOINT(1) );
   _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }
 

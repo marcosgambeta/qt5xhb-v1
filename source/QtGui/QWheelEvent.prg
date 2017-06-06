@@ -67,12 +67,10 @@ QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::Keyboard
 */
 HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = ISNIL(5)? (int) Qt::Vertical : hb_parni(5);
-  QWheelEvent * o = new QWheelEvent ( *par1, par2, (Qt::MouseButtons) par3, (Qt::KeyboardModifiers) par4, (Qt::Orientation) par5 );
+  QWheelEvent * o = new QWheelEvent ( *PQPOINTF(1), PINT(2), (Qt::MouseButtons) par3, (Qt::KeyboardModifiers) par4, (Qt::Orientation) par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -81,13 +79,10 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseBut
 */
 HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-  int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = ISNIL(6)? (int) Qt::Vertical : hb_parni(6);
-  QWheelEvent * o = new QWheelEvent ( *par1, *par2, par3, (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (Qt::Orientation) par6 );
+  QWheelEvent * o = new QWheelEvent ( *PQPOINTF(1), *PQPOINTF(2), PINT(3), (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (Qt::Orientation) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -96,15 +91,10 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoi
 */
 HB_FUNC_STATIC( QWHEELEVENT_NEW3 )
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-  QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
-  QPoint * par4 = (QPoint *) _qt5xhb_itemGetPtr(4);
-  int par5 = hb_parni(5);
   int par6 = hb_parni(6);
   int par7 = hb_parni(7);
   int par8 = hb_parni(8);
-  QWheelEvent * o = new QWheelEvent ( *par1, *par2, *par3, *par4, par5, (Qt::Orientation) par6, (Qt::MouseButtons) par7, (Qt::KeyboardModifiers) par8 );
+  QWheelEvent * o = new QWheelEvent ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), (Qt::Orientation) par6, (Qt::MouseButtons) par7, (Qt::KeyboardModifiers) par8 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

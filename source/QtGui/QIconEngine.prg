@@ -92,10 +92,9 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
   {
     if( ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
     {
-      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       int par3 = hb_parni(3);
-      QSize * ptr = new QSize( obj->actualSize ( *par1, (QIcon::Mode) par2, (QIcon::State) par3 ) );
+      QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -116,10 +115,9 @@ HB_FUNC_STATIC( QICONENGINE_ADDFILE )
   {
     if( ISCHAR(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
     {
-      QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
       int par3 = hb_parni(3);
       int par4 = hb_parni(4);
-      obj->addFile ( PQSTRING(1), *par2, (QIcon::Mode) par3, (QIcon::State) par4 );
+      obj->addFile ( PQSTRING(1), *PQSIZE(2), (QIcon::Mode) par3, (QIcon::State) par4 );
     }
     else
     {
@@ -141,10 +139,9 @@ HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
   {
     if( ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) )
     {
-      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       int par3 = hb_parni(3);
-      obj->addPixmap ( *par1, (QIcon::Mode) par2, (QIcon::State) par3 );
+      obj->addPixmap ( *PQPIXMAP(1), (QIcon::Mode) par2, (QIcon::State) par3 );
     }
     else
     {
@@ -263,11 +260,9 @@ HB_FUNC_STATIC( QICONENGINE_PAINT )
   {
     if( ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISNUM(4) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-      QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
       int par3 = hb_parni(3);
       int par4 = hb_parni(4);
-      obj->paint ( par1, *par2, (QIcon::Mode) par3, (QIcon::State) par4 );
+      obj->paint ( PQPAINTER(1), *PQRECT(2), (QIcon::Mode) par3, (QIcon::State) par4 );
     }
     else
     {
@@ -289,10 +284,9 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
   {
     if( ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
     {
-      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
       int par3 = hb_parni(3);
-      QPixmap * ptr = new QPixmap( obj->pixmap ( *par1, (QIcon::Mode) par2, (QIcon::State) par3 ) );
+      QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else

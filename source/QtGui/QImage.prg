@@ -123,9 +123,8 @@ QImage ( const QSize & size, Format format )
 */
 void QImage_new2 ()
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
-  QImage * o = new QImage ( *par1, (QImage::Format) par2 );
+  QImage * o = new QImage ( *PQSIZE(1), (QImage::Format) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -166,8 +165,7 @@ QImage ( const QImage & image )
 */
 void QImage_new11 ()
 {
-  QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-  QImage * o = new QImage ( *par1 );
+  QImage * o = new QImage ( *PQIMAGE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -844,8 +842,7 @@ void QImage_pixel1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->pixel ( *par1 ) );
+    hb_retni( obj->pixel ( *PQPOINT(1) ) );
   }
 }
 
@@ -890,8 +887,7 @@ void QImage_pixelIndex1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->pixelIndex ( *par1 ) );
+    hb_retni( obj->pixelIndex ( *PQPOINT(1) ) );
   }
 }
 
@@ -1012,10 +1008,9 @@ void QImage_scaled1 ()
 
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
     int par3 = ISNIL(3)? (int) Qt::FastTransformation : hb_parni(3);
-    QImage * ptr = new QImage( obj->scaled ( *par1, (Qt::AspectRatioMode) par2, (Qt::TransformationMode) par3 ) );
+    QImage * ptr = new QImage( obj->scaled ( *PQSIZE(1), (Qt::AspectRatioMode) par2, (Qt::TransformationMode) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -1203,8 +1198,7 @@ HB_FUNC_STATIC( QIMAGE_SETOFFSET )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->setOffset ( *par1 );
+      obj->setOffset ( *PQPOINT(1) );
     }
     else
     {
@@ -1224,8 +1218,7 @@ void QImage_setPixel1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->setPixel ( *par1, (uint) hb_parni(2) );
+    obj->setPixel ( *PQPOINT(1), (uint) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1369,9 +1362,8 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED2 )
   {
     if( ISQTRANSFORM(1) && ISOPTNUM(2) )
     {
-      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-      QImage * ptr = new QImage( obj->transformed ( *par1, (Qt::TransformationMode) par2 ) );
+      QImage * ptr = new QImage( obj->transformed ( *PQTRANSFORM(1), (Qt::TransformationMode) par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
     }
     else
@@ -1395,8 +1387,7 @@ void QImage_valid1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->valid ( *par1 ) );
+    hb_retl( obj->valid ( *PQPOINT(1) ) );
   }
 }
 
@@ -1477,8 +1468,7 @@ static QTransform trueMatrix ( const QTransform & matrix, int width, int height 
 */
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX2 )
 {
-  QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-  QTransform * ptr = new QTransform( QImage::trueMatrix ( *par1, PINT(2), PINT(3) ) );
+  QTransform * ptr = new QTransform( QImage::trueMatrix ( *PQTRANSFORM(1), PINT(2), PINT(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 

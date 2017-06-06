@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    obj->setFont ( *par1 );
+    obj->setFont ( *PQFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -731,8 +730,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPen * par1 = (QPen *) _qt5xhb_itemGetPtr(1);
-    obj->setTextOutline ( *par1 );
+    obj->setTextOutline ( *PQPEN(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

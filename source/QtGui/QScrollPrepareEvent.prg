@@ -59,8 +59,7 @@ QScrollPrepareEvent(const QPointF &startPos)
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_NEW )
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  QScrollPrepareEvent * o = new QScrollPrepareEvent ( *par1 );
+  QScrollPrepareEvent * o = new QScrollPrepareEvent ( *PQPOINTF(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -144,8 +143,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETVIEWPORTSIZE )
   QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->setViewportSize ( *par1 );
+    obj->setViewportSize ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -159,8 +157,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE )
   QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setContentPosRange ( *par1 );
+    obj->setContentPosRange ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -174,8 +171,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOS )
   QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setContentPos ( *par1 );
+    obj->setContentPos ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
-      QPicture * par3 = (QPicture *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->savePicture ( PQSTRING(1), PQSTRING(2), *par3 ) );
+      hb_retl( obj->savePicture ( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
     }
     else
     {

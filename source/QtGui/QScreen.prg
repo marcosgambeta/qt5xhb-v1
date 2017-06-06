@@ -455,8 +455,7 @@ HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    QRect * par3 = (QRect *) _qt5xhb_itemGetPtr(3);
-    QTransform * ptr = new QTransform( obj->transformBetween ( (Qt::ScreenOrientation) par1, (Qt::ScreenOrientation) par2, *par3 ) );
+    QTransform * ptr = new QTransform( obj->transformBetween ( (Qt::ScreenOrientation) par1, (Qt::ScreenOrientation) par2, *PQRECT(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -472,8 +471,7 @@ HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    QRect * par3 = (QRect *) _qt5xhb_itemGetPtr(3);
-    QRect * ptr = new QRect( obj->mapBetween ( (Qt::ScreenOrientation) par1, (Qt::ScreenOrientation) par2, *par3 ) );
+    QRect * ptr = new QRect( obj->mapBetween ( (Qt::ScreenOrientation) par1, (Qt::ScreenOrientation) par2, *PQRECT(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

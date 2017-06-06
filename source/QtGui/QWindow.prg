@@ -413,8 +413,7 @@ HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QPoint * ptr = new QPoint( obj->mapFromGlobal ( *par1 ) );
+    QPoint * ptr = new QPoint( obj->mapFromGlobal ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -428,8 +427,7 @@ HB_FUNC_STATIC( QWINDOW_MAPTOGLOBAL )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QPoint * ptr = new QPoint( obj->mapToGlobal ( *par1 ) );
+    QPoint * ptr = new QPoint( obj->mapToGlobal ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -517,8 +515,7 @@ HB_FUNC_STATIC( QWINDOW_RESIZE1 )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->resize ( *par1 );
+    obj->resize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -579,8 +576,7 @@ HB_FUNC_STATIC( QWINDOW_SETBASESIZE )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setBaseSize ( *par1 );
+    obj->setBaseSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -594,8 +590,7 @@ HB_FUNC_STATIC( QWINDOW_SETCURSOR )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-    obj->setCursor ( *par1 );
+    obj->setCursor ( *PQCURSOR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -639,8 +634,7 @@ HB_FUNC_STATIC( QWINDOW_SETGEOMETRY2 )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -686,8 +680,7 @@ HB_FUNC_STATIC( QWINDOW_SETMAXIMUMSIZE )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setMaximumSize ( *par1 );
+    obj->setMaximumSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -701,8 +694,7 @@ HB_FUNC_STATIC( QWINDOW_SETMINIMUMSIZE )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setMinimumSize ( *par1 );
+    obj->setMinimumSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -790,8 +782,7 @@ HB_FUNC_STATIC( QWINDOW_SETSIZEINCREMENT )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setSizeIncrement ( *par1 );
+    obj->setSizeIncrement ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

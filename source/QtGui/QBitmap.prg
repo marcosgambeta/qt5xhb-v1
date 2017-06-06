@@ -59,8 +59,7 @@ QBitmap ( const QPixmap & pixmap )
 */
 void QBitmap_new2 ()
 {
-  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-  QBitmap * o = new QBitmap ( *par1 );
+  QBitmap * o = new QBitmap ( *PQPIXMAP(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -69,9 +68,7 @@ QBitmap ( int width, int height )
 */
 void QBitmap_new3 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QBitmap * o = new QBitmap ( par1, par2 );
+  QBitmap * o = new QBitmap ( PINT(1), PINT(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -80,8 +77,7 @@ QBitmap ( const QSize & size )
 */
 void QBitmap_new4 ()
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-  QBitmap * o = new QBitmap ( *par1 );
+  QBitmap * o = new QBitmap ( *PQSIZE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -172,8 +168,7 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
   {
     if( ISQTRANSFORM(1) )
     {
-      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      QBitmap * ptr = new QBitmap( obj->transformed ( *par1 ) );
+      QBitmap * ptr = new QBitmap( obj->transformed ( *PQTRANSFORM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
     }
     else
@@ -190,10 +185,9 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
   if( ISQSIZE(1) && ISOPTNUM(3) ) // TODO: revisar e implementar segundo parametro
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
     const uchar * par2 = (const uchar *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
-    QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2, (QImage::Format) par3 ) );
+    QBitmap * ptr = new QBitmap( QBitmap::fromData ( *PQSIZE(1), par2, (QImage::Format) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
   }
   else
@@ -209,9 +203,8 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
   if( ISQIMAGE(1) && ISOPTNUM(2) )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1, (Qt::ImageConversionFlags) par2 ) );
+    QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *PQIMAGE(1), (Qt::ImageConversionFlags) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
   }
   else

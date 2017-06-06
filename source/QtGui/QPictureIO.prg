@@ -278,8 +278,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPICTURE )
   {
     if( ISQPICTURE(1) )
     {
-      QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
-      obj->setPicture ( *par1 );
+      obj->setPicture ( *PQPICTURE(1) );
     }
     else
     {

@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE1 )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->drawEllipse ( *par1 );
+    obj->drawEllipse ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -126,8 +125,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE2 )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->drawEllipse ( *par1 );
+    obj->drawEllipse ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -160,11 +158,8 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QImage * par2 = (QImage *) _qt5xhb_itemGetPtr(2);
-    QRectF * par3 = (QRectF *) _qt5xhb_itemGetPtr(3);
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *par1, *par2, *par3, (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -189,8 +184,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    obj->drawPath ( *par1 );
+    obj->drawPath ( *PQPAINTERPATH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -204,10 +198,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-    QRectF * par3 = (QRectF *) _qt5xhb_itemGetPtr(3);
-    obj->drawPixmap ( *par1, *par2, *par3 );
+    obj->drawPixmap ( *PQRECTF(1), *PQPIXMAP(2), *PQRECTF(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -254,9 +245,8 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     QTextItem * par2 = (QTextItem *) _qt5xhb_itemGetPtr(2);
-    obj->drawTextItem ( *par1, *par2 );
+    obj->drawTextItem ( *PQPOINTF(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -270,10 +260,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-    QPointF * par3 = (QPointF *) _qt5xhb_itemGetPtr(3);
-    obj->drawTiledPixmap ( *par1, *par2, *par3 );
+    obj->drawTiledPixmap ( *PQRECTF(1), *PQPIXMAP(2), *PQPOINTF(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

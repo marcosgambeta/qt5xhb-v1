@@ -447,8 +447,7 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setScaledSize ( *par1 );
+    obj->setScaledSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -383,8 +383,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setPosition ( *par1 );
+    obj->setPosition ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -451,10 +450,8 @@ HB_FUNC_STATIC( QTEXTLINE_DRAW )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
     QTextLayout::FormatRange * par3 = ISNIL(3)? 0 : (QTextLayout::FormatRange *) _qt5xhb_itemGetPtr(3);
-    obj->draw ( par1, *par2, par3 );
+    obj->draw ( PQPAINTER(1), *PQPOINTF(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

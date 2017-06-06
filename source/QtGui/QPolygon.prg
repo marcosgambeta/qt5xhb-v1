@@ -97,8 +97,7 @@ QPolygon(const QPolygon &a)
 */
 HB_FUNC_STATIC( QPOLYGON_NEW3 )
 {
-  QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
-  QPolygon * o = new QPolygon ( *par1 );
+  QPolygon * o = new QPolygon ( *PQPOLYGON(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -124,9 +123,7 @@ QPolygon(const QRect &r, bool closed=false)
 */
 HB_FUNC_STATIC( QPOLYGON_NEW5 )
 {
-  QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-  bool par2 = ISNIL(2)? false : hb_parl(2);
-  QPolygon * o = new QPolygon ( *par1, par2 );
+  QPolygon * o = new QPolygon ( *PQRECT(1), OPBOOL(2,false) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -195,8 +192,7 @@ HB_FUNC_STATIC( QPOLYGON_SWAP )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
+    obj->swap ( *PQPOLYGON(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -224,8 +220,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE2 )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->translate ( *par1 );
+    obj->translate ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -253,8 +248,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED2 )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->translated ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->translated ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -328,8 +322,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT2 )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-    obj->setPoint ( PINT(1), *par2 );
+    obj->setPoint ( PINT(1), *PQPOINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -347,8 +340,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * par3 = (QPolygon *) _qt5xhb_itemGetPtr(3);
-    obj->putPoints ( PINT(1), PINT(2), *par3, OPINT(4,0) );
+    obj->putPoints ( PINT(1), PINT(2), *PQPOLYGON(3), OPINT(4,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -362,9 +354,8 @@ HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->containsPoint ( *par1, (Qt::FillRule) par2 ) );
+    hb_retl( obj->containsPoint ( *PQPOINT(1), (Qt::FillRule) par2 ) );
   }
 }
 
@@ -377,8 +368,7 @@ HB_FUNC_STATIC( QPOLYGON_UNITED )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->united ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->united ( *PQPOLYGON(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -392,8 +382,7 @@ HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->intersected ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->intersected ( *PQPOLYGON(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -407,8 +396,7 @@ HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->subtracted ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->subtracted ( *PQPOLYGON(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }

@@ -52,9 +52,7 @@ QResizeEvent(const QSize &size, const QSize &oldSize)
 */
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-  QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-  QResizeEvent * o = new QResizeEvent ( *par1, *par2 );
+  QResizeEvent * o = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

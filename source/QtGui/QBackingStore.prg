@@ -102,8 +102,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_BEGINPAINT )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
-    obj->beginPaint ( *par1 );
+    obj->beginPaint ( *PQREGION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -131,10 +130,9 @@ HB_FUNC_STATIC( QBACKINGSTORE_FLUSH )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
     QWindow * par2 = ISNIL(2)? 0 : (QWindow *) _qt5xhb_itemGetPtr(2);
     QPoint par3 = ISNIL(3)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(3);
-    obj->flush ( *par1, par2, par3 );
+    obj->flush ( *PQREGION(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -189,8 +187,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_RESIZE )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->resize ( *par1 );
+    obj->resize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -204,8 +201,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SCROLL )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->scroll ( *par1, PINT(2), PINT(3) ) );
+    hb_retl( obj->scroll ( *PQREGION(1), PINT(2), PINT(3) ) );
   }
 }
 
@@ -218,8 +214,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SETSTATICCONTENTS )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
-    obj->setStaticContents ( *par1 );
+    obj->setStaticContents ( *PQREGION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

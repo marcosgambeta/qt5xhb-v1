@@ -219,9 +219,8 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->setDragCursor ( *par1, (Qt::DropAction) par2 );
+    obj->setDragCursor ( *PQPIXMAP(1), (Qt::DropAction) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -235,8 +234,7 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->setHotSpot ( *par1 );
+    obj->setHotSpot ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -265,8 +263,7 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-    obj->setPixmap ( *par1 );
+    obj->setPixmap ( *PQPIXMAP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

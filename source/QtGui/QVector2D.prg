@@ -105,8 +105,7 @@ QVector2D(const QPoint& point)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW3 )
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QVector2D * o = new QVector2D ( *par1 );
+  QVector2D * o = new QVector2D ( *PQPOINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -115,8 +114,7 @@ QVector2D(const QPointF& point)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW4 )
 {
-  QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-  QVector2D * o = new QVector2D ( *par1 );
+  QVector2D * o = new QVector2D ( *PQPOINTF(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

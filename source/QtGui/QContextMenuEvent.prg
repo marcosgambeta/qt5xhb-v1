@@ -61,10 +61,8 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos,
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
 {
   int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-  QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
   int par4 = hb_parni(4);
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) par1, *par2, *par3, (Qt::KeyboardModifiers) par4 );
+  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) par1, *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -74,9 +72,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
 {
   int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-  QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) par1, *par2, *par3 );
+  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) par1, *PQPOINT(2), *PQPOINT(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -86,8 +82,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos )
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
 {
   int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) par1, *par2 );
+  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) par1, *PQPOINT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

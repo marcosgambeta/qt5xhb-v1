@@ -88,11 +88,7 @@ QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY 
 */
 void QCursor_new3 ()
 {
-  QBitmap * par1 = (QBitmap *) _qt5xhb_itemGetPtr(1);
-  QBitmap * par2 = (QBitmap *) _qt5xhb_itemGetPtr(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  int par4 = ISNIL(4)? -1 : hb_parni(4);
-  QCursor * o = new QCursor ( *par1, *par2, par3, par4 );
+  QCursor * o = new QCursor ( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -101,10 +97,7 @@ QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
 void QCursor_new4 ()
 {
-  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? -1 : hb_parni(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  QCursor * o = new QCursor ( *par1, par2, par3 );
+  QCursor * o = new QCursor ( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -113,8 +106,7 @@ QCursor ( const QCursor & c )
 */
 void QCursor_new5 ()
 {
-  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-  QCursor * o = new QCursor ( *par1 );
+  QCursor * o = new QCursor ( *PQCURSOR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -286,8 +278,7 @@ static void setPos ( const QPoint & p )
 */
 void QCursor_setPos2 ()
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QCursor::setPos ( *par1 );
+  QCursor::setPos ( *PQPOINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

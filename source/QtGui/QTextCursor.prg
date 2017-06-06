@@ -1094,8 +1094,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE4 )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-    obj->insertImage ( *par1, OPQSTRING(2,QString()) );
+    obj->insertImage ( *PQIMAGE(1), OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

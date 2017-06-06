@@ -108,11 +108,10 @@ QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt
 */
 void QPen_new4 ()
 {
-  QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
   int par3 = ISNIL(3)? (int) Qt::SolidLine : hb_parni(3);
   int par4 = ISNIL(4)? (int) Qt::SquareCap : hb_parni(4);
   int par5 = ISNIL(5)? (int) Qt::BevelJoin : hb_parni(5);
-  QPen * o = new QPen ( *par1, PQREAL(2), (Qt::PenStyle) par3, (Qt::PenCapStyle) par4, (Qt::PenJoinStyle) par5 );
+  QPen * o = new QPen ( *PQBRUSH(1), PQREAL(2), (Qt::PenStyle) par3, (Qt::PenCapStyle) par4, (Qt::PenJoinStyle) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -121,8 +120,7 @@ QPen ( const QPen & pen )
 */
 void QPen_new5 ()
 {
-  QPen * par1 = (QPen *) _qt5xhb_itemGetPtr(1);
-  QPen * o = new QPen ( *par1 );
+  QPen * o = new QPen ( *PQPEN(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -294,8 +292,7 @@ HB_FUNC_STATIC( QPEN_SETBRUSH )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setBrush ( *par1 );
+      obj->setBrush ( *PQBRUSH(1) );
     }
     else
     {
