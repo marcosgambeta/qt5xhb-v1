@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->convertToNormalizedSourceRect ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->convertToNormalizedSourceRect ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

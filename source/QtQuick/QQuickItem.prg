@@ -267,8 +267,7 @@ HB_FUNC_STATIC( QQUICKITEM_CONTAINS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1 ) );
+    hb_retl( obj->contains ( *PQPOINTF(1) ) );
   }
 }
 
@@ -509,8 +508,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMITEM )
   if( obj )
   {
     const QQuickItem * par1 = (const QQuickItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    QPointF * ptr = new QPointF( obj->mapFromItem ( par1, *par2 ) );
+    QPointF * ptr = new QPointF( obj->mapFromItem ( par1, *PQPOINTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -524,8 +522,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMSCENE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapFromScene ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapFromScene ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -540,8 +537,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMITEM )
   if( obj )
   {
     const QQuickItem * par1 = (const QQuickItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-    QRectF * ptr = new QRectF( obj->mapRectFromItem ( par1, *par2 ) );
+    QRectF * ptr = new QRectF( obj->mapRectFromItem ( par1, *PQRECTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -555,8 +551,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMSCENE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectFromScene ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRectFromScene ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -571,8 +566,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOITEM )
   if( obj )
   {
     const QQuickItem * par1 = (const QQuickItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-    QRectF * ptr = new QRectF( obj->mapRectToItem ( par1, *par2 ) );
+    QRectF * ptr = new QRectF( obj->mapRectToItem ( par1, *PQRECTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -586,8 +580,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOSCENE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectToScene ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRectToScene ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -602,8 +595,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOITEM )
   if( obj )
   {
     const QQuickItem * par1 = (const QQuickItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    QPointF * ptr = new QPointF( obj->mapToItem ( par1, *par2 ) );
+    QPointF * ptr = new QPointF( obj->mapToItem ( par1, *PQPOINTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -617,8 +609,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOSCENE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapToScene ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -812,8 +803,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETCURSOR )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-    obj->setCursor ( *par1 );
+    obj->setCursor ( *PQCURSOR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

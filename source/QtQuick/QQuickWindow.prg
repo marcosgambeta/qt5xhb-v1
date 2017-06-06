@@ -176,9 +176,8 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
     int par3 = hb_parni(3);
-    QSGTexture * ptr = obj->createTextureFromId ( (uint) hb_parni(1), *par2, (QQuickWindow::CreateTextureOptions) par3 );
+    QSGTexture * ptr = obj->createTextureFromId ( (uint) hb_parni(1), *PQSIZE(2), (QQuickWindow::CreateTextureOptions) par3 );
     _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-    QSGTexture * ptr = obj->createTextureFromImage ( *par1 );
+    QSGTexture * ptr = obj->createTextureFromImage ( *PQIMAGE(1) );
     _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
   }
 }
@@ -417,8 +415,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET2 )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-    obj->setRenderTarget ( (uint) hb_parni(1), *par2 );
+    obj->setRenderTarget ( (uint) hb_parni(1), *PQSIZE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

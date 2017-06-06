@@ -337,8 +337,7 @@ static void updateRectGeometry(QSGGeometry * g, const QRectF & rect)
 HB_FUNC_STATIC( QSGGEOMETRY_UPDATERECTGEOMETRY )
 {
   QSGGeometry * par1 = (QSGGeometry *) _qt5xhb_itemGetPtr(1);
-  QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-  QSGGeometry::updateRectGeometry ( par1, *par2 );
+  QSGGeometry::updateRectGeometry ( par1, *PQRECTF(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -349,9 +348,7 @@ static void updateTexturedRectGeometry(QSGGeometry * g, const QRectF & rect, con
 HB_FUNC_STATIC( QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY )
 {
   QSGGeometry * par1 = (QSGGeometry *) _qt5xhb_itemGetPtr(1);
-  QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-  QRectF * par3 = (QRectF *) _qt5xhb_itemGetPtr(3);
-  QSGGeometry::updateTexturedRectGeometry ( par1, *par2, *par3 );
+  QSGGeometry::updateTexturedRectGeometry ( par1, *PQRECTF(2), *PQRECTF(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

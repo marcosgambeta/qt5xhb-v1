@@ -192,8 +192,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_PAINT )
   QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    obj->paint ( par1 );
+    obj->paint ( PQPAINTER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -275,8 +274,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
   QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setContentsSize ( *par1 );
+    obj->setContentsSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

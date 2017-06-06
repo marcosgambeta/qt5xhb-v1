@@ -109,8 +109,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
   QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setClipRect ( *par1 );
+    obj->setClipRect ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
