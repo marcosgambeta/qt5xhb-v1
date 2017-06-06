@@ -298,8 +298,7 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QWebHitTestResult * ptr = new QWebHitTestResult( obj->hitTestContent ( *par1 ) );
+    QWebHitTestResult * ptr = new QWebHitTestResult( obj->hitTestContent ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QWEBHITTESTRESULT", true );
   }
 }
@@ -420,8 +419,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER1 )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    obj->render ( par1 );
+    obj->render ( PQPAINTER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -434,9 +432,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER2 )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QRegion * par2 = (QRegion *) _qt5xhb_itemGetPtr(2);
-    obj->render ( par1, *par2 );
+    obj->render ( PQPAINTER(1), *PQREGION(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,10 +445,9 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER3 )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
     QRegion par3 = ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3);
-    obj->render ( par1, (QWebFrame::RenderLayer) par2, par3 );
+    obj->render ( PQPAINTER(1), (QWebFrame::RenderLayer) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -708,8 +703,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->setScrollPosition ( *par1 );
+    obj->setScrollPosition ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
