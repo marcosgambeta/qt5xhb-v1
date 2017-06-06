@@ -487,8 +487,7 @@ static void setWebGraphic ( WebGraphic type, const QPixmap & graphic )
 HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
 {
   int par1 = hb_parni(1);
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  QWebSettings::setWebGraphic ( (QWebSettings::WebGraphic) par1, *par2 );
+  QWebSettings::setWebGraphic ( (QWebSettings::WebGraphic) par1, *PQPIXMAP(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

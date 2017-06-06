@@ -879,8 +879,7 @@ HB_FUNC_STATIC( QWEBELEMENT_RENDER1 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    obj->render ( par1 );
+    obj->render ( PQPAINTER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -893,9 +892,7 @@ HB_FUNC_STATIC( QWEBELEMENT_RENDER2 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-    obj->render ( par1, *par2 );
+    obj->render ( PQPAINTER(1), *PQRECT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
