@@ -74,9 +74,8 @@ QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW1 )
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
-  QGLFramebufferObject * o = new QGLFramebufferObject ( *par1, par2 );
+  QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -85,10 +84,8 @@ QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW2 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
-  QGLFramebufferObject * o = new QGLFramebufferObject ( par1, par2, par3 );
+  QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -97,9 +94,8 @@ QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & fo
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW3 )
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
   QGLFramebufferObjectFormat * par2 = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(2);
-  QGLFramebufferObject * o = new QGLFramebufferObject ( *par1, *par2 );
+  QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), *par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -108,10 +104,8 @@ QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat &
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW4 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   QGLFramebufferObjectFormat * par3 = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(3);
-  QGLFramebufferObject * o = new QGLFramebufferObject ( par1, par2, *par3 );
+  QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), *par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -204,8 +198,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE1 )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->drawTexture ( *par1, (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
+    obj->drawTexture ( *PQRECTF(1), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -218,8 +211,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE2 )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->drawTexture ( *par1, (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
+    obj->drawTexture ( *PQPOINTF(1), (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -371,10 +363,8 @@ static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targe
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
 {
   QGLFramebufferObject * par1 = (QGLFramebufferObject *) _qt5xhb_itemGetPtr(1);
-  QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
   QGLFramebufferObject * par3 = (QGLFramebufferObject *) _qt5xhb_itemGetPtr(3);
-  QRect * par4 = (QRect *) _qt5xhb_itemGetPtr(4);
-  QGLFramebufferObject::blitFramebuffer ( par1, *par2, par3, *par4, (GLenum) ISNIL(6)? GL_NEAREST : hb_parni(6) );
+  QGLFramebufferObject::blitFramebuffer ( par1, *PQRECT(2), par3, *PQRECT(4), (GLenum) ISNIL(6)? GL_NEAREST : hb_parni(6) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

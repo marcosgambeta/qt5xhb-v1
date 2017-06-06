@@ -169,8 +169,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE1 )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
+    hb_retni( obj->bindTexture ( *PQIMAGE(1), (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
   }
 }
 
@@ -182,8 +181,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE2 )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
+    hb_retni( obj->bindTexture ( *PQPIXMAP(1), (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
   }
 }
 
@@ -195,9 +193,8 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE3 )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
     int par4 = hb_parni(4);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
+    hb_retni( obj->bindTexture ( *PQIMAGE(1), (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -209,9 +206,8 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE4 )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
     int par4 = hb_parni(4);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
+    hb_retni( obj->bindTexture ( *PQPIXMAP(1), (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -339,8 +335,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE1 )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->drawTexture ( *par1, (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
+    obj->drawTexture ( *PQRECTF(1), (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -353,8 +348,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE2 )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->drawTexture ( *par1, (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
+    obj->drawTexture ( *PQPOINTF(1), (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -611,8 +605,7 @@ static QImage convertToGLFormat ( const QImage & img )
 */
 HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
 {
-  QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-  QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *par1 ) );
+  QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 }
 
