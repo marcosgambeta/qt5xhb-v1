@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX1 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -288,8 +287,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX2 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -413,8 +411,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER1 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    obj->render ( par1 );
+    obj->render ( PQPAINTER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -427,9 +424,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER2 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-    obj->render ( par1, *par2 );
+    obj->render ( PQPAINTER(1), *PQRECTF(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -442,9 +437,8 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER3 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     QRectF par3 = ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3);
-    obj->render ( par1, PQSTRING(2), par3 );
+    obj->render ( PQPAINTER(1), PQSTRING(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setSize ( *par1 );
+    obj->setSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -237,8 +236,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX1 )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -251,8 +249,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX2 )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
