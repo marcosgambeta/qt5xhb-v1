@@ -164,8 +164,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETCUSTOMFOCUSPOINT )
   QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setCustomFocusPoint ( *par1 );
+    obj->setCustomFocusPoint ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

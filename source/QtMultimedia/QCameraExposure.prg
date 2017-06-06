@@ -277,8 +277,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETSPOTMETERINGPOINT )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setSpotMeteringPoint ( *par1 );
+    obj->setSpotMeteringPoint ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

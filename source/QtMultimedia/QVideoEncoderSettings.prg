@@ -328,8 +328,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION1 )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setResolution ( *par1 );
+    obj->setResolution ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

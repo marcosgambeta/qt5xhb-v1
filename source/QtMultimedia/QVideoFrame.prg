@@ -102,9 +102,8 @@ QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat for
 HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
 {
   QAbstractVideoBuffer * par1 = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtr(1);
-  QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
   int par3 = hb_parni(3);
-  QVideoFrame * o = new QVideoFrame ( par1, *par2, (QVideoFrame::PixelFormat) par3 );
+  QVideoFrame * o = new QVideoFrame ( par1, *PQSIZE(2), (QVideoFrame::PixelFormat) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -113,11 +112,8 @@ QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat forma
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
 {
-  int par1 = hb_parni(1);
-  QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-  int par3 = hb_parni(3);
   int par4 = hb_parni(4);
-  QVideoFrame * o = new QVideoFrame ( par1, *par2, par3, (QVideoFrame::PixelFormat) par4 );
+  QVideoFrame * o = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -126,8 +122,7 @@ QVideoFrame ( const QImage & image )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW4 )
 {
-  QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-  QVideoFrame * o = new QVideoFrame ( *par1 );
+  QVideoFrame * o = new QVideoFrame ( *PQIMAGE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
