@@ -100,8 +100,7 @@ static HBITMAP createMask(const QBitmap &bitmap)
 HB_FUNC_STATIC( QTWIN_CREATEMASK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBitmap * par1 = (QBitmap *) _qt5xhb_itemGetPtr(1);
-  hb_retptr( (HBITMAP) QtWin::createMask ( *par1 ) );
+  hb_retptr( (HBITMAP) QtWin::createMask ( *PQBITMAP(1) ) );
 #endif
 }
 
@@ -112,9 +111,8 @@ static HBITMAP toHBITMAP(const QPixmap &p, HBitmapFormat format = HBitmapNoAlpha
 HB_FUNC_STATIC( QTWIN_TOHBITMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QtWin::HBitmapNoAlpha : hb_parni(2);
-  hb_retptr( (HBITMAP) QtWin::toHBITMAP ( *par1, (QtWin::HBitmapFormat) par2 ) );
+  hb_retptr( (HBITMAP) QtWin::toHBITMAP ( *PQPIXMAP(1), (QtWin::HBitmapFormat) par2 ) );
 #endif
 }
 
@@ -139,8 +137,7 @@ static HICON toHICON(const QPixmap &p)
 HB_FUNC_STATIC( QTWIN_TOHICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-  hb_retptr( (HICON) QtWin::toHICON ( *par1 ) );
+  hb_retptr( (HICON) QtWin::toHICON ( *PQPIXMAP(1) ) );
 #endif
 }
 
@@ -178,8 +175,7 @@ static HRGN toHRGN(const QRegion &region)
 HB_FUNC_STATIC( QTWIN_TOHRGN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QRegion * par1 = (QRegion *) _qt5xhb_itemGetPtr(1);
-  hb_retptr( (HRGN) QtWin::toHRGN ( *par1 ) );
+  hb_retptr( (HRGN) QtWin::toHRGN ( *PQREGION(1) ) );
 #endif
 }
 
@@ -392,8 +388,7 @@ HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QRegion * par2 = (QRegion *) _qt5xhb_itemGetPtr(2);
-  QtWin::enableBlurBehindWindow ( par1, *par2 );
+  QtWin::enableBlurBehindWindow ( par1, *PQREGION(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
