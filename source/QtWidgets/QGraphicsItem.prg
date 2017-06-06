@@ -311,8 +311,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
   {
     if( ISQTRANSFORM(1) )
     {
-      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      QRegion * ptr = new QRegion( obj->boundingRegion ( *par1 ) );
+      QRegion * ptr = new QRegion( obj->boundingRegion ( *PQTRANSFORM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
     }
     else
@@ -424,9 +423,8 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
   {
     if( ISQPAINTERPATH(1) && ISOPTNUM(2) )
     {
-      QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-      hb_retl( obj->collidesWithPath ( *par1, (Qt::ItemSelectionMode) par2 ) );
+      hb_retl( obj->collidesWithPath ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2 ) );
     }
     else
     {
@@ -468,8 +466,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->contains ( *par1 ) );
+      hb_retl( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -524,8 +521,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
   {
     if( ISQTRANSFORM(1) )
     {
-      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      QTransform * ptr = new QTransform( obj->deviceTransform ( *par1 ) );
+      QTransform * ptr = new QTransform( obj->deviceTransform ( *PQTRANSFORM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
     }
     else
@@ -895,8 +891,7 @@ void QGraphicsItem_isObscured3 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isObscured ( *par1 ) );
+    hb_retl( obj->isObscured ( *PQRECTF(1) ) );
   }
 }
 
@@ -1078,8 +1073,7 @@ void QGraphicsItem_mapFromItem1 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    QPointF * ptr = new QPointF( obj->mapFromItem ( par1, *par2 ) );
+    QPointF * ptr = new QPointF( obj->mapFromItem ( par1, *PQPOINTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1094,8 +1088,7 @@ void QGraphicsItem_mapFromItem2 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromItem ( par1, *par2 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapFromItem ( par1, *PQRECTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1110,8 +1103,7 @@ void QGraphicsItem_mapFromItem3 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * par2 = (QPolygonF *) _qt5xhb_itemGetPtr(2);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromItem ( par1, *par2 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapFromItem ( par1, *PQPOLYGONF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1126,8 +1118,7 @@ void QGraphicsItem_mapFromItem4 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * par2 = (QPainterPath *) _qt5xhb_itemGetPtr(2);
-    QPainterPath * ptr = new QPainterPath( obj->mapFromItem ( par1, *par2 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapFromItem ( par1, *PQPAINTERPATH(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1210,8 +1201,7 @@ void QGraphicsItem_mapFromParent1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapFromParent ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapFromParent ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1225,8 +1215,7 @@ void QGraphicsItem_mapFromParent2 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromParent ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapFromParent ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1240,8 +1229,7 @@ void QGraphicsItem_mapFromParent3 ()
 
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromParent ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapFromParent ( *PQPOLYGONF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1255,8 +1243,7 @@ void QGraphicsItem_mapFromParent4 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapFromParent ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapFromParent ( *PQPAINTERPATH(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1337,8 +1324,7 @@ void QGraphicsItem_mapFromScene1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapFromScene ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapFromScene ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1352,8 +1338,7 @@ void QGraphicsItem_mapFromScene2 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromScene ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapFromScene ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1367,8 +1352,7 @@ void QGraphicsItem_mapFromScene3 ()
 
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromScene ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapFromScene ( *PQPOLYGONF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1382,8 +1366,7 @@ void QGraphicsItem_mapFromScene4 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1465,8 +1448,7 @@ void QGraphicsItem_mapRectFromItem1 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-    QRectF * ptr = new QRectF( obj->mapRectFromItem ( par1, *par2 ) );
+    QRectF * ptr = new QRectF( obj->mapRectFromItem ( par1, *PQRECTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1514,8 +1496,7 @@ void GraphicsItem_mapRectFromParent1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectFromParent ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRectFromParent ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1562,8 +1543,7 @@ void QGraphicsItem_mapRectFromScene1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectFromScene ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRectFromScene ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1611,8 +1591,7 @@ void QGraphicsItem_mapRectToItem1 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-    QRectF * ptr = new QRectF( obj->mapRectToItem ( par1, *par2 ) );
+    QRectF * ptr = new QRectF( obj->mapRectToItem ( par1, *PQRECTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1660,8 +1639,7 @@ void QGraphicsItem_mapRectToParent1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectToParent ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRectToParent ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1708,8 +1686,7 @@ void QGraphicsItem_mapRectToScene1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectToScene ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRectToScene ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1757,8 +1734,7 @@ void QGraphicsItem_mapToItem1 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    QPointF * ptr = new QPointF( obj->mapToItem ( par1, *par2 ) );
+    QPointF * ptr = new QPointF( obj->mapToItem ( par1, *PQPOINTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1773,8 +1749,7 @@ void QGraphicsItem_mapToItem2 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * par2 = (QRectF *) _qt5xhb_itemGetPtr(2);
-    QPolygonF * ptr = new QPolygonF( obj->mapToItem ( par1, *par2 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToItem ( par1, *PQRECTF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1789,8 +1764,7 @@ void QGraphicsItem_mapToItem3 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * par2 = (QPolygonF *) _qt5xhb_itemGetPtr(2);
-    QPolygonF * ptr = new QPolygonF( obj->mapToItem ( par1, *par2 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToItem ( par1, *PQPOLYGONF(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1805,8 +1779,7 @@ void QGraphicsItem_mapToItem4 ()
   if( obj )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * par2 = (QPainterPath *) _qt5xhb_itemGetPtr(2);
-    QPainterPath * ptr = new QPainterPath( obj->mapToItem ( par1, *par2 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapToItem ( par1, *PQPAINTERPATH(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1889,8 +1862,7 @@ void QGraphicsItem_mapToParent1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapToParent ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapToParent ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1904,8 +1876,7 @@ void QGraphicsItem_mapToParent2 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToParent ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToParent ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1919,8 +1890,7 @@ void QGraphicsItem_mapToParent3 ()
 
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToParent ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToParent ( *PQPOLYGONF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1934,8 +1904,7 @@ void QGraphicsItem_mapToParent4 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapToParent ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapToParent ( *PQPAINTERPATH(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -2016,8 +1985,7 @@ void QGraphicsItem_mapToScene1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapToScene ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -2031,8 +1999,7 @@ void QGraphicsItem_mapToScene2 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -2046,8 +2013,7 @@ void QGraphicsItem_mapToScene3 ()
 
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGONF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -2061,8 +2027,7 @@ void QGraphicsItem_mapToScene4 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -2194,9 +2159,8 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
   {
     if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISOPTQWIDGET(3) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-      obj->paint ( par1, par2, OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
     }
     else
     {
@@ -2601,8 +2565,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCURSOR )
   {
     if( ISQCURSOR(1) )
     {
-      QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-      obj->setCursor ( *par1 );
+      obj->setCursor ( *PQCURSOR(1) );
     }
     else
     {
@@ -2913,8 +2876,7 @@ void QGraphicsItem_setPos1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setPos ( *par1 );
+    obj->setPos ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3053,8 +3015,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
   {
     if( ISQTRANSFORM(1) && ISOPTLOG(2) )
     {
-      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      obj->setTransform ( *par1, OPBOOL(2,false) );
+      obj->setTransform ( *PQTRANSFORM(1), OPBOOL(2,false) );
     }
     else
     {
@@ -3074,8 +3035,7 @@ void QGraphicsItem_setTransformOriginPoint1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setTransformOriginPoint ( *par1 );
+    obj->setTransformOriginPoint ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

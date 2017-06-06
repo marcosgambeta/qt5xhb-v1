@@ -803,8 +803,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

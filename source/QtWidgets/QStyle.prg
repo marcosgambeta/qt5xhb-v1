@@ -111,9 +111,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWCOMPLEXCONTROL )
   {
     int par1 = hb_parni(1);
     const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
-    QPainter * par3 = (QPainter *) _qt5xhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-    obj->drawComplexControl ( (QStyle::ComplexControl) par1, par2, par3, par4 );
+    obj->drawComplexControl ( (QStyle::ComplexControl) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -129,9 +128,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
-    QPainter * par3 = (QPainter *) _qt5xhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-    obj->drawControl ( (QStyle::ControlElement) par1, par2, par3, par4 );
+    obj->drawControl ( (QStyle::ControlElement) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -145,10 +143,7 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
   QStyle * obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-    QPixmap * par4 = (QPixmap *) _qt5xhb_itemGetPtr(4);
-    obj->drawItemPixmap ( par1, *par2, PINT(3), *par4 );
+    obj->drawItemPixmap ( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -162,11 +157,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
   QStyle * obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-    QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-    QPalette * par4 = (QPalette *) _qt5xhb_itemGetPtr(4);
     int par7 = ISNIL(7)? (int) QPalette::NoRole : hb_parni(7);
-    obj->drawItemText ( par1, *par2, PINT(3), *par4, PBOOL(5), PQSTRING(6), (QPalette::ColorRole) par7 );
+    obj->drawItemText ( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6), (QPalette::ColorRole) par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -182,9 +174,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
-    QPainter * par3 = (QPainter *) _qt5xhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-    obj->drawPrimitive ( (QStyle::PrimitiveElement) par1, par2, par3, par4 );
+    obj->drawPrimitive ( (QStyle::PrimitiveElement) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -199,9 +190,8 @@ HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
     const QStyleOption * par3 = (const QStyleOption *) _qt5xhb_itemGetPtr(3);
-    QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) par1, *par2, par3 ) );
+    QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) par1, *PQPIXMAP(2), par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -217,9 +207,8 @@ HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
   {
     int par1 = hb_parni(1);
     const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
-    QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-    hb_retni( obj->hitTestComplexControl ( (QStyle::ComplexControl) par1, par2, *par3, par4 ) );
+    hb_retni( obj->hitTestComplexControl ( (QStyle::ComplexControl) par1, par2, *PQPOINT(3), par4 ) );
   }
 }
 
@@ -232,9 +221,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
   QStyle * obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    QPixmap * par3 = (QPixmap *) _qt5xhb_itemGetPtr(3);
-    QRect * ptr = new QRect( obj->itemPixmapRect ( *par1, PINT(2), *par3 ) );
+    QRect * ptr = new QRect( obj->itemPixmapRect ( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -248,9 +235,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
   QStyle * obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
-    QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-    QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, PINT(3), PBOOL(4), PQSTRING(5) ) );
+    QRect * ptr = new QRect( obj->itemTextRect ( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -380,9 +365,8 @@ HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
-    QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-    QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) par1, par2, *par3, par4 ) );
+    QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) par1, par2, *PQSIZE(3), par4 ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -525,9 +509,7 @@ HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
-  QRect * par4 = (QRect *) _qt5xhb_itemGetPtr(4);
-  QRect * ptr = new QRect( QStyle::alignedRect ( (Qt::LayoutDirection) par1, (Qt::Alignment) par2, *par3, *par4 ) );
+  QRect * ptr = new QRect( QStyle::alignedRect ( (Qt::LayoutDirection) par1, (Qt::Alignment) par2, *PQSIZE(3), *PQRECT(4) ) );
   _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 }
 
@@ -584,9 +566,7 @@ static QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingR
 HB_FUNC_STATIC( QSTYLE_VISUALPOS )
 {
   int par1 = hb_parni(1);
-  QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-  QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
-  QPoint * ptr = new QPoint( QStyle::visualPos ( (Qt::LayoutDirection) par1, *par2, *par3 ) );
+  QPoint * ptr = new QPoint( QStyle::visualPos ( (Qt::LayoutDirection) par1, *PQRECT(2), *PQPOINT(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 }
 
@@ -597,9 +577,7 @@ static QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingR
 HB_FUNC_STATIC( QSTYLE_VISUALRECT )
 {
   int par1 = hb_parni(1);
-  QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-  QRect * par3 = (QRect *) _qt5xhb_itemGetPtr(3);
-  QRect * ptr = new QRect( QStyle::visualRect ( (Qt::LayoutDirection) par1, *par2, *par3 ) );
+  QRect * ptr = new QRect( QStyle::visualRect ( (Qt::LayoutDirection) par1, *PQRECT(2), *PQRECT(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 }
 

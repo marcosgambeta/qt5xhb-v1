@@ -299,8 +299,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
   {
     if( ISQSIZE(1) )
     {
-      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-      obj->setIconSize ( *par1 );
+      obj->setIconSize ( *PQSIZE(1) );
     }
     else
     {

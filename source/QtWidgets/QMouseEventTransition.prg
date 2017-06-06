@@ -185,8 +185,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
   {
     if( ISQPAINTERPATH(1) )
     {
-      QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-      obj->setHitTestPath ( *par1 );
+      obj->setHitTestPath ( *PQPAINTERPATH(1) );
     }
     else
     {

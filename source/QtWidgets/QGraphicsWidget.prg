@@ -314,9 +314,8 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINTWINDOWFRAME )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-    obj->paintWindowFrame ( par1, par2, OPQWIDGET(3,0) );
+    obj->paintWindowFrame ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -393,8 +392,7 @@ void QGraphicsWidget_resize1 ()
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->resize ( *par1 );
+    obj->resize ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -507,8 +505,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    obj->setFont ( *par1 );
+    obj->setFont ( *PQFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -535,8 +532,7 @@ void QGraphicsWidget_setGeometry2 ()
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -599,8 +595,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETPALETTE )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
-    obj->setPalette ( *par1 );
+    obj->setPalette ( *PQPALETTE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -887,9 +882,8 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINT )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-    obj->paint ( par1, par2, OPQWIDGET(3,0) );
+    obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

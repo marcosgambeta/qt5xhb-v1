@@ -162,8 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->boundingRectFor ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -206,8 +205,7 @@ void QGraphicsDropShadowEffect_setOffset1 ()
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setOffset ( *par1 );
+    obj->setOffset ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

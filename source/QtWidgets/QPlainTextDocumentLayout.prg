@@ -197,9 +197,8 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    hb_retni( obj->hitTest ( *par1, (Qt::HitTestAccuracy) par2 ) );
+    hb_retni( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) par2 ) );
   }
 }
 

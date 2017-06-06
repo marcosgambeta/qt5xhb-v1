@@ -70,9 +70,8 @@ QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPathItem_new2 ()
 {
-  QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
-  QGraphicsPathItem * o = new QGraphicsPathItem ( *par1, par2 );
+  QGraphicsPathItem * o = new QGraphicsPathItem ( *PQPAINTERPATH(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -137,8 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
   {
     if( ISQPAINTERPATH(1) )
     {
-      QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-      obj->setPath ( *par1 );
+      obj->setPath ( *PQPAINTERPATH(1) );
     }
     else
     {
@@ -174,8 +172,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->contains ( *par1 ) );
+      hb_retl( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -230,9 +227,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PAINT )
   {
     if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISOPTQWIDGET(3) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-      obj->paint ( par1, par2, OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
     }
     else
     {

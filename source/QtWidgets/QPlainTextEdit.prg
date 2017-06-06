@@ -184,8 +184,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->anchorAt ( *par1 ) ) );
+      hb_retc( RQSTRING( obj->anchorAt ( *PQPOINT(1) ) ) );
     }
     else
     {
@@ -285,8 +284,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition ( *par1 ) );
+      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
     }
     else

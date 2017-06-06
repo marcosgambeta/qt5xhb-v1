@@ -495,8 +495,7 @@ HB_FUNC_STATIC( QTABBAR_SETICONSIZE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setIconSize ( *par1 );
+    obj->setIconSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -744,8 +743,7 @@ HB_FUNC_STATIC( QTABBAR_TABAT )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->tabAt ( *par1 ) );
+    hb_retni( obj->tabAt ( *PQPOINT(1) ) );
   }
 }
 

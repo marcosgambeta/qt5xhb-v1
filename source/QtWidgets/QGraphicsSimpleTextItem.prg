@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
   {
     if( ISQFONT(1) )
     {
-      QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-      obj->setFont ( *par1 );
+      obj->setFont ( *PQFONT(1) );
     }
     else
     {
@@ -213,8 +212,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->contains ( *par1 ) );
+      hb_retl( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -269,9 +267,8 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
   {
     if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-      obj->paint ( par1, par2, PQWIDGET(3) );
+      obj->paint ( PQPAINTER(1), par2, PQWIDGET(3) );
     }
     else
     {

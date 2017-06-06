@@ -105,8 +105,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE2 )
   QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->move ( *par1 );
+    obj->move ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -159,8 +158,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE2 )
   QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->resize ( *par1 );
+    obj->resize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -193,8 +191,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY1 )
   QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

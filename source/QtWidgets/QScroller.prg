@@ -102,8 +102,7 @@ HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->handleInput ( (QScroller::Input) par1, *par2, (qint64) ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retl( obj->handleInput ( (QScroller::Input) par1, *PQPOINTF(2), (qint64) ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
 
@@ -311,8 +310,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE1 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->ensureVisible ( *par1, PQREAL(2), PQREAL(3) );
+    obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -325,8 +323,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE2 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->ensureVisible ( *par1, PQREAL(2), PQREAL(3), PINT(4) );
+    obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -373,8 +370,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO1 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->scrollTo ( *par1 );
+    obj->scrollTo ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -387,8 +383,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO2 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->scrollTo ( *par1, PINT(2) );
+    obj->scrollTo ( *PQPOINTF(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -91,9 +91,8 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_PAINT )
 
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    obj->paint ( par1, *par2, *PQMODELINDEX(3) );
+    obj->paint ( PQPAINTER(1), *par2, *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

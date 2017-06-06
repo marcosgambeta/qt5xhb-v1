@@ -302,8 +302,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setGridSize ( *par1 );
+    obj->setGridSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -584,8 +583,7 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }

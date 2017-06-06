@@ -372,8 +372,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETICONSIZE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-    obj->setIconSize ( *par1 );
+    obj->setIconSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -172,8 +172,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
   QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentFont ( *par1 );
+    obj->setCurrentFont ( *PQFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

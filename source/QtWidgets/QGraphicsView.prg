@@ -218,8 +218,7 @@ void QGraphicsView_centeron1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->centerOn ( *par1 );
+    obj->centerOn ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -302,8 +301,7 @@ void QGraphicsView_ensureVisible1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->ensureVisible ( *par1, OPINT(2,50), OPINT(3,50) );
+    obj->ensureVisible ( *PQRECTF(1), OPINT(2,50), OPINT(3,50) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -373,9 +371,8 @@ void QGraphicsView_fitInView1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
-    obj->fitInView ( *par1, (Qt::AspectRatioMode) par2 );
+    obj->fitInView ( *PQRECTF(1), (Qt::AspectRatioMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -487,8 +484,7 @@ void QGraphicsView_itemAt1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QGraphicsItem * ptr = obj->itemAt ( *par1 );
+    QGraphicsItem * ptr = obj->itemAt ( *PQPOINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -542,8 +538,7 @@ void QGraphicsView_mapFromScene1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPoint * ptr = new QPoint( obj->mapFromScene ( *par1 ) );
+    QPoint * ptr = new QPoint( obj->mapFromScene ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -557,8 +552,7 @@ void QGraphicsView_mapFromScene2 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->mapFromScene ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -572,8 +566,7 @@ void QGraphicsView_mapFromScene3 ()
 
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
-    QPolygon * ptr = new QPolygon( obj->mapFromScene ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQPOLYGONF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -587,8 +580,7 @@ void QGraphicsView_mapFromScene4 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -669,8 +661,7 @@ void QGraphicsView_mapToScene1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapToScene ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -684,8 +675,7 @@ void QGraphicsView_mapToScene2 ()
 
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQRECT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -699,8 +689,7 @@ void QGraphicsView_mapToScene3 ()
 
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGON(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -714,8 +703,7 @@ void QGraphicsView_mapToScene4 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -839,11 +827,10 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
   {
     if( ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
       QRect par3 = ISNIL(3)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(3);
       int par4 = ISNIL(4)? (int) Qt::KeepAspectRatio : hb_parni(4);
-      obj->render ( par1, par2, par3, (Qt::AspectRatioMode) par4 );
+      obj->render ( PQPAINTER(1), par2, par3, (Qt::AspectRatioMode) par4 );
     }
     else
     {
@@ -1044,8 +1031,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setBackgroundBrush ( *par1 );
+      obj->setBackgroundBrush ( *PQBRUSH(1) );
     }
     else
     {
@@ -1113,8 +1099,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setForegroundBrush ( *par1 );
+      obj->setForegroundBrush ( *PQBRUSH(1) );
     }
     else
     {
@@ -1340,8 +1325,7 @@ void QGraphicsView_setSceneRect1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setSceneRect ( *par1 );
+    obj->setSceneRect ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1392,8 +1376,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
   {
     if( ISQTRANSFORM(1) && ISOPTLOG(2) )
     {
-      QTransform * par1 = (QTransform *) _qt5xhb_itemGetPtr(1);
-      obj->setTransform ( *par1, OPBOOL(2,false) );
+      obj->setTransform ( *PQTRANSFORM(1), OPBOOL(2,false) );
     }
     else
     {
@@ -1649,8 +1632,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENERECT )
   {
     if( ISQRECTF(1) )
     {
-      QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-      obj->updateSceneRect ( *par1 );
+      obj->updateSceneRect ( *PQRECTF(1) );
     }
     else
     {

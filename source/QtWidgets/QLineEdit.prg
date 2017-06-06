@@ -356,8 +356,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->cursorPositionAt ( *par1 ) );
+    hb_retni( obj->cursorPositionAt ( *PQPOINT(1) ) );
   }
 }
 

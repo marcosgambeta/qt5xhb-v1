@@ -117,9 +117,8 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    obj->paint ( par1, *par2, *PQMODELINDEX(3) );
+    obj->paint ( PQPAINTER(1), *par2, *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -223,9 +222,8 @@ static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextEl
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
 {
-  QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
   int par3 = hb_parni(3);
-  hb_retc( RQSTRING( QAbstractItemDelegate::elidedText ( *par1, PINT(2), (Qt::TextElideMode) par3, PQSTRING(4) ) ) );
+  hb_retc( RQSTRING( QAbstractItemDelegate::elidedText ( *PQFONTMETRICS(1), PINT(2), (Qt::TextElideMode) par3, PQSTRING(4) ) ) );
 }
 
 /*

@@ -89,8 +89,7 @@ QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new4 ()
 {
-  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-  QPushButton * o = new QPushButton ( *par1, PQSTRING(2), OPQWIDGET(3,0) );
+  QPushButton * o = new QPushButton ( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

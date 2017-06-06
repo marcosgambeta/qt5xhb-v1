@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETPOSAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    obj->setPosAt ( PQREAL(1), *par2 );
+    obj->setPosAt ( PQREAL(1), *PQPOINTF(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

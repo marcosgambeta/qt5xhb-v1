@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QMENU_ACTIONAT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      QAction * ptr = obj->actionAt ( *par1 );
+      QAction * ptr = obj->actionAt ( *PQPOINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -488,8 +487,7 @@ void QMenu_exec2 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QAction * ptr = obj->exec ( *par1, OPQACTION(2,0) );
+    QAction * ptr = obj->exec ( *PQPOINT(1), OPQACTION(2,0) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -507,8 +505,7 @@ void QMenu_exec3 ()
   {
     par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QPoint * par2 = (QPoint *) _qt5xhb_itemGetPtr(2);
-  QAction * ptr = QMenu::exec ( par1, *par2, OPQACTION(3,0), OPQWIDGET(4,0) );
+  QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), OPQACTION(3,0), OPQWIDGET(4,0) );
   _qt5xhb_createReturnClass ( ptr, "QACTION" );
 }
 
@@ -717,8 +714,7 @@ HB_FUNC_STATIC( QMENU_POPUP )
   {
     if( ISQPOINT(1) && ISOPTQACTION(2) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      obj->popup ( *par1, OPQACTION(2,0) );
+      obj->popup ( *PQPOINT(1), OPQACTION(2,0) );
     }
     else
     {

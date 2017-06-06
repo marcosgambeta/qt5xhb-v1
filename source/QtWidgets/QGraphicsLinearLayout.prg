@@ -521,8 +521,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETGEOMETRY )
   {
     if( ISQRECTF(1) )
     {
-      QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-      obj->setGeometry ( *par1 );
+      obj->setGeometry ( *PQRECTF(1) );
     }
     else
     {

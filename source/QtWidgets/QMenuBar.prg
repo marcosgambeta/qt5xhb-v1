@@ -525,8 +525,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      QAction * ptr = obj->actionAt ( *par1 );
+      QAction * ptr = obj->actionAt ( *PQPOINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else

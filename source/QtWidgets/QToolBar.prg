@@ -165,8 +165,7 @@ void QToolBar_actionAt2 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QAction * ptr = obj->actionAt ( *par1 );
+    QAction * ptr = obj->actionAt ( *PQPOINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -638,8 +637,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
   {
     if( ISQSIZE(1) )
     {
-      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-      obj->setIconSize ( *par1 );
+      obj->setIconSize ( *PQSIZE(1) );
     }
     else
     {

@@ -147,8 +147,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setLastOffset ( *par1 );
+    obj->setLastOffset ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -163,8 +162,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setOffset ( *par1 );
+    obj->setOffset ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -302,8 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

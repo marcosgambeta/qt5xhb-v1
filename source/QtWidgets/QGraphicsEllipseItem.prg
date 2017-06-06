@@ -74,9 +74,8 @@ QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new2 ()
 {
-  QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( *par1, par2 );
+  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( *PQRECTF(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -154,8 +153,7 @@ void QGraphicSEllipseItem_setRect1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setRect ( *par1 );
+    obj->setRect ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -290,8 +288,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->contains ( *par1 ) );
+      hb_retl( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -346,9 +343,8 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_PAINT )
   {
     if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISOPTQWIDGET(3) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       QStyleOptionGraphicsItem * par2 = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-      obj->paint ( par1, par2, OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
     }
     else
     {

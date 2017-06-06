@@ -232,8 +232,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->anchorAt ( *par1 ) ) );
+      hb_retc( RQSTRING( obj->anchorAt ( *PQPOINT(1) ) ) );
     }
     else
     {
@@ -291,8 +290,7 @@ void QTextEdit_createStandardContextMenu2 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QMenu * ptr = obj->createStandardContextMenu ( *par1 );
+    QMenu * ptr = obj->createStandardContextMenu ( *PQPOINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -355,8 +353,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition ( *par1 ) );
+      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
     }
     else
@@ -1403,8 +1400,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
   {
     if( ISQFONT(1) )
     {
-      QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-      obj->setCurrentFont ( *par1 );
+      obj->setCurrentFont ( *PQFONT(1) );
     }
     else
     {

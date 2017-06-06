@@ -260,8 +260,7 @@ HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setBackground ( *par1 );
+      obj->setBackground ( *PQBRUSH(1) );
     }
     else
     {

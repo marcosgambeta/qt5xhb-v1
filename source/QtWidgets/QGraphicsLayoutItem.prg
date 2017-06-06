@@ -349,8 +349,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -378,8 +377,7 @@ void QGraphicsLayoutItem_setMaximumSize1 ()
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->setMaximumSize ( *par1 );
+    obj->setMaximumSize ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -450,8 +448,7 @@ void QGraphicsLayoutItem_setMinimumSize1 ()
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->setMinimumSize ( *par1 );
+    obj->setMinimumSize ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -537,8 +534,7 @@ void QGraphicsLayoutItem_setPreferredSize1 ()
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-    obj->setPreferredSize ( *par1 );
+    obj->setPreferredSize ( *PQSIZEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

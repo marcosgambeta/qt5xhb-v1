@@ -665,8 +665,7 @@ HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
 
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -678,8 +677,7 @@ static QSize closestAcceptableSize ( const QWidget * widget, const QSize & size 
 HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
 {
   const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-  QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-  QSize * ptr = new QSize( QLayout::closestAcceptableSize ( par1, *par2 ) );
+  QSize * ptr = new QSize( QLayout::closestAcceptableSize ( par1, *PQSIZE(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 }
 

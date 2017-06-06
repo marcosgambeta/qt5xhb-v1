@@ -489,8 +489,7 @@ HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-    obj->setPixmap ( (QWizard::WizardPixmap) par1, *par2 );
+    obj->setPixmap ( (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

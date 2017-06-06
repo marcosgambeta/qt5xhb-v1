@@ -704,8 +704,7 @@ HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
   {
     if( ISQPOINT(1) )
     {
-      QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-      QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else

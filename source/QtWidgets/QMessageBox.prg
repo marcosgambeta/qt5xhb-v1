@@ -450,8 +450,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
   {
     if( ISQPIXMAP(1) )
     {
-      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-      obj->setIconPixmap ( *par1 );
+      obj->setIconPixmap ( *PQPIXMAP(1) );
     }
     else
     {

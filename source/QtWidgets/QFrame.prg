@@ -186,8 +186,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-    obj->setFrameRect ( *par1 );
+    obj->setFrameRect ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

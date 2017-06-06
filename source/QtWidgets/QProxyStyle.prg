@@ -177,9 +177,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWPRIMITIVE )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
-      QPainter * par3 = (QPainter *) _qt5xhb_itemGetPtr(3);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      obj->drawPrimitive ( (QStyle::PrimitiveElement) par1, par2, par3, par4 );
+      obj->drawPrimitive ( (QStyle::PrimitiveElement) par1, par2, PQPAINTER(3), par4 );
     }
     else
     {
@@ -203,9 +202,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCONTROL )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
-      QPainter * par3 = (QPainter *) _qt5xhb_itemGetPtr(3);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      obj->drawControl ( (QStyle::ControlElement) par1, par2, par3, par4 );
+      obj->drawControl ( (QStyle::ControlElement) par1, par2, PQPAINTER(3), par4 );
     }
     else
     {
@@ -229,9 +227,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCOMPLEXCONTROL )
     {
       int par1 = hb_parni(1);
       const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
-      QPainter * par3 = (QPainter *) _qt5xhb_itemGetPtr(3);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      obj->drawComplexControl ( (QStyle::ComplexControl) par1, par2, par3, par4 );
+      obj->drawComplexControl ( (QStyle::ComplexControl) par1, par2, PQPAINTER(3), par4 );
     }
     else
     {
@@ -253,11 +250,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
   {
     if( ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISQPALETTE(4) && ISLOG(5) && ISCHAR(6) && ISOPTNUM(7) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-      QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-      QPalette * par4 = (QPalette *) _qt5xhb_itemGetPtr(4);
       int par7 = ISNIL(7)? (int) QPalette::NoRole : hb_parni(7);
-      obj->drawItemText ( par1, *par2, PINT(3), *par4, PBOOL(5), PQSTRING(6), (QPalette::ColorRole) par7 );
+      obj->drawItemText ( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6), (QPalette::ColorRole) par7 );
     }
     else
     {
@@ -279,10 +273,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMPIXMAP )
   {
     if( ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISQPIXMAP(4) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
-      QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-      QPixmap * par4 = (QPixmap *) _qt5xhb_itemGetPtr(4);
-      obj->drawItemPixmap ( par1, *par2, PINT(3), *par4 );
+      obj->drawItemPixmap ( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4) );
     }
     else
     {
@@ -306,9 +297,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
     {
       int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
-      QSize * par3 = (QSize *) _qt5xhb_itemGetPtr(3);
       const QWidget * par4 = (const QWidget *) _qt5xhb_itemGetPtr(4);
-      QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) par1, par2, *par3, par4 ) );
+      QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) par1, par2, *PQSIZE(3), par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -378,9 +368,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
   {
     if( ISQFONTMETRICS(1) && ISQRECT(2) && ISNUM(3) && ISLOG(4) && ISCHAR(5) )
     {
-      QFontMetrics * par1 = (QFontMetrics *) _qt5xhb_itemGetPtr(1);
-      QRect * par2 = (QRect *) _qt5xhb_itemGetPtr(2);
-      QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, PINT(3), PBOOL(4), PQSTRING(5) ) );
+      QRect * ptr = new QRect( obj->itemTextRect ( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -401,9 +389,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMPIXMAPRECT )
   {
     if( ISQRECT(1) && ISNUM(2) && ISQPIXMAP(3) )
     {
-      QRect * par1 = (QRect *) _qt5xhb_itemGetPtr(1);
-      QPixmap * par3 = (QPixmap *) _qt5xhb_itemGetPtr(3);
-      QRect * ptr = new QRect( obj->itemPixmapRect ( *par1, PINT(2), *par3 ) );
+      QRect * ptr = new QRect( obj->itemPixmapRect ( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -426,9 +412,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
     {
       int par1 = hb_parni(1);
       const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
-      QPoint * par3 = (QPoint *) _qt5xhb_itemGetPtr(3);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      hb_retni( obj->hitTestComplexControl ( (QStyle::ComplexControl) par1, par2, *par3, par4 ) );
+      hb_retni( obj->hitTestComplexControl ( (QStyle::ComplexControl) par1, par2, *PQPOINT(3), par4 ) );
     }
     else
     {
@@ -569,9 +554,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_GENERATEDICONPIXMAP )
     if( ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3) )
     {
       int par1 = hb_parni(1);
-      QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
       const QStyleOption * par3 = (const QStyleOption *) _qt5xhb_itemGetPtr(3);
-      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) par1, *par2, par3 ) );
+      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) par1, *PQPIXMAP(2), par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else

@@ -142,8 +142,7 @@ QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
 */
 void QGraphicsScene_new2 ()
 {
-  QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-  QGraphicsScene * o = new QGraphicsScene ( *par1, OPQOBJECT(2,0) );
+  QGraphicsScene * o = new QGraphicsScene ( *PQRECTF(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -234,10 +233,9 @@ void QGraphicsScene_addEllipse1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2);
     QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3);
-    QGraphicsEllipseItem * ptr = obj->addEllipse ( *par1, par2, par3 );
+    QGraphicsEllipseItem * ptr = obj->addEllipse ( *PQRECTF(1), par2, par3 );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM" );
   }
 }
@@ -309,9 +307,8 @@ void QGraphicsScene_addLine1 ()
 
   if( obj )
   {
-    QLineF * par1 = (QLineF *) _qt5xhb_itemGetPtr(1);
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2);
-    QGraphicsLineItem * ptr = obj->addLine ( *par1, par2 );
+    QGraphicsLineItem * ptr = obj->addLine ( *PQLINEF(1), par2 );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM" );
   }
 }
@@ -361,10 +358,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPATH )
   {
     if( ISQPAINTERPATH(1) && (ISQPEN(2)||ISNIL(2)) && (ISQBRUSH(3)||ISNIL(3)) )
     {
-      QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
       QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2);
       QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3);
-      QGraphicsPathItem * ptr = obj->addPath ( *par1, par2, par3 );
+      QGraphicsPathItem * ptr = obj->addPath ( *PQPAINTERPATH(1), par2, par3 );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPATHITEM" );
     }
     else
@@ -385,8 +381,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPIXMAP )
   {
     if( ISQPIXMAP(1) )
     {
-      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-      QGraphicsPixmapItem * ptr = obj->addPixmap ( *par1 );
+      QGraphicsPixmapItem * ptr = obj->addPixmap ( *PQPIXMAP(1) );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPIXMAPITEM" );
     }
     else
@@ -407,10 +402,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPOLYGON )
   {
     if( ISQPOLYGONF(1) && (ISQPEN(2)||ISNIL(2)) && (ISQBRUSH(3)||ISNIL(3)) )
     {
-      QPolygonF * par1 = (QPolygonF *) _qt5xhb_itemGetPtr(1);
       QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2);
       QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3);
-      QGraphicsPolygonItem * ptr = obj->addPolygon ( *par1, par2, par3 );
+      QGraphicsPolygonItem * ptr = obj->addPolygon ( *PQPOLYGONF(1), par2, par3 );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSPOLYGONITEM" );
     }
     else
@@ -429,10 +423,9 @@ void QGraphicsScene_addRect1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2);
     QBrush par3 = ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3);
-    QGraphicsRectItem * ptr = obj->addRect ( *par1, par2, par3 );
+    QGraphicsRectItem * ptr = obj->addRect ( *PQRECTF(1), par2, par3 );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM" );
   }
 }
@@ -809,9 +802,7 @@ void QGraphicsScene_itemAt1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-    QGraphicsItem * ptr = obj->itemAt ( *par1, *par2 );
+    QGraphicsItem * ptr = obj->itemAt ( *PQPOINTF(1), *PQTRANSFORM(2) );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -825,8 +816,7 @@ void QGraphicsScene_itemAt2 ()
 
   if( obj )
   {
-    QTransform * par3 = (QTransform *) _qt5xhb_itemGetPtr(3);
-    QGraphicsItem * ptr = obj->itemAt ( PQREAL(1), PQREAL(2), *par3 );
+    QGraphicsItem * ptr = obj->itemAt ( PQREAL(1), PQREAL(2), *PQTRANSFORM(3) );
     _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -939,11 +929,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
   {
     if( ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECTF(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
       QRectF par3 = ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3);
       int par4 = ISNIL(4)? (int) Qt::KeepAspectRatio : hb_parni(4);
-      obj->render ( par1, par2, par3, (Qt::AspectRatioMode) par4 );
+      obj->render ( PQPAINTER(1), par2, par3, (Qt::AspectRatioMode) par4 );
     }
     else
     {
@@ -1061,8 +1050,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETBACKGROUNDBRUSH )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setBackgroundBrush ( *par1 );
+      obj->setBackgroundBrush ( *PQBRUSH(1) );
     }
     else
     {
@@ -1153,8 +1141,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFONT )
   {
     if( ISQFONT(1) )
     {
-      QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-      obj->setFont ( *par1 );
+      obj->setFont ( *PQFONT(1) );
     }
     else
     {
@@ -1176,8 +1163,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOREGROUNDBRUSH )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setForegroundBrush ( *par1 );
+      obj->setForegroundBrush ( *PQBRUSH(1) );
     }
     else
     {
@@ -1222,8 +1208,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETPALETTE )
   {
     if( ISQPALETTE(1) )
     {
-      QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
-      obj->setPalette ( *par1 );
+      obj->setPalette ( *PQPALETTE(1) );
     }
     else
     {
@@ -1243,8 +1228,7 @@ void QGraphicsScene_setSceneRect1 ()
 
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setSceneRect ( *par1 );
+    obj->setSceneRect ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1293,9 +1277,7 @@ void QGraphicsScene_setSelectionArea1 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
-    QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-    obj->setSelectionArea ( *par1, *par2 );
+    obj->setSelectionArea ( *PQPAINTERPATH(1), *PQTRANSFORM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1310,10 +1292,8 @@ void QGraphicsScene_setSelectionArea2 ()
 
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    QTransform * par3 = (QTransform *) _qt5xhb_itemGetPtr(3);
-    obj->setSelectionArea ( *par1, (Qt::ItemSelectionMode) par2, *par3 );
+    obj->setSelectionArea ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2, *PQTRANSFORM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

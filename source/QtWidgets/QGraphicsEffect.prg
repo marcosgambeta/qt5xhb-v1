@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
   QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->boundingRectFor ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
   QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-    obj->setBrush ( *par1 );
+    obj->setBrush ( *PQBRUSH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -120,8 +119,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
   QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPen * par1 = (QPen *) _qt5xhb_itemGetPtr(1);
-    obj->setPen ( *par1 );
+    obj->setPen ( *PQPEN(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

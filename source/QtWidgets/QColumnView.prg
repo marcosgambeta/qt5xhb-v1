@@ -199,8 +199,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }

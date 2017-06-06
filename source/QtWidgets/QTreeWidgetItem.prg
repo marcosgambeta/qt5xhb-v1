@@ -762,8 +762,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETBACKGROUND )
   {
     if( ISNUM(1) && ISQBRUSH(2) )
     {
-      QBrush * par2 = (QBrush *) _qt5xhb_itemGetPtr(2);
-      obj->setBackground ( PINT(1), *par2 );
+      obj->setBackground ( PINT(1), *PQBRUSH(2) );
     }
     else
     {
@@ -942,8 +941,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFONT )
   {
     if( ISNUM(1) && ISQFONT(2) )
     {
-      QFont * par2 = (QFont *) _qt5xhb_itemGetPtr(2);
-      obj->setFont ( PINT(1), *par2 );
+      obj->setFont ( PINT(1), *PQFONT(2) );
     }
     else
     {
@@ -965,8 +963,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFOREGROUND )
   {
     if( ISNUM(1) && ISQBRUSH(2) )
     {
-      QBrush * par2 = (QBrush *) _qt5xhb_itemGetPtr(2);
-      obj->setForeground ( PINT(1), *par2 );
+      obj->setForeground ( PINT(1), *PQBRUSH(2) );
     }
     else
     {
@@ -1055,8 +1052,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETSIZEHINT )
   {
     if( ISNUM(1) && ISQSIZE(2) )
     {
-      QSize * par2 = (QSize *) _qt5xhb_itemGetPtr(2);
-      obj->setSizeHint ( PINT(1), *par2 );
+      obj->setSizeHint ( PINT(1), *PQSIZE(2) );
     }
     else
     {

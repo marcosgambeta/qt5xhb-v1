@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUND )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setBackground ( *par1 );
+      obj->setBackground ( *PQBRUSH(1) );
     }
     else
     {
@@ -378,8 +377,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETFONT )
   {
     if( ISQFONT(1) )
     {
-      QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-      obj->setFont ( *par1 );
+      obj->setFont ( *PQFONT(1) );
     }
     else
     {
@@ -415,8 +413,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETFOREGROUND )
   {
     if( ISQBRUSH(1) )
     {
-      QBrush * par1 = (QBrush *) _qt5xhb_itemGetPtr(1);
-      obj->setForeground ( *par1 );
+      obj->setForeground ( *PQBRUSH(1) );
     }
     else
     {
@@ -596,8 +593,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSIZEHINT )
   {
     if( ISQSIZE(1) )
     {
-      QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-      obj->setSizeHint ( *par1 );
+      obj->setSizeHint ( *PQSIZE(1) );
     }
     else
     {

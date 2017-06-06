@@ -454,8 +454,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *PQPOINTF(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

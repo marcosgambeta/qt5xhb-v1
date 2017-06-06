@@ -185,8 +185,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setCenterPoint ( *par1 );
+    obj->setCenterPoint ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,8 +216,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setLastCenterPoint ( *par1 );
+    obj->setLastCenterPoint ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -293,8 +291,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setStartCenterPoint ( *par1 );
+    obj->setStartCenterPoint ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

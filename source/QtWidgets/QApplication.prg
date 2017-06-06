@@ -388,8 +388,7 @@ static void changeOverrideCursor ( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-  QApplication::changeOverrideCursor ( *par1 );
+  QApplication::changeOverrideCursor ( *PQCURSOR(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -800,9 +799,8 @@ static void setFont ( const QFont & font, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
-  QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setFont ( *par1, (const char *) par2 );
+  QApplication::setFont ( *PQFONT(1), (const char *) par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -812,8 +810,7 @@ static void setGlobalStrut ( const QSize & )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 {
-  QSize * par1 = (QSize *) _qt5xhb_itemGetPtr(1);
-  QApplication::setGlobalStrut ( *par1 );
+  QApplication::setGlobalStrut ( *PQSIZE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -854,8 +851,7 @@ static void setOverrideCursor ( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) _qt5xhb_itemGetPtr(1);
-  QApplication::setOverrideCursor ( *par1 );
+  QApplication::setOverrideCursor ( *PQCURSOR(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -865,9 +861,8 @@ static void setPalette ( const QPalette & palette, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
-  QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setPalette ( *par1, (const char *) par2 );
+  QApplication::setPalette ( *PQPALETTE(1), (const char *) par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1028,8 +1023,7 @@ static QWidget * topLevelAt ( const QPoint & point )
 */
 void QApplication_topLevelAt1 ()
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QWidget * ptr = QApplication::topLevelAt ( *par1 );
+  QWidget * ptr = QApplication::topLevelAt ( *PQPOINT(1) );
   _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
@@ -1117,8 +1111,7 @@ static QWidget * widgetAt ( const QPoint & point )
 */
 void QApplication_widgetAt1 ()
 {
-  QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-  QWidget * ptr = QApplication::widgetAt ( *par1 );
+  QWidget * ptr = QApplication::widgetAt ( *PQPOINT(1) );
   _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 

@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setPosition ( *par1 );
+    obj->setPosition ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

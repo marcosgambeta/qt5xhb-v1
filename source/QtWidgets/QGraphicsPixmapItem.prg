@@ -78,9 +78,8 @@ QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new2 ()
 {
-  QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
-  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( *par1, par2 );
+  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( *PQPIXMAP(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -157,8 +156,7 @@ void QGraphicsPixmapItem_setOffset1 ()
 
   if( obj )
   {
-    QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-    obj->setOffset ( *par1 );
+    obj->setOffset ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,8 +207,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
   {
     if( ISQPIXMAP(1) )
     {
-      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-      obj->setPixmap ( *par1 );
+      obj->setPixmap ( *PQPIXMAP(1) );
     }
     else
     {
@@ -318,8 +315,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      QPointF * par1 = (QPointF *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->contains ( *par1 ) );
+      hb_retl( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -374,9 +370,8 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
   {
     if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
     {
-      QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
       const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-      obj->paint ( par1, par2, PQWIDGET(3) );
+      obj->paint ( PQPAINTER(1), par2, PQWIDGET(3) );
     }
     else
     {

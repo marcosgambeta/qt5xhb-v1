@@ -140,8 +140,7 @@ HB_FUNC_STATIC( QTOOLTIP_SETFONT )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    obj->setFont ( *par1 );
+    obj->setFont ( *PQFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -155,8 +154,7 @@ HB_FUNC_STATIC( QTOOLTIP_SETPALETTE )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPalette * par1 = (QPalette *) _qt5xhb_itemGetPtr(1);
-    obj->setPalette ( *par1 );
+    obj->setPalette ( *PQPALETTE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -170,9 +168,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT1 )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QRect * par4 = (QRect *) _qt5xhb_itemGetPtr(4);
-    obj->showText ( *par1, PQSTRING(2), PQWIDGET(3), *par4 );
+    obj->showText ( *PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -185,8 +181,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT2 )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    obj->showText ( *par1, PQSTRING(2), OPQWIDGET(3,0) );
+    obj->showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

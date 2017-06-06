@@ -354,8 +354,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT1 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QListWidgetItem * ptr = obj->itemAt ( *par1 );
+    QListWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }

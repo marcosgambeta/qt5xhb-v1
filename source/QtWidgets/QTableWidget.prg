@@ -351,8 +351,7 @@ void QTableWidget_itemAt1 ()
 
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    QTableWidgetItem * ptr = obj->itemAt ( *par1 );
+    QTableWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
     _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }

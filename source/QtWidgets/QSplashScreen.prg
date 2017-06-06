@@ -158,8 +158,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
   {
     if( ISQPIXMAP(1) )
     {
-      QPixmap * par1 = (QPixmap *) _qt5xhb_itemGetPtr(1);
-      obj->setPixmap ( *par1 );
+      obj->setPixmap ( *PQPIXMAP(1) );
     }
     else
     {

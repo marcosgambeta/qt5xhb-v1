@@ -145,9 +145,8 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainter * par1 = (QPainter *) _qt5xhb_itemGetPtr(1);
     const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-    obj->paint ( par1, par2, PQWIDGET(3) );
+    obj->paint ( PQPAINTER(1), par2, PQWIDGET(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -161,8 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * par1 = (QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

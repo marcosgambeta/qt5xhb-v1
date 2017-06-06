@@ -459,8 +459,7 @@ void QHeaderView_logicalIndexAt3 ()
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPoint * par1 = (QPoint *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->logicalIndexAt ( *par1 ) );
+    hb_retni( obj->logicalIndexAt ( *PQPOINT(1) ) );
   }
 }
 

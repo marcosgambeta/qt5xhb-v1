@@ -581,8 +581,7 @@ HB_FUNC_STATIC( QACTION_SETFONT )
 
   if( obj )
   {
-    QFont * par1 = (QFont *) _qt5xhb_itemGetPtr(1);
-    obj->setFont ( *par1 );
+    obj->setFont ( *PQFONT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
