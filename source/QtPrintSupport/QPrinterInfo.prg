@@ -88,8 +88,7 @@ QPrinterInfo ( const QPrinterInfo & src )
 */
 void QPrinterInfo_new2 ()
 {
-  QPrinterInfo * par1 = (QPrinterInfo *) _qt5xhb_itemGetPtr(1);
-  QPrinterInfo * o = new QPrinterInfo ( *par1 );
+  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTERINFO(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

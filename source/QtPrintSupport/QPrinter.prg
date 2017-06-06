@@ -131,9 +131,8 @@ QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 */
 void QPrinter_new2 ()
 {
-  QPrinterInfo * par1 = (QPrinterInfo *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QPrinter::ScreenResolution : hb_parni(2);
-  QPrinter * o = new QPrinter ( *par1, (QPrinter::PrinterMode) par2 );
+  QPrinter * o = new QPrinter ( *PQPRINTERINFO(1), (QPrinter::PrinterMode) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -1146,9 +1145,8 @@ void QPrinter_setPaperSize2 ()
 
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->setPaperSize ( *par1, (QPrinter::Unit) par2 );
+    obj->setPaperSize ( *PQSIZEF(1), (QPrinter::Unit) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1369,8 +1367,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGESIZEMM )
   {
     if( ISQSIZEF(1) )
     {
-      QSizeF * par1 = (QSizeF *) _qt5xhb_itemGetPtr(1);
-      obj->setPageSizeMM ( *par1 );
+      obj->setPageSizeMM ( *PQSIZEF(1) );
     }
     else
     {
