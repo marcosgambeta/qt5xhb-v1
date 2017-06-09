@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QQMLERROR_SETURL )
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setUrl ( *par1 );
+    obj->setUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -352,8 +352,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETBASEURL )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setBaseUrl ( *par1 );
+    obj->setBaseUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -495,8 +494,7 @@ static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 */
 HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
 {
-  int par2 = hb_parni(2);
-  QQmlEngine::setObjectOwnership ( PQOBJECT(1), (QQmlEngine::ObjectOwnership) par2 );
+  QQmlEngine::setObjectOwnership ( PQOBJECT(1), (QQmlEngine::ObjectOwnership) hb_parni(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

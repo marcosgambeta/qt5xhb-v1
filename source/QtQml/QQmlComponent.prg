@@ -77,8 +77,7 @@ QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW1 )
 {
-  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QQmlComponent * o = new QQmlComponent ( par1, OPQOBJECT(2,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -87,8 +86,7 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW2 )
 {
-  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QQmlComponent * o = new QQmlComponent ( par1, PQSTRING(2), OPQOBJECT(3,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -97,9 +95,7 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mod
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW3 )
 {
-  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  int par3 = hb_parni(3);
-  QQmlComponent * o = new QQmlComponent ( par1, PQSTRING(2), (QQmlComponent::CompilationMode) par3, OPQOBJECT(4,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -108,9 +104,7 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW4 )
 {
-  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-  QQmlComponent * o = new QQmlComponent ( par1, *par2, OPQOBJECT(3,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -119,10 +113,7 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObje
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW5 )
 {
-  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-  int par3 = hb_parni(3);
-  QQmlComponent * o = new QQmlComponent ( par1, *par2, (QQmlComponent::CompilationMode) par3, OPQOBJECT(4,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -184,8 +175,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlContext * par1 = (QQmlContext *) _qt5xhb_itemGetPtr(1);
-    QObject * ptr = obj->beginCreate ( par1 );
+    QObject * ptr = obj->beginCreate ( PQQMLCONTEXT(1) );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
@@ -370,8 +360,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL1 )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->loadUrl ( *par1 );
+    obj->loadUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -384,9 +373,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL2 )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
-    obj->loadUrl ( *par1, (QQmlComponent::CompilationMode) par2 );
+    obj->loadUrl ( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -419,9 +406,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setData ( *par1, *par2 );
+    obj->setData ( *PQBYTEARRAY(1), *PQURL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

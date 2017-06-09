@@ -114,8 +114,7 @@ QJSValue(const QJSValue & other)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW2 )
 {
-  QJSValue * par1 = (QJSValue *) _qt5xhb_itemGetPtr(1);
-  QJSValue * o = new QJSValue ( *par1 );
+  QJSValue * o = new QJSValue ( *PQJSVALUE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -124,8 +123,7 @@ QJSValue(bool value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW3 )
 {
-  bool par1 = hb_parl(1);
-  QJSValue * o = new QJSValue ( par1 );
+  QJSValue * o = new QJSValue ( PBOOL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -134,8 +132,7 @@ QJSValue(int value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW4 )
 {
-  int par1 = hb_parni(1);
-  QJSValue * o = new QJSValue ( par1 );
+  QJSValue * o = new QJSValue ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -154,8 +151,7 @@ QJSValue(double value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW6 )
 {
-  double par1 = hb_parnd(1);
-  QJSValue * o = new QJSValue ( par1 );
+  QJSValue * o = new QJSValue ( PDOUBLE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -173,7 +169,7 @@ QJSValue(const char * value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
 {
-  QJSValue * o = new QJSValue ( (const char *) hb_parc(1) );
+  QJSValue * o = new QJSValue ( PCONSTCHAR(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

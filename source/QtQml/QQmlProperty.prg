@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL1 )
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), (const char *) hb_parc(2) ) );
+    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
   }
 }
 

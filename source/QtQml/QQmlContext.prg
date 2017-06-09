@@ -222,8 +222,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QUrl * ptr = new QUrl( obj->resolvedUrl ( *par1 ) );
+    QUrl * ptr = new QUrl( obj->resolvedUrl ( *PQURL(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -237,8 +236,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setBaseUrl ( *par1 );
+    obj->setBaseUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
