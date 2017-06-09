@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setContentType ( (QPlaceContent::Type) par1 );
+    obj->setContentType ( (QPlaceContent::Type) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

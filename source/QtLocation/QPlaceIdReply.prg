@@ -54,8 +54,7 @@ explicit QPlaceIdReply(OperationType operationType, QObject *parent = 0)
 HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  int par1 = hb_parni(1);
-  QPlaceIdReply * o = new QPlaceIdReply ( (QPlaceIdReply::OperationType) par1, OPQOBJECT(2,0) );
+  QPlaceIdReply * o = new QPlaceIdReply ( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

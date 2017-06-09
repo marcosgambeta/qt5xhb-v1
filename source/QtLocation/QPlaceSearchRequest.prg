@@ -374,8 +374,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETVISIBILITYSCOPE )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setVisibilityScope ( (QLocation::VisibilityScope) par1 );
+    obj->setVisibilityScope ( (QLocation::VisibilityScope) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -405,8 +404,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRELEVANCEHINT )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setRelevanceHint ( (QPlaceSearchRequest::RelevanceHint) par1 );
+    obj->setRelevanceHint ( (QPlaceSearchRequest::RelevanceHint) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDirection ( (QGeoManeuver::InstructionDirection) par1 );
+    obj->setDirection ( (QGeoManeuver::InstructionDirection) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -422,8 +422,7 @@ HB_FUNC_STATIC( QPLACE_TOTALCONTENTCOUNT )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->totalContentCount ( (QPlaceContent::Type) par1 ) );
+    hb_retni( obj->totalContentCount ( (QPlaceContent::Type) hb_parni(1) ) );
   }
 #endif
 }
@@ -437,8 +436,7 @@ HB_FUNC_STATIC( QPLACE_SETTOTALCONTENTCOUNT )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTotalContentCount ( (QPlaceContent::Type) par1, PINT(2) );
+    obj->setTotalContentCount ( (QPlaceContent::Type) hb_parni(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -805,8 +803,7 @@ HB_FUNC_STATIC( QPLACE_SETVISIBILITY )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setVisibility ( (QLocation::Visibility) par1 );
+    obj->setVisibility ( (QLocation::Visibility) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

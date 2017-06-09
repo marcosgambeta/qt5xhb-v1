@@ -280,8 +280,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SETMEASUREMENTSYSTEM )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMeasurementSystem ( (QLocale::MeasurementSystem) par1 );
+    obj->setMeasurementSystem ( (QLocale::MeasurementSystem) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

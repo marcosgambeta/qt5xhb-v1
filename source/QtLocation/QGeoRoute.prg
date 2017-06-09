@@ -333,8 +333,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETTRAVELMODE )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTravelMode ( (QGeoRouteRequest::TravelMode) par1 );
+    obj->setTravelMode ( (QGeoRouteRequest::TravelMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

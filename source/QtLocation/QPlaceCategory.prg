@@ -210,8 +210,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setVisibility ( (QLocation::Visibility) par1 );
+    obj->setVisibility ( (QLocation::Visibility) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
