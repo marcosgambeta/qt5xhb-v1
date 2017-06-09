@@ -237,8 +237,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
   QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAttribute ( (QGeoPositionInfo::Attribute) par1, PQREAL(2) );
+    obj->setAttribute ( (QGeoPositionInfo::Attribute) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -254,8 +253,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
   QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retnd( obj->attribute ( (QGeoPositionInfo::Attribute) par1 ) );
+    hb_retnd( obj->attribute ( (QGeoPositionInfo::Attribute) hb_parni(1) ) );
   }
 #endif
 }
@@ -270,8 +268,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
   QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->removeAttribute ( (QGeoPositionInfo::Attribute) par1 );
+    obj->removeAttribute ( (QGeoPositionInfo::Attribute) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -287,8 +284,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_HASATTRIBUTE )
   QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->hasAttribute ( (QGeoPositionInfo::Attribute) par1 ) );
+    hb_retl( obj->hasAttribute ( (QGeoPositionInfo::Attribute) hb_parni(1) ) );
   }
 #endif
 }

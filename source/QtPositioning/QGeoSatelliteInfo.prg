@@ -133,8 +133,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSatelliteSystem ( (QGeoSatelliteInfo::SatelliteSystem) par1 );
+    obj->setSatelliteSystem ( (QGeoSatelliteInfo::SatelliteSystem) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -227,8 +226,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAttribute ( (QGeoSatelliteInfo::Attribute) par1, PQREAL(2) );
+    obj->setAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -244,8 +242,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retnd( obj->attribute ( (QGeoSatelliteInfo::Attribute) par1 ) );
+    hb_retnd( obj->attribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
   }
 #endif
 }
@@ -260,8 +257,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->removeAttribute ( (QGeoSatelliteInfo::Attribute) par1 );
+    obj->removeAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -277,8 +273,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->hasAttribute ( (QGeoSatelliteInfo::Attribute) par1 ) );
+    hb_retl( obj->hasAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
   }
 #endif
 }

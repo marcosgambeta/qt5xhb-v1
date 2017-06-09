@@ -67,8 +67,7 @@ QNmeaPositionInfoSource(UpdateMode updateMode, QObject *parent = 0)
 HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  QNmeaPositionInfoSource * o = new QNmeaPositionInfoSource ( (QNmeaPositionInfoSource::UpdateMode) par1, OPQOBJECT(2,0) );
+  QNmeaPositionInfoSource * o = new QNmeaPositionInfoSource ( (QNmeaPositionInfoSource::UpdateMode) hb_parni(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -115,8 +114,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SETDEVICE )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
