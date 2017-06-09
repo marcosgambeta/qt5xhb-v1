@@ -78,8 +78,7 @@ QCursor ( Qt::CursorShape shape )
 */
 void QCursor_new2 ()
 {
-  int par1 = hb_parni(1);
-  QCursor * o = new QCursor ( (Qt::CursorShape) par1 );
+  QCursor * o = new QCursor ( (Qt::CursorShape) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -230,8 +229,7 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setShape ( (Qt::CursorShape) par1 );
+      obj->setShape ( (Qt::CursorShape) hb_parni(1) );
     }
     else
     {

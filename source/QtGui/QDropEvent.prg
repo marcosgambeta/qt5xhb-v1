@@ -187,8 +187,7 @@ HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
   QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDropAction ( (Qt::DropAction) par1 );
+    obj->setDropAction ( (Qt::DropAction) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -125,8 +125,7 @@ QTextFormat(int type)
 */
 HB_FUNC_STATIC( QTEXTFORMAT_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QTextFormat * o = new QTextFormat ( par1 );
+  QTextFormat * o = new QTextFormat ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -730,8 +729,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETLAYOUTDIRECTION )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
+    obj->setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

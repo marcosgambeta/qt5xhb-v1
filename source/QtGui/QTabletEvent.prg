@@ -69,10 +69,9 @@ QTabletEvent(Type type, const QPointF & pos, const QPointF & globalPos, int devi
 */
 HB_FUNC_STATIC( QTABLETEVENT_NEW )
 {
-  int par1 = hb_parni(1);
   int par12 = hb_parni(12);
   qint64 par13 = hb_parni(13);
-  QTabletEvent * o = new QTabletEvent ( (QEvent::Type) par1, *PQPOINTF(2), *PQPOINTF(3), PINT(4), PINT(5), PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11), (Qt::KeyboardModifiers) par12, par13 );
+  QTabletEvent * o = new QTabletEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), PINT(4), PINT(5), PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11), (Qt::KeyboardModifiers) par12, par13 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

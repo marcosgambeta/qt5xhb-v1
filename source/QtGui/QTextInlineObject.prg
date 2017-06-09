@@ -73,9 +73,8 @@ QTextInlineObject(int i, QTextEngine *e)
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW1 )
 {
-  int par1 = hb_parni(1);
   QTextEngine * par2 = (QTextEngine *) _qt5xhb_itemGetPtr(2);
-  QTextInlineObject * o = new QTextInlineObject ( par1, par2 );
+  QTextInlineObject * o = new QTextInlineObject ( PINT(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

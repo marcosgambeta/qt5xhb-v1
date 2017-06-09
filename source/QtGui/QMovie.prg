@@ -107,9 +107,8 @@ QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject *
 */
 HB_FUNC_STATIC( QMOVIE_NEW2 )
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QMovie * o = new QMovie ( par1, par2, OPQOBJECT(3,0) );
+  QMovie * o = new QMovie ( PQIODEVICE(1), par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -388,8 +387,7 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCacheMode ( (QMovie::CacheMode) par1 );
+    obj->setCacheMode ( (QMovie::CacheMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -403,8 +401,7 @@ HB_FUNC_STATIC( QMOVIE_SETDEVICE )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -432,8 +429,7 @@ HB_FUNC_STATIC( QMOVIE_SETFORMAT )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

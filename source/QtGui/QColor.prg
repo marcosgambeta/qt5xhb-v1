@@ -150,11 +150,7 @@ QColor ( int r, int g, int b, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_NEW2 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  int par4 = ISNIL(4)? 255 : hb_parni(4);
-  QColor * o = new QColor ( par1, par2, par3, par4 );
+  QColor * o = new QColor ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -182,7 +178,7 @@ QColor ( const char * name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
-  QColor * o = new QColor ( (const char *) hb_parc(1) );
+  QColor * o = new QColor ( PCONSTCHAR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -201,8 +197,7 @@ QColor ( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
-  int par1 = hb_parni(1);
-  QColor * o = new QColor ( (Qt::GlobalColor) par1 );
+  QColor * o = new QColor ( (Qt::GlobalColor) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -349,8 +344,7 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      QColor * ptr = new QColor( obj->convertTo ( (QColor::Spec) par1 ) );
+      QColor * ptr = new QColor( obj->convertTo ( (QColor::Spec) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
     }
     else

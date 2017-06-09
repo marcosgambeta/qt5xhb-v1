@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
   QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) par1 ) ) );
+    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) ) );
   }
 }
 
@@ -233,8 +232,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
   QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setText ( (QAccessible::Text) par1, PQSTRING(2) );
+    obj->setText ( (QAccessible::Text) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -402,8 +400,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VIRTUAL_HOOK )
   QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    void * par2 = (void *) hb_parptr(2);
-    obj->virtual_hook ( PINT(1), par2 );
+    obj->virtual_hook ( PINT(1), (void *) hb_parptr(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -417,8 +414,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INTERFACE_CAST )
   QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) par1 ) );
+    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) hb_parni(1) ) );
   }
 }
 

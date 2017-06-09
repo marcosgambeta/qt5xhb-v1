@@ -231,8 +231,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->invokeAction ( (QInputMethod::Action) par1, PINT(2) );
+    obj->invokeAction ( (QInputMethod::Action) hb_parni(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

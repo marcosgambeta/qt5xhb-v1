@@ -87,8 +87,7 @@ QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
 */
 void QFontMetrics_new2 ()
 {
-  QPaintDevice * par2 = (QPaintDevice *) _qt5xhb_itemGetPtr(2);
-  QFontMetrics * o = new QFontMetrics ( *PQFONT(1), par2 );
+  QFontMetrics * o = new QFontMetrics ( *PQFONT(1), PQPAINTDEVICE(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -224,8 +223,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
   {
     if( ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
-      int par2 = hb_parni(2);
-      hb_retc( RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) par2, PINT(3), OPINT(4,0) ) ) );
+      hb_retc( RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PINT(3), OPINT(4,0) ) ) );
     }
     else
     {

@@ -53,10 +53,7 @@ QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
-  QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
-  bool par3 = ISNIL(3)? false : hb_parl(3);
-  QShortcutEvent * o = new QShortcutEvent ( *par1, par2, par3 );
+  QShortcutEvent * o = new QShortcutEvent ( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -67,10 +67,7 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
 {
-  double par1 = hb_parnd(1);
-  double par2 = hb_parnd(2);
-  int par3 = hb_parni(3);
-  QDoubleValidator * o = new QDoubleValidator ( par1, par2, par3, PQOBJECT(4) );
+  QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -185,8 +182,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNotation ( (QDoubleValidator::Notation) par1 );
+    obj->setNotation ( (QDoubleValidator::Notation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

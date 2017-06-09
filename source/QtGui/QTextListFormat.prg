@@ -96,8 +96,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
   QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setStyle ( (QTextListFormat::Style) par1 );
+    obj->setStyle ( (QTextListFormat::Style) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

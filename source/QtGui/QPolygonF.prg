@@ -85,8 +85,7 @@ QPolygonF(int size)
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QPolygonF * o = new QPolygonF ( par1 );
+  QPolygonF * o = new QPolygonF ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -309,8 +308,7 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retl( obj->containsPoint ( *PQPOINTF(1), (Qt::FillRule) par2 ) );
+    hb_retl( obj->containsPoint ( *PQPOINTF(1), (Qt::FillRule) hb_parni(2) ) );
   }
 }
 

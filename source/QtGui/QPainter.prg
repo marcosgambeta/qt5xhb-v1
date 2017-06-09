@@ -177,8 +177,7 @@ QPainter ( QPaintDevice * device )
 */
 void QPainter_new2 ()
 {
-  QPaintDevice * par1 = (QPaintDevice *) _qt5xhb_itemGetPtr(1);
-  QPainter * o = new QPainter ( par1 );
+  QPainter * o = new QPainter ( PQPAINTDEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -191,7 +190,7 @@ HB_FUNC_STATIC( QPAINTER_NEW )
   {
     QPainter_new1();
   }
-  else if( ISNUMPAR(1) && ISOBJECT(1) )
+  else if( ISNUMPAR(1) && ISOBJECT(1) ) // TODO: implementar ISQPAINTDEVICE
   {
     QPainter_new2();
   }
@@ -2547,8 +2546,7 @@ void QPainter_fillRect3 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->fillRect ( *PQRECT(1), (Qt::BrushStyle) par2 );
+    obj->fillRect ( *PQRECT(1), (Qt::BrushStyle) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2563,8 +2561,7 @@ void QPainter_fillRect4 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->fillRect ( *PQRECTF(1), (Qt::BrushStyle) par2 );
+    obj->fillRect ( *PQRECTF(1), (Qt::BrushStyle) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2673,8 +2670,7 @@ void QPainter_fillRect11 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->fillRect ( *PQRECT(1), (Qt::GlobalColor) par2 );
+    obj->fillRect ( *PQRECT(1), (Qt::GlobalColor) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2689,8 +2685,7 @@ void QPainter_fillRect12 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->fillRect ( *PQRECTF(1), (Qt::GlobalColor) par2 );
+    obj->fillRect ( *PQRECTF(1), (Qt::GlobalColor) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3022,8 +3017,7 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setBackgroundMode ( (Qt::BGMode) par1 );
+      obj->setBackgroundMode ( (Qt::BGMode) hb_parni(1) );
     }
     else
     {
@@ -3058,8 +3052,7 @@ void QPainter_setBrush2 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setBrush ( (Qt::BrushStyle) par1 );
+    obj->setBrush ( (Qt::BrushStyle) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3304,8 +3297,7 @@ HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCompositionMode ( (QPainter::CompositionMode) par1 );
+      obj->setCompositionMode ( (QPainter::CompositionMode) hb_parni(1) );
     }
     else
     {
@@ -3349,8 +3341,7 @@ HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
+      obj->setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
     }
     else
     {
@@ -3423,8 +3414,7 @@ void QPainter_setPen3 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPen ( (Qt::PenStyle) par1 );
+    obj->setPen ( (Qt::PenStyle) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3465,8 +3455,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setRenderHint ( (QPainter::RenderHint) par1, OPBOOL(2,true) );
+      obj->setRenderHint ( (QPainter::RenderHint) hb_parni(1), OPBOOL(2,true) );
     }
     else
     {
@@ -3742,8 +3731,7 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testRenderHint ( (QPainter::RenderHint) par1 ) );
+      hb_retl( obj->testRenderHint ( (QPainter::RenderHint) hb_parni(1) ) );
     }
     else
     {

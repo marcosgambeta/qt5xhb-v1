@@ -176,8 +176,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAttachment ( (QOpenGLFramebufferObject::Attachment) par1 );
+    obj->setAttachment ( (QOpenGLFramebufferObject::Attachment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

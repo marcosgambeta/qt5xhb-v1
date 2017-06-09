@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_GETPROCADDRESS )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QFunctionPointer * ptr = new QFunctionPointer( obj->getProcAddress ( *par1 ) );
+    QFunctionPointer * ptr = new QFunctionPointer( obj->getProcAddress ( *PQBYTEARRAY(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
   }
 }
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_HASEXTENSION )
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->hasExtension ( *par1 ) );
+    hb_retl( obj->hasExtension ( *PQBYTEARRAY(1) ) );
   }
 }
 

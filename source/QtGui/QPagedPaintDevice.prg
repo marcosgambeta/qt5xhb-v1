@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPageSize ( (QPagedPaintDevice::PageSize) par1 );
+    obj->setPageSize ( (QPagedPaintDevice::PageSize) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -176,8 +175,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->setPageOrientation ( (QPageLayout::Orientation) par1 ) );
+    hb_retl( obj->setPageOrientation ( (QPageLayout::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -203,9 +201,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS2 )
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMarginsF * par1 = (QMarginsF *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->setPageMargins ( *par1, (QPageLayout::Unit) par2 ) );
+    hb_retl( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
   }
 }
 

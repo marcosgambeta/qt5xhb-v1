@@ -86,9 +86,7 @@ QOpenGLPaintDevice(int width, int height)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW3 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( par1, par2 );
+  QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( PINT(1), PINT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

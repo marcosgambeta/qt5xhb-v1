@@ -75,8 +75,7 @@ QFontInfo ( const QFontInfo & fi )
 */
 void QFontInfo_new2 ()
 {
-  QFontInfo * par1 = (QFontInfo *) _qt5xhb_itemGetPtr(1);
-  QFontInfo * o = new QFontInfo ( *par1 );
+  QFontInfo * o = new QFontInfo ( *PQFONTINFO(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

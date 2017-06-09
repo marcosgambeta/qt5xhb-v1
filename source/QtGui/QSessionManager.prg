@@ -145,8 +145,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setRestartHint ( (QSessionManager::RestartHint) par1 );
+    obj->setRestartHint ( (QSessionManager::RestartHint) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

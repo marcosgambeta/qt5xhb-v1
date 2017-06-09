@@ -82,9 +82,7 @@ QTextDocumentWriter(QIODevice *device, const QByteArray &format)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW2 )
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QTextDocumentWriter * o = new QTextDocumentWriter ( par1, *par2 );
+  QTextDocumentWriter * o = new QTextDocumentWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -146,8 +144,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,8 +172,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

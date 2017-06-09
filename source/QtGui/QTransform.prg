@@ -120,8 +120,7 @@ QTransform(Qt::Initialization)
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW1 )
 {
-  int par1 = hb_parni(1);
-  QTransform * o = new QTransform ( (Qt::Initialization) par1 );
+  QTransform * o = new QTransform ( (Qt::Initialization) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

@@ -178,9 +178,7 @@ QStandardItem(int rows, int columns = 1)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_NEW4 )
 {
-  int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? 1 : hb_parni(2);
-  QStandardItem * o = new QStandardItem ( par1, par2 );
+  QStandardItem * o = new QStandardItem ( PINT(1), OPINT(2,1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -471,8 +469,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTextAlignment ( (Qt::Alignment) par1 );
+    obj->setTextAlignment ( (Qt::Alignment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -555,8 +552,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCheckState ( (Qt::CheckState) par1 );
+    obj->setCheckState ( (Qt::CheckState) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

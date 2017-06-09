@@ -92,9 +92,7 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
   {
     if( ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
     {
-      int par2 = hb_parni(2);
-      int par3 = hb_parni(3);
-      QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
+      QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -115,9 +113,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDFILE )
   {
     if( ISCHAR(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
     {
-      int par3 = hb_parni(3);
-      int par4 = hb_parni(4);
-      obj->addFile ( PQSTRING(1), *PQSIZE(2), (QIcon::Mode) par3, (QIcon::State) par4 );
+      obj->addFile ( PQSTRING(1), *PQSIZE(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
     }
     else
     {
@@ -139,9 +135,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
   {
     if( ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) )
     {
-      int par2 = hb_parni(2);
-      int par3 = hb_parni(3);
-      obj->addPixmap ( *PQPIXMAP(1), (QIcon::Mode) par2, (QIcon::State) par3 );
+      obj->addPixmap ( *PQPIXMAP(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) );
     }
     else
     {
@@ -260,9 +254,7 @@ HB_FUNC_STATIC( QICONENGINE_PAINT )
   {
     if( ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISNUM(4) )
     {
-      int par3 = hb_parni(3);
-      int par4 = hb_parni(4);
-      obj->paint ( PQPAINTER(1), *PQRECT(2), (QIcon::Mode) par3, (QIcon::State) par4 );
+      obj->paint ( PQPAINTER(1), *PQRECT(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
     }
     else
     {
@@ -284,9 +276,7 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
   {
     if( ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
     {
-      int par2 = hb_parni(2);
-      int par3 = hb_parni(3);
-      QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
+      QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else
@@ -328,8 +318,7 @@ HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
   {
     if( ISNUM(1) && ISPOINTER(2) )
     {
-      void * par2 = (void *) hb_parptr(2);
-      obj->virtual_hook ( PINT(1), par2 );
+      obj->virtual_hook ( PINT(1), (void *) hb_parptr(2) );
     }
     else
     {

@@ -372,8 +372,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMetaInformation ( (QTextDocument::MetaInformation) par1, PQSTRING(2) );
+    obj->setMetaInformation ( (QTextDocument::MetaInformation) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -387,8 +386,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->metaInformation ( (QTextDocument::MetaInformation) par1 ) ) );
+    hb_retc( RQSTRING( obj->metaInformation ( (QTextDocument::MetaInformation) hb_parni(1) ) ) );
   }
 }
 
@@ -815,8 +813,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->resource ( PINT(1), *par2 ) );
+    QVariant * ptr = new QVariant( obj->resource ( PINT(1), *PQURL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -830,8 +827,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->addResource ( PINT(1), *par2, *PQVARIANT(3) );
+    obj->addResource ( PINT(1), *PQURL(2), *PQVARIANT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1204,8 +1200,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDefaultCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
+    obj->setDefaultCursorMoveStyle ( (Qt::CursorMoveStyle) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

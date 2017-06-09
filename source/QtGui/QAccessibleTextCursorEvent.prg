@@ -48,8 +48,7 @@ QAccessibleTextCursorEvent(QObject *obj, int cursorPos)
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 {
-  int par2 = hb_parni(2);
-  QAccessibleTextCursorEvent * o = new QAccessibleTextCursorEvent ( PQOBJECT(1), par2 );
+  QAccessibleTextCursorEvent * o = new QAccessibleTextCursorEvent ( PQOBJECT(1), PINT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

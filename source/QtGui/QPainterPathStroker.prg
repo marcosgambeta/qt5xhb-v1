@@ -245,8 +245,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCapStyle ( (Qt::PenCapStyle) par1 );
+      obj->setCapStyle ( (Qt::PenCapStyle) hb_parni(1) );
     }
     else
     {
@@ -310,8 +309,7 @@ void QPainterPathStroker_setDashPattern1 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDashPattern ( (Qt::PenStyle) par1 );
+    obj->setDashPattern ( (Qt::PenStyle) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -372,8 +370,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setJoinStyle ( (Qt::PenJoinStyle) par1 );
+      obj->setJoinStyle ( (Qt::PenJoinStyle) hb_parni(1) );
     }
     else
     {

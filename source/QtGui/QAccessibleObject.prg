@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
   QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setText ( (QAccessible::Text) par1, PQSTRING(2) );
+    obj->setText ( (QAccessible::Text) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

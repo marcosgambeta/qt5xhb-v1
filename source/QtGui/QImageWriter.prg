@@ -86,9 +86,7 @@ QImageWriter ( QIODevice * device, const QByteArray & format )
 */
 void QImageWriter_new2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QImageWriter * o = new QImageWriter ( par1, *par2 );
+  QImageWriter * o = new QImageWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -295,8 +293,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      obj->setDevice ( par1 );
+      obj->setDevice ( PQIODEVICE(1) );
     }
     else
     {
@@ -340,8 +337,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      obj->setFormat ( *par1 );
+      obj->setFormat ( *PQBYTEARRAY(1) );
     }
     else
     {
@@ -430,8 +426,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) par1 ) );
+      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
     }
     else
     {

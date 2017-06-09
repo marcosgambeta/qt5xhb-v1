@@ -118,9 +118,8 @@ QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hin
 */
 HB_FUNC_STATIC( QRAWFONT_NEW3 )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  QRawFont * o = new QRawFont ( *par1, PQREAL(2), (QFont::HintingPreference) par3 );
+  QRawFont * o = new QRawFont ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -577,8 +576,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par3 = hb_parni(3);
-    obj->loadFromFile ( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) par3 );
+    obj->loadFromFile ( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -592,9 +590,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    int par3 = hb_parni(3);
-    obj->loadFromData ( *par1, PQREAL(2), (QFont::HintingPreference) par3 );
+    obj->loadFromData ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -658,7 +654,7 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->fontTable ( (const char *) hb_parc(1) ) );
+    QByteArray * ptr = new QByteArray( obj->fontTable ( PCONSTCHAR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

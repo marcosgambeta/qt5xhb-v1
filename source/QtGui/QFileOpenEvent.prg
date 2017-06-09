@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
   if( obj )
   {
     QFile  * par1 = (QFile  *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->openFile ( *par1, (QIODevice::OpenMode) par2 ) );
+    hb_retl( obj->openFile ( *par1, (QIODevice::OpenMode) hb_parni(2) ) );
   }
 }
 

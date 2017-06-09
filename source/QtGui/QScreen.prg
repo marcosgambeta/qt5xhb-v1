@@ -438,9 +438,7 @@ HB_FUNC_STATIC( QSCREEN_ANGLEBETWEEN )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retni( obj->angleBetween ( (Qt::ScreenOrientation) par1, (Qt::ScreenOrientation) par2 ) );
+    hb_retni( obj->angleBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2) ) );
   }
 }
 
@@ -453,9 +451,7 @@ HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QTransform * ptr = new QTransform( obj->transformBetween ( (Qt::ScreenOrientation) par1, (Qt::ScreenOrientation) par2, *PQRECT(3) ) );
+    QTransform * ptr = new QTransform( obj->transformBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -469,9 +465,7 @@ HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QRect * ptr = new QRect( obj->mapBetween ( (Qt::ScreenOrientation) par1, (Qt::ScreenOrientation) par2, *PQRECT(3) ) );
+    QRect * ptr = new QRect( obj->mapBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -485,8 +479,7 @@ HB_FUNC_STATIC( QSCREEN_ISPORTRAIT )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isPortrait ( (Qt::ScreenOrientation) par1 ) );
+    hb_retl( obj->isPortrait ( (Qt::ScreenOrientation) hb_parni(1) ) );
   }
 }
 
@@ -499,8 +492,7 @@ HB_FUNC_STATIC( QSCREEN_ISLANDSCAPE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isLandscape ( (Qt::ScreenOrientation) par1 ) );
+    hb_retl( obj->isLandscape ( (Qt::ScreenOrientation) hb_parni(1) ) );
   }
 }
 

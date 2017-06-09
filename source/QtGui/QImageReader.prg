@@ -111,9 +111,8 @@ QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
 void QImageReader_new2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QImageReader * o = new QImageReader ( par1, par2 );
+  QImageReader * o = new QImageReader ( PQIODEVICE(1), par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -589,8 +588,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDEVICE )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      obj->setDevice ( par1 );
+      obj->setDevice ( PQIODEVICE(1) );
     }
     else
     {
@@ -634,8 +632,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFORMAT )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      obj->setFormat ( *par1 );
+      obj->setFormat ( *PQBYTEARRAY(1) );
     }
     else
     {
@@ -750,8 +747,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) par1 ) );
+      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
     }
     else
     {
@@ -821,8 +817,7 @@ static QByteArray imageFormat ( QIODevice * device )
 */
 void QImageReader_imageFormat3 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( par1 ) );
+  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQIODEVICE(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 

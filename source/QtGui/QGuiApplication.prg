@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
   QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->notify ( PQOBJECT(1), par2 ) );
+    hb_retl( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
   }
 }
 
@@ -444,8 +443,7 @@ static void setLayoutDirection(Qt::LayoutDirection direction)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 {
-  int par1 = hb_parni(1);
-  QGuiApplication::setLayoutDirection ( (Qt::LayoutDirection) par1 );
+  QGuiApplication::setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

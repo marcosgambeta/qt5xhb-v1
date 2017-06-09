@@ -123,8 +123,7 @@ QImage ( const QSize & size, Format format )
 */
 void QImage_new2 ()
 {
-  int par2 = hb_parni(2);
-  QImage * o = new QImage ( *PQSIZE(1), (QImage::Format) par2 );
+  QImage * o = new QImage ( *PQSIZE(1), (QImage::Format) hb_parni(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -133,10 +132,7 @@ QImage ( int width, int height, Format format )
 */
 void QImage_new3 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QImage * o = new QImage ( par1, par2, (QImage::Format) par3 );
+  QImage * o = new QImage ( PINT(1), PINT(2), (QImage::Format) hb_parni(3) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -145,8 +141,7 @@ QImage ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * o = new QImage ( PQSTRING(1), (const char *) par2 );
+  QImage * o = new QImage ( PQSTRING(1), OPCONSTCHAR(2,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -155,8 +150,7 @@ QImage ( const char * fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * o = new QImage ( (const char *) hb_parc(1), (const char *) par2 );
+  QImage * o = new QImage ( PCONSTCHAR(1), OPCONSTCHAR(2,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -357,9 +351,8 @@ void QImage_convertToFormat1 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, (Qt::ImageConversionFlags) par2 ) );
+    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) hb_parni(1), (Qt::ImageConversionFlags) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -373,7 +366,6 @@ void QImage_convertToFormat2 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
     QVector<QRgb> par2;
     PHB_ITEM aValues2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -385,7 +377,7 @@ void QImage_convertToFormat2 ()
       par2 << temp2;
     }
     int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, par2, (Qt::ImageConversionFlags) par3 ) );
+    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) hb_parni(1), par2, (Qt::ImageConversionFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -585,8 +577,7 @@ void QImage_fill2 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->fill ( (Qt::GlobalColor) par1 );
+    obj->fill ( (Qt::GlobalColor) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -729,8 +720,7 @@ void QImage_load1 ()
 
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( PQSTRING(1), (const char *) par2 ) );
+    hb_retl( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -743,8 +733,7 @@ void QImage_load2 ()
 
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->load ( par1, (const char *) hb_parc(2) ) );
+    hb_retl( obj->load ( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -776,9 +765,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->loadFromData ( *par1, (const char *) par2 ) );
+    hb_retl( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -960,8 +947,7 @@ void QImage_save1 ()
 
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( PQSTRING(1), (const char *) par2, OPINT(3,-1) ) );
+    hb_retl( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
   }
 }
 
@@ -974,9 +960,7 @@ void QImage_save2 ()
 
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1, (const char *) par2, OPINT(3,-1) ) );
+    hb_retl( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
   }
 }
 
@@ -1441,9 +1425,7 @@ static QImage fromData ( const QByteArray & data, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_FROMDATA2 )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * ptr = new QImage( QImage::fromData ( *par1, (const char *) par2 ) );
+  QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0) ) );
   _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 }
 

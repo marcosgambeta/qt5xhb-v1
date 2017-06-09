@@ -484,8 +484,7 @@ HB_FUNC_STATIC( QWINDOW_REPORTCONTENTORIENTATIONCHANGE )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->reportContentOrientationChange ( (Qt::ScreenOrientation) par1 );
+    obj->reportContentOrientationChange ( (Qt::ScreenOrientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -796,8 +795,7 @@ HB_FUNC_STATIC( QWINDOW_SETSURFACETYPE )
   QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSurfaceType ( (QSurface::SurfaceType) par1 );
+    obj->setSurfaceType ( (QSurface::SurfaceType) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

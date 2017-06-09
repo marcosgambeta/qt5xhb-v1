@@ -52,8 +52,7 @@ QActionEvent ( int type, QAction * action, QAction * before = 0 )
 */
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
-  int par1 = hb_parni(1);
-  QActionEvent * o = new QActionEvent ( par1, PQACTION(2), OPQACTION(3,0) );
+  QActionEvent * o = new QActionEvent ( PINT(1), PQACTION(2), OPQACTION(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

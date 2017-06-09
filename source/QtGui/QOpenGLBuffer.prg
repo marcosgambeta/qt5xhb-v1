@@ -77,8 +77,7 @@ QOpenGLBuffer(QOpenGLBuffer::Type type)
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QOpenGLBuffer * o = new QOpenGLBuffer ( (QOpenGLBuffer::Type) par1 );
+  QOpenGLBuffer * o = new QOpenGLBuffer ( (QOpenGLBuffer::Type) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -254,8 +253,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retptr( (void *) obj->map ( (QOpenGLBuffer::Access) par1 ) );
+    hb_retptr( (void *) obj->map ( (QOpenGLBuffer::Access) hb_parni(1) ) );
   }
 }
 
@@ -268,8 +266,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_READ )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    void * par2 = (void *) hb_parptr(2);
-    hb_retl( obj->read ( PINT(1), par2, PINT(3) ) );
+    hb_retl( obj->read ( PINT(1), (void *) hb_parptr(2), PINT(3) ) );
   }
 }
 
@@ -292,8 +289,7 @@ static void release(QOpenGLBuffer::Type type)
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE2 )
 {
-  int par1 = hb_parni(1);
-  QOpenGLBuffer::release ( (QOpenGLBuffer::Type) par1 );
+  QOpenGLBuffer::release ( (QOpenGLBuffer::Type) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -325,8 +321,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setUsagePattern ( (QOpenGLBuffer::UsagePattern) par1 );
+    obj->setUsagePattern ( (QOpenGLBuffer::UsagePattern) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -392,8 +387,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_WRITE )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const void * par2 = (const void *) hb_parptr(2);
-    obj->write ( PINT(1), par2, PINT(3) );
+    obj->write ( PINT(1), (const void *) hb_parptr(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

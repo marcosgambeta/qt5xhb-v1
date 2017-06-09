@@ -63,8 +63,7 @@ QAccessibleEvent(QObject *obj, QAccessible::Event typ)
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
-  int par2 = hb_parni(2);
-  QAccessibleEvent * o = new QAccessibleEvent ( PQOBJECT(1), (QAccessible::Event) par2 );
+  QAccessibleEvent * o = new QAccessibleEvent ( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

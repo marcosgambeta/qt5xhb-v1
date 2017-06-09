@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPosition ( (QTextFrameFormat::Position) par1 );
+    obj->setPosition ( (QTextFrameFormat::Position) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -204,8 +203,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setBorderStyle ( (QTextFrameFormat::BorderStyle) par1 );
+    obj->setBorderStyle ( (QTextFrameFormat::BorderStyle) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

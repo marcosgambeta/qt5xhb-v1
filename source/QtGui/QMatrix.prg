@@ -100,8 +100,7 @@ QMatrix(Qt::Initialization)
 */
 HB_FUNC_STATIC( QMATRIX_NEW1 )
 {
-  int par1 = hb_parni(1);
-  QMatrix * o = new QMatrix ( (Qt::Initialization) par1 );
+  QMatrix * o = new QMatrix ( (Qt::Initialization) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

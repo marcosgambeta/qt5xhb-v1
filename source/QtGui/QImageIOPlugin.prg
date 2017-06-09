@@ -74,9 +74,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
   {
     if( ISQIODEVICE(1) && ISQBYTEARRAY(2) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-      hb_retni( obj->capabilities ( par1, *par2 ) );
+      hb_retni( obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
     }
     else
     {
@@ -96,9 +94,8 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
   {
     if( ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
       QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-      QImageIOHandler * ptr = obj->create ( par1, par2 );
+      QImageIOHandler * ptr = obj->create ( PQIODEVICE(1), par2 );
       _qt5xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
     }
     else

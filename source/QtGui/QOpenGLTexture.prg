@@ -154,8 +154,7 @@ QOpenGLTexture(Target target)
 HB_FUNC_STATIC( QOPENGLTEXTURE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  QOpenGLTexture * o = new QOpenGLTexture ( (QOpenGLTexture::Target) par1 );
+  QOpenGLTexture * o = new QOpenGLTexture ( (QOpenGLTexture::Target) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -429,8 +428,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETFORMAT )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFormat ( (QOpenGLTexture::TextureFormat) par1 );
+    obj->setFormat ( (QOpenGLTexture::TextureFormat) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -645,9 +643,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_CREATETEXTUREVIEW )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QOpenGLTexture * ptr = obj->createTextureView ( (QOpenGLTexture::Target) par1, (QOpenGLTexture::TextureFormat) par2, PINT(3), PINT(4), PINT(5), PINT(6) );
+    QOpenGLTexture * ptr = obj->createTextureView ( (QOpenGLTexture::Target) hb_parni(1), (QOpenGLTexture::TextureFormat) hb_parni(2), PINT(3), PINT(4), PINT(5), PINT(6) );
     _qt5xhb_createReturnClass ( ptr, "QOPENGLTEXTURE" );
   }
 #endif
@@ -678,12 +674,9 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    int par5 = hb_parni(5);
     void * par6 = (void *) hb_parptr(6);
     const QOpenGLPixelTransferOptions * par7 = ISNIL(7)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(7);
-    obj->setData ( PINT(1), PINT(2), (QOpenGLTexture::CubeMapFace) par3, (QOpenGLTexture::PixelFormat) par4, (QOpenGLTexture::PixelType) par5, par6, par7 );
+    obj->setData ( PINT(1), PINT(2), (QOpenGLTexture::CubeMapFace) hb_parni(3), (QOpenGLTexture::PixelFormat) hb_parni(4), (QOpenGLTexture::PixelType) hb_parni(5), par6, par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -698,11 +691,9 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA2 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
     void * par5 = (void *) hb_parptr(5);
     const QOpenGLPixelTransferOptions * par6 = ISNIL(6)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(6);
-    obj->setData ( PINT(1), PINT(2), (QOpenGLTexture::PixelFormat) par3, (QOpenGLTexture::PixelType) par4, par5, par6 );
+    obj->setData ( PINT(1), PINT(2), (QOpenGLTexture::PixelFormat) hb_parni(3), (QOpenGLTexture::PixelType) hb_parni(4), par5, par6 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -717,11 +708,9 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA3 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
     void * par4 = (void *) hb_parptr(4);
     const QOpenGLPixelTransferOptions * par5 = ISNIL(5)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(5);
-    obj->setData ( PINT(1), (QOpenGLTexture::PixelFormat) par2, (QOpenGLTexture::PixelType) par3, par4, par5 );
+    obj->setData ( PINT(1), (QOpenGLTexture::PixelFormat) hb_parni(2), (QOpenGLTexture::PixelType) hb_parni(3), par4, par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -736,11 +725,8 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA4 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    void * par3 = (void *) hb_parptr(3);
     const QOpenGLPixelTransferOptions * par4 = ISNIL(4)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(4);
-    obj->setData ( (QOpenGLTexture::PixelFormat) par1, (QOpenGLTexture::PixelType) par2, par3, par4 );
+    obj->setData ( (QOpenGLTexture::PixelFormat) hb_parni(1), (QOpenGLTexture::PixelType) hb_parni(2), (void *) hb_parptr(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -794,10 +780,9 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par3 = hb_parni(3);
     void * par5 = (void *) hb_parptr(5);
     const QOpenGLPixelTransferOptions * par6 = ISNIL(6)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(6);
-    obj->setCompressedData ( PINT(1), PINT(2), (QOpenGLTexture::CubeMapFace) par3, PINT(4), par5, par6 );
+    obj->setCompressedData ( PINT(1), PINT(2), (QOpenGLTexture::CubeMapFace) hb_parni(3), PINT(4), par5, par6 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1045,9 +1030,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleComponent) par1, (QOpenGLTexture::SwizzleValue) par2 );
+    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleComponent) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1062,11 +1045,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK2 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleValue) par1, (QOpenGLTexture::SwizzleValue) par2, (QOpenGLTexture::SwizzleValue) par3, (QOpenGLTexture::SwizzleValue) par4 );
+    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleValue) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2), (QOpenGLTexture::SwizzleValue) hb_parni(3), (QOpenGLTexture::SwizzleValue) hb_parni(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1101,8 +1080,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SWIZZLEMASK )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->swizzleMask ( (QOpenGLTexture::SwizzleComponent) par1 ) );
+    hb_retni( obj->swizzleMask ( (QOpenGLTexture::SwizzleComponent) hb_parni(1) ) );
   }
 #endif
 }
@@ -1117,8 +1095,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDEPTHSTENCILMODE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDepthStencilMode ( (QOpenGLTexture::DepthStencilMode) par1 );
+    obj->setDepthStencilMode ( (QOpenGLTexture::DepthStencilMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1149,8 +1126,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIFICATIONFILTER )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMinificationFilter ( (QOpenGLTexture::Filter) par1 );
+    obj->setMinificationFilter ( (QOpenGLTexture::Filter) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1181,8 +1157,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAGNIFICATIONFILTER )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMagnificationFilter ( (QOpenGLTexture::Filter) par1 );
+    obj->setMagnificationFilter ( (QOpenGLTexture::Filter) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1213,9 +1188,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINMAGFILTERS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setMinMagFilters ( (QOpenGLTexture::Filter) par1, (QOpenGLTexture::Filter) par2 );
+    obj->setMinMagFilters ( (QOpenGLTexture::Filter) hb_parni(1), (QOpenGLTexture::Filter) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1264,8 +1237,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE1 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setWrapMode ( (QOpenGLTexture::WrapMode) par1 );
+    obj->setWrapMode ( (QOpenGLTexture::WrapMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1280,9 +1252,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE2 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setWrapMode ( (QOpenGLTexture::CoordinateDirection) par1, (QOpenGLTexture::WrapMode) par2 );
+    obj->setWrapMode ( (QOpenGLTexture::CoordinateDirection) hb_parni(1), (QOpenGLTexture::WrapMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1317,8 +1287,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_WRAPMODE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->wrapMode ( (QOpenGLTexture::CoordinateDirection) par1 ) );
+    hb_retni( obj->wrapMode ( (QOpenGLTexture::CoordinateDirection) hb_parni(1) ) );
   }
 #endif
 }
@@ -1634,8 +1603,7 @@ static GLuint boundTextureId(BindingTarget target)
 HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  hb_retni( QOpenGLTexture::boundTextureId ( (QOpenGLTexture::BindingTarget) par1 ) );
+  hb_retni( QOpenGLTexture::boundTextureId ( (QOpenGLTexture::BindingTarget) hb_parni(1) ) );
 #endif
 }
 
@@ -1645,8 +1613,7 @@ static GLuint boundTextureId(uint unit, BindingTarget target)
 HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par2 = hb_parni(2);
-  hb_retni( QOpenGLTexture::boundTextureId ( (uint) hb_parni(1), (QOpenGLTexture::BindingTarget) par2 ) );
+  hb_retni( QOpenGLTexture::boundTextureId ( (uint) hb_parni(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
 #endif
 }
 
@@ -1676,8 +1643,7 @@ static bool hasFeature(Feature feature)
 HB_FUNC_STATIC( QOPENGLTEXTURE_HASFEATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  hb_retl( QOpenGLTexture::hasFeature ( (QOpenGLTexture::Feature) par1 ) );
+  hb_retl( QOpenGLTexture::hasFeature ( (QOpenGLTexture::Feature) hb_parni(1) ) );
 #endif
 }
 

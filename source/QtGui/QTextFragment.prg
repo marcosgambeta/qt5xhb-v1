@@ -70,9 +70,7 @@ QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW1 )
 {
   QTextDocumentPrivate * par1 = (QTextDocumentPrivate *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QTextFragment * o = new QTextFragment ( par1, par2, par3 );
+  QTextFragment * o = new QTextFragment ( par1, PINT(2), PINT(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -90,8 +88,7 @@ QTextFragment(const QTextFragment &o)
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW3 )
 {
-  QTextFragment * par1 = (QTextFragment *) _qt5xhb_itemGetPtr(1);
-  QTextFragment * o = new QTextFragment ( *par1 );
+  QTextFragment * o = new QTextFragment ( *PQTEXTFRAGMENT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

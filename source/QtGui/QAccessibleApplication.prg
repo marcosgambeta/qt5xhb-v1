@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
   QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) par1 ) ) );
+    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) ) );
   }
 }
 

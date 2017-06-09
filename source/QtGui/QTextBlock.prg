@@ -97,8 +97,7 @@ QTextBlock(QTextDocumentPrivate *priv, int b)
 HB_FUNC_STATIC( QTEXTBLOCK_NEW1 )
 {
   QTextDocumentPrivate * par1 = (QTextDocumentPrivate *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
-  QTextBlock * o = new QTextBlock ( par1, par2 );
+  QTextBlock * o = new QTextBlock ( par1, PINT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

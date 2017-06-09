@@ -89,12 +89,8 @@ QRegion(int x, int y, int w, int h, RegionType t = Rectangle)
 */
 HB_FUNC_STATIC( QREGION_NEW2 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
   int par5 = ISNIL(5)? (int) QRegion::Rectangle : hb_parni(5);
-  QRegion * o = new QRegion ( par1, par2, par3, par4, (QRegion::RegionType) par5 );
+  QRegion * o = new QRegion ( PINT(1), PINT(2), PINT(3), PINT(4), (QRegion::RegionType) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

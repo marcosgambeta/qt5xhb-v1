@@ -66,8 +66,7 @@ explicit QPdfWriter(QIODevice * device)
 */
 HB_FUNC_STATIC( QPDFWRITER_NEW2 )
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QPdfWriter * o = new QPdfWriter ( par1 );
+  QPdfWriter * o = new QPdfWriter ( PQIODEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -179,8 +178,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPageSize ( (QPagedPaintDevice::PageSize) par1 );
+    obj->setPageSize ( (QPagedPaintDevice::PageSize) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

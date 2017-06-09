@@ -121,10 +121,7 @@ QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic
 */
 void QFont_new2 ()
 {
-  int par2 = ISNIL(2)? -1 : hb_parni(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  bool par4 = ISNIL(4)? false : hb_parl(4);
-  QFont * o = new QFont ( PQSTRING(1), par2, par3, par4 );
+  QFont * o = new QFont ( PQSTRING(1), OPINT(2,-1), OPINT(3,-1), OPBOOL(4,false) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -133,8 +130,7 @@ QFont ( const QFont & font, QPaintDevice * pd )
 */
 void QFont_new3 ()
 {
-  QPaintDevice * par2 = (QPaintDevice *) _qt5xhb_itemGetPtr(2);
-  QFont * o = new QFont ( *PQFONT(1), par2 );
+  QFont * o = new QFont ( *PQFONT(1), PQPAINTDEVICE(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -534,8 +530,7 @@ HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCapitalization ( (QFont::Capitalization) par1 );
+      obj->setCapitalization ( (QFont::Capitalization) hb_parni(1) );
     }
     else
     {
@@ -645,8 +640,7 @@ HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setLetterSpacing ( (QFont::SpacingType) par1, PQREAL(2) );
+      obj->setLetterSpacing ( (QFont::SpacingType) hb_parni(1), PQREAL(2) );
     }
     else
     {
@@ -844,8 +838,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setStyle ( (QFont::Style) par1 );
+      obj->setStyle ( (QFont::Style) hb_parni(1) );
     }
     else
     {
@@ -867,9 +860,8 @@ HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) QFont::PreferDefault : hb_parni(2);
-      obj->setStyleHint ( (QFont::StyleHint) par1, (QFont::StyleStrategy) par2 );
+      obj->setStyleHint ( (QFont::StyleHint) hb_parni(1), (QFont::StyleStrategy) par2 );
     }
     else
     {
@@ -891,8 +883,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLESTRATEGY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setStyleStrategy ( (QFont::StyleStrategy) par1 );
+      obj->setStyleStrategy ( (QFont::StyleStrategy) hb_parni(1) );
     }
     else
     {

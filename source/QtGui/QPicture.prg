@@ -160,8 +160,7 @@ void QPicture_load1 ()
 
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( PQSTRING(1), (const char *) par2 ) );
+    hb_retl( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -174,9 +173,7 @@ void QPicture_load2 ()
 
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( par1, (const char *) par2 ) );
+    hb_retl( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -228,8 +225,7 @@ void QPicture_save1 ()
 
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( PQSTRING(1), (const char *) par2 ) );
+    hb_retl( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -242,9 +238,7 @@ void QPicture_save2 ()
 
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1, (const char *) par2 ) );
+    hb_retl( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -300,7 +294,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      obj->setData ( (const char *) hb_parc(1), (uint) hb_parni(2) );
+      obj->setData ( PCONSTCHAR(1), (uint) hb_parni(2) );
     }
     else
     {

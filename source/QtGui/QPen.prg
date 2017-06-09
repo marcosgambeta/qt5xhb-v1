@@ -88,8 +88,7 @@ QPen ( Qt::PenStyle style )
 */
 void QPen_new2 ()
 {
-  int par1 = hb_parni(1);
-  QPen * o = new QPen ( (Qt::PenStyle) par1 );
+  QPen * o = new QPen ( (Qt::PenStyle) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -314,8 +313,7 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCapStyle ( (Qt::PenCapStyle) par1 );
+      obj->setCapStyle ( (Qt::PenCapStyle) hb_parni(1) );
     }
     else
     {
@@ -404,8 +402,7 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setJoinStyle ( (Qt::PenJoinStyle) par1 );
+      obj->setJoinStyle ( (Qt::PenJoinStyle) hb_parni(1) );
     }
     else
     {
@@ -449,8 +446,7 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setStyle ( (Qt::PenStyle) par1 );
+      obj->setStyle ( (Qt::PenStyle) hb_parni(1) );
     }
     else
     {

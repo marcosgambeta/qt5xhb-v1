@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETMODE )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMode ( (QPageLayout::Mode) par1 );
+    obj->setMode ( (QPageLayout::Mode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -255,8 +254,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation ( (QPageLayout::Orientation) par1 );
+    obj->setOrientation ( (QPageLayout::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -282,8 +280,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setUnits ( (QPageLayout::Unit) par1 );
+    obj->setUnits ( (QPageLayout::Unit) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -376,8 +373,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS2 )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QMarginsF * ptr = new QMarginsF( obj->margins ( (QPageLayout::Unit) par1 ) );
+    QMarginsF * ptr = new QMarginsF( obj->margins ( (QPageLayout::Unit) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 }
@@ -494,8 +490,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT2 )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->fullRect ( (QPageLayout::Unit) par1 ) );
+    QRectF * ptr = new QRectF( obj->fullRect ( (QPageLayout::Unit) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -569,8 +564,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT2 )
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->paintRect ( (QPageLayout::Unit) par1 ) );
+    QRectF * ptr = new QRectF( obj->paintRect ( (QPageLayout::Unit) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

@@ -91,8 +91,7 @@ QPictureIO(QIODevice *ioDevice, const char *format)
 */
 void QPictureIO_new2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QPictureIO * o = new QPictureIO ( par1, (const char *) hb_parc(2) );
+  QPictureIO * o = new QPictureIO ( PQIODEVICE(1), PCONSTCHAR(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -101,7 +100,7 @@ QPictureIO(const QString &fileName, const char *format)
 */
 void QPictureIO_new3 ()
 {
-  QPictureIO * o = new QPictureIO ( PQSTRING(1), (const char *) hb_parc(2) );
+  QPictureIO * o = new QPictureIO ( PQSTRING(1), PCONSTCHAR(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -312,7 +311,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
 }
 
 /*
-void setFormat(const char *)
+void setFormat ( const char * )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
 {
@@ -322,7 +321,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
   {
     if( ISCHAR(1) )
     {
-      obj->setFormat ( (const char *) hb_parc(1) );
+      obj->setFormat ( PCONSTCHAR(1) );
     }
     else
     {
@@ -344,8 +343,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETIODEVICE )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      obj->setIODevice ( par1 );
+      obj->setIODevice ( PQIODEVICE(1) );
     }
     else
     {
@@ -423,7 +421,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
 }
 
 /*
-void setParameters(const char *)
+void setParameters ( const char * )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
 {
@@ -433,7 +431,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
   {
     if( ISCHAR(1) )
     {
-      obj->setParameters ( (const char *) hb_parc(1) );
+      obj->setParameters ( PCONSTCHAR(1) );
     }
     else
     {
@@ -507,8 +505,7 @@ static QByteArray pictureFormat(QIODevice *)
 */
 void QPictureIO_pictureFormat2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( par1 ) );
+  QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( PQIODEVICE(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 

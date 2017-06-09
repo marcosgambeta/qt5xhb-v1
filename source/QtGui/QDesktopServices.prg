@@ -74,8 +74,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
   if( ISQURL(1) )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    hb_retl( QDesktopServices::openUrl ( *par1 ) );
+    hb_retl( QDesktopServices::openUrl ( *PQURL(1) ) );
   }
   else
   {
@@ -90,7 +89,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
   if( ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
-    QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) );
+    QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

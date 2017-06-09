@@ -48,8 +48,7 @@ QAccessibleTextRemoveEvent(QObject *obj, int position, const QString &text)
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
 {
-  int par2 = hb_parni(2);
-  QAccessibleTextRemoveEvent * o = new QAccessibleTextRemoveEvent ( PQOBJECT(1), par2, PQSTRING(3) );
+  QAccessibleTextRemoveEvent * o = new QAccessibleTextRemoveEvent ( PQOBJECT(1), PINT(2), PQSTRING(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

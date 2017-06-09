@@ -373,8 +373,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
+    obj->setCursorMoveStyle ( (Qt::CursorMoveStyle) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
