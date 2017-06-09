@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETASPECTRATIOMODE )
   QVideoWidgetControl * obj = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAspectRatioMode ( (Qt::AspectRatioMode) par1 );
+    obj->setAspectRatioMode ( (Qt::AspectRatioMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

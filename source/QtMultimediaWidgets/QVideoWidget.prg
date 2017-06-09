@@ -71,8 +71,7 @@ QVideoWidget(QWidget *parent = 0)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_NEW )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QVideoWidget * o = new QVideoWidget ( par1 );
+  QVideoWidget * o = new QVideoWidget ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -220,8 +219,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETASPECTRATIOMODE )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAspectRatioMode ( (Qt::AspectRatioMode) par1 );
+    obj->setAspectRatioMode ( (Qt::AspectRatioMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
