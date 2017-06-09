@@ -75,9 +75,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
   QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->canChangeProperty ( (QCameraControl::PropertyChangeType) par1, (QCamera::Status) par2 ) );
+    hb_retl( obj->canChangeProperty ( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
   }
 }
 
@@ -132,8 +130,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
   QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setState ( (QCamera::State) par1 );
+    obj->setState ( (QCamera::State) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

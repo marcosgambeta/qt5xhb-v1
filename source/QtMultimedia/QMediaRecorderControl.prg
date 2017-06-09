@@ -143,8 +143,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETOUTPUTLOCATION )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->setOutputLocation ( *par1 ) );
+    hb_retl( obj->setOutputLocation ( *PQURL(1) ) );
   }
 }
 
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
   QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setState ( (QMediaRecorder::State) par1 );
+    obj->setState ( (QMediaRecorder::State) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
   QMediaService * obj = (QMediaService *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaControl * ptr = obj->requestControl ( (const char *) hb_parc(1) );
+    QMediaControl * ptr = obj->requestControl ( PCONSTCHAR(1) );
     _qt5xhb_createReturnClass ( ptr, "QMEDIACONTROL" );
   }
 }

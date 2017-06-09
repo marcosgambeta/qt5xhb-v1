@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setQuality ( (QMultimedia::EncodingQuality) par1 );
+    obj->setQuality ( (QMultimedia::EncodingQuality) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

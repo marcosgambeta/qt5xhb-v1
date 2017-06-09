@@ -104,8 +104,7 @@ QCamera(const QByteArray & device, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QCAMERA_NEW2 )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QCamera * o = new QCamera ( *par1, OPQOBJECT(2,0) );
+  QCamera * o = new QCamera ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -260,8 +259,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS2 )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->lockStatus ( (QCamera::LockType) par1 ) );
+    hb_retni( obj->lockStatus ( (QCamera::LockType) hb_parni(1) ) );
   }
 }
 
@@ -618,8 +616,7 @@ static QString deviceDescription(const QByteArray & device)
 */
 HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  hb_retc( RQSTRING( QCamera::deviceDescription ( *par1 ) ) );
+  hb_retc( RQSTRING( QCamera::deviceDescription ( *PQBYTEARRAY(1) ) ) );
 }
 
 

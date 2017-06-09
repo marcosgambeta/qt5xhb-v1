@@ -82,8 +82,7 @@ QMediaContent(const QUrl & url)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW2 )
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QMediaContent * o = new QMediaContent ( *par1 );
+  QMediaContent * o = new QMediaContent ( *PQURL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

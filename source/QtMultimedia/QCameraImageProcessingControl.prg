@@ -71,8 +71,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED )
   QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isParameterSupported ( (QCameraImageProcessingControl::ProcessingParameter) par1 ) );
+    hb_retl( obj->isParameterSupported ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1) ) );
   }
 }
 
@@ -85,8 +84,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED )
   QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isParameterValueSupported ( (QCameraImageProcessingControl::ProcessingParameter) par1, *PQVARIANT(2) ) );
+    hb_retl( obj->isParameterValueSupported ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1), *PQVARIANT(2) ) );
   }
 }
 
@@ -99,8 +97,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
   QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->parameter ( (QCameraImageProcessingControl::ProcessingParameter) par1 ) );
+    QVariant * ptr = new QVariant( obj->parameter ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -114,8 +111,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER )
   QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setParameter ( (QCameraImageProcessingControl::ProcessingParameter) par1, *PQVARIANT(2) );
+    obj->setParameter ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

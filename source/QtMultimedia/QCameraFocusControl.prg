@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ISFOCUSPOINTMODESUPPORTED )
   QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isFocusPointModeSupported ( (QCameraFocus::FocusPointMode) par1 ) );
+    hb_retl( obj->isFocusPointModeSupported ( (QCameraFocus::FocusPointMode) hb_parni(1) ) );
   }
 }
 
@@ -193,8 +192,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSPOINTMODE )
   QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFocusPointMode ( (QCameraFocus::FocusPointMode) par1 );
+    obj->setFocusPointMode ( (QCameraFocus::FocusPointMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

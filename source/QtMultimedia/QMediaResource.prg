@@ -98,8 +98,7 @@ QMediaResource(const QUrl & url, const QString & mimeType = QString())
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW2 )
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QMediaResource * o = new QMediaResource ( *par1, OPQSTRING(2,QString()) );
+  QMediaResource * o = new QMediaResource ( *PQURL(1), OPQSTRING(2,QString()) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

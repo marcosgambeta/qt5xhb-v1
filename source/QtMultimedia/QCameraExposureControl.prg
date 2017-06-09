@@ -76,8 +76,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
   QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->actualValue ( (QCameraExposureControl::ExposureParameter) par1 ) );
+    QVariant * ptr = new QVariant( obj->actualValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -91,8 +90,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
   QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isParameterSupported ( (QCameraExposureControl::ExposureParameter) par1 ) );
+    hb_retl( obj->isParameterSupported ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
   }
 }
 
@@ -105,8 +103,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
   QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->requestedValue ( (QCameraExposureControl::ExposureParameter) par1 ) );
+    QVariant * ptr = new QVariant( obj->requestedValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -120,8 +117,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
   QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->setValue ( (QCameraExposureControl::ExposureParameter) par1, *PQVARIANT(2) ) );
+    hb_retl( obj->setValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1), *PQVARIANT(2) ) );
   }
 }
 
@@ -134,9 +130,8 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
   QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
     bool par2;
-    _qt5xhb_convert_qvariantlist_to_array( obj->supportedParameterRange ( (QCameraExposureControl::ExposureParameter) par1, &par2 ) );
+    _qt5xhb_convert_qvariantlist_to_array( obj->supportedParameterRange ( (QCameraExposureControl::ExposureParameter) hb_parni(1), &par2 ) );
     hb_storl( par2, 2 );
   }
 }

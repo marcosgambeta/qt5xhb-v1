@@ -86,8 +86,7 @@ QMediaServiceProviderHint(const QByteArray &device)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *par1 );
+  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *PQBYTEARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

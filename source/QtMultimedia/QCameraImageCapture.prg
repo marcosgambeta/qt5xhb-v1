@@ -256,8 +256,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setBufferFormat ( (QVideoFrame::PixelFormat) par1 );
+    obj->setBufferFormat ( (QVideoFrame::PixelFormat) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

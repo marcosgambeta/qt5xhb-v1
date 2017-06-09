@@ -279,8 +279,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGMODE )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setEncodingMode ( (QMultimedia::EncodingMode) par1 );
+    obj->setEncodingMode ( (QMultimedia::EncodingMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -309,8 +308,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETQUALITY )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setQuality ( (QMultimedia::EncodingQuality) par1 );
+    obj->setQuality ( (QMultimedia::EncodingQuality) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

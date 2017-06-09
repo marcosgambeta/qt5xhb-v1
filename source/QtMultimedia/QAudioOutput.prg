@@ -339,8 +339,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START1 )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->start ( par1 );
+    obj->start ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

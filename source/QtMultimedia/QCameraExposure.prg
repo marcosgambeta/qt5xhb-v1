@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isExposureModeSupported ( (QCameraExposure::ExposureMode) par1 ) );
+    hb_retl( obj->isExposureModeSupported ( (QCameraExposure::ExposureMode) hb_parni(1) ) );
   }
 }
 
@@ -198,8 +197,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isMeteringModeSupported ( (QCameraExposure::MeteringMode) par1 ) );
+    hb_retl( obj->isMeteringModeSupported ( (QCameraExposure::MeteringMode) hb_parni(1) ) );
   }
 }
 
@@ -422,8 +420,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setExposureMode ( (QCameraExposure::ExposureMode) par1 );
+    obj->setExposureMode ( (QCameraExposure::ExposureMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -494,8 +491,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMeteringMode ( (QCameraExposure::MeteringMode) par1 );
+    obj->setMeteringMode ( (QCameraExposure::MeteringMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

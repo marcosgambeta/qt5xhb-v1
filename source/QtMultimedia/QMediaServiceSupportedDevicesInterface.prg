@@ -77,9 +77,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION )
   QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-    hb_retc( RQSTRING( obj->deviceDescription ( *par1, *par2 ) ) );
+    hb_retc( RQSTRING( obj->deviceDescription ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) ) );
   }
 }
 
@@ -92,8 +90,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
   QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QList<QByteArray> list = obj->devices ( *par1 );
+    QList<QByteArray> list = obj->devices ( *PQBYTEARRAY(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );

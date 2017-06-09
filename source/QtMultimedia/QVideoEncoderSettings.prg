@@ -269,8 +269,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETENCODINGMODE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setEncodingMode ( (QMultimedia::EncodingMode) par1 );
+    obj->setEncodingMode ( (QMultimedia::EncodingMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -313,8 +312,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETQUALITY )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setQuality ( (QMultimedia::EncodingQuality) par1 );
+    obj->setQuality ( (QMultimedia::EncodingQuality) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

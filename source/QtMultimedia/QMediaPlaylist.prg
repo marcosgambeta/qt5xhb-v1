@@ -324,9 +324,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD1 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    obj->load ( *par1, (const char *) par2 );
+    obj->load ( *PQNETWORKREQUEST(1), OPCONSTCHAR(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -340,9 +338,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD2 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    obj->load ( *par1, (const char *) par2 );
+    obj->load ( *PQURL(1), OPCONSTCHAR(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -356,9 +352,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD3 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    obj->load ( par1, (const char *) par2 );
+    obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -507,9 +501,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE1 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( *par1, (const char *) par2 ) );
+    hb_retl( obj->save ( *PQURL(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -522,8 +514,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE2 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->save ( par1, (const char *) hb_parc(2) ) );
+    hb_retl( obj->save ( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -555,8 +546,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETPLAYBACKMODE )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPlaybackMode ( (QMediaPlaylist::PlaybackMode) par1 );
+    obj->setPlaybackMode ( (QMediaPlaylist::PlaybackMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

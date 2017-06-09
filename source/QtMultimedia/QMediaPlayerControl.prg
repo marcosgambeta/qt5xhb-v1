@@ -295,8 +295,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMEDIA )
   if( obj )
   {
     QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
-    QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
-    obj->setMedia ( *par1, par2 );
+    obj->setMedia ( *par1, PQIODEVICE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

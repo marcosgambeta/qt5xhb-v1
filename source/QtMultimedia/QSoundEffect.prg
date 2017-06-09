@@ -119,8 +119,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setSource ( *par1 );
+    obj->setSource ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

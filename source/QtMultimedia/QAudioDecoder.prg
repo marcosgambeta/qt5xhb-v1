@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEDEVICE )
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->setSourceDevice ( par1 );
+    obj->setSourceDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

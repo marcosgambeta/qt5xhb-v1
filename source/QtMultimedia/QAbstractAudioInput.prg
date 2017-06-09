@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_START1 )
   QAbstractAudioInput * obj = (QAbstractAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->start ( par1 );
+    obj->start ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

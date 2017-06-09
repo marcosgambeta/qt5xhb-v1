@@ -99,9 +99,8 @@ QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbst
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW2 )
 {
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QAbstractVideoBuffer::NoHandle : hb_parni(3);
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQSIZE(1), (QVideoFrame::PixelFormat) par2, (QAbstractVideoBuffer::HandleType) par3 );
+  QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQSIZE(1), (QVideoFrame::PixelFormat) hb_parni(2), (QAbstractVideoBuffer::HandleType) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -110,8 +109,7 @@ QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW3 )
 {
-  QVideoSurfaceFormat * par1 = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *par1 );
+  QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQVIDEOSURFACEFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -269,7 +267,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTY )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->property ( (const char *) hb_parc(1) ) );
+    QVariant * ptr = new QVariant( obj->property ( PCONSTCHAR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -448,7 +446,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPROPERTY )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setProperty ( (const char *) hb_parc(1), *PQVARIANT(2) );
+    obj->setProperty ( PCONSTCHAR(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -462,8 +460,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setScanLineDirection ( (QVideoSurfaceFormat::Direction) par1 );
+    obj->setScanLineDirection ( (QVideoSurfaceFormat::Direction) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -491,8 +488,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setYCbCrColorSpace ( (QVideoSurfaceFormat::YCbCrColorSpace) par1 );
+    obj->setYCbCrColorSpace ( (QVideoSurfaceFormat::YCbCrColorSpace) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
