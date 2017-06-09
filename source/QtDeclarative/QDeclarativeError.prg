@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->setUrl ( *par1 );
+      obj->setUrl ( *PQURL(1) );
     }
     else
     {

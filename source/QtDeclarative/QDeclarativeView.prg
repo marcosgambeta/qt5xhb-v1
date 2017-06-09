@@ -70,8 +70,7 @@ QDeclarativeView ( QWidget * parent = 0 )
 */
 void QDeclarativeView_new1 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeView * o = new QDeclarativeView ( par1 );
+  QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -80,9 +79,7 @@ QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
 void QDeclarativeView_new2 ()
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QDeclarativeView * o = new QDeclarativeView ( *par1, par2 );
+  QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -246,8 +243,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setResizeMode ( (QDeclarativeView::ResizeMode) par1 );
+      obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
     }
     else
     {
@@ -269,8 +265,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->setSource ( *par1 );
+      obj->setSource ( *PQURL(1) );
     }
     else
     {

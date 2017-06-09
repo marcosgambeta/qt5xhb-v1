@@ -215,8 +215,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      QUrl * ptr = new QUrl( obj->resolvedUrl ( *par1 ) );
+      QUrl * ptr = new QUrl( obj->resolvedUrl ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
     }
     else
@@ -237,8 +236,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->setBaseUrl ( *par1 );
+      obj->setBaseUrl ( *PQURL(1) );
     }
     else
     {

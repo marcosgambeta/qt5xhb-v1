@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
   {
     if( ISCHAR(1) && ISQDECLARATIVEIMAGEPROVIDER(2) )
     {
-      QDeclarativeImageProvider * par2 = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtr(2);
-      obj->addImageProvider ( PQSTRING(1), par2 );
+      obj->addImageProvider ( PQSTRING(1), PQDECLARATIVEIMAGEPROVIDER(2) );
     }
     else
     {
@@ -357,8 +356,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->setBaseUrl ( *par1 );
+      obj->setBaseUrl ( *PQURL(1) );
     }
     else
     {
@@ -519,8 +517,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 {
   if( ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2) )
   {
-    QDeclarativeContext * par2 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(2);
-    QDeclarativeEngine::setContextForObject ( PQOBJECT(1), par2 );
+    QDeclarativeEngine::setContextForObject ( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -536,8 +533,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
   if( ISQOBJECT(1) && ISNUM(2) )
   {
-    int par2 = hb_parni(2);
-    QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1), (QDeclarativeEngine::ObjectOwnership) par2 );
+    QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1), (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

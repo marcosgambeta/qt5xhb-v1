@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
     if( ISQDECLARATIVEENGINE(1) && ISCHAR(2) )
     {
       QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
-      obj->initializeEngine ( par1, (const char *) hb_parc(2) );
+      obj->initializeEngine ( par1, PCONSTCHAR(2) );
     }
     else
     {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
   {
     if( ISCHAR(1) )
     {
-      obj->registerTypes ( (const char *) hb_parc(1) );
+      obj->registerTypes ( PCONSTCHAR(1) );
     }
     else
     {

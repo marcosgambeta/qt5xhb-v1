@@ -394,8 +394,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setTransformOrigin ( (QDeclarativeItem::TransformOrigin) par1 );
+      obj->setTransformOrigin ( (QDeclarativeItem::TransformOrigin) hb_parni(1) );
     }
     else
     {

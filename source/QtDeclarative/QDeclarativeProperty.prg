@@ -98,8 +98,7 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
 */
 void QDeclarativeProperty_new3 ()
 {
-  QDeclarativeContext * par2 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(2);
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), par2 );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -108,8 +107,7 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 */
 void QDeclarativeProperty_new4 ()
 {
-  QDeclarativeEngine * par2 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(2);
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), par2 );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQDECLARATIVEENGINE(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -118,7 +116,7 @@ QDeclarativeProperty ( QObject * obj, const QString & name )
 */
 void QDeclarativeProperty_new5 ()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1) );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -127,8 +125,7 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext 
 */
 void QDeclarativeProperty_new6 ()
 {
-  QDeclarativeContext * par3 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2), par3 );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -137,8 +134,7 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine *
 */
 void QDeclarativeProperty_new7 ()
 {
-  QDeclarativeEngine * par3 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2), par3 );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -147,8 +143,7 @@ QDeclarativeProperty ( const QDeclarativeProperty & other )
 */
 void QDeclarativeProperty_new8 ()
 {
-  QDeclarativeProperty * par1 = (QDeclarativeProperty *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeProperty * o = new QDeclarativeProperty ( *par1 );
+  QDeclarativeProperty * o = new QDeclarativeProperty ( *PQDECLARATIVEPROPERTY(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -210,7 +205,7 @@ void QDeclarativeProperty_connectNotifySignal1 ()
 
   if( obj )
   {
-    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), (const char *) hb_parc(2) ) );
+    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -512,8 +507,7 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeConte
 */
 void QDeclarativeProperty_read3 ()
 {
-  QDeclarativeContext * par3 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -522,8 +516,7 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeEngin
 */
 void QDeclarativeProperty_read4 ()
 {
-  QDeclarativeEngine * par3 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -582,8 +575,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write3 ()
 {
-  QDeclarativeContext * par4 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
+  hb_retl( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4) ) );
 }
 
 /*
@@ -591,8 +583,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write4 ()
 {
-  QDeclarativeEngine * par4 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
+  hb_retl( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
 }
 
 //[1]bool write ( const QVariant & value ) const

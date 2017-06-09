@@ -91,8 +91,7 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject *
 void QDeclarativeComponent_new3 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
-  QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-  QDeclarativeComponent * o = new QDeclarativeComponent ( par1, *par2, OPQOBJECT(3,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent ( par1, *PQURL(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -317,8 +316,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->loadUrl ( *par1 );
+      obj->loadUrl ( *PQURL(1) );
     }
     else
     {
@@ -353,9 +351,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
   {
     if( ISQBYTEARRAY(1) && ISQURL(2) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-      obj->setData ( *par1, *par2 );
+      obj->setData ( *PQBYTEARRAY(1), *PQURL(2) );
     }
     else
     {
