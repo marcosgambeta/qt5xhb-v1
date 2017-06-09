@@ -120,8 +120,7 @@ QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 HB_FUNC_STATIC( QGLFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
-  QGLFormat * o = new QGLFormat ( (QGL::FormatOptions) par1, par2 );
+  QGLFormat * o = new QGLFormat ( (QGL::FormatOptions) par1, OPINT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -613,8 +612,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setProfile ( (QGLFormat::OpenGLContextProfile) par1 );
+    obj->setProfile ( (QGLFormat::OpenGLContextProfile) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

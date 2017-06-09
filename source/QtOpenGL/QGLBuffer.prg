@@ -84,8 +84,7 @@ QGLBuffer ( QGLBuffer::Type type )
 */
 HB_FUNC_STATIC( QGLBUFFER_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QGLBuffer * o = new QGLBuffer ( (QGLBuffer::Type) par1 );
+  QGLBuffer * o = new QGLBuffer ( (QGLBuffer::Type) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -260,8 +259,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retptr( (void *) obj->map ( (QGLBuffer::Access) par1 ) );
+    hb_retptr( (void *) obj->map ( (QGLBuffer::Access) hb_parni(1) ) );
   }
 }
 
@@ -298,8 +296,7 @@ static void release ( QGLBuffer::Type type )
 */
 HB_FUNC_STATIC( QGLBUFFER_RELEASE2 )
 {
-  int par1 = hb_parni(1);
-  QGLBuffer::release ( (QGLBuffer::Type) par1 );
+  QGLBuffer::release ( (QGLBuffer::Type) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -331,8 +328,7 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setUsagePattern ( (QGLBuffer::UsagePattern) par1 );
+    obj->setUsagePattern ( (QGLBuffer::UsagePattern) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

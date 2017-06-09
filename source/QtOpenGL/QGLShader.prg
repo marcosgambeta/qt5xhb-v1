@@ -63,8 +63,7 @@ QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGLSHADER_NEW1 )
 {
-  int par1 = hb_parni(1);
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) par1, OPQOBJECT(2,0) );
+  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -73,9 +72,8 @@ QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * pa
 */
 HB_FUNC_STATIC( QGLSHADER_NEW2 )
 {
-  int par1 = hb_parni(1);
   QGLContext * par2 = (QGLContext *) _qt5xhb_itemGetPtr(2);
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) par1, par2, OPQOBJECT(3,0) );
+  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -122,7 +120,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
   QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->compileSourceCode ( (const char *) hb_parc(1) ) );
+    hb_retl( obj->compileSourceCode ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -134,8 +132,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
   QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->compileSourceCode ( *par1 ) );
+    hb_retl( obj->compileSourceCode ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -256,9 +253,8 @@ static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
 */
 HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
 {
-  int par1 = hb_parni(1);
   const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) par1, par2 ) );
+  hb_retl( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) hb_parni(1), par2 ) );
 }
 
 
