@@ -83,7 +83,7 @@ QAndroidJniObject(const char *className)
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * o = new QAndroidJniObject ( (const char *) hb_parc(1) );
+  QAndroidJniObject * o = new QAndroidJniObject ( PCONSTCHAR(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD1 )
 
   if( obj )
   {
-    QAndroidJniObject * ptr = new QAndroidJniObject( obj->callObjectMethod<const char*> ( (const char *) hb_parc(1) ) );
+    QAndroidJniObject * ptr = new QAndroidJniObject( obj->callObjectMethod<const char*> ( PCONSTCHAR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
   }
 #endif
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
   {
     if( ISCHAR(1) )
     {
-      QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField<const char*> ( (const char *) hb_parc(1) ) );
+      QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField<const char*> ( PCONSTCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
     }
     else
@@ -222,7 +222,7 @@ static QAndroidJniObject callStaticObjectMethod(const char *className, const cha
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::callStaticObjectMethod<const char*> ( (const char *) hb_parc(1), (const char *) hb_parc(2) ) );
+  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::callStaticObjectMethod<const char*> ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
@@ -251,7 +251,7 @@ static QAndroidJniObject getStaticObjectField(const char *className, const char 
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField<const char*> ( (const char *) hb_parc(1), (const char *) hb_parc(2) ) );
+  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField<const char*> ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
@@ -262,7 +262,7 @@ static QAndroidJniObject getStaticObjectField(const char *className, const char 
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField<const char*> ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3) ) );
+  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField<const char*> ( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT" );
 #endif
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISCLASSAVAILABLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISCHAR(1) )
   {
-    hb_retl( QAndroidJniObject::isClassAvailable ( (const char *) hb_parc(1) ) );
+    hb_retl( QAndroidJniObject::isClassAvailable ( PCONSTCHAR(1) ) );
   }
   else
   {

@@ -87,9 +87,8 @@ HB_FUNC_STATIC( QTANDROID_STARTINTENTSENDER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISQANDROIDJNIOBJECT(1) && ISNUM(2) && (ISQANDROIDACTIVITYRESULTRECEIVER(3)||ISNIL(3)) )
   {
-    QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
     QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
-    QtAndroid::startIntentSender ( *par1, PINT(2), par3 );
+    QtAndroid::startIntentSender ( *PQANDROIDJNIOBJECT(1), PINT(2), par3 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -107,9 +106,8 @@ HB_FUNC_STATIC( QTANDROID_STARTACTIVITY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISQANDROIDJNIOBJECT(1) && ISNUM(2) && (ISQANDROIDACTIVITYRESULTRECEIVER(3)||ISNIL(3)) )
   {
-    QAndroidJniObject * par1 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(1);
     QAndroidActivityResultReceiver * par3 = ISNIL(3)? 0 : (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtr(3);
-    QtAndroid::startActivity ( *par1, PINT(2), par3 );
+    QtAndroid::startActivity ( *PQANDROIDJNIOBJECT(1), PINT(2), par3 );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
