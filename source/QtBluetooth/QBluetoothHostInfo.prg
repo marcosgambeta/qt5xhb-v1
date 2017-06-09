@@ -77,8 +77,7 @@ QBluetoothHostInfo(const QBluetoothHostInfo &other)
 void QBluetoothHostInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * par1 = (QBluetoothHostInfo *) _qt5xhb_itemGetPtr(1);
-  QBluetoothHostInfo * o = new QBluetoothHostInfo ( *par1 );
+  QBluetoothHostInfo * o = new QBluetoothHostInfo ( *PQBLUETOOTHHOSTINFO(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -149,8 +148,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETADDRESS )
   {
     if( ISQBLUETOOTHADDRESS(1) )
     {
-      QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-      obj->setAddress ( *par1 );
+      obj->setAddress ( *PQBLUETOOTHADDRESS(1) );
     }
     else
     {

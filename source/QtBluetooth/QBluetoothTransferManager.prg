@@ -101,9 +101,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
   {
     if( ISQBLUETOOTHTRANSFERREQUEST(1) && ISQIODEVICE(2) )
     {
-      QBluetoothTransferRequest * par1 = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtr(1);
-      QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
-      QBluetoothTransferReply * ptr = obj->put ( *par1, par2 );
+      QBluetoothTransferReply * ptr = obj->put ( *PQBLUETOOTHTRANSFERREQUEST(1), PQIODEVICE(2) );
       _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREPLY" );
     }
     else

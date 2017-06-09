@@ -80,8 +80,7 @@ QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0
 void QBluetoothSocket_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  QBluetoothSocket * o = new QBluetoothSocket ( (QBluetoothServiceInfo::Protocol) par1, OPQOBJECT(2,0) );
+  QBluetoothSocket * o = new QBluetoothSocket ( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -239,9 +238,8 @@ void QBluetoothSocket_connectToService1 ()
 
   if( obj )
   {
-    QBluetoothServiceInfo * par1 = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-    obj->connectToService ( *par1, (QIODevice::OpenMode) par2 );
+    obj->connectToService ( *PQBLUETOOTHSERVICEINFO(1), (QIODevice::OpenMode) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -258,10 +256,8 @@ void QBluetoothSocket_connectToService2 ()
 
   if( obj )
   {
-    QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-    QBluetoothUuid * par2 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->connectToService ( *par1, *par2, (QIODevice::OpenMode) par3 );
+    obj->connectToService ( *PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2), (QIODevice::OpenMode) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -278,9 +274,8 @@ void QBluetoothSocket_connectToService3 ()
 
   if( obj )
   {
-    QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->connectToService ( *par1, (quint16) hb_parni(2), (QIODevice::OpenMode) par3 );
+    obj->connectToService ( *PQBLUETOOTHADDRESS(1), (quint16) hb_parni(2), (QIODevice::OpenMode) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -432,10 +427,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
   {
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
-      int par2 = hb_parni(2);
       int par3 = ISNIL(3)? (int) QBluetoothSocket::ConnectedState : hb_parni(3);
       int par4 = ISNIL(4)? (int) QIODevice::ReadWrite : hb_parni(4);
-      hb_retl( obj->setSocketDescriptor ( PINT(1), (QBluetoothServiceInfo::Protocol) par2, (QBluetoothSocket::SocketState) par3, (QIODevice::OpenMode) par4 ) );
+      hb_retl( obj->setSocketDescriptor ( PINT(1), (QBluetoothServiceInfo::Protocol) hb_parni(2), (QBluetoothSocket::SocketState) par3, (QIODevice::OpenMode) par4 ) );
     }
     else
     {

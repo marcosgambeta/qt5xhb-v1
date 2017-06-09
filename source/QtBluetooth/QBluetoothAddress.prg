@@ -96,8 +96,7 @@ QBluetoothAddress(const QBluetoothAddress &other)
 void QBluetoothAddress_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * par1 = (QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-  QBluetoothAddress * o = new QBluetoothAddress ( *par1 );
+  QBluetoothAddress * o = new QBluetoothAddress ( *PQBLUETOOTHADDRESS(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

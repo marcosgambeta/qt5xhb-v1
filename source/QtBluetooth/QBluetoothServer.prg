@@ -75,8 +75,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
   {
-    int par1 = hb_parni(1);
-    QBluetoothServer * o = new QBluetoothServer ( (QBluetoothServiceInfo::Protocol) par1, OPQOBJECT(2,0) );
+    QBluetoothServer * o = new QBluetoothServer ( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -148,8 +147,7 @@ void QBluetoothServer_listen2 ()
 
   if( obj )
   {
-    QBluetoothUuid * par1 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(1);
-    QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *par1, OPQSTRING(2,QString()) ) );
+    QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
     _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO" );
   }
 #endif

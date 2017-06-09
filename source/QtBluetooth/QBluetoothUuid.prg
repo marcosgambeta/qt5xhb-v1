@@ -70,8 +70,7 @@ QBluetoothUuid(ProtocolUuid uuid)
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ProtocolUuid) par1 );
+  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ProtocolUuid) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -82,8 +81,7 @@ QBluetoothUuid(ServiceClassUuid uuid)
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par1 = hb_parni(1);
-  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ServiceClassUuid) par1 );
+  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ServiceClassUuid) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -140,8 +138,7 @@ QBluetoothUuid(const QBluetoothUuid &uuid)
 void QBluetoothUuid_new8 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * par1 = (QBluetoothUuid *) _qt5xhb_itemGetPtr(1);
-  QBluetoothUuid * o = new QBluetoothUuid ( *par1 );
+  QBluetoothUuid * o = new QBluetoothUuid ( *PQBLUETOOTHUUID(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -152,8 +149,7 @@ QBluetoothUuid(const QUuid &uuid)
 void QBluetoothUuid_new9 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QBluetoothUuid * o = new QBluetoothUuid ( *par1 );
+  QBluetoothUuid * o = new QBluetoothUuid ( *PQUUID(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -292,6 +288,44 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 ) // TODO: revisar e implementar paramet
     }
   }
 #endif
+}
+
+void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
+{
+  PHB_DYNS pDynSym;
+  #ifdef __XHARBOUR__
+  pDynSym = hb_dynsymFind( "QBLUETOOTHUUID" );
+  #else
+  pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
+  #endif
+
+  PHB_ITEM pArray = hb_itemArrayNew(0);
+
+  int i;
+
+  for(i=0; i<list.count(); i++)
+  {
+    if( pDynSym )
+    {
+      #ifdef __XHARBOUR__
+      hb_vmPushSymbol( pDynSym->pSymbol );
+      #else
+      hb_vmPushDynSym( pDynSym );
+      #endif
+      hb_vmPushNil();
+      hb_vmDo( 0 );
+      PHB_ITEM pObject = hb_itemNew( NULL );
+      hb_itemCopy( pObject, hb_stackReturnItem() );
+      PHB_ITEM pItem = hb_itemNew( NULL );
+      hb_itemPutPtr( pItem, (QBluetoothUuid *) new QBluetoothUuid ( list[i] ) );
+      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+      hb_itemRelease( pItem );
+      hb_arrayAddForward( pArray, pObject );
+      hb_itemRelease( pObject );
+    }
+  }
+
+  hb_itemReturnRelease(pArray);
 }
 
 #pragma ENDDUMP
