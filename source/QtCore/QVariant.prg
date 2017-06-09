@@ -188,8 +188,7 @@ QVariant(Type type)
 */
 HB_FUNC_STATIC( QVARIANT_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QVariant * o = new QVariant ( (QVariant::Type) par1 );
+  QVariant * o = new QVariant ( (QVariant::Type) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -198,9 +197,7 @@ QVariant(int typeId, const void *copy)
 */
 void QVariant_new3 ()
 {
-  int par1 = hb_parni(1);
-  const void * par2 = (const void *) hb_parptr(2);
-  QVariant * o = new QVariant ( par1, par2 );
+  QVariant * o = new QVariant ( PINT(1), (const void *) hb_parptr(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -209,10 +206,7 @@ QVariant(int typeId, const void *copy, uint flags)
 */
 void QVariant_new4 ()
 {
-  int par1 = hb_parni(1);
-  const void * par2 = (const void *) hb_parptr(2);
-  uint par3 = hb_parni(3);
-  QVariant * o = new QVariant ( par1, par2, par3 );
+  QVariant * o = new QVariant ( PINT(1), (const void *) hb_parptr(2), (uint) hb_parni(3) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -242,8 +236,7 @@ QVariant(int i)
 */
 HB_FUNC_STATIC( QVARIANT_NEW7 )
 {
-  int par1 = hb_parni(1);
-  QVariant * o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -313,7 +306,7 @@ QVariant(const char *str)
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
 #ifndef QT_NO_CAST_FROM_ASCII
-  QVariant * o = new QVariant ( (const char *) hb_parc(1) );
+  QVariant * o = new QVariant ( PCONSTCHAR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -323,8 +316,7 @@ QVariant(const QByteArray &bytearray)
 */
 void QVariant_new15 ()
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQBYTEARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -560,8 +552,7 @@ QVariant(const QUrl &url)
 */
 void QVariant_new38 ()
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQURL(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -580,8 +571,7 @@ QVariant(const QUuid &uuid)
 */
 void QVariant_new40 ()
 {
-  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQUUID(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -590,8 +580,7 @@ QVariant(const QModelIndex &modelIndex)
 */
 void QVariant_new41 ()
 {
-  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQMODELINDEX(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -1719,7 +1708,7 @@ HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
   if( ISCHAR(1) )
   {
-    hb_retni( QVariant::nameToType ( (const char *) hb_parc(1) ) );
+    hb_retni( QVariant::nameToType ( PCONSTCHAR(1) ) );
   }
   else
   {

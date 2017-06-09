@@ -64,9 +64,8 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQBYTEARRAY(2) )
   {
-    int par1 = hb_parni(1);
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-    QMessageAuthenticationCode * o = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) par1, par2 );
+    QMessageAuthenticationCode * o = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) hb_parni(1), par2 );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -118,8 +117,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      obj->setKey ( *par1 );
+      obj->setKey ( *PQBYTEARRAY(1) );
     }
     else
     {
@@ -139,7 +137,7 @@ void QMessageAuthenticationCode_addData1 ()
 
   if( obj )
   {
-    obj->addData ( (const char *) hb_parc(1), PINT(2) );
+    obj->addData ( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -154,8 +152,7 @@ void QMessageAuthenticationCode_addData2 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->addData ( *par1 );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -170,8 +167,7 @@ void QMessageAuthenticationCode_addData3 ()
 
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->addData ( par1 ) );
+    hb_retl( obj->addData ( PQIODEVICE(1) ) );
   }
 }
 
@@ -220,10 +216,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
 {
   if( ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && ISNUM(3) )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-    int par3 = hb_parni(3);
-    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *par1, *par2, (QCryptographicHash::Algorithm) par3 ) );
+    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *PQBYTEARRAY(1), *PQBYTEARRAY(2), (QCryptographicHash::Algorithm) hb_parni(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else

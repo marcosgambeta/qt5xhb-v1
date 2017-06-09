@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->keyToValue ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->keyToValue ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->keysToValue ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->keysToValue ( PCONSTCHAR(1) ) );
     }
     else
     {

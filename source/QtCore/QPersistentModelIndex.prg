@@ -81,8 +81,7 @@ QPersistentModelIndex(const QModelIndex &index)
 */
 void QPersistentModelIndex_new2 ()
 {
-  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-  QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
+  QPersistentModelIndex * o = new QPersistentModelIndex ( *PQMODELINDEX(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

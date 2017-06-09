@@ -126,8 +126,7 @@ void QSignalMapper_setMapping3 ()
 
   if( obj )
   {
-    QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-    obj->setMapping ( PQOBJECT(1), par2 );
+    obj->setMapping ( PQOBJECT(1), PQWIDGET(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -236,8 +235,7 @@ void QSignalMapper_mapping3 ()
 
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    QObject * ptr = obj->mapping ( par1 );
+    QObject * ptr = obj->mapping ( PQWIDGET(1) );
     _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }

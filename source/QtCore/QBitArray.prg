@@ -75,9 +75,7 @@ QBitArray ( int size, bool value = false )
 */
 void QBitArray_new2 ()
 {
-  int par1 = hb_parni(1);
-  bool par2 = ISNIL(2)? false : hb_parl(2);
-  QBitArray * o = new QBitArray ( par1, par2 );
+  QBitArray * o = new QBitArray ( PINT(1), OPBOOL(2,false) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -86,8 +84,7 @@ QBitArray ( const QBitArray & other )
 */
 void QBitArray_new3 ()
 {
-  QBitArray * par1 = (QBitArray *) _qt5xhb_itemGetPtr(1);
-  QBitArray * o = new QBitArray ( *par1 );
+  QBitArray * o = new QBitArray ( *PQBITARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

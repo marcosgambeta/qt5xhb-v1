@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
-    int par1 = hb_parni(1);
-    QChildEvent * o = new QChildEvent ( (QEvent::Type) par1, PQOBJECT(2) );
+    QChildEvent * o = new QChildEvent ( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

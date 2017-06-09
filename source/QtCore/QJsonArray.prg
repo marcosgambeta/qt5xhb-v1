@@ -250,8 +250,7 @@ HB_FUNC_STATIC( QJSONARRAY_INSERT )
   {
     if( ISNUM(1) && ISQJSONVALUE(2) )
     {
-      QJsonValue * par2 = (QJsonValue *) _qt5xhb_itemGetPtr(2);
-      obj->insert ( PINT(1), *par2 );
+      obj->insert ( PINT(1), *PQJSONVALUE(2) );
     }
     else
     {
@@ -451,8 +450,7 @@ HB_FUNC_STATIC( QJSONARRAY_REPLACE )
   {
     if( ISNUM(1) && ISQJSONVALUE(2) )
     {
-      QJsonValue * par2 = (QJsonValue *) _qt5xhb_itemGetPtr(2);
-      obj->replace ( PINT(1), *par2 );
+      obj->replace ( PINT(1), *PQJSONVALUE(2) );
     }
     else
     {

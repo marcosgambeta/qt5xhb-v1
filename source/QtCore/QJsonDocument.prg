@@ -358,9 +358,8 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
 {
   if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QJsonDocument::Validate : hb_parni(2);
-    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromBinaryData ( *par1, (QJsonDocument::DataValidation) par2 ) );
+    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromBinaryData ( *PQBYTEARRAY(1), (QJsonDocument::DataValidation) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
   }
   else
@@ -376,9 +375,8 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
 {
   if( ISQBYTEARRAY(1) && (ISQJSONPARSEERROR(2)||ISNIL(2)) )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QJsonParseError * par2 = ISNIL(2)? 0 : (QJsonParseError *) _qt5xhb_itemGetPtr(2);
-    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromJson ( *par1, par2 ) );
+    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromJson ( *PQBYTEARRAY(1), par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
   }
   else
@@ -395,7 +393,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMRAWDATA )
   if( ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
   {
     int par3 = ISNIL(3)? (int) QJsonDocument::Validate : hb_parni(3);
-    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromRawData ( (const char *) hb_parc(1), PINT(2), (QJsonDocument::DataValidation) par3 ) );
+    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromRawData ( PCONSTCHAR(1), PINT(2), (QJsonDocument::DataValidation) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
   }
   else

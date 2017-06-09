@@ -328,8 +328,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
   {
     if( ISCHAR(1) && ISQBYTEARRAY(2) )
     {
-      QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-      obj->setData ( PQSTRING(1), *par2 );
+      obj->setData ( PQSTRING(1), *PQBYTEARRAY(2) );
     }
     else
     {

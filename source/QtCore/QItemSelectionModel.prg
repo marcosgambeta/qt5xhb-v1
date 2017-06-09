@@ -74,8 +74,7 @@ QItemSelectionModel(QAbstractItemModel *model)
 */
 void QItemSelectionModel_new1 ()
 {
-  QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-  QItemSelectionModel * o = new QItemSelectionModel ( par1 );
+  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -84,8 +83,7 @@ QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
 */
 void QItemSelectionModel_new2 ()
 {
-  QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-  QItemSelectionModel * o = new QItemSelectionModel ( par1, PQOBJECT(2) );
+  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -150,8 +148,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isSelected ( *par1 ) );
+      hb_retl( obj->isSelected ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -171,8 +168,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->isRowSelected ( PINT(1), *par2 ) );
+      hb_retl( obj->isRowSelected ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -192,8 +188,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->isColumnSelected ( PINT(1), *par2 ) );
+      hb_retl( obj->isColumnSelected ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -213,8 +208,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->rowIntersectsSelection ( PINT(1), *par2 ) );
+      hb_retl( obj->rowIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -234,8 +228,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->columnIntersectsSelection ( PINT(1), *par2 ) );
+      hb_retl( obj->columnIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -440,9 +433,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
   {
     if( ISQMODELINDEX(1) && ISNUM(2) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
-      obj->setCurrentIndex ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
+      obj->setCurrentIndex ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
     }
     else
     {
@@ -462,9 +454,8 @@ void QItemSelectionModel_select1 ()
 
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->select ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
+    obj->select ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -479,9 +470,8 @@ void QItemSelectionModel_select2 ()
 
   if( obj )
   {
-    QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->select ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
+    obj->select ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

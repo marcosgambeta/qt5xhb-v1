@@ -84,8 +84,7 @@ QDataStream(QIODevice *)
 */
 void QDataStream_new2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QDataStream * o = new QDataStream ( par1 );
+  QDataStream * o = new QDataStream ( PQIODEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -95,8 +94,7 @@ QDataStream(QByteArray *, QIODevice::OpenMode flags)
 void QDataStream_new3 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
-  QDataStream * o = new QDataStream ( par1, (QIODevice::OpenMode) par2 );
+  QDataStream * o = new QDataStream ( par1, (QIODevice::OpenMode) hb_parni(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -105,8 +103,7 @@ QDataStream(const QByteArray &)
 */
 void QDataStream_new4 ()
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QDataStream * o = new QDataStream ( *par1 );
+  QDataStream * o = new QDataStream ( *PQBYTEARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -181,8 +178,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      obj->setDevice ( par1 );
+      obj->setDevice ( PQIODEVICE(1) );
     }
     else
     {
@@ -245,8 +241,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setStatus ( (QDataStream::Status) par1 );
+      obj->setStatus ( (QDataStream::Status) hb_parni(1) );
     }
     else
     {
@@ -296,8 +291,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setFloatingPointPrecision ( (QDataStream::FloatingPointPrecision) par1 );
+      obj->setFloatingPointPrecision ( (QDataStream::FloatingPointPrecision) hb_parni(1) );
     }
     else
     {
@@ -332,8 +326,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setByteOrder ( (QDataStream::ByteOrder) par1 );
+      obj->setByteOrder ( (QDataStream::ByteOrder) hb_parni(1) );
     }
     else
     {
@@ -434,7 +427,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      QDataStream * ptr = &obj->writeBytes ( (const char *) hb_parc(1), (uint) hb_parni(2) );
+      QDataStream * ptr = &obj->writeBytes ( PCONSTCHAR(1), (uint) hb_parni(2) );
       _qt5xhb_createReturnClass ( ptr, "QDATASTREAM" );
     }
     else
@@ -455,7 +448,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      hb_retni( obj->writeRawData ( (const char *) hb_parc(1), PINT(2) ) );
+      hb_retni( obj->writeRawData ( PCONSTCHAR(1), PINT(2) ) );
     }
     else
     {

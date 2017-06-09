@@ -69,8 +69,7 @@ QByteArrayMatcher ( const QByteArray & pattern )
 */
 void QByteArrayMatcher_new2 ()
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *par1 );
+  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -79,8 +78,7 @@ QByteArrayMatcher ( const char * pattern, int length )
 */
 void QByteArrayMatcher_new3 ()
 {
-  int par2 = hb_parni(2);
-  QByteArrayMatcher * o = new QByteArrayMatcher ( (const char *) hb_parc(1), par2 );
+  QByteArrayMatcher * o = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -89,8 +87,7 @@ QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
 void QByteArrayMatcher_new4 ()
 {
-  QByteArrayMatcher * par1 = (QByteArrayMatcher *) _qt5xhb_itemGetPtr(1);
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *par1 );
+  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -149,8 +146,7 @@ void QByteArrayMatcher_indexIn1 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexIn ( *par1, OPINT(2,0) ) );
+    hb_retni( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
   }
 }
 
@@ -163,7 +159,7 @@ void QByteArrayMatcher_indexIn2 ()
 
   if( obj )
   {
-    hb_retni( obj->indexIn ( (const char *) hb_parc(1), PINT(2), OPINT(3,0) ) );
+    hb_retni( obj->indexIn ( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
 
@@ -211,8 +207,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      obj->setPattern ( *par1 );
+      obj->setPattern ( *PQBYTEARRAY(1) );
     }
     else
     {

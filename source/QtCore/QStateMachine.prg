@@ -81,8 +81,7 @@ QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
 */
 void QStateMachine_new2 ()
 {
-  int par1 = hb_parni(1);
-  QStateMachine * o = new QStateMachine ( (QState::ChildMode) par1, OPQOBJECT(2,0) );
+  QStateMachine * o = new QStateMachine ( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -371,8 +370,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setGlobalRestorePolicy ( (QState::RestorePolicy) par1 );
+      obj->setGlobalRestorePolicy ( (QState::RestorePolicy) hb_parni(1) );
     }
     else
     {
@@ -459,8 +457,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
   {
     if( ISQOBJECT(1) && ISQEVENT(2) )
     {
-      QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->eventFilter ( PQOBJECT(1), par2 ) );
+      hb_retl( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
     }
     else
     {

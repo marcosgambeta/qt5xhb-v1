@@ -90,11 +90,7 @@ QLine(int x1, int y1, int x2, int y2)
 */
 void Qline_new3 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  QLine * o = new QLine ( par1, par2, par3, par4 );
+  QLine * o = new QLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

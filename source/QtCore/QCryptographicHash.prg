@@ -63,8 +63,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    QCryptographicHash * o = new QCryptographicHash ( (QCryptographicHash::Algorithm) par1 );
+    QCryptographicHash * o = new QCryptographicHash ( (QCryptographicHash::Algorithm) hb_parni(1) );
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else
@@ -114,7 +113,7 @@ void QCryptographicHash_addData1 ()
 
   if( obj )
   {
-    obj->addData ( (const char *) hb_parc(1), PINT(2) );
+    obj->addData ( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,8 +128,7 @@ void QCryptographicHash_addData2 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->addData ( *par1 );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -145,8 +143,7 @@ void QCryptographicHash_addData3 ()
 
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->addData ( par1 ) );
+    hb_retl( obj->addData ( PQIODEVICE(1) ) );
   }
 }
 
@@ -195,9 +192,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {
   if( ISQBYTEARRAY(1) && ISNUM(2) )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
-    QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *par1, (QCryptographicHash::Algorithm) par2 ) );
+    QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else

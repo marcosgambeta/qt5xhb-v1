@@ -209,8 +209,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setPriority ( (QThread::Priority) par1 );
+      obj->setPriority ( (QThread::Priority) hb_parni(1) );
     }
     else
     {

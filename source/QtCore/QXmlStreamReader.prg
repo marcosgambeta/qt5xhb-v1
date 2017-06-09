@@ -123,8 +123,7 @@ QXmlStreamReader(QIODevice * device)
 */
 void QXmlStreamReader_new2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamReader * o = new QXmlStreamReader ( par1 );
+  QXmlStreamReader * o = new QXmlStreamReader ( PQIODEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -133,8 +132,7 @@ QXmlStreamReader(const QByteArray & data)
 */
 void QXmlStreamReader_new3 ()
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamReader * o = new QXmlStreamReader ( *par1 );
+  QXmlStreamReader * o = new QXmlStreamReader ( *PQBYTEARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -204,8 +202,7 @@ void QXmlStreamReader_addData1 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->addData ( *par1 );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -235,7 +232,7 @@ void QXmlStreamReader_addData3 ()
 
   if( obj )
   {
-    obj->addData ( (const char *) hb_parc(1) );
+    obj->addData ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -882,8 +879,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETDEVICE )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      obj->setDevice ( par1 );
+      obj->setDevice ( PQIODEVICE(1) );
     }
     else
     {

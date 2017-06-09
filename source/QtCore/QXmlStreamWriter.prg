@@ -93,8 +93,7 @@ QXmlStreamWriter(QIODevice * device)
 */
 void QXmlStreamWriter_new2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
+  QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -299,7 +298,7 @@ void QXmlStreamWriter_setCodec2 ()
 
   if( obj )
   {
-    obj->setCodec ( (const char *) hb_parc(1) );
+    obj->setCodec ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -335,8 +334,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      obj->setDevice ( par1 );
+      obj->setDevice ( PQIODEVICE(1) );
     }
     else
     {

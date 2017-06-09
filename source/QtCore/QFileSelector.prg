@@ -106,8 +106,7 @@ void QFileSelector_select2 ()
 
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QUrl * ptr = new QUrl( obj->select ( *par1 ) );
+    QUrl * ptr = new QUrl( obj->select ( *PQURL(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

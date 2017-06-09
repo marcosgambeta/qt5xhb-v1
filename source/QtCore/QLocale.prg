@@ -154,9 +154,8 @@ QLocale ( Language language, Country country = AnyCountry )
 */
 void QLocale_new3 ()
 {
-  int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) QLocale::AnyCountry : hb_parni(2);
-  QLocale * o = new QLocale ( (QLocale::Language) par1, (QLocale::Country) par2 );
+  QLocale * o = new QLocale ( (QLocale::Language) hb_parni(1), (QLocale::Country) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -165,10 +164,7 @@ QLocale ( Language language, Script script, Country country )
 */
 void QLocale_new4 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QLocale * o = new QLocale ( (QLocale::Language) par1, (QLocale::Script) par2, (QLocale::Country) par3 );
+  QLocale * o = new QLocale ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -1572,8 +1568,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QLocale::countryToString ( (QLocale::Country) par1 ) ) );
+    hb_retc( RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) ) );
   }
   else
   {
@@ -1588,8 +1583,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QLocale::languageToString ( (QLocale::Language) par1 ) ) );
+    hb_retc( RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) ) );
   }
   else
   {
@@ -1604,10 +1598,7 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) par1, (QLocale::Script) par2, (QLocale::Country) par3 );
+    QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QLOCALE" );
@@ -1653,8 +1644,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QLocale::scriptToString ( (QLocale::Script) par1 ) ) );
+    hb_retc( RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) ) );
   }
   else
   {

@@ -71,9 +71,7 @@ QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
 void QItemSelection_new2 ()
 {
-  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-  QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-  QItemSelection * o = new QItemSelection ( *par1, *par2 );
+  QItemSelection * o = new QItemSelection ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -124,9 +122,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SELECT )
   {
     if( ISQMODELINDEX(1) && ISQMODELINDEX(2) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-      obj->select ( *par1, *par2 );
+      obj->select ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
     }
     else
     {
@@ -148,8 +144,7 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->contains ( *par1 ) );
+      hb_retl( obj->contains ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -213,9 +208,8 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
   {
     if( ISQITEMSELECTION(1) && ISNUM(2) )
     {
-      QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
       int par2 = hb_parni(2);
-      obj->merge ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
+      obj->merge ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) par2 );
     }
     else
     {
@@ -233,10 +227,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
 {
   if( ISQITEMSELECTIONRANGE(1) && ISQITEMSELECTIONRANGE(2) && ISQITEMSELECTION(3) )
   {
-    QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
-    QItemSelectionRange * par2 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(2);
-    QItemSelection * par3 = (QItemSelection *) _qt5xhb_itemGetPtr(3);
-    QItemSelection::split ( *par1, *par2, par3 );
+    QItemSelection::split ( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

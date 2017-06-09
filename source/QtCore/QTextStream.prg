@@ -108,8 +108,7 @@ QTextStream(QIODevice *device)
 */
 void QTextStream_new2 ()
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QTextStream * o = new QTextStream ( par1 );
+  QTextStream * o = new QTextStream ( PQIODEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -151,9 +150,8 @@ QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::R
 */
 void QTextStream_new6 ()
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QIODevice::ReadOnly : hb_parni(2);
-  QTextStream * o = new QTextStream ( *par1, (QIODevice::OpenMode) par2 );
+  QTextStream * o = new QTextStream ( *PQBYTEARRAY(1), (QIODevice::OpenMode) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -238,7 +236,7 @@ void QTextStream_setCodec2 ()
 
   if( obj )
   {
-    obj->setCodec ( (const char *) hb_parc(1) );
+    obj->setCodec ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -395,8 +393,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      obj->setDevice ( par1 );
+      obj->setDevice ( PQIODEVICE(1) );
     }
     else
     {
@@ -483,8 +480,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setStatus ( (QTextStream::Status) par1 );
+      obj->setStatus ( (QTextStream::Status) hb_parni(1) );
     }
     else
     {
@@ -665,8 +661,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setFieldAlignment ( (QTextStream::FieldAlignment) par1 );
+      obj->setFieldAlignment ( (QTextStream::FieldAlignment) hb_parni(1) );
     }
     else
     {
@@ -844,8 +839,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setRealNumberNotation ( (QTextStream::RealNumberNotation) par1 );
+      obj->setRealNumberNotation ( (QTextStream::RealNumberNotation) hb_parni(1) );
     }
     else
     {

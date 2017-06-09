@@ -75,8 +75,7 @@ QUuid(const QByteArray & text)
 */
 void QUuid_new2 ()
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QUuid * o = new QUuid ( *par1 );
+  QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -211,9 +210,7 @@ static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 */
 void QUuid_createUuidV31 ()
 {
-  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, *par2 ) );
+  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
@@ -222,8 +219,7 @@ static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 */
 void QUuid_createUuidV32 ()
 {
-  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *par1, PQSTRING(2) ) );
+  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
@@ -251,9 +247,7 @@ static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 */
 void QUuid_createUuidV51 ()
 {
-  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, *par2 ) );
+  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
@@ -262,8 +256,7 @@ static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 */
 void QUuid_createUuidV52 ()
 {
-  QUuid * par1 = (QUuid *) _qt5xhb_itemGetPtr(1);
-  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *par1, PQSTRING(2) ) );
+  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
@@ -293,8 +286,7 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {
   if( ISQBYTEARRAY(1) )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *par1 ) );
+    QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QUUID", true );
   }
   else

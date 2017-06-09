@@ -64,9 +64,8 @@ QHistoryState(HistoryType type, QState *parent = 0)
 */
 void QHistoryState_new2 ()
 {
-  int par1 = hb_parni(1);
   QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
-  QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) par1, par2 );
+  QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -167,8 +166,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setHistoryType ( (QHistoryState::HistoryType) par1 );
+      obj->setHistoryType ( (QHistoryState::HistoryType) hb_parni(1) );
     }
     else
     {

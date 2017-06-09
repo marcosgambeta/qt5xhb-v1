@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->closeReadChannel ( (QProcess::ProcessChannel) par1 );
+      obj->closeReadChannel ( (QProcess::ProcessChannel) hb_parni(1) );
     }
     else
     {
@@ -368,8 +367,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setProcessChannelMode ( (QProcess::ProcessChannelMode) par1 );
+      obj->setProcessChannelMode ( (QProcess::ProcessChannelMode) hb_parni(1) );
     }
     else
     {
@@ -414,8 +412,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setReadChannel ( (QProcess::ProcessChannel) par1 );
+      obj->setReadChannel ( (QProcess::ProcessChannel) hb_parni(1) );
     }
     else
     {
@@ -1036,8 +1033,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNELMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setReadChannelMode ( (QProcess::ProcessChannelMode) par1 );
+      obj->setReadChannelMode ( (QProcess::ProcessChannelMode) hb_parni(1) );
     }
     else
     {
@@ -1072,8 +1068,7 @@ HB_FUNC_STATIC( QPROCESS_SETINPUTCHANNELMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setInputChannelMode ( (QProcess::InputChannelMode) par1 );
+      obj->setInputChannelMode ( (QProcess::InputChannelMode) hb_parni(1) );
     }
     else
     {

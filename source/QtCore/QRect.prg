@@ -138,11 +138,7 @@ QRect ( int x, int y, int width, int height )
 */
 void QRect_new4 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  QRect * o = new QRect ( par1, par2, par3, par4 );
+  QRect * o = new QRect ( PINT(1), PINT(2), PINT(3), PINT(4) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

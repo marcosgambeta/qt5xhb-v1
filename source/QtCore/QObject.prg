@@ -474,8 +474,7 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
   {
     if( ISQOBJECT(1) && ISQEVENT(2) )
     {
-      QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->eventFilter ( PQOBJECT(1), par2 ) );
+      hb_retl( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
     }
     else
     {
@@ -682,7 +681,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->inherits ( (const char *) hb_parc(1) ) );
+      hb_retl( obj->inherits ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -881,7 +880,7 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
   {
     if( ISCHAR(1) )
     {
-      QVariant * ptr = new QVariant( obj->property ( (const char *) hb_parc(1) ) );
+      QVariant * ptr = new QVariant( obj->property ( PCONSTCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -904,7 +903,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
   {
     if( ISCHAR(1) && ISQVARIANT(2) )
     {
-      hb_retl( obj->setProperty ( (const char *) hb_parc(1), *PQVARIANT(2) ) );
+      hb_retl( obj->setProperty ( PCONSTCHAR(1), *PQVARIANT(2) ) );
     }
     else
     {
@@ -1006,8 +1005,7 @@ HB_FUNC_STATIC( QOBJECT_TR )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retc( RQSTRING( QObject::tr ( (const char *) hb_parc(1), (const char *) par2, OPINT(3,-1) ) ) );
+    hb_retc( RQSTRING( QObject::tr ( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) ) );
   }
   else
   {

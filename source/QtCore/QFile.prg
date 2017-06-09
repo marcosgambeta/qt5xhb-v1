@@ -358,8 +358,7 @@ void QFile_open1 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->open ( (QFile::OpenMode) par1 ) );
+    hb_retl( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -373,9 +372,8 @@ void QFile_open2 ()
   if( obj )
   {
     FILE * par1 = (FILE *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
-    hb_retl( obj->open ( par1, (QFile::OpenMode) par2, (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open ( par1, (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -388,9 +386,8 @@ void QFile_open3 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
-    hb_retl( obj->open ( PINT(1), (QFile::OpenMode) par2, (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -803,8 +800,7 @@ static QString decodeName ( const QByteArray & localFileName )
 */
 void QFile_decodeName1 ()
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  hb_retc( RQSTRING( QFile::decodeName ( *par1 ) ) );
+  hb_retc( RQSTRING( QFile::decodeName ( *PQBYTEARRAY(1) ) ) );
 }
 
 /*
@@ -812,7 +808,7 @@ static QString decodeName ( const char * localFileName )
 */
 void QFile_decodeName2 ()
 {
-  hb_retc( RQSTRING( QFile::decodeName ( (const char *) hb_parc(1) ) ) );
+  hb_retc( RQSTRING( QFile::decodeName ( PCONSTCHAR(1) ) ) );
 }
 
 //[1]QString decodeName ( const QByteArray & localFileName )

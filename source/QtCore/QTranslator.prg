@@ -166,8 +166,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
     {
-      const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-      hb_retc( RQSTRING( obj->translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) par3, OPINT(4,-1) ) ) );
+      hb_retc( RQSTRING( obj->translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) ) );
     }
     else
     {

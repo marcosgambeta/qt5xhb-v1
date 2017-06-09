@@ -117,8 +117,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setSingleDashWordOptionMode ( (QCommandLineParser::SingleDashWordOptionMode) par1 );
+      obj->setSingleDashWordOptionMode ( (QCommandLineParser::SingleDashWordOptionMode) hb_parni(1) );
     }
     else
     {

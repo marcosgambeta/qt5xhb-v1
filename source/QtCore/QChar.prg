@@ -174,8 +174,7 @@ QChar ( int code )
 */
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
-  int par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
+  QChar * o = new QChar ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -184,8 +183,7 @@ QChar ( SpecialCharacter ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
-  int par1 = hb_parni(1);
-  QChar * o = new QChar ( (QChar::SpecialCharacter) par1 );
+  QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

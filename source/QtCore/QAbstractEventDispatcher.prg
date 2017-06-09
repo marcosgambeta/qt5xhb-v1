@@ -90,10 +90,8 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
   {
     if( ISQBYTEARRAY(1) && ISPOINTER(2) && ISNUM(3) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      void * par2 = (void *) hb_parptr(2);
       long par3;
-      hb_retl( obj->filterNativeEvent ( *par1, par2, &par3 ) );
+      hb_retl( obj->filterNativeEvent ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
       hb_stornl( par3, 3 );
     }
     else
@@ -142,8 +140,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER )
   {
     if( ISQABSTRACTNATIVEEVENTFILTER(1) )
     {
-      QAbstractNativeEventFilter * par1 = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtr(1);
-      obj->installNativeEventFilter ( par1 );
+      obj->installNativeEventFilter ( PQABSTRACTNATIVEEVENTFILTER(1) );
     }
     else
     {
@@ -202,8 +199,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
   {
     if( ISQWINEVENTNOTIFIER(1) )
     {
-      QWinEventNotifier * par1 = (QWinEventNotifier *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->registerEventNotifier ( par1 ) );
+      hb_retl( obj->registerEventNotifier ( PQWINEVENTNOTIFIER(1) ) );
     }
     else
     {
@@ -224,8 +220,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
   {
     if( ISQSOCKETNOTIFIER(1) )
     {
-      QSocketNotifier * par1 = (QSocketNotifier *) _qt5xhb_itemGetPtr(1);
-      obj->registerSocketNotifier ( par1 );
+      obj->registerSocketNotifier ( PQSOCKETNOTIFIER(1) );
     }
     else
     {
@@ -245,8 +240,7 @@ void QAbstractEventDispatcher_registerTimer1 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retni( obj->registerTimer ( PINT(1), (Qt::TimerType) par2, PQOBJECT(3) ) );
+    hb_retni( obj->registerTimer ( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
   }
 }
 
@@ -259,8 +253,7 @@ void QAbstractEventDispatcher_registerTimer2 ()
 
   if( obj )
   {
-    int par3 = hb_parni(3);
-    obj->registerTimer ( PINT(1), PINT(2), (Qt::TimerType) par3, PQOBJECT(4) );
+    obj->registerTimer ( PINT(1), PINT(2), (Qt::TimerType) hb_parni(3), PQOBJECT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -316,8 +309,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER )
   {
     if( ISQABSTRACTNATIVEEVENTFILTER(1) )
     {
-      QAbstractNativeEventFilter * par1 = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtr(1);
-      obj->removeNativeEventFilter ( par1 );
+      obj->removeNativeEventFilter ( PQABSTRACTNATIVEEVENTFILTER(1) );
     }
     else
     {
@@ -340,8 +332,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER )
   {
     if( ISQWINEVENTNOTIFIER(1) )
     {
-      QWinEventNotifier * par1 = (QWinEventNotifier *) _qt5xhb_itemGetPtr(1);
-      obj->unregisterEventNotifier ( par1 );
+      obj->unregisterEventNotifier ( PQWINEVENTNOTIFIER(1) );
     }
     else
     {
@@ -364,8 +355,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
   {
     if( ISQSOCKETNOTIFIER(1) )
     {
-      QSocketNotifier * par1 = (QSocketNotifier *) _qt5xhb_itemGetPtr(1);
-      obj->unregisterSocketNotifier ( par1 );
+      obj->unregisterSocketNotifier ( PQSOCKETNOTIFIER(1) );
     }
     else
     {

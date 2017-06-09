@@ -92,8 +92,7 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 */
 void QSettings_new2 ()
 {
-  int par1 = hb_parni(1);
-  QSettings * o = new QSettings ( (QSettings::Scope) par1, PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
+  QSettings * o = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,9 +101,7 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 */
 void QSettings_new3 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QSettings * o = new QSettings ( (QSettings::Format) par1, (QSettings::Scope) par2, PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
+  QSettings * o = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -113,8 +110,7 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
 void QSettings_new4 ()
 {
-  int par2 = hb_parni(2);
-  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) par2, OPQOBJECT(3,0) );
+  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -558,7 +554,7 @@ void QSettings_setIniCodec2 ()
 
   if( obj )
   {
-    obj->setIniCodec ( (const char *) hb_parc(1) );
+    obj->setIniCodec ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -667,8 +663,7 @@ HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    QSettings::setDefaultFormat ( (QSettings::Format) par1 );
+    QSettings::setDefaultFormat ( (QSettings::Format) hb_parni(1) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -684,9 +679,7 @@ HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {
   if( ISNUM(1) && ISNUM(2) && ISCHAR(3) )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QSettings::setPath ( (QSettings::Format) par1, (QSettings::Scope) par2, PQSTRING(3) );
+    QSettings::setPath ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

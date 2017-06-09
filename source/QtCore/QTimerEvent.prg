@@ -49,8 +49,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    QTimerEvent * o = new QTimerEvent ( par1 );
+    QTimerEvent * o = new QTimerEvent ( PINT(1) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

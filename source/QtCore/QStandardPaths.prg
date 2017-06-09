@@ -61,8 +61,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QStandardPaths::writableLocation ( (QStandardPaths::StandardLocation) par1 ) ) );
+    hb_retc( RQSTRING( QStandardPaths::writableLocation ( (QStandardPaths::StandardLocation) hb_parni(1) ) ) );
   }
   else
   {
@@ -77,8 +76,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    QStringList strl = QStandardPaths::standardLocations ( (QStandardPaths::StandardLocation) par1 );
+    QStringList strl = QStandardPaths::standardLocations ( (QStandardPaths::StandardLocation) hb_parni(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
   else
@@ -94,9 +92,8 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
 {
   if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
-    int par1 = hb_parni(1);
     int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
-    hb_retc( RQSTRING( QStandardPaths::locate ( (QStandardPaths::StandardLocation) par1, PQSTRING(2), (QStandardPaths::LocateOptions) par3 ) ) );
+    hb_retc( RQSTRING( QStandardPaths::locate ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), (QStandardPaths::LocateOptions) par3 ) ) );
   }
   else
   {
@@ -111,9 +108,8 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
 {
   if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
-    int par1 = hb_parni(1);
     int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
-    QStringList strl = QStandardPaths::locateAll ( (QStandardPaths::StandardLocation) par1, PQSTRING(2), (QStandardPaths::LocateOptions) par3 );
+    QStringList strl = QStandardPaths::locateAll ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), (QStandardPaths::LocateOptions) par3 );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
   else
@@ -129,8 +125,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( QStandardPaths::displayName ( (QStandardPaths::StandardLocation) par1 ) ) );
+    hb_retc( RQSTRING( QStandardPaths::displayName ( (QStandardPaths::StandardLocation) hb_parni(1) ) ) );
   }
   else
   {

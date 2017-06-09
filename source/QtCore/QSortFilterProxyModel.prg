@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
   {
     if( ISQABSTRACTITEMMODEL(1) )
     {
-      QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-      obj->setSourceModel ( par1 );
+      obj->setSourceModel ( PQABSTRACTITEMMODEL(1) );
     }
     else
     {
@@ -173,8 +172,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *par1 ) );
+      QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -195,8 +193,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *par1 ) );
+      QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -373,8 +370,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setFilterCaseSensitivity ( (Qt::CaseSensitivity) par1 );
+      obj->setFilterCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
     }
     else
     {
@@ -409,8 +405,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setSortCaseSensitivity ( (Qt::CaseSensitivity) par1 );
+      obj->setSortCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
     }
     else
     {
@@ -684,8 +679,7 @@ void QSortFilterProxyModel_parent2 ()
 
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -742,8 +736,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SIBLING )
   {
     if( ISNUM(1) && ISNUM(2) && ISQMODELINDEX(3) )
     {
-      QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2), *par3 ) );
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -827,8 +820,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DATA )
   {
     if( ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * ptr = new QVariant( obj->data ( *par1, OPINT(2,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -849,8 +841,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDATA )
   {
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->setData ( *par1, *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {
@@ -870,8 +861,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HEADERDATA )
   {
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
-      int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -892,8 +882,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
   {
     if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
     {
-      int par2 = hb_parni(2);
-      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) par2, *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
+      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
     }
     else
     {
@@ -943,9 +932,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
     if( ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
     {
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
-      int par2 = hb_parni(2);
-      QModelIndex * par5 = (QModelIndex *) _qt5xhb_itemGetPtr(5);
-      hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) par2, PINT(3), PINT(4), *par5 ) );
+      hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
     }
     else
     {
@@ -1049,8 +1036,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FETCHMORE )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      obj->fetchMore ( *par1 );
+      obj->fetchMore ( *PQMODELINDEX(1) );
     }
     else
     {
@@ -1072,8 +1058,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CANFETCHMORE )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->canFetchMore ( *par1 ) );
+      hb_retl( obj->canFetchMore ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -1093,8 +1078,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FLAGS )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->flags ( *par1 ) );
+      hb_retni( obj->flags ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -1114,8 +1098,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_BUDDY )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QModelIndex * ptr = new QModelIndex( obj->buddy ( *par1 ) );
+      QModelIndex * ptr = new QModelIndex( obj->buddy ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
     }
     else
@@ -1136,9 +1119,8 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
   {
     if( ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) && ISOPTNUM(5) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
       int par5 = ISNIL(5)? (int) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : hb_parni(5);
-      QModelIndexList list = obj->match ( *par1, PINT(2), *PQVARIANT(3), OPINT(4,1), (Qt::MatchFlags) par5 );
+      QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), (Qt::MatchFlags) par5 );
       PHB_DYNS pDynSym;
       #ifdef __XHARBOUR__
       pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -1189,8 +1171,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SPAN )
   {
     if( ISQMODELINDEX(1) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QSize * ptr = new QSize( obj->span ( *par1 ) );
+      QSize * ptr = new QSize( obj->span ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else

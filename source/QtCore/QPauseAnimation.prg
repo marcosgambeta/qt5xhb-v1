@@ -57,8 +57,7 @@ QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
 void QPauseAnimation_new2 ()
 {
-  int par1 = hb_parni(1);
-  QPauseAnimation * o = new QPauseAnimation ( par1, OPQOBJECT(2,0) );
+  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -64,8 +64,7 @@ QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject 
 */
 void QPropertyAnimation_new2 ()
 {
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *par2, OPQOBJECT(3,0) );
+  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -130,8 +129,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      obj->setPropertyName ( *par1 );
+      obj->setPropertyName ( *PQBYTEARRAY(1) );
     }
     else
     {

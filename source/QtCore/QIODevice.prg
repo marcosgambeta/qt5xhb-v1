@@ -279,8 +279,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->open ( (QIODevice::OpenMode) par1 ) );
+      hb_retl( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
     }
     else
     {
@@ -633,7 +632,7 @@ void QIODevice_write1 ()
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      hb_retni( obj->write ( (const char *) hb_parc(1), (qint64) hb_parni(2) ) );
+      hb_retni( obj->write ( PCONSTCHAR(1), (qint64) hb_parni(2) ) );
     }
     else
     {
@@ -651,7 +650,7 @@ void QIODevice_write2 ()
 
   if( obj )
   {
-    hb_retni( obj->write ( (const char *) hb_parc(1) ) );
+    hb_retni( obj->write ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -664,8 +663,7 @@ void QIODevice_write3 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->write ( *par1 ) );
+    hb_retni( obj->write ( *PQBYTEARRAY(1) ) );
   }
 }
 

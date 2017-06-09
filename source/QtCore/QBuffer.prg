@@ -197,8 +197,7 @@ void QBuffer_setData1 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setData ( *par1 );
+    obj->setData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -213,7 +212,7 @@ void QBuffer_setData2 ()
 
   if( obj )
   {
-    obj->setData ( (const char *) hb_parc(1), PINT(2) );
+    obj->setData ( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -290,8 +289,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->open ( (QBuffer::OpenMode) par1 ) );
+      hb_retl( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
     }
     else
     {

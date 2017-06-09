@@ -53,8 +53,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
   {
     qintptr par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QSocketNotifier * o = new QSocketNotifier ( par1, (QSocketNotifier::Type) par2, OPQOBJECT(3,0) );
+    QSocketNotifier * o = new QSocketNotifier ( par1, (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

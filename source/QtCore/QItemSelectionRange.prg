@@ -94,9 +94,7 @@ QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
 void QItemSelectionRange_new3 ()
 {
-  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-  QModelIndex * par2 = (QModelIndex *) _qt5xhb_itemGetPtr(2);
-  QItemSelectionRange * o = new QItemSelectionRange ( *par1, *par2 );
+  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -105,8 +103,7 @@ QItemSelectionRange(const QModelIndex &index)
 */
 void QItemSelectionRange_new4 ()
 {
-  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-  QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
+  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -299,8 +296,7 @@ void QItemSelectionRange_contains1 ()
 
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1 ) );
+    hb_retl( obj->contains ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -313,8 +309,7 @@ void QItemSelectionRange_contains2 ()
 
   if( obj )
   {
-    QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->contains ( PINT(1), PINT(2), *par3 ) );
+    hb_retl( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
   }
 }
 

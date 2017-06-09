@@ -68,9 +68,7 @@ QPoint(int xpos, int ypos)
 */
 void QPoint_new2 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QPoint * o = new QPoint ( par1, par2 );
+  QPoint * o = new QPoint ( PINT(1), PINT(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

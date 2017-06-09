@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
   {
     if( ISQOBJECT(1) && ISQEVENT(2) )
     {
-      QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->notify ( PQOBJECT(1), par2 ) );
+      hb_retl( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
     }
     else
     {
@@ -317,8 +316,7 @@ static void postEvent ( QObject * receiver, QEvent * event )
 */
 void QCoreApplication_postEvent1 ()
 {
-  QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-  QCoreApplication::postEvent ( PQOBJECT(1), par2 );
+  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -327,8 +325,7 @@ static void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
 void QCoreApplication_postEvent2 ()
 {
-  QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-  QCoreApplication::postEvent ( PQOBJECT(1), par2, PINT(3) );
+  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2), PINT(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -467,8 +464,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 {
   if( ISQOBJECT(1) && ISQEVENT(2) )
   {
-    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( QCoreApplication::sendEvent ( PQOBJECT(1), par2 ) );
+    hb_retl( QCoreApplication::sendEvent ( PQOBJECT(1), PQEVENT(2) ) );
   }
   else
   {
@@ -552,8 +548,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
   if( ISNUM(1) && ISOPTLOG(2) )
   {
-    int par1 = hb_parni(1);
-    QCoreApplication::setAttribute ( (Qt::ApplicationAttribute) par1, OPBOOL(2,true) );
+    QCoreApplication::setAttribute ( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else
@@ -625,8 +620,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {
   if( ISNUM(1) )
   {
-    int par1 = hb_parni(1);
-    hb_retl( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) par1 ) );
+    hb_retl( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) hb_parni(1) ) );
   }
   else
   {
@@ -641,8 +635,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
   if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
-    const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    hb_retc( RQSTRING( QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) par3, OPINT(4,-1) ) ) );
+    hb_retc( RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) ) );
   }
   else
   {

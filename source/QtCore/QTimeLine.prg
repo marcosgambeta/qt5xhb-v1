@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCurveShape ( (QTimeLine::CurveShape) par1 );
+      obj->setCurveShape ( (QTimeLine::CurveShape) hb_parni(1) );
     }
     else
     {
@@ -266,8 +265,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setDirection ( (QTimeLine::Direction) par1 );
+      obj->setDirection ( (QTimeLine::Direction) hb_parni(1) );
     }
     else
     {

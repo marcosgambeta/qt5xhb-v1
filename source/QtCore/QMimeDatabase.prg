@@ -221,8 +221,7 @@ void QMimeDatabase_mimeTypeForData1 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForData ( *par1 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForData ( *PQBYTEARRAY(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
@@ -236,8 +235,7 @@ void QMimeDatabase_mimeTypeForData2 ()
 
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForData ( par1 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForData ( PQIODEVICE(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
@@ -272,8 +270,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      QMimeType * ptr = new QMimeType( obj->mimeTypeForUrl ( *par1 ) );
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForUrl ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
     }
     else
@@ -292,8 +289,7 @@ void QMimeDatabase_mimeTypeForFileNameAndData1 ()
 
   if( obj )
   {
-    QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), par2 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), PQIODEVICE(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
@@ -307,8 +303,7 @@ void QMimeDatabase_mimeTypeForFileNameAndData2 ()
 
   if( obj )
   {
-    QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), *par2 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), *PQBYTEARRAY(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }

@@ -385,8 +385,7 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCaseSensitivity ( (Qt::CaseSensitivity) par1 );
+      obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
     }
     else
     {
@@ -452,8 +451,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setPatternSyntax ( (QRegExp::PatternSyntax) par1 );
+      obj->setPatternSyntax ( (QRegExp::PatternSyntax) hb_parni(1) );
     }
     else
     {

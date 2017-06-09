@@ -301,8 +301,7 @@ void QMetaMethod_invoke1 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) par2 ) );
+    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) hb_parni(2) ) );
   }
 }
 
@@ -328,8 +327,7 @@ void QMetaMethod_invoke3 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) par2 ) );
+    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) hb_parni(2) ) );
   }
 }
 

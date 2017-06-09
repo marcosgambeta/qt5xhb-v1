@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
   if( ISCHAR(1) && ISNUM(1) )
   {
-    hb_retni( QMetaType::registerTypedef ( (const char *) hb_parc(1), PINT(2) ) );
+    hb_retni( QMetaType::registerTypedef ( PCONSTCHAR(1), PINT(2) ) );
   }
   else
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
   if( ISCHAR(1) )
   {
-    hb_retni( QMetaType::type ( (const char *) hb_parc(1) ) );
+    hb_retni( QMetaType::type ( PCONSTCHAR(1) ) );
   }
   else
   {
@@ -122,9 +122,7 @@ HB_FUNC_STATIC( QMETATYPE_CONSTRUCT )
 {
   if( ISNUM(1) && ISPOINTER(2) && ISPOINTER(3) )
   {
-    void * par2 = (void *) hb_parptr(2);
-    const void * par3 = (const void *) hb_parptr(3);
-    hb_retptr( (void *) QMetaType::construct ( PINT(1), par2, par3 ) );
+    hb_retptr( (void *) QMetaType::construct ( PINT(1), (void *) hb_parptr(2), (const void *) hb_parptr(3) ) );
   }
   else
   {
@@ -139,8 +137,7 @@ HB_FUNC_STATIC( QMETATYPE_DESTROY )
 {
   if( ISNUM(1) && ISPOINTER(2) )
   {
-    void * par2 = (void *) hb_parptr(2);
-    QMetaType::destroy ( PINT(1), par2 );
+    QMetaType::destroy ( PINT(1), (void *) hb_parptr(2) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

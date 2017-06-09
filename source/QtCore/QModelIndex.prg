@@ -79,8 +79,7 @@ QModelIndex ( const QModelIndex & other )
 */
 void QModelIndex_new2 ()
 {
-  QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-  QModelIndex * o = new QModelIndex ( *par1 );
+  QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

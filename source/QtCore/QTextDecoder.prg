@@ -116,7 +116,7 @@ void QTextDecoder_toUnicode1 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toUnicode ( (const char *) hb_parc(1), PINT(2) ) ) );
+    hb_retc( RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) ) );
   }
 }
 
@@ -129,8 +129,7 @@ void QTextDecoder_toUnicode3 ()
 
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->toUnicode ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) ) );
   }
 }
 

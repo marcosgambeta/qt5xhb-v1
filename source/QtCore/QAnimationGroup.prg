@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
   {
     if( ISNUM(1) && ISQABSTRACTANIMATION(2) )
     {
-      QAbstractAnimation * par2 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(2);
-      obj->insertAnimation ( PINT(1), par2 );
+      obj->insertAnimation ( PINT(1), PQABSTRACTANIMATION(2) );
     }
     else
     {

@@ -283,8 +283,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setType ( (QEasingCurve::Type) par1 );
+      obj->setType ( (QEasingCurve::Type) hb_parni(1) );
     }
     else
     {

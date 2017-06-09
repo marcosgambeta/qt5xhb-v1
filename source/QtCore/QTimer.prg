@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
   if( ISNUM(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
-    QTimer::singleShot ( PINT(1), PQOBJECT(2), (const char *) hb_parc(3) );
+    QTimer::singleShot ( PINT(1), PQOBJECT(2), PCONSTCHAR(3) );
     hb_itemReturn( hb_stackSelfItem() );
   }
   else

@@ -79,8 +79,7 @@ QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 */
 void QLibrary_new3 ()
 {
-  int par2 = hb_parni(2);
-  QLibrary * o = new QLibrary ( PQSTRING(1), par2, OPQOBJECT(3,0) );
+  QLibrary * o = new QLibrary ( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -320,7 +319,7 @@ void QLibrary_resolve1 ()
 
   if( obj )
   {
-    QFunctionPointer * ptr = new QFunctionPointer( obj->resolve ( (const char *) hb_parc(1) ) );
+    QFunctionPointer * ptr = new QFunctionPointer( obj->resolve ( PCONSTCHAR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
   }
 }
@@ -330,7 +329,7 @@ static QFunctionPointer resolve(const QString &fileName, const char *symbol) // 
 */
 void QLibrary_resolve2 ()
 {
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), (const char *) hb_parc(2) ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PCONSTCHAR(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
@@ -339,7 +338,7 @@ static QFunctionPointer resolve(const QString &fileName, int verNum, const char 
 */
 void QLibrary_resolve3 ()
 {
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PINT(2), (const char *) hb_parc(3) ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PINT(2), PCONSTCHAR(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 
@@ -348,7 +347,7 @@ static QFunctionPointer resolve(const QString &fileName, const QString &version,
 */
 void QLibrary_resolve4 ()
 {
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PQSTRING(2), (const char *) hb_parc(3) ) );
+  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PQSTRING(2), PCONSTCHAR(3) ) );
   _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
 }
 

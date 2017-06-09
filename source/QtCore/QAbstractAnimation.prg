@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setDirection ( (QAbstractAnimation::Direction) par1 );
+      obj->setDirection ( (QAbstractAnimation::Direction) hb_parni(1) );
     }
     else
     {

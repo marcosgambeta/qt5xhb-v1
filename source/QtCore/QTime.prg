@@ -79,11 +79,7 @@ QTime(int h, int m, int s = 0, int ms = 0)
 */
 void QTime_new2 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = ISNIL(3)? 0 : hb_parni(3);
-  int par4 = ISNIL(4)? 0 : hb_parni(4);
-  QTime * o = new QTime ( par1, par2, par3, par4 );
+  QTime * o = new QTime ( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

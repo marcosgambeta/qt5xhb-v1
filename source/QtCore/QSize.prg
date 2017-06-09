@@ -73,9 +73,7 @@ QSize ( int width, int height )
 */
 void QSize_new2 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QSize * o = new QSize ( par1, par2 );
+  QSize * o = new QSize ( PINT(1), PINT(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -218,8 +216,7 @@ void QSize_scale1 ()
 
   if( obj )
   {
-    int par3 = hb_parni(3);
-    obj->scale ( PINT(1), PINT(2), (Qt::AspectRatioMode) par3 );
+    obj->scale ( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -234,8 +231,7 @@ void QSize_scale2 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->scale ( *PQSIZE(1), (Qt::AspectRatioMode) par2 );
+    obj->scale ( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

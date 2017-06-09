@@ -84,8 +84,7 @@ QUrlQuery(const QUrl & url)
 */
 void QUrlQuery_new2 ()
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QUrlQuery * o = new QUrlQuery ( *par1 );
+  QUrlQuery * o = new QUrlQuery ( *PQURL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

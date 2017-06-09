@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QLoggingCategory * o = new QLoggingCategory ( (const char *) hb_parc(1) );
+    QLoggingCategory * o = new QLoggingCategory ( PCONSTCHAR(1) );
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else
@@ -100,8 +100,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->isEnabled ( (QtMsgType) par1 ) );
+      hb_retl( obj->isEnabled ( (QtMsgType) hb_parni(1) ) );
     }
     else
     {
@@ -121,8 +120,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
   {
     if( ISNUM(1) && ISLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setEnabled ( (QtMsgType) par1, PBOOL(2) );
+      obj->setEnabled ( (QtMsgType) hb_parni(1), PBOOL(2) );
     }
     else
     {

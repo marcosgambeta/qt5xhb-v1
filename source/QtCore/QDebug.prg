@@ -61,8 +61,7 @@ QDebug(QIODevice *device)
 */
 HB_FUNC_STATIC( QDEBUG_NEW1 )
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QDebug * o = new QDebug ( par1 );
+  QDebug * o = new QDebug ( PQIODEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

@@ -64,9 +64,8 @@ QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 */
 void QEventTransition_new2 ()
 {
-  int par2 = hb_parni(2);
   QState * par3 = ISNIL(3)? 0 : (QState *) _qt5xhb_itemGetPtr(3);
-  QEventTransition * o = new QEventTransition ( PQOBJECT(1), (QEvent::Type) par2, par3 );
+  QEventTransition * o = new QEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setEventType ( (QEvent::Type) par1 );
+      obj->setEventType ( (QEvent::Type) hb_parni(1) );
     }
     else
     {

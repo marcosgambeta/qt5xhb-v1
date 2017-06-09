@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfClassInfo ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->indexOfClassInfo ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfConstructor ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->indexOfConstructor ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfEnumerator ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->indexOfEnumerator ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfMethod ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->indexOfMethod ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfProperty ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->indexOfProperty ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfSignal ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->indexOfSignal ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfSlot ( (const char *) hb_parc(1) ) );
+      hb_retni( obj->indexOfSlot ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CHECKCONNECTARGS )
 {
   if( ISCHAR(1) && ISCHAR(2) )
   {
-    hb_retl( QMetaObject::checkConnectArgs ( (const char *) hb_parc(1), (const char *) hb_parc(2) ) );
+    hb_retl( QMetaObject::checkConnectArgs ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
   }
   else
   {
@@ -563,8 +563,7 @@ static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionTyp
 */
 void QMetaObject_invokeMethod1 ()
 {
-  int par3 = hb_parni(3);
-  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2), (Qt::ConnectionType) par3 ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2), (Qt::ConnectionType) hb_parni(3) ) );
 }
 
 /*
@@ -572,7 +571,7 @@ static bool invokeMethod ( QObject * obj, const char * member, QGenericReturnArg
 */
 void QMetaObject_invokeMethod2 ()
 {
-  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2) ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2) ) );
 }
 
 /*
@@ -580,8 +579,7 @@ static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionTyp
 */
 void QMetaObject_invokeMethod3 ()
 {
-  int par3 = hb_parni(3);
-  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2), (Qt::ConnectionType) par3 ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2), (Qt::ConnectionType) hb_parni(3) ) );
 }
 
 /*
@@ -589,7 +587,7 @@ static bool invokeMethod ( QObject * obj, const char * member, QGenericArgument 
 */
 void QMetaObject_invokeMethod4 ()
 {
-  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), (const char *) hb_parc(2) ) );
+  hb_retl( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2) ) );
 }
 
 //[1]bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
@@ -628,7 +626,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
 {
   if( ISCHAR(1) )
   {
-    QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature ( (const char *) hb_parc(1) ) );
+    QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature ( PCONSTCHAR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
@@ -644,7 +642,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
 {
   if( ISCHAR(1) )
   {
-    QByteArray * ptr = new QByteArray( QMetaObject::normalizedType ( (const char *) hb_parc(1) ) );
+    QByteArray * ptr = new QByteArray( QMetaObject::normalizedType ( PCONSTCHAR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
