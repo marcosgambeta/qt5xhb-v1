@@ -54,8 +54,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPT(2) )
   {
-    QAxScript * par2 = (QAxScript *) _qt5xhb_itemGetPtr(2);
-    QAxScriptEngine * o = new QAxScriptEngine ( PQSTRING(1), par2 );
+    QAxScriptEngine * o = new QAxScriptEngine ( PQSTRING(1), PQAXSCRIPT(2) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else
@@ -153,8 +152,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
   {
     if( ISNUMPAR(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setState ( (QAxScriptEngine::State) par1 );
+      obj->setState ( (QAxScriptEngine::State) hb_parni(1) );
     }
     else
     {

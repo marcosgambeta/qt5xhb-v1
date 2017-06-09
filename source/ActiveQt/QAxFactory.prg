@@ -281,8 +281,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
   {
     if( ISCHAR(1) && ISQSETTINGS(2) )
     {
-      QSettings * par2 = (QSettings *) _qt5xhb_itemGetPtr(2);
-      obj->registerClass ( PQSTRING(1), par2 );
+      obj->registerClass ( PQSTRING(1), PQSETTINGS(2) );
     }
     else
     {
@@ -338,8 +337,7 @@ HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
   {
     if( ISCHAR(1) && ISQSETTINGS(2) )
     {
-      QSettings * par2 = (QSettings *) _qt5xhb_itemGetPtr(2);
-      obj->unregisterClass ( PQSTRING(1), par2 );
+      obj->unregisterClass ( PQSTRING(1), PQSETTINGS(2) );
     }
     else
     {

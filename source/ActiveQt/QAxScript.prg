@@ -68,8 +68,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
   {
-    QAxScriptManager * par2 = (QAxScriptManager *) _qt5xhb_itemGetPtr(2);
-    QAxScript * o = new QAxScript ( PQSTRING(1), par2 );
+    QAxScript * o = new QAxScript ( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
     _qt5xhb_storePointerAndFlag( o, false );
   }
   else

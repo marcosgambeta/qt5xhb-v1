@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
   {
     if( ISQIODEVICE(1) && ISCHAR(2) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->readData ( par1, PQSTRING(2) ) );
+      hb_retl( obj->readData ( PQIODEVICE(1), PQSTRING(2) ) );
     }
     else
     {
@@ -157,8 +156,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->writeData ( par1 ) );
+      hb_retl( obj->writeData ( PQIODEVICE(1) ) );
     }
     else
     {

@@ -98,8 +98,7 @@ void QAxScriptManager_addObject1 ()
 
   if( obj )
   {
-    QAxBase * par1 = (QAxBase *) _qt5xhb_itemGetPtr(1);
-    obj->addObject ( par1 );
+    obj->addObject ( PQAXBASE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

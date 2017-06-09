@@ -193,7 +193,7 @@ void QAxBase_dynamicCall1 ()
     QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
-    QVariant * ptr = new QVariant( obj->dynamicCall ( (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall ( PCONSTCHAR(1), par2, par3, par4, par5, par6, par7, par8, par9 ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -207,7 +207,7 @@ void QAxBase_dynamicCall2 ()
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->dynamicCall ( (const char *) hb_parc(1), PQVARIANTLIST(2) ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall ( PCONSTCHAR(1), PQVARIANTLIST(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->propertyWritable ( (const char *) hb_parc(1) ) );
+      hb_retl( obj->propertyWritable ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -294,7 +294,7 @@ void QAxBase_querySubObject1 ()
     QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
-    QAxObject * ptr = obj->querySubObject ( (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 );
+    QAxObject * ptr = obj->querySubObject ( PCONSTCHAR(1), par2, par3, par4, par5, par6, par7, par8, par9 );
     _qt5xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
@@ -308,7 +308,7 @@ void QAxBase_querySubObject2 ()
 
   if( obj )
   {
-    QAxObject * ptr = obj->querySubObject ( (const char *) hb_parc(1), PQVARIANTLIST(2) );
+    QAxObject * ptr = obj->querySubObject ( PCONSTCHAR(1), PQVARIANTLIST(2) );
     _qt5xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QAXBASE_SETPROPERTYWRITABLE )
   {
     if( ISCHAR(1) && ISLOG(2) )
     {
-      obj->setPropertyWritable ( (const char *) hb_parc(1), PBOOL(2) );
+      obj->setPropertyWritable ( PCONSTCHAR(1), PBOOL(2) );
     }
     else
     {
