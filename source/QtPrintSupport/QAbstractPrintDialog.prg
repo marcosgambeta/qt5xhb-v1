@@ -240,8 +240,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setPrintRange ( (QAbstractPrintDialog::PrintRange) par1 );
+      obj->setPrintRange ( (QAbstractPrintDialog::PrintRange) hb_parni(1) );
     }
     else
     {
@@ -276,8 +275,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ADDENABLEDOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->addEnabledOption ( (QAbstractPrintDialog::PrintDialogOption) par1 );
+      obj->addEnabledOption ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) );
     }
     else
     {
@@ -335,8 +333,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ISOPTIONENABLED )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->isOptionEnabled ( (QAbstractPrintDialog::PrintDialogOption) par1 ) );
+      hb_retl( obj->isOptionEnabled ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) ) );
     }
     else
     {

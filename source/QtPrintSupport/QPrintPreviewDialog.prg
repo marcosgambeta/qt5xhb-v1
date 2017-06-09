@@ -56,10 +56,8 @@ explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::Win
 */
 void QPrintPreviewDialog_new1 ()
 {
-  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QPrintPreviewDialog * o = new QPrintPreviewDialog ( par1, par2, (Qt::WindowFlags) par3 );
+  QPrintPreviewDialog * o = new QPrintPreviewDialog ( PQPRINTER(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -68,9 +66,8 @@ explicit QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewDialog_new2 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QPrintPreviewDialog * o = new QPrintPreviewDialog ( par1, (Qt::WindowFlags) par2 );
+  QPrintPreviewDialog * o = new QPrintPreviewDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -121,7 +118,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
+      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
     }
     else
     {

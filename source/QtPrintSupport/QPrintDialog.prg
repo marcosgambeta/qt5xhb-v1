@@ -61,9 +61,7 @@ QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 void QPrintDialog_new1 ()
 {
-  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QPrintDialog * o = new QPrintDialog ( par1, par2 );
+  QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -72,8 +70,7 @@ QPrintDialog ( QWidget * parent = 0 )
 */
 void QPrintDialog_new2 ()
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QPrintDialog * o = new QPrintDialog ( par1 );
+  QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -124,7 +121,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
+      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
     }
     else
     {
@@ -173,8 +170,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   {
     if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
-      int par1 = hb_parni(1);
-      obj->setOption ( (QPrintDialog::PrintDialogOption) par1, PBOOL(2) );
+      obj->setOption ( (QPrintDialog::PrintDialogOption) hb_parni(1), PBOOL(2) );
     }
     else
     {
@@ -219,8 +215,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testOption ( (QPrintDialog::PrintDialogOption) par1 ) );
+      hb_retl( obj->testOption ( (QPrintDialog::PrintDialogOption) hb_parni(1) ) );
     }
     else
     {

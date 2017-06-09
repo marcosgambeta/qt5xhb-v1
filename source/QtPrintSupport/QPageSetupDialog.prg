@@ -55,9 +55,7 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 void QPageSetupDialog_new1 ()
 {
-  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QPageSetupDialog * o = new QPageSetupDialog ( par1, par2 );
+  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -66,9 +64,7 @@ QPageSetupDialog ( QWidget * parent = 0 )
 */
 void QPageSetupDialog_new2 ()
 {
-  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QPageSetupDialog * o = new QPageSetupDialog ( par1, par2 );
+  QPageSetupDialog * o = new QPageSetupDialog ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -119,7 +115,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
+      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
     }
     else
     {
