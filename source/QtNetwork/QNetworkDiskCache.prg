@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QIODevice * ptr = obj->data ( *par1 );
+    QIODevice * ptr = obj->data ( *PQURL(1) );
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->insert ( par1 );
+    obj->insert ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -203,8 +201,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *par1 ) );
+    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
   }
 }
@@ -233,8 +230,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->remove ( *par1 ) );
+    hb_retl( obj->remove ( *PQURL(1) ) );
   }
 }
 

@@ -103,8 +103,7 @@ QHostAddress ( const QHostAddress & address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
 {
-  QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-  QHostAddress * o = new QHostAddress ( *par1 );
+  QHostAddress * o = new QHostAddress ( *PQHOSTADDRESS(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -113,8 +112,7 @@ QHostAddress ( SpecialAddress address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
-  int par1 = hb_parni(1);
-  QHostAddress * o = new QHostAddress ( (QHostAddress::SpecialAddress) par1 );
+  QHostAddress * o = new QHostAddress ( (QHostAddress::SpecialAddress) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -189,8 +187,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isInSubnet ( *par1, PINT(2) ) );
+    hb_retl( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
   }
 }
 

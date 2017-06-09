@@ -65,8 +65,7 @@ QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) par1, OPQOBJECT(2,0) );
+  QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -142,8 +141,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
   QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setBoundary ( *par1 );
+    obj->setBoundary ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -157,8 +155,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
   QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setContentType ( (QHttpMultiPart::ContentType) par1 );
+    obj->setContentType ( (QHttpMultiPart::ContentType) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

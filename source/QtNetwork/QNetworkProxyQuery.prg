@@ -88,9 +88,8 @@ QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW2 )
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QNetworkProxyQuery::UrlRequest : hb_parni(2);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, (QNetworkProxyQuery::QueryType) par2 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQURL(1), (QNetworkProxyQuery::QueryType) par2 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -99,9 +98,8 @@ QNetworkProxyQuery ( const QString & hostname, int port, const QString & protoco
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW3 )
 {
-  int par2 = hb_parni(2);
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(4);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( PQSTRING(1), par2, OPQSTRING(3,QString()), (QNetworkProxyQuery::QueryType) par4 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( PQSTRING(1), PINT(2), OPQSTRING(3,QString()), (QNetworkProxyQuery::QueryType) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -132,9 +130,8 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW6 )
 {
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
-  QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::UrlRequest : hb_parni(3);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, *par2, (QNetworkProxyQuery::QueryType) par3 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, *PQURL(2), (QNetworkProxyQuery::QueryType) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -143,10 +140,8 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW7 )
 {
-  QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
-  int par3 = hb_parni(3);
   int par5 = ISNIL(5)? (int) QNetworkProxyQuery::TcpSocket : hb_parni(5);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, PQSTRING(2), par3, OPQSTRING(4,QString()), (QNetworkProxyQuery::QueryType) par5 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKCONFIGURATION(1), PQSTRING(2), PINT(3), OPQSTRING(4,QString()), (QNetworkProxyQuery::QueryType) par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -155,10 +150,9 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
 {
-  QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   quint16 par2 = hb_parni(2);
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpServer : hb_parni(4);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, par2, OPQSTRING(3,QString()), (QNetworkProxyQuery::QueryType) par4 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKCONFIGURATION(1), par2, OPQSTRING(3,QString()), (QNetworkProxyQuery::QueryType) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -356,8 +350,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setQueryType ( (QNetworkProxyQuery::QueryType) par1 );
+    obj->setQueryType ( (QNetworkProxyQuery::QueryType) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -371,8 +364,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setUrl ( *par1 );
+    obj->setUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

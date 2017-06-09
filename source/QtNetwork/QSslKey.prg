@@ -77,12 +77,10 @@ QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::Encodi
 */
 HB_FUNC_STATIC( QSSLKEY_NEW2 )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(5);
-  QSslKey * o = new QSslKey ( *par1, (QSsl::KeyAlgorithm) par2, (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
+  QSslKey * o = new QSslKey ( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -91,12 +89,10 @@ QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat
 */
 HB_FUNC_STATIC( QSSLKEY_NEW3 )
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(5);
-  QSslKey * o = new QSslKey ( par1, (QSsl::KeyAlgorithm) par2, (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
+  QSslKey * o = new QSslKey ( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

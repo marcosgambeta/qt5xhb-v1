@@ -790,8 +790,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYMODE )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPeerVerifyMode ( (QSslSocket::PeerVerifyMode) par1 );
+    obj->setPeerVerifyMode ( (QSslSocket::PeerVerifyMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -855,8 +854,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPROTOCOL )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setProtocol ( (QSsl::SslProtocol) par1 );
+    obj->setProtocol ( (QSsl::SslProtocol) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -899,8 +897,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSocketOption ( (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
+    obj->setSocketOption ( (QAbstractSocket::SocketOption) hb_parni(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -929,8 +926,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) par1 ) );
+    QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

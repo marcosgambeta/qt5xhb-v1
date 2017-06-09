@@ -85,8 +85,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->bind ( *par1, (quint16) hb_parni(2) ) );
+    hb_retl( obj->bind ( *PQHOSTADDRESS(1), (quint16) hb_parni(2) ) );
   }
 }
 
@@ -98,8 +97,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->bind ( *par1, (quint16) hb_parni(2) ) );
+    hb_retl( obj->bind ( *PQHOSTADDRESS(1), (quint16) hb_parni(2) ) ); // TODO: parametro 3 ausente
   }
 }
 
@@ -207,8 +205,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par3 = (QHostAddress *) _qt5xhb_itemGetPtr(3);
-    hb_retni( obj->writeDatagram ( (const char *) hb_parc(1), (qint64) hb_parni(2), *par3, (quint16) hb_parni(4) ) );
+    hb_retni( obj->writeDatagram ( PCONSTCHAR(1), (qint64) hb_parni(2), *PQHOSTADDRESS(1), (quint16) hb_parni(4) ) );
   }
 }
 
@@ -220,9 +217,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    QHostAddress * par2 = (QHostAddress *) _qt5xhb_itemGetPtr(2);
-    hb_retni( obj->writeDatagram ( *par1, *par2, (quint16) hb_parni(3) ) );
+    hb_retni( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), (quint16) hb_parni(3) ) );
   }
 }
 

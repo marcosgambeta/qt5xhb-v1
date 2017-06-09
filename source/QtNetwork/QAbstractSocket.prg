@@ -94,8 +94,7 @@ QAbstractSocket ( SocketType socketType, QObject * parent )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
-  int par1 = hb_parni(1);
-  QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) par1, PQOBJECT(2) );
+  QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -152,9 +151,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( *par1, (quint16) hb_parni(2), (QAbstractSocket::OpenMode) par3 );
+    obj->connectToHost ( *PQHOSTADDRESS(1), (quint16) hb_parni(2), (QAbstractSocket::OpenMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -359,8 +357,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSocketOption ( (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
+    obj->setSocketOption ( (QAbstractSocket::SocketOption) hb_parni(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -387,8 +384,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) par1 ) );
+    QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

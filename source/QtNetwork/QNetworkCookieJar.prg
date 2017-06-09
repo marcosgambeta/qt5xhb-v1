@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
   QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QList<QNetworkCookie> list = obj->cookiesForUrl ( *par1 );
+    QList<QNetworkCookie> list = obj->cookiesForUrl ( *PQURL(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QNETWORKCOOKIE" );
@@ -139,8 +138,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
     {
       par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->setCookiesFromUrl ( par1, *par2 ) );
+    hb_retl( obj->setCookiesFromUrl ( par1, *PQURL(2) ) );
   }
 }
 

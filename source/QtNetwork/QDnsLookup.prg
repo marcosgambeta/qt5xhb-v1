@@ -70,8 +70,7 @@ QDnsLookup(Type type, const QString & name, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QDNSLOOKUP_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) par1, PQSTRING(2), OPQOBJECT(3,0) );
+  QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -190,8 +189,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setType ( (QDnsLookup::Type) par1 );
+    obj->setType ( (QDnsLookup::Type) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

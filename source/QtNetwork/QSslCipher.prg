@@ -74,8 +74,7 @@ QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
 {
-  int par2 = hb_parni(2);
-  QSslCipher * o = new QSslCipher ( PQSTRING(1), (QSsl::SslProtocol) par2 );
+  QSslCipher * o = new QSslCipher ( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -84,8 +83,7 @@ QSslCipher ( const QSslCipher & other )
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
 {
-  QSslCipher * par1 = (QSslCipher *) _qt5xhb_itemGetPtr(1);
-  QSslCipher * o = new QSslCipher ( *par1 );
+  QSslCipher * o = new QSslCipher ( *PQSSLCIPHER(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

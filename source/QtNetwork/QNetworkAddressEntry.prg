@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-    obj->setBroadcast ( *par1 );
+    obj->setBroadcast ( *PQHOSTADDRESS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -194,8 +193,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-    obj->setIp ( *par1 );
+    obj->setIp ( *PQHOSTADDRESS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -209,8 +207,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) _qt5xhb_itemGetPtr(1);
-    obj->setNetmask ( *par1 );
+    obj->setNetmask ( *PQHOSTADDRESS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

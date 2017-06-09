@@ -83,9 +83,7 @@ QSslError ( SslError error, const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLERROR_NEW3 )
 {
-  int par1 = hb_parni(1);
-  QSslCertificate * par2 = (QSslCertificate *) _qt5xhb_itemGetPtr(2);
-  QSslError * o = new QSslError ( (QSslError::SslError) par1, *par2 );
+  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -94,8 +92,7 @@ QSslError ( const QSslError & other )
 */
 HB_FUNC_STATIC( QSSLERROR_NEW4 )
 {
-  QSslError * par1 = (QSslError *) _qt5xhb_itemGetPtr(1);
-  QSslError * o = new QSslError ( *par1 );
+  QSslError * o = new QSslError ( *PQSSLERROR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

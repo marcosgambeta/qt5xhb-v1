@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setName ( *par1 );
+    obj->setName ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -317,8 +316,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setValue ( *par1 );
+    obj->setValue ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -358,8 +356,7 @@ static QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QList<QNetworkCookie> list = QNetworkCookie::parseCookies ( *par1 );
+  QList<QNetworkCookie> list = QNetworkCookie::parseCookies ( *PQBYTEARRAY(1) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QNETWORKCOOKIE" );
