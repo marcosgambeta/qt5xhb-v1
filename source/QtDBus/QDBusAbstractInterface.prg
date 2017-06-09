@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
   if( obj )
   {
     QDBusError * ptr = new QDBusError( obj->lastError () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR" );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
   }
 }
 
@@ -216,7 +216,6 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL2 )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
     QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
@@ -225,7 +224,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL2 )
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
     QVariant par10 = ISNIL(10)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(10);
-    QDBusMessage * ptr = new QDBusMessage( obj->call ( (QDBus::CallMode) par1, PQSTRING(2), par3, par4, par5, par6, par7, par8, par9, par10 ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->call ( (QDBus::CallMode) hb_parni(1), PQSTRING(2), par3, par4, par5, par6, par7, par8, par9, par10 ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -247,8 +246,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList ( (QDBus::CallMode) par1, PQSTRING(2), PQVARIANTLIST(3) ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList ( (QDBus::CallMode) hb_parni(1), PQSTRING(2), PQVARIANTLIST(3) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -262,7 +260,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK1 )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->callWithCallback ( PQSTRING(1), PQVARIANTLIST(2), PQOBJECT(3), (const char *) hb_parc(4), (const char *) hb_parc(5) ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), PQVARIANTLIST(2), PQOBJECT(3), PCONSTCHAR(4), PCONSTCHAR(5) ) );
   }
 }
 
@@ -274,7 +272,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK2 )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->callWithCallback ( PQSTRING(1), PQVARIANTLIST(2), PQOBJECT(3), (const char *) hb_parc(4) ) );
+    hb_retl( obj->callWithCallback ( PQSTRING(1), PQVARIANTLIST(2), PQOBJECT(3), PCONSTCHAR(4) ) );
   }
 }
 

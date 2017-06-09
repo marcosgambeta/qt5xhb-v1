@@ -175,8 +175,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY2 )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->sendErrorReply ( (QDBusError::ErrorType) par1, OPQSTRING(2,QString()) );
+    obj->sendErrorReply ( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

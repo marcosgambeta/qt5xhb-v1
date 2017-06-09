@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ASSIGN2 )
   QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->assign ();
+    obj->assign ( *PQDBUSMESSAGE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -13,11 +13,6 @@ CLASS QDBusError
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD type
@@ -61,50 +56,48 @@ RETURN
 /*
 QDBusError()
 */
-HB_FUNC_STATIC( QDBUSERROR_NEW1 )
+void QDBusError_new1 ()
 {
   QDBusError * o = new QDBusError ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QDBusError(const DBusError *error)
 */
-HB_FUNC_STATIC( QDBUSERROR_NEW2 )
+void QDBusError_new2 ()
 {
   DBusError * par1 = (DBusError *) _qt5xhb_itemGetPtr(1);
   QDBusError * o = new QDBusError ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QDBusError(const QDBusMessage& msg)
 */
-HB_FUNC_STATIC( QDBUSERROR_NEW3 )
+void QDBusError_new3 ()
 {
-  QDBusError * o = new QDBusError ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  QDBusError * o = new QDBusError ( *PQDBUSMESSAGE(1) );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QDBusError(ErrorType error, const QString &message)
 */
-HB_FUNC_STATIC( QDBUSERROR_NEW4 )
+void QDBusError_new4 ()
 {
-  int par1 = hb_parni(1);
-  QDBusError * o = new QDBusError ( (QDBusError::ErrorType) par1, PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  QDBusError * o = new QDBusError ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QDBusError(const QDBusError &other)
 */
-HB_FUNC_STATIC( QDBUSERROR_NEW5 )
+void QDBusError_new5 ()
 {
   QDBusError * o = new QDBusError ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
-
 
 //[1]QDBusError()
 //[2]QDBusError(const DBusError *error)
@@ -114,11 +107,36 @@ HB_FUNC_STATIC( QDBUSERROR_NEW5 )
 
 HB_FUNC_STATIC( QDBUSERROR_NEW )
 {
+  if( ISNUMPAR(0) )
+  {
+    QDBusError_new1();
+  }
+  //else if( ISNUMPAR(1) && ISDBUSERROR(1) )
+  //{
+  //  QDBusError_new2();
+  //}
+  else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
+  {
+    QDBusError_new3();
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+  {
+    QDBusError_new4();
+  }
+  else if( ISNUMPAR(1) && ISQDBUSERROR(1) )
+  {
+    QDBusError_new5();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QDBUSERROR_DELETE )
 {
   QDBusError * obj = (QDBusError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -128,6 +146,7 @@ HB_FUNC_STATIC( QDBUSERROR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -137,12 +156,12 @@ ErrorType type() const
 HB_FUNC_STATIC( QDBUSERROR_TYPE )
 {
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->type () );
   }
 }
-
 
 /*
 QString name() const
@@ -150,12 +169,12 @@ QString name() const
 HB_FUNC_STATIC( QDBUSERROR_NAME )
 {
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( RQSTRING( obj->name () ) );
   }
 }
-
 
 /*
 QString message() const
@@ -163,12 +182,12 @@ QString message() const
 HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
 {
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( RQSTRING( obj->message () ) );
   }
 }
-
 
 /*
 bool isValid() const
@@ -176,27 +195,32 @@ bool isValid() const
 HB_FUNC_STATIC( QDBUSERROR_ISVALID )
 {
   QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retl( obj->isValid () );
   }
 }
 
-
 /*
 static QString errorString(ErrorType error)
 */
 HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {
-  int par1 = hb_parni(1);
-  hb_retc( RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) par1 ) ) );
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    hb_retc( RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) hb_parni(1) ) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
-
 
 HB_FUNC_STATIC( QDBUSERROR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -215,6 +239,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -236,14 +261,15 @@ HB_FUNC_STATIC( QDBUSERROR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QDBUSERROR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

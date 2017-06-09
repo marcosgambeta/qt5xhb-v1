@@ -96,7 +96,7 @@ QDBusMessage(const QDBusMessage &other)
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW2 )
 {
-  QDBusMessage * o = new QDBusMessage ();
+  QDBusMessage * o = new QDBusMessage ( *PQDBUSMESSAGE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -193,8 +193,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY3 )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply ( (QDBusError::ErrorType) par1, PQSTRING(2) ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
   }
 }
@@ -451,8 +450,7 @@ static inline QDBusMessage createError(QDBusError::ErrorType type, const QString
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR3 )
 {
-  int par1 = hb_parni(1);
-  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError ( (QDBusError::ErrorType) par1, PQSTRING(2) ) );
+  QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
 }
 

@@ -88,14 +88,14 @@ HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
 
 
 /*
-virtual void *qt_metacast(const char *)
+virtual void * qt_metacast ( const char * )
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
 {
   QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retptr( (void *) obj->qt_metacast ( (const char *) hb_parc(1) ) );
+    hb_retptr( (void *) obj->qt_metacast ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACALL )
   QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->qt_metacall ( (QMetaObject::Call) par1, PINT(2) ) );
+    hb_retni( obj->qt_metacall ( (QMetaObject::Call) hb_parni(1), PINT(2), par3 ) ); // TODO: parametro 3
   }
 }
 

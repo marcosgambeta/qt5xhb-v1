@@ -72,8 +72,7 @@ explicit QDBusUnixFileDescriptor(int fileDescriptor)
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW2 )
 {
-  int par1 = hb_parni(1);
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ( par1 );
+  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
