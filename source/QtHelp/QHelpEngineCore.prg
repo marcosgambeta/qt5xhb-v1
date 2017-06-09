@@ -233,8 +233,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QByteArray * ptr = new QByteArray( obj->fileData ( *par1 ) );
+    QByteArray * ptr = new QByteArray( obj->fileData ( *PQURL(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -297,8 +296,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QUrl * ptr = new QUrl( obj->findFile ( *par1 ) );
+    QUrl * ptr = new QUrl( obj->findFile ( *PQURL(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

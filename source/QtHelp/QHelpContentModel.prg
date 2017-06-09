@@ -80,8 +80,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
   QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QHelpContentItem * ptr = obj->contentItemAt ( *par1 );
+    QHelpContentItem * ptr = obj->contentItemAt ( *PQMODELINDEX(1) );
     _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
 }
@@ -136,8 +135,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
   QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVariant * ptr = new QVariant( obj->data ( *par1, PINT(2) ) );
+    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), PINT(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -166,8 +164,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
   QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
