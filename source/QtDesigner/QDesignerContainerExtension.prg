@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->addWidget ( par1 );
+      obj->addWidget ( PQWIDGET(1) );
     }
     else
     {
@@ -135,8 +134,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
   {
     if( ISNUM(1) && ISQWIDGET(2) )
     {
-      QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-      obj->insertWidget ( PINT(1), par2 );
+      obj->insertWidget ( PINT(1), PQWIDGET(2) );
     }
     else
     {

@@ -101,9 +101,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
   {
     if( ISQIODEVICE(1) && ISOPTQWIDGET(2) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-      QWidget * ptr = obj->load ( par1, par2 );
+      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -124,9 +122,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
   {
     if( ISQIODEVICE(1) && ISQWIDGET(2) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-      obj->save ( par1, par2 );
+      obj->save ( PQIODEVICE(1), PQWIDGET(2) );
     }
     else
     {

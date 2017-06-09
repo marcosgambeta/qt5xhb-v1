@@ -384,9 +384,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
   {
     if( ISOPTQWIDGET(1) && ISOPTNUM(2) )
     {
-      QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      QDesignerFormWindowInterface * ptr = obj->createFormWindow ( par1, (Qt::WindowFlags) par2 );
+      QDesignerFormWindowInterface * ptr = obj->createFormWindow ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
       _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
     }
     else

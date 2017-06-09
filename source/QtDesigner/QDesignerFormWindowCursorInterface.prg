@@ -132,8 +132,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
   {
     if( ISQWIDGET(1) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isWidgetSelected ( par1 ) );
+      hb_retl( obj->isWidgetSelected ( PQWIDGET(1) ) );
     }
     else
     {
@@ -153,9 +152,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2);
-      hb_retl( obj->movePosition ( (QDesignerFormWindowCursorInterface::MoveOperation) par1, (QDesignerFormWindowCursorInterface::MoveMode) par2 ) );
+      hb_retl( obj->movePosition ( (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1), (QDesignerFormWindowCursorInterface::MoveMode) par2 ) );
     }
     else
     {
