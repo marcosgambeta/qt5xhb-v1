@@ -91,9 +91,8 @@ QQuickView(const QUrl & source, QWindow * parent = 0)
 */
 HB_FUNC_STATIC( QQUICKVIEW_NEW3 )
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
   QWindow * par2 = ISNIL(2)? 0 : (QWindow *) _qt5xhb_itemGetPtr(2);
-  QQuickView * o = new QQuickView ( *par1, par2 );
+  QQuickView * o = new QQuickView ( *PQURL(1), par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -215,8 +214,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
   QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setResizeMode ( (QQuickView::ResizeMode) par1 );
+    obj->setResizeMode ( (QQuickView::ResizeMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -257,8 +255,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
   QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setSource ( *par1 );
+    obj->setSource ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

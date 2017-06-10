@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QSGNODE_MARKDIRTY )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->markDirty ( (QSGNode::DirtyState) par1 );
+    obj->markDirty ( (QSGNode::DirtyState) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

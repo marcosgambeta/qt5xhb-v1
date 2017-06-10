@@ -414,8 +414,7 @@ HB_FUNC_STATIC( QQUICKITEM_INPUTMETHODQUERY )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -1044,8 +1043,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETTRANSFORMORIGIN )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTransformOrigin ( (QQuickItem::TransformOrigin) par1 );
+    obj->setTransformOrigin ( (QQuickItem::TransformOrigin) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
