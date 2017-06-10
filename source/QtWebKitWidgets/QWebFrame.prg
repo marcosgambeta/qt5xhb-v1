@@ -326,8 +326,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD1 )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->load ( *par1 );
+    obj->load ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -445,9 +444,8 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER3 )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
     QRegion par3 = ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3);
-    obj->render ( PQPAINTER(1), (QWebFrame::RenderLayer) par2, par3 );
+    obj->render ( PQPAINTER(1), (QWebFrame::RenderLayer) hb_parni(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -514,8 +512,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QRect * ptr = new QRect( obj->scrollBarGeometry ( (Qt::Orientation) par1 ) );
+    QRect * ptr = new QRect( obj->scrollBarGeometry ( (Qt::Orientation) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -529,8 +526,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarMaximum ( (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarMaximum ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -543,8 +539,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarMinimum ( (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarMinimum ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -557,8 +552,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarPolicy ( (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarPolicy ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -571,8 +565,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->scrollBarValue ( (Qt::Orientation) par1 ) );
+    hb_retni( obj->scrollBarValue ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -627,9 +620,8 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
-    obj->setContent ( *par1, OPQSTRING(2,QString()), par3 );
+    obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -672,9 +664,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setScrollBarPolicy ( (Qt::Orientation) par1, (Qt::ScrollBarPolicy) par2 );
+    obj->setScrollBarPolicy ( (Qt::Orientation) hb_parni(1), (Qt::ScrollBarPolicy) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -688,8 +678,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setScrollBarValue ( (Qt::Orientation) par1, PINT(2) );
+    obj->setScrollBarValue ( (Qt::Orientation) hb_parni(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -731,8 +720,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETURL )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setUrl ( *par1 );
+    obj->setUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -853,8 +841,7 @@ HB_FUNC_STATIC( QWEBFRAME_PRINT )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
-    obj->print ( par1 );
+    obj->print ( PQPRINTER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

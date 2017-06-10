@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QAction * ptr = obj->action ( (QWebPage::WebAction) par1 );
+    QAction * ptr = obj->action ( (QWebPage::WebAction) hb_parni(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -211,10 +210,9 @@ HB_FUNC_STATIC( QWEBPAGE_EXTENSION )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
     QWebPage::ExtensionOption * par2 = (QWebPage::ExtensionOption *) _qt5xhb_itemGetPtr(2);
     QWebPage::ExtensionReturn * par3 = ISNIL(3)? 0 : (QWebPage::ExtensionReturn *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->extension ( (QWebPage::Extension) par1, par2, par3 ) );
+    hb_retl( obj->extension ( (QWebPage::Extension) hb_parni(1), par2, par3 ) );
   }
 }
 
@@ -295,8 +293,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -460,8 +457,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLinkDelegationPolicy ( (QWebPage::LinkDelegationPolicy) par1 );
+    obj->setLinkDelegationPolicy ( (QWebPage::LinkDelegationPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -533,8 +529,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setView ( par1 );
+    obj->setView ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -576,8 +571,7 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension ( (QWebPage::Extension) par1 ) );
+    hb_retl( obj->supportsExtension ( (QWebPage::Extension) hb_parni(1) ) );
   }
 }
 
@@ -617,8 +611,7 @@ HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
   QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->triggerAction ( (QWebPage::WebAction) par1, OPBOOL(2,false) );
+    obj->triggerAction ( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
