@@ -303,9 +303,7 @@ static void setWindowFlip3DPolicy(QWindow *window, WindowFlip3DPolicy policy)
 HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
-  QtWin::setWindowFlip3DPolicy ( par1, (QtWin::WindowFlip3DPolicy) par2 );
+  QtWin::setWindowFlip3DPolicy ( PQWINDOW(1), (QtWin::WindowFlip3DPolicy) hb_parni(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
