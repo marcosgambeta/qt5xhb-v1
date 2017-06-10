@@ -84,10 +84,8 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
   {
     if( ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
       QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-      QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QWidget * ptr = obj->createEditor ( par1, *par2, *par3 );
+      QWidget * ptr = obj->createEditor ( PQWIDGET(1), *par2, *PQMODELINDEX(3) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -108,10 +106,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
   {
     if( ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
     {
-      QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-      QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
-      QModelIndex * par3 = (QModelIndex *) _qt5xhb_itemGetPtr(3);
-      obj->setModelData ( par1, par2, *par3 );
+      obj->setModelData ( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
     }
     else
     {

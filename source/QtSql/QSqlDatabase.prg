@@ -427,8 +427,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) par1 );
+      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
     }
     else
     {

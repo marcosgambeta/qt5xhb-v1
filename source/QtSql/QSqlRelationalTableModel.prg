@@ -176,8 +176,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
   {
     if( ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      QVariant * ptr = new QVariant( obj->data ( *par1, OPINT(2,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -232,8 +231,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
   {
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      QModelIndex * par1 = (QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->setData ( *par1, *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {
@@ -297,8 +295,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETJOINMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setJoinMode ( (QSqlRelationalTableModel::JoinMode) par1 );
+      obj->setJoinMode ( (QSqlRelationalTableModel::JoinMode) hb_parni(1) );
     }
     else
     {

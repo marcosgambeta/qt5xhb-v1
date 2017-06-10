@@ -64,9 +64,7 @@ QSqlError ( const QString & driverText, const QString & databaseText, ErrorType 
 */
 void QSqlError_new1 ()
 {
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  QSqlError * o = new QSqlError ( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) par3, par4 );
+  QSqlError * o = new QSqlError ( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) hb_parni(3), PINT(4) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -85,8 +83,7 @@ QSqlError ( const QSqlError & other )
 */
 void QSqlError_new3 ()
 {
-  QSqlError * par1 = (QSqlError *) _qt5xhb_itemGetPtr(1);
-  QSqlError * o = new QSqlError ( *par1 );
+  QSqlError * o = new QSqlError ( *PQSQLERROR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -286,8 +283,7 @@ HB_FUNC_STATIC( QSQLERROR_SETTYPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setType ( (QSqlError::ErrorType) par1 );
+      obj->setType ( (QSqlError::ErrorType) hb_parni(1) );
     }
     else
     {

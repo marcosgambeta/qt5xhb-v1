@@ -445,8 +445,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setRequiredStatus ( (QSqlField::RequiredStatus) par1 );
+      obj->setRequiredStatus ( (QSqlField::RequiredStatus) hb_parni(1) );
     }
     else
     {
@@ -503,8 +502,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setType ( (QVariant::Type) par1 );
+      obj->setType ( (QVariant::Type) hb_parni(1) );
     }
     else
     {
