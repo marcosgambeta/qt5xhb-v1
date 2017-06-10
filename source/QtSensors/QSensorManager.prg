@@ -84,10 +84,8 @@ static void registerBackend(const QByteArray &type, const QByteArray &identifier
 HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
   QSensorBackendFactory * par3 = (QSensorBackendFactory *) _qt5xhb_itemGetPtr(3);
-  QSensorManager::registerBackend ( *par1, *par2, par3 );
+  QSensorManager::registerBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2), par3 );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -99,9 +97,7 @@ static void unregisterBackend(const QByteArray &type, const QByteArray &identifi
 HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QSensorManager::unregisterBackend ( *par1, *par2 );
+  QSensorManager::unregisterBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -113,9 +109,7 @@ static bool isBackendRegistered(const QByteArray &type, const QByteArray &identi
 HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QSensorManager::isBackendRegistered ( *par1, *par2 ) );
+  hb_retl( QSensorManager::isBackendRegistered ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
 #endif
 }
 
@@ -139,9 +133,7 @@ static void setDefaultBackend(const QByteArray &type, const QByteArray &identifi
 HB_FUNC_STATIC( QSENSORMANAGER_SETDEFAULTBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QByteArray * par2 = (QByteArray *) _qt5xhb_itemGetPtr(2);
-  QSensorManager::setDefaultBackend ( *par1, *par2 );
+  QSensorManager::setDefaultBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }

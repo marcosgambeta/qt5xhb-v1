@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTREADING_SETLIGHTLEVEL )
   QAmbientLightReading * obj = (QAmbientLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLightLevel ( (QAmbientLightReading::LightLevel) par1 );
+    obj->setLightLevel ( (QAmbientLightReading::LightLevel) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

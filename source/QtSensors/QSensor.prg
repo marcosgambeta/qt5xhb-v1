@@ -116,8 +116,7 @@ QSensor(const QByteArray &type, QObject *parent = 0)
 HB_FUNC_STATIC( QSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QSensor * o = new QSensor ( *par1, OPQOBJECT(2,0) );
+  QSensor * o = new QSensor ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -165,8 +164,7 @@ HB_FUNC_STATIC( QSENSOR_SETIDENTIFIER )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setIdentifier ( *par1 );
+    obj->setIdentifier ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -556,8 +554,7 @@ HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isFeatureSupported ( (QSensor::Feature) par1 ) );
+    hb_retl( obj->isFeatureSupported ( (QSensor::Feature) hb_parni(1) ) );
   }
 #endif
 }
@@ -587,8 +584,7 @@ HB_FUNC_STATIC( QSENSOR_SETAXESORIENTATIONMODE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAxesOrientationMode ( (QSensor::AxesOrientationMode) par1 );
+    obj->setAxesOrientationMode ( (QSensor::AxesOrientationMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -829,8 +825,7 @@ static QList<QByteArray> sensorsForType(const QByteArray &type)
 HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QList<QByteArray> list = QSensor::sensorsForType ( *par1 );
+  QList<QByteArray> list = QSensor::sensorsForType ( *PQBYTEARRAY(1) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -872,8 +867,7 @@ static QByteArray defaultSensorForType(const QByteArray &type)
 HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QByteArray * ptr = new QByteArray( QSensor::defaultSensorForType ( *par1 ) );
+  QByteArray * ptr = new QByteArray( QSensor::defaultSensorForType ( *PQBYTEARRAY(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 #endif
 }

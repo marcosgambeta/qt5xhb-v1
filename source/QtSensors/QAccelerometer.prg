@@ -107,8 +107,7 @@ HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
   QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAccelerationMode ( (QAccelerometer::AccelerationMode) par1 );
+    obj->setAccelerationMode ( (QAccelerometer::AccelerationMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

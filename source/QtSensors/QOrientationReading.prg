@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
   QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation ( (QOrientationReading::Orientation) par1 );
+    obj->setOrientation ( (QOrientationReading::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
