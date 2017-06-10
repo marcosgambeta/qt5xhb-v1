@@ -238,8 +238,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   {
     if( ISCHAR(1) && ISOPTQWIDGET(2) && ISOPTCHAR(3) )
     {
-      QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-      QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, OPQSTRING(3,QString()) );
+      QWidget * ptr = obj->createWidget ( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -273,9 +272,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
   {
     if( ISQIODEVICE(1) && ISOPTQWIDGET(2) )
     {
-      QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-      QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-      QWidget * ptr = obj->load ( par1, par2 );
+      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
