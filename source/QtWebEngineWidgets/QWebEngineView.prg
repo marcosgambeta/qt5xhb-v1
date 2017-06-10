@@ -89,8 +89,7 @@ explicit QWebEngineView(QWidget* parent = 0)
 HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QWebEngineView * o = new QWebEngineView ( par1 );
+  QWebEngineView * o = new QWebEngineView ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -154,8 +153,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->load ( *par1 );
+    obj->load ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -188,9 +186,8 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
-    obj->setContent ( *par1, OPQSTRING(2,QString()), par3 );
+    obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -252,8 +249,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setUrl ( *par1 );
+    obj->setUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -316,8 +312,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QAction * ptr = obj->pageAction ( (QWebEnginePage::WebAction) par1 );
+    QAction * ptr = obj->pageAction ( (QWebEnginePage::WebAction) hb_parni(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 #endif
@@ -334,8 +329,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->triggerPageAction ( (QWebEnginePage::WebAction) par1, OPBOOL(2,false) );
+    obj->triggerPageAction ( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -66,10 +66,8 @@ QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorD
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  int par1 = hb_parni(1);
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-  bool par3 = hb_parl(3);
-  QWebEngineCertificateError * o = new QWebEngineCertificateError ( par1, *par2, par3, PQSTRING(4) );
+  QWebEngineCertificateError * o = new QWebEngineCertificateError ( PINT(1), *par2, PBOOL(3), PQSTRING(4) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }

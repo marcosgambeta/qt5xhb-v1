@@ -165,8 +165,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETVIEW )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWidget * par1 = (QWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setView ( par1 );
+    obj->setView ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -230,8 +229,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->triggerAction ( (QWebEnginePage::WebAction) par1, OPBOOL(2,false) );
+    obj->triggerAction ( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -296,10 +294,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETFEATUREPERMISSION )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    obj->setFeaturePermission ( *par1, (QWebEnginePage::Feature) par2, (QWebEnginePage::PermissionPolicy) par3 );
+    obj->setFeaturePermission ( *PQURL(1), (QWebEnginePage::Feature) hb_parni(2), (QWebEnginePage::PermissionPolicy) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -315,8 +310,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_LOAD )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->load ( *par1 );
+    obj->load ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -349,9 +343,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
-    obj->setContent ( *par1, OPQSTRING(2,QString()), par3 );
+    obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -429,8 +422,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETURL )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setUrl ( *par1 );
+    obj->setUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
