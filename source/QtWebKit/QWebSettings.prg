@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->fontFamily ( (QWebSettings::FontFamily) par1 ) ) );
+    hb_retc( RQSTRING( obj->fontFamily ( (QWebSettings::FontFamily) hb_parni(1) ) ) );
   }
 }
 
@@ -126,8 +125,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->fontSize ( (QWebSettings::FontSize) par1 ) );
+    hb_retni( obj->fontSize ( (QWebSettings::FontSize) hb_parni(1) ) );
   }
 }
 
@@ -153,8 +151,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->resetAttribute ( (QWebSettings::WebAttribute) par1 );
+    obj->resetAttribute ( (QWebSettings::WebAttribute) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -168,8 +165,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->resetFontFamily ( (QWebSettings::FontFamily) par1 );
+    obj->resetFontFamily ( (QWebSettings::FontFamily) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -183,8 +179,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->resetFontSize ( (QWebSettings::FontSize) par1 );
+    obj->resetFontSize ( (QWebSettings::FontSize) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -198,8 +193,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAttribute ( (QWebSettings::WebAttribute) par1, PBOOL(2) );
+    obj->setAttribute ( (QWebSettings::WebAttribute) hb_parni(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -227,8 +221,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFontFamily ( (QWebSettings::FontFamily) par1, PQSTRING(2) );
+    obj->setFontFamily ( (QWebSettings::FontFamily) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -242,8 +235,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFontSize ( (QWebSettings::FontSize) par1, PINT(2) );
+    obj->setFontSize ( (QWebSettings::FontSize) hb_parni(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -271,8 +263,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setUserStyleSheetUrl ( *par1 );
+    obj->setUserStyleSheetUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -286,8 +277,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->testAttribute ( (QWebSettings::WebAttribute) par1 ) );
+    hb_retl( obj->testAttribute ( (QWebSettings::WebAttribute) hb_parni(1) ) );
   }
 }
 
@@ -360,8 +350,7 @@ static QIcon iconForUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QIcon * ptr = new QIcon( QWebSettings::iconForUrl ( *par1 ) );
+  QIcon * ptr = new QIcon( QWebSettings::iconForUrl ( *PQURL(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QICON", true );
 }
 
@@ -486,8 +475,7 @@ static void setWebGraphic ( WebGraphic type, const QPixmap & graphic )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
 {
-  int par1 = hb_parni(1);
-  QWebSettings::setWebGraphic ( (QWebSettings::WebGraphic) par1, *PQPIXMAP(2) );
+  QWebSettings::setWebGraphic ( (QWebSettings::WebGraphic) hb_parni(1), *PQPIXMAP(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -497,8 +485,7 @@ static QPixmap webGraphic ( WebGraphic type )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
 {
-  int par1 = hb_parni(1);
-  QPixmap * ptr = new QPixmap( QWebSettings::webGraphic ( (QWebSettings::WebGraphic) par1 ) );
+  QPixmap * ptr = new QPixmap( QWebSettings::webGraphic ( (QWebSettings::WebGraphic) hb_parni(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
 

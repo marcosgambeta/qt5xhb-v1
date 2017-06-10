@@ -1070,8 +1070,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retc( RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) par2 ) ) );
+    hb_retc( RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) hb_parni(2) ) ) );
   }
 }
 
