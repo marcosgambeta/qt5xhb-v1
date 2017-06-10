@@ -265,8 +265,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE1 )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->validate ( *par1 ) );
+    hb_retl( obj->validate ( *PQURL(1) ) );
   }
 }
 
@@ -278,9 +277,8 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE2 )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->validate ( par1, par2 ) );
+    hb_retl( obj->validate ( PQIODEVICE(1), par2 ) );
   }
 }
 
@@ -292,9 +290,8 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE3 )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->validate ( *par1, par2 ) );
+    hb_retl( obj->validate ( *PQBYTEARRAY(1), par2 ) );
   }
 }
 

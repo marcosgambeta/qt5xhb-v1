@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD1 )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->load ( *par1 ) );
+    hb_retl( obj->load ( *PQURL(1) ) );
   }
 }
 
@@ -173,9 +172,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD2 )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->load ( par1, par2 ) );
+    hb_retl( obj->load ( PQIODEVICE(1), par2 ) );
   }
 }
 
@@ -187,9 +185,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD3 )
   QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->load ( *par1, par2 ) );
+    hb_retl( obj->load ( *PQBYTEARRAY(1), par2 ) );
   }
 }
 

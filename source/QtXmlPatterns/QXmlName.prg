@@ -132,8 +132,7 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
   QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->localName ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->localName ( *PQXMLNAMEPOOL(1) ) ) );
   }
 }
 
@@ -146,8 +145,7 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
   QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->namespaceUri ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->namespaceUri ( *PQXMLNAMEPOOL(1) ) ) );
   }
 }
 
@@ -160,8 +158,7 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
   QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->prefix ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->prefix ( *PQXMLNAMEPOOL(1) ) ) );
   }
 }
 
@@ -174,8 +171,7 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
   QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->toClarkName ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->toClarkName ( *PQXMLNAMEPOOL(1) ) ) );
   }
 }
 
@@ -185,8 +181,7 @@ static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & 
 */
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
-  QXmlNamePool * par2 = (QXmlNamePool *) _qt5xhb_itemGetPtr(2);
-  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *par2 ) );
+  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
   _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
 }
 

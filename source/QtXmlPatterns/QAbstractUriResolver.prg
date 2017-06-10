@@ -71,9 +71,7 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
   QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-    QUrl * ptr = new QUrl( obj->resolve ( *par1, *par2 ) );
+    QUrl * ptr = new QUrl( obj->resolve ( *PQURL(1), *PQURL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

@@ -55,13 +55,11 @@ RETURN
 #endif
 
 /*
-QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice
+QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {
-  QXmlQuery * par1 = (QXmlQuery *) _qt5xhb_itemGetPtr(1);
-  QIODevice * par2 = (QIODevice *) _qt5xhb_itemGetPtr(2);
-  QXmlFormatter * o = new QXmlFormatter ( *par1, par2 );
+  QXmlFormatter * o = new QXmlFormatter ( *PQXMLQUERY(1), PQIODEVICE(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -130,9 +128,8 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
     QStringRef * par2 = (QStringRef *) _qt5xhb_itemGetPtr(2);
-    obj->attribute ( *par1, *par2 );
+    obj->attribute ( *PQXMLNAME(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,8 +214,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
-    obj->processingInstruction ( *par1, PQSTRING(2) );
+    obj->processingInstruction ( *PQXMLNAME(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -246,8 +242,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
   QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
-    obj->startElement ( *par1 );
+    obj->startElement ( *PQXMLNAME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

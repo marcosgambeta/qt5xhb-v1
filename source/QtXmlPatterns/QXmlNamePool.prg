@@ -64,8 +64,7 @@ QXmlNamePool ( const QXmlNamePool & other )
 */
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
 {
-  QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-  QXmlNamePool * o = new QXmlNamePool ( *par1 );
+  QXmlNamePool * o = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

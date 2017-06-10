@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *par1 ) );
+    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
   }
 }
@@ -168,8 +167,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) _qt5xhb_itemGetPtr(1);
-    QVector<QXmlNodeModelIndex> list = obj->nodesByIdref ( *par1 );
+    QVector<QXmlNodeModelIndex> list = obj->nodesByIdref ( *PQXMLNAME(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QXMLNODEMODELINDEX" );

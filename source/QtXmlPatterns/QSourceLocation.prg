@@ -86,10 +86,7 @@ QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_NEW3 )
 {
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? -1 : hb_parni(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  QSourceLocation * o = new QSourceLocation ( *par1, par2, par3 );
+  QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -208,8 +205,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setUri ( *par1 );
+    obj->setUri ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

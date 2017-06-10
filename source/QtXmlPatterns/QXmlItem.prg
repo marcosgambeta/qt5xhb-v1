@@ -78,8 +78,7 @@ QXmlItem ( const QXmlItem & other )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW2 )
 {
-  QXmlItem * par1 = (QXmlItem *) _qt5xhb_itemGetPtr(1);
-  QXmlItem * o = new QXmlItem ( *par1 );
+  QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
