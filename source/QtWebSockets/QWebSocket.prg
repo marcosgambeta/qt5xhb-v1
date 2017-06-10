@@ -559,8 +559,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->sendBinaryMessage ( *par1 ) );
+    hb_retni( obj->sendBinaryMessage ( *PQBYTEARRAY(1) ) );
   }
 #endif
 }
@@ -682,8 +681,7 @@ HB_FUNC_STATIC( QWEBSOCKET_OPEN )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->open ( *par1 );
+    obj->open ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
