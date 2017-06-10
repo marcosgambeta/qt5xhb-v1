@@ -58,8 +58,7 @@ QSvgWidget ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGWIDGET_NEW1 )
 {
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QSvgWidget * o = new QSvgWidget ( par1 );
+  QSvgWidget * o = new QSvgWidget ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -68,8 +67,7 @@ QSvgWidget ( const QString & file, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGWIDGET_NEW2 )
 {
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QSvgWidget * o = new QSvgWidget ( PQSTRING(1), par2 );
+  QSvgWidget * o = new QSvgWidget ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -157,8 +155,7 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD2 )
   QSvgWidget * obj = (QSvgWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->load ( *par1 );
+    obj->load ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

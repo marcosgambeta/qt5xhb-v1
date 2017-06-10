@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
   if( obj )
   {
     const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-    QWidget * par3 = ISNIL(3)? 0 : (QWidget *) _qt5xhb_itemGetPtr(3);
-    obj->paint ( PQPAINTER(1), par2, par3 );
+    obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

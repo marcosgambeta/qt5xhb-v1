@@ -98,8 +98,7 @@ QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW3 )
 {
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QSvgRenderer * o = new QSvgRenderer ( *par1, OPQOBJECT(2,0) );
+  QSvgRenderer * o = new QSvgRenderer ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -360,8 +359,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD2 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->load ( *par1 ) );
+    hb_retl( obj->load ( *PQBYTEARRAY(1) ) );
   }
 }
 

@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-    obj->setOutputDevice ( par1 );
+    obj->setOutputDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
