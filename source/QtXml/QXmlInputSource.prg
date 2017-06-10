@@ -75,8 +75,7 @@ QXmlInputSource ( QIODevice * dev )
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
 {
-  QIODevice * par1 = (QIODevice *) _qt5xhb_itemGetPtr(1);
-  QXmlInputSource * o = new QXmlInputSource ( par1 );
+  QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
   QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-    obj->setData ( *par1 );
+    obj->setData ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
