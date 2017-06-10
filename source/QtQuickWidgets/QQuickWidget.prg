@@ -83,8 +83,7 @@ explicit QQuickWidget(QWidget *parent = 0)
 HB_FUNC_STATIC( QQUICKWIDGET_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) _qt5xhb_itemGetPtr(1);
-  QQuickWidget * o = new QQuickWidget ( par1 );
+  QQuickWidget * o = new QQuickWidget ( OPQWIDGET(1,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -96,8 +95,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = (QWidget *) _qt5xhb_itemGetPtr(2);
-  QQuickWidget * o = new QQuickWidget ( par1, par2 );
+  QQuickWidget * o = new QQuickWidget ( par1, PQWIDGET(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -108,9 +106,7 @@ QQuickWidget(const QUrl &source, QWidget *parent = 0)
 HB_FUNC_STATIC( QQUICKWIDGET_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) _qt5xhb_itemGetPtr(2);
-  QQuickWidget * o = new QQuickWidget ( *par1, par2 );
+  QQuickWidget * o = new QQuickWidget ( *PQURL(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -183,8 +179,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-    obj->setSource ( *par1 );
+    obj->setSource ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -262,8 +257,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setResizeMode ( (QQuickWidget::ResizeMode) par1 );
+    obj->setResizeMode ( (QQuickWidget::ResizeMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -372,9 +366,8 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
     QQmlComponent * par2 = (QQmlComponent *) _qt5xhb_itemGetPtr(2);
-    obj->setContent ( *par1, par2, PQOBJECT(3) );
+    obj->setContent ( *PQURL(1), par2, PQOBJECT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
