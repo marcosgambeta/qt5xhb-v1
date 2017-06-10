@@ -132,8 +132,7 @@ QScriptValue(const QScriptValue & other)
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
-  QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-  QScriptValue * o = new QScriptValue ( *par1 );
+  QScriptValue * o = new QScriptValue ( *PQSCRIPTVALUE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -142,8 +141,7 @@ QScriptValue(SpecialValue value)
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
-  int par1 = hb_parni(1);
-  QScriptValue * o = new QScriptValue ( (QScriptValue::SpecialValue) par1 );
+  QScriptValue * o = new QScriptValue ( (QScriptValue::SpecialValue) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -152,8 +150,7 @@ QScriptValue(bool value)
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
-  bool par1 = hb_parl(1);
-  QScriptValue * o = new QScriptValue ( par1 );
+  QScriptValue * o = new QScriptValue ( PBOOL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -162,8 +159,7 @@ QScriptValue(int value)
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
-  int par1 = hb_parni(1);
-  QScriptValue * o = new QScriptValue ( par1 );
+  QScriptValue * o = new QScriptValue ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -201,7 +197,7 @@ QScriptValue(const char * value)
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
-  QScriptValue * o = new QScriptValue ( (const char *) hb_parc(1) );
+  QScriptValue * o = new QScriptValue ( PCONSTCHAR(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
