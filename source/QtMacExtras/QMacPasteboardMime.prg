@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CANCONVERT )
   QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canConvert ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->canConvert ( PQSTRING(1), PQSTRING(2) ) );
   }
 #endif
 }
