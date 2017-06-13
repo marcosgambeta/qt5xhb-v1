@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISCLASSAVAILABLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISCHAR(1) )
   {
-    hb_retl( QAndroidJniObject::isClassAvailable ( PCONSTCHAR(1) ) );
+    RBOOL( QAndroidJniObject::isClassAvailable ( PCONSTCHAR(1) ) );
   }
   else
   {
