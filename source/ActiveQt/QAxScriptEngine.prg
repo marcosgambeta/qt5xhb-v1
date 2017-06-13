@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 
   if( obj )
   {
-    hb_retl( obj->hasIntrospection () );
+    RBOOL( obj->hasIntrospection () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

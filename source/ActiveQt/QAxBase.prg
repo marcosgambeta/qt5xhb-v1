@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QAXBASE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->propertyWritable ( PCONSTCHAR(1) ) );
+      RBOOL( obj->propertyWritable ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QAXBASE_SETCONTROL )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->setControl ( PQSTRING(1) ) );
+      RBOOL( obj->setControl ( PQSTRING(1) ) );
     }
     else
     {

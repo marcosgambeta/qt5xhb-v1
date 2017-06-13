@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->doVerb ( PQSTRING(1) ) );
+      RBOOL( obj->doVerb ( PQSTRING(1) ) );
     }
     else
     {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->propertyWritable ( PCONSTCHAR(1) ) );
+      RBOOL( obj->propertyWritable ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->setControl ( PQSTRING(1) ) );
+      RBOOL( obj->setControl ( PQSTRING(1) ) );
     }
     else
     {

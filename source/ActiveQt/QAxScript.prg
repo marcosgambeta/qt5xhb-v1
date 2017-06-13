@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      hb_retl( obj->load ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
