@@ -85,8 +85,7 @@ QCollator(const QCollator &)
 void QCollator_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * par1 = (QCollator *) _qt5xhb_itemGetPtr(1);
-  QCollator * o = new QCollator ( *par1 );
+  QCollator * o = new QCollator ( *PQCOLLATOR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETLOCALE )
   {
     if( ISQLOCALE(1) )
     {
-      QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-      obj->setLocale ( *par1 );
+      obj->setLocale ( *PQLOCALE(1) );
     }
     else
     {
@@ -268,7 +266,7 @@ HB_FUNC_STATIC( QCOLLATOR_NUMERICMODE )
 
   if( obj )
   {
-    hb_retl( obj->numericMode () );
+    RBOOL( obj->numericMode () );
   }
 #endif
 }
@@ -307,7 +305,7 @@ HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
 
   if( obj )
   {
-    hb_retl( obj->ignorePunctuation () );
+    RBOOL( obj->ignorePunctuation () );
   }
 #endif
 }

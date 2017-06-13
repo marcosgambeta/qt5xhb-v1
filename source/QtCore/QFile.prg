@@ -164,7 +164,7 @@ void QFile_copy1 ()
 
   if( obj )
   {
-    hb_retl( obj->copy ( PQSTRING(1) ) );
+    RBOOL( obj->copy ( PQSTRING(1) ) );
   }
 }
 
@@ -173,7 +173,7 @@ static bool copy ( const QString & fileName, const QString & newName )
 */
 void QFile_copy2 ()
 {
-  hb_retl( QFile::copy ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QFile::copy ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool copy ( const QString & newName )
@@ -217,7 +217,7 @@ void QFile_exists1 ()
 
   if( obj )
   {
-    hb_retl( obj->exists () );
+    RBOOL( obj->exists () );
   }
 }
 
@@ -226,7 +226,7 @@ static bool exists ( const QString & fileName )
 */
 void QFile_exists2 ()
 {
-  hb_retl( QFile::exists ( PQSTRING(1) ) );
+  RBOOL( QFile::exists ( PQSTRING(1) ) );
 }
 
 //[1]bool exists () const
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QFILE_FLUSH )
 
   if( obj )
   {
-    hb_retl( obj->flush () );
+    RBOOL( obj->flush () );
   }
 }
 
@@ -296,7 +296,7 @@ void QFile_link1 ()
 
   if( obj )
   {
-    hb_retl( obj->link ( PQSTRING(1) ) );
+    RBOOL( obj->link ( PQSTRING(1) ) );
   }
 }
 
@@ -305,7 +305,7 @@ static bool link ( const QString & fileName, const QString & linkName )
 */
 void QFile_link2 ()
 {
-  hb_retl( QFile::link ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QFile::link ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool link ( const QString & linkName )
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QFILE_MAP ) // TODO: corrigir retorno do metodo
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QFile::NoOptions : hb_parni(3);
-      uchar * ptr = obj->map ( (qint64) hb_parni(1), (qint64) hb_parni(2), (QFile::MemoryMapFlags) par3 );
+      uchar * ptr = obj->map ( PQINT64(1), PQINT64(2), (QFile::MemoryMapFlags) par3 );
       _qt5xhb_createReturnClass ( ptr, "UCHAR" );
     }
     else
@@ -358,7 +358,7 @@ void QFile_open1 ()
 
   if( obj )
   {
-    hb_retl( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -373,7 +373,7 @@ void QFile_open2 ()
   {
     FILE * par1 = (FILE *) _qt5xhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
-    hb_retl( obj->open ( par1, (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) par3 ) );
+    RBOOL( obj->open ( par1, (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -387,7 +387,7 @@ void QFile_open3 ()
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QFile::DontCloseHandle : hb_parni(3);
-    hb_retl( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) par3 ) );
+    RBOOL( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -464,7 +464,7 @@ void QFile_remove1 ()
 
   if( obj )
   {
-    hb_retl( obj->remove () );
+    RBOOL( obj->remove () );
   }
 }
 
@@ -473,7 +473,7 @@ static bool remove ( const QString & fileName )
 */
 void QFile_remove2 ()
 {
-  hb_retl( QFile::remove ( PQSTRING(1) ) );
+  RBOOL( QFile::remove ( PQSTRING(1) ) );
 }
 
 //[1]bool remove ()
@@ -504,7 +504,7 @@ void QFile_rename1 ()
 
   if( obj )
   {
-    hb_retl( obj->rename ( PQSTRING(1) ) );
+    RBOOL( obj->rename ( PQSTRING(1) ) );
   }
 }
 
@@ -513,7 +513,7 @@ static bool rename ( const QString & oldName, const QString & newName )
 */
 void QFile_rename2 ()
 {
-  hb_retl( QFile::rename ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QFile::rename ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool rename ( const QString & newName )
@@ -544,7 +544,7 @@ void QFile_resize1 ()
 
   if( obj )
   {
-    hb_retl( obj->resize ( (qint64) hb_parni(1) ) );
+    RBOOL( obj->resize ( PQINT64(1) ) );
   }
 }
 
@@ -553,7 +553,7 @@ static bool resize ( const QString & fileName, qint64 sz )
 */
 void QFile_resize2 ()
 {
-  hb_retl( QFile::resize ( PQSTRING(1), (qint64) hb_parni(2) ) );
+  RBOOL( QFile::resize ( PQSTRING(1), PQINT64(2) ) );
 }
 
 //[1]bool resize ( qint64 sz )
@@ -607,7 +607,7 @@ void QFile_setPermissions1 ()
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->setPermissions ( (QFile::Permissions) par1 ) );
+    RBOOL( obj->setPermissions ( (QFile::Permissions) par1 ) );
   }
 }
 
@@ -617,7 +617,7 @@ static bool setPermissions ( const QString & fileName, Permissions permissions )
 void QFile_setPermissions2 ()
 {
   int par2 = hb_parni(2);
-  hb_retl( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) par2 ) );
+  RBOOL( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) par2 ) );
 }
 
 //[1]bool setPermissions ( Permissions permissions )
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QFILE_UNMAP ) // TODO: corrigir implementacao do metodo
   if( obj )
   {
     uchar * par1 = (uchar *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->unmap ( par1 ) );
+    RBOOL( obj->unmap ( par1 ) );
   }
 }
 
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QFILE_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QFILE_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos () );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QFILE_SEEK )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+      RBOOL( obj->seek ( PQINT64(1) ) );
     }
     else
     {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QFILE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RQINT64( obj->size () );
   }
 }
 

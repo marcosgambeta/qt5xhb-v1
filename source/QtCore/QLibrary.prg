@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QLIBRARY_LOAD )
 
   if( obj )
   {
-    hb_retl( obj->load () );
+    RBOOL( obj->load () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QLIBRARY_UNLOAD )
 
   if( obj )
   {
-    hb_retl( obj->unload () );
+    RBOOL( obj->unload () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 
   if( obj )
   {
-    hb_retl( obj->isLoaded () );
+    RBOOL( obj->isLoaded () );
   }
 }
 
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
   if( ISCHAR(1) )
   {
-    hb_retl( QLibrary::isLibrary ( PQSTRING(1) ) );
+    RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
   }
   else
   {

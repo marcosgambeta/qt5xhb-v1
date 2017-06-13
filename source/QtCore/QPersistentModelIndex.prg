@@ -90,8 +90,7 @@ QPersistentModelIndex(const QPersistentModelIndex &other)
 */
 void QPersistentModelIndex_new3 ()
 {
-  QPersistentModelIndex * par1 = (QPersistentModelIndex *) _qt5xhb_itemGetPtr(1);
-  QPersistentModelIndex * o = new QPersistentModelIndex ( *par1 );
+  QPersistentModelIndex * o = new QPersistentModelIndex ( *PQPERSISTENTMODELINDEX(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -325,7 +324,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

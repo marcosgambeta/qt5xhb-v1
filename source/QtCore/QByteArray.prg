@@ -484,7 +484,7 @@ void QByteArray_contains1 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->contains ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -497,7 +497,7 @@ void QByteArray_contains2 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( PCONSTCHAR(1) ) );
+    RBOOL( obj->contains ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -511,7 +511,7 @@ void QByteArray_contains3 ()
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    hb_retl( obj->contains ( par1 ) );
+    RBOOL( obj->contains ( par1 ) );
   }
 }
 
@@ -653,7 +653,7 @@ void QByteArray_endsWith1 ()
 
   if( obj )
   {
-    hb_retl( obj->endsWith ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->endsWith ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -666,7 +666,7 @@ void QByteArray_endsWith2 ()
 
   if( obj )
   {
-    hb_retl( obj->endsWith ( PCONSTCHAR(1) ) );
+    RBOOL( obj->endsWith ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -680,7 +680,7 @@ void QByteArray_endsWith3 ()
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    hb_retl( obj->endsWith ( par1 ) );
+    RBOOL( obj->endsWith ( par1 ) );
   }
 }
 
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -2245,7 +2245,7 @@ void QByteArray_startsWith1 ()
 
   if( obj )
   {
-    hb_retl( obj->startsWith ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->startsWith ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -2258,7 +2258,7 @@ void QByteArray_startsWith2 ()
 
   if( obj )
   {
-    hb_retl( obj->startsWith ( PCONSTCHAR(1) ) );
+    RBOOL( obj->startsWith ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -2272,7 +2272,7 @@ void QByteArray_startsWith3 ()
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    hb_retl( obj->startsWith ( par1 ) );
+    RBOOL( obj->startsWith ( par1 ) );
   }
 }
 
@@ -2327,7 +2327,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
     if( ISLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retnd( obj->toDouble ( &par1 ) );
+      RDOUBLE( obj->toDouble ( &par1 ) );
       hb_storl( par1, 1 );
     }
     else
@@ -2349,7 +2349,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
     if( ISLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retnd( obj->toFloat ( &par1 ) );
+      RFLOAT( obj->toFloat ( &par1 ) );
       hb_storl( par1, 1 );
     }
     else
@@ -2407,7 +2407,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
     if( ISLOG(1) && ISOPTNUM(2) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retnl( obj->toLong ( &par1, OPINT(2,10) ) );
+      RLONG( obj->toLong ( &par1, OPINT(2,10) ) );
       hb_storl( par1, 1 );
     }
     else
@@ -2429,7 +2429,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
     if( ISLOG(1) && ISOPTNUM(2) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retnl( obj->toLongLong ( &par1, OPINT(2,10) ) );
+      RQLONGLONG( obj->toLongLong ( &par1, OPINT(2,10) ) );
       hb_storl( par1, 1 );
     }
     else
@@ -2533,7 +2533,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
     if( ISLOG(1) && ISOPTNUM(2) )
     {
       bool par1;
-      hb_retnl( obj->toULong ( &par1, OPINT(2,10) ) );
+      RULONG( obj->toULong ( &par1, OPINT(2,10) ) );
       hb_storl( par1, 1 );
     }
     else
@@ -2555,7 +2555,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
     if( ISLOG(1) && ISOPTNUM(2) )
     {
       bool par1;
-      hb_retnl( obj->toULongLong ( &par1, OPINT(2,10) ) );
+      RQULONGLONG( obj->toULongLong ( &par1, OPINT(2,10) ) );
       hb_storl( par1, 1 );
     }
     else

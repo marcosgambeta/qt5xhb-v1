@@ -73,8 +73,7 @@ QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
 void QTextBoundaryFinder_new2 ()
 {
-  QTextBoundaryFinder * par1 = (QTextBoundaryFinder *) _qt5xhb_itemGetPtr(1);
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ( *par1 );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ( *PQTEXTBOUNDARYFINDER(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -153,7 +152,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -283,7 +282,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
 
   if( obj )
   {
-    hb_retl( obj->isAtBoundary () );
+    RBOOL( obj->isAtBoundary () );
   }
 }
 

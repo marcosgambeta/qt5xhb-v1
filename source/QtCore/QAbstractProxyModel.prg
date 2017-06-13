@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DROPMIMEDATA )
     if( ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
     {
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
     }
     else
     {

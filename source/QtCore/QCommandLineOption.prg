@@ -80,8 +80,7 @@ QCommandLineOption(const QCommandLineOption &other)
 */
 void QCommandLineOption_new3 ()
 {
-  QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-  QCommandLineOption * o = new QCommandLineOption ( *par1 );
+  QCommandLineOption * o = new QCommandLineOption ( *PQCOMMANDLINEOPTION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

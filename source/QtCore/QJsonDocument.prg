@@ -89,8 +89,7 @@ QJsonDocument(const QJsonObject & object)
 */
 void QJsonDocument_new2 ()
 {
-  QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
-  QJsonDocument * o = new QJsonDocument ( *par1 );
+  QJsonDocument * o = new QJsonDocument ( *PQJSONOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -99,8 +98,7 @@ QJsonDocument(const QJsonArray & array)
 */
 void QJsonDocument_new3 ()
 {
-  QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
-  QJsonDocument * o = new QJsonDocument ( *par1 );
+  QJsonDocument * o = new QJsonDocument ( *PQJSONARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -109,8 +107,7 @@ QJsonDocument(const QJsonDocument & other)
 */
 void QJsonDocument_new4 ()
 {
-  QJsonDocument * par1 = (QJsonDocument *) _qt5xhb_itemGetPtr(1);
-  QJsonDocument * o = new QJsonDocument ( *par1 );
+  QJsonDocument * o = new QJsonDocument ( *PQJSONDOCUMENT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -183,7 +180,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISARRAY )
 
   if( obj )
   {
-    hb_retl( obj->isArray () );
+    RBOOL( obj->isArray () );
   }
 }
 
@@ -196,7 +193,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -209,7 +206,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -222,7 +219,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ISOBJECT )
 
   if( obj )
   {
-    hb_retl( obj->isObject () );
+    RBOOL( obj->isObject () );
   }
 }
 
@@ -274,8 +271,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_SETARRAY )
   {
     if( ISQJSONARRAY(1) )
     {
-      QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
-      obj->setArray ( *par1 );
+      obj->setArray ( *PQJSONARRAY(1) );
     }
     else
     {
@@ -297,8 +293,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_SETOBJECT )
   {
     if( ISQJSONOBJECT(1) )
     {
-      QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
-      obj->setObject ( *par1 );
+      obj->setObject ( *PQJSONOBJECT(1) );
     }
     else
     {

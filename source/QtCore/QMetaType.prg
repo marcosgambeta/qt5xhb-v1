@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 {
   if( ISNUM(1) )
   {
-    hb_retl( QMetaType::isRegistered ( PINT(1) ) );
+    RBOOL( QMetaType::isRegistered ( PINT(1) ) );
   }
   else
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QMETATYPE_SAVE )
   {
     QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
     const void * par3 = (const void *) hb_parptr(3);
-    hb_retl( QMetaType::save ( *par1, PINT(2), par3 ) );
+    RBOOL( QMetaType::save ( *par1, PINT(2), par3 ) );
   }
   else
   {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QMETATYPE_LOAD )
   {
     QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
     void * par3 = (void *) hb_parptr(3);
-    hb_retl( QMetaType::load ( *par1, PINT(2), par3 ) );
+    RBOOL( QMetaType::load ( *par1, PINT(2), par3 ) );
   }
   else
   {

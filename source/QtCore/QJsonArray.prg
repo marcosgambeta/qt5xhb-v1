@@ -93,8 +93,7 @@ QJsonArray(const QJsonArray & other)
 */
 void QJsonArray_new2 ()
 {
-  QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
-  QJsonArray * o = new QJsonArray ( *par1 );
+  QJsonArray * o = new QJsonArray ( *PQJSONARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -145,8 +144,7 @@ HB_FUNC_STATIC( QJSONARRAY_APPEND )
   {
     if( ISQJSONVALUE(1) )
     {
-      QJsonValue * par1 = (QJsonValue *) _qt5xhb_itemGetPtr(1);
-      obj->append ( *par1 );
+      obj->append ( *PQJSONVALUE(1) );
     }
     else
     {
@@ -189,8 +187,7 @@ HB_FUNC_STATIC( QJSONARRAY_CONTAINS )
   {
     if( ISQJSONVALUE(1) )
     {
-      QJsonValue * par1 = (QJsonValue *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->contains ( *par1 ) );
+      RBOOL( obj->contains ( *PQJSONVALUE(1) ) );
     }
     else
     {
@@ -221,7 +218,7 @@ HB_FUNC_STATIC( QJSONARRAY_EMPTY )
 
   if( obj )
   {
-    hb_retl( obj->empty () );
+    RBOOL( obj->empty () );
   }
 }
 
@@ -270,7 +267,7 @@ HB_FUNC_STATIC( QJSONARRAY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -329,8 +326,7 @@ HB_FUNC_STATIC( QJSONARRAY_PREPEND )
   {
     if( ISQJSONVALUE(1) )
     {
-      QJsonValue * par1 = (QJsonValue *) _qt5xhb_itemGetPtr(1);
-      obj->prepend ( *par1 );
+      obj->prepend ( *PQJSONVALUE(1) );
     }
     else
     {
@@ -352,8 +348,7 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_BACK )
   {
     if( ISQJSONVALUE(1) )
     {
-      QJsonValue * par1 = (QJsonValue *) _qt5xhb_itemGetPtr(1);
-      obj->push_back ( *par1 );
+      obj->push_back ( *PQJSONVALUE(1) );
     }
     else
     {
@@ -375,8 +370,7 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_FRONT )
   {
     if( ISQJSONVALUE(1) )
     {
-      QJsonValue * par1 = (QJsonValue *) _qt5xhb_itemGetPtr(1);
-      obj->push_front ( *par1 );
+      obj->push_front ( *PQJSONVALUE(1) );
     }
     else
     {

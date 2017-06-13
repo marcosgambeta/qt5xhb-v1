@@ -79,8 +79,7 @@ QMimeType(const QMimeType &other)
 */
 void QMimeType_new2 ()
 {
-  QMimeType * par1 = (QMimeType *) _qt5xhb_itemGetPtr(1);
-  QMimeType * o = new QMimeType ( *par1 );
+  QMimeType * o = new QMimeType ( *PQMIMETYPE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -152,7 +151,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISDEFAULT )
 
   if( obj )
   {
-    hb_retl( obj->isDefault () );
+    RBOOL( obj->isDefault () );
   }
 }
 
@@ -315,7 +314,7 @@ HB_FUNC_STATIC( QMIMETYPE_INHERITS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->inherits ( PQSTRING(1) ) );
+      RBOOL( obj->inherits ( PQSTRING(1) ) );
     }
     else
     {

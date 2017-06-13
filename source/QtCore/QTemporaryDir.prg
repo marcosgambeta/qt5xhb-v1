@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
 
   if( obj )
   {
-    hb_retl( obj->autoRemove () );
+    RBOOL( obj->autoRemove () );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 
   if( obj )
   {
-    hb_retl( obj->remove () );
+    RBOOL( obj->remove () );
   }
 }
 

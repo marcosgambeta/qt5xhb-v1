@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOM )
 
   if( obj )
   {
-    hb_retnd( obj->bottom () );
+    RQREAL( obj->bottom () );
   }
 }
 
@@ -312,7 +312,7 @@ void QRectF_contains1 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQPOINTF(1) ) );
+    RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
 
@@ -325,7 +325,7 @@ void QRectF_contains2 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( PQREAL(1), PQREAL(2) ) );
+    RBOOL( obj->contains ( PQREAL(1), PQREAL(2) ) );
   }
 }
 
@@ -338,7 +338,7 @@ void QRectF_contains3 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQRECTF(1) ) );
+    RBOOL( obj->contains ( *PQRECTF(1) ) );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QRECTF_HEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->height () );
+    RQREAL( obj->height () );
   }
 }
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTS )
   {
     if( ISQRECTF(1) )
     {
-      hb_retl( obj->intersects ( *PQRECTF(1) ) );
+      RBOOL( obj->intersects ( *PQRECTF(1) ) );
     }
     else
     {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QRECTF_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QRECTF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QRECTF_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QRECTF_LEFT )
 
   if( obj )
   {
-    hb_retnd( obj->left () );
+    RQREAL( obj->left () );
   }
 }
 
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QRECTF_RIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->right () );
+    RQREAL( obj->right () );
   }
 }
 
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC( QRECTF_TOP )
 
   if( obj )
   {
-    hb_retnd( obj->top () );
+    RQREAL( obj->top () );
   }
 }
 
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QRECTF_WIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->width () );
+    RQREAL( obj->width () );
   }
 }
 
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QRECTF_X )
 
   if( obj )
   {
-    hb_retnd( obj->x () );
+    RQREAL( obj->x () );
   }
 }
 
@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QRECTF_Y )
 
   if( obj )
   {
-    hb_retnd( obj->y () );
+    RQREAL( obj->y () );
   }
 }
 

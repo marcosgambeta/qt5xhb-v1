@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QURL_HASFRAGMENT )
 
   if( obj )
   {
-    hb_retl( obj->hasFragment () );
+    RBOOL( obj->hasFragment () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QURL_HASQUERY )
 
   if( obj )
   {
-    hb_retl( obj->hasQuery () );
+    RBOOL( obj->hasQuery () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QURL_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QURL_ISLOCALFILE )
 
   if( obj )
   {
-    hb_retl( obj->isLocalFile () );
+    RBOOL( obj->isLocalFile () );
   }
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QURL_ISPARENTOF )
   {
     if( ISQURL(1) )
     {
-      hb_retl( obj->isParentOf ( *PQURL(1) ) );
+      RBOOL( obj->isParentOf ( *PQURL(1) ) );
     }
     else
     {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QURL_ISRELATIVE )
 
   if( obj )
   {
-    hb_retl( obj->isRelative () );
+    RBOOL( obj->isRelative () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QURL_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -547,8 +547,7 @@ HB_FUNC_STATIC( QURL_SETPATH )
   {
     if( ISCHAR(1) )
     {
-      QString  * par1 = (QString  *) _qt5xhb_itemGetPtr(1);
-      obj->setPath ( *par1 );
+      obj->setPath ( PQSTRING(1) );
     }
     else
     {

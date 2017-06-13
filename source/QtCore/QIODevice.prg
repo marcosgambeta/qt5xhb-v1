@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QIODEVICE_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 
   if( obj )
   {
-    hb_retni( obj->bytesAvailable () );
+    RQINT64( obj->bytesAvailable () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 
   if( obj )
   {
-    hb_retni( obj->bytesToWrite () );
+    RQINT64( obj->bytesToWrite () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 
   if( obj )
   {
-    hb_retl( obj->canReadLine () );
+    RBOOL( obj->canReadLine () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->getChar ( par1 ) );
+    RBOOL( obj->getChar ( par1 ) );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 
   if( obj )
   {
-    hb_retl( obj->isOpen () );
+    RBOOL( obj->isOpen () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 
   if( obj )
   {
-    hb_retl( obj->isReadable () );
+    RBOOL( obj->isReadable () );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isTextModeEnabled () );
+    RBOOL( obj->isTextModeEnabled () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
     }
     else
     {
@@ -311,7 +311,7 @@ void QIODevice_peek1 ()
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->peek ( par1, (qint64) hb_parni(2) ) );
+    RQINT64( obj->peek ( par1, PQINT64(2) ) );
   }
 }
 
@@ -324,7 +324,7 @@ void QIODevice_peek2 ()
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->peek ( (qint64) hb_parni(1) ) );
+    QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QIODEVICE_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos () );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
     if( (ISNUM(1)||ISCHAR(1)) )
     {
       char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-      hb_retl( obj->putChar ( par1 ) );
+      RBOOL( obj->putChar ( par1 ) );
     }
     else
     {
@@ -392,7 +392,7 @@ void QIODevice_read1 ()
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->read ( par1, (qint64) hb_parni(2) ) );
+    RQINT64( obj->read ( par1, PQINT64(2) ) );
   }
 }
 
@@ -405,7 +405,7 @@ void QIODevice_read2 ()
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->read ( (qint64) hb_parni(1) ) );
+    QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -453,7 +453,7 @@ void QIODevice_readLine1 ()
   if( obj )
   {
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->readLine ( par1, (qint64) hb_parni(2) ) );
+    RQINT64( obj->readLine ( par1, PQINT64(2) ) );
   }
 }
 
@@ -466,7 +466,7 @@ void QIODevice_readLine2 ()
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->readLine ( (qint64) ISNIL(1)? 0 : hb_parni(1) ) );
+    QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QIODEVICE_RESET )
 
   if( obj )
   {
-    hb_retl( obj->reset () );
+    RBOOL( obj->reset () );
   }
 }
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+      RBOOL( obj->seek ( PQINT64(1) ) );
     }
     else
     {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QIODEVICE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RQINT64( obj->size () );
   }
 }
 
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->waitForBytesWritten ( PINT(1) ) );
+      RBOOL( obj->waitForBytesWritten ( PINT(1) ) );
     }
     else
     {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->waitForReadyRead ( PINT(1) ) );
+      RBOOL( obj->waitForReadyRead ( PINT(1) ) );
     }
     else
     {
@@ -632,7 +632,7 @@ void QIODevice_write1 ()
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      hb_retni( obj->write ( PCONSTCHAR(1), (qint64) hb_parni(2) ) );
+      RQINT64( obj->write ( PCONSTCHAR(1), PQINT64(2) ) );
     }
     else
     {
@@ -650,7 +650,7 @@ void QIODevice_write2 ()
 
   if( obj )
   {
-    hb_retni( obj->write ( PCONSTCHAR(1) ) );
+    RQINT64( obj->write ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -663,7 +663,7 @@ void QIODevice_write3 ()
 
   if( obj )
   {
-    hb_retni( obj->write ( *PQBYTEARRAY(1) ) );
+    RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
   }
 }
 

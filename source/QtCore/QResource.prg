@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 
   if( obj )
   {
-    hb_retl( obj->isCompressed () );
+    RBOOL( obj->isCompressed () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -211,8 +211,7 @@ HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
   {
     if( ISQLOCALE(1) )
     {
-      QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-      obj->setLocale ( *par1 );
+      obj->setLocale ( *PQLOCALE(1) );
     }
     else
     {
@@ -232,7 +231,7 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RQINT64( obj->size () );
   }
 }
 
@@ -243,7 +242,7 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) )
   {
-    hb_retl( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
   else
   {
@@ -258,7 +257,7 @@ HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) )
   {
-    hb_retl( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
   else
   {

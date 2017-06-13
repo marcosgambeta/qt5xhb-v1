@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 
   if( obj )
   {
-    hb_retnd( obj->currentValue () );
+    RQREAL( obj->currentValue () );
   }
 }
 
@@ -309,8 +309,7 @@ HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
   {
     if( ISQEASINGCURVE(1) )
     {
-      QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
-      obj->setEasingCurve ( *par1 );
+      obj->setEasingCurve ( *PQEASINGCURVE(1) );
     }
     else
     {
@@ -481,7 +480,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
   {
     if( ISNUM(1) )
     {
-      hb_retnd( obj->valueForTime ( PINT(1) ) );
+      RQREAL( obj->valueForTime ( PINT(1) ) );
     }
     else
     {

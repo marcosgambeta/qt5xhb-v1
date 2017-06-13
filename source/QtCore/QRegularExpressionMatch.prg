@@ -74,8 +74,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_NEW )
 {
   if( ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCH(1) )
   {
-    QRegularExpressionMatch * par1 = (QRegularExpressionMatch *) _qt5xhb_itemGetPtr(1);
-    QRegularExpressionMatch * o = new QRegularExpressionMatch ( *par1 );
+    QRegularExpressionMatch * o = new QRegularExpressionMatch ( *PQREGULAREXPRESSIONMATCH(1) );
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else
@@ -351,7 +350,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_HASMATCH )
 
   if( obj )
   {
-    hb_retl( obj->hasMatch () );
+    RBOOL( obj->hasMatch () );
   }
 }
 
@@ -364,7 +363,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_HASPARTIALMATCH )
 
   if( obj )
   {
-    hb_retl( obj->hasPartialMatch () );
+    RBOOL( obj->hasPartialMatch () );
   }
 }
 
@@ -377,7 +376,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

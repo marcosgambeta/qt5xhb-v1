@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 

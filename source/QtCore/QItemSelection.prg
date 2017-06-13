@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retl( obj->contains ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
     }
     else
     {

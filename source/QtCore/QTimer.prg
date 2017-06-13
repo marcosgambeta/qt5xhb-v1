@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 
   if( obj )
   {
-    hb_retl( obj->isSingleShot () );
+    RBOOL( obj->isSingleShot () );
   }
 }
 

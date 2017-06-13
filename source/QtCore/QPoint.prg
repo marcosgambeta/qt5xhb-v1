@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPOINT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

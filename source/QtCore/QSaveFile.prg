@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSAVEFILE_OPEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
     }
     else
     {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSAVEFILE_COMMIT )
 
   if( obj )
   {
-    hb_retl( obj->commit () );
+    RBOOL( obj->commit () );
   }
 #endif
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
 
   if( obj )
   {
-    hb_retl( obj->directWriteFallback () );
+    RBOOL( obj->directWriteFallback () );
   }
 #endif
 }

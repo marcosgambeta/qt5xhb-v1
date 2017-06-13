@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTING )
 
   if( obj )
   {
-    hb_retl( obj->autoFormatting () );
+    RBOOL( obj->autoFormatting () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
 
   if( obj )
   {
-    hb_retl( obj->hasError () );
+    RBOOL( obj->hasError () );
   }
 }
 
@@ -384,8 +384,7 @@ void QXmlStreamWriter_writeAttribute3 ()
 
   if( obj )
   {
-    QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) _qt5xhb_itemGetPtr(1);
-    obj->writeAttribute ( *par1 );
+    obj->writeAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -426,8 +425,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
   {
     if( ISQXMLSTREAMATTRIBUTES(1) )
     {
-      QXmlStreamAttributes * par1 = (QXmlStreamAttributes *) _qt5xhb_itemGetPtr(1);
-      obj->writeAttributes ( *par1 );
+      obj->writeAttributes ( *PQXMLSTREAMATTRIBUTES(1) );
     }
     else
     {
@@ -515,8 +513,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
   {
     if( ISQXMLSTREAMREADER(1) )
     {
-      QXmlStreamReader * par1 = (QXmlStreamReader *) _qt5xhb_itemGetPtr(1);
-      obj->writeCurrentToken ( *par1 );
+      obj->writeCurrentToken ( *PQXMLSTREAMREADER(1) );
     }
     else
     {

@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning () );
+    RBOOL( obj->isRunning () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ELAPSED )
 
   if( obj )
   {
-    hb_retni( obj->elapsed () );
+    RQINT64( obj->elapsed () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_SETSTARTTIME )
   {
     if( ISNUM(1) )
     {
-      obj->setStartTime ( (qint64) hb_parni(1) );
+      obj->setStartTime ( PQINT64(1) );
     }
     else
     {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_STARTTIME )
 
   if( obj )
   {
-    hb_retni( obj->startTime () );
+    RQINT64( obj->startTime () );
   }
 }
 

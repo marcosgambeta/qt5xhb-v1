@@ -78,7 +78,7 @@ void QTextCodec_canEncode1 ()
   if( obj )
   {
     QChar * par1 = (QChar *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->canEncode ( *par1 ) );
+    RBOOL( obj->canEncode ( *par1 ) );
   }
 }
 
@@ -91,7 +91,7 @@ void QTextCodec_canEncode2 ()
 
   if( obj )
   {
-    hb_retl( obj->canEncode ( PQSTRING(1) ) );
+    RBOOL( obj->canEncode ( PQSTRING(1) ) );
   }
 }
 

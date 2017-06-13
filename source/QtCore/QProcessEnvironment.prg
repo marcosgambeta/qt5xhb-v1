@@ -72,8 +72,7 @@ QProcessEnvironment(const QProcessEnvironment &other)
 */
 void QProcessEnvironment_new2 ()
 {
-  QProcessEnvironment * par1 = (QProcessEnvironment *) _qt5xhb_itemGetPtr(1);
-  QProcessEnvironment * o = new QProcessEnvironment ( *par1 );
+  QProcessEnvironment * o = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -145,7 +144,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -175,7 +174,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains ( PQSTRING(1) ) );
     }
     else
     {
@@ -208,8 +207,7 @@ void QProcessEnvironment_insert2 ()
 
   if( obj )
   {
-    QProcessEnvironment * par1 = (QProcessEnvironment *) _qt5xhb_itemGetPtr(1);
-    obj->insert ( *par1 );
+    obj->insert ( *PQPROCESSENVIRONMENT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

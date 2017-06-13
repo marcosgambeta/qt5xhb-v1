@@ -95,8 +95,7 @@ QRegExp ( const QRegExp & rx )
 */
 void QRegExp_new3 ()
 {
-  QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
-  QRegExp * o = new QRegExp ( *par1 );
+  QRegExp * o = new QRegExp ( *PQREGEXP(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -225,7 +224,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->exactMatch ( PQSTRING(1) ) );
+      RBOOL( obj->exactMatch ( PQSTRING(1) ) );
     }
     else
     {
@@ -264,7 +263,7 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -277,7 +276,7 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 
   if( obj )
   {
-    hb_retl( obj->isMinimal () );
+    RBOOL( obj->isMinimal () );
   }
 }
 
@@ -290,7 +289,7 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

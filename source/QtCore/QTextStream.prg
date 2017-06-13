@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
 
   if( obj )
   {
-    hb_retl( obj->autoDetectUnicode () );
+    RBOOL( obj->autoDetectUnicode () );
   }
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
 
   if( obj )
   {
-    hb_retl( obj->generateByteOrderMark () );
+    RBOOL( obj->generateByteOrderMark () );
   }
 }
 
@@ -356,8 +356,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETLOCALE )
   {
     if( ISQLOCALE(1) )
     {
-      QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-      obj->setLocale ( *par1 );
+      obj->setLocale ( *PQLOCALE(1) );
     }
     else
     {
@@ -515,7 +514,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -560,7 +559,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+      RBOOL( obj->seek ( PQINT64(1) ) );
     }
     else
     {
@@ -578,7 +577,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos () );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -608,7 +607,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retc( RQSTRING( obj->readLine ( (qint64) ISNIL(1)? 0 : hb_parni(1) ) ) );
+      hb_retc( RQSTRING( obj->readLine ( OPQINT64(1,0) ) ) );
     }
     else
     {
@@ -641,7 +640,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->read ( (qint64) hb_parni(1) ) ) );
+      hb_retc( RQSTRING( obj->read ( PQINT64(1) ) ) );
     }
     else
     {

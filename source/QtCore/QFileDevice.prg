@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FLUSH )
 
   if( obj )
   {
-    hb_retl( obj->flush () );
+    RBOOL( obj->flush () );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->resize ( (qint64) hb_parni(1) ) );
+      RBOOL( obj->resize ( PQINT64(1) ) );
     }
     else
     {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->setPermissions ( (QFileDevice::Permissions) par1 ) );
+      RBOOL( obj->setPermissions ( (QFileDevice::Permissions) par1 ) );
     }
     else
     {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QFILEDEVICE_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos () );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SEEK )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+      RBOOL( obj->seek ( PQINT64(1) ) );
     }
     else
     {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RQINT64( obj->size () );
   }
 }
 

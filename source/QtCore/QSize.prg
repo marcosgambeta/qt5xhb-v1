@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

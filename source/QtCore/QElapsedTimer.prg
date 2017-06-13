@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 
   if( obj )
   {
-    hb_retni( obj->elapsed () );
+    RQINT64( obj->elapsed () );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->hasExpired ( (qint64) hb_parni(1) ) );
+      RBOOL( obj->hasExpired ( PQINT64(1) ) );
     }
     else
     {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 
   if( obj )
   {
-    hb_retni( obj->msecsSinceReference () );
+    RQINT64( obj->msecsSinceReference () );
   }
 }
 
@@ -171,8 +171,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
   {
     if( ISQELAPSEDTIMER(1) )
     {
-      QElapsedTimer * par1 = (QElapsedTimer *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->msecsTo ( *par1 ) );
+      RQINT64( obj->msecsTo ( *PQELAPSEDTIMER(1) ) );
     }
     else
     {
@@ -190,7 +189,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
 
   if( obj )
   {
-    hb_retni( obj->nsecsElapsed () );
+    RQINT64( obj->nsecsElapsed () );
   }
 }
 
@@ -203,7 +202,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 
   if( obj )
   {
-    hb_retni( obj->restart () );
+    RQINT64( obj->restart () );
   }
 }
 
@@ -218,8 +217,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
   {
     if( ISQELAPSEDTIMER(1) )
     {
-      QElapsedTimer * par1 = (QElapsedTimer *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->secsTo ( *par1 ) );
+      RQINT64( obj->secsTo ( *PQELAPSEDTIMER(1) ) );
     }
     else
     {
@@ -256,7 +254,7 @@ static bool isMonotonic()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
-  hb_retl( QElapsedTimer::isMonotonic () );
+  RBOOL( QElapsedTimer::isMonotonic () );
 }
 
 HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )

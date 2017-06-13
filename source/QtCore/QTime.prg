@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTIME_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -209,7 +209,7 @@ void QTime_isValid1 ()
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -218,7 +218,7 @@ static bool isValid(int h, int m, int s, int ms = 0)
 */
 void QTime_isValid2 ()
 {
-  hb_retl( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
+  RBOOL( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
 
 //[1]bool isValid() const
@@ -277,8 +277,7 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
   {
     if( ISQTIME(1) )
     {
-      QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->msecsTo ( *par1 ) );
+      hb_retni( obj->msecsTo ( *PQTIME(1) ) );
     }
     else
     {
@@ -324,8 +323,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
   {
     if( ISQTIME(1) )
     {
-      QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->secsTo ( *par1 ) );
+      hb_retni( obj->secsTo ( *PQTIME(1) ) );
     }
     else
     {
@@ -345,7 +343,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
-      hb_retl( obj->setHMS ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
+      RBOOL( obj->setHMS ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
     }
     else
     {

@@ -88,8 +88,7 @@ QStringMatcher(const QStringMatcher &other)
 */
 void QStringMatcher_new4 ()
 {
-  QStringMatcher * par1 = (QStringMatcher *) _qt5xhb_itemGetPtr(1);
-  QStringMatcher * o = new QStringMatcher ( *par1 );
+  QStringMatcher * o = new QStringMatcher ( *PQSTRINGMATCHER(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

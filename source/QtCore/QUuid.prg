@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QUUID_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

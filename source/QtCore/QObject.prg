@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
   {
     if( ISLOG(1) )
     {
-      hb_retl( obj->blockSignals ( PBOOL(1) ) );
+      RBOOL( obj->blockSignals ( PBOOL(1) ) );
     }
     else
     {
@@ -453,8 +453,7 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
   {
     if( ISQEVENT(1) )
     {
-      QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->event ( par1 ) );
+      RBOOL( obj->event ( PQEVENT(1) ) );
     }
     else
     {
@@ -474,7 +473,7 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
   {
     if( ISQOBJECT(1) && ISQEVENT(2) )
     {
-      hb_retl( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
     }
     else
     {
@@ -560,9 +559,8 @@ void QObject_findChildren2 ()
 
   if( obj )
   {
-    QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-    QList<QObject *> list = obj->findChildren<QObject *> ( *par1, (Qt::FindChildOptions) par2 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGEXP(1), (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );
@@ -608,9 +606,8 @@ void QObject_findChildren3 ()
 
   if( obj )
   {
-    QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-    QList<QObject *> list = obj->findChildren<QObject *> ( *par1, (Qt::FindChildOptions) par2 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGULAREXPRESSION(1), (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );
@@ -681,7 +678,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->inherits ( PCONSTCHAR(1) ) );
+      RBOOL( obj->inherits ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -721,7 +718,7 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isWidgetType () );
+    RBOOL( obj->isWidgetType () );
   }
 }
 
@@ -734,7 +731,7 @@ HB_FUNC_STATIC( QOBJECT_ISWINDOWTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isWindowType () );
+    RBOOL( obj->isWindowType () );
   }
 }
 
@@ -903,7 +900,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
   {
     if( ISCHAR(1) && ISQVARIANT(2) )
     {
-      hb_retl( obj->setProperty ( PCONSTCHAR(1), *PQVARIANT(2) ) );
+      RBOOL( obj->setProperty ( PCONSTCHAR(1), *PQVARIANT(2) ) );
     }
     else
     {
@@ -944,7 +941,7 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 
   if( obj )
   {
-    hb_retl( obj->signalsBlocked () );
+    RBOOL( obj->signalsBlocked () );
   }
 }
 

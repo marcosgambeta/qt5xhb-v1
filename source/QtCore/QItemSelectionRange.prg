@@ -84,8 +84,7 @@ QItemSelectionRange(const QItemSelectionRange &other)
 */
 void QItemSelectionRange_new2 ()
 {
-  QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
-  QItemSelectionRange * o = new QItemSelectionRange ( *par1 );
+  QItemSelectionRange * o = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -296,7 +295,7 @@ void QItemSelectionRange_contains1 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -309,7 +308,7 @@ void QItemSelectionRange_contains2 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
+    RBOOL( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
   }
 }
 
@@ -343,8 +342,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
   {
     if( ISQITEMSELECTIONRANGE(1) )
     {
-      QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->intersects ( *par1 ) );
+      RBOOL( obj->intersects ( *PQITEMSELECTIONRANGE(1) ) );
     }
     else
     {
@@ -364,8 +362,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
   {
     if( ISQITEMSELECTIONRANGE(1) )
     {
-      QItemSelectionRange * par1 = (QItemSelectionRange *) _qt5xhb_itemGetPtr(1);
-      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *par1 ) );
+      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *PQITEMSELECTIONRANGE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE" );
     }
     else
@@ -384,7 +381,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -397,7 +394,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

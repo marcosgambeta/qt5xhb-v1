@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 
   if( obj )
   {
-    hb_retl( obj->isAccepted () );
+    RBOOL( obj->isAccepted () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 
   if( obj )
   {
-    hb_retl( obj->spontaneous () );
+    RBOOL( obj->spontaneous () );
   }
 }
 

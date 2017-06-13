@@ -82,8 +82,7 @@ QEasingCurve ( const QEasingCurve & other )
 */
 void QEasingCurve_new2 ()
 {
-  QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
-  QEasingCurve * o = new QEasingCurve ( *par1 );
+  QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -176,7 +175,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 
   if( obj )
   {
-    hb_retnd( obj->amplitude () );
+    RQREAL( obj->amplitude () );
   }
 }
 
@@ -189,7 +188,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 
   if( obj )
   {
-    hb_retnd( obj->overshoot () );
+    RQREAL( obj->overshoot () );
   }
 }
 
@@ -202,7 +201,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 
   if( obj )
   {
-    hb_retnd( obj->period () );
+    RQREAL( obj->period () );
   }
 }
 
@@ -385,7 +384,7 @@ HB_FUNC_STATIC( QEASINGCURVE_VALUEFORPROGRESS )
   {
     if( ISNUM(1) )
     {
-      hb_retnd( obj->valueForProgress ( PQREAL(1) ) );
+      RQREAL( obj->valueForProgress ( PQREAL(1) ) );
     }
     else
     {

@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPOINTF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 
   if( obj )
   {
-    hb_retnd( obj->manhattanLength () );
+    RQREAL( obj->manhattanLength () );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QPOINTF_X )
 
   if( obj )
   {
-    hb_retnd( obj->x () );
+    RQREAL( obj->x () );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPOINTF_Y )
 
   if( obj )
   {
-    hb_retnd( obj->y () );
+    RQREAL( obj->y () );
   }
 }
 

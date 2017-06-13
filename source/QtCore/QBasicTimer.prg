@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 

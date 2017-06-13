@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning () );
+    RBOOL( obj->isRunning () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 
   if( obj )
   {
-    hb_retl( obj->isAnimated () );
+    RBOOL( obj->isAnimated () );
   }
 }
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->cancelDelayedEvent ( PINT(1) ) );
+      RBOOL( obj->cancelDelayedEvent ( PINT(1) ) );
     }
     else
     {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
   {
     if( ISQOBJECT(1) && ISQEVENT(2) )
     {
-      hb_retl( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
     }
     else
     {

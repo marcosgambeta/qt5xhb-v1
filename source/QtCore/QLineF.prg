@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QLINEF_X1 )
 
   if( obj )
   {
-    hb_retnd( obj->x1 () );
+    RQREAL( obj->x1 () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QLINEF_X2 )
 
   if( obj )
   {
-    hb_retnd( obj->x2 () );
+    RQREAL( obj->x2 () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QLINEF_Y1 )
 
   if( obj )
   {
-    hb_retnd( obj->y1 () );
+    RQREAL( obj->y1 () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QLINEF_Y2 )
 
   if( obj )
   {
-    hb_retnd( obj->y2 () );
+    RQREAL( obj->y2 () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QLINEF_ANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->angle () );
+    RQREAL( obj->angle () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QLINEF_ANGLETO )
   {
     if( ISQLINEF(1) )
     {
-      hb_retnd( obj->angleTo ( *PQLINEF(1) ) );
+      RQREAL( obj->angleTo ( *PQLINEF(1) ) );
     }
     else
     {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QLINEF_DX )
 
   if( obj )
   {
-    hb_retnd( obj->dx () );
+    RQREAL( obj->dx () );
   }
 }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QLINEF_DY )
 
   if( obj )
   {
-    hb_retnd( obj->dy () );
+    RQREAL( obj->dy () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QLINEF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QLINEF_LENGTH )
 
   if( obj )
   {
-    hb_retnd( obj->length () );
+    RQREAL( obj->length () );
   }
 }
 

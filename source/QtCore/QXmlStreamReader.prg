@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
   {
     if( ISQXMLSTREAMNAMESPACEDECLARATION(1) )
     {
-      QXmlStreamNamespaceDeclaration * par1 = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtr(1);
-      obj->addExtraNamespaceDeclaration ( *par1 );
+      obj->addExtraNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
     }
     else
     {
@@ -295,7 +294,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -322,7 +321,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_CHARACTEROFFSET )
 
   if( obj )
   {
-    hb_retni( obj->characterOffset () );
+    RQINT64( obj->characterOffset () );
   }
 }
 
@@ -350,7 +349,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_COLUMNNUMBER )
 
   if( obj )
   {
-    hb_retni( obj->columnNumber () );
+    RQINT64( obj->columnNumber () );
   }
 }
 
@@ -501,7 +500,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_HASERROR )
 
   if( obj )
   {
-    hb_retl( obj->hasError () );
+    RBOOL( obj->hasError () );
   }
 }
 
@@ -514,7 +513,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCDATA )
 
   if( obj )
   {
-    hb_retl( obj->isCDATA () );
+    RBOOL( obj->isCDATA () );
   }
 }
 
@@ -527,7 +526,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCHARACTERS )
 
   if( obj )
   {
-    hb_retl( obj->isCharacters () );
+    RBOOL( obj->isCharacters () );
   }
 }
 
@@ -540,7 +539,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCOMMENT )
 
   if( obj )
   {
-    hb_retl( obj->isComment () );
+    RBOOL( obj->isComment () );
   }
 }
 
@@ -553,7 +552,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISDTD )
 
   if( obj )
   {
-    hb_retl( obj->isDTD () );
+    RBOOL( obj->isDTD () );
   }
 }
 
@@ -566,7 +565,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDDOCUMENT )
 
   if( obj )
   {
-    hb_retl( obj->isEndDocument () );
+    RBOOL( obj->isEndDocument () );
   }
 }
 
@@ -579,7 +578,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDELEMENT )
 
   if( obj )
   {
-    hb_retl( obj->isEndElement () );
+    RBOOL( obj->isEndElement () );
   }
 }
 
@@ -592,7 +591,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENTITYREFERENCE )
 
   if( obj )
   {
-    hb_retl( obj->isEntityReference () );
+    RBOOL( obj->isEntityReference () );
   }
 }
 
@@ -605,7 +604,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION )
 
   if( obj )
   {
-    hb_retl( obj->isProcessingInstruction () );
+    RBOOL( obj->isProcessingInstruction () );
   }
 }
 
@@ -618,7 +617,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTANDALONEDOCUMENT )
 
   if( obj )
   {
-    hb_retl( obj->isStandaloneDocument () );
+    RBOOL( obj->isStandaloneDocument () );
   }
 }
 
@@ -631,7 +630,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTDOCUMENT )
 
   if( obj )
   {
-    hb_retl( obj->isStartDocument () );
+    RBOOL( obj->isStartDocument () );
   }
 }
 
@@ -644,7 +643,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTELEMENT )
 
   if( obj )
   {
-    hb_retl( obj->isStartElement () );
+    RBOOL( obj->isStartElement () );
   }
 }
 
@@ -657,7 +656,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISWHITESPACE )
 
   if( obj )
   {
-    hb_retl( obj->isWhitespace () );
+    RBOOL( obj->isWhitespace () );
   }
 }
 
@@ -670,7 +669,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_LINENUMBER )
 
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RQINT64( obj->lineNumber () );
   }
 }
 
@@ -711,7 +710,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEPROCESSING )
 
   if( obj )
   {
-    hb_retl( obj->namespaceProcessing () );
+    RBOOL( obj->namespaceProcessing () );
   }
 }
 
@@ -864,7 +863,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXTSTARTELEMENT )
 
   if( obj )
   {
-    hb_retl( obj->readNextStartElement () );
+    RBOOL( obj->readNextStartElement () );
   }
 }
 

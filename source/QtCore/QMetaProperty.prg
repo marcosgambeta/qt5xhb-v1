@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISREADABLE )
 
   if( obj )
   {
-    hb_retl( obj->isReadable () );
+    RBOOL( obj->isReadable () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
 
   if( obj )
   {
-    hb_retl( obj->isResettable () );
+    RBOOL( obj->isResettable () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
     if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isDesignable ( par1 ) );
+      RBOOL( obj->isDesignable ( par1 ) );
     }
     else
     {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
     if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isScriptable ( par1 ) );
+      RBOOL( obj->isScriptable ( par1 ) );
     }
     else
     {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
     if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isStored ( par1 ) );
+      RBOOL( obj->isStored ( par1 ) );
     }
     else
     {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
     if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isEditable ( par1 ) );
+      RBOOL( obj->isEditable ( par1 ) );
     }
     else
     {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
     if( ISOPTQOBJECT(1) )
     {
       const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isUser ( par1 ) );
+      RBOOL( obj->isUser ( par1 ) );
     }
     else
     {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISCONSTANT )
 
   if( obj )
   {
-    hb_retl( obj->isConstant () );
+    RBOOL( obj->isConstant () );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFINAL )
 
   if( obj )
   {
-    hb_retl( obj->isFinal () );
+    RBOOL( obj->isFinal () );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFLAGTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isFlagType () );
+    RBOOL( obj->isFlagType () );
   }
 }
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISENUMTYPE )
 
   if( obj )
   {
-    hb_retl( obj->isEnumType () );
+    RBOOL( obj->isEnumType () );
   }
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASNOTIFYSIGNAL )
 
   if( obj )
   {
-    hb_retl( obj->hasNotifySignal () );
+    RBOOL( obj->hasNotifySignal () );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
   {
     if( ISQOBJECT(1) && ISQVARIANT(2) )
     {
-      hb_retl( obj->write ( PQOBJECT(1), *PQVARIANT(2) ) );
+      RBOOL( obj->write ( PQOBJECT(1), *PQVARIANT(2) ) );
     }
     else
     {
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_RESET )
   {
     if( ISQOBJECT(1) )
     {
-      hb_retl( obj->reset ( PQOBJECT(1) ) );
+      RBOOL( obj->reset ( PQOBJECT(1) ) );
     }
     else
     {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASSTDCPPSET )
 
   if( obj )
   {
-    hb_retl( obj->hasStdCppSet () );
+    RBOOL( obj->hasStdCppSet () );
   }
 }
 
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 
   if( obj )
   {
-    hb_retl( obj->isFlag () );
+    RBOOL( obj->isFlag () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

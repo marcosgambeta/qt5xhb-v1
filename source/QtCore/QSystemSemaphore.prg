@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 
   if( obj )
   {
-    hb_retl( obj->acquire () );
+    RBOOL( obj->acquire () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->release ( OPINT(1,1) ) );
+      RBOOL( obj->release ( OPINT(1,1) ) );
     }
     else
     {

@@ -57,8 +57,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
 {
   if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )
   {
-    QCollatorSortKey * par1 = (QCollatorSortKey *) _qt5xhb_itemGetPtr(1);
-    QCollatorSortKey * o = new QCollatorSortKey ( *par1 );
+    QCollatorSortKey * o = new QCollatorSortKey ( *PQCOLLATORSORTKEY(1) );
     _qt5xhb_storePointerAndFlag( o, true );
   }
   else
@@ -118,8 +117,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
   {
     if( ISQCOLLATORSORTKEY(1) )
     {
-      QCollatorSortKey * par1 = (QCollatorSortKey *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->compare ( *par1 ) );
+      hb_retni( obj->compare ( *PQCOLLATORSORTKEY(1) ) );
     }
     else
     {

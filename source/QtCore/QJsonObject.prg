@@ -78,8 +78,7 @@ QJsonObject(const QJsonObject & other)
 */
 void QJsonObject_new2 ()
 {
-  QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
-  QJsonObject * o = new QJsonObject ( *par1 );
+  QJsonObject * o = new QJsonObject ( *PQJSONOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -130,7 +129,7 @@ HB_FUNC_STATIC( QJSONOBJECT_CONTAINS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains ( PQSTRING(1) ) );
     }
     else
     {
@@ -161,7 +160,7 @@ HB_FUNC_STATIC( QJSONOBJECT_EMPTY )
 
   if( obj )
   {
-    hb_retl( obj->empty () );
+    RBOOL( obj->empty () );
   }
 }
 
@@ -174,7 +173,7 @@ HB_FUNC_STATIC( QJSONOBJECT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

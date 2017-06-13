@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 
   if( obj )
   {
-    hb_retl( obj->canReadLine () );
+    RBOOL( obj->canReadLine () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
     }
     else
     {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QBUFFER_POS )
 
   if( obj )
   {
-    hb_retni( obj->pos () );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->seek ( (qint64) hb_parni(1) ) );
+      RBOOL( obj->seek ( PQINT64(1) ) );
     }
     else
     {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QBUFFER_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RQINT64( obj->size () );
   }
 }
 

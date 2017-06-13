@@ -85,8 +85,7 @@ QMarginsF(const QMargins &margins)
 */
 void QMarginsF_new3 ()
 {
-  QMargins * par1 = (QMargins *) _qt5xhb_itemGetPtr(1);
-  QMarginsF * o = new QMarginsF ( *par1 );
+  QMarginsF * o = new QMarginsF ( *PQMARGINS(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -140,7 +139,7 @@ HB_FUNC_STATIC( QMARGINSF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -153,7 +152,7 @@ HB_FUNC_STATIC( QMARGINSF_LEFT )
 
   if( obj )
   {
-    hb_retnd( obj->left () );
+    RQREAL( obj->left () );
   }
 }
 
@@ -166,7 +165,7 @@ HB_FUNC_STATIC( QMARGINSF_TOP )
 
   if( obj )
   {
-    hb_retnd( obj->top () );
+    RQREAL( obj->top () );
   }
 }
 
@@ -179,7 +178,7 @@ HB_FUNC_STATIC( QMARGINSF_RIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->right () );
+    RQREAL( obj->right () );
   }
 }
 
@@ -192,7 +191,7 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 
   if( obj )
   {
-    hb_retnd( obj->bottom () );
+    RQREAL( obj->bottom () );
   }
 }
 

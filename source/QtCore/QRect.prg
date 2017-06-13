@@ -295,7 +295,7 @@ void QRect_contains1 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQPOINT(1), OPBOOL(2,false) ) );
+    RBOOL( obj->contains ( *PQPOINT(1), OPBOOL(2,false) ) );
   }
 }
 
@@ -308,7 +308,7 @@ void QRect_contains2 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( PINT(1), PINT(2), PBOOL(3) ) );
+    RBOOL( obj->contains ( PINT(1), PINT(2), PBOOL(3) ) );
   }
 }
 
@@ -321,7 +321,7 @@ void QRect_contains3 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( PINT(1), PINT(2) ) );
+    RBOOL( obj->contains ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -334,7 +334,7 @@ void QRect_contains4 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQRECT(1), OPBOOL(2,false) ) );
+    RBOOL( obj->contains ( *PQRECT(1), OPBOOL(2,false) ) );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTS )
   {
     if( ISQRECT(1) )
     {
-      hb_retl( obj->intersects ( *PQRECT(1) ) );
+      RBOOL( obj->intersects ( *PQRECT(1) ) );
     }
     else
     {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QRECT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QRECT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QRECT_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

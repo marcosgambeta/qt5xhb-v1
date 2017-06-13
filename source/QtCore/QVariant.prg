@@ -325,8 +325,7 @@ QVariant(const QBitArray &bitarray)
 */
 void QVariant_new16 ()
 {
-  QBitArray * par1 = (QBitArray *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQBITARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -373,8 +372,7 @@ QVariant(const QDate &date)
 */
 void QVariant_new21 ()
 {
-  QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQDATE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -383,8 +381,7 @@ QVariant(const QTime &time)
 */
 void QVariant_new22 ()
 {
-  QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQTIME(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -393,8 +390,7 @@ QVariant(const QDateTime &datetime)
 */
 void QVariant_new23 ()
 {
-  QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQDATETIME(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -518,8 +514,7 @@ QVariant(const QLocale &locale)
 */
 void QVariant_new35 ()
 {
-  QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQLOCALE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -529,8 +524,7 @@ QVariant(const QRegExp &regExp)
 void QVariant_new36 ()
 {
 #ifndef QT_NO_REGEXP
-  QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQREGEXP(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -541,8 +535,7 @@ QVariant(const QRegularExpression &re)
 void QVariant_new37 ()
 {
 #ifndef QT_NO_REGULAREXPRESSION
-  QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQREGULAREXPRESSION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -561,8 +554,7 @@ QVariant(const QEasingCurve &easing)
 */
 void QVariant_new39 ()
 {
-  QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQEASINGCURVE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -589,8 +581,7 @@ QVariant(const QJsonValue &jsonValue)
 */
 void QVariant_new42 ()
 {
-  QJsonValue * par1 = (QJsonValue *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQJSONVALUE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -599,8 +590,7 @@ QVariant(const QJsonObject &jsonObject)
 */
 void QVariant_new43 ()
 {
-  QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQJSONOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -609,8 +599,7 @@ QVariant(const QJsonArray &jsonArray)
 */
 void QVariant_new44 ()
 {
-  QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQJSONARRAY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -619,8 +608,7 @@ QVariant(const QJsonDocument &jsonDocument)
 */
 void QVariant_new45 ()
 {
-  QJsonDocument * par1 = (QJsonDocument *) _qt5xhb_itemGetPtr(1);
-  QVariant * o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQJSONDOCUMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -947,7 +935,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->canConvert ( PINT(1) ) );
+      RBOOL( obj->canConvert ( PINT(1) ) );
     }
     else
     {
@@ -967,7 +955,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->convert ( PINT(1) ) );
+      RBOOL( obj->convert ( PINT(1) ) );
     }
     else
     {
@@ -985,7 +973,7 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -998,7 +986,7 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -1041,7 +1029,7 @@ HB_FUNC_STATIC( QVARIANT_ISDETACHED )
 
   if( obj )
   {
-    hb_retl( obj->isDetached () );
+    RBOOL( obj->isDetached () );
   }
 }
 
@@ -1142,7 +1130,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
 
   if( obj )
   {
-    hb_retl( obj->toBool () );
+    RBOOL( obj->toBool () );
   }
 }
 
@@ -1158,7 +1146,7 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
     if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retnd( obj->toDouble ( &par1 ) );
+      RDOUBLE( obj->toDouble ( &par1 ) );
       hb_storl( par1, 1 );
     }
     else
@@ -1180,7 +1168,7 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
     if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retnd( obj->toFloat ( &par1 ) );
+      RFLOAT( obj->toFloat ( &par1 ) );
       hb_storl( par1, 1 );
     }
     else
@@ -1202,7 +1190,7 @@ HB_FUNC_STATIC( QVARIANT_TOREAL )
     if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retnd( obj->toReal ( &par1 ) );
+      RQREAL( obj->toReal ( &par1 ) );
       hb_storl( par1, 1 );
     }
     else

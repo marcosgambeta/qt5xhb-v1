@@ -143,7 +143,7 @@ void QCryptographicHash_addData3 ()
 
   if( obj )
   {
-    hb_retl( obj->addData ( PQIODEVICE(1) ) );
+    RBOOL( obj->addData ( PQIODEVICE(1) ) );
   }
 }
 

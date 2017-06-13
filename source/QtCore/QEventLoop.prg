@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning () );
+    RBOOL( obj->isRunning () );
   }
 }
 
@@ -146,7 +146,7 @@ void QEventLoop_processEvents1 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-    hb_retl( obj->processEvents ( (QEventLoop::ProcessEventsFlags) par1 ) );
+    RBOOL( obj->processEvents ( (QEventLoop::ProcessEventsFlags) par1 ) );
   }
 }
 

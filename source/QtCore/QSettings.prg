@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains ( PQSTRING(1) ) );
     }
     else
     {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 
   if( obj )
   {
-    hb_retl( obj->fallbacksEnabled () );
+    RBOOL( obj->fallbacksEnabled () );
   }
 }
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 

@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 
   if( obj )
   {
-    hb_retl( obj->added () );
+    RBOOL( obj->added () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 
   if( obj )
   {
-    hb_retl( obj->polished () );
+    RBOOL( obj->polished () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
 
   if( obj )
   {
-    hb_retl( obj->removed () );
+    RBOOL( obj->removed () );
   }
 }
 

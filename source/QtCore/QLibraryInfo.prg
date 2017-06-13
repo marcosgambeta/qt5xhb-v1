@@ -103,7 +103,7 @@ static bool isDebugBuild()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
 {
-  hb_retl( QLibraryInfo::isDebugBuild () );
+  RBOOL( QLibraryInfo::isDebugBuild () );
 }
 
 /*

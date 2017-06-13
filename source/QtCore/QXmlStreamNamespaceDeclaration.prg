@@ -68,8 +68,7 @@ QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
 void QXmlStreamNamespaceDeclaration_new2 ()
 {
-  QXmlStreamNamespaceDeclaration * par1 = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *par1 );
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

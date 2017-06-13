@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QLINE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

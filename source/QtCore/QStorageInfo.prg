@@ -101,8 +101,7 @@ explicit QStorageInfo(const QDir &dir)
 void QStorageInfo_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-  QStorageInfo * o = new QStorageInfo ( *par1 );
+  QStorageInfo * o = new QStorageInfo ( *PQDIR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -113,8 +112,7 @@ QStorageInfo(const QStorageInfo &other)
 void QStorageInfo_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * par1 = (QStorageInfo *) _qt5xhb_itemGetPtr(1);
-  QStorageInfo * o = new QStorageInfo ( *par1 );
+  QStorageInfo * o = new QStorageInfo ( *PQSTORAGEINFO(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -303,7 +301,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESTOTAL )
 
   if( obj )
   {
-    hb_retni( obj->bytesTotal () );
+    RQINT64( obj->bytesTotal () );
   }
 #endif
 }
@@ -318,7 +316,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESFREE )
 
   if( obj )
   {
-    hb_retni( obj->bytesFree () );
+    RQINT64( obj->bytesFree () );
   }
 #endif
 }
@@ -333,7 +331,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESAVAILABLE )
 
   if( obj )
   {
-    hb_retni( obj->bytesAvailable () );
+    RQINT64( obj->bytesAvailable () );
   }
 #endif
 }
@@ -348,7 +346,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISROOT )
 
   if( obj )
   {
-    hb_retl( obj->isRoot () );
+    RBOOL( obj->isRoot () );
   }
 #endif
 }
@@ -363,7 +361,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 #endif
 }
@@ -378,7 +376,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADY )
 
   if( obj )
   {
-    hb_retl( obj->isReady () );
+    RBOOL( obj->isReady () );
   }
 #endif
 }
@@ -393,7 +391,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }

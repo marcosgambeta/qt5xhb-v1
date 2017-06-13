@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retl( obj->isSelected ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isSelected ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      hb_retl( obj->isRowSelected ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isRowSelected ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      hb_retl( obj->isColumnSelected ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isColumnSelected ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      hb_retl( obj->rowIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->rowIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
   {
     if( ISNUM(1) && ISQMODELINDEX(2) )
     {
-      hb_retl( obj->columnIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->columnIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
     }
     else
     {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
 
   if( obj )
   {
-    hb_retl( obj->hasSelection () );
+    RBOOL( obj->hasSelection () );
   }
 }
 

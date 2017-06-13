@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
   {
     if( ISQEASINGCURVE(1) )
     {
-      QEasingCurve * par1 = (QEasingCurve *) _qt5xhb_itemGetPtr(1);
-      obj->setEasingCurve ( *par1 );
+      obj->setEasingCurve ( *PQEASINGCURVE(1) );
     }
     else
     {

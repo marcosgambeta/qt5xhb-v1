@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
 
   if( obj )
   {
-    hb_retl( obj->hasColor () );
+    RBOOL( obj->hasColor () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->hasFormat ( PQSTRING(1) ) );
+      RBOOL( obj->hasFormat ( PQSTRING(1) ) );
     }
     else
     {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASHTML )
 
   if( obj )
   {
-    hb_retl( obj->hasHtml () );
+    RBOOL( obj->hasHtml () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
 
   if( obj )
   {
-    hb_retl( obj->hasImage () );
+    RBOOL( obj->hasImage () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
 
   if( obj )
   {
-    hb_retl( obj->hasText () );
+    RBOOL( obj->hasText () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
 
   if( obj )
   {
-    hb_retl( obj->hasUrls () );
+    RBOOL( obj->hasUrls () );
   }
 }
 

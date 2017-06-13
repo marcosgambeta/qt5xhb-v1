@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTHREAD_ISFINISHED )
 
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 
   if( obj )
   {
-    hb_retl( obj->isRunning () );
+    RBOOL( obj->isRunning () );
   }
 }
 
@@ -266,8 +266,7 @@ HB_FUNC_STATIC( QTHREAD_EVENT )
   {
     if( ISQEVENT(1) )
     {
-      QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->event ( par1 ) );
+      RBOOL( obj->event ( PQEVENT(1) ) );
     }
     else
     {

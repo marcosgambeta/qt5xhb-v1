@@ -89,8 +89,7 @@ QRegularExpression(const QRegularExpression & re)
 */
 void QRegularExpression_new3 ()
 {
-  QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
-  QRegularExpression * o = new QRegularExpression ( *par1 );
+  QRegularExpression * o = new QRegularExpression ( *PQREGULAREXPRESSION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -193,7 +192,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

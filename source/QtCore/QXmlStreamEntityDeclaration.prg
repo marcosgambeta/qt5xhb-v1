@@ -71,8 +71,7 @@ QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
 void QXmlStreamEntityDeclaration_new2 ()
 {
-  QXmlStreamEntityDeclaration * par1 = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *par1 );
+  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

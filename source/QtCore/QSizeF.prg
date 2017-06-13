@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSIZEF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSIZEF_WIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->width () );
+    RQREAL( obj->width () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->height () );
+    RQREAL( obj->height () );
   }
 }
 

@@ -112,8 +112,7 @@ QDir(const QDir & dir)
 */
 void QDir_new1 ()
 {
-  QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-  QDir * o = new QDir ( *par1 );
+  QDir * o = new QDir ( *PQDIR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -235,7 +234,7 @@ HB_FUNC_STATIC( QDIR_CD )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->cd ( PQSTRING(1) ) );
+      RBOOL( obj->cd ( PQSTRING(1) ) );
     }
     else
     {
@@ -253,7 +252,7 @@ HB_FUNC_STATIC( QDIR_CDUP )
 
   if( obj )
   {
-    hb_retl( obj->cdUp () );
+    RBOOL( obj->cdUp () );
   }
 }
 
@@ -454,7 +453,7 @@ void QDir_exists1 ()
 
   if( obj )
   {
-    hb_retl( obj->exists ( PQSTRING(1) ) );
+    RBOOL( obj->exists ( PQSTRING(1) ) );
   }
 }
 
@@ -467,7 +466,7 @@ void QDir_exists2 ()
 
   if( obj )
   {
-    hb_retl( obj->exists () );
+    RBOOL( obj->exists () );
   }
 }
 
@@ -532,7 +531,7 @@ HB_FUNC_STATIC( QDIR_ISABSOLUTE )
 
   if( obj )
   {
-    hb_retl( obj->isAbsolute () );
+    RBOOL( obj->isAbsolute () );
   }
 }
 
@@ -545,7 +544,7 @@ HB_FUNC_STATIC( QDIR_ISREADABLE )
 
   if( obj )
   {
-    hb_retl( obj->isReadable () );
+    RBOOL( obj->isReadable () );
   }
 }
 
@@ -558,7 +557,7 @@ HB_FUNC_STATIC( QDIR_ISRELATIVE )
 
   if( obj )
   {
-    hb_retl( obj->isRelative () );
+    RBOOL( obj->isRelative () );
   }
 }
 
@@ -571,7 +570,7 @@ HB_FUNC_STATIC( QDIR_ISROOT )
 
   if( obj )
   {
-    hb_retl( obj->isRoot () );
+    RBOOL( obj->isRoot () );
   }
 }
 
@@ -584,7 +583,7 @@ HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
 
   if( obj )
   {
-    hb_retl( obj->makeAbsolute () );
+    RBOOL( obj->makeAbsolute () );
   }
 }
 
@@ -599,7 +598,7 @@ HB_FUNC_STATIC( QDIR_MKDIR )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->mkdir ( PQSTRING(1) ) );
+      RBOOL( obj->mkdir ( PQSTRING(1) ) );
     }
     else
     {
@@ -619,7 +618,7 @@ HB_FUNC_STATIC( QDIR_MKPATH )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->mkpath ( PQSTRING(1) ) );
+      RBOOL( obj->mkpath ( PQSTRING(1) ) );
     }
     else
     {
@@ -701,7 +700,7 @@ HB_FUNC_STATIC( QDIR_REMOVE )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->remove ( PQSTRING(1) ) );
+      RBOOL( obj->remove ( PQSTRING(1) ) );
     }
     else
     {
@@ -719,7 +718,7 @@ HB_FUNC_STATIC( QDIR_REMOVERECURSIVELY )
 
   if( obj )
   {
-    hb_retl( obj->removeRecursively () );
+    RBOOL( obj->removeRecursively () );
   }
 }
 
@@ -734,7 +733,7 @@ HB_FUNC_STATIC( QDIR_RENAME )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      hb_retl( obj->rename ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->rename ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -754,7 +753,7 @@ HB_FUNC_STATIC( QDIR_RMDIR )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->rmdir ( PQSTRING(1) ) );
+      RBOOL( obj->rmdir ( PQSTRING(1) ) );
     }
     else
     {
@@ -774,7 +773,7 @@ HB_FUNC_STATIC( QDIR_RMPATH )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->rmpath ( PQSTRING(1) ) );
+      RBOOL( obj->rmpath ( PQSTRING(1) ) );
     }
     else
     {
@@ -1035,7 +1034,7 @@ HB_FUNC_STATIC( QDIR_ISABSOLUTEPATH )
 {
   if( ISCHAR(1) )
   {
-    hb_retl( QDir::isAbsolutePath ( PQSTRING(1) ) );
+    RBOOL( QDir::isAbsolutePath ( PQSTRING(1) ) );
   }
   else
   {
@@ -1050,7 +1049,7 @@ HB_FUNC_STATIC( QDIR_ISRELATIVEPATH )
 {
   if( ISCHAR(1) )
   {
-    hb_retl( QDir::isRelativePath ( PQSTRING(1) ) );
+    RBOOL( QDir::isRelativePath ( PQSTRING(1) ) );
   }
   else
   {
@@ -1063,7 +1062,7 @@ static bool match(const QString & filter, const QString & fileName)
 */
 void QDir_match1 ()
 {
-  hb_retl( QDir::match ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QDir::match ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 /*
@@ -1071,7 +1070,7 @@ static bool match(const QStringList & filters, const QString & fileName)
 */
 void QDir_match2 ()
 {
-  hb_retl( QDir::match ( PQSTRINGLIST(1), PQSTRING(2) ) );
+  RBOOL( QDir::match ( PQSTRINGLIST(1), PQSTRING(2) ) );
 }
 
 //[1]bool match(const QString & filter, const QString & fileName)
@@ -1142,7 +1141,7 @@ HB_FUNC_STATIC( QDIR_SETCURRENT )
 {
   if( ISCHAR(1) )
   {
-    hb_retl( QDir::setCurrent ( PQSTRING(1) ) );
+    RBOOL( QDir::setCurrent ( PQSTRING(1) ) );
   }
   else
   {

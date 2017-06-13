@@ -129,8 +129,7 @@ QTimeZone(const QTimeZone &other)
 void QTimeZone_new5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * par1 = (QTimeZone *) _qt5xhb_itemGetPtr(1);
-  QTimeZone * o = new QTimeZone ( *par1 );
+  QTimeZone * o = new QTimeZone ( *PQTIMEZONE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -223,7 +222,7 @@ HB_FUNC_STATIC( QTIMEZONE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -284,10 +283,9 @@ void QTimeZone_displayName1 ()
 
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
     QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
-    hb_retc( RQSTRING( obj->displayName ( *par1, (QTimeZone::NameType) par2, par3 ) ) );
+    hb_retc( RQSTRING( obj->displayName ( *PQDATETIME(1), (QTimeZone::NameType) par2, par3 ) ) );
   }
 #endif
 }
@@ -340,8 +338,7 @@ HB_FUNC_STATIC( QTIMEZONE_ABBREVIATION )
   {
     if( ISQDATETIME(1) )
     {
-      QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->abbreviation ( *par1 ) ) );
+      hb_retc( RQSTRING( obj->abbreviation ( *PQDATETIME(1) ) ) );
     }
     else
     {
@@ -363,8 +360,7 @@ HB_FUNC_STATIC( QTIMEZONE_OFFSETFROMUTC )
   {
     if( ISQDATETIME(1) )
     {
-      QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->offsetFromUtc ( *par1 ) );
+      hb_retni( obj->offsetFromUtc ( *PQDATETIME(1) ) );
     }
     else
     {
@@ -386,8 +382,7 @@ HB_FUNC_STATIC( QTIMEZONE_STANDARDTIMEOFFSET )
   {
     if( ISQDATETIME(1) )
     {
-      QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->standardTimeOffset ( *par1 ) );
+      hb_retni( obj->standardTimeOffset ( *PQDATETIME(1) ) );
     }
     else
     {
@@ -409,8 +404,7 @@ HB_FUNC_STATIC( QTIMEZONE_DAYLIGHTTIMEOFFSET )
   {
     if( ISQDATETIME(1) )
     {
-      QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->daylightTimeOffset ( *par1 ) );
+      hb_retni( obj->daylightTimeOffset ( *PQDATETIME(1) ) );
     }
     else
     {
@@ -430,7 +424,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASDAYLIGHTTIME )
 
   if( obj )
   {
-    hb_retl( obj->hasDaylightTime () );
+    RBOOL( obj->hasDaylightTime () );
   }
 #endif
 }
@@ -447,8 +441,7 @@ HB_FUNC_STATIC( QTIMEZONE_ISDAYLIGHTTIME )
   {
     if( ISQDATETIME(1) )
     {
-      QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isDaylightTime ( *par1 ) );
+      RBOOL( obj->isDaylightTime ( *PQDATETIME(1) ) );
     }
     else
     {
@@ -468,7 +461,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASTRANSITIONS )
 
   if( obj )
   {
-    hb_retl( obj->hasTransitions () );
+    RBOOL( obj->hasTransitions () );
   }
 #endif
 }
@@ -492,7 +485,7 @@ HB_FUNC_STATIC( QTIMEZONE_ISTIMEZONEIDAVAILABLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISQBYTEARRAY(1) )
   {
-    hb_retl( QTimeZone::isTimeZoneIdAvailable ( *PQBYTEARRAY(1) ) );
+    RBOOL( QTimeZone::isTimeZoneIdAvailable ( *PQBYTEARRAY(1) ) );
   }
   else
   {

@@ -301,7 +301,7 @@ void QMetaMethod_invoke1 ()
 
   if( obj )
   {
-    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) hb_parni(2) ) );
+    RBOOL( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) hb_parni(2) ) );
   }
 }
 
@@ -314,7 +314,7 @@ void QMetaMethod_invoke2 ()
 
   if( obj )
   {
-    hb_retl( obj->invoke ( PQOBJECT(1) ) );
+    RBOOL( obj->invoke ( PQOBJECT(1) ) );
   }
 }
 
@@ -327,7 +327,7 @@ void QMetaMethod_invoke3 ()
 
   if( obj )
   {
-    hb_retl( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) hb_parni(2) ) );
+    RBOOL( obj->invoke ( PQOBJECT(1), (Qt::ConnectionType) hb_parni(2) ) );
   }
 }
 
@@ -340,7 +340,7 @@ void QMetaMethod_invoke4 ()
 
   if( obj )
   {
-    hb_retl( obj->invoke ( PQOBJECT(1) ) );
+    RBOOL( obj->invoke ( PQOBJECT(1) ) );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

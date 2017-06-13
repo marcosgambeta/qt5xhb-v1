@@ -169,7 +169,7 @@ static bool isTestModeEnabled()
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_ISTESTMODEENABLED )
 {
-  hb_retl( QStandardPaths::isTestModeEnabled () );
+  RBOOL( QStandardPaths::isTestModeEnabled () );
 }
 
 HB_FUNC_STATIC( QSTANDARDPATHS_NEWFROM )

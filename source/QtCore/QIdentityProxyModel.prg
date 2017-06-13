@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
     if( ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
     {
       const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
     }
     else
     {
@@ -300,8 +300,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
   {
     if( ISQITEMSELECTION(1) )
     {
-      QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *par1 ) );
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *PQITEMSELECTION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
     }
     else
@@ -322,8 +321,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
   {
     if( ISQITEMSELECTION(1) )
     {
-      QItemSelection * par1 = (QItemSelection *) _qt5xhb_itemGetPtr(1);
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *par1 ) );
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *PQITEMSELECTION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
     }
     else
@@ -419,7 +417,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -440,7 +438,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -461,7 +459,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -482,7 +480,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {

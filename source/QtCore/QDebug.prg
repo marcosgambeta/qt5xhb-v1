@@ -70,8 +70,7 @@ QDebug(const QDebug &o)
 */
 HB_FUNC_STATIC( QDEBUG_NEW4 )
 {
-  QDebug * par1 = (QDebug *) _qt5xhb_itemGetPtr(1);
-  QDebug * o = new QDebug ( *par1 );
+  QDebug * o = new QDebug ( *PQDEBUG(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -187,7 +186,7 @@ HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
 
   if( obj )
   {
-    hb_retl( obj->autoInsertSpaces () );
+    RBOOL( obj->autoInsertSpaces () );
   }
 }
 

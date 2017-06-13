@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QMODELINDEX_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

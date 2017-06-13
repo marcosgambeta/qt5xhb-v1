@@ -90,8 +90,7 @@ QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
 void QXmlStreamAttribute_new4 ()
 {
-  QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( *par1 );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -150,7 +149,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
 
   if( obj )
   {
-    hb_retl( obj->isDefault () );
+    RBOOL( obj->isDefault () );
   }
 }
 

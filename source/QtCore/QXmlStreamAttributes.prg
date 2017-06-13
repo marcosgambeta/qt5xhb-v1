@@ -112,8 +112,7 @@ void QXmlStreamAttributes_append2 ()
 
   if( obj )
   {
-    QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) _qt5xhb_itemGetPtr(1);
-    obj->append ( *par1 );
+    obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -167,7 +166,7 @@ void QXmlStreamAttributes_hasAttribute1 ()
 
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( PQSTRING(1) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -181,7 +180,7 @@ void QXmlStreamAttributes_hasAttribute2 ()
   if( obj )
   {
     QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->hasAttribute ( *par1 ) );
+    RBOOL( obj->hasAttribute ( *par1 ) );
   }
 }
 
@@ -194,7 +193,7 @@ void QXmlStreamAttributes_hasAttribute3 ()
 
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 

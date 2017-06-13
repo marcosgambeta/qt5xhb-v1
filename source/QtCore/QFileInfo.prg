@@ -123,8 +123,7 @@ QFileInfo(const QFile & file)
 */
 void QFileInfo_new3 ()
 {
-  QFile * par1 = (QFile *) _qt5xhb_itemGetPtr(1);
-  QFileInfo * o = new QFileInfo ( *par1 );
+  QFileInfo * o = new QFileInfo ( *PQFILE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -133,8 +132,7 @@ QFileInfo(const QDir & dir, const QString & file)
 */
 void QFileInfo_new4 ()
 {
-  QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-  QFileInfo * o = new QFileInfo ( *par1, PQSTRING(2) );
+  QFileInfo * o = new QFileInfo ( *PQDIR(1), PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -143,8 +141,7 @@ QFileInfo(const QFileInfo & fileinfo)
 */
 void QFileInfo_new5 ()
 {
-  QFileInfo * par1 = (QFileInfo *) _qt5xhb_itemGetPtr(1);
-  QFileInfo * o = new QFileInfo ( *par1 );
+  QFileInfo * o = new QFileInfo ( *PQFILEINFO(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -274,7 +271,7 @@ HB_FUNC_STATIC( QFILEINFO_CACHING )
 
   if( obj )
   {
-    hb_retl( obj->caching () );
+    RBOOL( obj->caching () );
   }
 }
 
@@ -367,7 +364,7 @@ HB_FUNC_STATIC( QFILEINFO_EXISTS )
 
   if( obj )
   {
-    hb_retl( obj->exists () );
+    RBOOL( obj->exists () );
   }
 }
 
@@ -432,7 +429,7 @@ HB_FUNC_STATIC( QFILEINFO_ISABSOLUTE )
 
   if( obj )
   {
-    hb_retl( obj->isAbsolute () );
+    RBOOL( obj->isAbsolute () );
   }
 }
 
@@ -445,7 +442,7 @@ HB_FUNC_STATIC( QFILEINFO_ISBUNDLE )
 
   if( obj )
   {
-    hb_retl( obj->isBundle () );
+    RBOOL( obj->isBundle () );
   }
 }
 
@@ -458,7 +455,7 @@ HB_FUNC_STATIC( QFILEINFO_ISDIR )
 
   if( obj )
   {
-    hb_retl( obj->isDir () );
+    RBOOL( obj->isDir () );
   }
 }
 
@@ -471,7 +468,7 @@ HB_FUNC_STATIC( QFILEINFO_ISEXECUTABLE )
 
   if( obj )
   {
-    hb_retl( obj->isExecutable () );
+    RBOOL( obj->isExecutable () );
   }
 }
 
@@ -484,7 +481,7 @@ HB_FUNC_STATIC( QFILEINFO_ISFILE )
 
   if( obj )
   {
-    hb_retl( obj->isFile () );
+    RBOOL( obj->isFile () );
   }
 }
 
@@ -497,7 +494,7 @@ HB_FUNC_STATIC( QFILEINFO_ISHIDDEN )
 
   if( obj )
   {
-    hb_retl( obj->isHidden () );
+    RBOOL( obj->isHidden () );
   }
 }
 
@@ -510,7 +507,7 @@ HB_FUNC_STATIC( QFILEINFO_ISNATIVEPATH )
 
   if( obj )
   {
-    hb_retl( obj->isNativePath () );
+    RBOOL( obj->isNativePath () );
   }
 }
 
@@ -523,7 +520,7 @@ HB_FUNC_STATIC( QFILEINFO_ISREADABLE )
 
   if( obj )
   {
-    hb_retl( obj->isReadable () );
+    RBOOL( obj->isReadable () );
   }
 }
 
@@ -536,7 +533,7 @@ HB_FUNC_STATIC( QFILEINFO_ISRELATIVE )
 
   if( obj )
   {
-    hb_retl( obj->isRelative () );
+    RBOOL( obj->isRelative () );
   }
 }
 
@@ -549,7 +546,7 @@ HB_FUNC_STATIC( QFILEINFO_ISROOT )
 
   if( obj )
   {
-    hb_retl( obj->isRoot () );
+    RBOOL( obj->isRoot () );
   }
 }
 
@@ -562,7 +559,7 @@ HB_FUNC_STATIC( QFILEINFO_ISSYMLINK )
 
   if( obj )
   {
-    hb_retl( obj->isSymLink () );
+    RBOOL( obj->isSymLink () );
   }
 }
 
@@ -575,7 +572,7 @@ HB_FUNC_STATIC( QFILEINFO_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -616,7 +613,7 @@ HB_FUNC_STATIC( QFILEINFO_MAKEABSOLUTE )
 
   if( obj )
   {
-    hb_retl( obj->makeAbsolute () );
+    RBOOL( obj->makeAbsolute () );
   }
 }
 
@@ -671,7 +668,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSION )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->permission ( (QFile::Permissions) par1 ) );
+      RBOOL( obj->permission ( (QFile::Permissions) par1 ) );
     }
     else
     {
@@ -754,8 +751,7 @@ void QFileInfo_setFile2 ()
 
   if( obj )
   {
-    QFile * par1 = (QFile *) _qt5xhb_itemGetPtr(1);
-    obj->setFile ( *par1 );
+    obj->setFile ( *PQFILE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -770,8 +766,7 @@ void QFileInfo_setFile3 ()
 
   if( obj )
   {
-    QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-    obj->setFile ( *par1, PQSTRING(2) );
+    obj->setFile ( *PQDIR(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -810,7 +805,7 @@ HB_FUNC_STATIC( QFILEINFO_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RQINT64( obj->size () );
   }
 }
 

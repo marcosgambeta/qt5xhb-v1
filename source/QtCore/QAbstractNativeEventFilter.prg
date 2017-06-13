@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER )
     if( ISQBYTEARRAY(1) && ISPOINTER(2) && ISNUM(3) )
     {
       long par3;
-      hb_retl( obj->nativeEventFilter ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
+      RBOOL( obj->nativeEventFilter ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
       hb_stornl( par3, 3 );
     }
     else

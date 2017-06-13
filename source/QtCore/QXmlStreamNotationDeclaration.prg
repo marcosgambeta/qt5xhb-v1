@@ -69,8 +69,7 @@ QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
 void QXmlStreamNotationDeclaration_new2 ()
 {
-  QXmlStreamNotationDeclaration * par1 = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *par1 );
+  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *PQXMLSTREAMNOTATIONDECLARATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

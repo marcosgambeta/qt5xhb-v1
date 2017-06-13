@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
     if( ISQBYTEARRAY(1) && ISPOINTER(2) && ISNUM(3) )
     {
       long par3;
-      hb_retl( obj->filterNativeEvent ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
+      RBOOL( obj->filterNativeEvent ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
       hb_stornl( par3, 3 );
     }
     else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 
   if( obj )
   {
-    hb_retl( obj->hasPendingEvents () );
+    RBOOL( obj->hasPendingEvents () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      hb_retl( obj->processEvents ( (QEventLoop::ProcessEventsFlags) par1 ) );
+      RBOOL( obj->processEvents ( (QEventLoop::ProcessEventsFlags) par1 ) );
     }
     else
     {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
   {
     if( ISQWINEVENTNOTIFIER(1) )
     {
-      hb_retl( obj->registerEventNotifier ( PQWINEVENTNOTIFIER(1) ) );
+      RBOOL( obj->registerEventNotifier ( PQWINEVENTNOTIFIER(1) ) );
     }
     else
     {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->unregisterTimer ( PINT(1) ) );
+      RBOOL( obj->unregisterTimer ( PINT(1) ) );
     }
     else
     {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
   {
     if( ISQOBJECT(1) )
     {
-      hb_retl( obj->unregisterTimers ( PQOBJECT(1) ) );
+      RBOOL( obj->unregisterTimers ( PQOBJECT(1) ) );
     }
     else
     {

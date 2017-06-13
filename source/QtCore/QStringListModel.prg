@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
   {
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {

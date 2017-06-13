@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
 
   if( obj )
   {
-    hb_retl( obj->isBool () );
+    RBOOL( obj->isBool () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
 
   if( obj )
   {
-    hb_retl( obj->isDouble () );
+    RBOOL( obj->isDouble () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
 
   if( obj )
   {
-    hb_retl( obj->isString () );
+    RBOOL( obj->isString () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
 
   if( obj )
   {
-    hb_retl( obj->isArray () );
+    RBOOL( obj->isArray () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
 
   if( obj )
   {
-    hb_retl( obj->isObject () );
+    RBOOL( obj->isObject () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
 
   if( obj )
   {
-    hb_retl( obj->isUndefined () );
+    RBOOL( obj->isUndefined () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
 
   if( obj )
   {
-    hb_retl( obj->toBool () );
+    RBOOL( obj->toBool () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
 
   if( obj )
   {
-    hb_retnd( obj->toDouble () );
+    RDOUBLE( obj->toDouble () );
   }
 }
 

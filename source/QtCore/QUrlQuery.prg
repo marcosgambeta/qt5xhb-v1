@@ -102,8 +102,7 @@ QUrlQuery(const QUrlQuery & other)
 */
 void QUrlQuery_new4 ()
 {
-  QUrlQuery * par1 = (QUrlQuery *) _qt5xhb_itemGetPtr(1);
-  QUrlQuery * o = new QUrlQuery ( *par1 );
+  QUrlQuery * o = new QUrlQuery ( *PQURLQUERY(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -223,7 +222,7 @@ HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->hasQueryItem ( PQSTRING(1) ) );
+      RBOOL( obj->hasQueryItem ( PQSTRING(1) ) );
     }
     else
     {
@@ -241,7 +240,7 @@ HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

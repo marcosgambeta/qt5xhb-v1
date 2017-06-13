@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 
   if( obj )
   {
-    hb_retl( obj->isLoaded () );
+    RBOOL( obj->isLoaded () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 
   if( obj )
   {
-    hb_retl( obj->load () );
+    RBOOL( obj->load () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 
   if( obj )
   {
-    hb_retl( obj->unload () );
+    RBOOL( obj->unload () );
   }
 }
 

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isEnabled ( (QtMsgType) hb_parni(1) ) );
+      RBOOL( obj->isEnabled ( (QtMsgType) hb_parni(1) ) );
     }
     else
     {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISDEBUGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isDebugEnabled () );
+    RBOOL( obj->isDebugEnabled () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISWARNINGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isWarningEnabled () );
+    RBOOL( obj->isWarningEnabled () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISCRITICALENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isCriticalEnabled () );
+    RBOOL( obj->isCriticalEnabled () );
   }
 }
 

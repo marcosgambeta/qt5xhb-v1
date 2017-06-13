@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -99,7 +99,7 @@ void QTranslator_load1 ()
 
   if( obj )
   {
-    hb_retl( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
+    RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
   }
 }
 
@@ -112,8 +112,7 @@ void QTranslator_load2 ()
 
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->load ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
+    RBOOL( obj->load ( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
   }
 }
 
@@ -127,7 +126,7 @@ void QTranslator_load3 ()
   if( obj )
   {
     const uchar * par1 = (const uchar *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->load ( par1, PINT(2), OPQSTRING(3,QString()) ) );
+    RBOOL( obj->load ( par1, PINT(2), OPQSTRING(3,QString()) ) );
   }
 }
 

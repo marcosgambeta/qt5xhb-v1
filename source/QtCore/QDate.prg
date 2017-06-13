@@ -267,8 +267,7 @@ HB_FUNC_STATIC( QDATE_DAYSTO )
   {
     if( ISQDATE(1) )
     {
-      QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->daysTo ( *par1 ) );
+      hb_retni( obj->daysTo ( *PQDATE(1) ) );
     }
     else
     {
@@ -314,7 +313,7 @@ HB_FUNC_STATIC( QDATE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -342,7 +341,7 @@ HB_FUNC_STATIC( QDATE_SETDATE )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
-      hb_retl( obj->setDate ( PINT(1), PINT(2), PINT(3) ) );
+      RBOOL( obj->setDate ( PINT(1), PINT(2), PINT(3) ) );
     }
     else
     {
@@ -515,7 +514,7 @@ HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 {
   if( ISNUM(1) )
   {
-    hb_retl( QDate::isLeapYear ( PINT(1) ) );
+    RBOOL( QDate::isLeapYear ( PINT(1) ) );
   }
   else
   {
@@ -532,7 +531,7 @@ void QDate_isValid1 ()
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -541,7 +540,7 @@ static bool isValid ( int year, int month, int day )
 */
 void QDate_isValid2 ()
 {
-  hb_retl( QDate::isValid ( PINT(1), PINT(2), PINT(3) ) );
+  RBOOL( QDate::isValid ( PINT(1), PINT(2), PINT(3) ) );
 }
 
 //[1]bool isValid () const

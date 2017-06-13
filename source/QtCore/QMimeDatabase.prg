@@ -131,9 +131,8 @@ void QMimeDatabase_mimeTypeForFile2 ()
 
   if( obj )
   {
-    QFileInfo * par1 = (QFileInfo *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QMimeDatabase::MatchDefault : hb_parni(2);
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFile ( *par1, (QMimeDatabase::MatchMode) par2 ) );
+    QMimeType * ptr = new QMimeType( obj->mimeTypeForFile ( *PQFILEINFO(1), (QMimeDatabase::MatchMode) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }

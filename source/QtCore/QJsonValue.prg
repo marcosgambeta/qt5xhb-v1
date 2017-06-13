@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISARRAY )
 
   if( obj )
   {
-    hb_retl( obj->isArray () );
+    RBOOL( obj->isArray () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISBOOL )
 
   if( obj )
   {
-    hb_retl( obj->isBool () );
+    RBOOL( obj->isBool () );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISDOUBLE )
 
   if( obj )
   {
-    hb_retl( obj->isDouble () );
+    RBOOL( obj->isDouble () );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISOBJECT )
 
   if( obj )
   {
-    hb_retl( obj->isObject () );
+    RBOOL( obj->isObject () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISSTRING )
 
   if( obj )
   {
-    hb_retl( obj->isString () );
+    RBOOL( obj->isString () );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
 
   if( obj )
   {
-    hb_retl( obj->isUndefined () );
+    RBOOL( obj->isUndefined () );
   }
 }
 
@@ -318,8 +318,7 @@ void QJsonValue_toArray1 ()
 
   if( obj )
   {
-    QJsonArray * par1 = (QJsonArray *) _qt5xhb_itemGetPtr(1);
-    QJsonArray * ptr = new QJsonArray( obj->toArray ( *par1 ) );
+    QJsonArray * ptr = new QJsonArray( obj->toArray ( *PQJSONARRAY(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
   }
 }
@@ -368,7 +367,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOBOOL )
   {
     if( ISOPTLOG(1) )
     {
-      hb_retl( obj->toBool ( OPBOOL(1,false) ) );
+      RBOOL( obj->toBool ( OPBOOL(1,false) ) );
     }
     else
     {
@@ -388,8 +387,7 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
   {
     if( ISOPTNUM(1) )
     {
-      double par1 = ISNIL(1)? 0 : hb_parnd(1);
-      hb_retnd( obj->toDouble ( par1 ) );
+      RDOUBLE( obj->toDouble ( OPDOUBLE(1,0) ) );
     }
     else
     {
@@ -407,8 +405,7 @@ void QJsonValue_toObject1 ()
 
   if( obj )
   {
-    QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
-    QJsonObject * ptr = new QJsonObject( obj->toObject ( *par1 ) );
+    QJsonObject * ptr = new QJsonObject( obj->toObject ( *PQJSONOBJECT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
   }
 }

@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDOPTION )
   {
     if( ISQCOMMANDLINEOPTION(1) )
     {
-      QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->addOption ( *par1 ) );
+      RBOOL( obj->addOption ( *PQCOMMANDLINEOPTION(1) ) );
     }
     else
     {
@@ -291,8 +290,7 @@ void QCommandLineParser_process2 ()
 
   if( obj )
   {
-    QCoreApplication * par1 = (QCoreApplication *) _qt5xhb_itemGetPtr(1);
-    obj->process ( *par1 );
+    obj->process ( *PQCOREAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -330,7 +328,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PARSE )
   {
     if( ISARRAY(1) )
     {
-      hb_retl( obj->parse ( PQSTRINGLIST(1) ) );
+      RBOOL( obj->parse ( PQSTRINGLIST(1) ) );
     }
     else
     {
@@ -365,7 +363,7 @@ void QCommandLineParser_isSet1 ()
 
   if( obj )
   {
-    hb_retl( obj->isSet ( PQSTRING(1) ) );
+    RBOOL( obj->isSet ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -380,8 +378,7 @@ void QCommandLineParser_isSet2 ()
 
   if( obj )
   {
-    QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isSet ( *par1 ) );
+    RBOOL( obj->isSet ( *PQCOMMANDLINEOPTION(1) ) );
   }
 #endif
 }
@@ -430,8 +427,7 @@ void QCommandLineParser_value2 ()
 
   if( obj )
   {
-    QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->value ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->value ( *PQCOMMANDLINEOPTION(1) ) ) );
   }
 #endif
 }
@@ -481,8 +477,7 @@ void QCommandLineParser_values2 ()
 
   if( obj )
   {
-    QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-    QStringList strl = obj->values ( *par1 );
+    QStringList strl = obj->values ( *PQCOMMANDLINEOPTION(1) );
     _qt5xhb_convert_qstringlist_to_array ( strl );
   }
 #endif

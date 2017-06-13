@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 

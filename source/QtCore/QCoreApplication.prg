@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
   {
     if( ISQOBJECT(1) && ISQEVENT(2) )
     {
-      hb_retl( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
     }
     else
     {
@@ -191,7 +191,7 @@ static qint64 applicationPid ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 {
-  hb_retni( QCoreApplication::applicationPid () );
+  RQINT64( QCoreApplication::applicationPid () );
 }
 
 /*
@@ -216,7 +216,7 @@ static bool closingDown ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 {
-  hb_retl( QCoreApplication::closingDown () );
+  RBOOL( QCoreApplication::closingDown () );
 }
 
 /*
@@ -257,7 +257,7 @@ static bool hasPendingEvents ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 {
-  hb_retl( QCoreApplication::hasPendingEvents () );
+  RBOOL( QCoreApplication::hasPendingEvents () );
 }
 
 /*
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 {
   if( ISQOBJECT(1) && ISQEVENT(2) )
   {
-    hb_retl( QCoreApplication::sendEvent ( PQOBJECT(1), PQEVENT(2) ) );
+    RBOOL( QCoreApplication::sendEvent ( PQOBJECT(1), PQEVENT(2) ) );
   }
   else
   {
@@ -610,7 +610,7 @@ static bool startingUp ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 {
-  hb_retl( QCoreApplication::startingUp () );
+  RBOOL( QCoreApplication::startingUp () );
 }
 
 /*
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {
   if( ISNUM(1) )
   {
-    hb_retl( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) hb_parni(1) ) );
+    RBOOL( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) hb_parni(1) ) );
   }
   else
   {

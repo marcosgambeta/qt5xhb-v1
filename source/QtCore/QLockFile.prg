@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QLOCKFILE_LOCK )
 
   if( obj )
   {
-    hb_retl( obj->lock () );
+    RBOOL( obj->lock () );
   }
 #endif
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->tryLock ( OPINT(1,0) ) );
+      RBOOL( obj->tryLock ( OPINT(1,0) ) );
     }
     else
     {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
 
   if( obj )
   {
-    hb_retl( obj->isLocked () );
+    RBOOL( obj->isLocked () );
   }
 #endif
 }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO ) // TODO: revisar implementacao do metodo
       qint64 * par1 = (qint64 *) _qt5xhb_itemGetPtr(1);
       QString par2 = hb_parc(2);
       QString par3 = hb_parc(3);
-      hb_retl( obj->getLockInfo ( par1, &par2, &par3 ) );
+      RBOOL( obj->getLockInfo ( par1, &par2, &par3 ) );
     }
     else
     {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QLOCKFILE_REMOVESTALELOCKFILE )
 
   if( obj )
   {
-    hb_retl( obj->removeStaleLockFile () );
+    RBOOL( obj->removeStaleLockFile () );
   }
 #endif
 }

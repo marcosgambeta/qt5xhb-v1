@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 
   if( obj )
   {
-    hb_retl( obj->autoRemove () );
+    RBOOL( obj->autoRemove () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 
   if( obj )
   {
-    hb_retl( obj->open () );
+    RBOOL( obj->open () );
   }
 }
 

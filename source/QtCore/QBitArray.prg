@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QBITARRAY_AT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->at ( PINT(1) ) );
+      RBOOL( obj->at ( PINT(1) ) );
     }
     else
     {
@@ -240,7 +240,7 @@ void QBitArray_fill1 ()
 
   if( obj )
   {
-    hb_retl( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
+    RBOOL( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QBITARRAY_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QBITARRAY_TESTBIT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->testBit ( PINT(1) ) );
+      RBOOL( obj->testBit ( PINT(1) ) );
     }
     else
     {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->toggleBit ( PINT(1) ) );
+      RBOOL( obj->toggleBit ( PINT(1) ) );
     }
     else
     {

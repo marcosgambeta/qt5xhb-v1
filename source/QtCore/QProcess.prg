@@ -389,8 +389,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
   {
     if( ISQPROCESSENVIRONMENT(1) )
     {
-      QProcessEnvironment * par1 = (QProcessEnvironment *) _qt5xhb_itemGetPtr(1);
-      obj->setProcessEnvironment ( *par1 );
+      obj->setProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
     }
     else
     {
@@ -632,7 +631,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForFinished ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForFinished ( OPINT(1,30000) ) );
     }
     else
     {
@@ -652,7 +651,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForStarted ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForStarted ( OPINT(1,30000) ) );
     }
     else
     {
@@ -683,7 +682,7 @@ HB_FUNC_STATIC( QPROCESS_ATEND )
 
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -696,7 +695,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 
   if( obj )
   {
-    hb_retni( obj->bytesAvailable () );
+    RQINT64( obj->bytesAvailable () );
   }
 }
 
@@ -709,7 +708,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 
   if( obj )
   {
-    hb_retni( obj->bytesToWrite () );
+    RQINT64( obj->bytesToWrite () );
   }
 }
 
@@ -722,7 +721,7 @@ HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 
   if( obj )
   {
-    hb_retl( obj->canReadLine () );
+    RBOOL( obj->canReadLine () );
   }
 }
 
@@ -750,7 +749,7 @@ HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -765,7 +764,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
     }
     else
     {
@@ -785,7 +784,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retl( obj->waitForReadyRead ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
     }
     else
     {
@@ -864,8 +863,8 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 */
 void QProcess_startDetached1 ()
 {
-  qint64 * par4 = (qint64 *) _qt5xhb_itemGetPtr(4);
-  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), par4 ) );
+  qint64 * par4 = (qint64 *) _qt5xhb_itemGetPtr(4); // TODO: corrigir
+  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), par4 ) );
 }
 
 /*
@@ -873,7 +872,7 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 */
 void QProcess_startDetached2 ()
 {
-  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 /*
@@ -881,7 +880,7 @@ static bool startDetached ( const QString & program )
 */
 void QProcess_startDetached3 ()
 {
-  hb_retl( QProcess::startDetached ( PQSTRING(1) ) );
+  RBOOL( QProcess::startDetached ( PQSTRING(1) ) );
 }
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
@@ -929,7 +928,7 @@ HB_FUNC_STATIC( QPROCESS_OPEN )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QIODevice::ReadWrite : hb_parni(1);
-      hb_retl( obj->open ( (QIODevice::OpenMode) par1 ) );
+      RBOOL( obj->open ( (QIODevice::OpenMode) par1 ) );
     }
     else
     {
@@ -1088,7 +1087,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSID )
 
   if( obj )
   {
-    hb_retni( obj->processId () );
+    RQINT64( obj->processId () );
   }
 }
 
