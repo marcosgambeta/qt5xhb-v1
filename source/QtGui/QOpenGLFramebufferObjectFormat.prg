@@ -74,8 +74,7 @@ QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 {
-  QOpenGLFramebufferObjectFormat * par1 = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(1);
-  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ( *par1 );
+  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -163,7 +162,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_MIPMAP )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->mipmap () );
+    RBOOL( obj->mipmap () );
   }
 }
 

@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QFONTINFO_BOLD )
 
   if( obj )
   {
-    hb_retl( obj->bold () );
+    RBOOL( obj->bold () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 
   if( obj )
   {
-    hb_retl( obj->exactMatch () );
+    RBOOL( obj->exactMatch () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 
   if( obj )
   {
-    hb_retl( obj->fixedPitch () );
+    RBOOL( obj->fixedPitch () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QFONTINFO_ITALIC )
 
   if( obj )
   {
-    hb_retl( obj->italic () );
+    RBOOL( obj->italic () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 
   if( obj )
   {
-    hb_retnd( obj->pointSizeF () );
+    RQREAL( obj->pointSizeF () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 
   if( obj )
   {
-    hb_retl( obj->rawMode () );
+    RBOOL( obj->rawMode () );
   }
 }
 

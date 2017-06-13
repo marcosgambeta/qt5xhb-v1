@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QMOVIE_ISVALID )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->jumpToFrame ( PINT(1) ) );
+    RBOOL( obj->jumpToFrame ( PINT(1) ) );
   }
 }
 
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->jumpToNextFrame () );
+    RBOOL( obj->jumpToNextFrame () );
   }
 }
 

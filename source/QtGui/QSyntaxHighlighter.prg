@@ -125,8 +125,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
-    obj->rehighlightBlock ( *par1 );
+    obj->rehighlightBlock ( *PQTEXTBLOCK(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

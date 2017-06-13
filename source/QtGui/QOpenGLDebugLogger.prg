@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_INITIALIZE )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->initialize () );
+    RBOOL( obj->initialize () );
   }
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ISLOGGING )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLogging () );
+    RBOOL( obj->isLogging () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumMessageLength () );
+    RQINT64( obj->maximumMessageLength () );
   }
 }
 
@@ -171,8 +171,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGMESSAGE )
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtr(1);
-    obj->logMessage ( *par1 );
+    obj->logMessage ( *PQOPENGLDEBUGMESSAGE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

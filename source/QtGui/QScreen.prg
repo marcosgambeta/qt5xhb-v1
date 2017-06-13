@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCHX )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->physicalDotsPerInchX () );
+    RQREAL( obj->physicalDotsPerInchX () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCHY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->physicalDotsPerInchY () );
+    RQREAL( obj->physicalDotsPerInchY () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCH )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->physicalDotsPerInch () );
+    RQREAL( obj->physicalDotsPerInch () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCHX )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->logicalDotsPerInchX () );
+    RQREAL( obj->logicalDotsPerInchX () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCHY )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->logicalDotsPerInchY () );
+    RQREAL( obj->logicalDotsPerInchY () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCH )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->logicalDotsPerInch () );
+    RQREAL( obj->logicalDotsPerInch () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSCREEN_DEVICEPIXELRATIO )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->devicePixelRatio () );
+    RQREAL( obj->devicePixelRatio () );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSCREEN_ISPORTRAIT )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isPortrait ( (Qt::ScreenOrientation) hb_parni(1) ) );
+    RBOOL( obj->isPortrait ( (Qt::ScreenOrientation) hb_parni(1) ) );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QSCREEN_ISLANDSCAPE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLandscape ( (Qt::ScreenOrientation) hb_parni(1) ) );
+    RBOOL( obj->isLandscape ( (Qt::ScreenOrientation) hb_parni(1) ) );
   }
 }
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QSCREEN_REFRESHRATE )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->refreshRate () );
+    RQREAL( obj->refreshRate () );
   }
 }
 

@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isColumnSelected ( PINT(1) ) );
+    RBOOL( obj->isColumnSelected ( PINT(1) ) );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRowSelected ( PINT(1) ) );
+    RBOOL( obj->isRowSelected ( PINT(1) ) );
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->selectRow ( PINT(1) ) );
+    RBOOL( obj->selectRow ( PINT(1) ) );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->selectColumn ( PINT(1) ) );
+    RBOOL( obj->selectColumn ( PINT(1) ) );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->unselectRow ( PINT(1) ) );
+    RBOOL( obj->unselectRow ( PINT(1) ) );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->unselectColumn ( PINT(1) ) );
+    RBOOL( obj->unselectColumn ( PINT(1) ) );
   }
 }
 

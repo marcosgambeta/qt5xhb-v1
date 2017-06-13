@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_HASSTATICCONTENTS )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasStaticContents () );
+    RBOOL( obj->hasStaticContents () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SCROLL )
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->scroll ( *PQREGION(1), PINT(2), PINT(3) ) );
+    RBOOL( obj->scroll ( *PQREGION(1), PINT(2), PINT(3) ) );
   }
 }
 

@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ISAFFINE )
 
   if( obj )
   {
-    hb_retl( (bool) obj->isAffine () );
+    RBOOL( (bool) obj->isAffine () );
   }
 #endif
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ISIDENTITY )
 
   if( obj )
   {
-    hb_retl( (bool) obj->isIdentity () );
+    RBOOL( (bool) obj->isIdentity () );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
 
   if( obj )
   {
-    hb_retnd( obj->determinant () );
+    RDOUBLE( obj->determinant () );
   }
 }
 

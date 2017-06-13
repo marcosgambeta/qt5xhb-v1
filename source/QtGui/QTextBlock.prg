@@ -115,8 +115,7 @@ QTextBlock(const QTextBlock &o)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEW3 )
 {
-  QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
-  QTextBlock * o = new QTextBlock ( *par1 );
+  QTextBlock * o = new QTextBlock ( *PQTEXTBLOCK(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -168,7 +167,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -207,7 +206,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( PINT(1) ) );
+    RBOOL( obj->contains ( PINT(1) ) );
   }
 }
 
@@ -439,7 +438,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 

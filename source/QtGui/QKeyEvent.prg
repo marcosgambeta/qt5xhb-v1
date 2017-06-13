@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
   QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAutoRepeat () );
+    RBOOL( obj->isAutoRepeat () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
   QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->matches ( (QKeySequence::StandardKey) hb_parni(1) ) );
+    RBOOL( obj->matches ( (QKeySequence::StandardKey) hb_parni(1) ) );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
   QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nativeModifiers () );
+    RQUINT32( obj->nativeModifiers () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
   QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nativeScanCode () );
+    RQUINT32( obj->nativeScanCode () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
   QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nativeVirtualKey () );
+    RQUINT32( obj->nativeVirtualKey () );
   }
 }
 

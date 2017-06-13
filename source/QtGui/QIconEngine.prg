@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QICONENGINE_READ )
     if( ISQDATASTREAM(1) )
     {
       QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->read ( *par1 ) );
+      RBOOL( obj->read ( *par1 ) );
     }
     else
     {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QICONENGINE_WRITE )
     if( ISQDATASTREAM(1) )
     {
       QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->write ( *par1 ) );
+      RBOOL( obj->write ( *par1 ) );
     }
     else
     {

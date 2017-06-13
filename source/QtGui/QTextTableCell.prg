@@ -83,8 +83,7 @@ QTextTableCell(const QTextTableCell &o)
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
 {
-  QTextTableCell * par1 = (QTextTableCell *) _qt5xhb_itemGetPtr(1);
-  QTextTableCell * o = new QTextTableCell ( *par1 );
+  QTextTableCell * o = new QTextTableCell ( *PQTEXTTABLECELL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -131,8 +130,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextCharFormat * par1 = (QTextCharFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQTEXTCHARFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -212,7 +210,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

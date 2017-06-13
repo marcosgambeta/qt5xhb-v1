@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
   QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

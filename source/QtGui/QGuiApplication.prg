@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
   QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
+    RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
   }
 }
 
@@ -215,7 +215,7 @@ static bool desktopSettingsAware()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_DESKTOPSETTINGSAWARE )
 {
-  hb_retl( QGuiApplication::desktopSettingsAware () );
+  RBOOL( QGuiApplication::desktopSettingsAware () );
 }
 
 
@@ -273,7 +273,7 @@ static bool isLeftToRight()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ISLEFTTORIGHT )
 {
-  hb_retl( QGuiApplication::isLeftToRight () );
+  RBOOL( QGuiApplication::isLeftToRight () );
 }
 
 
@@ -282,7 +282,7 @@ static bool isRightToLeft()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ISRIGHTTOLEFT )
 {
-  hb_retl( QGuiApplication::isRightToLeft () );
+  RBOOL( QGuiApplication::isRightToLeft () );
 }
 
 
@@ -386,7 +386,7 @@ static bool quitOnLastWindowClosed()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
-  hb_retl( QGuiApplication::quitOnLastWindowClosed () );
+  RBOOL( QGuiApplication::quitOnLastWindowClosed () );
 }
 
 

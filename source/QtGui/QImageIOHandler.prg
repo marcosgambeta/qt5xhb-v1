@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 
   if( obj )
   {
-    hb_retl( obj->canRead () );
+    RBOOL( obj->canRead () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->jumpToImage ( PINT(1) ) );
+      RBOOL( obj->jumpToImage ( PINT(1) ) );
     }
     else
     {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 
   if( obj )
   {
-    hb_retl( obj->jumpToNextImage () );
+    RBOOL( obj->jumpToNextImage () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
     if( ISQIMAGE(1) )
     {
       QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->read ( par1 ) );
+      RBOOL( obj->read ( par1 ) );
     }
     else
     {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
+      RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
     }
     else
     {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
   {
     if( ISQIMAGE(1) )
     {
-      hb_retl( obj->write ( *PQIMAGE(1) ) );
+      RBOOL( obj->write ( *PQIMAGE(1) ) );
     }
     else
     {

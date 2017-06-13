@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QFONTDATABASE_BOLD )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      hb_retl( obj->bold ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->bold ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      hb_retl( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RBOOL( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      hb_retl( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RBOOL( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      hb_retl( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RBOOL( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      hb_retl( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RBOOL( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      hb_retl( obj->italic ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->italic ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -451,7 +451,7 @@ static bool removeAllApplicationFonts ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 {
-  hb_retl( QFontDatabase::removeAllApplicationFonts () );
+  RBOOL( QFontDatabase::removeAllApplicationFonts () );
 }
 
 /*
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
   if( ISNUM(1) )
   {
-    hb_retl( QFontDatabase::removeApplicationFont ( PINT(1) ) );
+    RBOOL( QFontDatabase::removeApplicationFont ( PINT(1) ) );
   }
   else
   {
@@ -483,7 +483,7 @@ static bool supportsThreadedFontRendering ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {
-  hb_retl( QFontDatabase::supportsThreadedFontRendering () );
+  RBOOL( QFontDatabase::supportsThreadedFontRendering () );
 }
 
 /*

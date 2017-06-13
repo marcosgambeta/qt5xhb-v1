@@ -104,8 +104,7 @@ QKeySequence ( const QKeySequence & keysequence )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
 {
-  QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-  QKeySequence * o = new QKeySequence ( *par1 );
+  QKeySequence * o = new QKeySequence ( *PQKEYSEQUENCE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -191,7 +190,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
   QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -204,8 +203,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
   QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->matches ( *par1 ) );
+    hb_retni( obj->matches ( *PQKEYSEQUENCE(1) ) );
   }
 }
 

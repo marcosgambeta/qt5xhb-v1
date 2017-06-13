@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
   QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->brushNeedsResolving () );
+    RBOOL( obj->brushNeedsResolving () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
   QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isClipEnabled () );
+    RBOOL( obj->isClipEnabled () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
   QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->opacity () );
+    RQREAL( obj->opacity () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
   QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->penNeedsResolving () );
+    RBOOL( obj->penNeedsResolving () );
   }
 }
 

@@ -81,7 +81,7 @@ static bool isActive()
 */
 HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 {
-  hb_retl( QAccessible::isActive () );
+  RBOOL( QAccessible::isActive () );
 }
 
 

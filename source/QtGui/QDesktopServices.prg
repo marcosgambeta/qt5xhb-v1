@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
   if( ISQURL(1) )
   {
-    hb_retl( QDesktopServices::openUrl ( *PQURL(1) ) );
+    RBOOL( QDesktopServices::openUrl ( *PQURL(1) ) );
   }
   else
   {

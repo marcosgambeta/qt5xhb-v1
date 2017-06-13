@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    hb_retl( obj->movePosition ( (QTextCursor::MoveOperation) hb_parni(1), (QTextCursor::MoveMode) par2, OPINT(3,1) ) );
+    RBOOL( obj->movePosition ( (QTextCursor::MoveOperation) hb_parni(1), (QTextCursor::MoveMode) par2, OPINT(3,1) ) );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->visualNavigation () );
+    RBOOL( obj->visualNavigation () );
   }
 }
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->keepPositionOnInsert () );
+    RBOOL( obj->keepPositionOnInsert () );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasSelection () );
+    RBOOL( obj->hasSelection () );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasComplexSelection () );
+    RBOOL( obj->hasComplexSelection () );
   }
 }
 
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->atBlockStart () );
+    RBOOL( obj->atBlockStart () );
   }
 }
 
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->atBlockEnd () );
+    RBOOL( obj->atBlockEnd () );
   }
 }
 
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->atStart () );
+    RBOOL( obj->atStart () );
   }
 }
 
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
   QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCopyOf ( *PQTEXTCURSOR(1) ) );
+    RBOOL( obj->isCopyOf ( *PQTEXTCURSOR(1) ) );
   }
 }
 

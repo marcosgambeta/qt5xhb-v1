@@ -97,8 +97,7 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPaintDevice * par1 = (QPaintDevice *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->begin ( par1 ) );
+    RBOOL( obj->begin ( PQPAINTDEVICE(1) ) );
   }
 }
 
@@ -274,7 +273,7 @@ HB_FUNC_STATIC( QPAINTENGINE_END )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->end () );
+    RBOOL( obj->end () );
   }
 }
 
@@ -288,7 +287,7 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->hasFeature ( (QPaintEngine::PaintEngineFeatures) par1 ) );
+    RBOOL( obj->hasFeature ( (QPaintEngine::PaintEngineFeatures) par1 ) );
   }
 }
 
@@ -301,7 +300,7 @@ HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -369,8 +368,7 @@ HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPaintEngineState * par1 = (QPaintEngineState *) _qt5xhb_itemGetPtr(1);
-    obj->updateState ( *par1 );
+    obj->updateState ( *PQPAINTENGINESTATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

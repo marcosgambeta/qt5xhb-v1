@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEditable () );
+    RBOOL( obj->isEditable () );
   }
 }
 
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSelectable () );
+    RBOOL( obj->isSelectable () );
   }
 }
 
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCheckable () );
+    RBOOL( obj->isCheckable () );
   }
 }
 
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTristate () );
+    RBOOL( obj->isTristate () );
   }
 }
 
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDragEnabled () );
+    RBOOL( obj->isDragEnabled () );
   }
 }
 
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDropEnabled () );
+    RBOOL( obj->isDropEnabled () );
   }
 }
 
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasChildren () );
+    RBOOL( obj->hasChildren () );
   }
 }
 

@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
   QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
   QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->width () );
+    RQREAL( obj->width () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
   QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->ascent () );
+    RQREAL( obj->ascent () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
   QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->descent () );
+    RQREAL( obj->descent () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
   QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->height () );
+    RQREAL( obj->height () );
   }
 }
 

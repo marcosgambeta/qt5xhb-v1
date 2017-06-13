@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->inFontUcs4 ( (uint) hb_parni(1) ) );
+      RBOOL( obj->inFontUcs4 ( (uint) hb_parni(1) ) );
     }
     else
     {

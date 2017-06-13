@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QPALETTE_CACHEKEY )
 
   if( obj )
   {
-    hb_retni( obj->cacheKey () );
+    RQINT64( obj->cacheKey () );
   }
 }
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retl( obj->isBrushSet ( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) ) );
+      RBOOL( obj->isBrushSet ( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) ) );
     }
     else
     {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
   {
     if( ISQPALETTE(1) )
     {
-      hb_retl( obj->isCopyOf ( *PQPALETTE(1) ) );
+      RBOOL( obj->isCopyOf ( *PQPALETTE(1) ) );
     }
     else
     {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retl( obj->isEqual ( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorGroup) hb_parni(2) ) );
+      RBOOL( obj->isEqual ( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorGroup) hb_parni(2) ) );
     }
     else
     {

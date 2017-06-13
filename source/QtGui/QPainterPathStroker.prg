@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 
   if( obj )
   {
-    hb_retnd( obj->curveThreshold () );
+    RQREAL( obj->curveThreshold () );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
 
   if( obj )
   {
-    hb_retnd( obj->dashOffset () );
+    RQREAL( obj->dashOffset () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
 
   if( obj )
   {
-    hb_retnd( obj->miterLimit () );
+    RQREAL( obj->miterLimit () );
   }
 }
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->width () );
+    RQREAL( obj->width () );
   }
 }
 

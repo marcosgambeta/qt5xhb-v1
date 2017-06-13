@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->bottom () );
+    RDOUBLE( obj->bottom () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->top () );
+    RDOUBLE( obj->top () );
   }
 }
 

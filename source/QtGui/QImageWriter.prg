@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 
   if( obj )
   {
-    hb_retl( obj->canWrite () );
+    RBOOL( obj->canWrite () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 
   if( obj )
   {
-    hb_retnd( obj->gamma () );
+    RFLOAT( obj->gamma () );
   }
 }
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
+      RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
     }
     else
     {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
   {
     if( ISQIMAGE(1) )
     {
-      hb_retl( obj->write ( *PQIMAGE(1) ) );
+      RBOOL( obj->write ( *PQIMAGE(1) ) );
     }
     else
     {

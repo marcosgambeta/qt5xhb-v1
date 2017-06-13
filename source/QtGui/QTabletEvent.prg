@@ -70,8 +70,7 @@ QTabletEvent(Type type, const QPointF & pos, const QPointF & globalPos, int devi
 HB_FUNC_STATIC( QTABLETEVENT_NEW )
 {
   int par12 = hb_parni(12);
-  qint64 par13 = hb_parni(13);
-  QTabletEvent * o = new QTabletEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), PINT(4), PINT(5), PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11), (Qt::KeyboardModifiers) par12, par13 );
+  QTabletEvent * o = new QTabletEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), PINT(4), PINT(5), PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11), (Qt::KeyboardModifiers) par12, PQINT64(13) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -164,7 +163,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->hiResGlobalX () );
+    RQREAL( obj->hiResGlobalX () );
   }
 }
 
@@ -177,7 +176,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->hiResGlobalY () );
+    RQREAL( obj->hiResGlobalY () );
   }
 }
 
@@ -229,7 +228,7 @@ HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->pressure () );
+    RQREAL( obj->pressure () );
   }
 }
 
@@ -242,7 +241,7 @@ HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rotation () );
+    RQREAL( obj->rotation () );
   }
 }
 
@@ -255,7 +254,7 @@ HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->tangentialPressure () );
+    RQREAL( obj->tangentialPressure () );
   }
 }
 
@@ -268,7 +267,7 @@ HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
   QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->uniqueId () );
+    RQINT64( obj->uniqueId () );
   }
 }
 

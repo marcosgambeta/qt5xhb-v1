@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->border () );
+    RQREAL( obj->border () );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->margin () );
+    RQREAL( obj->margin () );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->topMargin () );
+    RQREAL( obj->topMargin () );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->bottomMargin () );
+    RQREAL( obj->bottomMargin () );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->leftMargin () );
+    RQREAL( obj->leftMargin () );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rightMargin () );
+    RQREAL( obj->rightMargin () );
   }
 }
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->padding () );
+    RQREAL( obj->padding () );
   }
 }
 
@@ -406,8 +406,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH2 )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextLength * par1 = (QTextLength *) _qt5xhb_itemGetPtr(1);
-    obj->setWidth ( *par1 );
+    obj->setWidth ( *PQTEXTLENGTH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,8 +448,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT2 )
   QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextLength * par1 = (QTextLength *) _qt5xhb_itemGetPtr(1);
-    obj->setHeight ( *par1 );
+    obj->setHeight ( *PQTEXTLENGTH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -90,8 +90,7 @@ QTextOption(const QTextOption &o)
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
 {
-  QTextOption * par1 = (QTextOption *) _qt5xhb_itemGetPtr(1);
-  QTextOption * o = new QTextOption ( *par1 );
+  QTextOption * o = new QTextOption ( *PQTEXTOPTION(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -266,7 +265,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
   QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->tabStop () );
+    RQREAL( obj->tabStop () );
   }
 }
 
@@ -333,7 +332,7 @@ HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
   QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->useDesignMetrics () );
+    RBOOL( obj->useDesignMetrics () );
   }
 }
 

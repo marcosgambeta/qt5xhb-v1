@@ -134,8 +134,7 @@ QTextFormat(const QTextFormat &rhs)
 */
 HB_FUNC_STATIC( QTEXTFORMAT_NEW3 )
 {
-  QTextFormat * par1 = (QTextFormat *) _qt5xhb_itemGetPtr(1);
-  QTextFormat * o = new QTextFormat ( *par1 );
+  QTextFormat * o = new QTextFormat ( *PQTEXTFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -202,8 +201,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFormat * par1 = (QTextFormat *) _qt5xhb_itemGetPtr(1);
-    obj->merge ( *par1 );
+    obj->merge ( *PQTEXTFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,7 +215,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISVALID )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -312,7 +310,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasProperty ( PINT(1) ) );
+    RBOOL( obj->hasProperty ( PINT(1) ) );
   }
 }
 
@@ -325,7 +323,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->boolProperty ( PINT(1) ) );
+    RBOOL( obj->boolProperty ( PINT(1) ) );
   }
 }
 
@@ -351,7 +349,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->doubleProperty ( PINT(1) ) );
+    RQREAL( obj->doubleProperty ( PINT(1) ) );
   }
 }
 
@@ -540,7 +538,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISCHARFORMAT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCharFormat () );
+    RBOOL( obj->isCharFormat () );
   }
 }
 
@@ -553,7 +551,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISBLOCKFORMAT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBlockFormat () );
+    RBOOL( obj->isBlockFormat () );
   }
 }
 
@@ -566,7 +564,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISLISTFORMAT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isListFormat () );
+    RBOOL( obj->isListFormat () );
   }
 }
 
@@ -579,7 +577,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISFRAMEFORMAT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFrameFormat () );
+    RBOOL( obj->isFrameFormat () );
   }
 }
 
@@ -592,7 +590,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISIMAGEFORMAT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isImageFormat () );
+    RBOOL( obj->isImageFormat () );
   }
 }
 
@@ -605,7 +603,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLEFORMAT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTableFormat () );
+    RBOOL( obj->isTableFormat () );
   }
 }
 
@@ -618,7 +616,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLECELLFORMAT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTableCellFormat () );
+    RBOOL( obj->isTableCellFormat () );
   }
 }
 

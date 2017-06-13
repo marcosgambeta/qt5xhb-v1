@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAffine () );
+    RBOOL( obj->isAffine () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isIdentity () );
+    RBOOL( obj->isIdentity () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isInvertible () );
+    RBOOL( obj->isInvertible () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isScaling () );
+    RBOOL( obj->isScaling () );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRotating () );
+    RBOOL( obj->isRotating () );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTranslating () );
+    RBOOL( obj->isTranslating () );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->determinant () );
+    RQREAL( obj->determinant () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTRANSFORM_DET )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->det () );
+    RQREAL( obj->det () );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTRANSFORM_M11 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m11 () );
+    RQREAL( obj->m11 () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QTRANSFORM_M12 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m12 () );
+    RQREAL( obj->m12 () );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QTRANSFORM_M13 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m13 () );
+    RQREAL( obj->m13 () );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTRANSFORM_M21 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m21 () );
+    RQREAL( obj->m21 () );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTRANSFORM_M22 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m22 () );
+    RQREAL( obj->m22 () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QTRANSFORM_M23 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m23 () );
+    RQREAL( obj->m23 () );
   }
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTRANSFORM_M31 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m31 () );
+    RQREAL( obj->m31 () );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QTRANSFORM_M32 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m32 () );
+    RQREAL( obj->m32 () );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QTRANSFORM_M33 )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m33 () );
+    RQREAL( obj->m33 () );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTRANSFORM_DX )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dx () );
+    RQREAL( obj->dx () );
   }
 }
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dy () );
+    RQREAL( obj->dy () );
   }
 }
 
@@ -815,7 +815,7 @@ static bool squareToQuad(const QPolygonF &square, QTransform &result)
 HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {
   QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QTransform::squareToQuad ( *PQPOLYGONF(1), *par2 ) );
+  RBOOL( QTransform::squareToQuad ( *PQPOLYGONF(1), *par2 ) );
 }
 
 
@@ -825,7 +825,7 @@ static bool quadToSquare(const QPolygonF &quad, QTransform &result)
 HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 {
   QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QTransform::quadToSquare ( *PQPOLYGONF(1), *par2 ) );
+  RBOOL( QTransform::quadToSquare ( *PQPOLYGONF(1), *par2 ) );
 }
 
 
@@ -835,7 +835,7 @@ static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &res
 HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
   QTransform * par3 = (QTransform *) _qt5xhb_itemGetPtr(3);
-  hb_retl( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *par3 ) );
+  RBOOL( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *par3 ) );
 }
 
 

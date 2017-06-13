@@ -62,8 +62,7 @@ QInputMethodEvent ( const QInputMethodEvent & other )
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
 {
-  QInputMethodEvent * par1 = (QInputMethodEvent *) _qt5xhb_itemGetPtr(1);
-  QInputMethodEvent * o = new QInputMethodEvent ( *par1 );
+  QInputMethodEvent * o = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

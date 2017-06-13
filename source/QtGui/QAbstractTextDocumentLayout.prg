@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->blockBoundingRect ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->blockBoundingRect ( *PQTEXTBLOCK(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

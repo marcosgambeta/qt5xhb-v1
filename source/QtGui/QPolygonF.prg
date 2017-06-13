@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isClosed () );
+    RBOOL( obj->isClosed () );
   }
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
   QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->containsPoint ( *PQPOINTF(1), (Qt::FillRule) hb_parni(2) ) );
+    RBOOL( obj->containsPoint ( *PQPOINTF(1), (Qt::FillRule) hb_parni(2) ) );
   }
 }
 

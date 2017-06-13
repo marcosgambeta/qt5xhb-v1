@@ -123,8 +123,7 @@ QVector2D(const QVector3D& vector)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW5 )
 {
-  QVector3D * par1 = (QVector3D *) _qt5xhb_itemGetPtr(1);
-  QVector2D * o = new QVector2D ( *par1 );
+  QVector2D * o = new QVector2D ( *PQVECTOR3D(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -133,8 +132,7 @@ QVector2D(const QVector4D& vector)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW6 )
 {
-  QVector4D * par1 = (QVector4D *) _qt5xhb_itemGetPtr(1);
-  QVector2D * o = new QVector2D ( *par1 );
+  QVector2D * o = new QVector2D ( *PQVECTOR4D(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -174,7 +172,7 @@ HB_FUNC_STATIC( QVECTOR2D_ISNULL )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -187,7 +185,7 @@ HB_FUNC_STATIC( QVECTOR2D_X )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->x () );
+    RFLOAT( obj->x () );
   }
 }
 
@@ -200,7 +198,7 @@ HB_FUNC_STATIC( QVECTOR2D_Y )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->y () );
+    RFLOAT( obj->y () );
   }
 }
 
@@ -243,7 +241,7 @@ HB_FUNC_STATIC( QVECTOR2D_LENGTH )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->length () );
+    RFLOAT( obj->length () );
   }
 }
 
@@ -256,7 +254,7 @@ HB_FUNC_STATIC( QVECTOR2D_LENGTHSQUARED )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->lengthSquared () );
+    RFLOAT( obj->lengthSquared () );
   }
 }
 
@@ -297,8 +295,7 @@ HB_FUNC_STATIC( QVECTOR2D_DISTANCETOPOINT )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector2D * par1 = (QVector2D *) _qt5xhb_itemGetPtr(1);
-    hb_retnd( obj->distanceToPoint ( *par1 ) );
+    RFLOAT( obj->distanceToPoint ( *PQVECTOR2D(1) ) );
   }
 }
 
@@ -311,9 +308,7 @@ HB_FUNC_STATIC( QVECTOR2D_DISTANCETOLINE )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector2D * par1 = (QVector2D *) _qt5xhb_itemGetPtr(1);
-    QVector2D * par2 = (QVector2D *) _qt5xhb_itemGetPtr(2);
-    hb_retnd( obj->distanceToLine ( *par1, *par2 ) );
+    RFLOAT( obj->distanceToLine ( *PQVECTOR2D(1), *PQVECTOR2D(2) ) );
   }
 }
 
@@ -379,9 +374,7 @@ static float dotProduct(const QVector2D& v1, const QVector2D& v2)
 */
 HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
 {
-  QVector2D * par1 = (QVector2D *) _qt5xhb_itemGetPtr(1);
-  QVector2D * par2 = (QVector2D *) _qt5xhb_itemGetPtr(2);
-  hb_retnd( QVector2D::dotProduct ( *par1, *par2 ) );
+  RFLOAT( QVector2D::dotProduct ( *PQVECTOR2D(1), *PQVECTOR2D(2) ) );
 }
 
 

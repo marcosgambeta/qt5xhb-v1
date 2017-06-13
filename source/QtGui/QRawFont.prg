@@ -128,8 +128,7 @@ QRawFont(const QRawFont &other)
 */
 HB_FUNC_STATIC( QRAWFONT_NEW4 )
 {
-  QRawFont * par1 = (QRawFont *) _qt5xhb_itemGetPtr(1);
-  QRawFont * o = new QRawFont ( *par1 );
+  QRawFont * o = new QRawFont ( *PQRAWFONT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -186,7 +185,7 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -346,7 +345,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORCHARS )
     const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
     quint32 * par3 = (quint32 *) _qt5xhb_itemGetPtr(3);
     int par4;
-    hb_retl( obj->glyphIndexesForChars ( par1, PINT(2), par3, &par4 ) );
+    RBOOL( obj->glyphIndexesForChars ( par1, PINT(2), par3, &par4 ) );
     hb_storni( par4, 4 );
   }
 }
@@ -362,7 +361,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES2 )
   {
     const quint32 * par1 = (const quint32 *) _qt5xhb_itemGetPtr(1);
     QPointF * par2 = (QPointF *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->advancesForGlyphIndexes ( par1, par2, PINT(3) ) );
+    RBOOL( obj->advancesForGlyphIndexes ( par1, par2, PINT(3) ) );
   }
 }
 
@@ -377,7 +376,7 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
   {
     int par2 = ISNIL(2)? (int) QRawFont::SubPixelAntialiasing : hb_parni(2);
     QTransform par3 = ISNIL(3)? QTransform() : *(QTransform *) _qt5xhb_itemGetPtr(3);
-    QImage * ptr = new QImage( obj->alphaMapForGlyph ( (quint32) hb_parni(1), (QRawFont::AntialiasingType) par2, par3 ) );
+    QImage * ptr = new QImage( obj->alphaMapForGlyph ( PQUINT32(1), (QRawFont::AntialiasingType) par2, par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -391,7 +390,7 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( (quint32) hb_parni(1) ) );
+    QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( PQUINT32(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -405,7 +404,7 @@ HB_FUNC_STATIC( QRAWFONT_BOUNDINGRECT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect ( (quint32) hb_parni(1) ) );
+    QRectF * ptr = new QRectF( obj->boundingRect ( PQUINT32(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -433,7 +432,7 @@ HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->pixelSize () );
+    RQREAL( obj->pixelSize () );
   }
 }
 
@@ -459,7 +458,7 @@ HB_FUNC_STATIC( QRAWFONT_ASCENT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->ascent () );
+    RQREAL( obj->ascent () );
   }
 }
 
@@ -472,7 +471,7 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->descent () );
+    RQREAL( obj->descent () );
   }
 }
 
@@ -485,7 +484,7 @@ HB_FUNC_STATIC( QRAWFONT_LEADING )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->leading () );
+    RQREAL( obj->leading () );
   }
 }
 
@@ -498,7 +497,7 @@ HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->xHeight () );
+    RQREAL( obj->xHeight () );
   }
 }
 
@@ -511,7 +510,7 @@ HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->averageCharWidth () );
+    RQREAL( obj->averageCharWidth () );
   }
 }
 
@@ -524,7 +523,7 @@ HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maxCharWidth () );
+    RQREAL( obj->maxCharWidth () );
   }
 }
 
@@ -537,7 +536,7 @@ HB_FUNC_STATIC( QRAWFONT_LINETHICKNESS )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->lineThickness () );
+    RQREAL( obj->lineThickness () );
   }
 }
 
@@ -550,7 +549,7 @@ HB_FUNC_STATIC( QRAWFONT_UNDERLINEPOSITION )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->underlinePosition () );
+    RQREAL( obj->underlinePosition () );
   }
 }
 
@@ -563,7 +562,7 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->unitsPerEm () );
+    RQREAL( obj->unitsPerEm () );
   }
 }
 
@@ -604,7 +603,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER1 )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->supportsCharacter ( (uint) hb_parni(1) ) );
+    RBOOL( obj->supportsCharacter ( (uint) hb_parni(1) ) );
   }
 }
 
@@ -618,7 +617,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER2 )
   if( obj )
   {
     QChar * par1 = (QChar *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->supportsCharacter ( *par1 ) );
+    RBOOL( obj->supportsCharacter ( *par1 ) );
   }
 }
 

@@ -141,8 +141,7 @@ QPageSize(const QPageSize &other)
 */
 HB_FUNC_STATIC( QPAGESIZE_NEW5 )
 {
-  QPageSize * par1 = (QPageSize *) _qt5xhb_itemGetPtr(1);
-  QPageSize * o = new QPageSize ( *par1 );
+  QPageSize * o = new QPageSize ( *PQPAGESIZE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -219,8 +218,7 @@ HB_FUNC_STATIC( QPAGESIZE_ISEQUIVALENTTO )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPageSize * par1 = (QPageSize *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isEquivalentTo ( *par1 ) );
+    RBOOL( obj->isEquivalentTo ( *PQPAGESIZE(1) ) );
   }
 }
 
@@ -233,7 +231,7 @@ HB_FUNC_STATIC( QPAGESIZE_ISVALID )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

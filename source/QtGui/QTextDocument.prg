@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isUndoRedoEnabled () );
+    RBOOL( obj->isUndoRedoEnabled () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isUndoAvailable () );
+    RBOOL( obj->isUndoAvailable () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRedoAvailable () );
+    RBOOL( obj->isRedoAvailable () );
   }
 }
 
@@ -499,9 +499,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( *PQREGEXP(1), OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -515,10 +514,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND4 )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
-    QTextCursor * par2 = (QTextCursor *) _qt5xhb_itemGetPtr(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, *par2, (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( *PQREGEXP(1), *PQTEXTCURSOR(2), (QTextDocument::FindFlags) par3 ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -603,8 +600,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFormat * par1 = (QTextFormat *) _qt5xhb_itemGetPtr(1);
-    QTextObject * ptr = obj->objectForFormat ( *par1 );
+    QTextObject * ptr = obj->objectForFormat ( *PQTEXTFORMAT(1) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
   }
 }
@@ -785,7 +781,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isModified () );
+    RBOOL( obj->isModified () );
   }
 }
 
@@ -870,7 +866,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->useDesignMetrics () );
+    RBOOL( obj->useDesignMetrics () );
   }
 }
 
@@ -912,7 +908,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->textWidth () );
+    RQREAL( obj->textWidth () );
   }
 }
 
@@ -925,7 +921,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->idealWidth () );
+    RQREAL( obj->idealWidth () );
   }
 }
 
@@ -938,7 +934,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->indentWidth () );
+    RQREAL( obj->indentWidth () );
   }
 }
 
@@ -965,7 +961,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->documentMargin () );
+    RQREAL( obj->documentMargin () );
   }
 }
 
@@ -1172,8 +1168,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
   QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextOption * par1 = (QTextOption *) _qt5xhb_itemGetPtr(1);
-    obj->setDefaultTextOption ( *par1 );
+    obj->setDefaultTextOption ( *PQTEXTOPTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

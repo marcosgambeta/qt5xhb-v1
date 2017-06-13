@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QPAINTER_BEGIN )
     if( ISOBJECT(1) ) // TODO: refinar identificacao dos objetos
     {
       QPaintDevice * par1 = (QPaintDevice *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->begin ( par1 ) );
+      RBOOL( obj->begin ( par1 ) );
     }
     else
     {
@@ -2396,7 +2396,7 @@ HB_FUNC_STATIC( QPAINTER_END )
 
   if( obj )
   {
-    hb_retl( obj->end () );
+    RBOOL( obj->end () );
   }
 }
 
@@ -2811,7 +2811,7 @@ HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
 
   if( obj )
   {
-    hb_retl( obj->hasClipping () );
+    RBOOL( obj->hasClipping () );
   }
 }
 
@@ -2824,7 +2824,7 @@ HB_FUNC_STATIC( QPAINTER_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -2850,7 +2850,7 @@ HB_FUNC_STATIC( QPAINTER_OPACITY )
 
   if( obj )
   {
-    hb_retnd( obj->opacity () );
+    RQREAL( obj->opacity () );
   }
 }
 
@@ -3731,7 +3731,7 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->testRenderHint ( (QPainter::RenderHint) hb_parni(1) ) );
+      RBOOL( obj->testRenderHint ( (QPainter::RenderHint) hb_parni(1) ) );
     }
     else
     {
@@ -3832,7 +3832,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
 
   if( obj )
   {
-    hb_retl( obj->viewTransformEnabled () );
+    RBOOL( obj->viewTransformEnabled () );
   }
 }
 
@@ -3873,7 +3873,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
 
   if( obj )
   {
-    hb_retl( obj->worldMatrixEnabled () );
+    RBOOL( obj->worldMatrixEnabled () );
   }
 }
 

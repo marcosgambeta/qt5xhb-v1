@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
   {
     if( ISNUM(1) )
     {
-      hb_retnd( obj->angleAtPercent ( PQREAL(1) ) );
+      RQREAL( obj->angleAtPercent ( PQREAL(1) ) );
     }
     else
     {
@@ -624,7 +624,7 @@ void QPainterPath_contains1 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQPOINTF(1) ) );
+    RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
 
@@ -637,7 +637,7 @@ void QPainterPath_contains2 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQRECTF(1) ) );
+    RBOOL( obj->contains ( *PQRECTF(1) ) );
   }
 }
 
@@ -650,7 +650,7 @@ void QPainterPath_contains3 ()
 
   if( obj )
   {
-    hb_retl( obj->contains ( *PQPAINTERPATH(1) ) );
+    RBOOL( obj->contains ( *PQPAINTERPATH(1) ) );
   }
 }
 
@@ -811,7 +811,7 @@ void QPainterPath_intersects1 ()
 
   if( obj )
   {
-    hb_retl( obj->intersects ( *PQRECTF(1) ) );
+    RBOOL( obj->intersects ( *PQRECTF(1) ) );
   }
 }
 
@@ -824,7 +824,7 @@ void QPainterPath_intersects2 ()
 
   if( obj )
   {
-    hb_retl( obj->intersects ( *PQPAINTERPATH(1) ) );
+    RBOOL( obj->intersects ( *PQPAINTERPATH(1) ) );
   }
 }
 
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
 
   if( obj )
   {
-    hb_retnd( obj->length () );
+    RQREAL( obj->length () );
   }
 }
 
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
   {
     if( ISNUM(1) )
     {
-      hb_retnd( obj->percentAtLength ( PQREAL(1) ) );
+      RQREAL( obj->percentAtLength ( PQREAL(1) ) );
     }
     else
     {
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
   {
     if( ISNUM(1) )
     {
-      hb_retnd( obj->slopeAtPercent ( PQREAL(1) ) );
+      RQREAL( obj->slopeAtPercent ( PQREAL(1) ) );
     }
     else
     {

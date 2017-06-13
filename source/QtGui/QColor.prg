@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHAF )
 
   if( obj )
   {
-    hb_retnd( obj->alphaF () );
+    RQREAL( obj->alphaF () );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QCOLOR_BLACKF )
 
   if( obj )
   {
-    hb_retnd( obj->blackF () );
+    RQREAL( obj->blackF () );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QCOLOR_BLUEF )
 
   if( obj )
   {
-    hb_retnd( obj->blueF () );
+    RQREAL( obj->blueF () );
   }
 }
 
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QCOLOR_CYANF )
 
   if( obj )
   {
-    hb_retnd( obj->cyanF () );
+    RQREAL( obj->cyanF () );
   }
 }
 
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QCOLOR_GREENF )
 
   if( obj )
   {
-    hb_retnd( obj->greenF () );
+    RQREAL( obj->greenF () );
   }
 }
 
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUEF )
 
   if( obj )
   {
-    hb_retnd( obj->hslHueF () );
+    RQREAL( obj->hslHueF () );
   }
 }
 
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
 
   if( obj )
   {
-    hb_retnd( obj->hslSaturationF () );
+    RQREAL( obj->hslSaturationF () );
   }
 }
 
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUEF )
 
   if( obj )
   {
-    hb_retnd( obj->hsvHueF () );
+    RQREAL( obj->hsvHueF () );
   }
 }
 
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
 
   if( obj )
   {
-    hb_retnd( obj->hsvSaturationF () );
+    RQREAL( obj->hsvSaturationF () );
   }
 }
 
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QCOLOR_HUEF )
 
   if( obj )
   {
-    hb_retnd( obj->hueF () );
+    RQREAL( obj->hueF () );
   }
 }
 
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
 
   if( obj )
   {
-    hb_retnd( obj->lightnessF () );
+    RQREAL( obj->lightnessF () );
   }
 }
 
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTAF )
 
   if( obj )
   {
-    hb_retnd( obj->magentaF () );
+    RQREAL( obj->magentaF () );
   }
 }
 
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QCOLOR_REDF )
 
   if( obj )
   {
-    hb_retnd( obj->redF () );
+    RQREAL( obj->redF () );
   }
 }
 
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATIONF )
 
   if( obj )
   {
-    hb_retnd( obj->saturationF () );
+    RQREAL( obj->saturationF () );
   }
 }
 
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QCOLOR_VALUEF )
 
   if( obj )
   {
-    hb_retnd( obj->valueF () );
+    RQREAL( obj->valueF () );
   }
 }
 
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOWF )
 
   if( obj )
   {
-    hb_retnd( obj->yellowF () );
+    RQREAL( obj->yellowF () );
   }
 }
 
@@ -1703,7 +1703,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
 {
   if( ISCHAR(1) )
   {
-    hb_retl( QColor::isValidColor ( PQSTRING(1) ) );
+    RBOOL( QColor::isValidColor ( PQSTRING(1) ) );
   }
   else
   {

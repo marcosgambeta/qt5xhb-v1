@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QIMAGE_ALLGRAY )
 
   if( obj )
   {
-    hb_retl( obj->allGray () );
+    RBOOL( obj->allGray () );
   }
 }
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QIMAGE_CACHEKEY )
 
   if( obj )
   {
-    hb_retni( obj->cacheKey () );
+    RQINT64( obj->cacheKey () );
   }
 }
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
 
   if( obj )
   {
-    hb_retl( obj->hasAlphaChannel () );
+    RBOOL( obj->hasAlphaChannel () );
   }
 }
 
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
 
   if( obj )
   {
-    hb_retl( obj->isGrayscale () );
+    RBOOL( obj->isGrayscale () );
   }
 }
 
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QIMAGE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -720,7 +720,7 @@ void QImage_load1 ()
 
   if( obj )
   {
-    hb_retl( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -733,7 +733,7 @@ void QImage_load2 ()
 
   if( obj )
   {
-    hb_retl( obj->load ( PQIODEVICE(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->load ( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
 
   if( obj )
   {
-    hb_retl( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -947,7 +947,7 @@ void QImage_save1 ()
 
   if( obj )
   {
-    hb_retl( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+    RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
   }
 }
 
@@ -960,7 +960,7 @@ void QImage_save2 ()
 
   if( obj )
   {
-    hb_retl( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+    RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
   }
 }
 
@@ -1371,7 +1371,7 @@ void QImage_valid1 ()
 
   if( obj )
   {
-    hb_retl( obj->valid ( *PQPOINT(1) ) );
+    RBOOL( obj->valid ( *PQPOINT(1) ) );
   }
 }
 
@@ -1384,7 +1384,7 @@ void QImage_valid2 ()
 
   if( obj )
   {
-    hb_retl( obj->valid ( PINT(1), PINT(2) ) );
+    RBOOL( obj->valid ( PINT(1), PINT(2) ) );
   }
 }
 

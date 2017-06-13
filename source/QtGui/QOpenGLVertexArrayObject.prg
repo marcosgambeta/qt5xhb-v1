@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create () );
+    RBOOL( obj->create () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
   QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated () );
+    RBOOL( obj->isCreated () );
   }
 }
 

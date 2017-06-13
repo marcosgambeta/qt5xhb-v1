@@ -93,8 +93,7 @@ HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrameFormat * par1 = (QTextFrameFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setFrameFormat ( *par1 );
+    obj->setFrameFormat ( *PQTEXTFRAMEFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

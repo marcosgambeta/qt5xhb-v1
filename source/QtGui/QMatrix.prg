@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QMATRIX_M11 )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m11 () );
+    RQREAL( obj->m11 () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QMATRIX_M12 )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m12 () );
+    RQREAL( obj->m12 () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMATRIX_M21 )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m21 () );
+    RQREAL( obj->m21 () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QMATRIX_M22 )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->m22 () );
+    RQREAL( obj->m22 () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMATRIX_DX )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dx () );
+    RQREAL( obj->dx () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QMATRIX_DY )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dy () );
+    RQREAL( obj->dy () );
   }
 }
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QMATRIX_ISIDENTITY )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isIdentity () );
+    RBOOL( obj->isIdentity () );
   }
 }
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QMATRIX_ISINVERTIBLE )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isInvertible () );
+    RBOOL( obj->isInvertible () );
   }
 }
 
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QMATRIX_DETERMINANT )
   QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->determinant () );
+    RQREAL( obj->determinant () );
   }
 }
 

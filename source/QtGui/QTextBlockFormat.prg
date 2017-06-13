@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->topMargin () );
+    RQREAL( obj->topMargin () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->bottomMargin () );
+    RQREAL( obj->bottomMargin () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->leftMargin () );
+    RQREAL( obj->leftMargin () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rightMargin () );
+    RQREAL( obj->rightMargin () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->textIndent () );
+    RQREAL( obj->textIndent () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->lineHeight ( PQREAL(1), PQREAL(2) ) );
+    RQREAL( obj->lineHeight ( PQREAL(1), PQREAL(2) ) );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT2 )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->lineHeight () );
+    RQREAL( obj->lineHeight () );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->nonBreakableLines () );
+    RBOOL( obj->nonBreakableLines () );
   }
 }
 

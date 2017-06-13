@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
 
   if( obj )
   {
-    hb_retnd( obj->ascent () );
+    RQREAL( obj->ascent () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->averageCharWidth () );
+    RQREAL( obj->averageCharWidth () );
   }
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 
   if( obj )
   {
-    hb_retnd( obj->descent () );
+    RQREAL( obj->descent () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->height () );
+    RQREAL( obj->height () );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->inFontUcs4 ( (uint) hb_parni(1) ) );
+      RBOOL( obj->inFontUcs4 ( (uint) hb_parni(1) ) );
     }
     else
     {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
 
   if( obj )
   {
-    hb_retnd( obj->leading () );
+    RQREAL( obj->leading () );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
 
   if( obj )
   {
-    hb_retnd( obj->lineSpacing () );
+    RQREAL( obj->lineSpacing () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->lineWidth () );
+    RQREAL( obj->lineWidth () );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->maxWidth () );
+    RQREAL( obj->maxWidth () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
 
   if( obj )
   {
-    hb_retnd( obj->minLeftBearing () );
+    RQREAL( obj->minLeftBearing () );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
 
   if( obj )
   {
-    hb_retnd( obj->minRightBearing () );
+    RQREAL( obj->minRightBearing () );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
 
   if( obj )
   {
-    hb_retnd( obj->overlinePos () );
+    RQREAL( obj->overlinePos () );
   }
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
 
   if( obj )
   {
-    hb_retnd( obj->strikeOutPos () );
+    RQREAL( obj->strikeOutPos () );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 
   if( obj )
   {
-    hb_retnd( obj->underlinePos () );
+    RQREAL( obj->underlinePos () );
   }
 }
 
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
   {
     if( ISCHAR(1) )
     {
-      hb_retnd( obj->width ( PQSTRING(1) ) );
+      RQREAL( obj->width ( PQSTRING(1) ) );
     }
     else
     {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->xHeight () );
+    RQREAL( obj->xHeight () );
   }
 }
 

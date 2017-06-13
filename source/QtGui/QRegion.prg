@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QREGION_ISEMPTY )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QREGION_ISNULL )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS1 )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( *PQPOINT(1) ) );
+    RBOOL( obj->contains ( *PQPOINT(1) ) );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS2 )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( *PQRECT(1) ) );
+    RBOOL( obj->contains ( *PQRECT(1) ) );
   }
 }
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS1 )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->intersects ( *PQREGION(1) ) );
+    RBOOL( obj->intersects ( *PQREGION(1) ) );
   }
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS2 )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->intersects ( *PQRECT(1) ) );
+    RBOOL( obj->intersects ( *PQRECT(1) ) );
   }
 }
 

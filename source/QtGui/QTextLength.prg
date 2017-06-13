@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
   QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->value ( PQREAL(1) ) );
+    RQREAL( obj->value ( PQREAL(1) ) );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
   QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rawValue () );
+    RQREAL( obj->rawValue () );
   }
 }
 

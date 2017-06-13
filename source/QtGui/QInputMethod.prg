@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAnimating () );
+    RBOOL( obj->isAnimating () );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
   QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 

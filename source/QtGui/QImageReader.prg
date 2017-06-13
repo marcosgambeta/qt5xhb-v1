@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QIMAGEREADER_AUTODETECTIMAGEFORMAT )
 
   if( obj )
   {
-    hb_retl( obj->autoDetectImageFormat () );
+    RBOOL( obj->autoDetectImageFormat () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CANREAD )
 
   if( obj )
   {
-    hb_retl( obj->canRead () );
+    RBOOL( obj->canRead () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DECIDEFORMATFROMCONTENT )
 
   if( obj )
   {
-    hb_retl( obj->decideFormatFromContent () );
+    RBOOL( obj->decideFormatFromContent () );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTOIMAGE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->jumpToImage ( PINT(1) ) );
+      RBOOL( obj->jumpToImage ( PINT(1) ) );
     }
     else
     {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTONEXTIMAGE )
 
   if( obj )
   {
-    hb_retl( obj->jumpToNextImage () );
+    RBOOL( obj->jumpToNextImage () );
   }
 }
 
@@ -437,7 +437,7 @@ void QImageReader_read2 ()
   if( obj )
   {
     QImage * par1 = (QImage *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->read ( par1 ) );
+    RBOOL( obj->read ( par1 ) );
   }
 }
 
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSANIMATION )
 
   if( obj )
   {
-    hb_retl( obj->supportsAnimation () );
+    RBOOL( obj->supportsAnimation () );
   }
 }
 
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
+      RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
     }
     else
     {

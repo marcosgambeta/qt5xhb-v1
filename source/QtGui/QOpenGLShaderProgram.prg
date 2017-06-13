@@ -93,8 +93,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADER )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLShader * par1 = (QOpenGLShader *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->addShader ( par1 ) );
+    RBOOL( obj->addShader ( PQOPENGLSHADER(1) ) );
   }
 }
 
@@ -107,8 +106,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVESHADER )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLShader * par1 = (QOpenGLShader *) _qt5xhb_itemGetPtr(1);
-    obj->removeShader ( par1 );
+    obj->removeShader ( PQOPENGLSHADER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -134,7 +132,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -147,7 +145,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), *PQBYTEARRAY(2) ) );
+    RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), *PQBYTEARRAY(2) ) );
   }
 }
 
@@ -160,7 +158,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
+    RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
   }
 }
 
@@ -182,7 +180,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->addShaderFromSourceFile ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
+    RBOOL( obj->addShaderFromSourceFile ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
   }
 }
 
@@ -209,7 +207,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LINK )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->link () );
+    RBOOL( obj->link () );
   }
 }
 
@@ -222,7 +220,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ISLINKED )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLinked () );
+    RBOOL( obj->isLinked () );
   }
 }
 
@@ -248,7 +246,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_BIND )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind () );
+    RBOOL( obj->bind () );
   }
 }
 
@@ -457,7 +455,7 @@ static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
   QOpenGLContext * par1 = ISNIL(1)? 0 : (QOpenGLContext *) _qt5xhb_itemGetPtr(1);
-  hb_retl( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( par1 ) );
+  RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( par1 ) );
 }
 
 

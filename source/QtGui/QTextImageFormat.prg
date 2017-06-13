@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
   QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
   QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->width () );
+    RQREAL( obj->width () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
   QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->height () );
+    RQREAL( obj->height () );
   }
 }
 

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( PINT(1) ) );
+    RBOOL( obj->contains ( PINT(1) ) );
   }
 }
 

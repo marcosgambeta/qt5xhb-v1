@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
   QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    obj->setLocale ( *par1 );
+    obj->setLocale ( *PQLOCALE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

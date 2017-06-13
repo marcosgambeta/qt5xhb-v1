@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ISVALID )
   QOffscreenSurface * obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -149,8 +149,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETFORMAT )
   QOffscreenSurface * obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurfaceFormat * par1 = (QSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQSURFACEFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

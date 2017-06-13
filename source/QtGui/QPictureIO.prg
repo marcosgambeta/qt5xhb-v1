@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QPICTUREIO_GAMMA )
 
   if( obj )
   {
-    hb_retnd( obj->gamma () );
+    RFLOAT( obj->gamma () );
   }
 }
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QPICTUREIO_READ )
 
   if( obj )
   {
-    hb_retl( obj->read () );
+    RBOOL( obj->read () );
   }
 }
 
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QPICTUREIO_WRITE )
 
   if( obj )
   {
-    hb_retl( obj->write () );
+    RBOOL( obj->write () );
   }
 }
 

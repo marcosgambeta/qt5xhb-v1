@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERX )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dotsPerMeterX () );
+    RQREAL( obj->dotsPerMeterX () );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERY )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->dotsPerMeterY () );
+    RQREAL( obj->dotsPerMeterY () );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTFLIPPED )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->paintFlipped () );
+    RBOOL( obj->paintFlipped () );
   }
 }
 

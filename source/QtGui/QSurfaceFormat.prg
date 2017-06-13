@@ -104,8 +104,7 @@ QSurfaceFormat(const QSurfaceFormat &other)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW3 )
 {
-  QSurfaceFormat * par1 = (QSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-  QSurfaceFormat * o = new QSurfaceFormat ( *par1 );
+  QSurfaceFormat * o = new QSurfaceFormat ( *PQSURFACEFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -373,7 +372,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_HASALPHA )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAlpha () );
+    RBOOL( obj->hasAlpha () );
   }
 }
 
@@ -494,7 +493,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STEREO )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->stereo () );
+    RBOOL( obj->stereo () );
   }
 }
 
@@ -537,7 +536,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption ( (QSurfaceFormat::FormatOptions) par1 ) );
+    RBOOL( obj->testOption ( (QSurfaceFormat::FormatOptions) par1 ) );
   }
 }
 

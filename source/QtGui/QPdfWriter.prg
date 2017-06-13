@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPDFWRITER_NEWPAGE )
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->newPage () );
+    RBOOL( obj->newPage () );
   }
 }
 

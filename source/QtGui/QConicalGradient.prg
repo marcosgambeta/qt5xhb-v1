@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->angle () );
+    RQREAL( obj->angle () );
   }
 }
 

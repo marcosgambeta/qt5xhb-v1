@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QICON_CACHEKEY )
 
   if( obj )
   {
-    hb_retni( obj->cacheKey () );
+    RQINT64( obj->cacheKey () );
   }
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
   if( ISCHAR(1) )
   {
-    hb_retl( QIcon::hasThemeIcon ( PQSTRING(1) ) );
+    RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
   }
   else
   {

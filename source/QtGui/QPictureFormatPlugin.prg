@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
     if( ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
       QPicture * par3 = (QPicture *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->loadPicture ( PQSTRING(1), PQSTRING(2), par3 ) );
+      RBOOL( obj->loadPicture ( PQSTRING(1), PQSTRING(2), par3 ) );
     }
     else
     {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
-      hb_retl( obj->savePicture ( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
+      RBOOL( obj->savePicture ( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
     }
     else
     {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->installIOHandler ( PQSTRING(1) ) );
+      RBOOL( obj->installIOHandler ( PQSTRING(1) ) );
     }
     else
     {

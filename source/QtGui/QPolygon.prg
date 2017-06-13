@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
   QPolygon * obj = (QPolygon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->containsPoint ( *PQPOINT(1), (Qt::FillRule) hb_parni(2) ) );
+    RBOOL( obj->containsPoint ( *PQPOINT(1), (Qt::FillRule) hb_parni(2) ) );
   }
 }
 

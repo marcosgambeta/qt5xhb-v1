@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
   QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

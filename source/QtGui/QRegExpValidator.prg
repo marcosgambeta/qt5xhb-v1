@@ -60,12 +60,11 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
 }
 
 /*
-QRegExpValidator ( const QRegExp & rx, QObject * parent )
+QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
 {
-  QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
-  QRegExpValidator * o = new QRegExpValidator ( *par1 );
+  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -126,8 +125,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
   QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegExp * par1 = (QRegExp *) _qt5xhb_itemGetPtr(1);
-    obj->setRegExp ( *par1 );
+    obj->setRegExp ( *PQREGEXP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

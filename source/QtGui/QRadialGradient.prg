@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTERRADIUS )
 
   if( obj )
   {
-    hb_retnd( obj->centerRadius () );
+    RQREAL( obj->centerRadius () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALRADIUS )
 
   if( obj )
   {
-    hb_retnd( obj->focalRadius () );
+    RQREAL( obj->focalRadius () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_RADIUS )
 
   if( obj )
   {
-    hb_retnd( obj->radius () );
+    RQREAL( obj->radius () );
   }
 }
 

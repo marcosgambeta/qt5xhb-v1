@@ -65,8 +65,7 @@ QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW2 )
 {
-  QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *par1, OPQOBJECT(2,0) );
+  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -128,8 +127,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
   QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRegularExpression * par1 = (QRegularExpression *) _qt5xhb_itemGetPtr(1);
-    obj->setRegularExpression ( *par1 );
+    obj->setRegularExpression ( *PQREGULAREXPRESSION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

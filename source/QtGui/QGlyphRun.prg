@@ -78,8 +78,7 @@ QGlyphRun ( const QGlyphRun & other )
 */
 HB_FUNC_STATIC( QGLYPHRUN_NEW2 )
 {
-  QGlyphRun * par1 = (QGlyphRun *) _qt5xhb_itemGetPtr(1);
-  QGlyphRun * o = new QGlyphRun ( *par1 );
+  QGlyphRun * o = new QGlyphRun ( *PQGLYPHRUN(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -141,7 +140,7 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
   QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->overline () );
+    RBOOL( obj->overline () );
   }
 }
 
@@ -180,7 +179,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 /*
 void setRawData ( const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETRAWDATA )
+HB_FUNC_STATIC( QGLYPHRUN_SETRAWDATA ) // TODO: corrigir implementacao
 {
   QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -201,8 +200,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
   QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRawFont * par1 = (QRawFont *) _qt5xhb_itemGetPtr(1);
-    obj->setRawFont ( *par1 );
+    obj->setRawFont ( *PQRAWFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -244,7 +242,7 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
   QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->strikeOut () );
+    RBOOL( obj->strikeOut () );
   }
 }
 
@@ -257,7 +255,7 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
   QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->underline () );
+    RBOOL( obj->underline () );
   }
 }
 

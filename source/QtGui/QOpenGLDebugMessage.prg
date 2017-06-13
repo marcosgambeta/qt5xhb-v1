@@ -72,8 +72,7 @@ QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW2 )
 {
-  QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtr(1);
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *par1 );
+  QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *PQOPENGLDEBUGMESSAGE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
   QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAmbiguous () );
+    RBOOL( obj->isAmbiguous () );
   }
 }
 

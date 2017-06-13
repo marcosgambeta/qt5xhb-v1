@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QFONT_BOLD )
 
   if( obj )
   {
-    hb_retl( obj->bold () );
+    RBOOL( obj->bold () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QFONT_EXACTMATCH )
 
   if( obj )
   {
-    hb_retl( obj->exactMatch () );
+    RBOOL( obj->exactMatch () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QFONT_FIXEDPITCH )
 
   if( obj )
   {
-    hb_retl( obj->fixedPitch () );
+    RBOOL( obj->fixedPitch () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QFONT_FROMSTRING )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->fromString ( PQSTRING(1) ) );
+      RBOOL( obj->fromString ( PQSTRING(1) ) );
     }
     else
     {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QFONT_ISCOPYOF )
   {
     if( ISQFONT(1) )
     {
-      hb_retl( obj->isCopyOf ( *PQFONT(1) ) );
+      RBOOL( obj->isCopyOf ( *PQFONT(1) ) );
     }
     else
     {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QFONT_ITALIC )
 
   if( obj )
   {
-    hb_retl( obj->italic () );
+    RBOOL( obj->italic () );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QFONT_KERNING )
 
   if( obj )
   {
-    hb_retl( obj->kerning () );
+    RBOOL( obj->kerning () );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACING )
 
   if( obj )
   {
-    hb_retnd( obj->letterSpacing () );
+    RQREAL( obj->letterSpacing () );
   }
 }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QFONT_OVERLINE )
 
   if( obj )
   {
-    hb_retl( obj->overline () );
+    RBOOL( obj->overline () );
   }
 }
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZEF )
 
   if( obj )
   {
-    hb_retnd( obj->pointSizeF () );
+    RQREAL( obj->pointSizeF () );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QFONT_RAWMODE )
 
   if( obj )
   {
-    hb_retl( obj->rawMode () );
+    RBOOL( obj->rawMode () );
   }
 }
 
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QFONT_STRIKEOUT )
 
   if( obj )
   {
-    hb_retl( obj->strikeOut () );
+    RBOOL( obj->strikeOut () );
   }
 }
 
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QFONT_UNDERLINE )
 
   if( obj )
   {
-    hb_retl( obj->underline () );
+    RBOOL( obj->underline () );
   }
 }
 
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QFONT_WORDSPACING )
 
   if( obj )
   {
-    hb_retnd( obj->wordSpacing () );
+    RQREAL( obj->wordSpacing () );
   }
 }
 

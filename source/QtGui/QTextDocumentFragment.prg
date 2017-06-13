@@ -82,8 +82,7 @@ QTextDocumentFragment(const QTextCursor &range)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW3 )
 {
-  QTextCursor * par1 = (QTextCursor *) _qt5xhb_itemGetPtr(1);
-  QTextDocumentFragment * o = new QTextDocumentFragment ( *par1 );
+  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTCURSOR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -92,8 +91,7 @@ QTextDocumentFragment(const QTextDocumentFragment &rhs)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW4 )
 {
-  QTextDocumentFragment * par1 = (QTextDocumentFragment *) _qt5xhb_itemGetPtr(1);
-  QTextDocumentFragment * o = new QTextDocumentFragment ( *par1 );
+  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTDOCUMENTFRAGMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -152,7 +150,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
 
   if( obj )
   {
-    hb_retnd( obj->dashOffset () );
+    RQREAL( obj->dashOffset () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 
   if( obj )
   {
-    hb_retl( obj->isCosmetic () );
+    RBOOL( obj->isCosmetic () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
 
   if( obj )
   {
-    hb_retl( obj->isSolid () );
+    RBOOL( obj->isSolid () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
 
   if( obj )
   {
-    hb_retnd( obj->miterLimit () );
+    RQREAL( obj->miterLimit () );
   }
 }
 
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QPEN_WIDTHF )
 
   if( obj )
   {
-    hb_retnd( obj->widthF () );
+    RQREAL( obj->widthF () );
   }
 }
 

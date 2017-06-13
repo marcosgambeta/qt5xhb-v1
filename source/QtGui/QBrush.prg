@@ -161,8 +161,7 @@ QBrush ( const QGradient & gradient )
 */
 void QBrush_new10 ()
 {
-  QGradient * par1 = (QGradient *) _qt5xhb_itemGetPtr(1);
-  QBrush * o = new QBrush ( *par1 );
+  QBrush * o = new QBrush ( *PQGRADIENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -293,7 +292,7 @@ HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 
   if( obj )
   {
-    hb_retl( obj->isOpaque () );
+    RBOOL( obj->isOpaque () );
   }
 }
 
@@ -372,8 +371,7 @@ HB_FUNC_STATIC( QBRUSH_SETMATRIX )
   {
     if( ISQMATRIX(1) )
     {
-      QMatrix * par1 = (QMatrix *) _qt5xhb_itemGetPtr(1);
-      obj->setMatrix ( *par1 );
+      obj->setMatrix ( *PQMATRIX(1) );
     }
     else
     {

@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->allowsInteraction () );
+    RBOOL( obj->allowsInteraction () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->allowsErrorInteraction () );
+    RBOOL( obj->allowsErrorInteraction () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isPhase2 () );
+    RBOOL( obj->isPhase2 () );
   }
 }
 

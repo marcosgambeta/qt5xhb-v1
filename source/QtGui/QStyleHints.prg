@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_SHOWISFULLSCREEN )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->showIsFullScreen () );
+    RBOOL( obj->showIsFullScreen () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_FONTSMOOTHINGGAMMA )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->fontSmoothingGamma () );
+    RQREAL( obj->fontSmoothingGamma () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_USERTLEXTENSIONS )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->useRtlExtensions () );
+    RBOOL( obj->useRtlExtensions () );
   }
 }
 

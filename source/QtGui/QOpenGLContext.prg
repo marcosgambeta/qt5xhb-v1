@@ -80,10 +80,10 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 HB_FUNC_STATIC( QOPENGLCONTEXT_DELETE )
 {
   QOpenGLContext * obj = (QOpenGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -93,6 +93,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -102,12 +103,12 @@ bool create()
 HB_FUNC_STATIC( QOPENGLCONTEXT_CREATE )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->create () );
+    RBOOL( obj->create () );
   }
 }
-
 
 /*
 GLuint defaultFramebufferObject() const
@@ -115,12 +116,12 @@ GLuint defaultFramebufferObject() const
 HB_FUNC_STATIC( QOPENGLCONTEXT_DEFAULTFRAMEBUFFEROBJECT )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->defaultFramebufferObject () );
   }
 }
-
 
 /*
 void doneCurrent()
@@ -128,14 +129,14 @@ void doneCurrent()
 HB_FUNC_STATIC( QOPENGLCONTEXT_DONECURRENT )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     obj->doneCurrent ();
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 QSurfaceFormat format() const
@@ -143,6 +144,7 @@ QSurfaceFormat format() const
 HB_FUNC_STATIC( QOPENGLCONTEXT_FORMAT )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
@@ -150,13 +152,13 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FORMAT )
   }
 }
 
-
 /*
 QOpenGLFunctions * functions() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QOpenGLFunctions * ptr = obj->functions ();
@@ -164,13 +166,13 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
   }
 }
 
-
 /*
 QFunctionPointer getProcAddress(const QByteArray & procName) const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_GETPROCADDRESS )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QFunctionPointer * ptr = new QFunctionPointer( obj->getProcAddress ( *PQBYTEARRAY(1) ) );
@@ -178,19 +180,18 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_GETPROCADDRESS )
   }
 }
 
-
 /*
 bool hasExtension(const QByteArray & extension) const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_HASEXTENSION )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->hasExtension ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->hasExtension ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 bool isValid() const
@@ -198,12 +199,12 @@ bool isValid() const
 HB_FUNC_STATIC( QOPENGLCONTEXT_ISVALID )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 bool makeCurrent(QSurface * surface)
@@ -211,13 +212,12 @@ bool makeCurrent(QSurface * surface)
 HB_FUNC_STATIC( QOPENGLCONTEXT_MAKECURRENT )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QSurface * par1 = (QSurface *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->makeCurrent ( par1 ) );
+    RBOOL( obj->makeCurrent ( PQSURFACE(1) ) );
   }
 }
-
 
 /*
 QScreen * screen() const
@@ -225,6 +225,7 @@ QScreen * screen() const
 HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QScreen * ptr = obj->screen ();
@@ -232,21 +233,20 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
   }
 }
 
-
 /*
 void setFormat(const QSurfaceFormat & format)
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SETFORMAT )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QSurfaceFormat * par1 = (QSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQSURFACEFORMAT(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setScreen(QScreen * screen)
@@ -254,14 +254,14 @@ void setScreen(QScreen * screen)
 HB_FUNC_STATIC( QOPENGLCONTEXT_SETSCREEN )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QScreen * par1 = (QScreen *) _qt5xhb_itemGetPtr(1);
-    obj->setScreen ( par1 );
+    obj->setScreen ( PQSCREEN(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setShareContext(QOpenGLContext * shareContext)
@@ -269,14 +269,14 @@ void setShareContext(QOpenGLContext * shareContext)
 HB_FUNC_STATIC( QOPENGLCONTEXT_SETSHARECONTEXT )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QOpenGLContext * par1 = (QOpenGLContext *) _qt5xhb_itemGetPtr(1);
-    obj->setShareContext ( par1 );
+    obj->setShareContext ( PQOPENGLCONTEXT(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QOpenGLContext * shareContext() const
@@ -284,6 +284,7 @@ QOpenGLContext * shareContext() const
 HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QOpenGLContext * ptr = obj->shareContext ();
@@ -291,13 +292,13 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
   }
 }
 
-
 /*
 QOpenGLContextGroup * shareGroup() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QOpenGLContextGroup * ptr = obj->shareGroup ();
@@ -305,13 +306,13 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
   }
 }
 
-
 /*
 QSurface * surface() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSurface * ptr = obj->surface ();
@@ -319,32 +320,28 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
   }
 }
 
-
 /*
 void swapBuffers(QSurface * surface)
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SWAPBUFFERS )
 {
   QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QSurface * par1 = (QSurface *) _qt5xhb_itemGetPtr(1);
-    obj->swapBuffers ( par1 );
+    obj->swapBuffers ( PQSURFACE(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static bool areSharing(QOpenGLContext * first, QOpenGLContext * second)
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_ARESHARING )
 {
-  QOpenGLContext * par1 = (QOpenGLContext *) _qt5xhb_itemGetPtr(1);
-  QOpenGLContext * par2 = (QOpenGLContext *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QOpenGLContext::areSharing ( par1, par2 ) );
+  RBOOL( QOpenGLContext::areSharing ( PQOPENGLCONTEXT(1), PQOPENGLCONTEXT(2) ) );
 }
-
 
 /*
 static QOpenGLContext * currentContext()
@@ -355,8 +352,4 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
   _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
 }
 
-
-
-
 #pragma ENDDUMP
-

@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_CREATE )
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create () );
+    RBOOL( obj->create () );
   }
 #endif
 #endif
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISCREATED )
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated () );
+    RBOOL( obj->isCreated () );
   }
 #endif
 #endif
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISRESULTAVAILABLE )
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isResultAvailable () );
+    RBOOL( obj->isResultAvailable () );
   }
 #endif
 #endif
