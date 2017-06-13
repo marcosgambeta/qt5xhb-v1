@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->canAddDynamicProperty ( PQSTRING(1) ) );
+      RBOOL( obj->canAddDynamicProperty ( PQSTRING(1) ) );
     }
     else
     {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED 
 
   if( obj )
   {
-    hb_retl( obj->dynamicPropertiesAllowed () );
+    RBOOL( obj->dynamicPropertiesAllowed () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isDynamicProperty ( PINT(1) ) );
+      RBOOL( obj->isDynamicProperty ( PINT(1) ) );
     }
     else
     {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->removeDynamicProperty ( PINT(1) ) );
+      RBOOL( obj->removeDynamicProperty ( PINT(1) ) );
     }
     else
     {

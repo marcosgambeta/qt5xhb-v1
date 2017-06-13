@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->inheritedFromWidget ( PINT(1) ) );
+      RBOOL( obj->inheritedFromWidget ( PINT(1) ) );
     }
     else
     {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isSignal ( PINT(1) ) );
+      RBOOL( obj->isSignal ( PINT(1) ) );
     }
     else
     {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isSlot ( PINT(1) ) );
+      RBOOL( obj->isSlot ( PINT(1) ) );
     }
     else
     {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isVisible ( PINT(1) ) );
+      RBOOL( obj->isVisible ( PINT(1) ) );
     }
     else
     {

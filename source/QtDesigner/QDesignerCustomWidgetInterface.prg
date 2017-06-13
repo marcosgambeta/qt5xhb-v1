@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 
   if( obj )
   {
-    hb_retl( obj->isContainer () );
+    RBOOL( obj->isContainer () );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 
   if( obj )
   {
-    hb_retl( obj->isInitialized () );
+    RBOOL( obj->isInitialized () );
   }
 }
 

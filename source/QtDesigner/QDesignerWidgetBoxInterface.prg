@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 
   if( obj )
   {
-    hb_retl( obj->load () );
+    RBOOL( obj->load () );
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 
   if( obj )
   {
-    hb_retl( obj->save () );
+    RBOOL( obj->save () );
   }
 }
 
