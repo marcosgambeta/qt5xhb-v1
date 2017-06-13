@@ -69,8 +69,7 @@ QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW2 )
 {
-  QDnsMailExchangeRecord * par1 = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtr(1);
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ( *par1 );
+  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ( *PQDNSMAILEXCHANGERECORD(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -143,7 +142,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->preference () );
+    RQUINT16( obj->preference () );
   }
 }
 
@@ -171,7 +170,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_TIMETOLIVE )
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive () );
+    RQUINT32( obj->timeToLive () );
   }
 }
 

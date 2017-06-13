@@ -74,8 +74,7 @@ QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW2 )
 {
-  QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
-  QNetworkConfiguration * o = new QNetworkConfiguration ( *par1 );
+  QNetworkConfiguration * o = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -210,7 +209,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRoamingAvailable () );
+    RBOOL( obj->isRoamingAvailable () );
   }
 }
 
@@ -223,7 +222,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind ( *PQHOSTADDRESS(1), (quint16) hb_parni(2) ) );
+    RBOOL( obj->bind ( *PQHOSTADDRESS(1), PQUINT16(2) ) );
   }
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind ( *PQHOSTADDRESS(1), (quint16) hb_parni(2) ) ); // TODO: parametro 3 ausente
+    RBOOL( obj->bind ( *PQHOSTADDRESS(1), PQUINT16(2), (QAbstractSocket::BindMode) hb_parni(3) ) );
   }
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND3 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind ( (quint16) ISNIL(1)? 0 : hb_parni(1) ) );
+    RBOOL( obj->bind ( OPQUINT16(1,0) ) );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind ( (quint16) hb_parni(1) ) );
+    RBOOL( obj->bind ( PQUINT16(1), (QAbstractSocket::BindMode) hb_parni(2) ) );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasPendingDatagrams () );
+    RBOOL( obj->hasPendingDatagrams () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->pendingDatagramSize () );
+    RQINT64( obj->pendingDatagramSize () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 /*
 qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
 */
-HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM )
+HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM ) // TODO: corrigir codigo
 {
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM )
     char * par1 = (char *) _qt5xhb_itemGetPtr(1);
     QHostAddress * par3 = ISNIL(3)? 0 : (QHostAddress *) _qt5xhb_itemGetPtr(3);
     quint16 * par4 = ISNIL(4)? 0 : (quint16 *) _qt5xhb_itemGetPtr(4);
-    hb_retni( obj->readDatagram ( par1, (qint64) hb_parni(2), par3, par4 ) );
+    RQINT64( obj->readDatagram ( par1, PQINT64(2), par3, par4 ) );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->writeDatagram ( PCONSTCHAR(1), (qint64) hb_parni(2), *PQHOSTADDRESS(1), (quint16) hb_parni(4) ) );
+    RQINT64( obj->writeDatagram ( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(1), PQUINT16(4) ) );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), (quint16) hb_parni(3) ) );
+    RQINT64( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
   }
 }
 

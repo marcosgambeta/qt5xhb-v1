@@ -68,8 +68,7 @@ QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW2 )
 {
-  QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtr(1);
-  QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *par1 );
+  QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *PQDNSDOMAINNAMERECORD(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -144,7 +143,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_TIMETOLIVE )
   QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive () );
+    RQUINT32( obj->timeToLive () );
   }
 }
 

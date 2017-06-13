@@ -68,8 +68,7 @@ QHttpPart ( const QHttpPart & other )
 */
 HB_FUNC_STATIC( QHTTPPART_NEW2 )
 {
-  QHttpPart * par1 = (QHttpPart *) _qt5xhb_itemGetPtr(1);
-  QHttpPart * o = new QHttpPart ( *par1 );
+  QHttpPart * o = new QHttpPart ( *PQHTTPPART(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

@@ -90,8 +90,7 @@ QNetworkCookie ( const QNetworkCookie & other )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW2 )
 {
-  QNetworkCookie * par1 = (QNetworkCookie *) _qt5xhb_itemGetPtr(1);
-  QNetworkCookie * o = new QNetworkCookie ( *par1 );
+  QNetworkCookie * o = new QNetworkCookie ( *PQNETWORKCOOKIE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isHttpOnly () );
+    RBOOL( obj->isHttpOnly () );
   }
 }
 
@@ -178,7 +177,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSecure () );
+    RBOOL( obj->isSecure () );
   }
 }
 
@@ -191,7 +190,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSessionCookie () );
+    RBOOL( obj->isSessionCookie () );
   }
 }
 
@@ -245,8 +244,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-    obj->setExpirationDate ( *par1 );
+    obj->setExpirationDate ( *PQDATETIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

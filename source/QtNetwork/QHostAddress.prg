@@ -84,8 +84,7 @@ QHostAddress ( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
-  quint32 par1 = hb_parni(1);
-  QHostAddress * o = new QHostAddress ( par1 );
+  QHostAddress * o = new QHostAddress ( PQUINT32(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -187,7 +186,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
+    RBOOL( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
   }
 }
 
@@ -200,7 +199,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
 //  {
 //    const QPair<QHostAddress, int>  * par2 = (QPair<QHostAddress, int> *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
 //    bool b = obj->isInSubnet ( *par2 );
-//    hb_retl( b );
+//    RBOOL( b );
 //  }
 //}
 
@@ -227,7 +226,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -266,7 +265,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS1 )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAddress ( (quint32) hb_parni(1) );
+    obj->setAddress ( PQUINT32(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -282,7 +281,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setAddress ( PQSTRING(1) ) );
+    RBOOL( obj->setAddress ( PQSTRING(1) ) );
   }
 }
 
@@ -332,7 +331,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toIPv4Address () );
+    RQUINT32( obj->toIPv4Address () );
   }
 }
 

@@ -108,8 +108,7 @@ QSslCertificate ( const QSslCertificate & other )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
 {
-  QSslCertificate * par1 = (QSslCertificate *) _qt5xhb_itemGetPtr(1);
-  QSslCertificate * o = new QSslCertificate ( *par1 );
+  QSslCertificate * o = new QSslCertificate ( *PQSSLCERTIFICATE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -221,7 +220,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

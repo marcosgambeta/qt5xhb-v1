@@ -72,8 +72,7 @@ QDnsTextRecord(const QDnsTextRecord & other)
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW2 )
 {
-  QDnsTextRecord * par1 = (QDnsTextRecord *) _qt5xhb_itemGetPtr(1);
-  QDnsTextRecord * o = new QDnsTextRecord ( *par1 );
+  QDnsTextRecord * o = new QDnsTextRecord ( *PQDNSTEXTRECORD(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -148,7 +147,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_TIMETOLIVE )
   QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive () );
+    RQUINT32( obj->timeToLive () );
   }
 }
 

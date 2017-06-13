@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
   QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QHttpPart * par1 = (QHttpPart *) _qt5xhb_itemGetPtr(1);
-    obj->append ( *par1 );
+    obj->append ( *PQHTTPPART(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -78,8 +78,7 @@ QAuthenticator ( const QAuthenticator & other )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
 {
-  QAuthenticator * par1 = (QAuthenticator *) _qt5xhb_itemGetPtr(1);
-  QAuthenticator * o = new QAuthenticator ( *par1 );
+  QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -126,7 +125,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
   QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

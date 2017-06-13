@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
   QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

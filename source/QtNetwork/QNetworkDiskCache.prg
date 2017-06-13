@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumCacheSize () );
+    RQINT64( obj->maximumCacheSize () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setMaximumCacheSize ( (qint64) hb_parni(1) );
+    obj->setMaximumCacheSize ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cacheSize () );
+    RQINT64( obj->cacheSize () );
   }
 }
 
@@ -215,8 +215,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtr(1);
-    QIODevice * ptr = obj->prepare ( *par1 );
+    QIODevice * ptr = obj->prepare ( *PQNETWORKCACHEMETADATA(1) );
     _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -230,7 +229,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->remove ( *PQURL(1) ) );
+    RBOOL( obj->remove ( *PQURL(1) ) );
   }
 }
 
@@ -243,8 +242,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtr(1);
-    obj->updateMetaData ( *par1 );
+    obj->updateMetaData ( *PQNETWORKCACHEMETADATA(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

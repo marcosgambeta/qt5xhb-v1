@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
     {
       par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    hb_retl( obj->setCookiesFromUrl ( par1, *PQURL(2) ) );
+    RBOOL( obj->setCookiesFromUrl ( par1, *PQURL(2) ) );
   }
 }
 

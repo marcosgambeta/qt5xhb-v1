@@ -126,8 +126,7 @@ static QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
-  QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
-  QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *par1 );
+  QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *PQNETWORKPROXYQUERY(1) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QNETWORKPROXY" );

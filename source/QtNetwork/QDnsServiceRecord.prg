@@ -71,8 +71,7 @@ QDnsServiceRecord(const QDnsServiceRecord & other)
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_NEW2 )
 {
-  QDnsServiceRecord * par1 = (QDnsServiceRecord *) _qt5xhb_itemGetPtr(1);
-  QDnsServiceRecord * o = new QDnsServiceRecord ( *par1 );
+  QDnsServiceRecord * o = new QDnsServiceRecord ( *PQDNSSERVICERECORD(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -132,7 +131,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PORT )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->port () );
+    RQUINT16( obj->port () );
   }
 }
 
@@ -145,7 +144,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->priority () );
+    RQUINT16( obj->priority () );
   }
 }
 
@@ -186,7 +185,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TIMETOLIVE )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive () );
+    RQUINT32( obj->timeToLive () );
   }
 }
 
@@ -199,7 +198,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_WEIGHT )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->weight () );
+    RQUINT16( obj->weight () );
   }
 }
 

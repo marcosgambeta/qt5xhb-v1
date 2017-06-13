@@ -80,8 +80,7 @@ QNetworkInterface ( const QNetworkInterface & other )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
 {
-  QNetworkInterface * par1 = (QNetworkInterface *) _qt5xhb_itemGetPtr(1);
-  QNetworkInterface * o = new QNetworkInterface ( *par1 );
+  QNetworkInterface * o = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -228,7 +227,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

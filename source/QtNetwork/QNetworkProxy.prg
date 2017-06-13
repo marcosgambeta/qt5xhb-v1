@@ -81,8 +81,7 @@ QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 po
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
 {
-  quint16 par3 = ISNIL(3)? 0 : hb_parni(3);
-  QNetworkProxy * o = new QNetworkProxy ( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), par3, OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  QNetworkProxy * o = new QNetworkProxy ( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -91,8 +90,7 @@ QNetworkProxy ( const QNetworkProxy & other )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
 {
-  QNetworkProxy * par1 = (QNetworkProxy *) _qt5xhb_itemGetPtr(1);
-  QNetworkProxy * o = new QNetworkProxy ( *par1 );
+  QNetworkProxy * o = new QNetworkProxy ( *PQNETWORKPROXY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -170,7 +168,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCachingProxy () );
+    RBOOL( obj->isCachingProxy () );
   }
 }
 
@@ -183,7 +181,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTransparentProxy () );
+    RBOOL( obj->isTransparentProxy () );
   }
 }
 
@@ -209,7 +207,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PORT )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->port () );
+    RQUINT16( obj->port () );
   }
 }
 
@@ -265,7 +263,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPort ( (quint16) hb_parni(1) );
+    obj->setPort ( PQUINT16(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -340,8 +338,7 @@ static void setApplicationProxy ( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
-  QNetworkProxy * par1 = (QNetworkProxy *) _qt5xhb_itemGetPtr(1);
-  QNetworkProxy::setApplicationProxy ( *par1 );
+  QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

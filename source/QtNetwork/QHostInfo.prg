@@ -74,8 +74,7 @@ QHostInfo ( int id = -1 )
 */
 HB_FUNC_STATIC( QHOSTINFO_NEW1 )
 {
-  int par1 = ISNIL(1)? -1 : hb_parni(1);
-  QHostInfo * o = new QHostInfo ( par1 );
+  QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -84,8 +83,7 @@ QHostInfo ( const QHostInfo & other )
 */
 HB_FUNC_STATIC( QHOSTINFO_NEW2 )
 {
-  QHostInfo * par1 = (QHostInfo *) _qt5xhb_itemGetPtr(1);
-  QHostInfo * o = new QHostInfo ( *par1 );
+  QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

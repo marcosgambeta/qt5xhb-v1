@@ -73,8 +73,7 @@ QSslError ( SslError error )
 */
 HB_FUNC_STATIC( QSSLERROR_NEW2 )
 {
-  QSslError * par1 = (QSslError *) _qt5xhb_itemGetPtr(1);
-  QSslError * o = new QSslError ( *par1 );
+  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

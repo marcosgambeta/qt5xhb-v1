@@ -93,8 +93,7 @@ QSslConfiguration ( const QSslConfiguration & other )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW2 )
 {
-  QSslConfiguration * par1 = (QSslConfiguration *) _qt5xhb_itemGetPtr(1);
-  QSslConfiguration * o = new QSslConfiguration ( *par1 );
+  QSslConfiguration * o = new QSslConfiguration ( *PQSSLCONFIGURATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -237,7 +236,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -437,8 +436,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslCertificate * par1 = (QSslCertificate *) _qt5xhb_itemGetPtr(1);
-    obj->setLocalCertificate ( *par1 );
+    obj->setLocalCertificate ( *PQSSLCERTIFICATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -480,8 +478,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslKey * par1 = (QSslKey *) _qt5xhb_itemGetPtr(1);
-    obj->setPrivateKey ( *par1 );
+    obj->setPrivateKey ( *PQSSLKEY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -516,8 +513,7 @@ static void setDefaultConfiguration ( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 {
-  QSslConfiguration * par1 = (QSslConfiguration *) _qt5xhb_itemGetPtr(1);
-  QSslConfiguration::setDefaultConfiguration ( *par1 );
+  QSslConfiguration::setDefaultConfiguration ( *PQSSLCONFIGURATION(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -108,9 +108,8 @@ QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), 
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW4 )
 {
-  quint16 par1 = hb_parni(1);
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::TcpServer : hb_parni(3);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( par1, OPQSTRING(2,QString()), (QNetworkProxyQuery::QueryType) par3 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( PQUINT16(1), OPQSTRING(2,QString()), (QNetworkProxyQuery::QueryType) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -119,8 +118,7 @@ QNetworkProxyQuery ( const QNetworkProxyQuery & other )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW5 )
 {
-  QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKPROXYQUERY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -129,9 +127,8 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW6 )
 {
-  QNetworkConfiguration * par1 = (QNetworkConfiguration *) _qt5xhb_itemGetPtr(1);
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::UrlRequest : hb_parni(3);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *par1, *PQURL(2), (QNetworkProxyQuery::QueryType) par3 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKCONFIGURATION(1), *PQURL(2), (QNetworkProxyQuery::QueryType) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -150,9 +147,8 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
 {
-  quint16 par2 = hb_parni(2);
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpServer : hb_parni(4);
-  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKCONFIGURATION(1), par2, OPQSTRING(3,QString()), (QNetworkProxyQuery::QueryType) par4 );
+  QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3,QString()), (QNetworkProxyQuery::QueryType) par4 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

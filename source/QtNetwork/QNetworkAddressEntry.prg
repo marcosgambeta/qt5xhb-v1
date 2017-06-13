@@ -76,8 +76,7 @@ QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW2 )
 {
-  QNetworkAddressEntry * par1 = (QNetworkAddressEntry *) _qt5xhb_itemGetPtr(1);
-  QNetworkAddressEntry * o = new QNetworkAddressEntry ( *par1 );
+  QNetworkAddressEntry * o = new QNetworkAddressEntry ( *PQNETWORKADDRESSENTRY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

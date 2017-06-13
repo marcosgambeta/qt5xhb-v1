@@ -91,8 +91,7 @@ QNetworkRequest ( const QNetworkRequest & other )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW2 )
 {
-  QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
-  QNetworkRequest * o = new QNetworkRequest ( *par1 );
+  QNetworkRequest * o = new QNetworkRequest ( *PQNETWORKREQUEST(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -154,7 +153,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HASRAWHEADER )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -338,8 +337,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslConfiguration * par1 = (QSslConfiguration *) _qt5xhb_itemGetPtr(1);
-    obj->setSslConfiguration ( *par1 );
+    obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

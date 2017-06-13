@@ -74,8 +74,7 @@ QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW2 )
 {
-  QDnsHostAddressRecord * par1 = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtr(1);
-  QDnsHostAddressRecord * o = new QDnsHostAddressRecord ( *par1 );
+  QDnsHostAddressRecord * o = new QDnsHostAddressRecord ( *PQDNSHOSTADDRESSRECORD(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -150,7 +149,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
   QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToLive () );
+    RQUINT32( obj->timeToLive () );
   }
 }
 

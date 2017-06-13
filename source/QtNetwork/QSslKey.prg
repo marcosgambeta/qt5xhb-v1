@@ -101,8 +101,7 @@ QSslKey ( const QSslKey & other )
 */
 HB_FUNC_STATIC( QSSLKEY_NEW4 )
 {
-  QSslKey * par1 = (QSslKey *) _qt5xhb_itemGetPtr(1);
-  QSslKey * o = new QSslKey ( *par1 );
+  QSslKey * o = new QSslKey ( *PQSSLKEY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -187,7 +186,7 @@ HB_FUNC_STATIC( QSSLKEY_ISNULL )
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
