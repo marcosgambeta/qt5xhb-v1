@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISCOMPLETE )
 
   if( obj )
   {
-    hb_retl( obj->isComplete () );
+    RBOOL( obj->isComplete () );
   }
 #endif
 }
@@ -226,7 +226,7 @@ void QBluetoothServiceInfo_setAttribute1 ()
 
   if( obj )
   {
-    obj->setAttribute ( (quint16) hb_parni(1), *PQVARIANT(2) );
+    obj->setAttribute ( PQUINT16(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -243,7 +243,7 @@ void QBluetoothServiceInfo_setAttribute2 ()
 
   if( obj )
   {
-    obj->setAttribute ( (quint16) hb_parni(1), *PQBLUETOOTHUUID(2) );
+    obj->setAttribute ( PQUINT16(1), *PQBLUETOOTHUUID(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ATTRIBUTE )
   {
     if( ISNUM(1) )
     {
-      QVariant * ptr = new QVariant( obj->attribute ( (quint16) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->attribute ( PQUINT16(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_CONTAINS )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->contains ( (quint16) hb_parni(1) ) );
+      RBOOL( obj->contains ( PQUINT16(1) ) );
     }
     else
     {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_REMOVEATTRIBUTE )
   {
     if( ISNUM(1) )
     {
-      obj->removeAttribute ( (quint16) hb_parni(1) );
+      obj->removeAttribute ( PQUINT16(1) );
     }
     else
     {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEAVAILABILITY )
   {
     if( ISNUM(1) )
     {
-      obj->setServiceAvailability ( (quint8) hb_parni(1) );
+      obj->setServiceAvailability ( PQUINT8(1) );
     }
     else
     {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEAVAILABILITY )
 
   if( obj )
   {
-    hb_retni( obj->serviceAvailability () );
+    RQUINT8( obj->serviceAvailability () );
   }
 #endif
 }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISREGISTERED )
 
   if( obj )
   {
-    hb_retl( obj->isRegistered () );
+    RBOOL( obj->isRegistered () );
   }
 #endif
 }
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_REGISTERSERVICE )
     if( (ISQBLUETOOTHADDRESS(1)||ISNIL(1)) )
     {
       QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->registerService ( par1 ) );
+      RBOOL( obj->registerService ( par1 ) );
     }
     else
     {
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_UNREGISTERSERVICE )
 
   if( obj )
   {
-    hb_retl( obj->unregisterService () );
+    RBOOL( obj->unregisterService () );
   }
 #endif
 }

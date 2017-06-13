@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 #endif
 }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_SETREMOTEADDRESS )
   {
     if( ISQBLUETOOTHADDRESS(1) )
     {
-      hb_retl( obj->setRemoteAddress ( *PQBLUETOOTHADDRESS(1) ) );
+      RBOOL( obj->setRemoteAddress ( *PQBLUETOOTHADDRESS(1) ) );
     }
     else
     {

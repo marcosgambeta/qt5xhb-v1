@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ISSEQUENTIAL )
 
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 #endif
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESAVAILABLE )
 
   if( obj )
   {
-    hb_retni( obj->bytesAvailable () );
+    RQINT64( obj->bytesAvailable () );
   }
 #endif
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESTOWRITE )
 
   if( obj )
   {
-    hb_retni( obj->bytesToWrite () );
+    RQINT64( obj->bytesToWrite () );
   }
 #endif
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CANREADLINE )
 
   if( obj )
   {
-    hb_retl( obj->canReadLine () );
+    RBOOL( obj->canReadLine () );
   }
 #endif
 }
@@ -275,7 +275,7 @@ void QBluetoothSocket_connectToService3 ()
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->connectToService ( *PQBLUETOOTHADDRESS(1), (quint16) hb_parni(2), (QIODevice::OpenMode) par3 );
+    obj->connectToService ( *PQBLUETOOTHADDRESS(1), PQUINT16(2), (QIODevice::OpenMode) par3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALPORT )
 
   if( obj )
   {
-    hb_retni( obj->localPort () );
+    RQUINT16( obj->localPort () );
   }
 #endif
 }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERPORT )
 
   if( obj )
   {
-    hb_retni( obj->peerPort () );
+    RQUINT16( obj->peerPort () );
   }
 #endif
 }
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
     {
       int par3 = ISNIL(3)? (int) QBluetoothSocket::ConnectedState : hb_parni(3);
       int par4 = ISNIL(4)? (int) QIODevice::ReadWrite : hb_parni(4);
-      hb_retl( obj->setSocketDescriptor ( PINT(1), (QBluetoothServiceInfo::Protocol) hb_parni(2), (QBluetoothSocket::SocketState) par3, (QIODevice::OpenMode) par4 ) );
+      RBOOL( obj->setSocketDescriptor ( PINT(1), (QBluetoothServiceInfo::Protocol) hb_parni(2), (QBluetoothSocket::SocketState) par3, (QIODevice::OpenMode) par4 ) );
     }
     else
     {

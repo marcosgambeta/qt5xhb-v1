@@ -73,8 +73,7 @@ QBluetoothAddress(quint64 address)
 void QBluetoothAddress_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  quint64 par1 = hb_parni(1);
-  QBluetoothAddress * o = new QBluetoothAddress ( par1 );
+  QBluetoothAddress * o = new QBluetoothAddress ( PQUINT64(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -159,7 +158,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 #endif
 }
@@ -191,7 +190,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_TOUINT64 )
 
   if( obj )
   {
-    hb_retni( obj->toUInt64 () );
+    RQUINT64( obj->toUInt64 () );
   }
 #endif
 }

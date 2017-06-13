@@ -92,8 +92,7 @@ QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quin
 void QBluetoothDeviceInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  quint32 par3 = hb_parni(3);
-  QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo ( *PQBLUETOOTHADDRESS(1), PQSTRING(2), par3 );
+  QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo ( *PQBLUETOOTHADDRESS(1), PQSTRING(2), PQUINT32(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -162,7 +161,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -177,7 +176,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ISCACHED )
 
   if( obj )
   {
-    hb_retl( obj->isCached () );
+    RBOOL( obj->isCached () );
   }
 #endif
 }
@@ -277,7 +276,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MINORDEVICECLASS )
 
   if( obj )
   {
-    hb_retni( obj->minorDeviceClass () );
+    RQUINT8( obj->minorDeviceClass () );
   }
 #endif
 }
@@ -292,7 +291,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_RSSI )
 
   if( obj )
   {
-    hb_retni( obj->rssi () );
+    RQINT16( obj->rssi () );
   }
 #endif
 }
@@ -309,7 +308,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETRSSI )
   {
     if( ISNUM(1) )
     {
-      obj->setRssi ( (qint16) hb_parni(1) );
+      obj->setRssi ( PQINT16(1) );
     }
     else
     {

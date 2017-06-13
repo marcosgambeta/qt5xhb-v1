@@ -132,7 +132,7 @@ void QBluetoothServer_listen1 ()
   if( obj )
   {
     QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->listen ( par1, (quint16) ISNIL(2)? 0 : hb_parni(2) ) );
+    RBOOL( obj->listen ( par1, OPQUINT16(2,0) ) );
   }
 #endif
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ISLISTENING )
 
   if( obj )
   {
-    hb_retl( obj->isListening () );
+    RBOOL( obj->isListening () );
   }
 #endif
 }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_HASPENDINGCONNECTIONS )
 
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections () );
+    RBOOL( obj->hasPendingConnections () );
   }
 #endif
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERPORT )
 
   if( obj )
   {
-    hb_retni( obj->serverPort () );
+    RQUINT16( obj->serverPort () );
   }
 #endif
 }
