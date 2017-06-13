@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
   QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 #endif
 }

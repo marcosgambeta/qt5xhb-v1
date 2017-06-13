@@ -84,8 +84,7 @@ QPlaceContent(const QPlaceContent &other)
 void QPlaceContent_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * par1 = (QPlaceContent *) _qt5xhb_itemGetPtr(1);
-  QPlaceContent * o = new QPlaceContent ( *par1 );
+  QPlaceContent * o = new QPlaceContent ( *PQPLACECONTENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QPLACECONTENT_SETSUPPLIER )
   QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSupplier * par1 = (QPlaceSupplier *) _qt5xhb_itemGetPtr(1);
-    obj->setSupplier ( *par1 );
+    obj->setSupplier ( *PQPLACESUPPLIER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -198,8 +196,7 @@ HB_FUNC_STATIC( QPLACECONTENT_SETUSER )
   QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceUser * par1 = (QPlaceUser *) _qt5xhb_itemGetPtr(1);
-    obj->setUser ( *par1 );
+    obj->setUser ( *PQPLACEUSER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

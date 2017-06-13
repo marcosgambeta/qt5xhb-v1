@@ -84,8 +84,7 @@ QPlaceContentRequest(const QPlaceContentRequest &other)
 void QPlaceContentRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * par1 = (QPlaceContentRequest *) _qt5xhb_itemGetPtr(1);
-  QPlaceContentRequest * o = new QPlaceContentRequest ( *par1 );
+  QPlaceContentRequest * o = new QPlaceContentRequest ( *PQPLACECONTENTREQUEST(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

@@ -120,8 +120,7 @@ QPlace(const QPlace &other)
 void QPlace_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * par1 = (QPlace *) _qt5xhb_itemGetPtr(1);
-  QPlace * o = new QPlace ( *par1 );
+  QPlace * o = new QPlace ( *PQPLACE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -245,8 +244,7 @@ HB_FUNC_STATIC( QPLACE_SETCATEGORY )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceCategory * par1 = (QPlaceCategory *) _qt5xhb_itemGetPtr(1);
-    obj->setCategory ( *par1 );
+    obj->setCategory ( *PQPLACECATEGORY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -277,8 +275,7 @@ HB_FUNC_STATIC( QPLACE_SETLOCATION )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoLocation * par1 = (QGeoLocation *) _qt5xhb_itemGetPtr(1);
-    obj->setLocation ( *par1 );
+    obj->setLocation ( *PQGEOLOCATION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -309,8 +306,7 @@ HB_FUNC_STATIC( QPLACE_SETRATINGS )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceRatings * par1 = (QPlaceRatings *) _qt5xhb_itemGetPtr(1);
-    obj->setRatings ( *par1 );
+    obj->setRatings ( *PQPLACERATINGS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -341,8 +337,7 @@ HB_FUNC_STATIC( QPLACE_SETSUPPLIER )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSupplier * par1 = (QPlaceSupplier *) _qt5xhb_itemGetPtr(1);
-    obj->setSupplier ( *par1 );
+    obj->setSupplier ( *PQPLACESUPPLIER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -403,8 +398,7 @@ HB_FUNC_STATIC( QPLACE_SETICON )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * par1 = (QPlaceIcon *) _qt5xhb_itemGetPtr(1);
-    obj->setIcon ( *par1 );
+    obj->setIcon ( *PQPLACEICON(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -573,7 +567,7 @@ HB_FUNC_STATIC( QPLACE_DETAILSFETCHED )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->detailsFetched () );
+    RBOOL( obj->detailsFetched () );
   }
 #endif
 }
@@ -819,7 +813,7 @@ HB_FUNC_STATIC( QPLACE_ISEMPTY )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 #endif
 }

@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACECONTENT )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceContentRequest * par1 = (QPlaceContentRequest *) _qt5xhb_itemGetPtr(1);
-    QPlaceContentReply * ptr = obj->getPlaceContent ( *par1 );
+    QPlaceContentReply * ptr = obj->getPlaceContent ( *PQPLACECONTENTREQUEST(1) );
     _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREPLY" );
   }
 #endif
@@ -178,8 +177,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCH )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSearchRequest * par1 = (QPlaceSearchRequest *) _qt5xhb_itemGetPtr(1);
-    QPlaceSearchReply * ptr = obj->search ( *par1 );
+    QPlaceSearchReply * ptr = obj->search ( *PQPLACESEARCHREQUEST(1) );
     _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREPLY" );
   }
 #endif
@@ -195,8 +193,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCHSUGGESTIONS )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSearchRequest * par1 = (QPlaceSearchRequest *) _qt5xhb_itemGetPtr(1);
-    QPlaceSearchSuggestionReply * ptr = obj->searchSuggestions ( *par1 );
+    QPlaceSearchSuggestionReply * ptr = obj->searchSuggestions ( *PQPLACESEARCHREQUEST(1) );
     _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHSUGGESTIONREPLY" );
   }
 #endif
@@ -212,8 +209,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVEPLACE )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlace * par1 = (QPlace *) _qt5xhb_itemGetPtr(1);
-    QPlaceIdReply * ptr = obj->savePlace ( *par1 );
+    QPlaceIdReply * ptr = obj->savePlace ( *PQPLACE(1) );
     _qt5xhb_createReturnClass ( ptr, "QPLACEIDREPLY" );
   }
 #endif
@@ -245,8 +241,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVECATEGORY )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceCategory * par1 = (QPlaceCategory *) _qt5xhb_itemGetPtr(1);
-    QPlaceIdReply * ptr = obj->saveCategory ( *par1, PQSTRING(2) );
+    QPlaceIdReply * ptr = obj->saveCategory ( *PQPLACECATEGORY(1), PQSTRING(2) );
     _qt5xhb_createReturnClass ( ptr, "QPLACEIDREPLY" );
   }
 #endif
@@ -461,8 +456,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CONSTRUCTICONURL )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * par1 = (QPlaceIcon *) _qt5xhb_itemGetPtr(1);
-    QUrl * ptr = new QUrl( obj->constructIconUrl ( *par1, *PQSIZE(2) ) );
+    QUrl * ptr = new QUrl( obj->constructIconUrl ( *PQPLACEICON(1), *PQSIZE(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 #endif
@@ -478,8 +472,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_COMPATIBLEPLACE )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlace * par1 = (QPlace *) _qt5xhb_itemGetPtr(1);
-    QPlace * ptr = new QPlace( obj->compatiblePlace ( *par1 ) );
+    QPlace * ptr = new QPlace( obj->compatiblePlace ( *PQPLACE(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
   }
 #endif
@@ -495,8 +488,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MATCHINGPLACES )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceMatchRequest * par1 = (QPlaceMatchRequest *) _qt5xhb_itemGetPtr(1);
-    QPlaceMatchReply * ptr = obj->matchingPlaces ( *par1 );
+    QPlaceMatchReply * ptr = obj->matchingPlaces ( *PQPLACEMATCHREQUEST(1) );
     _qt5xhb_createReturnClass ( ptr, "QPLACEMATCHREPLY" );
   }
 #endif

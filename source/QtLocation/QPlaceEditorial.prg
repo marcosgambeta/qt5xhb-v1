@@ -68,8 +68,7 @@ QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
 void QPlaceEditorial_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * par1 = (QPlaceContent *) _qt5xhb_itemGetPtr(1);
-  QPlaceEditorial * o = new QPlaceEditorial ( *par1 );
+  QPlaceEditorial * o = new QPlaceEditorial ( *PQPLACECONTENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

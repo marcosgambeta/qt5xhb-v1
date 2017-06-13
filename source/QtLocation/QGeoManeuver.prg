@@ -88,8 +88,7 @@ QGeoManeuver(const QGeoManeuver &other)
 void QGeoManeuver_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoManeuver * par1 = (QGeoManeuver *) _qt5xhb_itemGetPtr(1);
-  QGeoManeuver * o = new QGeoManeuver ( *par1 );
+  QGeoManeuver * o = new QGeoManeuver ( *PQGEOMANEUVER(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -140,7 +139,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_ISVALID )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -155,8 +154,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETPOSITION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
-    obj->setPosition ( *par1 );
+    obj->setPosition ( *PQGEOCOORDINATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -292,7 +290,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DISTANCETONEXTINSTRUCTION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->distanceToNextInstruction () );
+    RQREAL( obj->distanceToNextInstruction () );
   }
 #endif
 }
@@ -307,8 +305,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETWAYPOINT )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
-    obj->setWaypoint ( *par1 );
+    obj->setWaypoint ( *PQGEOCOORDINATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
   QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->distance () );
+    RQREAL( obj->distance () );
   }
 #endif
 }
@@ -138,8 +138,7 @@ HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
   QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlace * par1 = (QPlace *) _qt5xhb_itemGetPtr(1);
-    obj->setPlace ( *par1 );
+    obj->setPlace ( *PQPLACE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -155,7 +154,7 @@ HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
   QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSponsored () );
+    RBOOL( obj->isSponsored () );
   }
 #endif
 }

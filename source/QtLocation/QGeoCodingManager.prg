@@ -119,9 +119,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE1 )
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoAddress * par1 = (QGeoAddress *) _qt5xhb_itemGetPtr(1);
     QGeoShape par2 = ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2);
-    QGeoCodeReply * ptr = obj->geocode ( *par1, par2 );
+    QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), par2 );
     _qt5xhb_createReturnClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
@@ -172,9 +171,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
     QGeoShape par2 = ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2);
-    QGeoCodeReply * ptr = obj->reverseGeocode ( *par1, par2 );
+    QGeoCodeReply * ptr = obj->reverseGeocode ( *PQGEOCOORDINATE(1), par2 );
     _qt5xhb_createReturnClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
@@ -190,8 +188,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_SETLOCALE )
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    obj->setLocale ( *par1 );
+    obj->setLocale ( *PQLOCALE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -123,8 +123,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_CALCULATEROUTE )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRouteRequest * par1 = (QGeoRouteRequest *) _qt5xhb_itemGetPtr(1);
-    QGeoRouteReply * ptr = obj->calculateRoute ( *par1 );
+    QGeoRouteReply * ptr = obj->calculateRoute ( *PQGEOROUTEREQUEST(1) );
     _qt5xhb_createReturnClass ( ptr, "QGEOROUTEREPLY" );
   }
 #endif
@@ -140,9 +139,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_UPDATEROUTE )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRoute * par1 = (QGeoRoute *) _qt5xhb_itemGetPtr(1);
-    QGeoCoordinate * par2 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(2);
-    QGeoRouteReply * ptr = obj->updateRoute ( *par1, *par2 );
+    QGeoRouteReply * ptr = obj->updateRoute ( *PQGEOROUTE(1), *PQGEOCOORDINATE(2) );
     _qt5xhb_createReturnClass ( ptr, "QGEOROUTEREPLY" );
   }
 #endif
@@ -248,8 +245,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETLOCALE )
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    obj->setLocale ( *par1 );
+    obj->setLocale ( *PQLOCALE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

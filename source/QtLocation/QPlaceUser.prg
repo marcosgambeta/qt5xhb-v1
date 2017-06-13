@@ -73,8 +73,7 @@ QPlaceUser(const QPlaceUser &other)
 void QPlaceUser_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * par1 = (QPlaceUser *) _qt5xhb_itemGetPtr(1);
-  QPlaceUser * o = new QPlaceUser ( *par1 );
+  QPlaceUser * o = new QPlaceUser ( *PQPLACEUSER(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

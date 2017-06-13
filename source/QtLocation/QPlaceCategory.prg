@@ -84,8 +84,7 @@ QPlaceCategory(const QPlaceCategory &other)
 void QPlaceCategory_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * par1 = (QPlaceCategory *) _qt5xhb_itemGetPtr(1);
-  QPlaceCategory * o = new QPlaceCategory ( *par1 );
+  QPlaceCategory * o = new QPlaceCategory ( *PQPLACECATEGORY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -241,8 +240,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * par1 = (QPlaceIcon *) _qt5xhb_itemGetPtr(1);
-    obj->setIcon ( *par1 );
+    obj->setIcon ( *PQPLACEICON(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -258,7 +256,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 #endif
 }

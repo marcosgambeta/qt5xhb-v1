@@ -78,8 +78,7 @@ QPlaceIcon(const QPlaceIcon &other)
 void QPlaceIcon_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * par1 = (QPlaceIcon *) _qt5xhb_itemGetPtr(1);
-  QPlaceIcon * o = new QPlaceIcon ( *par1 );
+  QPlaceIcon * o = new QPlaceIcon ( *PQPLACEICON(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -181,7 +180,7 @@ HB_FUNC_STATIC( QPLACEICON_ISEMPTY )
   QPlaceIcon * obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 #endif
 }

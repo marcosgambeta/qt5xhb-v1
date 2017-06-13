@@ -83,8 +83,7 @@ QPlaceSupplier(const QPlaceSupplier &other)
 void QPlaceSupplier_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * par1 = (QPlaceSupplier *) _qt5xhb_itemGetPtr(1);
-  QPlaceSupplier * o = new QPlaceSupplier ( *par1 );
+  QPlaceSupplier * o = new QPlaceSupplier ( *PQPLACESUPPLIER(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -241,8 +240,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETICON )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * par1 = (QPlaceIcon *) _qt5xhb_itemGetPtr(1);
-    obj->setIcon ( *par1 );
+    obj->setIcon ( *PQPLACEICON(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -258,7 +256,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ISEMPTY )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 #endif
 }

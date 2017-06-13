@@ -80,8 +80,7 @@ QPlaceSearchResult(const QPlaceSearchResult &other)
 void QPlaceSearchResult_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * par1 = (QPlaceSearchResult *) _qt5xhb_itemGetPtr(1);
-  QPlaceSearchResult * o = new QPlaceSearchResult ( *par1 );
+  QPlaceSearchResult * o = new QPlaceSearchResult ( *PQPLACESEARCHRESULT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_SETICON )
   QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceIcon * par1 = (QPlaceIcon *) _qt5xhb_itemGetPtr(1);
-    obj->setIcon ( *par1 );
+    obj->setIcon ( *PQPLACEICON(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

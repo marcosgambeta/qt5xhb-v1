@@ -258,8 +258,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_SETLOCALE )
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-    obj->setLocale ( *par1 );
+    obj->setLocale ( *PQLOCALE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -275,7 +274,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_SETALLOWEXPERIMENTAL )
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setAllowExperimental ( (bool) hb_parl(1) );
+    obj->setAllowExperimental ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

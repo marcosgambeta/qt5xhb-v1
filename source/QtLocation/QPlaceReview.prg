@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_SETDATETIME )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) _qt5xhb_itemGetPtr(1);
-    obj->setDateTime ( *par1 );
+    obj->setDateTime ( *PQDATETIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -193,7 +192,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_RATING )
   QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rating () );
+    RQREAL( obj->rating () );
   }
 #endif
 }

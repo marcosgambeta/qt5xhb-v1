@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST )
   QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceSearchRequest * par1 = (QPlaceSearchRequest *) _qt5xhb_itemGetPtr(1);
-    obj->setSearchRequest ( *par1 );
+    obj->setSearchRequest ( *PQPLACESEARCHREQUEST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

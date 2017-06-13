@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ISFINISHED )
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 #endif
 }

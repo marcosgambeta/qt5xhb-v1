@@ -74,8 +74,7 @@ QPlaceContactDetail(const QPlaceContactDetail &other)
 void QPlaceContactDetail_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * par1 = (QPlaceContactDetail *) _qt5xhb_itemGetPtr(1);
-  QPlaceContactDetail * o = new QPlaceContactDetail ( *par1 );
+  QPlaceContactDetail * o = new QPlaceContactDetail ( *PQPLACECONTACTDETAIL(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

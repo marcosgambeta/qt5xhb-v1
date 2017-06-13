@@ -72,8 +72,7 @@ QPlaceImage(const QPlaceContent &other)
 void QPlaceImage_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * par1 = (QPlaceContent *) _qt5xhb_itemGetPtr(1);
-  QPlaceImage * o = new QPlaceImage ( *par1 );
+  QPlaceImage * o = new QPlaceImage ( *PQPLACECONTENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

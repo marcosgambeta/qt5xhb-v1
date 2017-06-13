@@ -77,8 +77,7 @@ QPlaceMatchRequest(const QPlaceMatchRequest &other)
 void QPlaceMatchRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * par1 = (QPlaceMatchRequest *) _qt5xhb_itemGetPtr(1);
-  QPlaceMatchRequest * o = new QPlaceMatchRequest ( *par1 );
+  QPlaceMatchRequest * o = new QPlaceMatchRequest ( *PQPLACEMATCHREQUEST(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }

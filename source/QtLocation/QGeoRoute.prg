@@ -95,8 +95,7 @@ QGeoRoute(const QGeoRoute &other)
 void QGeoRoute_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoute * par1 = (QGeoRoute *) _qt5xhb_itemGetPtr(1);
-  QGeoRoute * o = new QGeoRoute ( *par1 );
+  QGeoRoute * o = new QGeoRoute ( *PQGEOROUTE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -177,8 +176,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETREQUEST )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRouteRequest * par1 = (QGeoRouteRequest *) _qt5xhb_itemGetPtr(1);
-    obj->setRequest ( *par1 );
+    obj->setRequest ( *PQGEOROUTEREQUEST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -209,8 +207,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETBOUNDS )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRectangle * par1 = (QGeoRectangle *) _qt5xhb_itemGetPtr(1);
-    obj->setBounds ( *par1 );
+    obj->setBounds ( *PQGEORECTANGLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -241,8 +238,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETFIRSTROUTESEGMENT )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoRouteSegment * par1 = (QGeoRouteSegment *) _qt5xhb_itemGetPtr(1);
-    obj->setFirstRouteSegment ( *par1 );
+    obj->setFirstRouteSegment ( *PQGEOROUTESEGMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -318,7 +314,7 @@ HB_FUNC_STATIC( QGEOROUTE_DISTANCE )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->distance () );
+    RQREAL( obj->distance () );
   }
 #endif
 }

@@ -96,8 +96,7 @@ QPlaceSearchRequest(const QPlaceSearchRequest &other)
 void QPlaceSearchRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * par1 = (QPlaceSearchRequest *) _qt5xhb_itemGetPtr(1);
-  QPlaceSearchRequest * o = new QPlaceSearchRequest ( *par1 );
+  QPlaceSearchRequest * o = new QPlaceSearchRequest ( *PQPLACESEARCHREQUEST(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -227,8 +226,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORY )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPlaceCategory * par1 = (QPlaceCategory *) _qt5xhb_itemGetPtr(1);
-    obj->setCategory ( *par1 );
+    obj->setCategory ( *PQPLACECATEGORY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -282,8 +280,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHAREA )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoShape * par1 = (QGeoShape *) _qt5xhb_itemGetPtr(1);
-    obj->setSearchArea ( *par1 );
+    obj->setSearchArea ( *PQGEOSHAPE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
