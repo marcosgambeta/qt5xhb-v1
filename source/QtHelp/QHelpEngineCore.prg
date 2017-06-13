@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->addCustomFilter ( PQSTRING(1), PQSTRINGLIST(2) ) );
+    RBOOL( obj->addCustomFilter ( PQSTRING(1), PQSTRINGLIST(2) ) );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->autoSaveFilter () );
+    RBOOL( obj->autoSaveFilter () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->copyCollectionFile ( PQSTRING(1) ) );
+    RBOOL( obj->copyCollectionFile ( PQSTRING(1) ) );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->registerDocumentation ( PQSTRING(1) ) );
+    RBOOL( obj->registerDocumentation ( PQSTRING(1) ) );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->removeCustomFilter ( PQSTRING(1) ) );
+    RBOOL( obj->removeCustomFilter ( PQSTRING(1) ) );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->removeCustomValue ( PQSTRING(1) ) );
+    RBOOL( obj->removeCustomValue ( PQSTRING(1) ) );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setCustomValue ( PQSTRING(1), *PQVARIANT(2) ) );
+    RBOOL( obj->setCustomValue ( PQSTRING(1), *PQVARIANT(2) ) );
   }
 }
 
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setupData () );
+    RBOOL( obj->setupData () );
   }
 }
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->unregisterDocumentation ( PQSTRING(1) ) );
+    RBOOL( obj->unregisterDocumentation ( PQSTRING(1) ) );
   }
 }
 
