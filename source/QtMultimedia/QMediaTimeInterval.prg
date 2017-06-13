@@ -71,9 +71,7 @@ QMediaTimeInterval(qint64 start, qint64 end)
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW2 )
 {
-  qint64 par1 = hb_parni(1);
-  qint64 par2 = hb_parni(2);
-  QMediaTimeInterval * o = new QMediaTimeInterval ( par1, par2 );
+  QMediaTimeInterval * o = new QMediaTimeInterval ( PQINT64(1), PQINT64(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -82,8 +80,7 @@ QMediaTimeInterval(const QMediaTimeInterval & other)
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW3 )
 {
-  QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
-  QMediaTimeInterval * o = new QMediaTimeInterval ( *par1 );
+  QMediaTimeInterval * o = new QMediaTimeInterval ( *PQMEDIATIMEINTERVAL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -135,7 +132,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_CONTAINS )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( (qint64) hb_parni(1) ) );
+    RBOOL( obj->contains ( PQINT64(1) ) );
   }
 }
 
@@ -148,7 +145,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_END )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->end () );
+    RQINT64( obj->end () );
   }
 }
 
@@ -161,7 +158,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_ISNORMAL )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNormal () );
+    RBOOL( obj->isNormal () );
   }
 }
 
@@ -188,7 +185,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_START )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->start () );
+    RQINT64( obj->start () );
   }
 }
 
@@ -201,7 +198,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_TRANSLATED )
   QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->translated ( (qint64) hb_parni(1) ) );
+    QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->translated ( PQINT64(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
   }
 }

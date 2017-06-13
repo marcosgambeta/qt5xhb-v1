@@ -60,8 +60,7 @@ QCameraFocusZone(const QCameraFocusZone & other)
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 {
-  QCameraFocusZone * par1 = (QCameraFocusZone *) _qt5xhb_itemGetPtr(1);
-  QCameraFocusZone * o = new QCameraFocusZone ( *par1 );
+  QCameraFocusZone * o = new QCameraFocusZone ( *PQCAMERAFOCUSZONE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -103,7 +102,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_ISVALID )
   QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

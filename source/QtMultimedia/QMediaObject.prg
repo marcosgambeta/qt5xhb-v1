@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind ( PQOBJECT(1) ) );
+    RBOOL( obj->bind ( PQOBJECT(1) ) );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISAVAILABLE )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable () );
+    RBOOL( obj->isAvailable () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMetaDataAvailable () );
+    RBOOL( obj->isMetaDataAvailable () );
   }
 }
 

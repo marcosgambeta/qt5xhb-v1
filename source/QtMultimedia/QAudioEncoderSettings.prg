@@ -83,8 +83,7 @@ QAudioEncoderSettings(const QAudioEncoderSettings & other)
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW2 )
 {
-  QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
-  QAudioEncoderSettings * o = new QAudioEncoderSettings ( *par1 );
+  QAudioEncoderSettings * o = new QAudioEncoderSettings ( *PQAUDIOENCODERSETTINGS(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -198,7 +197,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ISNULL )
   QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

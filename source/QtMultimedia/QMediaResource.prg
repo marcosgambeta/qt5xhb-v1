@@ -107,8 +107,7 @@ QMediaResource(const QNetworkRequest & request, const QString & mimeType = QStri
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW3 )
 {
-  QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
-  QMediaResource * o = new QMediaResource ( *par1, OPQSTRING(2,QString()) );
+  QMediaResource * o = new QMediaResource ( *PQNETWORKREQUEST(1), OPQSTRING(2,QString()) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -117,8 +116,7 @@ QMediaResource(const QMediaResource & other)
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW4 )
 {
-  QMediaResource * par1 = (QMediaResource *) _qt5xhb_itemGetPtr(1);
-  QMediaResource * o = new QMediaResource ( *par1 );
+  QMediaResource * o = new QMediaResource ( *PQMEDIARESOURCE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -214,7 +212,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_DATASIZE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->dataSize () );
+    RQINT64( obj->dataSize () );
   }
 }
 
@@ -227,7 +225,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_ISNULL )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -349,7 +347,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETDATASIZE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDataSize ( (qint64) hb_parni(1) );
+    obj->setDataSize ( (qint64) hb_parni(1) ); // TODO: usar macro ?
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

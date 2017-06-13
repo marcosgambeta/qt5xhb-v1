@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISBANDSUPPORTED )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBandSupported ( (QRadioTuner::Band) hb_parni(1) ) );
+    RBOOL( obj->isBandSupported ( (QRadioTuner::Band) hb_parni(1) ) );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSTEREO )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isStereo () );
+    RBOOL( obj->isStereo () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISMUTED )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted () );
+    RBOOL( obj->isMuted () );
   }
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSEARCHING )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSearching () );
+    RBOOL( obj->isSearching () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISANTENNACONNECTED )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAntennaConnected () );
+    RBOOL( obj->isAntennaConnected () );
   }
 }
 

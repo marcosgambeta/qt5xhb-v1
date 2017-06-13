@@ -101,9 +101,8 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
   QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
-    QList<QSize> list = obj->supportedResolutions ( *par1, &par2 );
+    QList<QSize> list = obj->supportedResolutions ( *PQIMAGEENCODERSETTINGS(1), &par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSIZE" );
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SETIMAGESETTINGS )
   QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
-    obj->setImageSettings ( *par1 );
+    obj->setImageSettings ( *PQIMAGEENCODERSETTINGS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

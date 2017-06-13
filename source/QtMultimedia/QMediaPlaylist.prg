@@ -124,8 +124,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA1 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->addMedia ( *par1 ) );
+    RBOOL( obj->addMedia ( *PQMEDIACONTENT(1) ) );
   }
 }
 
@@ -146,7 +145,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA2 )
     {
       par1 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    hb_retl( obj->addMedia ( par1 ) );
+    RBOOL( obj->addMedia ( par1 ) );
   }
 }
 
@@ -178,7 +177,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CLEAR )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->clear () );
+    RBOOL( obj->clear () );
   }
 }
 
@@ -245,7 +244,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA1 )
   if( obj )
   {
     QMediaContent * par2 = (QMediaContent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->insertMedia ( PINT(1), *par2 ) );
+    RBOOL( obj->insertMedia ( PINT(1), *par2 ) );
   }
 }
 
@@ -266,7 +265,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA2 )
     {
       par2 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    hb_retl( obj->insertMedia ( PINT(1), par2 ) );
+    RBOOL( obj->insertMedia ( PINT(1), par2 ) );
   }
 }
 
@@ -298,7 +297,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISEMPTY )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -311,7 +310,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISREADONLY )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -456,7 +455,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA1 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->removeMedia ( PINT(1) ) );
+    RBOOL( obj->removeMedia ( PINT(1) ) );
   }
 }
 
@@ -469,7 +468,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA2 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->removeMedia ( PINT(1), PINT(2) ) );
+    RBOOL( obj->removeMedia ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -501,7 +500,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE1 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->save ( *PQURL(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->save ( *PQURL(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -514,7 +513,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE2 )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->save ( PQIODEVICE(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->save ( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
 }
 

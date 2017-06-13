@@ -80,8 +80,7 @@ QImageEncoderSettings(const QImageEncoderSettings& other)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW2 )
 {
-  QImageEncoderSettings * par1 = (QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
-  QImageEncoderSettings * o = new QImageEncoderSettings ( *par1 );
+  QImageEncoderSettings * o = new QImageEncoderSettings ( *PQIMAGEENCODERSETTINGS(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -128,7 +127,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ISNULL )
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

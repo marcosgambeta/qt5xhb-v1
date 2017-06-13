@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
   QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEventFeedbackEnabled ( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
+    RBOOL( obj->isEventFeedbackEnabled ( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
   }
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
   QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEventFeedbackLocked ( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
+    RBOOL( obj->isEventFeedbackLocked ( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
   QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setEventFeedbackEnabled ( (QCameraFeedbackControl::EventType) hb_parni(1), PBOOL(2) ) );
+    RBOOL( obj->setEventFeedbackEnabled ( (QCameraFeedbackControl::EventType) hb_parni(1), PBOOL(2) ) );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
   QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setEventFeedbackSound ( (QCameraFeedbackControl::EventType) hb_parni(1), PQSTRING(2) ) );
+    RBOOL( obj->setEventFeedbackSound ( (QCameraFeedbackControl::EventType) hb_parni(1), PQSTRING(2) ) );
   }
 }
 

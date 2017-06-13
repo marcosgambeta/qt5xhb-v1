@@ -77,8 +77,7 @@ QAudioFormat ( const QAudioFormat & other )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
 {
-  QAudioFormat * par1 = (QAudioFormat *) _qt5xhb_itemGetPtr(1);
-  QAudioFormat * o = new QAudioFormat ( *par1 );
+  QAudioFormat * o = new QAudioFormat ( *PQAUDIOFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -164,7 +163,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
   QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

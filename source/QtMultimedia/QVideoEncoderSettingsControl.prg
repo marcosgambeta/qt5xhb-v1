@@ -75,8 +75,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
   QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
-    obj->setVideoSettings ( *par1 );
+    obj->setVideoSettings ( *PQVIDEOENCODERSETTINGS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -90,9 +89,8 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
   QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
-    QList<qreal> list = obj->supportedFrameRates ( *par1, &par2 );
+    QList<qreal> list = obj->supportedFrameRates ( *PQVIDEOENCODERSETTINGS(1), &par2 );
     _qt5xhb_convert_qlist_qreal_to_array ( list );
     hb_storl( par2, 2 );
   }
@@ -107,9 +105,8 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
   QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
-    QList<QSize> list = obj->supportedResolutions ( *par1, &par2 );
+    QList<QSize> list = obj->supportedResolutions ( *PQVIDEOENCODERSETTINGS(1), &par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSIZE" );

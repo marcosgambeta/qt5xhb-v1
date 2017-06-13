@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_DURATION )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RQINT64( obj->duration () );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISAUDIOAVAILABLE )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAudioAvailable () );
+    RBOOL( obj->isAudioAvailable () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISMUTED )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted () );
+    RBOOL( obj->isMuted () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISSEEKABLE )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSeekable () );
+    RBOOL( obj->isSeekable () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISVIDEOAVAILABLE )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVideoAvailable () );
+    RBOOL( obj->isVideoAvailable () );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_PLAYBACKRATE )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->playbackRate () );
+    RQREAL( obj->playbackRate () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_POSITION )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->position () );
+    RQINT64( obj->position () );
   }
 }
 
@@ -294,8 +294,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMEDIA )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
-    obj->setMedia ( *par1, PQIODEVICE(2) );
+    obj->setMedia ( *PQMEDIACONTENT(1), PQIODEVICE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -337,7 +336,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETPOSITION )
   QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setPosition ( (qint64) hb_parni(1) );
+    obj->setPosition ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

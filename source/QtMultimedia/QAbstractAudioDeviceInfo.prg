@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED )
   QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioFormat * par1 = (QAudioFormat *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isFormatSupported ( *par1 ) );
+    RBOOL( obj->isFormatSupported ( *PQAUDIOFORMAT(1) ) );
   }
 }
 

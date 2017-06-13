@@ -87,9 +87,7 @@ QMediaTimeRange(qint64 start, qint64 end)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW2 )
 {
-  qint64 par1 = hb_parni(1);
-  qint64 par2 = hb_parni(2);
-  QMediaTimeRange * o = new QMediaTimeRange ( par1, par2 );
+  QMediaTimeRange * o = new QMediaTimeRange ( PQINT64(1), PQINT64(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -98,8 +96,7 @@ QMediaTimeRange(const QMediaTimeInterval & interval)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW3 )
 {
-  QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
-  QMediaTimeRange * o = new QMediaTimeRange ( *par1 );
+  QMediaTimeRange * o = new QMediaTimeRange ( *PQMEDIATIMEINTERVAL(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -108,8 +105,7 @@ QMediaTimeRange(const QMediaTimeRange & range)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW4 )
 {
-  QMediaTimeRange * par1 = (QMediaTimeRange *) _qt5xhb_itemGetPtr(1);
-  QMediaTimeRange * o = new QMediaTimeRange ( *par1 );
+  QMediaTimeRange * o = new QMediaTimeRange ( *PQMEDIATIMERANGE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -166,8 +162,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL1 )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
-    obj->addInterval ( *par1 );
+    obj->addInterval ( *PQMEDIATIMEINTERVAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -181,7 +176,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL2 )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->addInterval ( (qint64) hb_parni(1), (qint64) hb_parni(2) );
+    obj->addInterval ( PQINT64(1), PQINT64(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -214,8 +209,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDTIMERANGE )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaTimeRange * par1 = (QMediaTimeRange *) _qt5xhb_itemGetPtr(1);
-    obj->addTimeRange ( *par1 );
+    obj->addTimeRange ( *PQMEDIATIMERANGE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -243,7 +237,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_CONTAINS )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( (qint64) hb_parni(1) ) );
+    RBOOL( obj->contains ( PQINT64(1) ) );
   }
 }
 
@@ -256,7 +250,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_EARLIESTTIME )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->earliestTime () );
+    RQINT64( obj->earliestTime () );
   }
 }
 
@@ -313,7 +307,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ISCONTINUOUS )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isContinuous () );
+    RBOOL( obj->isContinuous () );
   }
 }
 
@@ -326,7 +320,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ISEMPTY )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -339,7 +333,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->latestTime () );
+    RQINT64( obj->latestTime () );
   }
 }
 
@@ -352,8 +346,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL1 )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaTimeInterval * par1 = (QMediaTimeInterval *) _qt5xhb_itemGetPtr(1);
-    obj->removeInterval ( *par1 );
+    obj->removeInterval ( *PQMEDIATIMEINTERVAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -367,7 +360,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL2 )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->removeInterval ( (qint64) hb_parni(1), (qint64) hb_parni(2) );
+    obj->removeInterval ( PQINT64(1), PQINT64(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -400,8 +393,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVETIMERANGE )
   QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaTimeRange * par1 = (QMediaTimeRange *) _qt5xhb_itemGetPtr(1);
-    obj->removeTimeRange ( *par1 );
+    obj->removeTimeRange ( *PQMEDIATIMERANGE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

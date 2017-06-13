@@ -128,8 +128,7 @@ QVideoFrame ( const QVideoFrame & other )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW5 )
 {
-  QVideoFrame * par1 = (QVideoFrame *) _qt5xhb_itemGetPtr(1);
-  QVideoFrame * o = new QVideoFrame ( *par1 );
+  QVideoFrame * o = new QVideoFrame ( *PQVIDEOFRAME(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -240,7 +239,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->endTime () );
+    RQINT64( obj->endTime () );
   }
 }
 
@@ -306,7 +305,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMapped () );
+    RBOOL( obj->isMapped () );
   }
 }
 
@@ -319,7 +318,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReadable () );
+    RBOOL( obj->isReadable () );
   }
 }
 
@@ -332,7 +331,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -345,7 +344,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -358,7 +357,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->map ( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
+    RBOOL( obj->map ( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
   }
 }
 
@@ -410,7 +409,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setEndTime ( (qint64) hb_parni(1) );
+    obj->setEndTime ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -438,7 +437,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setStartTime ( (qint64) hb_parni(1) );
+    obj->setStartTime ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -466,7 +465,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startTime () );
+    RQINT64( obj->startTime () );
   }
 }
 

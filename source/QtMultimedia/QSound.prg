@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 }
 

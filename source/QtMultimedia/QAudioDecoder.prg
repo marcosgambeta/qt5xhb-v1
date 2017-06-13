@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QAUDIODECODER_BUFFERAVAILABLE )
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bufferAvailable () );
+    RBOOL( obj->bufferAvailable () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QAUDIODECODER_DURATION )
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RQINT64( obj->duration () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QAUDIODECODER_POSITION )
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->position () );
+    RQINT64( obj->position () );
   }
 }
 
@@ -199,8 +199,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETAUDIOFORMAT )
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioFormat * par1 = (QAudioFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setAudioFormat ( *par1 );
+    obj->setAudioFormat ( *PQAUDIOFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

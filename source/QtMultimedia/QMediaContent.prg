@@ -91,8 +91,7 @@ QMediaContent(const QNetworkRequest & request)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW3 )
 {
-  QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
-  QMediaContent * o = new QMediaContent ( *par1 );
+  QMediaContent * o = new QMediaContent ( *PQNETWORKREQUEST(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -101,8 +100,7 @@ QMediaContent(const QMediaResource & resource)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW4 )
 {
-  QMediaResource * par1 = (QMediaResource *) _qt5xhb_itemGetPtr(1);
-  QMediaContent * o = new QMediaContent ( *par1 );
+  QMediaContent * o = new QMediaContent ( *PQMEDIARESOURCE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -128,8 +126,7 @@ QMediaContent(const QMediaContent & other)
 */
 HB_FUNC_STATIC( QMEDIACONTENT_NEW6 )
 {
-  QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
-  QMediaContent * o = new QMediaContent ( *par1 );
+  QMediaContent * o = new QMediaContent ( *PQMEDIACONTENT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -255,7 +252,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

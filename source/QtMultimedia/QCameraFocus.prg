@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_DIGITALZOOM )
   QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->digitalZoom () );
+    RQREAL( obj->digitalZoom () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
   QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable () );
+    RBOOL( obj->isAvailable () );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isFocusModeSupported ( (QCameraFocus::FocusModes) par1 ) );
+    RBOOL( obj->isFocusModeSupported ( (QCameraFocus::FocusModes) par1 ) );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
   QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFocusPointModeSupported ( (QCameraFocus::FocusPointMode) hb_parni(1) ) );
+    RBOOL( obj->isFocusPointModeSupported ( (QCameraFocus::FocusPointMode) hb_parni(1) ) );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMDIGITALZOOM )
   QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maximumDigitalZoom () );
+    RQREAL( obj->maximumDigitalZoom () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
   QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->maximumOpticalZoom () );
+    RQREAL( obj->maximumOpticalZoom () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_OPTICALZOOM )
   QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->opticalZoom () );
+    RQREAL( obj->opticalZoom () );
   }
 }
 

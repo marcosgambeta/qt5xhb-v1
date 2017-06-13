@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoSurfaceFormat * par1 = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isFormatSupported ( *par1 ) );
+    RBOOL( obj->isFormatSupported ( *PQVIDEOSURFACEFORMAT(1) ) );
   }
 }
 
@@ -118,8 +117,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoSurfaceFormat * par1 = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *par1 ) );
+    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
   }
 }
@@ -133,8 +131,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoFrame * par1 = (QVideoFrame *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->present ( *par1 ) );
+    RBOOL( obj->present ( *PQVIDEOFRAME(1) ) );
   }
 }
 
@@ -147,8 +144,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVideoSurfaceFormat * par1 = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->start ( *par1 ) );
+    RBOOL( obj->start ( *PQVIDEOSURFACEFORMAT(1) ) );
   }
 }
 

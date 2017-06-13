@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_CONTRAST )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->contrast () );
+    RQREAL( obj->contrast () );
   }
 }
 
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_DENOISINGLEVEL )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->denoisingLevel () );
+    RQREAL( obj->denoisingLevel () );
   }
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISAVAILABLE )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAvailable () );
+    RBOOL( obj->isAvailable () );
   }
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isWhiteBalanceModeSupported ( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) ) );
+    RBOOL( obj->isWhiteBalanceModeSupported ( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) ) );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_MANUALWHITEBALANCE )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->manualWhiteBalance () );
+    RQREAL( obj->manualWhiteBalance () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SATURATION )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->saturation () );
+    RQREAL( obj->saturation () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SHARPENINGLEVEL )
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->sharpeningLevel () );
+    RQREAL( obj->sharpeningLevel () );
   }
 }
 

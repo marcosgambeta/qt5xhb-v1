@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->volume () );
+    RQREAL( obj->volume () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMuted () );
+    RBOOL( obj->isMuted () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLoaded () );
+    RBOOL( obj->isLoaded () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isPlaying () );
+    RBOOL( obj->isPlaying () );
   }
 }
 

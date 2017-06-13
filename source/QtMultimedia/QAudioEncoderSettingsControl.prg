@@ -100,8 +100,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS )
   QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
-    obj->setAudioSettings ( *par1 );
+    obj->setAudioSettings ( *PQAUDIOENCODERSETTINGS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -129,9 +128,8 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
   QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAudioEncoderSettings * par1 = (QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
-    QList<int> list = obj->supportedSampleRates ( *par1, &par2 );
+    QList<int> list = obj->supportedSampleRates ( *PQAUDIOENCODERSETTINGS(1), &par2 );
     _qt5xhb_convert_qlist_int_to_array ( list );
     hb_storl( par2, 2 );
   }

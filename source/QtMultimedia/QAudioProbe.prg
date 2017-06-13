@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
   QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE1 )
   QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaObject * par1 = (QMediaObject *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->setSource ( par1 ) );
+    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
   }
 }
 
@@ -108,8 +107,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE2 )
   QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaRecorder * par1 = (QMediaRecorder *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->setSource ( par1 ) );
+    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
   }
 }
 

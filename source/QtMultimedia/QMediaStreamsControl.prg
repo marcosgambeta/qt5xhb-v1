@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
   QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive ( PINT(1) ) );
+    RBOOL( obj->isActive ( PINT(1) ) );
   }
 }
 

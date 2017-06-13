@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISWRITABLE )
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE )
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMetaDataAvailable () );
+    RBOOL( obj->isMetaDataAvailable () );
   }
 }
 

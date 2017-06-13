@@ -81,9 +81,8 @@ QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format 
 */
 HB_FUNC_STATIC( QAUDIOINPUT_NEW2 )
 {
-  QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) _qt5xhb_itemGetPtr(1);
   QAudioFormat par2 = ISNIL(2)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(2);
-  QAudioInput * o = new QAudioInput ( *par1, par2, OPQOBJECT(3,0) );
+  QAudioInput * o = new QAudioInput ( *PQAUDIODEVICEINFO(1), par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -156,7 +155,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
   QAudioInput * obj = (QAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->elapsedUSecs () );
+    RQINT64( obj->elapsedUSecs () );
   }
 }
 
@@ -222,7 +221,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
   QAudioInput * obj = (QAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->processedUSecs () );
+    RQINT64( obj->processedUSecs () );
   }
 }
 

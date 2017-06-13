@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
   QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canChangeProperty ( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
+    RBOOL( obj->canChangeProperty ( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
+    RBOOL( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
   }
 }
 

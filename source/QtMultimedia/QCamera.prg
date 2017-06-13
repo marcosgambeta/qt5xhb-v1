@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QCAMERA_ISCAPTUREMODESUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
+    RBOOL( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
   }
 }
 

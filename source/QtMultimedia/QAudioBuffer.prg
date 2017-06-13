@@ -78,8 +78,7 @@ QAudioBuffer(const QAudioBuffer & other)
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW2 )
 {
-  QAudioBuffer * par1 = (QAudioBuffer *) _qt5xhb_itemGetPtr(1);
-  QAudioBuffer * o = new QAudioBuffer ( *par1 );
+  QAudioBuffer * o = new QAudioBuffer ( *PQAUDIOBUFFER(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -88,9 +87,7 @@ QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startT
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW3 )
 {
-  QAudioFormat * par2 = (QAudioFormat *) _qt5xhb_itemGetPtr(2);
-  qint64 par3 = ISNIL(3)? -1 : hb_parni(3);
-  QAudioBuffer * o = new QAudioBuffer ( *PQBYTEARRAY(1), *par2, par3 );
+  QAudioBuffer * o = new QAudioBuffer ( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -99,8 +96,7 @@ QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW4 )
 {
-  qint64 par3 = ISNIL(3)? -1 : hb_parni(3);
-  QAudioBuffer * o = new QAudioBuffer ( PINT(1), *PQAUDIOFORMAT(2), par3 );
+  QAudioBuffer * o = new QAudioBuffer ( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -188,7 +184,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_DURATION )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RQINT64( obj->duration () );
   }
 }
 
@@ -228,7 +224,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_ISVALID )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -254,7 +250,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_STARTTIME )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startTime () );
+    RQINT64( obj->startTime () );
   }
 }
 

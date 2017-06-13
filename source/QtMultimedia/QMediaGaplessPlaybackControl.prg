@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
   QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->crossfadeTime () );
+    RQREAL( obj->crossfadeTime () );
   }
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
   QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCrossfadeSupported () );
+    RBOOL( obj->isCrossfadeSupported () );
   }
 }
 
@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
   QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMediaContent * par1 = (QMediaContent *) _qt5xhb_itemGetPtr(1);
-    obj->setNextMedia ( *par1 );
+    obj->setNextMedia ( *PQMEDIACONTENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

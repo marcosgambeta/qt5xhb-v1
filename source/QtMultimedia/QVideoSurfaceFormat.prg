@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMERATE )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->frameRate () );
+    RQREAL( obj->frameRate () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_ISVALID )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

@@ -88,9 +88,8 @@ QAudioOutput(const QAudioDeviceInfo & audioDevice, const QAudioFormat & format =
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_NEW2 )
 {
-  QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) _qt5xhb_itemGetPtr(1);
   QAudioFormat par2 = ISNIL(2)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(2);
-  QAudioOutput * o = new QAudioOutput ( *par1, par2, OPQOBJECT(3,0) );
+  QAudioOutput * o = new QAudioOutput ( *PQAUDIODEVICEINFO(1), par2, OPQOBJECT(3,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -176,7 +175,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->elapsedUSecs () );
+    RQINT64( obj->elapsedUSecs () );
   }
 }
 
@@ -242,7 +241,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->processedUSecs () );
+    RQINT64( obj->processedUSecs () );
   }
 }
 
@@ -427,7 +426,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->volume () );
+    RQREAL( obj->volume () );
   }
 }
 

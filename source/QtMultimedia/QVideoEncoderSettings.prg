@@ -86,8 +86,7 @@ QVideoEncoderSettings(const QVideoEncoderSettings & other)
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW2 )
 {
-  QVideoEncoderSettings * par1 = (QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
-  QVideoEncoderSettings * o = new QVideoEncoderSettings ( *par1 );
+  QVideoEncoderSettings * o = new QVideoEncoderSettings ( *PQVIDEOENCODERSETTINGS(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -188,7 +187,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_FRAMERATE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->frameRate () );
+    RQREAL( obj->frameRate () );
   }
 }
 
@@ -201,7 +200,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ISNULL )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
