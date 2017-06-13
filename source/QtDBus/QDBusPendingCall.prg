@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISFINISHED )
   QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 #endif
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISERROR )
   QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isError () );
+    RBOOL( obj->isError () );
   }
 #endif
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISVALID )
   QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }

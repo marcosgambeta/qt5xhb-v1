@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_ISVALID )
   QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -210,7 +210,7 @@ static bool isSupported()
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_ISSUPPORTED )
 {
-  hb_retl( QDBusUnixFileDescriptor::isSupported () );
+  RBOOL( QDBusUnixFileDescriptor::isSupported () );
 }
 
 

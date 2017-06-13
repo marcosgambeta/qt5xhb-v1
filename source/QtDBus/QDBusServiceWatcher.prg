@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE )
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->removeWatchedService ( PQSTRING(1) ) );
+    RBOOL( obj->removeWatchedService ( PQSTRING(1) ) );
   }
 }
 

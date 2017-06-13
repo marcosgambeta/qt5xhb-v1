@@ -74,7 +74,7 @@ static bool demarshall(const QDBusArgument &, int id, void *data)
 HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
 {
   void * par3 = (void *) hb_parptr(3);
-  hb_retl( QDBusMetaType::demarshall ( PINT(2), par3 ) ); // TODO: revisar e corrigir metodo
+  RBOOL( QDBusMetaType::demarshall ( PINT(2), par3 ) ); // TODO: revisar e corrigir metodo
 }
 
 

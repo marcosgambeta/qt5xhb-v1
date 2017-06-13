@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ATEND )
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 

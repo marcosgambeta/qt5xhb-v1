@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISREPLYREQUIRED )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReplyRequired () );
+    RBOOL( obj->isReplyRequired () );
   }
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISDELAYEDREPLY )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDelayedReply () );
+    RBOOL( obj->isDelayedReply () );
   }
 }
 
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_AUTOSTARTSERVICE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->autoStartService () );
+    RBOOL( obj->autoStartService () );
   }
 }
 

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ISCONNECTED )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isConnected () );
+    RBOOL( obj->isConnected () );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->send ( *PQDBUSMESSAGE(1) ) );
+    RBOOL( obj->send ( *PQDBUSMESSAGE(1) ) );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK1 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->callWithCallback ( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT(5,-1) ) );
+    RBOOL( obj->callWithCallback ( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT(5,-1) ) );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK2 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->callWithCallback ( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT(4,-1) ) );
+    RBOOL( obj->callWithCallback ( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT(4,-1) ) );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT1 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
+    RBOOL( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT2 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
+    RBOOL( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
+    RBOOL( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT1 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
+    RBOOL( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
   }
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT2 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
+    RBOOL( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
+    RBOOL( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->registerObject ( PQSTRING(1), PQOBJECT(2) ) );
+    RBOOL( obj->registerObject ( PQSTRING(1), PQOBJECT(2) ) );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERVIRTUALOBJECT )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->registerVirtualObject ( PQSTRING(1), PQDBUSVIRTUALOBJECT(2), par3 ) ); // TODO: parametro 3
+    RBOOL( obj->registerVirtualObject ( PQSTRING(1), PQDBUSVIRTUALOBJECT(2), par3 ) ); // TODO: parametro 3
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERSERVICE )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->registerService ( PQSTRING(1) ) );
+    RBOOL( obj->registerService ( PQSTRING(1) ) );
   }
 }
 
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTERSERVICE )
   QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->unregisterService ( PQSTRING(1) ) );
+    RBOOL( obj->unregisterService ( PQSTRING(1) ) );
   }
 }
 

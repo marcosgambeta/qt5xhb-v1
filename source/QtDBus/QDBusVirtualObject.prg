@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_HANDLEMESSAGE )
   QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->handleMessage ( *PQDBUSMESSAGE(1), par2 ) ); // TODO: implementar parametro 2
+    RBOOL( obj->handleMessage ( *PQDBUSMESSAGE(1), par2 ) ); // TODO: implementar parametro 2
   }
 }
 

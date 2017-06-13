@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->calledFromDBus () );
+    RBOOL( obj->calledFromDBus () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
   QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDelayedReply () );
+    RBOOL( obj->isDelayedReply () );
   }
 }
 

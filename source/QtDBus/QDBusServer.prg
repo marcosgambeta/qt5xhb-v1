@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
   QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isConnected () );
+    RBOOL( obj->isConnected () );
   }
 }
 
