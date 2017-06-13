@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ISFULLSCREEN )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFullScreen () );
+    RBOOL( obj->isFullScreen () );
   }
 }
 
