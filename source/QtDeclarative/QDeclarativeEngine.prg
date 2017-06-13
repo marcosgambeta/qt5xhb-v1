@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 
   if( obj )
   {
-    hb_retl( obj->outputWarningsToStandardError () );
+    RBOOL( obj->outputWarningsToStandardError () );
   }
 }
 

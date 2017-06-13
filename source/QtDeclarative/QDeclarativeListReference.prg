@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
   {
     if( ISQOBJECT(1) )
     {
-      hb_retl( obj->append ( PQOBJECT(1) ) );
+      RBOOL( obj->append ( PQOBJECT(1) ) );
     }
     else
     {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 
   if( obj )
   {
-    hb_retl( obj->canAppend () );
+    RBOOL( obj->canAppend () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 
   if( obj )
   {
-    hb_retl( obj->canAt () );
+    RBOOL( obj->canAt () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 
   if( obj )
   {
-    hb_retl( obj->canClear () );
+    RBOOL( obj->canClear () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 
   if( obj )
   {
-    hb_retl( obj->canCount () );
+    RBOOL( obj->canCount () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 
   if( obj )
   {
-    hb_retl( obj->clear () );
+    RBOOL( obj->clear () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

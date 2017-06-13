@@ -205,7 +205,7 @@ void QDeclarativeProperty_connectNotifySignal1 ()
 
   if( obj )
   {
-    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -218,7 +218,7 @@ void QDeclarativeProperty_connectNotifySignal2 ()
 
   if( obj )
   {
-    hb_retl( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
+    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL )
 
   if( obj )
   {
-    hb_retl( obj->hasNotifySignal () );
+    RBOOL( obj->hasNotifySignal () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISDESIGNABLE )
 
   if( obj )
   {
-    hb_retl( obj->isDesignable () );
+    RBOOL( obj->isDesignable () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISPROPERTY )
 
   if( obj )
   {
-    hb_retl( obj->isProperty () );
+    RBOOL( obj->isProperty () );
   }
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISRESETTABLE )
 
   if( obj )
   {
-    hb_retl( obj->isResettable () );
+    RBOOL( obj->isResettable () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISSIGNALPROPERTY )
 
   if( obj )
   {
-    hb_retl( obj->isSignalProperty () );
+    RBOOL( obj->isSignalProperty () );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
 
   if( obj )
   {
-    hb_retl( obj->needsNotifySignal () );
+    RBOOL( obj->needsNotifySignal () );
   }
 }
 
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
 
   if( obj )
   {
-    hb_retl( obj->reset () );
+    RBOOL( obj->reset () );
   }
 }
 
@@ -558,7 +558,7 @@ void QDeclarativeProperty_write1 ()
 
   if( obj )
   {
-    hb_retl( obj->write ( *PQVARIANT(1) ) );
+    RBOOL( obj->write ( *PQVARIANT(1) ) );
   }
 }
 
@@ -567,7 +567,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write2 ()
 {
-  hb_retl( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
+  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
 }
 
 /*
@@ -575,7 +575,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write3 ()
 {
-  hb_retl( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4) ) );
+  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4) ) );
 }
 
 /*
@@ -583,7 +583,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write4 ()
 {
-  hb_retl( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
+  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
 }
 
 //[1]bool write ( const QVariant & value ) const

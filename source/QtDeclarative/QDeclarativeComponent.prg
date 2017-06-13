@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 
   if( obj )
   {
-    hb_retl( obj->isError () );
+    RBOOL( obj->isError () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 
   if( obj )
   {
-    hb_retl( obj->isLoading () );
+    RBOOL( obj->isLoading () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 
   if( obj )
   {
-    hb_retl( obj->isReady () );
+    RBOOL( obj->isReady () );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 
   if( obj )
   {
-    hb_retnd( obj->progress () );
+    RQREAL( obj->progress () );
   }
 }
 

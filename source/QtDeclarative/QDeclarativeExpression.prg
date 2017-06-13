@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
 
   if( obj )
   {
-    hb_retl( obj->hasError () );
+    RBOOL( obj->hasError () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
 
   if( obj )
   {
-    hb_retl( obj->notifyOnValueChanged () );
+    RBOOL( obj->notifyOnValueChanged () );
   }
 }
 

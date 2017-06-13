@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains ( PQSTRING(1) ) );
     }
     else
     {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

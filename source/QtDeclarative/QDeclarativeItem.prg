@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 
   if( obj )
   {
-    hb_retnd( obj->baselineOffset () );
+    RQREAL( obj->baselineOffset () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 
   if( obj )
   {
-    hb_retl( obj->clip () );
+    RBOOL( obj->clip () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->implicitHeight () );
+    RQREAL( obj->implicitHeight () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->implicitWidth () );
+    RQREAL( obj->implicitWidth () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 
   if( obj )
   {
-    hb_retl( obj->keepMouseGrab () );
+    RBOOL( obj->keepMouseGrab () );
   }
 }
 
@@ -225,8 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
   {
     if( ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
     {
-      QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-      QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *par1, PQREAL(2), PQREAL(3) ) );
+      QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
     }
     else
@@ -247,8 +246,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
   {
     if( ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
     {
-      QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-      QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *par1, PQREAL(2), PQREAL(3) ) );
+      QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
     }
     else
@@ -414,7 +412,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 
   if( obj )
   {
-    hb_retl( obj->smooth () );
+    RBOOL( obj->smooth () );
   }
 }
 

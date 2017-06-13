@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

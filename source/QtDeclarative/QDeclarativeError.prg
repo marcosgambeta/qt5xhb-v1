@@ -75,8 +75,7 @@ QDeclarativeError ( const QDeclarativeError & other )
 */
 void QDeclarativeError_new2 ()
 {
-  QDeclarativeError * par1 = (QDeclarativeError *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeError * o = new QDeclarativeError ( *par1 );
+  QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -134,7 +133,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

@@ -72,8 +72,7 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
 void QDeclarativeScriptString_new2 ()
 {
-  QDeclarativeScriptString * par1 = (QDeclarativeScriptString *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeScriptString * o = new QDeclarativeScriptString ( *par1 );
+  QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
