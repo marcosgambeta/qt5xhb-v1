@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSGTEXTURE_HASALPHACHANNEL )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAlphaChannel () );
+    RBOOL( obj->hasAlphaChannel () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSGTEXTURE_HASMIPMAPS )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasMipmaps () );
+    RBOOL( obj->hasMipmaps () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSGTEXTURE_ISATLASTEXTURE )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAtlasTexture () );
+    RBOOL( obj->isAtlasTexture () );
   }
 }
 

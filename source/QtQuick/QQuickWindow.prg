@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CLEARBEFORERENDERING )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->clearBeforeRendering () );
+    RBOOL( obj->clearBeforeRendering () );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ISPERSISTENTOPENGLCONTEXT )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isPersistentOpenGLContext () );
+    RBOOL( obj->isPersistentOpenGLContext () );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ISPERSISTENTSCENEGRAPH )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isPersistentSceneGraph () );
+    RBOOL( obj->isPersistentSceneGraph () );
   }
 }
 
@@ -329,9 +329,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SENDEVENT )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQuickItem * par1 = (QQuickItem *) _qt5xhb_itemGetPtr(1);
-    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->sendEvent ( par1, par2 ) );
+    RBOOL( obj->sendEvent ( PQQUICKITEM(1), PQEVENT(2) ) );
   }
 }
 
@@ -401,8 +399,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET1 )
   QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QOpenGLFramebufferObject * par1 = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtr(1);
-    obj->setRenderTarget ( par1 );
+    obj->setRenderTarget ( PQOPENGLFRAMEBUFFEROBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

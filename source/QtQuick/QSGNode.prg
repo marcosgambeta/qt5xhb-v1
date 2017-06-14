@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSGNODE_ISSUBTREEBLOCKED )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSubtreeBlocked () );
+    RBOOL( obj->isSubtreeBlocked () );
   }
 }
 

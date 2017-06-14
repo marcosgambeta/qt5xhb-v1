@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
   QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->opacity () );
+    RQREAL( obj->opacity () );
   }
 }
 

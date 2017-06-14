@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QQUICKITEM_ACCEPTHOVEREVENTS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->acceptHoverEvents () );
+    RBOOL( obj->acceptHoverEvents () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QQUICKITEM_ANTIALIASING )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->antialiasing () );
+    RBOOL( obj->antialiasing () );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QQUICKITEM_BASELINEOFFSET )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->baselineOffset () );
+    RQREAL( obj->baselineOffset () );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QQUICKITEM_CLIP )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->clip () );
+    RBOOL( obj->clip () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QQUICKITEM_CONTAINS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( *PQPOINTF(1) ) );
+    RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QQUICKITEM_FILTERSCHILDMOUSEEVENTS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->filtersChildMouseEvents () );
+    RBOOL( obj->filtersChildMouseEvents () );
   }
 }
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QQUICKITEM_HASACTIVEFOCUS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasActiveFocus () );
+    RBOOL( obj->hasActiveFocus () );
   }
 }
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QQUICKITEM_HASFOCUS )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasFocus () );
+    RBOOL( obj->hasFocus () );
   }
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QQUICKITEM_HEIGHT )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->height () );
+    RQREAL( obj->height () );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QQUICKITEM_IMPLICITHEIGHT )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->implicitHeight () );
+    RQREAL( obj->implicitHeight () );
   }
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QQUICKITEM_IMPLICITWIDTH )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->implicitWidth () );
+    RQREAL( obj->implicitWidth () );
   }
 }
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISENABLED )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISFOCUSSCOPE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFocusScope () );
+    RBOOL( obj->isFocusScope () );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISTEXTUREPROVIDER )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTextureProvider () );
+    RBOOL( obj->isTextureProvider () );
   }
 }
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISVISIBLE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QQUICKITEM_KEEPMOUSEGRAB )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->keepMouseGrab () );
+    RBOOL( obj->keepMouseGrab () );
   }
 }
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QQUICKITEM_KEEPTOUCHGRAB )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->keepTouchGrab () );
+    RBOOL( obj->keepTouchGrab () );
   }
 }
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QQUICKITEM_OPACITY )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->opacity () );
+    RQREAL( obj->opacity () );
   }
 }
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QQUICKITEM_ROTATION )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rotation () );
+    RQREAL( obj->rotation () );
   }
 }
 
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QQUICKITEM_SCALE )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->scale () );
+    RQREAL( obj->scale () );
   }
 }
 
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC( QQUICKITEM_SMOOTH )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->smooth () );
+    RBOOL( obj->smooth () );
   }
 }
 
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QQUICKITEM_WIDTH )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->width () );
+    RQREAL( obj->width () );
   }
 }
 
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QQUICKITEM_X )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->x () );
+    RQREAL( obj->x () );
   }
 }
 
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QQUICKITEM_Y )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->y () );
+    RQREAL( obj->y () );
   }
 }
 
@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC( QQUICKITEM_Z )
   QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->z () );
+    RQREAL( obj->z () );
   }
 }
 

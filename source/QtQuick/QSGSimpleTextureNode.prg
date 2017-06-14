@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT1 )
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const QRectF  * par1 = (const QRectF  *) _qt5xhb_itemGetPtr(1);
-    obj->setRect ( *par1 );
+    obj->setRect ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_LINEWIDTH )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->lineWidth () );
+    RFLOAT( obj->lineWidth () );
   }
 }
 
