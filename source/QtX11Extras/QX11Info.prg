@@ -93,7 +93,7 @@ static bool isPlatformX11()
 HB_FUNC_STATIC( QX11INFO_ISPLATFORMX11 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retl( QX11Info::isPlatformX11 () );
+  RBOOL( QX11Info::isPlatformX11 () );
 #endif
 }
 
