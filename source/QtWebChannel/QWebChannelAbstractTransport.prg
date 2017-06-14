@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
   QWebChannelAbstractTransport * obj = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJsonObject * par1 = (QJsonObject *) _qt5xhb_itemGetPtr(1);
-    obj->sendMessage ( *par1 );
+    obj->sendMessage ( *PQJSONOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
