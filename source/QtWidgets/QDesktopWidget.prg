@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 
   if( obj )
   {
-    hb_retl( obj->isVirtualDesktop () );
+    RBOOL( obj->isVirtualDesktop () );
   }
 }
 

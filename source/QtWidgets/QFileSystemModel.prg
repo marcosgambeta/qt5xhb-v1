@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QFileIconProvider * par1 = (QFileIconProvider *) _qt5xhb_itemGetPtr(1);
-    obj->setIconProvider ( par1 );
+    obj->setIconProvider ( PQFILEICONPROVIDER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -291,7 +290,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDir ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->isDir ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -304,7 +303,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -381,7 +380,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->nameFilterDisables () );
+    RBOOL( obj->nameFilterDisables () );
   }
 }
 
@@ -456,7 +455,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->remove ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->remove ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -469,7 +468,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->resolveSymlinks () );
+    RBOOL( obj->resolveSymlinks () );
   }
 }
 
@@ -504,7 +503,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->rmdir ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->rmdir ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -557,7 +556,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size ( *PQMODELINDEX(1) ) );
+    RQINT64( obj->size ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -583,7 +582,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canFetchMore ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->canFetchMore ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -623,7 +622,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+    RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
 
@@ -637,8 +636,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
   if( obj )
   {
     const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->dropMimeData ( par1, (Qt::DropAction) par2, PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+    RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
 
@@ -679,7 +677,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->hasChildren ( par1 ) );
+    RBOOL( obj->hasChildren ( par1 ) );
   }
 }
 
@@ -692,8 +690,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -707,14 +704,14 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-QModelIndexList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QModelIndexList par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     QMimeData * ptr = obj->mimeData ( par1 );
     _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }

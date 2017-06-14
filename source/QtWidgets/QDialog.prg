@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSizeGripEnabled () );
+    RBOOL( obj->isSizeGripEnabled () );
   }
 }
 
@@ -333,8 +333,7 @@ HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation ( (Qt::Orientation) par1 );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

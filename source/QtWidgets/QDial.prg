@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 
   if( obj )
   {
-    hb_retnd( obj->notchTarget () );
+    RQREAL( obj->notchTarget () );
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->notchesVisible () );
+    RBOOL( obj->notchesVisible () );
   }
 }
 
@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setNotchTarget ( par1 );
+    obj->setNotchTarget ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -144,7 +143,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
 
   if( obj )
   {
-    hb_retl( obj->wrapping () );
+    RBOOL( obj->wrapping () );
   }
 }
 

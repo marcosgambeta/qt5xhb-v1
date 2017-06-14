@@ -94,9 +94,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
   QGestureRecognizer * obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGesture * par1 = (QGesture *) _qt5xhb_itemGetPtr(1);
-    QEvent * par3 = (QEvent *) _qt5xhb_itemGetPtr(3);
-    hb_retni( obj->recognize ( par1, PQOBJECT(2), par3 ) );
+    hb_retni( obj->recognize ( PQGESTURE(1), PQOBJECT(2), PQEVENT(3) ) );
   }
 }
 
@@ -109,8 +107,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
   QGestureRecognizer * obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGesture * par1 = (QGesture *) _qt5xhb_itemGetPtr(1);
-    obj->reset ( par1 );
+    obj->reset ( PQGESTURE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -121,8 +118,7 @@ static Qt::GestureType registerRecognizer(QGestureRecognizer * recognizer)
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 {
-  QGestureRecognizer * par1 = (QGestureRecognizer *) _qt5xhb_itemGetPtr(1);
-  hb_retni( QGestureRecognizer::registerRecognizer ( par1 ) );
+  hb_retni( QGestureRecognizer::registerRecognizer ( PQGESTURERECOGNIZER(1) ) );
 }
 
 
@@ -131,8 +127,7 @@ static void unregisterRecognizer(Qt::GestureType type)
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
 {
-  int par1 = hb_parni(1);
-  QGestureRecognizer::unregisterRecognizer ( (Qt::GestureType) par1 );
+  QGestureRecognizer::unregisterRecognizer ( (Qt::GestureType) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

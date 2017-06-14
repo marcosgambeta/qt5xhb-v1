@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-    QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *par1 ) );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *PQDATE(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
@@ -215,7 +214,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISDATEEDITENABLED )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDateEditEnabled () );
+    RBOOL( obj->isDateEditEnabled () );
   }
 }
 
@@ -228,7 +227,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISGRIDVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isGridVisible () );
+    RBOOL( obj->isGridVisible () );
   }
 }
 
@@ -241,7 +240,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNavigationBarVisible () );
+    RBOOL( obj->isNavigationBarVisible () );
   }
 }
 
@@ -366,9 +365,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATETEXTFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-    QTextCharFormat * par2 = (QTextCharFormat *) _qt5xhb_itemGetPtr(2);
-    obj->setDateTextFormat ( *par1, *par2 );
+    obj->setDateTextFormat ( *PQDATE(1), *PQTEXTCHARFORMAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -382,8 +379,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFirstDayOfWeek ( (Qt::DayOfWeek) par1 );
+    obj->setFirstDayOfWeek ( (Qt::DayOfWeek) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -397,8 +393,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHEADERTEXTFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextCharFormat * par1 = (QTextCharFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setHeaderTextFormat ( *par1 );
+    obj->setHeaderTextFormat ( *PQTEXTCHARFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -412,8 +407,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setHorizontalHeaderFormat ( (QCalendarWidget::HorizontalHeaderFormat) par1 );
+    obj->setHorizontalHeaderFormat ( (QCalendarWidget::HorizontalHeaderFormat) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -427,8 +421,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMAXIMUMDATE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-    obj->setMaximumDate ( *par1 );
+    obj->setMaximumDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -442,8 +435,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMINIMUMDATE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-    obj->setMinimumDate ( *par1 );
+    obj->setMinimumDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -457,8 +449,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTIONMODE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSelectionMode ( (QCalendarWidget::SelectionMode) par1 );
+    obj->setSelectionMode ( (QCalendarWidget::SelectionMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -472,8 +463,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setVerticalHeaderFormat ( (QCalendarWidget::VerticalHeaderFormat) par1 );
+    obj->setVerticalHeaderFormat ( (QCalendarWidget::VerticalHeaderFormat) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -487,9 +477,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QTextCharFormat * par2 = (QTextCharFormat *) _qt5xhb_itemGetPtr(2);
-    obj->setWeekdayTextFormat ( (Qt::DayOfWeek) par1, *par2 );
+    obj->setWeekdayTextFormat ( (Qt::DayOfWeek) hb_parni(1), *PQTEXTCHARFORMAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -516,8 +504,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat ( (Qt::DayOfWeek) par1 ) );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat ( (Qt::DayOfWeek) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
@@ -593,9 +580,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATERANGE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-    QDate * par2 = (QDate *) _qt5xhb_itemGetPtr(2);
-    obj->setDateRange ( *par1, *par2 );
+    obj->setDateRange ( *PQDATE(1), *PQDATE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -655,8 +640,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTEDDATE )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-    obj->setSelectedDate ( *par1 );
+    obj->setSelectedDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

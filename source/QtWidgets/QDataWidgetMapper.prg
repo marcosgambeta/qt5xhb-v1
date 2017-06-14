@@ -124,8 +124,7 @@ void QDataWidgetMapper_addMapping2 ()
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QByteArray * par3 = (QByteArray *) _qt5xhb_itemGetPtr(3);
-    obj->addMapping ( PQWIDGET(1), PINT(2), *par3 );
+    obj->addMapping ( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -302,8 +301,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractItemDelegate * par1 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(1);
-    obj->setItemDelegate ( par1 );
+    obj->setItemDelegate ( PQABSTRACTITEMDELEGATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -317,8 +315,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-    obj->setModel ( par1 );
+    obj->setModel ( PQABSTRACTITEMMODEL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -332,8 +329,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation ( (Qt::Orientation) par1 );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -361,8 +357,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSubmitPolicy ( (QDataWidgetMapper::SubmitPolicy) par1 );
+    obj->setSubmitPolicy ( (QDataWidgetMapper::SubmitPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -438,7 +433,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->submit () );
+    RBOOL( obj->submit () );
   }
 }
 

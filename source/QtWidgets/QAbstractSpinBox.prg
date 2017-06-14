@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 
   if( obj )
   {
-    hb_retl( obj->hasAcceptableInput () );
+    RBOOL( obj->hasAcceptableInput () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 
   if( obj )
   {
-    hb_retl( obj->isAccelerated () );
+    RBOOL( obj->isAccelerated () );
   }
 }
 
@@ -199,8 +199,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -257,8 +256,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCorrectionMode ( (QAbstractSpinBox::CorrectionMode) par1 );
+    obj->setCorrectionMode ( (QAbstractSpinBox::CorrectionMode) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -273,7 +271,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 
   if( obj )
   {
-    hb_retl( obj->hasFrame () );
+    RBOOL( obj->hasFrame () );
   }
 }
 
@@ -308,7 +306,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 
   if( obj )
   {
-    hb_retl( obj->keyboardTracking () );
+    RBOOL( obj->keyboardTracking () );
   }
 }
 
@@ -343,7 +341,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -406,7 +404,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 
   if( obj )
   {
-    hb_retl( obj->wrapping () );
+    RBOOL( obj->wrapping () );
   }
 }
 
@@ -491,8 +489,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 
@@ -505,8 +502,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -608,7 +604,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISGROUPSEPARATORSHOWN )
 
   if( obj )
   {
-    hb_retl( obj->isGroupSeparatorShown () );
+    RBOOL( obj->isGroupSeparatorShown () );
   }
 }
 

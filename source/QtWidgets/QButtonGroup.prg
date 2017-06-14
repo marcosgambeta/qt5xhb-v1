@@ -98,8 +98,7 @@ void QButtonGroup_addButton1 ()
 
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
-    obj->addButton ( par1 );
+    obj->addButton ( PQABSTRACTBUTTON(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -114,8 +113,7 @@ void QButtonGroup_addButton2 ()
 
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
-    obj->addButton ( par1, PINT(2) );
+    obj->addButton ( PQABSTRACTBUTTON(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -246,7 +244,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 
   if( obj )
   {
-    hb_retl( obj->exclusive () );
+    RBOOL( obj->exclusive () );
   }
 }
 
@@ -260,8 +258,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
 
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->id ( par1 ) );
+    hb_retni( obj->id ( PQABSTRACTBUTTON(1) ) );
   }
 }
 
@@ -275,8 +272,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
-    obj->removeButton ( par1 );
+    obj->removeButton ( PQABSTRACTBUTTON(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -315,8 +311,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 
   if( obj )
   {
-    QAbstractButton * par1 = (QAbstractButton *) _qt5xhb_itemGetPtr(1);
-    obj->setId ( par1, PINT(2) );
+    obj->setId ( PQABSTRACTBUTTON(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

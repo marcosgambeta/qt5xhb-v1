@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
   QFontComboBox * obj = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setWritingSystem ( (QFontDatabase::WritingSystem) par1 );
+    obj->setWritingSystem ( (QFontDatabase::WritingSystem) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

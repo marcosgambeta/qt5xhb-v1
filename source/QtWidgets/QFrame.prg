@@ -200,8 +200,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFrameShadow ( (QFrame::Shadow) par1 );
+    obj->setFrameShadow ( (QFrame::Shadow) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -215,8 +214,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFrameShape ( (QFrame::Shape) par1 );
+    obj->setFrameShape ( (QFrame::Shape) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

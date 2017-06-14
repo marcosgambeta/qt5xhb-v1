@@ -100,8 +100,7 @@ QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
 */
 void QCompleter_new2 ()
 {
-  QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-  QCompleter * o = new QCompleter ( par1, OPQOBJECT(2,0) );
+  QCompleter * o = new QCompleter ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -372,8 +371,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCaseSensitivity ( (Qt::CaseSensitivity) par1 );
+      obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
     }
     else
     {
@@ -417,8 +415,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCompletionMode ( (QCompleter::CompletionMode) par1 );
+      obj->setCompletionMode ( (QCompleter::CompletionMode) hb_parni(1) );
     }
     else
     {
@@ -462,7 +459,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->setCurrentRow ( PINT(1) ) );
+      RBOOL( obj->setCurrentRow ( PINT(1) ) );
     }
     else
     {
@@ -504,8 +501,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
   {
     if( ISQABSTRACTITEMMODEL(1) )
     {
-      QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-      obj->setModel ( par1 );
+      obj->setModel ( PQABSTRACTITEMMODEL(1) );
     }
     else
     {
@@ -527,8 +523,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setModelSorting ( (QCompleter::ModelSorting) par1 );
+      obj->setModelSorting ( (QCompleter::ModelSorting) hb_parni(1) );
     }
     else
     {
@@ -550,8 +545,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
   {
     if( ISQABSTRACTITEMVIEW(1) )
     {
-      QAbstractItemView * par1 = (QAbstractItemView *) _qt5xhb_itemGetPtr(1);
-      obj->setPopup ( par1 );
+      obj->setPopup ( PQABSTRACTITEMVIEW(1) );
     }
     else
     {
@@ -628,7 +622,7 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
 
   if( obj )
   {
-    hb_retl( obj->wrapAround () );
+    RBOOL( obj->wrapAround () );
   }
 }
 

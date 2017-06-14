@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 
   if( obj )
   {
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *par2, *PQMODELINDEX(3) );
+    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -101,10 +100,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
-    QStyleOptionViewItem * par3 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->editorEvent ( par1, par2, *par3, *PQMODELINDEX(4) ) );
+    RBOOL( obj->editorEvent ( PQEVENT(1), PQABSTRACTITEMMODEL(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
   }
 }
 
@@ -117,8 +113,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 
   if( obj )
   {
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    obj->paint ( PQPAINTER(1), *par2, *PQMODELINDEX(3) );
+    obj->paint ( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -148,8 +143,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 
   if( obj )
   {
-    QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
-    obj->setModelData ( PQWIDGET(1), par2, *PQMODELINDEX(3) );
+    obj->setModelData ( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -164,8 +158,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 
   if( obj )
   {
-    QStyleOptionViewItem * par1 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(1);
-    QSize * ptr = new QSize( obj->sizeHint ( *par1, *PQMODELINDEX(2) ) );
+    QSize * ptr = new QSize( obj->sizeHint ( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -179,8 +172,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 
   if( obj )
   {
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    obj->updateEditorGeometry ( PQWIDGET(1), *par2, *PQMODELINDEX(3) );
+    obj->updateEditorGeometry ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -195,10 +187,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 
   if( obj )
   {
-    QHelpEvent * par1 = (QHelpEvent *) _qt5xhb_itemGetPtr(1);
-    QAbstractItemView * par2 = (QAbstractItemView *) _qt5xhb_itemGetPtr(2);
-    QStyleOptionViewItem * par3 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->helpEvent ( par1, par2, *par3, *PQMODELINDEX(4) ) );
+    RBOOL( obj->helpEvent ( PQHELPEVENT(1), PQABSTRACTITEMVIEW(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
   }
 }
 
@@ -222,8 +211,7 @@ static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextEl
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
 {
-  int par3 = hb_parni(3);
-  hb_retc( RQSTRING( QAbstractItemDelegate::elidedText ( *PQFONTMETRICS(1), PINT(2), (Qt::TextElideMode) par3, PQSTRING(4) ) ) );
+  hb_retc( RQSTRING( QAbstractItemDelegate::elidedText ( *PQFONTMETRICS(1), PINT(2), (Qt::TextElideMode) hb_parni(3), PQSTRING(4) ) ) );
 }
 
 /*

@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 
   if( obj )
   {
-    hb_retl( obj->isFlat () );
+    RBOOL( obj->isFlat () );
   }
 }
 

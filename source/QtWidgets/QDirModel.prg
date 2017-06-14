@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETDATA )
   {
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {
@@ -303,8 +303,7 @@ HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
   {
     if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
-      int par2 = hb_parni(2);
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -326,7 +325,7 @@ HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
     if( (ISQMODELINDEX(1)||ISNIL(1)) )
     {
       QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->hasChildren ( par1 ) );
+      RBOOL( obj->hasChildren ( par1 ) );
     }
     else
     {
@@ -416,8 +415,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETICONPROVIDER )
   {
     if( ISQFILEICONPROVIDER(1) )
     {
-      QFileIconProvider * par1 = (QFileIconProvider *) _qt5xhb_itemGetPtr(1);
-      obj->setIconProvider ( par1 );
+      obj->setIconProvider ( PQFILEICONPROVIDER(1) );
     }
     else
     {
@@ -581,7 +579,7 @@ HB_FUNC_STATIC( QDIRMODEL_RESOLVESYMLINKS )
 
   if( obj )
   {
-    hb_retl( obj->resolveSymlinks () );
+    RBOOL( obj->resolveSymlinks () );
   }
 }
 
@@ -616,7 +614,7 @@ HB_FUNC_STATIC( QDIRMODEL_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -651,7 +649,7 @@ HB_FUNC_STATIC( QDIRMODEL_LAZYCHILDCOUNT )
 
   if( obj )
   {
-    hb_retl( obj->lazyChildCount () );
+    RBOOL( obj->lazyChildCount () );
   }
 }
 
@@ -666,7 +664,7 @@ HB_FUNC_STATIC( QDIRMODEL_ISDIR )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retl( obj->isDir ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isDir ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -707,7 +705,7 @@ HB_FUNC_STATIC( QDIRMODEL_RMDIR )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retl( obj->rmdir ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->rmdir ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -727,7 +725,7 @@ HB_FUNC_STATIC( QDIRMODEL_REMOVE )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retl( obj->remove ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->remove ( *PQMODELINDEX(1) ) );
     }
     else
     {

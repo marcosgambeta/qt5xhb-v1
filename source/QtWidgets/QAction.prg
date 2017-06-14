@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->activate ( (QAction::ActionEvent) par1 );
+    obj->activate ( (QAction::ActionEvent) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -306,7 +305,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 
   if( obj )
   {
-    hb_retl( obj->autoRepeat () );
+    RBOOL( obj->autoRepeat () );
   }
 }
 
@@ -374,7 +373,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 
   if( obj )
   {
-    hb_retl( obj->isCheckable () );
+    RBOOL( obj->isCheckable () );
   }
 }
 
@@ -387,7 +386,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
 
   if( obj )
   {
-    hb_retl( obj->isChecked () );
+    RBOOL( obj->isChecked () );
   }
 }
 
@@ -400,7 +399,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -413,7 +412,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 
   if( obj )
   {
-    hb_retl( obj->isIconVisibleInMenu () );
+    RBOOL( obj->isIconVisibleInMenu () );
   }
 }
 
@@ -426,7 +425,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 
   if( obj )
   {
-    hb_retl( obj->isSeparator () );
+    RBOOL( obj->isSeparator () );
   }
 }
 
@@ -439,7 +438,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 
@@ -506,8 +505,7 @@ HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
 
   if( obj )
   {
-    QActionGroup * par1 = (QActionGroup *) _qt5xhb_itemGetPtr(1);
-    obj->setActionGroup ( par1 );
+    obj->setActionGroup ( PQACTIONGROUP(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -649,8 +647,7 @@ HB_FUNC_STATIC( QACTION_SETMENU )
 
   if( obj )
   {
-    QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-    obj->setMenu ( par1 );
+    obj->setMenu ( PQMENU(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -665,8 +662,7 @@ HB_FUNC_STATIC( QACTION_SETMENUROLE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMenuRole ( (QAction::MenuRole) par1 );
+    obj->setMenuRole ( (QAction::MenuRole) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -681,8 +677,7 @@ HB_FUNC_STATIC( QACTION_SETPRIORITY )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPriority ( (QAction::Priority) par1 );
+    obj->setPriority ( (QAction::Priority) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -719,8 +714,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUT )
 
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-    obj->setShortcut ( *par1 );
+    obj->setShortcut ( *PQKEYSEQUENCE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -735,8 +729,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setShortcutContext ( (Qt::ShortcutContext) par1 );
+    obj->setShortcutContext ( (Qt::ShortcutContext) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -774,8 +767,7 @@ void QAction_setShortcuts2 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setShortcuts ( (QKeySequence::StandardKey) par1 );
+    obj->setShortcuts ( (QKeySequence::StandardKey) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -944,7 +936,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 
   if( obj )
   {
-    hb_retl( obj->showStatusText ( OPQWIDGET(1,0) ) );
+    RBOOL( obj->showStatusText ( OPQWIDGET(1,0) ) );
   }
 }
 

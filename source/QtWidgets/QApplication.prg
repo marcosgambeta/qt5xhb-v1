@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSessionRestored () );
+    RBOOL( obj->isSessionRestored () );
   }
 }
 
@@ -241,8 +241,7 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->notify ( PQOBJECT(1), par2 ) );
+    RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
   }
 }
 
@@ -436,7 +435,7 @@ static bool desktopSettingsAware ()
 */
 HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 {
-  hb_retl( QApplication::desktopSettingsAware () );
+  RBOOL( QApplication::desktopSettingsAware () );
 }
 
 
@@ -491,7 +490,7 @@ static QFont font ( const char * className )
 */
 void QApplication_font3 ()
 {
-  QFont * ptr = new QFont( QApplication::font ( (const char *) hb_parc(1) ) );
+  QFont * ptr = new QFont( QApplication::font ( PCONSTCHAR(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -545,8 +544,7 @@ static bool isEffectEnabled ( Qt::UIEffect effect )
 */
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
-  int par1 = hb_parni(1);
-  hb_retl( QApplication::isEffectEnabled ( (Qt::UIEffect) par1 ) );
+  RBOOL( QApplication::isEffectEnabled ( (Qt::UIEffect) hb_parni(1) ) );
 }
 
 
@@ -555,7 +553,7 @@ static bool isLeftToRight ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 {
-  hb_retl( QApplication::isLeftToRight () );
+  RBOOL( QApplication::isLeftToRight () );
 }
 
 
@@ -564,7 +562,7 @@ static bool isRightToLeft ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 {
-  hb_retl( QApplication::isRightToLeft () );
+  RBOOL( QApplication::isRightToLeft () );
 }
 
 
@@ -641,7 +639,7 @@ static QPalette palette ( const char * className )
 */
 void QApplication_palette3 ()
 {
-  QPalette * ptr = new QPalette( QApplication::palette ( (const char *) hb_parc(1) ) );
+  QPalette * ptr = new QPalette( QApplication::palette ( PCONSTCHAR(1) ) );
   _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -684,7 +682,7 @@ static bool quitOnLastWindowClosed ()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
-  hb_retl( QApplication::quitOnLastWindowClosed () );
+  RBOOL( QApplication::quitOnLastWindowClosed () );
 }
 
 
@@ -788,8 +786,7 @@ static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
-  int par1 = hb_parni(1);
-  QApplication::setEffectEnabled ( (Qt::UIEffect) par1, OPBOOL(2,true) );
+  QApplication::setEffectEnabled ( (Qt::UIEffect) hb_parni(1), OPBOOL(2,true) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -799,8 +796,7 @@ static void setFont ( const QFont & font, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setFont ( *PQFONT(1), (const char *) par2 );
+  QApplication::setFont ( *PQFONT(1), OPCONSTCHAR(2,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -839,8 +835,7 @@ static void setLayoutDirection ( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 {
-  int par1 = hb_parni(1);
-  QApplication::setLayoutDirection ( (Qt::LayoutDirection) par1 );
+  QApplication::setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -861,8 +856,7 @@ static void setPalette ( const QPalette & palette, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setPalette ( *PQPALETTE(1), (const char *) par2 );
+  QApplication::setPalette ( *PQPALETTE(1), OPCONSTCHAR(2,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -926,8 +920,7 @@ static void setStyle ( QStyle * style )
 */
 void QApplication_setStyle1 ()
 {
-  QStyle * par1 = (QStyle *) _qt5xhb_itemGetPtr(1);
-  QApplication::setStyle ( par1 );
+  QApplication::setStyle ( PQSTYLE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

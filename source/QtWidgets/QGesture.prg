@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 
   if( obj )
   {
-    hb_retl( obj->hasHotSpot () );
+    RBOOL( obj->hasHotSpot () );
   }
 }
 
@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setGestureCancelPolicy ( (QGesture::GestureCancelPolicy) par1 );
+    obj->setGestureCancelPolicy ( (QGesture::GestureCancelPolicy) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

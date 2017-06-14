@@ -66,8 +66,7 @@ QColormap ( const QColormap & colormap )
 */
 HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
-  QColormap * par1 = (QColormap *) _qt5xhb_itemGetPtr(1);
-  QColormap * o = new QColormap ( *par1 );
+  QColormap * o = new QColormap ( *PQCOLORMAP(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

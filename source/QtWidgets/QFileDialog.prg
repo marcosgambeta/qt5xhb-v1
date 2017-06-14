@@ -203,8 +203,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setAcceptMode ( (QFileDialog::AcceptMode) par1 );
+      obj->setAcceptMode ( (QFileDialog::AcceptMode) hb_parni(1) );
     }
     else
     {
@@ -224,7 +223,7 @@ HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
 
   if( obj )
   {
-    hb_retl( obj->confirmOverwrite () );
+    RBOOL( obj->confirmOverwrite () );
   }
 }
 
@@ -309,8 +308,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setFileMode ( (QFileDialog::FileMode) par1 );
+      obj->setFileMode ( (QFileDialog::FileMode) hb_parni(1) );
     }
     else
     {
@@ -414,8 +412,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETICONPROVIDER )
   {
     if( ISQFILEICONPROVIDER(1) )
     {
-      QFileIconProvider * par1 = (QFileIconProvider *) _qt5xhb_itemGetPtr(1);
-      obj->setIconProvider ( par1 );
+      obj->setIconProvider ( PQFILEICONPROVIDER(1) );
     }
     else
     {
@@ -435,7 +432,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isNameFilterDetailsVisible () );
+    RBOOL( obj->isNameFilterDetailsVisible () );
   }
 }
 
@@ -470,7 +467,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -521,8 +518,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETITEMDELEGATE )
   {
     if( ISQABSTRACTITEMDELEGATE(1) )
     {
-      QAbstractItemDelegate * par1 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(1);
-      obj->setItemDelegate ( par1 );
+      obj->setItemDelegate ( PQABSTRACTITEMDELEGATE(1) );
     }
     else
     {
@@ -545,8 +541,7 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retc( RQSTRING( obj->labelText ( (QFileDialog::DialogLabel) par1 ) ) );
+      hb_retc( RQSTRING( obj->labelText ( (QFileDialog::DialogLabel) hb_parni(1) ) ) );
     }
     else
     {
@@ -566,8 +561,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
   {
     if( ISNUM(1) && ISCHAR(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setLabelText ( (QFileDialog::DialogLabel) par1, PQSTRING(2) );
+      obj->setLabelText ( (QFileDialog::DialogLabel) hb_parni(1), PQSTRING(2) );
     }
     else
     {
@@ -625,7 +619,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
+      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
     }
     else
     {
@@ -700,8 +694,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETPROXYMODEL )
   {
     if( ISQABSTRACTPROXYMODEL(1) )
     {
-      QAbstractProxyModel * par1 = (QAbstractProxyModel *) _qt5xhb_itemGetPtr(1);
-      obj->setProxyModel ( par1 );
+      obj->setProxyModel ( PQABSTRACTPROXYMODEL(1) );
     }
     else
     {
@@ -722,7 +715,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
 
   if( obj )
   {
-    hb_retl( obj->resolveSymlinks () );
+    RBOOL( obj->resolveSymlinks () );
   }
 }
 
@@ -759,8 +752,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->restoreState ( *par1 ) );
+      RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
     }
     else
     {
@@ -892,8 +884,7 @@ void QFileDialog_setDirectory2 ()
 
   if( obj )
   {
-    QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-    obj->setDirectory ( *par1 );
+    obj->setDirectory ( *PQDIR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -951,8 +942,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setOption ( (QFileDialog::Option) par1, OPBOOL(2,true) );
+      obj->setOption ( (QFileDialog::Option) hb_parni(1), OPBOOL(2,true) );
     }
     else
     {
@@ -1052,8 +1042,7 @@ HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testOption ( (QFileDialog::Option) par1 ) );
+      RBOOL( obj->testOption ( (QFileDialog::Option) hb_parni(1) ) );
     }
     else
     {
@@ -1086,8 +1075,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setViewMode ( (QFileDialog::ViewMode) par1 );
+      obj->setViewMode ( (QFileDialog::ViewMode) hb_parni(1) );
     }
     else
     {
@@ -1145,8 +1133,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORYURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->setDirectoryUrl ( *par1 );
+      obj->setDirectoryUrl ( *PQURL(1) );
     }
     else
     {
@@ -1168,8 +1155,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTURL )
   {
     if( ISQURL(1) )
     {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->selectUrl ( *par1 );
+      obj->selectUrl ( *PQURL(1) );
     }
     else
     {

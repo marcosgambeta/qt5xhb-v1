@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -194,8 +194,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) par1 ) ) );
+    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) ) );
   }
 }
 
@@ -250,8 +249,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) par1 ) );
+    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) hb_parni(1) ) );
   }
 }
 

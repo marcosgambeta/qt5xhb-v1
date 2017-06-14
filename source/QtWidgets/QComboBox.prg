@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
 
   if( obj )
   {
-    hb_retl( obj->duplicatesEnabled () );
+    RBOOL( obj->duplicatesEnabled () );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
 
   if( obj )
   {
-    hb_retl( obj->hasFrame () );
+    RBOOL( obj->hasFrame () );
   }
 }
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isEditable () );
+    RBOOL( obj->isEditable () );
   }
 }
 
@@ -704,8 +704,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCOMPLETER )
   {
     if( ISQCOMPLETER(1) )
     {
-      QCompleter * par1 = (QCompleter *) _qt5xhb_itemGetPtr(1);
-      obj->setCompleter ( par1 );
+      obj->setCompleter ( PQCOMPLETER(1) );
     }
     else
     {
@@ -815,8 +814,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setInsertPolicy ( (QComboBox::InsertPolicy) par1 );
+      obj->setInsertPolicy ( (QComboBox::InsertPolicy) hb_parni(1) );
     }
     else
     {
@@ -860,8 +858,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDELEGATE )
   {
     if( ISQABSTRACTITEMDELEGATE(1) )
     {
-      QAbstractItemDelegate * par1 = (QAbstractItemDelegate *) _qt5xhb_itemGetPtr(1);
-      obj->setItemDelegate ( par1 );
+      obj->setItemDelegate ( PQABSTRACTITEMDELEGATE(1) );
     }
     else
     {
@@ -928,8 +925,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETLINEEDIT )
   {
     if( ISQLINEEDIT(1) )
     {
-      QLineEdit * par1 = (QLineEdit *) _qt5xhb_itemGetPtr(1);
-      obj->setLineEdit ( par1 );
+      obj->setLineEdit ( PQLINEEDIT(1) );
     }
     else
     {
@@ -1017,8 +1013,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMODEL )
   {
     if( ISQABSTRACTITEMMODEL(1) )
     {
-      QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-      obj->setModel ( par1 );
+      obj->setModel ( PQABSTRACTITEMMODEL(1) );
     }
     else
     {
@@ -1084,8 +1079,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETSIZEADJUSTPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setSizeAdjustPolicy ( (QComboBox::SizeAdjustPolicy) par1 );
+      obj->setSizeAdjustPolicy ( (QComboBox::SizeAdjustPolicy) hb_parni(1) );
     }
     else
     {
@@ -1130,8 +1124,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETVIEW )
   {
     if( ISQABSTRACTITEMVIEW(1) )
     {
-      QAbstractItemView * par1 = (QAbstractItemView *) _qt5xhb_itemGetPtr(1);
-      obj->setView ( par1 );
+      obj->setView ( PQABSTRACTITEMVIEW(1) );
     }
     else
     {
@@ -1209,8 +1202,7 @@ HB_FUNC_STATIC( QCOMBOBOX_EVENT )
   {
     if( ISQEVENT(1) )
     {
-      QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->event ( par1 ) );
+      RBOOL( obj->event ( PQEVENT(1) ) );
     }
     else
     {

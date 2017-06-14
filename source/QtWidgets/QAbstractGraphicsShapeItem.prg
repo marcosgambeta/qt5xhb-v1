@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
   if( obj )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isObscuredBy ( par1 ) );
+    RBOOL( obj->isObscuredBy ( par1 ) );
   }
 }
 

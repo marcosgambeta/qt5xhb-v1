@@ -82,8 +82,7 @@ QBoxLayout ( Direction dir, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 {
-  int par1 = hb_parni(1);
-  QBoxLayout * o = new QBoxLayout ( (QBoxLayout::Direction) par1, OPQWIDGET(2,0) );
+  QBoxLayout * o = new QBoxLayout ( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -113,8 +112,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 
   if( obj )
   {
-    QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
-    obj->addLayout ( par1, OPINT(2,0) );
+    obj->addLayout ( PQLAYOUT(1), OPINT(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,8 +127,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
 
   if( obj )
   {
-    QSpacerItem * par1 = (QSpacerItem *) _qt5xhb_itemGetPtr(1);
-    obj->addSpacerItem ( par1 );
+    obj->addSpacerItem ( PQSPACERITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -240,8 +237,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 
   if( obj )
   {
-    QLayout * par2 = (QLayout *) _qt5xhb_itemGetPtr(2);
-    obj->insertLayout ( PINT(1), par2, OPINT(3,0) );
+    obj->insertLayout ( PINT(1), PQLAYOUT(2), OPINT(3,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -256,8 +252,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
 
   if( obj )
   {
-    QSpacerItem * par2 = (QSpacerItem *) _qt5xhb_itemGetPtr(2);
-    obj->insertSpacerItem ( PINT(1), par2 );
+    obj->insertSpacerItem ( PINT(1), PQSPACERITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -332,8 +327,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDirection ( (QBoxLayout::Direction) par1 );
+    obj->setDirection ( (QBoxLayout::Direction) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -392,7 +386,7 @@ void QBoxLayout_setStretchFactor1 ()
 
   if( obj )
   {
-    hb_retl( obj->setStretchFactor ( PQWIDGET(1), PINT(2) ) );
+    RBOOL( obj->setStretchFactor ( PQWIDGET(1), PINT(2) ) );
   }
 }
 
@@ -405,8 +399,7 @@ void QBoxLayout_setStretchFactor2 ()
 
   if( obj )
   {
-    QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->setStretchFactor ( par1, PINT(2) ) );
+    RBOOL( obj->setStretchFactor ( PQLAYOUT(1), PINT(2) ) );
   }
 }
 
@@ -471,8 +464,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
 
   if( obj )
   {
-    QLayoutItem * par1 = (QLayoutItem *) _qt5xhb_itemGetPtr(1);
-    obj->addItem ( par1 );
+    obj->addItem ( PQLAYOUTITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -513,7 +505,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth () );
+    RBOOL( obj->hasHeightForWidth () );
   }
 }
 

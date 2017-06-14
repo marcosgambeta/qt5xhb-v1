@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 
   if( obj )
   {
-    hb_retl( obj->autoExclusive () );
+    RBOOL( obj->autoExclusive () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 
   if( obj )
   {
-    hb_retl( obj->autoRepeat () );
+    RBOOL( obj->autoRepeat () );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 
   if( obj )
   {
-    hb_retl( obj->isCheckable () );
+    RBOOL( obj->isCheckable () );
   }
 }
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 
   if( obj )
   {
-    hb_retl( obj->isChecked () );
+    RBOOL( obj->isChecked () );
   }
 }
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 
   if( obj )
   {
-    hb_retl( obj->isDown () );
+    RBOOL( obj->isDown () );
   }
 }
 
@@ -443,8 +443,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
   {
     if( ISQKEYSEQUENCE(1) )
     {
-      QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-      obj->setShortcut ( *par1 );
+      obj->setShortcut ( *PQKEYSEQUENCE(1) );
     }
     else
     {

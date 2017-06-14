@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 
   if( obj )
   {
-    hb_retnd( obj->maximum () );
+    RDOUBLE( obj->maximum () );
   }
 }
 
@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setMaximum ( par1 );
+    obj->setMaximum ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,7 +174,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 
   if( obj )
   {
-    hb_retnd( obj->minimum () );
+    RDOUBLE( obj->minimum () );
   }
 }
 
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setMinimum ( par1 );
+    obj->setMinimum ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -232,9 +230,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
-    obj->setRange ( par1, par2 );
+    obj->setRange ( PDOUBLE(1), PDOUBLE(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -249,7 +245,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 
   if( obj )
   {
-    hb_retnd( obj->singleStep () );
+    RDOUBLE( obj->singleStep () );
   }
 }
 
@@ -262,8 +258,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setSingleStep ( par1 );
+    obj->setSingleStep ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -306,8 +301,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    hb_retc( RQSTRING( obj->textFromValue ( par1 ) ) );
+    hb_retc( RQSTRING( obj->textFromValue ( PDOUBLE(1) ) ) );
   }
 }
 
@@ -320,7 +314,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 
   if( obj )
   {
-    hb_retnd( obj->value () );
+    RDOUBLE( obj->value () );
   }
 }
 
@@ -333,8 +327,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setValue ( par1 );
+    obj->setValue ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -349,7 +342,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 
   if( obj )
   {
-    hb_retnd( obj->valueFromText ( PQSTRING(1) ) );
+    RDOUBLE( obj->valueFromText ( PQSTRING(1) ) );
   }
 }
 

@@ -90,8 +90,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->addScrollBarWidget ( PQWIDGET(1), (Qt::Alignment) par2 );
+    obj->addScrollBarWidget ( PQWIDGET(1), (Qt::Alignment) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -117,8 +116,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setHorizontalScrollBarPolicy ( (Qt::ScrollBarPolicy) par1 );
+    obj->setHorizontalScrollBarPolicy ( (Qt::ScrollBarPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -146,8 +144,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidgetList list = obj->scrollBarWidgets ( (Qt::Alignment) par1 );
+    QWidgetList list = obj->scrollBarWidgets ( (Qt::Alignment) hb_parni(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWIDGET" );
@@ -231,8 +228,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScrollBar * par1 = (QScrollBar *) _qt5xhb_itemGetPtr(1);
-    obj->setHorizontalScrollBar ( par1 );
+    obj->setHorizontalScrollBar ( PQSCROLLBAR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -273,8 +269,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScrollBar * par1 = (QScrollBar *) _qt5xhb_itemGetPtr(1);
-    obj->setVerticalScrollBar ( par1 );
+    obj->setVerticalScrollBar ( PQSCROLLBAR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -300,8 +295,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setVerticalScrollBarPolicy ( (Qt::ScrollBarPolicy) par1 );
+    obj->setVerticalScrollBarPolicy ( (Qt::ScrollBarPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -383,8 +377,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETSIZEADJUSTPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSizeAdjustPolicy ( (QAbstractScrollArea::SizeAdjustPolicy) par1 );
+    obj->setSizeAdjustPolicy ( (QAbstractScrollArea::SizeAdjustPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

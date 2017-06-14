@@ -180,8 +180,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation ( (Qt::Orientation) par1 );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -231,7 +230,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 
   if( obj )
   {
-    hb_retl( obj->invertedAppearance () );
+    RBOOL( obj->invertedAppearance () );
   }
 }
 
@@ -266,7 +265,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 
   if( obj )
   {
-    hb_retl( obj->invertedControls () );
+    RBOOL( obj->invertedControls () );
   }
 }
 
@@ -323,7 +322,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 
   if( obj )
   {
-    hb_retl( obj->isSliderDown () );
+    RBOOL( obj->isSliderDown () );
   }
 }
 
@@ -428,8 +427,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->triggerAction ( (QAbstractSlider::SliderAction) par1 );
+    obj->triggerAction ( (QAbstractSlider::SliderAction) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -479,7 +477,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 
   if( obj )
   {
-    hb_retl( obj->hasTracking () );
+    RBOOL( obj->hasTracking () );
   }
 }
 

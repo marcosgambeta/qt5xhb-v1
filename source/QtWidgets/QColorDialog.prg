@@ -180,7 +180,7 @@ void QColorDialog_open2 ()
 
   if( obj )
   {
-    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -266,8 +266,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setOption ( (QColorDialog::ColorDialogOption) par1, OPBOOL(2,true) );
+      obj->setOption ( (QColorDialog::ColorDialogOption) hb_parni(1), OPBOOL(2,true) );
     }
     else
     {
@@ -289,8 +288,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testOption ( (QColorDialog::ColorDialogOption) par1 ) );
+      RBOOL( obj->testOption ( (QColorDialog::ColorDialogOption) hb_parni(1) ) );
     }
     else
     {

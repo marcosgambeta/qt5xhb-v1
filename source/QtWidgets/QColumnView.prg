@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->resizeGripsVisible () );
+    RBOOL( obj->resizeGripsVisible () );
   }
 }
 
@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETMODEL )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-    obj->setModel ( par1 );
+    obj->setModel ( PQABSTRACTITEMMODEL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -271,8 +270,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
   QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemSelectionModel * par1 = (QItemSelectionModel *) _qt5xhb_itemGetPtr(1);
-    obj->setSelectionModel ( par1 );
+    obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

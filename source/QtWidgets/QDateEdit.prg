@@ -55,8 +55,7 @@ QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
 void QDateEdit_new2 ()
 {
-  QDate * par1 = (QDate *) _qt5xhb_itemGetPtr(1);
-  QDateEdit * o = new QDateEdit ( *par1, OPQWIDGET(2,0) );
+  QDateEdit * o = new QDateEdit ( *PQDATE(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 
   if( obj )
   {
-    hb_retl( obj->isExclusive () );
+    RBOOL( obj->isExclusive () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 

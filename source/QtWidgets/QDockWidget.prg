@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->isAreaAllowed ( (Qt::DockWidgetArea) par1 ) );
+      RBOOL( obj->isAreaAllowed ( (Qt::DockWidgetArea) hb_parni(1) ) );
     }
     else
     {
@@ -176,7 +175,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 
   if( obj )
   {
-    hb_retl( obj->isFloating () );
+    RBOOL( obj->isFloating () );
   }
 }
 
