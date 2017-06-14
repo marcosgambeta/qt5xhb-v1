@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_HASSELECTION )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasSelection () );
+    RBOOL( obj->hasSelection () );
   }
 #endif
 }
@@ -245,8 +245,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_EVENT )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 #endif
 }
@@ -470,7 +469,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ZOOMFACTOR )
   QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->zoomFactor () );
+    RQREAL( obj->zoomFactor () );
   }
 #endif
 }

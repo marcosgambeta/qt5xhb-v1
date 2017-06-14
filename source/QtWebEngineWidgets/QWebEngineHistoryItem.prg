@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ISVALID )
   QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }

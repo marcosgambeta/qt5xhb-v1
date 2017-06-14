@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoBack () );
+    RBOOL( obj->canGoBack () );
   }
 #endif
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoForward () );
+    RBOOL( obj->canGoForward () );
   }
 #endif
 }

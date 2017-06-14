@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_HASSELECTION )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasSelection () );
+    RBOOL( obj->hasSelection () );
   }
 #endif
 }
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
   QWebEngineView * obj = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->zoomFactor () );
+    RQREAL( obj->zoomFactor () );
   }
 #endif
 }

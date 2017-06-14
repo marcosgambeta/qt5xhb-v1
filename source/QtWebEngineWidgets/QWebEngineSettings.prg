@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_TESTATTRIBUTE )
   QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->testAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) ) );
+    RBOOL( obj->testAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) ) );
   }
 #endif
 }

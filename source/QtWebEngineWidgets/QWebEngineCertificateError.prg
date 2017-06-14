@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE )
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isOverridable () );
+    RBOOL( obj->isOverridable () );
   }
 #endif
 }
