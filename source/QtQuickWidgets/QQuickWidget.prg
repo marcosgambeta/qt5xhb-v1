@@ -22,9 +22,6 @@ CLASS QQuickWidget INHERIT QWidget
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD source
@@ -80,7 +77,7 @@ RETURN
 /*
 explicit QQuickWidget(QWidget *parent = 0)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_NEW1 )
+void QQuickWidget_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * o = new QQuickWidget ( OPQWIDGET(1,0) );
@@ -91,11 +88,10 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW1 )
 /*
 QQuickWidget(QQmlEngine* engine, QWidget *parent)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_NEW2 )
+void QQuickWidget_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QQuickWidget * o = new QQuickWidget ( par1, PQWIDGET(2) );
+  QQuickWidget * o = new QQuickWidget ( PQQMLENGINE(1), PQWIDGET(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
@@ -103,14 +99,13 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW2 )
 /*
 QQuickWidget(const QUrl &source, QWidget *parent = 0)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_NEW3 )
+void QQuickWidget_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * o = new QQuickWidget ( *PQURL(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 #endif
 }
-
 
 //[1]explicit QQuickWidget(QWidget *parent = 0)
 //[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
@@ -121,15 +116,15 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QQUICKWIDGET_NEW1 );
+    QQuickWidget_new1();
   }
   else if( ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QQUICKWIDGET_NEW2 );
+    QQuickWidget_new2();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QQUICKWIDGET_NEW3 );
+    QQuickWidget_new3();
   }
   else
   {
@@ -142,6 +137,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -151,6 +147,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -162,6 +159,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->source () );
@@ -177,14 +175,22 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setSource ( *PQURL(1) );
+    if( ISQURL(1) )
+    {
+      obj->setSource ( *PQURL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 QQmlEngine* engine() const
@@ -193,6 +199,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QQmlEngine * ptr = obj->engine ();
@@ -201,7 +208,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 #endif
 }
 
-
 /*
 QQmlContext* rootContext() const
 */
@@ -209,6 +215,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QQmlContext * ptr = obj->rootContext ();
@@ -217,7 +224,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 #endif
 }
 
-
 /*
 QQuickItem *rootObject() const
 */
@@ -225,6 +231,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QQuickItem * ptr = obj->rootObject ();
@@ -233,7 +240,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 #endif
 }
 
-
 /*
 ResizeMode resizeMode() const
 */
@@ -241,6 +247,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->resizeMode () );
@@ -255,14 +262,22 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setResizeMode ( (QQuickWidget::ResizeMode) hb_parni(1) );
+    if( ISNUM(1) )
+    {
+      obj->setResizeMode ( (QQuickWidget::ResizeMode) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 Status status() const
@@ -271,13 +286,13 @@ HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->status () );
   }
 #endif
 }
-
 
 /*
 QList<QQmlError> errors() const
@@ -286,6 +301,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QList<QQmlError> list = obj->errors ();
@@ -324,7 +340,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
 #endif
 }
 
-
 /*
 QSize sizeHint() const
 */
@@ -332,6 +347,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint () );
@@ -340,7 +356,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
 #endif
 }
 
-
 /*
 QSize initialSize() const
 */
@@ -348,6 +363,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->initialSize () );
@@ -356,7 +372,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
 #endif
 }
 
-
 /*
 void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
 */
@@ -364,15 +379,22 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QQmlComponent * par2 = (QQmlComponent *) _qt5xhb_itemGetPtr(2);
-    obj->setContent ( *PQURL(1), par2, PQOBJECT(3) );
+    if( ISQURL(1) && ISQQMLCOMPONENT(2) && ISQOBJECT(3) )
+    {
+      obj->setContent ( *PQURL(1), PQQMLCOMPONENT(2), PQOBJECT(3) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 /*
 QSurfaceFormat format() const
@@ -381,6 +403,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
@@ -396,17 +419,21 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QSurfaceFormat * par1 = (QSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    if( ISQSURFACEFORMAT(1) )
+    {
+      obj->setFormat ( *PQSURFACEFORMAT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
 
-
-
-
 #pragma ENDDUMP
-
