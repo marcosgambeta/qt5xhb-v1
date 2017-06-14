@@ -81,8 +81,7 @@ QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
 HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfo * par1 = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtr(1);
-  QGeoSatelliteInfo * o = new QGeoSatelliteInfo ( *par1 );
+  QGeoSatelliteInfo * o = new QGeoSatelliteInfo ( *PQGEOSATELLITEINFO(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -242,7 +241,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->attribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
+    RQREAL( obj->attribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
   }
 #endif
 }
@@ -273,7 +272,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
+    RBOOL( obj->hasAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
   }
 #endif
 }

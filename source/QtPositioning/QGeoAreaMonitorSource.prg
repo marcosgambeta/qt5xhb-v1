@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STARTMONITORING )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoAreaMonitorInfo * par1 = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->startMonitoring ( *par1 ) );
+    RBOOL( obj->startMonitoring ( *PQGEOAREAMONITORINFO(1) ) );
   }
 #endif
 }
@@ -189,8 +188,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STOPMONITORING )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoAreaMonitorInfo * par1 = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->stopMonitoring ( *par1 ) );
+    RBOOL( obj->stopMonitoring ( *PQGEOAREAMONITORINFO(1) ) );
   }
 #endif
 }
@@ -205,8 +203,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoAreaMonitorInfo * par1 = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->requestUpdate ( *par1, PCONSTCHAR(2) ) );
+    RBOOL( obj->requestUpdate ( *PQGEOAREAMONITORINFO(1), PCONSTCHAR(2) ) );
   }
 #endif
 }
@@ -270,8 +267,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS2 )
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoShape * par1 = (QGeoShape *) _qt5xhb_itemGetPtr(1);
-    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ( *par1 );
+    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ( *PQGEOSHAPE(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGEOAREAMONITORINFO" );

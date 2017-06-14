@@ -75,8 +75,7 @@ QGeoShape(const QGeoShape &other)
 HB_FUNC_STATIC( QGEOSHAPE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * par1 = (QGeoShape *) _qt5xhb_itemGetPtr(1);
-  QGeoShape * o = new QGeoShape ( *par1 );
+  QGeoShape * o = new QGeoShape ( *PQGEOSHAPE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -142,7 +141,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
   QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -157,7 +156,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
   QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 #endif
 }
@@ -172,8 +171,7 @@ HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
   QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->contains ( *par1 ) );
+    RBOOL( obj->contains ( *PQGEOCOORDINATE(1) ) );
   }
 #endif
 }

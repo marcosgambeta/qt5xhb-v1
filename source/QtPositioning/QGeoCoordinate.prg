@@ -112,8 +112,7 @@ QGeoCoordinate(const QGeoCoordinate &other)
 HB_FUNC_STATIC( QGEOCOORDINATE_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
-  QGeoCoordinate * o = new QGeoCoordinate ( *par1 );
+  QGeoCoordinate * o = new QGeoCoordinate ( *PQGEOCOORDINATE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -174,7 +173,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ISVALID )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -221,7 +220,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LATITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->latitude () );
+    RDOUBLE( obj->latitude () );
   }
 #endif
 }
@@ -253,7 +252,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LONGITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->longitude () );
+    RDOUBLE( obj->longitude () );
   }
 #endif
 }
@@ -285,7 +284,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ALTITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->altitude () );
+    RDOUBLE( obj->altitude () );
   }
 #endif
 }
@@ -300,8 +299,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_DISTANCETO )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
-    hb_retnd( obj->distanceTo ( *par1 ) );
+    RQREAL( obj->distanceTo ( *PQGEOCOORDINATE(1) ) );
   }
 #endif
 }
@@ -316,8 +314,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_AZIMUTHTO )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGeoCoordinate * par1 = (QGeoCoordinate *) _qt5xhb_itemGetPtr(1);
-    hb_retnd( obj->azimuthTo ( *par1 ) );
+    RQREAL( obj->azimuthTo ( *PQGEOCOORDINATE(1) ) );
   }
 #endif
 }

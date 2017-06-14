@@ -94,8 +94,7 @@ QGeoAddress(const QGeoAddress &other)
 HB_FUNC_STATIC( QGEOADDRESS_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * par1 = (QGeoAddress *) _qt5xhb_itemGetPtr(1);
-  QGeoAddress * o = new QGeoAddress ( *par1 );
+  QGeoAddress * o = new QGeoAddress ( *PQGEOADDRESS(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -425,7 +424,7 @@ HB_FUNC_STATIC( QGEOADDRESS_ISEMPTY )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 #endif
 }
@@ -456,7 +455,7 @@ HB_FUNC_STATIC( QGEOADDRESS_ISTEXTGENERATED )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTextGenerated () );
+    RBOOL( obj->isTextGenerated () );
   }
 #endif
 }
