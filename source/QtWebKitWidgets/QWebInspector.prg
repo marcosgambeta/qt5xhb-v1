@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
   QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 

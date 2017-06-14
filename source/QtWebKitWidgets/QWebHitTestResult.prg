@@ -92,8 +92,7 @@ QWebHitTestResult ( const QWebHitTestResult & other )
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW2 )
 {
-  QWebHitTestResult * par1 = (QWebHitTestResult *) _qt5xhb_itemGetPtr(1);
-  QWebHitTestResult * o = new QWebHitTestResult ( *par1 );
+  QWebHitTestResult * o = new QWebHitTestResult ( *PQWEBHITTESTRESULT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -223,7 +222,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isContentEditable () );
+    RBOOL( obj->isContentEditable () );
   }
 }
 
@@ -236,7 +235,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isContentSelected () );
+    RBOOL( obj->isContentSelected () );
   }
 }
 
@@ -249,7 +248,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
   QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

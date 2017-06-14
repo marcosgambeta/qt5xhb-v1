@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasFocus () );
+    RBOOL( obj->hasFocus () );
   }
 }
 
@@ -339,10 +339,9 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD2 )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkRequest * par1 = (QNetworkRequest *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
     QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
-    obj->load ( *par1, (QNetworkAccessManager::Operation) par2, par3 );
+    obj->load ( *PQNETWORKREQUEST(1), (QNetworkAccessManager::Operation) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -748,7 +747,7 @@ HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->textSizeMultiplier () );
+    RQREAL( obj->textSizeMultiplier () );
   }
 }
 
@@ -814,7 +813,7 @@ HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->zoomFactor () );
+    RQREAL( obj->zoomFactor () );
   }
 }
 
