@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QWEBSOCKET_FLUSH )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->flush () );
+    RBOOL( obj->flush () );
   }
 #endif
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ISVALID )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QWEBSOCKET_LOCALPORT )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->localPort () );
+    RQUINT16( obj->localPort () );
   }
 #endif
 }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERPORT )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerPort () );
+    RQUINT16( obj->peerPort () );
   }
 #endif
 }
@@ -326,8 +326,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPROXY )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxy * par1 = (QNetworkProxy *) _qt5xhb_itemGetPtr(1);
-    obj->setProxy ( *par1 );
+    obj->setProxy ( *PQNETWORKPROXY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -375,7 +374,7 @@ HB_FUNC_STATIC( QWEBSOCKET_READBUFFERSIZE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->readBufferSize () );
+    RQINT64( obj->readBufferSize () );
   }
 #endif
 }
@@ -389,7 +388,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETREADBUFFERSIZE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setReadBufferSize ( (qint64) hb_parni(1) );
+    obj->setReadBufferSize ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -544,7 +543,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDTEXTMESSAGE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sendTextMessage ( PQSTRING(1) ) );
+    RQINT64( obj->sendTextMessage ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -559,7 +558,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sendBinaryMessage ( *PQBYTEARRAY(1) ) );
+    RQINT64( obj->sendBinaryMessage ( *PQBYTEARRAY(1) ) );
   }
 #endif
 }
@@ -647,8 +646,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETSSLCONFIGURATION )
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslConfiguration * par1 = (QSslConfiguration *) _qt5xhb_itemGetPtr(1);
-    obj->setSslConfiguration ( *par1 );
+    obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

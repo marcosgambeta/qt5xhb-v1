@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_LISTEN )
   if( obj )
   {
     QHostAddress par1 = ISNIL(1)? QHostAddress::Any : *(QHostAddress *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->listen ( par1, (quint16) ISNIL(2)? 0 : hb_parni(2) ) );
+    RBOOL( obj->listen ( par1, OPQUINT16(2,0) ) );
   }
 #endif
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ISLISTENING )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isListening () );
+    RBOOL( obj->isListening () );
   }
 #endif
 }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERPORT )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->serverPort () );
+    RQUINT16( obj->serverPort () );
   }
 #endif
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSOCKETDESCRIPTOR )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setSocketDescriptor ( PINT(1) ) );
+    RBOOL( obj->setSocketDescriptor ( PINT(1) ) );
   }
 #endif
 }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_HASPENDINGCONNECTIONS )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections () );
+    RBOOL( obj->hasPendingConnections () );
   }
 #endif
 }
@@ -413,8 +413,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETPROXY )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QNetworkProxy * par1 = (QNetworkProxy *) _qt5xhb_itemGetPtr(1);
-    obj->setProxy ( *par1 );
+    obj->setProxy ( *PQNETWORKPROXY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -430,8 +429,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSSLCONFIGURATION )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSslConfiguration * par1 = (QSslConfiguration *) _qt5xhb_itemGetPtr(1);
-    obj->setSslConfiguration ( *par1 );
+    obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

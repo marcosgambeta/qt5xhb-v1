@@ -78,8 +78,7 @@ explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * par1 = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtr(1);
-  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( *par1 );
+  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -162,7 +161,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ALLOWED )
   QWebSocketCorsAuthenticator * obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->allowed () );
+    RBOOL( obj->allowed () );
   }
 #endif
 }
