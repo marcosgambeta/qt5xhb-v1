@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->append ( PQOBJECT(1) ) );
+    RBOOL( obj->append ( PQOBJECT(1) ) );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canAppend () );
+    RBOOL( obj->canAppend () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canAt () );
+    RBOOL( obj->canAt () );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canClear () );
+    RBOOL( obj->canClear () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canCount () );
+    RBOOL( obj->canCount () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->clear () );
+    RBOOL( obj->clear () );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

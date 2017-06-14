@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isError () );
+    RBOOL( obj->isError () );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLoading () );
+    RBOOL( obj->isLoading () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
   QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReady () );
+    RBOOL( obj->isReady () );
   }
 }
 

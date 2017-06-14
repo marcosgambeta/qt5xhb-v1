@@ -72,8 +72,7 @@ HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SETTARGET )
   QQmlPropertyValueSource * obj = (QQmlPropertyValueSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QQmlProperty * par1 = (QQmlProperty *) _qt5xhb_itemGetPtr(1);
-    obj->setTarget ( *par1 );
+    obj->setTarget ( *PQQMLPROPERTY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

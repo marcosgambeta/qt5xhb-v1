@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDNAMEDBUNDLE )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->addNamedBundle ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->addNamedBundle ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -223,13 +223,13 @@ HB_FUNC_STATIC( QQMLENGINE_IMPORTPATHLIST )
 /*
 bool importPlugin(const QString & filePath, const QString & uri, QList<QQmlError> * errors)
 */
-HB_FUNC_STATIC( QQMLENGINE_IMPORTPLUGIN )
+HB_FUNC_STATIC( QQMLENGINE_IMPORTPLUGIN ) // TODO: corrigir implementacao
 {
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
     QList<QQmlError> * par3 = (QList<QQmlError> *) _qt5xhb_itemGetPtr(3);
-    hb_retl( obj->importPlugin ( PQSTRING(1), PQSTRING(2), par3 ) );
+    RBOOL( obj->importPlugin ( PQSTRING(1), PQSTRING(2), par3 ) );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->outputWarningsToStandardError () );
+    RBOOL( obj->outputWarningsToStandardError () );
   }
 }
 

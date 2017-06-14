@@ -17,8 +17,6 @@ CLASS QQmlError
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD column
@@ -67,22 +65,20 @@ RETURN
 /*
 QQmlError()
 */
-HB_FUNC_STATIC( QQMLERROR_NEW1 )
+void QQmlError_new1 ()
 {
   QQmlError * o = new QQmlError ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QQmlError(const QQmlError & other)
 */
-HB_FUNC_STATIC( QQMLERROR_NEW2 )
+void QQmlError_new2 ()
 {
-  QQmlError * par1 = (QQmlError *) _qt5xhb_itemGetPtr(1);
-  QQmlError * o = new QQmlError ( *par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  QQmlError * o = new QQmlError ( *PQQMLERROR(1) );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
-
 
 //[1]QQmlError()
 //[2]QQmlError(const QQmlError & other)
@@ -91,11 +87,11 @@ HB_FUNC_STATIC( QQMLERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QQMLERROR_NEW1 );
+    QQmlError_new1();
   }
   else if( ISNUMPAR(1) && ISQQMLERROR(1) )
   {
-    HB_FUNC_EXEC( QQMLERROR_NEW2 );
+    QQmlError_new2();
   }
   else
   {
@@ -106,6 +102,7 @@ HB_FUNC_STATIC( QQMLERROR_NEW )
 HB_FUNC_STATIC( QQMLERROR_DELETE )
 {
   QQmlError * obj = (QQmlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -115,6 +112,7 @@ HB_FUNC_STATIC( QQMLERROR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -124,12 +122,12 @@ int column() const
 HB_FUNC_STATIC( QQMLERROR_COLUMN )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->column () );
   }
 }
-
 
 /*
 QString description() const
@@ -137,12 +135,12 @@ QString description() const
 HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( RQSTRING( obj->description () ) );
   }
 }
-
 
 /*
 bool isValid() const
@@ -150,12 +148,12 @@ bool isValid() const
 HB_FUNC_STATIC( QQMLERROR_ISVALID )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 int line() const
@@ -163,12 +161,12 @@ int line() const
 HB_FUNC_STATIC( QQMLERROR_LINE )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retni( obj->line () );
   }
 }
-
 
 /*
 void setColumn(int column)
@@ -176,13 +174,21 @@ void setColumn(int column)
 HB_FUNC_STATIC( QQMLERROR_SETCOLUMN )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setColumn ( PINT(1) );
+    if( ISNUM(1) )
+    {
+      obj->setColumn ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDescription(const QString & description)
@@ -190,13 +196,21 @@ void setDescription(const QString & description)
 HB_FUNC_STATIC( QQMLERROR_SETDESCRIPTION )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setDescription ( PQSTRING(1) );
+    if( ISCHAR(1) )
+    {
+      obj->setDescription ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLine(int line)
@@ -204,13 +218,21 @@ void setLine(int line)
 HB_FUNC_STATIC( QQMLERROR_SETLINE )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setLine ( PINT(1) );
+    if( ISNUM(1) )
+    {
+      obj->setLine ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUrl(const QUrl & url)
@@ -218,13 +240,21 @@ void setUrl(const QUrl & url)
 HB_FUNC_STATIC( QQMLERROR_SETURL )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    obj->setUrl ( *PQURL(1) );
+    if( ISQURL(1) )
+    {
+      obj->setUrl ( *PQURL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString toString() const
@@ -232,12 +262,12 @@ QString toString() const
 HB_FUNC_STATIC( QQMLERROR_TOSTRING )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     hb_retc( RQSTRING( obj->toString () ) );
   }
 }
-
 
 /*
 QUrl url() const
@@ -245,6 +275,7 @@ QUrl url() const
 HB_FUNC_STATIC( QQMLERROR_URL )
 {
   QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url () );
@@ -252,11 +283,10 @@ HB_FUNC_STATIC( QQMLERROR_URL )
   }
 }
 
-
-
 HB_FUNC_STATIC( QQMLERROR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
@@ -275,6 +305,7 @@ HB_FUNC_STATIC( QQMLERROR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
@@ -296,14 +327,15 @@ HB_FUNC_STATIC( QQMLERROR_SELFDESTRUCTION )
 HB_FUNC_STATIC( QQMLERROR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
+
   if( hb_pcount() == 1 && ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
+
   hb_itemReturn( self );
 }
 
 #pragma ENDDUMP
-

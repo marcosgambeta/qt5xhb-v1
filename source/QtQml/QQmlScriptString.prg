@@ -70,8 +70,7 @@ QQmlScriptString(const QQmlScriptString & other)
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW2 )
 {
-  QQmlScriptString * par1 = (QQmlScriptString *) _qt5xhb_itemGetPtr(1);
-  QQmlScriptString * o = new QQmlScriptString ( *par1 );
+  QQmlScriptString * o = new QQmlScriptString ( *PQQMLSCRIPTSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -119,7 +118,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
   if( obj )
   {
     bool par1;
-    hb_retl( obj->booleanLiteral ( &par1 ) );
+    RBOOL( obj->booleanLiteral ( &par1 ) );
     hb_storl( par1, 1 );
   }
 }
@@ -133,7 +132,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISEMPTY )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -146,7 +145,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISNULLLITERAL )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNullLiteral () );
+    RBOOL( obj->isNullLiteral () );
   }
 }
 
@@ -159,7 +158,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
   QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isUndefinedLiteral () );
+    RBOOL( obj->isUndefinedLiteral () );
   }
 }
 
@@ -173,7 +172,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
   if( obj )
   {
     bool par1;
-    hb_retnd( obj->numberLiteral ( &par1 ) );
+    RQREAL( obj->numberLiteral ( &par1 ) );
     hb_storl( par1, 1 );
   }
 }

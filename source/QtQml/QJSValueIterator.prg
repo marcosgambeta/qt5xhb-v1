@@ -61,8 +61,7 @@ QJSValueIterator(const QJSValue & object)
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
 {
-  QJSValue * par1 = (QJSValue *) _qt5xhb_itemGetPtr(1);
-  QJSValueIterator * o = new QJSValueIterator ( *par1 );
+  QJSValueIterator * o = new QJSValueIterator ( *PQJSVALUE(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -90,7 +89,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
   QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasNext () );
+    RBOOL( obj->hasNext () );
   }
 }
 
@@ -116,7 +115,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
   QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->next () );
+    RBOOL( obj->next () );
   }
 }
 

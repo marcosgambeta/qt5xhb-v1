@@ -16,8 +16,6 @@ CLASS QJSEngine INHERIT QObject
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD collectGarbage
@@ -56,7 +54,7 @@ RETURN
 /*
 QJSEngine()
 */
-HB_FUNC_STATIC( QJSENGINE_NEW1 )
+void QJSEngine_new1 ()
 {
   QJSEngine * o = new QJSEngine ();
   _qt5xhb_storePointerAndFlag( o, false );
@@ -65,7 +63,7 @@ HB_FUNC_STATIC( QJSENGINE_NEW1 )
 /*
 QJSEngine(QObject * parent)
 */
-HB_FUNC_STATIC( QJSENGINE_NEW2 )
+void QJSEngine_new2 ()
 {
   QJSEngine * o = new QJSEngine ( PQOBJECT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
@@ -79,11 +77,11 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QJSENGINE_NEW1 );
+    QJSEngine_new1();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QJSENGINE_NEW2 );
+    QJSEngine_new2();
   }
   else
   {

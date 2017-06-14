@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->contains ( PQSTRING(1) ) );
+    RBOOL( obj->contains ( PQSTRING(1) ) );
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ISEMPTY )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

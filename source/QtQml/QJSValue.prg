@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QJSVALUE_DELETEPROPERTY )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->deleteProperty ( PQSTRING(1) ) );
+    RBOOL( obj->deleteProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -252,8 +252,7 @@ HB_FUNC_STATIC( QJSVALUE_EQUALS )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * par1 = (QJSValue *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->equals ( *par1 ) );
+    RBOOL( obj->equals ( *PQJSVALUE(1) ) );
   }
 }
 
@@ -266,7 +265,7 @@ HB_FUNC_STATIC( QJSVALUE_HASOWNPROPERTY )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasOwnProperty ( PQSTRING(1) ) );
+    RBOOL( obj->hasOwnProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -279,7 +278,7 @@ HB_FUNC_STATIC( QJSVALUE_HASPROPERTY )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasProperty ( PQSTRING(1) ) );
+    RBOOL( obj->hasProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -292,7 +291,7 @@ HB_FUNC_STATIC( QJSVALUE_ISARRAY )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isArray () );
+    RBOOL( obj->isArray () );
   }
 }
 
@@ -305,7 +304,7 @@ HB_FUNC_STATIC( QJSVALUE_ISBOOL )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBool () );
+    RBOOL( obj->isBool () );
   }
 }
 
@@ -318,7 +317,7 @@ HB_FUNC_STATIC( QJSVALUE_ISCALLABLE )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCallable () );
+    RBOOL( obj->isCallable () );
   }
 }
 
@@ -331,7 +330,7 @@ HB_FUNC_STATIC( QJSVALUE_ISDATE )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDate () );
+    RBOOL( obj->isDate () );
   }
 }
 
@@ -344,7 +343,7 @@ HB_FUNC_STATIC( QJSVALUE_ISERROR )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isError () );
+    RBOOL( obj->isError () );
   }
 }
 
@@ -357,7 +356,7 @@ HB_FUNC_STATIC( QJSVALUE_ISNULL )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -370,7 +369,7 @@ HB_FUNC_STATIC( QJSVALUE_ISNUMBER )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNumber () );
+    RBOOL( obj->isNumber () );
   }
 }
 
@@ -383,7 +382,7 @@ HB_FUNC_STATIC( QJSVALUE_ISOBJECT )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isObject () );
+    RBOOL( obj->isObject () );
   }
 }
 
@@ -396,7 +395,7 @@ HB_FUNC_STATIC( QJSVALUE_ISQOBJECT )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isQObject () );
+    RBOOL( obj->isQObject () );
   }
 }
 
@@ -409,7 +408,7 @@ HB_FUNC_STATIC( QJSVALUE_ISREGEXP )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isRegExp () );
+    RBOOL( obj->isRegExp () );
   }
 }
 
@@ -422,7 +421,7 @@ HB_FUNC_STATIC( QJSVALUE_ISSTRING )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isString () );
+    RBOOL( obj->isString () );
   }
 }
 
@@ -435,7 +434,7 @@ HB_FUNC_STATIC( QJSVALUE_ISUNDEFINED )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isUndefined () );
+    RBOOL( obj->isUndefined () );
   }
 }
 
@@ -448,7 +447,7 @@ HB_FUNC_STATIC( QJSVALUE_ISVARIANT )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVariant () );
+    RBOOL( obj->isVariant () );
   }
 }
 
@@ -474,7 +473,7 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY2 )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * ptr = new QJSValue( obj->property ( (quint32) hb_parni(1) ) );
+    QJSValue * ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
   }
 }
@@ -521,8 +520,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY1 )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * par2 = (QJSValue *) _qt5xhb_itemGetPtr(2);
-    obj->setProperty ( PQSTRING(1), *par2 );
+    obj->setProperty ( PQSTRING(1), *PQJSVALUE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -535,8 +533,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY2 )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * par2 = (QJSValue *) _qt5xhb_itemGetPtr(2);
-    obj->setProperty ( (quint32) hb_parni(1), *par2 );
+    obj->setProperty ( PQUINT32(1), *PQJSVALUE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -569,8 +566,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROTOTYPE )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * par1 = (QJSValue *) _qt5xhb_itemGetPtr(1);
-    obj->setPrototype ( *par1 );
+    obj->setPrototype ( *PQJSVALUE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -584,8 +580,7 @@ HB_FUNC_STATIC( QJSVALUE_STRICTLYEQUALS )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QJSValue * par1 = (QJSValue *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->strictlyEquals ( *par1 ) );
+    RBOOL( obj->strictlyEquals ( *PQJSVALUE(1) ) );
   }
 }
 
@@ -598,7 +593,7 @@ HB_FUNC_STATIC( QJSVALUE_TOBOOL )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->toBool () );
+    RBOOL( obj->toBool () );
   }
 }
 
@@ -625,7 +620,7 @@ HB_FUNC_STATIC( QJSVALUE_TOINT )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toInt () );
+    RQINT32( obj->toInt () );
   }
 }
 
@@ -638,7 +633,7 @@ HB_FUNC_STATIC( QJSVALUE_TONUMBER )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->toNumber () );
+    RDOUBLE( obj->toNumber () );
   }
 }
 
@@ -678,7 +673,7 @@ HB_FUNC_STATIC( QJSVALUE_TOUINT )
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->toUInt () );
+    RQUINT32( obj->toUInt () );
   }
 }
 

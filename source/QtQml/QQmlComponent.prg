@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISERROR )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isError () );
+    RBOOL( obj->isError () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISLOADING )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isLoading () );
+    RBOOL( obj->isLoading () );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISNULL )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISREADY )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isReady () );
+    RBOOL( obj->isReady () );
   }
 }
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_PROGRESS )
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->progress () );
+    RQREAL( obj->progress () );
   }
 }
 
