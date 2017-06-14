@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bindToDynamicTexture ( (GLuint) hb_parni(1) ) );
+    RBOOL( obj->bindToDynamicTexture ( (GLuint) hb_parni(1) ) );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->doneCurrent () );
+    RBOOL( obj->doneCurrent () );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->makeCurrent () );
+    RBOOL( obj->makeCurrent () );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasOpenGLPbuffers () );
+    RBOOL( obj->hasOpenGLPbuffers () );
   }
 }
 

@@ -110,10 +110,9 @@ QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * sh
 */
 HB_FUNC_STATIC( QGLWIDGET_NEW3 )
 {
-  QGLFormat * par1 = (QGLFormat *) _qt5xhb_itemGetPtr(1);
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QGLWidget * o = new QGLWidget ( *par1, OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
+  QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -319,7 +318,7 @@ HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->doubleBuffer () );
+    RBOOL( obj->doubleBuffer () );
   }
 }
 
@@ -406,7 +405,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSharing () );
+    RBOOL( obj->isSharing () );
   }
 }
 
@@ -419,7 +418,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISVALID )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -534,8 +533,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
   QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGLColormap * par1 = (QGLColormap *) _qt5xhb_itemGetPtr(1);
-    obj->setColormap ( *par1 );
+    obj->setColormap ( *PQGLCOLORMAP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

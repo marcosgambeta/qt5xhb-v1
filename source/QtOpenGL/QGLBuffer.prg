@@ -93,8 +93,7 @@ QGLBuffer ( const QGLBuffer & other )
 */
 HB_FUNC_STATIC( QGLBUFFER_NEW3 )
 {
-  QGLBuffer * par1 = (QGLBuffer *) _qt5xhb_itemGetPtr(1);
-  QGLBuffer * o = new QGLBuffer ( *par1 );
+  QGLBuffer * o = new QGLBuffer ( *PQGLBUFFER(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -193,7 +192,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind () );
+    RBOOL( obj->bind () );
   }
 }
 
@@ -219,7 +218,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->create () );
+    RBOOL( obj->create () );
   }
 }
 
@@ -246,7 +245,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCreated () );
+    RBOOL( obj->isCreated () );
   }
 }
 
@@ -273,7 +272,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
   if( obj )
   {
     void * par2 = (void *) hb_parptr(2);
-    hb_retl( obj->read ( PINT(1), par2, PINT(3) ) );
+    RBOOL( obj->read ( PINT(1), par2, PINT(3) ) );
   }
 }
 
@@ -368,7 +367,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->unmap () );
+    RBOOL( obj->unmap () );
   }
 }
 

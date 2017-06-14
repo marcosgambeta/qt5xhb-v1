@@ -65,8 +65,7 @@ QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 {
-  QGLFramebufferObjectFormat * par1 = (QGLFramebufferObjectFormat *) _qt5xhb_itemGetPtr(1);
-  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ( *par1 );
+  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

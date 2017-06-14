@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BIND )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->bind () );
+    RBOOL( obj->bind () );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISBOUND )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBound () );
+    RBOOL( obj->isBound () );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISVALID )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_RELEASE )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->release () );
+    RBOOL( obj->release () );
   }
 }
 
@@ -374,7 +374,7 @@ static bool hasOpenGLFramebufferBlit ()
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
 {
-  hb_retl( QGLFramebufferObject::hasOpenGLFramebufferBlit () );
+  RBOOL( QGLFramebufferObject::hasOpenGLFramebufferBlit () );
 }
 
 
@@ -383,7 +383,7 @@ static bool hasOpenGLFramebufferObjects ()
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
 {
-  hb_retl( QGLFramebufferObject::hasOpenGLFramebufferObjects () );
+  RBOOL( QGLFramebufferObject::hasOpenGLFramebufferObjects () );
 }
 
 

@@ -85,8 +85,7 @@ QGLContext ( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
-  QGLFormat * par1 = (QGLFormat *) _qt5xhb_itemGetPtr(1);
-  QGLContext * o = new QGLContext ( *par1 );
+  QGLContext * o = new QGLContext ( *PQGLFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -114,9 +113,8 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE1 )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage  * par1 = (QImage  *) _qt5xhb_itemGetPtr(1);
     int par4 = hb_parni(4);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (QGLContext::BindOptions) par4 ) );
+    hb_retni( obj->bindTexture ( *PQIMAGE(1), (GLenum) hb_parni(2), (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -140,8 +138,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE3 )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QImage  * par1 = (QImage  *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
+    hb_retni( obj->bindTexture ( *PQIMAGE(1), (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
   }
 }
 
@@ -153,8 +150,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE4 )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap  * par1 = (QPixmap  *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
+    hb_retni( obj->bindTexture ( *PQPIXMAP(1), (GLenum) ISNIL(2)? GL_TEXTURE_2D : hb_parni(2), (GLint) ISNIL(3)? GL_RGBA : hb_parni(3) ) );
   }
 }
 
@@ -166,9 +162,8 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE5 )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPixmap  * par1 = (QPixmap  *) _qt5xhb_itemGetPtr(1);
     int par4 = hb_parni(4);
-    hb_retni( obj->bindTexture ( *par1, (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
+    hb_retni( obj->bindTexture ( *PQPIXMAP(1), (GLenum) hb_parni(2), (GLint) hb_parni(3), (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -216,7 +211,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CREATE )
   if( obj )
   {
     QGLContext * par1 = ISNIL(1)? 0 : (QGLContext *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->create ( par1 ) );
+    RBOOL( obj->create ( par1 ) );
   }
 }
 
@@ -271,8 +266,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE1 )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QRectF  * par1 = (QRectF  *) _qt5xhb_itemGetPtr(1);
-    obj->drawTexture ( *par1, (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
+    obj->drawTexture ( *PQRECTF(1), (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -285,8 +279,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE2 )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QPointF  * par1 = (QPointF  *) _qt5xhb_itemGetPtr(1);
-    obj->drawTexture ( *par1, (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
+    obj->drawTexture ( *PQPOINTF(1), (GLuint) hb_parni(2), (GLenum) ISNIL(3)? GL_TEXTURE_2D : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -334,7 +327,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSharing () );
+    RBOOL( obj->isSharing () );
   }
 }
 
@@ -347,7 +340,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -416,8 +409,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGLFormat  * par1 = (QGLFormat  *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQGLFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -444,7 +436,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
   QGLContext * par1 = (QGLContext *) _qt5xhb_itemGetPtr(1);
   QGLContext * par2 = (QGLContext *) _qt5xhb_itemGetPtr(2);
-  hb_retl( QGLContext::areSharing ( par1, par2 ) );
+  RBOOL( QGLContext::areSharing ( par1, par2 ) );
 }
 
 

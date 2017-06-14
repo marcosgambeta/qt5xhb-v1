@@ -129,8 +129,7 @@ QGLFormat ( const QGLFormat & other )
 */
 HB_FUNC_STATIC( QGLFORMAT_NEW3 )
 {
-  QGLFormat * par1 = (QGLFormat *) _qt5xhb_itemGetPtr(1);
-  QGLFormat * o = new QGLFormat ( *par1 );
+  QGLFormat * o = new QGLFormat ( *PQGLFORMAT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -182,7 +181,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUM )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->accum () );
+    RBOOL( obj->accum () );
   }
 }
 
@@ -208,7 +207,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHA )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->alpha () );
+    RBOOL( obj->alpha () );
   }
 }
 
@@ -247,7 +246,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTH )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->depth () );
+    RBOOL( obj->depth () );
   }
 }
 
@@ -273,7 +272,7 @@ HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->directRendering () );
+    RBOOL( obj->directRendering () );
   }
 }
 
@@ -286,7 +285,7 @@ HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->doubleBuffer () );
+    RBOOL( obj->doubleBuffer () );
   }
 }
 
@@ -312,7 +311,7 @@ HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasOverlay () );
+    RBOOL( obj->hasOverlay () );
   }
 }
 
@@ -390,7 +389,7 @@ HB_FUNC_STATIC( QGLFORMAT_RGBA )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->rgba () );
+    RBOOL( obj->rgba () );
   }
 }
 
@@ -403,7 +402,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->sampleBuffers () );
+    RBOOL( obj->sampleBuffers () );
   }
 }
 
@@ -752,7 +751,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCIL )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->stencil () );
+    RBOOL( obj->stencil () );
   }
 }
 
@@ -778,7 +777,7 @@ HB_FUNC_STATIC( QGLFORMAT_STEREO )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->stereo () );
+    RBOOL( obj->stereo () );
   }
 }
 
@@ -805,7 +804,7 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption ( (QGL::FormatOptions) par1 ) );
+    RBOOL( obj->testOption ( (QGL::FormatOptions) par1 ) );
   }
 }
 
@@ -835,7 +834,7 @@ static bool hasOpenGL ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
-  hb_retl( QGLFormat::hasOpenGL () );
+  RBOOL( QGLFormat::hasOpenGL () );
 }
 
 
@@ -844,7 +843,7 @@ static bool hasOpenGLOverlays ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 {
-  hb_retl( QGLFormat::hasOpenGLOverlays () );
+  RBOOL( QGLFormat::hasOpenGLOverlays () );
 }
 
 
@@ -862,8 +861,7 @@ static void setDefaultFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
 {
-  QGLFormat * par1 = (QGLFormat *) _qt5xhb_itemGetPtr(1);
-  QGLFormat::setDefaultFormat ( *par1 );
+  QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -873,8 +871,7 @@ static void setDefaultOverlayFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
 {
-  QGLFormat * par1 = (QGLFormat *) _qt5xhb_itemGetPtr(1);
-  QGLFormat::setDefaultOverlayFormat ( *par1 );
+  QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

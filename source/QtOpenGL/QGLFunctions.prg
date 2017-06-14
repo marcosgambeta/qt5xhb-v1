@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISBUFFER )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->glIsBuffer ( (GLuint) hb_parni(1) ) );
+    RBOOL( obj->glIsBuffer ( (GLuint) hb_parni(1) ) );
   }
 }
 
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISFRAMEBUFFER )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->glIsFramebuffer ( (GLuint) hb_parni(1) ) );
+    RBOOL( obj->glIsFramebuffer ( (GLuint) hb_parni(1) ) );
   }
 }
 
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISPROGRAM )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->glIsProgram ( (GLuint) hb_parni(1) ) );
+    RBOOL( obj->glIsProgram ( (GLuint) hb_parni(1) ) );
   }
 }
 
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISRENDERBUFFER )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->glIsRenderbuffer ( (GLuint) hb_parni(1) ) );
+    RBOOL( obj->glIsRenderbuffer ( (GLuint) hb_parni(1) ) );
   }
 }
 
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISSHADER )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->glIsShader ( (GLuint) hb_parni(1) ) );
+    RBOOL( obj->glIsShader ( (GLuint) hb_parni(1) ) );
   }
 }
 
@@ -1299,7 +1299,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasOpenGLFeature ( (QGLFunctions::OpenGLFeature) hb_parni(1) ) );
+    RBOOL( obj->hasOpenGLFeature ( (QGLFunctions::OpenGLFeature) hb_parni(1) ) );
   }
 }
 
