@@ -66,8 +66,7 @@ QScriptString(const QScriptString & other)
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW2 )
 {
-  QScriptString * par1 = (QScriptString *) _qt5xhb_itemGetPtr(1);
-  QScriptString * o = new QScriptString ( *par1 );
+  QScriptString * o = new QScriptString ( *PQSCRIPTSTRING(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -114,7 +113,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
   QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

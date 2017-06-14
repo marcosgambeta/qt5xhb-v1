@@ -76,8 +76,7 @@ QScriptContextInfo(const QScriptContextInfo & other)
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
 {
-  QScriptContextInfo * par1 = (QScriptContextInfo *) _qt5xhb_itemGetPtr(1);
-  QScriptContextInfo * o = new QScriptContextInfo ( *par1 );
+  QScriptContextInfo * o = new QScriptContextInfo ( *PQSCRIPTCONTEXTINFO(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -230,7 +229,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
   QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -256,7 +255,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
   QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->scriptId () );
+    RQINT64( obj->scriptId () );
   }
 }
 

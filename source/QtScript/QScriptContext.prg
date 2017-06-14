@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCalledAsConstructor () );
+    RBOOL( obj->isCalledAsConstructor () );
   }
 }
 
@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-    obj->setActivationObject ( *par1 );
+    obj->setActivationObject ( *PQSCRIPTVALUE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -234,8 +233,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-    obj->setThisObject ( *par1 );
+    obj->setThisObject ( *PQSCRIPTVALUE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -322,8 +320,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par1 = (QScriptValue *) _qt5xhb_itemGetPtr(1);
-    QScriptValue * ptr = new QScriptValue( obj->throwValue ( *par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->throwValue ( *PQSCRIPTVALUE(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

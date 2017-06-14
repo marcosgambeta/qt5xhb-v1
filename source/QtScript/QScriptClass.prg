@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
   QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->supportsExtension ( (QScriptClass::Extension) hb_parni(1) ) );
+    RBOOL( obj->supportsExtension ( (QScriptClass::Extension) hb_parni(1) ) );
   }
 }
 

@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
-    obj->exceptionCatch ( (qint64) hb_parni(1), *par2 );
+    obj->exceptionCatch ( PQINT64(1), *PQSCRIPTVALUE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -156,8 +155,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
-    obj->exceptionThrow ( (qint64) hb_parni(1), *par2, PBOOL(3) );
+    obj->exceptionThrow ( PQINT64(1), *PQSCRIPTVALUE(2), PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -186,7 +184,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->functionEntry ( (qint64) hb_parni(1) );
+    obj->functionEntry ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -200,8 +198,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScriptValue * par2 = (QScriptValue *) _qt5xhb_itemGetPtr(2);
-    obj->functionExit ( (qint64) hb_parni(1), *par2 );
+    obj->functionExit ( PQINT64(1), *PQSCRIPTVALUE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -215,7 +212,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->positionChange ( (qint64) hb_parni(1), PINT(2), PINT(3) );
+    obj->positionChange ( PQINT64(1), PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -229,7 +226,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->scriptLoad ( (qint64) hb_parni(1), PQSTRING(2), PQSTRING(3), PINT(4) );
+    obj->scriptLoad ( PQINT64(1), PQSTRING(2), PQSTRING(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -243,7 +240,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->scriptUnload ( (qint64) hb_parni(1) );
+    obj->scriptUnload ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -257,7 +254,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->supportsExtension ( (QScriptEngineAgent::Extension) hb_parni(1) ) );
+    RBOOL( obj->supportsExtension ( (QScriptEngineAgent::Extension) hb_parni(1) ) );
   }
 }
 

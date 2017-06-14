@@ -79,8 +79,7 @@ QScriptProgram(const QScriptProgram & other)
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
 {
-  QScriptProgram * par1 = (QScriptProgram *) _qt5xhb_itemGetPtr(1);
-  QScriptProgram * o = new QScriptProgram ( *par1 );
+  QScriptProgram * o = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -158,7 +157,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
