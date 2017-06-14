@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isLanguageChangeEnabled () );
+    RBOOL( obj->isLanguageChangeEnabled () );
   }
 }
 
@@ -329,8 +329,7 @@ HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
   {
     if( ISQDIR(1) )
     {
-      QDir * par1 = (QDir *) _qt5xhb_itemGetPtr(1);
-      obj->setWorkingDirectory ( *par1 );
+      obj->setWorkingDirectory ( *PQDIR(1) );
     }
     else
     {
