@@ -144,8 +144,7 @@ void QSqlQueryModel_setQuery1 ()
 
   if( obj )
   {
-    QSqlQuery * par1 = (QSqlQuery *) _qt5xhb_itemGetPtr(1);
-    obj->setQuery ( *par1 );
+    obj->setQuery ( *PQSQLQUERY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -245,7 +244,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
     if( (ISQMODELINDEX(1)||ISNIL(1)) )
     {
       QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->canFetchMore ( par1 ) );
+      RBOOL( obj->canFetchMore ( par1 ) );
     }
     else
     {
@@ -351,7 +350,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
   {
     if( ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
     {
-      hb_retl( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
+      RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
     }
     else
     {
@@ -372,7 +371,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -393,7 +392,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {

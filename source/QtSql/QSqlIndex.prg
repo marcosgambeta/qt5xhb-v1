@@ -62,8 +62,7 @@ QSqlIndex ( const QSqlIndex & other )
 */
 void QSqlIndex_new2 ()
 {
-  QSqlIndex * par1 = (QSqlIndex *) _qt5xhb_itemGetPtr(1);
-  QSqlIndex * o = new QSqlIndex ( *par1 );
+  QSqlIndex * o = new QSqlIndex ( *PQSQLINDEX(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -112,8 +111,7 @@ void QSqlIndex_append1 ()
 
   if( obj )
   {
-    QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
-    obj->append ( *par1 );
+    obj->append ( *PQSQLFIELD(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -128,8 +126,7 @@ void QSqlIndex_append2 ()
 
   if( obj )
   {
-    QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
-    obj->append ( *par1, PBOOL(2) );
+    obj->append ( *PQSQLFIELD(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -200,7 +197,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isDescending ( PINT(1) ) );
+      RBOOL( obj->isDescending ( PINT(1) ) );
     }
     else
     {

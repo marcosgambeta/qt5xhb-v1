@@ -128,8 +128,7 @@ QSqlQuery ( const QSqlQuery & other )
 */
 void QSqlQuery_new4 ()
 {
-  QSqlQuery * par1 = (QSqlQuery *) _qt5xhb_itemGetPtr(1);
-  QSqlQuery * o = new QSqlQuery ( *par1 );
+  QSqlQuery * o = new QSqlQuery ( *PQSQLQUERY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -351,7 +350,7 @@ void QSqlQuery_exec1 ()
 
   if( obj )
   {
-    hb_retl( obj->exec ( PQSTRING(1) ) );
+    RBOOL( obj->exec ( PQSTRING(1) ) );
   }
 }
 
@@ -364,7 +363,7 @@ void QSqlQuery_exec2 ()
 
   if( obj )
   {
-    hb_retl( obj->exec () );
+    RBOOL( obj->exec () );
   }
 }
 
@@ -399,7 +398,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QSqlQuery::ValuesAsRows : hb_parni(1);
-      hb_retl( obj->execBatch ( (QSqlQuery::BatchExecutionMode) par1 ) );
+      RBOOL( obj->execBatch ( (QSqlQuery::BatchExecutionMode) par1 ) );
     }
     else
     {
@@ -445,7 +444,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
 
   if( obj )
   {
-    hb_retl( obj->first () );
+    RBOOL( obj->first () );
   }
 }
 
@@ -458,7 +457,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -471,7 +470,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 
   if( obj )
   {
-    hb_retl( obj->isForwardOnly () );
+    RBOOL( obj->isForwardOnly () );
   }
 }
 
@@ -506,7 +505,7 @@ void QSqlQuery_isNull1 ()
 
   if( obj )
   {
-    hb_retl( obj->isNull ( PINT(1) ) );
+    RBOOL( obj->isNull ( PINT(1) ) );
   }
 }
 
@@ -519,7 +518,7 @@ void QSqlQuery_isNull2 ()
 
   if( obj )
   {
-    hb_retl( obj->isNull ( PQSTRING(1) ) );
+    RBOOL( obj->isNull ( PQSTRING(1) ) );
   }
 }
 
@@ -551,7 +550,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 
   if( obj )
   {
-    hb_retl( obj->isSelect () );
+    RBOOL( obj->isSelect () );
   }
 }
 
@@ -564,7 +563,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -577,7 +576,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
 
   if( obj )
   {
-    hb_retl( obj->last () );
+    RBOOL( obj->last () );
   }
 }
 
@@ -631,7 +630,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
 
   if( obj )
   {
-    hb_retl( obj->next () );
+    RBOOL( obj->next () );
   }
 }
 
@@ -644,7 +643,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 
   if( obj )
   {
-    hb_retl( obj->nextResult () );
+    RBOOL( obj->nextResult () );
   }
 }
 
@@ -707,7 +706,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->prepare ( PQSTRING(1) ) );
+      RBOOL( obj->prepare ( PQSTRING(1) ) );
     }
     else
     {
@@ -725,7 +724,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 
   if( obj )
   {
-    hb_retl( obj->previous () );
+    RBOOL( obj->previous () );
   }
 }
 
@@ -768,7 +767,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      hb_retl( obj->seek ( PINT(1), OPBOOL(2,false) ) );
+      RBOOL( obj->seek ( PINT(1), OPBOOL(2,false) ) );
     }
     else
     {

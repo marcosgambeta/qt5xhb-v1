@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
 
   if( obj )
   {
-    hb_retl( obj->select () );
+    RBOOL( obj->select () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
   {
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {

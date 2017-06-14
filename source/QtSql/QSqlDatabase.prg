@@ -115,8 +115,7 @@ QSqlDatabase ( const QSqlDatabase & other )
 */
 void QSqlDatabase_new2 ()
 {
-  QSqlDatabase * par1 = (QSqlDatabase *) _qt5xhb_itemGetPtr(1);
-  QSqlDatabase * o = new QSqlDatabase ( *par1 );
+  QSqlDatabase * o = new QSqlDatabase ( *PQSQLDATABASE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -180,7 +179,7 @@ HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 
   if( obj )
   {
-    hb_retl( obj->commit () );
+    RBOOL( obj->commit () );
   }
 }
 
@@ -359,7 +358,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 
   if( obj )
   {
-    hb_retl( obj->isOpen () );
+    RBOOL( obj->isOpen () );
   }
 }
 
@@ -372,7 +371,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 
   if( obj )
   {
-    hb_retl( obj->isOpenError () );
+    RBOOL( obj->isOpenError () );
   }
 }
 
@@ -385,7 +384,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -447,7 +446,7 @@ void QSqlDatabase_open1 ()
 
   if( obj )
   {
-    hb_retl( obj->open () );
+    RBOOL( obj->open () );
   }
 }
 
@@ -460,7 +459,7 @@ void QSqlDatabase_open2 ()
 
   if( obj )
   {
-    hb_retl( obj->open ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->open ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -604,7 +603,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 
   if( obj )
   {
-    hb_retl( obj->rollback () );
+    RBOOL( obj->rollback () );
   }
 }
 
@@ -639,7 +638,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->transaction () );
+    RBOOL( obj->transaction () );
   }
 }
 
@@ -725,8 +724,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 {
   if( ISQSQLDATABASE(1) && ISCHAR(2) )
   {
-    QSqlDatabase * par1 = (QSqlDatabase *) _qt5xhb_itemGetPtr(1);
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *par1, PQSTRING(2) ) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
   }
   else
@@ -752,7 +750,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
   if( ISOPTCHAR(1) )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
-    hb_retl( QSqlDatabase::contains ( par1 ) );
+    RBOOL( QSqlDatabase::contains ( par1 ) );
   }
   else
   {
@@ -793,7 +791,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
   if( ISCHAR(1) )
   {
-    hb_retl( QSqlDatabase::isDriverAvailable ( PQSTRING(1) ) );
+    RBOOL( QSqlDatabase::isDriverAvailable ( PQSTRING(1) ) );
   }
   else
   {

@@ -89,8 +89,7 @@ QSqlRecord ( const QSqlRecord & other )
 */
 void QSqlRecord_new2 ()
 {
-  QSqlRecord * par1 = (QSqlRecord *) _qt5xhb_itemGetPtr(1);
-  QSqlRecord * o = new QSqlRecord ( *par1 );
+  QSqlRecord * o = new QSqlRecord ( *PQSQLRECORD(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -141,8 +140,7 @@ HB_FUNC_STATIC( QSQLRECORD_APPEND )
   {
     if( ISQSQLFIELD(1) )
     {
-      QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
-      obj->append ( *par1 );
+      obj->append ( *PQSQLFIELD(1) );
     }
     else
     {
@@ -194,7 +192,7 @@ HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains ( PQSTRING(1) ) );
     }
     else
     {
@@ -335,7 +333,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -348,7 +346,7 @@ void QSqlRecord_isGenerated1 ()
 
   if( obj )
   {
-    hb_retl( obj->isGenerated ( PQSTRING(1) ) );
+    RBOOL( obj->isGenerated ( PQSTRING(1) ) );
   }
 }
 
@@ -361,7 +359,7 @@ void QSqlRecord_isGenerated2 ()
 
   if( obj )
   {
-    hb_retl( obj->isGenerated ( PINT(1) ) );
+    RBOOL( obj->isGenerated ( PINT(1) ) );
   }
 }
 
@@ -393,7 +391,7 @@ void QSqlRecord_isNull1 ()
 
   if( obj )
   {
-    hb_retl( obj->isNull ( PQSTRING(1) ) );
+    RBOOL( obj->isNull ( PQSTRING(1) ) );
   }
 }
 
@@ -406,7 +404,7 @@ void QSqlRecord_isNull2 ()
 
   if( obj )
   {
-    hb_retl( obj->isNull ( PINT(1) ) );
+    RBOOL( obj->isNull ( PINT(1) ) );
   }
 }
 
@@ -679,8 +677,7 @@ HB_FUNC_STATIC( QSQLRECORD_KEYVALUES )
   {
     if( ISQSQLRECORD(1) )
     {
-      QSqlRecord * par1 = (QSqlRecord *) _qt5xhb_itemGetPtr(1);
-      QSqlRecord * ptr = new QSqlRecord( obj->keyValues ( *par1 ) );
+      QSqlRecord * ptr = new QSqlRecord( obj->keyValues ( *PQSQLRECORD(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
     }
     else

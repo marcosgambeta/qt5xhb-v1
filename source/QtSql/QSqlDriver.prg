@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->beginTransaction () );
+    RBOOL( obj->beginTransaction () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->commitTransaction () );
+    RBOOL( obj->commitTransaction () );
   }
 }
 
@@ -184,8 +184,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   {
     if( ISQSQLFIELD(1) && ISOPTLOG(2) )
     {
-      QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
-      hb_retc( RQSTRING( obj->formatValue ( *par1, OPBOOL(2,false) ) ) );
+      hb_retc( RQSTRING( obj->formatValue ( *PQSQLFIELD(1), OPBOOL(2,false) ) ) );
     }
     else
     {
@@ -219,7 +218,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->hasFeature ( (QSqlDriver::DriverFeature) hb_parni(1) ) );
+      RBOOL( obj->hasFeature ( (QSqlDriver::DriverFeature) hb_parni(1) ) );
     }
     else
     {
@@ -239,7 +238,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      hb_retl( obj->isIdentifierEscaped ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
+      RBOOL( obj->isIdentifierEscaped ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
     }
     else
     {
@@ -257,7 +256,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 
   if( obj )
   {
-    hb_retl( obj->isOpen () );
+    RBOOL( obj->isOpen () );
   }
 }
 
@@ -270,7 +269,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 
   if( obj )
   {
-    hb_retl( obj->isOpenError () );
+    RBOOL( obj->isOpenError () );
   }
 }
 
@@ -312,7 +311,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
     {
-      hb_retl( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
+      RBOOL( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
     }
     else
     {
@@ -372,7 +371,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 
   if( obj )
   {
-    hb_retl( obj->rollbackTransaction () );
+    RBOOL( obj->rollbackTransaction () );
   }
 }
 
@@ -449,7 +448,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->subscribeToNotification ( PQSTRING(1) ) );
+      RBOOL( obj->subscribeToNotification ( PQSTRING(1) ) );
     }
     else
     {
@@ -504,7 +503,7 @@ HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
+      RBOOL( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
     }
     else
     {
@@ -522,7 +521,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
 
   if( obj )
   {
-    hb_retl( obj->cancelQuery () );
+    RBOOL( obj->cancelQuery () );
   }
 }
 

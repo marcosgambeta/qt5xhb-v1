@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

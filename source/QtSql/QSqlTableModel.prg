@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
     if( ISNUM(1) && ISQSQLRECORD(2) )
     {
       QSqlRecord * par2 = (QSqlRecord *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->insertRecord ( PINT(1), *par2 ) );
+      RBOOL( obj->insertRecord ( PINT(1), *par2 ) );
     }
     else
     {
@@ -247,7 +247,7 @@ void QSqlTableModel_isDirty1 ()
 
   if( obj )
   {
-    hb_retl( obj->isDirty () );
+    RBOOL( obj->isDirty () );
   }
 }
 
@@ -260,7 +260,7 @@ void QSqlTableModel_isDirty2 ()
 
   if( obj )
   {
-    hb_retl( obj->isDirty ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->isDirty ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 
   if( obj )
   {
-    hb_retl( obj->select () );
+    RBOOL( obj->select () );
   }
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
     if( ISNUM(1) && ISQSQLRECORD(2) )
     {
       QSqlRecord * par2 = (QSqlRecord *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->setRecord ( PINT(1), *par2 ) );
+      RBOOL( obj->setRecord ( PINT(1), *par2 ) );
     }
     else
     {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
   {
     if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
-      hb_retl( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
     }
     else
     {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
     if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
       QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
     }
     else
     {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 
   if( obj )
   {
-    hb_retl( obj->submit () );
+    RBOOL( obj->submit () );
   }
 }
 
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
 
   if( obj )
   {
-    hb_retl( obj->submitAll () );
+    RBOOL( obj->submitAll () );
   }
 }
 
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->selectRow ( PINT(1) ) );
+      RBOOL( obj->selectRow ( PINT(1) ) );
     }
     else
     {

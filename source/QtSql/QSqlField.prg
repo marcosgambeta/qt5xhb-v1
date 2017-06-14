@@ -93,8 +93,7 @@ QSqlField ( const QSqlField & other )
 */
 void QSqlField_new2 ()
 {
-  QSqlField * par1 = (QSqlField *) _qt5xhb_itemGetPtr(1);
-  QSqlField * o = new QSqlField ( *par1 );
+  QSqlField * o = new QSqlField ( *PQSQLFIELD(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -194,7 +193,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 
   if( obj )
   {
-    hb_retl( obj->isAutoValue () );
+    RBOOL( obj->isAutoValue () );
   }
 }
 
@@ -229,7 +228,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 
   if( obj )
   {
-    hb_retl( obj->isGenerated () );
+    RBOOL( obj->isGenerated () );
   }
 }
 
@@ -264,7 +263,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -277,7 +276,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -312,7 +311,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
