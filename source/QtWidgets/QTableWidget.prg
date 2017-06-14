@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CLOSEPERSISTENTEDITOR )
   {
     if( ISQTABLEWIDGETITEM(1) )
     {
-      QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      obj->closePersistentEditor ( par1 );
+      obj->closePersistentEditor ( PQTABLEWIDGETITEM(1) );
     }
     else
     {
@@ -288,8 +287,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_EDITITEM )
   {
     if( ISQTABLEWIDGETITEM(1) )
     {
-      QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      obj->editItem ( par1 );
+      obj->editItem ( PQTABLEWIDGETITEM(1) );
     }
     else
     {
@@ -400,8 +398,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_OPENPERSISTENTEDITOR )
   {
     if( ISQTABLEWIDGETITEM(1) )
     {
-      QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      obj->openPersistentEditor ( par1 );
+      obj->openPersistentEditor ( PQTABLEWIDGETITEM(1) );
     }
     else
     {
@@ -571,8 +568,7 @@ void QTableWidget_setCurrentItem1 ()
 
   if( obj )
   {
-    QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentItem ( par1 );
+    obj->setCurrentItem ( PQTABLEWIDGETITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -587,9 +583,8 @@ void QTableWidget_setCurrentItem2 ()
 
   if( obj )
   {
-    QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->setCurrentItem ( par1, (QItemSelectionModel::SelectionFlags) par2 );
+    obj->setCurrentItem ( PQTABLEWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -625,8 +620,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERITEM )
   {
     if( ISNUM(1) && ISQTABLEWIDGETITEM(2) )
     {
-      QTableWidgetItem * par2 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(2);
-      obj->setHorizontalHeaderItem ( PINT(1), par2 );
+      obj->setHorizontalHeaderItem ( PINT(1), PQTABLEWIDGETITEM(2) );
     }
     else
     {
@@ -670,8 +664,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETITEM )
   {
     if( ISNUM(1) && ISNUM(2) && ISQTABLEWIDGETITEM(3) )
     {
-      QTableWidgetItem * par3 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(3);
-      obj->setItem ( PINT(1), PINT(2), par3 );
+      obj->setItem ( PINT(1), PINT(2), PQTABLEWIDGETITEM(3) );
     }
     else
     {
@@ -716,8 +709,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETRANGESELECTED )
   {
     if( ISQTABLEWIDGETSELECTIONRANGE(1) && ISLOG(2) )
     {
-      QTableWidgetSelectionRange  * par1 = (QTableWidgetSelectionRange  *) _qt5xhb_itemGetPtr(1);
-      obj->setRangeSelected ( *par1, PBOOL(2) );
+      obj->setRangeSelected ( *PQTABLEWIDGETSELECTIONRANGE(1), PBOOL(2) );
     }
     else
     {
@@ -761,8 +753,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERITEM )
   {
     if( ISNUM(1) && ISQTABLEWIDGETITEM(2) )
     {
-      QTableWidgetItem * par2 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(2);
-      obj->setVerticalHeaderItem ( PINT(1), par2 );
+      obj->setVerticalHeaderItem ( PINT(1), PQTABLEWIDGETITEM(2) );
     }
     else
     {

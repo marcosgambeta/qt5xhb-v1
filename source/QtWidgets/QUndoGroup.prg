@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
-    obj->addStack ( par1 );
+    obj->addStack ( PQUNDOSTACK(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -130,7 +129,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canRedo () );
+    RBOOL( obj->canRedo () );
   }
 }
 
@@ -143,7 +142,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canUndo () );
+    RBOOL( obj->canUndo () );
   }
 }
 
@@ -184,7 +183,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isClean () );
+    RBOOL( obj->isClean () );
   }
 }
 
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
-    obj->removeStack ( par1 );
+    obj->removeStack ( PQUNDOSTACK(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -296,8 +294,7 @@ HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
   QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
-    obj->setActiveStack ( par1 );
+    obj->setActiveStack ( PQUNDOSTACK(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

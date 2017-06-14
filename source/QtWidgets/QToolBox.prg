@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isItemEnabled ( PINT(1) ) );
+      RBOOL( obj->isItemEnabled ( PINT(1) ) );
     }
     else
     {

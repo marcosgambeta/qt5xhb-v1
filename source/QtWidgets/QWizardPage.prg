@@ -97,8 +97,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->buttonText ( (QWizard::WizardButton) par1 ) ) );
+    hb_retc( RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) ) );
   }
 }
 
@@ -110,8 +109,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setButtonText ( (QWizard::WizardButton) par1, PQSTRING(2) );
+    obj->setButtonText ( (QWizard::WizardButton) hb_parni(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -153,7 +151,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isCommitPage () );
+    RBOOL( obj->isCommitPage () );
   }
 }
 
@@ -188,7 +186,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isComplete () );
+    RBOOL( obj->isComplete () );
   }
 }
 
@@ -201,7 +199,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFinalPage () );
+    RBOOL( obj->isFinalPage () );
   }
 }
 
@@ -249,8 +247,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) par1 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -263,8 +260,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPixmap ( (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
+    obj->setPixmap ( (QWizard::WizardPixmap) hb_parni(1), *PQPIXMAP(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -330,7 +326,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->validatePage () );
+    RBOOL( obj->validatePage () );
   }
 }
 

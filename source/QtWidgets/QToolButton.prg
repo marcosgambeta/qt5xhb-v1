@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 
   if( obj )
   {
-    hb_retl( obj->autoRaise () );
+    RBOOL( obj->autoRaise () );
   }
 }
 
@@ -172,8 +172,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setArrowType ( (Qt::ArrowType) par1 );
+      obj->setArrowType ( (Qt::ArrowType) hb_parni(1) );
     }
     else
     {
@@ -218,8 +217,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
   {
     if( ISQMENU(1) )
     {
-      QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-      obj->setMenu ( par1 );
+      obj->setMenu ( PQMENU(1) );
     }
     else
     {
@@ -243,8 +241,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setPopupMode ( (QToolButton::ToolButtonPopupMode) par1 );
+      obj->setPopupMode ( (QToolButton::ToolButtonPopupMode) hb_parni(1) );
     }
     else
     {
@@ -330,8 +327,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) par1 );
+      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) hb_parni(1) );
     }
     else
     {

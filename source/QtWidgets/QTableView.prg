@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isColumnHidden ( PINT(1) ) );
+      RBOOL( obj->isColumnHidden ( PINT(1) ) );
     }
     else
     {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isCornerButtonEnabled () );
+    RBOOL( obj->isCornerButtonEnabled () );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isRowHidden ( PINT(1) ) );
+      RBOOL( obj->isRowHidden ( PINT(1) ) );
     }
     else
     {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isSortingEnabled () );
+    RBOOL( obj->isSortingEnabled () );
   }
 }
 
@@ -462,8 +462,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setGridStyle ( (Qt::PenStyle) par1 );
+      obj->setGridStyle ( (Qt::PenStyle) hb_parni(1) );
     }
     else
     {
@@ -485,8 +484,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
   {
     if( ISQHEADERVIEW(1) )
     {
-      QHeaderView * par1 = (QHeaderView *) _qt5xhb_itemGetPtr(1);
-      obj->setHorizontalHeader ( par1 );
+      obj->setHorizontalHeader ( PQHEADERVIEW(1) );
     }
     else
     {
@@ -596,8 +594,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
   {
     if( ISQHEADERVIEW(1) )
     {
-      QHeaderView * par1 = (QHeaderView *) _qt5xhb_itemGetPtr(1);
-      obj->setVerticalHeader ( par1 );
+      obj->setVerticalHeader ( PQHEADERVIEW(1) );
     }
     else
     {
@@ -639,7 +636,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
 
   if( obj )
   {
-    hb_retl( obj->showGrid () );
+    RBOOL( obj->showGrid () );
   }
 }
 
@@ -654,8 +651,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      int par2 = hb_parni(2);
-      obj->sortByColumn ( PINT(1), (Qt::SortOrder) par2 );
+      obj->sortByColumn ( PINT(1), (Qt::SortOrder) hb_parni(2) );
     }
     else
     {
@@ -689,7 +685,7 @@ HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
 
   if( obj )
   {
-    hb_retl( obj->wordWrap () );
+    RBOOL( obj->wordWrap () );
   }
 }
 
@@ -725,8 +721,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
   {
     if( ISQABSTRACTITEMMODEL(1) )
     {
-      QAbstractItemModel * par1 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(1);
-      obj->setModel ( par1 );
+      obj->setModel ( PQABSTRACTITEMMODEL(1) );
     }
     else
     {
@@ -770,8 +765,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
   {
     if( ISQITEMSELECTIONMODEL(1) )
     {
-      QItemSelectionModel * par1 = (QItemSelectionModel *) _qt5xhb_itemGetPtr(1);
-      obj->setSelectionModel ( par1 );
+      obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
     }
     else
     {

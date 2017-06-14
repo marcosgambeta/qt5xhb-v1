@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTOOLTIP_ISVISIBLE )
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 

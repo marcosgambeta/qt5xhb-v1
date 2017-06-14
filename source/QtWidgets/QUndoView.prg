@@ -69,8 +69,7 @@ QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 */
 void QUndoView_new2 ()
 {
-  QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
-  QUndoView * o = new QUndoView ( par1, OPQWIDGET(2,0) );
+  QUndoView * o = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -79,8 +78,7 @@ QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 */
 void QUndoView_new3 ()
 {
-  QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
-  QUndoView * o = new QUndoView ( par1, OPQWIDGET(2,0) );
+  QUndoView * o = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -236,8 +234,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
   {
     if( ISQUNDOGROUP(1) )
     {
-      QUndoGroup * par1 = (QUndoGroup *) _qt5xhb_itemGetPtr(1);
-      obj->setGroup ( par1 );
+      obj->setGroup ( PQUNDOGROUP(1) );
     }
     else
     {
@@ -259,8 +256,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
   {
     if( ISQUNDOSTACK(1) )
     {
-      QUndoStack * par1 = (QUndoStack *) _qt5xhb_itemGetPtr(1);
-      obj->setStack ( par1 );
+      obj->setStack ( PQUNDOSTACK(1) );
     }
     else
     {

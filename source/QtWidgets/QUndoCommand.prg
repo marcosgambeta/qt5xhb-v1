@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
     if( ISQUNDOCOMMAND(1) )
     {
       const QUndoCommand * par1 = (const QUndoCommand *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->mergeWith ( par1 ) );
+      RBOOL( obj->mergeWith ( par1 ) );
     }
     else
     {

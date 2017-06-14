@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QTABWIDGET_DOCUMENTMODE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->documentMode () );
+    RBOOL( obj->documentMode () );
   }
 }
 
@@ -344,8 +344,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETELIDEMODE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setElideMode ( (Qt::TextElideMode) par1 );
+    obj->setElideMode ( (Qt::TextElideMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -444,7 +443,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISMOVABLE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMovable () );
+    RBOOL( obj->isMovable () );
   }
 }
 
@@ -481,7 +480,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISTABENABLED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isTabEnabled ( PINT(1) ) );
+      RBOOL( obj->isTabEnabled ( PINT(1) ) );
     }
     else
     {
@@ -587,8 +586,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABPOSITION )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTabPosition ( (QTabWidget::TabPosition) par1 );
+    obj->setTabPosition ( (QTabWidget::TabPosition) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -614,8 +612,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABSHAPE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTabShape ( (QTabWidget::TabShape) par1 );
+    obj->setTabShape ( (QTabWidget::TabShape) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -736,7 +733,7 @@ HB_FUNC_STATIC( QTABWIDGET_USESSCROLLBUTTONS )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->usesScrollButtons () );
+    RBOOL( obj->usesScrollButtons () );
   }
 }
 
@@ -771,7 +768,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSCLOSABLE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->tabsClosable () );
+    RBOOL( obj->tabsClosable () );
   }
 }
 
@@ -868,7 +865,7 @@ HB_FUNC_STATIC( QTABWIDGET_HASHEIGHTFORWIDTH )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth () );
+    RBOOL( obj->hasHeightForWidth () );
   }
 }
 
@@ -882,7 +879,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBARAUTOHIDE )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->tabBarAutoHide () );
+    RBOOL( obj->tabBarAutoHide () );
   }
 #endif
 }

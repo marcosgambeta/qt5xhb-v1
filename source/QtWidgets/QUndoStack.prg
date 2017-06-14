@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canRedo () );
+    RBOOL( obj->canRedo () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canUndo () );
+    RBOOL( obj->canUndo () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isClean () );
+    RBOOL( obj->isClean () );
   }
 }
 
@@ -285,8 +285,7 @@ HB_FUNC_STATIC( QUNDOSTACK_PUSH )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QUndoCommand * par1 = (QUndoCommand *) _qt5xhb_itemGetPtr(1);
-    obj->push ( par1 );
+    obj->push ( PQUNDOCOMMAND(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

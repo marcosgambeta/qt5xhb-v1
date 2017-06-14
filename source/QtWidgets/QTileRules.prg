@@ -53,9 +53,7 @@ QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 */
 void QTileRules_new1 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QTileRules * o = new QTileRules ( (Qt::TileRule) par1, (Qt::TileRule) par2 );
+  QTileRules * o = new QTileRules ( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

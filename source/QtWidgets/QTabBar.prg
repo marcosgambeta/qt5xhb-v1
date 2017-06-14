@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTABBAR_DOCUMENTMODE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->documentMode () );
+    RBOOL( obj->documentMode () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTABBAR_DRAWBASE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->drawBase () );
+    RBOOL( obj->drawBase () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTABBAR_EXPANDING )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->expanding () );
+    RBOOL( obj->expanding () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTABBAR_ISMOVABLE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isMovable () );
+    RBOOL( obj->isMovable () );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isTabEnabled ( PINT(1) ) );
+      RBOOL( obj->isTabEnabled ( PINT(1) ) );
     }
     else
     {
@@ -457,8 +457,7 @@ HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setElideMode ( (Qt::TextElideMode) par1 );
+    obj->setElideMode ( (Qt::TextElideMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -532,8 +531,7 @@ HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSelectionBehaviorOnRemove ( (QTabBar::SelectionBehavior) par1 );
+    obj->setSelectionBehaviorOnRemove ( (QTabBar::SelectionBehavior) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -547,8 +545,7 @@ HB_FUNC_STATIC( QTABBAR_SETSHAPE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setShape ( (QTabBar::Shape) par1 );
+    obj->setShape ( (QTabBar::Shape) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -562,8 +559,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->setTabButton ( PINT(1), (QTabBar::ButtonPosition) par2, PQWIDGET(3) );
+    obj->setTabButton ( PINT(1), (QTabBar::ButtonPosition) hb_parni(2), PQWIDGET(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -758,8 +754,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      int par2 = hb_parni(2);
-      QWidget * ptr = obj->tabButton ( PINT(1), (QTabBar::ButtonPosition) par2 );
+      QWidget * ptr = obj->tabButton ( PINT(1), (QTabBar::ButtonPosition) hb_parni(2) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
@@ -918,7 +913,7 @@ HB_FUNC_STATIC( QTABBAR_TABSCLOSABLE )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->tabsClosable () );
+    RBOOL( obj->tabsClosable () );
   }
 }
 
@@ -931,7 +926,7 @@ HB_FUNC_STATIC( QTABBAR_USESSCROLLBUTTONS )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->usesScrollButtons () );
+    RBOOL( obj->usesScrollButtons () );
   }
 }
 

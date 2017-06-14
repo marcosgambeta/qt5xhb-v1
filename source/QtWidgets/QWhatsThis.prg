@@ -107,7 +107,7 @@ static bool inWhatsThisMode()
 */
 HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {
-  hb_retl( QWhatsThis::inWhatsThisMode () );
+  RBOOL( QWhatsThis::inWhatsThisMode () );
 }
 
 

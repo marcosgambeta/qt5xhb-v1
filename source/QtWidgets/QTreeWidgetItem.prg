@@ -123,8 +123,7 @@ explicit QTreeWidgetItem(int type = Type)
 */
 void QTreeWidgetItem_new1 ()
 {
-  int par1 = ISNIL(1)? QTreeWidgetItem::Type : hb_parni(1);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( par1 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( OPINT(1,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -133,8 +132,7 @@ explicit QTreeWidgetItem(const QStringList & strings, int type = Type)
 */
 void QTreeWidgetItem_new2 ()
 {
-  int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQSTRINGLIST(1), par2 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( PQSTRINGLIST(1), OPINT(2,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -143,9 +141,7 @@ explicit QTreeWidgetItem(QTreeWidget * view, int type = Type)
 */
 void QTreeWidgetItem_new3 ()
 {
-  QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGET(1), OPINT(2,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -154,9 +150,7 @@ QTreeWidgetItem(QTreeWidget * view, const QStringList & strings, int type = Type
 */
 void QTreeWidgetItem_new4 ()
 {
-  QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( par1, PQSTRINGLIST(2), par3 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -165,10 +159,7 @@ QTreeWidgetItem(QTreeWidget * view, QTreeWidgetItem * after, int type = Type)
 */
 void QTreeWidgetItem_new5 ()
 {
-  QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
-  QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGET(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -177,9 +168,7 @@ explicit QTreeWidgetItem(QTreeWidgetItem * parent, int type = Type)
 */
 void QTreeWidgetItem_new6 ()
 {
-  QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGETITEM(1), OPINT(2,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -188,9 +177,7 @@ QTreeWidgetItem(QTreeWidgetItem * parent, const QStringList & strings, int type 
 */
 void QTreeWidgetItem_new7 ()
 {
-  QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( par1, PQSTRINGLIST(2), par3 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -199,10 +186,7 @@ QTreeWidgetItem(QTreeWidgetItem * parent, QTreeWidgetItem * after, int type = Ty
 */
 void QTreeWidgetItem_new8 ()
 {
-  QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-  QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( par1, par2, par3 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGETITEM(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -211,8 +195,7 @@ QTreeWidgetItem(const QTreeWidgetItem & other)
 */
 void QTreeWidgetItem_new9 ()
 {
-  QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-  QTreeWidgetItem * o = new QTreeWidgetItem ( *par1 );
+  QTreeWidgetItem * o = new QTreeWidgetItem ( *PQTREEWIDGETITEM(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -298,8 +281,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILD )
   {
     if( ISQTREEWIDGETITEM(1) )
     {
-      QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-      obj->addChild ( par1 );
+      obj->addChild ( PQTREEWIDGETITEM(1) );
     }
     else
     {
@@ -563,8 +545,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INDEXOFCHILD )
   {
     if( ISQTREEWIDGETITEM(1) )
     {
-      QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->indexOfChild ( par1 ) );
+      hb_retni( obj->indexOfChild ( PQTREEWIDGETITEM(1) ) );
     }
     else
     {
@@ -584,8 +565,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILD )
   {
     if( ISNUM(1) && ISQTREEWIDGETITEM(2) )
     {
-      QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
-      obj->insertChild ( PINT(1), par2 );
+      obj->insertChild ( PINT(1), PQTREEWIDGETITEM(2) );
     }
     else
     {
@@ -635,7 +615,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISDISABLED )
 
   if( obj )
   {
-    hb_retl( obj->isDisabled () );
+    RBOOL( obj->isDisabled () );
   }
 }
 
@@ -648,7 +628,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISEXPANDED )
 
   if( obj )
   {
-    hb_retl( obj->isExpanded () );
+    RBOOL( obj->isExpanded () );
   }
 }
 
@@ -661,7 +641,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED )
 
   if( obj )
   {
-    hb_retl( obj->isFirstColumnSpanned () );
+    RBOOL( obj->isFirstColumnSpanned () );
   }
 }
 
@@ -674,7 +654,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISHIDDEN )
 
   if( obj )
   {
-    hb_retl( obj->isHidden () );
+    RBOOL( obj->isHidden () );
   }
 }
 
@@ -687,7 +667,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISSELECTED )
 
   if( obj )
   {
-    hb_retl( obj->isSelected () );
+    RBOOL( obj->isSelected () );
   }
 }
 
@@ -739,8 +719,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_REMOVECHILD )
   {
     if( ISQTREEWIDGETITEM(1) )
     {
-      QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-      obj->removeChild ( par1 );
+      obj->removeChild ( PQTREEWIDGETITEM(1) );
     }
     else
     {
@@ -784,8 +763,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHECKSTATE )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      int par2 = hb_parni(2);
-      obj->setCheckState ( PINT(1), (Qt::CheckState) par2 );
+      obj->setCheckState ( PINT(1), (Qt::CheckState) hb_parni(2) );
     }
     else
     {
@@ -807,8 +785,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHILDINDICATORPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setChildIndicatorPolicy ( (QTreeWidgetItem::ChildIndicatorPolicy) par1 );
+      obj->setChildIndicatorPolicy ( (QTreeWidgetItem::ChildIndicatorPolicy) hb_parni(1) );
     }
     else
     {
@@ -1205,8 +1182,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SORTCHILDREN )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      int par2 = hb_parni(2);
-      obj->sortChildren ( PINT(1), (Qt::SortOrder) par2 );
+      obj->sortChildren ( PINT(1), (Qt::SortOrder) hb_parni(2) );
     }
     else
     {

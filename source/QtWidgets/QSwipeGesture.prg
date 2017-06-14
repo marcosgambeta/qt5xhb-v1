@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->swipeAngle () );
+    RQREAL( obj->swipeAngle () );
   }
 }
 

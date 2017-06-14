@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->addTopLevelItem ( par1 );
+    obj->addTopLevelItem ( PQTREEWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -147,8 +146,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->closePersistentEditor ( par1, OPINT(2,0) );
+    obj->closePersistentEditor ( PQTREEWIDGETITEM(1), OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -202,8 +200,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->editItem ( par1, OPINT(2,0) );
+    obj->editItem ( PQTREEWIDGETITEM(1), OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -232,8 +229,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INDEXOFTOPLEVELITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexOfTopLevelItem ( par1 ) );
+    hb_retni( obj->indexOfTopLevelItem ( PQTREEWIDGETITEM(1) ) );
   }
 }
 
@@ -246,8 +242,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par2 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(2);
-    obj->insertTopLevelItem ( PINT(1), par2 );
+    obj->insertTopLevelItem ( PINT(1), PQTREEWIDGETITEM(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -277,7 +272,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED )
   if( obj )
   {
     const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isFirstItemColumnSpanned ( par1 ) );
+    RBOOL( obj->isFirstItemColumnSpanned ( par1 ) );
   }
 }
 
@@ -373,8 +368,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    QWidget * ptr = obj->itemWidget ( par1, PINT(2) );
+    QWidget * ptr = obj->itemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -388,8 +382,7 @@ HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->openPersistentEditor ( par1, OPINT(2,0) );
+    obj->openPersistentEditor ( PQTREEWIDGETITEM(1), OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -403,8 +396,7 @@ HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->removeItemWidget ( par1, PINT(2) );
+    obj->removeItemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -440,8 +432,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM1 )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentItem ( par1 );
+    obj->setCurrentItem ( PQTREEWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -454,8 +445,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM2 )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentItem ( par1, PINT(2) );
+    obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -468,9 +458,8 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM3 )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par3 = hb_parni(3);
-    obj->setCurrentItem ( par1, PINT(2), (QItemSelectionModel::SelectionFlags) par3 );
+    obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2), (QItemSelectionModel::SelectionFlags) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -523,8 +512,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERITEM )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setHeaderItem ( par1 );
+    obj->setHeaderItem ( PQTREEWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -566,8 +554,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setItemWidget ( par1, PINT(2), PQWIDGET(3) );
+    obj->setItemWidget ( PQTREEWIDGETITEM(1), PINT(2), PQWIDGET(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -596,8 +583,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      int par2 = hb_parni(2);
-      obj->sortItems ( PINT(1), (Qt::SortOrder) par2 );
+      obj->sortItems ( PINT(1), (Qt::SortOrder) hb_parni(2) );
     }
     else
     {
@@ -686,8 +672,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETSELECTIONMODEL )
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemSelectionModel * par1 = (QItemSelectionModel *) _qt5xhb_itemGetPtr(1);
-    obj->setSelectionModel ( par1 );
+    obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

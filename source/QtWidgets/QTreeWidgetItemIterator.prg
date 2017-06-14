@@ -53,8 +53,7 @@ QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
 */
 void QTreeWidgetItemIterator_new1 ()
 {
-  QTreeWidgetItemIterator * par1 = (QTreeWidgetItemIterator *) _qt5xhb_itemGetPtr(1);
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( *par1 );
+  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( *PQTREEWIDGETITEMITERATOR(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -63,9 +62,8 @@ QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
 */
 void QTreeWidgetItemIterator_new2 ()
 {
-  QTreeWidget * par1 = (QTreeWidget *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( par1, (QTreeWidgetItemIterator::IteratorFlags) par2 );
+  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGET(1), (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -74,9 +72,8 @@ QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
 */
 void QTreeWidgetItemIterator_new3 ()
 {
-  QTreeWidgetItem * par1 = (QTreeWidgetItem *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( par1, (QTreeWidgetItemIterator::IteratorFlags) par2 );
+  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGETITEM(1), (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 
@@ -185,8 +185,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
   {
     if( ISQMENU(1) )
     {
-      QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-      obj->setContextMenu ( par1 );
+      obj->setContextMenu ( PQMENU(1) );
     }
     else
     {
@@ -335,7 +334,7 @@ static bool isSystemTrayAvailable()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
-  hb_retl( QSystemTrayIcon::isSystemTrayAvailable () );
+  RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
 }
 
 /*
@@ -343,7 +342,7 @@ static bool supportsMessages()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
-  hb_retl( QSystemTrayIcon::supportsMessages () );
+  RBOOL( QSystemTrayIcon::supportsMessages () );
 }
 
 #pragma ENDDUMP

@@ -55,8 +55,7 @@ QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
 void QTimeEdit_new2 ()
 {
-  QTime * par1 = (QTime *) _qt5xhb_itemGetPtr(1);
-  QTimeEdit * o = new QTimeEdit ( *par1, OPQWIDGET(2,0) );
+  QTimeEdit * o = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

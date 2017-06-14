@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QWIDGET_ACCEPTDROPS )
 
   if( obj )
   {
-    hb_retl( obj->acceptDrops () );
+    RBOOL( obj->acceptDrops () );
   }
 }
 
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QWIDGET_AUTOFILLBACKGROUND )
 
   if( obj )
   {
-    hb_retl( obj->autoFillBackground () );
+    RBOOL( obj->autoFillBackground () );
   }
 }
 
@@ -647,8 +647,7 @@ HB_FUNC_STATIC( QWIDGET_SETBACKGROUNDROLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setBackgroundRole ( (QPalette::ColorRole) par1 );
+      obj->setBackgroundRole ( (QPalette::ColorRole) hb_parni(1) );
     }
     else
     {
@@ -879,8 +878,7 @@ HB_FUNC_STATIC( QWIDGET_SETCONTEXTMENUPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setContextMenuPolicy ( (Qt::ContextMenuPolicy) par1 );
+      obj->setContextMenuPolicy ( (Qt::ContextMenuPolicy) hb_parni(1) );
     }
     else
     {
@@ -1001,8 +999,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOCUSPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setFocusPolicy ( (Qt::FocusPolicy) par1 );
+      obj->setFocusPolicy ( (Qt::FocusPolicy) hb_parni(1) );
     }
     else
     {
@@ -1129,8 +1126,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOREGROUNDROLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setForegroundRole ( (QPalette::ColorRole) par1 );
+      obj->setForegroundRole ( (QPalette::ColorRole) hb_parni(1) );
     }
     else
     {
@@ -1210,9 +1206,8 @@ HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) Qt::GestureFlags() : hb_parni(2);
-      obj->grabGesture ( (Qt::GestureType) par1, (Qt::GestureFlags) par2 );
+      obj->grabGesture ( (Qt::GestureType) hb_parni(1), (Qt::GestureFlags) par2 );
     }
     else
     {
@@ -1301,9 +1296,8 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
   {
     if( ISQKEYSEQUENCE(1) && ISOPTNUM(2) )
     {
-      QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-      hb_retni( obj->grabShortcut ( *par1, (Qt::ShortcutContext) par2 ) );
+      hb_retni( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
     }
     else
     {
@@ -1341,8 +1335,7 @@ HB_FUNC_STATIC( QWIDGET_SETGRAPHICSEFFECT )
   {
     if( ISQGRAPHICSEFFECT(1) )
     {
-      QGraphicsEffect * par1 = (QGraphicsEffect *) _qt5xhb_itemGetPtr(1);
-      obj->setGraphicsEffect ( par1 );
+      obj->setGraphicsEffect ( PQGRAPHICSEFFECT(1) );
     }
     else
     {
@@ -1380,7 +1373,7 @@ HB_FUNC_STATIC( QWIDGET_HASEDITFOCUS )
 
   if( obj )
   {
-    hb_retl( obj->hasEditFocus () );
+    RBOOL( obj->hasEditFocus () );
   }
 #endif
 }
@@ -1394,7 +1387,7 @@ HB_FUNC_STATIC( QWIDGET_HASFOCUS )
 
   if( obj )
   {
-    hb_retl( obj->hasFocus () );
+    RBOOL( obj->hasFocus () );
   }
 }
 
@@ -1407,7 +1400,7 @@ HB_FUNC_STATIC( QWIDGET_HASMOUSETRACKING )
 
   if( obj )
   {
-    hb_retl( obj->hasMouseTracking () );
+    RBOOL( obj->hasMouseTracking () );
   }
 }
 
@@ -1513,8 +1506,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTMETHODQUERY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
+      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -1589,7 +1581,7 @@ HB_FUNC_STATIC( QWIDGET_ISACTIVEWINDOW )
 
   if( obj )
   {
-    hb_retl( obj->isActiveWindow () );
+    RBOOL( obj->isActiveWindow () );
   }
 }
 
@@ -1605,7 +1597,7 @@ HB_FUNC_STATIC( QWIDGET_ISANCESTOROF )
     if( ISQWIDGET(1) )
     {
       const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isAncestorOf ( par1 ) );
+      RBOOL( obj->isAncestorOf ( par1 ) );
     }
     else
     {
@@ -1626,7 +1618,7 @@ HB_FUNC_STATIC( QWIDGET_ISENABLEDTO )
     if( ISQWIDGET(1) )
     {
       const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isEnabledTo ( par1 ) );
+      RBOOL( obj->isEnabledTo ( par1 ) );
     }
     else
     {
@@ -1644,7 +1636,7 @@ HB_FUNC_STATIC( QWIDGET_ISFULLSCREEN )
 
   if( obj )
   {
-    hb_retl( obj->isFullScreen () );
+    RBOOL( obj->isFullScreen () );
   }
 }
 
@@ -1657,7 +1649,7 @@ HB_FUNC_STATIC( QWIDGET_ISHIDDEN )
 
   if( obj )
   {
-    hb_retl( obj->isHidden () );
+    RBOOL( obj->isHidden () );
   }
 }
 
@@ -1670,7 +1662,7 @@ HB_FUNC_STATIC( QWIDGET_ISMAXIMIZED )
 
   if( obj )
   {
-    hb_retl( obj->isMaximized () );
+    RBOOL( obj->isMaximized () );
   }
 }
 
@@ -1683,7 +1675,7 @@ HB_FUNC_STATIC( QWIDGET_ISMINIMIZED )
 
   if( obj )
   {
-    hb_retl( obj->isMinimized () );
+    RBOOL( obj->isMinimized () );
   }
 }
 
@@ -1696,7 +1688,7 @@ HB_FUNC_STATIC( QWIDGET_ISMODAL )
 
   if( obj )
   {
-    hb_retl( obj->isModal () );
+    RBOOL( obj->isModal () );
   }
 }
 
@@ -1709,7 +1701,7 @@ HB_FUNC_STATIC( QWIDGET_ISVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 
@@ -1747,7 +1739,7 @@ HB_FUNC_STATIC( QWIDGET_ISVISIBLETO )
     if( ISQWIDGET(1) )
     {
       const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isVisibleTo ( par1 ) );
+      RBOOL( obj->isVisibleTo ( par1 ) );
     }
     else
     {
@@ -1765,7 +1757,7 @@ HB_FUNC_STATIC( QWIDGET_ISWINDOW )
 
   if( obj )
   {
-    hb_retl( obj->isWindow () );
+    RBOOL( obj->isWindow () );
   }
 }
 
@@ -1778,7 +1770,7 @@ HB_FUNC_STATIC( QWIDGET_ISWINDOWMODIFIED )
 
   if( obj )
   {
-    hb_retl( obj->isWindowModified () );
+    RBOOL( obj->isWindowModified () );
   }
 }
 
@@ -1842,8 +1834,7 @@ HB_FUNC_STATIC( QWIDGET_SETLAYOUTDIRECTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
+      obj->setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
     }
     else
     {
@@ -1894,8 +1885,7 @@ HB_FUNC_STATIC( QWIDGET_SETLOCALE )
   {
     if( ISQLOCALE(1) )
     {
-      QLocale * par1 = (QLocale *) _qt5xhb_itemGetPtr(1);
-      obj->setLocale ( *par1 );
+      obj->setLocale ( *PQLOCALE(1) );
     }
     else
     {
@@ -2558,11 +2548,10 @@ HB_FUNC_STATIC( QWIDGET_RENDER1 )
 
   if( obj )
   {
-    QPaintDevice * par1 = (QPaintDevice *) _qt5xhb_itemGetPtr(1);
     QPoint par2 = ISNIL(2)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(2);
     QRegion par3 = ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3);
     int par4 = ISNIL(4)? (int) QWidget::DrawWindowBackground | QWidget::DrawChildren : hb_parni(4);
-    obj->render ( par1, par2, par3, (QWidget::RenderFlags) par4 );
+    obj->render ( PQPAINTDEVICE(1), par2, par3, (QWidget::RenderFlags) par4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2754,8 +2743,7 @@ HB_FUNC_STATIC( QWIDGET_RESTOREGEOMETRY )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->restoreGeometry ( *par1 ) );
+      RBOOL( obj->restoreGeometry ( *PQBYTEARRAY(1) ) );
     }
     else
     {
@@ -2838,8 +2826,7 @@ HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setAttribute ( (Qt::WidgetAttribute) par1, OPBOOL(2,true) );
+      obj->setAttribute ( (Qt::WidgetAttribute) hb_parni(1), OPBOOL(2,true) );
     }
     else
     {
@@ -2874,8 +2861,7 @@ void QWidget_setContentsMargins2 ()
 
   if( obj )
   {
-    QMargins * par1 = (QMargins *) _qt5xhb_itemGetPtr(1);
-    obj->setContentsMargins ( *par1 );
+    obj->setContentsMargins ( *PQMARGINS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3026,8 +3012,7 @@ void QWidget_setFocus1 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFocus ( (Qt::FocusReason) par1 );
+    obj->setFocus ( (Qt::FocusReason) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3163,8 +3148,7 @@ HB_FUNC_STATIC( QWIDGET_SETLAYOUT )
   {
     if( ISQLAYOUT(1) )
     {
-      QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
-      obj->setLayout ( par1 );
+      obj->setLayout ( PQLAYOUT(1) );
     }
     else
     {
@@ -3483,8 +3467,7 @@ void QWidget_setSizePolicy1 ()
 
   if( obj )
   {
-    QSizePolicy * par1 = (QSizePolicy *) _qt5xhb_itemGetPtr(1);
-    obj->setSizePolicy ( *par1 );
+    obj->setSizePolicy ( *PQSIZEPOLICY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3499,9 +3482,7 @@ void QWidget_setSizePolicy2 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setSizePolicy ( (QSizePolicy::Policy) par1, (QSizePolicy::Policy) par2 );
+    obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3593,8 +3574,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODALITY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setWindowModality ( (Qt::WindowModality) par1 );
+      obj->setWindowModality ( (Qt::WindowModality) hb_parni(1) );
     }
     else
     {
@@ -3764,8 +3744,7 @@ HB_FUNC_STATIC( QWIDGET_SETSTYLE )
   {
     if( ISQSTYLE(1) )
     {
-      QStyle * par1 = (QStyle *) _qt5xhb_itemGetPtr(1);
-      obj->setStyle ( par1 );
+      obj->setStyle ( PQSTYLE(1) );
     }
     else
     {
@@ -3826,8 +3805,7 @@ HB_FUNC_STATIC( QWIDGET_TESTATTRIBUTE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testAttribute ( (Qt::WidgetAttribute) par1 ) );
+      RBOOL( obj->testAttribute ( (Qt::WidgetAttribute) hb_parni(1) ) );
     }
     else
     {
@@ -3884,7 +3862,7 @@ HB_FUNC_STATIC( QWIDGET_UNDERMOUSE )
 
   if( obj )
   {
-    hb_retl( obj->underMouse () );
+    RBOOL( obj->underMouse () );
   }
 }
 
@@ -3900,8 +3878,7 @@ HB_FUNC_STATIC( QWIDGET_UNGRABGESTURE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->ungrabGesture ( (Qt::GestureType) par1 );
+      obj->ungrabGesture ( (Qt::GestureType) hb_parni(1) );
     }
     else
     {
@@ -4026,7 +4003,7 @@ HB_FUNC_STATIC( QWIDGET_UPDATESENABLED )
 
   if( obj )
   {
-    hb_retl( obj->updatesEnabled () );
+    RBOOL( obj->updatesEnabled () );
   }
 }
 
@@ -4312,7 +4289,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWOPACITY )
 
   if( obj )
   {
-    hb_retnd( obj->windowOpacity () );
+    RQREAL( obj->windowOpacity () );
   }
 }
 
@@ -4461,7 +4438,7 @@ HB_FUNC_STATIC( QWIDGET_CLOSE )
 
   if( obj )
   {
-    hb_retl( obj->close () );
+    RBOOL( obj->close () );
   }
 }
 
@@ -4541,7 +4518,7 @@ HB_FUNC_STATIC( QWIDGET_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -4686,7 +4663,7 @@ HB_FUNC_STATIC( QWIDGET_ISTOPLEVEL )
 
   if( obj )
   {
-    hb_retl( obj->isTopLevel () );
+    RBOOL( obj->isTopLevel () );
   }
 }
 
@@ -4699,7 +4676,7 @@ HB_FUNC_STATIC( QWIDGET_ISENABLEDTOTLW )
 
   if( obj )
   {
-    hb_retl( obj->isEnabledToTLW () );
+    RBOOL( obj->isEnabledToTLW () );
   }
 }
 
@@ -4748,7 +4725,7 @@ HB_FUNC_STATIC( QWIDGET_ISRIGHTTOLEFT )
 
   if( obj )
   {
-    hb_retl( obj->isRightToLeft () );
+    RBOOL( obj->isRightToLeft () );
   }
 }
 
@@ -4761,7 +4738,7 @@ HB_FUNC_STATIC( QWIDGET_ISLEFTTORIGHT )
 
   if( obj )
   {
-    hb_retl( obj->isLeftToRight () );
+    RBOOL( obj->isLeftToRight () );
   }
 }
 
@@ -4825,7 +4802,7 @@ HB_FUNC_STATIC( QWIDGET_HASHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth () );
+    RBOOL( obj->hasHeightForWidth () );
   }
 }
 
@@ -4907,7 +4884,7 @@ HB_FUNC_STATIC( QWIDGET_PAINTINGACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->paintingActive () );
+    RBOOL( obj->paintingActive () );
   }
 }
 
@@ -4961,8 +4938,7 @@ HB_FUNC_STATIC( QWIDGET_FIND )
 {
   if( ISPOINTER(1) )
   {
-    WId par1 = (WId) hb_parptr(1);
-    QWidget * ptr = QWidget::find ( par1 );
+    QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
@@ -5012,9 +4988,8 @@ HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
 {
   if( ISQWINDOW(1) && ISOPTQWIDGET(2) && ISOPTNUM(3) )
   {
-    QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QWidget * ptr = QWidget::createWindowContainer ( par1, OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
+    QWidget * ptr = QWidget::createWindowContainer ( PQWINDOW(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else

@@ -132,8 +132,7 @@ HB_FUNC_STATIC( QWIZARD_ADDPAGE )
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWizardPage * par1 = (QWizardPage *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->addPage ( par1 ) );
+    hb_retni( obj->addPage ( PQWIZARDPAGE(1) ) );
   }
 }
 
@@ -147,8 +146,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QAbstractButton * ptr = obj->button ( (QWizard::WizardButton) par1 );
+    QAbstractButton * ptr = obj->button ( (QWizard::WizardButton) hb_parni(1) );
     _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -162,9 +160,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTON )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QAbstractButton * par2 = (QAbstractButton *) _qt5xhb_itemGetPtr(2);
-    obj->setButton ( (QWizard::WizardButton) par1, par2 );
+    obj->setButton ( (QWizard::WizardButton) hb_parni(1), PQABSTRACTBUTTON(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -180,8 +176,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retc( RQSTRING( obj->buttonText ( (QWizard::WizardButton) par1 ) ) );
+    hb_retc( RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) ) );
   }
 }
 
@@ -194,8 +189,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setButtonText ( (QWizard::WizardButton) par1, PQSTRING(2) );
+    obj->setButtonText ( (QWizard::WizardButton) hb_parni(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -257,7 +251,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->hasVisitedPage ( PINT(1) ) );
+      RBOOL( obj->hasVisitedPage ( PINT(1) ) );
     }
     else
     {
@@ -357,8 +351,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) par1 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -422,7 +415,7 @@ HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
 
   if( obj )
   {
-    obj->setDefaultProperty ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3) );
+    obj->setDefaultProperty ( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -454,8 +447,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTION )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QWizard::WizardOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QWizard::WizardOption) hb_parni(1), OPBOOL(2,true) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -471,8 +463,7 @@ HB_FUNC_STATIC( QWIZARD_SETPAGE )
 
   if( obj )
   {
-    QWizardPage * par2 = (QWizardPage *) _qt5xhb_itemGetPtr(2);
-    obj->setPage ( PINT(1), par2 );
+    obj->setPage ( PINT(1), PQWIZARDPAGE(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -488,8 +479,7 @@ HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPixmap ( (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
+    obj->setPixmap ( (QWizard::WizardPixmap) hb_parni(1), *PQPIXMAP(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -585,8 +575,7 @@ HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSubTitleFormat ( (Qt::TextFormat) par1 );
+    obj->setSubTitleFormat ( (Qt::TextFormat) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -602,8 +591,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->testOption ( (QWizard::WizardOption) par1 ) );
+    RBOOL( obj->testOption ( (QWizard::WizardOption) hb_parni(1) ) );
   }
 }
 
@@ -630,8 +618,7 @@ HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTitleFormat ( (Qt::TextFormat) par1 );
+    obj->setTitleFormat ( (Qt::TextFormat) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -647,7 +634,7 @@ HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
 
   if( obj )
   {
-    hb_retl( obj->validateCurrentPage () );
+    RBOOL( obj->validateCurrentPage () );
   }
 }
 
@@ -689,8 +676,7 @@ HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setWizardStyle ( (QWizard::WizardStyle) par1 );
+    obj->setWizardStyle ( (QWizard::WizardStyle) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

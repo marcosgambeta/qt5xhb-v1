@@ -97,8 +97,7 @@ QTableWidgetItem ( int type = Type )
 */
 void QTableWidgetItem_new1 ()
 {
-  int par1 = ISNIL(1)? QTableWidgetItem::Type : hb_parni(1);
-  QTableWidgetItem * o = new QTableWidgetItem ( par1 );
+  QTableWidgetItem * o = new QTableWidgetItem ( OPINT(1,QTableWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -107,8 +106,7 @@ QTableWidgetItem ( const QString & text, int type = Type )
 */
 void QTableWidgetItem_new2 ()
 {
-  int par2 = ISNIL(2)? QTableWidgetItem::Type : hb_parni(2);
-  QTableWidgetItem * o = new QTableWidgetItem ( PQSTRING(1), par2 );
+  QTableWidgetItem * o = new QTableWidgetItem ( PQSTRING(1), OPINT(2,QTableWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -118,8 +116,7 @@ QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
 void QTableWidgetItem_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  int par3 = ISNIL(3)? QTableWidgetItem::Type : hb_parni(3);
-  QTableWidgetItem * o = new QTableWidgetItem ( par1, PQSTRING(2), par3 );
+  QTableWidgetItem * o = new QTableWidgetItem ( par1, PQSTRING(2), OPINT(3,QTableWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -128,8 +125,7 @@ QTableWidgetItem ( const QTableWidgetItem & other )
 */
 void QTableWidgetItem_new4 ()
 {
-  QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-  QTableWidgetItem * o = new QTableWidgetItem ( *par1 );
+  QTableWidgetItem * o = new QTableWidgetItem ( *PQTABLEWIDGETITEM(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -318,7 +314,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_ISSELECTED )
 
   if( obj )
   {
-    hb_retl( obj->isSelected () );
+    RBOOL( obj->isSelected () );
   }
 }
 
@@ -391,8 +387,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETCHECKSTATE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCheckState ( (Qt::CheckState) par1 );
+      obj->setCheckState ( (Qt::CheckState) hb_parni(1) );
     }
     else
     {
