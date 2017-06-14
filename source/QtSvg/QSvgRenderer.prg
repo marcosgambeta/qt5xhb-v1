@@ -107,8 +107,7 @@ QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW4 )
 {
-  QXmlStreamReader * par1 = (QXmlStreamReader *) _qt5xhb_itemGetPtr(1);
-  QSvgRenderer * o = new QSvgRenderer ( par1, OPQOBJECT(2,0) );
+  QSvgRenderer * o = new QSvgRenderer ( PQXMLSTREAMREADER(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->animated () );
+    RBOOL( obj->animated () );
   }
 }
 
@@ -206,7 +205,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->elementExists ( PQSTRING(1) ) );
+    RBOOL( obj->elementExists ( PQSTRING(1) ) );
   }
 }
 
@@ -232,7 +231,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -347,7 +346,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD1 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->load ( PQSTRING(1) ) );
+    RBOOL( obj->load ( PQSTRING(1) ) );
   }
 }
 
@@ -359,7 +358,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD2 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->load ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->load ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -371,8 +370,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD3 )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlStreamReader * par1 = (QXmlStreamReader *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->load ( par1 ) );
+    RBOOL( obj->load ( PQXMLSTREAMREADER(1) ) );
   }
 }
 
