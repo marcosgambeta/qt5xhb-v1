@@ -60,9 +60,8 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 */
 void QKeyEventTransition_new2 ()
 {
-  int par2 = hb_parni(2);
   QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
-  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) par2, PINT(3), par4 );
+  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

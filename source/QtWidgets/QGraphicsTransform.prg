@@ -65,8 +65,7 @@ HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
   QGraphicsTransform * obj = (QGraphicsTransform *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMatrix4x4 * par1 = (QMatrix4x4 *) _qt5xhb_itemGetPtr(1);
-    obj->applyTo ( par1 );
+    obj->applyTo ( PQMATRIX4X4(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

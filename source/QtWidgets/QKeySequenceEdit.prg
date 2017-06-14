@@ -72,8 +72,7 @@ QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QKeySequenceEdit_new2 ()
 {
-  QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-  QKeySequenceEdit * o = new QKeySequenceEdit ( *par1, OPQWIDGET(2,0) );
+  QKeySequenceEdit * o = new QKeySequenceEdit ( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 #endif
@@ -145,8 +144,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
   {
     if( ISQKEYSEQUENCE(1) )
     {
-      QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-      obj->setKeySequence ( *par1 );
+      obj->setKeySequence ( *PQKEYSEQUENCE(1) );
     }
     else
     {

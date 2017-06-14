@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
   QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 

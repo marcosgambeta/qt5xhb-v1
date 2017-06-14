@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      hb_retl( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
     if( ISQGRAPHICSITEM(1) )
     {
       QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isObscuredBy ( par1 ) );
+      RBOOL( obj->isObscuredBy ( par1 ) );
     }
     else
     {

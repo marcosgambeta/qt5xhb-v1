@@ -87,8 +87,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
   QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    obj->addToGroup ( par1 );
+    obj->addToGroup ( PQGRAPHICSITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -102,8 +101,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
   QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    obj->removeFromGroup ( par1 );
+    obj->removeFromGroup ( PQGRAPHICSITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -132,7 +130,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
   if( obj )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->isObscuredBy ( par1 ) );
+    RBOOL( obj->isObscuredBy ( par1 ) );
   }
 }
 

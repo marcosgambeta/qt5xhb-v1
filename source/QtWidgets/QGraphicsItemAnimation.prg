@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->horizontalScaleAt ( PQREAL(1) ) );
+    RQREAL( obj->horizontalScaleAt ( PQREAL(1) ) );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->horizontalShearAt ( PQREAL(1) ) );
+    RQREAL( obj->horizontalShearAt ( PQREAL(1) ) );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ROTATIONAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->rotationAt ( PQREAL(1) ) );
+    RQREAL( obj->rotationAt ( PQREAL(1) ) );
   }
 }
 
@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETITEM )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    obj->setItem ( par1 );
+    obj->setItem ( PQGRAPHICSITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -273,8 +272,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTIMELINE )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTimeLine * par1 = (QTimeLine *) _qt5xhb_itemGetPtr(1);
-    obj->setTimeLine ( par1 );
+    obj->setTimeLine ( PQTIMELINE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -318,7 +316,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSCALEAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->verticalScaleAt ( PQREAL(1) ) );
+    RQREAL( obj->verticalScaleAt ( PQREAL(1) ) );
   }
 }
 
@@ -331,7 +329,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSHEARAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->verticalShearAt ( PQREAL(1) ) );
+    RQREAL( obj->verticalShearAt ( PQREAL(1) ) );
   }
 }
 
@@ -344,7 +342,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_XTRANSLATIONAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->xTranslationAt ( PQREAL(1) ) );
+    RQREAL( obj->xTranslationAt ( PQREAL(1) ) );
   }
 }
 
@@ -357,7 +355,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_YTRANSLATIONAT )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->yTranslationAt ( PQREAL(1) ) );
+    RQREAL( obj->yTranslationAt ( PQREAL(1) ) );
   }
 }
 

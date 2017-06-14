@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 
   if( obj )
   {
-    hb_retl( obj->hasClipping () );
+    RBOOL( obj->hasClipping () );
   }
 }
 
@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 
   if( obj )
   {
-    QItemEditorFactory * par1 = (QItemEditorFactory *) _qt5xhb_itemGetPtr(1);
-    obj->setItemEditorFactory ( par1 );
+    obj->setItemEditorFactory ( PQITEMEDITORFACTORY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

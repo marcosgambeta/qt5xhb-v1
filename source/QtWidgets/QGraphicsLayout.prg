@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
   QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActivated () );
+    RBOOL( obj->isActivated () );
   }
 }
 
@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
   QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    obj->widgetEvent ( par1 );
+    obj->widgetEvent ( PQEVENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -238,7 +237,7 @@ static bool instantInvalidatePropagation ()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
-  hb_retl( QGraphicsLayout::instantInvalidatePropagation () );
+  RBOOL( QGraphicsLayout::instantInvalidatePropagation () );
 }
 
 

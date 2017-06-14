@@ -119,8 +119,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
   QItemEditorFactory * obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QItemEditorCreatorBase * par2 = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtr(2);
-    obj->registerEditor ( PINT(1), par2 );
+    obj->registerEditor ( PINT(1), PQITEMEDITORCREATORBASE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -141,8 +140,7 @@ static void setDefaultFactory(QItemEditorFactory *factory)
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_SETDEFAULTFACTORY )
 {
-  QItemEditorFactory * par1 = (QItemEditorFactory *) _qt5xhb_itemGetPtr(1);
-  QItemEditorFactory::setDefaultFactory ( par1 );
+  QItemEditorFactory::setDefaultFactory ( PQITEMEDITORFACTORY(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

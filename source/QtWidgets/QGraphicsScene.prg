@@ -286,8 +286,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDITEM )
   {
     if( ISQGRAPHICSITEM(1) )
     {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      obj->addItem ( par1 );
+      obj->addItem ( PQGRAPHICSITEM(1) );
     }
     else
     {
@@ -613,8 +612,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_DESTROYITEMGROUP )
   {
     if( ISQGRAPHICSITEMGROUP(1) )
     {
-      QGraphicsItemGroup * par1 = (QGraphicsItemGroup *) _qt5xhb_itemGetPtr(1);
-      obj->destroyItemGroup ( par1 );
+      obj->destroyItemGroup ( PQGRAPHICSITEMGROUP(1) );
     }
     else
     {
@@ -676,7 +674,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
 
   if( obj )
   {
-    hb_retl( obj->hasFocus () );
+    RBOOL( obj->hasFocus () );
   }
 }
 
@@ -689,7 +687,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
 
   if( obj )
   {
-    hb_retnd( obj->height () );
+    RQREAL( obj->height () );
   }
 }
 
@@ -704,8 +702,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
+      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -776,7 +773,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
 
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -789,7 +786,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isSortCacheEnabled () );
+    RBOOL( obj->isSortCacheEnabled () );
   }
 }
 
@@ -906,8 +903,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_REMOVEITEM )
   {
     if( ISQGRAPHICSITEM(1) )
     {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      obj->removeItem ( par1 );
+      obj->removeItem ( PQGRAPHICSITEM(1) );
     }
     else
     {
@@ -982,9 +978,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
   {
     if( ISQGRAPHICSITEM(1) && ISQEVENT(2) )
     {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-      hb_retl( obj->sendEvent ( par1, par2 ) );
+      RBOOL( obj->sendEvent ( PQGRAPHICSITEM(1), PQEVENT(2) ) );
     }
     else
     {
@@ -1004,8 +998,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEPANEL )
   {
     if( ISQGRAPHICSITEM(1) )
     {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      obj->setActivePanel ( par1 );
+      obj->setActivePanel ( PQGRAPHICSITEM(1) );
     }
     else
     {
@@ -1027,8 +1020,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEWINDOW )
   {
     if( ISQGRAPHICSWIDGET(1) )
     {
-      QGraphicsWidget * par1 = (QGraphicsWidget *) _qt5xhb_itemGetPtr(1);
-      obj->setActiveWindow ( par1 );
+      obj->setActiveWindow ( PQGRAPHICSWIDGET(1) );
     }
     else
     {
@@ -1117,9 +1109,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
   {
     if( ISQGRAPHICSITEM(1) && ISOPTNUM(2) )
     {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) Qt::OtherFocusReason : hb_parni(2);
-      obj->setFocusItem ( par1, (Qt::FocusReason) par2 );
+      obj->setFocusItem ( PQGRAPHICSITEM(1), (Qt::FocusReason) par2 );
     }
     else
     {
@@ -1185,8 +1176,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETITEMINDEXMETHOD )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setItemIndexMethod ( (QGraphicsScene::ItemIndexMethod) par1 );
+      obj->setItemIndexMethod ( (QGraphicsScene::ItemIndexMethod) hb_parni(1) );
     }
     else
     {
@@ -1292,8 +1282,7 @@ void QGraphicsScene_setSelectionArea2 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->setSelectionArea ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2, *PQTRANSFORM(3) );
+    obj->setSelectionArea ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) hb_parni(2), *PQTRANSFORM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1374,8 +1363,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTYLE )
   {
     if( ISQSTYLE(1) )
     {
-      QStyle * par1 = (QStyle *) _qt5xhb_itemGetPtr(1);
-      obj->setStyle ( par1 );
+      obj->setStyle ( PQSTYLE(1) );
     }
     else
     {
@@ -1395,7 +1383,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
 
   if( obj )
   {
-    hb_retl( obj->stickyFocus () );
+    RBOOL( obj->stickyFocus () );
   }
 }
 
@@ -1472,7 +1460,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->width () );
+    RQREAL( obj->width () );
   }
 }
 

@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 
   if( obj )
   {
-    hb_retl( obj->hasScaledContents () );
+    RBOOL( obj->hasScaledContents () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 
   if( obj )
   {
-    hb_retl( obj->hasSelectedText () );
+    RBOOL( obj->hasSelectedText () );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
 
   if( obj )
   {
-    hb_retl( obj->openExternalLinks () );
+    RBOOL( obj->openExternalLinks () );
   }
 }
 
@@ -300,8 +300,7 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setAlignment ( (Qt::Alignment) par1 );
+      obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
     }
     else
     {
@@ -455,8 +454,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setTextFormat ( (Qt::TextFormat) par1 );
+      obj->setTextFormat ( (Qt::TextFormat) hb_parni(1) );
     }
     else
     {
@@ -560,7 +558,7 @@ HB_FUNC_STATIC( QLABEL_WORDWRAP )
 
   if( obj )
   {
-    hb_retl( obj->wordWrap () );
+    RBOOL( obj->wordWrap () );
   }
 }
 
@@ -638,8 +636,7 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
   {
     if( ISQMOVIE(1) )
     {
-      QMovie * par1 = (QMovie *) _qt5xhb_itemGetPtr(1);
-      obj->setMovie ( par1 );
+      obj->setMovie ( PQMOVIE(1) );
     }
     else
     {
@@ -674,8 +671,7 @@ void QLabel_setNum2 ()
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setNum ( par1 );
+    obj->setNum ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

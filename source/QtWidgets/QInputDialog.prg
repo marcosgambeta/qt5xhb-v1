@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
 
   if( obj )
   {
-    hb_retnd( obj->doubleMaximum () );
+    RDOUBLE( obj->doubleMaximum () );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
 
   if( obj )
   {
-    hb_retnd( obj->doubleMinimum () );
+    RDOUBLE( obj->doubleMinimum () );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
 
   if( obj )
   {
-    hb_retnd( obj->doubleValue () );
+    RDOUBLE( obj->doubleValue () );
   }
 }
 
@@ -369,8 +369,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setInputMode ( (QInputDialog::InputMode) par1 );
+      obj->setInputMode ( (QInputDialog::InputMode) hb_parni(1) );
     }
     else
     {
@@ -530,7 +529,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 
   if( obj )
   {
-    hb_retl( obj->isComboBoxEditable () );
+    RBOOL( obj->isComboBoxEditable () );
   }
 }
 
@@ -637,7 +636,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
+      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
     }
     else
     {
@@ -739,8 +738,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setOption ( (QInputDialog::InputDialogOption) par1, OPBOOL(2,true) );
+      obj->setOption ( (QInputDialog::InputDialogOption) hb_parni(1), OPBOOL(2,true) );
     }
     else
     {
@@ -762,8 +760,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testOption ( (QInputDialog::InputDialogOption) par1 ) );
+      RBOOL( obj->testOption ( (QInputDialog::InputDialogOption) hb_parni(1) ) );
     }
     else
     {
@@ -796,8 +793,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setTextEchoMode ( (QLineEdit::EchoMode) par1 );
+      obj->setTextEchoMode ( (QLineEdit::EchoMode) hb_parni(1) );
     }
     else
     {
@@ -924,7 +920,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
   {
     bool par8;
     int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-    hb_retnd( QInputDialog::getDouble ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPDOUBLE(4,0), OPDOUBLE(5,-2147483647), OPDOUBLE(6,2147483647), OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
+    RDOUBLE( QInputDialog::getDouble ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPDOUBLE(4,0), OPDOUBLE(5,-2147483647), OPDOUBLE(6,2147483647), OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
     hb_storl( par8, 8 );
   }
   else

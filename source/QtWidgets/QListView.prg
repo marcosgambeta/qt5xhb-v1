@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isRowHidden ( PINT(1) ) );
+      RBOOL( obj->isRowHidden ( PINT(1) ) );
     }
     else
     {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSelectionRectVisible () );
+    RBOOL( obj->isSelectionRectVisible () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isWrapping () );
+    RBOOL( obj->isWrapping () );
   }
 }
 
@@ -287,8 +287,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFlow ( (QListView::Flow) par1 );
+    obj->setFlow ( (QListView::Flow) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -316,8 +315,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLayoutMode ( (QListView::LayoutMode) par1 );
+    obj->setLayoutMode ( (QListView::LayoutMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -352,8 +350,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMovement ( (QListView::Movement) par1 );
+    obj->setMovement ( (QListView::Movement) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -367,8 +364,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setResizeMode ( (QListView::ResizeMode) par1 );
+    obj->setResizeMode ( (QListView::ResizeMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -470,8 +466,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setViewMode ( (QListView::ViewMode) par1 );
+    obj->setViewMode ( (QListView::ViewMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -544,7 +539,7 @@ HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->uniformItemSizes () );
+    RBOOL( obj->uniformItemSizes () );
   }
 }
 
@@ -570,7 +565,7 @@ HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->wordWrap () );
+    RBOOL( obj->wordWrap () );
   }
 }
 

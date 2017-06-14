@@ -68,8 +68,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSizePolicy ( (QSizePolicy::Policy) par1 );
+    obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -110,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->spacing () );
+    RQREAL( obj->spacing () );
   }
 }
 

@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setShapeMode ( (QGraphicsPixmapItem::ShapeMode) par1 );
+      obj->setShapeMode ( (QGraphicsPixmapItem::ShapeMode) hb_parni(1) );
     }
     else
     {
@@ -252,8 +251,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setTransformationMode ( (Qt::TransformationMode) par1 );
+      obj->setTransformationMode ( (Qt::TransformationMode) hb_parni(1) );
     }
     else
     {
@@ -315,7 +313,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      hb_retl( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -336,7 +334,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
     if( ISQGRAPHICSITEM(1) )
     {
       const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isObscuredBy ( par1 ) );
+      RBOOL( obj->isObscuredBy ( par1 ) );
     }
     else
     {

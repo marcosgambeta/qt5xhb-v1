@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth () );
+    RBOOL( obj->hasHeightForWidth () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETALIGNMENT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

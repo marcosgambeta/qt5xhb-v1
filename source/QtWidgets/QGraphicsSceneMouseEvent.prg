@@ -93,8 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QPointF * ptr = new QPointF( obj->buttonDownPos ( (Qt::MouseButton) par1 ) );
+    QPointF * ptr = new QPointF( obj->buttonDownPos ( (Qt::MouseButton) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -108,8 +107,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QPointF * ptr = new QPointF( obj->buttonDownScenePos ( (Qt::MouseButton) par1 ) );
+    QPointF * ptr = new QPointF( obj->buttonDownScenePos ( (Qt::MouseButton) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -123,8 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QPoint * ptr = new QPoint( obj->buttonDownScreenPos ( (Qt::MouseButton) par1 ) );
+    QPoint * ptr = new QPoint( obj->buttonDownScreenPos ( (Qt::MouseButton) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }

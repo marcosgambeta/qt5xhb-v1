@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
 
   if( obj )
   {
-    hb_retl( obj->activate () );
+    RBOOL( obj->activate () );
   }
 }
 
@@ -134,8 +134,7 @@ HB_FUNC_STATIC( QLAYOUT_ADDITEM )
 
   if( obj )
   {
-    QLayoutItem * par1 = (QLayoutItem *) _qt5xhb_itemGetPtr(1);
-    obj->addItem ( par1 );
+    obj->addItem ( PQLAYOUTITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -219,7 +218,7 @@ HB_FUNC_STATIC( QLAYOUT_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -281,8 +280,7 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
 
   if( obj )
   {
-    QLayoutItem * par1 = (QLayoutItem *) _qt5xhb_itemGetPtr(1);
-    obj->removeItem ( par1 );
+    obj->removeItem ( PQLAYOUTITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -312,8 +310,7 @@ void QLayout_setAlignment1 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retl( obj->setAlignment ( PQWIDGET(1), (Qt::Alignment) par2 ) );
+    RBOOL( obj->setAlignment ( PQWIDGET(1), (Qt::Alignment) hb_parni(2) ) );
   }
 }
 
@@ -326,8 +323,7 @@ void QLayout_setAlignment2 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -342,9 +338,7 @@ void QLayout_setAlignment3 ()
 
   if( obj )
   {
-    QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->setAlignment ( par1, (Qt::Alignment) par2 ) );
+    RBOOL( obj->setAlignment ( PQLAYOUT(1), (Qt::Alignment) hb_parni(2) ) );
   }
 }
 
@@ -396,8 +390,7 @@ void QLayout_setContentsMargins2 ()
 
   if( obj )
   {
-    QMargins * par1 = (QMargins *) _qt5xhb_itemGetPtr(1);
-    obj->setContentsMargins ( *par1 );
+    obj->setContentsMargins ( *PQMARGINS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -468,8 +461,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSizeConstraint ( (QLayout::SizeConstraint) par1 );
+    obj->setSizeConstraint ( (QLayout::SizeConstraint) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -610,7 +602,7 @@ HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

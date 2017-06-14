@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 
   if( obj )
   {
-    hb_retl( obj->isCheckable () );
+    RBOOL( obj->isCheckable () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 
   if( obj )
   {
-    hb_retl( obj->isChecked () );
+    RBOOL( obj->isChecked () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 
   if( obj )
   {
-    hb_retl( obj->isFlat () );
+    RBOOL( obj->isFlat () );
   }
 }
 

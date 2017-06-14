@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->angle () );
+    RQREAL( obj->angle () );
   }
 }
 
@@ -144,8 +144,7 @@ void QGraphicsRotation_setAxis1 ()
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector3D * par1 = (QVector3D *) _qt5xhb_itemGetPtr(1);
-    obj->setAxis ( *par1 );
+    obj->setAxis ( *PQVECTOR3D(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -158,8 +157,7 @@ void QGraphicsRotation_setAxis2 ()
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAxis ( (Qt::Axis) par1 );
+    obj->setAxis ( (Qt::Axis) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -192,8 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QVector3D * par1 = (QVector3D *) _qt5xhb_itemGetPtr(1);
-    obj->setOrigin ( *par1 );
+    obj->setOrigin ( *PQVECTOR3D(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -207,8 +204,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QMatrix4x4 * par1 = (QMatrix4x4 *) _qt5xhb_itemGetPtr(1);
-    obj->applyTo ( par1 );
+    obj->applyTo ( PQMATRIX4X4(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

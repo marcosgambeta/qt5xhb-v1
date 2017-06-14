@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_AUTOFILLBACKGROUND )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->autoFillBackground () );
+    RBOOL( obj->autoFillBackground () );
   }
 }
 
@@ -244,9 +244,8 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
     int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    hb_retni( obj->grabShortcut ( *par1, (Qt::ShortcutContext) par2 ) );
+    hb_retni( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
   }
 }
 
@@ -274,7 +273,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ISACTIVEWINDOW )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActiveWindow () );
+    RBOOL( obj->isActiveWindow () );
   }
 }
 
@@ -438,8 +437,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETATTRIBUTE )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAttribute ( (Qt::WidgetAttribute) par1, OPBOOL(2,true) );
+    obj->setAttribute ( (Qt::WidgetAttribute) hb_parni(1), OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -490,8 +488,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFOCUSPOLICY )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFocusPolicy ( (Qt::FocusPolicy) par1 );
+    obj->setFocusPolicy ( (Qt::FocusPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -565,8 +562,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUT )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QGraphicsLayout * par1 = (QGraphicsLayout *) _qt5xhb_itemGetPtr(1);
-    obj->setLayout ( par1 );
+    obj->setLayout ( PQGRAPHICSLAYOUT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -580,8 +576,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUTDIRECTION )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
+    obj->setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -651,8 +646,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSTYLE )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStyle * par1 = (QStyle *) _qt5xhb_itemGetPtr(1);
-    obj->setStyle ( par1 );
+    obj->setStyle ( PQSTYLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -737,8 +731,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TESTATTRIBUTE )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->testAttribute ( (Qt::WidgetAttribute) par1 ) );
+    RBOOL( obj->testAttribute ( (Qt::WidgetAttribute) hb_parni(1) ) );
   }
 }
 
@@ -925,7 +918,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_CLOSE )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->close () );
+    RBOOL( obj->close () );
   }
 }
 
@@ -935,9 +928,7 @@ static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETTABORDER )
 {
-  QGraphicsWidget * par1 = (QGraphicsWidget *) _qt5xhb_itemGetPtr(1);
-  QGraphicsWidget * par2 = (QGraphicsWidget *) _qt5xhb_itemGetPtr(2);
-  QGraphicsWidget::setTabOrder ( par1, par2 );
+  QGraphicsWidget::setTabOrder ( PQGRAPHICSWIDGET(1), PQGRAPHICSWIDGET(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

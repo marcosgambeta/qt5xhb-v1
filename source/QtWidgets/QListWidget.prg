@@ -140,8 +140,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM2 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->addItem ( par1 );
+    obj->addItem ( PQLISTWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->closePersistentEditor ( par1 );
+    obj->closePersistentEditor ( PQLISTWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -243,8 +241,7 @@ HB_FUNC_STATIC( QLISTWIDGET_EDITITEM )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->editItem ( par1 );
+    obj->editItem ( PQLISTWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -259,8 +256,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM1 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par2 = (QListWidgetItem *) _qt5xhb_itemGetPtr(2);
-    obj->insertItem ( PINT(1), par2 );
+    obj->insertItem ( PINT(1), PQLISTWIDGETITEM(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -320,7 +316,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSortingEnabled () );
+    RBOOL( obj->isSortingEnabled () );
   }
 }
 
@@ -407,8 +403,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    QWidget * ptr = obj->itemWidget ( par1 );
+    QWidget * ptr = obj->itemWidget ( PQLISTWIDGETITEM(1) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -422,8 +417,7 @@ HB_FUNC_STATIC( QLISTWIDGET_OPENPERSISTENTEDITOR )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->openPersistentEditor ( par1 );
+    obj->openPersistentEditor ( PQLISTWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -437,8 +431,7 @@ HB_FUNC_STATIC( QLISTWIDGET_REMOVEITEMWIDGET )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->removeItemWidget ( par1 );
+    obj->removeItemWidget ( PQLISTWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -467,8 +460,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM1 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setCurrentItem ( par1 );
+    obj->setCurrentItem ( PQLISTWIDGETITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -481,9 +473,8 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM2 )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
     int par2 = hb_parni(2);
-    obj->setCurrentItem ( par1, (QItemSelectionModel::SelectionFlags) par2 );
+    obj->setCurrentItem ( PQLISTWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -577,8 +568,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETITEMWIDGET )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    obj->setItemWidget ( par1, PQWIDGET(2) );
+    obj->setItemWidget ( PQLISTWIDGETITEM(1), PQWIDGET(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -666,8 +656,7 @@ HB_FUNC_STATIC( QLISTWIDGET_DROPEVENT )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDropEvent * par1 = (QDropEvent *) _qt5xhb_itemGetPtr(1);
-    obj->dropEvent ( par1 );
+    obj->dropEvent ( PQDROPEVENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

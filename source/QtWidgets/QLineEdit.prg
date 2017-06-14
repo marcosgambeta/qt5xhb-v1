@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -455,7 +454,7 @@ HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->dragEnabled () );
+    RBOOL( obj->dragEnabled () );
   }
 }
 
@@ -503,8 +502,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setEchoMode ( (QLineEdit::EchoMode) par1 );
+    obj->setEchoMode ( (QLineEdit::EchoMode) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -564,7 +562,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
 
   if( obj )
   {
-    hb_retl( obj->hasAcceptableInput () );
+    RBOOL( obj->hasAcceptableInput () );
   }
 }
 
@@ -577,7 +575,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
 
   if( obj )
   {
-    hb_retl( obj->hasSelectedText () );
+    RBOOL( obj->hasSelectedText () );
   }
 }
 
@@ -655,7 +653,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
 
   if( obj )
   {
-    hb_retl( obj->isModified () );
+    RBOOL( obj->isModified () );
   }
 }
 
@@ -690,7 +688,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -725,7 +723,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
 
   if( obj )
   {
-    hb_retl( obj->isRedoAvailable () );
+    RBOOL( obj->isRedoAvailable () );
   }
 }
 
@@ -738,7 +736,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
 
   if( obj )
   {
-    hb_retl( obj->isUndoAvailable () );
+    RBOOL( obj->isUndoAvailable () );
   }
 }
 
@@ -854,7 +852,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
 
   if( obj )
   {
-    hb_retl( obj->hasFrame () );
+    RBOOL( obj->hasFrame () );
   }
 }
 
@@ -926,8 +924,7 @@ void QLineEdit_setTextMargins2 ()
 
   if( obj )
   {
-    QMargins * par1 = (QMargins *) _qt5xhb_itemGetPtr(1);
-    obj->setTextMargins ( *par1 );
+    obj->setTextMargins ( *PQMARGINS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1047,8 +1044,7 @@ HB_FUNC_STATIC( QLINEEDIT_EVENT )
 
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 
@@ -1061,8 +1057,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -1166,8 +1161,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORMOVESTYLE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
+    obj->setCursorMoveStyle ( (Qt::CursorMoveStyle) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1210,8 +1204,7 @@ void QLineEdit_addAction1 ()
 
   if( obj )
   {
-    int par2 = hb_parni(2);
-    obj->addAction ( PQACTION(1), (QLineEdit::ActionPosition) par2 );
+    obj->addAction ( PQACTION(1), (QLineEdit::ActionPosition) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1227,8 +1220,7 @@ void QLineEdit_addAction2 ()
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    int par2 = hb_parni(2);
-    QAction * ptr = obj->addAction ( par1, (QLineEdit::ActionPosition) par2 );
+    QAction * ptr = obj->addAction ( par1, (QLineEdit::ActionPosition) hb_parni(2) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -1276,7 +1268,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISCLEARBUTTONENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isClearButtonEnabled () );
+    RBOOL( obj->isClearButtonEnabled () );
   }
 }
 

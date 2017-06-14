@@ -128,8 +128,7 @@ void QLCDNumber_checkOverflow1 ()
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    hb_retl( obj->checkOverflow ( par1 ) );
+    RBOOL( obj->checkOverflow ( PDOUBLE(1) ) );
   }
 }
 
@@ -144,7 +143,7 @@ void QLCDNumber_checkOverflow2 ()
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->checkOverflow ( PINT(1) ) );
+      RBOOL( obj->checkOverflow ( PINT(1) ) );
     }
     else
     {
@@ -272,8 +271,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setMode ( (QLCDNumber::Mode) par1 );
+      obj->setMode ( (QLCDNumber::Mode) hb_parni(1) );
     }
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -294,8 +292,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setSegmentStyle ( (QLCDNumber::SegmentStyle) par1 );
+      obj->setSegmentStyle ( (QLCDNumber::SegmentStyle) hb_parni(1) );
     }
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -314,7 +311,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 
   if( obj )
   {
-    hb_retl( obj->smallDecimalPoint () );
+    RBOOL( obj->smallDecimalPoint () );
   }
 }
 
@@ -327,7 +324,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 
   if( obj )
   {
-    hb_retnd( obj->value () );
+    RDOUBLE( obj->value () );
   }
 }
 
@@ -369,8 +366,7 @@ void QLCDNumber_display2 ()
 
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->display ( par1 );
+    obj->display ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

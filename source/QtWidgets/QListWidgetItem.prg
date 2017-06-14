@@ -103,8 +103,7 @@ QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 void QListWidgetItem_new1 ()
 {
   QListWidget * par1 = ISNIL(1)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? QListWidgetItem::Type : hb_parni(2);
-  QListWidgetItem * o = new QListWidgetItem ( par1, par2 );
+  QListWidgetItem * o = new QListWidgetItem ( par1, OPINT(2,QListWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -114,8 +113,7 @@ QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Typ
 void QListWidgetItem_new2 ()
 {
   QListWidget * par2 = ISNIL(2)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(2);
-  int par3 = ISNIL(3)? QListWidgetItem::Type : hb_parni(3);
-  QListWidgetItem * o = new QListWidgetItem ( PQSTRING(1), par2, par3 );
+  QListWidgetItem * o = new QListWidgetItem ( PQSTRING(1), par2, OPINT(3,QListWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -126,8 +124,7 @@ void QListWidgetItem_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QListWidget * par3 = ISNIL(3)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(3);
-  int par4 = ISNIL(4)? QListWidgetItem::Type : hb_parni(4);
-  QListWidgetItem * o = new QListWidgetItem ( par1, PQSTRING(2), par3, par4 );
+  QListWidgetItem * o = new QListWidgetItem ( par1, PQSTRING(2), par3, OPINT(4,QListWidgetItem::Type) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -136,8 +133,7 @@ QListWidgetItem ( const QListWidgetItem & other )
 */
 void QListWidgetItem_new4 ()
 {
-  QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-  QListWidgetItem * o = new QListWidgetItem ( *par1 );
+  QListWidgetItem * o = new QListWidgetItem ( *PQLISTWIDGETITEM(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -247,8 +243,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETCHECKSTATE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setCheckState ( (Qt::CheckState) par1 );
+      obj->setCheckState ( (Qt::CheckState) hb_parni(1) );
     }
     else
     {
@@ -470,7 +465,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
 
   if( obj )
   {
-    hb_retl( obj->isHidden () );
+    RBOOL( obj->isHidden () );
   }
 }
 
@@ -505,7 +500,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
 
   if( obj )
   {
-    hb_retl( obj->isSelected () );
+    RBOOL( obj->isSelected () );
   }
 }
 

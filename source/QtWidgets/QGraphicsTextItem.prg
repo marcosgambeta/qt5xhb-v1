@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
 
   if( obj )
   {
-    hb_retl( obj->openExternalLinks () );
+    RBOOL( obj->openExternalLinks () );
   }
 }
 
@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
   {
     if( ISQTEXTDOCUMENT(1) )
     {
-      QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
-      obj->setDocument ( par1 );
+      obj->setDocument ( PQTEXTDOCUMENT(1) );
     }
     else
     {
@@ -374,8 +373,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
   {
     if( ISQTEXTCURSOR(1) )
     {
-      QTextCursor * par1 = (QTextCursor *) _qt5xhb_itemGetPtr(1);
-      obj->setTextCursor ( *par1 );
+      obj->setTextCursor ( *PQTEXTCURSOR(1) );
     }
     else
     {
@@ -440,7 +438,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 
   if( obj )
   {
-    hb_retl( obj->tabChangesFocus () );
+    RBOOL( obj->tabChangesFocus () );
   }
 }
 
@@ -480,7 +478,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 
   if( obj )
   {
-    hb_retnd( obj->textWidth () );
+    RQREAL( obj->textWidth () );
   }
 }
 
@@ -535,7 +533,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
   {
     if( ISQPOINTF(1) )
     {
-      hb_retl( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains ( *PQPOINTF(1) ) );
     }
     else
     {
@@ -556,7 +554,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
     if( ISQGRAPHICSITEM(1) )
     {
       QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->isObscuredBy ( par1 ) );
+      RBOOL( obj->isObscuredBy ( par1 ) );
     }
     else
     {
