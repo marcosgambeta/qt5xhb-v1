@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->testOption ( (QPrintDialog::PrintDialogOption) hb_parni(1) ) );
+      RBOOL( obj->testOption ( (QPrintDialog::PrintDialogOption) hb_parni(1) ) );
     }
     else
     {

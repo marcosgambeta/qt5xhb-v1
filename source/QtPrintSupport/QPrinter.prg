@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPRINTER_ABORT )
 
   if( obj )
   {
-    hb_retl( obj->abort () );
+    RBOOL( obj->abort () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
 
   if( obj )
   {
-    hb_retl( obj->collateCopies () );
+    RBOOL( obj->collateCopies () );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
 
   if( obj )
   {
-    hb_retl( obj->doubleSidedPrinting () );
+    RBOOL( obj->doubleSidedPrinting () );
   }
 }
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->fontEmbeddingEnabled () );
+    RBOOL( obj->fontEmbeddingEnabled () );
   }
 }
 
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QPRINTER_FULLPAGE )
 
   if( obj )
   {
-    hb_retl( obj->fullPage () );
+    RBOOL( obj->fullPage () );
   }
 }
 
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QPRINTER_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QPRINTER_NEWPAGE )
 
   if( obj )
   {
-    hb_retl( obj->newPage () );
+    RBOOL( obj->newPage () );
   }
 }
 
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
 
   if( obj )
   {
-    hb_retl( obj->supportsMultipleCopies () );
+    RBOOL( obj->supportsMultipleCopies () );
   }
 }
 

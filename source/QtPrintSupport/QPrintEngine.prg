@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 
   if( obj )
   {
-    hb_retl( obj->abort () );
+    RBOOL( obj->abort () );
   }
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 
   if( obj )
   {
-    hb_retl( obj->newPage () );
+    RBOOL( obj->newPage () );
   }
 }
 

@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ISOPTIONENABLED )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isOptionEnabled ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) ) );
+      RBOOL( obj->isOptionEnabled ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) ) );
     }
     else
     {

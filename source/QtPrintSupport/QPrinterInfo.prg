@@ -97,8 +97,7 @@ explicit QPrinterInfo ( const QPrinter & printer )
 */
 void QPrinterInfo_new3 ()
 {
-  QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
-  QPrinterInfo * o = new QPrinterInfo ( *par1 );
+  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -152,7 +151,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 
   if( obj )
   {
-    hb_retl( obj->isDefault () );
+    RBOOL( obj->isDefault () );
   }
 }
 
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -305,7 +304,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
 
   if( obj )
   {
-    hb_retl( obj->isRemote () );
+    RBOOL( obj->isRemote () );
   }
 }
 
@@ -393,7 +392,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
 
   if( obj )
   {
-    hb_retl( obj->supportsCustomPageSizes () );
+    RBOOL( obj->supportsCustomPageSizes () );
   }
 }
 

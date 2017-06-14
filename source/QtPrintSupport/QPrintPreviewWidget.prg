@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
 
   if( obj )
   {
-    hb_retnd( obj->zoomFactor () );
+    RQREAL( obj->zoomFactor () );
   }
 }
 
