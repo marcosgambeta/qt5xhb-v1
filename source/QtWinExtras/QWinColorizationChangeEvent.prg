@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_OPAQUEBLEND )
   QWinColorizationChangeEvent * obj = (QWinColorizationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->opaqueBlend () );
+    RBOOL( obj->opaqueBlend () );
   }
 #endif
 }

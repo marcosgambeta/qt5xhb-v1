@@ -223,8 +223,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_EVENTFILTER )
   QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QEvent * par2 = (QEvent *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->eventFilter ( PQOBJECT(1), par2 ) );
+    RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
   }
 #endif
 }

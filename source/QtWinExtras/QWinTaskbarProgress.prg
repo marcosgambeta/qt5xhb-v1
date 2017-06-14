@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISVISIBLE )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 #endif
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISPAUSED )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isPaused () );
+    RBOOL( obj->isPaused () );
   }
 #endif
 }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISSTOPPED )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isStopped () );
+    RBOOL( obj->isStopped () );
   }
 #endif
 }

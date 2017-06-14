@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QTWIN_ISWINDOWEXCLUDEDFROMPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  hb_retl( QtWin::isWindowExcludedFromPeek ( par1 ) );
+  RBOOL( QtWin::isWindowExcludedFromPeek ( par1 ) );
 #endif
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QTWIN_ISWINDOWPEEKDISALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  hb_retl( QtWin::isWindowPeekDisallowed ( par1 ) );
+  RBOOL( QtWin::isWindowPeekDisallowed ( par1 ) );
 #endif
 }
 
@@ -442,7 +442,7 @@ static bool isCompositionEnabled()
 HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retl( QtWin::isCompositionEnabled () );
+  RBOOL( QtWin::isCompositionEnabled () );
 #endif
 }
 
@@ -465,7 +465,7 @@ static bool isCompositionOpaque()
 HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONOPAQUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retl( QtWin::isCompositionOpaque () );
+  RBOOL( QtWin::isCompositionOpaque () );
 #endif
 }
 
