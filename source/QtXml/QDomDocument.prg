@@ -105,8 +105,7 @@ QDomDocument ( const QDomDocumentType & doctype )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
 {
-  QDomDocumentType * par1 = (QDomDocumentType *) _qt5xhb_itemGetPtr(1);
-  QDomDocument * o = new QDomDocument ( *par1 );
+  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENTTYPE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -115,8 +114,7 @@ QDomDocument ( const QDomDocument & x )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
 {
-  QDomDocument * par1 = (QDomDocument *) _qt5xhb_itemGetPtr(1);
-  QDomDocument * o = new QDomDocument ( *par1 );
+  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -397,8 +395,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
   QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) _qt5xhb_itemGetPtr(1);
-    QDomNode * ptr = new QDomNode( obj->importNode ( *par1, PBOOL(2) ) );
+    QDomNode * ptr = new QDomNode( obj->importNode ( *PQDOMNODE(1), PBOOL(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }

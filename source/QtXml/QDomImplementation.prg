@@ -75,8 +75,7 @@ QDomImplementation ( const QDomImplementation & x )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
 {
-  QDomImplementation * par1 = (QDomImplementation *) _qt5xhb_itemGetPtr(1);
-  QDomImplementation * o = new QDomImplementation ( *par1 );
+  QDomImplementation * o = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -152,7 +151,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
   QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
   QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

@@ -74,8 +74,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
   QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlParseException  * par1 = (QXmlParseException  *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->error ( *par1 ) );
+    RBOOL( obj->error ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
 
@@ -101,8 +100,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
   QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlParseException * par1 = (QXmlParseException *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->fatalError ( *par1 ) );
+    RBOOL( obj->fatalError ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
 
@@ -115,8 +113,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
   QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlParseException * par1 = (QXmlParseException *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->warning ( *par1 ) );
+    RBOOL( obj->warning ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
 

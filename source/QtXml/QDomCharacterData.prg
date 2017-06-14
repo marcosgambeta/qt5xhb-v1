@@ -66,8 +66,7 @@ QDomCharacterData ( const QDomCharacterData & x )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW2 )
 {
-  QDomCharacterData * par1 = (QDomCharacterData *) _qt5xhb_itemGetPtr(1);
-  QDomCharacterData * o = new QDomCharacterData ( *par1 );
+  QDomCharacterData * o = new QDomCharacterData ( *PQDOMCHARACTERDATA(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

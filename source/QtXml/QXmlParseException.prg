@@ -71,8 +71,7 @@ QXmlParseException ( const QXmlParseException & other )
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
 {
-  QXmlParseException * par1 = (QXmlParseException *) _qt5xhb_itemGetPtr(1);
-  QXmlParseException * o = new QXmlParseException ( *par1 );
+  QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

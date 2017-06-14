@@ -68,8 +68,7 @@ QDomDocumentType ( const QDomDocumentType & n )
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
 {
-  QDomDocumentType * par1 = (QDomDocumentType *) _qt5xhb_itemGetPtr(1);
-  QDomDocumentType * o = new QDomDocumentType ( *par1 );
+  QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

@@ -58,8 +58,7 @@ QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
 {
-  QDomDocumentFragment * par1 = (QDomDocumentFragment *) _qt5xhb_itemGetPtr(1);
-  QDomDocumentFragment * o = new QDomDocumentFragment ( *par1 );
+  QDomDocumentFragment * o = new QDomDocumentFragment ( *PQDOMDOCUMENTFRAGMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

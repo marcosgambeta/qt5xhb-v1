@@ -60,8 +60,7 @@ QDomNotation ( const QDomNotation & x )
 */
 HB_FUNC_STATIC( QDOMNOTATION_NEW2 )
 {
-  QDomNotation * par1 = (QDomNotation *) _qt5xhb_itemGetPtr(1);
-  QDomNotation * o = new QDomNotation ( *par1 );
+  QDomNotation * o = new QDomNotation ( *PQDOMNOTATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

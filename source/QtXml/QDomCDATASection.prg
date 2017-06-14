@@ -58,8 +58,7 @@ QDomCDATASection ( const QDomCDATASection & x )
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
 {
-  QDomCDATASection * par1 = (QDomCDATASection *) _qt5xhb_itemGetPtr(1);
-  QDomCDATASection * o = new QDomCDATASection ( *par1 );
+  QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

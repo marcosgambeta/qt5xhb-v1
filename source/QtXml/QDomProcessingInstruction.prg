@@ -61,8 +61,7 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 {
-  QDomProcessingInstruction * par1 = (QDomProcessingInstruction *) _qt5xhb_itemGetPtr(1);
-  QDomProcessingInstruction * o = new QDomProcessingInstruction ( *par1 );
+  QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

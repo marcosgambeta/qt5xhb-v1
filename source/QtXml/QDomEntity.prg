@@ -61,8 +61,7 @@ QDomEntity ( const QDomEntity & x )
 */
 HB_FUNC_STATIC( QDOMENTITY_NEW2 )
 {
-  QDomEntity * par1 = (QDomEntity *) _qt5xhb_itemGetPtr(1);
-  QDomEntity * o = new QDomEntity ( *par1 );
+  QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

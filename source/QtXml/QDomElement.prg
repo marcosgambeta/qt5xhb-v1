@@ -96,8 +96,7 @@ QDomElement ( const QDomElement & x )
 */
 HB_FUNC_STATIC( QDOMELEMENT_NEW2 )
 {
-  QDomElement * par1 = (QDomElement *) _qt5xhb_itemGetPtr(1);
-  QDomElement * o = new QDomElement ( *par1 );
+  QDomElement * o = new QDomElement ( *PQDOMELEMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -241,7 +240,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( PQSTRING(1) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -254,7 +253,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -308,8 +307,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomAttr * par1 = (QDomAttr *) _qt5xhb_itemGetPtr(1);
-    QDomAttr * ptr = new QDomAttr( obj->removeAttributeNode ( *par1 ) );
+    QDomAttr * ptr = new QDomAttr( obj->removeAttributeNode ( *PQDOMATTR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
@@ -549,8 +547,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomAttr * par1 = (QDomAttr *) _qt5xhb_itemGetPtr(1);
-    QDomAttr * ptr = new QDomAttr( obj->setAttributeNode ( *par1 ) );
+    QDomAttr * ptr = new QDomAttr( obj->setAttributeNode ( *PQDOMATTR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
@@ -564,8 +561,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QDomAttr * par1 = (QDomAttr *) _qt5xhb_itemGetPtr(1);
-    QDomAttr * ptr = new QDomAttr( obj->setAttributeNodeNS ( *par1 ) );
+    QDomAttr * ptr = new QDomAttr( obj->setAttributeNodeNS ( *PQDOMATTR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }

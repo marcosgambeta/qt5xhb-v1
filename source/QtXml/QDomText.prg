@@ -59,8 +59,7 @@ QDomText ( const QDomText & x )
 */
 HB_FUNC_STATIC( QDOMTEXT_NEW2 )
 {
-  QDomText * par1 = (QDomText *) _qt5xhb_itemGetPtr(1);
-  QDomText * o = new QDomText ( *par1 );
+  QDomText * o = new QDomText ( *PQDOMTEXT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

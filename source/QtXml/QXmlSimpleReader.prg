@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
   if( obj )
   {
     QXmlInputSource * par1 = (QXmlInputSource *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->parse ( par1, PBOOL(2) ) );
+    RBOOL( obj->parse ( par1, PBOOL(2) ) );
   }
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
   QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->parseContinue () );
+    RBOOL( obj->parseContinue () );
   }
 }
 

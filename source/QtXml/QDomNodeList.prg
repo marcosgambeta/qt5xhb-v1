@@ -74,8 +74,7 @@ QDomNodeList ( const QDomNodeList & n )
 */
 HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
 {
-  QDomNodeList * par1 = (QDomNodeList *) _qt5xhb_itemGetPtr(1);
-  QDomNodeList * o = new QDomNodeList ( *par1 );
+  QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -149,7 +148,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

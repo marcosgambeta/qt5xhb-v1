@@ -58,8 +58,7 @@ QDomComment ( const QDomComment & x )
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
 {
-  QDomComment * par1 = (QDomComment *) _qt5xhb_itemGetPtr(1);
-  QDomComment * o = new QDomComment ( *par1 );
+  QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

@@ -58,8 +58,7 @@ QDomEntityReference ( const QDomEntityReference & x )
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW2 )
 {
-  QDomEntityReference * par1 = (QDomEntityReference *) _qt5xhb_itemGetPtr(1);
-  QDomEntityReference * o = new QDomEntityReference ( *par1 );
+  QDomEntityReference * o = new QDomEntityReference ( *PQDOMENTITYREFERENCE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

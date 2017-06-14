@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
   QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->attributeDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
+    RBOOL( obj->attributeDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
   QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->externalEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+    RBOOL( obj->externalEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
   QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->internalEntityDecl ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->internalEntityDecl ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
