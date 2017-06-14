@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QHOLSTERFILTER_FILTER )
   if( obj )
   {
     QHolsterReading * par1 = (QHolsterReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

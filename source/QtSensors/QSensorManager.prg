@@ -109,7 +109,7 @@ static bool isBackendRegistered(const QByteArray &type, const QByteArray &identi
 HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retl( QSensorManager::isBackendRegistered ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
+  RBOOL( QSensorManager::isBackendRegistered ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
 #endif
 }
 

@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
   QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isDoubleTap () );
+    RBOOL( obj->isDoubleTap () );
   }
 #endif
 }

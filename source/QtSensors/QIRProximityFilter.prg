@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QIRPROXIMITYFILTER_FILTER )
   if( obj )
   {
     QIRProximityReading * par1 = (QIRProximityReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

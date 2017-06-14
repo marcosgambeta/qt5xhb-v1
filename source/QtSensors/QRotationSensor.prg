@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
   QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasZ () );
+    RBOOL( obj->hasZ () );
   }
 #endif
 }

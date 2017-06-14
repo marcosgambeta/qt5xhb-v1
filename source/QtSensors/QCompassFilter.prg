@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QCOMPASSFILTER_FILTER )
   if( obj )
   {
     QCompassReading * par1 = (QCompassReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

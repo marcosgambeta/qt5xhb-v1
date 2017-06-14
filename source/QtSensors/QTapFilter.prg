@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QTAPFILTER_FILTER )
   if( obj )
   {
     QTapReading * par1 = (QTapReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

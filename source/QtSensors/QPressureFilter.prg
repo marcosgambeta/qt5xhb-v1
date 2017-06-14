@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPRESSUREFILTER_FILTER )
   if( obj )
   {
     QPressureReading * par1 = (QPressureReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

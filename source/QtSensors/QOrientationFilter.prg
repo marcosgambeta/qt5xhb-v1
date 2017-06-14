@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QORIENTATIONFILTER_FILTER )
   if( obj )
   {
     QOrientationReading * par1 = (QOrientationReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

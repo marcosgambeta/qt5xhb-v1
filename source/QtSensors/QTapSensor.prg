@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
   QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->returnDoubleTapEvents () );
+    RBOOL( obj->returnDoubleTapEvents () );
   }
 #endif
 }

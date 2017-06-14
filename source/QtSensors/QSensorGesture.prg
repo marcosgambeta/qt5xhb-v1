@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_ISACTIVE )
   QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 #endif
 }

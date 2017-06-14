@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QROTATIONFILTER_FILTER )
   if( obj )
   {
     QRotationReading * par1 = (QRotationReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

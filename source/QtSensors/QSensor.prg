@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSENSOR_CONNECTTOBACKEND )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->connectToBackend () );
+    RBOOL( obj->connectToBackend () );
   }
 #endif
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSENSOR_ISCONNECTEDTOBACKEND )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isConnectedToBackend () );
+    RBOOL( obj->isConnectedToBackend () );
   }
 #endif
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSENSOR_ISBUSY )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isBusy () );
+    RBOOL( obj->isBusy () );
   }
 #endif
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QSENSOR_ISACTIVE )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 #endif
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSENSOR_ISALWAYSON )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAlwaysOn () );
+    RBOOL( obj->isAlwaysOn () );
   }
 #endif
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSENSOR_SKIPDUPLICATES )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->skipDuplicates () );
+    RBOOL( obj->skipDuplicates () );
   }
 #endif
 }
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFeatureSupported ( (QSensor::Feature) hb_parni(1) ) );
+    RBOOL( obj->isFeatureSupported ( (QSensor::Feature) hb_parni(1) ) );
   }
 #endif
 }
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QSENSOR_START )
   QSensor * obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->start () );
+    RBOOL( obj->start () );
   }
 #endif
 }

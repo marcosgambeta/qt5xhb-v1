@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QIRPROXIMITYREADING_REFLECTANCE )
   QIRProximityReading * obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->reflectance () );
+    RQREAL( obj->reflectance () );
   }
 #endif
 }

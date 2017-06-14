@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSENSORFILTER_FILTER )
   if( obj )
   {
     QSensorReading * par1 = (QSensorReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

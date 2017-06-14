@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QMAGNETOMETERFILTER_FILTER )
   if( obj )
   {
     QMagnetometerReading * par1 = (QMagnetometerReading *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->filter ( par1 ) );
+    RBOOL( obj->filter ( par1 ) );
   }
 #endif
 }

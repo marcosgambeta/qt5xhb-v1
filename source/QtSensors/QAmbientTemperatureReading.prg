@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
   QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->temperature () );
+    RQREAL( obj->temperature () );
   }
 #endif
 }

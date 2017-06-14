@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
   if( obj )
   {
     QSensorGestureRecognizer * par1 = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->registerSensorGestureRecognizer ( par1 ) );
+    RBOOL( obj->registerSensorGestureRecognizer ( par1 ) );
   }
 #endif
 }

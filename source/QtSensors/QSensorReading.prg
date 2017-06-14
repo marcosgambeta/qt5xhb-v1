@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
   QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timestamp () );
+    RQUINT64( obj->timestamp () );
   }
 #endif
 }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
   QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTimestamp ( (quint64) hb_parni(1) );
+    obj->setTimestamp ( PQUINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QALTIMETERREADING_ALTITUDE )
   QAltimeterReading * obj = (QAltimeterReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->altitude () );
+    RQREAL( obj->altitude () );
   }
 #endif
 }

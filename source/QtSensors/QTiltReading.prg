@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTILTREADING_YROTATION )
   QTiltReading * obj = (QTiltReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->yRotation () );
+    RQREAL( obj->yRotation () );
   }
 #endif
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTILTREADING_XROTATION )
   QTiltReading * obj = (QTiltReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retnd( obj->xRotation () );
+    RQREAL( obj->xRotation () );
   }
 #endif
 }

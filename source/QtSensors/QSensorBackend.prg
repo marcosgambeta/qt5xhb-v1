@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
   QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isFeatureSupported ( (QSensor::Feature) hb_parni(1) ) );
+    RBOOL( obj->isFeatureSupported ( (QSensor::Feature) hb_parni(1) ) );
   }
 #endif
 }
