@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO2 )
   if( obj )
   {
     QAbstractXmlReceiver * par1 = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->evaluateTo ( par1 ) );
+    RBOOL( obj->evaluateTo ( par1 ) );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO4 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    hb_retl( obj->evaluateTo ( &par1 ) );
+    RBOOL( obj->evaluateTo ( &par1 ) );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO5 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->evaluateTo ( PQIODEVICE(1) ) );
+    RBOOL( obj->evaluateTo ( PQIODEVICE(1) ) );
   }
 }
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QXMLQUERY_ISVALID )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS2 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setFocus ( *PQURL(1) ) );
+    RBOOL( obj->setFocus ( *PQURL(1) ) );
   }
 }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS3 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setFocus ( PQIODEVICE(1) ) );
+    RBOOL( obj->setFocus ( PQIODEVICE(1) ) );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS4 )
   QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->setFocus ( PQSTRING(1) ) );
+    RBOOL( obj->setFocus ( PQSTRING(1) ) );
   }
 }
 

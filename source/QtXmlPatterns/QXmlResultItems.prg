@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
   QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasError () );
+    RBOOL( obj->hasError () );
   }
 }
 

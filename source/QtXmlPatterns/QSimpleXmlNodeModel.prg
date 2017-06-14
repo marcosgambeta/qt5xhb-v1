@@ -93,8 +93,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
-    QUrl * ptr = new QUrl( obj->baseUri ( *par1 ) );
+    QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -122,8 +121,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
-    QVector<QXmlName> list = obj->namespaceBindings ( *par1 );
+    QVector<QXmlName> list = obj->namespaceBindings ( *PQXMLNODEMODELINDEX(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QXMLNAME" );
@@ -211,8 +209,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->stringValue ( *par1 ) ) );
+    hb_retc( RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) ) );
   }
 }
 

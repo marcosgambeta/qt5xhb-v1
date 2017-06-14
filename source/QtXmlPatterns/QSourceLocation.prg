@@ -76,8 +76,7 @@ QSourceLocation ( const QSourceLocation & other )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_NEW2 )
 {
-  QSourceLocation * par1 = (QSourceLocation *) _qt5xhb_itemGetPtr(1);
-  QSourceLocation * o = new QSourceLocation ( *par1 );
+  QSourceLocation * o = new QSourceLocation ( *PQSOURCELOCATION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -138,7 +137,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->column () );
+    RQINT64( obj->column () );
   }
 }
 
@@ -151,7 +150,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -164,7 +163,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->line () );
+    RQINT64( obj->line () );
   }
 }
 
@@ -177,7 +176,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setColumn ( (qint64) hb_parni(1) );
+    obj->setColumn ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -191,7 +190,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
   QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setLine ( (qint64) hb_parni(1) );
+    obj->setLine ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

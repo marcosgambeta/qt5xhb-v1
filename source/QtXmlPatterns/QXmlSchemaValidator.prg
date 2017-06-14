@@ -87,8 +87,7 @@ QXmlSchemaValidator ( const QXmlSchema & schema )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW2 )
 {
-  QXmlSchema * par1 = (QXmlSchema *) _qt5xhb_itemGetPtr(1);
-  QXmlSchemaValidator * o = new QXmlSchemaValidator ( *par1 );
+  QXmlSchemaValidator * o = new QXmlSchemaValidator ( *PQXMLSCHEMA(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -221,8 +220,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QXmlSchema * par1 = (QXmlSchema *) _qt5xhb_itemGetPtr(1);
-    obj->setSchema ( *par1 );
+    obj->setSchema ( *PQXMLSCHEMA(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -265,7 +263,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE1 )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->validate ( *PQURL(1) ) );
+    RBOOL( obj->validate ( *PQURL(1) ) );
   }
 }
 
@@ -278,7 +276,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE2 )
   if( obj )
   {
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->validate ( PQIODEVICE(1), par2 ) );
+    RBOOL( obj->validate ( PQIODEVICE(1), par2 ) );
   }
 }
 
@@ -291,7 +289,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE3 )
   if( obj )
   {
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    hb_retl( obj->validate ( *PQBYTEARRAY(1), par2 ) );
+    RBOOL( obj->validate ( *PQBYTEARRAY(1), par2 ) );
   }
 }
 

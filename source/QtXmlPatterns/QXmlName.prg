@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
   QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -191,7 +191,7 @@ static bool isNCName ( const QString & candidate )
 */
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
-  hb_retl( QXmlName::isNCName ( PQSTRING(1) ) );
+  RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
 }
 
 

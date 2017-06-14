@@ -87,8 +87,7 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW3 )
 {
-  QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtr(1);
-  QXmlItem * o = new QXmlItem ( *par1 );
+  QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -154,7 +153,7 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
   QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isAtomicValue () );
+    RBOOL( obj->isAtomicValue () );
   }
 }
 
@@ -167,7 +166,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
   QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNode () );
+    RBOOL( obj->isNode () );
   }
 }
 
@@ -180,7 +179,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
   QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
