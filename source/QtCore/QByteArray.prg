@@ -2067,9 +2067,8 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
   {
     if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
-      double par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      QByteArray * ptr = &obj->setNum ( par1, par2, OPINT(3,6) );
+      QByteArray * ptr = &obj->setNum ( PDOUBLE(1), par2, OPINT(3,6) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
     }
     else
@@ -2090,9 +2089,8 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
   {
     if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
-      float par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      QByteArray * ptr = &obj->setNum ( par1, par2, OPINT(3,6) );
+      QByteArray * ptr = &obj->setNum ( PFLOAT(1), par2, OPINT(3,6) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
     }
     else
@@ -2775,9 +2773,8 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 {
   if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
-    double par1 = hb_parnd(1);
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QByteArray * ptr = new QByteArray( QByteArray::number ( par1, par2, OPINT(3,6) ) );
+    QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), par2, OPINT(3,6) ) );
     _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else

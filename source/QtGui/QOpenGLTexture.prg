@@ -1205,8 +1205,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMANISOTROPY )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setMaximumAnisotropy ( par1 );
+    obj->setMaximumAnisotropy ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1318,11 +1317,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR2 )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    float par2 = hb_parnd(2);
-    float par3 = hb_parnd(3);
-    float par4 = hb_parnd(4);
-    obj->setBorderColor ( par1, par2, par3, par4 );
+    obj->setBorderColor ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1491,8 +1486,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setMinimumLevelOfDetail ( par1 );
+    obj->setMinimumLevelOfDetail ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1523,8 +1517,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setMaximumLevelOfDetail ( par1 );
+    obj->setMaximumLevelOfDetail ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1555,9 +1548,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILRANGE )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    float par2 = hb_parnd(2);
-    obj->setLevelOfDetailRange ( par1, par2 );
+    obj->setLevelOfDetailRange ( PFLOAT(1), PFLOAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -1574,8 +1565,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILBIAS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setLevelofDetailBias ( par1 );
+    obj->setLevelofDetailBias ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

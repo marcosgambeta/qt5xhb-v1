@@ -245,8 +245,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETLINEWIDTH )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setLineWidth ( par1 );
+    obj->setLineWidth ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

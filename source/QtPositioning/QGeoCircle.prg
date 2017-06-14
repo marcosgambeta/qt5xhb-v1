@@ -222,9 +222,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATE )
   QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PDOUBLE(1), PDOUBLE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -240,9 +238,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATED )
   QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
-    QGeoCircle * ptr = new QGeoCircle( obj->translated ( par1, par2 ) );
+    QGeoCircle * ptr = new QGeoCircle( obj->translated ( PDOUBLE(1), PDOUBLE(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QGEOCIRCLE", true );
   }
 #endif

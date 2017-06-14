@@ -94,9 +94,7 @@ QVector2D(float xpos, float ypos)
 */
 HB_FUNC_STATIC( QVECTOR2D_NEW2 )
 {
-  float par1 = hb_parnd(1);
-  float par2 = hb_parnd(2);
-  QVector2D * o = new QVector2D ( par1, par2 );
+  QVector2D * o = new QVector2D ( PFLOAT(1), PFLOAT(2) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -211,8 +209,7 @@ HB_FUNC_STATIC( QVECTOR2D_SETX )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setX ( par1 );
+    obj->setX ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,8 +223,7 @@ HB_FUNC_STATIC( QVECTOR2D_SETY )
   QVector2D * obj = (QVector2D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setY ( par1 );
+    obj->setY ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

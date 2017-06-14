@@ -85,9 +85,7 @@ QGeoCoordinate(double latitude, double longitude)
 HB_FUNC_STATIC( QGEOCOORDINATE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  double par1 = hb_parnd(1);
-  double par2 = hb_parnd(2);
-  QGeoCoordinate * o = new QGeoCoordinate ( par1, par2 );
+  QGeoCoordinate * o = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -98,10 +96,7 @@ QGeoCoordinate(double latitude, double longitude, double altitude)
 HB_FUNC_STATIC( QGEOCOORDINATE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  double par1 = hb_parnd(1);
-  double par2 = hb_parnd(2);
-  double par3 = hb_parnd(3);
-  QGeoCoordinate * o = new QGeoCoordinate ( par1, par2, par3 );
+  QGeoCoordinate * o = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3) );
   _qt5xhb_storePointerAndFlag( o, true );
 #endif
 }
@@ -203,8 +198,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_SETLATITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setLatitude ( par1 );
+    obj->setLatitude ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -235,8 +229,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_SETLONGITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setLongitude ( par1 );
+    obj->setLongitude ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -267,8 +260,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_SETALTITUDE )
   QGeoCoordinate * obj = (QGeoCoordinate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setAltitude ( par1 );
+    obj->setAltitude ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif

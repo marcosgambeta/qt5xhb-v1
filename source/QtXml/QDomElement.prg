@@ -388,8 +388,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par2 = hb_parnd(2);
-    obj->setAttribute ( PQSTRING(1), par2 );
+    obj->setAttribute ( PQSTRING(1), PFLOAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -402,8 +401,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par2 = hb_parnd(2);
-    obj->setAttribute ( PQSTRING(1), par2 );
+    obj->setAttribute ( PQSTRING(1), PDOUBLE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -509,8 +507,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par3 = hb_parnd(3);
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), par3 );
+    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PDOUBLE(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

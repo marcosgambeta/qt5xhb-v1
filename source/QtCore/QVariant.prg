@@ -285,8 +285,7 @@ QVariant(double d)
 */
 HB_FUNC_STATIC( QVARIANT_NEW12 )
 {
-  double par1 = hb_parnd(1);
-  QVariant * o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( PDOUBLE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -295,8 +294,7 @@ QVariant(float f)
 */
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
-  float par1 = hb_parnd(1);
-  QVariant * o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( PFLOAT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 

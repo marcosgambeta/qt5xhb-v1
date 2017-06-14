@@ -104,10 +104,7 @@ QVector3D(float xpos, float ypos, float zpos)
 */
 HB_FUNC_STATIC( QVECTOR3D_NEW2 )
 {
-  float par1 = hb_parnd(1);
-  float par2 = hb_parnd(2);
-  float par3 = hb_parnd(3);
-  QVector3D * o = new QVector3D ( par1, par2, par3 );
+  QVector3D * o = new QVector3D ( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -245,8 +242,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETX )
   QVector3D * obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setX ( par1 );
+    obj->setX ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -260,8 +256,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETY )
   QVector3D * obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setY ( par1 );
+    obj->setY ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -275,8 +270,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETZ )
   QVector3D * obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setZ ( par1 );
+    obj->setZ ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

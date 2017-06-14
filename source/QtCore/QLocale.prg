@@ -857,8 +857,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      float par1 = hb_parnd(1);
-      hb_retc( RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) ) );
+      hb_retc( RQSTRING( obj->toCurrencyString ( PFLOAT(1), OPQSTRING(2,QString()) ) ) );
     }
     else
     {
@@ -899,8 +898,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      double par1 = hb_parnd(1);
-      hb_retc( RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) ) );
+      hb_retc( RQSTRING( obj->toCurrencyString ( PDOUBLE(1), OPQSTRING(2,QString()) ) ) );
     }
     else
     {
@@ -1319,9 +1317,8 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
   {
     if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
-      float par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      hb_retc( RQSTRING( obj->toString ( par1, par2, OPINT(3,6) ) ) );
+      hb_retc( RQSTRING( obj->toString ( PFLOAT(1), par2, OPINT(3,6) ) ) );
     }
     else
     {
@@ -1362,9 +1359,8 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
   {
     if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
-      double par1 = hb_parnd(1);
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      hb_retc( RQSTRING( obj->toString ( par1, par2, OPINT(3,6) ) ) );
+      hb_retc( RQSTRING( obj->toString ( PDOUBLE(1), par2, OPINT(3,6) ) ) );
     }
     else
     {

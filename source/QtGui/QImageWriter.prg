@@ -359,8 +359,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
   {
     if( ISNUM(1) )
     {
-      float par1 = hb_parnd(1);
-      obj->setGamma ( par1 );
+      obj->setGamma ( PFLOAT(1) );
     }
     else
     {

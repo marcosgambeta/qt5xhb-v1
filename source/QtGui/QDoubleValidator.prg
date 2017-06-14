@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setBottom ( par1 );
+    obj->setBottom ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -196,9 +195,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
-    obj->setRange ( par1, par2, OPINT(3,0) );
+    obj->setRange ( PDOUBLE(1), PDOUBLE(2), OPINT(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -212,8 +209,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setTop ( par1 );
+    obj->setTop ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
