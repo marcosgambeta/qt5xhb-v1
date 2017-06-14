@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->testAttribute ( (QWebSettings::WebAttribute) hb_parni(1) ) );
+    RBOOL( obj->testAttribute ( (QWebSettings::WebAttribute) hb_parni(1) ) );
   }
 }
 
@@ -369,7 +369,7 @@ static qint64 offlineStorageDefaultQuota ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 {
-  hb_retni( QWebSettings::offlineStorageDefaultQuota () );
+  RQINT64( QWebSettings::offlineStorageDefaultQuota () );
 }
 
 
@@ -396,7 +396,7 @@ static qint64 offlineWebApplicationCacheQuota ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
-  hb_retni( QWebSettings::offlineWebApplicationCacheQuota () );
+  RQINT64( QWebSettings::offlineWebApplicationCacheQuota () );
 }
 
 
@@ -435,7 +435,7 @@ static void setOfflineStorageDefaultQuota ( qint64 maximumSize )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA )
 {
-  QWebSettings::setOfflineStorageDefaultQuota ( (qint64) hb_parni(1) );
+  QWebSettings::setOfflineStorageDefaultQuota ( PQINT64(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -465,7 +465,7 @@ static void setOfflineWebApplicationCacheQuota ( qint64 maximumSize )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
-  QWebSettings::setOfflineWebApplicationCacheQuota ( (qint64) hb_parni(1) );
+  QWebSettings::setOfflineWebApplicationCacheQuota ( PQINT64(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

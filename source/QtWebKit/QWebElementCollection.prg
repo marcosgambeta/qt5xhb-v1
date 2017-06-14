@@ -75,8 +75,7 @@ QWebElementCollection ( const QWebElement & contextElement, const QString & quer
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 {
-  QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-  QWebElementCollection * o = new QWebElementCollection ( *par1, PQSTRING(2) );
+  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -85,8 +84,7 @@ QWebElementCollection ( const QWebElementCollection & other )
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
 {
-  QWebElementCollection * par1 = (QWebElementCollection *) _qt5xhb_itemGetPtr(1);
-  QWebElementCollection * o = new QWebElementCollection ( *par1 );
+  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -138,8 +136,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
   QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElementCollection * par1 = (QWebElementCollection *) _qt5xhb_itemGetPtr(1);
-    obj->append ( *par1 );
+    obj->append ( *PQWEBELEMENTCOLLECTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

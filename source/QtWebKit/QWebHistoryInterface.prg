@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
   QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->historyContains ( PQSTRING(1) ) );
+    RBOOL( obj->historyContains ( PQSTRING(1) ) );
   }
 }
 

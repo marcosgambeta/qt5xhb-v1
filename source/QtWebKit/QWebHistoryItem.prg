@@ -70,8 +70,7 @@ QWebHistoryItem ( const QWebHistoryItem & other )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 {
-  QWebHistoryItem * par1 = (QWebHistoryItem *) _qt5xhb_itemGetPtr(1);
-  QWebHistoryItem * o = new QWebHistoryItem ( *par1 );
+  QWebHistoryItem * o = new QWebHistoryItem ( *PQWEBHISTORYITEM(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -113,7 +112,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

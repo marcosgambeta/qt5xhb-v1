@@ -140,8 +140,7 @@ QWebElement ( const QWebElement & other )
 */
 HB_FUNC_STATIC( QWEBELEMENT_NEW2 )
 {
-  QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-  QWebElement * o = new QWebElement ( *par1 );
+  QWebElement * o = new QWebElement ( *PQWEBELEMENT(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -215,8 +214,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE2 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-    obj->appendInside ( *par1 );
+    obj->appendInside ( *PQWEBELEMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -262,8 +260,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE2 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-    obj->appendOutside ( *par1 );
+    obj->appendOutside ( *PQWEBELEMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -378,8 +375,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH1 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-    obj->encloseContentsWith ( *par1 );
+    obj->encloseContentsWith ( *PQWEBELEMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -438,8 +434,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH2 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-    obj->encloseWith ( *par1 );
+    obj->encloseWith ( *PQWEBELEMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -542,7 +537,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( PQSTRING(1) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -555,7 +550,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -568,7 +563,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasAttributes () );
+    RBOOL( obj->hasAttributes () );
   }
 }
 
@@ -581,7 +576,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasClass ( PQSTRING(1) ) );
+    RBOOL( obj->hasClass ( PQSTRING(1) ) );
   }
 }
 
@@ -594,7 +589,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->hasFocus () );
+    RBOOL( obj->hasFocus () );
   }
 }
 
@@ -607,7 +602,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -714,8 +709,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE2 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-    obj->prependInside ( *par1 );
+    obj->prependInside ( *PQWEBELEMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -761,8 +755,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE2 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-    obj->prependOutside ( *par1 );
+    obj->prependOutside ( *PQWEBELEMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -938,8 +931,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE2 )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebElement * par1 = (QWebElement *) _qt5xhb_itemGetPtr(1);
-    obj->replace ( *par1 );
+    obj->replace ( *PQWEBELEMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

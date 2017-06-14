@@ -67,8 +67,7 @@ QWebDatabase ( const QWebDatabase & other )
 */
 HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
-  QWebDatabase * par1 = (QWebDatabase *) _qt5xhb_itemGetPtr(1);
-  QWebDatabase * o = new QWebDatabase ( *par1 );
+  QWebDatabase * o = new QWebDatabase ( *PQWEBDATABASE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -109,7 +108,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->expectedSize () );
+    RQINT64( obj->expectedSize () );
   }
 }
 
@@ -162,7 +161,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
   QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size () );
+    RQINT64( obj->size () );
   }
 }
 
@@ -182,8 +181,7 @@ static void removeDatabase ( const QWebDatabase & db )
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
-  QWebDatabase * par1 = (QWebDatabase *) _qt5xhb_itemGetPtr(1);
-  QWebDatabase::removeDatabase ( *par1 );
+  QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

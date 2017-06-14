@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoBack () );
+    RBOOL( obj->canGoBack () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->canGoForward () );
+    RBOOL( obj->canGoForward () );
   }
 }
 
@@ -309,8 +309,7 @@ HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QWebHistoryItem * par1 = (QWebHistoryItem *) _qt5xhb_itemGetPtr(1);
-    obj->goToItem ( *par1 );
+    obj->goToItem ( *PQWEBHISTORYITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
