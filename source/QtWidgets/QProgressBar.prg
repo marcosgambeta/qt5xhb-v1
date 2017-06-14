@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->invertedAppearance () );
+    RBOOL( obj->invertedAppearance () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isTextVisible () );
+    RBOOL( obj->isTextVisible () );
   }
 }
 
@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -247,8 +246,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTextDirection ( (QProgressBar::Direction) par1 );
+    obj->setTextDirection ( (QProgressBar::Direction) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -409,8 +407,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation ( (Qt::Orientation) par1 );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -55,9 +55,7 @@ QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 */
 void QStyleOption_new1 ()
 {
-  int par1 = ISNIL(1)? QStyleOption::Version : hb_parni(1);
-  int par2 = ISNIL(2)? QStyleOption::SO_Default : hb_parni(2);
-  QStyleOption * o = new QStyleOption ( par1, par2 );
+  QStyleOption * o = new QStyleOption ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleOption::SO_Default) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -66,8 +64,7 @@ QStyleOption(const QStyleOption &other)
 */
 void QStyleOption_new2 ()
 {
-  QStyleOption * par1 = (QStyleOption *) _qt5xhb_itemGetPtr(1);
-  QStyleOption * o = new QStyleOption ( *par1 );
+  QStyleOption * o = new QStyleOption ( *PQSTYLEOPTION(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 

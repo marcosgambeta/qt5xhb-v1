@@ -138,8 +138,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -218,7 +217,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
   QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->widgetResizable () );
+    RBOOL( obj->widgetResizable () );
   }
 }
 
@@ -234,7 +233,7 @@ HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
   {
     if( ISLOG(1) )
     {
-      hb_retl( obj->focusNextPrevChild ( PBOOL(1) ) );
+      RBOOL( obj->focusNextPrevChild ( PBOOL(1) ) );
     }
     else
     {

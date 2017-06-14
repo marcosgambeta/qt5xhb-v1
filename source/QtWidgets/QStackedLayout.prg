@@ -80,8 +80,7 @@ QStackedLayout ( QLayout * parentLayout )
 */
 void QStackedLayout_new3 ()
 {
-  QLayout * par1 = (QLayout *) _qt5xhb_itemGetPtr(1);
-  QStackedLayout * o = new QStackedLayout ( par1 );
+  QStackedLayout * o = new QStackedLayout ( PQLAYOUT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setStackingMode ( (QStackedLayout::StackingMode) par1 );
+    obj->setStackingMode ( (QStackedLayout::StackingMode) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

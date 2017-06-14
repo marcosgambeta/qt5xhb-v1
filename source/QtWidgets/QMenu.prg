@@ -260,7 +260,7 @@ void QMenu_addAction3 ()
   {
     const QObject * par2 = (const QObject *) _qt5xhb_itemGetPtr(2);
     QKeySequence par4 = ISNIL(4)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(4);
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2, (const char *) hb_parc(3), par4 );
+    QAction * ptr = obj->addAction ( PQSTRING(1), par2, PCONSTCHAR(3), par4 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -277,7 +277,7 @@ void QMenu_addAction4 ()
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
     const QObject * par3 = (const QObject *) _qt5xhb_itemGetPtr(3);
     QKeySequence par5 = ISNIL(5)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(5);
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3, (const char *) hb_parc(4), par5 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3, PCONSTCHAR(4), par5 );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -340,8 +340,7 @@ void QMenu_addMenu1 ()
 
   if( obj )
   {
-    QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-    QAction * ptr = obj->addMenu ( par1 );
+    QAction * ptr = obj->addMenu ( PQMENU(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -596,8 +595,7 @@ HB_FUNC_STATIC( QMENU_INSERTMENU )
   {
     if( ISQACTION(1) && ISQMENU(2) )
     {
-      QMenu * par2 = (QMenu *) _qt5xhb_itemGetPtr(2);
-      QAction * ptr = obj->insertMenu ( PQACTION(1), par2 );
+      QAction * ptr = obj->insertMenu ( PQACTION(1), PQMENU(2) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -637,7 +635,7 @@ HB_FUNC_STATIC( QMENU_ISEMPTY )
 
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -650,7 +648,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isTearOffEnabled () );
+    RBOOL( obj->isTearOffEnabled () );
   }
 }
 
@@ -685,7 +683,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->isTearOffMenuVisible () );
+    RBOOL( obj->isTearOffMenuVisible () );
   }
 }
 
@@ -734,7 +732,7 @@ HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 
   if( obj )
   {
-    hb_retl( obj->separatorsCollapsible () );
+    RBOOL( obj->separatorsCollapsible () );
   }
 }
 
@@ -983,7 +981,7 @@ HB_FUNC_STATIC( QMENU_TOOLTIPSVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->toolTipsVisible () );
+    RBOOL( obj->toolTipsVisible () );
   }
 #endif
 }

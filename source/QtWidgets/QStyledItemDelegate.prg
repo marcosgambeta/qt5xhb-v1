@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_PAINT )
 
   if( obj )
   {
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    obj->paint ( PQPAINTER(1), *par2, *PQMODELINDEX(3) );
+    obj->paint ( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -107,8 +106,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
 
   if( obj )
   {
-    QStyleOptionViewItem * par1 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(1);
-    QSize * ptr = new QSize( obj->sizeHint ( *par1, *PQMODELINDEX(2) ) );
+    QSize * ptr = new QSize( obj->sizeHint ( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
     _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -122,8 +120,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
 
   if( obj )
   {
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *par2, *PQMODELINDEX(3) );
+    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
     _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
@@ -152,8 +149,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETMODELDATA )
 
   if( obj )
   {
-    QAbstractItemModel * par2 = (QAbstractItemModel *) _qt5xhb_itemGetPtr(2);
-    obj->setModelData ( PQWIDGET(1), par2, *PQMODELINDEX(3) );
+    obj->setModelData ( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -168,8 +164,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY )
 
   if( obj )
   {
-    QStyleOptionViewItem * par2 = (QStyleOptionViewItem *) _qt5xhb_itemGetPtr(2);
-    obj->updateEditorGeometry ( PQWIDGET(1), *par2, *PQMODELINDEX(3) );
+    obj->updateEditorGeometry ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -198,8 +193,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY )
 
   if( obj )
   {
-    QItemEditorFactory * par1 = (QItemEditorFactory *) _qt5xhb_itemGetPtr(1);
-    obj->setItemEditorFactory ( par1 );
+    obj->setItemEditorFactory ( PQITEMEDITORFACTORY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -214,8 +208,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
 
   if( obj )
   {
-    QLocale * par2 = (QLocale *) _qt5xhb_itemGetPtr(2);
-    hb_retc( RQSTRING( obj->displayText ( *PQVARIANT(1), *par2 ) ) );
+    hb_retc( RQSTRING( obj->displayText ( *PQVARIANT(1), *PQLOCALE(2) ) ) );
   }
 }
 

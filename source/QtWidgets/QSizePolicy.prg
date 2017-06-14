@@ -78,10 +78,8 @@ QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
 */
 void QSizePolicy_new2 ()
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSizePolicy::DefaultType : hb_parni(3);
-  QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) par1, (QSizePolicy::Policy) par2, (QSizePolicy::ControlType) par3 );
+  QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) par3 );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
@@ -156,7 +154,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASHEIGHTFORWIDTH )
 
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth () );
+    RBOOL( obj->hasHeightForWidth () );
   }
 }
 
@@ -169,7 +167,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
 
   if( obj )
   {
-    hb_retl( obj->hasWidthForHeight () );
+    RBOOL( obj->hasWidthForHeight () );
   }
 }
 
@@ -210,8 +208,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETCONTROLTYPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setControlType ( (QSizePolicy::ControlType) par1 );
+      obj->setControlType ( (QSizePolicy::ControlType) hb_parni(1) );
     }
     else
     {
@@ -255,8 +252,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setHorizontalPolicy ( (QSizePolicy::Policy) par1 );
+      obj->setHorizontalPolicy ( (QSizePolicy::Policy) hb_parni(1) );
     }
     else
     {
@@ -300,8 +296,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALPOLICY )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setVerticalPolicy ( (QSizePolicy::Policy) par1 );
+      obj->setVerticalPolicy ( (QSizePolicy::Policy) hb_parni(1) );
     }
     else
     {

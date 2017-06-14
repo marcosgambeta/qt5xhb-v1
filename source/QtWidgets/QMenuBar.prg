@@ -147,7 +147,7 @@ void QMenuBar_addAction2 ()
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) );
+    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -200,8 +200,7 @@ void QMenuBar_addMenu1 ()
 
   if( obj )
   {
-    QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-    QAction * ptr = obj->addMenu ( par1 );
+    QAction * ptr = obj->addMenu ( PQMENU(1) );
     _qt5xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -299,8 +298,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
   {
     if( ISQACTION(1) && ISQMENU(2) )
     {
-      QMenu * par2 = (QMenu *) _qt5xhb_itemGetPtr(2);
-      QAction * ptr = obj->insertMenu ( PQACTION(1), par2 );
+      QAction * ptr = obj->insertMenu ( PQACTION(1), PQMENU(2) );
       _qt5xhb_createReturnClass ( ptr, "QACTION" );
     }
     else
@@ -340,7 +338,7 @@ HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 
   if( obj )
   {
-    hb_retl( obj->isDefaultUp () );
+    RBOOL( obj->isDefaultUp () );
   }
 }
 
@@ -375,7 +373,7 @@ HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 
   if( obj )
   {
-    hb_retl( obj->isNativeMenuBar () );
+    RBOOL( obj->isNativeMenuBar () );
   }
 }
 

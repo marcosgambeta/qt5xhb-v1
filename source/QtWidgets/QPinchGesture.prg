@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTROTATIONANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->lastRotationAngle () );
+    RQREAL( obj->lastRotationAngle () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTSCALEFACTOR )
 
   if( obj )
   {
-    hb_retnd( obj->lastScaleFactor () );
+    RQREAL( obj->lastScaleFactor () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_ROTATIONANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->rotationAngle () );
+    RQREAL( obj->rotationAngle () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SCALEFACTOR )
 
   if( obj )
   {
-    hb_retnd( obj->scaleFactor () );
+    RQREAL( obj->scaleFactor () );
   }
 }
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALROTATIONANGLE )
 
   if( obj )
   {
-    hb_retnd( obj->totalRotationAngle () );
+    RQREAL( obj->totalRotationAngle () );
   }
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALSCALEFACTOR )
 
   if( obj )
   {
-    hb_retnd( obj->totalScaleFactor () );
+    RQREAL( obj->totalScaleFactor () );
   }
 }
 

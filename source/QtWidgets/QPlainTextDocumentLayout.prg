@@ -60,8 +60,7 @@ QPlainTextDocumentLayout ( QTextDocument * document )
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
-  QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
-  QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout ( par1 );
+  QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout ( PQTEXTDOCUMENT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -102,8 +101,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
-    obj->ensureBlockLayout ( *par1 );
+    obj->ensureBlockLayout ( *PQTEXTBLOCK(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -152,8 +150,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->blockBoundingRect ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->blockBoundingRect ( *PQTEXTBLOCK(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -182,8 +179,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QTextFrame * par1 = (QTextFrame *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->frameBoundingRect ( par1 ) );
+    QRectF * ptr = new QRectF( obj->frameBoundingRect ( PQTEXTFRAME(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -197,8 +193,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retni( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) par2 ) );
+    hb_retni( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) hb_parni(2) ) );
   }
 }
 

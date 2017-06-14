@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
 
   if( obj )
   {
-    hb_retnd( obj->acceleration () );
+    RQREAL( obj->acceleration () );
   }
 }
 

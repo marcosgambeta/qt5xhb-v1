@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SETBASESTYLE )
   {
     if( ISQSTYLE(1) )
     {
-      QStyle * par1 = (QStyle *) _qt5xhb_itemGetPtr(1);
-      obj->setBaseStyle ( par1 );
+      obj->setBaseStyle ( PQSTYLE(1) );
     }
     else
     {
@@ -175,10 +174,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWPRIMITIVE )
   {
     if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISOPTQWIDGET(4) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      obj->drawPrimitive ( (QStyle::PrimitiveElement) par1, par2, PQPAINTER(3), par4 );
+      obj->drawPrimitive ( (QStyle::PrimitiveElement) hb_parni(1), par2, PQPAINTER(3), par4 );
     }
     else
     {
@@ -200,10 +198,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCONTROL )
   {
     if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISOPTQWIDGET(4) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      obj->drawControl ( (QStyle::ControlElement) par1, par2, PQPAINTER(3), par4 );
+      obj->drawControl ( (QStyle::ControlElement) hb_parni(1), par2, PQPAINTER(3), par4 );
     }
     else
     {
@@ -225,10 +222,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCOMPLEXCONTROL )
   {
     if( ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ISOPTQWIDGET(4) )
     {
-      int par1 = hb_parni(1);
       const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      obj->drawComplexControl ( (QStyle::ComplexControl) par1, par2, PQPAINTER(3), par4 );
+      obj->drawComplexControl ( (QStyle::ComplexControl) hb_parni(1), par2, PQPAINTER(3), par4 );
     }
     else
     {
@@ -295,10 +291,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
   {
     if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGET(4) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par4 = (const QWidget *) _qt5xhb_itemGetPtr(4);
-      QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) par1, par2, *PQSIZE(3), par4 ) );
+      QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) hb_parni(1), par2, *PQSIZE(3), par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -319,10 +314,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBELEMENTRECT )
   {
     if( ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGET(3) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par3 = (const QWidget *) _qt5xhb_itemGetPtr(3);
-      QRect * ptr = new QRect( obj->subElementRect ( (QStyle::SubElement) par1, par2, par3 ) );
+      QRect * ptr = new QRect( obj->subElementRect ( (QStyle::SubElement) hb_parni(1), par2, par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -343,11 +337,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBCONTROLRECT )
   {
     if( ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISNUM(3) && ISQWIDGET(4) )
     {
-      int par1 = hb_parni(1);
       const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
-      int par3 = hb_parni(3);
       const QWidget * par4 = (const QWidget *) _qt5xhb_itemGetPtr(4);
-      QRect * ptr = new QRect( obj->subControlRect ( (QStyle::ComplexControl) par1, par2, (QStyle::SubControl) par3, par4 ) );
+      QRect * ptr = new QRect( obj->subControlRect ( (QStyle::ComplexControl) hb_parni(1), par2, (QStyle::SubControl) hb_parni(3), par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -410,10 +402,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
   {
     if( ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && ISOPTQWIDGET(4) )
     {
-      int par1 = hb_parni(1);
       const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) _qt5xhb_itemGetPtr(2);
       const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(4);
-      hb_retni( obj->hitTestComplexControl ( (QStyle::ComplexControl) par1, par2, *PQPOINT(3), par4 ) );
+      hb_retni( obj->hitTestComplexControl ( (QStyle::ComplexControl) hb_parni(1), par2, *PQPOINT(3), par4 ) );
     }
     else
     {
@@ -433,11 +424,10 @@ HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
   {
     if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && ISOPTQWIDGET(3) && (ISQSTYLEHINTRETURN(4)||ISNIL(4)) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(3);
       QStyleHintReturn * par4 = ISNIL(4)? 0 : (QStyleHintReturn *) _qt5xhb_itemGetPtr(4);
-      hb_retni( obj->styleHint ( (QStyle::StyleHint) par1, par2, par3, par4 ) );
+      hb_retni( obj->styleHint ( (QStyle::StyleHint) hb_parni(1), par2, par3, par4 ) );
     }
     else
     {
@@ -457,10 +447,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
   {
     if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && ISOPTQWIDGET(3) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(3);
-      hb_retni( obj->pixelMetric ( (QStyle::PixelMetric) par1, par2, par3 ) );
+      hb_retni( obj->pixelMetric ( (QStyle::PixelMetric) hb_parni(1), par2, par3 ) );
     }
     else
     {
@@ -480,12 +469,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
   {
     if( ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQSTYLEOPTION(4)||ISNIL(4)) && ISOPTQWIDGET(5) )
     {
-      int par1 = hb_parni(1);
-      int par2 = hb_parni(2);
-      int par3 = hb_parni(3);
       const QStyleOption * par4 = ISNIL(4)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(4);
       const QWidget * par5 = ISNIL(5)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(5);
-      hb_retni( obj->layoutSpacing ( (QSizePolicy::ControlType) par1, (QSizePolicy::ControlType) par2, (Qt::Orientation) par3, par4, par5 ) );
+      hb_retni( obj->layoutSpacing ( (QSizePolicy::ControlType) hb_parni(1), (QSizePolicy::ControlType) hb_parni(2), (Qt::Orientation) hb_parni(3), par4, par5 ) );
     }
     else
     {
@@ -505,10 +491,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
   {
     if( ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && ISOPTQWIDGET(3) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(3);
-      QIcon * ptr = new QIcon( obj->standardIcon ( (QStyle::StandardPixmap) par1, par2, par3 ) );
+      QIcon * ptr = new QIcon( obj->standardIcon ( (QStyle::StandardPixmap) hb_parni(1), par2, par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -529,10 +514,9 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
   {
     if( ISNUM(1) && ISQSTYLEOPTION(2) && ISOPTQWIDGET(3) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par2 = (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(3);
-      QPixmap * ptr = new QPixmap( obj->standardPixmap ( (QStyle::StandardPixmap) par1, par2, par3 ) );
+      QPixmap * ptr = new QPixmap( obj->standardPixmap ( (QStyle::StandardPixmap) hb_parni(1), par2, par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else
@@ -553,9 +537,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_GENERATEDICONPIXMAP )
   {
     if( ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3) )
     {
-      int par1 = hb_parni(1);
       const QStyleOption * par3 = (const QStyleOption *) _qt5xhb_itemGetPtr(3);
-      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) par1, *PQPIXMAP(2), par3 ) );
+      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) hb_parni(1), *PQPIXMAP(2), par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
     }
     else
@@ -619,8 +602,7 @@ void QProxyStyle_polish3 ()
 
   if( obj )
   {
-    QApplication * par1 = (QApplication *) _qt5xhb_itemGetPtr(1);
-    obj->polish ( par1 );
+    obj->polish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -674,8 +656,7 @@ void QProxyStyle_unpolish2 ()
 
   if( obj )
   {
-    QApplication * par1 = (QApplication *) _qt5xhb_itemGetPtr(1);
-    obj->unpolish ( par1 );
+    obj->unpolish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

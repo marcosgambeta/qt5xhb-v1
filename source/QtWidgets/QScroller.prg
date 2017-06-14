@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->handleInput ( (QScroller::Input) par1, *PQPOINTF(2), (qint64) ISNIL(3)? 0 : hb_parni(3) ) );
+    RBOOL( obj->handleInput ( (QScroller::Input) hb_parni(1), *PQPOINTF(2), OPQINT64(3,0) ) );
   }
 }
 
@@ -143,16 +142,16 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX1 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-QList<qreal> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetND(aValues1, i1+1);
-par1 << temp1;
-}
+    QList<qreal> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setSnapPositionsX ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -199,16 +198,16 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY1 )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-QList<qreal> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetND(aValues1, i1+1);
-par1 << temp1;
-}
+    QList<qreal> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setSnapPositionsY ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -416,8 +415,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSCROLLERPROPERTIES )
   QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QScrollerProperties * par1 = (QScrollerProperties *) _qt5xhb_itemGetPtr(1);
-    obj->setScrollerProperties ( *par1 );
+    obj->setScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -455,7 +453,7 @@ static bool hasScroller(QObject * target)
 */
 HB_FUNC_STATIC( QSCROLLER_HASSCROLLER )
 {
-  hb_retl( QScroller::hasScroller ( PQOBJECT(1) ) );
+  RBOOL( QScroller::hasScroller ( PQOBJECT(1) ) );
 }
 
 

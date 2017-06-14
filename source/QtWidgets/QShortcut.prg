@@ -75,11 +75,8 @@ QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, c
 */
 void QShortcut_new2 ()
 {
-  QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-  const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-  const char * par4 = ISNIL(4)? 0 : hb_parc(4);
   int par5 = ISNIL(5)? (int) Qt::WindowShortcut : hb_parni(5);
-  QShortcut * o = new QShortcut ( *par1, PQWIDGET(2), (const char *) par3, (const char *) par4, (Qt::ShortcutContext) par5 );
+  QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), (Qt::ShortcutContext) par5 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -128,7 +125,7 @@ HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
 
   if( obj )
   {
-    hb_retl( obj->autoRepeat () );
+    RBOOL( obj->autoRepeat () );
   }
 }
 
@@ -167,7 +164,7 @@ HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -232,8 +229,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setContext ( (Qt::ShortcutContext) par1 );
+      obj->setContext ( (Qt::ShortcutContext) hb_parni(1) );
     }
     else
     {
@@ -277,8 +273,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETKEY )
   {
     if( ISQKEYSEQUENCE(1) )
     {
-      QKeySequence * par1 = (QKeySequence *) _qt5xhb_itemGetPtr(1);
-      obj->setKey ( *par1 );
+      obj->setKey ( *PQKEYSEQUENCE(1) );
     }
     else
     {

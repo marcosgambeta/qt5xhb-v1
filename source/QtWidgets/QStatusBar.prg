@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isSizeGripEnabled () );
+    RBOOL( obj->isSizeGripEnabled () );
   }
 }
 

@@ -87,8 +87,7 @@ QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QSplitter_new2 ()
 {
-  int par1 = hb_parni(1);
-  QSplitter * o = new QSplitter ( (Qt::Orientation) par1, OPQWIDGET(2,0) );
+  QSplitter * o = new QSplitter ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -159,7 +158,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 
   if( obj )
   {
-    hb_retl( obj->childrenCollapsible () );
+    RBOOL( obj->childrenCollapsible () );
   }
 }
 
@@ -289,7 +288,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
   {
     if( ISNUM(1) )
     {
-      hb_retl( obj->isCollapsible ( PINT(1) ) );
+      RBOOL( obj->isCollapsible ( PINT(1) ) );
     }
     else
     {
@@ -307,7 +306,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 
   if( obj )
   {
-    hb_retl( obj->opaqueResize () );
+    RBOOL( obj->opaqueResize () );
   }
 }
 
@@ -350,8 +349,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
   {
     if( ISQBYTEARRAY(1) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->restoreState ( *par1 ) );
+      RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
     }
     else
     {
@@ -473,8 +471,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setOrientation ( (Qt::Orientation) par1 );
+      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
     }
     else
     {

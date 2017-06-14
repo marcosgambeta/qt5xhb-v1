@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_BACKGROUNDVISIBLE )
 
   if( obj )
   {
-    hb_retl( obj->backgroundVisible () );
+    RBOOL( obj->backgroundVisible () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CANPASTE )
 
   if( obj )
   {
-    hb_retl( obj->canPaste () );
+    RBOOL( obj->canPaste () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERONSCROLL )
 
   if( obj )
   {
-    hb_retl( obj->centerOnScroll () );
+    RBOOL( obj->centerOnScroll () );
   }
 }
 
@@ -303,8 +303,7 @@ void QPlainTextEdit_cursorRect1 ()
 
   if( obj )
   {
-    QTextCursor * par1 = (QTextCursor *) _qt5xhb_itemGetPtr(1);
-    QRect * ptr = new QRect( obj->cursorRect ( *par1 ) );
+    QRect * ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
     _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -409,7 +408,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      hb_retl( obj->find ( PQSTRING(1), (QTextDocument::FindFlags) par2 ) );
+      RBOOL( obj->find ( PQSTRING(1), (QTextDocument::FindFlags) par2 ) );
     }
     else
     {
@@ -427,7 +426,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ISREADONLY )
 
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -440,7 +439,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ISUNDOREDOENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isUndoRedoEnabled () );
+    RBOOL( obj->isUndoRedoEnabled () );
   }
 }
 
@@ -468,8 +467,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
   {
     if( ISNUM(1) && ISQURL(2) )
     {
-      QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-      QVariant * ptr = new QVariant( obj->loadResource ( PINT(1), *par2 ) );
+      QVariant * ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
     }
     else
@@ -503,8 +501,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MERGECURRENTCHARFORMAT )
   {
     if( ISQTEXTCHARFORMAT(1) )
     {
-      QTextCharFormat * par1 = (QTextCharFormat *) _qt5xhb_itemGetPtr(1);
-      obj->mergeCurrentCharFormat ( *par1 );
+      obj->mergeCurrentCharFormat ( *PQTEXTCHARFORMAT(1) );
     }
     else
     {
@@ -526,9 +523,8 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
   {
     if( ISNUM(1) && ISOPTNUM(2) )
     {
-      int par1 = hb_parni(1);
       int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-      obj->moveCursor ( (QTextCursor::MoveOperation) par1, (QTextCursor::MoveMode) par2 );
+      obj->moveCursor ( (QTextCursor::MoveOperation) hb_parni(1), (QTextCursor::MoveMode) par2 );
     }
     else
     {
@@ -548,7 +544,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_OVERWRITEMODE )
 
   if( obj )
   {
-    hb_retl( obj->overwriteMode () );
+    RBOOL( obj->overwriteMode () );
   }
 }
 
@@ -563,8 +559,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_PRINT )
   {
     if( ISQPRINTER(1) )
     {
-      QPrinter * par1 = (QPrinter *) _qt5xhb_itemGetPtr(1);
-      obj->print ( par1 );
+      obj->print ( PQPRINTER(1) );
     }
     else
     {
@@ -630,8 +625,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURRENTCHARFORMAT )
   {
     if( ISQTEXTCHARFORMAT(1) )
     {
-      QTextCharFormat * par1 = (QTextCharFormat *) _qt5xhb_itemGetPtr(1);
-      obj->setCurrentCharFormat ( *par1 );
+      obj->setCurrentCharFormat ( *PQTEXTCHARFORMAT(1) );
     }
     else
     {
@@ -675,8 +669,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENT )
   {
     if( ISQTEXTDOCUMENT(1) )
     {
-      QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
-      obj->setDocument ( par1 );
+      obj->setDocument ( PQTEXTDOCUMENT(1) );
     }
     else
     {
@@ -720,8 +713,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETLINEWRAPMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setLineWrapMode ( (QPlainTextEdit::LineWrapMode) par1 );
+      obj->setLineWrapMode ( (QPlainTextEdit::LineWrapMode) hb_parni(1) );
     }
     else
     {
@@ -853,8 +845,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTCURSOR )
   {
     if( ISQTEXTCURSOR(1) )
     {
-      QTextCursor * par1 = (QTextCursor *) _qt5xhb_itemGetPtr(1);
-      obj->setTextCursor ( *par1 );
+      obj->setTextCursor ( *PQTEXTCURSOR(1) );
     }
     else
     {
@@ -921,8 +912,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETWORDWRAPMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setWordWrapMode ( (QTextOption::WrapMode) par1 );
+      obj->setWordWrapMode ( (QTextOption::WrapMode) hb_parni(1) );
     }
     else
     {
@@ -942,7 +932,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TABCHANGESFOCUS )
 
   if( obj )
   {
-    hb_retl( obj->tabChangesFocus () );
+    RBOOL( obj->tabChangesFocus () );
   }
 }
 

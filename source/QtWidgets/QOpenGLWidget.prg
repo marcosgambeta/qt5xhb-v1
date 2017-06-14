@@ -125,8 +125,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_SETFORMAT )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QSurfaceFormat * par1 = (QSurfaceFormat *) _qt5xhb_itemGetPtr(1);
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQSURFACEFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 #endif
@@ -144,7 +143,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 #endif
 #endif

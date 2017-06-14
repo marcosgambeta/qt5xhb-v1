@@ -134,9 +134,7 @@ void QMainWindow_addDockWidget1 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDockWidget * par2 = (QDockWidget *) _qt5xhb_itemGetPtr(2);
-    obj->addDockWidget ( (Qt::DockWidgetArea) par1, par2 );
+    obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -151,10 +149,7 @@ void QMainWindow_addDockWidget2 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDockWidget * par2 = (QDockWidget *) _qt5xhb_itemGetPtr(2);
-    int par3 = hb_parni(3);
-    obj->addDockWidget ( (Qt::DockWidgetArea) par1, par2, (Qt::Orientation) par3 );
+    obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -188,9 +183,7 @@ void QMainWindow_addToolBar1 ()
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QToolBar * par2 = (QToolBar *) _qt5xhb_itemGetPtr(2);
-    obj->addToolBar ( (Qt::ToolBarArea) par1, par2 );
+    obj->addToolBar ( (Qt::ToolBarArea) hb_parni(1), PQTOOLBAR(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -205,8 +198,7 @@ void QMainWindow_addToolBar2 ()
 
   if( obj )
   {
-    QToolBar * par1 = (QToolBar *) _qt5xhb_itemGetPtr(1);
-    obj->addToolBar ( par1 );
+    obj->addToolBar ( PQTOOLBAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -298,8 +290,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CORNER )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retni( obj->corner ( (Qt::Corner) par1 ) );
+      hb_retni( obj->corner ( (Qt::Corner) hb_parni(1) ) );
     }
     else
     {
@@ -346,8 +337,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
   {
     if( ISQDOCKWIDGET(1) )
     {
-      QDockWidget * par1 = (QDockWidget *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->dockWidgetArea ( par1 ) );
+      hb_retni( obj->dockWidgetArea ( PQDOCKWIDGET(1) ) );
     }
     else
     {
@@ -365,7 +355,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
 
   if( obj )
   {
-    hb_retl( obj->documentMode () );
+    RBOOL( obj->documentMode () );
   }
 }
 
@@ -394,9 +384,7 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBAR )
   {
     if( ISQTOOLBAR(1) && ISQTOOLBAR(2) )
     {
-      QToolBar * par1 = (QToolBar *) _qt5xhb_itemGetPtr(1);
-      QToolBar * par2 = (QToolBar *) _qt5xhb_itemGetPtr(2);
-      obj->insertToolBar ( par1, par2 );
+      obj->insertToolBar ( PQTOOLBAR(1), PQTOOLBAR(2) );
     }
     else
     {
@@ -418,8 +406,7 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
   {
     if( ISQTOOLBAR(1) )
     {
-      QToolBar * par1 = (QToolBar *) _qt5xhb_itemGetPtr(1);
-      obj->insertToolBarBreak ( par1 );
+      obj->insertToolBarBreak ( PQTOOLBAR(1) );
     }
     else
     {
@@ -439,7 +426,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
 
   if( obj )
   {
-    hb_retl( obj->isAnimated () );
+    RBOOL( obj->isAnimated () );
   }
 }
 
@@ -452,7 +439,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
 
   if( obj )
   {
-    hb_retl( obj->isDockNestingEnabled () );
+    RBOOL( obj->isDockNestingEnabled () );
   }
 }
 
@@ -495,8 +482,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVEDOCKWIDGET )
   {
     if( ISQDOCKWIDGET(1) )
     {
-      QDockWidget * par1 = (QDockWidget *) _qt5xhb_itemGetPtr(1);
-      obj->removeDockWidget ( par1 );
+      obj->removeDockWidget ( PQDOCKWIDGET(1) );
     }
     else
     {
@@ -518,8 +504,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBAR )
   {
     if( ISQTOOLBAR(1) )
     {
-      QToolBar * par1 = (QToolBar *) _qt5xhb_itemGetPtr(1);
-      obj->removeToolBar ( par1 );
+      obj->removeToolBar ( PQTOOLBAR(1) );
     }
     else
     {
@@ -541,8 +526,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
   {
     if( ISQTOOLBAR(1) )
     {
-      QToolBar * par1 = (QToolBar *) _qt5xhb_itemGetPtr(1);
-      obj->removeToolBarBreak ( par1 );
+      obj->removeToolBarBreak ( PQTOOLBAR(1) );
     }
     else
     {
@@ -564,8 +548,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
   {
     if( ISQDOCKWIDGET(1) )
     {
-      QDockWidget * par1 = (QDockWidget *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->restoreDockWidget ( par1 ) );
+      RBOOL( obj->restoreDockWidget ( PQDOCKWIDGET(1) ) );
     }
     else
     {
@@ -585,8 +568,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
   {
     if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->restoreState ( *par1, OPINT(2,0) ) );
+      RBOOL( obj->restoreState ( *PQBYTEARRAY(1), OPINT(2,0) ) );
     }
     else
     {
@@ -649,9 +631,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      int par1 = hb_parni(1);
-      int par2 = hb_parni(2);
-      obj->setCorner ( (Qt::Corner) par1, (Qt::DockWidgetArea) par2 );
+      obj->setCorner ( (Qt::Corner) hb_parni(1), (Qt::DockWidgetArea) hb_parni(2) );
     }
     else
     {
@@ -740,8 +720,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
   {
     if( ISQMENUBAR(1) )
     {
-      QMenuBar * par1 = (QMenuBar *) _qt5xhb_itemGetPtr(1);
-      obj->setMenuBar ( par1 );
+      obj->setMenuBar ( PQMENUBAR(1) );
     }
     else
     {
@@ -809,8 +788,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
     if( ISNUM(1) && ISNUM(2) )
     {
       int par1 = hb_parni(1);
-      int par2 = hb_parni(2);
-      obj->setTabPosition ( (Qt::DockWidgetAreas) par1, (QTabWidget::TabPosition) par2 );
+      obj->setTabPosition ( (Qt::DockWidgetAreas) par1, (QTabWidget::TabPosition) hb_parni(2) );
     }
     else
     {
@@ -832,8 +810,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setTabShape ( (QTabWidget::TabShape) par1 );
+      obj->setTabShape ( (QTabWidget::TabShape) hb_parni(1) );
     }
     else
     {
@@ -856,8 +833,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) par1 );
+      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) hb_parni(1) );
     }
     else
     {
@@ -879,10 +855,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
   {
     if( ISQDOCKWIDGET(1) && ISQDOCKWIDGET(2) && ISNUM(3) )
     {
-      QDockWidget * par1 = (QDockWidget *) _qt5xhb_itemGetPtr(1);
-      QDockWidget * par2 = (QDockWidget *) _qt5xhb_itemGetPtr(2);
-      int par3 = hb_parni(3);
-      obj->splitDockWidget ( par1, par2, (Qt::Orientation) par3 );
+      obj->splitDockWidget ( PQDOCKWIDGET(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
     }
     else
     {
@@ -918,8 +891,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retni( obj->tabPosition ( (Qt::DockWidgetArea) par1 ) );
+      hb_retni( obj->tabPosition ( (Qt::DockWidgetArea) hb_parni(1) ) );
     }
     else
     {
@@ -952,9 +924,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFYDOCKWIDGET )
   {
     if( ISQDOCKWIDGET(1) && ISQDOCKWIDGET(2) )
     {
-      QDockWidget * par1 = (QDockWidget *) _qt5xhb_itemGetPtr(1);
-      QDockWidget * par2 = (QDockWidget *) _qt5xhb_itemGetPtr(2);
-      obj->tabifyDockWidget ( par1, par2 );
+      obj->tabifyDockWidget ( PQDOCKWIDGET(1), PQDOCKWIDGET(2) );
     }
     else
     {
@@ -976,8 +946,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
   {
     if( ISQTOOLBAR(1) )
     {
-      QToolBar * par1 = (QToolBar *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->toolBarArea ( par1 ) );
+      hb_retni( obj->toolBarArea ( PQTOOLBAR(1) ) );
     }
     else
     {
@@ -997,8 +966,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
   {
     if( ISQTOOLBAR(1) )
     {
-      QToolBar * par1 = (QToolBar *) _qt5xhb_itemGetPtr(1);
-      hb_retl( obj->toolBarBreak ( par1 ) );
+      RBOOL( obj->toolBarBreak ( PQTOOLBAR(1) ) );
     }
     else
     {

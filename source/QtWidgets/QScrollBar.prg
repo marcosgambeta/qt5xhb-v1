@@ -61,8 +61,7 @@ QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QScrollBar_new2 ()
 {
-  int par1 = hb_parni(1);
-  QScrollBar * o = new QScrollBar ( (Qt::Orientation) par1, OPQWIDGET(2,0) );
+  QScrollBar * o = new QScrollBar ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -111,8 +110,7 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 
   if( obj )
   {
-    QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 

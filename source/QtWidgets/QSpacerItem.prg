@@ -60,11 +60,9 @@ QSpacerItem(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QS
 */
 HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSizePolicy::Minimum : hb_parni(4);
-  QSpacerItem * o = new QSpacerItem ( par1, par2, (QSizePolicy::Policy) par3, (QSizePolicy::Policy) par4 );
+  QSpacerItem * o = new QSpacerItem ( PINT(1), PINT(2), (QSizePolicy::Policy) par3, (QSizePolicy::Policy) par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -135,7 +133,7 @@ HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
   QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

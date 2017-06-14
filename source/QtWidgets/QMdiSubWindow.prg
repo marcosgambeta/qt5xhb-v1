@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 
   if( obj )
   {
-    hb_retl( obj->isShaded () );
+    RBOOL( obj->isShaded () );
   }
 }
 
@@ -209,8 +209,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setOption ( (QMdiSubWindow::SubWindowOption) par1, OPBOOL(2,true) );
+      obj->setOption ( (QMdiSubWindow::SubWindowOption) hb_parni(1), OPBOOL(2,true) );
     }
     else
     {
@@ -232,8 +231,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
   {
     if( ISQMENU(1) )
     {
-      QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-      obj->setSystemMenu ( par1 );
+      obj->setSystemMenu ( PQMENU(1) );
     }
     else
     {
@@ -291,8 +289,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testOption ( (QMdiSubWindow::SubWindowOption) par1 ) );
+      RBOOL( obj->testOption ( (QMdiSubWindow::SubWindowOption) hb_parni(1) ) );
     }
     else
     {

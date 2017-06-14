@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 
   if( obj )
   {
-    hb_retl( obj->autoDefault () );
+    RBOOL( obj->autoDefault () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 
   if( obj )
   {
-    hb_retl( obj->isDefault () );
+    RBOOL( obj->isDefault () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 
   if( obj )
   {
-    hb_retl( obj->isFlat () );
+    RBOOL( obj->isFlat () );
   }
   else
   {
@@ -276,8 +276,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETMENU )
   {
     if( ISQMENU(1) )
     {
-      QMenu * par1 = (QMenu *) _qt5xhb_itemGetPtr(1);
-      obj->setMenu ( par1 );
+      obj->setMenu ( PQMENU(1) );
     }
     else
     {

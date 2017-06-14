@@ -68,10 +68,8 @@ QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton but
 */
 void QMouseEventTransition_new2 ()
 {
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
   QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
-  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) par2, (Qt::MouseButton) par3, par4 );
+  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), par4 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -162,8 +160,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setButton ( (Qt::MouseButton) par1 );
+      obj->setButton ( (Qt::MouseButton) hb_parni(1) );
     }
     else
     {

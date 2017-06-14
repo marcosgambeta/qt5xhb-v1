@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
 
   if( obj )
   {
-    hb_retl( obj->documentMode () );
+    RBOOL( obj->documentMode () );
   }
 }
 
@@ -237,8 +237,7 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setActivationOrder ( (QMdiArea::WindowOrder) par1 );
+      obj->setActivationOrder ( (QMdiArea::WindowOrder) hb_parni(1) );
     }
     else
     {
@@ -304,8 +303,7 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
   {
     if( ISNUM(1) && ISOPTLOG(2) )
     {
-      int par1 = hb_parni(1);
-      obj->setOption ( (QMdiArea::AreaOption) par1, OPBOOL(2,true) );
+      obj->setOption ( (QMdiArea::AreaOption) hb_parni(1), OPBOOL(2,true) );
     }
     else
     {
@@ -327,8 +325,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setTabPosition ( (QTabWidget::TabPosition) par1 );
+      obj->setTabPosition ( (QTabWidget::TabPosition) hb_parni(1) );
     }
     else
     {
@@ -350,8 +347,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setTabShape ( (QTabWidget::TabShape) par1 );
+      obj->setTabShape ( (QTabWidget::TabShape) hb_parni(1) );
     }
     else
     {
@@ -373,8 +369,7 @@ HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      obj->setViewMode ( (QMdiArea::ViewMode) par1 );
+      obj->setViewMode ( (QMdiArea::ViewMode) hb_parni(1) );
     }
     else
     {
@@ -474,8 +469,7 @@ HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
   {
     if( ISNUM(1) )
     {
-      int par1 = hb_parni(1);
-      hb_retl( obj->testOption ( (QMdiArea::AreaOption) par1 ) );
+      RBOOL( obj->testOption ( (QMdiArea::AreaOption) hb_parni(1) ) );
     }
     else
     {
@@ -647,7 +641,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSCLOSABLE )
 
   if( obj )
   {
-    hb_retl( obj->tabsClosable () );
+    RBOOL( obj->tabsClosable () );
   }
 }
 
@@ -682,7 +676,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSMOVABLE )
 
   if( obj )
   {
-    hb_retl( obj->tabsMovable () );
+    RBOOL( obj->tabsMovable () );
   }
 }
 

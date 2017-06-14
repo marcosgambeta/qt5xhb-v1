@@ -86,10 +86,8 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 */
 void QProgressDialog_new2 ()
 {
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), par3, par4, OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
+  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
@@ -138,7 +136,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
 
   if( obj )
   {
-    hb_retl( obj->autoClose () );
+    RBOOL( obj->autoClose () );
   }
 }
 
@@ -173,7 +171,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 
   if( obj )
   {
-    hb_retl( obj->autoReset () );
+    RBOOL( obj->autoReset () );
   }
 }
 
@@ -350,7 +348,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
   {
     if( ISQOBJECT(1) && ISCHAR(2) )
     {
-      obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
+      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
     }
     else
     {
@@ -372,8 +370,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
   {
     if( ISQPROGRESSBAR(1) )
     {
-      QProgressBar * par1 = (QProgressBar *) _qt5xhb_itemGetPtr(1);
-      obj->setBar ( par1 );
+      obj->setBar ( PQPROGRESSBAR(1) );
     }
     else
     {
@@ -395,8 +392,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
   {
     if( ISQPUSHBUTTON(1) )
     {
-      QPushButton * par1 = (QPushButton *) _qt5xhb_itemGetPtr(1);
-      obj->setCancelButton ( par1 );
+      obj->setCancelButton ( PQPUSHBUTTON(1) );
     }
     else
     {
@@ -418,8 +414,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
   {
     if( ISQLABEL(1) )
     {
-      QLabel * par1 = (QLabel *) _qt5xhb_itemGetPtr(1);
-      obj->setLabel ( par1 );
+      obj->setLabel ( PQLABEL(1) );
     }
     else
     {
@@ -474,7 +469,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
 
   if( obj )
   {
-    hb_retl( obj->wasCanceled () );
+    RBOOL( obj->wasCanceled () );
   }
 }
 
