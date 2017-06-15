@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentItemIndex () );
+    RINT( obj->currentItemIndex () );
   }
 #endif
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
   QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 #endif
 }
