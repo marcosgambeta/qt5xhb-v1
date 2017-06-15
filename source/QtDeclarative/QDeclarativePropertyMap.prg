@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

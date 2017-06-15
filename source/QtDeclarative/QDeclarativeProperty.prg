@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_INDEX )
 
   if( obj )
   {
-    hb_retni( obj->index () );
+    RINT( obj->index () );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
 
   if( obj )
   {
-    hb_retni( obj->propertyType () );
+    RINT( obj->propertyType () );
   }
 }
 

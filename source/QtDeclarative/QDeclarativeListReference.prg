@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
