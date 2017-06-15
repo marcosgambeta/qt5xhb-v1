@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->scrollBarMaximum ( (Qt::Orientation) hb_parni(1) ) );
+    RINT( obj->scrollBarMaximum ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->scrollBarMinimum ( (Qt::Orientation) hb_parni(1) ) );
+    RINT( obj->scrollBarMinimum ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->scrollBarValue ( (Qt::Orientation) hb_parni(1) ) );
+    RINT( obj->scrollBarValue ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
