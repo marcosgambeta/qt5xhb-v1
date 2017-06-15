@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETDESCRIPTOR )
 
   if( obj )
   {
-    hb_retni( obj->socketDescriptor () );
+    RINT( obj->socketDescriptor () );
   }
 #endif
 }

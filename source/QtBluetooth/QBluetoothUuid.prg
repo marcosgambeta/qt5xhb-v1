@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 
   if( obj )
   {
-    hb_retni( obj->minimumSize () );
+    RINT( obj->minimumSize () );
   }
 #endif
 }

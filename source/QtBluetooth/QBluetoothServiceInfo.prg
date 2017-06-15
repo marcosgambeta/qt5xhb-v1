@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_PROTOCOLSERVICEMULTIPLEXER )
 
   if( obj )
   {
-    hb_retni( obj->protocolServiceMultiplexer () );
+    RINT( obj->protocolServiceMultiplexer () );
   }
 #endif
 }
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVERCHANNEL )
 
   if( obj )
   {
-    hb_retni( obj->serverChannel () );
+    RINT( obj->serverChannel () );
   }
 #endif
 }
