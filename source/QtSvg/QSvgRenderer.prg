@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->framesPerSecond () );
+    RINT( obj->framesPerSecond () );
   }
 }
 
