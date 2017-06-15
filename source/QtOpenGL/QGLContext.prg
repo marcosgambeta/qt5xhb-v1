@@ -465,7 +465,7 @@ static int textureCacheLimit ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {
-  hb_retni( QGLContext::textureCacheLimit () );
+  RINT( QGLContext::textureCacheLimit () );
 }
 
 

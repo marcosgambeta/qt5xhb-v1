@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->find ( (QRgb) hb_parni(1) ) );
+    RINT( obj->find ( (QRgb) hb_parni(1) ) );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->findNearest ( (QRgb) hb_parni(1) ) );
+    RINT( obj->findNearest ( (QRgb) hb_parni(1) ) );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
   QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

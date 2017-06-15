@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->glGetAttribLocation ( (GLuint) hb_parni(1), PCONSTCHAR(2) ) );
+    RINT( obj->glGetAttribLocation ( (GLuint) hb_parni(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
   QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->glGetUniformLocation ( (GLuint) hb_parni(1), PCONSTCHAR(2) ) );
+    RINT( obj->glGetUniformLocation ( (GLuint) hb_parni(1), PCONSTCHAR(2) ) );
   }
 }
 

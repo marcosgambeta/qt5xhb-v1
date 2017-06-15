@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->accumBufferSize () );
+    RINT( obj->accumBufferSize () );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->alphaBufferSize () );
+    RINT( obj->alphaBufferSize () );
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->blueBufferSize () );
+    RINT( obj->blueBufferSize () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depthBufferSize () );
+    RINT( obj->depthBufferSize () );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->greenBufferSize () );
+    RINT( obj->greenBufferSize () );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->majorVersion () );
+    RINT( obj->majorVersion () );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minorVersion () );
+    RINT( obj->minorVersion () );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QGLFORMAT_PLANE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->plane () );
+    RINT( obj->plane () );
   }
 }
 
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->redBufferSize () );
+    RINT( obj->redBufferSize () );
   }
 }
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->samples () );
+    RINT( obj->samples () );
   }
 }
 
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->stencilBufferSize () );
+    RINT( obj->stencilBufferSize () );
   }
 }
 
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
   QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->swapInterval () );
+    RINT( obj->swapInterval () );
   }
 }
 
