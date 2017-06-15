@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
 
   if( obj )
   {
-    hb_retni( obj->currentPage () );
+    RINT( obj->currentPage () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->pageCount () );
+    RINT( obj->pageCount () );
   }
 }
 

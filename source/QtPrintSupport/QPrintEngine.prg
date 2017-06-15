@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->metric ( (QPaintDevice::PaintDeviceMetric) hb_parni(1) ) );
+      RINT( obj->metric ( (QPaintDevice::PaintDeviceMetric) hb_parni(1) ) );
     }
     else
     {

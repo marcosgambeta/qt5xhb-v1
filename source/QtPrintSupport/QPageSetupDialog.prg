@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 

@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->copyCount () );
+    RINT( obj->copyCount () );
   }
 }
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QPRINTER_FROMPAGE )
 
   if( obj )
   {
-    hb_retni( obj->fromPage () );
+    RINT( obj->fromPage () );
   }
 }
 
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QPRINTER_RESOLUTION )
 
   if( obj )
   {
-    hb_retni( obj->resolution () );
+    RINT( obj->resolution () );
   }
 }
 
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QPRINTER_TOPAGE )
 
   if( obj )
   {
-    hb_retni( obj->toPage () );
+    RINT( obj->toPage () );
   }
 }
 
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
 
   if( obj )
   {
-    hb_retni( obj->winPageSize () );
+    RINT( obj->winPageSize () );
   }
 }
 
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QPRINTER_DEVTYPE )
 
   if( obj )
   {
-    hb_retni( obj->devType () );
+    RINT( obj->devType () );
   }
 }
 
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QPRINTER_NUMCOPIES )
 
   if( obj )
   {
-    hb_retni( obj->numCopies () );
+    RINT( obj->numCopies () );
   }
 }
 
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QPRINTER_ACTUALNUMCOPIES )
 
   if( obj )
   {
-    hb_retni( obj->actualNumCopies () );
+    RINT( obj->actualNumCopies () );
   }
 }
 

@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 

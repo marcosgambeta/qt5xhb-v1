@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 
   if( obj )
   {
-    hb_retni( obj->fromPage () );
+    RINT( obj->fromPage () );
   }
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 
   if( obj )
   {
-    hb_retni( obj->maxPage () );
+    RINT( obj->maxPage () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 
   if( obj )
   {
-    hb_retni( obj->minPage () );
+    RINT( obj->minPage () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
 
   if( obj )
   {
-    hb_retni( obj->toPage () );
+    RINT( obj->toPage () );
   }
 }
 
