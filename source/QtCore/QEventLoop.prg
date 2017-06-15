@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-      hb_retni( obj->exec ( (QEventLoop::ProcessEventsFlags) par1 ) );
+      RINT( obj->exec ( (QEventLoop::ProcessEventsFlags) par1 ) );
     }
     else
     {

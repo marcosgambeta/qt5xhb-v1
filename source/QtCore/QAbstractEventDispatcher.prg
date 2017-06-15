@@ -240,7 +240,7 @@ void QAbstractEventDispatcher_registerTimer1 ()
 
   if( obj )
   {
-    hb_retni( obj->registerTimer ( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
+    RINT( obj->registerTimer ( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMAININGTIME )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->remainingTime ( PINT(1) ) );
+      RINT( obj->remainingTime ( PINT(1) ) );
     }
     else
     {

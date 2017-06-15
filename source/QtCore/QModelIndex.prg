@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
 
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 

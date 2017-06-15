@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSIZE_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 

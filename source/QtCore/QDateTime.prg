@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QDATETIME_DAYSTO )
   {
     if( ISQDATETIME(1) )
     {
-      hb_retni( obj->daysTo ( *PQDATETIME(1) ) );
+      RINT( obj->daysTo ( *PQDATETIME(1) ) );
     }
     else
     {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QDATETIME_SECSTO )
   {
     if( ISQDATETIME(1) )
     {
-      hb_retni( obj->secsTo ( *PQDATETIME(1) ) );
+      RINT( obj->secsTo ( *PQDATETIME(1) ) );
     }
     else
     {

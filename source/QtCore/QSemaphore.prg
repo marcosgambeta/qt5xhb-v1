@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 
   if( obj )
   {
-    hb_retni( obj->available () );
+    RINT( obj->available () );
   }
 }
 

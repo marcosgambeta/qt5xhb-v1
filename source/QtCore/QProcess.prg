@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QPROCESS_EXITCODE )
 
   if( obj )
   {
-    hb_retni( obj->exitCode () );
+    RINT( obj->exitCode () );
   }
 }
 
@@ -828,7 +828,7 @@ static int execute ( const QString & program, const QStringList & arguments )
 */
 void QProcess_execute1 ()
 {
-  hb_retni( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RINT( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 /*
@@ -836,7 +836,7 @@ static int execute ( const QString & command )
 */
 void QProcess_execute2 ()
 {
-  hb_retni( QProcess::execute ( PQSTRING(1) ) );
+  RINT( QProcess::execute ( PQSTRING(1) ) );
 }
 
 //[1]int execute ( const QString & program, const QStringList & arguments )

@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
 
   if( obj )
   {
-    hb_retni( obj->attributes () );
+    RINT( obj->attributes () );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
 
   if( obj )
   {
-    hb_retni( obj->methodIndex () );
+    RINT( obj->methodIndex () );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 
   if( obj )
   {
-    hb_retni( obj->revision () );
+    RINT( obj->revision () );
   }
 }
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QMETAMETHOD_RETURNTYPE )
 
   if( obj )
   {
-    hb_retni( obj->returnType () );
+    RINT( obj->returnType () );
   }
 }
 
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->parameterCount () );
+    RINT( obj->parameterCount () );
   }
 }
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->parameterType ( PINT(1) ) );
+      RINT( obj->parameterType ( PINT(1) ) );
     }
     else
     {

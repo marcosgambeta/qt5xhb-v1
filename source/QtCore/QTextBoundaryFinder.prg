@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
 
   if( obj )
   {
-    hb_retni( obj->position () );
+    RINT( obj->position () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
 
   if( obj )
   {
-    hb_retni( obj->toNextBoundary () );
+    RINT( obj->toNextBoundary () );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
 
   if( obj )
   {
-    hb_retni( obj->toPreviousBoundary () );
+    RINT( obj->toPreviousBoundary () );
   }
 }
 

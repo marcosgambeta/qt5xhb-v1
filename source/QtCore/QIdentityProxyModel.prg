@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
     if( (ISQMODELINDEX(1)||ISNIL(1)) )
     {
       QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->columnCount ( par1 ) );
+      RINT( obj->columnCount ( par1 ) );
     }
     else
     {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
     if( (ISQMODELINDEX(1)||ISNIL(1)) )
     {
       QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->rowCount ( par1 ) );
+      RINT( obj->rowCount ( par1 ) );
     }
     else
     {

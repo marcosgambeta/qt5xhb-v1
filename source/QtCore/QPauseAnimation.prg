@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RINT( obj->duration () );
   }
 }
 

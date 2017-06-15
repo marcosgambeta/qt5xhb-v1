@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMARGINS_LEFT )
 
   if( obj )
   {
-    hb_retni( obj->left () );
+    RINT( obj->left () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMARGINS_TOP )
 
   if( obj )
   {
-    hb_retni( obj->top () );
+    RINT( obj->top () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QMARGINS_RIGHT )
 
   if( obj )
   {
-    hb_retni( obj->right () );
+    RINT( obj->right () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QMARGINS_BOTTOM )
 
   if( obj )
   {
-    hb_retni( obj->bottom () );
+    RINT( obj->bottom () );
   }
 }
 

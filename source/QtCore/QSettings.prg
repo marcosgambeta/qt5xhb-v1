@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->beginReadArray ( PQSTRING(1) ) );
+      RINT( obj->beginReadArray ( PQSTRING(1) ) );
     }
     else
     {

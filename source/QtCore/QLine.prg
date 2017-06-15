@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QLINE_X1 )
 
   if( obj )
   {
-    hb_retni( obj->x1 () );
+    RINT( obj->x1 () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLINE_X2 )
 
   if( obj )
   {
-    hb_retni( obj->x2 () );
+    RINT( obj->x2 () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QLINE_Y1 )
 
   if( obj )
   {
-    hb_retni( obj->y1 () );
+    RINT( obj->y1 () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QLINE_Y2 )
 
   if( obj )
   {
-    hb_retni( obj->y2 () );
+    RINT( obj->y2 () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QLINE_DX )
 
   if( obj )
   {
-    hb_retni( obj->dx () );
+    RINT( obj->dx () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QLINE_DY )
 
   if( obj )
   {
-    hb_retni( obj->dy () );
+    RINT( obj->dy () );
   }
 }
 

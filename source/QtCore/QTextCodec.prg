@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
 
   if( obj )
   {
-    hb_retni( obj->mibEnum () );
+    RINT( obj->mibEnum () );
   }
 }
 

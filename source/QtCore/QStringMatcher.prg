@@ -191,7 +191,7 @@ void QStringMatcher_indexIn1 ()
 
   if( obj )
   {
-    hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
+    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
   }
 }
 
@@ -205,7 +205,7 @@ void QStringMatcher_indexIn2 ()
   if( obj )
   {
     const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexIn ( par1, PINT(2), PINT(3) ) );
+    RINT( obj->indexIn ( par1, PINT(2), PINT(3) ) );
   }
 }
 

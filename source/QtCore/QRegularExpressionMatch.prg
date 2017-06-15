@@ -154,7 +154,7 @@ void QRegularExpressionMatch_capturedEnd1 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedEnd ( OPINT(1,0) ) );
+    RINT( obj->capturedEnd ( OPINT(1,0) ) );
   }
 }
 
@@ -167,7 +167,7 @@ void QRegularExpressionMatch_capturedEnd2 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedEnd ( PQSTRING(1) ) );
+    RINT( obj->capturedEnd ( PQSTRING(1) ) );
   }
 }
 
@@ -199,7 +199,7 @@ void QRegularExpressionMatch_capturedLength1 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedLength ( OPINT(1,0) ) );
+    RINT( obj->capturedLength ( OPINT(1,0) ) );
   }
 }
 
@@ -212,7 +212,7 @@ void QRegularExpressionMatch_capturedLength2 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedLength ( PQSTRING(1) ) );
+    RINT( obj->capturedLength ( PQSTRING(1) ) );
   }
 }
 
@@ -291,7 +291,7 @@ void QRegularExpressionMatch_capturedStart1 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedStart ( OPINT(1,0) ) );
+    RINT( obj->capturedStart ( OPINT(1,0) ) );
   }
 }
 
@@ -304,7 +304,7 @@ void QRegularExpressionMatch_capturedStart2 ()
 
   if( obj )
   {
-    hb_retni( obj->capturedStart ( PQSTRING(1) ) );
+    RINT( obj->capturedStart ( PQSTRING(1) ) );
   }
 }
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_LASTCAPTUREDINDEX )
 
   if( obj )
   {
-    hb_retni( obj->lastCapturedIndex () );
+    RINT( obj->lastCapturedIndex () );
   }
 }
 

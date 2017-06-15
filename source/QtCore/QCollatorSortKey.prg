@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
   {
     if( ISQCOLLATORSORTKEY(1) )
     {
-      hb_retni( obj->compare ( *PQCOLLATORSORTKEY(1) ) );
+      RINT( obj->compare ( *PQCOLLATORSORTKEY(1) ) );
     }
     else
     {

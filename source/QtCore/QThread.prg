@@ -342,7 +342,7 @@ static int idealThreadCount()
 */
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
-  hb_retni( QThread::idealThreadCount () );
+  RINT( QThread::idealThreadCount () );
 }
 
 /*

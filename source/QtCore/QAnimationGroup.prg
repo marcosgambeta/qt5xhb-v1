@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->animationCount () );
+    RINT( obj->animationCount () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
     if( ISQABSTRACTANIMATION(1) )
     {
       QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->indexOfAnimation ( par1 ) );
+      RINT( obj->indexOfAnimation ( par1 ) );
     }
     else
     {

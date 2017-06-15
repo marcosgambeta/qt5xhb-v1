@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
   if( ISOPTNUM(1) )
   {
-    hb_retni( QEvent::registerEventType ( OPINT(1,-1) ) );
+    RINT( QEvent::registerEventType ( OPINT(1,-1) ) );
   }
   else
   {

@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
 
   if( obj )
   {
-    hb_retni( obj->toInt () );
+    RINT( obj->toInt () );
   }
 }
 

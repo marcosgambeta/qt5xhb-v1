@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
 
   if( obj )
   {
-    hb_retni( obj->userType () );
+    RINT( obj->userType () );
   }
 }
 
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
     if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retni( obj->toInt ( &par1 ) );
+      RINT( obj->toInt ( &par1 ) );
       hb_storl( par1, 1 );
     }
     else

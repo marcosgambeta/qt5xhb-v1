@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
 
   if( obj )
   {
-    hb_retni( obj->userType () );
+    RINT( obj->userType () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
 
   if( obj )
   {
-    hb_retni( obj->propertyIndex () );
+    RINT( obj->propertyIndex () );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
 
   if( obj )
   {
-    hb_retni( obj->notifySignalIndex () );
+    RINT( obj->notifySignalIndex () );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
 
   if( obj )
   {
-    hb_retni( obj->revision () );
+    RINT( obj->revision () );
   }
 }
 

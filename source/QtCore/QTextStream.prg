@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->fieldWidth () );
+    RINT( obj->fieldWidth () );
   }
 }
 
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
 
   if( obj )
   {
-    hb_retni( obj->integerBase () );
+    RINT( obj->integerBase () );
   }
 }
 
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
 
   if( obj )
   {
-    hb_retni( obj->realNumberPrecision () );
+    RINT( obj->realNumberPrecision () );
   }
 }
 

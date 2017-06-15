@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QFILE_HANDLE )
 
   if( obj )
   {
-    hb_retni( obj->handle () );
+    RINT( obj->handle () );
   }
 }
 

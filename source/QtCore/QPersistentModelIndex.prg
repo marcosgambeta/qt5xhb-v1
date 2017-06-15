@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ROW )
 
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_COLUMN )
 
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 

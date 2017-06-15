@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
     if( ISQEVENT(1) && ISNUM(2) )
     {
       QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->postDelayedEvent ( par1, PINT(2) ) );
+      RINT( obj->postDelayedEvent ( par1, PINT(2) ) );
     }
     else
     {

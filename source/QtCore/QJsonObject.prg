@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QJSONOBJECT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QJSONOBJECT_LENGTH )
 
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QJSONOBJECT_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

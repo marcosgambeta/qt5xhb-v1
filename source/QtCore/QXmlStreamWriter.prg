@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTINGINDENT )
 
   if( obj )
   {
-    hb_retni( obj->autoFormattingIndent () );
+    RINT( obj->autoFormattingIndent () );
   }
 }
 

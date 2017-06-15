@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTIME_ELAPSED )
 
   if( obj )
   {
-    hb_retni( obj->elapsed () );
+    RINT( obj->elapsed () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTIME_HOUR )
 
   if( obj )
   {
-    hb_retni( obj->hour () );
+    RINT( obj->hour () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QTIME_MINUTE )
 
   if( obj )
   {
-    hb_retni( obj->minute () );
+    RINT( obj->minute () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTIME_MSEC )
 
   if( obj )
   {
-    hb_retni( obj->msec () );
+    RINT( obj->msec () );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
   {
     if( ISQTIME(1) )
     {
-      hb_retni( obj->msecsTo ( *PQTIME(1) ) );
+      RINT( obj->msecsTo ( *PQTIME(1) ) );
     }
     else
     {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTIME_RESTART )
 
   if( obj )
   {
-    hb_retni( obj->restart () );
+    RINT( obj->restart () );
   }
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QTIME_SECOND )
 
   if( obj )
   {
-    hb_retni( obj->second () );
+    RINT( obj->second () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
   {
     if( ISQTIME(1) )
     {
-      hb_retni( obj->secsTo ( *PQTIME(1) ) );
+      RINT( obj->secsTo ( *PQTIME(1) ) );
     }
     else
     {

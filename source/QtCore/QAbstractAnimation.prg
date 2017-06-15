@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 
   if( obj )
   {
-    hb_retni( obj->currentLoop () );
+    RINT( obj->currentLoop () );
   }
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 
   if( obj )
   {
-    hb_retni( obj->currentLoopTime () );
+    RINT( obj->currentLoopTime () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 
   if( obj )
   {
-    hb_retni( obj->currentTime () );
+    RINT( obj->currentTime () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RINT( obj->duration () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 
   if( obj )
   {
-    hb_retni( obj->totalDuration () );
+    RINT( obj->totalDuration () );
   }
 }
 

@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
   if( ISCHAR(1) && ISNUM(1) )
   {
-    hb_retni( QMetaType::registerTypedef ( PCONSTCHAR(1), PINT(2) ) );
+    RINT( QMetaType::registerTypedef ( PCONSTCHAR(1), PINT(2) ) );
   }
   else
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
   if( ISCHAR(1) )
   {
-    hb_retni( QMetaType::type ( PCONSTCHAR(1) ) );
+    RINT( QMetaType::type ( PCONSTCHAR(1) ) );
   }
   else
   {

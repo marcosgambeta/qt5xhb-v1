@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->interval () );
+    RINT( obj->interval () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
 
   if( obj )
   {
-    hb_retni( obj->timerId () );
+    RINT( obj->timerId () );
   }
 }
 

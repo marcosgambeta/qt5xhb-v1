@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
 
   if( obj )
   {
-    hb_retni( obj->capacity () );
+    RINT( obj->capacity () );
   }
 }
 
@@ -548,7 +548,7 @@ void QByteArray_count1 ()
 
   if( obj )
   {
-    hb_retni( obj->count ( *PQBYTEARRAY(1) ) );
+    RINT( obj->count ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -561,7 +561,7 @@ void QByteArray_count2 ()
 
   if( obj )
   {
-    hb_retni( obj->count ( PCONSTCHAR(1) ) );
+    RINT( obj->count ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -575,7 +575,7 @@ void QByteArray_count3 ()
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    hb_retni( obj->count ( par1 ) );
+    RINT( obj->count ( par1 ) );
   }
 }
 
@@ -588,7 +588,7 @@ void QByteArray_count4 ()
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
   {
     if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
-      hb_retni( obj->indexOf ( *PQBYTEARRAY(1), OPINT(2,0) ) );
+      RINT( obj->indexOf ( *PQBYTEARRAY(1), OPINT(2,0) ) );
     }
     else
     {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      hb_retni( obj->indexOf ( PQSTRING(1), OPINT(2,0) ) );
+      RINT( obj->indexOf ( PQSTRING(1), OPINT(2,0) ) );
     }
     else
     {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      hb_retni( obj->indexOf ( PCONSTCHAR(1), OPINT(2,0) ) );
+      RINT( obj->indexOf ( PCONSTCHAR(1), OPINT(2,0) ) );
     }
     else
     {
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
     if( (ISNUM(1)||ISCHAR(1)) && ISOPTNUM(2) )
     {
       char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-      hb_retni( obj->indexOf ( par1, OPINT(2,0) ) );
+      RINT( obj->indexOf ( par1, OPINT(2,0) ) );
     }
     else
     {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
   {
     if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
-      hb_retni( obj->lastIndexOf ( *PQBYTEARRAY(1), OPINT(2,-1) ) );
+      RINT( obj->lastIndexOf ( *PQBYTEARRAY(1), OPINT(2,-1) ) );
     }
     else
     {
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      hb_retni( obj->lastIndexOf ( PQSTRING(1), OPINT(2,-1) ) );
+      RINT( obj->lastIndexOf ( PQSTRING(1), OPINT(2,-1) ) );
     }
     else
     {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
   {
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
-      hb_retni( obj->lastIndexOf ( PCONSTCHAR(1), OPINT(2,-1) ) );
+      RINT( obj->lastIndexOf ( PCONSTCHAR(1), OPINT(2,-1) ) );
     }
     else
     {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
     if( (ISNUM(1)||ISCHAR(1)) && ISOPTNUM(2) )
     {
       char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-      hb_retni( obj->lastIndexOf ( par1, OPINT(2,-1) ) );
+      RINT( obj->lastIndexOf ( par1, OPINT(2,-1) ) );
     }
     else
     {
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
 
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -2166,7 +2166,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
@@ -2383,7 +2383,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
     if( ISLOG(1) && ISOPTNUM(2) ) // TODO: implementar parametro opcional
     {
       bool par1;
-      hb_retni( obj->toInt ( &par1, OPINT(2,10) ) );
+      RINT( obj->toInt ( &par1, OPINT(2,10) ) );
       hb_storl( par1, 1 );
     }
     else

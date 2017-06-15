@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_CAPTURECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->captureCount () );
+    RINT( obj->captureCount () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERNERROROFFSET )
 
   if( obj )
   {
-    hb_retni( obj->patternErrorOffset () );
+    RINT( obj->patternErrorOffset () );
   }
 }
 

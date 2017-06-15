@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
 
   if( obj )
   {
-    hb_retni( obj->handle () );
+    RINT( obj->handle () );
   }
 }
 

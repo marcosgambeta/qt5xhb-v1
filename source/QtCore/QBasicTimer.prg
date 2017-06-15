@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 
   if( obj )
   {
-    hb_retni( obj->timerId () );
+    RINT( obj->timerId () );
   }
 }
 

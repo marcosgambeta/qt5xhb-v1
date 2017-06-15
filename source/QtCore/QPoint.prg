@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 
   if( obj )
   {
-    hb_retni( obj->manhattanLength () );
+    RINT( obj->manhattanLength () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPOINT_X )
 
   if( obj )
   {
-    hb_retni( obj->x () );
+    RINT( obj->x () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPOINT_Y )
 
   if( obj )
   {
-    hb_retni( obj->y () );
+    RINT( obj->y () );
   }
 }
 

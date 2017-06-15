@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLOCKFILE_STALELOCKTIME )
 
   if( obj )
   {
-    hb_retni( obj->staleLockTime () );
+    RINT( obj->staleLockTime () );
   }
 #endif
 }

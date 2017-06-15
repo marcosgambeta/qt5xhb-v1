@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->captureCount () );
+    RINT( obj->captureCount () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0), (QRegExp::CaretMode) par3 ) );
+      RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0), (QRegExp::CaretMode) par3 ) );
     }
     else
     {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
     if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      hb_retni( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), (QRegExp::CaretMode) par3 ) );
+      RINT( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), (QRegExp::CaretMode) par3 ) );
     }
     else
     {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 
   if( obj )
   {
-    hb_retni( obj->matchedLength () );
+    RINT( obj->matchedLength () );
   }
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retni( obj->pos ( OPINT(1,0) ) );
+      RINT( obj->pos ( OPINT(1,0) ) );
     }
     else
     {

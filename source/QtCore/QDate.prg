@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDATE_DAY )
 
   if( obj )
   {
-    hb_retni( obj->day () );
+    RINT( obj->day () );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDATE_DAYOFWEEK )
 
   if( obj )
   {
-    hb_retni( obj->dayOfWeek () );
+    RINT( obj->dayOfWeek () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDATE_DAYOFYEAR )
 
   if( obj )
   {
-    hb_retni( obj->dayOfYear () );
+    RINT( obj->dayOfYear () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDATE_DAYSINMONTH )
 
   if( obj )
   {
-    hb_retni( obj->daysInMonth () );
+    RINT( obj->daysInMonth () );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDATE_DAYSINYEAR )
 
   if( obj )
   {
-    hb_retni( obj->daysInYear () );
+    RINT( obj->daysInYear () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDATE_DAYSTO )
   {
     if( ISQDATE(1) )
     {
-      hb_retni( obj->daysTo ( *PQDATE(1) ) );
+      RINT( obj->daysTo ( *PQDATE(1) ) );
     }
     else
     {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDATE_MONTH )
 
   if( obj )
   {
-    hb_retni( obj->month () );
+    RINT( obj->month () );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QDATE_TOJULIANDAY )
 
   if( obj )
   {
-    hb_retni( obj->toJulianDay () );
+    RINT( obj->toJulianDay () );
   }
 }
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
     if( ISNUM(1) ) // TODO: implementar parametro opcional
     {
       int par1;
-      hb_retni( obj->weekNumber ( &par1 ) );
+      RINT( obj->weekNumber ( &par1 ) );
       hb_storni( par1, 1 );
     }
     else
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QDATE_YEAR )
 
   if( obj )
   {
-    hb_retni( obj->year () );
+    RINT( obj->year () );
   }
 }
 

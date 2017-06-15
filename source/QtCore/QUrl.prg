@@ -378,7 +378,7 @@ void QUrl_port1 ()
 
   if( obj )
   {
-    hb_retni( obj->port () );
+    RINT( obj->port () );
   }
 }
 
@@ -391,7 +391,7 @@ void QUrl_port2 ()
 
   if( obj )
   {
-    hb_retni( obj->port ( PINT(1) ) );
+    RINT( obj->port ( PINT(1) ) );
   }
 }
 

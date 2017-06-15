@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QTIMEZONE_OFFSETFROMUTC )
   {
     if( ISQDATETIME(1) )
     {
-      hb_retni( obj->offsetFromUtc ( *PQDATETIME(1) ) );
+      RINT( obj->offsetFromUtc ( *PQDATETIME(1) ) );
     }
     else
     {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QTIMEZONE_STANDARDTIMEOFFSET )
   {
     if( ISQDATETIME(1) )
     {
-      hb_retni( obj->standardTimeOffset ( *PQDATETIME(1) ) );
+      RINT( obj->standardTimeOffset ( *PQDATETIME(1) ) );
     }
     else
     {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTIMEZONE_DAYLIGHTTIMEOFFSET )
   {
     if( ISQDATETIME(1) )
     {
-      hb_retni( obj->daylightTimeOffset ( *PQDATETIME(1) ) );
+      RINT( obj->daylightTimeOffset ( *PQDATETIME(1) ) );
     }
     else
     {

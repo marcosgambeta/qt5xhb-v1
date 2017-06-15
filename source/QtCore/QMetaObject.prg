@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->classInfoCount () );
+    RINT( obj->classInfoCount () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
 
   if( obj )
   {
-    hb_retni( obj->classInfoOffset () );
+    RINT( obj->classInfoOffset () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->constructorCount () );
+    RINT( obj->constructorCount () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->enumeratorCount () );
+    RINT( obj->enumeratorCount () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
 
   if( obj )
   {
-    hb_retni( obj->enumeratorOffset () );
+    RINT( obj->enumeratorOffset () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfClassInfo ( PCONSTCHAR(1) ) );
+      RINT( obj->indexOfClassInfo ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfConstructor ( PCONSTCHAR(1) ) );
+      RINT( obj->indexOfConstructor ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfEnumerator ( PCONSTCHAR(1) ) );
+      RINT( obj->indexOfEnumerator ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfMethod ( PCONSTCHAR(1) ) );
+      RINT( obj->indexOfMethod ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfProperty ( PCONSTCHAR(1) ) );
+      RINT( obj->indexOfProperty ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfSignal ( PCONSTCHAR(1) ) );
+      RINT( obj->indexOfSignal ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOfSlot ( PCONSTCHAR(1) ) );
+      RINT( obj->indexOfSlot ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->methodCount () );
+    RINT( obj->methodCount () );
   }
 }
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
 
   if( obj )
   {
-    hb_retni( obj->methodOffset () );
+    RINT( obj->methodOffset () );
   }
 }
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->propertyCount () );
+    RINT( obj->propertyCount () );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
 
   if( obj )
   {
-    hb_retni( obj->propertyOffset () );
+    RINT( obj->propertyOffset () );
   }
 }
 

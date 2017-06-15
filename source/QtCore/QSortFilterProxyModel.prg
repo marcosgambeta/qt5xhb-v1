@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->filterKeyColumn () );
+    RINT( obj->filterKeyColumn () );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->sortColumn () );
+    RINT( obj->sortColumn () );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
 
   if( obj )
   {
-    hb_retni( obj->sortRole () );
+    RINT( obj->sortRole () );
   }
 }
 
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERROLE )
 
   if( obj )
   {
-    hb_retni( obj->filterRole () );
+    RINT( obj->filterRole () );
   }
 }
 
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ROWCOUNT )
     if( (ISQMODELINDEX(1)||ISNIL(1)) )
     {
       QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->rowCount ( par1 ) );
+      RINT( obj->rowCount ( par1 ) );
     }
     else
     {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
     if( (ISQMODELINDEX(1)||ISNIL(1)) )
     {
       QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->columnCount ( par1 ) );
+      RINT( obj->columnCount ( par1 ) );
     }
     else
     {

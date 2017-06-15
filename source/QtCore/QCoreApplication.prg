@@ -224,7 +224,7 @@ static int exec ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
 {
-  hb_retni( QCoreApplication::exec () );
+  RINT( QCoreApplication::exec () );
 }
 
 /*

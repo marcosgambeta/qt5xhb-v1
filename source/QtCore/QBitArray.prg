@@ -195,7 +195,7 @@ void QBitArray_count1 ()
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -208,7 +208,7 @@ void QBitArray_count2 ()
 
   if( obj )
   {
-    hb_retni( obj->count ( PBOOL(1) ) );
+    RINT( obj->count ( PBOOL(1) ) );
   }
 }
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QBITARRAY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

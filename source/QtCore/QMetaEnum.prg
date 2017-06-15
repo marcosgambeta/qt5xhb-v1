@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->keyCount () );
+    RINT( obj->keyCount () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->value ( PINT(1) ) );
+      RINT( obj->value ( PINT(1) ) );
     }
     else
     {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->keyToValue ( PCONSTCHAR(1) ) );
+      RINT( obj->keyToValue ( PCONSTCHAR(1) ) );
     }
     else
     {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->keysToValue ( PCONSTCHAR(1) ) );
+      RINT( obj->keysToValue ( PCONSTCHAR(1) ) );
     }
     else
     {

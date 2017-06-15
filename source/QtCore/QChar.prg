@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 
   if( obj )
   {
-    hb_retni( obj->digitValue () );
+    RINT( obj->digitValue () );
   }
 }
 

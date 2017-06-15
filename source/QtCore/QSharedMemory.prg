@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

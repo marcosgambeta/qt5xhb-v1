@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
 
   if( obj )
   {
-    hb_retni( obj->timerId () );
+    RINT( obj->timerId () );
   }
 }
 

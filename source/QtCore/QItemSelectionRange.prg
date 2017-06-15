@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 
   if( obj )
   {
-    hb_retni( obj->top () );
+    RINT( obj->top () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 
   if( obj )
   {
-    hb_retni( obj->left () );
+    RINT( obj->left () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 
   if( obj )
   {
-    hb_retni( obj->bottom () );
+    RINT( obj->bottom () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 
   if( obj )
   {
-    hb_retni( obj->right () );
+    RINT( obj->right () );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 }
 

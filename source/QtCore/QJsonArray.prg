@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QJSONARRAY_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QJSONARRAY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

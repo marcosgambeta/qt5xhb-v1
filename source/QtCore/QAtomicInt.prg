@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddAcquire ( PINT(1) ) );
+      RINT( obj->fetchAndAddAcquire ( PINT(1) ) );
     }
     else
     {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddOrdered ( PINT(1) ) );
+      RINT( obj->fetchAndAddOrdered ( PINT(1) ) );
     }
     else
     {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddRelaxed ( PINT(1) ) );
+      RINT( obj->fetchAndAddRelaxed ( PINT(1) ) );
     }
     else
     {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndAddRelease ( PINT(1) ) );
+      RINT( obj->fetchAndAddRelease ( PINT(1) ) );
     }
     else
     {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreAcquire ( PINT(1) ) );
+      RINT( obj->fetchAndStoreAcquire ( PINT(1) ) );
     }
     else
     {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreOrdered ( PINT(1) ) );
+      RINT( obj->fetchAndStoreOrdered ( PINT(1) ) );
     }
     else
     {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreRelaxed ( PINT(1) ) );
+      RINT( obj->fetchAndStoreRelaxed ( PINT(1) ) );
     }
     else
     {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->fetchAndStoreRelease ( PINT(1) ) );
+      RINT( obj->fetchAndStoreRelease ( PINT(1) ) );
     }
     else
     {

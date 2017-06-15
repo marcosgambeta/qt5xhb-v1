@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 
   if( obj )
   {
-    hb_retni( obj->currentFrame () );
+    RINT( obj->currentFrame () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 
   if( obj )
   {
-    hb_retni( obj->currentTime () );
+    RINT( obj->currentTime () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
 
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RINT( obj->duration () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 
   if( obj )
   {
-    hb_retni( obj->endFrame () );
+    RINT( obj->endFrame () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->frameForTime ( PINT(1) ) );
+      RINT( obj->frameForTime ( PINT(1) ) );
     }
     else
     {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 
   if( obj )
   {
-    hb_retni( obj->startFrame () );
+    RINT( obj->startFrame () );
   }
 }
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->updateInterval () );
+    RINT( obj->updateInterval () );
   }
 }
 

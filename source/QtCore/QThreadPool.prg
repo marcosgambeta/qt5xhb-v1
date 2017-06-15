@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 
   if( obj )
   {
-    hb_retni( obj->expiryTimeout () );
+    RINT( obj->expiryTimeout () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->maxThreadCount () );
+    RINT( obj->maxThreadCount () );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->activeThreadCount () );
+    RINT( obj->activeThreadCount () );
   }
 }
 
