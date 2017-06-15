@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->byteCount () );
+    RINT( obj->byteCount () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_FRAMECOUNT )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frameCount () );
+    RINT( obj->frameCount () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_SAMPLECOUNT )
   QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleCount () );
+    RINT( obj->sampleCount () );
   }
 }
 

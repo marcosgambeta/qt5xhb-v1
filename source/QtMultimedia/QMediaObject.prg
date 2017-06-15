@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
   QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->notifyInterval () );
+    RINT( obj->notifyInterval () );
   }
 }
 

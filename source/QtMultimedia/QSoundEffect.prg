@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loopsRemaining () );
+    RINT( obj->loopsRemaining () );
   }
 }
 

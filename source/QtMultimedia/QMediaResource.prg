@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOBITRATE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->audioBitRate () );
+    RINT( obj->audioBitRate () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_CHANNELCOUNT )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->channelCount () );
+    RINT( obj->channelCount () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SAMPLERATE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleRate () );
+    RINT( obj->sampleRate () );
   }
 }
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOBITRATE )
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->videoBitRate () );
+    RINT( obj->videoBitRate () );
   }
 }
 

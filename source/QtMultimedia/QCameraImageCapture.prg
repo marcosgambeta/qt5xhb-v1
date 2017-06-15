@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
   QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->capture ( OPQSTRING(1,QString()) ) );
+    RINT( obj->capture ( OPQSTRING(1,QString()) ) );
   }
 }
 

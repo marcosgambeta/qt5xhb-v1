@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCY )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frequency () );
+    RINT( obj->frequency () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frequencyStep ( (QRadioTuner::Band) hb_parni(1) ) );
+    RINT( obj->frequencyStep ( (QRadioTuner::Band) hb_parni(1) ) );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SIGNALSTRENGTH )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->signalStrength () );
+    RINT( obj->signalStrength () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_VOLUME )
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->volume () );
+    RINT( obj->volume () );
   }
 }
 

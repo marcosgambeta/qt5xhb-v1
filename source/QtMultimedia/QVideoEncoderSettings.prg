@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_BITRATE )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bitRate () );
+    RINT( obj->bitRate () );
   }
 }
 

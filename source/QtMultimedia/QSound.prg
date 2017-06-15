@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loops () );
+    RINT( obj->loops () );
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loopsRemaining () );
+    RINT( obj->loopsRemaining () );
   }
 }
 

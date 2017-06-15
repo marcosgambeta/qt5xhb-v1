@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bytesPerLine () );
+    RINT( obj->bytesPerLine () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 }
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mappedBytes () );
+    RINT( obj->mappedBytes () );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
   QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 

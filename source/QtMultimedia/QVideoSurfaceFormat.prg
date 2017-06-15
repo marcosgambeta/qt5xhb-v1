@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEHEIGHT )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frameHeight () );
+    RINT( obj->frameHeight () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEWIDTH )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frameWidth () );
+    RINT( obj->frameWidth () );
   }
 }
 

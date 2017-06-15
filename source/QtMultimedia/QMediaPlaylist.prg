@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTINDEX )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIACOUNT )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mediaCount () );
+    RINT( obj->mediaCount () );
   }
 }
 
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nextIndex ( OPINT(1,1) ) );
+    RINT( obj->nextIndex ( OPINT(1,1) ) );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->previousIndex ( OPINT(1,1) ) );
+    RINT( obj->previousIndex ( OPINT(1,1) ) );
   }
 }
 

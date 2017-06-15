@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISOSENSITIVITY )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->isoSensitivity () );
+    RINT( obj->isoSensitivity () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY )
   QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->requestedIsoSensitivity () );
+    RINT( obj->requestedIsoSensitivity () );
   }
 }
 

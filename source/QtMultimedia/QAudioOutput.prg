@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferSize () );
+    RINT( obj->bufferSize () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bytesFree () );
+    RINT( obj->bytesFree () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->notifyInterval () );
+    RINT( obj->notifyInterval () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
   QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->periodSize () );
+    RINT( obj->periodSize () );
   }
 }
 

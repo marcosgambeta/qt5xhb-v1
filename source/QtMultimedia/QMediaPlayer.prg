@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_BUFFERSTATUS )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferStatus () );
+    RINT( obj->bufferStatus () );
   }
 }
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_VOLUME )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->volume () );
+    RINT( obj->volume () );
   }
 }
 
