@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSSLKEY_LENGTH )
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 

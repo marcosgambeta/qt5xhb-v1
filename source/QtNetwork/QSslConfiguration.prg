@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerVerifyDepth () );
+    RINT( obj->peerVerifyDepth () );
   }
 }
 

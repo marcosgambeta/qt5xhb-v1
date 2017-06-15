@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
   QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->supportedBits () );
+    RINT( obj->supportedBits () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
   QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->usedBits () );
+    RINT( obj->usedBits () );
   }
 }
 

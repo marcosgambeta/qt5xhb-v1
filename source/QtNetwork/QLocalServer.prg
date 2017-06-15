@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections () );
+    RINT( obj->maxPendingConnections () );
   }
 }
 

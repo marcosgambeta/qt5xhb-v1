@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
   QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lookupId () );
+    RINT( obj->lookupId () );
   }
 }
 
@@ -343,7 +343,7 @@ static int lookupHost ( const QString & name, QObject * receiver, const char * m
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
-  hb_retni( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
+  RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
 }
 
 

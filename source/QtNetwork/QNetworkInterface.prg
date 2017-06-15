@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->index () );
+    RINT( obj->index () );
   }
 }
 

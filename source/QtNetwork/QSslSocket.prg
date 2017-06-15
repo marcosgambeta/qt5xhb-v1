@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYDEPTH )
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->peerVerifyDepth () );
+    RINT( obj->peerVerifyDepth () );
   }
 }
 

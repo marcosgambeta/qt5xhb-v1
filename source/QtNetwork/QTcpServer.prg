@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections () );
+    RINT( obj->maxPendingConnections () );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->socketDescriptor () );
+    RINT( obj->socketDescriptor () );
   }
 }
 
