@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACALL )
   QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->qt_metacall ( (QMetaObject::Call) hb_parni(1), PINT(2), par3 ) ); // TODO: parametro 3
+    RINT( obj->qt_metacall ( (QMetaObject::Call) hb_parni(1), PINT(2), par3 ) ); // TODO: parametro 3
   }
 }
 

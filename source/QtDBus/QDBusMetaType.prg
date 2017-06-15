@@ -83,7 +83,7 @@ static int signatureToType(const char *signature)
 */
 HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
 {
-  hb_retni( QDBusMetaType::signatureToType ( PCONSTCHAR(1) ) );
+  RINT( QDBusMetaType::signatureToType ( PCONSTCHAR(1) ) );
 }
 
 
