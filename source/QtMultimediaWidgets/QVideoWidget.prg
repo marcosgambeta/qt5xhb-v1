@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_BRIGHTNESS )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->brightness () );
+    RINT( obj->brightness () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_CONTRAST )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->contrast () );
+    RINT( obj->contrast () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_HUE )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->hue () );
+    RINT( obj->hue () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SATURATION )
   QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->saturation () );
+    RINT( obj->saturation () );
   }
 }
 
