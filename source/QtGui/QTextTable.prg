@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rows () );
+    RINT( obj->rows () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
   QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columns () );
+    RINT( obj->columns () );
   }
 }
 

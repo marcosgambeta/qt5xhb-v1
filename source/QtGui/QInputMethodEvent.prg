@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->replacementLength () );
+    RINT( obj->replacementLength () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
   QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->replacementStart () );
+    RINT( obj->replacementStart () );
   }
 }
 

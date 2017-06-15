@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstPosition () );
+    RINT( obj->firstPosition () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
   QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lastPosition () );
+    RINT( obj->lastPosition () );
   }
 }
 

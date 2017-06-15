@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_WIDTH )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HEIGHT )
   QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 }
 

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bottom () );
+    RINT( obj->bottom () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->top () );
+    RINT( obj->top () );
   }
 }
 

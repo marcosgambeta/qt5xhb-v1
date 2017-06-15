@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
   QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textPosition () );
+    RINT( obj->textPosition () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
   QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->formatIndex () );
+    RINT( obj->formatIndex () );
   }
 }
 

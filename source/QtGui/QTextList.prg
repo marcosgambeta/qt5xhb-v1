@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->itemNumber ( *PQTEXTBLOCK(1) ) );
+    RINT( obj->itemNumber ( *PQTEXTBLOCK(1) ) );
   }
 }
 

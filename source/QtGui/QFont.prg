@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QFONT_PIXELSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pixelSize () );
+    RINT( obj->pixelSize () );
   }
 }
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pointSize () );
+    RINT( obj->pointSize () );
   }
 }
 
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QFONT_STRETCH )
 
   if( obj )
   {
-    hb_retni( obj->stretch () );
+    RINT( obj->stretch () );
   }
 }
 
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QFONT_WEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->weight () );
+    RINT( obj->weight () );
   }
 }
 

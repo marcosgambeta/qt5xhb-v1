@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 
   if( obj )
   {
-    hb_retni( obj->currentImageNumber () );
+    RINT( obj->currentImageNumber () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->imageCount () );
+    RINT( obj->imageCount () );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 
   if( obj )
   {
-    hb_retni( obj->nextImageDelay () );
+    RINT( obj->nextImageDelay () );
   }
 }
 

@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->bitPlaneCount () );
+    RINT( obj->bitPlaneCount () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
 
   if( obj )
   {
-    hb_retni( obj->byteCount () );
+    RINT( obj->byteCount () );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
 
   if( obj )
   {
-    hb_retni( obj->bytesPerLine () );
+    RINT( obj->bytesPerLine () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->colorCount () );
+    RINT( obj->colorCount () );
   }
 }
 
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QIMAGE_DEPTH )
 
   if( obj )
   {
-    hb_retni( obj->depth () );
+    RINT( obj->depth () );
   }
 }
 
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
 
   if( obj )
   {
-    hb_retni( obj->dotsPerMeterX () );
+    RINT( obj->dotsPerMeterX () );
   }
 }
 
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
 
   if( obj )
   {
-    hb_retni( obj->dotsPerMeterY () );
+    RINT( obj->dotsPerMeterY () );
   }
 }
 
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QIMAGE_HEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 }
 
@@ -874,7 +874,7 @@ void QImage_pixelIndex1 ()
 
   if( obj )
   {
-    hb_retni( obj->pixelIndex ( *PQPOINT(1) ) );
+    RINT( obj->pixelIndex ( *PQPOINT(1) ) );
   }
 }
 
@@ -887,7 +887,7 @@ void QImage_pixelIndex2 ()
 
   if( obj )
   {
-    hb_retni( obj->pixelIndex ( PINT(1), PINT(2) ) );
+    RINT( obj->pixelIndex ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -1416,7 +1416,7 @@ HB_FUNC_STATIC( QIMAGE_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 

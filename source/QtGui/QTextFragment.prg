@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->position () );
+    RINT( obj->position () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
   QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->charFormatIndex () );
+    RINT( obj->charFormatIndex () );
   }
 }
 

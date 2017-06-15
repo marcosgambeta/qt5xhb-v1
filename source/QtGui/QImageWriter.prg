@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 
   if( obj )
   {
-    hb_retni( obj->compression () );
+    RINT( obj->compression () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 
   if( obj )
   {
-    hb_retni( obj->quality () );
+    RINT( obj->quality () );
   }
 }
 

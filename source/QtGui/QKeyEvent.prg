@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
   QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
   QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->key () );
+    RINT( obj->key () );
   }
 }
 

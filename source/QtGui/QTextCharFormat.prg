@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontWeight () );
+    RINT( obj->fontWeight () );
   }
 }
 
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRETCH )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontStretch () );
+    RINT( obj->fontStretch () );
   }
 }
 
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TABLECELLROWSPAN )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tableCellRowSpan () );
+    RINT( obj->tableCellRowSpan () );
   }
 }
 
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TABLECELLCOLUMNSPAN )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tableCellColumnSpan () );
+    RINT( obj->tableCellColumnSpan () );
   }
 }
 

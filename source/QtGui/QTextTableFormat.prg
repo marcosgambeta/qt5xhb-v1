@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
   QTextTableFormat * obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columns () );
+    RINT( obj->columns () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
   QTextTableFormat * obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->headerRowCount () );
+    RINT( obj->headerRowCount () );
   }
 }
 

@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->weight () );
+    RINT( obj->weight () );
   }
 }
 

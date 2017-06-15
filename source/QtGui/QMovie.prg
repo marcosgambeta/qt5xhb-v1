@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentFrameNumber () );
+    RINT( obj->currentFrameNumber () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frameCount () );
+    RINT( obj->frameCount () );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nextFrameDelay () );
+    RINT( obj->nextFrameDelay () );
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QMOVIE_SPEED )
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->speed () );
+    RINT( obj->speed () );
   }
 }
 

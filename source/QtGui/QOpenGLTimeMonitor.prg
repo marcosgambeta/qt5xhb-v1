@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SAMPLECOUNT )
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sampleCount () );
+    RINT( obj->sampleCount () );
   }
 #endif
 #endif
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RECORDSAMPLE )
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->recordSample () );
+    RINT( obj->recordSample () );
   }
 #endif
 #endif

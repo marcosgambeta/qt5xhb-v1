@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHA )
 
   if( obj )
   {
-    hb_retni( obj->alpha () );
+    RINT( obj->alpha () );
   }
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCOLOR_BLACK )
 
   if( obj )
   {
-    hb_retni( obj->black () );
+    RINT( obj->black () );
   }
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QCOLOR_BLUE )
 
   if( obj )
   {
-    hb_retni( obj->blue () );
+    RINT( obj->blue () );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QCOLOR_CYAN )
 
   if( obj )
   {
-    hb_retni( obj->cyan () );
+    RINT( obj->cyan () );
   }
 }
 
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QCOLOR_GREEN )
 
   if( obj )
   {
-    hb_retni( obj->green () );
+    RINT( obj->green () );
   }
 }
 
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUE )
 
   if( obj )
   {
-    hb_retni( obj->hslHue () );
+    RINT( obj->hslHue () );
   }
 }
 
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
 
   if( obj )
   {
-    hb_retni( obj->hslSaturation () );
+    RINT( obj->hslSaturation () );
   }
 }
 
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUE )
 
   if( obj )
   {
-    hb_retni( obj->hsvHue () );
+    RINT( obj->hsvHue () );
   }
 }
 
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
 
   if( obj )
   {
-    hb_retni( obj->hsvSaturation () );
+    RINT( obj->hsvSaturation () );
   }
 }
 
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QCOLOR_HUE )
 
   if( obj )
   {
-    hb_retni( obj->hue () );
+    RINT( obj->hue () );
   }
 }
 
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
 
   if( obj )
   {
-    hb_retni( obj->lightness () );
+    RINT( obj->lightness () );
   }
 }
 
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTA )
 
   if( obj )
   {
-    hb_retni( obj->magenta () );
+    RINT( obj->magenta () );
   }
 }
 
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QCOLOR_RED )
 
   if( obj )
   {
-    hb_retni( obj->red () );
+    RINT( obj->red () );
   }
 }
 
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATION )
 
   if( obj )
   {
-    hb_retni( obj->saturation () );
+    RINT( obj->saturation () );
   }
 }
 
@@ -1479,7 +1479,7 @@ HB_FUNC_STATIC( QCOLOR_VALUE )
 
   if( obj )
   {
-    hb_retni( obj->value () );
+    RINT( obj->value () );
   }
 }
 
@@ -1505,7 +1505,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOW )
 
   if( obj )
   {
-    hb_retni( obj->yellow () );
+    RINT( obj->yellow () );
   }
 }
 
@@ -1718,7 +1718,7 @@ HB_FUNC( QALPHA )
 {
   if( ISNUM(1) )
   {
-    hb_retni( qAlpha ( (QRgb) hb_parni(1) ) );
+    RINT( qAlpha ( (QRgb) hb_parni(1) ) );
   }
   else
   {
@@ -1733,7 +1733,7 @@ HB_FUNC( QBLUE )
 {
   if( ISNUM(1) )
   {
-    hb_retni( qBlue ( (QRgb) hb_parni(1) ) );
+    RINT( qBlue ( (QRgb) hb_parni(1) ) );
   }
   else
   {
@@ -1748,7 +1748,7 @@ HB_FUNC( QGRAY1 )
 {
   if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    hb_retni( qGray ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
+    RINT( qGray ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
   }
   else
   {
@@ -1763,7 +1763,7 @@ HB_FUNC( QGRAY2 )
 {
   if( ISNUM(1) )
   {
-    hb_retni( qGray ( (QRgb) hb_parni(1) ) );
+    RINT( qGray ( (QRgb) hb_parni(1) ) );
   }
   else
   {
@@ -1793,7 +1793,7 @@ HB_FUNC( QGREEN )
 {
   if( ISNUM(1) )
   {
-    hb_retni( qGreen ( (QRgb) hb_parni(1) ) );
+    RINT( qGreen ( (QRgb) hb_parni(1) ) );
   }
   else
   {
@@ -1808,7 +1808,7 @@ HB_FUNC( QRED )
 {
   if( ISNUM(1) )
   {
-    hb_retni( qRed ( (QRgb) hb_parni(1) ) );
+    RINT( qRed ( (QRgb) hb_parni(1) ) );
   }
   else
   {

@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QPAGESIZE_WINDOWSID1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->windowsId () );
+    RINT( obj->windowsId () );
   }
 }
 
@@ -401,7 +401,7 @@ static int windowsId(PageSizeId pageSizeId)
 */
 HB_FUNC_STATIC( QPAGESIZE_WINDOWSID2 )
 {
-  hb_retni( QPageSize::windowsId ( (QPageSize::PageSizeId) hb_parni(1) ) );
+  RINT( QPageSize::windowsId ( (QPageSize::PageSizeId) hb_parni(1) ) );
 }
 
 

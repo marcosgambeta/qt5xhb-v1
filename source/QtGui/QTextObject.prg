@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
   QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->formatIndex () );
+    RINT( obj->formatIndex () );
   }
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
   QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->objectIndex () );
+    RINT( obj->objectIndex () );
   }
 }
 

@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxGeometryOutputVertices () );
+    RINT( obj->maxGeometryOutputVertices () );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PATCHVERTEXCOUNT )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->patchVertexCount () );
+    RINT( obj->patchVertexCount () );
   }
 }
 

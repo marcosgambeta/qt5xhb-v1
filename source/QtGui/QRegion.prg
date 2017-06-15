@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QREGION_RECTCOUNT )
   QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rectCount () );
+    RINT( obj->rectCount () );
   }
 }
 

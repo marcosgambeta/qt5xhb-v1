@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectedCellCount () );
+    RINT( obj->selectedCellCount () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectedColumnCount () );
+    RINT( obj->selectedColumnCount () );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectedRowCount () );
+    RINT( obj->selectedRowCount () );
   }
 }
 

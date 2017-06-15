@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalX () );
+    RINT( obj->globalX () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->globalY () );
+    RINT( obj->globalY () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->x () );
+    RINT( obj->x () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
   QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->y () );
+    RINT( obj->y () );
   }
 }
 

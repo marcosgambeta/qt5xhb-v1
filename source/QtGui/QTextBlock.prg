@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->position () );
+    RINT( obj->position () );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->blockFormatIndex () );
+    RINT( obj->blockFormatIndex () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->charFormatIndex () );
+    RINT( obj->charFormatIndex () );
   }
 }
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->userState () );
+    RINT( obj->userState () );
   }
 }
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->revision () );
+    RINT( obj->revision () );
   }
 }
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->blockNumber () );
+    RINT( obj->blockNumber () );
   }
 }
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstLineNumber () );
+    RINT( obj->firstLineNumber () );
   }
 }
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineCount () );
+    RINT( obj->lineCount () );
   }
 }
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_FRAGMENTINDEX )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fragmentIndex () );
+    RINT( obj->fragmentIndex () );
   }
 }
 

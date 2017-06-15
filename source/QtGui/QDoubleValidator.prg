@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
   QDoubleValidator * obj = (QDoubleValidator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->decimals () );
+    RINT( obj->decimals () );
   }
 }
 

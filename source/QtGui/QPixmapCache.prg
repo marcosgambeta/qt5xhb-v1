@@ -84,7 +84,7 @@ static int cacheLimit()
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
 {
-  hb_retni( QPixmapCache::cacheLimit () );
+  RINT( QPixmapCache::cacheLimit () );
 }
 
 /*

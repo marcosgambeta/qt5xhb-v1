@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->preeditAreaPosition () );
+    RINT( obj->preeditAreaPosition () );
   }
 }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineCount () );
+    RINT( obj->lineCount () );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    hb_retni( obj->nextCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
+    RINT( obj->nextCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
   }
 }
 
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    hb_retni( obj->previousCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
+    RINT( obj->previousCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
   }
 }
 
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->leftCursorPosition ( PINT(1) ) );
+    RINT( obj->leftCursorPosition ( PINT(1) ) );
   }
 }
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
   QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rightCursorPosition ( PINT(1) ) );
+    RINT( obj->rightCursorPosition ( PINT(1) ) );
   }
 }
 

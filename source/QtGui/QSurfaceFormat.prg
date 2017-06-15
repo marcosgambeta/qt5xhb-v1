@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_DEPTHBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depthBufferSize () );
+    RINT( obj->depthBufferSize () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STENCILBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->stencilBufferSize () );
+    RINT( obj->stencilBufferSize () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_REDBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->redBufferSize () );
+    RINT( obj->redBufferSize () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_GREENBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->greenBufferSize () );
+    RINT( obj->greenBufferSize () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_BLUEBUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->blueBufferSize () );
+    RINT( obj->blueBufferSize () );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_ALPHABUFFERSIZE )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->alphaBufferSize () );
+    RINT( obj->alphaBufferSize () );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SAMPLES )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->samples () );
+    RINT( obj->samples () );
   }
 }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_MAJORVERSION )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->majorVersion () );
+    RINT( obj->majorVersion () );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_MINORVERSION )
   QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minorVersion () );
+    RINT( obj->minorVersion () );
   }
 }
 

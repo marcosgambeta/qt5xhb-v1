@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->elementCount () );
+    RINT( obj->elementCount () );
   }
 }
 

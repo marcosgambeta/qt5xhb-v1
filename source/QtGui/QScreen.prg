@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSCREEN_DEPTH )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depth () );
+    RINT( obj->depth () );
   }
 }
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSCREEN_ANGLEBETWEEN )
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->angleBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2) ) );
+    RINT( obj->angleBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2) ) );
   }
 }
 

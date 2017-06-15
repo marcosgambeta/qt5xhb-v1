@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPICTUREIO_STATUS )
 
   if( obj )
   {
-    hb_retni( obj->status () );
+    RINT( obj->status () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPICTUREIO_QUALITY )
 
   if( obj )
   {
-    hb_retni( obj->quality () );
+    RINT( obj->quality () );
   }
 }
 

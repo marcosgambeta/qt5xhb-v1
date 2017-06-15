@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->indent () );
+    RINT( obj->indent () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
   QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineHeightType () );
+    RINT( obj->lineHeightType () );
   }
 }
 

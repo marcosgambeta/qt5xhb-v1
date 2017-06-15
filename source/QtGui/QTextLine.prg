@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLine::CursorBetweenCharacters : hb_parni(2);
-    hb_retni( obj->xToCursor ( PQREAL(1), (QTextLine::CursorPosition) par2 ) );
+    RINT( obj->xToCursor ( PQREAL(1), (QTextLine::CursorPosition) par2 ) );
   }
 }
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textStart () );
+    RINT( obj->textStart () );
   }
 }
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textLength () );
+    RINT( obj->textLength () );
   }
 }
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
   QTextLine * obj = (QTextLine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 

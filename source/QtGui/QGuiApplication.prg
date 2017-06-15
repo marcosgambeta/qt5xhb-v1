@@ -224,7 +224,7 @@ static int exec()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_EXEC )
 {
-  hb_retni( QGuiApplication::exec () );
+  RINT( QGuiApplication::exec () );
 }
 
 

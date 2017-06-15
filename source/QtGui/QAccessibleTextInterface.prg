@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTIONCOUNT )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->selectionCount () );
+    RINT( obj->selectionCount () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CURSORPOSITION )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cursorPosition () );
+    RINT( obj->cursorPosition () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERCOUNT )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->characterCount () );
+    RINT( obj->characterCount () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_OFFSETATPOINT )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->offsetAtPoint ( *PQPOINT(1) ) );
+    RINT( obj->offsetAtPoint ( *PQPOINT(1) ) );
   }
 }
 

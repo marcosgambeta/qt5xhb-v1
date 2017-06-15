@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QPEN_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 

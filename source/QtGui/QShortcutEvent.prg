@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
   QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->shortcutId () );
+    RINT( obj->shortcutId () );
   }
 }
 

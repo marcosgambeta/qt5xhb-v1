@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mouseDoubleClickInterval () );
+    RINT( obj->mouseDoubleClickInterval () );
   }
 }
 
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGDISTANCE )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startDragDistance () );
+    RINT( obj->startDragDistance () );
   }
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGTIME )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startDragTime () );
+    RINT( obj->startDragTime () );
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGVELOCITY )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->startDragVelocity () );
+    RINT( obj->startDragVelocity () );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDINPUTINTERVAL )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->keyboardInputInterval () );
+    RINT( obj->keyboardInputInterval () );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDAUTOREPEATRATE )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->keyboardAutoRepeatRate () );
+    RINT( obj->keyboardAutoRepeatRate () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_CURSORFLASHTIME )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cursorFlashTime () );
+    RINT( obj->cursorFlashTime () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_PASSWORDMASKDELAY )
   QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->passwordMaskDelay () );
+    RINT( obj->passwordMaskDelay () );
   }
 }
 

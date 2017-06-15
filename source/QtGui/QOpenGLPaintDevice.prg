@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DEVTYPE )
   QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->devType () );
+    RINT( obj->devType () );
   }
 }
 

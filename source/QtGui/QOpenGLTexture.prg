@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_WIDTH )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 #endif
 }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_HEIGHT )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 #endif
 }
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTH )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depth () );
+    RINT( obj->depth () );
   }
 #endif
 }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPLEVELS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mipLevels () );
+    RINT( obj->mipLevels () );
   }
 #endif
 }
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMMIPLEVELS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumMipLevels () );
+    RINT( obj->maximumMipLevels () );
   }
 #endif
 }
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_LAYERS )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->layers () );
+    RINT( obj->layers () );
   }
 #endif
 }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_FACES )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->faces () );
+    RINT( obj->faces () );
   }
 #endif
 }
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPBASELEVEL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mipBaseLevel () );
+    RINT( obj->mipBaseLevel () );
   }
 #endif
 }
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPMAXLEVEL )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mipMaxLevel () );
+    RINT( obj->mipMaxLevel () );
   }
 #endif
 }

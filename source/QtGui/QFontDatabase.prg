@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      hb_retni( obj->weight ( PQSTRING(1), PQSTRING(2) ) );
+      RINT( obj->weight ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
   if( ISCHAR(1) )
   {
-    hb_retni( QFontDatabase::addApplicationFont ( PQSTRING(1) ) );
+    RINT( QFontDatabase::addApplicationFont ( PQSTRING(1) ) );
   }
   else
   {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 {
   if( ISQBYTEARRAY(1) )
   {
-    hb_retni( QFontDatabase::addApplicationFontFromData ( *PQBYTEARRAY(1) ) );
+    RINT( QFontDatabase::addApplicationFontFromData ( *PQBYTEARRAY(1) ) );
   }
   else
   {

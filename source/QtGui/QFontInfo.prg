@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pixelSize () );
+    RINT( obj->pixelSize () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 
   if( obj )
   {
-    hb_retni( obj->pointSize () );
+    RINT( obj->pointSize () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QFONTINFO_WEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->weight () );
+    RINT( obj->weight () );
   }
 }
 

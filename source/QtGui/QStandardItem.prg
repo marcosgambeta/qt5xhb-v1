@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROW )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

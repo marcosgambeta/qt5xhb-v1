@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QPIXMAP_DEVTYPE )
   {
     if( ISNUMPAR(0) )
     {
-      hb_retni( obj->devType () );
+      RINT( obj->devType () );
     }
     else
     {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QPIXMAP_WIDTH )
   {
     if( ISNUMPAR(0) )
     {
-      hb_retni( obj->width () );
+      RINT( obj->width () );
     }
     else
     {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QPIXMAP_HEIGHT )
   {
     if( ISNUMPAR(0) )
     {
-      hb_retni( obj->height () );
+      RINT( obj->height () );
     }
     else
     {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QPIXMAP_DEPTH )
   {
     if( ISNUMPAR(0) )
     {
-      hb_retni( obj->depth () );
+      RINT( obj->depth () );
     }
     else
     {
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QPIXMAP_DEFAULTDEPTH )
 {
   if( ISNUMPAR(0) )
   {
-    hb_retni( QPixmap::defaultDepth () );
+    RINT( QPixmap::defaultDepth () );
   }
   else
   {

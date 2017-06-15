@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TYPE )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->objectIndex () );
+    RINT( obj->objectIndex () );
   }
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->intProperty ( PINT(1) ) );
+    RINT( obj->intProperty ( PINT(1) ) );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTYCOUNT )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->propertyCount () );
+    RINT( obj->propertyCount () );
   }
 }
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTTYPE )
   QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->objectType () );
+    RINT( obj->objectType () );
   }
 }
 

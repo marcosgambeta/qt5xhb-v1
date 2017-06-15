@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowSpan () );
+    RINT( obj->rowSpan () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnSpan () );
+    RINT( obj->columnSpan () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTPOSITION )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstPosition () );
+    RINT( obj->firstPosition () );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTPOSITION )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lastPosition () );
+    RINT( obj->lastPosition () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
   QTextTableCell * obj = (QTextTableCell *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tableCellFormatIndex () );
+    RINT( obj->tableCellFormatIndex () );
   }
 }
 

@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SIZE )
   QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
