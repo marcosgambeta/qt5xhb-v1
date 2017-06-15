@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_MAXPENDINGCONNECTIONS )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections () );
+    RINT( obj->maxPendingConnections () );
   }
 #endif
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SOCKETDESCRIPTOR )
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->socketDescriptor () );
+    RINT( obj->socketDescriptor () );
   }
 #endif
 }
