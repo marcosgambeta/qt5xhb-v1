@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 
   if( obj )
   {
-    hb_retni( obj->precision () );
+    RINT( obj->precision () );
   }
 }
 
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QSQLFIELD_TYPEID )
 
   if( obj )
   {
-    hb_retni( obj->typeID () );
+    RINT( obj->typeID () );
   }
 }
 

@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PORT )
 
   if( obj )
   {
-    hb_retni( obj->port () );
+    RINT( obj->port () );
   }
 }
 

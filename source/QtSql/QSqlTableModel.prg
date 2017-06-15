@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->fieldIndex ( PQSTRING(1) ) );
+      RINT( obj->fieldIndex ( PQSTRING(1) ) );
     }
     else
     {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
     if( (ISQMODELINDEX(1)||ISNIL(1)) )
     {
       QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->rowCount ( par1 ) );
+      RINT( obj->rowCount ( par1 ) );
     }
     else
     {

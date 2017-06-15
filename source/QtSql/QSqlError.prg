@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
 
   if( obj )
   {
-    hb_retni( obj->number () );
+    RINT( obj->number () );
   }
 }
 

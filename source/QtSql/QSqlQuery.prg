@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
 
   if( obj )
   {
-    hb_retni( obj->at () );
+    RINT( obj->at () );
   }
 }
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 
   if( obj )
   {
-    hb_retni( obj->numRowsAffected () );
+    RINT( obj->numRowsAffected () );
   }
 }
 
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
 
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
