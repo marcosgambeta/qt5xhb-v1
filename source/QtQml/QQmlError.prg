@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QQMLERROR_COLUMN )
 
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QQMLERROR_LINE )
 
   if( obj )
   {
-    hb_retni( obj->line () );
+    RINT( obj->line () );
   }
 }
 

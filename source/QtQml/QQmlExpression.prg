@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_COLUMNNUMBER )
 
   if( obj )
   {
-    hb_retni( obj->columnNumber () );
+    RINT( obj->columnNumber () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_LINENUMBER )
 
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 

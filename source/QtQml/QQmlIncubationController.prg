@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
   QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->incubatingObjectCount () );
+    RINT( obj->incubatingObjectCount () );
   }
 }
 

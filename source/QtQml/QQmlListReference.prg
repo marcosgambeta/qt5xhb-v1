@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
   QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 

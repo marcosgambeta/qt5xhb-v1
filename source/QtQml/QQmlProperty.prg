@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_INDEX )
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->index () );
+    RINT( obj->index () );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPE )
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->propertyType () );
+    RINT( obj->propertyType () );
   }
 }
 

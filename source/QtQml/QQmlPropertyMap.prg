@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
   QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
