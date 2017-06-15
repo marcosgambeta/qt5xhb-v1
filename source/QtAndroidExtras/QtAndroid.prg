@@ -75,7 +75,7 @@ static int androidSdkVersion()
 HB_FUNC_STATIC( QTANDROID_ANDROIDSDKVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retni( QtAndroid::androidSdkVersion () );
+  RINT( QtAndroid::androidSdkVersion () );
 #endif
 }
 
