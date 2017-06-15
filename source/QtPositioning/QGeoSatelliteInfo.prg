@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITEIDENTIFIER )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->satelliteIdentifier () );
+    RINT( obj->satelliteIdentifier () );
   }
 #endif
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SIGNALSTRENGTH )
   QGeoSatelliteInfo * obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->signalStrength () );
+    RINT( obj->signalStrength () );
   }
 #endif
 }

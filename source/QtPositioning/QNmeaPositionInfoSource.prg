@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL )
   QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minimumUpdateInterval () );
+    RINT( obj->minimumUpdateInterval () );
   }
 #endif
 }
