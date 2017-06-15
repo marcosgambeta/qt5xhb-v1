@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
   QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 

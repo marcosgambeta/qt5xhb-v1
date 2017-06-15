@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QWEBHISTORY_COUNT )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentItemIndex () );
+    RINT( obj->currentItemIndex () );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
   QWebHistory * obj = (QWebHistory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximumItemCount () );
+    RINT( obj->maximumItemCount () );
   }
 }
 

@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->port () );
+    RINT( obj->port () );
   }
 }
 

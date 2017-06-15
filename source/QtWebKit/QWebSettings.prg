@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
   QWebSettings * obj = (QWebSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->fontSize ( (QWebSettings::FontSize) hb_parni(1) ) );
+    RINT( obj->fontSize ( (QWebSettings::FontSize) hb_parni(1) ) );
   }
 }
 
@@ -360,7 +360,7 @@ static int maximumPagesInCache ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 {
-  hb_retni( QWebSettings::maximumPagesInCache () );
+  RINT( QWebSettings::maximumPagesInCache () );
 }
 
 
