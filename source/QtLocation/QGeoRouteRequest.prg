@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NUMBERALTERNATIVEROUTES )
   QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->numberAlternativeRoutes () );
+    RINT( obj->numberAlternativeRoutes () );
   }
 #endif
 }

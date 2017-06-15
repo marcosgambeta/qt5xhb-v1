@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_MANAGERVERSION )
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->managerVersion () );
+    RINT( obj->managerVersion () );
   }
 #endif
 }

@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LIMIT )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->limit () );
+    RINT( obj->limit () );
   }
 #endif
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_OFFSET )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->offset () );
+    RINT( obj->offset () );
   }
 #endif
 }

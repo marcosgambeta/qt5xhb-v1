@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_LIMIT )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->limit () );
+    RINT( obj->limit () );
   }
 #endif
 }

@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_TRAVELTIME )
   QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->travelTime () );
+    RINT( obj->travelTime () );
   }
 #endif
 }

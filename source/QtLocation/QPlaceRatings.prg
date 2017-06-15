@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPLACERATINGS_COUNT )
   QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 #endif
 }

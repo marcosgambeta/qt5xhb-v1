@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_LIMIT )
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->limit () );
+    RINT( obj->limit () );
   }
 #endif
 }

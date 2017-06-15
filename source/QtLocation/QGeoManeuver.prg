@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_TIMETONEXTINSTRUCTION )
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->timeToNextInstruction () );
+    RINT( obj->timeToNextInstruction () );
   }
 #endif
 }

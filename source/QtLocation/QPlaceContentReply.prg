@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
   QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->totalCount () );
+    RINT( obj->totalCount () );
   }
 #endif
 }
