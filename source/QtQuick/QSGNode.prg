@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSGNODE_CHILDCOUNT )
   QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->childCount () );
+    RINT( obj->childCount () );
   }
 }
 

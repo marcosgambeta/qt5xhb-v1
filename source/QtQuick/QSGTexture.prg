@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSGTEXTURE_TEXTUREID )
   QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureId () );
+    RINT( obj->textureId () );
   }
 }
 

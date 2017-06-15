@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
   if( obj )
   {
     const QSGMaterial * par1 = (const QSGMaterial *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->compare ( par1 ) );
+    RINT( obj->compare ( par1 ) );
   }
 }
 

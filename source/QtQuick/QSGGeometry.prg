@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_ATTRIBUTECOUNT )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->attributeCount () );
+    RINT( obj->attributeCount () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_INDEXCOUNT )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->indexCount () );
+    RINT( obj->indexCount () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_INDEXTYPE )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->indexType () );
+    RINT( obj->indexType () );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SIZEOFINDEX )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sizeOfIndex () );
+    RINT( obj->sizeOfIndex () );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SIZEOFVERTEX )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->sizeOfVertex () );
+    RINT( obj->sizeOfVertex () );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_VERTEXCOUNT )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->vertexCount () );
+    RINT( obj->vertexCount () );
   }
 }
 

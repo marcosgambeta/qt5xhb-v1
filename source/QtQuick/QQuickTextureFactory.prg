@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
   QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureByteCount () );
+    RINT( obj->textureByteCount () );
   }
 }
 
