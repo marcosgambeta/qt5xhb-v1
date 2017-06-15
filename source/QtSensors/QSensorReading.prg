@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
   QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->valueCount () );
+    RINT( obj->valueCount () );
   }
 #endif
 }
