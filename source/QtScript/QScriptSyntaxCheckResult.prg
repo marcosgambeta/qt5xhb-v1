@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->errorColumnNumber () );
+    RINT( obj->errorColumnNumber () );
   }
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->errorLineNumber () );
+    RINT( obj->errorLineNumber () );
   }
 }
 

@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->processEventsInterval () );
+    RINT( obj->processEventsInterval () );
   }
 }
 
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
   QScriptEngine * obj = (QScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->uncaughtExceptionLineNumber () );
+    RINT( obj->uncaughtExceptionLineNumber () );
   }
 }
 

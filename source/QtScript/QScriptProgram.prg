@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->firstLineNumber () );
+    RINT( obj->firstLineNumber () );
   }
 }
 

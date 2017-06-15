@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->functionEndLineNumber () );
+    RINT( obj->functionEndLineNumber () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
   QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->functionMetaIndex () );
+    RINT( obj->functionMetaIndex () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->functionStartLineNumber () );
+    RINT( obj->functionStartLineNumber () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 

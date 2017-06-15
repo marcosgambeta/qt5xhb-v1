@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->argumentCount () );
+    RINT( obj->argumentCount () );
   }
 }
 
