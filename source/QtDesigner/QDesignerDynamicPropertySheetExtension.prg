@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
   {
     if( ISCHAR(1) && ISQVARIANT(2) )
     {
-      hb_retni( obj->addDynamicProperty ( PQSTRING(1), *PQVARIANT(2) ) );
+      RINT( obj->addDynamicProperty ( PQSTRING(1), *PQVARIANT(2) ) );
     }
     else
     {

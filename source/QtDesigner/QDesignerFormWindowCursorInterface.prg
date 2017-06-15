@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
 
   if( obj )
   {
-    hb_retni( obj->position () );
+    RINT( obj->position () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->selectedWidgetCount () );
+    RINT( obj->selectedWidgetCount () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->widgetCount () );
+    RINT( obj->widgetCount () );
   }
 }
 

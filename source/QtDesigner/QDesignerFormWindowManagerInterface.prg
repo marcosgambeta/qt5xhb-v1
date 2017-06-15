@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->formWindowCount () );
+    RINT( obj->formWindowCount () );
   }
 }
 

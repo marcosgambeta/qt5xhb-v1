@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
   {
     if( ISCHAR(1) )
     {
-      hb_retni( obj->indexOf ( PQSTRING(1) ) );
+      RINT( obj->indexOf ( PQSTRING(1) ) );
     }
     else
     {
