@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->hitCount () );
+    RINT( obj->hitCount () );
   }
 }
 

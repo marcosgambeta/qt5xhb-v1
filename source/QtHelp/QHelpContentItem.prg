@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
   QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->childCount () );
+    RINT( obj->childCount () );
   }
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
   if( obj )
   {
     QHelpContentItem * par1 = (QHelpContentItem *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->childPosition ( par1 ) );
+    RINT( obj->childPosition ( par1 ) );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
   QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 
