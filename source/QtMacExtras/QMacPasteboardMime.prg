@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_COUNT )
   if( obj )
   {
     QMimeData * par1 = (QMimeData *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->count ( par1 ) );
+    RINT( obj->count ( par1 ) );
   }
 #endif
 }
