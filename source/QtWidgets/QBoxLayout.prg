@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
 
   if( obj )
   {
-    hb_retni( obj->spacing () );
+    RINT( obj->spacing () );
   }
 }
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->stretch ( PINT(1) ) );
+      RINT( obj->stretch ( PINT(1) ) );
     }
     else
     {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->minimumHeightForWidth ( PINT(1) ) );
+      RINT( obj->minimumHeightForWidth ( PINT(1) ) );
     }
     else
     {

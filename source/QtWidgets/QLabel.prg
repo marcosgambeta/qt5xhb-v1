@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QLABEL_INDENT )
 
   if( obj )
   {
-    hb_retni( obj->indent () );
+    RINT( obj->indent () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
 
   if( obj )
   {
-    hb_retni( obj->margin () );
+    RINT( obj->margin () );
   }
 }
 
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {

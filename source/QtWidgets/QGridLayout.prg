@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnMinimumWidth ( PINT(1) ) );
+      RINT( obj->columnMinimumWidth ( PINT(1) ) );
     }
     else
     {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnStretch ( PINT(1) ) );
+      RINT( obj->columnStretch ( PINT(1) ) );
     }
     else
     {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->horizontalSpacing () );
+    RINT( obj->horizontalSpacing () );
   }
 }
 
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->rowMinimumHeight ( PINT(1) ) );
+      RINT( obj->rowMinimumHeight ( PINT(1) ) );
     }
     else
     {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->rowStretch ( PINT(1) ) );
+      RINT( obj->rowStretch ( PINT(1) ) );
     }
     else
     {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 
   if( obj )
   {
-    hb_retni( obj->spacing () );
+    RINT( obj->spacing () );
   }
 }
 
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->verticalSpacing () );
+    RINT( obj->verticalSpacing () );
   }
 }
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->minimumHeightForWidth ( PINT(1) ) );
+      RINT( obj->minimumHeightForWidth ( PINT(1) ) );
     }
     else
     {

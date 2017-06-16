@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 

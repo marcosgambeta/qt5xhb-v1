@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 
   if( obj )
   {
-    hb_retni( obj->checkedId () );
+    RINT( obj->checkedId () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
 
   if( obj )
   {
-    hb_retni( obj->id ( PQABSTRACTBUTTON(1) ) );
+    RINT( obj->id ( PQABSTRACTBUTTON(1) ) );
   }
 }
 

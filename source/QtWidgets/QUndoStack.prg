@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->cleanIndex () );
+    RINT( obj->cleanIndex () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->index () );
+    RINT( obj->index () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
   QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->undoLimit () );
+    RINT( obj->undoLimit () );
   }
 }
 

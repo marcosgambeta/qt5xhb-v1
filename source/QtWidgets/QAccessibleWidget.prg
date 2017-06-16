@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->childCount () );
+    RINT( obj->childCount () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
   if( obj )
   {
     const QAccessibleInterface * par1 = (const QAccessibleInterface *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->indexOfChild ( par1 ) );
+    RINT( obj->indexOfChild ( par1 ) );
   }
 }
 

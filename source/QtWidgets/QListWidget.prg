@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QLISTWIDGET_COUNT )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
   QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentRow () );
+    RINT( obj->currentRow () );
   }
 }
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ROW )
   if( obj )
   {
     QListWidgetItem * par1 = (QListWidgetItem *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->row ( par1 ) );
+    RINT( obj->row ( par1 ) );
   }
 }
 

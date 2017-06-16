@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
   QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

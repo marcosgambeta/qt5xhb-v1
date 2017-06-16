@@ -407,7 +407,7 @@ static int colorSpec ()
 */
 HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 {
-  hb_retni( QApplication::colorSpec () );
+  RINT( QApplication::colorSpec () );
 }
 
 
@@ -416,7 +416,7 @@ static int cursorFlashTime ()
 */
 HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 {
-  hb_retni( QApplication::cursorFlashTime () );
+  RINT( QApplication::cursorFlashTime () );
 }
 
 
@@ -444,7 +444,7 @@ static int doubleClickInterval ()
 */
 HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 {
-  hb_retni( QApplication::doubleClickInterval () );
+  RINT( QApplication::doubleClickInterval () );
 }
 
 
@@ -453,7 +453,7 @@ static int exec ()
 */
 HB_FUNC_STATIC( QAPPLICATION_EXEC )
 {
-  hb_retni( QApplication::exec () );
+  RINT( QApplication::exec () );
 }
 
 
@@ -572,7 +572,7 @@ static int keyboardInputInterval ()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 {
-  hb_retni( QApplication::keyboardInputInterval () );
+  RINT( QApplication::keyboardInputInterval () );
 }
 
 
@@ -987,7 +987,7 @@ static int startDragDistance ()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 {
-  hb_retni( QApplication::startDragDistance () );
+  RINT( QApplication::startDragDistance () );
 }
 
 
@@ -996,7 +996,7 @@ static int startDragTime ()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 {
-  hb_retni( QApplication::startDragTime () );
+  RINT( QApplication::startDragTime () );
 }
 
 
@@ -1095,7 +1095,7 @@ static int wheelScrollLines ()
 */
 HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 {
-  hb_retni( QApplication::wheelScrollLines () );
+  RINT( QApplication::wheelScrollLines () );
 }
 
 

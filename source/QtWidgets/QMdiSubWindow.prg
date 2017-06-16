@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 
   if( obj )
   {
-    hb_retni( obj->keyboardPageStep () );
+    RINT( obj->keyboardPageStep () );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 
   if( obj )
   {
-    hb_retni( obj->keyboardSingleStep () );
+    RINT( obj->keyboardSingleStep () );
   }
 }
 

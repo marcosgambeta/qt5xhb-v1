@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->childCount () );
+    RINT( obj->childCount () );
   }
 }
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_COLUMNCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INDEXOFCHILD )
   {
     if( ISQTREEWIDGETITEM(1) )
     {
-      hb_retni( obj->indexOfChild ( PQTREEWIDGETITEM(1) ) );
+      RINT( obj->indexOfChild ( PQTREEWIDGETITEM(1) ) );
     }
     else
     {
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTALIGNMENT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->textAlignment ( PINT(1) ) );
+      RINT( obj->textAlignment ( PINT(1) ) );
     }
     else
     {
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

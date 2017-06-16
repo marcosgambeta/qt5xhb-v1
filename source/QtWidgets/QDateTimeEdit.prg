@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
 
   if( obj )
   {
-    hb_retni( obj->currentSectionIndex () );
+    RINT( obj->currentSectionIndex () );
   }
 }
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->sectionCount () );
+    RINT( obj->sectionCount () );
   }
 }
 

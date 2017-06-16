@@ -110,7 +110,7 @@ void QToolBox_addItem1 ()
   if( obj )
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    hb_retni( obj->addItem ( PQWIDGET(1), par2, PQSTRING(3) ) );
+    RINT( obj->addItem ( PQWIDGET(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -123,7 +123,7 @@ void QToolBox_addItem2 ()
 
   if( obj )
   {
-    hb_retni( obj->addItem ( PQWIDGET(1), PQSTRING(2) ) );
+    RINT( obj->addItem ( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 
   if( obj )
   {
-    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
+    RINT( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -209,7 +209,7 @@ void QToolBox_insertItem1 ()
   if( obj )
   {
     QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
-    hb_retni( obj->insertItem ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
+    RINT( obj->insertItem ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
   }
 }
 
@@ -222,7 +222,7 @@ void QToolBox_insertItem2 ()
 
   if( obj )
   {
-    hb_retni( obj->insertItem ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
+    RINT( obj->insertItem ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
 

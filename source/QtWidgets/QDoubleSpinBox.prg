@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 
   if( obj )
   {
-    hb_retni( obj->decimals () );
+    RINT( obj->decimals () );
   }
 }
 

@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNCOUNT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnStretchFactor ( PINT(1) ) );
+      RINT( obj->columnStretchFactor ( PINT(1) ) );
     }
     else
     {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWCOUNT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->rowStretchFactor ( PINT(1) ) );
+      RINT( obj->rowStretchFactor ( PINT(1) ) );
     }
     else
     {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COUNT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 

@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
 
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
     if( ISQVARIANT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
       int par3 = ISNIL(3)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(3);
-      hb_retni( obj->findData ( *PQVARIANT(1), OPINT(2,Qt::UserRole), (Qt::MatchFlags) par3 ) );
+      RINT( obj->findData ( *PQVARIANT(1), OPINT(2,Qt::UserRole), (Qt::MatchFlags) par3 ) );
     }
     else
     {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(2);
-      hb_retni( obj->findText ( PQSTRING(1), (Qt::MatchFlags) par2 ) );
+      RINT( obj->findText ( PQSTRING(1), (Qt::MatchFlags) par2 ) );
     }
     else
     {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->maxCount () );
+    RINT( obj->maxCount () );
   }
 }
 
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
 
   if( obj )
   {
-    hb_retni( obj->maxVisibleItems () );
+    RINT( obj->maxVisibleItems () );
   }
 }
 
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
 
   if( obj )
   {
-    hb_retni( obj->minimumContentsLength () );
+    RINT( obj->minimumContentsLength () );
   }
 }
 
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODELCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->modelColumn () );
+    RINT( obj->modelColumn () );
   }
 }
 

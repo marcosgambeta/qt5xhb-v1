@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 
   if( obj )
   {
-    hb_retni( obj->maximum () );
+    RINT( obj->maximum () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 
   if( obj )
   {
-    hb_retni( obj->minimum () );
+    RINT( obj->minimum () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 
   if( obj )
   {
-    hb_retni( obj->singleStep () );
+    RINT( obj->singleStep () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSPINBOX_VALUE )
 
   if( obj )
   {
-    hb_retni( obj->value () );
+    RINT( obj->value () );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
 
   if( obj )
   {
-    hb_retni( obj->displayIntegerBase () );
+    RINT( obj->displayIntegerBase () );
   }
 }
 

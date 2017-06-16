@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
     if( ISQKEYSEQUENCE(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-      hb_retni( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
+      RINT( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
     }
     else
     {
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 }
 
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -2109,7 +2109,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMHEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->maximumHeight () );
+    RINT( obj->maximumHeight () );
   }
 }
 
@@ -2144,7 +2144,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->maximumWidth () );
+    RINT( obj->maximumWidth () );
   }
 }
 
@@ -2179,7 +2179,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMHEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->minimumHeight () );
+    RINT( obj->minimumHeight () );
   }
 }
 
@@ -2228,7 +2228,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->minimumWidth () );
+    RINT( obj->minimumWidth () );
   }
 }
 
@@ -3518,7 +3518,7 @@ HB_FUNC_STATIC( QWIDGET_TOOLTIPDURATION )
 
   if( obj )
   {
-    hb_retni( obj->toolTipDuration () );
+    RINT( obj->toolTipDuration () );
   }
 #endif
 #endif
@@ -4091,7 +4091,7 @@ HB_FUNC_STATIC( QWIDGET_WIDTH )
 
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 
@@ -4398,7 +4398,7 @@ HB_FUNC_STATIC( QWIDGET_X )
 
   if( obj )
   {
-    hb_retni( obj->x () );
+    RINT( obj->x () );
   }
 }
 
@@ -4411,7 +4411,7 @@ HB_FUNC_STATIC( QWIDGET_Y )
 
   if( obj )
   {
-    hb_retni( obj->y () );
+    RINT( obj->y () );
   }
 }
 
@@ -4650,7 +4650,7 @@ HB_FUNC_STATIC( QWIDGET_DEVTYPE )
 
   if( obj )
   {
-    hb_retni( obj->devType () );
+    RINT( obj->devType () );
   }
 }
 
@@ -4819,7 +4819,7 @@ HB_FUNC_STATIC( QWIDGET_COLORCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->colorCount () );
+    RINT( obj->colorCount () );
   }
 }
 
@@ -4832,7 +4832,7 @@ HB_FUNC_STATIC( QWIDGET_DEPTH )
 
   if( obj )
   {
-    hb_retni( obj->depth () );
+    RINT( obj->depth () );
   }
 }
 
@@ -4845,7 +4845,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTMM )
 
   if( obj )
   {
-    hb_retni( obj->heightMM () );
+    RINT( obj->heightMM () );
   }
 }
 
@@ -4858,7 +4858,7 @@ HB_FUNC_STATIC( QWIDGET_LOGICALDPIX )
 
   if( obj )
   {
-    hb_retni( obj->logicalDpiX () );
+    RINT( obj->logicalDpiX () );
   }
 }
 
@@ -4871,7 +4871,7 @@ HB_FUNC_STATIC( QWIDGET_LOGICALDPIY )
 
   if( obj )
   {
-    hb_retni( obj->logicalDpiY () );
+    RINT( obj->logicalDpiY () );
   }
 }
 
@@ -4897,7 +4897,7 @@ HB_FUNC_STATIC( QWIDGET_PHYSICALDPIX )
 
   if( obj )
   {
-    hb_retni( obj->physicalDpiX () );
+    RINT( obj->physicalDpiX () );
   }
 }
 
@@ -4910,7 +4910,7 @@ HB_FUNC_STATIC( QWIDGET_PHYSICALDPIY )
 
   if( obj )
   {
-    hb_retni( obj->physicalDpiY () );
+    RINT( obj->physicalDpiY () );
   }
 }
 
@@ -4923,7 +4923,7 @@ HB_FUNC_STATIC( QWIDGET_WIDTHMM )
 
   if( obj )
   {
-    hb_retni( obj->widthMM () );
+    RINT( obj->widthMM () );
   }
 }
 

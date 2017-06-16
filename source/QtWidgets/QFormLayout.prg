@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->horizontalSpacing () );
+    RINT( obj->horizontalSpacing () );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 
   if( obj )
   {
-    hb_retni( obj->spacing () );
+    RINT( obj->spacing () );
   }
 }
 
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 
   if( obj )
   {
-    hb_retni( obj->verticalSpacing () );
+    RINT( obj->verticalSpacing () );
   }
 }
 
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {

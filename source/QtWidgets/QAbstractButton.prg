@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 
   if( obj )
   {
-    hb_retni( obj->autoRepeatDelay () );
+    RINT( obj->autoRepeatDelay () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->autoRepeatInterval () );
+    RINT( obj->autoRepeatInterval () );
   }
 }
 

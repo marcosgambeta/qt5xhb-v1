@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSHORTCUT_ID )
 
   if( obj )
   {
-    hb_retni( obj->id () );
+    RINT( obj->id () );
   }
 }
 

@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
 
   if( obj )
   {
-    hb_retni( obj->spanAngle () );
+    RINT( obj->spanAngle () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
 
   if( obj )
   {
-    hb_retni( obj->startAngle () );
+    RINT( obj->startAngle () );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

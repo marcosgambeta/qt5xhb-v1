@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QCOLORMAP_DEPTH )
   QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->depth () );
+    RINT( obj->depth () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QCOLORMAP_SIZE )
   QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
 
   if( obj )
   {
-    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
+    RINT( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QLAYOUT_SPACING )
 
   if( obj )
   {
-    hb_retni( obj->spacing () );
+    RINT( obj->spacing () );
   }
 }
 

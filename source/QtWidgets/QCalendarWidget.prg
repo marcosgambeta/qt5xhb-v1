@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->dateEditAcceptDelay () );
+    RINT( obj->dateEditAcceptDelay () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->monthShown () );
+    RINT( obj->monthShown () );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->yearShown () );
+    RINT( obj->yearShown () );
   }
 }
 

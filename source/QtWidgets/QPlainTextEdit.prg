@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_BLOCKCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->blockCount () );
+    RINT( obj->blockCount () );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->cursorWidth () );
+    RINT( obj->cursorWidth () );
   }
 }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->maximumBlockCount () );
+    RINT( obj->maximumBlockCount () );
   }
 }
 
@@ -945,7 +945,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TABSTOPWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->tabStopWidth () );
+    RINT( obj->tabStopWidth () );
   }
 }
 

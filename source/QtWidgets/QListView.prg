@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->batchSize () );
+    RINT( obj->batchSize () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->modelColumn () );
+    RINT( obj->modelColumn () );
   }
 }
 
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QLISTVIEW_SPACING )
   QListView * obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->spacing () );
+    RINT( obj->spacing () );
   }
 }
 

@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWIZARD_ADDPAGE )
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->addPage ( PQWIZARDPAGE(1) ) );
+    RINT( obj->addPage ( PQWIZARDPAGE(1) ) );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTID )
 
   if( obj )
   {
-    hb_retni( obj->currentId () );
+    RINT( obj->currentId () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QWIZARD_NEXTID )
 
   if( obj )
   {
-    hb_retni( obj->nextId () );
+    RINT( obj->nextId () );
   }
 }
 
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QWIZARD_STARTID )
 
   if( obj )
   {
-    hb_retni( obj->startId () );
+    RINT( obj->startId () );
   }
 }
 

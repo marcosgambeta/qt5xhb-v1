@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->result () );
+    RINT( obj->result () );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 

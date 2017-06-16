@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->cursorWidth () );
+    RINT( obj->cursorWidth () );
   }
 }
 
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
 
   if( obj )
   {
-    hb_retni( obj->fontWeight () );
+    RINT( obj->fontWeight () );
   }
 }
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->lineWrapColumnOrWidth () );
+    RINT( obj->lineWrapColumnOrWidth () );
   }
 }
 
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->tabStopWidth () );
+    RINT( obj->tabStopWidth () );
   }
 }
 

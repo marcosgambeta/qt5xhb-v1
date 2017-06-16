@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
   {
     if( ISQGRAPHICSLAYOUTITEM(1) )
     {
-      hb_retni( obj->stretchFactor ( PQGRAPHICSLAYOUTITEM(1) ) );
+      RINT( obj->stretchFactor ( PQGRAPHICSLAYOUTITEM(1) ) );
     }
     else
     {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 

@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->delta () );
+    RINT( obj->delta () );
   }
 }
 

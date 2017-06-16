@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_AUTOSCROLLMARGIN )
   QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->autoScrollMargin () );
+    RINT( obj->autoScrollMargin () );
   }
 }
 
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sizeHintForColumn ( PINT(1) ) );
+      RINT( obj->sizeHintForColumn ( PINT(1) ) );
     }
     else
     {
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORROW )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->sizeHintForRow ( PINT(1) ) );
+      RINT( obj->sizeHintForRow ( PINT(1) ) );
     }
     else
     {

@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->completionColumn () );
+    RINT( obj->completionColumn () );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->completionCount () );
+    RINT( obj->completionCount () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 
   if( obj )
   {
-    hb_retni( obj->completionRole () );
+    RINT( obj->completionRole () );
   }
 }
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
 
   if( obj )
   {
-    hb_retni( obj->currentRow () );
+    RINT( obj->currentRow () );
   }
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
 
   if( obj )
   {
-    hb_retni( obj->maxVisibleItems () );
+    RINT( obj->maxVisibleItems () );
   }
 }
 

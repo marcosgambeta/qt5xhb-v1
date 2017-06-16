@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->tickInterval () );
+    RINT( obj->tickInterval () );
   }
 }
 

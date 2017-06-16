@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->childCount () );
+    RINT( obj->childCount () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 
   if( obj )
   {
-    hb_retni( obj->id () );
+    RINT( obj->id () );
   }
 }
 

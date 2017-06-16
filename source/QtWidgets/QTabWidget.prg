@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB1 )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->addTab ( PQWIDGET(1), PQSTRING(2) ) );
+    RINT( obj->addTab ( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB2 )
   if( obj )
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    hb_retni( obj->addTab ( PQWIDGET(1), par2, PQSTRING(3) ) );
+    RINT( obj->addTab ( PQWIDGET(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTABWIDGET_COUNT )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
+    RINT( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB1 )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->insertTab ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
+    RINT( obj->insertTab ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB2 )
   if( obj )
   {
     QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
-    hb_retni( obj->insertTab ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
+    RINT( obj->insertTab ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
   }
 }
 
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QTABWIDGET_HEIGHTFORWIDTH )
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->heightForWidth ( PINT(1) ) );
+    RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
 

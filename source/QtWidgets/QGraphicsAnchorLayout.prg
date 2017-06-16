@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 

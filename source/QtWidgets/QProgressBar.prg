@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximum () );
+    RINT( obj->maximum () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minimum () );
+    RINT( obj->minimum () );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
   QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->value () );
+    RINT( obj->value () );
   }
 }
 

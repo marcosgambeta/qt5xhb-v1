@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 
   if( obj )
   {
-    hb_retni( obj->key () );
+    RINT( obj->key () );
   }
 }
 

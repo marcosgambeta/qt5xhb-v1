@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 
   if( obj )
   {
-    hb_retni( obj->notchSize () );
+    RINT( obj->notchSize () );
   }
 }
 

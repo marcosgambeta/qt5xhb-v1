@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->addWidget ( PQWIDGET(1) ) );
+    RINT( obj->addWidget ( PQWIDGET(1) ) );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->indexOf ( PQWIDGET(1) ) );
+    RINT( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
   QStackedWidget * obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
+    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
   }
 }
 

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 
   if( obj )
   {
-    hb_retni( obj->maximum () );
+    RINT( obj->maximum () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 
   if( obj )
   {
-    hb_retni( obj->minimum () );
+    RINT( obj->minimum () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 
   if( obj )
   {
-    hb_retni( obj->pageStep () );
+    RINT( obj->pageStep () );
   }
 }
 
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 
   if( obj )
   {
-    hb_retni( obj->singleStep () );
+    RINT( obj->singleStep () );
   }
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 
   if( obj )
   {
-    hb_retni( obj->sliderPosition () );
+    RINT( obj->sliderPosition () );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 
   if( obj )
   {
-    hb_retni( obj->value () );
+    RINT( obj->value () );
   }
 }
 

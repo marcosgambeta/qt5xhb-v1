@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 
   if( obj )
   {
-    hb_retni( obj->primaryScreen () );
+    RINT( obj->primaryScreen () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->screenCount () );
+    RINT( obj->screenCount () );
   }
 }
 
@@ -277,7 +277,7 @@ void QDesktopWidget_screenNumber1 ()
   if( obj )
   {
     const QWidget * par1 = ISNIL(1)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(1);
-    hb_retni( obj->screenNumber ( par1 ) );
+    RINT( obj->screenNumber ( par1 ) );
   }
 }
 
@@ -290,7 +290,7 @@ void QDesktopWidget_screenNumber2 ()
 
   if( obj )
   {
-    hb_retni( obj->screenNumber ( *PQPOINT(1) ) );
+    RINT( obj->screenNumber ( *PQPOINT(1) ) );
   }
 }
 

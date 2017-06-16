@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

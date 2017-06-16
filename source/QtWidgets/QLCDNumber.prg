@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->digitCount () );
+    RINT( obj->digitCount () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 
   if( obj )
   {
-    hb_retni( obj->intValue () );
+    RINT( obj->intValue () );
   }
 }
 

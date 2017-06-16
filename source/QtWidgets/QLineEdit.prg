@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
 
   if( obj )
   {
-    hb_retni( obj->cursorPosition () );
+    RINT( obj->cursorPosition () );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
 
   if( obj )
   {
-    hb_retni( obj->cursorPositionAt ( *PQPOINT(1) ) );
+    RINT( obj->cursorPositionAt ( *PQPOINT(1) ) );
   }
 }
 
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
 
   if( obj )
   {
-    hb_retni( obj->maxLength () );
+    RINT( obj->maxLength () );
   }
 }
 
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
 
   if( obj )
   {
-    hb_retni( obj->selectionStart () );
+    RINT( obj->selectionStart () );
   }
 }
 

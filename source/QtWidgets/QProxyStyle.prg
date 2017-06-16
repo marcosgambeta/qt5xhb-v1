@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(3);
       QStyleHintReturn * par4 = ISNIL(4)? 0 : (QStyleHintReturn *) _qt5xhb_itemGetPtr(4);
-      hb_retni( obj->styleHint ( (QStyle::StyleHint) hb_parni(1), par2, par3, par4 ) );
+      RINT( obj->styleHint ( (QStyle::StyleHint) hb_parni(1), par2, par3, par4 ) );
     }
     else
     {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
     {
       const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(2);
       const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(3);
-      hb_retni( obj->pixelMetric ( (QStyle::PixelMetric) hb_parni(1), par2, par3 ) );
+      RINT( obj->pixelMetric ( (QStyle::PixelMetric) hb_parni(1), par2, par3 ) );
     }
     else
     {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
     {
       const QStyleOption * par4 = ISNIL(4)? 0 : (const QStyleOption *) _qt5xhb_itemGetPtr(4);
       const QWidget * par5 = ISNIL(5)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(5);
-      hb_retni( obj->layoutSpacing ( (QSizePolicy::ControlType) hb_parni(1), (QSizePolicy::ControlType) hb_parni(2), (Qt::Orientation) hb_parni(3), par4, par5 ) );
+      RINT( obj->layoutSpacing ( (QSizePolicy::ControlType) hb_parni(1), (QSizePolicy::ControlType) hb_parni(2), (Qt::Orientation) hb_parni(3), par4, par5 ) );
     }
     else
     {

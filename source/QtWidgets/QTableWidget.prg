@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMN )
     if( ISQTABLEWIDGETITEM(1) )
     {
       QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->column ( par1 ) );
+      RINT( obj->column ( par1 ) );
     }
     else
     {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->currentColumn () );
+    RINT( obj->currentColumn () );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
 
   if( obj )
   {
-    hb_retni( obj->currentRow () );
+    RINT( obj->currentRow () );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROW )
     if( ISQTABLEWIDGETITEM(1) )
     {
       QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      hb_retni( obj->row ( par1 ) );
+      RINT( obj->row ( par1 ) );
     }
     else
     {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALCOLUMN )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->visualColumn ( PINT(1) ) );
+      RINT( obj->visualColumn ( PINT(1) ) );
     }
     else
     {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->visualRow ( PINT(1) ) );
+      RINT( obj->visualRow ( PINT(1) ) );
     }
     else
     {

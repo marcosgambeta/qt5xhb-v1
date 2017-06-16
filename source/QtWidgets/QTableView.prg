@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnAt ( PINT(1) ) );
+      RINT( obj->columnAt ( PINT(1) ) );
     }
     else
     {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retni( obj->columnSpan ( PINT(1), PINT(2) ) );
+      RINT( obj->columnSpan ( PINT(1), PINT(2) ) );
     }
     else
     {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnViewportPosition ( PINT(1) ) );
+      RINT( obj->columnViewportPosition ( PINT(1) ) );
     }
     else
     {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->columnWidth ( PINT(1) ) );
+      RINT( obj->columnWidth ( PINT(1) ) );
     }
     else
     {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->rowAt ( PINT(1) ) );
+      RINT( obj->rowAt ( PINT(1) ) );
     }
     else
     {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->rowHeight ( PINT(1) ) );
+      RINT( obj->rowHeight ( PINT(1) ) );
     }
     else
     {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
   {
     if( ISNUM(1) && ISNUM(2) )
     {
-      hb_retni( obj->rowSpan ( PINT(1), PINT(2) ) );
+      RINT( obj->rowSpan ( PINT(1), PINT(2) ) );
     }
     else
     {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->rowViewportPosition ( PINT(1) ) );
+      RINT( obj->rowViewportPosition ( PINT(1) ) );
     }
     else
     {

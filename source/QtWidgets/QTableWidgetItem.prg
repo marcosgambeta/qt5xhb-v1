@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_COLUMN )
 
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_ROW )
 
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXTALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->textAlignment () );
+    RINT( obj->textAlignment () );
   }
 }
 
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth ( PINT(1) ) );
     }
     else
     {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
   {
     if( ISNUM(1) )
     {
-      hb_retni( obj->minimumHeightForWidth ( PINT(1) ) );
+      RINT( obj->minimumHeightForWidth ( PINT(1) ) );
     }
     else
     {

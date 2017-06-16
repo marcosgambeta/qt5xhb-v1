@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB1 )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->addTab ( PQSTRING(1) ) );
+    RINT( obj->addTab ( PQSTRING(1) ) );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB2 )
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    hb_retni( obj->addTab ( par1, PQSTRING(2) ) );
+    RINT( obj->addTab ( par1, PQSTRING(2) ) );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTABBAR_COUNT )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTABBAR_CURRENTINDEX )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB1 )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->insertTab ( PINT(1), PQSTRING(2) ) );
+    RINT( obj->insertTab ( PINT(1), PQSTRING(2) ) );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB2 )
   if( obj )
   {
     QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    hb_retni( obj->insertTab ( PINT(1), par2, PQSTRING(3) ) );
+    RINT( obj->insertTab ( PINT(1), par2, PQSTRING(3) ) );
   }
 }
 
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QTABBAR_TABAT )
   QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->tabAt ( *PQPOINT(1) ) );
+    RINT( obj->tabAt ( *PQPOINT(1) ) );
   }
 }
 

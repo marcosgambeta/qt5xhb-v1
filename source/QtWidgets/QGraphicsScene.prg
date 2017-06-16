@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
 
   if( obj )
   {
-    hb_retni( obj->bspTreeDepth () );
+    RINT( obj->bspTreeDepth () );
   }
 }
 

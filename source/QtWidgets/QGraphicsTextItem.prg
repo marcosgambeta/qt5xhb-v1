@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

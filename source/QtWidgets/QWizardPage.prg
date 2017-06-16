@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->nextId () );
+    RINT( obj->nextId () );
   }
 }
 

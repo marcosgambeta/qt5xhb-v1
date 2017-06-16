@@ -358,7 +358,7 @@ static int customCount ()
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 {
-  hb_retni( QColorDialog::customCount () );
+  RINT( QColorDialog::customCount () );
 }
 
 /*

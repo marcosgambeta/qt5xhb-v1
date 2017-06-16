@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
 
   if( obj )
   {
-    hb_retni( obj->addWidget ( PQWIDGET(1) ) );
+    RINT( obj->addWidget ( PQWIDGET(1) ) );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
 
   if( obj )
   {
-    hb_retni( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
+    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
   }
 }
 

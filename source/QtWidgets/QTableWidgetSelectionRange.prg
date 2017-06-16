@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
 
   if( obj )
   {
-    hb_retni( obj->bottomRow () );
+    RINT( obj->bottomRow () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->leftColumn () );
+    RINT( obj->leftColumn () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
 
   if( obj )
   {
-    hb_retni( obj->rightColumn () );
+    RINT( obj->rightColumn () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
 
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
 
   if( obj )
   {
-    hb_retni( obj->topRow () );
+    RINT( obj->topRow () );
   }
 }
 

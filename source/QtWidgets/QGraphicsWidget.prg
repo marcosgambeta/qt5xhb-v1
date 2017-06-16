@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    hb_retni( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
+    RINT( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
   }
 }
 
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TYPE )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

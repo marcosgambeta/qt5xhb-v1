@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
 
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 
   if( obj )
   {
-    hb_retni( obj->handleWidth () );
+    RINT( obj->handleWidth () );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
   {
     if( ISQWIDGET(1) )
     {
-      hb_retni( obj->indexOf ( PQWIDGET(1) ) );
+      RINT( obj->indexOf ( PQWIDGET(1) ) );
     }
     else
     {

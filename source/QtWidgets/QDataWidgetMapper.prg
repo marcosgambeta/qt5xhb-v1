@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->mappedSection ( PQWIDGET(1) ) );
+    RINT( obj->mappedSection ( PQWIDGET(1) ) );
   }
 }
 

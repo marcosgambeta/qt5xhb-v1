@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->insertPermanentWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
+    RINT( obj->insertPermanentWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
   QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
+    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
   }
 }
 

@@ -3298,7 +3298,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 

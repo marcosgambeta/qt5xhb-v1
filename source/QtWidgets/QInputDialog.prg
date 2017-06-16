@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
 
   if( obj )
   {
-    hb_retni( obj->doubleDecimals () );
+    RINT( obj->doubleDecimals () );
   }
 }
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
 
   if( obj )
   {
-    hb_retni( obj->intMaximum () );
+    RINT( obj->intMaximum () );
   }
 }
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
 
   if( obj )
   {
-    hb_retni( obj->intMinimum () );
+    RINT( obj->intMinimum () );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
 
   if( obj )
   {
-    hb_retni( obj->intStep () );
+    RINT( obj->intStep () );
   }
 }
 
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
 
   if( obj )
   {
-    hb_retni( obj->intValue () );
+    RINT( obj->intValue () );
   }
 }
 
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
   {
     bool par8;
     int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-    hb_retni( QInputDialog::getInt ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4,0), OPINT(5,-2147483647), OPINT(6,2147483647), OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
+    RINT( QInputDialog::getInt ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4,0), OPINT(5,-2147483647), OPINT(6,2147483647), OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
     hb_storl( par8, 8 );
   }
   else

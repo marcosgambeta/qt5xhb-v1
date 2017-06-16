@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
 
   if( obj )
   {
-    hb_retni( obj->horizontalStretch () );
+    RINT( obj->horizontalStretch () );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
 
   if( obj )
   {
-    hb_retni( obj->verticalStretch () );
+    RINT( obj->verticalStretch () );
   }
 }
 

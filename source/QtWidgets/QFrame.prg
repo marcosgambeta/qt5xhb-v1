@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frameStyle () );
+    RINT( obj->frameStyle () );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->frameWidth () );
+    RINT( obj->frameWidth () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineWidth () );
+    RINT( obj->lineWidth () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->midLineWidth () );
+    RINT( obj->midLineWidth () );
   }
 }
 

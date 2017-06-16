@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
 
   if( obj )
   {
-    hb_retni( obj->maximum () );
+    RINT( obj->maximum () );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
 
   if( obj )
   {
-    hb_retni( obj->minimum () );
+    RINT( obj->minimum () );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
 
   if( obj )
   {
-    hb_retni( obj->minimumDuration () );
+    RINT( obj->minimumDuration () );
   }
 }
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
 
   if( obj )
   {
-    hb_retni( obj->value () );
+    RINT( obj->value () );
   }
 }
 

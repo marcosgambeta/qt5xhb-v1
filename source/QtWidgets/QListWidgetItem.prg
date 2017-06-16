@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->textAlignment () );
+    RINT( obj->textAlignment () );
   }
 }
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 
   if( obj )
   {
-    hb_retni( obj->type () );
+    RINT( obj->type () );
   }
 }
 
