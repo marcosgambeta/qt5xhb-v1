@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
   QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnNumber () );
+    RINT( obj->columnNumber () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
   QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX1 )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->index ( PQSTRING(1) ) );
+    RINT( obj->index ( PQSTRING(1) ) );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX3 )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->index ( PQSTRING(1), PQSTRING(2) ) );
+    RINT( obj->index ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
   QXmlAttributes * obj = (QXmlAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 

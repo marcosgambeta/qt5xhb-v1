@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
   QXmlLocator * obj = (QXmlLocator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->columnNumber () );
+    RINT( obj->columnNumber () );
   }
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
   QXmlLocator * obj = (QXmlLocator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 

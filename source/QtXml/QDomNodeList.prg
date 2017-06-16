@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
   QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

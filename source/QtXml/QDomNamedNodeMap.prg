@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
