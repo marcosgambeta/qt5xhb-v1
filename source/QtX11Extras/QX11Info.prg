@@ -104,7 +104,7 @@ static int appDpiX(int screen=-1)
 HB_FUNC_STATIC( QX11INFO_APPDPIX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retni( QX11Info::appDpiX ( OPINT(1,-1) ) );
+  RINT( QX11Info::appDpiX ( OPINT(1,-1) ) );
 #endif
 }
 
@@ -115,7 +115,7 @@ static int appDpiY(int screen=-1)
 HB_FUNC_STATIC( QX11INFO_APPDPIY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retni( QX11Info::appDpiY ( OPINT(1,-1) ) );
+  RINT( QX11Info::appDpiY ( OPINT(1,-1) ) );
 #endif
 }
 
@@ -137,7 +137,7 @@ static int appScreen()
 HB_FUNC_STATIC( QX11INFO_APPSCREEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retni( QX11Info::appScreen () );
+  RINT( QX11Info::appScreen () );
 #endif
 }
 
