@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 #endif
 }

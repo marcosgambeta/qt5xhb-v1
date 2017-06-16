@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_COUNT )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 #endif
 }

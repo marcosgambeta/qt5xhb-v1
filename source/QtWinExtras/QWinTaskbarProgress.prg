@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_VALUE )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->value () );
+    RINT( obj->value () );
   }
 #endif
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MINIMUM )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->minimum () );
+    RINT( obj->minimum () );
   }
 #endif
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MAXIMUM )
   QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->maximum () );
+    RINT( obj->maximum () );
   }
 #endif
 }
