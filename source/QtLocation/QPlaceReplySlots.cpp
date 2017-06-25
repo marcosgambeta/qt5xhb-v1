@@ -41,7 +41,7 @@ void SlotsQPlaceReply::error(QPlaceReply::Error error, const QString &errorStrin
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, RQSTRING(errorString) );
+    PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( perror );

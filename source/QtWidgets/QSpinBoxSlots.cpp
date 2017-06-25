@@ -40,7 +40,7 @@ void SlotsQSpinBox::valueChanged ( const QString & text )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, RQSTRING(text) );
+    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );

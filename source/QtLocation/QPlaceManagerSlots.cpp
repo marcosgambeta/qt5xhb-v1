@@ -44,7 +44,7 @@ void SlotsQPlaceManager::error(QPlaceReply * reply, QPlaceReply::Error error, co
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM preply = hb_itemPutPtr( NULL, (QPlaceReply *) reply );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, RQSTRING(errorString) );
+    PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, preply, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
@@ -62,7 +62,7 @@ void SlotsQPlaceManager::placeAdded(const QString &placeId)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pplaceId = hb_itemPutC( NULL, RQSTRING(placeId) );
+    PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
     hb_itemRelease( pplaceId );
@@ -78,7 +78,7 @@ void SlotsQPlaceManager::placeUpdated(const QString &placeId)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pplaceId = hb_itemPutC( NULL, RQSTRING(placeId) );
+    PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
     hb_itemRelease( pplaceId );
@@ -94,7 +94,7 @@ void SlotsQPlaceManager::placeRemoved(const QString &placeId)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pplaceId = hb_itemPutC( NULL, RQSTRING(placeId) );
+    PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
     hb_itemRelease( pplaceId );
@@ -111,7 +111,7 @@ void SlotsQPlaceManager::categoryAdded(const QPlaceCategory &category, const QSt
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pcategory = hb_itemPutPtr( NULL, (QPlaceCategory *) &category );
-    PHB_ITEM pparentId = hb_itemPutC( NULL, RQSTRING(parentId) );
+    PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcategory, pparentId );
     hb_itemRelease( psender );
     hb_itemRelease( pcategory );
@@ -129,7 +129,7 @@ void SlotsQPlaceManager::categoryUpdated(const QPlaceCategory &category, const Q
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pcategory = hb_itemPutPtr( NULL, (QPlaceCategory *) &category );
-    PHB_ITEM pparentId = hb_itemPutC( NULL, RQSTRING(parentId) );
+    PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcategory, pparentId );
     hb_itemRelease( psender );
     hb_itemRelease( pcategory );
@@ -146,8 +146,8 @@ void SlotsQPlaceManager::categoryRemoved(const QString &categoryId, const QStrin
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcategoryId = hb_itemPutC( NULL, RQSTRING(categoryId) );
-    PHB_ITEM pparentId = hb_itemPutC( NULL, RQSTRING(parentId) );
+    PHB_ITEM pcategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(categoryId) );
+    PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcategoryId, pparentId );
     hb_itemRelease( psender );
     hb_itemRelease( pcategoryId );

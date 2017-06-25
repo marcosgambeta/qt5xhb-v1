@@ -26,7 +26,7 @@ void SlotsQFileSystemWatcher::directoryChanged(const QString & path)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
+    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
@@ -40,7 +40,7 @@ void SlotsQFileSystemWatcher::fileChanged(const QString & path)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
+    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );

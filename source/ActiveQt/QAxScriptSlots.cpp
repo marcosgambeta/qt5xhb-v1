@@ -39,9 +39,9 @@ void SlotsQAxScript::error ( int code, const QString & description, int sourcePo
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
-    PHB_ITEM pdescription = hb_itemPutC( NULL, RQSTRING(description) );
+    PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
     PHB_ITEM psourcePosition = hb_itemPutNI( NULL, sourcePosition );
-    PHB_ITEM psourceText = hb_itemPutC( NULL, RQSTRING(sourceText) );
+    PHB_ITEM psourceText = hb_itemPutC( NULL, QSTRINGTOSTRING(sourceText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 5, psender, pcode, pdescription, psourcePosition, psourceText );
     hb_itemRelease( psender );
     hb_itemRelease( pcode );
@@ -85,9 +85,9 @@ void SlotsQAxScript::finished ( int code, const QString & source, const QString 
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
-    PHB_ITEM psource = hb_itemPutC( NULL, RQSTRING(source) );
-    PHB_ITEM pdescription = hb_itemPutC( NULL, RQSTRING(description) );
-    PHB_ITEM phelp = hb_itemPutC( NULL, RQSTRING(help) );
+    PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING(source) );
+    PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
+    PHB_ITEM phelp = hb_itemPutC( NULL, QSTRINGTOSTRING(help) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 5, psender, pcode, psource, pdescription, phelp );
     hb_itemRelease( psender );
     hb_itemRelease( pcode );

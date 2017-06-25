@@ -26,7 +26,7 @@ void SlotsQDBusServiceWatcher::serviceRegistered(const QString &service)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pservice = hb_itemPutC( NULL, RQSTRING(service) );
+    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
@@ -40,7 +40,7 @@ void SlotsQDBusServiceWatcher::serviceUnregistered(const QString &service)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pservice = hb_itemPutC( NULL, RQSTRING(service) );
+    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
@@ -54,9 +54,9 @@ void SlotsQDBusServiceWatcher::serviceOwnerChanged(const QString &service, const
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pservice = hb_itemPutC( NULL, RQSTRING(service) );
-    PHB_ITEM poldOwner = hb_itemPutC( NULL, RQSTRING(oldOwner) );
-    PHB_ITEM pnewOwner = hb_itemPutC( NULL, RQSTRING(newOwner) );
+    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
+    PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
+    PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pservice, poldOwner, pnewOwner );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );

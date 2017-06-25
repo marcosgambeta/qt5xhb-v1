@@ -82,7 +82,7 @@ void SlotsQTextBrowser::highlighted ( const QString & link )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutC( NULL, RQSTRING(link) );
+    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );

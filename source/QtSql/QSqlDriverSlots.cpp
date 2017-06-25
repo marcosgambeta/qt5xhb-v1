@@ -26,7 +26,7 @@ void SlotsQSqlDriver::notification ( const QString & name )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
     hb_itemRelease( psender );
     hb_itemRelease( pname );
@@ -40,7 +40,7 @@ void SlotsQSqlDriver::notification(const QString &name, QSqlDriver::Notification
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM psource = hb_itemPutNI( NULL, (int) source );
     PHB_ITEM ppayload = hb_itemPutPtr( NULL, (QVariant *) &payload );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pname, psource, ppayload );

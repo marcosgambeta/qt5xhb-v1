@@ -82,7 +82,7 @@ void SlotsQUndoStack::redoTextChanged(const QString & redoText)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM predoText = hb_itemPutC( NULL, RQSTRING(redoText) );
+    PHB_ITEM predoText = hb_itemPutC( NULL, QSTRINGTOSTRING(redoText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, predoText );
     hb_itemRelease( psender );
     hb_itemRelease( predoText );
@@ -96,7 +96,7 @@ void SlotsQUndoStack::undoTextChanged(const QString & undoText)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pundoText = hb_itemPutC( NULL, RQSTRING(undoText) );
+    PHB_ITEM pundoText = hb_itemPutC( NULL, QSTRINGTOSTRING(undoText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pundoText );
     hb_itemRelease( psender );
     hb_itemRelease( pundoText );

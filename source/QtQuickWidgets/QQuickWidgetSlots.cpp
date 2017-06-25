@@ -44,7 +44,7 @@ void SlotsQQuickWidget::sceneGraphError(QQuickWindow::SceneGraphError error, con
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    PHB_ITEM pmessage = hb_itemPutC( NULL, RQSTRING(message) );
+    PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, pmessage );
     hb_itemRelease( psender );
     hb_itemRelease( perror );

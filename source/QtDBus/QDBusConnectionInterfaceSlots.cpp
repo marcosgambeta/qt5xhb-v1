@@ -26,7 +26,7 @@ void SlotsQDBusConnectionInterface::serviceRegistered(const QString &service)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pservice = hb_itemPutC( NULL, RQSTRING(service) );
+    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
@@ -40,7 +40,7 @@ void SlotsQDBusConnectionInterface::serviceUnregistered(const QString &service)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pservice = hb_itemPutC( NULL, RQSTRING(service) );
+    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
@@ -54,9 +54,9 @@ void SlotsQDBusConnectionInterface::serviceOwnerChanged(const QString &name, con
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
-    PHB_ITEM poldOwner = hb_itemPutC( NULL, RQSTRING(oldOwner) );
-    PHB_ITEM pnewOwner = hb_itemPutC( NULL, RQSTRING(newOwner) );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+    PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
+    PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pname, poldOwner, pnewOwner );
     hb_itemRelease( psender );
     hb_itemRelease( pname );

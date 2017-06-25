@@ -26,7 +26,7 @@ void SlotsQFileSystemModel::directoryLoaded ( const QString & path )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
+    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
@@ -40,9 +40,9 @@ void SlotsQFileSystemModel::fileRenamed ( const QString & path, const QString & 
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
-    PHB_ITEM poldName = hb_itemPutC( NULL, RQSTRING(oldName) );
-    PHB_ITEM pnewName = hb_itemPutC( NULL, RQSTRING(newName) );
+    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
+    PHB_ITEM poldName = hb_itemPutC( NULL, QSTRINGTOSTRING(oldName) );
+    PHB_ITEM pnewName = hb_itemPutC( NULL, QSTRINGTOSTRING(newName) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, ppath, poldName, pnewName );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
@@ -58,7 +58,7 @@ void SlotsQFileSystemModel::rootPathChanged ( const QString & newPath )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pnewPath = hb_itemPutC( NULL, RQSTRING(newPath) );
+    PHB_ITEM pnewPath = hb_itemPutC( NULL, QSTRINGTOSTRING(newPath) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewPath );
     hb_itemRelease( psender );
     hb_itemRelease( pnewPath );

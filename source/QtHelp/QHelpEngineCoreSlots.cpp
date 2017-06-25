@@ -26,7 +26,7 @@ void SlotsQHelpEngineCore::currentFilterChanged ( const QString & newFilter )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pnewFilter = hb_itemPutC( NULL, RQSTRING(newFilter) );
+    PHB_ITEM pnewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING(newFilter) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewFilter );
     hb_itemRelease( psender );
     hb_itemRelease( pnewFilter );
@@ -64,7 +64,7 @@ void SlotsQHelpEngineCore::warning ( const QString & msg )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmsg = hb_itemPutC( NULL, RQSTRING(msg) );
+    PHB_ITEM pmsg = hb_itemPutC( NULL, QSTRINGTOSTRING(msg) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmsg );
     hb_itemRelease( psender );
     hb_itemRelease( pmsg );

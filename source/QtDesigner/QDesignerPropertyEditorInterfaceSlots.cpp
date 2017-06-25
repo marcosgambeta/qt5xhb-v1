@@ -26,7 +26,7 @@ void SlotsQDesignerPropertyEditorInterface::propertyChanged ( const QString & na
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pname, pvalue );
     hb_itemRelease( psender );

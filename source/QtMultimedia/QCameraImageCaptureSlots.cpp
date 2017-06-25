@@ -56,7 +56,7 @@ void SlotsQCameraImageCapture::error(int id, QCameraImageCapture::Error error, c
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, RQSTRING(errorString) );
+    PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pid, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
@@ -119,7 +119,7 @@ void SlotsQCameraImageCapture::imageMetadataAvailable(int id, const QString & ke
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    PHB_ITEM pkey = hb_itemPutC( NULL, RQSTRING(key) );
+    PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pid, pkey, pvalue );
     hb_itemRelease( psender );
@@ -137,7 +137,7 @@ void SlotsQCameraImageCapture::imageSaved(int id, const QString & fileName)
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    PHB_ITEM pfileName = hb_itemPutC( NULL, RQSTRING(fileName) );
+    PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pid, pfileName );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
