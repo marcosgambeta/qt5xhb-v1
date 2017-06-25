@@ -303,8 +303,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->childCategoryIds ( OPQSTRING(1,QString()) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->childCategoryIds ( OPQSTRING(1,QString()) ) );
   }
 #endif
 }

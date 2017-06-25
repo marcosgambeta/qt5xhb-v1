@@ -182,8 +182,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 
   if( obj )
   {
-    QStringList strl = obj->capturedTexts ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->capturedTexts () );
   }
 }
 

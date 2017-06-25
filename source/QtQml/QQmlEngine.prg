@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QQMLENGINE_IMPORTPATHLIST )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->importPathList ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->importPathList () );
   }
 }
 
@@ -310,8 +309,7 @@ HB_FUNC_STATIC( QQMLENGINE_PLUGINPATHLIST )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->pluginPathList ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->pluginPathList () );
   }
 }
 

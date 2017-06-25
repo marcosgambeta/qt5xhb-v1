@@ -207,8 +207,7 @@ static QStringList arguments ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
 {
-  QStringList strl = QCoreApplication::arguments ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QCoreApplication::arguments () );
 }
 
 /*
@@ -291,8 +290,7 @@ static QStringList libraryPaths ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 {
-  QStringList strl = QCoreApplication::libraryPaths ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QCoreApplication::libraryPaths () );
 }
 
 /*

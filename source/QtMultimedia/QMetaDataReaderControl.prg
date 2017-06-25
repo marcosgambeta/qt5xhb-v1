@@ -102,8 +102,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
   QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->availableMetaData ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->availableMetaData () );
   }
 }
 

@@ -283,8 +283,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 
   if( obj )
   {
-    QStringList strl = obj->toStringList ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->toStringList () );
   }
 }
 
@@ -297,8 +296,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 
   if( obj )
   {
-    QStringList strl = obj->keys ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->keys () );
   }
 }
 

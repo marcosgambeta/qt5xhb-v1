@@ -589,8 +589,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
   {
     if( ISCHAR(1) )
     {
-      QStringList strl = obj->splitPath ( PQSTRING(1) );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->splitPath ( PQSTRING(1) ) );
     }
     else
     {

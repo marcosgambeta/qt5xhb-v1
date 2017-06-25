@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_VALIDIDS )
   QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->validIds ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->validIds () );
   }
 #endif
 }
@@ -122,8 +121,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_INVALIDIDS )
   QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->invalidIds ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->invalidIds () );
   }
 #endif
 }
@@ -138,8 +136,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_GESTURESIGNALS )
   QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->gestureSignals ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->gestureSignals () );
   }
 #endif
 }

@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_GESTURESIGNALS )
   QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->gestureSignals ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->gestureSignals () );
   }
 #endif
 }

@@ -443,8 +443,7 @@ static QStringList availablePrinterNames()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
 {
-  QStringList strl = QPrinterInfo::availablePrinterNames ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QPrinterInfo::availablePrinterNames () );
 }
 
 /*

@@ -277,8 +277,7 @@ static QStringList localSchemes ()
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {
-  QStringList strl = QWebSecurityOrigin::localSchemes ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
 }
 
 

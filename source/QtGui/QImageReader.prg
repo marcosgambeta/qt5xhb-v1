@@ -785,8 +785,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXTKEYS )
 
   if( obj )
   {
-    QStringList strl = obj->textKeys ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->textKeys () );
   }
 }
 

@@ -240,8 +240,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->searchPaths ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->searchPaths () );
   }
 }
 

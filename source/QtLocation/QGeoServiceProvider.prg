@@ -88,8 +88,7 @@ static QStringList availableServiceProviders()
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_AVAILABLESERVICEPROVIDERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStringList strl = QGeoServiceProvider::availableServiceProviders ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QGeoServiceProvider::availableServiceProviders () );
 #endif
 }
 

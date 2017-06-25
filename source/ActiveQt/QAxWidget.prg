@@ -503,8 +503,7 @@ HB_FUNC_STATIC( QAXWIDGET_VERBS )
 
   if( obj )
   {
-    QStringList strl = obj->verbs ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->verbs () );
   }
 }
 

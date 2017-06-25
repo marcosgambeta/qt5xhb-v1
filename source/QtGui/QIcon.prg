@@ -525,8 +525,7 @@ static QStringList themeSearchPaths ()
 */
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
-  QStringList strl = QIcon::themeSearchPaths ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QIcon::themeSearchPaths () );
 }
 
 HB_FUNC_STATIC( QICON_NEWFROM )

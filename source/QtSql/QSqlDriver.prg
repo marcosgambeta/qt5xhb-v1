@@ -466,8 +466,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 
   if( obj )
   {
-    QStringList strl = obj->subscribedToNotifications ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->subscribedToNotifications () );
   }
 }
 
@@ -482,8 +481,7 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
   {
     if( ISNUM(1) )
     {
-      QStringList strl = obj->tables ( (QSql::TableType) hb_parni(1) );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->tables ( (QSql::TableType) hb_parni(1) ) );
     }
     else
     {

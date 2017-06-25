@@ -137,8 +137,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
   {
     if( ISARRAY(1) )
     {
-      QStringList strl = obj->addPaths ( PQSTRINGLIST(1) );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->addPaths ( PQSTRINGLIST(1) ) );
     }
     else
     {
@@ -156,8 +155,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 
   if( obj )
   {
-    QStringList strl = obj->directories ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->directories () );
   }
 }
 
@@ -170,8 +168,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 
   if( obj )
   {
-    QStringList strl = obj->files ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->files () );
   }
 }
 
@@ -206,8 +203,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
   {
     if( ISARRAY(1) )
     {
-      QStringList strl = obj->removePaths ( PQSTRINGLIST(1) );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->removePaths ( PQSTRINGLIST(1) ) );
     }
     else
     {

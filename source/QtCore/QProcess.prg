@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 
   if( obj )
   {
-    QStringList strl = obj->environment ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->environment () );
   }
 }
 
@@ -912,8 +911,7 @@ static QStringList systemEnvironment ()
 */
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
-  QStringList strl = QProcess::systemEnvironment ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QProcess::systemEnvironment () );
 }
 
 /*
@@ -981,8 +979,7 @@ HB_FUNC_STATIC( QPROCESS_ARGUMENTS )
 
   if( obj )
   {
-    QStringList strl = obj->arguments ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->arguments () );
   }
 }
 

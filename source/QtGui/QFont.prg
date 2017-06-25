@@ -1131,8 +1131,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTES )
 {
   if( ISCHAR(1) )
   {
-    QStringList strl = QFont::substitutes ( PQSTRING(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( QFont::substitutes ( PQSTRING(1) ) );
   }
   else
   {
@@ -1145,8 +1144,7 @@ static QStringList substitutions ()
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
 {
-  QStringList strl = QFont::substitutions ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QFont::substitutions () );
 }
 
 HB_FUNC_STATIC( QFONT_NEWFROM )

@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 
   if( obj )
   {
-    QStringList strl = obj->featureList ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->featureList () );
   }
 }
 

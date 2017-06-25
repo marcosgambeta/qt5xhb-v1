@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTS )
   QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->audioInputs ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->audioInputs () );
   }
 }
 

@@ -318,8 +318,7 @@ static QStringList supportedMimeTypes()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
 {
-  QStringList strl = QSoundEffect::supportedMimeTypes ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QSoundEffect::supportedMimeTypes () );
 }
 
 

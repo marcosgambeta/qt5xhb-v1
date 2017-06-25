@@ -415,8 +415,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->nameFilters ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->nameFilters () );
   }
 }
 
@@ -726,8 +725,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->mimeTypes ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->mimeTypes () );
   }
 }
 

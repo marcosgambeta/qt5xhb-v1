@@ -290,8 +290,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ARGUMENTS )
   QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->arguments ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->arguments () );
   }
 #endif
 }

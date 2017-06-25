@@ -319,8 +319,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->attributeNames ( OPQSTRING(1,QString()) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->attributeNames ( OPQSTRING(1,QString()) ) );
   }
 }
 
@@ -333,8 +332,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->classes ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->classes () );
   }
 }
 

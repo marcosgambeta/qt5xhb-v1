@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_CODECS )
   QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->codecs ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->codecs () );
   }
 }
 

@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->actionNames ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->actionNames () );
   }
 }
 
@@ -136,8 +135,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->keyBindingsForAction ( PQSTRING(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->keyBindingsForAction ( PQSTRING(1) ) );
   }
 }
 

@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 
   if( obj )
   {
-    QStringList strl = obj->allKeys ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->allKeys () );
   }
 }
 
@@ -274,8 +273,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 
   if( obj )
   {
-    QStringList strl = obj->childGroups ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->childGroups () );
   }
 }
 
@@ -288,8 +286,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 
   if( obj )
   {
-    QStringList strl = obj->childKeys ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->childKeys () );
   }
 }
 

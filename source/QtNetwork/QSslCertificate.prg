@@ -234,8 +234,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO1 )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->issuerInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->issuerInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
   }
 }
 
@@ -248,8 +247,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO2 )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->issuerInfo ( *PQBYTEARRAY(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->issuerInfo ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -311,8 +309,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO1 )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->subjectInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->subjectInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
   }
 }
 
@@ -325,8 +322,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO2 )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->subjectInfo ( *PQBYTEARRAY(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->subjectInfo ( *PQBYTEARRAY(1) ) );
   }
 }
 

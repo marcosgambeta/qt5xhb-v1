@@ -83,8 +83,7 @@ static QStringList keys()
 */
 HB_FUNC_STATIC( QSTYLEFACTORY_KEYS )
 {
-  QStringList strl = QStyleFactory::keys ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QStyleFactory::keys () );
 }
 
 

@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 
   if( obj )
   {
-    QStringList strl = obj->availableLayouts ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->availableLayouts () );
   }
 }
 
@@ -144,8 +143,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 
   if( obj )
   {
-    QStringList strl = obj->availableWidgets ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->availableWidgets () );
   }
 }
 
@@ -291,8 +289,7 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 
   if( obj )
   {
-    QStringList strl = obj->pluginPaths ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->pluginPaths () );
   }
 }
 

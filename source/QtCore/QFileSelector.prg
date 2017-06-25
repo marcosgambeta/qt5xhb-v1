@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 
   if( obj )
   {
-    QStringList strl = obj->extraSelectors ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->extraSelectors () );
   }
 }
 
@@ -175,8 +174,7 @@ HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
 
   if( obj )
   {
-    QStringList strl = obj->allSelectors ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->allSelectors () );
   }
 }
 

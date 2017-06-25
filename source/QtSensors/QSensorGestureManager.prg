@@ -109,8 +109,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
   QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->gestureIds ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->gestureIds () );
   }
 #endif
 }
@@ -125,8 +124,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
   QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->recognizerSignals ( PQSTRING(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->recognizerSignals ( PQSTRING(1) ) );
   }
 #endif
 }

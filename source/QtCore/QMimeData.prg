@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QMIMEDATA_FORMATS )
 
   if( obj )
   {
-    QStringList strl = obj->formats ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->formats () );
   }
 }
 

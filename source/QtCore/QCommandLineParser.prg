@@ -461,8 +461,7 @@ void QCommandLineParser_values1 ()
 
   if( obj )
   {
-    QStringList strl = obj->values ( PQSTRING(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->values ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -477,8 +476,7 @@ void QCommandLineParser_values2 ()
 
   if( obj )
   {
-    QStringList strl = obj->values ( *PQCOMMANDLINEOPTION(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->values ( *PQCOMMANDLINEOPTION(1) ) );
   }
 #endif
 }
@@ -512,8 +510,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_POSITIONALARGUMENTS )
 
   if( obj )
   {
-    QStringList strl = obj->positionalArguments ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->positionalArguments () );
   }
 #endif
 }
@@ -528,8 +525,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_OPTIONNAMES )
 
   if( obj )
   {
-    QStringList strl = obj->optionNames ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->optionNames () );
   }
 #endif
 }
@@ -544,8 +540,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_UNKNOWNOPTIONNAMES )
 
   if( obj )
   {
-    QStringList strl = obj->unknownOptionNames ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->unknownOptionNames () );
   }
 #endif
 }

@@ -364,8 +364,7 @@ HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
 
   if( obj )
   {
-    QStringList strl = obj->history ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->history () );
   }
 }
 
@@ -581,8 +580,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
 
   if( obj )
   {
-    QStringList strl = obj->nameFilters ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->nameFilters () );
   }
 }
 
@@ -828,8 +826,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
 
   if( obj )
   {
-    QStringList strl = obj->selectedFiles ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->selectedFiles () );
   }
 }
 
@@ -1223,8 +1220,7 @@ HB_FUNC_STATIC( QFILEDIALOG_MIMETYPEFILTERS )
 
   if( obj )
   {
-    QStringList strl = obj->mimeTypeFilters ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->mimeTypeFilters () );
   }
 }
 
@@ -1314,8 +1310,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
   {
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    QStringList strl = QFileDialog::getOpenFileNames ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), &par5, (QFileDialog::Options) par6 );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( QFileDialog::getOpenFileNames ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), &par5, (QFileDialog::Options) par6 ) );
   }
   else
   {

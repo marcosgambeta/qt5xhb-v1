@@ -612,8 +612,7 @@ static QStringList supportedMimeTypes(Flags flags = 0) (deprecated)
 HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
 {
   int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
-  QStringList strl = QMediaPlayer::supportedMimeTypes ( (QMediaPlayer::Flags) par1 );
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QMediaPlayer::supportedMimeTypes ( (QMediaPlayer::Flags) par1 ) );
 }
 
 

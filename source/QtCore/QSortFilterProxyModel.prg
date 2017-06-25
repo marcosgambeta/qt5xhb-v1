@@ -1210,8 +1210,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMETYPES )
 
   if( obj )
   {
-    QStringList strl = obj->mimeTypes ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->mimeTypes () );
   }
 }
 

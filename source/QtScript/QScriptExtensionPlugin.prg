@@ -103,8 +103,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->keys ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->keys () );
   }
 }
 

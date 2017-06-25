@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QMIMETYPE_GLOBPATTERNS )
 
   if( obj )
   {
-    QStringList strl = obj->globPatterns ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->globPatterns () );
   }
 }
 
@@ -243,8 +242,7 @@ HB_FUNC_STATIC( QMIMETYPE_PARENTMIMETYPES )
 
   if( obj )
   {
-    QStringList strl = obj->parentMimeTypes ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->parentMimeTypes () );
   }
 }
 
@@ -257,8 +255,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALLANCESTORS )
 
   if( obj )
   {
-    QStringList strl = obj->allAncestors ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->allAncestors () );
   }
 }
 
@@ -271,8 +268,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALIASES )
 
   if( obj )
   {
-    QStringList strl = obj->aliases ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->aliases () );
   }
 }
 
@@ -285,8 +281,7 @@ HB_FUNC_STATIC( QMIMETYPE_SUFFIXES )
 
   if( obj )
   {
-    QStringList strl = obj->suffixes ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->suffixes () );
   }
 }
 

@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 
   if( obj )
   {
-    QStringList strl = obj->names ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->names () );
   }
 }
 
@@ -285,8 +284,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
 
   if( obj )
   {
-    QStringList strl = obj->defaultValues ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->defaultValues () );
   }
 }
 

@@ -873,8 +873,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->anchorNames ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->anchorNames () );
   }
 }
 

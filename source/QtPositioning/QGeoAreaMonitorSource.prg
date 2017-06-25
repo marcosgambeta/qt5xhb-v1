@@ -357,8 +357,7 @@ static QStringList availableSources()
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_AVAILABLESOURCES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QStringList strl = QGeoAreaMonitorSource::availableSources ();
-  _qt5xhb_convert_qstringlist_to_array ( strl );
+  RQSTRINGLIST( QGeoAreaMonitorSource::availableSources () );
 #endif
 }
 

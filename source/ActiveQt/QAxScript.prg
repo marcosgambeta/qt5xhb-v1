@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1);
-      QStringList strl = obj->functions ( (QAxScript::FunctionFlags) par1 );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->functions ( (QAxScript::FunctionFlags) par1 ) );
     }
     else
     {

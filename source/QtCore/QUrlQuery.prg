@@ -186,8 +186,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QUrl::PrettyDecoded : hb_parni(2);
-      QStringList strl = obj->allQueryItemValues ( PQSTRING(1), (QUrl::ComponentFormattingOptions) par2 );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->allQueryItemValues ( PQSTRING(1), (QUrl::ComponentFormattingOptions) par2 ) );
     }
     else
     {

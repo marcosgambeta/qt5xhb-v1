@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QFontDatabase::Any : hb_parni(1);
-      QStringList strl = obj->families ( (QFontDatabase::WritingSystem) par1 );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->families ( (QFontDatabase::WritingSystem) par1 ) );
     }
     else
     {
@@ -370,8 +369,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
   {
     if( ISCHAR(1) )
     {
-      QStringList strl = obj->styles ( PQSTRING(1) );
-      _qt5xhb_convert_qstringlist_to_array ( strl );
+      RQSTRINGLIST( obj->styles ( PQSTRING(1) ) );
     }
     else
     {
@@ -437,8 +435,7 @@ HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
   if( ISNUM(1) )
   {
-    QStringList strl = QFontDatabase::applicationFontFamilies ( PINT(1) );
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( QFontDatabase::applicationFontFamilies ( PINT(1) ) );
   }
   else
   {

@@ -597,8 +597,7 @@ HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTETYPES )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->extendedAttributeTypes ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->extendedAttributeTypes () );
   }
 #endif
 }
@@ -661,8 +660,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTTYPES )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->contactTypes ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->contactTypes () );
   }
 #endif
 }

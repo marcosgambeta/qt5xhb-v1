@@ -186,8 +186,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->restartCommand ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->restartCommand () );
   }
 }
 
@@ -214,8 +213,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    QStringList strl = obj->discardCommand ();
-    _qt5xhb_convert_qstringlist_to_array ( strl );
+    RQSTRINGLIST( obj->discardCommand () );
   }
 }
 
