@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DEFAULTFRAMEBUFFEROBJECT )
 
   if( obj )
   {
-    hb_retni( obj->defaultFramebufferObject () );
+    RGLUINT( obj->defaultFramebufferObject () );
   }
 }
 

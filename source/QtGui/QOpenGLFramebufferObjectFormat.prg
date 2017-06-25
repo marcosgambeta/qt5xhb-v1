@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setTextureTarget ( (GLenum) hb_parni(1) );
+    obj->setTextureTarget ( PGLENUM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureTarget () );
+    RGLENUM( obj->textureTarget () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setInternalTextureFormat ( (GLenum) hb_parni(1) );
+    obj->setInternalTextureFormat ( PGLENUM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
   QOpenGLFramebufferObjectFormat * obj = (QOpenGLFramebufferObjectFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->internalTextureFormat () );
+    RGLENUM( obj->internalTextureFormat () );
   }
 }
 

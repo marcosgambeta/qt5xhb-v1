@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_TEXTUREID )
   QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->textureId () );
+    RGLUINT( obj->textureId () );
   }
 #endif
 }
@@ -1593,7 +1593,7 @@ static GLuint boundTextureId(BindingTarget target)
 HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retni( QOpenGLTexture::boundTextureId ( (QOpenGLTexture::BindingTarget) hb_parni(1) ) );
+  RGLUINT( QOpenGLTexture::boundTextureId ( (QOpenGLTexture::BindingTarget) hb_parni(1) ) );
 #endif
 }
 
@@ -1603,7 +1603,7 @@ static GLuint boundTextureId(uint unit, BindingTarget target)
 HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retni( QOpenGLTexture::boundTextureId ( (uint) hb_parni(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
+  RGLUINT( QOpenGLTexture::boundTextureId ( (uint) hb_parni(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
 #endif
 }
 

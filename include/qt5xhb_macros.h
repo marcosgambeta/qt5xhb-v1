@@ -1043,6 +1043,13 @@
 #define PQUINT16(n)                                         (quint16) hb_parni(n)
 #define PQUINT32(n)                                         (quint32) hb_parni(n)
 #define PQUINT64(n)                                         (quint64) hb_parnll(n)
+#define PGLINT(n)                                           (GLint) hb_parni(n)
+#define PGLUINT(n)                                          (GLuint) hb_parni(n)
+#define PGLUINT64(n)                                        (GLuint64) hb_parnll(n)
+#define PGLFLOAT(n)                                         (GLfloat) hb_parnd(n)
+#define PGLENUM(n)                                          (GLenum) hb_parni(n)
+#define PGLBITFIELD(n)                                      (GLbitfield) hb_parni(n)
+#define PGLSIZEI(n)                                         (GLsizei) hb_parni(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
@@ -1063,6 +1070,13 @@
 #define OPQUINT16(n,v)                                      (quint16) ISNIL(n)? v : hb_parni(n)
 #define OPQUINT32(n,v)                                      (quint32) ISNIL(n)? v : hb_parni(n)
 #define OPQUINT64(n,v)                                      (quint64) ISNIL(n)? v : hb_parnll(n)
+#define OPGLINT(n,v)                                        (GLint) ISNIL(n)? v : hb_parni(n)
+#define OPGLUINT(n,v)                                       (GLuint) ISNIL(n)? v : hb_parni(n)
+#define OPGLUINT64(n,v)                                     (GLuint64) ISNIL(n)? v : hb_parnll(n)
+#define OPGLFLOAT(n,v)                                      (GLfloat) ISNIL(n)? v : hb_parnd(n)
+#define OPGLENUM(n,v)                                       (GLenum) ISNIL(n)? v : hb_parni(n)
+#define OPGLBITFIELD(n,v)                                   (GLbitfield) ISNIL(n)? v : hb_parni(n)
+#define OPGLSIZEI(n,v)                                      (GLsizei) ISNIL(n)? v : hb_parni(n)
 
 // macros for return's
 #define RQSTRING(x)                                         (const char *) x.toLatin1().data()
@@ -1084,6 +1098,13 @@
 #define RQUINT16(x)                                         hb_retni(x)
 #define RQUINT32(x)                                         hb_retni(x)
 #define RQUINT64(x)                                         hb_retnll(x)
+#define RGLINT(x)                                           hb_parni( (GLint) x )
+#define RGLUINT(x)                                          hb_parni( (GLuint) x )
+#define RGLUINT64(x)                                        hb_parnll( (GLuint64) x )
+#define RGLFLOAT(x)                                         hb_parnd( (GLfloat) x )
+#define RGLENUM(x)                                          hb_parni( (GLenum) x )
+#define RGLBITFIELD(x)                                      hb_parni( (GLbitfield) x )
+#define RGLSIZEI(x)                                         hb_parni( (GLsizei) x )
 
 // macros for parameters (Qt objects)
 #define PQABSTRACTANIMATION(n)                             (QAbstractAnimation *) _qt5xhb_itemGetPtr(n)

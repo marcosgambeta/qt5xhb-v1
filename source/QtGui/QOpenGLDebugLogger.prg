@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::ApplicationSource : hb_parni(3);
-    obj->pushGroup ( PQSTRING(1), (GLuint) ISNIL(2)? 0 : hb_parni(2), (QOpenGLDebugMessage::Source) par3 );
+    obj->pushGroup ( PQSTRING(1), OPGLUINT(2,0), (QOpenGLDebugMessage::Source) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

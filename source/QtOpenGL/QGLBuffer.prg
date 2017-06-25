@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->bufferId () );
+    RGLUINT( obj->bufferId () );
   }
 }
 

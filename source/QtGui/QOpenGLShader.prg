@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_SHADERID )
   QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->shaderId () );
+    RGLUINT( obj->shaderId () );
   }
 }
 

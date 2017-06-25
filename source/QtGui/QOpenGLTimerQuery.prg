@@ -8,10 +8,6 @@
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST GLUINT64
-#endif
-
 CLASS QOpenGLTimerQuery INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -154,7 +150,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->objectId () );
+    RGLUINT( obj->objectId () );
   }
 #endif
 #endif
@@ -207,8 +203,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    GLuint64 * ptr = new GLuint64( obj->waitForTimestamp () ); // TODO: corrigir codigo
-    _qt5xhb_createReturnClass ( ptr, "GLUINT64" );
+    RGLUINT64( obj->waitForTimestamp () );
   }
 #endif
 #endif
@@ -260,8 +255,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
   QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    GLuint64 * ptr = new GLuint64( obj->waitForResult () ); // TODO: corrigir codigo
-    _qt5xhb_createReturnClass ( ptr, "GLUINT64" );
+    RGLUINT64( obj->waitForResult () );
   }
 #endif
 #endif

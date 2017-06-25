@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->defaultFramebufferObject () );
+    RGLUINT( obj->defaultFramebufferObject () );
   }
 #endif
 #endif

@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_DRAWINGMODE )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retni( obj->drawingMode () );
+    RGLENUM( obj->drawingMode () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETDRAWINGMODE )
   QSGGeometry * obj = (QSGGeometry *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    obj->setDrawingMode ( (GLenum) hb_parni(1) );
+    obj->setDrawingMode ( PGLENUM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
