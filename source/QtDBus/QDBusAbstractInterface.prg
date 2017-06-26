@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SERVICE )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->service () ) );
+    RQSTRING( obj->service () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_PATH )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->path () ) );
+    RQSTRING( obj->path () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_INTERFACE )
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->interface () ) );
+    RQSTRING( obj->interface () );
   }
 }
 

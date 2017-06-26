@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
   QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->windowTitle () ) );
+    RQSTRING( obj->windowTitle () );
   }
 }
 

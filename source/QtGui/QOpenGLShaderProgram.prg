@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LOG )
   QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->log () ) );
+    RQSTRING( obj->log () );
   }
 }
 

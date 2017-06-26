@@ -322,7 +322,7 @@ void QFontDatabase_styleString1 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->styleString ( *PQFONT(1) ) ) );
+    RQSTRING( obj->styleString ( *PQFONT(1) ) );
   }
 }
 
@@ -335,7 +335,7 @@ void QFontDatabase_styleString2 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->styleString ( *PQFONTINFO(1) ) ) );
+    RQSTRING( obj->styleString ( *PQFONTINFO(1) ) );
   }
 }
 
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 {
   if( ISNUM(1) )
   {
-    hb_retc( RQSTRING( QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) hb_parni(1) ) ) );
+    RQSTRING( QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
   }
   else
   {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {
   if( ISNUM(1) )
   {
-    hb_retc( RQSTRING( QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) hb_parni(1) ) ) );
+    RQSTRING( QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
   }
   else
   {

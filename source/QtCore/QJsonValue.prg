@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
   {
     if( ISOPTCHAR(1) )
     {
-      hb_retc( RQSTRING( obj->toString ( OPQSTRING(1,QString()) ) ) );
+      RQSTRING( obj->toString ( OPQSTRING(1,QString()) ) );
     }
     else
     {

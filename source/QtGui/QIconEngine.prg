@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QICONENGINE_ICONNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->iconName () ) );
+    RQSTRING( obj->iconName () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QICONENGINE_KEY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->key () ) );
+    RQSTRING( obj->key () );
   }
 }
 

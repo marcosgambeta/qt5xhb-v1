@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->anchorAt ( *PQPOINTF(1) ) ) );
+    RQSTRING( obj->anchorAt ( *PQPOINTF(1) ) );
   }
 }
 

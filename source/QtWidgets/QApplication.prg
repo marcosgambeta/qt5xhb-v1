@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->sessionId () ) );
+    RQSTRING( obj->sessionId () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->sessionKey () ) );
+    RQSTRING( obj->sessionKey () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->styleSheet () ) );
+    RQSTRING( obj->styleSheet () );
   }
 }
 

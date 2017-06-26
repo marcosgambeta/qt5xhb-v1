@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      hb_retc( RQSTRING( obj->escapeIdentifier ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) ) );
+      RQSTRING( obj->escapeIdentifier ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
     }
     else
     {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   {
     if( ISQSQLFIELD(1) && ISOPTLOG(2) )
     {
-      hb_retc( RQSTRING( obj->formatValue ( *PQSQLFIELD(1), OPBOOL(2,false) ) ) );
+      RQSTRING( obj->formatValue ( *PQSQLFIELD(1), OPBOOL(2,false) ) );
     }
     else
     {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
   {
     if( ISNUM(1) && ISCHAR(2) && ISQSQLRECORD(3) && ISLOG(4) )
     {
-      hb_retc( RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4) ) ) );
+      RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4) ) );
     }
     else
     {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
   {
     if( ISCHAR(1) && ISNUM(2) )
     {
-      hb_retc( RQSTRING( obj->stripDelimiters ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) ) );
+      RQSTRING( obj->stripDelimiters ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
     }
     else
     {

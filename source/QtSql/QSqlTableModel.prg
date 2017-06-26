@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->filter () ) );
+    RQSTRING( obj->filter () );
   }
 }
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->tableName () ) );
+    RQSTRING( obj->tableName () );
   }
 }
 

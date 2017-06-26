@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->completionPrefix () ) );
+    RQSTRING( obj->completionPrefix () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->currentCompletion () ) );
+    RQSTRING( obj->currentCompletion () );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retc( RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) ) );
+      RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) );
     }
     else
     {

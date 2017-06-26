@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->key () ) );
+    RQSTRING( obj->key () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->nativeKey () ) );
+    RQSTRING( obj->nativeKey () );
   }
 }
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

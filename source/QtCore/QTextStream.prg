@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retc( RQSTRING( obj->readLine ( OPQINT64(1,0) ) ) );
+      RQSTRING( obj->readLine ( OPQINT64(1,0) ) );
     }
     else
     {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READALL )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->readAll () ) );
+    RQSTRING( obj->readAll () );
   }
 }
 
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->read ( PQINT64(1) ) ) );
+      RQSTRING( obj->read ( PQINT64(1) ) );
     }
     else
     {

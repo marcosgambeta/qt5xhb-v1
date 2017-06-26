@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERRORSTRING )
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

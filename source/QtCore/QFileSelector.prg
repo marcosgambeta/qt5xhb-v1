@@ -93,7 +93,7 @@ void QFileSelector_select1 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->select ( PQSTRING(1) ) ) );
+    RQSTRING( obj->select ( PQSTRING(1) ) );
   }
 }
 

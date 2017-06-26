@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTCPSERVER_ERRORSTRING )
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

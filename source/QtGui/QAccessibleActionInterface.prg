@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->localizedActionName ( PQSTRING(1) ) ) );
+    RQSTRING( obj->localizedActionName ( PQSTRING(1) ) );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
   QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->localizedActionDescription ( PQSTRING(1) ) ) );
+    RQSTRING( obj->localizedActionDescription ( PQSTRING(1) ) );
   }
 }
 

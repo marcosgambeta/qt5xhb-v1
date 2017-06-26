@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
   QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

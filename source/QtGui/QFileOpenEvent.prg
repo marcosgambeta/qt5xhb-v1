@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
   QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->file () ) );
+    RQSTRING( obj->file () );
   }
 }
 

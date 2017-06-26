@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->iconText () ) );
+    RQSTRING( obj->iconText () );
   }
 }
 
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->statusTip () ) );
+    RQSTRING( obj->statusTip () );
   }
 }
 
@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toolTip () ) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->whatsThis () ) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 

@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QPAGESIZE_KEY1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->key () ) );
+    RQSTRING( obj->key () );
   }
 }
 
@@ -253,7 +253,7 @@ static QString key(PageSizeId pageSizeId)
 */
 HB_FUNC_STATIC( QPAGESIZE_KEY2 )
 {
-  hb_retc( RQSTRING( QPageSize::key ( (QPageSize::PageSizeId) hb_parni(1) ) ) );
+  RQSTRING( QPageSize::key ( (QPageSize::PageSizeId) hb_parni(1) ) );
 }
 
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QPAGESIZE_NAME1 )
   QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -293,7 +293,7 @@ static QString name(PageSizeId pageSizeId)
 */
 HB_FUNC_STATIC( QPAGESIZE_NAME2 )
 {
-  hb_retc( RQSTRING( QPageSize::name ( (QPageSize::PageSizeId) hb_parni(1) ) ) );
+  RQSTRING( QPageSize::name ( (QPageSize::PageSizeId) hb_parni(1) ) );
 }
 
 

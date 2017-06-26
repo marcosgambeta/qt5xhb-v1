@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->frameName () ) );
+    RQSTRING( obj->frameName () );
   }
 }
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QWEBFRAME_TITLE )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 }
 
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOHTML )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toHtml () ) );
+    RQSTRING( obj->toHtml () );
   }
 }
 
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
   QWebFrame * obj = (QWebFrame *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toPlainText () ) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 

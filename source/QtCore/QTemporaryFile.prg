@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileTemplate () ) );
+    RQSTRING( obj->fileTemplate () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 

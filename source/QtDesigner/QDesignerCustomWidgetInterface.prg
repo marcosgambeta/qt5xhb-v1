@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->codeTemplate () ) );
+    RQSTRING( obj->codeTemplate () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->domXml () ) );
+    RQSTRING( obj->domXml () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->group () ) );
+    RQSTRING( obj->group () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->includeFile () ) );
+    RQSTRING( obj->includeFile () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toolTip () ) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->whatsThis () ) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 

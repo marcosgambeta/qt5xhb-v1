@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_SUFFIXFORFILENAME )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( RQSTRING( obj->suffixForFileName ( PQSTRING(1) ) ) );
+      RQSTRING( obj->suffixForFileName ( PQSTRING(1) ) );
     }
     else
     {

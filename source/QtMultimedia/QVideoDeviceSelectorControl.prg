@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->deviceDescription ( PINT(1) ) ) );
+    RQSTRING( obj->deviceDescription ( PINT(1) ) );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->deviceName ( PINT(1) ) ) );
+    RQSTRING( obj->deviceName ( PINT(1) ) );
   }
 }
 

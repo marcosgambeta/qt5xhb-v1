@@ -109,7 +109,7 @@ void QRegularExpressionMatch_captured1 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->captured ( OPINT(1,0) ) ) );
+    RQSTRING( obj->captured ( OPINT(1,0) ) );
   }
 }
 
@@ -122,7 +122,7 @@ void QRegularExpressionMatch_captured2 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->captured ( PQSTRING(1) ) ) );
+    RQSTRING( obj->captured ( PQSTRING(1) ) );
   }
 }
 

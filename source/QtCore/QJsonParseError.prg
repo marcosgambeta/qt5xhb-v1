@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QJSONPARSEERROR_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

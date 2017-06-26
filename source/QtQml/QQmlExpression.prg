@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EXPRESSION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->expression () ) );
+    RQSTRING( obj->expression () );
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->sourceFile () ) );
+    RQSTRING( obj->sourceFile () );
   }
 }
 

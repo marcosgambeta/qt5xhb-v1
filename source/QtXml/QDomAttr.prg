@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDOMATTR_NAME )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDOMATTR_VALUE )
   QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->value () ) );
+    RQSTRING( obj->value () );
   }
 }
 

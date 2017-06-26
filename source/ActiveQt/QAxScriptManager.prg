@@ -315,7 +315,7 @@ static QString scriptFileFilter ()
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {
-  hb_retc( RQSTRING( QAxScriptManager::scriptFileFilter () ) );
+  RQSTRING( QAxScriptManager::scriptFileFilter () );
 }
 
 #pragma ENDDUMP

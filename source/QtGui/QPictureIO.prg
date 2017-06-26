@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPICTUREIO_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPICTUREIO_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->description () ) );
+    RQSTRING( obj->description () );
   }
 }
 

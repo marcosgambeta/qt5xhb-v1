@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->displayColumn () ) );
+    RQSTRING( obj->displayColumn () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->indexColumn () ) );
+    RQSTRING( obj->indexColumn () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->tableName () ) );
+    RQSTRING( obj->tableName () );
   }
 }
 

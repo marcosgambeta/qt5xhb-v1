@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGEOADDRESS_TEXT )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 #endif
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->country () ) );
+    RQSTRING( obj->country () );
   }
 #endif
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->countryCode () ) );
+    RQSTRING( obj->countryCode () );
   }
 #endif
 }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STATE )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->state () ) );
+    RQSTRING( obj->state () );
   }
 #endif
 }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->county () ) );
+    RQSTRING( obj->county () );
   }
 #endif
 }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QGEOADDRESS_CITY )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->city () ) );
+    RQSTRING( obj->city () );
   }
 #endif
 }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->district () ) );
+    RQSTRING( obj->district () );
   }
 #endif
 }
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->postalCode () ) );
+    RQSTRING( obj->postalCode () );
   }
 #endif
 }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STREET )
   QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->street () ) );
+    RQSTRING( obj->street () );
   }
 #endif
 }

@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->itemText ( *PQTEXTBLOCK(1) ) ) );
+    RQSTRING( obj->itemText ( *PQTEXTBLOCK(1) ) );
   }
 }
 

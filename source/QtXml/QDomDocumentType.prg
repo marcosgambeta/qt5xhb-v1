@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->internalSubset () ) );
+    RQSTRING( obj->internalSubset () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->publicId () ) );
+    RQSTRING( obj->publicId () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
   QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->systemId () ) );
+    RQSTRING( obj->systemId () );
   }
 }
 

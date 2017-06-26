@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QPLACECONTENT_ATTRIBUTION )
   QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->attribution () ) );
+    RQSTRING( obj->attribution () );
   }
 #endif
 }

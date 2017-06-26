@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->description () ) );
+    RQSTRING( obj->description () );
   }
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
   QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 }
 

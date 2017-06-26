@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
   QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->audioInput () ) );
+    RQSTRING( obj->audioInput () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
   QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->audioInputDescription ( PQSTRING(1) ) ) );
+    RQSTRING( obj->audioInputDescription ( PQSTRING(1) ) );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
   QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->defaultAudioInput () ) );
+    RQSTRING( obj->defaultAudioInput () );
   }
 }
 

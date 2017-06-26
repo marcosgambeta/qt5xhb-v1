@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->peerName () ) );
+    RQSTRING( obj->peerName () );
   }
 }
 

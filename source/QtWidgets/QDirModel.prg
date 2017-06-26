@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retc( RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) ) );
+      RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
     }
     else
     {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILENAME )
   {
     if( ISQMODELINDEX(1) )
     {
-      hb_retc( RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) ) );
+      RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
     }
     else
     {

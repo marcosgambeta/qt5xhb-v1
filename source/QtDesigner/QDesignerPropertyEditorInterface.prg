@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->currentPropertyName () ) );
+    RQSTRING( obj->currentPropertyName () );
   }
 }
 

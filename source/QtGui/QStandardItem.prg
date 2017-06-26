@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toolTip () ) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->statusTip () ) );
+    RQSTRING( obj->statusTip () );
   }
 }
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->whatsThis () ) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->accessibleText () ) );
+    RQSTRING( obj->accessibleText () );
   }
 }
 
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
   QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->accessibleDescription () ) );
+    RQSTRING( obj->accessibleDescription () );
   }
 }
 

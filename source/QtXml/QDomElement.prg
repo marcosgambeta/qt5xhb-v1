@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) ) );
+    RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) ) );
+    RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
 }
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->tagName () ) );
+    RQSTRING( obj->tagName () );
   }
 }
 
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TEXT )
   QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) ) );
+    RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->subTitle () ) );
+    RQSTRING( obj->subTitle () );
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
   QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 }
 

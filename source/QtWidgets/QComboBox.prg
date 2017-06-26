@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->currentText () ) );
+    RQSTRING( obj->currentText () );
   }
 }
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->itemText ( PINT(1) ) ) );
+      RQSTRING( obj->itemText ( PINT(1) ) );
     }
     else
     {

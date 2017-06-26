@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->applicationName () ) );
+    RQSTRING( obj->applicationName () );
   }
 }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QSETTINGS_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QSETTINGS_GROUP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->group () ) );
+    RQSTRING( obj->group () );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->organizationName () ) );
+    RQSTRING( obj->organizationName () );
   }
 }
 

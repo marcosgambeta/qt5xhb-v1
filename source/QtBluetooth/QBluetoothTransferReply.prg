@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 #endif
 }

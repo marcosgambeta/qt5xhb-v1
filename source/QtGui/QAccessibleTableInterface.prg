@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->columnDescription ( PINT(1) ) ) );
+    RQSTRING( obj->columnDescription ( PINT(1) ) );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
   QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->rowDescription ( PINT(1) ) ) );
+    RQSTRING( obj->rowDescription ( PINT(1) ) );
   }
 }
 

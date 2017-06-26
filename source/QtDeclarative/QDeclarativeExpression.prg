@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->expression () ) );
+    RQSTRING( obj->expression () );
   }
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->sourceFile () ) );
+    RQSTRING( obj->sourceFile () );
   }
 }
 

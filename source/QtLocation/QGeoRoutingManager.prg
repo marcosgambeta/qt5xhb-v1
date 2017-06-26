@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_MANAGERNAME )
   QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->managerName () ) );
+    RQSTRING( obj->managerName () );
   }
 #endif
 }

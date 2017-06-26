@@ -325,7 +325,7 @@ void QClipboard_text1 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-    hb_retc( RQSTRING( obj->text ( (QClipboard::Mode) par1 ) ) );
+    RQSTRING( obj->text ( (QClipboard::Mode) par1 ) );
   }
 }
 
@@ -340,7 +340,7 @@ void QClipboard_text2 ()
   {
     QString par1 = QLatin1String( hb_parc(1) );
     int par2 = ISNIL(2)? (int) QClipboard::Clipboard : hb_parni(2);
-    hb_retc( RQSTRING( obj->text ( par1, (QClipboard::Mode) par2 ) ) );
+    RQSTRING( obj->text ( par1, (QClipboard::Mode) par2 ) );
   }
 }
 

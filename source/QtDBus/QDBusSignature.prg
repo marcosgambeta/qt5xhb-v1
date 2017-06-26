@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
   QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->signature () ) );
+    RQSTRING( obj->signature () );
   }
 }
 

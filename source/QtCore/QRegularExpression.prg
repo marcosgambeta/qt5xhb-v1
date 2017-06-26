@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERN )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->pattern () ) );
+    RQSTRING( obj->pattern () );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ESCAPE )
 {
   if( ISCHAR(1) )
   {
-    hb_retc( RQSTRING( QRegularExpression::escape ( PQSTRING(1) ) ) );
+    RQSTRING( QRegularExpression::escape ( PQSTRING(1) ) );
   }
   else
   {

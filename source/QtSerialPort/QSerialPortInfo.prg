@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_PORTNAME )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->portName () ) );
+    RQSTRING( obj->portName () );
   }
 #endif
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_SYSTEMLOCATION )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->systemLocation () ) );
+    RQSTRING( obj->systemLocation () );
   }
 #endif
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_DESCRIPTION )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->description () ) );
+    RQSTRING( obj->description () );
   }
 #endif
 }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_MANUFACTURER )
   QSerialPortInfo * obj = (QSerialPortInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->manufacturer () ) );
+    RQSTRING( obj->manufacturer () );
   }
 #endif
 }

@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
   {
     if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
     {
-      hb_retc( RQSTRING( obj->translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) ) );
+      RQSTRING( obj->translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
     }
     else
     {

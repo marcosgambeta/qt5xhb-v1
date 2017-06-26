@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
   QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->address () ) );
+    RQSTRING( obj->address () );
   }
 }
 

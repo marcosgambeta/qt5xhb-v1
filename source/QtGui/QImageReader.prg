@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QIMAGEREADER_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXT )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( RQSTRING( obj->text ( PQSTRING(1) ) ) );
+      RQSTRING( obj->text ( PQSTRING(1) ) );
     }
     else
     {

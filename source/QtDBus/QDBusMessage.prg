@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SERVICE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->service () ) );
+    RQSTRING( obj->service () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_PATH )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->path () ) );
+    RQSTRING( obj->path () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_INTERFACE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->interface () ) );
+    RQSTRING( obj->interface () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_MEMBER )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->member () ) );
+    RQSTRING( obj->member () );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ERRORNAME )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorName () ) );
+    RQSTRING( obj->errorName () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ERRORMESSAGE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorMessage () ) );
+    RQSTRING( obj->errorMessage () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SIGNATURE )
   QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->signature () ) );
+    RQSTRING( obj->signature () );
   }
 }
 

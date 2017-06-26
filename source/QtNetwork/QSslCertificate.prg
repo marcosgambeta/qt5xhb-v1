@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOTEXT )
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toText () ) );
+    RQSTRING( obj->toText () );
   }
 }
 

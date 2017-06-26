@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_TEXT )
   QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text ( PINT(1), PINT(2) ) ) );
+    RQSTRING( obj->text ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ATTRIBUTES )
   {
     int par2;
     int par3;
-    hb_retc( RQSTRING( obj->attributes ( PINT(1), &par2, &par3 ) ) );
+    RQSTRING( obj->attributes ( PINT(1), &par2, &par3 ) );
     hb_storni( par2, 2 );
     hb_storni( par3, 3 );
   }

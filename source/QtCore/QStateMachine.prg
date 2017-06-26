@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

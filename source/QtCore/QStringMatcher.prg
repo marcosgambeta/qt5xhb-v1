@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->pattern () ) );
+    RQSTRING( obj->pattern () );
   }
 }
 

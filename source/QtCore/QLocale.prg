@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QLOCALE_AMTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->amText () ) );
+    RQSTRING( obj->amText () );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->bcp47Name () ) );
+    RQSTRING( obj->bcp47Name () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
   {
     if( ISARRAY(1) )
     {
-      hb_retc( RQSTRING( obj->createSeparatedList ( PQSTRINGLIST(1) ) ) );
+      RQSTRING( obj->createSeparatedList ( PQSTRINGLIST(1) ) );
     }
     else
     {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
     if( ISNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::CurrencySymbol : hb_parni(1);
-      hb_retc( RQSTRING( obj->currencySymbol ( (QLocale::CurrencySymbolFormat) par1 ) ) );
+      RQSTRING( obj->currencySymbol ( (QLocale::CurrencySymbolFormat) par1 ) );
     }
     else
     {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
     if( ISNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
-      hb_retc( RQSTRING( obj->dateFormat ( (QLocale::FormatType) par1 ) ) );
+      RQSTRING( obj->dateFormat ( (QLocale::FormatType) par1 ) );
     }
     else
     {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
     if( ISNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
-      hb_retc( RQSTRING( obj->dateTimeFormat ( (QLocale::FormatType) par1 ) ) );
+      RQSTRING( obj->dateTimeFormat ( (QLocale::FormatType) par1 ) );
     }
     else
     {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QLOCALE_DAYNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->dayName ( PINT(1), (QLocale::FormatType) par2 ) ) );
+      RQSTRING( obj->dayName ( PINT(1), (QLocale::FormatType) par2 ) );
     }
     else
     {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QLOCALE_MONTHNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->monthName ( PINT(1), (QLocale::FormatType) par2 ) ) );
+      RQSTRING( obj->monthName ( PINT(1), (QLocale::FormatType) par2 ) );
     }
     else
     {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QLOCALE_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->nativeCountryName () ) );
+    RQSTRING( obj->nativeCountryName () );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->nativeLanguageName () ) );
+    RQSTRING( obj->nativeLanguageName () );
   }
 }
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QLOCALE_PMTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->pmText () ) );
+    RQSTRING( obj->pmText () );
   }
 }
 
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING1 )
     if( ISCHAR(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::StandardQuotation : hb_parni(2);
-      hb_retc( RQSTRING( obj->quoteString ( PQSTRING(1), (QLocale::QuotationStyle) par2 ) ) );
+      RQSTRING( obj->quoteString ( PQSTRING(1), (QLocale::QuotationStyle) par2 ) );
     }
     else
     {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING2 )
     {
       QStringRef * par1 = (QStringRef *) _qt5xhb_itemGetPtr(1);
       int par2 = ISNIL(2)? (int) QLocale::StandardQuotation : hb_parni(2);
-      hb_retc( RQSTRING( obj->quoteString ( *par1, (QLocale::QuotationStyle) par2 ) ) );
+      RQSTRING( obj->quoteString ( *par1, (QLocale::QuotationStyle) par2 ) );
     }
     else
     {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->standaloneDayName ( PINT(1), (QLocale::FormatType) par2 ) ) );
+      RQSTRING( obj->standaloneDayName ( PINT(1), (QLocale::FormatType) par2 ) );
     }
     else
     {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
     if( ISNUM(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->standaloneMonthName ( PINT(1), (QLocale::FormatType) par2 ) ) );
+      RQSTRING( obj->standaloneMonthName ( PINT(1), (QLocale::FormatType) par2 ) );
     }
     else
     {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QLocale::LongFormat : hb_parni(1);
-      hb_retc( RQSTRING( obj->timeFormat ( (QLocale::FormatType) par1 ) ) );
+      RQSTRING( obj->timeFormat ( (QLocale::FormatType) par1 ) );
     }
     else
     {
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
       qlonglong par1 = hb_parnl(1);
-      hb_retc( RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toCurrencyString ( (short) hb_parni(1), OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( (short) hb_parni(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toCurrencyString ( (ushort) hb_parni(1), OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( (ushort) hb_parni(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toCurrencyString ( PINT(1), OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( PINT(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toCurrencyString ( (uint) hb_parni(1), OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( (uint) hb_parni(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toCurrencyString ( PFLOAT(1), OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( PFLOAT(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
       qulonglong par1 = hb_parnl(1);
-      hb_retc( RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
   {
     if( ISNUM(1) && ISOPTCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toCurrencyString ( PDOUBLE(1), OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->toCurrencyString ( PDOUBLE(1), OPQSTRING(2,QString()) ) );
     }
     else
     {
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QLOCALE_TOLOWER )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( RQSTRING( obj->toLower ( PQSTRING(1) ) ) );
+      RQSTRING( obj->toLower ( PQSTRING(1) ) );
     }
     else
     {
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
     if( ISNUM(1) )
     {
       qlonglong par1 = hb_parnl(1);
-      hb_retc( RQSTRING( obj->toString ( par1 ) ) );
+      RQSTRING( obj->toString ( par1 ) );
     }
     else
     {
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING2 )
   {
     if( ISQDATE(1) && ISCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toString ( *PQDATE(1), PQSTRING(2) ) ) );
+      RQSTRING( obj->toString ( *PQDATE(1), PQSTRING(2) ) );
     }
     else
     {
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
     if( ISQDATE(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->toString ( *PQDATE(1), (QLocale::FormatType) par2 ) ) );
+      RQSTRING( obj->toString ( *PQDATE(1), (QLocale::FormatType) par2 ) );
     }
     else
     {
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING4 )
   {
     if( ISQTIME(1) && ISCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toString ( *PQTIME(1), PQSTRING(2) ) ) );
+      RQSTRING( obj->toString ( *PQTIME(1), PQSTRING(2) ) );
     }
     else
     {
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
     if( ISQTIME(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->toString ( *PQTIME(1), (QLocale::FormatType) par2 ) ) );
+      RQSTRING( obj->toString ( *PQTIME(1), (QLocale::FormatType) par2 ) );
     }
     else
     {
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
     if( ISQDATETIME(1) && ISOPTNUM(2) )
     {
       int par2 = ISNIL(2)? (int) QLocale::LongFormat : hb_parni(2);
-      hb_retc( RQSTRING( obj->toString ( *PQDATETIME(1), (QLocale::FormatType) par2 ) ) );
+      RQSTRING( obj->toString ( *PQDATETIME(1), (QLocale::FormatType) par2 ) );
     }
     else
     {
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING7 )
   {
     if( ISQDATETIME(1) && ISCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->toString ( *PQDATETIME(1), PQSTRING(2) ) ) );
+      RQSTRING( obj->toString ( *PQDATETIME(1), PQSTRING(2) ) );
     }
     else
     {
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING8 )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->toString ( (short) hb_parni(1) ) ) );
+      RQSTRING( obj->toString ( (short) hb_parni(1) ) );
     }
     else
     {
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING9 )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->toString ( (ushort) hb_parni(1) ) ) );
+      RQSTRING( obj->toString ( (ushort) hb_parni(1) ) );
     }
     else
     {
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->toString ( PINT(1) ) ) );
+      RQSTRING( obj->toString ( PINT(1) ) );
     }
     else
     {
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->toString ( (uint) hb_parni(1) ) ) );
+      RQSTRING( obj->toString ( (uint) hb_parni(1) ) );
     }
     else
     {
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
     if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      hb_retc( RQSTRING( obj->toString ( PFLOAT(1), par2, OPINT(3,6) ) ) );
+      RQSTRING( obj->toString ( PFLOAT(1), par2, OPINT(3,6) ) );
     }
     else
     {
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
     if( ISNUM(1) )
     {
       qulonglong par1 = hb_parnl(1);
-      hb_retc( RQSTRING( obj->toString ( par1 ) ) );
+      RQSTRING( obj->toString ( par1 ) );
     }
     else
     {
@@ -1360,7 +1360,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
     if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
     {
       char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      hb_retc( RQSTRING( obj->toString ( PDOUBLE(1), par2, OPINT(3,6) ) ) );
+      RQSTRING( obj->toString ( PDOUBLE(1), par2, OPINT(3,6) ) );
     }
     else
     {
@@ -1481,7 +1481,7 @@ HB_FUNC_STATIC( QLOCALE_TOUPPER )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->toUpper ( PQSTRING(1) ) ) );
+      RQSTRING( obj->toUpper ( PQSTRING(1) ) );
     }
     else
     {
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
 {
   if( ISNUM(1) )
   {
-    hb_retc( RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) ) );
+    RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) );
   }
   else
   {
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
 {
   if( ISNUM(1) )
   {
-    hb_retc( RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) ) );
+    RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) );
   }
   else
   {
@@ -1632,7 +1632,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
 {
   if( ISNUM(1) )
   {
-    hb_retc( RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) ) );
+    RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) );
   }
   else
   {

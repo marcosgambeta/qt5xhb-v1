@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
   QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->sourceCode () ) );
+    RQSTRING( obj->sourceCode () );
   }
 }
 

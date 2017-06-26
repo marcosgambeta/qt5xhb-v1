@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fontFamily () ) );
+    RQSTRING( obj->fontFamily () );
   }
 }
 
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toolTip () ) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->anchorHref () ) );
+    RQSTRING( obj->anchorHref () );
   }
 }
 
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAME )
   QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->anchorName () ) );
+    RQSTRING( obj->anchorName () );
   }
 }
 

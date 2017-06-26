@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) ) );
+    RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) ) );
+    RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
 }
 
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->localName () ) );
+    RQSTRING( obj->localName () );
   }
 }
 
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->namespaceUri () ) );
+    RQSTRING( obj->namespaceUri () );
   }
 }
 
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->prefix () ) );
+    RQSTRING( obj->prefix () );
   }
 }
 
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) hb_parni(2) ) ) );
+    RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) hb_parni(2) ) );
   }
 }
 
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->tagName () ) );
+    RQSTRING( obj->tagName () );
   }
 }
 
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toInnerXml () ) );
+    RQSTRING( obj->toInnerXml () );
   }
 }
 
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toOuterXml () ) );
+    RQSTRING( obj->toOuterXml () );
   }
 }
 
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
   QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toPlainText () ) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 

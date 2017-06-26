@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ERRORSTRING )
   QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

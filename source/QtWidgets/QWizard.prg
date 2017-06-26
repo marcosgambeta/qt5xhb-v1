@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) ) );
+    RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
   }
 }
 

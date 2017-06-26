@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION )
   QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->imageDescription () ) );
+    RQSTRING( obj->imageDescription () );
   }
 }
 

@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
   QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->path () ) );
+    RQSTRING( obj->path () );
   }
 }
 

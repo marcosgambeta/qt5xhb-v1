@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) ) );
+    RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
   }
 }
 

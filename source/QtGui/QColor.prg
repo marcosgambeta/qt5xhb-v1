@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QCOLOR_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

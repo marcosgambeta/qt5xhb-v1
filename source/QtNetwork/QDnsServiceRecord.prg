@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NAME )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TARGET )
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->target () ) );
+    RQSTRING( obj->target () );
   }
 }
 

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->actionText () ) );
+    RQSTRING( obj->actionText () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

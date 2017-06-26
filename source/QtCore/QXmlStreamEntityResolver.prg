@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( RQSTRING( obj->resolveUndeclaredEntity ( PQSTRING(1) ) ) );
+      RQSTRING( obj->resolveUndeclaredEntity ( PQSTRING(1) ) );
     }
     else
     {

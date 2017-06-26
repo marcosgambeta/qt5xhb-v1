@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_INTROSPECT )
   QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->introspect ( PQSTRING(1) ) ) );
+    RQSTRING( obj->introspect ( PQSTRING(1) ) );
   }
 }
 

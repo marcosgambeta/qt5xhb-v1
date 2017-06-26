@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QFONTINFO_FAMILY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->family () ) );
+    RQSTRING( obj->family () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->styleName () ) );
+    RQSTRING( obj->styleName () );
   }
 }
 

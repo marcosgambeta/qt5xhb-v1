@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->absoluteFilePath () ) );
+    RQSTRING( obj->absoluteFilePath () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->absolutePath () ) );
+    RQSTRING( obj->absolutePath () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QFILEINFO_BASENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->baseName () ) );
+    RQSTRING( obj->baseName () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->bundleName () ) );
+    RQSTRING( obj->bundleName () );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->canonicalFilePath () ) );
+    RQSTRING( obj->canonicalFilePath () );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->canonicalPath () ) );
+    RQSTRING( obj->canonicalPath () );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->completeBaseName () ) );
+    RQSTRING( obj->completeBaseName () );
   }
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->completeSuffix () ) );
+    RQSTRING( obj->completeSuffix () );
   }
 }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QFILEINFO_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QFILEINFO_FILEPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->filePath () ) );
+    RQSTRING( obj->filePath () );
   }
 }
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->group () ) );
+    RQSTRING( obj->group () );
   }
 }
 
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNER )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->owner () ) );
+    RQSTRING( obj->owner () );
   }
 }
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->path () ) );
+    RQSTRING( obj->path () );
   }
 }
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QFILEINFO_SUFFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->suffix () ) );
+    RQSTRING( obj->suffix () );
   }
 }
 
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->symLinkTarget () ) );
+    RQSTRING( obj->symLinkTarget () );
   }
 }
 

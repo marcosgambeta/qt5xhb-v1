@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION )
   QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->deviceDescription ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) ) );
+    RQSTRING( obj->deviceDescription ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
   }
 }
 

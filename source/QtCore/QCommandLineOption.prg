@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->valueName () ) );
+    RQSTRING( obj->valueName () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->description () ) );
+    RQSTRING( obj->description () );
   }
 }
 

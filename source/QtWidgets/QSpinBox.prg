@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->cleanText () ) );
+    RQSTRING( obj->cleanText () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->prefix () ) );
+    RQSTRING( obj->prefix () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->suffix () ) );
+    RQSTRING( obj->suffix () );
   }
 }
 

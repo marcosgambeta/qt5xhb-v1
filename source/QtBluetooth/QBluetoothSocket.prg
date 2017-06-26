@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->localName () ) );
+    RQSTRING( obj->localName () );
   }
 #endif
 }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->peerName () ) );
+    RQSTRING( obj->peerName () );
   }
 #endif
 }
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 #endif
 }

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
   QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->notationName () ) );
+    RQSTRING( obj->notationName () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
   QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->publicId () ) );
+    RQSTRING( obj->publicId () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
   QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->systemId () ) );
+    RQSTRING( obj->systemId () );
   }
 }
 

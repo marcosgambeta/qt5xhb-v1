@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
   QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->imageId () ) );
+    RQSTRING( obj->imageId () );
   }
 #endif
 }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
   QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->mimeType () ) );
+    RQSTRING( obj->mimeType () );
   }
 #endif
 }

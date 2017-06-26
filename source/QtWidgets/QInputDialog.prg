@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->cancelButtonText () ) );
+    RQSTRING( obj->cancelButtonText () );
   }
 }
 
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->labelText () ) );
+    RQSTRING( obj->labelText () );
   }
 }
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->okButtonText () ) );
+    RQSTRING( obj->okButtonText () );
   }
 }
 
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->textValue () ) );
+    RQSTRING( obj->textValue () );
   }
 }
 
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
     bool par7;
     int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
     int par9 = ISNIL(9)? (int) Qt::ImhNone : hb_parni(9);
-    hb_retc( RQSTRING( QInputDialog::getItem ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5,0), OPBOOL(6,true), &par7, (Qt::WindowFlags) par8, (Qt::InputMethodHints) par9 ) ) );
+    RQSTRING( QInputDialog::getItem ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5,0), OPBOOL(6,true), &par7, (Qt::WindowFlags) par8, (Qt::InputMethodHints) par9 ) );
     hb_storl( par7, 7 );
   }
   else
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
     bool par6;
     int par7 = ISNIL(7)? (int) 0 : hb_parni(7);
     int par8 = ISNIL(8)? (int) Qt::ImhNone : hb_parni(8);
-    hb_retc( RQSTRING( QInputDialog::getText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QLineEdit::EchoMode) par4, OPQSTRING(5,QString()), &par6, (Qt::WindowFlags) par7, (Qt::InputMethodHints) par8 ) ) );
+    RQSTRING( QInputDialog::getText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QLineEdit::EchoMode) par4, OPQSTRING(5,QString()), &par6, (Qt::WindowFlags) par7, (Qt::InputMethodHints) par8 ) );
     hb_storl( par6, 6 );
   }
   else
@@ -995,7 +995,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
     bool par5;
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
     int par7 = ISNIL(7)? (int) Qt::ImhNone : hb_parni(7);
-    hb_retc( RQSTRING( QInputDialog::getMultiLineText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()), &par5, (Qt::WindowFlags) par6, (Qt::InputMethodHints) par7 ) ) );
+    RQSTRING( QInputDialog::getMultiLineText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()), &par5, (Qt::WindowFlags) par6, (Qt::InputMethodHints) par7 ) );
     hb_storl( par5, 5 );
   }
   else

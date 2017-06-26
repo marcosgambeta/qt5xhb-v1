@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->emptyLabel () ) );
+    RQSTRING( obj->emptyLabel () );
   }
 }
 

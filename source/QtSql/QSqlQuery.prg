@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->executedQuery () ) );
+    RQSTRING( obj->executedQuery () );
   }
 }
 
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->lastQuery () ) );
+    RQSTRING( obj->lastQuery () );
   }
 }
 

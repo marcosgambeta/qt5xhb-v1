@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QMENU_TITLE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 }
 

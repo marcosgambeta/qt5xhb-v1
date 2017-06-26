@@ -3229,7 +3229,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toolTip () ) );
+    RQSTRING( obj->toolTip () );
   }
 }
 

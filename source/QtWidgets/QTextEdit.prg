@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
   {
     if( ISQPOINT(1) )
     {
-      hb_retc( RQSTRING( obj->anchorAt ( *PQPOINT(1) ) ) );
+      RQSTRING( obj->anchorAt ( *PQPOINT(1) ) );
     }
     else
     {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->documentTitle () ) );
+    RQSTRING( obj->documentTitle () );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fontFamily () ) );
+    RQSTRING( obj->fontFamily () );
   }
 }
 
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toHtml () ) );
+    RQSTRING( obj->toHtml () );
   }
 }
 
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toPlainText () ) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 

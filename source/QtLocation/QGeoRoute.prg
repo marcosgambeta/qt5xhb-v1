@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGEOROUTE_ROUTEID )
   QGeoRoute * obj = (QGeoRoute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->routeId () ) );
+    RQSTRING( obj->routeId () );
   }
 #endif
 }

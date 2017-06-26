@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->cursorName () ) );
+    RQSTRING( obj->cursorName () );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

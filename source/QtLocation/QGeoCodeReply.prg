@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ERRORSTRING )
   QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 #endif
 }

@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 

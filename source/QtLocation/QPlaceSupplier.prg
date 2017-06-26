@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->supplierId () ) );
+    RQSTRING( obj->supplierId () );
   }
 #endif
 }

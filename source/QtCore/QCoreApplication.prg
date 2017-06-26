@@ -167,7 +167,7 @@ static QString applicationDirPath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
-  hb_retc( RQSTRING( QCoreApplication::applicationDirPath () ) );
+  RQSTRING( QCoreApplication::applicationDirPath () );
 }
 
 /*
@@ -175,7 +175,7 @@ static QString applicationFilePath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
-  hb_retc( RQSTRING( QCoreApplication::applicationFilePath () ) );
+  RQSTRING( QCoreApplication::applicationFilePath () );
 }
 
 /*
@@ -183,7 +183,7 @@ static QString applicationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
-  hb_retc( RQSTRING( QCoreApplication::applicationName () ) );
+  RQSTRING( QCoreApplication::applicationName () );
 }
 
 /*
@@ -199,7 +199,7 @@ static QString applicationVersion ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
-  hb_retc( RQSTRING( QCoreApplication::applicationVersion () ) );
+  RQSTRING( QCoreApplication::applicationVersion () );
 }
 
 /*
@@ -298,7 +298,7 @@ static QString organizationDomain ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
-  hb_retc( RQSTRING( QCoreApplication::organizationDomain () ) );
+  RQSTRING( QCoreApplication::organizationDomain () );
 }
 
 /*
@@ -306,7 +306,7 @@ static QString organizationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {
-  hb_retc( RQSTRING( QCoreApplication::organizationName () ) );
+  RQSTRING( QCoreApplication::organizationName () );
 }
 
 /*
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
   if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
-    hb_retc( RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) ) );
+    RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
   }
   else
   {

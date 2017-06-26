@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
   QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->href () ) );
+    RQSTRING( obj->href () );
   }
 }
 

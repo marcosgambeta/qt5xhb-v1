@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->labelText () ) );
+    RQSTRING( obj->labelText () );
   }
 }
 

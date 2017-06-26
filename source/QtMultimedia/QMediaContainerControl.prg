@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION )
   QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->containerDescription ( PQSTRING(1) ) ) );
+    RQSTRING( obj->containerDescription ( PQSTRING(1) ) );
   }
 }
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERFORMAT )
   QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->containerFormat () ) );
+    RQSTRING( obj->containerFormat () );
   }
 }
 

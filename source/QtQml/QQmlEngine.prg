@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QQMLENGINE_OFFLINESTORAGEPATH )
   QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->offlineStoragePath () ) );
+    RQSTRING( obj->offlineStoragePath () );
   }
 }
 

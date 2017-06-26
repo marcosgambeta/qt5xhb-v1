@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_STATUSTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->statusTip ( PINT(1) ) ) );
+      RQSTRING( obj->statusTip ( PINT(1) ) );
     }
     else
     {
@@ -1289,7 +1289,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->text ( PINT(1) ) ) );
+      RQSTRING( obj->text ( PINT(1) ) );
     }
     else
     {
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->toolTip ( PINT(1) ) ) );
+      RQSTRING( obj->toolTip ( PINT(1) ) );
     }
     else
     {
@@ -1376,7 +1376,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_WHATSTHIS )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->whatsThis ( PINT(1) ) ) );
+      RQSTRING( obj->whatsThis ( PINT(1) ) );
     }
     else
     {

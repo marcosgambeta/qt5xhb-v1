@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
   {
     if( ISCHAR(1) && ISOPTCHAR(2) )
     {
-      hb_retc( RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) ) );
+      RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {

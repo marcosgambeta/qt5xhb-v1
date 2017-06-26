@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
   QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->publicId () ) );
+    RQSTRING( obj->publicId () );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
   QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->systemId () ) );
+    RQSTRING( obj->systemId () );
   }
 }
 

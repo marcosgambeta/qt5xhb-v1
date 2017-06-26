@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->scriptCode () ) );
+    RQSTRING( obj->scriptCode () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->scriptName () ) );
+    RQSTRING( obj->scriptName () );
   }
 }
 

@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXT )
   QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

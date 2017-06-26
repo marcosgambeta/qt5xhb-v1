@@ -78,7 +78,7 @@ static QString licensee()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
-  hb_retc( RQSTRING( QLibraryInfo::licensee () ) );
+  RQSTRING( QLibraryInfo::licensee () );
 }
 
 /*
@@ -86,7 +86,7 @@ static QString licensedProducts()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
-  hb_retc( RQSTRING( QLibraryInfo::licensedProducts () ) );
+  RQSTRING( QLibraryInfo::licensedProducts () );
 }
 
 /*
@@ -111,7 +111,7 @@ static QString location(LibraryLocation)
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
-  hb_retc( RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) ) );
+  RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
 }
 
 HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )

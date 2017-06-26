@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QAXBASE_CONTROL )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->control () ) );
+    RQSTRING( obj->control () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->generateDocumentation () ) );
+    RQSTRING( obj->generateDocumentation () );
   }
 }
 

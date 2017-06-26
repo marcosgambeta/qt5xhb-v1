@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->selectedText () ) );
+    RQSTRING( obj->selectedText () );
   }
 }
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 }
 

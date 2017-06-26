@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->nativeArguments () ) );
+    RQSTRING( obj->nativeArguments () );
   }
 #endif
 }
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->workingDirectory () ) );
+    RQSTRING( obj->workingDirectory () );
   }
 }
 
@@ -944,7 +944,7 @@ HB_FUNC_STATIC( QPROCESS_PROGRAM )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->program () ) );
+    RQSTRING( obj->program () );
   }
 }
 
@@ -1093,7 +1093,7 @@ static QString nullDevice()
 */
 HB_FUNC_STATIC( QPROCESS_NULLDEVICE )
 {
-  hb_retc( RQSTRING( QProcess::nullDevice () ) );
+  RQSTRING( QProcess::nullDevice () );
 }
 
 #pragma ENDDUMP

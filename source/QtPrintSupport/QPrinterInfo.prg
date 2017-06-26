@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->printerName () ) );
+    RQSTRING( obj->printerName () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->description () ) );
+    RQSTRING( obj->description () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->location () ) );
+    RQSTRING( obj->location () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->makeAndModel () ) );
+    RQSTRING( obj->makeAndModel () );
   }
 }
 
@@ -451,7 +451,7 @@ static QString defaultPrinterName()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
 {
-  hb_retc( RQSTRING( QPrinterInfo::defaultPrinterName () ) );
+  RQSTRING( QPrinterInfo::defaultPrinterName () );
 }
 
 /*

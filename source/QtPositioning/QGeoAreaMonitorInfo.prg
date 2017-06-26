@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NAME )
   QGeoAreaMonitorInfo * obj = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 #endif
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_IDENTIFIER )
   QGeoAreaMonitorInfo * obj = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->identifier () ) );
+    RQSTRING( obj->identifier () );
   }
 #endif
 }

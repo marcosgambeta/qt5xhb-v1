@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPLACEUSER_USERID )
   QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->userId () ) );
+    RQSTRING( obj->userId () );
   }
 #endif
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QPLACEUSER_NAME )
   QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 #endif
 }

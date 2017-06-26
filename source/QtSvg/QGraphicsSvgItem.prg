@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->elementId () ) );
+    RQSTRING( obj->elementId () );
   }
 }
 

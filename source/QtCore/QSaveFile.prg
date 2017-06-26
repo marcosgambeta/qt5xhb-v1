@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 #endif
 }

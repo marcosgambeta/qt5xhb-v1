@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->bearerTypeName () ) );
+    RQSTRING( obj->bearerTypeName () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->identifier () ) );
+    RQSTRING( obj->identifier () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

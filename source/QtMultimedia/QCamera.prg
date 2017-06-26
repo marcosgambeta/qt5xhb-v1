@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QCAMERA_ERRORSTRING )
   QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -616,7 +616,7 @@ static QString deviceDescription(const QByteArray & device)
 */
 HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
 {
-  hb_retc( RQSTRING( QCamera::deviceDescription ( *PQBYTEARRAY(1) ) ) );
+  RQSTRING( QCamera::deviceDescription ( *PQBYTEARRAY(1) ) );
 }
 
 

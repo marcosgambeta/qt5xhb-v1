@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 

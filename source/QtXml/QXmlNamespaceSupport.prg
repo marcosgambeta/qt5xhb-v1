@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->prefix ( PQSTRING(1) ) ) );
+    RQSTRING( obj->prefix ( PQSTRING(1) ) );
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->uri ( PQSTRING(1) ) ) );
+    RQSTRING( obj->uri ( PQSTRING(1) ) );
   }
 }
 

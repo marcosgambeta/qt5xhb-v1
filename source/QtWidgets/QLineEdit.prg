@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->displayText () ) );
+    RQSTRING( obj->displayText () );
   }
 }
 
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->inputMask () ) );
+    RQSTRING( obj->inputMask () );
   }
 }
 
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->placeholderText () ) );
+    RQSTRING( obj->placeholderText () );
   }
 }
 
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->selectedText () ) );
+    RQSTRING( obj->selectedText () );
   }
 }
 
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

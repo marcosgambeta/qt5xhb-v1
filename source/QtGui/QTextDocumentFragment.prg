@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toPlainText () ) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
   if( obj )
   {
     QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
-    hb_retc( RQSTRING( obj->toHtml ( par1 ) ) );
+    RQSTRING( obj->toHtml ( par1 ) );
   }
 }
 

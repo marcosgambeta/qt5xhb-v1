@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->displayFormat () ) );
+    RQSTRING( obj->displayFormat () );
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) ) );
+    RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) );
   }
 }
 

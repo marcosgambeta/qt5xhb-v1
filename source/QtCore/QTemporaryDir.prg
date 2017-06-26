@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->path () ) );
+    RQSTRING( obj->path () );
   }
 }
 

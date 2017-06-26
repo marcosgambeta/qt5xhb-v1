@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLEDESCRIPTION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->accessibleDescription () ) );
+    RQSTRING( obj->accessibleDescription () );
   }
 #endif
 }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->accessibleName () ) );
+    RQSTRING( obj->accessibleName () );
   }
 #endif
 }
@@ -3690,7 +3690,7 @@ HB_FUNC_STATIC( QWIDGET_STATUSTIP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->statusTip () ) );
+    RQSTRING( obj->statusTip () );
   }
 #endif
 }
@@ -3765,7 +3765,7 @@ HB_FUNC_STATIC( QWIDGET_STYLESHEET )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->styleSheet () ) );
+    RQSTRING( obj->styleSheet () );
   }
 #endif
 }
@@ -3824,7 +3824,7 @@ HB_FUNC_STATIC( QWIDGET_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toolTip () ) );
+    RQSTRING( obj->toolTip () );
   }
 #endif
 }
@@ -4053,7 +4053,7 @@ HB_FUNC_STATIC( QWIDGET_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->whatsThis () ) );
+    RQSTRING( obj->whatsThis () );
   }
 #endif
 }
@@ -4146,7 +4146,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->windowFilePath () ) );
+    RQSTRING( obj->windowFilePath () );
   }
 }
 
@@ -4254,7 +4254,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->windowIconText () ) );
+    RQSTRING( obj->windowIconText () );
   }
 }
 
@@ -4324,7 +4324,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->windowRole () ) );
+    RQSTRING( obj->windowRole () );
   }
 }
 
@@ -4350,7 +4350,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->windowTitle () ) );
+    RQSTRING( obj->windowTitle () );
   }
 }
 

@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_CODEC )
   QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->codec () ) );
+    RQSTRING( obj->codec () );
   }
 }
 

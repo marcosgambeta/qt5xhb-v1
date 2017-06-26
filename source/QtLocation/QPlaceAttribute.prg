@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_LABEL )
   QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->label () ) );
+    RQSTRING( obj->label () );
   }
 #endif
 }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_TEXT )
   QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 #endif
 }

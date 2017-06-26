@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->defaultSuffix () ) );
+    RQSTRING( obj->defaultSuffix () );
   }
 }
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->labelText ( (QFileDialog::DialogLabel) hb_parni(1) ) ) );
+      RQSTRING( obj->labelText ( (QFileDialog::DialogLabel) hb_parni(1) ) );
     }
     else
     {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->selectedNameFilter () ) );
+    RQSTRING( obj->selectedNameFilter () );
   }
 }
 
@@ -1276,7 +1276,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
     int par4 = ISNIL(4)? (int) QFileDialog::ShowDirsOnly : hb_parni(4);
-    hb_retc( RQSTRING( QFileDialog::getExistingDirectory ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), (QFileDialog::Options) par4 ) ) );
+    RQSTRING( QFileDialog::getExistingDirectory ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), (QFileDialog::Options) par4 ) );
   }
   else
   {
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
   {
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    hb_retc( RQSTRING( QFileDialog::getOpenFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), &par5, (QFileDialog::Options) par6 ) ) );
+    RQSTRING( QFileDialog::getOpenFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), &par5, (QFileDialog::Options) par6 ) );
   }
   else
   {
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
   {
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    hb_retc( RQSTRING( QFileDialog::getSaveFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), &par5, (QFileDialog::Options) par6 ) ) );
+    RQSTRING( QFileDialog::getSaveFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), &par5, (QFileDialog::Options) par6 ) );
   }
   else
   {

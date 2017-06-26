@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_TITLE )
   QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 #endif
 }

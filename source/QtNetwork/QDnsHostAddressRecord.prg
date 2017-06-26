@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
   QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

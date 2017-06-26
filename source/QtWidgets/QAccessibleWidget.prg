@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) ) );
+    RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) );
   }
 }
 

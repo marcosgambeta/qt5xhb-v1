@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
   {
     if( ISOPTNUM(1) )
     {
-      hb_retc( RQSTRING( obj->cap ( OPINT(1,0) ) ) );
+      RQSTRING( obj->cap ( OPINT(1,0) ) );
     }
     else
     {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->pattern () ) );
+    RQSTRING( obj->pattern () );
   }
 }
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
   if( ISCHAR(1) )
   {
-    hb_retc( RQSTRING( QRegExp::escape ( PQSTRING(1) ) ) );
+    RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
   }
   else
   {

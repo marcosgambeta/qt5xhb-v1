@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->description () ) );
+    RQSTRING( obj->description () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QQMLERROR_TOSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toString () ) );
+    RQSTRING( obj->toString () );
   }
 }
 

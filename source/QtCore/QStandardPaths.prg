@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
 {
   if( ISNUM(1) )
   {
-    hb_retc( RQSTRING( QStandardPaths::writableLocation ( (QStandardPaths::StandardLocation) hb_parni(1) ) ) );
+    RQSTRING( QStandardPaths::writableLocation ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
   }
   else
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
   if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
     int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
-    hb_retc( RQSTRING( QStandardPaths::locate ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), (QStandardPaths::LocateOptions) par3 ) ) );
+    RQSTRING( QStandardPaths::locate ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), (QStandardPaths::LocateOptions) par3 ) );
   }
   else
   {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
 {
   if( ISNUM(1) )
   {
-    hb_retc( RQSTRING( QStandardPaths::displayName ( (QStandardPaths::StandardLocation) hb_parni(1) ) ) );
+    RQSTRING( QStandardPaths::displayName ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
   }
   else
   {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
 {
   if( ISCHAR(1) && ISOPTARRAY(2) )
   {
-    hb_retc( RQSTRING( QStandardPaths::findExecutable ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) ) );
+    RQSTRING( QStandardPaths::findExecutable ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
   }
   else
   {

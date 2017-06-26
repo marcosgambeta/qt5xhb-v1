@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) ) );
+    RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) ) );
+    RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->rootPath () ) );
+    RQSTRING( obj->rootPath () );
   }
 }
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
   QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->type ( *PQMODELINDEX(1) ) ) );
+    RQSTRING( obj->type ( *PQMODELINDEX(1) ) );
   }
 }
 

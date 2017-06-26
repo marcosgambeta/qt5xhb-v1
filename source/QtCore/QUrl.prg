@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QURL_AUTHORITY )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->authority () ) );
+    RQSTRING( obj->authority () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QURL_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QURL_FRAGMENT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fragment () ) );
+    RQSTRING( obj->fragment () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QURL_HOST )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->host () ) );
+    RQSTRING( obj->host () );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QURL_PASSWORD )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->password () ) );
+    RQSTRING( obj->password () );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QURL_PATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->path () ) );
+    RQSTRING( obj->path () );
   }
 }
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QURL_SCHEME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->scheme () ) );
+    RQSTRING( obj->scheme () );
   }
 }
 
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QURL_TOLOCALFILE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toLocalFile () ) );
+    RQSTRING( obj->toLocalFile () );
   }
 }
 
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QURL_TOSTRING )
     if( ISOPTNUM(1) )
     {
       int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
-      hb_retc( RQSTRING( obj->toString ( (QUrl::FormattingOptions) par1 ) ) );
+      RQSTRING( obj->toString ( (QUrl::FormattingOptions) par1 ) );
     }
     else
     {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->topLevelDomain () ) );
+    RQSTRING( obj->topLevelDomain () );
   }
 }
 
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QURL_USERINFO )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->userInfo () ) );
+    RQSTRING( obj->userInfo () );
   }
 }
 
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QURL_USERNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->userName () ) );
+    RQSTRING( obj->userName () );
   }
 }
 
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QURL_FROMACE )
 {
   if( ISQBYTEARRAY(1) )
   {
-    hb_retc( RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) ) );
+    RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) );
   }
   else
   {
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
   if( ISQBYTEARRAY(1) )
   {
-    hb_retc( RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) ) );
+    RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) );
   }
   else
   {

@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->fieldName ( PINT(1) ) ) );
+      RQSTRING( obj->fieldName ( PINT(1) ) );
     }
     else
     {

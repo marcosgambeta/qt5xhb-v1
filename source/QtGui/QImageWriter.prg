@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 

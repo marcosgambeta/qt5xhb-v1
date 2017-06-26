@@ -123,7 +123,7 @@ void QTextCodec_toUnicode1 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) ) );
+    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -136,7 +136,7 @@ void QTextCodec_toUnicode2 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toUnicode ( PCONSTCHAR(1) ) ) );
+    RQSTRING( obj->toUnicode ( PCONSTCHAR(1) ) );
   }
 }
 

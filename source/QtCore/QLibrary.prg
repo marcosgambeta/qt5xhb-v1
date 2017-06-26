@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

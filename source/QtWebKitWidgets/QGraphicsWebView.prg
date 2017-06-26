@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
   QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 }
 

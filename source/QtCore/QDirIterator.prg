@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->filePath () ) );
+    RQSTRING( obj->filePath () );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->next () ) );
+    RQSTRING( obj->next () );
   }
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDIRITERATOR_PATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->path () ) );
+    RQSTRING( obj->path () );
   }
 }
 

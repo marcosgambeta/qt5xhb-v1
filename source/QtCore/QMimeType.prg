@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMIMETYPE_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QMIMETYPE_COMMENT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->comment () ) );
+    RQSTRING( obj->comment () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->genericIconName () ) );
+    RQSTRING( obj->genericIconName () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->iconName () ) );
+    RQSTRING( obj->iconName () );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->preferredSuffix () ) );
+    RQSTRING( obj->preferredSuffix () );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->filterString () ) );
+    RQSTRING( obj->filterString () );
   }
 }
 

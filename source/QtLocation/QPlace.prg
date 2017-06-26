@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QPLACE_ATTRIBUTION )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->attribution () ) );
+    RQSTRING( obj->attribution () );
   }
 #endif
 }
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QPLACE_NAME )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 #endif
 }
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QPLACE_PLACEID )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->placeId () ) );
+    RQSTRING( obj->placeId () );
   }
 #endif
 }
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYPHONE )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->primaryPhone () ) );
+    RQSTRING( obj->primaryPhone () );
   }
 #endif
 }
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYFAX )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->primaryFax () ) );
+    RQSTRING( obj->primaryFax () );
   }
 #endif
 }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYEMAIL )
   QPlace * obj = (QPlace *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->primaryEmail () ) );
+    RQSTRING( obj->primaryEmail () );
   }
 #endif
 }

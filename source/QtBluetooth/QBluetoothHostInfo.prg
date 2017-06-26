@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 #endif
 }

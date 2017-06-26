@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDBUSERROR_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->message () ) );
+    RQSTRING( obj->message () );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    hb_retc( RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) hb_parni(1) ) ) );
+    RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) hb_parni(1) ) );
   }
   else
   {

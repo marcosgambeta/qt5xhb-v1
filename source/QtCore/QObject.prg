@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->objectName () ) );
+    RQSTRING( obj->objectName () );
   }
 }
 
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QOBJECT_TR )
 {
   if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
   {
-    hb_retc( RQSTRING( QObject::tr ( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) ) );
+    RQSTRING( QObject::tr ( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
   }
   else
   {

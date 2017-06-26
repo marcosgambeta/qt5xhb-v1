@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
   QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 }
 

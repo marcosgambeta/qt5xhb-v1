@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
   QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

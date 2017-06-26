@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->scopeId () ) );
+    RQSTRING( obj->scopeId () );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toString () ) );
+    RQSTRING( obj->toString () );
   }
 }
 

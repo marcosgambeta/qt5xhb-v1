@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
   QSoundEffect * obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->category () ) );
+    RQSTRING( obj->category () );
   }
 }
 

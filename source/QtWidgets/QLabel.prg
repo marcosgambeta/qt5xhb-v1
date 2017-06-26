@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->selectedText () ) );
+    RQSTRING( obj->selectedText () );
   }
 }
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QLABEL_TEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

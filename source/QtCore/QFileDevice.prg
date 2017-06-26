@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->fileName () ) );
+    RQSTRING( obj->fileName () );
   }
 }
 

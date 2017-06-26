@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
   {
     if( ISCHAR(1) )
     {
-      hb_retc( RQSTRING( obj->exposeToSuperClass ( PQSTRING(1) ) ) );
+      RQSTRING( obj->exposeToSuperClass ( PQSTRING(1) ) );
     }
     else
     {
@@ -395,7 +395,7 @@ static QString serverDirPath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
-  hb_retc( RQSTRING( QAxFactory::serverDirPath () ) );
+  RQSTRING( QAxFactory::serverDirPath () );
 }
 
 /*
@@ -403,7 +403,7 @@ static QString serverFilePath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
-  hb_retc( RQSTRING( QAxFactory::serverFilePath () ) );
+  RQSTRING( QAxFactory::serverFilePath () );
 }
 
 /*

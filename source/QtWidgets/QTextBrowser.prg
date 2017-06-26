@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
   {
     if( ISNUM(1) )
     {
-      hb_retc( RQSTRING( obj->historyTitle ( PINT(1) ) ) );
+      RQSTRING( obj->historyTitle ( PINT(1) ) );
     }
     else
     {

@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
   QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

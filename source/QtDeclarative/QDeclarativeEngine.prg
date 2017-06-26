@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->offlineStoragePath () ) );
+    RQSTRING( obj->offlineStoragePath () );
   }
 }
 

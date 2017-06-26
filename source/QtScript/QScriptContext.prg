@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
   QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toString () ) );
+    RQSTRING( obj->toString () );
   }
 }
 

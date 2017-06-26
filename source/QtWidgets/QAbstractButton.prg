@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

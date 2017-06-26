@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
   {
     if( ISOPTCHAR(1) )
     {
-      hb_retc( RQSTRING( obj->text ( OPQSTRING(1,QString()) ) ) );
+      RQSTRING( obj->text ( OPQSTRING(1,QString()) ) );
     }
     else
     {

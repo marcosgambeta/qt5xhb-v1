@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->html () ) );
+    RQSTRING( obj->html () );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

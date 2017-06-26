@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AUDIOCODECDESCRIPTION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->audioCodecDescription ( PQSTRING(1) ) ) );
+    RQSTRING( obj->audioCodecDescription ( PQSTRING(1) ) );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERDESCRIPTION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->containerDescription ( PQSTRING(1) ) ) );
+    RQSTRING( obj->containerDescription ( PQSTRING(1) ) );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERFORMAT )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->containerFormat () ) );
+    RQSTRING( obj->containerFormat () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ERRORSTRING )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VIDEOCODECDESCRIPTION )
   QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->videoCodecDescription ( PQSTRING(1) ) ) );
+    RQSTRING( obj->videoCodecDescription ( PQSTRING(1) ) );
   }
 }
 

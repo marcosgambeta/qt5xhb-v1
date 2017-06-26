@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_IDENTIFIER )
   QWinJumpList * obj = (QWinJumpList *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->identifier () ) );
+    RQSTRING( obj->identifier () );
   }
 #endif
 }

@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONID )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->stationId () ) );
+    RQSTRING( obj->stationId () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPENAME )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->programTypeName () ) );
+    RQSTRING( obj->programTypeName () );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONNAME )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->stationName () ) );
+    RQSTRING( obj->stationName () );
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->radioText () ) );
+    RQSTRING( obj->radioText () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

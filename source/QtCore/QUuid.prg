@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QUUID_TOSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toString () ) );
+    RQSTRING( obj->toString () );
   }
 }
 

@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_PLACEID )
   QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->placeId () ) );
+    RQSTRING( obj->placeId () );
   }
 #endif
 }

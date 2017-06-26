@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->cleanText () ) );
+    RQSTRING( obj->cleanText () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->prefix () ) );
+    RQSTRING( obj->prefix () );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->suffix () ) );
+    RQSTRING( obj->suffix () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->textFromValue ( PDOUBLE(1) ) ) );
+    RQSTRING( obj->textFromValue ( PDOUBLE(1) ) );
   }
 }
 

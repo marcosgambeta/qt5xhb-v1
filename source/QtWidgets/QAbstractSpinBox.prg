@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->specialValueText () ) );
+    RQSTRING( obj->specialValueText () );
   }
 }
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->text () ) );
+    RQSTRING( obj->text () );
   }
 }
 

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
   QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->imageCodecDescription ( PQSTRING(1) ) ) );
+    RQSTRING( obj->imageCodecDescription ( PQSTRING(1) ) );
   }
 }
 

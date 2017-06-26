@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->rootPath () ) );
+    RQSTRING( obj->rootPath () );
   }
 #endif
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 #endif
 }
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->displayName () ) );
+    RQSTRING( obj->displayName () );
   }
 #endif
 }

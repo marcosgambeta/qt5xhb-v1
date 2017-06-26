@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->deviceName () ) );
+    RQSTRING( obj->deviceName () );
   }
 }
 

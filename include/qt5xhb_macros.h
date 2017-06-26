@@ -1079,7 +1079,7 @@
 #define OPGLSIZEI(n,v)                                      (GLsizei) ISNIL(n)? v : hb_parni(n)
 
 // macros for return's
-#define RQSTRING(x)                                         (const char *) x.toLatin1().data()
+#define RQSTRING(x)                                         hb_retc( (const char *) x.toLatin1().data() )
 //#define RQSTRING(x)                                         (const char *) x.toUtf8().data()
 #define RBOOL(x)                                            hb_retl(x)
 #define RINT(x)                                             hb_retni(x)

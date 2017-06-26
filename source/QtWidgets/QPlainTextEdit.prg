@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
   {
     if( ISQPOINT(1) )
     {
-      hb_retc( RQSTRING( obj->anchorAt ( *PQPOINT(1) ) ) );
+      RQSTRING( obj->anchorAt ( *PQPOINT(1) ) );
     }
     else
     {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->documentTitle () ) );
+    RQSTRING( obj->documentTitle () );
   }
 }
 
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toPlainText () ) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 

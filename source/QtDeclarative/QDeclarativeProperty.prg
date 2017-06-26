@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->collectionFile () ) );
+    RQSTRING( obj->collectionFile () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->currentFilter () ) );
+    RQSTRING( obj->currentFilter () );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->documentationFileName ( PQSTRING(1) ) ) );
+    RQSTRING( obj->documentationFileName ( PQSTRING(1) ) );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
   QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->error () ) );
+    RQSTRING( obj->error () );
   }
 }
 
@@ -448,7 +448,7 @@ static QString namespaceName ( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
-  hb_retc( RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) ) );
+  RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
 }
 
 

@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION )
   QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->overlayAccessibleDescription () ) );
+    RQSTRING( obj->overlayAccessibleDescription () );
   }
 #endif
 }

@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->localName () ) );
+    RQSTRING( obj->localName () );
   }
 }
 
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->namespaceURI () ) );
+    RQSTRING( obj->namespaceURI () );
   }
 }
 
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QDOMNODE_NODENAME )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->nodeName () ) );
+    RQSTRING( obj->nodeName () );
   }
 }
 
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->nodeValue () ) );
+    RQSTRING( obj->nodeValue () );
   }
 }
 
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QDOMNODE_PREFIX )
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->prefix () ) );
+    RQSTRING( obj->prefix () );
   }
 }
 

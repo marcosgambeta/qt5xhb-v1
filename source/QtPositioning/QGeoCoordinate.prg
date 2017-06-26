@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TOSTRING )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QGeoCoordinate::DegreesMinutesSecondsWithHemisphere : hb_parni(1);
-    hb_retc( RQSTRING( obj->toString ( (QGeoCoordinate::CoordinateFormat) par1 ) ) );
+    RQSTRING( obj->toString ( (QGeoCoordinate::CoordinateFormat) par1 ) );
   }
 #endif
 }

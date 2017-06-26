@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toString () ) );
+    RQSTRING( obj->toString () );
   }
 }
 

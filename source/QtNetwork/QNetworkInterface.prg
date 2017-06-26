@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->hardwareAddress () ) );
+    RQSTRING( obj->hardwareAddress () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->humanReadableName () ) );
+    RQSTRING( obj->humanReadableName () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->name () ) );
+    RQSTRING( obj->name () );
   }
 }
 

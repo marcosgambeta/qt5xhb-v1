@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->whatsThis () ) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 

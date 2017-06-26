@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QPRINTER_CREATOR )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->creator () ) );
+    RQSTRING( obj->creator () );
   }
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QPRINTER_DOCNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->docName () ) );
+    RQSTRING( obj->docName () );
   }
 }
 
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->outputFileName () ) );
+    RQSTRING( obj->outputFileName () );
   }
 }
 
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->printProgram () ) );
+    RQSTRING( obj->printProgram () );
   }
 }
 
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->printerName () ) );
+    RQSTRING( obj->printerName () );
   }
 }
 
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSELECTIONOPTION )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->printerSelectionOption () ) );
+    RQSTRING( obj->printerSelectionOption () );
   }
 }
 
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERNAME )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->paperName () ) );
+    RQSTRING( obj->paperName () );
   }
 }
 

@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->errorString () ) );
+    RQSTRING( obj->errorString () );
   }
 }
 

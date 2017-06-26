@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERNAME )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->managerName () ) );
+    RQSTRING( obj->managerName () );
   }
 #endif
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_PARENTCATEGORYID )
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->parentCategoryId ( PQSTRING(1) ) ) );
+    RQSTRING( obj->parentCategoryId ( PQSTRING(1) ) );
   }
 #endif
 }

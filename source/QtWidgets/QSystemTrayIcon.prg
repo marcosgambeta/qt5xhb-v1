@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toolTip () ) );
+    RQSTRING( obj->toolTip () );
   }
 }
 

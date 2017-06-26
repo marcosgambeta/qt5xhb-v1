@@ -372,7 +372,7 @@ void QDate_toString1 ()
 
   if( obj )
   {
-    hb_retc( RQSTRING( obj->toString ( PQSTRING(1) ) ) );
+    RQSTRING( obj->toString ( PQSTRING(1) ) );
   }
 }
 
@@ -386,7 +386,7 @@ void QDate_toString2 ()
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);
-    hb_retc( RQSTRING( obj->toString ( (Qt::DateFormat) par1 ) ) );
+    RQSTRING( obj->toString ( (Qt::DateFormat) par1 ) );
   }
 }
 
@@ -567,7 +567,7 @@ static QString longDayName ( int weekday )
 */
 void QDate_longDayName1 ()
 {
-  hb_retc( RQSTRING( QDate::longDayName ( PINT(1) ) ) );
+  RQSTRING( QDate::longDayName ( PINT(1) ) );
 }
 
 /*
@@ -575,7 +575,7 @@ static QString longDayName ( int weekday, MonthNameType type )
 */
 void QDate_longDayName2 ()
 {
-  hb_retc( RQSTRING( QDate::longDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) ) );
+  RQSTRING( QDate::longDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
 //[1]QString longDayName ( int weekday )
@@ -602,7 +602,7 @@ static QString longMonthName ( int month )
 */
 void QDate_longMonthName1 ()
 {
-  hb_retc( RQSTRING( QDate::longMonthName ( PINT(1) ) ) );
+  RQSTRING( QDate::longMonthName ( PINT(1) ) );
 }
 
 /*
@@ -610,7 +610,7 @@ static QString longMonthName ( int month, MonthNameType type )
 */
 void QDate_longMonthName2 ()
 {
-  hb_retc( RQSTRING( QDate::longMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) ) );
+  RQSTRING( QDate::longMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
 //[1]QString longMonthName ( int month )
@@ -637,7 +637,7 @@ static QString shortDayName ( int weekday )
 */
 void QDate_shortDayName1 ()
 {
-  hb_retc( RQSTRING( QDate::shortDayName ( PINT(1) ) ) );
+  RQSTRING( QDate::shortDayName ( PINT(1) ) );
 }
 
 /*
@@ -645,7 +645,7 @@ static QString shortDayName ( int weekday, MonthNameType type )
 */
 void QDate_shortDayName2 ()
 {
-  hb_retc( RQSTRING( QDate::shortDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) ) );
+  RQSTRING( QDate::shortDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
 //[1]QString shortDayName ( int weekday )
@@ -672,7 +672,7 @@ static QString shortMonthName ( int month )
 */
 void QDate_shortMonthName1 ()
 {
-  hb_retc( RQSTRING( QDate::shortMonthName ( PINT(1) ) ) );
+  RQSTRING( QDate::shortMonthName ( PINT(1) ) );
 }
 
 /*
@@ -680,7 +680,7 @@ static QString shortMonthName ( int month, MonthNameType type )
 */
 void QDate_shortMonthName2 ()
 {
-  hb_retc( RQSTRING( QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) ) );
+  RQSTRING( QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
 //[1]QString shortMonthName ( int month )

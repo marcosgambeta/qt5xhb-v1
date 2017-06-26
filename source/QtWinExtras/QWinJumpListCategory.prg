@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
   QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    hb_retc( RQSTRING( obj->title () ) );
+    RQSTRING( obj->title () );
   }
 #endif
 }
