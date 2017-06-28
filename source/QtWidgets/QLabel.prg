@@ -151,7 +151,14 @@ HB_FUNC_STATIC( QLABEL_ALIGNMENT )
 
   if( obj )
   {
-    hb_retni( obj->alignment () );
+    if( ISNUMPAR(0) )
+    {
+      hb_retni( obj->alignment () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -164,8 +171,15 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
 
   if( obj )
   {
-    QWidget * ptr = obj->buddy ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUMPAR(0) )
+    {
+      QWidget * ptr = obj->buddy ();
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -178,7 +192,14 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 
   if( obj )
   {
-    RBOOL( obj->hasScaledContents () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasScaledContents () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -191,7 +212,14 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 
   if( obj )
   {
-    RBOOL( obj->hasSelectedText () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasSelectedText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -204,7 +232,14 @@ HB_FUNC_STATIC( QLABEL_INDENT )
 
   if( obj )
   {
-    RINT( obj->indent () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->indent () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -217,7 +252,14 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
 
   if( obj )
   {
-    RINT( obj->margin () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->margin () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -230,8 +272,15 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
 
   if( obj )
   {
-    QMovie * ptr = obj->movie ();
-    _qt5xhb_createReturnClass ( ptr, "QMOVIE" );
+    if( ISNUMPAR(0) )
+    {
+      QMovie * ptr = obj->movie ();
+      _qt5xhb_createReturnClass ( ptr, "QMOVIE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -244,7 +293,14 @@ HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
 
   if( obj )
   {
-    RBOOL( obj->openExternalLinks () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->openExternalLinks () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -257,8 +313,15 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
 
   if( obj )
   {
-    const QPicture * ptr = obj->picture ();
-    _qt5xhb_createReturnClass ( ptr, "QPICTURE" );
+    if( ISNUMPAR(0) )
+    {
+      const QPicture * ptr = obj->picture ();
+      _qt5xhb_createReturnClass ( ptr, "QPICTURE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -271,8 +334,15 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
 
   if( obj )
   {
-    const QPixmap * ptr = obj->pixmap ();
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
+    if( ISNUMPAR(0) )
+    {
+      const QPixmap * ptr = obj->pixmap ();
+      _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -285,7 +355,14 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
 
   if( obj )
   {
-    RQSTRING( obj->selectedText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->selectedText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -298,7 +375,7 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
     }
@@ -320,7 +397,7 @@ HB_FUNC_STATIC( QLABEL_SETBUDDY )
 
   if( obj )
   {
-    if( ISOPTQWIDGET(1) )
+    if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
     {
       obj->setBuddy ( OPQWIDGET(1,0) );
     }
@@ -342,7 +419,7 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setIndent ( PINT(1) );
     }
@@ -364,7 +441,7 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setMargin ( PINT(1) );
     }
@@ -386,7 +463,7 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setOpenExternalLinks ( PBOOL(1) );
     }
@@ -408,7 +485,7 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setScaledContents ( PBOOL(1) );
     }
@@ -430,7 +507,7 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
       obj->setSelection ( PINT(1), PINT(2) );
     }
@@ -452,7 +529,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setTextFormat ( (Qt::TextFormat) hb_parni(1) );
     }
@@ -474,7 +551,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       int par1 = hb_parni(1);
       obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) par1 );
@@ -497,7 +574,7 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setWordWrap ( PBOOL(1) );
     }
@@ -519,7 +596,14 @@ HB_FUNC_STATIC( QLABEL_TEXT )
 
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -532,7 +616,14 @@ HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
 
   if( obj )
   {
-    hb_retni( obj->textFormat () );
+    if( ISNUMPAR(0) )
+    {
+      hb_retni( obj->textFormat () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -545,7 +636,14 @@ HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
 
   if( obj )
   {
-    hb_retni( obj->textInteractionFlags () );
+    if( ISNUMPAR(0) )
+    {
+      hb_retni( obj->textInteractionFlags () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -558,7 +656,14 @@ HB_FUNC_STATIC( QLABEL_WORDWRAP )
 
   if( obj )
   {
-    RBOOL( obj->wordWrap () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->wordWrap () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -571,7 +676,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       RINT( obj->heightForWidth ( PINT(1) ) );
     }
@@ -591,8 +696,15 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    if( ISNUMPAR(0) )
+    {
+      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -605,8 +717,15 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    if( ISNUMPAR(0) )
+    {
+      QSize * ptr = new QSize( obj->sizeHint () );
+      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -619,7 +738,14 @@ HB_FUNC_STATIC( QLABEL_CLEAR )
 
   if( obj )
   {
-    obj->clear ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clear ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -634,7 +760,7 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
 
   if( obj )
   {
-    if( ISQMOVIE(1) )
+    if( ISNUMPAR(1) && ISQMOVIE(1) )
     {
       obj->setMovie ( PQMOVIE(1) );
     }
@@ -717,7 +843,7 @@ HB_FUNC_STATIC( QLABEL_SETPICTURE )
 
   if( obj )
   {
-    if( ISQPICTURE(1) )
+    if( ISNUMPAR(1) && ISQPICTURE(1) )
     {
       obj->setPicture ( *PQPICTURE(1) );
     }
@@ -739,7 +865,7 @@ HB_FUNC_STATIC( QLABEL_SETPIXMAP )
 
   if( obj )
   {
-    if( ISQPIXMAP(1) )
+    if( ISNUMPAR(1) && ISQPIXMAP(1) )
     {
       obj->setPixmap ( *PQPIXMAP(1) );
     }
@@ -761,7 +887,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->setText ( PQSTRING(1) );
     }
