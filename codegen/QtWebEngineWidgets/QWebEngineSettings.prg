@@ -1,0 +1,297 @@
+/*
+
+  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+
+  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+
+*/
+
+#include "hbclass.ch"
+
+CLASS QWebEngineSettings
+
+   DATA pointer
+   DATA self_destruction INIT .F.
+
+   METHOD globalSettings
+   METHOD fontFamily
+   METHOD setFontFamily
+   METHOD resetFontFamily
+   METHOD fontSize
+   METHOD setFontSize
+   METHOD resetFontSize
+   METHOD setAttribute
+   METHOD testAttribute
+   METHOD resetAttribute
+   METHOD defaultTextEncoding
+   METHOD setDefaultTextEncoding
+
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
+
+   DESTRUCTOR destroyObject
+
+END CLASS
+
+PROCEDURE destroyObject () CLASS QWebEngineSettings
+   IF ::self_destruction
+      ::delete()
+   ENDIF
+RETURN
+
+#pragma BEGINDUMP
+
+#include <Qt>
+
+#ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#include <QWebEngineSettings>
+#endif
+#endif
+
+#include "qt5xhb_common.h"
+#include "qt5xhb_macros.h"
+#include "qt5xhb_utils.h"
+
+#ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#include <QWebEngineSettings>
+#endif
+#endif
+
+
+
+/*
+static QWebEngineSettings *globalSettings()
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_GLOBALSETTINGS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * ptr = QWebEngineSettings::globalSettings ();
+  _qt5xhb_createReturnClass ( ptr, "QWEBENGINESETTINGS" );
+#endif
+}
+
+
+/*
+QString fontFamily(FontFamily which) const
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTFAMILY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    RQSTRING( obj->fontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1) ) );
+  }
+#endif
+}
+
+/*
+void setFontFamily(FontFamily which, const QString &family)
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTFAMILY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    obj->setFontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1), PQSTRING(2) );
+  }
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+void resetFontFamily(FontFamily which)
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTFAMILY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    obj->resetFontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1) );
+  }
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+
+/*
+int fontSize(FontSize type) const
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTSIZE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    RINT( obj->fontSize ( (QWebEngineSettings::FontSize) hb_parni(1) ) );
+  }
+#endif
+}
+
+/*
+void setFontSize(FontSize type, int size)
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTSIZE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    obj->setFontSize ( (QWebEngineSettings::FontSize) hb_parni(1), PINT(2) );
+  }
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+void resetFontSize(FontSize type)
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTSIZE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    obj->resetFontSize ( (QWebEngineSettings::FontSize) hb_parni(1) );
+  }
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+
+/*
+void setAttribute(WebAttribute attr, bool on)
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_SETATTRIBUTE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    obj->setAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1), PBOOL(2) );
+  }
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+bool testAttribute(WebAttribute attr) const
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_TESTATTRIBUTE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    RBOOL( obj->testAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) ) );
+  }
+#endif
+}
+
+/*
+void resetAttribute(WebAttribute attr)
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETATTRIBUTE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    obj->resetAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) );
+  }
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+
+/*
+QString defaultTextEncoding() const
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_DEFAULTTEXTENCODING )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    RQSTRING( obj->defaultTextEncoding () );
+  }
+#endif
+}
+
+/*
+void setDefaultTextEncoding(const QString &encoding)
+*/
+HB_FUNC_STATIC( QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  if( obj )
+  {
+    obj->setDefaultTextEncoding ( PQSTRING(1) );
+  }
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+
+
+HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROM )
+{
+  PHB_ITEM self = hb_stackSelfItem();
+  if( hb_pcount() == 1 && ISOBJECT(1) )
+  {
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, false );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  {
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, false );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+  hb_itemReturn( self );
+}
+
+HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROMOBJECT )
+{
+  HB_FUNC_EXEC( QWEBENGINESETTINGS_NEWFROM );
+}
+
+HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROMPOINTER )
+{
+  HB_FUNC_EXEC( QWEBENGINESETTINGS_NEWFROM );
+}
+
+HB_FUNC_STATIC( QWEBENGINESETTINGS_SELFDESTRUCTION )
+{
+  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+}
+
+HB_FUNC_STATIC( QWEBENGINESETTINGS_SETSELFDESTRUCTION )
+{
+  PHB_ITEM self = hb_stackSelfItem();
+  if( hb_pcount() == 1 && ISLOG(1) )
+  {
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+  hb_itemReturn( self );
+}
+
+#pragma ENDDUMP
+
