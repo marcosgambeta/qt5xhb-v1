@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW )
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,14 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_TOSTRING )
 
   if( obj )
   {
-    RQSTRING( obj->toString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -211,7 +218,14 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
 
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -313,7 +327,7 @@ static bool isClassAvailable(const char *className)
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISCLASSAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
     RBOOL( QAndroidJniObject::isClassAvailable ( PCONSTCHAR(1) ) );
   }

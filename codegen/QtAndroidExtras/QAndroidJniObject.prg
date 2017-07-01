@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -112,24 +106,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,2,0
 
 /*
 QAndroidJniObject callObjectMethod(const char *methodName) const
@@ -189,32 +166,12 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_TOSTRING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-#endif
-}
+$method=5,2,0|QString|toString|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-#endif
-}
+$method=5,2,0|bool|isValid|
 
 /*
 static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName)
@@ -310,73 +267,8 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMSTRING )
 /*
 static bool isClassAvailable(const char *className)
 */
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISCLASSAVAILABLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISCHAR(1) )
-  {
-    RBOOL( QAndroidJniObject::isClassAvailable ( PCONSTCHAR(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-#endif
-}
+$staticMethod=5,2,0|bool|isClassAvailable|const char *
 
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QANDROIDJNIOBJECT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QANDROIDJNIOBJECT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QANDROIDJNIOBJECT_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

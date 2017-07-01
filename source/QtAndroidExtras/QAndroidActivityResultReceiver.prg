@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,7 +55,7 @@ RETURN
 HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidActivityResultReceiver * obj = (QAndroidActivityResultReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAndroidActivityResultReceiver * obj = (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,10 +81,9 @@ HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT )
 
   if( obj )
   {
-    if( ISNUM(1) && ISNUM(2) && ISQANDROIDJNIOBJECT(3) )
+    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQANDROIDJNIOBJECT(3) )
     {
-      QAndroidJniObject * par3 = (QAndroidJniObject *) _qt5xhb_itemGetPtr(3);
-      obj->handleActivityResult ( PINT(1), PINT(2), *par3 );
+      obj->handleActivityResult ( PINT(1), PINT(2), *PQANDROIDJNIOBJECT(3) );
     }
     else
     {

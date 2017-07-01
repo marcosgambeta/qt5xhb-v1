@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,7 +75,14 @@ static int androidSdkVersion()
 HB_FUNC_STATIC( QTANDROID_ANDROIDSDKVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  RINT( QtAndroid::androidSdkVersion () );
+  if( ISNUMPAR(0) )
+  {
+    RINT( QtAndroid::androidSdkVersion () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 

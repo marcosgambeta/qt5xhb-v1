@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
 HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniEnvironment * obj = (QAndroidJniEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAndroidJniEnvironment * obj = (QAndroidJniEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
