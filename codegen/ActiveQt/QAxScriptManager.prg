@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -72,22 +66,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addObject ( QAxBase * object )
@@ -283,17 +262,9 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 }
 
 /*
-QStringList scriptNames () const
+QStringList scriptNames() const
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->scriptNames () );
-  }
-}
+$method=|QStringList|scriptNames|
 
 /*
 static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
@@ -313,9 +284,6 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 /*
 static QString scriptFileFilter ()
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
-{
-  RQSTRING( QAxScriptManager::scriptFileFilter () );
-}
+$staticMethod=|QString|scriptFileFilter|
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
 
 HB_FUNC_STATIC( QAXWIDGET_DELETE )
 {
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       RBOOL( obj->doVerb ( PQSTRING(1) ) );
     }
@@ -187,7 +187,14 @@ HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 
   if( obj )
   {
-    obj->clear ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clear ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -221,6 +228,8 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
   }
 }
 
+// QAxBase methods - begin
+
 // métodos da classe QAxBase, adicionados aqui, para
 // resolver problemas na utilização dos métodos
 
@@ -247,7 +256,14 @@ HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 
   if( obj )
   {
-    RQSTRING( obj->control () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->control () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -260,7 +276,14 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 
   if( obj )
   {
-    obj->disableClassInfo ();
+    if( ISNUMPAR(0) )
+    {
+      obj->disableClassInfo ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -275,7 +298,14 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 
   if( obj )
   {
-    obj->disableEventSink ();
+    if( ISNUMPAR(0) )
+    {
+      obj->disableEventSink ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -290,7 +320,14 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 
   if( obj )
   {
-    obj->disableMetaObject ();
+    if( ISNUMPAR(0) )
+    {
+      obj->disableMetaObject ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -360,7 +397,14 @@ HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 
   if( obj )
   {
-    RQSTRING( obj->generateDocumentation () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->generateDocumentation () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -373,7 +417,14 @@ HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -386,7 +437,7 @@ HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       RBOOL( obj->propertyWritable ( PCONSTCHAR(1) ) );
     }
@@ -461,7 +512,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       RBOOL( obj->setControl ( PQSTRING(1) ) );
     }
@@ -481,7 +532,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 
   if( obj )
   {
-    if( ISCHAR(1) && ISLOG(2) )
+    if( ISNUMPAR(2) && ISCHAR(1) && ISLOG(2) )
     {
       obj->setPropertyWritable ( PCONSTCHAR(1), PBOOL(2) );
     }
@@ -503,8 +554,17 @@ HB_FUNC_STATIC( QAXWIDGET_VERBS )
 
   if( obj )
   {
-    RQSTRINGLIST( obj->verbs () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->verbs () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
+
+// QAxBase methods - end
 
 #pragma ENDDUMP

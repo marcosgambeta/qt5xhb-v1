@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 }
 
 /*
-QStringList scriptNames () const
+QStringList scriptNames() const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 {
@@ -291,7 +291,14 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 
   if( obj )
   {
-    RQSTRINGLIST( obj->scriptNames () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->scriptNames () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -315,7 +322,14 @@ static QString scriptFileFilter ()
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {
-  RQSTRING( QAxScriptManager::scriptFileFilter () );
+  if( ISNUMPAR(0) )
+  {
+    RQSTRING( QAxScriptManager::scriptFileFilter () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP

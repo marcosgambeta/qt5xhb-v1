@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 {
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 
   if( obj )
   {
-    if( ISQIODEVICE(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
     {
       RBOOL( obj->readData ( PQIODEVICE(1), PQSTRING(2) ) );
     }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 
   if( obj )
   {
-    if( ISQIODEVICE(1) )
+    if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
       RBOOL( obj->writeData ( PQIODEVICE(1) ) );
     }

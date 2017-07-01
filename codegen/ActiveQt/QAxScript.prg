@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -77,22 +71,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QAXSCRIPT_DELETE )
-{
-  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
@@ -193,15 +172,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 /*
 QString scriptCode () const
 */
-HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
-{
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->scriptCode () );
-  }
-}
+$method=|QString|scriptCode|
 
 /*
 QAxScriptEngine * scriptEngine () const
@@ -220,14 +191,6 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 /*
 QString scriptName () const
 */
-HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
-{
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->scriptName () );
-  }
-}
+$method=|QString|scriptName|
 
 #pragma ENDDUMP

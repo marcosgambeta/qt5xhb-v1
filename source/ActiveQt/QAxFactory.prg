@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QAXFACTORY_DELETE )
 {
-  QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       RQSTRING( obj->exposeToSuperClass ( PQSTRING(1) ) );
     }
@@ -190,7 +190,14 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 
   if( obj )
   {
-    RQSTRINGLIST( obj->featureList () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->featureList () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -203,7 +210,7 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       RBOOL( obj->hasStockEvents ( PQSTRING(1) ) );
     }
@@ -244,7 +251,14 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 
   if( obj )
   {
-    RBOOL( obj->isService () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isService () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -278,7 +292,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 
   if( obj )
   {
-    if( ISCHAR(1) && ISQSETTINGS(2) )
+    if( ISNUMPAR(2) && ISCHAR(1) && ISQSETTINGS(2) )
     {
       obj->registerClass ( PQSTRING(1), PQSETTINGS(2) );
     }
@@ -300,7 +314,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       RBOOL( obj->stayTopLevel ( PQSTRING(1) ) );
     }
@@ -334,7 +348,7 @@ HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 
   if( obj )
   {
-    if( ISCHAR(1) && ISQSETTINGS(2) )
+    if( ISNUMPAR(2) && ISCHAR(1) && ISQSETTINGS(2) )
     {
       obj->unregisterClass ( PQSTRING(1), PQSETTINGS(2) );
     }
@@ -356,7 +370,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 
   if( obj )
   {
-    if( ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
       RBOOL( obj->validateLicenseKey ( PQSTRING(1), PQSTRING(2) ) );
     }
@@ -372,7 +386,14 @@ static bool isServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
-  RBOOL( QAxFactory::isServer () );
+  if( ISNUMPAR(0) )
+  {
+    RBOOL( QAxFactory::isServer () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -380,7 +401,7 @@ static bool registerActiveObject ( QObject * object )
 */
 HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
-  if( ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     RBOOL( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
   }
@@ -395,7 +416,14 @@ static QString serverDirPath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
-  RQSTRING( QAxFactory::serverDirPath () );
+  if( ISNUMPAR(0) )
+  {
+    RQSTRING( QAxFactory::serverDirPath () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -403,7 +431,14 @@ static QString serverFilePath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
-  RQSTRING( QAxFactory::serverFilePath () );
+  if( ISNUMPAR(0) )
+  {
+    RQSTRING( QAxFactory::serverFilePath () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -427,7 +462,14 @@ static bool stopServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
-  RBOOL( QAxFactory::stopServer () );
+  if( ISNUMPAR(0) )
+  {
+    RBOOL( QAxFactory::stopServer () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP

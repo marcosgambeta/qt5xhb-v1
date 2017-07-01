@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 {
-  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,14 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 
   if( obj )
   {
-    RQSTRING( obj->scriptCode () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->scriptCode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -226,7 +233,14 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 
   if( obj )
   {
-    RQSTRING( obj->scriptName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->scriptName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

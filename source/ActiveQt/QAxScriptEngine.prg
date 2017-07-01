@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->addItem ( PQSTRING(1) );
     }
@@ -111,7 +111,14 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 
   if( obj )
   {
-    RBOOL( obj->hasIntrospection () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasIntrospection () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -124,7 +131,14 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -137,7 +151,14 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 
   if( obj )
   {
-    RQSTRING( obj->scriptLanguage () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->scriptLanguage () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

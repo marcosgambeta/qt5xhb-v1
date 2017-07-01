@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -67,22 +61,7 @@ RETURN
 #include <QAxFactory>
 #endif
 
-HB_FUNC_STATIC( QAXFACTORY_DELETE )
-{
-  QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 virtual QUuid appID () const
@@ -164,55 +143,17 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 /*
 virtual QString exposeToSuperClass ( const QString & key ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RQSTRING( obj->exposeToSuperClass ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|exposeToSuperClass|const QString &
 
 /*
 virtual QStringList featureList () const = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->featureList () );
-  }
-}
+$method=|QStringList|featureList|
 
 /*
 virtual bool hasStockEvents ( const QString & key ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->hasStockEvents ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|hasStockEvents|const QString &
 
 /*
 virtual QUuid interfaceID ( const QString & key ) const
@@ -238,15 +179,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 /*
 virtual bool isService () const
 */
-HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isService () );
-  }
-}
+$method=|bool|isService|
 
 /*
 virtual const QMetaObject * metaObject ( const QString & key ) const = 0
@@ -272,44 +205,12 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 /*
 virtual void registerClass ( const QString & key, QSettings * settings ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISQSETTINGS(2) )
-    {
-      obj->registerClass ( PQSTRING(1), PQSETTINGS(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|registerClass|const QString &,QSettings *
 
 /*
 virtual bool stayTopLevel ( const QString & key ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->stayTopLevel ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|stayTopLevel|const QString &
 
 /*
 virtual QUuid typeLibID () const
@@ -328,83 +229,32 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 /*
 virtual void unregisterClass ( const QString & key, QSettings * settings ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISQSETTINGS(2) )
-    {
-      obj->unregisterClass ( PQSTRING(1), PQSETTINGS(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unregisterClass|const QString &,QSettings *
 
 /*
 virtual bool validateLicenseKey ( const QString & key, const QString & licenseKey ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISCHAR(2) )
-    {
-      RBOOL( obj->validateLicenseKey ( PQSTRING(1), PQSTRING(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|validateLicenseKey|const QString &,const QString &
 
 /*
 static bool isServer ()
 */
-HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
-{
-  RBOOL( QAxFactory::isServer () );
-}
+$staticMethod=|bool|isServer|
 
 /*
 static bool registerActiveObject ( QObject * object )
 */
-HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
-{
-  if( ISQOBJECT(1) )
-  {
-    RBOOL( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|registerActiveObject|QObject *
 
 /*
 static QString serverDirPath ()
 */
-HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
-{
-  RQSTRING( QAxFactory::serverDirPath () );
-}
+$staticMethod=|QString|serverDirPath|
 
 /*
 static QString serverFilePath ()
 */
-HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
-{
-  RQSTRING( QAxFactory::serverFilePath () );
-}
+$staticMethod=|QString|serverFilePath|
 
 /*
 static bool startServer ( ServerType type = MultipleInstances )
@@ -425,9 +275,6 @@ HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 /*
 static bool stopServer ()
 */
-HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
-{
-  RBOOL( QAxFactory::stopServer () );
-}
+$staticMethod=|bool|stopServer|
 
 #pragma ENDDUMP
