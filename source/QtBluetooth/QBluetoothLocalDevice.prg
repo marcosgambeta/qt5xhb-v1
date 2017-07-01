@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,14 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ISVALID )
 
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -151,7 +158,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_REQUESTPAIRING )
 
   if( obj )
   {
-    if( ISQBLUETOOTHADDRESS(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQBLUETOOTHADDRESS(1) && ISNUM(2) )
     {
       obj->requestPairing ( *PQBLUETOOTHADDRESS(1), (QBluetoothLocalDevice::Pairing) hb_parni(2) );
     }
@@ -175,9 +182,9 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS )
 
   if( obj )
   {
-    if( ISQBLUETOOTHADDRESS(1) )
+    if( ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1) )
     {
-      hb_retni( obj->pairingStatus ( *PQBLUETOOTHADDRESS(1) ) );
+      RENUM( obj->pairingStatus ( *PQBLUETOOTHADDRESS(1) ) );
     }
     else
     {
@@ -197,7 +204,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_SETHOSTMODE )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setHostMode ( (QBluetoothLocalDevice::HostMode) hb_parni(1) );
     }
@@ -221,7 +228,14 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_HOSTMODE )
 
   if( obj )
   {
-    hb_retni( obj->hostMode () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->hostMode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -236,7 +250,14 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_POWERON )
 
   if( obj )
   {
-    obj->powerOn ();
+    if( ISNUMPAR(0) )
+    {
+      obj->powerOn ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -253,7 +274,14 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NAME )
 
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -284,7 +312,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGCONFIRMATION )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->pairingConfirmation ( PBOOL(1) );
     }

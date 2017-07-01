@@ -1106,6 +1106,7 @@
 #define RGLBITFIELD(x)                                      hb_parni( (GLbitfield) x )
 #define RGLSIZEI(x)                                         hb_parni( (GLsizei) x )
 #define RQSTRINGLIST(x)                                     _qt5xhb_convert_qstringlist_to_array( x )
+#define RENUM(x)                                            hb_retni(x)
 
 // macros for parameters (Qt objects)
 #define PQABSTRACTANIMATION(n)                             (QAbstractAnimation *) _qt5xhb_itemGetPtr(n)

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -115,118 +109,37 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,2,0
 
 /*
 void abort()
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_ABORT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->abort ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|abort|
 
 /*
 virtual void close()
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_CLOSE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->close ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|close|
 
 /*
 bool isSequential() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_ISSEQUENTIAL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSequential () );
-  }
-#endif
-}
+$method=5,2,0|bool|isSequential|
 
 /*
 virtual qint64 bytesAvailable() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESAVAILABLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->bytesAvailable () );
-  }
-#endif
-}
+$method=5,2,0|qint64|bytesAvailable|
 
 /*
 virtual qint64 bytesToWrite() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_BYTESTOWRITE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->bytesToWrite () );
-  }
-#endif
-}
+$method=5,2,0|qint64|bytesToWrite|
 
 /*
 virtual bool canReadLine() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_CANREADLINE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canReadLine () );
-  }
-#endif
-}
+$method=5,2,0|bool|canReadLine|
 
 /*
 void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
@@ -309,34 +222,12 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 /*
 void disconnectFromService()
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_DISCONNECTFROMSERVICE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->disconnectFromService ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|disconnectFromService|
 
 /*
 QString localName() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALNAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->localName () );
-  }
-#endif
-}
+$method=5,2,0|QString|localName|
 
 /*
 QBluetoothAddress localAddress() const
@@ -357,32 +248,12 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALADDRESS )
 /*
 quint16 localPort() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALPORT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQUINT16( obj->localPort () );
-  }
-#endif
-}
+$method=5,2,0|quint16|localPort|
 
 /*
 QString peerName() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERNAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->peerName () );
-  }
-#endif
-}
+$method=5,2,0|QString|peerName|
 
 /*
 QBluetoothAddress peerAddress() const
@@ -403,17 +274,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERADDRESS )
 /*
 quint16 peerPort() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERPORT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQUINT16( obj->peerPort () );
-  }
-#endif
-}
+$method=5,2,0|quint16|peerPort|
 
 /*
 bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol socketType,SocketState socketState = ConnectedState,OpenMode openMode = ReadWrite)
@@ -442,32 +303,12 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
 /*
 int socketDescriptor() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETDESCRIPTOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->socketDescriptor () );
-  }
-#endif
-}
+$method=5,2,0|int|socketDescriptor|
 
 /*
 QBluetoothServiceInfo::Protocol socketType() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETTYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->socketType () );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothServiceInfo::Protocol|socketType|
 
 /*
 SocketState state() const
@@ -502,16 +343,6 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERRORSTRING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-#endif
-}
+$method=5,2,0|QString|errorString|
 
 #pragma ENDDUMP

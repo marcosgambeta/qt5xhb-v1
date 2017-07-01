@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEW )
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -156,7 +156,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISVALID )
 
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -171,7 +178,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISCOMPLETE )
 
   if( obj )
   {
-    RBOOL( obj->isComplete () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isComplete () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -186,7 +200,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETDEVICE )
 
   if( obj )
   {
-    if( ISQBLUETOOTHDEVICEINFO(1) )
+    if( ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1) )
     {
       obj->setDevice ( *PQBLUETOOTHDEVICEINFO(1) );
     }
@@ -320,7 +334,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_CONTAINS )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       RBOOL( obj->contains ( PQUINT16(1) ) );
     }
@@ -342,7 +356,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_REMOVEATTRIBUTE )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->removeAttribute ( PQUINT16(1) );
     }
@@ -366,7 +380,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICENAME )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->setServiceName ( PQSTRING(1) );
     }
@@ -390,7 +404,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICENAME )
 
   if( obj )
   {
-    RQSTRING( obj->serviceName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->serviceName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -405,7 +426,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEDESCRIPTION )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->setServiceDescription ( PQSTRING(1) );
     }
@@ -429,7 +450,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEDESCRIPTION )
 
   if( obj )
   {
-    RQSTRING( obj->serviceDescription () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->serviceDescription () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -444,7 +472,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEPROVIDER )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->setServiceProvider ( PQSTRING(1) );
     }
@@ -468,7 +496,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEPROVIDER )
 
   if( obj )
   {
-    RQSTRING( obj->serviceProvider () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->serviceProvider () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -483,7 +518,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SOCKETPROTOCOL )
 
   if( obj )
   {
-    hb_retni( obj->socketProtocol () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->socketProtocol () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -498,7 +540,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_PROTOCOLSERVICEMULTIPLEXER )
 
   if( obj )
   {
-    RINT( obj->protocolServiceMultiplexer () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->protocolServiceMultiplexer () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -513,7 +562,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVERCHANNEL )
 
   if( obj )
   {
-    RINT( obj->serverChannel () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->serverChannel () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -528,7 +584,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEAVAILABILITY )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setServiceAvailability ( PQUINT8(1) );
     }
@@ -552,7 +608,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEAVAILABILITY )
 
   if( obj )
   {
-    RQUINT8( obj->serviceAvailability () );
+    if( ISNUMPAR(0) )
+    {
+      RQUINT8( obj->serviceAvailability () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -567,7 +630,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEUUID )
 
   if( obj )
   {
-    if( ISQBLUETOOTHUUID(1) )
+    if( ISNUMPAR(1) && ISQBLUETOOTHUUID(1) )
     {
       obj->setServiceUuid ( *PQBLUETOOTHUUID(1) );
     }
@@ -653,7 +716,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISREGISTERED )
 
   if( obj )
   {
-    RBOOL( obj->isRegistered () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isRegistered () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -691,7 +761,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_UNREGISTERSERVICE )
 
   if( obj )
   {
-    RBOOL( obj->unregisterService () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->unregisterService () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }

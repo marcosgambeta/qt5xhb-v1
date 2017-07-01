@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 HB_FUNC_STATIC( QBLUETOOTHSERVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_CLOSE )
 
   if( obj )
   {
-    obj->close ();
+    if( ISNUMPAR(0) )
+    {
+      obj->close ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,7 +189,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ISLISTENING )
 
   if( obj )
   {
-    RBOOL( obj->isListening () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isListening () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -197,7 +211,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setMaxPendingConnections ( PINT(1) );
     }
@@ -221,7 +235,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_MAXPENDINGCONNECTIONS )
 
   if( obj )
   {
-    RINT( obj->maxPendingConnections () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->maxPendingConnections () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -236,7 +257,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_HASPENDINGCONNECTIONS )
 
   if( obj )
   {
-    RBOOL( obj->hasPendingConnections () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasPendingConnections () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -283,7 +311,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERPORT )
 
   if( obj )
   {
-    RQUINT16( obj->serverPort () );
+    if( ISNUMPAR(0) )
+    {
+      RQUINT16( obj->serverPort () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -338,7 +373,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERTYPE )
 
   if( obj )
   {
-    hb_retni( obj->serverType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->serverType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }

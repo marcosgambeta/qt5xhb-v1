@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -59,54 +53,17 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,2,0
 
 /*
 virtual bool isFinished() const = 0
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ISFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isFinished () );
-  }
-#endif
-}
+$method=5,2,0|bool|isFinished|
 
 /*
 virtual bool isRunning() const = 0
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ISRUNNING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRunning () );
-  }
-#endif
-}
+$method=5,2,0|bool|isRunning|
 
 /*
 QBluetoothTransferManager *manager() const
@@ -142,17 +99,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERROR )
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERRORSTRING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-#endif
-}
+$method=5,2,0|QString|errorString|
 
 /*
 QBluetoothTransferRequest request() const
@@ -173,18 +120,6 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_REQUEST )
 /*
 void abort()
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ABORT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->abort ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|abort|
 
 #pragma ENDDUMP

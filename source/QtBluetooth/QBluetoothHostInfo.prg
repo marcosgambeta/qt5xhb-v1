@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETADDRESS )
 
   if( obj )
   {
-    if( ISQBLUETOOTHADDRESS(1) )
+    if( ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1) )
     {
       obj->setAddress ( *PQBLUETOOTHADDRESS(1) );
     }
@@ -170,7 +170,14 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NAME )
 
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -185,7 +192,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETNAME )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->setName ( PQSTRING(1) );
     }

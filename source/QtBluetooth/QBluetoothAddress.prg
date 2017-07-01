@@ -2,7 +2,7 @@
 
   Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_NEW )
 HB_FUNC_STATIC( QBLUETOOTHADDRESS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * obj = (QBluetoothAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothAddress * obj = (QBluetoothAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,14 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_ISNULL )
 
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -173,7 +180,14 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_CLEAR )
 
   if( obj )
   {
-    obj->clear ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clear ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -190,7 +204,14 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_TOUINT64 )
 
   if( obj )
   {
-    RQUINT64( obj->toUInt64 () );
+    if( ISNUMPAR(0) )
+    {
+      RQUINT64( obj->toUInt64 () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
@@ -205,7 +226,14 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_TOSTRING )
 
   if( obj )
   {
-    RQSTRING( obj->toString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 #endif
 }
