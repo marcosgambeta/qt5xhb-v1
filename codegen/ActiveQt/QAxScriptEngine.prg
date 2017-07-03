@@ -27,19 +27,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QAxScriptEngine>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAxScriptEngine>
-#endif
+$includes
 
 /*
 QAxScriptEngine ( const QString & language, QAxScript * script )
