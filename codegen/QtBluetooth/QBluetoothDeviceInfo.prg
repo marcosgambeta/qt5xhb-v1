@@ -46,23 +46,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothDeviceInfo>
-#endif
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothDeviceInfo>
-#endif
-#endif
+$includes=5,2,0
 
 #include <QBluetoothAddress>
 #include <QBluetoothUuid>
