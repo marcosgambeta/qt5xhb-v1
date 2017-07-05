@@ -42,11 +42,7 @@ CLASS QAxWidget INHERIT QWidget,QAxBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

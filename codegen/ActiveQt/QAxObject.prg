@@ -36,11 +36,7 @@ CLASS QAxObject INHERIT QObject,QAxBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

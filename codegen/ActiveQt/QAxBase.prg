@@ -42,11 +42,7 @@ CLASS QAxBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxBase
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

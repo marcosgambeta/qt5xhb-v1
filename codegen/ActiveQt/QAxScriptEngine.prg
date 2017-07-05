@@ -19,11 +19,7 @@ CLASS QAxScriptEngine INHERIT QAxObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxScriptEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
