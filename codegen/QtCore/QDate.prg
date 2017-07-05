@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -52,27 +46,11 @@ CLASS QDate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QDate>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QDate>
-#endif
+$includes
 
 /*
 QDate ()
@@ -111,170 +89,52 @@ HB_FUNC_STATIC( QDATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDATE_DELETE )
-{
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QDate addDays ( int ndays ) const
 */
-HB_FUNC_STATIC( QDATE_ADDDAYS )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QDate * ptr = new QDate( obj->addDays ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDate|addDays|int
 
 /*
 QDate addMonths ( int nmonths ) const
 */
-HB_FUNC_STATIC( QDATE_ADDMONTHS )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QDate * ptr = new QDate( obj->addMonths ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDate|addMonths|int
 
 /*
 QDate addYears ( int nyears ) const
 */
-HB_FUNC_STATIC( QDATE_ADDYEARS )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QDate * ptr = new QDate( obj->addYears ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDate|addYears|int
 
 /*
 int day () const
 */
-HB_FUNC_STATIC( QDATE_DAY )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->day () );
-  }
-}
+$method=|int|day|
 
 /*
 int dayOfWeek () const
 */
-HB_FUNC_STATIC( QDATE_DAYOFWEEK )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->dayOfWeek () );
-  }
-}
+$method=|int|dayOfWeek|
 
 /*
 int dayOfYear () const
 */
-HB_FUNC_STATIC( QDATE_DAYOFYEAR )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->dayOfYear () );
-  }
-}
+$method=|int|dayOfYear|
 
 /*
 int daysInMonth () const
 */
-HB_FUNC_STATIC( QDATE_DAYSINMONTH )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->daysInMonth () );
-  }
-}
+$method=|int|daysInMonth|
 
 /*
 int daysInYear () const
 */
-HB_FUNC_STATIC( QDATE_DAYSINYEAR )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->daysInYear () );
-  }
-}
+$method=|int|daysInYear|
 
 /*
 int daysTo ( const QDate & d ) const
 */
-HB_FUNC_STATIC( QDATE_DAYSTO )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDATE(1) )
-    {
-      RINT( obj->daysTo ( *PQDATE(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|daysTo|const QDate &
 
 /*
 void getDate ( int * year, int * month, int * day )
@@ -307,88 +167,32 @@ HB_FUNC_STATIC( QDATE_GETDATE )
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QDATE_ISNULL )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 int month () const
 */
-HB_FUNC_STATIC( QDATE_MONTH )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->month () );
-  }
-}
+$method=|int|month|
 
 /*
 bool setDate ( int year, int month, int day )
 */
-HB_FUNC_STATIC( QDATE_SETDATE )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
-    {
-      RBOOL( obj->setDate ( PINT(1), PINT(2), PINT(3) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|setDate|int,int,int
 
 /*
 int toJulianDay () const
 */
-HB_FUNC_STATIC( QDATE_TOJULIANDAY )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->toJulianDay () );
-  }
-}
+$method=|int|toJulianDay|
 
 /*
 QString toString ( const QString & format ) const
 */
-void QDate_toString1 ()
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|QString|toString,toString1|const QString &
 
 /*
 QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 */
-void QDate_toString2 ()
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);
-    RQSTRING( obj->toString ( (Qt::DateFormat) par1 ) );
-  }
-}
+$internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString ( const QString & format ) const
 //[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
@@ -434,59 +238,27 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
 /*
 int year () const
 */
-HB_FUNC_STATIC( QDATE_YEAR )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->year () );
-  }
-}
+$method=|int|year|
 
 /*
 static QDate currentDate ()
 */
-HB_FUNC_STATIC( QDATE_CURRENTDATE )
-{
-  QDate * ptr = new QDate( QDate::currentDate () );
-  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-}
+$staticMethod=|QDate|currentDate|
 
 /*
 static QDate fromJulianDay ( int jd )
 */
-HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
-{
-  if( ISNUM(1) )
-  {
-    QDate * ptr = new QDate( QDate::fromJulianDay ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QDate|fromJulianDay|int
 
 /*
 static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
-void QDate_fromString1 ()
-{
-  int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
-  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), (Qt::DateFormat) par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-}
+$staticInternalMethod=|QDate|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
 static QDate fromString ( const QString & string, const QString & format )
 */
-void QDate_fromString2 ()
-{
-  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-}
+$staticInternalMethod=|QDate|fromString,fromString2|const QString &,const QString &
 
 //[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 //[2]QDate fromString ( const QString & string, const QString & format )
@@ -510,38 +282,17 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
 /*
 static bool isLeapYear ( int year )
 */
-HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
-{
-  if( ISNUM(1) )
-  {
-    RBOOL( QDate::isLeapYear ( PINT(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|isLeapYear|int
 
 /*
 bool isValid () const
 */
-void QDate_isValid1 ()
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$internalMethod=|bool|isValid,isValid1|
 
 /*
 static bool isValid ( int year, int month, int day )
 */
-void QDate_isValid2 ()
-{
-  RBOOL( QDate::isValid ( PINT(1), PINT(2), PINT(3) ) );
-}
+$staticInternalMethod=|bool|isValid,isValid2|int,int,int
 
 //[1]bool isValid () const
 //[2]bool isValid ( int year, int month, int day )
@@ -565,18 +316,12 @@ HB_FUNC_STATIC( QDATE_ISVALID )
 /*
 static QString longDayName ( int weekday )
 */
-void QDate_longDayName1 ()
-{
-  RQSTRING( QDate::longDayName ( PINT(1) ) );
-}
+$staticInternalMethod=|QString|longDayName,longDayName1|int
 
 /*
 static QString longDayName ( int weekday, MonthNameType type )
 */
-void QDate_longDayName2 ()
-{
-  RQSTRING( QDate::longDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
+$staticInternalMethod=|QString|longDayName,longDayName2|int,QDate::MonthNameType
 
 //[1]QString longDayName ( int weekday )
 //[2]QString longDayName ( int weekday, MonthNameType type )
@@ -600,18 +345,12 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 /*
 static QString longMonthName ( int month )
 */
-void QDate_longMonthName1 ()
-{
-  RQSTRING( QDate::longMonthName ( PINT(1) ) );
-}
+$staticInternalMethod=|QString|longMonthName,longMonthName1|int
 
 /*
 static QString longMonthName ( int month, MonthNameType type )
 */
-void QDate_longMonthName2 ()
-{
-  RQSTRING( QDate::longMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
+$staticInternalMethod=|QString|longMonthName,longMonthName2|int,QDate::MonthNameType
 
 //[1]QString longMonthName ( int month )
 //[2]QString longMonthName ( int month, MonthNameType type )
@@ -635,18 +374,12 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 /*
 static QString shortDayName ( int weekday )
 */
-void QDate_shortDayName1 ()
-{
-  RQSTRING( QDate::shortDayName ( PINT(1) ) );
-}
+$staticInternalMethod=|QString|shortDayName,shortDayName1|int
 
 /*
 static QString shortDayName ( int weekday, MonthNameType type )
 */
-void QDate_shortDayName2 ()
-{
-  RQSTRING( QDate::shortDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
+$staticInternalMethod=|QString|shortDayName,shortDayName2|int,QDate::MonthNameType
 
 //[1]QString shortDayName ( int weekday )
 //[2]QString shortDayName ( int weekday, MonthNameType type )
@@ -670,18 +403,12 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 /*
 static QString shortMonthName ( int month )
 */
-void QDate_shortMonthName1 ()
-{
-  RQSTRING( QDate::shortMonthName ( PINT(1) ) );
-}
+$staticInternalMethod=|QString|shortMonthName,shortMonthName1|int
 
 /*
 static QString shortMonthName ( int month, MonthNameType type )
 */
-void QDate_shortMonthName2 ()
-{
-  RQSTRING( QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
+$staticInternalMethod=|QString|shortMonthName,shortMonthName2|int,QDate::MonthNameType
 
 //[1]QString shortMonthName ( int month )
 //[2]QString shortMonthName ( int month, MonthNameType type )
@@ -702,59 +429,6 @@ HB_FUNC_STATIC( QDATE_SHORTMONTHNAME )
   }
 }
 
-HB_FUNC_STATIC( QDATE_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QDATE_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QDATE_NEWFROM );
-}
-
-HB_FUNC_STATIC( QDATE_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QDATE_NEWFROM );
-}
-
-HB_FUNC_STATIC( QDATE_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QDATE_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

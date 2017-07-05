@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -41,31 +35,11 @@ CLASS QCollator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCollator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QCollator>
-#endif
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QCollator>
-#endif
-#endif
+$includes=5,2,0
 
 /*
 QCollator(const QLocale &locale = QLocale())
@@ -109,24 +83,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCOLLATOR_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,2,0
 
 /*
 void swap(QCollator &other)
@@ -156,236 +113,48 @@ HB_FUNC_STATIC( QCOLLATOR_SWAP )
 /*
 void setLocale(const QLocale &locale)
 */
-HB_FUNC_STATIC( QCOLLATOR_SETLOCALE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQLOCALE(1) )
-    {
-      obj->setLocale ( *PQLOCALE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setLocale|const QLocale &
 
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QCOLLATOR_LOCALE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->locale () );
-    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-#endif
-}
+$method=5,2,0|QLocale|locale|
 
 /*
 Qt::CaseSensitivity caseSensitivity() const
 */
-HB_FUNC_STATIC( QCOLLATOR_CASESENSITIVITY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->caseSensitivity () );
-  }
-#endif
-}
+$method=5,2,0|Qt::CaseSensitivity|caseSensitivity|
 
 /*
 void setCaseSensitivity(Qt::CaseSensitivity cs)
 */
-HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setCaseSensitivity|Qt::CaseSensitivity
 
 /*
 void setNumericMode(bool on)
 */
-HB_FUNC_STATIC( QCOLLATOR_SETNUMERICMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setNumericMode ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setNumericMode|bool
 
 /*
 bool numericMode() const
 */
-HB_FUNC_STATIC( QCOLLATOR_NUMERICMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->numericMode () );
-  }
-#endif
-}
+$method=5,2,0|bool|numericMode|
 
 /*
 void setIgnorePunctuation(bool on)
 */
-HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setIgnorePunctuation ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setIgnorePunctuation|bool
 
 /*
 bool ignorePunctuation() const
 */
-HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->ignorePunctuation () );
-  }
-#endif
-}
+$methpd=5,2,0|bool|ignorePunctuation|
 
 /*
 QCollatorSortKey sortKey(const QString &string) const
 */
-HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+$method=5,2,0|QCollatorSortKey|sortKey|const QString &
 
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLLATORSORTKEY", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
-
-HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QCOLLATOR_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QCOLLATOR_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCOLLATOR_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QCOLLATOR_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCOLLATOR_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QCOLLATOR_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

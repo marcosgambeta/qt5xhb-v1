@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -106,27 +100,11 @@ CLASS QLocale
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLocale
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QLocale>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QLocale>
-#endif
+$includes
 
 #include <QDate>
 #include <QStringList>
@@ -211,48 +189,17 @@ HB_FUNC_STATIC( QLOCALE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QLOCALE_DELETE )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QString amText () const
 */
-HB_FUNC_STATIC( QLOCALE_AMTEXT )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->amText () );
-  }
-}
+$method=|QString|amText|
 
 /*
 QString bcp47Name () const
 */
-HB_FUNC_STATIC( QLOCALE_BCP47NAME )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->bcp47Name () );
-  }
-}
+$method=|QString|bcp47Name|
 
 /*
 Country country () const
@@ -270,22 +217,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRY )
 /*
 QString createSeparatedList ( const QStringList & list ) const
 */
-HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      RQSTRING( obj->createSeparatedList ( PQSTRINGLIST(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|createSeparatedList|const QStringList &
 
 /*
 QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
@@ -476,41 +408,17 @@ HB_FUNC_STATIC( QLOCALE_MONTHNAME )
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QLOCALE_NAME )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
+$method=|QString|name|
 
 /*
 QString nativeCountryName () const
 */
-HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->nativeCountryName () );
-  }
-}
+$method=|QString|nativeCountryName|
 
 /*
 QString nativeLanguageName () const
 */
-HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->nativeLanguageName () );
-  }
-}
+$method=|QString|nativeLanguageName|
 
 /*
 QChar negativeSign () const
@@ -556,15 +464,7 @@ HB_FUNC_STATIC( QLOCALE_PERCENT )
 /*
 QString pmText () const
 */
-HB_FUNC_STATIC( QLOCALE_PMTEXT )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->pmText () );
-  }
-}
+$method=|QString|pmText|
 
 /*
 QChar positiveSign () const
@@ -1065,22 +965,7 @@ HB_FUNC_STATIC( QLOCALE_TOFLOAT )
 /*
 QString toLower ( const QString & str ) const
 */
-HB_FUNC_STATIC( QLOCALE_TOLOWER )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RQSTRING( obj->toLower ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|toLower|const QString &
 
 /*
 QString toString ( qlonglong i ) const
@@ -1473,35 +1358,12 @@ HB_FUNC_STATIC( QLOCALE_TOTIME )
 /*
 QString toUpper ( const QString & str ) const
 */
-HB_FUNC_STATIC( QLOCALE_TOUPPER )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->toUpper ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|toUpper|const QString &
 
 /*
 QStringList uiLanguages () const
 */
-HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->uiLanguages () );
-  }
-}
+$method=|QStringList|uiLanguages|
 
 /*
 QList<Qt::DayOfWeek> weekdays () const
@@ -1552,32 +1414,12 @@ HB_FUNC_STATIC( QLOCALE_C )
 /*
 static QString countryToString ( Country country )
 */
-HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
-{
-  if( ISNUM(1) )
-  {
-    RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|countryToString|QLocale::Country
 
 /*
 static QString languageToString ( Language language )
 */
-HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
-{
-  if( ISNUM(1) )
-  {
-    RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|languageToString|QLocale::Language
 
 /*
 static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
@@ -1628,33 +1470,12 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 /*
 static QString scriptToString ( Script script )
 */
-HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
-{
-  if( ISNUM(1) )
-  {
-    RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|scriptToString|QLocale::Script
 
 /*
 static void setDefault ( const QLocale & locale )
 */
-HB_FUNC_STATIC( QLOCALE_SETDEFAULT )
-{
-  if( ISQLOCALE(1) )
-  {
-    QLocale::setDefault ( *PQLOCALE(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setDefault|const QLocale &
 
 /*
 static QLocale system ()
@@ -1665,59 +1486,6 @@ HB_FUNC_STATIC( QLOCALE_SYSTEM )
   _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
 }
 
-HB_FUNC_STATIC( QLOCALE_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QLOCALE_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QLOCALE_NEWFROM );
-}
-
-HB_FUNC_STATIC( QLOCALE_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QLOCALE_NEWFROM );
-}
-
-HB_FUNC_STATIC( QLOCALE_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QLOCALE_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

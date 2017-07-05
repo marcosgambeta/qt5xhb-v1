@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -26,27 +20,11 @@ CLASS QTemporaryFile INHERIT QFile
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTemporaryFile
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QTemporaryFile>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QTemporaryFile>
-#endif
+$includes
 
 /*
 QTemporaryFile()
@@ -113,118 +91,37 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool autoRemove() const
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->autoRemove () );
-  }
-}
+$method=|bool|autoRemove|
 
 /*
 QString fileTemplate() const
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileTemplate () );
-  }
-}
+$method=|QString|fileTemplate|
 
 /*
 bool open()
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->open () );
-  }
-}
+$method=|bool|open|
 
 /*
 void setAutoRemove(bool b)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoRemove ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRemove|bool
 
 /*
 void setFileTemplate(const QString & name)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setFileTemplate ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileTemplate|const QString &
 
 /*
 virtual QString fileName() const
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 static QTemporaryFile * createNativeFile(QFile & file)

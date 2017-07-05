@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -42,27 +36,11 @@ CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIdentityProxyModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QIdentityProxyModel>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QIdentityProxyModel>
-#endif
+$includes
 
 #include <QItemSelection>
 
@@ -82,22 +60,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DELETE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 int columnCount(const QModelIndex& parent = QModelIndex()) const
@@ -386,24 +349,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 /*
 void setSourceModel(QAbstractItemModel* sourceModel)
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTITEMMODEL(1) )
-    {
-      obj->setSourceModel ( PQABSTRACTITEMMODEL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSourceModel|QAbstractItemModel *
 
 /*
 bool insertColumns(int column, int count, const QModelIndex& parent = QModelIndex())

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -45,27 +39,11 @@ CLASS QJsonValueRef
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QJsonValueRef
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QJsonValueRef>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QJsonValueRef>
-#endif
+$includes
 
 #include <QJsonArray>
 #include <QJsonObject>
@@ -107,178 +85,67 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
   }
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QJsonValue::Type type() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
+$method=|QJsonValue::Type|type|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool isBool() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isBool () );
-  }
-}
+$method=|bool|isBool|
 
 /*
 bool isDouble() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isDouble () );
-  }
-}
+$method=|bool|isDouble|
 
 /*
 bool isString() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isString () );
-  }
-}
+$method=|bool|isString|
 
 /*
 bool isArray() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isArray () );
-  }
-}
+$method=|bool|isArray|
 
 /*
 bool isObject() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isObject () );
-  }
-}
+$method=|bool|isObject|
 
 /*
 bool isUndefined() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isUndefined () );
-  }
-}
+$method=|bool|isUndefined|
 
 /*
 bool toBool() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->toBool () );
-  }
-}
+$method=|bool|toBool|
 
 /*
 int toInt() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->toInt () );
-  }
-}
+$method=|int|toInt|
 
 /*
 double toDouble() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->toDouble () );
-  }
-}
+$method=|double|toDouble|
 
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
+$method=|QString|toString|
 
 /*
 QJsonArray toArray() const
@@ -308,59 +175,6 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QJSONVALUEREF_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QJSONVALUEREF_NEWFROM );
-}
-
-HB_FUNC_STATIC( QJSONVALUEREF_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QJSONVALUEREF_NEWFROM );
-}
-
-HB_FUNC_STATIC( QJSONVALUEREF_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QJSONVALUEREF_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

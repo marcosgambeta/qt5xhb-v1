@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -64,27 +58,11 @@ CLASS QMetaObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QMetaObject>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QMetaObject>
-#endif
+$includes
 
 #include <QMetaClassInfo>
 #include <QMetaMethod>
@@ -92,22 +70,7 @@ RETURN
 #include <QMetaProperty>
 #include <QByteArray>
 
-HB_FUNC_STATIC( QMETAOBJECT_DELETE )
-{
-  QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QMetaClassInfo classInfo ( int index ) const
@@ -133,42 +96,17 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
 /*
 int classInfoCount () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->classInfoCount () );
-  }
-}
+$method=|int|classInfoCount|
 
 /*
 int classInfoOffset () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->classInfoOffset () );
-  }
-}
+$method=|int|classInfoOffset|
 
 /*
 const char * className () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const char * str1 = obj->className ();
-    hb_retc( str1 );
-  }
-}
+$method=|const char *|className|
 
 /*
 QMetaMethod constructor ( int index ) const
@@ -194,15 +132,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
 /*
 int constructorCount () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->constructorCount () );
-  }
-}
+$method=|int|constructorCount|
 
 /*
 QMetaEnum enumerator ( int index ) const
@@ -228,168 +158,47 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
 /*
 int enumeratorCount () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->enumeratorCount () );
-  }
-}
+$method=|int|enumeratorCount|
 
 /*
 int enumeratorOffset () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->enumeratorOffset () );
-  }
-}
+$method=|int|enumeratorOffset|
 
 /*
 int indexOfClassInfo ( const char * name ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOfClassInfo ( PCONSTCHAR(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOfClassInfo|const char *
 
 /*
 int indexOfConstructor ( const char * constructor ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOfConstructor ( PCONSTCHAR(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOfConstructor|const char *
 
 /*
 int indexOfEnumerator ( const char * name ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOfEnumerator ( PCONSTCHAR(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOfEnumerator|const char *
 
 /*
 int indexOfMethod ( const char * method ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOfMethod ( PCONSTCHAR(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOfMethod|const char *
 
 /*
 int indexOfProperty ( const char * name ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOfProperty ( PCONSTCHAR(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOfProperty|const char *
 
 /*
 int indexOfSignal ( const char * signal ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOfSignal ( PCONSTCHAR(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOfSignal|const char *
 
 /*
 int indexOfSlot ( const char * slot ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOfSlot ( PCONSTCHAR(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOfSlot|const char *
 
 /*
 QMetaMethod method ( int index ) const
@@ -415,28 +224,12 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
 /*
 int methodCount () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->methodCount () );
-  }
-}
+$method=|int|methodCount|
 
 /*
 int methodOffset () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->methodOffset () );
-  }
-}
+$method=|int|methodOffset|
 
 /*
 QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() ) const
@@ -476,28 +269,12 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
 /*
 int propertyCount () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->propertyCount () );
-  }
-}
+$method=|int|propertyCount|
 
 /*
 int propertyOffset () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->propertyOffset () );
-  }
-}
+$method=|int|propertyOffset|
 
 /*
 const QMetaObject * superClass () const
@@ -530,33 +307,12 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
 /*
 static bool checkConnectArgs ( const char * signal, const char * method )
 */
-HB_FUNC_STATIC( QMETAOBJECT_CHECKCONNECTARGS )
-{
-  if( ISCHAR(1) && ISCHAR(2) )
-  {
-    RBOOL( QMetaObject::checkConnectArgs ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|checkConnectArgs|const char *,const char *
 
 /*
 static void connectSlotsByName ( QObject * object )
 */
-HB_FUNC_STATIC( QMETAOBJECT_CONNECTSLOTSBYNAME )
-{
-  if( ISQOBJECT(1) )
-  {
-    QMetaObject::connectSlotsByName ( PQOBJECT(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|connectSlotsByName|QObject *
 
 /*
 static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
@@ -651,59 +407,6 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
   }
 }
 
-HB_FUNC_STATIC( QMETAOBJECT_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QMETAOBJECT_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QMETAOBJECT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QMETAOBJECT_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QMETAOBJECT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QMETAOBJECT_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QMETAOBJECT_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

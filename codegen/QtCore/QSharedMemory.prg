@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -33,27 +27,11 @@ CLASS QSharedMemory INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSharedMemory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QSharedMemory>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QSharedMemory>
-#endif
+$includes
 
 /*
 QSharedMemory(QObject *parent = 0)
@@ -92,22 +70,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void setKey(const QString &key)
@@ -134,50 +97,17 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 /*
 QString key() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->key () );
-  }
-}
+$method=|QString|key|
 
 /*
 void setNativeKey(const QString &key)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setNativeKey ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNativeKey|const QString &
 
 /*
 QString nativeKey() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->nativeKey () );
-  }
-}
+$method=|QString|nativeKey|
 
 /*
 bool create(int size, AccessMode mode = ReadWrite)
@@ -237,28 +167,12 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 /*
 bool isAttached() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isAttached () );
-  }
-}
+$method=|bool|isAttached|
 
 /*
 bool detach()
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->detach () );
-  }
-}
+$method=|bool|detach|
 
 /*
 void *data()
@@ -276,28 +190,12 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 /*
 bool lock()
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->lock () );
-  }
-}
+$method=|bool|lock|
 
 /*
 bool unlock()
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->unlock () );
-  }
-}
+$method=|bool|unlock|
 
 /*
 SharedMemoryError error() const
@@ -315,14 +213,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
-{
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 #pragma ENDDUMP

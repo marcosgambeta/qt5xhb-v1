@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -47,27 +41,11 @@ CLASS QItemSelectionModel INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemSelectionModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QItemSelectionModel>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QItemSelectionModel>
-#endif
+$includes
 
 /*
 QItemSelectionModel(QAbstractItemModel *model)
@@ -106,22 +84,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QModelIndex currentIndex() const
@@ -140,115 +103,32 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
 /*
 bool isSelected(const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      RBOOL( obj->isSelected ( *PQMODELINDEX(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isSelected|const QModelIndex &
 
 /*
 bool isRowSelected(int row, const QModelIndex &parent) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQMODELINDEX(2) )
-    {
-      RBOOL( obj->isRowSelected ( PINT(1), *PQMODELINDEX(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isRowSelected|int,const QModelIndex &
 
 /*
 bool isColumnSelected(int column, const QModelIndex &parent) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQMODELINDEX(2) )
-    {
-      RBOOL( obj->isColumnSelected ( PINT(1), *PQMODELINDEX(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isColumnSelected|int,const QModelIndex &
 
 /*
 bool rowIntersectsSelection(int row, const QModelIndex &parent) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQMODELINDEX(2) )
-    {
-      RBOOL( obj->rowIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|rowIntersectsSelection|int,const QModelIndex &
 
 /*
 bool columnIntersectsSelection(int column, const QModelIndex &parent) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQMODELINDEX(2) )
-    {
-      RBOOL( obj->columnIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|columnIntersectsSelection|int,const QModelIndex &
 
 /*
 bool hasSelection() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasSelection () );
-  }
-}
+$method=|bool|hasSelection|
 
 /*
 QModelIndexList selectedIndexes() const
@@ -425,25 +305,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 /*
 virtual void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) && ISNUM(2) )
-    {
-      int par2 = hb_parni(2);
-      obj->setCurrentIndex ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 /*
 virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
@@ -499,61 +361,21 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 /*
 virtual void clear()
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 virtual void reset()
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->reset ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|reset|
 
 /*
 void clearSelection()
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearSelection ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearSelection|
 
 /*
 virtual void clearCurrentIndex()
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARCURRENTINDEX )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearCurrentIndex ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearCurrentIndex|
 
 #pragma ENDDUMP

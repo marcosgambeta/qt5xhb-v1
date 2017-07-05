@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -72,27 +66,11 @@ CLASS QUrl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUrl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QUrl>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QUrl>
-#endif
+$includes
 
 #include <QStringList>
 
@@ -161,213 +139,77 @@ HB_FUNC_STATIC( QURL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QURL_DELETE )
-{
-  QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QString authority () const
 */
-HB_FUNC_STATIC( QURL_AUTHORITY )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->authority () );
-  }
-}
+$method=|QString|authority|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QURL_CLEAR )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QURL_ERRORSTRING )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 /*
 QString fragment () const
 */
-HB_FUNC_STATIC( QURL_FRAGMENT )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fragment () );
-  }
-}
+$method=|QString|fragment|
 
 /*
 bool hasFragment () const
 */
-HB_FUNC_STATIC( QURL_HASFRAGMENT )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasFragment () );
-  }
-}
+$method=|bool|hasFragment|
 
 /*
 bool hasQuery () const
 */
-HB_FUNC_STATIC( QURL_HASQUERY )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasQuery () );
-  }
-}
+$method=|bool|hasQuery|
 
 /*
 QString host () const
 */
-HB_FUNC_STATIC( QURL_HOST )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->host () );
-  }
-}
+$method=|QString|host|
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QURL_ISEMPTY )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 bool isLocalFile () const
 */
-HB_FUNC_STATIC( QURL_ISLOCALFILE )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLocalFile () );
-  }
-}
+$method=|bool|isLocalFile|
 
 /*
 bool isParentOf ( const QUrl & childUrl ) const
 */
-HB_FUNC_STATIC( QURL_ISPARENTOF )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      RBOOL( obj->isParentOf ( *PQURL(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isParentOf|const QUrl &
 
 /*
 bool isRelative () const
 */
-HB_FUNC_STATIC( QURL_ISRELATIVE )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRelative () );
-  }
-}
+$method=|bool|isRelative|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QURL_ISVALID )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QString password () const
 */
-HB_FUNC_STATIC( QURL_PASSWORD )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->password () );
-  }
-}
+$method=|QString|password|
 
 /*
 QString path () const
 */
-HB_FUNC_STATIC( QURL_PATH )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
+$method=|QString|path|
 
 /*
 int port () const
@@ -417,190 +259,47 @@ HB_FUNC_STATIC( QURL_PORT )
 /*
 QUrl resolved ( const QUrl & relative ) const
 */
-HB_FUNC_STATIC( QURL_RESOLVED )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      QUrl * ptr = new QUrl( obj->resolved ( *PQURL(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QUrl|resolved|const QUrl &
 
 /*
 QString scheme () const
 */
-HB_FUNC_STATIC( QURL_SCHEME )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->scheme () );
-  }
-}
+$method=|QString|scheme|
 
 /*
 void setAuthority ( const QString & authority )
 */
-HB_FUNC_STATIC( QURL_SETAUTHORITY )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setAuthority ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAuthority|const QString &
 
 /*
 void setFragment ( const QString & fragment )
 */
-HB_FUNC_STATIC( QURL_SETFRAGMENT )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setFragment ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFragment|const QString &
 
 /*
 void setHost ( const QString & host )
 */
-HB_FUNC_STATIC( QURL_SETHOST )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setHost ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHost|const QString &
 
 /*
 void setPassword ( const QString & password )
 */
-HB_FUNC_STATIC( QURL_SETPASSWORD )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setPassword ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPassword|const QString &
 
 /*
 void setPath ( const QString & path )
 */
-HB_FUNC_STATIC( QURL_SETPATH )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setPath ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPath|const QString &
 
 /*
 void setPort ( int port )
 */
-HB_FUNC_STATIC( QURL_SETPORT )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setPort ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPort|int
 
 /*
 void setScheme ( const QString & scheme )
 */
-HB_FUNC_STATIC( QURL_SETSCHEME )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setScheme ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScheme|const QString &
 
 /*
 void setUrl ( const QString & url )
@@ -654,46 +353,12 @@ HB_FUNC_STATIC( QURL_SETURL )
 /*
 void setUserInfo ( const QString & userInfo )
 */
-HB_FUNC_STATIC( QURL_SETUSERINFO )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setUserInfo ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUserInfo|const QString &
 
 /*
 void setUserName ( const QString & userName )
 */
-HB_FUNC_STATIC( QURL_SETUSERNAME )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setUserName ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUserName|const QString &
 
 /*
 void swap ( QUrl & other )
@@ -743,15 +408,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
 /*
 QString toLocalFile () const
 */
-HB_FUNC_STATIC( QURL_TOLOCALFILE )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toLocalFile () );
-  }
-}
+$method=|QString|toLocalFile|
 
 /*
 QString toString ( FormattingOptions options = None ) const
@@ -777,56 +434,22 @@ HB_FUNC_STATIC( QURL_TOSTRING )
 /*
 QString topLevelDomain () const
 */
-HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->topLevelDomain () );
-  }
-}
+$method=|QString|topLevelDomain|
 
 /*
 QString userInfo () const
 */
-HB_FUNC_STATIC( QURL_USERINFO )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->userInfo () );
-  }
-}
+$method=|QString|userInfo|
 
 /*
 QString userName () const
 */
-HB_FUNC_STATIC( QURL_USERNAME )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->userName () );
-  }
-}
+$method=|QString|userName|
 
 /*
 static QString fromAce ( const QByteArray & domain )
 */
-HB_FUNC_STATIC( QURL_FROMACE )
-{
-  if( ISQBYTEARRAY(1) )
-  {
-    RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|fromAce|const QByteArray &
 
 /*
 static QUrl fromEncoded ( const QByteArray & input )
@@ -868,65 +491,22 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
 /*
 static QUrl fromLocalFile ( const QString & localFile )
 */
-HB_FUNC_STATIC( QURL_FROMLOCALFILE )
-{
-  if( ISCHAR(1) )
-  {
-    QUrl * ptr = new QUrl( QUrl::fromLocalFile ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QUrl|fromLocalFile|const QString &
 
 /*
 static QString fromPercentEncoding ( const QByteArray & input )
 */
-HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
-{
-  if( ISQBYTEARRAY(1) )
-  {
-    RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|fromPercentEncoding|const QByteArray &
 
 /*
 static QUrl fromUserInput ( const QString & userInput )
 */
-HB_FUNC_STATIC( QURL_FROMUSERINPUT )
-{
-  if( ISCHAR(1) )
-  {
-    QUrl * ptr = new QUrl( QUrl::fromUserInput ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QUrl|fromUserInput|const QString &
 
 /*
 static void setIdnWhitelist ( const QStringList & list )
 */
-HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
-{
-  if( ISARRAY(1) )
-  {
-    QUrl::setIdnWhitelist ( PQSTRINGLIST(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setIdnWhitelist|const QStringList &
 
 /*
 static QByteArray toAce ( const QString & domain )
@@ -962,59 +542,6 @@ HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
   }
 }
 
-HB_FUNC_STATIC( QURL_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QURL_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QURL_NEWFROM );
-}
-
-HB_FUNC_STATIC( QURL_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QURL_NEWFROM );
-}
-
-HB_FUNC_STATIC( QURL_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QURL_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

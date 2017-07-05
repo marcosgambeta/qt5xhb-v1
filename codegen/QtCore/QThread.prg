@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -45,27 +39,11 @@ CLASS QThread INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QThread
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QThread>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QThread>
-#endif
+$includes
 
 /*
 QThread(QObject * parent = 0)
@@ -83,22 +61,7 @@ HB_FUNC_STATIC( QTHREAD_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTHREAD_DELETE )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QAbstractEventDispatcher * eventDispatcher() const
@@ -117,50 +80,17 @@ HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
 /*
 void exit(int returnCode = 0)
 */
-HB_FUNC_STATIC( QTHREAD_EXIT )
-{
-  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      obj->exit ( OPINT(1,0) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|exit|int=0
 
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QTHREAD_ISFINISHED )
-{
-  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isFinished () );
-  }
-}
+$method=|bool|isFinished|
 
 /*
 bool isRunning() const
 */
-HB_FUNC_STATIC( QTHREAD_ISRUNNING )
-{
-  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRunning () );
-  }
-}
+$method=|bool|isRunning|
 
 /*
 Priority priority() const
@@ -258,37 +188,12 @@ HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 /*
 virtual bool event(QEvent * event)
 */
-HB_FUNC_STATIC( QTHREAD_EVENT )
-{
-  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQEVENT(1) )
-    {
-      RBOOL( obj->event ( PQEVENT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|event|QEvent *
 
 /*
 void quit()
 */
-HB_FUNC_STATIC( QTHREAD_QUIT )
-{
-  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->quit ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|quit|
 
 /*
 void start(Priority priority = InheritPriority)

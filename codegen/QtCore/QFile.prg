@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -51,27 +45,11 @@ CLASS QFile INHERIT QFileDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFile
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QFile>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QFile>
-#endif
+$includes
 
 /*
 QFile()
@@ -138,22 +116,7 @@ HB_FUNC_STATIC( QFILE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFILE_DELETE )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool copy ( const QString & newName )
@@ -251,41 +214,17 @@ HB_FUNC_STATIC( QFILE_EXISTS )
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QFILE_FILENAME )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 bool flush ()
 */
-HB_FUNC_STATIC( QFILE_FLUSH )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->flush () );
-  }
-}
+$method=|bool|flush|
 
 /*
 int handle () const
 */
-HB_FUNC_STATIC( QFILE_HANDLE )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->handle () );
-  }
-}
+$method=|int|handle|
 
 /*
 bool link ( const QString & linkName )
@@ -711,89 +650,32 @@ HB_FUNC_STATIC( QFILE_UNSETERROR )
 /*
 virtual bool atEnd () const
 */
-HB_FUNC_STATIC( QFILE_ATEND )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
+$method=|bool|atEnd|
 
 /*
 virtual void close ()
 */
-HB_FUNC_STATIC( QFILE_CLOSE )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->close ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|close|
 
 /*
 virtual bool isSequential () const
 */
-HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSequential () );
-  }
-}
+$method=|bool|isSequential|
 
 /*
 virtual qint64 pos () const
 */
-HB_FUNC_STATIC( QFILE_POS )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
+$method=|qint64|pos|
 
 /*
 virtual bool seek ( qint64 pos )
 */
-HB_FUNC_STATIC( QFILE_SEEK )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->seek ( PQINT64(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|seek|qint64
 
 /*
 qint64 size () const
 */
-HB_FUNC_STATIC( QFILE_SIZE )
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
+$method=|qint64|size|
 
 /*
 static QString decodeName ( const QByteArray & localFileName )

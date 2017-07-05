@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -34,27 +28,11 @@ CLASS QLibrary INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLibrary
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QLibrary>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QLibrary>
-#endif
+$includes
 
 /*
 QLibrary(QObject *parent = 0)
@@ -121,96 +99,32 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QLIBRARY_DELETE )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool load()
 */
-HB_FUNC_STATIC( QLIBRARY_LOAD )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load () );
-  }
-}
+$method=|bool|load|
 
 /*
 bool unload()
 */
-HB_FUNC_STATIC( QLIBRARY_UNLOAD )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->unload () );
-  }
-}
+$method=|bool|unload|
 
 /*
 bool isLoaded() const
 */
-HB_FUNC_STATIC( QLIBRARY_ISLOADED )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLoaded () );
-  }
-}
+$method=|bool|isLoaded|
 
 /*
 void setFileName(const QString &fileName)
 */
-HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setFileName ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileName|const QString &
 
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QLIBRARY_FILENAME )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 void setFileNameAndVersion(const QString &fileName, int verNum)
@@ -264,51 +178,17 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 /*
 void setLoadHints(LoadHints hints)
 */
-HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setLoadHints ( (QLibrary::LoadHints) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLoadHints|QLibrary::LoadHints
 
 /*
 LoadHints loadHints() const
 */
-HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->loadHints () );
-  }
-}
+$method=|QLibrary::LoadHints|loadHints|
 
 /*
 QFunctionPointer resolve(const char *symbol) // TODO: corrigir implementacao do metodo
@@ -383,16 +263,6 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 /*
 static bool isLibrary(const QString &fileName)
 */
-HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
-{
-  if( ISCHAR(1) )
-  {
-    RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|isLibrary|const QString &
 
 #pragma ENDDUMP

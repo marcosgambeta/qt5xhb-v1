@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -36,67 +30,18 @@ CLASS QAbstractTransition INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractTransition
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
+$includes
 
-#ifndef __XHARBOUR__
-#include <QAbstractTransition>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAbstractTransition>
-#endif
-
-HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTANIMATION(1) )
-    {
-      QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-      obj->addAnimation ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addAnimation|QAbstractAnimation *
 
 /*
 QList<QAbstractAnimation *> animations () const
@@ -159,48 +104,12 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 /*
 void removeAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTANIMATION(1) )
-    {
-      QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-      obj->removeAnimation ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeAnimation|QAbstractAnimation *
 
 /*
 void setTargetState ( QAbstractState * target )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTSTATE(1) )
-    {
-      QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
-      obj->setTargetState ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTargetState|QAbstractState *
 
 /*
 void setTargetStates ( const QList<QAbstractState *> & targets )

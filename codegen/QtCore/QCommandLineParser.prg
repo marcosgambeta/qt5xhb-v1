@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -49,31 +43,11 @@ CLASS QCommandLineParser
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCommandLineParser
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QCommandLineParser>
-#endif
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QCommandLineParser>
-#endif
-#endif
+$includes=5,2,0
 
 /*
 QCommandLineParser()
@@ -86,141 +60,37 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,2,0
 
 /*
 void setSingleDashWordOptionMode(SingleDashWordOptionMode parsingMode)
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setSingleDashWordOptionMode ( (QCommandLineParser::SingleDashWordOptionMode) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setSingleDashWordOptionMode|QCommandLineParser::SingleDashWordOptionMode
 
 /*
 bool addOption(const QCommandLineOption &commandLineOption)
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDOPTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQCOMMANDLINEOPTION(1) )
-    {
-      RBOOL( obj->addOption ( *PQCOMMANDLINEOPTION(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=5,2,0|bool|addOption|const QCommandLineOption &
 
 /*
 QCommandLineOption addVersionOption()
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDVERSIONOPTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QCommandLineOption * ptr = new QCommandLineOption( obj->addVersionOption () );
-    _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
-  }
-#endif
-}
+$method=5,2,0|QCommandLineOption|addVersionOption|
 
 /*
 QCommandLineOption addHelpOption()
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDHELPOPTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QCommandLineOption * ptr = new QCommandLineOption( obj->addHelpOption () );
-    _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
-  }
-#endif
-}
+$method=5,2,0|QCommandLineOption|addHelpOption|
 
 /*
 void setApplicationDescription(const QString &description)
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETAPPLICATIONDESCRIPTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setApplicationDescription ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setApplicationDescription|const QString &
 
 /*
 QString applicationDescription() const
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_APPLICATIONDESCRIPTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->applicationDescription () );
-  }
-#endif
-}
+$method=5,2,0|QString|applicationDescription|
 
 /*
 void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
@@ -249,53 +119,17 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
 /*
 void clearPositionalArguments()
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_CLEARPOSITIONALARGUMENTS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearPositionalArguments ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|clearPositionalArguments|
 
 /*
 void process(const QStringList &arguments)
 */
-void QCommandLineParser_process1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->process ( PQSTRINGLIST(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|process,process1|const QStringList &
 
 /*
 void process(const QCoreApplication &app)
 */
-void QCommandLineParser_process2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->process ( *PQCOREAPPLICATION(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|process,process2|const QCoreApplication &
 
 //[1]void process(const QStringList &arguments)
 //[2]void process(const QCoreApplication &app)
@@ -319,69 +153,22 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 /*
 bool parse(const QStringList &arguments)
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_PARSE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      RBOOL( obj->parse ( PQSTRINGLIST(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=5,2,0|bool|parse|const QStringList &
 
 /*
 QString errorText() const
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_ERRORTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorText () );
-  }
-#endif
-}
+$method=5,2,0|QString|errorText|
 
 /*
 bool isSet(const QString &name) const
 */
-void QCommandLineParser_isSet1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSet ( PQSTRING(1) ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|bool|isSet,isSet1|const QString &
 
 /*
 bool isSet(const QCommandLineOption &option) const
 */
-void QCommandLineParser_isSet2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSet ( *PQCOMMANDLINEOPTION(1) ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|bool|isSet,isSet2|const QCommandLineOption &
 
 //[1]bool isSet(const QString &name) const
 //[2]bool isSet(const QCommandLineOption &option) const
@@ -405,32 +192,12 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
 /*
 QString value(const QString &name) const
 */
-void QCommandLineParser_value1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->value ( PQSTRING(1) ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|QString|value,value1|const QString &
 
 /*
 QString value(const QCommandLineOption &option) const
 */
-void QCommandLineParser_value2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->value ( *PQCOMMANDLINEOPTION(1) ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|QString|value,value2|const QCommandLineOption &
 
 //[1]QString value(const QString &name) const
 //[2]QString value(const QCommandLineOption &option) const
@@ -454,32 +221,12 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
 /*
 QStringList values(const QString &name) const
 */
-void QCommandLineParser_values1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->values ( PQSTRING(1) ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|QStringList|values,values1|const QString &
 
 /*
 QStringList values(const QCommandLineOption &option) const
 */
-void QCommandLineParser_values2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->values ( *PQCOMMANDLINEOPTION(1) ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|QStringList|values,values2|const QCommandLineOption &
 
 //[1]QStringList values(const QString &name) const
 //[2]QStringList values(const QCommandLineOption &option) const
@@ -503,140 +250,28 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
 /*
 QStringList positionalArguments() const
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_POSITIONALARGUMENTS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->positionalArguments () );
-  }
-#endif
-}
+$method=5,2,0|QStringList|positionalArguments|
 
 /*
 QStringList optionNames() const
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_OPTIONNAMES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->optionNames () );
-  }
-#endif
-}
+$method=5,2,0|QStringList|optionNames|
 
 /*
 QStringList unknownOptionNames() const
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_UNKNOWNOPTIONNAMES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->unknownOptionNames () );
-  }
-#endif
-}
+$method=5,2,0|QStringList|unknownOptionNames|
 
 /*
 Q_NORETURN void showHelp(int exitCode = 0)
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_SHOWHELP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      obj->showHelp ( OPINT(1,0) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|showHelp|int=0
 
 /*
 QString helpText() const
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_HELPTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
+$method=5,2,0|QString|helpText|
 
-  if( obj )
-  {
-    RQSTRING( obj->helpText () );
-  }
-#endif
-}
-
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QCOMMANDLINEPARSER_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QCOMMANDLINEPARSER_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

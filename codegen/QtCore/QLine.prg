@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -45,27 +39,11 @@ CLASS QLine
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QLine>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QLine>
-#endif
+$includes
 
 /*
 QLine()
@@ -118,22 +96,7 @@ HB_FUNC_STATIC( QLINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QLINE_DELETE )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QPoint p1() const
@@ -166,181 +129,57 @@ HB_FUNC_STATIC( QLINE_P2 )
 /*
 int x1() const
 */
-HB_FUNC_STATIC( QLINE_X1 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->x1 () );
-  }
-}
+$method=|int|x1|
 
 /*
 int x2() const
 */
-HB_FUNC_STATIC( QLINE_X2 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->x2 () );
-  }
-}
+$method=|int|x2|
 
 /*
 int y1() const
 */
-HB_FUNC_STATIC( QLINE_Y1 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->y1 () );
-  }
-}
+$method=|int|y1|
 
 /*
 int y2() const
 */
-HB_FUNC_STATIC( QLINE_Y2 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->y2 () );
-  }
-}
+$method=|int|y2|
 
 /*
 int dx() const
 */
-HB_FUNC_STATIC( QLINE_DX )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->dx () );
-  }
-}
+$method=|int|dx|
 
 /*
 int dy() const
 */
-HB_FUNC_STATIC( QLINE_DY )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->dy () );
-  }
-}
+$method=|int|dy|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QLINE_ISNULL )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 void setP1(const QPoint & p1)
 */
-HB_FUNC_STATIC( QLINE_SETP1 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->setP1 ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setP1|const QPoint &
 
 /*
 void setP2(const QPoint & p2)
 */
-HB_FUNC_STATIC( QLINE_SETP2 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->setP2 ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setP2|const QPoint &
 
 /*
 void setLine(int x1, int y1, int x2, int y2)
 */
-HB_FUNC_STATIC( QLINE_SETLINE )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      obj->setLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLine|int,int,int,int
 
 /*
 void setPoints(const QPoint & p1, const QPoint & p2)
 */
-HB_FUNC_STATIC( QLINE_SETPOINTS )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) && ISQPOINT(2) )
-    {
-      obj->setPoints ( *PQPOINT(1), *PQPOINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPoints|const QPoint &,const QPoint &
 
 /*
 void translate(const QPoint & offset)
@@ -438,59 +277,6 @@ HB_FUNC_STATIC( QLINE_TRANSLATED )
   }
 }
 
-HB_FUNC_STATIC( QLINE_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QLINE_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QLINE_NEWFROM );
-}
-
-HB_FUNC_STATIC( QLINE_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QLINE_NEWFROM );
-}
-
-HB_FUNC_STATIC( QLINE_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QLINE_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

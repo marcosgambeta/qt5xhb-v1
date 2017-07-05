@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -45,27 +39,11 @@ CLASS QStateMachine INHERIT QState
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStateMachine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QStateMachine>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QStateMachine>
-#endif
+$includes
 
 /*
 QStateMachine(QObject *parent = 0)
@@ -104,68 +82,17 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
-{
-  QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addState(QAbstractState *state)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTSTATE(1) )
-    {
-      QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
-      obj->addState ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addState|QAbstractState *
 
 /*
 void removeState(QAbstractState *state)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTSTATE(1) )
-    {
-      QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
-      obj->removeState ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeState|QAbstractState *
 
 /*
 Error error() const
@@ -183,101 +110,32 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 /*
 void clearError()
 */
-HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearError ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearError|
 
 /*
 bool isRunning() const
 */
-HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRunning () );
-  }
-}
+$method=|bool|isRunning|
 
 /*
 bool isAnimated() const
 */
-HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isAnimated () );
-  }
-}
+$method=|bool|isAnimated|
 
 /*
 void setAnimated(bool enabled)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAnimated ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAnimated|bool
 
 /*
 void addDefaultAnimation(QAbstractAnimation *animation)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_ADDDEFAULTANIMATION )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTANIMATION(1) )
-    {
-      QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-      obj->addDefaultAnimation ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addDefaultAnimation|QAbstractAnimation *
 
 /*
 QList<QAbstractAnimation *> defaultAnimations() const
@@ -326,60 +184,17 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 /*
 void removeDefaultAnimation(QAbstractAnimation *animation)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTANIMATION(1) )
-    {
-      QAbstractAnimation * par1 = (QAbstractAnimation *) _qt5xhb_itemGetPtr(1);
-      obj->removeDefaultAnimation ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeDefaultAnimation|QAbstractAnimation *
 
 /*
 QState::RestorePolicy globalRestorePolicy() const
 */
-HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->globalRestorePolicy () );
-  }
-}
+$method=|QState::RestorePolicy|globalRestorePolicy|
 
 /*
 void setGlobalRestorePolicy(QState::RestorePolicy restorePolicy)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setGlobalRestorePolicy ( (QState::RestorePolicy) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGlobalRestorePolicy|QState::RestorePolicy
 
 /*
 void postEvent(QEvent *event, EventPriority priority = NormalPriority)
@@ -408,92 +223,26 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 /*
 int postDelayedEvent(QEvent *event, int delay)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQEVENT(1) && ISNUM(2) )
-    {
-      QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->postDelayedEvent ( par1, PINT(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|postDelayedEvent|QEvent *,int
 
 /*
 bool cancelDelayedEvent(int id)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->cancelDelayedEvent ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|cancelDelayedEvent|int
 
 /*
 bool eventFilter(QObject *watched, QEvent *event)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) && ISQEVENT(2) )
-    {
-      RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|eventFilter|QObject *,QEvent *
 
 /*
 void start()
 */
-HB_FUNC_STATIC( QSTATEMACHINE_START )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->start ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|start|
 
 /*
 void stop()
 */
-HB_FUNC_STATIC( QSTATEMACHINE_STOP )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->stop ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stop|
 
 #pragma ENDDUMP

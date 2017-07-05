@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -25,27 +19,11 @@ CLASS QEventLoop INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEventLoop
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QEventLoop>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QEventLoop>
-#endif
+$includes
 
 /*
 QEventLoop ( QObject * parent = 0 )
@@ -63,22 +41,7 @@ HB_FUNC_STATIC( QEVENTLOOP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEVENTLOOP_DELETE )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 int exec ( ProcessEventsFlags flags = AllEvents )
@@ -104,37 +67,12 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 /*
 void exit ( int returnCode = 0 )
 */
-HB_FUNC_STATIC( QEVENTLOOP_EXIT )
-{
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      obj->exit ( OPINT(1,0) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|exit|int=0
 
 /*
 bool isRunning () const
 */
-HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
-{
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRunning () );
-  }
-}
+$method=|bool|isRunning|
 
 /*
 bool processEvents ( ProcessEventsFlags flags = AllEvents )
@@ -188,31 +126,11 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 /*
 void wakeUp ()
 */
-HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
-{
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->wakeUp ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|wakeUp|
 
 /*
 void quit ()
 */
-HB_FUNC_STATIC( QEVENTLOOP_QUIT )
-{
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->quit ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|quit|
 
 #pragma ENDDUMP

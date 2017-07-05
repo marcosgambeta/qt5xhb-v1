@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -47,31 +41,11 @@ CLASS QStorageInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStorageInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QStorageInfo>
-#endif
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QStorageInfo>
-#endif
-#endif
+$includes=5,4,0
 
 /*
 QStorageInfo()
@@ -146,24 +120,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTORAGEINFO_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,4,0
 
 /*
 void swap(QStorageInfo &other)
@@ -193,41 +150,12 @@ HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
 /*
 void setPath(const QString &path)
 */
-HB_FUNC_STATIC( QSTORAGEINFO_SETPATH )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setPath ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|setPath|const QString &
 
 /*
 QString rootPath() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->rootPath () );
-  }
-#endif
-}
+$method=5,4,0|QString|rootPath|
 
 /*
 QByteArray device() const
@@ -264,154 +192,52 @@ HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_NAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-#endif
-}
+$method=5,4,0|QString|name|
 
 /*
 QString displayName() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->displayName () );
-  }
-#endif
-}
+$method=5,4,0|QString|displayName|
 
 /*
 qint64 bytesTotal() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_BYTESTOTAL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->bytesTotal () );
-  }
-#endif
-}
+$method=5,4,0|qint64|bytesTotal|
 
 /*
 qint64 bytesFree() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_BYTESFREE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->bytesFree () );
-  }
-#endif
-}
+$method=5,4,0|qint64|bytesFree|
 
 /*
 qint64 bytesAvailable() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_BYTESAVAILABLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->bytesAvailable () );
-  }
-#endif
-}
+$method=5,4,0|qint64|bytesAvailable|
 
 /*
 bool isRoot() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_ISROOT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRoot () );
-  }
-#endif
-}
+$method=5,4,0|bool|isRoot|
 
 /*
 bool isReadOnly() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_ISREADONLY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-#endif
-}
+$method=5,4,0|bool|isReadOnly|
 
 /*
 bool isReady() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_ISREADY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isReady () );
-  }
-#endif
-}
+$method=5,4,0|bool|isReady|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_ISVALID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-#endif
-}
+$method=5,4,0|bool|isValid|
 
 /*
 void refresh()
 */
-HB_FUNC_STATIC( QSTORAGEINFO_REFRESH )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->refresh ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|refresh|
 
 /*
 static QList<QStorageInfo> mountedVolumes()
@@ -469,59 +295,6 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
 #endif
 }
 
-HB_FUNC_STATIC( QSTORAGEINFO_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QSTORAGEINFO_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QSTORAGEINFO_NEWFROM );
-}
-
-HB_FUNC_STATIC( QSTORAGEINFO_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QSTORAGEINFO_NEWFROM );
-}
-
-HB_FUNC_STATIC( QSTORAGEINFO_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QSTORAGEINFO_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

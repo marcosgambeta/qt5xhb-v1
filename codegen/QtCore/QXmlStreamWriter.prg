@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -57,27 +51,11 @@ CLASS QXmlStreamWriter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamWriter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QXmlStreamWriter>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QXmlStreamWriter>
-#endif
+$includes
 
 /*
 QXmlStreamWriter()
@@ -145,48 +123,17 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLSTREAMWRITER_DELETE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool autoFormatting() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTING )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->autoFormatting () );
-  }
-}
+$method=|bool|autoFormatting|
 
 /*
 int autoFormattingIndent() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTINGINDENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->autoFormattingIndent () );
-  }
-}
+$method=|int|autoFormattingIndent|
 
 /*
 QTextCodec * codec() const
@@ -219,59 +166,17 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
 /*
 bool hasError() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasError () );
-  }
-}
+$method=|bool|hasError|
 
 /*
 void setAutoFormatting(bool enable)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTING )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoFormatting ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoFormatting|bool
 
 /*
 void setAutoFormattingIndent(int spacesOrTabs)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAutoFormattingIndent ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoFormattingIndent|int
 
 /*
 void setCodec(QTextCodec * codec)
@@ -326,24 +231,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 /*
 void setDevice(QIODevice * device)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) )
-    {
-      obj->setDevice ( PQIODEVICE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDevice|QIODevice *
 
 /*
 void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
@@ -417,156 +305,37 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 /*
 void writeAttributes(const QXmlStreamAttributes & attributes)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQXMLSTREAMATTRIBUTES(1) )
-    {
-      obj->writeAttributes ( *PQXMLSTREAMATTRIBUTES(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeAttributes|const QXmlStreamAttributes &
 
 /*
 void writeCDATA(const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECDATA )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->writeCDATA ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeCDATA|const QString &
 
 /*
 void writeCharacters(const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECHARACTERS )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->writeCharacters ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeCharacters|const QString &
 
 /*
 void writeComment(const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECOMMENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->writeComment ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeComment|const QString &
 
 /*
 void writeCurrentToken(const QXmlStreamReader & reader)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQXMLSTREAMREADER(1) )
-    {
-      obj->writeCurrentToken ( *PQXMLSTREAMREADER(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeCurrentToken|const QXmlStreamReader &
 
 /*
 void writeDTD(const QString & dtd)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDTD )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->writeDTD ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeDTD|const QString &
 
 /*
 void writeDefaultNamespace(const QString & namespaceUri)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->writeDefaultNamespace ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeDefaultNamespace|const QString &
 
 /*
 void writeEmptyElement(const QString & namespaceUri, const QString & name)
@@ -620,54 +389,17 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 /*
 void writeEndDocument()
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDDOCUMENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeEndDocument ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeEndDocument|
 
 /*
 void writeEndElement()
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDELEMENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeEndElement ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeEndElement|
 
 /*
 void writeEntityReference(const QString & name)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENTITYREFERENCE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->writeEntityReference ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeEntityReference|const QString &
 
 /*
 void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
@@ -880,59 +612,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT )
   }
 }
 
-HB_FUNC_STATIC( QXMLSTREAMWRITER_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QXMLSTREAMWRITER_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QXMLSTREAMWRITER_NEWFROM );
-}
-
-HB_FUNC_STATIC( QXMLSTREAMWRITER_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QXMLSTREAMWRITER_NEWFROM );
-}
-
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -56,27 +50,11 @@ CLASS QCoreApplication INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCoreApplication
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QCoreApplication>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QCoreApplication>
-#endif
+$includes
 
 #include <QStringList>
 
@@ -94,187 +72,82 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtor
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
-{
-  QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 virtual bool notify ( QObject * receiver, QEvent * event )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
-{
-  QCoreApplication * obj = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) && ISQEVENT(2) )
-    {
-      RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|notify|QObject *,QEvent *
 
 /*
 void quit ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
-{
-  QCoreApplication * obj = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->quit ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|quit|
 
 /*
 static void addLibraryPath ( const QString & path )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
-{
-  if( ISCHAR(1) )
-  {
-    QCoreApplication::addLibraryPath ( PQSTRING(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|addLibraryPath|const QString &
 
 /*
 static QString applicationDirPath ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
-{
-  RQSTRING( QCoreApplication::applicationDirPath () );
-}
+$staticMethod=|QString|applicationDirPath|
 
 /*
 static QString applicationFilePath ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
-{
-  RQSTRING( QCoreApplication::applicationFilePath () );
-}
+$staticMethod=|QString|applicationFilePath|
 
 /*
 static QString applicationName ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
-{
-  RQSTRING( QCoreApplication::applicationName () );
-}
+$staticMethod=|QString|applicationName|
 
 /*
 static qint64 applicationPid ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
-{
-  RQINT64( QCoreApplication::applicationPid () );
-}
+$staticMethod=|qint64|applicationPid|
 
 /*
 static QString applicationVersion ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
-{
-  RQSTRING( QCoreApplication::applicationVersion () );
-}
+$staticMethod=|QString|applicationVersion|
 
 /*
 static QStringList arguments ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
-{
-  RQSTRINGLIST( QCoreApplication::arguments () );
-}
+$staticMethod=|QStringList|arguments|
 
 /*
 static bool closingDown ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
-{
-  RBOOL( QCoreApplication::closingDown () );
-}
+$staticMethod=|bool|closingDown|
 
 /*
 static int exec ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
-{
-  RINT( QCoreApplication::exec () );
-}
+$staticMethod=|int|exec|
 
 /*
 static void exit ( int returnCode = 0 )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
-{
-  if( ISOPTNUM(1) )
-  {
-    QCoreApplication::exit ( OPINT(1,0) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|exit|int=0
 
 /*
 static void flush ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
-{
-  QCoreApplication::flush ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|flush|
 
 /*
 static bool hasPendingEvents ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
-{
-  RBOOL( QCoreApplication::hasPendingEvents () );
-}
+$staticMethod=|bool|hasPendingEvents|
 
 /*
 static void installTranslator ( QTranslator * translationFile )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_INSTALLTRANSLATOR )
-{
-  if( ISQTRANSLATOR(1) )
-  {
-    QTranslator * par1 = (QTranslator *) _qt5xhb_itemGetPtr(1);
-    QCoreApplication::installTranslator ( par1 );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|installTranslator|QTranslator *
 
 /*
 static QCoreApplication * instance ()
@@ -288,26 +161,17 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
 /*
 static QStringList libraryPaths ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
-{
-  RQSTRINGLIST( QCoreApplication::libraryPaths () );
-}
+$staticMethod=|QStringList|libraryPaths|
 
 /*
 static QString organizationDomain ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
-{
-  RQSTRING( QCoreApplication::organizationDomain () );
-}
+$staticMethod=|QString|organizationDomain|
 
 /*
 static QString organizationName ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
-{
-  RQSTRING( QCoreApplication::organizationName () );
-}
+$staticMethod=|QString|organizationName|
 
 /*
 static void postEvent ( QObject * receiver, QEvent * event )
@@ -388,18 +252,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 /*
 static void removeLibraryPath ( const QString & path )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
-{
-  if( ISCHAR(1) )
-  {
-    QCoreApplication::removeLibraryPath ( PQSTRING(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|removeLibraryPath|const QString &
 
 /*
 static void removePostedEvents ( QObject * receiver )
@@ -441,34 +294,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 /*
 static void removeTranslator ( QTranslator * translationFile )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_REMOVETRANSLATOR )
-{
-  if( ISQTRANSLATOR(1) )
-  {
-    QTranslator * par1 = (QTranslator *) _qt5xhb_itemGetPtr(1);
-    QCoreApplication::removeTranslator ( par1 );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|removeTranslator|QTranslator *
 
 /*
 static bool sendEvent ( QObject * receiver, QEvent * event )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
-{
-  if( ISQOBJECT(1) && ISQEVENT(2) )
-  {
-    RBOOL( QCoreApplication::sendEvent ( PQOBJECT(1), PQEVENT(2) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|sendEvent|QObject *,QEvent *
 
 /*
 static void sendPostedEvents ( QObject * receiver, int event_type )
@@ -510,121 +341,42 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 /*
 static void setApplicationName ( const QString & application )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
-{
-  if( ISCHAR(1) )
-  {
-    QCoreApplication::setApplicationName ( PQSTRING(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setApplicationName|const QString &
 
 /*
 static void setApplicationVersion ( const QString & version )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
-{
-  if( ISCHAR(1) )
-  {
-    QCoreApplication::setApplicationVersion ( PQSTRING(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setApplicationVersion|const QString &
 
 /*
 static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
-{
-  if( ISNUM(1) && ISOPTLOG(2) )
-  {
-    QCoreApplication::setAttribute ( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setAttribute|Qt::ApplicationAttribute,bool=true
 
 /*
 static void setLibraryPaths ( const QStringList & paths )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
-{
-  if( ISARRAY(1) )
-  {
-    QCoreApplication::setLibraryPaths ( PQSTRINGLIST(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setLibraryPaths|const QStringList &
 
 /*
 static void setOrganizationDomain ( const QString & orgDomain )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
-{
-  if( ISCHAR(1) )
-  {
-    QCoreApplication::setOrganizationDomain ( PQSTRING(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setOrganizationDomain|const QString &
 
 /*
 static void setOrganizationName ( const QString & orgName )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
-{
-  if( ISCHAR(1) )
-  {
-    QCoreApplication::setOrganizationName ( PQSTRING(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setOrganizationName|const QString &
 
 /*
 static bool startingUp ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
-{
-  RBOOL( QCoreApplication::startingUp () );
-}
+$staticMethod=|bool|startingUp|
 
 /*
 static bool testAttribute ( Qt::ApplicationAttribute attribute )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
-{
-  if( ISNUM(1) )
-  {
-    RBOOL( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) hb_parni(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
 
 /*
 static QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1)

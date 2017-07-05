@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -27,27 +21,11 @@ CLASS QChildEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QChildEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QChildEvent>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QChildEvent>
-#endif
+$includes
 
 /*
 QChildEvent(Type type, QObject * child)
@@ -65,35 +43,12 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCHILDEVENT_DELETE )
-{
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool added() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_ADDED )
-{
-  QChildEvent * obj = (QChildEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->added () );
-  }
-}
+$method=|bool|added|
 
 /*
 QObject * child() const
@@ -112,27 +67,11 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 /*
 bool polished() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
-{
-  QChildEvent * obj = (QChildEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->polished () );
-  }
-}
+$method=|bool|polished|
 
 /*
 bool removed() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
-{
-  QChildEvent * obj = (QChildEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->removed () );
-  }
-}
+$method=|bool|removed|
 
 #pragma ENDDUMP

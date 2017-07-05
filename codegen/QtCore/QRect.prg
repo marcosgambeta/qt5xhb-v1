@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -84,27 +78,11 @@ CLASS QRect
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QRect>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QRect>
-#endif
+$includes
 
 /*
 QRect ()
@@ -171,44 +149,12 @@ HB_FUNC_STATIC( QRECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QRECT_DELETE )
-{
-  QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void adjust ( int dx1, int dy1, int dx2, int dy2 )
 */
-HB_FUNC_STATIC( QRECT_ADJUST )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      obj->adjust ( PINT(1), PINT(2), PINT(3), PINT(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|adjust|int,int,int,int
 
 /*
 QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
@@ -234,15 +180,7 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
 /*
 int bottom () const
 */
-HB_FUNC_STATIC( QRECT_BOTTOM )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->bottom () );
-  }
-}
+$method=|int|bottom|
 
 /*
 QPoint bottomLeft () const
@@ -430,15 +368,7 @@ HB_FUNC_STATIC( QRECT_GETRECT )
 /*
 int height () const
 */
-HB_FUNC_STATIC( QRECT_HEIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 QRect intersected ( const QRect & rectangle ) const
@@ -464,206 +394,57 @@ HB_FUNC_STATIC( QRECT_INTERSECTED )
 /*
 bool intersects ( const QRect & rectangle ) const
 */
-HB_FUNC_STATIC( QRECT_INTERSECTS )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQRECT(1) )
-    {
-      RBOOL( obj->intersects ( *PQRECT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|intersects|const QRect &
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QRECT_ISEMPTY )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QRECT_ISNULL )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QRECT_ISVALID )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 int left () const
 */
-HB_FUNC_STATIC( QRECT_LEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->left () );
-  }
-}
+$method=|int|left|
 
 /*
 void moveBottom ( int y )
 */
-HB_FUNC_STATIC( QRECT_MOVEBOTTOM )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->moveBottom ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveBottom|int
 
 /*
 void moveBottomLeft ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_MOVEBOTTOMLEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->moveBottomLeft ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveBottomLeft|const QPoint &
 
 /*
 void moveBottomRight ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_MOVEBOTTOMRIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->moveBottomRight ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveBottomRight|const QPoint &
 
 /*
 void moveCenter ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_MOVECENTER )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->moveCenter ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveCenter|const QPoint &
 
 /*
 void moveLeft ( int x )
 */
-HB_FUNC_STATIC( QRECT_MOVELEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->moveLeft ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveLeft|int
 
 /*
 void moveRight ( int x )
 */
-HB_FUNC_STATIC( QRECT_MOVERIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->moveRight ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveRight|int
 
 /*
 void moveTo ( int x, int y )
@@ -717,68 +498,17 @@ HB_FUNC_STATIC( QRECT_MOVETO )
 /*
 void moveTop ( int y )
 */
-HB_FUNC_STATIC( QRECT_MOVETOP )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->moveTop ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveTop|int
 
 /*
 void moveTopLeft ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_MOVETOPLEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->moveTopLeft ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveTopLeft|const QPoint &
 
 /*
 void moveTopRight ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_MOVETOPRIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->moveTopRight ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveTopRight|const QPoint &
 
 /*
 QRect normalized () const
@@ -797,345 +527,82 @@ HB_FUNC_STATIC( QRECT_NORMALIZED )
 /*
 int right () const
 */
-HB_FUNC_STATIC( QRECT_RIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->right () );
-  }
-}
+$method=|int|right|
 
 /*
 void setBottom ( int y )
 */
-HB_FUNC_STATIC( QRECT_SETBOTTOM )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setBottom ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBottom|int
 
 /*
 void setBottomLeft ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_SETBOTTOMLEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->setBottomLeft ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBottomLeft|const QPoint &
 
 /*
 void setBottomRight ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_SETBOTTOMRIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->setBottomRight ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBottomRight|const QPoint &
 
 /*
 void setCoords ( int x1, int y1, int x2, int y2 )
 */
-HB_FUNC_STATIC( QRECT_SETCOORDS )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      obj->setCoords ( PINT(1), PINT(2), PINT(3), PINT(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCoords|int,int,int,int
 
 /*
 void setHeight ( int height )
 */
-HB_FUNC_STATIC( QRECT_SETHEIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setHeight ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHeight|int
 
 /*
 void setLeft ( int x )
 */
-HB_FUNC_STATIC( QRECT_SETLEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setLeft ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLeft|int
 
 /*
 void setRect ( int x, int y, int width, int height )
 */
-HB_FUNC_STATIC( QRECT_SETRECT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      obj->setRect ( PINT(1), PINT(2), PINT(3), PINT(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRect|int,int,int,int
 
 /*
 void setRight ( int x )
 */
-HB_FUNC_STATIC( QRECT_SETRIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRight ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRight|int
 
 /*
 void setSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QRECT_SETSIZE )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      obj->setSize ( *PQSIZE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSize|const QSize &
 
 /*
 void setTop ( int y )
 */
-HB_FUNC_STATIC( QRECT_SETTOP )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setTop ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTop|int
 
 /*
 void setTopLeft ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_SETTOPLEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->setTopLeft ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTopLeft|const QPoint &
 
 /*
 void setTopRight ( const QPoint & position )
 */
-HB_FUNC_STATIC( QRECT_SETTOPRIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      obj->setTopRight ( *PQPOINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTopRight|const QPoint &
 
 /*
 void setWidth ( int width )
 */
-HB_FUNC_STATIC( QRECT_SETWIDTH )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidth|int
 
 /*
 void setX ( int x )
 */
-HB_FUNC_STATIC( QRECT_SETX )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setX ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setX|int
 
 /*
 void setY ( int y )
 */
-HB_FUNC_STATIC( QRECT_SETY )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setY ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setY|int
 
 /*
 QSize size () const
@@ -1154,15 +621,7 @@ HB_FUNC_STATIC( QRECT_SIZE )
 /*
 int top () const
 */
-HB_FUNC_STATIC( QRECT_TOP )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->top () );
-  }
-}
+$method=|int|top|
 
 /*
 QPoint topLeft () const
@@ -1312,95 +771,18 @@ HB_FUNC_STATIC( QRECT_UNITED )
 /*
 int width () const
 */
-HB_FUNC_STATIC( QRECT_WIDTH )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
+$method=|int|width|
 
 /*
 int x () const
 */
-HB_FUNC_STATIC( QRECT_X )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
+$method=|int|x|
 
 /*
 int y () const
 */
-HB_FUNC_STATIC( QRECT_Y )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
+$method=|int|y|
 
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
-
-HB_FUNC_STATIC( QRECT_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QRECT_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QRECT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QRECT_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QRECT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QRECT_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QRECT_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

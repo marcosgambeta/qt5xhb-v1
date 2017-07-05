@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -72,27 +66,11 @@ CLASS QTextStream
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextStream
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QTextStream>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QTextStream>
-#endif
+$includes
 
 /*
 QTextStream()
@@ -194,22 +172,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
   }
 }
 
-HB_FUNC_STATIC( QTEXTSTREAM_DELETE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void setCodec(QTextCodec *codec)
@@ -300,72 +263,22 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
 /*
 bool autoDetectUnicode() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->autoDetectUnicode () );
-  }
-}
+$method=|bool|autoDetectUnicode|
 
 /*
 void setGenerateByteOrderMark(bool generate)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETGENERATEBYTEORDERMARK )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setGenerateByteOrderMark ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGenerateByteOrderMark|bool
 
 /*
 bool generateByteOrderMark() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->generateByteOrderMark () );
-  }
-}
+$method=|bool|generateByteOrderMark|
 
 /*
 void setLocale(const QLocale &locale)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETLOCALE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQLOCALE(1) )
-    {
-      obj->setLocale ( *PQLOCALE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLocale|const QLocale &
 
 /*
 QLocale locale() const
@@ -384,23 +297,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
 /*
 void setDevice(QIODevice *device)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) )
-    {
-      obj->setDevice ( PQIODEVICE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
+$method=|void|setDevice|QIODevice *
 }
 
 /*
@@ -493,108 +390,37 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
 /*
 void resetStatus()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_RESETSTATUS )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->resetStatus ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resetStatus|
 
 /*
 bool atEnd() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
+$method=|bool|atEnd|
 
 /*
 void reset()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_RESET )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->reset ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|reset|
 
 /*
 void flush()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_FLUSH )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->flush ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|flush|
 
 /*
 bool seek(qint64 pos)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->seek ( PQINT64(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|seek|qint64
 
 /*
 qint64 pos() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_POS )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
+$method=|qint64|pos|
 
 /*
 void skipWhiteSpace()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->skipWhiteSpace ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|skipWhiteSpace|
 
 /*
 QString readLine(qint64 maxlen = 0)
@@ -619,35 +445,12 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
 /*
 QString readAll()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_READALL )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->readAll () );
-  }
-}
+$method=|QString|readAll|
 
 /*
 QString read(qint64 maxlen)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_READ )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->read ( PQINT64(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|read|qint64
 
 /*
 void setFieldAlignment(FieldAlignment alignment)
@@ -724,37 +527,12 @@ HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
 /*
 void setFieldWidth(int width)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDWIDTH )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setFieldWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFieldWidth|int
 
 /*
 int fieldWidth() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->fieldWidth () );
-  }
-}
+$method=|int|fieldWidth|
 
 /*
 void setNumberFlags(NumberFlags flags)
@@ -795,37 +573,12 @@ HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
 /*
 void setIntegerBase(int base)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETINTEGERBASE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setIntegerBase ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIntegerBase|int
 
 /*
 int integerBase() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->integerBase () );
-  }
-}
+$method=|int|integerBase|
 
 /*
 void setRealNumberNotation(RealNumberNotation notation)
@@ -865,91 +618,13 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
 /*
 void setRealNumberPrecision(int precision)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERPRECISION )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRealNumberPrecision ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRealNumberPrecision|int
 
 /*
 int realNumberPrecision() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+$method=|int|realNumberPrecision|
 
-  if( obj )
-  {
-    RINT( obj->realNumberPrecision () );
-  }
-}
-
-HB_FUNC_STATIC( QTEXTSTREAM_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QTEXTSTREAM_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QTEXTSTREAM_NEWFROM );
-}
-
-HB_FUNC_STATIC( QTEXTSTREAM_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QTEXTSTREAM_NEWFROM );
-}
-
-HB_FUNC_STATIC( QTEXTSTREAM_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QTEXTSTREAM_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

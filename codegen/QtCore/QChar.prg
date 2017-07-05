@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -68,27 +62,11 @@ CLASS QChar
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QChar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QChar>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QChar>
-#endif
+$includes
 
 /*
 QChar ()
@@ -203,22 +181,7 @@ HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
   HB_FUNC_EXEC( QCHAR_NEW1 );
 }
 
-HB_FUNC_STATIC( QCHAR_DELETE )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 Category category () const
@@ -275,15 +238,7 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 /*
 int digitValue () const
 */
-HB_FUNC_STATIC( QCHAR_DIGITVALUE )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->digitValue () );
-  }
-}
+$method=|int|digitValue|
 
 /*
 Direction direction () const
@@ -301,210 +256,82 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
 /*
 bool hasMirrored () const
 */
-HB_FUNC_STATIC( QCHAR_HASMIRRORED )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasMirrored () );
-  }
-}
+$method=|bool|hasMirrored|
 
 /*
 bool isDigit () const
 */
-HB_FUNC_STATIC( QCHAR_ISDIGIT )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isDigit () );
-  }
-}
+$method=|bool|isDigit|
 
 /*
 bool isHighSurrogate () const
 */
-HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isHighSurrogate () );
-  }
-}
+$method=|bool|isHighSurrogate|
 
 /*
 bool isLetter () const
 */
-HB_FUNC_STATIC( QCHAR_ISLETTER )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLetter () );
-  }
-}
+$method=|bool|isLetter|
 
 /*
 bool isLetterOrNumber () const
 */
-HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLetterOrNumber () );
-  }
-}
+$method=|bool|isLetterOrNumber|
 
 /*
 bool isLowSurrogate () const
 */
-HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLowSurrogate () );
-  }
-}
+$method=|bool|isLowSurrogate|
 
 /*
 bool isLower () const
 */
-HB_FUNC_STATIC( QCHAR_ISLOWER )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLower () );
-  }
-}
+$method=|bool|isLower|
 
 /*
 bool isMark () const
 */
-HB_FUNC_STATIC( QCHAR_ISMARK )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isMark () );
-  }
-}
+$method=|bool|isMark|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QCHAR_ISNULL )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool isNumber () const
 */
-HB_FUNC_STATIC( QCHAR_ISNUMBER )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNumber () );
-  }
-}
+$method=|bool|isNumber|
 
 /*
 bool isPrint () const
 */
-HB_FUNC_STATIC( QCHAR_ISPRINT )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isPrint () );
-  }
-}
+$method=|bool|isPrint|
 
 /*
 bool isPunct () const
 */
-HB_FUNC_STATIC( QCHAR_ISPUNCT )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isPunct () );
-  }
-}
+$method=|bool|isPunct|
 
 /*
 bool isSpace () const
 */
-HB_FUNC_STATIC( QCHAR_ISSPACE )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSpace () );
-  }
-}
+$method=|bool|isSpace|
 
 /*
 bool isSymbol () const
 */
-HB_FUNC_STATIC( QCHAR_ISSYMBOL )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSymbol () );
-  }
-}
+$method=|bool|isSymbol|
 
 /*
 bool isTitleCase () const
 */
-HB_FUNC_STATIC( QCHAR_ISTITLECASE )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isTitleCase () );
-  }
-}
+$method=|bool|isTitleCase|
 
 /*
 bool isUpper () const
 */
-HB_FUNC_STATIC( QCHAR_ISUPPER )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isUpper () );
-  }
-}
+$method=|bool|isUpper|
 
 /*
 Joining joining () const
@@ -522,16 +349,7 @@ HB_FUNC_STATIC( QCHAR_JOINING )
 /*
 QChar mirroredChar () const
 */
-HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->mirroredChar () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
+$method=|QChar|mirroredChar|
 
 /*
 uchar row () const
@@ -549,16 +367,7 @@ HB_FUNC_STATIC( QCHAR_ROW )
 /*
 QChar toCaseFolded () const
 */
-HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toCaseFolded () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
+$method=|QChar|toCaseFolded|
 
 /*
 char toLatin1 () const
@@ -576,44 +385,17 @@ HB_FUNC_STATIC( QCHAR_TOLATIN1 )
 /*
 QChar toLower () const
 */
-HB_FUNC_STATIC( QCHAR_TOLOWER )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toLower () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
+$method=|QChar|toLower|
 
 /*
 QChar toTitleCase () const
 */
-HB_FUNC_STATIC( QCHAR_TOTITLECASE )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toTitleCase () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
+$method=|QChar|toTitleCase|
 
 /*
 QChar toUpper () const
 */
-HB_FUNC_STATIC( QCHAR_TOUPPER )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toUpper () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
+$method=|QChar|toUpper|
 
 /*
 ushort unicode () const
@@ -643,59 +425,6 @@ HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
 
 // TODO: implementar metódos estáticos
 
-HB_FUNC_STATIC( QCHAR_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QCHAR_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QCHAR_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCHAR_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QCHAR_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCHAR_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QCHAR_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

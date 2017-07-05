@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -33,27 +27,11 @@ CLASS QPluginLoader INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPluginLoader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QPluginLoader>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QPluginLoader>
-#endif
+$includes
 
 /*
 QPluginLoader ( QObject * parent = 0 )
@@ -92,48 +70,17 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 QObject * instance ()
@@ -152,99 +99,32 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 /*
 bool isLoaded () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLoaded () );
-  }
-}
+$method=|bool|isLoaded|
 
 /*
 bool load ()
 */
-HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load () );
-  }
-}
+$method=|bool|load|
 
 /*
 QLibrary::LoadHints loadHints () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->loadHints () );
-  }
-}
+$method=|QLibrary::LoadHints|loadHints|
 
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setFileName ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileName|const QString &
 
 /*
 void setLoadHints ( QLibrary::LoadHints loadHints )
 */
-HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setLoadHints ( (QLibrary::LoadHints) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLoadHints|QLibrary::LoadHints
 
 /*
 bool unload ()
 */
-HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->unload () );
-  }
-}
+$method=|bool|unload|
 
 /*
 QObjectList staticInstances ()

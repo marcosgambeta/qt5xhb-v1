@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -40,27 +34,11 @@ CLASS QDirIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDirIterator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QDirIterator>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QDirIterator>
-#endif
+$includes
 
 /*
 QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
@@ -135,155 +113,38 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDIRITERATOR_DELETE )
-{
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QFileInfo fileInfo () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
-{
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QFileInfo * ptr = new QFileInfo( obj->fileInfo () );
-    _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
-  }
-}
+$method=|QFileInfo|fileInfo|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
-{
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 QString filePath () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
-{
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->filePath () );
-  }
-}
+$method=|QString|filePath|
 
 /*
 bool hasNext () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
-{
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasNext () );
-  }
-}
+$method=|bool|hasNext|
 
 /*
 QString next ()
 */
-HB_FUNC_STATIC( QDIRITERATOR_NEXT )
-{
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->next () );
-  }
-}
+$method=|QString|next|
 
 /*
 QString path () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_PATH )
-{
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+$method=|QString|path|
 
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
-
-HB_FUNC_STATIC( QDIRITERATOR_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QDIRITERATOR_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QDIRITERATOR_NEWFROM );
-}
-
-HB_FUNC_STATIC( QDIRITERATOR_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QDIRITERATOR_NEWFROM );
-}
-
-HB_FUNC_STATIC( QDIRITERATOR_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QDIRITERATOR_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

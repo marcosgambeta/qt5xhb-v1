@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -119,27 +113,11 @@ CLASS QVariant
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVariant
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QVariant>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QVariant>
-#endif
+$includes
 
 #include <QDataStream>
 #include <QByteArray>
@@ -843,22 +821,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QVARIANT_DELETE )
-{
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void swap(QVariant &other)
@@ -925,111 +888,37 @@ HB_FUNC_STATIC( QVARIANT_TYPENAME )
 /*
 bool canConvert(int targetTypeId) const
 */
-HB_FUNC_STATIC( QVARIANT_CANCONVERT )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->canConvert ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|canConvert|int
 
 /*
 bool convert(int targetTypeId)
 */
-HB_FUNC_STATIC( QVARIANT_CONVERT )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->convert ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|convert|int
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QVARIANT_ISVALID )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QVARIANT_ISNULL )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QVARIANT_CLEAR )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 void detach()
 */
-HB_FUNC_STATIC( QVARIANT_DETACH )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->detach ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|detach|
 
 /*
 bool isDetached() const
 */
-HB_FUNC_STATIC( QVARIANT_ISDETACHED )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isDetached () );
-  }
-}
+$method=|bool|isDetached|
 
 /*
 int toInt(bool *ok = 0) const
@@ -1122,15 +1011,7 @@ HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
 /*
 bool toBool() const
 */
-HB_FUNC_STATIC( QVARIANT_TOBOOL )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->toBool () );
-  }
-}
+$method=|bool|toBool|
 
 /*
 double toDouble(bool *ok = 0) const
@@ -1229,28 +1110,12 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSTRING )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
+$method=|QString|toString|
 
 /*
 QStringList toStringList() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->toStringList () );
-  }
-}
+$method=|QStringList|toStringList|
 
 /*
 QChar toChar() const
@@ -1498,114 +1363,42 @@ HB_FUNC_STATIC( QVARIANT_TOREGULAREXPRESSION )
 /*
 QUrl toUrl() const
 */
-HB_FUNC_STATIC( QVARIANT_TOURL )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->toUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|toUrl|
 
 /*
 QEasingCurve toEasingCurve() const
 */
-HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve () );
-    _qt5xhb_createReturnClass ( ptr, "QEASINGCURVE" );
-  }
-}
+$method=|QEasingCurve|toEasingCurve|
 
 /*
 QUuid toUuid() const
 */
-HB_FUNC_STATIC( QVARIANT_TOUUID )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUuid * ptr = new QUuid( obj->toUuid () );
-    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-  }
-}
+$method=|QUuid|toUuid|
 
 /*
 QModelIndex toModelIndex() const
 */
-HB_FUNC_STATIC( QVARIANT_TOMODELINDEX )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->toModelIndex () );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|toModelIndex|
 
 /*
 QJsonValue toJsonValue() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONVALUE )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonValue * ptr = new QJsonValue( obj->toJsonValue () );
-    _qt5xhb_createReturnClass ( ptr, "QJSONVALUE" );
-  }
-}
+$method=|QJsonValue|toJsonValue|
 
 /*
 QJsonObject toJsonObject() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONOBJECT )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonObject * ptr = new QJsonObject( obj->toJsonObject () );
-    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
-  }
-}
+$method=|QJsonObject|toJsonObject|
 
 /*
 QJsonArray toJsonArray() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONARRAY )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonArray * ptr = new QJsonArray( obj->toJsonArray () );
-    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
-  }
-}
+$method=|QJsonArray|toJsonArray|
 
 /*
 QJsonDocument toJsonDocument() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONDOCUMENT )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonDocument * ptr = new QJsonDocument( obj->toJsonDocument () );
-    _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT" );
-  }
-}
+$method=|QJsonDocument|toJsonDocument|
 
 /*
 void load(QDataStream &ds)
@@ -1673,87 +1466,13 @@ HB_FUNC_STATIC( QVARIANT_DATA )
 /*
 static const char *typeToName(int typeId)
 */
-HB_FUNC_STATIC( QVARIANT_TYPETONAME )
-{
-  if( ISNUM(1) )
-  {
-    const char * str1 = QVariant::typeToName ( PINT(1) );
-    hb_retc( str1 );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|const char *|typeToName|int
 
 /*
 static Type nameToType(const char *name)
 */
-HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
-{
-  if( ISCHAR(1) )
-  {
-    hb_retni( QVariant::nameToType ( PCONSTCHAR(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QVariant::Type|nameToType|const char *
 
-HB_FUNC_STATIC( QVARIANT_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QVARIANT_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QVARIANT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QVARIANT_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QVARIANT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QVARIANT_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QVARIANT_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

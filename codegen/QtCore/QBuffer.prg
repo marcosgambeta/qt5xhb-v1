@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -36,27 +30,11 @@ CLASS QBuffer INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBuffer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QBuffer>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QBuffer>
-#endif
+$includes
 
 /*
 QBuffer ( QObject * parent = 0 )
@@ -96,22 +74,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QBUFFER_DELETE )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QByteArray & buffer ()
@@ -168,55 +131,17 @@ HB_FUNC_STATIC( QBUFFER_DATA )
 /*
 void setBuffer ( QByteArray * byteArray )
 */
-HB_FUNC_STATIC( QBUFFER_SETBUFFER )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) )
-    {
-      QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-      obj->setBuffer ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBuffer|QByteArray *
 
 /*
 void setData ( const QByteArray & data )
 */
-void QBuffer_setData1 ()
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setData ( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setData,setData1|const QByteArray &
 
 /*
 void setData ( const char * data, int size )
 */
-void QBuffer_setData2 ()
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setData ( PCONSTCHAR(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setData,setData2|const char *,int
 
 //[1]void setData ( const QByteArray & data )
 //[2]void setData ( const char * data, int size )
@@ -240,108 +165,36 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 /*
 virtual bool atEnd () const
 */
-HB_FUNC_STATIC( QBUFFER_ATEND )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
+$method=|bool|atEnd|
 
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC_STATIC( QBUFFER_CANREADLINE )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canReadLine () );
-  }
-}
+$method=|bool|canReadLine|
 
 /*
 virtual void close ()
 */
-HB_FUNC_STATIC( QBUFFER_CLOSE )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->close ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|close|
 
 /*
 virtual bool open ( OpenMode flags )
 */
-HB_FUNC_STATIC( QBUFFER_OPEN )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|open|QBuffer::OpenMode
 
 /*
 virtual qint64 pos () const
 */
-HB_FUNC_STATIC( QBUFFER_POS )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
+$method=|qint64|pos|
 
 /*
 virtual bool seek ( qint64 pos )
 */
-HB_FUNC_STATIC( QBUFFER_SEEK )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->seek ( PQINT64(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|seek|qint64
 
 /*
 virtual qint64 size () const
 */
-HB_FUNC_STATIC( QBUFFER_SIZE )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
+$method=|qint64|size|
 
 #pragma ENDDUMP

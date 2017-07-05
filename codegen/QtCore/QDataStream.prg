@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -48,27 +42,11 @@ CLASS QDataStream
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDataStream
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QDataStream>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QDataStream>
-#endif
+$includes
 
 /*
 QDataStream()
@@ -136,22 +114,7 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDATASTREAM_DELETE )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QIODevice *device() const
@@ -170,210 +133,65 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
 /*
 void setDevice(QIODevice *)
 */
-HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) )
-    {
-      obj->setDevice ( PQIODEVICE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDevice|QIODevice *
 
 /*
 void unsetDevice()
 */
-HB_FUNC_STATIC( QDATASTREAM_UNSETDEVICE )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->unsetDevice ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unsetDevice|
 
 /*
 bool atEnd() const
 */
-HB_FUNC_STATIC( QDATASTREAM_ATEND )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
+$method=|bool|atEnd|
 
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QDATASTREAM_STATUS )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
+$method=|QDataStream::Status|QDataStream::status|
 
 /*
 void setStatus(Status status)
 */
-HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setStatus ( (QDataStream::Status) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStatus|QDataStream::Status
 
 /*
 void resetStatus()
 */
-HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->resetStatus ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resetStatus|
 
 /*
 FloatingPointPrecision floatingPointPrecision() const
 */
-HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->floatingPointPrecision () );
-  }
-}
+$method=|QDataStream::FloatingPointPrecision|floatingPointPrecision|
 
 /*
 void setFloatingPointPrecision(FloatingPointPrecision precision)
 */
-HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setFloatingPointPrecision ( (QDataStream::FloatingPointPrecision) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFloatingPointPrecision|QDataStream::FloatingPointPrecision
 
 /*
 ByteOrder byteOrder() const
 */
-HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->byteOrder () );
-  }
-}
+$method=|QDataStream::ByteOrder|byteOrder|
 
 /*
 void setByteOrder(ByteOrder)
 */
-HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setByteOrder ( (QDataStream::ByteOrder) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setByteOrder|QDataStream::ByteOrder
 
 /*
 int version() const
 */
-HB_FUNC_STATIC( QDATASTREAM_VERSION )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->version () );
-  }
-}
+$method=|int|version|
 
 /*
 void setVersion(int)
 */
-HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setVersion ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVersion|int
 
 /*
-QDataStream &readBytes(char *&, uint &len) // TODO: revisar implementacao do metodo
+QDataStream &readBytes(char *&, uint &len) // TODO: revisar e corrigir implementacao do metodo
 */
 HB_FUNC_STATIC( QDATASTREAM_READBYTES )
 {
@@ -440,96 +258,13 @@ HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
 /*
 int writeRawData(const char *, int len)
 */
-HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      RINT( obj->writeRawData ( PCONSTCHAR(1), PINT(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|writeRawData|const char *,int
 
 /*
 int skipRawData(int len)
 */
-HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+$method=|int|skipRawData|int
 
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->skipRawData ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-HB_FUNC_STATIC( QDATASTREAM_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QDATASTREAM_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QDATASTREAM_NEWFROM );
-}
-
-HB_FUNC_STATIC( QDATASTREAM_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QDATASTREAM_NEWFROM );
-}
-
-HB_FUNC_STATIC( QDATASTREAM_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QDATASTREAM_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP
