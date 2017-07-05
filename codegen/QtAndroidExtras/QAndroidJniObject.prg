@@ -34,11 +34,7 @@ CLASS QAndroidJniObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAndroidJniObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

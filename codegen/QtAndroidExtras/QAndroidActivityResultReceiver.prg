@@ -20,11 +20,7 @@ CLASS QAndroidActivityResultReceiver
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAndroidActivityResultReceiver
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
