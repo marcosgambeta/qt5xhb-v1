@@ -24,11 +24,7 @@ CLASS QBluetoothAddress
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothAddress
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

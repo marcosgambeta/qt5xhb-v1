@@ -27,11 +27,7 @@ CLASS QBluetoothTransferReply INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothTransferReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

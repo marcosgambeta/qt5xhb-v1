@@ -21,11 +21,7 @@ CLASS QBluetoothUuid INHERIT QUuid
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothUuid
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

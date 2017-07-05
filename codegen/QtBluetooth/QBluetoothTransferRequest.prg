@@ -28,11 +28,7 @@ CLASS QBluetoothTransferRequest
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothTransferRequest
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
