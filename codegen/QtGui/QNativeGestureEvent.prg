@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -30,27 +24,11 @@ CLASS QNativeGestureEvent INHERIT QInputEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNativeGestureEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QNativeGestureEvent>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QNativeGestureEvent>
-#endif
+$includes
 
 /*
 QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos,const QPointF &screenPos, qreal value, ulong sequenceId, quint64 intArgument)
@@ -62,21 +40,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
-HB_FUNC_STATIC( QNATIVEGESTUREEVENT_DELETE )
-{
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 Qt::NativeGestureType gestureType() const

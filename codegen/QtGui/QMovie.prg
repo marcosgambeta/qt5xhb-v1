@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -68,27 +62,11 @@ CLASS QMovie INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMovie
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QMovie>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QMovie>
-#endif
+$includes
 
 #include <QColor>
 #include <QPixmap>
@@ -147,20 +125,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMOVIE_DELETE )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QColor  backgroundColor () const

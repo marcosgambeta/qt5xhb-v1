@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -26,33 +20,11 @@ CLASS QAccessible INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessible
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QAccessible>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAccessible>
-#endif
-
-
-
-
-
-
+$includes
 
 /*
 static QAccessibleInterface *queryAccessibleInterface(QObject *)
@@ -62,8 +34,6 @@ HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
   QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( PQOBJECT(1) );
   _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
 }
-
-
 
 /*
 static void updateAccessibility(QAccessibleEvent *event)
@@ -75,7 +45,6 @@ HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static bool isActive()
 */
@@ -83,7 +52,6 @@ HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 {
   RBOOL( QAccessible::isActive () );
 }
-
 
 /*
 static void setRootObject(QObject *object)
@@ -94,7 +62,6 @@ HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static void cleanup()
 */
@@ -104,7 +71,4 @@ HB_FUNC_STATIC( QACCESSIBLE_CLEANUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-
